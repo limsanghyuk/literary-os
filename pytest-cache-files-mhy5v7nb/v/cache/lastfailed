@@ -1,0 +1,3 @@
+{
+  "tests/test_v471_eval_safety.py::TestSafetyRegressionSuiteReport::test_empty_samples_handled": true
+}

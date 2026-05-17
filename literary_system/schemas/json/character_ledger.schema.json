@@ -1,0 +1,41 @@
+{
+  "$id": "character_ledger.schema.json",
+  "type": "object",
+  "required": [
+    "character_id",
+    "display_name",
+    "role_type",
+    "pressure_target",
+    "residue_binding",
+    "act_evolution",
+    "memory_weight",
+    "prunable"
+  ],
+  "properties": {
+    "character_id": {
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "role_type": {
+      "type": "string"
+    },
+    "pressure_target": {
+      "type": "string"
+    },
+    "residue_binding": {
+      "type": "object"
+    },
+    "act_evolution": {
+      "type": "object"
+    },
+    "memory_weight": {
+      "type": "number"
+    },
+    "prunable": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

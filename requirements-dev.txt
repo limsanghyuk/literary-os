@@ -1,0 +1,5 @@
+# Literary OS V380 — 개발/테스트 의존성
+-r requirements.txt
+pytest>=8,<10
+pytest-cov>=4
+scikit-learn>=1.3

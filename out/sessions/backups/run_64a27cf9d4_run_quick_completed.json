@@ -1,0 +1,113 @@
+{
+  "run_id": "run_64a27cf9d4",
+  "project_id": "proj_1e7cdac2",
+  "started_at": "2026-05-15T09:29:47.674875+00:00",
+  "out_root": "./out",
+  "execution_trace": [
+    "[09:29:47.674] \n[BuildOpeningOrchestrator] run_quick 시작 | mode=quick",
+    "[09:29:47.674] \n[Node_SeedCompiler] compile 시작",
+    "[09:29:47.674]   -> 씨드 컴파일 완료 | project_id=proj_1e7cdac2",
+    "[09:29:47.674]   -> checkpoint saved: seed_compiler",
+    "[09:29:47.674] \n[Node_StandardLiteraryAnalyzer] analyze 시작",
+    "[09:29:47.675]   -> StandardLiteraryAnalyzer 완료",
+    "[09:29:47.675]   -> checkpoint saved: standard_literary_analyzer",
+    "[09:29:47.675] \n[Node_StyleDNAEngine] style compile 시작",
+    "[09:29:47.675]   -> StyleDNAEngine 완료",
+    "[09:29:47.675]   -> checkpoint saved: style_dna_engine",
+    "[09:29:47.675] \n[Node_V312Bridge] 브릿지 상태 확인 | available=False",
+    "[09:29:47.675]   -> checkpoint saved: v312_bridge_check",
+    "[09:29:47.675] \n[Node_Episode_01] 에피소드 1화 생성 시작",
+    "[09:29:47.676]   -> 에피소드 1화 완료 | coherence_violations=0",
+    "[09:29:47.676]   -> checkpoint saved: episode_01",
+    "[09:29:47.676] \n[Node_Episode_02] 에피소드 2화 생성 시작",
+    "[09:29:47.676]   -> 에피소드 2화 완료 | coherence_violations=0",
+    "[09:29:47.676]   -> checkpoint saved: episode_02",
+    "[09:29:47.676] \n[Node_Episode_03] 에피소드 3화 생성 시작",
+    "[09:29:47.676]   -> 에피소드 3화 완료 | coherence_violations=0",
+    "[09:29:47.676]   -> checkpoint saved: episode_03",
+    "[09:29:47.676] \n[BuildOpeningOrchestrator] run_quick 완료 | episodes=3"
+  ],
+  "last_good_node": "episode_03",
+  "checkpoints": {
+    "seed_compiler": {
+      "run_id": "run_64a27cf9d4",
+      "project_id": "proj_1e7cdac2",
+      "seed_contract": {
+        "project_id": "proj_1e7cdac2",
+        "user_prompt": "드라마 3화",
+        "genre": "general_drama",
+        "genre_secondary": null,
+        "format_type": "screenplay",
+        "target_span": "ep01_ep03_opening",
+        "tone_keywords": [
+          "restrained",
+          "pressure-driven"
+        ],
+        "pdi_baseline": 0.35,
+        "forbidden_rules": [
+          "cheap_cliffhanger",
+          "emotion_explanation",
+          "generic_ai_phrase",
+          "summary_ending"
+        ],
+        "required_objects": [],
+        "core_conflict": "to_be_inferred",
+        "seed_confidence": 0.55
+      }
+    },
+    "standard_literary_analyzer": {
+      "run_id": "run_64a27cf9d4",
+      "project_id": "proj_1e7cdac2"
+    },
+    "style_dna_engine": {
+      "run_id": "run_64a27cf9d4",
+      "project_id": "proj_1e7cdac2"
+    },
+    "v312_bridge_check": {
+      "run_id": "run_64a27cf9d4",
+      "project_id": "proj_1e7cdac2"
+    },
+    "episode_01": {
+      "run_id": "run_64a27cf9d4",
+      "project_id": "proj_1e7cdac2"
+    },
+    "episode_02": {
+      "run_id": "run_64a27cf9d4",
+      "project_id": "proj_1e7cdac2"
+    },
+    "episode_03": {
+      "run_id": "run_64a27cf9d4",
+      "project_id": "proj_1e7cdac2"
+    }
+  },
+  "last_disk_checkpoint_path": "",
+  "seed_contract": {
+    "project_id": "proj_1e7cdac2",
+    "user_prompt": "드라마 3화",
+    "genre": "general_drama",
+    "genre_secondary": null,
+    "format_type": "screenplay",
+    "target_span": "ep01_ep03_opening",
+    "tone_keywords": [
+      "restrained",
+      "pressure-driven"
+    ],
+    "pdi_baseline": 0.35,
+    "forbidden_rules": [
+      "cheap_cliffhanger",
+      "emotion_explanation",
+      "generic_ai_phrase",
+      "summary_ending"
+    ],
+    "required_objects": [],
+    "core_conflict": "to_be_inferred",
+    "seed_confidence": 0.55
+  },
+  "arc_node_count": 0,
+  "budget_episodes": 0,
+  "knowledge_facts": 0,
+  "status": "completed",
+  "physics_trace": [],
+  "updated_at": "2026-05-15T09:29:47.676578+00:00",
+  "checkpoint_label": "run_quick_completed"
+}

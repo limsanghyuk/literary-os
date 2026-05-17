@@ -1,0 +1,86 @@
+{
+  "run_id": "run_d23ce73ff8",
+  "project_id": "proj_6e5d8df4",
+  "started_at": "2026-05-17T05:40:13.178518+00:00",
+  "out_root": "./out/gate_test",
+  "execution_trace": [
+    "[05:40:13.178] \n[Pipeline] Literary OS V382 최소 파이프라인 시작 | seed='릴리즈 게이트 생존 검증 씨드' | episodes=2 | run_id=run_d23ce73ff8",
+    "[05:40:13.178] \n[Node_SeedCompiler] compile 시작",
+    "[05:40:13.178]   -> 씨드 컴파일 완료 | project_id=proj_6e5d8df4",
+    "[05:40:13.178]   -> checkpoint saved: seed_compiler",
+    "[05:40:13.178]   -> disk autosave: run_d23ce73ff8_node_seed_compiler.json",
+    "[05:40:13.178] \n[Node_SeriesArcPlanner] plan() 실행",
+    "[05:40:13.179]   -> 아크 플랜 완료 | nodes=8",
+    "[05:40:13.179]   -> checkpoint saved: series_arc_planner",
+    "[05:40:13.179]   -> disk autosave: run_d23ce73ff8_node_series_arc_planner.json",
+    "[05:40:13.179] \n[Node_CausalPlotGraph] 인과율 그래프 초기화",
+    "[05:40:13.179]   -> 인과 그래프 초기화 완료 | nodes=1",
+    "[05:40:13.179]   -> checkpoint saved: causal_plot_graph"
+  ],
+  "last_good_node": "causal_plot_graph",
+  "checkpoints": {
+    "seed_compiler": {
+      "run_id": "run_d23ce73ff8",
+      "project_id": "proj_6e5d8df4",
+      "seed_contract": {
+        "project_id": "proj_6e5d8df4",
+        "user_prompt": "릴리즈 게이트 생존 검증 씨드",
+        "genre": "general_drama",
+        "genre_secondary": null,
+        "format_type": "screenplay",
+        "target_span": "ep01_ep03_opening",
+        "tone_keywords": [
+          "restrained",
+          "pressure-driven"
+        ],
+        "pdi_baseline": 0.35,
+        "forbidden_rules": [
+          "cheap_cliffhanger",
+          "emotion_explanation",
+          "generic_ai_phrase",
+          "summary_ending"
+        ],
+        "required_objects": [],
+        "core_conflict": "to_be_inferred",
+        "seed_confidence": 0.55
+      }
+    },
+    "series_arc_planner": {
+      "run_id": "run_d23ce73ff8",
+      "arc_node_count": 8
+    },
+    "causal_plot_graph": {
+      "run_id": "run_d23ce73ff8"
+    }
+  },
+  "last_disk_checkpoint_path": "out/gate_test/sessions/backups/run_d23ce73ff8_node_series_arc_planner.json",
+  "seed_contract": {
+    "project_id": "proj_6e5d8df4",
+    "user_prompt": "릴리즈 게이트 생존 검증 씨드",
+    "genre": "general_drama",
+    "genre_secondary": null,
+    "format_type": "screenplay",
+    "target_span": "ep01_ep03_opening",
+    "tone_keywords": [
+      "restrained",
+      "pressure-driven"
+    ],
+    "pdi_baseline": 0.35,
+    "forbidden_rules": [
+      "cheap_cliffhanger",
+      "emotion_explanation",
+      "generic_ai_phrase",
+      "summary_ending"
+    ],
+    "required_objects": [],
+    "core_conflict": "to_be_inferred",
+    "seed_confidence": 0.55
+  },
+  "arc_node_count": 8,
+  "budget_episodes": 0,
+  "knowledge_facts": 0,
+  "status": "runtime_checkpoint",
+  "physics_trace": [],
+  "updated_at": "2026-05-17T05:40:13.179394+00:00",
+  "checkpoint_label": "node_causal_plot_graph"
+}

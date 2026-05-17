@@ -1,0 +1,113 @@
+{
+  "run_id": "run_63b6817128",
+  "project_id": "proj_69f2996e",
+  "started_at": "2026-05-14T04:19:21.040436+00:00",
+  "out_root": "./out",
+  "execution_trace": [
+    "[04:19:21.040] \n[BuildOpeningOrchestrator] run_quick 시작 | mode=quick",
+    "[04:19:21.040] \n[Node_SeedCompiler] compile 시작",
+    "[04:19:21.040]   -> 씨드 컴파일 완료 | project_id=proj_69f2996e",
+    "[04:19:21.040]   -> checkpoint saved: seed_compiler",
+    "[04:19:21.040] \n[Node_StandardLiteraryAnalyzer] analyze 시작",
+    "[04:19:21.088]   -> StandardLiteraryAnalyzer 완료",
+    "[04:19:21.088]   -> checkpoint saved: standard_literary_analyzer",
+    "[04:19:21.089] \n[Node_StyleDNAEngine] style compile 시작",
+    "[04:19:21.089]   -> StyleDNAEngine 완료",
+    "[04:19:21.089]   -> checkpoint saved: style_dna_engine",
+    "[04:19:21.089] \n[Node_V312Bridge] 브릿지 상태 확인 | available=False",
+    "[04:19:21.089]   -> checkpoint saved: v312_bridge_check",
+    "[04:19:21.089] \n[Node_Episode_01] 에피소드 1화 생성 시작",
+    "[04:19:21.089]   -> 에피소드 1화 완료 | coherence_violations=0",
+    "[04:19:21.089]   -> checkpoint saved: episode_01",
+    "[04:19:21.089] \n[Node_Episode_02] 에피소드 2화 생성 시작",
+    "[04:19:21.089]   -> 에피소드 2화 완료 | coherence_violations=0",
+    "[04:19:21.090]   -> checkpoint saved: episode_02",
+    "[04:19:21.090] \n[Node_Episode_03] 에피소드 3화 생성 시작",
+    "[04:19:21.090]   -> 에피소드 3화 완료 | coherence_violations=0",
+    "[04:19:21.090]   -> checkpoint saved: episode_03",
+    "[04:19:21.090] \n[BuildOpeningOrchestrator] run_quick 완료 | episodes=3"
+  ],
+  "last_good_node": "episode_03",
+  "checkpoints": {
+    "seed_compiler": {
+      "run_id": "run_63b6817128",
+      "project_id": "proj_69f2996e",
+      "seed_contract": {
+        "project_id": "proj_69f2996e",
+        "user_prompt": "한국 정치 스릴러 3화 오프닝",
+        "genre": "political_thriller",
+        "genre_secondary": "thriller_suspense",
+        "format_type": "screenplay",
+        "target_span": "ep01_ep03_opening",
+        "tone_keywords": [
+          "restrained",
+          "pressure-driven"
+        ],
+        "pdi_baseline": 0.32,
+        "forbidden_rules": [
+          "cheap_cliffhanger",
+          "emotion_explanation",
+          "generic_ai_phrase",
+          "summary_ending"
+        ],
+        "required_objects": [],
+        "core_conflict": "to_be_inferred",
+        "seed_confidence": 0.75
+      }
+    },
+    "standard_literary_analyzer": {
+      "run_id": "run_63b6817128",
+      "project_id": "proj_69f2996e"
+    },
+    "style_dna_engine": {
+      "run_id": "run_63b6817128",
+      "project_id": "proj_69f2996e"
+    },
+    "v312_bridge_check": {
+      "run_id": "run_63b6817128",
+      "project_id": "proj_69f2996e"
+    },
+    "episode_01": {
+      "run_id": "run_63b6817128",
+      "project_id": "proj_69f2996e"
+    },
+    "episode_02": {
+      "run_id": "run_63b6817128",
+      "project_id": "proj_69f2996e"
+    },
+    "episode_03": {
+      "run_id": "run_63b6817128",
+      "project_id": "proj_69f2996e"
+    }
+  },
+  "last_disk_checkpoint_path": "",
+  "seed_contract": {
+    "project_id": "proj_69f2996e",
+    "user_prompt": "한국 정치 스릴러 3화 오프닝",
+    "genre": "political_thriller",
+    "genre_secondary": "thriller_suspense",
+    "format_type": "screenplay",
+    "target_span": "ep01_ep03_opening",
+    "tone_keywords": [
+      "restrained",
+      "pressure-driven"
+    ],
+    "pdi_baseline": 0.32,
+    "forbidden_rules": [
+      "cheap_cliffhanger",
+      "emotion_explanation",
+      "generic_ai_phrase",
+      "summary_ending"
+    ],
+    "required_objects": [],
+    "core_conflict": "to_be_inferred",
+    "seed_confidence": 0.75
+  },
+  "arc_node_count": 0,
+  "budget_episodes": 0,
+  "knowledge_facts": 0,
+  "status": "completed",
+  "physics_trace": [],
+  "updated_at": "2026-05-14T04:19:21.090493+00:00",
+  "checkpoint_label": "run_quick_completed"
+}

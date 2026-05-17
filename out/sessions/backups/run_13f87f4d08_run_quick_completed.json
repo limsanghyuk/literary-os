@@ -1,0 +1,117 @@
+{
+  "run_id": "run_13f87f4d08",
+  "project_id": "proj_a6141f11",
+  "started_at": "2026-05-13T14:37:17.836482+00:00",
+  "out_root": "./out",
+  "execution_trace": [
+    "[14:37:17.836] \n[BuildOpeningOrchestrator] run_quick 시작 | mode=quick",
+    "[14:37:17.836] \n[Node_SeedCompiler] compile 시작",
+    "[14:37:17.836]   -> 씨드 컴파일 완료 | project_id=proj_a6141f11",
+    "[14:37:17.836]   -> checkpoint saved: seed_compiler",
+    "[14:37:17.836] \n[Node_StandardLiteraryAnalyzer] analyze 시작",
+    "[14:37:17.836]   -> StandardLiteraryAnalyzer 완료",
+    "[14:37:17.836]   -> checkpoint saved: standard_literary_analyzer",
+    "[14:37:17.836] \n[Node_StyleDNAEngine] style compile 시작",
+    "[14:37:17.836]   -> StyleDNAEngine 완료",
+    "[14:37:17.836]   -> checkpoint saved: style_dna_engine",
+    "[14:37:17.837] \n[Node_V312Bridge] 브릿지 상태 확인 | available=False",
+    "[14:37:17.837]   -> checkpoint saved: v312_bridge_check",
+    "[14:37:17.837] \n[Node_Episode_01] 에피소드 1화 생성 시작",
+    "[14:37:17.837]   -> 에피소드 1화 완료 | coherence_violations=0",
+    "[14:37:17.837]   -> checkpoint saved: episode_01",
+    "[14:37:17.837] \n[Node_Episode_02] 에피소드 2화 생성 시작",
+    "[14:37:17.837]   -> 에피소드 2화 완료 | coherence_violations=0",
+    "[14:37:17.837]   -> checkpoint saved: episode_02",
+    "[14:37:17.837] \n[Node_Episode_03] 에피소드 3화 생성 시작",
+    "[14:37:17.837]   -> 에피소드 3화 완료 | coherence_violations=0",
+    "[14:37:17.837]   -> checkpoint saved: episode_03",
+    "[14:37:17.837] \n[BuildOpeningOrchestrator] run_quick 완료 | episodes=3"
+  ],
+  "last_good_node": "episode_03",
+  "checkpoints": {
+    "seed_compiler": {
+      "run_id": "run_13f87f4d08",
+      "project_id": "proj_a6141f11",
+      "seed_contract": {
+        "project_id": "proj_a6141f11",
+        "user_prompt": "낡은 보관함이 나오는 정치 스릴러 3화",
+        "genre": "political_thriller",
+        "genre_secondary": "thriller_suspense",
+        "format_type": "screenplay",
+        "target_span": "ep01_ep03_opening",
+        "tone_keywords": [
+          "restrained",
+          "pressure-driven"
+        ],
+        "pdi_baseline": 0.32,
+        "forbidden_rules": [
+          "cheap_cliffhanger",
+          "emotion_explanation",
+          "generic_ai_phrase",
+          "summary_ending"
+        ],
+        "required_objects": [
+          "보관함"
+        ],
+        "core_conflict": "to_be_inferred",
+        "seed_confidence": 0.75
+      }
+    },
+    "standard_literary_analyzer": {
+      "run_id": "run_13f87f4d08",
+      "project_id": "proj_a6141f11"
+    },
+    "style_dna_engine": {
+      "run_id": "run_13f87f4d08",
+      "project_id": "proj_a6141f11"
+    },
+    "v312_bridge_check": {
+      "run_id": "run_13f87f4d08",
+      "project_id": "proj_a6141f11"
+    },
+    "episode_01": {
+      "run_id": "run_13f87f4d08",
+      "project_id": "proj_a6141f11"
+    },
+    "episode_02": {
+      "run_id": "run_13f87f4d08",
+      "project_id": "proj_a6141f11"
+    },
+    "episode_03": {
+      "run_id": "run_13f87f4d08",
+      "project_id": "proj_a6141f11"
+    }
+  },
+  "last_disk_checkpoint_path": "",
+  "seed_contract": {
+    "project_id": "proj_a6141f11",
+    "user_prompt": "낡은 보관함이 나오는 정치 스릴러 3화",
+    "genre": "political_thriller",
+    "genre_secondary": "thriller_suspense",
+    "format_type": "screenplay",
+    "target_span": "ep01_ep03_opening",
+    "tone_keywords": [
+      "restrained",
+      "pressure-driven"
+    ],
+    "pdi_baseline": 0.32,
+    "forbidden_rules": [
+      "cheap_cliffhanger",
+      "emotion_explanation",
+      "generic_ai_phrase",
+      "summary_ending"
+    ],
+    "required_objects": [
+      "보관함"
+    ],
+    "core_conflict": "to_be_inferred",
+    "seed_confidence": 0.75
+  },
+  "arc_node_count": 0,
+  "budget_episodes": 0,
+  "knowledge_facts": 0,
+  "status": "completed",
+  "physics_trace": [],
+  "updated_at": "2026-05-13T14:37:17.837891+00:00",
+  "checkpoint_label": "run_quick_completed"
+}

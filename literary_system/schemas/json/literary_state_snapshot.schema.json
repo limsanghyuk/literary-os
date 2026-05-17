@@ -1,0 +1,41 @@
+{
+  "$id": "literary_state_snapshot.schema.json",
+  "type": "object",
+  "required": [
+    "SP",
+    "RU",
+    "ET",
+    "RD",
+    "RT",
+    "AC",
+    "RO",
+    "MR"
+  ],
+  "properties": {
+    "SP": {
+      "type": "number"
+    },
+    "RU": {
+      "type": "number"
+    },
+    "ET": {
+      "type": "number"
+    },
+    "RD": {
+      "type": "object"
+    },
+    "RT": {
+      "type": "number"
+    },
+    "AC": {
+      "type": "number"
+    },
+    "RO": {
+      "type": "number"
+    },
+    "MR": {
+      "type": "number"
+    }
+  },
+  "additionalProperties": true
+}

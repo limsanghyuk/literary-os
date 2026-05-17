@@ -1,0 +1,25 @@
+{
+  "$id": "final_acceptance_packet.schema.json",
+  "type": "object",
+  "required": [
+    "bundle_id",
+    "release_decision",
+    "fewshot_promotion_decision",
+    "graph_write_mode"
+  ],
+  "properties": {
+    "bundle_id": {
+      "type": "string"
+    },
+    "release_decision": {
+      "type": "string"
+    },
+    "fewshot_promotion_decision": {
+      "type": "string"
+    },
+    "graph_write_mode": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

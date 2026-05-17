@@ -1,0 +1,79 @@
+{
+  "run_id": "run_f83b6b902c",
+  "project_id": "proj_32128d1e",
+  "started_at": "2026-05-15T11:42:51.508427+00:00",
+  "out_root": "./out/gate_test",
+  "execution_trace": [
+    "[11:42:51.508] \n[Pipeline] Literary OS V382 최소 파이프라인 시작 | seed='릴리즈 게이트 생존 검증 씨드' | episodes=2 | run_id=run_f83b6b902c",
+    "[11:42:51.508] \n[Node_SeedCompiler] compile 시작",
+    "[11:42:51.508]   -> 씨드 컴파일 완료 | project_id=proj_32128d1e",
+    "[11:42:51.508]   -> checkpoint saved: seed_compiler",
+    "[11:42:51.511]   -> disk autosave: run_f83b6b902c_node_seed_compiler.json",
+    "[11:42:51.511] \n[Node_SeriesArcPlanner] plan() 실행",
+    "[11:42:51.511]   -> 아크 플랜 완료 | nodes=8",
+    "[11:42:51.511]   -> checkpoint saved: series_arc_planner"
+  ],
+  "last_good_node": "series_arc_planner",
+  "checkpoints": {
+    "seed_compiler": {
+      "run_id": "run_f83b6b902c",
+      "project_id": "proj_32128d1e",
+      "seed_contract": {
+        "project_id": "proj_32128d1e",
+        "user_prompt": "릴리즈 게이트 생존 검증 씨드",
+        "genre": "general_drama",
+        "genre_secondary": null,
+        "format_type": "screenplay",
+        "target_span": "ep01_ep03_opening",
+        "tone_keywords": [
+          "restrained",
+          "pressure-driven"
+        ],
+        "pdi_baseline": 0.35,
+        "forbidden_rules": [
+          "cheap_cliffhanger",
+          "emotion_explanation",
+          "generic_ai_phrase",
+          "summary_ending"
+        ],
+        "required_objects": [],
+        "core_conflict": "to_be_inferred",
+        "seed_confidence": 0.55
+      }
+    },
+    "series_arc_planner": {
+      "run_id": "run_f83b6b902c",
+      "arc_node_count": 8
+    }
+  },
+  "last_disk_checkpoint_path": "out/gate_test/sessions/backups/run_f83b6b902c_node_seed_compiler.json",
+  "seed_contract": {
+    "project_id": "proj_32128d1e",
+    "user_prompt": "릴리즈 게이트 생존 검증 씨드",
+    "genre": "general_drama",
+    "genre_secondary": null,
+    "format_type": "screenplay",
+    "target_span": "ep01_ep03_opening",
+    "tone_keywords": [
+      "restrained",
+      "pressure-driven"
+    ],
+    "pdi_baseline": 0.35,
+    "forbidden_rules": [
+      "cheap_cliffhanger",
+      "emotion_explanation",
+      "generic_ai_phrase",
+      "summary_ending"
+    ],
+    "required_objects": [],
+    "core_conflict": "to_be_inferred",
+    "seed_confidence": 0.55
+  },
+  "arc_node_count": 8,
+  "budget_episodes": 0,
+  "knowledge_facts": 0,
+  "status": "runtime_checkpoint",
+  "physics_trace": [],
+  "updated_at": "2026-05-15T11:42:51.512112+00:00",
+  "checkpoint_label": "node_series_arc_planner"
+}

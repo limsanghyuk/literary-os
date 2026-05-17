@@ -1,0 +1,71 @@
+{
+  "run_id": "run_bc1d2cc67d",
+  "project_id": "proj_8e9e6f50",
+  "started_at": "2026-05-17T05:30:14.873727+00:00",
+  "out_root": "./out/gate_test",
+  "execution_trace": [
+    "[05:30:14.873] \n[Pipeline] Literary OS V382 최소 파이프라인 시작 | seed='릴리즈 게이트 생존 검증 씨드' | episodes=2 | run_id=run_bc1d2cc67d",
+    "[05:30:14.873] \n[Node_SeedCompiler] compile 시작",
+    "[05:30:14.873]   -> 씨드 컴파일 완료 | project_id=proj_8e9e6f50",
+    "[05:30:14.873]   -> checkpoint saved: seed_compiler"
+  ],
+  "last_good_node": "seed_compiler",
+  "checkpoints": {
+    "seed_compiler": {
+      "run_id": "run_bc1d2cc67d",
+      "project_id": "proj_8e9e6f50",
+      "seed_contract": {
+        "project_id": "proj_8e9e6f50",
+        "user_prompt": "릴리즈 게이트 생존 검증 씨드",
+        "genre": "general_drama",
+        "genre_secondary": null,
+        "format_type": "screenplay",
+        "target_span": "ep01_ep03_opening",
+        "tone_keywords": [
+          "restrained",
+          "pressure-driven"
+        ],
+        "pdi_baseline": 0.35,
+        "forbidden_rules": [
+          "cheap_cliffhanger",
+          "emotion_explanation",
+          "generic_ai_phrase",
+          "summary_ending"
+        ],
+        "required_objects": [],
+        "core_conflict": "to_be_inferred",
+        "seed_confidence": 0.55
+      }
+    }
+  },
+  "last_disk_checkpoint_path": "",
+  "seed_contract": {
+    "project_id": "proj_8e9e6f50",
+    "user_prompt": "릴리즈 게이트 생존 검증 씨드",
+    "genre": "general_drama",
+    "genre_secondary": null,
+    "format_type": "screenplay",
+    "target_span": "ep01_ep03_opening",
+    "tone_keywords": [
+      "restrained",
+      "pressure-driven"
+    ],
+    "pdi_baseline": 0.35,
+    "forbidden_rules": [
+      "cheap_cliffhanger",
+      "emotion_explanation",
+      "generic_ai_phrase",
+      "summary_ending"
+    ],
+    "required_objects": [],
+    "core_conflict": "to_be_inferred",
+    "seed_confidence": 0.55
+  },
+  "arc_node_count": 0,
+  "budget_episodes": 0,
+  "knowledge_facts": 0,
+  "status": "runtime_checkpoint",
+  "physics_trace": [],
+  "updated_at": "2026-05-17T05:30:14.873928+00:00",
+  "checkpoint_label": "node_seed_compiler"
+}

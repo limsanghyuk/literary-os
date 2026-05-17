@@ -1,0 +1,113 @@
+{
+  "run_id": "run_31298796b7",
+  "project_id": "proj_dbde42a4",
+  "started_at": "2026-05-14T02:58:38.280732+00:00",
+  "out_root": "./out",
+  "execution_trace": [
+    "[02:58:38.280] \n[BuildOpeningOrchestrator] run_quick 시작 | mode=quick",
+    "[02:58:38.280] \n[Node_SeedCompiler] compile 시작",
+    "[02:58:38.280]   -> 씨드 컴파일 완료 | project_id=proj_dbde42a4",
+    "[02:58:38.280]   -> checkpoint saved: seed_compiler",
+    "[02:58:38.280] \n[Node_StandardLiteraryAnalyzer] analyze 시작",
+    "[02:58:38.281]   -> StandardLiteraryAnalyzer 완료",
+    "[02:58:38.281]   -> checkpoint saved: standard_literary_analyzer",
+    "[02:58:38.281] \n[Node_StyleDNAEngine] style compile 시작",
+    "[02:58:38.281]   -> StyleDNAEngine 완료",
+    "[02:58:38.281]   -> checkpoint saved: style_dna_engine",
+    "[02:58:38.281] \n[Node_V312Bridge] 브릿지 상태 확인 | available=False",
+    "[02:58:38.281]   -> checkpoint saved: v312_bridge_check",
+    "[02:58:38.281] \n[Node_Episode_01] 에피소드 1화 생성 시작",
+    "[02:58:38.281]   -> 에피소드 1화 완료 | coherence_violations=0",
+    "[02:58:38.281]   -> checkpoint saved: episode_01",
+    "[02:58:38.281] \n[Node_Episode_02] 에피소드 2화 생성 시작",
+    "[02:58:38.281]   -> 에피소드 2화 완료 | coherence_violations=0",
+    "[02:58:38.282]   -> checkpoint saved: episode_02",
+    "[02:58:38.282] \n[Node_Episode_03] 에피소드 3화 생성 시작",
+    "[02:58:38.282]   -> 에피소드 3화 완료 | coherence_violations=0",
+    "[02:58:38.282]   -> checkpoint saved: episode_03",
+    "[02:58:38.282] \n[BuildOpeningOrchestrator] run_quick 완료 | episodes=3"
+  ],
+  "last_good_node": "episode_03",
+  "checkpoints": {
+    "seed_compiler": {
+      "run_id": "run_31298796b7",
+      "project_id": "proj_dbde42a4",
+      "seed_contract": {
+        "project_id": "proj_dbde42a4",
+        "user_prompt": "느와르 범죄 드라마 3화",
+        "genre": "noir_crime",
+        "genre_secondary": null,
+        "format_type": "screenplay",
+        "target_span": "ep01_ep03_opening",
+        "tone_keywords": [
+          "restrained",
+          "pressure-driven"
+        ],
+        "pdi_baseline": 0.3,
+        "forbidden_rules": [
+          "cheap_cliffhanger",
+          "emotion_explanation",
+          "generic_ai_phrase",
+          "summary_ending"
+        ],
+        "required_objects": [],
+        "core_conflict": "to_be_inferred",
+        "seed_confidence": 0.65
+      }
+    },
+    "standard_literary_analyzer": {
+      "run_id": "run_31298796b7",
+      "project_id": "proj_dbde42a4"
+    },
+    "style_dna_engine": {
+      "run_id": "run_31298796b7",
+      "project_id": "proj_dbde42a4"
+    },
+    "v312_bridge_check": {
+      "run_id": "run_31298796b7",
+      "project_id": "proj_dbde42a4"
+    },
+    "episode_01": {
+      "run_id": "run_31298796b7",
+      "project_id": "proj_dbde42a4"
+    },
+    "episode_02": {
+      "run_id": "run_31298796b7",
+      "project_id": "proj_dbde42a4"
+    },
+    "episode_03": {
+      "run_id": "run_31298796b7",
+      "project_id": "proj_dbde42a4"
+    }
+  },
+  "last_disk_checkpoint_path": "",
+  "seed_contract": {
+    "project_id": "proj_dbde42a4",
+    "user_prompt": "느와르 범죄 드라마 3화",
+    "genre": "noir_crime",
+    "genre_secondary": null,
+    "format_type": "screenplay",
+    "target_span": "ep01_ep03_opening",
+    "tone_keywords": [
+      "restrained",
+      "pressure-driven"
+    ],
+    "pdi_baseline": 0.3,
+    "forbidden_rules": [
+      "cheap_cliffhanger",
+      "emotion_explanation",
+      "generic_ai_phrase",
+      "summary_ending"
+    ],
+    "required_objects": [],
+    "core_conflict": "to_be_inferred",
+    "seed_confidence": 0.65
+  },
+  "arc_node_count": 0,
+  "budget_episodes": 0,
+  "knowledge_facts": 0,
+  "status": "completed",
+  "physics_trace": [],
+  "updated_at": "2026-05-14T02:58:38.282244+00:00",
+  "checkpoint_label": "run_quick_completed"
+}

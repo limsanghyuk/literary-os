@@ -1,0 +1,111 @@
+{
+  "run_id": "run_361a33d445",
+  "project_id": "proj_c9540f94",
+  "started_at": "2026-05-15T08:43:18.722295+00:00",
+  "out_root": "./out/gate_test",
+  "execution_trace": [
+    "[08:43:18.722] \n[Pipeline] Literary OS V382 최소 파이프라인 시작 | seed='릴리즈 게이트 생존 검증 씨드' | episodes=2 | run_id=run_361a33d445",
+    "[08:43:18.722] \n[Node_SeedCompiler] compile 시작",
+    "[08:43:18.722]   -> 씨드 컴파일 완료 | project_id=proj_c9540f94",
+    "[08:43:18.722]   -> checkpoint saved: seed_compiler",
+    "[08:43:18.725]   -> disk autosave: run_361a33d445_node_seed_compiler.json",
+    "[08:43:18.725] \n[Node_SeriesArcPlanner] plan() 실행",
+    "[08:43:18.726]   -> 아크 플랜 완료 | nodes=8",
+    "[08:43:18.726]   -> checkpoint saved: series_arc_planner",
+    "[08:43:18.728]   -> disk autosave: run_361a33d445_node_series_arc_planner.json",
+    "[08:43:18.728] \n[Node_CausalPlotGraph] 인과율 그래프 초기화",
+    "[08:43:18.728]   -> 인과 그래프 초기화 완료 | nodes=1",
+    "[08:43:18.728]   -> checkpoint saved: causal_plot_graph",
+    "[08:43:18.730]   -> disk autosave: run_361a33d445_node_causal_plot_graph.json",
+    "[08:43:18.730] \n[Node_EpisodeRevealBudget] 공개 예산 설정",
+    "[08:43:18.730]   -> 2화 예산 정책 설정 완료",
+    "[08:43:18.730]   -> checkpoint saved: episode_reveal_budget",
+    "[08:43:18.733]   -> disk autosave: run_361a33d445_node_episode_reveal_budget.json",
+    "[08:43:18.733] \n[Node_KnowledgeStateTracker] 지식 상태 초기화",
+    "[08:43:18.733]   -> 지식 상태 초기화 완료 | facts=1",
+    "[08:43:18.733]   -> checkpoint saved: knowledge_state_tracker",
+    "[08:43:18.737]   -> disk autosave: run_361a33d445_node_knowledge_state_tracker.json",
+    "[08:43:18.737] \n[Node_CharacterKnowledgeProseBridge] 산문 브릿지 연결",
+    "[08:43:18.737]   -> 산문 브릿지 연결 완료",
+    "[08:43:18.737]   -> checkpoint saved: character_knowledge_prose_bridge",
+    "[08:43:18.740]   -> disk autosave: run_361a33d445_node_character_knowledge_prose_bridge.json",
+    "[08:43:18.741] \n[Pipeline] 완료 | executed_nodes=6 | trace_entries=25"
+  ],
+  "last_good_node": "character_knowledge_prose_bridge",
+  "checkpoints": {
+    "seed_compiler": {
+      "run_id": "run_361a33d445",
+      "project_id": "proj_c9540f94",
+      "seed_contract": {
+        "project_id": "proj_c9540f94",
+        "user_prompt": "릴리즈 게이트 생존 검증 씨드",
+        "genre": "general_drama",
+        "genre_secondary": null,
+        "format_type": "screenplay",
+        "target_span": "ep01_ep03_opening",
+        "tone_keywords": [
+          "restrained",
+          "pressure-driven"
+        ],
+        "pdi_baseline": 0.35,
+        "forbidden_rules": [
+          "cheap_cliffhanger",
+          "emotion_explanation",
+          "generic_ai_phrase",
+          "summary_ending"
+        ],
+        "required_objects": [],
+        "core_conflict": "to_be_inferred",
+        "seed_confidence": 0.55
+      }
+    },
+    "series_arc_planner": {
+      "run_id": "run_361a33d445",
+      "arc_node_count": 8
+    },
+    "causal_plot_graph": {
+      "run_id": "run_361a33d445"
+    },
+    "episode_reveal_budget": {
+      "run_id": "run_361a33d445",
+      "budget_episodes": 2
+    },
+    "knowledge_state_tracker": {
+      "run_id": "run_361a33d445",
+      "knowledge_facts": 1
+    },
+    "character_knowledge_prose_bridge": {
+      "run_id": "run_361a33d445"
+    }
+  },
+  "last_disk_checkpoint_path": "out/gate_test/sessions/backups/run_361a33d445_node_character_knowledge_prose_bridge.json",
+  "seed_contract": {
+    "project_id": "proj_c9540f94",
+    "user_prompt": "릴리즈 게이트 생존 검증 씨드",
+    "genre": "general_drama",
+    "genre_secondary": null,
+    "format_type": "screenplay",
+    "target_span": "ep01_ep03_opening",
+    "tone_keywords": [
+      "restrained",
+      "pressure-driven"
+    ],
+    "pdi_baseline": 0.35,
+    "forbidden_rules": [
+      "cheap_cliffhanger",
+      "emotion_explanation",
+      "generic_ai_phrase",
+      "summary_ending"
+    ],
+    "required_objects": [],
+    "core_conflict": "to_be_inferred",
+    "seed_confidence": 0.55
+  },
+  "arc_node_count": 8,
+  "budget_episodes": 2,
+  "knowledge_facts": 1,
+  "status": "completed",
+  "physics_trace": [],
+  "updated_at": "2026-05-15T08:43:18.741163+00:00",
+  "checkpoint_label": "pipeline_completed"
+}

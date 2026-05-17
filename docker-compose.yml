@@ -1,0 +1,61 @@
+# Literary OS Studio — V430 Docker Compose
+# 개발/테스트: docker compose up
+# 프로덕션: LITERARY_OS_DEV_MODE=false docker compose up
+
+version: "3.9"
+
+services:
+  studio-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: literary-studio-api
+    ports:
+      - "8000:8000"   # FastAPI
+      - "9090:9090"   # Prometheus metrics
+    environment:
+      # V430: DEV_MODE 명시 설정 (기본 false — 프로덕션)
+      LITERARY_OS_DEV_MODE: "${LITERARY_OS_DEV_MODE:-false}"
+      LITERARY_OS_LOCALE: "${LITERARY_OS_LOCALE:-ko}"
+      LITERARY_OS_COST_BUDGET_USD: "${LITERARY_OS_COST_BUDGET_USD:-100.0}"
+      OAUTH_ISSUER: "${OAUTH_ISSUER:-https://auth.literary-os.dev}"
+      OAUTH_AUDIENCE: "${OAUTH_AUDIENCE:-literary-os-api}"
+      OTEL_EXPORTER_OTLP_ENDPOINT: "${OTEL_EXPORTER_OTLP_ENDPOINT:-}"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    restart: unless-stopped
+
+  # 개발 환경: DEV_MODE=true, 코드 마운트
+  studio-api-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: literary-studio-dev
+    ports:
+      - "8001:8000"
+    environment:
+      LITERARY_OS_DEV_MODE: "true"
+      LITERARY_OS_LOCALE: "ko"
+    volumes:
+      - .:/app
+    command: >
+      python -m uvicorn apps.studio_api.main:create_app
+      --factory --host 0.0.0.0 --port 8000
+      --reload --log-level debug
+    profiles:
+      - dev
+
+  # OTel Collector (선택적)
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.96.0
+    container_name: literary-otel
+    ports:
+      - "4317:4317"   # OTLP gRPC
+      - "4318:4318"   # OTLP HTTP
+    profiles:
+      - observability
+    restart: unless-stopped

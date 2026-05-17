@@ -1,0 +1,24 @@
+{
+  "$id": "critic_decision_packet.schema.json",
+  "type": "object",
+  "required": [
+    "pattern_codes",
+    "loss_report",
+    "decision"
+  ],
+  "properties": {
+    "pattern_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "loss_report": {
+      "type": "object"
+    },
+    "decision": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

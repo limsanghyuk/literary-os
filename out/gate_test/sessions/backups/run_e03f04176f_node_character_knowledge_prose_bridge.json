@@ -1,0 +1,109 @@
+{
+  "run_id": "run_e03f04176f",
+  "project_id": "proj_baa9f4ee",
+  "started_at": "2026-05-15T08:43:10.896878+00:00",
+  "out_root": "./out/gate_test",
+  "execution_trace": [
+    "[08:43:10.896] \n[Pipeline] Literary OS V382 최소 파이프라인 시작 | seed='릴리즈 게이트 생존 검증 씨드' | episodes=2 | run_id=run_e03f04176f",
+    "[08:43:10.896] \n[Node_SeedCompiler] compile 시작",
+    "[08:43:10.896]   -> 씨드 컴파일 완료 | project_id=proj_baa9f4ee",
+    "[08:43:10.896]   -> checkpoint saved: seed_compiler",
+    "[08:43:10.901]   -> disk autosave: run_e03f04176f_node_seed_compiler.json",
+    "[08:43:10.901] \n[Node_SeriesArcPlanner] plan() 실행",
+    "[08:43:10.901]   -> 아크 플랜 완료 | nodes=8",
+    "[08:43:10.901]   -> checkpoint saved: series_arc_planner",
+    "[08:43:10.905]   -> disk autosave: run_e03f04176f_node_series_arc_planner.json",
+    "[08:43:10.905] \n[Node_CausalPlotGraph] 인과율 그래프 초기화",
+    "[08:43:10.905]   -> 인과 그래프 초기화 완료 | nodes=1",
+    "[08:43:10.905]   -> checkpoint saved: causal_plot_graph",
+    "[08:43:10.909]   -> disk autosave: run_e03f04176f_node_causal_plot_graph.json",
+    "[08:43:10.909] \n[Node_EpisodeRevealBudget] 공개 예산 설정",
+    "[08:43:10.909]   -> 2화 예산 정책 설정 완료",
+    "[08:43:10.909]   -> checkpoint saved: episode_reveal_budget",
+    "[08:43:10.913]   -> disk autosave: run_e03f04176f_node_episode_reveal_budget.json",
+    "[08:43:10.913] \n[Node_KnowledgeStateTracker] 지식 상태 초기화",
+    "[08:43:10.913]   -> 지식 상태 초기화 완료 | facts=1",
+    "[08:43:10.913]   -> checkpoint saved: knowledge_state_tracker",
+    "[08:43:10.916]   -> disk autosave: run_e03f04176f_node_knowledge_state_tracker.json",
+    "[08:43:10.916] \n[Node_CharacterKnowledgeProseBridge] 산문 브릿지 연결",
+    "[08:43:10.916]   -> 산문 브릿지 연결 완료",
+    "[08:43:10.916]   -> checkpoint saved: character_knowledge_prose_bridge"
+  ],
+  "last_good_node": "character_knowledge_prose_bridge",
+  "checkpoints": {
+    "seed_compiler": {
+      "run_id": "run_e03f04176f",
+      "project_id": "proj_baa9f4ee",
+      "seed_contract": {
+        "project_id": "proj_baa9f4ee",
+        "user_prompt": "릴리즈 게이트 생존 검증 씨드",
+        "genre": "general_drama",
+        "genre_secondary": null,
+        "format_type": "screenplay",
+        "target_span": "ep01_ep03_opening",
+        "tone_keywords": [
+          "restrained",
+          "pressure-driven"
+        ],
+        "pdi_baseline": 0.35,
+        "forbidden_rules": [
+          "cheap_cliffhanger",
+          "emotion_explanation",
+          "generic_ai_phrase",
+          "summary_ending"
+        ],
+        "required_objects": [],
+        "core_conflict": "to_be_inferred",
+        "seed_confidence": 0.55
+      }
+    },
+    "series_arc_planner": {
+      "run_id": "run_e03f04176f",
+      "arc_node_count": 8
+    },
+    "causal_plot_graph": {
+      "run_id": "run_e03f04176f"
+    },
+    "episode_reveal_budget": {
+      "run_id": "run_e03f04176f",
+      "budget_episodes": 2
+    },
+    "knowledge_state_tracker": {
+      "run_id": "run_e03f04176f",
+      "knowledge_facts": 1
+    },
+    "character_knowledge_prose_bridge": {
+      "run_id": "run_e03f04176f"
+    }
+  },
+  "last_disk_checkpoint_path": "out/gate_test/sessions/backups/run_e03f04176f_node_knowledge_state_tracker.json",
+  "seed_contract": {
+    "project_id": "proj_baa9f4ee",
+    "user_prompt": "릴리즈 게이트 생존 검증 씨드",
+    "genre": "general_drama",
+    "genre_secondary": null,
+    "format_type": "screenplay",
+    "target_span": "ep01_ep03_opening",
+    "tone_keywords": [
+      "restrained",
+      "pressure-driven"
+    ],
+    "pdi_baseline": 0.35,
+    "forbidden_rules": [
+      "cheap_cliffhanger",
+      "emotion_explanation",
+      "generic_ai_phrase",
+      "summary_ending"
+    ],
+    "required_objects": [],
+    "core_conflict": "to_be_inferred",
+    "seed_confidence": 0.55
+  },
+  "arc_node_count": 8,
+  "budget_episodes": 2,
+  "knowledge_facts": 1,
+  "status": "runtime_checkpoint",
+  "physics_trace": [],
+  "updated_at": "2026-05-15T08:43:10.917296+00:00",
+  "checkpoint_label": "node_character_knowledge_prose_bridge"
+}

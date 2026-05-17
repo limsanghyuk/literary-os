@@ -1,0 +1,61 @@
+{
+  "schema_version": "adapter_spec_v1",
+  "name": "default_creator_project_spec",
+  "description": "Default spec for creative-project package ingestion into the standard literary analyzer.",
+  "engine_compat": {"min": "v3", "recommended": "v5"},
+  "file_slots": {
+    "project_context": ["project_context.json", "project.json"],
+    "constitution": ["constitution.json", "format_constitution.json", "engine_constitution.json"],
+    "characters": ["characters.json", "cast.json"],
+    "scenes": ["scenes.json", "scene_plan.json", "beats.json"],
+    "raw_inputs": ["raw_inputs.json"],
+    "seed": ["seed.md", "seed.txt", "master_seed.md", "master_seed.txt"]
+  },
+  "required_slots": [],
+  "context_aliases": {
+    "projectId": "project_id",
+    "projectMode": "project_mode",
+    "mediaType": "media_type",
+    "masterSeed": "master_seed",
+    "episodeRuntimeMin": "episode_runtime_min",
+    "totalEpisodes": "total_episode_count",
+    "actBundleSize": "act_bundle_size",
+    "pdiProfile": "pdi_profile",
+    "authorialProfileHint": "authorial_profile_hint",
+    "kHybridBias": "k_hybrid_bias",
+    "criticPatternCodes": "critic_pattern_codes",
+    "fewshotPromotionDecision": "fewshot_promotion_decision"
+  },
+  "character_field_aliases": {
+    "id": "character_id",
+    "name": "display_name",
+    "role": "role_type",
+    "pressureTarget": "pressure_target",
+    "memoryWeight": "memory_weight",
+    "entryAct": "entry_act",
+    "entryTrigger": "entry_trigger",
+    "exitCondition": "exit_condition",
+    "residueBinding": "residue_binding",
+    "actEvolution": "act_evolution"
+  },
+  "scene_field_aliases": {
+    "id": "scene_id",
+    "goal": "scene_goal",
+    "focus": "scene_focus",
+    "characters": "active_characters",
+    "tensionAxes": "active_tension_axes",
+    "bundleId": "bundle_id",
+    "rawText": "raw_text",
+    "sceneText": "scene_text",
+    "continuityNotes": "continuity_notes",
+    "continuityRisks": "continuity_risks"
+  },
+  "input_folder_rules": [
+    {"folder": "sources", "default_kind": "canon", "extensions": [".txt", ".md", ".json"]},
+    {"folder": "notes", "default_kind": "project_doc", "extensions": [".txt", ".md", ".json"]}
+  ],
+  "extension_packet_folders": ["packets", "extensions"],
+  "packet_slot_map": {},
+  "merge_order": ["constitution", "project_context"],
+  "local_spec_candidates": ["adapter_spec.json", "adapter.spec.json"]
+}
