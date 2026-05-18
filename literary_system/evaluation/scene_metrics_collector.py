@@ -10,7 +10,13 @@ V324 - SceneMetricsCollector  (Phase 2)
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any
+from typing import Any, Dict, Optional
+
+try:
+    from literary_system.trajectory.reader_simulator import ReaderSimulator
+    _READER_SIM_AVAILABLE = True
+except ImportError:
+    _READER_SIM_AVAILABLE = False
 
 
 @dataclass
@@ -217,3 +223,39 @@ class SceneMetricsCollector:
             return 1.0 - (contradiction / total_edges)
         except Exception:
             return 1.0
+
+    def collect_batch(
+        self,
+        scene_texts: Dict[str, str],
+        literary_state_before: Optional[Dict[str, float]] = None,
+    ) -> Dict[str, "SceneMetrics"]:
+        """
+        V556: 복수 씬 일괄 수집 — ReaderSimulator.estimate_batch() 직접 사용.
+
+        Parameters
+        ----------
+        scene_texts : {scene_id: text}
+        literary_state_before : 이전 문학 상태 (선택)
+
+        Returns
+        -------
+        {scene_id: SceneMetrics}
+        """
+        if not scene_texts:
+            return {}
+
+        if _READER_SIM_AVAILABLE:
+            sim = ReaderSimulator()
+            estimates = sim.estimate_batch(scene_texts, literary_state_before)
+            return {
+                sid: SceneMetrics.compute(
+                    scene_id=sid,
+                    reader_pull=est.reader_pull,
+                    reader_afterimage=est.reader_afterimage,
+                    reader_uncertainty=est.reader_uncertainty,
+                )
+                for sid, est in estimates.items()
+            }
+        # fallback: 개별 collect
+        return {sid: self.collect(sid, text) for sid, text in scene_texts.items()}
+

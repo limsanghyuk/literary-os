@@ -9,6 +9,9 @@ from typing import Any, Dict, List, Optional
 from literary_system.episode.episode_state import SeriesConfig, NarrativeStateTensor
 from literary_system.episode.episode_planner import EpisodePlanner
 from literary_system.episode.microplot_matrix import MicroPlotMatrix
+from literary_system.longform.fractal_plot_tree import (
+    FractalPlotTreeBuilder, FractalPlotTree, FractalTreeConfig,
+)
 from literary_system.longform.fractal_topology import (
     FractalTopologyValidator, FractalReport
 )
@@ -49,6 +52,7 @@ class EnduranceRunReport:
     episode_count: int
     microplot_matrix: Optional[MicroPlotMatrix] = None
     fractal_report: Optional[FractalReport] = None
+    fractal_tree: Optional[FractalPlotTree] = None  # V556: FractalPlotTreeBuilder 연결
     load_report: Optional[LoadBalanceReport] = None
     agency_report: Optional[AgencyReport] = None
     debt_ledger: Optional[PayoffDebtLedger] = None
@@ -105,6 +109,14 @@ class LongformEnduranceOrchestrator:
         fractal_report = FractalTopologyValidator().validate(fractal_units)
         report.fractal_report = fractal_report
         report.add_trace(f"FractalTopology: orphan={fractal_report.orphan_microplot_count} pass={fractal_report.pass_gate}")
+
+        # V556: FractalPlotTreeBuilder.build() — 실제 프랙탈 트리 생성
+        tree_config = FractalTreeConfig(
+            total_episodes=n,
+            microplots_per_episode=int(matrix.summary().get('k_avg', 4)) if matrix else 4,
+        )
+        report.fractal_tree = FractalPlotTreeBuilder().build(tree_config)
+        report.add_trace(f"FractalPlotTree: depth={report.fractal_tree.config.max_depth} units={len(report.fractal_tree.all_units)}")
 
         # ── 3. Dramatic Load Balancing ─────────────────────────────────
         ep_loads = [

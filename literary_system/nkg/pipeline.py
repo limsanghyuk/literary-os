@@ -248,6 +248,13 @@ class NKGPipeline:
             except Exception as e:
                 ctx["_emotional_error"] = str(e)
 
+            # V556: compute_ev_delta — link() 성공 여부와 무관하게 ev 속성 기반 계산
+            if len(nodes) >= 2 and hasattr(nodes[0], 'ev') and hasattr(nodes[1], 'ev'):
+                ev_delta = self._emo_linker.compute_ev_delta(
+                    nodes[0].ev, nodes[1].ev
+                )
+                ctx["_ev_delta"] = ev_delta
+
         ctx["_emotional_edges"] = edges_added
 
     def _phase_commit(self, ctx: Dict, _: Dict) -> None:

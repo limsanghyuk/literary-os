@@ -1,101 +1,168 @@
-# Literary OS V382 — 개발자 컨텍스트
+# Literary OS V571 — 개발자 컨텍스트
 
 ## 빠른 시작
 
 ```bash
 pip install -e ".[dev]"
-pytest tests/ -q                     # → 2015 passed
-python tools/run_release_gate.py     # → {"status": "pass", "gates_passed": 5}
-python tools/run_runtime_smoke.py    # → 6/6 ok
+pytest tests/ -q                         # → 5456 passed, 20 skipped
+python literary_system/gates/release_gate.py  # → {"status": "pass", "gates_passed": 30}
 ```
 
 ## 핵심 설계 원칙
 
-**LLM-0**: 복선/지식/아크 계산은 모두 로컬. LLM은 산문 생성에만 선택적으로 호출.
+**LLM-0** (ADR-015/031): `graph_intelligence/`, `predictive/`, `corpus/`, `multiwork/` — 외부 LLM 호출 0건. LLM은 산문 생성에만 선택적 호출.
 
-**V312 연결**: `SOVEREIGN_BACKEND_PATH` 환경변수로 외부 V312 엔진 연결 가능.
-미설정 시 design-layer-only 모드로 동작 (graceful fallback).
+**Thread-safety**: 모든 multiwork 클래스는 `threading.RLock` 사용.
 
-```bash
-export SOVEREIGN_BACKEND_PATH=/path/to/SOVEREIGN_OS_V312/backend
+**CIM 수식**: `W[i][j] = 1 − exp(−0.95 × count)`
+
+**GenreTransfer 수식**: `transferred[k] = (1−α) × target[k] + α × source[k]`
+
+## 버전 계보 (Phase별 요약)
+
+| 버전 범위 | 핵심 추가 |
+|-----------|-----------|
+| V327~V400 | 코어 파이프라인, NKG, GDAP, LLMNodeRouter, Episode, FullSceneOrchestrator |
+| V411~V480 | StudioAPI v2, OAuth, OTel, RAG, Compliance(SP3), FineTune(SP4), ScaleOps(SP5) |
+| V481~V497 | Hotfix, EpisodeStructure, RealLLM어댑터, DramaEpisodeGenerator, TrainingData |
+| V498~V525 | NIE v2.0 — PhysicsReward, CIM, SparseCIM, NIL루프, Gate25 |
+| V526~V540 | GIG — NarrativeGraph, CodeDependencyGraph, PlanBuildProtocol, Gate26/27 |
+| V541~V545 | ASD — NarrativeDebt, ArcConsistency, StoryDoctor, AutoRepair, Gate28 |
+| V546~V555 | PNE — PNECore, DebtPredictor, PreemptiveGate, FeedbackLearner, Gate29 |
+| V556~V560 | Corpus — ExternalCorpusBridge, BGEM3Embedder, CIMBootstrap, Gate30 |
+| **V562~V571** | **MultiWork Stage C — 7모듈 + Gate31 (현재 최신)** |
+
+## GitNexus 인덱스 현황 (V571 AST 분석 기준)
+
+```
+literary_system/ 서브패키지: 59개
+소스 파일 (non-test): 466개
+클래스 심볼:        1,016개
+임포트 엣지:        4,111개
+릴리즈 게이트:       30/30 PASS
+테스트:           5,456 PASS
 ```
 
-## 계보 (V313 → V381)
+> GitNexus analyze는 `npx gitnexus analyze --force`로 재실행 가능 (완료에 ~60초 소요).
 
-| 버전 | 핵심 추가 |
-|------|-----------|
-| V312 | SOVEREIGN_OS 런타임 (외부 연결) |
-| V318 | ClosedLoopRenderOrchestrator |
-| V325 | SceneGenerationOrchestrator, SelfLearningCollector |
-| V326 | CharacterIntentAgent, MultiLLMRouter |
-| V328 | LLMNodeRouter, ProseRenderContract 게이트 |
-| V350 | NKGGraphStore, GDAP |
-| V360 | KnowledgeStateTracker (5상태) |
-| V370 | ContractBridge (GPT-Claude 공유 IR) |
-| V380 | SeriesArcPlanner, EpisodeRevealBudget, CharacterKnowledgeProseBridge |
-| **V381** | **Release Gate, CI, GitNexus, 5건 버그 수정** |
-
-## GitNexus — 코드 인덱싱
-
-GitNexus는 이 레포의 심볼 그래프를 인덱싱하여 Claude가 코드 구조를 빠르게 파악하도록 돕습니다.
-
-### 초기 설정 (최초 1회)
-
-```bash
-# Node.js 18+ 필요
-npx gitnexus analyze
-```
-
-실행 후 `.gitnexus/` 디렉터리가 생성되고 `CLAUDE.md`가 갱신됩니다.
-
-### 주요 명령
-
-```bash
-npx gitnexus status    # 인덱스 최신 여부 확인
-npx gitnexus analyze   # 코드 변경 후 재인덱싱
-npx gitnexus wiki      # 자동 문서 생성
-```
-
-### Claude 사용 시
-
-이 레포에서 작업할 때 Claude는 `.claude/skills/gitnexus/` 아래의 skill 파일을 참조합니다.
-인덱스가 stale 상태이면 `npx gitnexus analyze --force`를 실행하세요.
-
-## Release Gate
-
-```bash
-python tools/run_release_gate.py
-```
-
-5개 gate를 순차 실행:
-1. `llm_zero` — 외부 LLM provider 직접 호출 0 검증
-2. `arc_integrity` — 4막 비율(기25%/승35%/전25%/결15%) ±7% 이내
-3. `reveal_budget` — BLOCK 정책 예외 정상 동작
-4. `knowledge_leakage` — READER_ONLY 누수 방지
-5. `packaging` — `cli_entry` import 성공
-
-모든 gate 통과 시 `{"status": "pass", "gates_passed": 5}` 출력.
-
-## 모듈 구조 (요약)
+## literary_system 서브패키지 지도
 
 ```
 literary_system/
-├── arc/          SeriesArcPlanner, CausalPlotGraph        [V380]
-├── ledgers/      EpisodeRevealBudget                      [V380]
-├── world/        KnowledgeStateTracker, KnowledgeProseBridge [V360/V380]
-├── gates/        run_release_gate (5-gate)                [V381]
-├── prose/        StyleDNA, AntiLLM, RhythmRewriter, Contract
-├── nkg/          NKGGraphStore, EdgeInfer                 [V350]
-├── compiler/     V312Bridge, PromptAssembler
-├── orchestrators/ SceneGenerationOrchestrator, CharacterIntentAgent
-├── llm_bridge/   LLMNodeRouter, MultiLLMRouter, ClaudeAdapter
-└── trace/        SelfLearningCollector, TraceDatasetStore
+├── multiwork/        ← V562~V571 신규 (MultiWork Stage C)
+│   ├── multi_work_core.py          WorkStatus FSM, WorkProject, WorkSession, MultiWorkCore
+│   ├── shared_character_db.py      RelationType(7), CharacterProfile, SharedCharacterDB
+│   ├── shared_world_db.py          Location, Faction, TimelineEvent, LoreEntry, SharedWorldDB
+│   ├── genre_transfer.py           GenreProfile, TransferRecord, GenreTransferLearning
+│   ├── project_isolation.py        IsolationPolicy, AuditEntry, ProjectIsolationManager
+│   ├── multi_work_cim.py           CIMEntry, ProjectCIM, MultiWorkCIM
+│   ├── author_license_api.py       LicenseType(4), LicenseScope(5), AuthorLicenseAPI
+│   └── multi_work_orchestrator.py  MultiWorkOrchestrator (7컴포넌트 통합)
+│
+├── predictive/       ← V551~V555 PNE
+│   ├── pne_core.py           RepairOutcome, PatternLibrary, PNECore
+│   ├── debt_predictor.py     DebtPrediction, PredictionReport, DebtPredictor
+│   ├── preemptive_gate.py    PreemptiveGate (NIL Step6 사전차단)
+│   └── feedback_learner.py   FeedbackLearner (F1 추적, 모델 재학습)
+│
+├── corpus/           ← V556~V560 ExternalCorpusBridge
+│   ├── corpus_ingestor.py    CorpusIngestor
+│   ├── bgem3_embedder.py     BGEM3Embedder (SHA-256 fallback, LLM-0 준수)
+│   └── cim_bootstrap.py      CIMBootstrap (W = 1−exp(−0.95×count))
+│
+├── graph_intelligence/ ← V526~V545 GIG + ASD
+│   ├── narrative_graph_store.py    NarrativeGraphStore
+│   ├── narrative_impact_analyzer.py NarrativeImpactAnalyzer
+│   ├── asd/
+│   │   ├── auto_repair_executor.py   AutoRepairExecutor
+│   │   └── story_doctor_orchestrator.py StoryDoctorOrchestrator
+│   └── ...
+│
+├── nie/              ← V498~V525 NIE v2.0
+│   ├── nil_orchestrator.py   NILOrchestrator
+│   ├── physics_reward_bridge.py PhysicsRewardBridge
+│   └── ...
+│
+├── llm_bridge/       ← 멀티어댑터 레이어
+│   ├── gateway/unified_llm_gateway.py  UnifiedLLMGateway
+│   ├── routing/task_router.py          TaskRouter
+│   └── ...
+│
+├── drse/             DualSemanticScorer (DRSE 엔진)
+├── gates/            release_gate.py (30-gate 오케스트레이터, V571)
+├── compliance/       GDPRComplianceModule, EUAIActGovernance, PIIScannerV2
+├── finetune/         FineTuneJobManager (LoRA), ProseStyleDataset, ModelEvalHarness
+├── ops/              LoadBalancer(WRR), CircuitBreaker, ObservabilityStack
+├── rag/              RAGContextBuilder, SemanticCacheLayer, RAGPipelineOrchestrator
+├── physics/          NarrativePhysicsEngine, CIM, SparseCIM, PageRank
+├── nkg/              NKGGraphStore, NKGSearchEngine (BM25+Vector RRF K=60)
+└── ...
+```
+
+## Release Gate (30/30)
+
+```bash
+python -c "
+from literary_system.gates.release_gate import run_release_gate
+r = run_release_gate()
+print(r['summary'])
+"
+# → RELEASE GATE PASS: 30/30 gates passed
+```
+
+| Gate | 담당 레이어 |
+|------|------------|
+| G01~G16 | 레거시 누적 (V327~V480) |
+| G17 | Compliance (GDPR/EU AI Act) |
+| G18~G20 | SP3/SP4/SP5 통합 |
+| G21~G22 | Hotfix/EP구조 |
+| G23 | RAG Pipeline |
+| G24 | TrainingData (TraceQuality/PII) |
+| G25 | NIL (NIE v2.0 통합) |
+| G26~G27 | GIG (NarrativeGraph/CodeDependency) |
+| G28 | ASD (StoryDoctor/AutoRepair) |
+| G29 | PNE (DebtPredictor/PreemptiveGate) |
+| G30 | Corpus (BGEM3/CIMBootstrap) |
+| **G31** | **MultiWork Stage C (V571 최종)** |
+
+## ADR 목록
+
+| ADR | 결정 |
+|-----|------|
+| ADR-001~005 | 7-Layer / OAuth / OTel / TieredModel / TestPolicy |
+| ADR-006~010 | Phase 2 SubPhase 1~4 아키텍처 |
+| ADR-014 | SceneNecessity 정책 |
+| ADR-015 | LLM-0 (외부 LLM 호출 금지 범위) |
+| ADR-016~022 | NIE v2.0 (CIM/PageRank/NIL/MetaLearner/TIdeal) |
+| ADR-023~025 | GIG (NarrativeGraph/CodeDep/PlanBuild) |
+| ADR-027~031 | Phase 6 (Cleanup/PNE/Corpus/MultiWork/License) |
+
+## MultiWork Stage C 주요 제약 (ADR-031)
+
+- `PERSONAL`: max 3 프로젝트, `{GENERATE, EXPORT}` scope
+- `COMMERCIAL`: max 10, `+MULTI_WORK, +API_ACCESS`
+- `ENTERPRISE`: unlimited, 모든 scope
+- `RESEARCH`: max 5, `+FINE_TUNE` (단, API_ACCESS 없음)
+- `cross_project_read`: owner_id가 requester의 `allowed_projects` 화이트리스트에 있어야 허용
+
+## 개발 시 필수 체크
+
+```bash
+# 1. 테스트
+pytest tests/ -q
+
+# 2. 릴리즈 게이트
+python -c "from literary_system.gates.release_gate import run_release_gate; r=run_release_gate(); print(r['summary'])"
+
+# 3. LLM-0 확인 (multiwork/ 추가 시)
+grep -r "requests\|httpx\|openai\|anthropic" literary_system/multiwork/ --include="*.py"
+# → 결과 0건이어야 함
 ```
 
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **literary_os_v400** (12688 symbols, 25629 relationships, 138 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **release_v571** (28964 symbols, 56087 relationships, 190 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 
@@ -118,10 +185,10 @@ This project is indexed by GitNexus as **literary_os_v400** (12688 symbols, 2562
 
 | Resource | Use for |
 |----------|---------|
-| `gitnexus://repo/literary_os_v400/context` | Codebase overview, check index freshness |
-| `gitnexus://repo/literary_os_v400/clusters` | All functional areas |
-| `gitnexus://repo/literary_os_v400/processes` | All execution flows |
-| `gitnexus://repo/literary_os_v400/process/{name}` | Step-by-step execution trace |
+| `gitnexus://repo/release_v571/context` | Codebase overview, check index freshness |
+| `gitnexus://repo/release_v571/clusters` | All functional areas |
+| `gitnexus://repo/release_v571/processes` | All execution flows |
+| `gitnexus://repo/release_v571/process/{name}` | Step-by-step execution trace |
 
 ## CLI
 
@@ -135,33 +202,3 @@ This project is indexed by GitNexus as **literary_os_v400** (12688 symbols, 2562
 | Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md` |
 
 <!-- gitnexus:end -->
-
-
-## V382 핵심 추가: 파이프라인 실행 추적 시스템
-
-SOVEREIGN_OS V305의 execution_trace 패턴을 Literary OS에 이식.
-
-**원칙**: '모든 노드는 실행될 때 흔적을 남긴다. 흔적이 없으면 실행되지 않은 것이다.'
-
-### literary_system/pipeline/
-
-- `LiteraryPipelineState` — 실행 추적 상태 모델 (execution_trace, checkpoints)
-- `append_trace(state, msg)` — 노드 진입 시 흔적 기록 (전 노드 필수)
-- `save_literary_checkpoint(state, name)` — 인메모리 상태 스냅샷
-- `restore_literary_checkpoint(state, name)` — 체크포인트 복원
-- `autosave_literary_state(state, label)` — 디스크 영속성
-- `run_minimal_pipeline(seed, episodes)` — Gate 6 전용 최소 파이프라인 실행기
-
-### Gate 6: pipeline_survival (V382 신설)
-
-run_minimal_pipeline() 실행 후 모든 핵심 모듈이 execution_trace에 나타나는지 확인.
-검증 대상: SeriesArcPlanner, CausalPlotGraph, EpisodeRevealBudget,
-KnowledgeStateTracker, CharacterKnowledgeProseBridge
-
-### 신규 개발 규칙 (V382~)
-
-새로운 노드를 추가할 때:
-1. 함수 진입 시 append_trace(state, '[Node_XXX] 설명') 반드시 호출
-2. 노드 완료 시 save_literary_checkpoint(state, 'node_xxx') 저장
-3. run_minimal_pipeline()에 새 노드 추가
-4. test_v382_pipeline_survival.py::TestCoreLogicSurvival에 생존 테스트 추가

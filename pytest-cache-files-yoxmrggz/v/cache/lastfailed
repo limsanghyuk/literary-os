@@ -1,3 +1,0 @@
-{
-  "tests/studio_api/test_v420_integration.py::TestWebSocketEnergy::test_stream_energy_produces_5_updates": true
-}

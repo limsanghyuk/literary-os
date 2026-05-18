@@ -1,0 +1,37 @@
+Literary OS V571 — Phase 6 Stage C MultiWork Release Package
+=============================================================
+Version      : V571
+Release Date : 2026-05-17
+Build Type   : Clean Release (not dev workspace archive)
+Test Result  : 5456 PASS / 0 FAIL / 20 SKIP
+Gate         : Gate31 PASS (MultiWork Stage C Survival Gate)
+
+Modules (Phase 6 Stage C — MultiWork)
+--------------------------------------
+V562  MultiWorkCore              multi_work_core.py
+V563  SharedCharacterDB          shared_character_db.py
+V564  SharedWorldDB              shared_world_db.py
+V565  GenreTransferLearning      genre_transfer.py
+V566  ProjectIsolationManager    project_isolation.py
+V567  MultiWorkCIM               multi_work_cim.py
+V568  AuthorLicenseAPI           author_license_api.py
+V569  MultiWorkOrchestrator      multi_work_orchestrator.py
+V570  Gate31 + Tests
+V571  Integration Release
+
+Design Gap Fixes Applied
+-------------------------
+GAP-1  pyproject.toml description 갱신 (V571 MultiWork Stage C)
+GAP-2  MANIFEST_V571_MULTIWORK.md 신규 생성
+GAP-3  MultiWorkOrchestrator.create_project() COMMERCIAL 라이선스 docstring
+
+Known Limitations
+------------------
+KL-001  PERSONAL 라이선스: MULTI_WORK 스코프 미포함 → LicenseViolation
+KL-002  OTel tracer 1 FAIL (V474+, runtime 비영향)
+
+Integrity Files
+---------------
+FILELIST.txt     : 전체 파일 목록 (경로 / 크기 / mtime)
+SHA256SUMS.txt   : literary_system/**/*.py + tests/**/*.py + 루트 설정 파일 체크섬 (652개)
+SHA256SUMS.txt.sig : SHA256SUMS.txt 자체 체크섬

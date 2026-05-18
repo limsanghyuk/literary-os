@@ -1,7 +1,7 @@
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **literary_os_v400** (12688 symbols, 25629 relationships, 138 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **release_v571** (28964 symbols, 56087 relationships, 190 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 
@@ -24,10 +24,10 @@ This project is indexed by GitNexus as **literary_os_v400** (12688 symbols, 2562
 
 | Resource | Use for |
 |----------|---------|
-| `gitnexus://repo/literary_os_v400/context` | Codebase overview, check index freshness |
-| `gitnexus://repo/literary_os_v400/clusters` | All functional areas |
-| `gitnexus://repo/literary_os_v400/processes` | All execution flows |
-| `gitnexus://repo/literary_os_v400/process/{name}` | Step-by-step execution trace |
+| `gitnexus://repo/release_v571/context` | Codebase overview, check index freshness |
+| `gitnexus://repo/release_v571/clusters` | All functional areas |
+| `gitnexus://repo/release_v571/processes` | All execution flows |
+| `gitnexus://repo/release_v571/process/{name}` | Step-by-step execution trace |
 
 ## CLI
 

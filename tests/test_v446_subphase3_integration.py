@@ -363,7 +363,7 @@ class TestReleaseGateV446:
     def test_release_gate_version_v446(self):
         from literary_system.gates.release_gate import run_release_gate
         report = run_release_gate()
-        assert report["version"] in ("V446", "V450", "V456", "V462", "V467", "V468", "V474", "V480", "V481", "V485", "V491", "V497", "V546", "V555")
+        assert report["version"] in ("V446", "V450", "V456", "V462", "V467", "V468", "V474", "V480", "V481", "V485", "V491", "V497", "V546", "V555", "V556", "V561", "V571")
 
     def test_release_gate_11_gates(self):
         from literary_system.gates.release_gate import run_release_gate

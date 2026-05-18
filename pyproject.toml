@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "literary-os"
-version = "6.5.0"
-description = "Literary OS V525 — Phase3 NIE v2.0 Full Build (Narrative Intelligence Engine)"
+version = "7.7.1"
+description = "Literary OS V571 — Phase6 MultiWork Stage C Full Build (MultiWork Orchestrator)"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}

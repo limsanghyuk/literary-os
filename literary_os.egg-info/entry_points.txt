@@ -1,2 +1,0 @@
-[console_scripts]
-literary-os = apps.studio_api.main:cli_entry

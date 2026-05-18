@@ -14,6 +14,12 @@ from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
 import math
 
+try:
+    from literary_system.predictive.preemptive_gate import PreemptiveGate
+    _PREEMPTIVE_AVAILABLE = True
+except ImportError:
+    _PREEMPTIVE_AVAILABLE = False
+
 
 # ─── 결과 타입 ────────────────────────────────────────────────────────────────
 
@@ -225,3 +231,49 @@ class FeedbackLearner:
             "retrain_count":     self._retrain_count,
             "precision_target":  self.PRECISION_TARGET,
         }
+    def run_prediction_cycle(
+        self,
+        preemptive_gate: "PreemptiveGate",
+        scene_ids: List[str],
+        severities: Optional[List[float]] = None,
+        actual_occurrences: Optional[List[bool]] = None,
+    ) -> List["PredictionRecord"]:
+        """
+        V556: PreemptiveGate.evaluate_batch() 를 직접 호출하고
+        결과를 FeedbackLearner에 기록하는 통합 사이클.
+
+        Parameters
+        ----------
+        preemptive_gate : PreemptiveGate 인스턴스
+        scene_ids       : 평가할 씬 ID 목록
+        severities      : 씬별 심각도 (None이면 0.5 기본값)
+        actual_occurrences : 실제 부채 발생 여부 (None이면 False 기본값)
+
+        Returns
+        -------
+        List[PredictionRecord] — 기록된 예측 레코드
+        """
+        if not scene_ids:
+            return []
+
+        # V556 핵심: evaluate_batch() 호출
+        results = preemptive_gate.evaluate_batch(
+            scene_ids=scene_ids,
+            severities=severities,
+        )
+
+        if actual_occurrences is None:
+            actual_occurrences = [False] * len(results)
+
+        records = []
+        for res, actual in zip(results, actual_occurrences):
+            rec = self.record(
+                scene_id=res.scene_id,
+                category=res.high_risk_cats[0] if res.high_risk_cats else "unknown",
+                predicted_prob=res.max_probability,
+                actual_occurred=actual,
+            )
+            records.append(rec)
+
+        return records
+

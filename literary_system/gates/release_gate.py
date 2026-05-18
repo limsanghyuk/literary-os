@@ -507,6 +507,94 @@ def _gate_llm0_static() -> dict:
         return {"pass": False, "error": str(exc)}
 
 
+
+# ── V561 Stage B: ExternalCorpusBridge 게이트 (Gate30) ─────────────────────
+
+def _gate_multiwork_g31() -> dict:
+    """Gate31: MultiWork Stage C 핵심 모듈 생존 확인."""
+    try:
+        from literary_system.multiwork import (
+            MultiWorkCore, SharedCharacterDB, SharedWorldDB,
+            GenreTransferLearning, ProjectIsolationManager,
+            MultiWorkCIM, AuthorLicenseAPI,
+        )
+        # MultiWorkCore 기본 동작
+        core = MultiWorkCore()
+        proj = core.register_project("test_author", "테스트 작품", "drama")
+        session = core.open_session(proj.project_id)
+        core.close_session(proj.project_id)
+
+        # SharedCharacterDB
+        char_db = SharedCharacterDB()
+        char_db.add_character("hero", "주인공", "주인공", genre_tags=["drama"])
+
+        # SharedWorldDB
+        world_db = SharedWorldDB()
+        world_db.add_location("city", "서울", "수도")
+
+        # GenreTransferLearning
+        gtl = GenreTransferLearning()
+        profile = gtl.transfer("fantasy", "drama", alpha=0.3)
+        assert profile is not None
+
+        # ProjectIsolationManager
+        from literary_system.multiwork import IsolationPolicy
+        iso = ProjectIsolationManager()
+        iso.register_policy(IsolationPolicy(project_id="p-test"))
+        iso.write("p-test", "key", "val")
+
+        # MultiWorkCIM
+        cim = MultiWorkCIM()
+        cim.init_project("proj-cim-test")
+        cim.record("proj-cim-test", "hero", "villain")
+
+        # AuthorLicenseAPI
+        from literary_system.multiwork import LicenseType
+        api = AuthorLicenseAPI()
+        lic = api.issue_license("lic-001", "author-A", LicenseType.COMMERCIAL)
+        assert lic.is_active()
+
+        return {
+            "pass": True,
+            "detail": "MultiWork Stage C 7종 모듈 생존 확인 (V562~V568)",
+        }
+    except Exception as exc:
+        return {"pass": False, "error": str(exc)}
+
+def _gate_corpus_quality_g30() -> dict:
+    """Gate30: ExternalCorpusBridge 게이트 (L2) — corpus/ 4종 모듈 구조 생존 확인."""
+    try:
+        from literary_system.corpus import (
+            CorpusIngestor, CorpusValidator, BGEM3Embedder, CIMBootstrap
+        )
+
+        # CorpusIngestor 생존 확인
+        ingestor = CorpusIngestor(seed=0)
+        report = ingestor.ingest(target=50)
+        assert report.total_ingested == 50
+
+        # CorpusValidator 생존 확인
+        validator = CorpusValidator()
+        entries = ingestor.entries()
+        passed, v_report = validator.validate_batch(entries)
+        assert v_report.total == 50
+
+        # BGEM3Embedder 생존 확인
+        embedder = BGEM3Embedder()
+        vec = embedder.embed("테스트 씬 내용")
+        assert len(vec) == 1024
+
+        # CIMBootstrap 생존 확인
+        bootstrap = CIMBootstrap()
+        b_report = bootstrap.fit(entries[:20])
+        assert b_report.total_scenes == 20
+        assert b_report.unique_characters > 0
+
+        return {"pass": True, "detail": "ExternalCorpusBridge 4종 모듈 구조 생존 확인"}
+    except Exception as exc:
+        return {"pass": False, "error": str(exc)}
+
+
 GATES = [
     ("llm_zero",              "LLM-0 외부 호출 금지",              _gate_llm_zero),
     ("arc_integrity",         "SeriesArcPlanner 4막 비율",          _gate_arc_integrity),
@@ -539,12 +627,16 @@ GATES = [
     ("llm0_static_analysis",     "graph_intelligence LLM-0 정적 분석 (ADR-031)",                  _gate_llm0_static),
     # ── V555 Stage B: PNE 통합 게이트 (Gate29) ──────────────────────────────────
     ("pne_convergence_gate29",    "PNE 통합 게이트 (Gate 29, L2)",                                  _gate_pne_convergence_g29),
+    # ── V561 Stage B: ExternalCorpusBridge 게이트 (Gate30) ─────────────────────
+    ("corpus_quality_gate30",     "ExternalCorpusBridge 게이트 (Gate 30, L2)",                      _gate_corpus_quality_g30),
+    # ── V571 Stage C: MultiWork 게이트 (Gate31) ──────────────────────────────────
+    ("multiwork_gate31",         "MultiWork Stage C 게이트 (Gate 31, L3)",                            _gate_multiwork_g31),
 ]
 
 
 
 def run_release_gate() -> dict:
-    """V555 릴리즈 게이트 실행 (30개 게이트 / Gate 29 + PNE)."""
+    """V571 릴리즈 게이트 실행 (30개 게이트 + Gate31 MultiWork)."""
     import traceback
     results_dict: dict = {}
     passed_count = 0
@@ -572,7 +664,7 @@ def run_release_gate() -> dict:
     all_passed = failed_count == 0
     issues = [gid for gid, gv in results_dict.items() if not gv.get("pass", False)]
     return {
-        "version": "V555",
+        "version": "V571",
         "pass": all_passed,
         "status": "pass" if all_passed else "fail",
         "total_gates": total,
