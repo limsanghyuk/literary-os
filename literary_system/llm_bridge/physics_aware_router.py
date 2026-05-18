@@ -94,8 +94,8 @@ class PhysicsAwareRouter(LLMBridgeInterface):
 
     def parse_action_packet(self, raw: str):
         try:
-            from literary_system.llm_bridge.tool_use_parser import ActionPacketParser
-            return ActionPacketParser().parse(raw)
+            from literary_system.llm_bridge.tool_use_parser import ToolUseParser
+            return ToolUseParser().parse(raw)
         except Exception:
             return None
 

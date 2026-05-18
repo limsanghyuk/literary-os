@@ -466,20 +466,36 @@ def _gate_story_quality_g28() -> dict:
     try:
         from literary_system.graph_intelligence.asd.gate28 import Gate28
         from literary_system.graph_intelligence.asd.story_doctor_orchestrator import DoctorReport
-        from literary_system.graph_intelligence.asd.narrative_debt_detector import DebtReport
-        from literary_system.graph_intelligence.asd.arc_consistency_checker import ArcReport
+        from literary_system.graph_intelligence.asd.narrative_debt_detector import NarrativeDebtReport
+        from literary_system.graph_intelligence.asd.arc_consistency_checker import ArcConsistencyReport
         gate = Gate28()
         # 빈 보고서 (모든 점수 0, 수리 권고 없음) → 기본 PASS
-        debt_report = DebtReport(overall_debt_score=0.0, debt_items=[])
-        arc_report  = ArcReport(overall_score=0.0, issues=[])
+        debt_report = NarrativeDebtReport(
+            total_debts=0,
+            unresolved_secrets=[],
+            broken_foreshadows=[],
+            abandoned_threads=[],
+            overall_debt_score=0.0,
+        )
+        arc_report = ArcConsistencyReport(
+            total_issues=0,
+            not_tracked=[],
+            post_death_edges=[],
+            contradiction_flows=[],
+            episode_inversions=[],
+            overall_score=0.0,
+        )
         report = DoctorReport(
-            work_id="__preflight__",
+            recommendations=[],
+            total_issues=0,
+            high_priority=[],
+            medium_priority=[],
+            low_priority=[],
             debt_report=debt_report,
             arc_report=arc_report,
-            recommendations=[],
         )
         result = gate.evaluate(report)
-        passed = getattr(result, "overall_passed", True)
+        passed = result.approved
         return {"pass": passed, "detail": f"Gate28 passed={passed}"}
     except Exception as exc:
         # 의존성 부재 시 클래스 생존 확인으로 대체
