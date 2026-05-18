@@ -1,360 +1,140 @@
-# Literary OS V430 — Studio API + Docker + OTel + LLM Gateway
+# Literary OS V571
 
-> **판단은 로컬, 생성만 LLM, 학습은 누적**
-> V430 = V411(완전통합) + Studio API(FastAPI) + Docker + OpenTelemetry + LLM Gateway + Release Gate 8종
+> **판단은 로컬, 생성만 LLM, 학습은 누적**  
+> AI 기반 장편 소설·드라마 시나리오 생성 시스템
 
-[![Tests](https://img.shields.io/badge/tests-2015%20PASS-brightgreen)]()
-[![Version](https://img.shields.io/badge/version-4.3.0-blue)]()
+[![Version](https://img.shields.io/badge/version-7.7.1-blue)]()
+[![Tests](https://img.shields.io/badge/tests-5456%20PASS-brightgreen)]()
+[![Gates](https://img.shields.io/badge/release%20gates-30%2F30%20PASS-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue)]()
+[![License](https://img.shields.io/badge/license-MIT-green)]()
 
 ---
 
 ## 빠른 시작
 
 ```bash
-# 1. 설치
-pip install -e .
-# 또는 의존성만
-pip install -r requirements.txt
+# 설치
+pip install -e ".[dev]"
 
-# LLM 어댑터 사용 시 (선택)
-export ANTHROPIC_API_KEY=your_key_here
-
-# 2. 전체 테스트 실행
+# 전체 테스트 실행
 pytest tests/ -q
-# → 2015 passed
+# → 5456 passed, 20 skipped
 
-# 3. V380 신규 테스트만 실행
-pytest tests/test_v380_*.py -v
-# → 192 passed (7개 파일)
+# 릴리즈 게이트 확인
+python -c "
+from literary_system.gates.release_gate import run_release_gate
+result = run_release_gate()
+print(result['summary'])
+"
+# → gates_passed: 30/30, status: pass
 ```
 
 ---
 
-## V380 신규 기능 — 3분 예제
+## 시스템 개요
 
-### 1. SeriesArcPlanner — 16부작 아크 자동 생성
-
-```python
-from literary_system.arc import SeriesArcPlanner, CausalPlotGraph
-
-planner = SeriesArcPlanner(total_episodes=16, series_title="미스터 선샤인")
-graph   = planner.plan()
-
-# 텐션 곡선 확인
-for ep_id, tension in graph.tension_curve():
-    print(f"{ep_id}: {tension:.2f}")
-# ep_1: 0.12  ...  ep_8: 0.85  ...  ep_16: 0.32
-
-# 에피소드 노드 조회
-node = graph.get_node("ep_1")
-print(node.act)               # ArcAct.GI
-print(node.emotional_target)  # "기대감"
-print(node.tension_level)     # 0.12
-```
-
-### 2. EpisodeRevealBudget — 복선 예산 게이팅
-
-```python
-from literary_system.ledgers.episode_reveal_budget import (
-    EpisodeRevealBudget, RevealPolicy, RevealBlockedError
-)
-
-budget = EpisodeRevealBudget()
-
-# ep_3에서 비밀A는 암시만 허용
-budget.set_policy("ep_3", "secret_A", RevealPolicy.FORESHADOW_ONLY)
-# 전 에피소드에서 비밀B 완전 차단
-budget.set_global_block("secret_B")
-
-# 산문 생성 직전 게이트 검사
-try:
-    budget.check("ep_3", "secret_A", direct_reveal=True)
-except RevealBlockedError as e:
-    print(e)  # FORESHADOW_ONLY 위반
-
-# 일괄 검사 (예외 없이 위반 목록 반환)
-violations = budget.check_all("ep_5", ["secret_A", "secret_B", "fact_C"])
-# → ["secret_B"]
-
-# 아크 그래프에서 자동 구성 (node.forbidden_reveals 기반)
-budget = EpisodeRevealBudget.from_arc_graph(graph)
-```
-
-### 3. CharacterKnowledgeProseBridge — 인물 지식 → 산문 제약
-
-```python
-from literary_system.world.character_knowledge_prose_bridge import (
-    CharacterKnowledgeProseBridge, KnowledgeLeakageError
-)
-from literary_system.world.knowledge_state_tracker import KnowledgeStateTracker
-
-tracker = KnowledgeStateTracker()
-bridge  = CharacterKnowledgeProseBridge(tracker=tracker)
-
-# READER_ONLY 누수 검사
-try:
-    bridge.check("eugene", "killer_identity")
-except KnowledgeLeakageError as e:
-    print(e)  # READER_ONLY → 산문 노출 금지
-
-# 렌더 제약 조회
-c = bridge.get_constraint("ae_shin", "war_secret")
-print(c.render_mode)      # "suggestive"
-print(c.behavioral_hint)  # "시선 회피, 말끝 흐림, 간접 질문으로 암시"
-
-# ProseRenderContract에 지식 제약 주입 (원본 불변)
-enriched = bridge.enrich_contract(contract, "ae_shin", ["war_secret", "identity"])
-
-# 지식 비대칭 압력 수치화 (0.0~1.0)
-pressure = bridge.asymmetry_pressure("ae_shin", "eugene", ["killer_identity"])
-```
-
-### 4. 전체 파이프라인 통합
-
-```python
-from literary_system.arc import SeriesArcPlanner
-from literary_system.ledgers.episode_reveal_budget import EpisodeRevealBudget
-from literary_system.world.character_knowledge_prose_bridge import CharacterKnowledgeProseBridge
-from literary_system.world.knowledge_state_tracker import KnowledgeStateTracker
-from literary_system.nkg.nkg_graph_store import NKGGraphStore
-
-# 1. 아크 생성
-arc    = SeriesArcPlanner(total_episodes=16, series_title="시리즈명").plan()
-
-# 2. 복선 예산 자동 구성
-budget = EpisodeRevealBudget.from_arc_graph(arc)
-
-# 3. NKG 동기화
-nkg   = NKGGraphStore()
-count = arc.sync_to_nkg(nkg)  # → EpisodeNode + CausalLink + ForeshadowingOf
-
-# 4. 인물 지식 브리지
-bridge = CharacterKnowledgeProseBridge(tracker=KnowledgeStateTracker())
-
-# 5. 에피소드별 산문 생성 루프
-for ep_id, tension in arc.tension_curve():
-    violations = budget.check_all(ep_id, all_facts)
-    if violations:
-        continue
-    bridge.assert_no_leakage(char_ids, all_facts)
-    # → LLM 산문 생성
-```
-
----
-
-## 아키텍처 레이어
-
-```
-Layer 0  │ LLM (ClaudeAdapter / MultiLLMRouter)
-─────────┼──────────────────────────────────────────────────────────────
-Layer 1  │ V312Bridge · PromptAssembler · ActionPacketParser
-Layer 1.5│ SnapshotManager · SequencePlanner · SceneFocusInjector
-─────────┼──────────────────────────────────────────────────────────────
-Layer 2  │ DRSEScorer · KnowledgeBoundaryGate · SpatialConstraintGate
-         │ LocalJudgmentValidator · LearnedCoefficientStore
-         │ EpisodeRevealBudget                              [V380 신규]
-─────────┼──────────────────────────────────────────────────────────────
-Layer 3  │ MAEOrchestrator · CoefficientMapper
-         │ SceneGenerationOrchestrator
-         │ CharacterKnowledgeProseBridge                   [V380 신규]
-─────────┼──────────────────────────────────────────────────────────────
-Layer 4  │ SelfLearningCollector · MultiLLMRouter
-         │ SeriesArcPlanner · CausalPlotGraph               [V380 신규]
-─────────┼──────────────────────────────────────────────────────────────
-Layer 5  │ NKGGraphStore (ArcPlotNode ↔ EpisodeNode 동기화)[V380 확장]
-```
-
----
-
-## 모듈 구조
+Literary OS는 장편 서사 생성을 위한 AI 파이프라인입니다.  
+외부 LLM은 산문 생성에만 선택적으로 사용하며, 플롯·캐릭터·구조 판단은 전부 로컬 모델이 처리합니다 (**LLM-0 원칙**, ADR-015/031).
 
 ```
 literary_system/
-├── arc/                              # [V380 신규] 서사 아크 패키지
-│   ├── __init__.py
-│   ├── schema.py                     # ArcAct · ArcPlotEdgeType · ArcPlotNode · ArcPlotEdge
-│   ├── causal_plot_graph.py          # CausalPlotGraph (방향성 아크 그래프)
-│   └── series_arc_planner.py         # SeriesArcPlanner (16부작 자동 생성)
-├── ledgers/                          # [V380 신규] 복선 예산 패키지
-│   ├── __init__.py
-│   └── episode_reveal_budget.py      # EpisodeRevealBudget · RevealPolicy
-├── world/
-│   ├── knowledge_state_tracker.py    # KnowledgeStateTracker (V315~)
-│   ├── character_knowledge_prose_bridge.py  # [V380 신규] KnowledgeProseBridge
-│   └── ...
-├── nkg/
-│   ├── nkg_graph_store.py            # NKGGraphStore (V380 sync_to_nkg 확장)
-│   └── schema.py                     # EpisodeNode · CausalLink · ForeshadowingOf
-└── orchestrators/
-    ├── sequence_planner.py
-    └── scene_generation_orchestrator.py
-
-tests/
-├── test_v380_arc_schema.py           # 18 tests
-├── test_v380_causal_plot_graph.py    # 42 tests
-├── test_v380_series_arc_planner.py   # 44 tests
-├── test_v380_episode_reveal_budget.py  # 52 tests
-├── test_v380_knowledge_bridge.py     # 51 tests
-├── test_v380_integration.py          # 12 tests
-└── test_v380_extended.py             # 45 tests
+├── graph_intelligence/   # NKG 지식 그래프 + 감정 링커
+├── orchestrators/        # 장편 지속 오케스트레이터
+├── predictive/           # PNE — 예측적 서사 엔진 (V551~V555)
+├── corpus/               # 외부 코퍼스 브릿지 — BGE-M3 + CIM (V557~V561)
+├── multiwork/            # 다중작품 관리 오케스트레이터 (V562~V571)
+├── gates/                # 릴리즈 게이트 30종 (G01~G31)
+├── adapters_live/        # LLM 어댑터 (Claude / OpenAI / Ollama)
+└── ...
 ```
 
 ---
 
-## 핵심 API 레퍼런스
+## Phase 6 완성 현황
 
-### `SeriesArcPlanner`
-
-```python
-SeriesArcPlanner(total_episodes=16, series_title="시리즈", tension_mode="sigmoid")
-# tension_mode: "sigmoid" (S자형 곡선) | "linear" (선형)
-# raises ValueError if total_episodes < 2
-
-.plan(graph=None) -> CausalPlotGraph
-# 4막 분배 기25%/승35%/전25%/결15%, 16종 감정 목표, 엣지 자동 추론
-
-.plan_custom(episode_specs: List[Dict]) -> CausalPlotGraph
-# 커스텀 스펙: {"episode_id", "title", "act", "tension_level", ...}
-```
-
-### `CausalPlotGraph`
-
-```python
-.add_node(node) / .get_node(id) / .remove_node(id)
-.get_nodes_by_act(act: ArcAct) -> List[ArcPlotNode]
-.add_edge(edge) / .get_edges(id, direction="out")
-
-.infer_causal_edges() -> List[ArcPlotEdge]
-.infer_foreshadow_edges() -> List[ArcPlotEdge]       # 기/승→전/결 + CALLBACK 역방향
-.infer_emotional_escalation_edges() -> List[ArcPlotEdge]
-
-.tension_curve() -> List[Tuple[str, float]]
-.validate_act_structure() -> bool
-.sync_to_nkg(nkg_store) -> int                        # 동기화된 노드 수 반환
-```
-
-### `EpisodeRevealBudget`
-
-```python
-.set_policy(episode_id, fact_id, policy, delay_to=None, reason="")
-.set_global_block(fact_id) / .remove_global_block(fact_id)
-.get_policy(episode_id, fact_id) -> RevealPolicy      # 기본값: ALLOW
-
-.check(episode_id, fact_id, direct_reveal=True)
-# BLOCK → RevealBlockedError
-# FORESHADOW_ONLY + direct_reveal=True → RevealForeshadowOnlyError
-
-.check_all(episode_id, fact_ids, direct_reveal=True) -> List[str]
-.episode_summary(episode_id) -> Dict[str, RevealPolicy]
-.fact_journey(fact_id) -> List[Tuple[str, RevealPolicy]]
-
-@classmethod
-.from_arc_graph(graph: CausalPlotGraph) -> EpisodeRevealBudget
-```
-
-### `CharacterKnowledgeProseBridge`
-
-```python
-CharacterKnowledgeProseBridge(tracker: KnowledgeStateTracker)
-
-.check(char_id, fact_id, allow_suspect=True)           # READER_ONLY → KnowledgeLeakageError
-.check_scene(char_id, fact_ids) -> List[str]           # 위반 fact_id 목록
-.assert_no_leakage(char_ids, fact_ids)                 # 첫 위반 시 예외
-
-.get_constraint(char_id, fact_id) -> KnowledgeRenderConstraint
-# .render_mode: "direct"|"suggestive"|"ignorant"|"mistaken"|"blocked"
-
-.enrich_contract(contract, char_id, fact_ids) -> ProseRenderContract  # 원본 불변
-.asymmetry_pressure(char_a, char_b, fact_ids) -> float  # 0.0~1.0
-.blocked_facts_for(char_id) -> List[str]
-```
+| 단계 | 버전 | 주요 내용 | 게이트 |
+|------|------|-----------|--------|
+| Stage A (Cleanup) | V546~V548 | ADR-027~031, GraphSync, Gate Hierarchy, LLM0Static | G25~G28 |
+| Stage B (PNE) | V551~V555 | PNECore / DebtPredictor / PreemptiveGate / FeedbackLearner | G29 |
+| Stage B+ (Corpus) | V557~V561 | CorpusIngestor + BGEM3Embedder + CIMBootstrap | G30 |
+| Stage C (MultiWork) | V562~V571 | MultiWorkOrchestrator + SharedCharacterDB + AuthorLicenseAPI | **G31** |
 
 ---
 
-## 5상태 → 산문 렌더 모드 매핑
+## 핵심 패키지 (Phase 6)
 
-| KnowledgeStatus | render_mode | behavioral_hint |
-|:----------------|:------------|:----------------|
-| `KNOWS` | `direct` | 해당 사실을 자연스럽게 행동/대사에 반영 |
-| `SUSPECTS` | `suggestive` | 시선 회피, 말끝 흐림, 간접 질문으로 암시 |
-| `UNAWARE` | `ignorant` | 해당 사실과 무관하게 행동 — 직접 언급 금지 |
-| `MISBELIEVES` | `mistaken` | 잘못된 믿음 기반 행동 — 왜곡된 확신 |
-| `READER_ONLY` | `blocked` | 산문 노출 절대 금지 → `KnowledgeLeakageError` |
+### `literary_system/corpus/` — 외부 코퍼스 브릿지
+| 모듈 | 역할 |
+|------|------|
+| `corpus_ingestor.py` | 시나리오 씬 수집 (1만 씬 합성) |
+| `bgem3_embedder.py` | BGE-M3 1024-dim 임베딩 |
+| `cim_bootstrap.py` | CIM 부트스트랩 |
+| `corpus_validator.py` | 라이선스·PII·품질 필터 |
+
+### `literary_system/multiwork/` — 다중작품 관리
+| 모듈 | 역할 |
+|------|------|
+| `multi_work_core.py` | WorkProject FSM, 세션 관리 |
+| `shared_character_db.py` | 공유 캐릭터 DB |
+| `shared_world_db.py` | 공유 세계관 DB |
+| `genre_transfer.py` | 장르 전이 학습 |
+| `project_isolation.py` | 프로젝트 격리 관리 |
+| `multi_work_cim.py` | 다중작품 CIM |
+| `author_license_api.py` | 저자 라이선스 API (PERSONAL / COMMERCIAL) |
+| `multi_work_orchestrator.py` | 통합 오케스트레이터 |
 
 ---
 
-## 설계 원칙
+## 릴리즈 게이트
 
-1. **LLM-0 라우팅**: 복선/지식 게이팅, 아크 구조 계산은 모두 로컬. LLM은 산문 생성만.
-2. **불변 계약**: `enrich_contract()`는 원본을 수정하지 않음 (`dataclasses.replace` 사용).
-3. **계층적 예외**: `RevealBudgetViolationError` → `RevealBlockedError` / `RevealForeshadowOnlyError`.  `ProseContractViolationError` → `KnowledgeLeakageError` / `UnawarnessViolationError`.
-4. **단방향 NKG 동기화**: Arc → NKG 방향만. NKG 변경이 Arc를 오염시키지 않음.
-5. **4막 비율 고정**: 기25% / 승35% / 전25% / 결15% — `ACT_RATIOS` 상수로 관리.
+총 30개 게이트가 전부 통과해야 릴리즈 가능한 설계입니다.
+
+```python
+from literary_system.gates.release_gate import run_release_gate
+result = run_release_gate()
+# {"status": "pass", "gates_passed": 30, "total_gates": 30}
+```
+
+| 범위 | 게이트 |
+|------|--------|
+| G01~G08 | LLM-0 / Arc / Budget / Leakage / Packaging / Pipeline / DRSE / Adapter |
+| G09~G16 | StudioAPI / RAG / SLM / Quality / LiveAdapter / SP2Tenant / SP1Adapter / SP4 |
+| G17~G24 | SP3Compliance / SP5Ops / ScenePipeline / DramaEpisode / RAGSP2 / SLMSP3 / NIE / NarrativeBlast |
+| G25~G31 | CodeCoupling / StoryQuality / PNE / LLM0Static / Corpus / MultiWork |
 
 ---
 
-## 테스트 현황
+## 알려진 제약
 
-| 버전 | PASS | 신규 테스트 파일 |
-|:-----|-----:|:----------------|
-| V370 기반 | 1823 | — |
-| V380 신규 | +192 | `test_v380_arc_schema.py` (18) |
-| | | `test_v380_causal_plot_graph.py` (42) |
-| | | `test_v380_series_arc_planner.py` (44) |
-| | | `test_v380_episode_reveal_budget.py` (52) |
-| | | `test_v380_knowledge_bridge.py` (51) |
-| | | `test_v380_integration.py` (12) |
-| | | `test_v380_extended.py` (45) |
-| **V380 합계** | **2015** | **7개 파일** |
+| ID | 내용 | 영향 |
+|----|------|------|
+| KL-001 | PERSONAL 라이선스에서 MultiWorkOrchestrator 사용 불가 (`LicenseViolation`) | 설계 의도. COMMERCIAL 라이선스 필요 |
+| KL-002 | OTel tracer 초기화 테스트 1건 FAIL (V474~, 런타임 비영향) | Release Block 아님 |
+
+---
+
+## 개발 환경
 
 ```bash
-# 커버리지 포함 실행
-pytest tests/ --cov=literary_system --cov-report=term-missing -q
+# 의존성 설치
+pip install -r requirements.txt
+pip install -r requirements-dev.txt
+
+# 특정 패키지 테스트
+pytest tests/test_v562_v571_multiwork.py -v   # MultiWork (111 tests)
+pytest tests/test_v557_v561_corpus.py -v      # Corpus (33 tests)
+pytest tests/test_v551_v555_pne.py -v         # PNE
 ```
 
 ---
 
-## V370 → V380 마이그레이션
+## ADR 목록
 
-V370 코드는 변경 없이 V380과 호환됩니다. V380은 신규 패키지(`arc/`, `ledgers/`)와
-기존 `world/` 브리지 클래스를 추가하는 방식으로만 확장합니다.
-
-```python
-# V370 기존 코드 — 그대로 동작
-from literary_system.world.knowledge_state_tracker import KnowledgeStateTracker
-tracker = KnowledgeStateTracker()
-
-# V380 확장 — 기존 tracker 재사용
-from literary_system.world.character_knowledge_prose_bridge import CharacterKnowledgeProseBridge
-bridge = CharacterKnowledgeProseBridge(tracker=tracker)
-```
+ADR-001 ~ ADR-031 (`docs/` 디렉터리 참조)
 
 ---
 
-## 버전 히스토리
+## 라이선스
 
-| 버전 | PASS | 핵심 기능 |
-|:-----|-----:|:----------|
-| V325 | 722 | SceneGenerationOrchestrator · SelfLearningCollector |
-| V326 | 865 | MultiLLMRouter · GeminiAdapter |
-| V328 | 1023 | ProseRenderContract · SurfaceOnlyContractGate |
-| V350 | 1082 | NKGGraphStore · KnowledgeBoundaryGate · GDAP |
-| V360 | 1421 | KnowledgeStateTracker · CharacterKnowledgeGraph |
-| V370 | 1823 | ProseRenderContract V2 · EpisodeNode NKG |
-| **V380** | **2015** | **SeriesArcPlanner · EpisodeRevealBudget · CharacterKnowledgeProseBridge** |
-
----
-
-## V380 목표 점수
-
-| 평가 항목 | V370 | V380 목표 | 달성 |
-|:----------|-----:|----------:|:-----|
-| 서사 아크 관리 | 7.5 | 9.8 | ✅ |
-| 복선 예산 관리 | 8.5 | 10.0 | ✅ |
-| 캐릭터 지식 전파 | 8.0 | 10.0 | ✅ |
-
----
-
-*Literary OS V430 — Released 2026-05-15*
-                                               
+MIT License

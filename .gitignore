@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# 가상환경
+.venv/
+venv/
+env/
+
+# 테스트 / 커버리지
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# GitNexus 인덱스 (바이너리, 대용량)
+.gitnexus/
+
+# Cowork 내부 디렉터리
+.claude/
+
+# 에디터
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 빌드 산출물
+*.zip
+*.tar.gz
+FILELIST.txt
