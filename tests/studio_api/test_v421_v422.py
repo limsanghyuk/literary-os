@@ -187,7 +187,10 @@ class TestOTelInterface:
 
     def test_tracer_not_none(self):
         """OTel tracer 인스턴스 생성 확인."""
-        from apps.studio_api.otel.setup import _tracer
+        import pytest
+        from apps.studio_api.otel.setup import _OTEL_AVAILABLE, _tracer
+        if not _OTEL_AVAILABLE:
+            pytest.skip("opentelemetry-sdk 미설치 — CI/sandbox 환경 skip (KL-002)")
         assert _tracer is not None
 
 
