@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+-V[0-9]+"
+
+jobs:
+  release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install & test
+        run: |
+          pip install -e ".[dev]"
+          pytest tests/ -q --tb=short --timeout=120
+      - name: Build release archive
+        run: |
+          TAG=${GITHUB_REF_NAME}
+          zip -r literary_os_${TAG}.zip . \
+            --exclude "__pycache__/*" --exclude "**/__pycache__/*" \
+            --exclude "*.pyc" --exclude ".pytest_cache/*" \
+            --exclude "**/.pytest_cache/*" --exclude ".git/*" -q
+          sha256sum literary_os_${TAG}.zip > literary_os_${TAG}.zip.sha256
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: RELEASE_NOTES.md
+          files: |
+            literary_os_*.zip
+            literary_os_*.zip.sha256
+            SHA256SUMS.txt
+            RELEASE_INFO.txt
