@@ -11,6 +11,7 @@ Anthropic Claude API → LLMBridgeInterface 구현체.
   - LLM 0회 평가 원칙 준수 (생성만 LLM, 판정은 로컬)
 """
 from __future__ import annotations
+import logging
 
 import os
 from typing import Any
@@ -77,6 +78,13 @@ class ClaudeAdapter(LLMBridgeInterface):
         self._parser: ToolUseParser = ToolUseParser()
         self._last_response: Any    = None   # 최근 Anthropic Message 저장
         self._call_count: int       = 0
+
+        # V577 ADR-035 Deprecation 경고
+        logging.getLogger(__name__).warning(
+            "[DEPRECATED V577] ClaudeAdapter(G1)는 구세대 어댑터입니다. "
+            "V578 이후 제거 예정. literary_system.llm_bridge.canonical_adapter."
+            "make_canonical_claude() 사용을 권장합니다."
+        )
 
         # 패키지가 있으면 클라이언트 초기화
         self._client: Any = None

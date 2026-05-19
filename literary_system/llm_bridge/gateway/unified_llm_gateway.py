@@ -160,36 +160,53 @@ class UnifiedLLMGateway:
 
 def make_default_gateway(
     ollama_model: str = "llama3.2",
-    ollama_base_url: str = "http://localhost:11434/v1",
+    ollama_base_url: str = "http://localhost:11434",
     claude_haiku_key: str = "",
     claude_sonnet_key: str = "",
     mock_fallback: bool = True,
+    call_fn=None,
 ) -> UnifiedLLMGateway:
     """
-    기본 3티어 게이트웨이 생성.
+    기본 3티어 게이트웨이 생성 (V577: G3 캐노니컬 어댑터 사용).
 
-    - local  → OllamaAdapter
-    - speed  → ClaudeAdapter (haiku)
-    - quality→ ClaudeAdapter (sonnet)
+    - local  → CanonicalLLMBridge(RealOllamaAdapter)
+    - speed  → CanonicalLLMBridge(RealClaudeAdapter, haiku)
+    - quality→ CanonicalLLMBridge(RealClaudeAdapter, sonnet)
     - fallback→ MockLLMBridge (테스트 환경)
+
+    ADR-035: G1/G2 ClaudeAdapter 대신 G3 adapters_live/ 캐노니컬 사용.
+    LLM-0: call_fn 주입으로 CI에서 실 API 호출 차단 가능.
     """
-    from literary_system.llm_bridge.ollama_adapter import make_ollama_adapter
+    from literary_system.llm_bridge.canonical_adapter import (
+        make_canonical_claude,
+        make_canonical_ollama,
+    )
     from literary_system.llm_bridge.mock_llm_bridge import MockLLMBridge
 
     providers = {}
-    providers["local"] = make_ollama_adapter(ollama_model, ollama_base_url)
 
     try:
-        from literary_system.llm_bridge.claude_adapter import ClaudeAdapter
-        providers["speed"]   = ClaudeAdapter("claude-haiku-4-5-20251001",
-                                              api_key=claude_haiku_key or None)
-        providers["quality"] = ClaudeAdapter("claude-sonnet-4-6",
-                                              api_key=claude_sonnet_key or None)
+        providers["local"] = make_canonical_ollama(
+            model=ollama_model,
+            base_url=ollama_base_url,
+            call_fn=call_fn,
+        )
+    except Exception:
+        providers["local"] = MockLLMBridge(scripted_response="[ollama_mock]")
+
+    try:
+        providers["speed"] = make_canonical_claude(
+            model="claude-haiku-4-5-20251001",
+            call_fn=call_fn,
+        )
+        providers["quality"] = make_canonical_claude(
+            model="claude-sonnet-4-6",
+            call_fn=call_fn,
+        )
     except Exception:
         providers["speed"]   = MockLLMBridge(scripted_response="[haiku_mock]")
         providers["quality"] = MockLLMBridge(scripted_response="[sonnet_mock]")
 
-    # Bug-Fix C: key by tier name, not get_provider_id() (returns "mock" in tests)
     health  = ProviderHealthMonitor(providers)
     router  = TaskRouter(providers=providers, health_monitor=health,
                          fallback=MockLLMBridge() if mock_fallback else None)

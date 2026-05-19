@@ -8,6 +8,7 @@ Classes:
   OllamaAdapterV2      -- Local Ollama + circuit breaker + contract
 """
 from __future__ import annotations
+import logging
 
 import time
 from typing import Any, Optional, Union
@@ -56,6 +57,13 @@ class ClaudeAdapterV2(LLMBridgeInterface):
         self._last_response: Any = None
         self._call_count: int = 0
         self._circuit_open = False
+
+        # V577 ADR-035 Deprecation 경고
+        logging.getLogger(__name__).warning(
+            "[DEPRECATED V577] ClaudeAdapterV2(G2)는 구세대 어댑터입니다. "
+            "V578 이후 제거 예정. literary_system.llm_bridge.canonical_adapter."
+            "make_canonical_claude() 사용을 권장합니다."
+        )
 
         # Lazy Anthropic client
         self._client: Any = None
@@ -357,6 +365,13 @@ class OllamaAdapterV2(LLMBridgeInterface):
             recovery_timeout=_CB_HALF_OPEN_AFTER,
         )
         self._call_count = 0
+
+        # V577 ADR-035 Deprecation 경고
+        logging.getLogger(__name__).warning(
+            "[DEPRECATED V577] OllamaAdapterV2(G2)는 구세대 어댑터입니다. "
+            "V578 이후 제거 예정. literary_system.llm_bridge.canonical_adapter."
+            "make_canonical_ollama() 사용을 권장합니다."
+        )
 
     # -- LLMBridgeInterface --------------------------------------------------
 

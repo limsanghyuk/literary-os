@@ -735,6 +735,74 @@ def _gate_auth_regression_g34() -> dict:
 
 
 
+
+def _gate_adapter_canonical_g35() -> dict:
+    """
+    Gate 35 — AdapterCanonical: G3 캐노니컬 어댑터 체계 검증 (ADR-035).
+
+    검증 항목:
+      1. CanonicalLLMBridge가 LLMBridgeInterface 구현체임을 확인
+      2. make_canonical_claude(call_fn=mock) + generate() 정상 동작 확인
+      3. UnifiedLLMGateway.make_default_gateway(call_fn=mock) 반환 타입 확인
+      4. G3 어댑터 3종 임포트 가능 확인
+    """
+    errors = []
+    try:
+        # ── 검증 1: CanonicalLLMBridge IS-A LLMBridgeInterface ──────────────
+        from literary_system.llm_bridge.canonical_adapter import CanonicalLLMBridge
+        from literary_system.llm_bridge.llm_bridge_interface import LLMBridgeInterface
+        if not issubclass(CanonicalLLMBridge, LLMBridgeInterface):
+            errors.append("CanonicalLLMBridge가 LLMBridgeInterface를 상속하지 않음")
+
+        # ── 검증 2: make_canonical_claude + generate() 동작 확인 ────────────
+        from literary_system.llm_bridge.canonical_adapter import make_canonical_claude
+
+        def _mock_call_fn(messages, model, max_tokens, timeout, system_prompt=""):
+            return {"content": "G35_mock_response", "input_tokens": 5, "output_tokens": 3}
+
+        bridge = make_canonical_claude(
+            model="claude-haiku-4-5-20251001",
+            call_fn=_mock_call_fn,
+        )
+        from literary_system.llm_bridge.llm_context import LLMContext
+        ctx = LLMContext(series_id="g35-test", provider_hint="speed")
+        result = bridge.generate("게이트35 테스트 프롬프트", ctx)
+        if result != "G35_mock_response":
+            errors.append(f"generate() 예상값 불일치: {result!r} != 'G35_mock_response'")
+
+        # ── 검증 3: provider_name / get_provider_id() 확인 ──────────────────
+        pid = bridge.get_provider_id()
+        if "claude" not in pid.lower():
+            errors.append(f"get_provider_id()에 'claude' 미포함: {pid!r}")
+
+        # ── 검증 4: UnifiedLLMGateway.make_default_gateway() 타입 확인 ──────
+        from literary_system.llm_bridge.gateway.unified_llm_gateway import (
+            make_default_gateway,
+            UnifiedLLMGateway,
+        )
+        gw = make_default_gateway(call_fn=_mock_call_fn)
+        if not isinstance(gw, UnifiedLLMGateway):
+            errors.append(f"make_default_gateway() 반환 타입 불일치: {type(gw)}")
+
+        # ── 검증 5: G3 어댑터 3종 임포트 ───────────────────────────────────
+        from literary_system.adapters_live.real_claude_adapter import RealClaudeAdapter
+        from literary_system.adapters_live.real_openai_adapter import RealOpenAIAdapter
+        from literary_system.adapters_live.real_ollama_adapter import RealOllamaAdapter
+        for cls in (RealClaudeAdapter, RealOpenAIAdapter, RealOllamaAdapter):
+            if not callable(cls):
+                errors.append(f"{cls.__name__} 임포트 실패")
+
+    except Exception as exc:
+        errors.append(f"예외 발생: {exc}")
+
+    passed = len(errors) == 0
+    return {
+        "pass": passed,
+        "passed": passed,  # 하위 호환
+        "details": "AdapterCanonical G35 PASS — G3 canonical 체계 검증 완료" if passed
+                   else f"AdapterCanonical G35 FAIL: {'; '.join(errors)}",
+    }
+
 GATES = [
     ("llm_zero",              "LLM-0 외부 호출 금지",              _gate_llm_zero),
     ("arc_integrity",         "SeriesArcPlanner 4막 비율",          _gate_arc_integrity),
@@ -777,6 +845,8 @@ GATES = [
     ("schema_roundtrip_g33",     "SchemaRoundTrip: 직렬화/역직렬화 무결성 (Gate 33, ADR-034)",          _gate_schema_roundtrip_g33),
     # ── V576: DEV_MODE 보안 회귀 방지 (Gate 34) ───────────────────────────────
     ("auth_regression_g34",      "AuthRegression: DEV_MODE 기본값=false 회귀 방지 (Gate 34, ADR-034)", _gate_auth_regression_g34),
+    # ── V577: G3 캐노니컬 어댑터 체계 검증 (Gate 35) ─────────────────────────
+    ("adapter_canonical_g35",    "AdapterCanonical: G3 캐노니컬 어댑터 체계 검증 (Gate 35, ADR-035)", _gate_adapter_canonical_g35),
 ]
 
 

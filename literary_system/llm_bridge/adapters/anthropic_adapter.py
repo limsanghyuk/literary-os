@@ -58,6 +58,13 @@ class AnthropicAdapter(LLMBridgeInterface):
         self._parser     = ActionPacketParser()
         self._client     = None  # lazy init
 
+        # V577 ADR-035 Deprecation 경고
+        logging.getLogger(__name__).warning(
+            "[DEPRECATED V577] AnthropicAdapter(G1_sub)는 구세대 어댑터입니다. "
+            "V578 이후 제거 예정. literary_system.llm_bridge.canonical_adapter."
+            "make_canonical_claude() 사용을 권장합니다."
+        )
+
     # ── LLMBridgeInterface 구현 ─────────────────────────────────
 
     @property

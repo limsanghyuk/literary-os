@@ -15,6 +15,7 @@ Ollama API 노트:
   - api_key는 임의 문자열 허용 ("ollama" 관례)
 """
 from __future__ import annotations
+import logging
 
 from literary_system.llm_bridge.openai_compatible_adapter import (
     OpenAICompatibleAdapter,
@@ -62,6 +63,13 @@ class OllamaAdapter(OpenAICompatibleAdapter):
         )
         # timeout은 LLMContext에서 관리하지만 __init__ 호환성 유지
         self._default_timeout = timeout
+
+        # V577 ADR-035 Deprecation 경고
+        logging.getLogger(__name__).warning(
+            "[DEPRECATED V577] OllamaAdapter(G1)는 구세대 어댑터입니다. "
+            "V578 이후 제거 예정. literary_system.llm_bridge.canonical_adapter."
+            "make_canonical_ollama() 사용을 권장합니다."
+        )
 
     @property
     def provider_name(self) -> str:
