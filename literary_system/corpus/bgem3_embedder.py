@@ -16,7 +16,7 @@ MAX_CONTEXT_LEN = 8192  # 토큰 기준 (참고용)
 
 
 @dataclass
-class SearchResult:
+class BGESearchResult:
     entry: ScenarioEntry
     score: float  # 코사인 유사도 [0, 1]
 
@@ -106,3 +106,5 @@ class BGEM3Embedder:
         na   = math.sqrt(sum(x * x for x in a)) or 1.0
         nb   = math.sqrt(sum(x * x for x in b)) or 1.0
         return dot / (na * nb)
+
+SearchResult = BGESearchResult  # V579 backward-compat alias

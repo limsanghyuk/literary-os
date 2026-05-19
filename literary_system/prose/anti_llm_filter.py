@@ -106,7 +106,7 @@ _EXEMPT_PATTERNS: List[str] = [
 
 
 @dataclass
-class FilterResult:
+class AntiLLMFilterResult:
     filtered:     str
     score:        float
     replacements: List[Tuple[str, str]] = field(default_factory=list)
@@ -165,3 +165,5 @@ class KoreanAntiLLMFilter:
     @property
     def dict_size(self) -> int:
         return len(self._dict)
+
+FilterResult = AntiLLMFilterResult  # V579 backward-compat alias

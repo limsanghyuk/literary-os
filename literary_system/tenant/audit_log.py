@@ -25,7 +25,7 @@ from typing import Callable, Dict, List, Optional
 # 열거형
 # ---------------------------------------------------------------------------
 
-class AuditEventType(str, Enum):
+class TenantAuditEventType(str, Enum):
     # 테넌트 생명주기
     TENANT_CREATED   = "TENANT_CREATED"
     TENANT_SUSPENDED = "TENANT_SUSPENDED"
@@ -56,7 +56,7 @@ class AuditEventType(str, Enum):
 # ---------------------------------------------------------------------------
 
 @dataclass(frozen=True)
-class AuditRecord:
+class TenantAuditRecord:
     """불변 감사 레코드 (hash chain 노드)."""
     record_id:  str
     tenant_id:  str
@@ -236,3 +236,7 @@ class TenantAuditLog:
             if tenant_id:
                 return sum(1 for r in self._records if r.tenant_id == tenant_id)
             return len(self._records)
+
+AuditEventType = TenantAuditEventType  # V579 backward-compat alias
+
+AuditRecord = TenantAuditRecord  # V579 backward-compat alias

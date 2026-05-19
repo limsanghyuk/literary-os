@@ -89,7 +89,7 @@ class CausalContinuationPlan:
     continuation_hooks: list[str]                       # 다음 화 첫 씬 진입 후크
 
 
-class CausalContinuationPlanBuilder:
+class CausalPlanBuilder:
     """
     KnowledgeStateTracker + PayoffPropagationReport
     → CausalContinuationPlan 생성.
@@ -302,3 +302,5 @@ class CausalContinuationPlanBuilder:
             hooks.append("이전 화 마지막 오브제로 첫 씬 열기")
 
         return hooks[:4]
+
+CausalContinuationPlanBuilder = CausalPlanBuilder  # V579 backward-compat alias

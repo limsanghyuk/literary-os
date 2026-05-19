@@ -49,7 +49,7 @@ class ReleaseDecision(str, Enum):
     REJECT = "reject"
 
 
-class RelationType(str, Enum):
+class NarrativeRelationType(str, Enum):
     PRESSURE = "pressure"
     MIRROR = "mirror"
     STRUCTURE = "structure"
@@ -63,3 +63,5 @@ class RoleType(str, Enum):
     STRUCTURE = "structure"
     WITNESS = "witness"
     RESIDUE_CARRIER = "residue_carrier"
+
+RelationType = NarrativeRelationType  # V579 backward-compat alias

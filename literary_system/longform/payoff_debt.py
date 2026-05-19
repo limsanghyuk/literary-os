@@ -7,7 +7,7 @@ from enum import Enum
 from typing import List, Optional
 
 
-class DebtType(str, Enum):
+class LongformDebtType(str, Enum):
     FORESHADOW = "FORESHADOW"; MYSTERY = "MYSTERY"; EMOTIONAL = "EMOTIONAL"
     RELATIONSHIP = "RELATIONSHIP"; MOTIF = "MOTIF"; MORAL = "MORAL"
     INSTITUTIONAL = "INSTITUTIONAL"
@@ -123,3 +123,5 @@ class PayoffDebtLedger:
             "critical_defaults": critical_defaults,
             "open": len(self.open_debts()),
         }
+
+DebtType = LongformDebtType  # V579 backward-compat alias

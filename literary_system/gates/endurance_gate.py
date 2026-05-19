@@ -7,7 +7,7 @@ from typing import Dict, List
 
 
 @dataclass
-class GateResult:
+class EnduranceGateResult:
     passed: bool
     checks: Dict[str, bool] = field(default_factory=dict)
     failures: List[str] = field(default_factory=list)
@@ -118,3 +118,5 @@ class EnduranceGate:
 
         overall = len(failures) == 0
         return GateResult(passed=overall, checks=checks, failures=failures, warnings=warnings)
+
+GateResult = EnduranceGateResult  # V579 backward-compat alias

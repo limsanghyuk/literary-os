@@ -19,7 +19,7 @@ class EnsembleGateResult:
     decision: EnsembleDecision
 
 
-class EnsembleGate:
+class EnsembleGateV1:
     """
     Gate 8: Provider Ensemble 중재 게이트.
     모든 결정은 execution_trace에 기록. REJECT 시 checkpoint 저장.
@@ -61,3 +61,5 @@ class EnsembleGate:
             raise EnsembleGateFailure(decision)
 
         return EnsembleGateResult(passed=True, decision=decision)
+
+EnsembleGate = EnsembleGateV1  # V579 backward-compat alias

@@ -21,7 +21,7 @@ class PhysicsGateFailure(Exception):
 
 
 @dataclass
-class GateResult:
+class PhysicsGateResult:
     passed:  bool
     fitness: float
     motif_orphan_count: int = 0
@@ -91,3 +91,5 @@ class PhysicsValidationGate:
             fitness          = result.fitness,
             motif_orphan_count = orphan_count,
         )
+
+GateResult = PhysicsGateResult  # V579 backward-compat alias

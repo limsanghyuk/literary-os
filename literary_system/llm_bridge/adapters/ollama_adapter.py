@@ -31,7 +31,7 @@ _DEFAULT_MODEL    = "llama3.2"
 _DEFAULT_TIMEOUT  = 120
 
 
-class OllamaAdapter(LLMBridgeInterface):
+class OllamaAdapterLegacy(LLMBridgeInterface):
     """
     Ollama 로컬 LLM 어댑터.
 
@@ -136,3 +136,5 @@ class OllamaAdapter(LLMBridgeInterface):
                 return [m["name"] for m in data.get("models", [])]
         except Exception:
             return []
+
+OllamaAdapter = OllamaAdapterLegacy  # V579 backward-compat alias

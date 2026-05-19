@@ -19,7 +19,7 @@ class WorkDeclaration:
     max_blast_ratio:      float = 0.30
 
 @dataclass
-class GateResult:
+class PlanGateResult:
     passed:   bool
     checks:   List[GuardrailCheck]
     violations: List[str]
@@ -56,3 +56,5 @@ class PlanBuildGate:
             if not c.passed: violations.append(c.message)
         return GateResult(passed=len(violations) == 0, checks=checks,
                           violations=violations, blast=blast)
+
+GateResult = PlanGateResult  # V579 backward-compat alias

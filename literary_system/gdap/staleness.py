@@ -9,7 +9,7 @@ from __future__ import annotations
 from typing import Dict, Optional, Set
 
 
-class DKGStalenessTracker:
+class GDAPStalenessTracker:
     """파일/노드 단위 Dirty Flag 관리자.
 
     Attributes:
@@ -116,3 +116,5 @@ class DKGStalenessTracker:
         return (f"DKGStalenessTracker("
                 f"registered={len(self._hashes)}, "
                 f"dirty={len(self._dirty)})")
+
+DKGStalenessTracker = GDAPStalenessTracker  # V579 backward-compat alias

@@ -118,7 +118,7 @@ class ProvenanceRecord:
 # ProvenanceLedger  -- session-level audit log
 # ---------------------------------------------------------------------------
 
-class ProvenanceLedger:
+class RAGProvenanceLedger:
     """
     In-memory audit ledger for a retrieval session.
     Append-only: records can be read but not modified or deleted.
@@ -285,3 +285,5 @@ class RetrievalPipeline:
             "retrievals_logged": self._ledger.count,
             "pipeline_version": PIPELINE_VERSION,
         }
+
+ProvenanceLedger = RAGProvenanceLedger  # V579 backward-compat alias

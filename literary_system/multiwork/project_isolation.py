@@ -59,7 +59,7 @@ class IsolationPolicy:
 
 
 @dataclass
-class AuditEntry:
+class ProjectAuditEntry:
     """접근 감사 레코드."""
     entry_id: str
     project_id: str
@@ -320,3 +320,5 @@ class ProjectIsolationManager:
                     for pid, ctx in self._private_ctx.items()
                 },
             }
+
+AuditEntry = ProjectAuditEntry  # V579 backward-compat alias

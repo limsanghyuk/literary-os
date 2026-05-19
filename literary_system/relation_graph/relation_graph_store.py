@@ -104,7 +104,7 @@ class StoryEdge:
 
 
 # ── RelationGraphStore ────────────────────────────────────────────
-class RelationGraphStore:
+class LocalRelationGraphStore:
     """
     NetworkX DiGraph 기반 방향성 지식 그래프.
 
@@ -260,3 +260,5 @@ class RelationGraphStore:
             s, t = ed.pop("source"), ed.pop("target")
             store._graph.add_edge(s, t, **ed)
         return store
+
+RelationGraphStore = LocalRelationGraphStore  # V579 backward-compat alias

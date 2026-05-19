@@ -22,17 +22,17 @@ class NarrativeNode:
     def __eq__(self, o): return isinstance(o, NarrativeNode) and self.node_id==o.node_id
 
 @dataclass
-class CharacterNode(NarrativeNode):
+class NarrativeCharacterNode(NarrativeNode):
     role: str="supporting"; episode_first: int=1; episode_last: int=1
     def __post_init__(self): self.node_type=NarrativeNodeType.CHARACTER
 
 @dataclass
-class SceneNode(NarrativeNode):
+class NarrativeSceneNode(NarrativeNode):
     episode: int=1; scene_idx: int=0; t_position: float=0.0
     def __post_init__(self): self.node_type=NarrativeNodeType.SCENE
 
 @dataclass
-class EventNode(NarrativeNode):
+class NarrativeEventNode(NarrativeNode):
     episode: int=1; scene_id: str=""; impact: float=0.5
     def __post_init__(self): self.node_type=NarrativeNodeType.EVENT
 
@@ -95,3 +95,9 @@ class NarrativeImpactReport:
                 f"Indirect:{len(self.indirect_impact)} Reveals:{len(self.reveal_impacts)} "
                 f"ForeshadowBreaks:{len(self.foreshadow_breaks)}"
                 + (f"\nReason: {self.reason}" if self.reason else ""))
+
+CharacterNode = NarrativeCharacterNode  # V579 backward-compat alias
+
+EventNode = NarrativeEventNode  # V579 backward-compat alias
+
+SceneNode = NarrativeSceneNode  # V579 backward-compat alias

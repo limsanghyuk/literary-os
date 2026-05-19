@@ -32,7 +32,7 @@ def _now_iso() -> str:
 # ═══════════════════════════════════════════════════════════════════════════
 
 @dataclass
-class DatasetStats:
+class RegistryDatasetStats:
     """데이터셋 기본 통계."""
     total_records: int
     canonical_count: int
@@ -82,7 +82,7 @@ class BiasAnalysis:
         }
 
 
-class DatasetCardGenerator:
+class RegistryDatasetCardGenerator:
     """
     HuggingFace 표준 데이터셋 카드 생성기.
 
@@ -348,7 +348,7 @@ class ConsentRecord:
 
 
 @dataclass(frozen=True)
-class DeletionRequest:
+class DatasetDeletionRequest:
     """삭제 요청 기록 (ADR-008 §3)."""
     request_id:  str
     subject_id:  str
@@ -562,3 +562,9 @@ class TrainingDataRegistry:
         if self._root:
             p = self._root / f"{v.version_id}.json"
             p.write_text(json.dumps(v.to_dict(), ensure_ascii=False, indent=2), encoding="utf-8")
+
+DeletionRequest = DatasetDeletionRequest  # V579 backward-compat alias
+
+DatasetCardGenerator = RegistryDatasetCardGenerator  # V579 backward-compat alias
+
+DatasetStats = RegistryDatasetStats  # V579 backward-compat alias

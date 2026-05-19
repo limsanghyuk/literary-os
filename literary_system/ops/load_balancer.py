@@ -68,7 +68,7 @@ class AdapterRef:
 
 
 @dataclass
-class RouteResult:
+class LoadBalancerResult:
     adapter:   AdapterRef
     weight:    float
     reason:    str = ""
@@ -204,3 +204,5 @@ class LoadBalancer:
     def healthy_count(self) -> int:
         with self._lock:
             return sum(1 for a in self._adapters if a.is_healthy())
+
+RouteResult = LoadBalancerResult  # V579 backward-compat alias

@@ -113,7 +113,7 @@ class SplitResult:
 
 
 @dataclass
-class FilterResult:
+class TraceFilterResult:
     """run() 전체 파이프라인 결과."""
     split:          SplitResult
     dedup_stats:    DedupStats
@@ -355,3 +355,5 @@ class TraceQualityFilter:
                 "scrub_pii":       do_scrub,
             },
         )
+
+FilterResult = TraceFilterResult  # V579 backward-compat alias

@@ -25,7 +25,7 @@ from typing import Any
 # ActionType — 인물이 취할 수 있는 행동 유형
 # ────────────────────────────────────────────────────────────────
 
-class ActionType(str, Enum):
+class IntentActionType(str, Enum):
     MOVE        = "move"         # 이동 — 장소를 바꾼다
     CONFRONT    = "confront"     # 대립 — 특정 대상에게 다가가 맞선다
     ACQUIRE     = "acquire"      # 획득 — 물건·정보·사람을 얻으려 한다
@@ -283,3 +283,5 @@ class ConcurrentIntentCollector:
 
     def character_ids(self) -> list[str]:
         return [a.character_id for a in self.agents]
+
+ActionType = IntentActionType  # V579 backward-compat alias

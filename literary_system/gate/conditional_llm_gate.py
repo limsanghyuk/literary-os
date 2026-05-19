@@ -32,7 +32,7 @@ class GateDecision(str, Enum):
 
 
 @dataclass
-class GateResult:
+class ConditionalLLMGateResult:
     """게이트 판정 결과."""
     decision: GateDecision
     literary_state: dict[str, float]
@@ -217,3 +217,5 @@ class ConditionalLLMGate:
     def reset_stats(self) -> None:
         """통계 초기화 (Phase 전환 시 사용)."""
         self._stats = {k: 0 for k in self._stats}
+
+GateResult = ConditionalLLMGateResult  # V579 backward-compat alias

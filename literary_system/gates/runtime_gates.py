@@ -112,7 +112,7 @@ class PhysicsGate:
 
 # ── RG-2: EnsembleGate ────────────────────────────────────────────────────────
 
-class EnsembleGate:
+class RuntimeEnsembleGate:
     """RG-2 — Stage96 앙상블 검증 (LLM 호출 포함).
 
     LLM_DISABLED=true 환경변수 설정 시 자동 skip.
@@ -221,3 +221,5 @@ class RuntimeGateRunner:
 
     def all_passed(self, results: Dict[str, RuntimeGateResult]) -> bool:
         return all(r.passed for r in results.values())
+
+EnsembleGate = RuntimeEnsembleGate  # V579 backward-compat alias

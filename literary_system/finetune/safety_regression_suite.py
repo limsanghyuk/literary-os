@@ -81,7 +81,7 @@ _SAFETY_PATTERNS: dict[SafetyCategory, list[str]] = {
 # ---------------------------------------------------------------------------
 
 @dataclass
-class SafetyViolation:
+class FinetuneViolation:
     category: SafetyCategory
     verdict: SafetyVerdict
     pattern_matched: str
@@ -245,3 +245,5 @@ class SafetyRegressionSuite:
         """단일 텍스트 빠른 안전 여부 확인"""
         violations = self.check_text(text)
         return not any(v.verdict == SafetyVerdict.VIOLATION for v in violations)
+
+SafetyViolation = FinetuneViolation  # V579 backward-compat alias

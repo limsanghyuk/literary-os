@@ -26,7 +26,7 @@ from typing import List, Optional, Set
 # ════════════════════════════════════════════════════════════════════
 
 @dataclass
-class CharacterState:
+class CharacterStateSnapshot:
     """단일 캐릭터의 현재 상태."""
     is_alive: bool = True
     is_hidden: bool = False
@@ -183,3 +183,5 @@ class CharacterStateGate:
     def clear_violations(self) -> None:
         """위반 이력 초기화."""
         self._violations.clear()
+
+CharacterState = CharacterStateSnapshot  # V579 backward-compat alias

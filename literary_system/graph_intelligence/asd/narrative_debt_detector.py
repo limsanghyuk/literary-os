@@ -30,7 +30,7 @@ from ..narrative_graph_store import NarrativeGraphStore
 # Debt item types
 # ---------------------------------------------------------------------------
 
-class DebtType(str, Enum):
+class NarrativeDebtType(str, Enum):
     UNRESOLVED_SECRET    = "unresolved_secret"
     BROKEN_FORESHADOW    = "broken_foreshadow"
     ABANDONED_THREAD     = "abandoned_thread"
@@ -222,3 +222,5 @@ class NarrativeDebtDetector:
                 ))
 
         return items
+
+DebtType = NarrativeDebtType  # V579 backward-compat alias

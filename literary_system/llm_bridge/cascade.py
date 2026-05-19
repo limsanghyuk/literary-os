@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 @dataclass
-class CacheEntry:
+class LLMCacheEntry:
     """Single cache entry with TTL support."""
     response:    str
     created_at:  float = field(default_factory=time.time)
@@ -263,3 +263,5 @@ class CascadeOrchestrator:
                 if self._draft_count > 0 else 0.0
             ),
         }
+
+CacheEntry = LLMCacheEntry  # V579 backward-compat alias

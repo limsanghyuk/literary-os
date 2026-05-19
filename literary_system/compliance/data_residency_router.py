@@ -113,7 +113,7 @@ class TenantResidencyConfig:
 
 
 @dataclass
-class RouteDecision:
+class ResidencyRouteDecision:
     decision_id: str
     tenant_id: str
     requested_region: DataRegion | None
@@ -304,3 +304,5 @@ class DataResidencyRouter:
         if config is None:
             return True   # 미설정 → ANY
         return region in _POLICY_ALLOWED_REGIONS[config.policy]
+
+RouteDecision = ResidencyRouteDecision  # V579 backward-compat alias

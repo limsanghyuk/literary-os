@@ -33,7 +33,7 @@ class ProseStyle(str, Enum):
     UNKNOWN = "unknown"
 
 
-class LicenseType(str, Enum):
+class DatasetLicenseType(str, Enum):
     CC_BY = "cc-by"               # CC Attribution — 허용
     CC_BY_SA = "cc-by-sa"         # CC Attribution-ShareAlike — 허용
     CC_BY_NC = "cc-by-nc"         # NonCommercial — 비상업적만 허용
@@ -55,9 +55,9 @@ class DataSource(str, Enum):
 # ---------------------------------------------------------------------------
 
 ALLOWED_LICENSES = {
-    LicenseType.CC_BY,
-    LicenseType.CC_BY_SA,
-    LicenseType.PUBLIC_DOMAIN,
+    DatasetLicenseType.CC_BY,
+    DatasetLicenseType.CC_BY_SA,
+    DatasetLicenseType.PUBLIC_DOMAIN,
 }
 
 ALLOWED_SOURCES = {
@@ -80,7 +80,7 @@ class ProseEntry:
     text: str
     style: ProseStyle
     source: DataSource
-    license_type: LicenseType
+    license_type: DatasetLicenseType
     author: str = ""
     title: str = ""
     year: int | None = None
@@ -132,7 +132,7 @@ class DatasetSplit:
 
 
 @dataclass
-class DatasetCard:
+class ProseDatasetCard:
     dataset_id: str
     name: str
     description: str
@@ -172,7 +172,7 @@ class ProseStyleDataset:
     load(filters) → list[ProseEntry]
     license_check(entry) → bool
     split(entries, train_ratio, val_ratio) → DatasetSplit
-    generate_card(dataset_id, entries) → DatasetCard
+    generate_card(dataset_id, entries) → ProseDatasetCard
 
     LLM-0: 필터·분할·카드 생성 모두 규칙 기반.
     """
@@ -183,7 +183,7 @@ class ProseStyleDataset:
 
     def __init__(self) -> None:
         self._registry: list[ProseEntry] = []
-        self._datasets: dict[str, DatasetCard] = {}
+        self._datasets: dict[str, ProseDatasetCard] = {}
 
     # ------------------------------------------------------------------
     # 데이터 등록
@@ -232,7 +232,7 @@ class ProseStyleDataset:
         self,
         style: ProseStyle | None = None,
         source: DataSource | None = None,
-        license_type: LicenseType | None = None,
+        license_type: DatasetLicenseType | None = None,
         min_tokens: int = 0,
         max_tokens: int | None = None,
         language: str | None = None,
@@ -313,7 +313,7 @@ class ProseStyleDataset:
         entries: list[ProseEntry],
         name: str = "ProseStyleDataset",
         description: str = "한국 문학 스타일 파인튜닝 데이터셋",
-    ) -> DatasetCard:
+    ) -> ProseDatasetCard:
         """ADR-014: 데이터셋 카드 자동 생성"""
         style_dist: dict[str, int] = {}
         total_tokens = 0
@@ -334,7 +334,7 @@ class ProseStyleDataset:
         ids_str = ",".join(sorted(e.entry_id for e in entries))
         checksum = hashlib.sha256(ids_str.encode()).hexdigest()[:16]
 
-        card = DatasetCard(
+        card = ProseDatasetCard(
             dataset_id=dataset_id,
             name=name,
             description=description,
@@ -350,7 +350,7 @@ class ProseStyleDataset:
         self._datasets[dataset_id] = card
         return card
 
-    def get_card(self, dataset_id: str) -> DatasetCard | None:
+    def get_card(self, dataset_id: str) -> ProseDatasetCard | None:
         return self._datasets.get(dataset_id)
 
     # ------------------------------------------------------------------
@@ -381,7 +381,7 @@ def make_entry(
     text: str,
     style: ProseStyle,
     source: DataSource = DataSource.SYNTHETIC,
-    license_type: LicenseType = LicenseType.CC_BY,
+    license_type: DatasetLicenseType = DatasetLicenseType.CC_BY,
     **kwargs: Any,
 ) -> ProseEntry:
     """ProseEntry 빠른 생성 헬퍼"""
@@ -393,3 +393,8 @@ def make_entry(
         license_type=license_type,
         **kwargs,
     )
+
+
+LicenseType = DatasetLicenseType  # V579 backward-compat alias
+
+DatasetCard = ProseDatasetCard  # V579 backward-compat alias

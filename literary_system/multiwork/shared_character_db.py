@@ -20,7 +20,7 @@ from enum import Enum
 from typing import Dict, List, Optional, Set, Tuple, Any
 
 
-class RelationType(Enum):
+class CharacterRelationType(Enum):
     """캐릭터 간 관계 유형."""
     ALLY = "ally"
     RIVAL = "rival"
@@ -277,3 +277,5 @@ class SharedCharacterDB:
                 "total_relations": len(self._relations),
                 "roles": list({c.role for c in self._chars.values()}),
             }
+
+RelationType = CharacterRelationType  # V579 backward-compat alias

@@ -1,6 +1,6 @@
 """
 literary_system/ops/dr_controller.py
-V477 — DRController (Disaster Recovery, RPO 1h)
+V477 — OpsDRController (Disaster Recovery, RPO 1h)
 
 설계 (Phase 3 v2 ADR-018):
   - RPO 1h: 스냅샷 + WAL 스트리밍 mock
@@ -21,7 +21,7 @@ from typing import Any, Callable, Dict, List, Optional
 
 # ── 열거형 ───────────────────────────────────────────────────
 
-class DRStatus(str, Enum):
+class OpsDRStatus(str, Enum):
     IDLE       = "idle"
     SNAPSHOTTING = "snapshotting"
     STREAMING  = "streaming"
@@ -37,7 +37,7 @@ class DRTestResult(str, Enum):
 # ── 데이터 모델 ──────────────────────────────────────────────
 
 @dataclass
-class Snapshot:
+class OpsDRSnapshot:
     snapshot_id: str
     timestamp:   float
     size_mb:     float
@@ -74,9 +74,9 @@ class RestoreReport:
         return self.rto_actual_s <= self.rto_target_s
 
 
-# ── DRController ─────────────────────────────────────────────
+# ── OpsDRController ─────────────────────────────────────────────
 
-class DRController:
+class OpsDRController:
     """
     재해 복구 컨트롤러.
 
@@ -100,28 +100,28 @@ class DRController:
         self._wal_fn      = wal_fn      or (lambda: [])
         self._clock       = clock_fn    or time.time
 
-        self._snapshots: List[Snapshot] = []
+        self._snapshots: List[OpsDRSnapshot] = []
         self._wal:       List[WALEntry] = []
-        self._status     = DRStatus.IDLE
+        self._status     = OpsDRStatus.IDLE
         self._last_snapshot_time: Optional[float] = None
 
     # ── 스냅샷 ──────────────────────────────────────────────
 
-    def take_snapshot(self) -> Snapshot:
+    def take_snapshot(self) -> OpsDRSnapshot:
         """스냅샷 생성."""
-        self._status = DRStatus.SNAPSHOTTING
+        self._status = OpsDRStatus.SNAPSHOTTING
         size_mb = self._snapshot_fn()
-        snap = Snapshot(
+        snap = OpsDRSnapshot(
             snapshot_id=f"snap_{uuid.uuid4().hex[:8]}",
             timestamp=self._clock(),
             size_mb=float(size_mb),
         )
         self._snapshots.append(snap)
         self._last_snapshot_time = snap.timestamp
-        self._status = DRStatus.IDLE
+        self._status = OpsDRStatus.IDLE
         return snap
 
-    def latest_snapshot(self) -> Optional[Snapshot]:
+    def latest_snapshot(self) -> Optional[OpsDRSnapshot]:
         if not self._snapshots:
             return None
         return max(self._snapshots, key=lambda s: s.timestamp)
@@ -133,10 +133,10 @@ class DRController:
 
     def stream_wal(self) -> List[WALEntry]:
         """WAL 항목 수집 (streaming mock)."""
-        self._status = DRStatus.STREAMING
+        self._status = OpsDRStatus.STREAMING
         entries = self._wal_fn()
         self._wal.extend(entries)
-        self._status = DRStatus.IDLE
+        self._status = OpsDRStatus.IDLE
         return entries
 
     def append_wal(self, operation: str, data: Dict[str, Any] = None) -> WALEntry:
@@ -157,7 +157,7 @@ class DRController:
 
     def dr_restore_test(
         self,
-        target_snapshot: Optional[Snapshot] = None,
+        target_snapshot: Optional[OpsDRSnapshot] = None,
     ) -> RestoreReport:
         """
         DR 복원 테스트 시뮬레이션.
@@ -167,7 +167,7 @@ class DRController:
         if snap is None:
             raise RuntimeError("dr_restore_test: 스냅샷 없음 — 먼저 take_snapshot() 실행")
 
-        self._status = DRStatus.RESTORING
+        self._status = OpsDRStatus.RESTORING
         restore_id   = f"rst_{uuid.uuid4().hex[:8]}"
         started_at   = self._clock()
 
@@ -184,7 +184,7 @@ class DRController:
         rto_actual = self._restore_fn(snap.snapshot_id)
         completed_at = started_at + rto_actual
 
-        self._status = DRStatus.IDLE
+        self._status = OpsDRStatus.IDLE
 
         result_flag = (
             DRTestResult.PASS
@@ -213,3 +213,15 @@ class DRController:
 
     def status(self) -> str:
         return self._status.value
+
+
+
+
+
+Snapshot = OpsDRSnapshot  # V579 backward-compat alias
+
+DRController = OpsDRController  # V579 backward-compat alias
+
+DRStatus = OpsDRStatus  # V579 backward-compat alias
+
+DRSnapshot = OpsDRSnapshot  # V579 backward-compat alias

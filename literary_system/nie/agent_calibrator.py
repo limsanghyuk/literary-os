@@ -54,7 +54,7 @@ class AgentRecord:
 
 
 @dataclass
-class RubricScore:
+class NIERubricScore:
     """RubricCalibrator 평가 결과."""
     agent: str
     score: float                       # 0~1
@@ -73,7 +73,7 @@ class CalibrationResult:
 
 
 # ─── RubricCalibrator ─────────────────────────────────────────────────────────
-class RubricCalibrator:
+class NIERubricCalibrator:
     """
     Phase 2 룰릭 기반 가중치 재보정기.
     각 에이전트의 누적 pass_rate 와 sigma_escalation 을 룰릭 점수로 환산,
@@ -262,3 +262,7 @@ class AgentCalibrator:
         self._calibration_history.append(result)
         self._last_calibration_works = self._works_count
         return result
+
+RubricCalibrator = NIERubricCalibrator  # V579 backward-compat alias
+
+RubricScore = NIERubricScore  # V579 backward-compat alias

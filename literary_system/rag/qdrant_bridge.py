@@ -132,7 +132,7 @@ class EmbeddingService:
 # ---------------------------------------------------------------------------
 
 @dataclass
-class TenantConfig:
+class QdrantTenantConfig:
     tenant_id:    str
     kms_key_id:   str  = ""   # KMS key for encryption at rest
     created_at:   float = field(default_factory=time.time)
@@ -187,7 +187,7 @@ class VectorDocument:
 
 
 @dataclass
-class SearchResult:
+class QdrantSearchResult:
     doc_id:  str
     text:    str
     score:   float
@@ -375,3 +375,7 @@ class QdrantBridge:
             if self._fallback:
                 return self._fallback.search(collection, vector, top_k)
             return []
+
+SearchResult = QdrantSearchResult  # V579 backward-compat alias
+
+TenantConfig = QdrantTenantConfig  # V579 backward-compat alias

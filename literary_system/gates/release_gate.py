@@ -820,6 +820,60 @@ def _gate_registry_g36() -> dict:
     except Exception as exc:
         return {"pass": False, "details": f"GateRegistry 임포트 실패: {exc}"}
 
+
+def _gate_duplicate_zero_g37() -> dict:
+    """
+    Gate 37 — DuplicateZero: 중복 클래스 이름 0건 검증 (ADR-033).
+
+    literary_system/ 전체를 AST 스캔하여
+    서로 다른 파일에 같은 이름의 class 정의가 2개 이상 존재하면 FAIL.
+    동일 파일 내 조건 분기 정의(예: if pydantic: ... else: ...)는 허용.
+    """
+    import ast as _ast
+    import os as _os
+    from collections import defaultdict as _dd
+
+    root = _os.path.join(_os.path.dirname(__file__), "..", "..")
+    root = _os.path.abspath(root)
+    literary_root = _os.path.join(root, "literary_system")
+
+    class_locs: dict = _dd(list)
+    for dirpath, dirnames, filenames in _os.walk(literary_root):
+        dirnames[:] = [d for d in dirnames if d != "__pycache__"]
+        for fname in filenames:
+            if not fname.endswith(".py"):
+                continue
+            fpath = _os.path.join(dirpath, fname)
+            try:
+                src = open(fpath, encoding="utf-8").read()
+                tree = _ast.parse(src)
+                for node in _ast.walk(tree):
+                    if isinstance(node, _ast.ClassDef):
+                        class_locs[node.name].append(fpath)
+            except Exception:
+                pass
+
+    duplicates = {}
+    for cls_name, paths in class_locs.items():
+        unique_files = list(dict.fromkeys(paths))
+        if len(unique_files) > 1:
+            duplicates[cls_name] = [
+                _os.path.relpath(p, root) for p in unique_files
+            ]
+
+    passed = len(duplicates) == 0
+    details = (
+        f"중복 클래스 0건 — DuplicateZero 충족"
+        if passed
+        else f"중복 클래스 {len(duplicates)}건: " + ", ".join(sorted(duplicates.keys())[:5])
+    )
+    return {
+        "pass": passed,
+        "duplicate_count": len(duplicates),
+        "duplicates": duplicates,
+        "details": details,
+    }
+
 GATES = [
     ("llm_zero",              "LLM-0 외부 호출 금지",              _gate_llm_zero),
     ("arc_integrity",         "SeriesArcPlanner 4막 비율",          _gate_arc_integrity),
@@ -866,6 +920,8 @@ GATES = [
     ("adapter_canonical_g35",    "AdapterCanonical: G3 캐노니컬 어댑터 체계 검증 (Gate 35, ADR-035)", _gate_adapter_canonical_g35),
     # ── V578: 게이트 레지스트리 단일 소스 무결성 (Gate 36) ───────────────────
     ("gate_registry_g36",        "GateRegistry: 레지스트리 단일 소스 무결성 (Gate 36, ADR-032)",       _gate_registry_g36),
+    # ── V579: 중복 클래스 0건 (Gate 37) ──────────────────────────────────
+    ("duplicate_zero_g37",       "DuplicateZero: literary_system 중복 클래스명 0건 (Gate 37)",           _gate_duplicate_zero_g37),
 ]
 
 
