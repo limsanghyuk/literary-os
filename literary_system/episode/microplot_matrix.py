@@ -2,8 +2,10 @@
 16화 × K(가변) 미시 플롯 행렬.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import List
+
 from .episode_planner import EpisodePlan
 
 

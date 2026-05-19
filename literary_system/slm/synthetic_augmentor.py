@@ -154,8 +154,9 @@ class SyntheticAugmentor:
         레코드 목록을 받아 증강된 TraceRecord 목록을 반환.
         원본 레코드는 불변으로 유지.
         """
-        from literary_system.trace.trace_dataset_store import PromotionTier
         import dataclasses
+
+        from literary_system.trace.trace_dataset_store import PromotionTier
 
         strat = strategy or self.strategy
         # 명시적 strategy 오버라이드가 있으면 해당 mock 사용,

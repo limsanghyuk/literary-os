@@ -23,10 +23,7 @@ from enum import Enum
 from typing import Dict, List, Optional
 
 from .episode_planner import EpisodePlan, EpisodePlanner
-from .episode_state import (
-    ActPosition, NarrativeStateTensor, SeriesConfig
-)
-
+from .episode_state import ActPosition, NarrativeStateTensor, SeriesConfig
 
 # ── 씬 타입 ─────────────────────────────────────────────────────
 
@@ -208,7 +205,7 @@ class EpisodeStructureConfig:
             avg_curiosity_gradient=0.5 + 0.2 * pos,
         )
         # current_episode_idx = len(episodes) → episode_idx개의 더미 에피소드 추가
-        from literary_system.episode.episode_state import EpisodeState, ActPosition
+        from literary_system.episode.episode_state import ActPosition, EpisodeState
         for i in range(self.episode_idx):
             state.episodes.append(EpisodeState(
                 episode_idx=i,

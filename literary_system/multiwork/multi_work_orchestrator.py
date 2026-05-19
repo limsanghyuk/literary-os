@@ -19,15 +19,15 @@ from __future__ import annotations
 
 import threading
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Any
+from typing import Any, Dict, List, Optional
 
-from .multi_work_core import MultiWorkCore, WorkProject, WorkSession, ProjectConflict
+from .author_license_api import AuthorLicenseAPI, LicenseScope, LicenseType
+from .genre_transfer import GenreTransferLearning
+from .multi_work_cim import MultiWorkCIM
+from .multi_work_core import MultiWorkCore, ProjectConflict, WorkProject, WorkSession
+from .project_isolation import IsolationPolicy, ProjectIsolationManager
 from .shared_character_db import SharedCharacterDB
 from .shared_world_db import SharedWorldDB
-from .genre_transfer import GenreTransferLearning
-from .project_isolation import ProjectIsolationManager, IsolationPolicy
-from .multi_work_cim import MultiWorkCIM
-from .author_license_api import AuthorLicenseAPI, LicenseType, LicenseScope
 
 
 @dataclass

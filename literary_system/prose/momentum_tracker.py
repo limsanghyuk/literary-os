@@ -1,5 +1,6 @@
 """V370: EmotionalMomentumTracker v2 — 4D 감정 벡터 + CharacterCluster 가중치."""
 from __future__ import annotations
+
 from collections import defaultdict, deque
 from dataclasses import dataclass, field
 from typing import Deque, Dict, List, Optional, Tuple

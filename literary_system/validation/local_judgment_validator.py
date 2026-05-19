@@ -21,10 +21,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any
 
-from literary_system.validation.gold_standard_builder import (
-    GoldStandardStore, QualityLabel, SceneLabel
-)
 from literary_system.trajectory.reader_simulator import ReaderSimulator
+from literary_system.validation.gold_standard_builder import GoldStandardStore, QualityLabel, SceneLabel
 
 
 @dataclass

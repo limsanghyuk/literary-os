@@ -8,8 +8,8 @@ audit_mode 전용: V312 단독 vs V323 풀 파이프라인 비교.
   - LLM 0회. 완전 로컬.
 """
 from __future__ import annotations
-import logging
 
+import logging
 from dataclasses import dataclass, field
 from typing import Any
 

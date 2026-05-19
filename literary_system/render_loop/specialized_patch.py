@@ -21,6 +21,7 @@ GPT v1600은 각 패밀리마다:
 LLM 연결 시 soft instruction으로 변환 가능하도록 설계.
 """
 from __future__ import annotations
+
 import re
 from dataclasses import dataclass
 from typing import Any

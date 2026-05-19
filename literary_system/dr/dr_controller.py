@@ -15,10 +15,9 @@ from __future__ import annotations
 import threading
 import uuid
 from dataclasses import dataclass, field
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta, timezone
 from enum import Enum
 from typing import Callable, Dict, List, Optional
-
 
 # ---------------------------------------------------------------------------
 # 예외
@@ -266,7 +265,7 @@ class DRController:
         for comp in DRComponent:
             try:
                 results[comp.value] = self.take_snapshot(comp)
-            except DRSnapshotError as e:
+            except DRSnapshotError:
                 results[comp.value] = None
         return results
 

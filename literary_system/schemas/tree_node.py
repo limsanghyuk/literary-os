@@ -20,7 +20,6 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any, Dict, List, Optional
 
-
 # ── 노드 타입 ────────────────────────────────────────────────────
 
 class TreeNodeType(str, Enum):

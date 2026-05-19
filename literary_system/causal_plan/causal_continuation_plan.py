@@ -22,12 +22,11 @@ GPT v1601 vs 우리 V315:
 LLM 0회.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any
 
-from literary_system.world.knowledge_state_tracker import (
-    KnowledgeStateTracker, KnowledgeStatus
-)
+from literary_system.world.knowledge_state_tracker import KnowledgeStateTracker, KnowledgeStatus
 
 
 @dataclass

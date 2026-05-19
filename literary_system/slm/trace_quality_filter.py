@@ -18,7 +18,7 @@ from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Any
 
-from literary_system.trace.trace_dataset_store import TraceRecord, PromotionTier
+from literary_system.trace.trace_dataset_store import PromotionTier, TraceRecord
 
 # ── MinHash ───────────────────────────────────────────────────────────────
 

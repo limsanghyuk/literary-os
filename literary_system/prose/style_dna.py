@@ -1,5 +1,6 @@
 """V370: StyleDNA v2 — 장르별 산문 스타일 DNA 프로파일."""
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any, Dict, List
 

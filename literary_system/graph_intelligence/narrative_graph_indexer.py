@@ -5,13 +5,22 @@ LLM-0 compliant: zero LLM calls.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Any
+from typing import Any, Dict, List, Optional
 
 from literary_system.graph_intelligence.narrative_graph_schema import (
-    NarrativeEdgeType, NarrativeNodeType,
-    CharacterNode, SceneNode, EventNode, SecretNode, RevealNode,
-    MotifNode, RelationshipNode, EmotionPressureNode, TimeDeltaNode,
-    DialogueIntentNode, NarrativeEdge,
+    CharacterNode,
+    DialogueIntentNode,
+    EmotionPressureNode,
+    EventNode,
+    MotifNode,
+    NarrativeEdge,
+    NarrativeEdgeType,
+    NarrativeNodeType,
+    RelationshipNode,
+    RevealNode,
+    SceneNode,
+    SecretNode,
+    TimeDeltaNode,
 )
 from literary_system.graph_intelligence.narrative_graph_store import NarrativeGraphStore
 

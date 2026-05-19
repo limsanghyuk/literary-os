@@ -17,13 +17,14 @@ import datetime
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
+from literary_system.episode.episode_state import NarrativeStateTensor, SeriesConfig
 from literary_system.memory.narrative_memory_store import (
-    NarrativeMemoryStore, EpisodeMemory,
-    EpisodeMemoryNotFound, SeriesNotFound,
+    EpisodeMemory,
+    EpisodeMemoryNotFound,
+    NarrativeMemoryStore,
+    SeriesNotFound,
 )
 from literary_system.physics.coefficient_store import PhysicsCoefficientStore
-from literary_system.episode.episode_state import SeriesConfig, NarrativeStateTensor
-
 
 # ── 데이터 구조 ───────────────────────────────────────────────────────────────
 
@@ -224,7 +225,8 @@ class NarrativeConductor:
         LongformEnduranceOrchestrator에 위임.
         """
         from literary_system.orchestrators.longform_endurance_orchestrator import (
-            LongformEnduranceOrchestrator, LongformInput
+            LongformEnduranceOrchestrator,
+            LongformInput,
         )
 
         memories = self._memory.load_series(series_id)

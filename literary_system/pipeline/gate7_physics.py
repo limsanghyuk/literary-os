@@ -3,8 +3,9 @@ V383 — PhysicsValidationGate (Gate 7)
 Gate 6 통과 후 실행. NarrativeFitnessScore + 물리 엔진 결과 검증.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
-from typing import List, TYPE_CHECKING
+from typing import TYPE_CHECKING, List
 
 from literary_system.physics import NarrativePhysicsEngine, PhysicsRunResult
 from literary_system.physics.coefficient_store import PhysicsCoefficientStore

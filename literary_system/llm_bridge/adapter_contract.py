@@ -22,8 +22,7 @@ from __future__ import annotations
 import math
 import time
 from dataclasses import dataclass, field
-from typing import Optional, Callable, Any
-
+from typing import Any, Callable, Optional
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 1. KEY — API 키 관리

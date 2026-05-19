@@ -14,26 +14,27 @@ V313→V322: BuildOpeningOrchestrator
     → 결과 반환 + 다음 화 handoff 저장
 """
 from __future__ import annotations
+
 from pathlib import Path
 from typing import Any
 
-from literary_system.compiler.seed_compiler import SeedCompiler
-from literary_system.compiler.prompt_assembler import PromptAssembler
-from literary_system.compiler.v312_bridge import V312Bridge
-from literary_system.style.style_dna_engine import StyleDNAEngine
 from literary_system.coherence.temporal_coherence import (
-    TemporalCoherenceEngine,
     ProjectMemoryStore,
     ResidueLifecycle,
+    TemporalCoherenceEngine,
 )
+from literary_system.compiler.prompt_assembler import PromptAssembler
+from literary_system.compiler.seed_compiler import SeedCompiler
+from literary_system.compiler.v312_bridge import V312Bridge
 
 # V382: 파이프라인 실행 추적
 from literary_system.pipeline import (
     LiteraryPipelineState,
     append_trace,
-    save_literary_checkpoint,
     autosave_literary_state,
+    save_literary_checkpoint,
 )
+from literary_system.style.style_dna_engine import StyleDNAEngine
 
 
 class BuildOpeningOrchestrator:
@@ -112,7 +113,7 @@ class BuildOpeningOrchestrator:
             save_literary_checkpoint(self.pipeline_state, "standard_literary_analyzer",
                 ["run_id", "project_id"])
 
-        except Exception as e:
+        except Exception:
             # v7 분析기 없이 기본 패킷으로 폴백
             bundle_v7 = self._make_fallback_bundle(seed, total_episodes)
             append_trace(self.pipeline_state,
@@ -174,7 +175,7 @@ class BuildOpeningOrchestrator:
                 ["run_id", "project_id"])
 
         append_trace(self.pipeline_state,
-            f"\n[BuildOpeningOrchestrator] run_quick 완료 | episodes=3")
+            "\n[BuildOpeningOrchestrator] run_quick 완료 | episodes=3")
         autosave_literary_state(self.pipeline_state, "run_quick_completed", status="completed")
 
         return {

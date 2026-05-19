@@ -22,10 +22,10 @@ from __future__ import annotations
 import time
 from typing import List, Optional, Union
 
+from literary_system.llm_bridge.health.provider_health_monitor import ProviderHealthMonitor
 from literary_system.llm_bridge.llm_bridge_interface import LLMBridgeInterface
 from literary_system.llm_bridge.llm_context import LLMContext, LLMResponse, coerce_context
 from literary_system.llm_bridge.routing.task_router import TaskRouter
-from literary_system.llm_bridge.health.provider_health_monitor import ProviderHealthMonitor
 
 
 class UnifiedLLMGateway:
@@ -211,4 +211,3 @@ def make_default_gateway(
     router  = TaskRouter(providers=providers, health_monitor=health,
                          fallback=MockLLMBridge() if mock_fallback else None)
     return UnifiedLLMGateway(task_router=router, health_monitor=health)
-  

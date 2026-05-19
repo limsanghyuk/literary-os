@@ -11,10 +11,10 @@ TIdealLearner (V518+) 연동: Fourier 계수 작품·장르별 적응.
 """
 from __future__ import annotations
 
+import logging
 import math
 from dataclasses import dataclass, field
-from typing import List, Dict, Optional, Tuple
-import logging
+from typing import Dict, List, Optional, Tuple
 
 logger = logging.getLogger(__name__)
 

@@ -2,11 +2,11 @@
 from literary_system.pipeline.pipeline_state import (
     LiteraryPipelineState,
     append_trace,
-    save_literary_checkpoint,
-    restore_literary_checkpoint,
     autosave_literary_state,
-    run_minimal_pipeline,
     prune_trace,
+    restore_literary_checkpoint,
+    run_minimal_pipeline,
+    save_literary_checkpoint,
 )
 
 __all__ = [

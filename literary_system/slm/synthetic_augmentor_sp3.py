@@ -22,7 +22,6 @@ import uuid
 from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, List, Optional
 
-
 # ── Mock 변환 함수 ────────────────────────────────────────────────────
 
 # 한국어 동의어 간이 맵

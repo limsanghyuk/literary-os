@@ -3,10 +3,10 @@ V383 — MotifResidueGraphBuilder
 NKG 모티프 잔상 누적 그래프. residue_score = appearances × exp(-decay × episodes_since_last).
 """
 from __future__ import annotations
+
 import math
 from dataclasses import dataclass, field
 from typing import Dict, List
-
 
 _DECAY = 0.3          # 감쇠 계수
 _ORPHAN_THRESHOLD = 0.1   # 잔상 점수 임계값

@@ -8,19 +8,18 @@ Classes:
   OllamaAdapterV2      -- Local Ollama + circuit breaker + contract
 """
 from __future__ import annotations
-import logging
 
+import logging
 import time
 from typing import Any, Optional, Union
 
-from literary_system.llm_bridge.llm_bridge_interface import LLMBridgeInterface
-from literary_system.llm_bridge.llm_context import LLMContext, coerce_context
 from literary_system.llm_bridge.adapter_contract import (
     AdapterContractV2,
     RetryPolicy,
     execute_with_retry,
 )
-
+from literary_system.llm_bridge.llm_bridge_interface import LLMBridgeInterface
+from literary_system.llm_bridge.llm_context import LLMContext, coerce_context
 
 # ---------------------------------------------------------------------------
 # 1. ClaudeAdapterV2
@@ -218,7 +217,8 @@ class OpenAIAdapterV2(LLMBridgeInterface):
         self._contract = contract
 
     def is_available(self) -> bool:
-        import urllib.request, urllib.error
+        import urllib.error
+        import urllib.request
         try:
             url = f"{self._base_url}/models"
             api_key = self._contract.key.resolve() or "none"
@@ -232,7 +232,9 @@ class OpenAIAdapterV2(LLMBridgeInterface):
             return False
 
     def generate(self, prompt: str, context: Union[LLMContext, dict] = None) -> str:
-        import json, urllib.request, urllib.error
+        import json
+        import urllib.error
+        import urllib.request
 
         # Token budget check
         estimated = self._contract.token.count_input_tokens(prompt)
@@ -405,7 +407,8 @@ class OllamaAdapterV2(LLMBridgeInterface):
         if not self._cb.can_pass():
             return ""  # circuit open
 
-        import json, urllib.request
+        import json
+        import urllib.request
 
         contract = self._contract
 

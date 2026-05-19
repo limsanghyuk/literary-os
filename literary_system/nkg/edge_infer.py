@@ -15,12 +15,11 @@ from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Set, Tuple
 
 from literary_system.nkg.schema import (
+    ForeshadowNode,
     NKGEdge,
     NKGEdgeType,
-    ForeshadowNode,
     SceneNode,
 )
-
 
 # ──────────────────────────────────────────────────────────────
 #  키워드 사전 (한국어 + 영어)

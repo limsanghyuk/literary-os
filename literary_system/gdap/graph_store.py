@@ -11,10 +11,20 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Set
 
 from literary_system.gdap.schema import (
-    DKGEdge, DKGEdgeType, DKGNodeType,
-    DKGFileNode, DKGModuleNode, DKGFunctionNode,
-    DKGClassNode, DKGSchemaNode, DKGTestNode, DKGConfigNode,
-    DEPENDENCY_EDGES, CONTRACT_EDGES, VERIFICATION_EDGES, REFERENCE_EDGES,
+    CONTRACT_EDGES,
+    DEPENDENCY_EDGES,
+    REFERENCE_EDGES,
+    VERIFICATION_EDGES,
+    DKGClassNode,
+    DKGConfigNode,
+    DKGEdge,
+    DKGEdgeType,
+    DKGFileNode,
+    DKGFunctionNode,
+    DKGModuleNode,
+    DKGNodeType,
+    DKGSchemaNode,
+    DKGTestNode,
     node_type_of,
 )
 

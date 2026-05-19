@@ -3,9 +3,10 @@
 T[episode][scene][character][dimension]에서 episode 레이어를 담당한다.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Dict, List, Optional, Any
+from typing import Any, Dict, List, Optional
 
 
 class ActPosition(str, Enum):

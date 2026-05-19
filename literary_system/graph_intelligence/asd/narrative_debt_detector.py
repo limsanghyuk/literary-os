@@ -25,7 +25,6 @@ from typing import List, Optional
 from ..narrative_graph_schema import NarrativeEdgeType, NarrativeNodeType
 from ..narrative_graph_store import NarrativeGraphStore
 
-
 # ---------------------------------------------------------------------------
 # Debt item types
 # ---------------------------------------------------------------------------

@@ -1,10 +1,15 @@
 """V389 — EnsembleGate (Gate 8). REJECT/SELECT/MERGE 결정을 execution_trace에 기록."""
 from __future__ import annotations
+
 from dataclasses import dataclass
-from literary_system.ensemble.narrative_fitness_arbiter import (
-    NarrativeFitnessArbiter, CandidateScore, EnsembleDecision, EnsembleDecisionType
-)
 from typing import List
+
+from literary_system.ensemble.narrative_fitness_arbiter import (
+    CandidateScore,
+    EnsembleDecision,
+    EnsembleDecisionType,
+    NarrativeFitnessArbiter,
+)
 
 
 class EnsembleGateFailure(Exception):

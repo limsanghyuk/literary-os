@@ -1,7 +1,10 @@
 """V328 Task16: DataChunker — TraceDatasetStore → SLMDatasetBuilder 파이프라인 (단절 H)."""
 from __future__ import annotations
-from typing import Iterator, Any
-import json, os
+
+import json
+import os
+from typing import Any, Iterator
+
 
 class DataChunker:
     def __init__(self, chunk_size: int = 50):

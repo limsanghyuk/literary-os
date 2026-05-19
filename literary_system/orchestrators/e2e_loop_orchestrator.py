@@ -31,14 +31,12 @@ logger = logging.getLogger(__name__)
 from dataclasses import dataclass, field
 from typing import Any
 
-from literary_system.trajectory.reader_simulator import ReaderSimulator
-from literary_system.render_loop.specialized_patch import SpecializedLocalPatchEngine
-from literary_system.gate.conditional_llm_gate import (
-    ConditionalLLMGate, GateDecision, GateResult
-)
-from literary_system.trace.trace_dataset_store import TraceDatasetStore
 from literary_system.compiler.v312_bridge import V312Bridge
+from literary_system.gate.conditional_llm_gate import ConditionalLLMGate, GateDecision, GateResult
 from literary_system.llm_bridge.llm_bridge_interface import LLMBridgeInterface
+from literary_system.render_loop.specialized_patch import SpecializedLocalPatchEngine
+from literary_system.trace.trace_dataset_store import TraceDatasetStore
+from literary_system.trajectory.reader_simulator import ReaderSimulator
 
 
 @dataclass

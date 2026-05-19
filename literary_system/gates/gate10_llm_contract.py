@@ -17,7 +17,6 @@ import inspect
 from dataclasses import dataclass, field
 from typing import Any, List, Optional
 
-
 # ────────────────────────────────────────────────────────────────
 # ContractViolation
 # ────────────────────────────────────────────────────────────────
@@ -197,8 +196,8 @@ def _gate_llm_adapter_contract() -> dict:
     Returns:
         {"passed": bool, "details": dict}
     """
-    from literary_system.llm_bridge.openai_compatible_adapter import OpenAICompatibleAdapter
     from literary_system.llm_bridge.mock_llm_bridge import MockLLMBridge
+    from literary_system.llm_bridge.openai_compatible_adapter import OpenAICompatibleAdapter
     from literary_system.llm_bridge.routing.task_router import TaskRouter
 
     adapters = [

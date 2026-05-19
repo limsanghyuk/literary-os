@@ -1,8 +1,14 @@
 """V360: 역사 소설 장르 플러그인."""
-from literary_system.scope.resolver import (
-    NarrativeScopePlugin, StyleDirective, SceneContext, StoryContext, PluginRegistry
-)
 from typing import List
+
+from literary_system.scope.resolver import (
+    NarrativeScopePlugin,
+    PluginRegistry,
+    SceneContext,
+    StoryContext,
+    StyleDirective,
+)
+
 
 class HistoricalPlugin(NarrativeScopePlugin):
     genre_id     = "historical"

@@ -1,8 +1,11 @@
 """V328 Task14: LLMNodeRouter — ComfyUI 스타일 멀티 어댑터 라우터 (단절 G)."""
 from __future__ import annotations
+
 from enum import Enum
 from typing import Any
+
 from literary_system.llm_bridge.llm_bridge_interface import LLMBridgeInterface
+
 
 class RoutingPolicy(str, Enum):
     PRIMARY     = "primary"

@@ -17,15 +17,15 @@ SOVEREIGN_OS V305의 execution_trace / checkpoint 시스템을 Literary OS에 �
   run_minimal_pipeline()        — Gate 6 전용 최소 파이프라인 실행기
 """
 from __future__ import annotations
-import logging
 
 import json
+import logging
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from pydantic import BaseModel, Field, ConfigDict, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 
 logger = logging.getLogger(__name__)
 
@@ -273,7 +273,7 @@ def run_minimal_pipeline(
     # ── Node 3: CausalPlotGraph ───────────────────────────────────────────
     append_trace(state, "\n[Node_CausalPlotGraph] 인과율 그래프 초기화")
     try:
-        from literary_system.arc import ArcPlotNode, ArcAct, CausalPlotGraph
+        from literary_system.arc import ArcAct, ArcPlotNode, CausalPlotGraph
         cpg = CausalPlotGraph()
         root_node = ArcPlotNode(
             episode_id="ep_root", episode_index=1,
@@ -290,7 +290,8 @@ def run_minimal_pipeline(
     append_trace(state, "\n[Node_EpisodeRevealBudget] 공개 예산 설정")
     try:
         from literary_system.ledgers.episode_reveal_budget import (
-            EpisodeRevealBudget, RevealPolicy,
+            EpisodeRevealBudget,
+            RevealPolicy,
         )
         budget = EpisodeRevealBudget()
         for ep in range(1, episodes + 1):
@@ -307,7 +308,8 @@ def run_minimal_pipeline(
     append_trace(state, "\n[Node_KnowledgeStateTracker] 지식 상태 초기화")
     try:
         from literary_system.world.knowledge_state_tracker import (
-            KnowledgeStateTracker, KnowledgeStatus,
+            KnowledgeStateTracker,
+            KnowledgeStatus,
         )
         tracker = KnowledgeStateTracker(project_id=state.project_id or "gate_test")
         tracker.register_fact(

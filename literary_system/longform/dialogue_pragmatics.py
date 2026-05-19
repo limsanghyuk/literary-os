@@ -3,6 +3,7 @@
 Node2가 최종 표면 리듬 생성을 담당한다.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Dict, List
 

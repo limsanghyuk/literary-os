@@ -78,7 +78,7 @@ class Gate25:
             measured=l_final,
             threshold=GATE_L_FINAL_MAX,
             passed=l_final <= GATE_L_FINAL_MAX,
-            detail=f"Narrative tension loss",
+            detail="Narrative tension loss",
         )
         checks.append(g1)
 

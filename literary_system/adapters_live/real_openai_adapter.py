@@ -7,19 +7,18 @@ function_calling 패스스루, 스트리밍 지원.
 from __future__ import annotations
 
 import os
+import random
 import time
 import uuid
-import random
 from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, List, Optional
 
 from literary_system.adapters_live.real_claude_adapter import (
-    RealLLMResponse,
     LiveAdapterCall,
-    _count_tokens,
+    RealLLMResponse,
     _backoff_delay,
+    _count_tokens,
 )
-
 
 # ---------------------------------------------------------------------------
 # 설정

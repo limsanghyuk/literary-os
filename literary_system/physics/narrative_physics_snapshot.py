@@ -10,7 +10,6 @@ import datetime
 from dataclasses import dataclass, field
 from typing import Dict, FrozenSet, List, Optional
 
-
 # ── 스냅샷 데이터 구조 ─────────────────────────────────────────────────────────
 
 @dataclass
@@ -90,9 +89,7 @@ class NarrativePhysicsSnapshotEngine:
         실제 씬 데이터가 없는 경우 SeriesConfig의 대표값으로 계산.
         """
         from literary_system.physics.coefficient_store import PhysicsCoefficientStore
-        from literary_system.physics.fitness_score import (
-            NarrativeFitnessScore, NarrativeFitnessComponents
-        )
+        from literary_system.physics.fitness_score import NarrativeFitnessComponents, NarrativeFitnessScore
 
         # SeriesConfig에서 계수 store 추출 (없으면 기본값)
         store: PhysicsCoefficientStore

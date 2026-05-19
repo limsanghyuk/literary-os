@@ -1,8 +1,14 @@
 """V360: 판타지 장르 플러그인."""
-from literary_system.scope.resolver import (
-    NarrativeScopePlugin, StyleDirective, SceneContext, StoryContext, PluginRegistry
-)
 from typing import List
+
+from literary_system.scope.resolver import (
+    NarrativeScopePlugin,
+    PluginRegistry,
+    SceneContext,
+    StoryContext,
+    StyleDirective,
+)
+
 
 class FantasyPlugin(NarrativeScopePlugin):
     genre_id     = "fantasy"

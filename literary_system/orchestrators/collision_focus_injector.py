@@ -21,20 +21,19 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any
 
+from literary_system.orchestrators.character_intent_agent import (
+    ActionType,
+    IntentPacket,
+)
+from literary_system.orchestrators.concurrent_action_resolver import (
+    CollisionEvent,
+    CollisionType,
+)
 from literary_system.orchestrators.scene_focus_injector import (
     SceneFocusContext,
     SceneFocusInjector,
 )
 from literary_system.orchestrators.sequence_planner import SequencePlan
-from literary_system.orchestrators.concurrent_action_resolver import (
-    CollisionEvent,
-    CollisionType,
-)
-from literary_system.orchestrators.character_intent_agent import (
-    ActionType,
-    IntentPacket,
-)
-
 
 # ────────────────────────────────────────────────────────────────
 # CollisionSceneFocusContext — 충돌 씬 전용 컨텍스트

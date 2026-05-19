@@ -1,9 +1,12 @@
 """V360: PlanBuildGate v2 — WorkDeclaration + GUARDRAILS 통합."""
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
-from literary_system.gdap.guardrails import NKGGuardrails, GuardrailViolation, GuardrailCheck
-from literary_system.gdap.blast_radius import BlastRadiusCalculator, BlastRadius
+
+from literary_system.gdap.blast_radius import BlastRadius, BlastRadiusCalculator
+from literary_system.gdap.guardrails import GuardrailCheck, GuardrailViolation, NKGGuardrails
+
 
 @dataclass
 class WorkDeclaration:

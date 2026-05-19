@@ -8,8 +8,9 @@ DualSemanticScorer 활성화 후 S항 품질 검증.
 NKG 없는 환경(CI 초기)에서는 TF-IDF 기준으로만 검사.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
-from typing import List, Dict, Any
+from typing import Any, Dict, List
 
 
 @dataclass
@@ -96,12 +97,12 @@ class DRSEQualityGate:
 def _gate_drse_quality() -> dict:
     """릴리즈 게이트 Gate 9 실행 함수."""
     try:
+        from literary_system.drse.drse_engine import DRSEScorer, KnowledgeBoundaryGate, TFIDFSemanticScorer
         from literary_system.relation_graph.relation_graph_store import (
+            NodeType,
+            RelationGraphStore,
             StoryEdge,
-            RelationGraphStore, StoryNode, NodeType
-        )
-        from literary_system.drse.drse_engine import (
-            DRSEScorer, KnowledgeBoundaryGate, TFIDFSemanticScorer
+            StoryNode,
         )
 
         rgs = RelationGraphStore()

@@ -1,8 +1,10 @@
 """V328 Task17: EmotionalMomentumTracker — 4D 감정 모멘텀 벡터."""
 from __future__ import annotations
+
+import math
 from dataclasses import dataclass, field
 from typing import Optional
-import math
+
 
 @dataclass
 class EmotionalVector:

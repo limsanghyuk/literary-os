@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+
 from .slot_registry import SLOT_REGISTRY, normalize_slot_name
 
 TEXT_SUFFIXES = {'.json', '.md', '.txt'}

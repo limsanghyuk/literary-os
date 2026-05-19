@@ -26,17 +26,17 @@ from typing import List, Optional, Union
 from ..narrative_graph_schema import NarrativeNodeType
 from ..narrative_graph_store import NarrativeGraphStore
 from ..narrative_impact_analyzer import NarrativeImpactAnalyzer
-from .narrative_debt_detector import (
-    DebtType,
-    NarrativeDebtDetector,
-    NarrativeDebtItem,
-    NarrativeDebtReport,
-)
 from .arc_consistency_checker import (
     ArcConsistencyChecker,
     ArcConsistencyReport,
     ArcIssue,
     ArcIssueType,
+)
+from .narrative_debt_detector import (
+    DebtType,
+    NarrativeDebtDetector,
+    NarrativeDebtItem,
+    NarrativeDebtReport,
 )
 
 

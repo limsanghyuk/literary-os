@@ -12,7 +12,9 @@ from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
 
 from literary_system.graph_intelligence.narrative_graph_indexer import (
-    IndexInput, IndexResult, NarrativeGraphIndexer,
+    IndexInput,
+    IndexResult,
+    NarrativeGraphIndexer,
 )
 from literary_system.graph_intelligence.narrative_graph_store import NarrativeGraphStore
 

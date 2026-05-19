@@ -9,6 +9,7 @@ DualSemanticScorer에서 사용. LLM 0 calls.
   - 닭-달걀 해결: 첫 실행엔 NKG 비어→TF-IDF, 씬 쌓이면 자동 활성화
 """
 from __future__ import annotations
+
 import re
 from typing import Optional
 

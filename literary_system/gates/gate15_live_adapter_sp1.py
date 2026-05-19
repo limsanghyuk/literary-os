@@ -12,7 +12,6 @@ from __future__ import annotations
 
 from typing import Any, Dict, List
 
-
 # ---------------------------------------------------------------------------
 # 골든셋 정의 (50개)
 # ---------------------------------------------------------------------------
@@ -151,13 +150,20 @@ def _gate_live_adapter_sp1() -> dict:
     # 1. 모듈 임포트 생존
     try:
         from literary_system.adapters_live import (
-            RealClaudeAdapter, RealClaudeAdapterConfig,
-            RealLLMResponse, LiveAdapterCall,
-            RealOpenAIAdapter, RealOpenAIAdapterConfig,
-            RealOllamaAdapter, RealOllamaAdapterConfig, GPUMemorySnapshot,
+            GPUMemorySnapshot,
+            LiveAdapterCall,
+            RealClaudeAdapter,
+            RealClaudeAdapterConfig,
+            RealLLMResponse,
+            RealOllamaAdapter,
+            RealOllamaAdapterConfig,
+            RealOpenAIAdapter,
+            RealOpenAIAdapterConfig,
         )
         from literary_system.cost_cache import (
-            LiveCostMeter, SemanticCacheRedis, InMemoryRedis,
+            InMemoryRedis,
+            LiveCostMeter,
+            SemanticCacheRedis,
         )
     except Exception as e:
         return {
@@ -341,7 +347,8 @@ def _run_openai_case(case: Dict[str, Any]) -> bool:
 
 def _run_ollama_case(case: Dict[str, Any]) -> bool:
     from literary_system.adapters_live import (
-        RealOllamaAdapter, GPUMemorySnapshot,
+        GPUMemorySnapshot,
+        RealOllamaAdapter,
     )
     from literary_system.llm_bridge.llm_context import LLMContext
 
@@ -443,7 +450,7 @@ def _run_cost_case(case: Dict[str, Any]) -> bool:
 # ---------------------------------------------------------------------------
 
 def _run_cache_case(case: Dict[str, Any]) -> bool:
-    from literary_system.cost_cache import SemanticCacheRedis, InMemoryRedis
+    from literary_system.cost_cache import InMemoryRedis, SemanticCacheRedis
 
     label = case["label"]
 

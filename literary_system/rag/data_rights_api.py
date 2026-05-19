@@ -24,7 +24,6 @@ from typing import Any, Dict, List, Optional
 
 from literary_system.rag.retrieval_pipeline import ProvenanceLedger
 
-
 # ---------------------------------------------------------------------------
 # Enums & constants
 # ---------------------------------------------------------------------------

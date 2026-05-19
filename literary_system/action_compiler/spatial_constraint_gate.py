@@ -4,7 +4,8 @@ Gemini StateEngine INTERACT 공간 제약 재해석.
 LLM 0회. 완전 로컬.
 """
 from __future__ import annotations
-from dataclasses import dataclass, field
+
+from dataclasses import dataclass
 from typing import Any
 
 

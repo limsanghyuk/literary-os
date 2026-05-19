@@ -11,13 +11,12 @@ Design:
 """
 from __future__ import annotations
 
-import math
 import hashlib
+import math
 from dataclasses import dataclass, field
-from typing import List, Dict, Optional, Tuple, Any
+from typing import Any, Dict, List, Optional, Tuple
 
 from literary_system.rag.qdrant_bridge import QdrantBridge, SearchResult
-
 
 # ---------------------------------------------------------------------------
 # Data models

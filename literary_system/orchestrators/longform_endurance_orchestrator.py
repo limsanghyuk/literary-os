@@ -3,37 +3,26 @@ Gate 1~8 (V390) + 8개 장편 이론 모듈 (V393~V398)을
 16화 전체 파이프라인으로 통합하는 최상위 오케스트레이터.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
-from literary_system.episode.episode_state import SeriesConfig, NarrativeStateTensor
 from literary_system.episode.episode_planner import EpisodePlanner
+from literary_system.episode.episode_state import NarrativeStateTensor, SeriesConfig
 from literary_system.episode.microplot_matrix import MicroPlotMatrix
+from literary_system.longform.agency_conservation import AgencyConservationChecker, AgencyDelta, AgencyReport
+from literary_system.longform.attention_economy import FatigueReport, NarrativeAttentionEconomy
+from literary_system.longform.dialogue_pragmatics import DialoguePragmaticsEngine, DialogueReport
 from literary_system.longform.fractal_plot_tree import (
-    FractalPlotTreeBuilder, FractalPlotTree, FractalTreeConfig,
+    FractalPlotTree,
+    FractalPlotTreeBuilder,
+    FractalTreeConfig,
 )
-from literary_system.longform.fractal_topology import (
-    FractalTopologyValidator, FractalReport
-)
-from literary_system.longform.load_balancing import (
-    DramaticLoadBalancer, LoadBalanceReport, EpisodeLoad
-)
-from literary_system.longform.agency_conservation import (
-    AgencyConservationChecker, AgencyReport, AgencyDelta
-)
+from literary_system.longform.fractal_topology import FractalReport, FractalTopologyValidator
+from literary_system.longform.load_balancing import DramaticLoadBalancer, EpisodeLoad, LoadBalanceReport
 from literary_system.longform.payoff_debt import PayoffDebtLedger
-from literary_system.longform.scene_necessity import (
-    SceneNecessityChecker, StateDelta, NecessityReport
-)
-from literary_system.longform.dialogue_pragmatics import (
-    DialoguePragmaticsEngine, DialogueReport
-)
-from literary_system.longform.voice_manifold import (
-    VoiceManifold, VoiceDriftReport, StyleGenome
-)
-from literary_system.longform.attention_economy import (
-    NarrativeAttentionEconomy, FatigueReport
-)
+from literary_system.longform.scene_necessity import NecessityReport, SceneNecessityChecker, StateDelta
+from literary_system.longform.voice_manifold import StyleGenome, VoiceDriftReport, VoiceManifold
 
 
 @dataclass
@@ -137,9 +126,7 @@ class LongformEnduranceOrchestrator:
         report.add_trace(f"AgencyConservation: floor_pass={agency_report.protagonist_floor_pass}")
 
         # ── 5. Payoff Debt Ledger ──────────────────────────────────────
-        from literary_system.longform.payoff_debt import (
-            PayoffDebt, DebtType, DebtPriority
-        )
+        from literary_system.longform.payoff_debt import DebtPriority, DebtType, PayoffDebt
         ledger = PayoffDebtLedger()
         for i in range(n):
             if i % 3 == 0:
@@ -159,7 +146,8 @@ class LongformEnduranceOrchestrator:
         report.add_trace(f"PayoffDebt: summary={ledger.summary()} finale_ok={ledger.finale_critical_check()}")
 
         # ── 6. Scene Necessity ─────────────────────────────────────────
-        import random; random.seed(13)
+        import random
+        random.seed(13)
         scene_deltas = {
             f"sc_{i:04d}": StateDelta(
                 belief=random.uniform(0, 0.3), emotion=random.uniform(0.1, 0.5),

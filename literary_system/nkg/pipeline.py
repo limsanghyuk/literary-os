@@ -13,7 +13,8 @@ from typing import Any, Callable, Dict, List, Optional
 
 from literary_system.nkg.adapters.scene_node_adapter import SceneNodeAdapter
 from literary_system.nkg.graph_store import NKGGraphStore
-from literary_system.nkg.schema import NKGEdgeType, EpisodeNode as EpisodeNode, SceneNode
+from literary_system.nkg.schema import EpisodeNode as EpisodeNode
+from literary_system.nkg.schema import NKGEdgeType, SceneNode
 from literary_system.nkg.staleness import NKGStalenessTracker
 
 # V340 신규 — lazy import로 하위 호환 유지

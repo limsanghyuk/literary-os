@@ -1,11 +1,16 @@
 """V360: NKGSearchEngine — BM25 + LightVector RRF."""
 from __future__ import annotations
-import hashlib, math, re
+
+import hashlib
+import math
+import re
 from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Tuple
-from literary_system.nkg.schema import NKGNodeType, NKGNode
+
 from literary_system.nkg.graph_store import NKGGraphStore
+from literary_system.nkg.schema import NKGNode, NKGNodeType
+
 
 @dataclass
 class SearchResult:

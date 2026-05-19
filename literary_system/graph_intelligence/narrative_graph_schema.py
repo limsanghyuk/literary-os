@@ -1,8 +1,10 @@
 """V526 — NarrativeGraphSchema: 서사 지식 그래프 노드·엣지 (10+10)"""
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any, Dict, List, Optional
+
 
 class NarrativeNodeType(Enum):
     CHARACTER="character"; SCENE="scene"; EVENT="event"; SECRET="secret"

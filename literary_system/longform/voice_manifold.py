@@ -3,6 +3,7 @@
 character growth driven shift = permitted_drift, 무근거 변화 = blocked_drift.
 """
 from __future__ import annotations
+
 import math
 from dataclasses import dataclass, field
 from enum import Enum

@@ -2,15 +2,15 @@
 V434 -- CascadeOrchestrator + SemanticCache + StreamingNormalizer
 """
 from __future__ import annotations
-import logging
 
 import hashlib
+import logging
 import time
 from dataclasses import dataclass, field
 from typing import Any, Dict, Iterator, List, Optional
 
-from literary_system.llm_bridge.llm_bridge_interface import LLMBridgeInterface
 from literary_system.llm_bridge.adapter_contract import AdapterContractV2
+from literary_system.llm_bridge.llm_bridge_interface import LLMBridgeInterface
 
 logger = logging.getLogger(__name__)
 

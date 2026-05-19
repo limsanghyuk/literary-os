@@ -16,7 +16,10 @@ from typing import Dict, List, Optional
 
 from literary_system.graph_intelligence.sp2.code_dependency_graph import CodeDependencyGraph
 from literary_system.graph_intelligence.sp2.stage_patch_impact_calculator import (
-    PatchType, StagePatchImpact, StagePatchImpactCalculator, StagePatchRequest,
+    PatchType,
+    StagePatchImpact,
+    StagePatchImpactCalculator,
+    StagePatchRequest,
 )
 
 _G27_DIRECT_MAX         = 10

@@ -6,9 +6,9 @@ LLM-0 원칙: call_fn 주입으로 CI에서 실 API 호출 없음 보장.
 from __future__ import annotations
 
 import os
+import random
 import time
 import uuid
-import random
 from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, List, Optional
 

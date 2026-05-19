@@ -1,5 +1,6 @@
 """V387 — ExtendedPhysicsCoefficientStore. 14개 계수 전체 지원."""
 from __future__ import annotations
+
 from literary_system.physics.coefficient_store import PhysicsCoefficientStore
 
 

@@ -1,7 +1,9 @@
 """V328 Task13: SceneGraphQueryEngine — GraphRAG 기반 씬 컨텍스트 검색 (단절 D)."""
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any, Optional
+
 
 @dataclass
 class GraphDoc:

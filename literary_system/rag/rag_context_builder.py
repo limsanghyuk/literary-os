@@ -21,19 +21,18 @@ from typing import Any, Dict, List, Optional
 from literary_system.rag.hybrid_retriever import (
     BM25Retriever,
     DenseRetriever,
-    HybridRetriever,
-    RRFMerger,
     Document,
+    HybridRetriever,
     RankedResult,
+    RRFMerger,
 )
-from literary_system.rag.qdrant_bridge import QdrantBridge
 from literary_system.rag.nkg_context_adapter import (
     NKGContextAdapter,
-    NKGNodeSnapshot,
     NKGEdgeSnapshot,
+    NKGNodeSnapshot,
     PriorityLevel,
 )
-
+from literary_system.rag.qdrant_bridge import QdrantBridge
 
 # ---------------------------------------------------------------------------
 # ADR-007: Provenance

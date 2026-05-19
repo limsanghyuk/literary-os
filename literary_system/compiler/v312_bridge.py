@@ -10,6 +10,7 @@ literary_system → SOVEREIGN_OS_V312 연결 브릿지.
              → Literary Librarian → trace_commit
 """
 from __future__ import annotations
+
 import asyncio
 import sys
 from pathlib import Path

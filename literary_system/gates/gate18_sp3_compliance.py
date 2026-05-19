@@ -19,7 +19,11 @@ def _gate_sp3_compliance_sovereignty() -> dict:
     # --- 1. PIAGenerator ---
     try:
         from literary_system.compliance.pia_generator import (
-            PIAGenerator, ProcessingActivity, DataCategory, LegalBasis, RiskLevel
+            DataCategory,
+            LegalBasis,
+            PIAGenerator,
+            ProcessingActivity,
+            RiskLevel,
         )
         gen = PIAGenerator()
         act = ProcessingActivity(
@@ -38,7 +42,9 @@ def _gate_sp3_compliance_sovereignty() -> dict:
     # --- 2. EUAIActGovernance ---
     try:
         from literary_system.compliance.eu_ai_act import (
-            EUAIActGovernance, AISystemProfile, AIRiskCategory,
+            AIRiskCategory,
+            AISystemProfile,
+            EUAIActGovernance,
             TransparencyObligation,
         )
         gov = EUAIActGovernance()
@@ -57,7 +63,7 @@ def _gate_sp3_compliance_sovereignty() -> dict:
 
     # --- 3. PIIScannerV2 ---
     try:
-        from literary_system.compliance.pii_scanner_v2 import PIIScannerV2, MaskMode, PIIType
+        from literary_system.compliance.pii_scanner_v2 import MaskMode, PIIScannerV2, PIIType
         scanner = PIIScannerV2(mask_mode=MaskMode.PARTIAL)
         result = scanner.scan("연락처: 010-1234-5678, 이메일: test@example.com")
         assert result.pii_found
@@ -71,9 +77,7 @@ def _gate_sp3_compliance_sovereignty() -> dict:
 
     # --- 4. AuditTrailDB hash chain ---
     try:
-        from literary_system.compliance.audit_trail_db import (
-            AuditTrailDB, AuditEventType, AuditSeverity
-        )
+        from literary_system.compliance.audit_trail_db import AuditEventType, AuditSeverity, AuditTrailDB
         db = AuditTrailDB()
         r1 = db.log("gate_t", AuditEventType.CONSENT_GRANTED, "user", "api", "GRANT")
         r2 = db.log("gate_t", AuditEventType.PERSONAL_DATA_ACCESS, "sys", "table", "SELECT")
@@ -83,15 +87,18 @@ def _gate_sp3_compliance_sovereignty() -> dict:
         report = db.verify_chain("gate_t")
         assert report.valid
         assert report.total_records == 3
-        verified.append(f"AuditTrailDB[3 records, chain OK]")
+        verified.append("AuditTrailDB[3 records, chain OK]")
     except Exception as e:
         errors.append(f"AuditTrailDB: {e}")
 
     # --- 5. DataResidencyRouter ---
     try:
         from literary_system.compliance.data_residency_router import (
-            DataResidencyRouter, TenantResidencyConfig,
-            ResidencyPolicy, DataRegion, RouteResult
+            DataRegion,
+            DataResidencyRouter,
+            ResidencyPolicy,
+            RouteResult,
+            TenantResidencyConfig,
         )
         router = DataResidencyRouter()
         # KR-only 테넌트 설정
@@ -106,7 +113,7 @@ def _gate_sp3_compliance_sovereignty() -> dict:
         assert d2.result in (RouteResult.VIOLATION, RouteResult.FALLBACK)
         violations = router.get_violations("kr_tenant")
         assert len(violations) == 1
-        verified.append(f"DataResidencyRouter[KR_ONLY policy, violation detected]")
+        verified.append("DataResidencyRouter[KR_ONLY policy, violation detected]")
     except Exception as e:
         errors.append(f"DataResidencyRouter: {e}")
 

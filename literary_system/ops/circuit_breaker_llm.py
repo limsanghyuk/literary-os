@@ -128,7 +128,7 @@ class CircuitBreaker:
             return result
         except CircuitBreakerOpenError:
             raise
-        except Exception as exc:
+        except Exception:
             self._on_failure()
             raise
 

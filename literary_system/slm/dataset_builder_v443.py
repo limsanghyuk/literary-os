@@ -19,7 +19,7 @@ from typing import Any, Optional
 
 from literary_system.slm.dataset_builder import SLMDatasetBuilder
 from literary_system.slm.pii_scrubber import PIIScrubber
-from literary_system.trace.trace_dataset_store import TraceRecord, PromotionTier
+from literary_system.trace.trace_dataset_store import PromotionTier, TraceRecord
 
 
 class SLMDatasetBuilderV443(SLMDatasetBuilder):

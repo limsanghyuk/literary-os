@@ -18,7 +18,6 @@ import re
 from dataclasses import dataclass
 from typing import Any
 
-
 # ── 언어적 신호 사전 ────────────────────────────────────────
 
 # 독자 불확실성을 높이는 신호 (RU ↑)

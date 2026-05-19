@@ -22,7 +22,6 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Dict, List, Optional
 
-
 # ── 리듬 타입 ────────────────────────────────────────────────────
 
 class CadencePattern(str, Enum):

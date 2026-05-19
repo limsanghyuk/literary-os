@@ -1,9 +1,11 @@
 """V360: DKGStalenessTracker v2 — 증분 변경 추적."""
 from __future__ import annotations
+
 import time
 from collections import OrderedDict
 from dataclasses import dataclass, field
 from typing import Dict, Optional, Set
+
 
 class NKGNodeCache:
     def __init__(self, max_size: int = 500) -> None:

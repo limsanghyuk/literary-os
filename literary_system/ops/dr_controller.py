@@ -18,7 +18,6 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any, Callable, Dict, List, Optional
 
-
 # ── 열거형 ───────────────────────────────────────────────────
 
 class OpsDRStatus(str, Enum):

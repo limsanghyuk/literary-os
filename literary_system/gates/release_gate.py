@@ -40,7 +40,7 @@ def _gate_llm_zero() -> dict:
 def _gate_arc_integrity() -> dict:
     """SeriesArcPlanner 4막 비율 편차 ±7% 이내 확인."""
     try:
-        from literary_system.arc import SeriesArcPlanner, ArcAct
+        from literary_system.arc import ArcAct, SeriesArcPlanner
         planner = SeriesArcPlanner(total_episodes=16, series_title="gate_test")
         graph = planner.plan()
         nodes = list(graph._nodes.values())
@@ -72,7 +72,9 @@ def _gate_reveal_budget() -> dict:
     """BLOCK 정책 → RevealBlockedError 정상 발생 확인."""
     try:
         from literary_system.ledgers.episode_reveal_budget import (
-            EpisodeRevealBudget, RevealPolicy, RevealBlockedError,
+            EpisodeRevealBudget,
+            RevealBlockedError,
+            RevealPolicy,
         )
         budget = EpisodeRevealBudget()
         budget.set_policy("ep_1", "secret_gate", RevealPolicy.BLOCK)
@@ -92,11 +94,13 @@ def _gate_reveal_budget() -> dict:
 def _gate_knowledge_leakage() -> dict:
     """READER_ONLY 상태 → KnowledgeLeakageError 정상 발생 확인."""
     try:
-        from literary_system.world.knowledge_state_tracker import (
-            KnowledgeStateTracker, KnowledgeStatus,
-        )
         from literary_system.world.character_knowledge_prose_bridge import (
-            CharacterKnowledgeProseBridge, KnowledgeLeakageError,
+            CharacterKnowledgeProseBridge,
+            KnowledgeLeakageError,
+        )
+        from literary_system.world.knowledge_state_tracker import (
+            KnowledgeStateTracker,
+            KnowledgeStatus,
         )
 
         tracker = KnowledgeStateTracker(project_id="gate_test")
@@ -232,12 +236,12 @@ def _gate_studio_api_contract() -> dict:
 def _gate_rag_stack_survival() -> dict:
     """SubPhase 2 RAG 핵심 모듈 생존 검증."""
     try:
-        from literary_system.rag.qdrant_bridge import QdrantBridge, EmbeddingService, TenantIsolation
-        from literary_system.rag.hybrid_retriever import BM25Retriever, DenseRetriever, HybridRetriever
-        from literary_system.rag.nkg_context_adapter import NKGContextAdapter, NKGNodeSnapshot
-        from literary_system.rag.retrieval_pipeline import RetrievalPipeline, ProvenanceLedger
         from literary_system.rag.bge_hosting_gate import BGEHostingGate
         from literary_system.rag.data_rights_api import DataRightsAPI
+        from literary_system.rag.hybrid_retriever import BM25Retriever, DenseRetriever, HybridRetriever
+        from literary_system.rag.nkg_context_adapter import NKGContextAdapter, NKGNodeSnapshot
+        from literary_system.rag.qdrant_bridge import EmbeddingService, QdrantBridge, TenantIsolation
+        from literary_system.rag.retrieval_pipeline import RAGProvenanceLedger, RetrievalPipeline
 
         # smoke test: embed + search round-trip
         svc = EmbeddingService(provider="mock")
@@ -387,7 +391,7 @@ def _gate_slm_sp3_integration() -> dict:
 def _gate_pne_convergence_g29() -> dict:
     """Gate29: PNE 통합 게이트 (L2) — PNECore·DebtPredictor·PreemptiveGate·FeedbackLearner 구조 생존 확인."""
     try:
-        from literary_system.predictive import PNECore, DebtPredictor, PreemptiveGate, FeedbackLearner
+        from literary_system.predictive import DebtPredictor, FeedbackLearner, PNECore, PreemptiveGate
 
         # PNECore 생존 확인
         core = PNECore()
@@ -433,8 +437,8 @@ def _gate_nie_convergence_g25() -> dict:
 def _gate_narrative_blast_g26() -> dict:
     """Gate26: NarrativeGraph Blast Radius (L3) — 빈 그래프 기본 통과."""
     try:
-        from literary_system.graph_intelligence.scene_change_pre_gate import SceneChangePreGate
         from literary_system.graph_intelligence.narrative_graph_store import NarrativeGraphStore
+        from literary_system.graph_intelligence.scene_change_pre_gate import SceneChangePreGate
         store = NarrativeGraphStore()
         gate = SceneChangePreGate(store)
         result = gate.evaluate("__preflight__")
@@ -447,10 +451,10 @@ def _gate_narrative_blast_g26() -> dict:
 def _gate_code_coupling_g27() -> dict:
     """Gate27: CodeCoupling (L3) — 빈 CDG+Calculator 기본 구조 생존 확인."""
     try:
-        from literary_system.graph_intelligence.sp2.gate27 import Gate27
-        from literary_system.graph_intelligence.sp2.code_dependency_graph import CodeDependencyGraph
-        from literary_system.graph_intelligence.sp2.stage_patch_impact_calculator import StagePatchImpactCalculator
         from literary_system.graph_intelligence.narrative_graph_store import NarrativeGraphStore
+        from literary_system.graph_intelligence.sp2.code_dependency_graph import CodeDependencyGraph
+        from literary_system.graph_intelligence.sp2.gate27 import Gate27
+        from literary_system.graph_intelligence.sp2.stage_patch_impact_calculator import StagePatchImpactCalculator
         cdg = CodeDependencyGraph()
         store = NarrativeGraphStore()
         calculator = StagePatchImpactCalculator(store, cdg)
@@ -464,10 +468,10 @@ def _gate_code_coupling_g27() -> dict:
 def _gate_story_quality_g28() -> dict:
     """Gate28: StoryQualityGate ASD (L4) — 빈 DoctorReport로 기본 통과."""
     try:
-        from literary_system.graph_intelligence.asd.gate28 import Gate28
-        from literary_system.graph_intelligence.asd.story_doctor_orchestrator import DoctorReport
-        from literary_system.graph_intelligence.asd.narrative_debt_detector import NarrativeDebtReport
         from literary_system.graph_intelligence.asd.arc_consistency_checker import ArcConsistencyReport
+        from literary_system.graph_intelligence.asd.gate28 import Gate28
+        from literary_system.graph_intelligence.asd.narrative_debt_detector import NarrativeDebtReport
+        from literary_system.graph_intelligence.asd.story_doctor_orchestrator import DoctorReport
         gate = Gate28()
         # 빈 보고서 (모든 점수 0, 수리 권고 없음) → 기본 PASS
         debt_report = NarrativeDebtReport(
@@ -510,7 +514,8 @@ def _gate_story_quality_g28() -> dict:
 def _gate_llm0_static() -> dict:
     """ADR-031: graph_intelligence/ LLM-0 정적 분석."""
     try:
-        import os, sys
+        import os
+        import sys
         gi_path = os.path.join(
             os.path.dirname(os.path.dirname(__file__)),
             "graph_intelligence"
@@ -530,9 +535,13 @@ def _gate_multiwork_g31() -> dict:
     """Gate31: MultiWork Stage C 핵심 모듈 생존 확인."""
     try:
         from literary_system.multiwork import (
-            MultiWorkCore, SharedCharacterDB, SharedWorldDB,
-            GenreTransferLearning, ProjectIsolationManager,
-            MultiWorkCIM, AuthorLicenseAPI,
+            AuthorLicenseAPI,
+            GenreTransferLearning,
+            MultiWorkCIM,
+            MultiWorkCore,
+            ProjectIsolationManager,
+            SharedCharacterDB,
+            SharedWorldDB,
         )
         # MultiWorkCore 기본 동작
         core = MultiWorkCore()
@@ -580,9 +589,7 @@ def _gate_multiwork_g31() -> dict:
 def _gate_corpus_quality_g30() -> dict:
     """Gate30: ExternalCorpusBridge 게이트 (L2) — corpus/ 4종 모듈 구조 생존 확인."""
     try:
-        from literary_system.corpus import (
-            CorpusIngestor, CorpusValidator, BGEM3Embedder, CIMBootstrap
-        )
+        from literary_system.corpus import BGEM3Embedder, CIMBootstrap, CorpusIngestor, CorpusValidator
 
         # CorpusIngestor 생존 확인
         ingestor = CorpusIngestor(seed=0)
@@ -657,10 +664,11 @@ def _gate_logging_discipline() -> dict:
 
 def _gate_schema_roundtrip_g33() -> dict:
     """Gate 33 (G33) — SchemaRoundTrip: 스키마 직렬화/역직렬화 무결성 (ADR-034)."""
-    import json, dataclasses
+    import dataclasses
+    import json
     try:
-        from literary_system.schemas.envelope import make_envelope
         from literary_system.schemas.definitions import COMMON_ENVELOPE_REQUIRED
+        from literary_system.schemas.envelope import make_envelope
 
         errors = []
 
@@ -777,8 +785,8 @@ def _gate_adapter_canonical_g35() -> dict:
 
         # ── 검증 4: UnifiedLLMGateway.make_default_gateway() 타입 확인 ──────
         from literary_system.llm_bridge.gateway.unified_llm_gateway import (
-            make_default_gateway,
             UnifiedLLMGateway,
+            make_default_gateway,
         )
         gw = make_default_gateway(call_fn=_mock_call_fn)
         if not isinstance(gw, UnifiedLLMGateway):
@@ -786,8 +794,8 @@ def _gate_adapter_canonical_g35() -> dict:
 
         # ── 검증 5: G3 어댑터 3종 임포트 ───────────────────────────────────
         from literary_system.adapters_live.real_claude_adapter import RealClaudeAdapter
-        from literary_system.adapters_live.real_openai_adapter import RealOpenAIAdapter
         from literary_system.adapters_live.real_ollama_adapter import RealOllamaAdapter
+        from literary_system.adapters_live.real_openai_adapter import RealOpenAIAdapter
         for cls in (RealClaudeAdapter, RealOpenAIAdapter, RealOllamaAdapter):
             if not callable(cls):
                 errors.append(f"{cls.__name__} 임포트 실패")
@@ -863,7 +871,7 @@ def _gate_duplicate_zero_g37() -> dict:
 
     passed = len(duplicates) == 0
     details = (
-        f"중복 클래스 0건 — DuplicateZero 충족"
+        "중복 클래스 0건 — DuplicateZero 충족"
         if passed
         else f"중복 클래스 {len(duplicates)}건: " + ", ".join(sorted(duplicates.keys())[:5])
     )
@@ -944,11 +952,14 @@ def _gate_db_migration_g40() -> dict:
       5. SchemaRegistry 히스토리 기록 확인
     """
     try:
-        from literary_system.db.schema_registry import BackendType, SchemaRegistry, MigrationRecord
         from literary_system.db.migration_manager import (
-            MigrationManager, Migration,
-            SQLMigrationAdapter, GraphMigrationAdapter, VectorMigrationAdapter,
+            GraphMigrationAdapter,
+            Migration,
+            MigrationManager,
+            SQLMigrationAdapter,
+            VectorMigrationAdapter,
         )
+        from literary_system.db.schema_registry import BackendType, MigrationRecord, SchemaRegistry
 
         # 1. 싱글턴 초기화
         SchemaRegistry.reset()
@@ -1007,10 +1018,10 @@ def _gate_performance_baseline_g39() -> dict:
       - 순수 Python 표준 라이브러리만 사용
       - 환경 편차 ±30% 허용 (느린 CI 환경 대응)
     """
-    import time as _time
-    import json as _json
     import hashlib as _hashlib
+    import json as _json
     import re as _re
+    import time as _time
 
     benchmarks = []
     all_passed = True
@@ -1160,7 +1171,7 @@ def run_release_gate() -> dict:
         try:
             result = gate_fn()
             gate_passed = result.get("pass", False)
-        except Exception as e:
+        except Exception:
             result = {"pass": False, "error": traceback.format_exc()}
             gate_passed = False
 

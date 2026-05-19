@@ -3,17 +3,18 @@ V390 — FullSceneOrchestrator
 Gate 1~8 완전 체인. 모든 레이어 통합 E2E 파이프라인.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
-from literary_system.pipeline.pipeline_state import LiteraryPipelineState
-from literary_system.pipeline.gate7_physics import PhysicsValidationGate, GateResult
 from literary_system.ensemble.gate8_ensemble import EnsembleGate, EnsembleGateResult
 from literary_system.ensemble.narrative_fitness_arbiter import CandidateScore
-from literary_system.physics.coefficient_store import PhysicsCoefficientStore
 from literary_system.learning.manuscript_learner import ManuscriptLearner
-from literary_system.optimizer.update_coordinator import UpdateCoordinator
 from literary_system.llm_bridge.physics_aware_router import PhysicsAwareRouter, PhysicsRoutingPolicy
+from literary_system.optimizer.update_coordinator import UpdateCoordinator
+from literary_system.physics.coefficient_store import PhysicsCoefficientStore
+from literary_system.pipeline.gate7_physics import GateResult, PhysicsValidationGate
+from literary_system.pipeline.pipeline_state import LiteraryPipelineState
 
 
 @dataclass

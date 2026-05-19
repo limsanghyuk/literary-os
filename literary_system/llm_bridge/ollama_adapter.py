@@ -15,11 +15,12 @@ Ollama API 노트:
   - api_key는 임의 문자열 허용 ("ollama" 관례)
 """
 from __future__ import annotations
+
 import logging
 
 from literary_system.llm_bridge.openai_compatible_adapter import (
-    OpenAICompatibleAdapter,
     PRESET_URLS,
+    OpenAICompatibleAdapter,
 )
 
 

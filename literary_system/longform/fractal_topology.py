@@ -2,6 +2,7 @@
 시리즈~비트 모든 단위에 setup→pressure→collision→reversal→residue 구조 적용.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Dict, List, Optional

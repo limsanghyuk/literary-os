@@ -19,8 +19,12 @@ def _gate_subphase1_adapter_survival() -> dict:
     try:
         # ── 1. AdapterContractV2 6요소 (V431) ────────────────────────────────
         from literary_system.llm_bridge.adapter_contract import (
-            AdapterContractV2, KeyConfig, RetryPolicy, TimeoutConfig,
-            TokenBudget, CostConfig,
+            AdapterContractV2,
+            CostConfig,
+            KeyConfig,
+            RetryPolicy,
+            TimeoutConfig,
+            TokenBudget,
         )
         key      = KeyConfig(env_var="GATE17_TEST_KEY")
         retry    = RetryPolicy(max_attempts=3, backoff_factor=1.5)
@@ -34,8 +38,10 @@ def _gate_subphase1_adapter_survival() -> dict:
 
         # ── 2. AdaptersV2 3종 + CircuitBreakerState (V432) ───────────────────
         from literary_system.llm_bridge.adapters_v2 import (
-            ClaudeAdapterV2, OpenAIAdapterV2, OllamaAdapterV2,
             CircuitBreakerState,
+            ClaudeAdapterV2,
+            OllamaAdapterV2,
+            OpenAIAdapterV2,
         )
         cb = CircuitBreakerState()
         assert cb.can_pass(), "CircuitBreakerState 초기 CLOSED 아님"
@@ -48,8 +54,12 @@ def _gate_subphase1_adapter_survival() -> dict:
 
         # ── 3. ModelRegistry + ModelSelectionPolicy (V433) ───────────────────
         from literary_system.llm_bridge.model_registry import (
-            ModelRegistry, ModelEntry, ModelCapabilities,
-            SelectionWeights, ModelSelectionPolicy, TaskContext,
+            ModelCapabilities,
+            ModelEntry,
+            ModelRegistry,
+            ModelSelectionPolicy,
+            SelectionWeights,
+            TaskContext,
         )
         reg = ModelRegistry()
         entry = ModelEntry(
@@ -72,7 +82,9 @@ def _gate_subphase1_adapter_survival() -> dict:
 
         # ── 4. CascadeOrchestrator + SemanticCache + StreamingNormalizer (V434)
         from literary_system.llm_bridge.cascade import (
-            CascadeOrchestrator, SemanticCache, StreamingNormalizer,
+            CascadeOrchestrator,
+            SemanticCache,
+            StreamingNormalizer,
         )
         from literary_system.llm_bridge.mock_llm_bridge import MockLLMBridge
 
@@ -96,11 +108,14 @@ def _gate_subphase1_adapter_survival() -> dict:
 
         # ── 5. Resilience 4종 (V435) ─────────────────────────────────────────
         from literary_system.llm_bridge.resilience import (
-            ExperimentRegistry, FeatureFlag, FeatureFlagService,
-            RetryBudget, RetryBudgetManager, GracefulDegradation,
+            ExperimentRegistry,
+            FeatureFlag,
+            FeatureFlagService,
+            GracefulDegradation,
+            RetryBudget,
+            RetryBudgetManager,
+            Variant,
         )
-
-        from literary_system.llm_bridge.resilience import Variant
         exp_reg = ExperimentRegistry()
         variants = [Variant(name="A", weight=0.5), Variant(name="B", weight=0.5)]
         exp_reg.create(experiment_id="gate17_exp", variants=variants)

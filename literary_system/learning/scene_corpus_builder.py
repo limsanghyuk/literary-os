@@ -1,8 +1,10 @@
 """V385 — SceneCorpusBuilder. 원고 텍스트 → SceneFeature 배치 변환."""
 from __future__ import annotations
-from typing import List, Dict, Any
-from literary_system.physics.scene_feature_extractor import SceneFeatureExtractor, SceneFeature
+
+from typing import Any, Dict, List
+
 from literary_system.learning.privacy_guard import PrivacyGuard
+from literary_system.physics.scene_feature_extractor import SceneFeature, SceneFeatureExtractor
 
 
 class SceneCorpusBuilder:

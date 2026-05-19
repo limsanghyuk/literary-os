@@ -1,8 +1,10 @@
 """V360: NarrativeScopeResolver + 장르 플러그인 아키텍처."""
 from __future__ import annotations
+
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Type
+
 
 @dataclass
 class StyleDirective:
@@ -56,8 +58,11 @@ class NarrativeScopeResolver:
 
     def _load_builtin_plugins(self) -> None:
         from literary_system.scope.plugins import (
-            genre_plugin_literary, genre_plugin_noir, genre_plugin_fantasy,
-            genre_plugin_romance, genre_plugin_historical,
+            genre_plugin_fantasy,
+            genre_plugin_historical,
+            genre_plugin_literary,
+            genre_plugin_noir,
+            genre_plugin_romance,
         )
 
     def load(self, genre_id: Optional[str] = None) -> NarrativeScopePlugin:

@@ -1,9 +1,12 @@
 """V360: NKG 스키마 — CONFLICT_CLUSTER/NARRATIVE_PROCESS 추가."""
 from __future__ import annotations
-import hashlib, time
+
+import hashlib
+import time
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any, Dict, List, Optional
+
 
 class NKGNodeType(Enum):
     SCENE             = "scene"

@@ -139,8 +139,8 @@ class BOOToSGOAdapter:
         """
         try:
             from literary_system.world.knowledge_state_tracker import (
-                KnowledgeStateTracker,
                 InformationType,
+                KnowledgeStateTracker,
             )
         except ImportError:
             return None

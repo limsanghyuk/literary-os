@@ -80,10 +80,11 @@ class Gate10v2:
         quality_modules_checked = 0
 
         try:
-            from literary_system.quality.llm_judge import LLMJudge, RubricCalibrator
             from literary_system.quality.hallucination_safety import (
-                HallucinationDetector, SafetyGate,
+                HallucinationDetector,
+                SafetyGate,
             )
+            from literary_system.quality.llm_judge import LLMJudge, RubricCalibrator
             _judge = LLMJudge()
             instances = {
                 "LLMJudge":              _judge,
@@ -137,8 +138,8 @@ def _gate10_v2_fn() -> dict:
     """Release Gate — Gate10 v2 실행 함수."""
     try:
         from literary_system.llm_bridge.mock_llm_bridge import MockLLMBridge
-        from literary_system.llm_bridge.routing.task_router import TaskRouter
         from literary_system.llm_bridge.openai_compatible_adapter import OpenAICompatibleAdapter
+        from literary_system.llm_bridge.routing.task_router import TaskRouter
 
         adapters = [OpenAICompatibleAdapter.for_ollama(), MockLLMBridge()]
         router   = TaskRouter()

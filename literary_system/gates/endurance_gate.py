@@ -2,6 +2,7 @@
 14개 필수 체크. 모두 통과해야 overall_pass = True.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Dict, List
 

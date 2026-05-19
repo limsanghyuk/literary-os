@@ -18,7 +18,6 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-
 # ────────────────────────────────────────────────────────────────
 # SLMRecord 데이터클래스
 # ────────────────────────────────────────────────────────────────

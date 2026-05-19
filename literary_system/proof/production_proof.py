@@ -3,6 +3,7 @@
 전체 endurance proof pack을 산출한다.
 """
 from __future__ import annotations
+
 import json
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
@@ -55,23 +56,17 @@ class ProductionProof:
         series_title: str = "Synthetic Series",
     ) -> ProofPack:
         """Orchestrator 없이 독립 실행 가능한 경량 proof 생성."""
-        from literary_system.episode.episode_state import (
-            SeriesConfig, NarrativeStateTensor
-        )
         from literary_system.episode.episode_planner import EpisodePlanner
+        from literary_system.episode.episode_state import NarrativeStateTensor, SeriesConfig
         from literary_system.episode.microplot_matrix import MicroPlotMatrix
+        from literary_system.longform.agency_conservation import AgencyConservationChecker
+        from literary_system.longform.attention_economy import NarrativeAttentionEconomy
+        from literary_system.longform.dialogue_pragmatics import DialoguePragmaticsEngine
         from literary_system.longform.fractal_topology import FractalTopologyValidator
         from literary_system.longform.load_balancing import DramaticLoadBalancer
-        from literary_system.longform.agency_conservation import AgencyConservationChecker
-        from literary_system.longform.payoff_debt import (
-            PayoffDebt, DebtType, DebtPriority, PayoffDebtLedger
-        )
-        from literary_system.longform.scene_necessity import (
-            SceneNecessityChecker, StateDelta, SceneFunctionType
-        )
-        from literary_system.longform.dialogue_pragmatics import DialoguePragmaticsEngine
-        from literary_system.longform.voice_manifold import VoiceManifold, StyleGenome
-        from literary_system.longform.attention_economy import NarrativeAttentionEconomy
+        from literary_system.longform.payoff_debt import DebtPriority, DebtType, PayoffDebt, PayoffDebtLedger
+        from literary_system.longform.scene_necessity import SceneFunctionType, SceneNecessityChecker, StateDelta
+        from literary_system.longform.voice_manifold import StyleGenome, VoiceManifold
 
         protagonist_ids = ["CHAR_A", "CHAR_B"]
         series_config = SeriesConfig(
@@ -140,7 +135,8 @@ class ProductionProof:
                     ledger.mark_paid(d.debt_id, i, f"ep{i}_payoff", 0.8)
 
         # Scene Necessity
-        import random; random.seed(13)
+        import random
+        random.seed(13)
         checker = SceneNecessityChecker()
         scene_deltas = {}
         for i in range(episode_count * 6):

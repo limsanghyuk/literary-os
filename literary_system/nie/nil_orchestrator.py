@@ -21,14 +21,13 @@ from literary_system.nie.agent_calibrator import AgentCalibrator, CalibrationRes
 from literary_system.nie.character_influence_matrix import CharacterInfluenceMatrix
 from literary_system.nie.mae_agents_v2 import MAEOrchestratorV2, MAEResultV2
 from literary_system.nie.meta_learner import MetaLearner, MetaUpdateResult
-from literary_system.nie.narrative_tension_curve import NarrativeTensionCurve, LossResult
+from literary_system.nie.narrative_tension_curve import LossResult, NarrativeTensionCurve
 from literary_system.nie.nie_l7_container import NIEConfig
 from literary_system.nie.nil_stability_module import NILStabilityModule
 from literary_system.nie.physics_reward_bridge import BridgeResult
 from literary_system.nie.query_intent_classifier import QueryIntentClassifier
 from literary_system.nie.temporal_cim import TemporalCIM
 from literary_system.nie.tideal_learner import TIdealLearner
-
 
 # ─── 입력/출력 스키마 ──────────────────────────────────────────────────────────
 

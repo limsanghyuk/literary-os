@@ -20,7 +20,6 @@ import copy
 from dataclasses import dataclass, field
 from typing import List, Optional, Set
 
-
 # ════════════════════════════════════════════════════════════════════
 # CharacterState DTO
 # ════════════════════════════════════════════════════════════════════
@@ -97,7 +96,7 @@ def _is_allowed(action_type: str, state: CharacterState) -> tuple[bool, str]:
         return False, f"캐릭터가 사망 상태(alive=False)이므로 {act} 불가"
 
     if act == "ACQUIRE" and state.is_hidden:
-        return False, f"은신 중(hidden=True)에는 ACQUIRE 불가"
+        return False, "은신 중(hidden=True)에는 ACQUIRE 불가"
 
     # 살아있으면 ACQUIRE 포함 모든 기본 액션 허용
     return True, ""

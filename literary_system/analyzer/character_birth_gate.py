@@ -13,7 +13,6 @@ from __future__ import annotations
 
 from typing import Any
 
-
 CORE_GATE_KEYS = (
     "act_necessity",
     "pressure_target_defined",

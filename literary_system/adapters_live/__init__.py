@@ -8,19 +8,19 @@ V453: RealOllamaAdapter + BGE-M3
 """
 
 from literary_system.adapters_live.real_claude_adapter import (
+    LiveAdapterCall,
     RealClaudeAdapter,
     RealClaudeAdapterConfig,
     RealLLMResponse,
-    LiveAdapterCall,
+)
+from literary_system.adapters_live.real_ollama_adapter import (
+    GPUMemorySnapshot,
+    RealOllamaAdapter,
+    RealOllamaAdapterConfig,
 )
 from literary_system.adapters_live.real_openai_adapter import (
     RealOpenAIAdapter,
     RealOpenAIAdapterConfig,
-)
-from literary_system.adapters_live.real_ollama_adapter import (
-    RealOllamaAdapter,
-    RealOllamaAdapterConfig,
-    GPUMemorySnapshot,
 )
 
 __all__ = [

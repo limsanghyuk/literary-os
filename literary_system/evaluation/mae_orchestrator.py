@@ -14,11 +14,13 @@ from dataclasses import dataclass, field
 from typing import List
 
 from literary_system.evaluation.mae_agents import (
-    AlphaAgent, BetaAgent, GammaAgent, AgentVerdict,
+    AgentVerdict,
+    AlphaAgent,
+    BetaAgent,
+    GammaAgent,
 )
 from literary_system.evaluation.scene_metrics_collector import SceneMetrics
 from literary_system.validation.coefficient_mapper import MAEWeights
-
 
 # ════════════════════════════════════════════════════════════════════
 # MAEResult

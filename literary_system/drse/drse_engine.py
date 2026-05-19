@@ -18,10 +18,7 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from typing import Any
 
-from literary_system.relation_graph.relation_graph_store import (
-    RelationGraphStore, StoryNode, NodeType, RelationType
-)
-
+from literary_system.relation_graph.relation_graph_store import NodeType, RelationGraphStore, RelationType, StoryNode
 
 # ══════════════════════════════════════════════════════════════════
 # V321-B: KnowledgeBoundaryGate

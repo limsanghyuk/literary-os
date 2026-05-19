@@ -17,7 +17,6 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
-
 # ---------------------------------------------------------------------------
 # KPI 임계값 (ADR-017)
 # ---------------------------------------------------------------------------

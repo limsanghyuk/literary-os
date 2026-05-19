@@ -29,17 +29,21 @@ GPT v1500 closed_loop_render_orchestrator + policy_conditioned_recovery 흡수.
 이것이 V1500이 V1402보다 품질이 높은 이유.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any
 
+from literary_system.coherence.temporal_coherence import ProjectMemoryStore, TemporalCoherenceEngine
+from literary_system.compiler.seed_compiler import SeedCompiler
+from literary_system.reference.reference_pack_steering import (
+    ReferenceBundle,
+    ReferencePack,
+    ReferencePackBuilder,
+    TrajectorySoftPromptTranslator,
+)
+from literary_system.render_loop.specialized_patch import SpecializedLocalPatchEngine
 from literary_system.trajectory.narrative_trajectory import TrajectoryEngine, TrajectoryPoint
 from literary_system.trajectory.reader_simulator import ReaderSimulator
-from literary_system.render_loop.specialized_patch import SpecializedLocalPatchEngine
-from literary_system.reference.reference_pack_steering import (
-    ReferenceBundle, ReferencePackBuilder, TrajectorySoftPromptTranslator, ReferencePack
-)
-from literary_system.compiler.seed_compiler import SeedCompiler
-from literary_system.coherence.temporal_coherence import ProjectMemoryStore, TemporalCoherenceEngine
 
 
 @dataclass

@@ -13,14 +13,13 @@ LLM-0 준수: export_fn / sink_fn 주입 가능, 순수 인메모리 mock
 """
 from __future__ import annotations
 
+import statistics
 import time
 import uuid
-import statistics
 from contextlib import contextmanager
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any, Callable, Dict, Generator, List, Optional
-
 
 # ── 열거형 ───────────────────────────────────────────────────
 

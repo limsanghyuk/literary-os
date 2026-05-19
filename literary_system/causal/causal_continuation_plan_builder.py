@@ -1,7 +1,9 @@
 """V328 Task16: CausalContinuationPlanBuilder — 핸드오프 기반 인과 연속 계획 (단절 F)."""
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any
+
 
 @dataclass
 class CausalPlan:

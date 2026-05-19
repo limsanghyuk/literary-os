@@ -1,10 +1,12 @@
 """V385 — ManuscriptLearner. 4단계 학습 파이프라인."""
 from __future__ import annotations
-from typing import List, Dict, Any, Optional
-from literary_system.physics.coefficient_store import PhysicsCoefficientStore
+
+from typing import Any, Dict, List, Optional
+
+from literary_system.learning.physics_coefficient_updater import PhysicsCoefficientUpdater
 from literary_system.learning.privacy_guard import PrivacyGuard
 from literary_system.learning.scene_corpus_builder import SceneCorpusBuilder
-from literary_system.learning.physics_coefficient_updater import PhysicsCoefficientUpdater
+from literary_system.physics.coefficient_store import PhysicsCoefficientStore
 
 
 class ManuscriptLearner:

@@ -1,7 +1,9 @@
 """V328 Task12: MiseEnSceneCompiler — DRSEEngine 직접 배선 (단절 E)."""
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any, Optional
+
 
 @dataclass
 class DirectorialNote:

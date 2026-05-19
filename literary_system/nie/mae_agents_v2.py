@@ -13,9 +13,9 @@ from __future__ import annotations
 import random
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from literary_system.evaluation.mae_agents import AgentVerdict
 from literary_system.evaluation.scene_metrics_collector import SceneMetrics
-
 
 # ── 4종 에이전트 가중치 (ADR-017) ─────────────────────────────────
 AGENT_WEIGHTS = {

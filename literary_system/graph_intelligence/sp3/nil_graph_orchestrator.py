@@ -9,17 +9,20 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 
 from literary_system.graph_intelligence.narrative_graph_indexer import (
-    IndexResult, NarrativeGraphIndexer,
+    IndexResult,
+    NarrativeGraphIndexer,
 )
 from literary_system.graph_intelligence.narrative_graph_store import NarrativeGraphStore
 from literary_system.graph_intelligence.sp2.code_dependency_graph import CodeDependencyGraph
+from literary_system.graph_intelligence.sp2.stage_patch_impact_calculator import PatchType
 from literary_system.graph_intelligence.sp3.nil_graph_bridge import (
-    NILGraphBridge, NILGraphBridgeConfig,
+    NILGraphBridge,
+    NILGraphBridgeConfig,
 )
 from literary_system.graph_intelligence.sp3.scene_blast_radius_report import (
-    BlastRadiusReportBuilder, SceneBlastRadiusReport,
+    BlastRadiusReportBuilder,
+    SceneBlastRadiusReport,
 )
-from literary_system.graph_intelligence.sp2.stage_patch_impact_calculator import PatchType
 
 
 @dataclass

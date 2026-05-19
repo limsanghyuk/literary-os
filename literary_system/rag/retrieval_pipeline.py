@@ -17,19 +17,24 @@ ADR-007 Provenance contract:
     - pipeline_version
 """
 from __future__ import annotations
-import logging
 
 import hashlib
+import logging
 import uuid
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional
 
 from literary_system.rag.hybrid_retriever import (
-    HybridRetriever, RankedResult, Document,
+    Document,
+    HybridRetriever,
+    RankedResult,
 )
 from literary_system.rag.nkg_context_adapter import (
-    NKGContextAdapter, NKGNodeSnapshot, PriorityLevel, ContextSerializer,
+    ContextSerializer,
+    NKGContextAdapter,
+    NKGNodeSnapshot,
+    PriorityLevel,
 )
 
 logger = logging.getLogger(__name__)

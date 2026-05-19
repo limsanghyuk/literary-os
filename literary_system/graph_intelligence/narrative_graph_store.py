@@ -1,9 +1,16 @@
 """V527 — NarrativeGraphStore: 인메모리 BFS 서사 그래프 저장소"""
 from __future__ import annotations
+
 from collections import defaultdict, deque
 from typing import Dict, Iterable, List, Optional, Set, Tuple
+
 from literary_system.graph_intelligence.narrative_graph_schema import (
-    NarrativeEdge, NarrativeEdgeType, NarrativeNode, NarrativeNodeType)
+    NarrativeEdge,
+    NarrativeEdgeType,
+    NarrativeNode,
+    NarrativeNodeType,
+)
+
 
 class NarrativeGraphStore:
     def __init__(self):

@@ -16,7 +16,6 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Dict, List, Optional
 
-
 # ─── 상수 ─────────────────────────────────────────────────────────────────────
 ALPHA_MIN: float = 0.30
 ALPHA_MAX: float = 0.80

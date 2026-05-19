@@ -27,7 +27,6 @@ from typing import Optional, Union
 from literary_system.llm_bridge.llm_bridge_interface import LLMBridgeInterface
 from literary_system.llm_bridge.llm_context import LLMContext, coerce_context
 
-
 # ────────────────────────────────────────────────────────────────
 # 프리셋 URL 상수
 # ────────────────────────────────────────────────────────────────

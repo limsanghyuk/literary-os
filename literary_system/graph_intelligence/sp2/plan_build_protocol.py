@@ -11,12 +11,16 @@ from enum import Enum
 from typing import Callable, Dict, List, Optional
 
 from literary_system.graph_intelligence.scene_change_pre_gate import (
-    Gate26Result, SceneChangePreGate,
-)
-from literary_system.graph_intelligence.sp2.stage_patch_impact_calculator import (
-    PatchType, StagePatchImpact, StagePatchImpactCalculator, StagePatchRequest,
+    Gate26Result,
+    SceneChangePreGate,
 )
 from literary_system.graph_intelligence.sp2.gate27 import Gate27, Gate27Result
+from literary_system.graph_intelligence.sp2.stage_patch_impact_calculator import (
+    PatchType,
+    StagePatchImpact,
+    StagePatchImpactCalculator,
+    StagePatchRequest,
+)
 
 
 class ProtocolPhase(Enum):

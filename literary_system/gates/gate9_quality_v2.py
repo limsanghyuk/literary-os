@@ -142,14 +142,19 @@ class Gate9v2:
 def _gate9_v2_fn() -> dict:
     """Release Gate — Gate9 v2 실행 함수."""
     try:
-        from literary_system.relation_graph.relation_graph_store import (
-            RelationGraphStore, StoryNode, StoryEdge, NodeType,
-        )
         from literary_system.drse.drse_engine import (
-            DRSEScorer, KnowledgeBoundaryGate, TFIDFSemanticScorer,
+            DRSEScorer,
+            KnowledgeBoundaryGate,
+            TFIDFSemanticScorer,
         )
-        from literary_system.quality.llm_judge import LLMJudge
         from literary_system.quality.hallucination_safety import HallucinationDetector
+        from literary_system.quality.llm_judge import LLMJudge
+        from literary_system.relation_graph.relation_graph_store import (
+            NodeType,
+            RelationGraphStore,
+            StoryEdge,
+            StoryNode,
+        )
 
         # DRSE
         rgs   = RelationGraphStore()

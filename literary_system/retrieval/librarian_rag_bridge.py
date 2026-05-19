@@ -16,7 +16,6 @@ from typing import Any
 
 from literary_system.retrieval.simple_vector_retriever import RetrievedDoc, SimpleVectorRetriever
 
-
 # ────────────────────────────────────────────────────────────────
 # LibrarianRAGBridge
 # ────────────────────────────────────────────────────────────────

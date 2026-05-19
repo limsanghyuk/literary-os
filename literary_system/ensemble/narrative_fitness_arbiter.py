@@ -4,9 +4,10 @@ GPT Stage96 Provider Ensemble 점수 공식 흡수.
 REJECT / SELECT / MERGE 결정.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List, Dict, Any, Optional
+from typing import Any, Dict, List, Optional
 
 
 class EnsembleDecisionType(str, Enum):

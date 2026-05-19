@@ -1,5 +1,4 @@
 """literary_system/db — V581 LOSDB 기반 레이어 (SchemaRegistry + MigrationManager)."""
-from .schema_registry import BackendType, MigrationRecord, SchemaRegistry, SchemaVersion
 from .migration_manager import (
     GraphMigrationAdapter,
     Migration,
@@ -8,6 +7,7 @@ from .migration_manager import (
     SQLMigrationAdapter,
     VectorMigrationAdapter,
 )
+from .schema_registry import BackendType, MigrationRecord, SchemaRegistry, SchemaVersion
 
 __all__ = [
     "BackendType",

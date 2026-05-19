@@ -15,11 +15,11 @@ DramaLexicon BM25 부스팅:
 """
 from __future__ import annotations
 
+import logging
 import re
 from dataclasses import dataclass
 from enum import Enum
-from typing import Dict, List, Set, Optional
-import logging
+from typing import Dict, List, Optional, Set
 
 logger = logging.getLogger(__name__)
 

@@ -21,7 +21,6 @@ from literary_system.tenant.tenant_manager import (
     TenantRegion,
 )
 
-
 # ── 예외 ─────────────────────────────────────────────────────────────────────
 
 class QuotaExceededError(RuntimeError):
@@ -237,7 +236,7 @@ class TenantRouter:
         for tid in tenant_ids:
             try:
                 results[tid] = self.route(tid)
-            except (TenantNotFoundError, TenantInactiveError, TenantRoutingError) as e:
+            except (TenantNotFoundError, TenantInactiveError, TenantRoutingError):
                 results[tid] = None  # 라우팅 불가 표시
         return results
 

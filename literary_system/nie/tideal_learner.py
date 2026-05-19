@@ -17,7 +17,6 @@ from collections import defaultdict, deque
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Tuple
 
-
 # ─── 상수 ─────────────────────────────────────────────────────────────────────
 T_LR: float = 0.005                    # Fourier 계수 SGD 학습률
 GENRE_WINDOW: int = 5                  # 장르별 rolling history 크기

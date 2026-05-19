@@ -1,12 +1,21 @@
 """V360: NKGGraphStore — 군집/프로세스 노드 지원 추가."""
 from __future__ import annotations
+
 from collections import defaultdict
-from typing import Dict, List, Optional, Set, Any
+from typing import Any, Dict, List, Optional, Set
+
 from literary_system.nkg.schema import (
-    NKGNode, NKGEdge, NKGNodeType, NKGEdgeType,
-    CharacterNode, SceneNode, ForeshadowNode,
-    ConflictClusterNode, NarrativeProcessNode,
+    CharacterNode,
+    ConflictClusterNode,
+    ForeshadowNode,
+    NarrativeProcessNode,
+    NKGEdge,
+    NKGEdgeType,
+    NKGNode,
+    NKGNodeType,
+    SceneNode,
 )
+
 
 class NKGGraphStore:
     def __init__(self) -> None:

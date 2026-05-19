@@ -5,6 +5,7 @@ V312 authorial_habit(3개)에서 컴파일 가능한 계층으로 승격.
 LLM 0회.
 """
 from __future__ import annotations
+
 from typing import Any
 
 _PROFILES: dict[str, dict[str, Any]] = {

@@ -13,7 +13,6 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
 
-
 BLOCK_THRESHOLD: float = 0.60   # 부채 발생 확률 임계값
 
 

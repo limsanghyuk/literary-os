@@ -1,6 +1,8 @@
 """V383 — NarrativeFitnessScore. 6컴포넌트 가중합 × 10.0 → [0, 10]."""
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from literary_system.physics.coefficient_store import PhysicsCoefficientStore
 
 

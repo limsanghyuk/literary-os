@@ -1,14 +1,21 @@
 """V360: NKGProcessDetector — BFS 씬 흐름 탐지."""
 from __future__ import annotations
+
 import time
 from collections import deque
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Set, Tuple
-from literary_system.nkg.schema import (
-    NKGEdgeType, NKGNodeType, NarrativeProcessNode, ForeshadowNode, NKGEdge,
-    SceneNode, make_process_id,
-)
+
 from literary_system.nkg.graph_store import NKGGraphStore
+from literary_system.nkg.schema import (
+    ForeshadowNode,
+    NarrativeProcessNode,
+    NKGEdge,
+    NKGEdgeType,
+    NKGNodeType,
+    SceneNode,
+    make_process_id,
+)
 
 BFS_MAX_DEPTH      = 8
 MIN_CHAIN_LENGTH   = 3

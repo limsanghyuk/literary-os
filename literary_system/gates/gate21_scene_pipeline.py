@@ -13,17 +13,17 @@ def _gate_scene_pipeline() -> dict:
             AnthropicSonnetAdapter,
         )
         from literary_system.llm_bridge.adapters.ollama_adapter import OllamaAdapter
-
-        # V484 SceneGenerationPipeline
-        from literary_system.pipelines.scene_generation_pipeline import (
-            SceneGenerationPipeline,
-            GeneratedScene,
-            SceneGenerationResult,
-        )
+        from literary_system.llm_bridge.gateway.unified_llm_gateway import UnifiedLLMGateway
 
         # LLMContext + UnifiedLLMGateway (Phase 2 핵심)
         from literary_system.llm_bridge.llm_context import LLMContext
-        from literary_system.llm_bridge.gateway.unified_llm_gateway import UnifiedLLMGateway
+
+        # V484 SceneGenerationPipeline
+        from literary_system.pipelines.scene_generation_pipeline import (
+            GeneratedScene,
+            SceneGenerationPipeline,
+            SceneGenerationResult,
+        )
 
         symbols_verified = [
             "AnthropicHaikuAdapter",

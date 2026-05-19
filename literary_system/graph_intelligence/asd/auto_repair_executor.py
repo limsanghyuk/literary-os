@@ -36,7 +36,6 @@ from ..sp2.stage_patch_impact_calculator import (
 )
 from .story_doctor_orchestrator import RepairCategory, RepairRecommendation
 
-
 # 콜백 타입: (recommendation) → bool (성공 여부)
 RepairFn = Callable[[RepairRecommendation], bool]
 

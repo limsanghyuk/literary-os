@@ -11,8 +11,8 @@ Anthropic Claude API → LLMBridgeInterface 구현체.
   - LLM 0회 평가 원칙 준수 (생성만 LLM, 판정은 로컬)
 """
 from __future__ import annotations
-import logging
 
+import logging
 import os
 from typing import Any
 
@@ -21,7 +21,6 @@ from literary_system.llm_bridge.llm_bridge_interface import LLMBridgeInterface
 from literary_system.llm_bridge.llm_context import LLMContext, coerce_context
 from literary_system.llm_bridge.scene_draft_tool import SCENE_DRAFT_TOOL, TOOL_NAME
 from literary_system.llm_bridge.tool_use_parser import ToolUseParser
-
 
 # ────────────────────────────────────────────────────────────────
 # Anthropic 패키지 지연 임포트 (optional dependency)
@@ -136,7 +135,7 @@ class ClaudeAdapter(LLMBridgeInterface):
             # tool_use 블록에서 narrative_text 빠르게 추출
             return self._extract_narrative(response)
 
-        except Exception as e:
+        except Exception:
             # API 오류 시 빈 문자열 반환 (서비스 중단 방지)
             self._last_response = None
             return ""

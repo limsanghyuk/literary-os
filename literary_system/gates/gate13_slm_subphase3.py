@@ -22,9 +22,11 @@ def _gate_slm_subphase3_survival() -> dict:
         assert "[PHONE]" in clean, "PIIScrubber 전화번호 마스킹 실패"
 
         # 2. SLMDatasetBuilderV443
+        import os
+        import tempfile
+
         from literary_system.slm.dataset_builder_v443 import SLMDatasetBuilderV443
         from literary_system.trace.trace_dataset_store import TraceDatasetStore, make_trace_record
-        import tempfile, os
         tmpdir = tempfile.mkdtemp()
         store = TraceDatasetStore(tmpdir)
         rec = make_trace_record(

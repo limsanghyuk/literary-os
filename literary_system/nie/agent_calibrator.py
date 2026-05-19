@@ -15,8 +15,6 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Dict, List, Optional, Tuple
 
-
-
 # ─── 상수 ─────────────────────────────────────────────────────────────────────
 PHASE2_ACTIVATION_WORKS: int = 10      # Phase 2 활성화 임계값
 BIWEEKLY_INTERVAL_WORKS: int = 2       # 격주 ≈ 작품 2편 처리 간격(작품 단위)

@@ -5,7 +5,9 @@ V313→V322: SeedCompiler
 LLM 0회 — 로컬 deterministic.
 """
 from __future__ import annotations
-import re, uuid
+
+import re
+import uuid
 from typing import Any
 
 _GENRE_SIGNALS: dict[str, list[str]] = {

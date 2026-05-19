@@ -10,13 +10,13 @@ Phase 6 Stage B — PredictiveNarrativeEngine (V551~V555)
   feedback_learner.py — FeedbackLearner: 예측 vs 실제 대조 + F1 추적 (V554)
 """
 
-from .pne_core import PNECore, PatternLibrary, RepairOutcome  # noqa: F401
+from .pne_core import PatternLibrary, PNECore, RepairOutcome  # noqa: F401
 
 __all__ = ["PNECore", "PatternLibrary", "RepairOutcome"]
 
-from .debt_predictor import DebtPredictor, DebtPrediction, PredictionReport  # noqa: F401
-from .preemptive_gate import PreemptiveGate, PreemptiveResult  # noqa: F401
+from .debt_predictor import DebtPrediction, DebtPredictor, PredictionReport  # noqa: F401
 from .feedback_learner import FeedbackLearner, MetricsSnapshot  # noqa: F401
+from .preemptive_gate import PreemptiveGate, PreemptiveResult  # noqa: F401
 
 __all__ += [
     "DebtPredictor", "DebtPrediction", "PredictionReport",

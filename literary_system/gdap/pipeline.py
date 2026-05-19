@@ -1,19 +1,21 @@
 """V360: DKGPipeline v2 — 7단계 오케스트레이터."""
 from __future__ import annotations
+
 import time
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any, Callable, Dict, List, Optional
 
-from literary_system.nkg.graph_store import NKGGraphStore
-from literary_system.nkg.schema import NKGNode, NKGEdge, NKGNodeType
-from literary_system.nkg.staleness import DKGStalenessTrackerV2
-from literary_system.nkg.semantic_model import NKGSemanticModel
-from literary_system.nkg.cluster.character_cluster import CharacterClusterDetector
-from literary_system.nkg.process.process_detector import NKGProcessDetector
-from literary_system.gdap.guardrails import NKGGuardrails
 from literary_system.gdap.blast_radius import BlastRadiusCalculator
+from literary_system.gdap.guardrails import NKGGuardrails
 from literary_system.gdap.plan_gate import PlanBuildGate, WorkDeclaration
+from literary_system.nkg.cluster.character_cluster import CharacterClusterDetector
+from literary_system.nkg.graph_store import NKGGraphStore
+from literary_system.nkg.process.process_detector import NKGProcessDetector
+from literary_system.nkg.schema import NKGEdge, NKGNode, NKGNodeType
+from literary_system.nkg.semantic_model import NKGSemanticModel
+from literary_system.nkg.staleness import DKGStalenessTrackerV2
+
 
 class PipelinePhase(Enum):
     INIT        = "INIT"

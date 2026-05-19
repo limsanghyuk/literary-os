@@ -1,21 +1,9 @@
 """Phase 5 ASD — Autonomous Story Doctor"""
-from .narrative_debt_detector import (
-    DebtType,
-    NarrativeDebtDetector,
-    NarrativeDebtItem,
-    NarrativeDebtReport,
-)
 from .arc_consistency_checker import (
     ArcConsistencyChecker,
     ArcConsistencyReport,
     ArcIssue,
     ArcIssueType,
-)
-from .story_doctor_orchestrator import (
-    DoctorReport,
-    RepairCategory,
-    RepairRecommendation,
-    StoryDoctorOrchestrator,
 )
 from .auto_repair_executor import (
     AutoRepairExecutor,
@@ -24,6 +12,18 @@ from .auto_repair_executor import (
     ExecutionStatus,
 )
 from .gate28 import Gate28, Gate28Check, Gate28Result
+from .narrative_debt_detector import (
+    DebtType,
+    NarrativeDebtDetector,
+    NarrativeDebtItem,
+    NarrativeDebtReport,
+)
+from .story_doctor_orchestrator import (
+    DoctorReport,
+    RepairCategory,
+    RepairRecommendation,
+    StoryDoctorOrchestrator,
+)
 
 __all__ = [
     # Debt
@@ -40,5 +40,7 @@ __all__ = [
 
 # V546 — SafetyAugmentedAutoRepair
 from .safety_augmented_auto_repair import (
-    SafetyAugmentedAutoRepair, SafetyRepairResult, SafetyCheckResult,
+    SafetyAugmentedAutoRepair,
+    SafetyCheckResult,
+    SafetyRepairResult,
 )

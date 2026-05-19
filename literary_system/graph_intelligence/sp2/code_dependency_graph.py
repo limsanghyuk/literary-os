@@ -5,9 +5,9 @@ LLM-0 compliant.
 """
 from __future__ import annotations
 
+from collections import defaultdict, deque
 from dataclasses import dataclass, field
 from typing import Dict, FrozenSet, List, Optional, Set, Tuple
-from collections import defaultdict, deque
 
 
 @dataclass(frozen=True)

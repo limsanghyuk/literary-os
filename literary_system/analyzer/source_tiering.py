@@ -4,7 +4,6 @@ from typing import Any
 
 from literary_system.common.enums import SourceTier
 
-
 _KIND_TO_TIER = {
     "canon": SourceTier.T0.value,
     "project_doc": SourceTier.T1.value,

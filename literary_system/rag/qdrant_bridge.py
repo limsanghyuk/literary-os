@@ -15,11 +15,10 @@ from __future__ import annotations
 import hashlib
 import json
 import time
-import urllib.request
 import urllib.error
+import urllib.request
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Any
-
+from typing import Any, Dict, List, Optional
 
 # ---------------------------------------------------------------------------
 # EmbeddingService
@@ -346,7 +345,7 @@ class QdrantBridge:
         )
         try:
             urllib.request.urlopen(req, timeout=10)
-        except Exception as e:
+        except Exception:
             if self._fallback:
                 self._fallback.upsert(collection, doc)
                 self._qdrant_ok = False

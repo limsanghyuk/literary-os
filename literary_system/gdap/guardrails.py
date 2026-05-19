@@ -1,7 +1,9 @@
 """V360: NKGGuardrails — GR-01~GR-05 5규칙."""
 from __future__ import annotations
+
 from dataclasses import dataclass
 from typing import List, Optional
+
 
 class GuardrailViolation(Exception):
     def __init__(self, rule: str, msg: str): super().__init__(f"[{rule}] {msg}"); self.rule = rule; self.msg = msg

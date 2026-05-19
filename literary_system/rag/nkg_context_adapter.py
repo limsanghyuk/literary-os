@@ -9,7 +9,6 @@ from dataclasses import dataclass, field
 from enum import IntEnum
 from typing import Any, Dict, List, Optional, Tuple
 
-
 # ---------------------------------------------------------------------------
 # Priority
 # ---------------------------------------------------------------------------

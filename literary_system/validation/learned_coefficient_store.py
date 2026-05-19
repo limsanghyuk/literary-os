@@ -18,7 +18,6 @@ import time
 from dataclasses import dataclass, field
 from typing import Any
 
-
 # ================================================================
 # CoefficientRecord - 단일 씬 학습 레코드
 # ================================================================

@@ -1,10 +1,14 @@
 """V360: NKGChangeDetector — 씬 변경 감지."""
 from __future__ import annotations
-import hashlib, time
+
+import hashlib
+import time
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Set
-from literary_system.nkg.schema import NKGNodeType
+
 from literary_system.nkg.graph_store import NKGGraphStore
+from literary_system.nkg.schema import NKGNodeType
+
 
 @dataclass
 class ChangeDetectionResult:

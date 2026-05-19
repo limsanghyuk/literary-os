@@ -14,7 +14,6 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any
 
-
 # ────────────────────────────────────────────────────────────────
 # SceneFocusContext 데이터클래스
 # ────────────────────────────────────────────────────────────────

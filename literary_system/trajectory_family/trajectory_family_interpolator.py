@@ -16,6 +16,7 @@ GPT v1600 패턴 vs 우리 V314:
 LLM 0회. 완전 deterministic.
 """
 from __future__ import annotations
+
 import math
 from dataclasses import dataclass, field
 from typing import Any

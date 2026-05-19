@@ -4,10 +4,12 @@ CorpusValidator: 라이선스·PII·품질 검증 + 마스킹
 LLM-0 정책(ADR-015/031): 외부 LLM 호출 없음
 """
 from __future__ import annotations
+
 import re
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List, Tuple, Optional
+from typing import List, Optional, Tuple
+
 from .corpus_ingestor import ScenarioEntry
 
 

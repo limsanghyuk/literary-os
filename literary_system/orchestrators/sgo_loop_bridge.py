@@ -1,5 +1,6 @@
 """V328 Task15: SGOLoopBridge — E2ELoop ↔ SGO 통합 (단절 C)."""
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any, Optional
 

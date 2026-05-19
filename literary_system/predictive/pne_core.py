@@ -11,11 +11,10 @@ LLM-0 정책 준수: 외부 LLM 호출 없음
 
 from __future__ import annotations
 
+import statistics
 from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
-import statistics
-
 
 # ─── 도메인 타입 ───────────────────────────────────────────────────────────────
 

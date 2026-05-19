@@ -3,6 +3,7 @@ V383 — AudienceCuriosityGradientEngine
 독자 호기심 기울기 추적. gradient <= 0 시 CuriosityCollapseError.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass
 from typing import Optional
 

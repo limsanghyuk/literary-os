@@ -5,10 +5,12 @@ BGEM3Embedder: 1024차원 임베딩 + 인메모리 코사인 검색
 폴백: hash 기반 결정론적 벡터 (LLM-0, ADR-015/031)
 """
 from __future__ import annotations
+
 import hashlib
 import math
 from dataclasses import dataclass, field
-from typing import Dict, List, Tuple, Optional
+from typing import Dict, List, Optional, Tuple
+
 from .corpus_ingestor import ScenarioEntry
 
 EMBEDDING_DIM   = 1024

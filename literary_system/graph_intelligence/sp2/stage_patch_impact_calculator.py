@@ -4,15 +4,15 @@ by combining NarrativeImpactAnalyzer (story graph) + CodeDependencyGraph (script
 LLM-0 compliant.
 """
 from __future__ import annotations
-import logging
 
+import logging
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Dict, List, Optional, Set
 
-from literary_system.graph_intelligence.narrative_impact_analyzer import NarrativeImpactAnalyzer
 from literary_system.graph_intelligence.narrative_graph_schema import NarrativeImpactReport
 from literary_system.graph_intelligence.narrative_graph_store import NarrativeGraphStore
+from literary_system.graph_intelligence.narrative_impact_analyzer import NarrativeImpactAnalyzer
 from literary_system.graph_intelligence.sp2.code_dependency_graph import CodeDependencyGraph
 
 logger = logging.getLogger(__name__)
@@ -62,7 +62,7 @@ class StagePatchImpact:
 
     def summary(self) -> str:
         lines = [
-            f"=== StagePatchImpact ===",
+            "=== StagePatchImpact ===",
             f"Scene      : {self.scene_id}  [{self.patch_type.value}]",
             f"NarrRisk   : {self.narrative_risk:.3f} ({self.narrative_report.risk_level if self.narrative_report else 'N/A'})",
             f"CouplingRisk: {self.coupling_risk:.3f}",

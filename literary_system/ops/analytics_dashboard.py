@@ -12,13 +12,12 @@ LLM-0 준수: 순수 계산, 외부 의존 없음
 """
 from __future__ import annotations
 
-import time
 import statistics
+import time
 from collections import defaultdict
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any, Dict, List, Optional
-
 
 # ── 데이터 모델 ──────────────────────────────────────────────
 

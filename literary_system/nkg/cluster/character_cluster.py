@@ -1,14 +1,23 @@
 """V360: CharacterClusterDetector — Leiden 알고리즘."""
 from __future__ import annotations
-import math, random, time
+
+import math
+import random
+import time
 from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Set, Tuple
-from literary_system.nkg.schema import (
-    NKGEdgeType, NKGNodeType, CharacterNode, ConflictClusterNode,
-    ConflictType, NKGEdge, make_cluster_id,
-)
+
 from literary_system.nkg.graph_store import NKGGraphStore
+from literary_system.nkg.schema import (
+    CharacterNode,
+    ConflictClusterNode,
+    ConflictType,
+    NKGEdge,
+    NKGEdgeType,
+    NKGNodeType,
+    make_cluster_id,
+)
 
 LEIDEN_RESOLUTION = 0.5; LEIDEN_ITERATIONS = 10; LEIDEN_RANDOM_SEED = 42
 

@@ -1,8 +1,10 @@
 """V385 — PhysicsCoefficientUpdater. SceneFeature 배치 → 계수 1 epoch 업데이트."""
 from __future__ import annotations
+
 from typing import List
-from literary_system.physics.scene_feature_extractor import SceneFeature
+
 from literary_system.physics.coefficient_store import PhysicsCoefficientStore
+from literary_system.physics.scene_feature_extractor import SceneFeature
 
 
 class PhysicsCoefficientUpdater:

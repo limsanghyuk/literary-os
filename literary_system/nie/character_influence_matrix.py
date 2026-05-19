@@ -15,11 +15,11 @@ ADR-018: 비대칭 W[n×n] 행렬 + 구조적 균형 이론 + PageRank + 5티어
 from __future__ import annotations
 
 import heapq
+import logging
 import math
 from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
-import logging
 
 logger = logging.getLogger(__name__)
 

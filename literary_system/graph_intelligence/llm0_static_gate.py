@@ -130,7 +130,7 @@ class LLM0StaticGate:
                     violations.append(ViolationRecord(
                         file=filename, line=node.lineno,
                         violation_type="FROM_IMPORT",
-                        detail=f"LLM-0 위반: graph_intelligence에서 llm_bridge 직접 import"
+                        detail="LLM-0 위반: graph_intelligence에서 llm_bridge 직접 import"
                     ))
 
             # 함수 호출 검사

@@ -1,5 +1,6 @@
 """V370: ProseRenderContract — 산문 렌더링 필수 진입 계약."""
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any, Dict
 

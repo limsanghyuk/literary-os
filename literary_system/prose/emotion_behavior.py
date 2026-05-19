@@ -1,5 +1,6 @@
 """V370: EmotionToBehaviorRenderer — 4D 감정 벡터 → 신체·행동 표현 변환."""
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Tuple
 

@@ -66,21 +66,21 @@ class DatasetCard:
         """HuggingFace README.md YAML front-matter 형식."""
         lines = [
             "---",
-            f"dataset_info:",
+            "dataset_info:",
             f"  dataset_name: {self.dataset_name}",
             f"  version: {self.version}",
-            f"language:",
+            "language:",
         ]
         for lang in self.language:
             lines.append(f"  - {lang}")
         lines += [
             f"license: {self.license}",
-            f"task_categories:",
+            "task_categories:",
         ]
         for cat in self.task_categories:
             lines.append(f"  - {cat}")
         lines += [
-            f"tags:",
+            "tags:",
         ]
         for tag in self.tags:
             lines.append(f"  - {tag}")

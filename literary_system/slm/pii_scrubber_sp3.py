@@ -14,7 +14,6 @@ import re
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Tuple
 
-
 # ── PII 패턴 정의 (한국어 + 국제) ─────────────────────────────────────
 _PATTERNS: Dict[str, Tuple[re.Pattern, str]] = {
     # ── 국제 PII (특이 형식 우선) ─────────────────────────────────────

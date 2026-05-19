@@ -3,8 +3,8 @@ from __future__ import annotations
 from collections import defaultdict
 from typing import Any
 
-from literary_system.common.errors import SchemaValidationError
 from literary_system.common.enums import PacketType, PromotionDecision
+from literary_system.common.errors import SchemaValidationError
 
 
 def _payloads(bundle: dict[str, Any], packet_type: str) -> list[dict[str, Any]]:

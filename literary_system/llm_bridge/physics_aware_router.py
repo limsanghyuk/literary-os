@@ -9,10 +9,12 @@ Stage96 멀티어댑터 아키텍처 흡수:
   - ENSEMBLE: 복수 어댑터 결과를 NarrativeFitnessArbiter로 중재 (V389 선행 구현)
 """
 from __future__ import annotations
+
 from enum import Enum
 from typing import Any, Dict, List, Optional
-from literary_system.llm_bridge.llm_node_router import LLMNodeRouter, RoutingPolicy, _AdapterNode
+
 from literary_system.llm_bridge.llm_bridge_interface import LLMBridgeInterface
+from literary_system.llm_bridge.llm_node_router import LLMNodeRouter, RoutingPolicy, _AdapterNode
 
 
 class PhysicsRoutingPolicy(str, Enum):

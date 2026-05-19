@@ -21,7 +21,6 @@ from typing import Optional, Set
 
 from literary_system.nkg.graph_store import NKGGraphStore
 
-
 # ────────────────────────────────────────────────────────────────
 # CurationReport — 큐레이션 결과 기록
 # ────────────────────────────────────────────────────────────────

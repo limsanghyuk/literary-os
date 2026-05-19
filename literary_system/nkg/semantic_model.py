@@ -1,10 +1,13 @@
 """V360: NKGSemanticModel — 3단계 상태 머신."""
 from __future__ import annotations
+
 import time
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Tuple
-from literary_system.nkg.schema import SemanticModelState, NKGNodeType
+
 from literary_system.nkg.graph_store import NKGGraphStore
+from literary_system.nkg.schema import NKGNodeType, SemanticModelState
+
 
 class SemanticModelError(Exception): pass
 class SemanticModelFrozenError(SemanticModelError): pass

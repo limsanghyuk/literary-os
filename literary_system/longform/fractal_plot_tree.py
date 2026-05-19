@@ -19,9 +19,11 @@ from dataclasses import dataclass, field
 from typing import Dict, List, Optional
 
 from .fractal_topology import (
-    FractalPlotUnit, FractalReport, FractalTopologyValidator, FractalUnitType,
+    FractalPlotUnit,
+    FractalReport,
+    FractalTopologyValidator,
+    FractalUnitType,
 )
-
 
 # ── 설정 ──────────────────────────────────────────────────────────
 

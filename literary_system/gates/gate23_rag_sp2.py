@@ -21,10 +21,10 @@ def _gate_rag_sp2_survival() -> dict:
     # ── 1. RAGContextBuilder ───────────────────────────────────────────
     try:
         from literary_system.rag.rag_context_builder import (
-            RAGContextBuilder,
-            RetrievalProvenance,
-            RAGEnrichedRequest,
             DramaDocumentFactory,
+            RAGContextBuilder,
+            RAGEnrichedRequest,
+            RetrievalProvenance,
         )
         assert callable(getattr(RAGContextBuilder, "build", None)), \
             "RAGContextBuilder.build() 누락"
@@ -73,11 +73,11 @@ def _gate_rag_sp2_survival() -> dict:
     # ── 3. TenantIsolationV2 ──────────────────────────────────────────
     try:
         from literary_system.tenant.tenant_isolation_v2 import (
+            DataHygieneFilter,
+            DataHygieneViolation,
+            KMSKeyManager,
             TenantIsolationV2,
             TenantRAGRegistry,
-            DataHygieneFilter,
-            KMSKeyManager,
-            DataHygieneViolation,
         )
         assert callable(getattr(TenantIsolationV2, "register_tenant", None)), \
             "TenantIsolationV2.register_tenant() 누락"
@@ -118,6 +118,7 @@ def _gate_rag_sp2_survival() -> dict:
             "make_default_orchestrator() 누락"
         # 인스턴스 생성 후 속성 확인 (dataclass)
         import datetime
+
         from literary_system.rag.rag_context_builder import RetrievalProvenance as RP
         p = RP(retrieved_doc_ids=["d1"], query="q",
                 retrieval_ts=datetime.datetime.now())
@@ -139,6 +140,7 @@ def _gate_rag_sp2_survival() -> dict:
     # ── ADR-007 Provenance 계약 확인 ──────────────────────────────────
     try:
         import datetime
+
         from literary_system.rag.rag_context_builder import RetrievalProvenance
         p = RetrievalProvenance(
             retrieved_doc_ids=["d1", "d2"],

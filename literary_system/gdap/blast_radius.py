@@ -1,9 +1,12 @@
 """V360: BlastRadiusCalculator v2 — DKG+NKG 통합."""
 from __future__ import annotations
+
 from collections import deque
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Set
+
 from literary_system.nkg.graph_store import NKGGraphStore
+
 
 @dataclass
 class BlastRadius:

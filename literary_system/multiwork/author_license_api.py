@@ -16,11 +16,11 @@ LLM-0: 외부 LLM 호출 없음.
 
 from __future__ import annotations
 
-import time
 import threading
+import time
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Dict, List, Optional, Set, Any
+from typing import Any, Dict, List, Optional, Set
 
 
 class LicenseType(Enum):

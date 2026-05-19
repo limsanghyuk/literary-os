@@ -16,15 +16,16 @@ ANTHROPIC_API_KEY 설정 시 실 Claude API, 미설정 시 Mock 자동 폴백.
 """
 from __future__ import annotations
 
-import os
 import logging
+import os
 import time
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Any
+from typing import Any, Dict, List, Optional
 
 from literary_system.episode.episode_structure_calculator import EpisodeStructureConfig
 from literary_system.pipelines.scene_generation_pipeline import (
-    SceneGenerationPipeline, SceneGenerationResult,
+    SceneGenerationPipeline,
+    SceneGenerationResult,
 )
 
 logger = logging.getLogger(__name__)
@@ -175,12 +176,13 @@ class DramaEpisodeGenerator:
     def _make_real_gateway(cls, api_key: str):
         """AnthropicSonnet + AnthropicHaiku + Ollama 3-tier gateway."""
         from literary_system.llm_bridge.adapters.anthropic_adapter import (
-            AnthropicSonnetAdapter, AnthropicHaikuAdapter,
+            AnthropicHaikuAdapter,
+            AnthropicSonnetAdapter,
         )
         from literary_system.llm_bridge.adapters.ollama_adapter import OllamaAdapter
+        from literary_system.llm_bridge.gateway.unified_llm_gateway import UnifiedLLMGateway
         from literary_system.llm_bridge.health.provider_health_monitor import ProviderHealthMonitor
         from literary_system.llm_bridge.routing.task_router import TaskRouter
-        from literary_system.llm_bridge.gateway.unified_llm_gateway import UnifiedLLMGateway
 
         providers = {
             "local":   OllamaAdapter(),
@@ -196,9 +198,9 @@ class DramaEpisodeGenerator:
     @classmethod
     def _make_mock_gateway(cls):
         """MockLLMBridge 기반 테스트용 gateway."""
+        from literary_system.llm_bridge.gateway.unified_llm_gateway import UnifiedLLMGateway
         from literary_system.llm_bridge.mock_llm_bridge import MockLLMBridge
         from literary_system.llm_bridge.routing.task_router import TaskRouter
-        from literary_system.llm_bridge.gateway.unified_llm_gateway import UnifiedLLMGateway
 
         mock_response = (
             "[씬 시작]\n"

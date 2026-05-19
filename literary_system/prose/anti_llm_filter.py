@@ -1,9 +1,9 @@
 """V370: KoreanAntiLLMFilter — 한국 드라마 AI 클리셰 교체 필터."""
 from __future__ import annotations
+
 import re
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
-
 
 # ──────────────────────────────────────────────────────────────────────
 #  기본 클리셰 사전 (장르 무관 공통 50+ 쌍)

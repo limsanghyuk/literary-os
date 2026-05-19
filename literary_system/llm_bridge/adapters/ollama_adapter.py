@@ -14,15 +14,15 @@ LLM-0 원칙: generate()만 LLM 호출, 라우팅·계획 로직 없음.
 from __future__ import annotations
 
 import json
-import os
 import logging
-import urllib.request
+import os
 import urllib.error
+import urllib.request
 from typing import Union
 
+from literary_system.action_compiler.action_packet import ActionPacket, ActionPacketParser
 from literary_system.llm_bridge.llm_bridge_interface import LLMBridgeInterface
 from literary_system.llm_bridge.llm_context import LLMContext, coerce_context
-from literary_system.action_compiler.action_packet import ActionPacket, ActionPacketParser
 
 logger = logging.getLogger(__name__)
 

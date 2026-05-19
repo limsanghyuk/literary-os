@@ -13,25 +13,24 @@ V325 - SceneGenerationOrchestrator  (Phase 3)
   - LLM 호출은 bridge.generate()를 통해서만
 """
 from __future__ import annotations
-import logging
-from typing import Optional
 
+import logging
 import time
 import uuid
 from dataclasses import dataclass, field
-from typing import Any
+from typing import Any, Optional
 
-from literary_system.orchestrators.sequence_planner import SequencePlan
 from literary_system.orchestrators.scene_focus_injector import (
-    SceneFocusInjector,
     SceneFocusContext,
+    SceneFocusInjector,
 )
+from literary_system.orchestrators.sequence_planner import SequencePlan
 
 logger = logging.getLogger(__name__)
 # V327 P1-2: DRSE 실 피드백 루프 활성화 임포트
 try:
-    from literary_system.evaluation.scene_metrics_collector import SceneMetricsCollector as _SceneMetricsCollector
     from literary_system.drse.drse_engine import DRSEEngine as _DRSEEngine
+    from literary_system.evaluation.scene_metrics_collector import SceneMetricsCollector as _SceneMetricsCollector
     _DRSE_AVAILABLE = True
 except ImportError:
     _DRSE_AVAILABLE = False
@@ -41,11 +40,11 @@ try:
     from literary_system.orchestrators.character_intent_agent import (
         ConcurrentIntentCollector as _ConcurrentIntentCollector,
     )
-    from literary_system.orchestrators.concurrent_action_resolver import (
-        ConcurrentActionResolver as _ConcurrentActionResolver,
-    )
     from literary_system.orchestrators.collision_focus_injector import (
         CollisionFocusInjector as _CollisionFocusInjector,
+    )
+    from literary_system.orchestrators.concurrent_action_resolver import (
+        ConcurrentActionResolver as _ConcurrentActionResolver,
     )
     _CONCURRENT_AVAILABLE = True
 except ImportError:
@@ -562,8 +561,8 @@ class SceneGenerationOrchestrator:
         """
         try:
             from literary_system.validation.learned_coefficient_store import (
-                LearnedCoefficientStore,
                 CoefficientRecord,
+                LearnedCoefficientStore,
             )
             # MAEWeights → LearnedCoefficients 역매핑
             mae_weights = self.coeff_mapper.map_to_mae(

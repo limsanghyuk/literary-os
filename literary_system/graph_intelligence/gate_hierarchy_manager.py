@@ -15,7 +15,7 @@ from __future__ import annotations
 
 import logging
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Callable, Any
+from typing import Any, Callable, Dict, List, Optional
 
 logger = logging.getLogger(__name__)
 
@@ -145,8 +145,8 @@ def _register_defaults(mgr: GateHierarchyManager) -> None:
 
     # Gate26 — SceneChangePreGate (NarrativeGraph blast radius)
     try:
-        from literary_system.graph_intelligence.scene_change_pre_gate import SceneChangePreGate
         from literary_system.graph_intelligence.narrative_graph_store import NarrativeGraphStore
+        from literary_system.graph_intelligence.scene_change_pre_gate import SceneChangePreGate
         g26_store = NarrativeGraphStore()
         g26 = SceneChangePreGate(g26_store)
 
@@ -159,8 +159,8 @@ def _register_defaults(mgr: GateHierarchyManager) -> None:
 
     # Gate27 — CodeCoupling 게이트
     try:
-        from literary_system.graph_intelligence.sp2.gate27 import Gate27
         from literary_system.graph_intelligence.sp2.code_dependency_graph import CodeDependencyGraph
+        from literary_system.graph_intelligence.sp2.gate27 import Gate27
         g27_cdg = CodeDependencyGraph()
         g27 = Gate27(g27_cdg)
 

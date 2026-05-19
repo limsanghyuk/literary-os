@@ -5,6 +5,7 @@ V313→V322: TemporalCoherenceEngine
 LLM 0회.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any
 

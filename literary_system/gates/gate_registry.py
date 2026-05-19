@@ -21,14 +21,13 @@ ADR-032: 릴리즈 게이트 단일 소스 레지스트리.
     # entry.name, entry.layer 로 접근
 """
 from __future__ import annotations
-import logging
 
+import logging
 import sys
 
 _logger = logging.getLogger(__name__)
 from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, List, Optional
-
 
 # ---------------------------------------------------------------------------
 # GateRegistryEntry
@@ -175,7 +174,7 @@ def run_all_gates() -> Dict[str, dict]:
                 "layer": entry.layer,
                 **result,
             }
-        except Exception as exc:
+        except Exception:
             results[gate_id] = {
                 "gate_name": entry.name,
                 "pass": False,

@@ -25,7 +25,6 @@ from typing import List
 
 from literary_system.validation.learned_coefficient_store import LearnedCoefficients
 
-
 # ════════════════════════════════════════════════════════════════════
 # MAEWeights DTO
 # ════════════════════════════════════════════════════════════════════

@@ -21,7 +21,6 @@ import re
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Tuple
 
-
 # ── 기본 상수 ──────────────────────────────────────────────────────────
 DEFAULT_MIN_QUALITY   = 0.4
 DEFAULT_DEDUP_THRESHOLD = 0.85

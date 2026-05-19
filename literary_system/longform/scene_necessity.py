@@ -3,6 +3,7 @@
 여백 장면은 atmosphere_function / emotional_residue_function으로 보호.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Dict, List

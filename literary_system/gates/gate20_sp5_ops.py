@@ -26,7 +26,9 @@ def _gate_sp5_ops() -> Dict[str, Any]:
     # ── 1. LoadBalancer ──────────────────────────────────────
     try:
         from literary_system.ops.load_balancer import (
-            LoadBalancer, AdapterRef, RouteResult,
+            AdapterRef,
+            LoadBalancer,
+            RouteResult,
         )
         lb = LoadBalancer()
         lb.register(AdapterRef("test_adapter"))
@@ -43,7 +45,9 @@ def _gate_sp5_ops() -> Dict[str, Any]:
     # ── 2. CircuitBreaker (LLM) ──────────────────────────────
     try:
         from literary_system.ops.circuit_breaker_llm import (
-            CircuitBreaker, CircuitState, CircuitBreakerOpenError,
+            CircuitBreaker,
+            CircuitBreakerOpenError,
+            CircuitState,
         )
         cb = CircuitBreaker(name="gate_test", recovery_timeout_s=60.0,
                             llm_recovery_timeout_s=120.0)
@@ -70,7 +74,8 @@ def _gate_sp5_ops() -> Dict[str, Any]:
     # ── 3. ObservabilityStack ────────────────────────────────
     try:
         from literary_system.ops.observability_stack import (
-            ObservabilityStack, LoadTestReport,
+            LoadTestReport,
+            ObservabilityStack,
         )
         obs = ObservabilityStack()
         # 트레이스
@@ -92,10 +97,13 @@ def _gate_sp5_ops() -> Dict[str, Any]:
 
     # ── 4. DRController ──────────────────────────────────────
     try:
-        from literary_system.ops.dr_controller import (
-            DRController, RestoreReport, DRTestResult,
-        )
         import time
+
+        from literary_system.ops.dr_controller import (
+            DRController,
+            DRTestResult,
+            RestoreReport,
+        )
 
         t = [0.0]
         def clock(): return t[0]
@@ -123,7 +131,8 @@ def _gate_sp5_ops() -> Dict[str, Any]:
     # ── 5. ProductionLaunchGate ──────────────────────────────
     try:
         from literary_system.ops.production_launch_gate import (
-            ProductionLaunchGate, LaunchReport,
+            LaunchReport,
+            ProductionLaunchGate,
         )
         gate = ProductionLaunchGate()
         report = gate.run_full_check()
@@ -139,7 +148,10 @@ def _gate_sp5_ops() -> Dict[str, Any]:
     # ── 6. UserOnboarding ────────────────────────────────────
     try:
         from literary_system.ops.user_onboarding import (
-            UserOnboarding, UserPlan, PaymentGateway, OnboardResult,
+            OnboardResult,
+            PaymentGateway,
+            UserOnboarding,
+            UserPlan,
         )
         uo = UserOnboarding()
         result = uo.onboard({"email": "gate@test.com", "name": "게이트테스터"})
@@ -157,7 +169,9 @@ def _gate_sp5_ops() -> Dict[str, Any]:
     # ── 7. AnalyticsDashboard ────────────────────────────────
     try:
         from literary_system.ops.analytics_dashboard import (
-            AnalyticsDashboard, PublicAPIDoc, NPSResult,
+            AnalyticsDashboard,
+            NPSResult,
+            PublicAPIDoc,
         )
         dash = AnalyticsDashboard()
         dash.track_event("page_view", "usr_001", {"page": "/home"})

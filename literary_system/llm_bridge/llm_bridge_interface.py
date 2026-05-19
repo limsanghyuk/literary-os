@@ -11,7 +11,7 @@ V411 기반 + AdapterContractV2 수용 인터페이스 추가.
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from typing import Any, Union, Optional, TYPE_CHECKING
+from typing import TYPE_CHECKING, Any, Optional, Union
 
 from literary_system.llm_bridge.llm_context import LLMContext, LLMResponse, coerce_context
 

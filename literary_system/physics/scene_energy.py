@@ -3,6 +3,7 @@ V383 — SceneEnergyConservationAudit
 씬 에너지 입출력 보존 검증. 손실률 > 30% 시 SceneEnergyViolation.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass
 from typing import Optional
 

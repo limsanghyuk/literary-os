@@ -1,5 +1,6 @@
 """V370: ReaderSurfaceScorer — 6개 축 산문 표면 품질 실측 점수화."""
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any, Dict, Optional
 

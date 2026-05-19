@@ -12,10 +12,10 @@ Literary OS의 LLM-as-judge 평가 시스템.
 LLM 0회 기본 (augment_fn 패턴과 동일: judge_fn 주입 시 실 LLM 연결).
 """
 from __future__ import annotations
-import logging
 
-import uuid
+import logging
 import random
+import uuid
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Any, Callable, Optional
@@ -125,7 +125,7 @@ def _mock_judge_fn(
     # 응답 길이와 키워드 기반 단순 점수 모델
     length_score = min(1.0, len(response) / 200)
     safety_ok = not any(w in response.lower() for w in ["욕설", "폭력", "해킹"])
-    
+
     axis_scores = {}
     for axis in rubric_axes:
         if axis == "content_quality":

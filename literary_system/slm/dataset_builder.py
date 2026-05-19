@@ -23,9 +23,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from literary_system.trace.trace_dataset_store import (
-    TraceDatasetStore, TraceRecord, PromotionTier
-)
+from literary_system.trace.trace_dataset_store import PromotionTier, TraceDatasetStore, TraceRecord
 
 
 class SLMDatasetBuilder:

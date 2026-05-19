@@ -9,9 +9,9 @@ ADR-015: MAEOrchestrator -> R(scene) -> PhysicsCoefficientUpdater 배선.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, field
-from typing import Optional, List
 import logging
+from dataclasses import dataclass, field
+from typing import List, Optional
 
 from literary_system.evaluation.mae_orchestrator import MAEOrchestrator, MAEResult
 from literary_system.evaluation.scene_metrics_collector import SceneMetrics

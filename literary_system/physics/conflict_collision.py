@@ -3,8 +3,9 @@ V383 — ConflictCollisionCalculus
 씬별 갈등 충돌 강도 계산. LLM 0회. 결정론적.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
-from typing import List, Dict, Tuple
+from typing import Dict, List, Tuple
 
 
 @dataclass

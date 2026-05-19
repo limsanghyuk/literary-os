@@ -19,7 +19,6 @@ import math
 from dataclasses import dataclass, field
 from typing import Any
 
-
 # ── 표준 궤도 형상 (MacroArc Constitution 정의) ──────────────
 _TRAJECTORY_SHAPES: dict[str, dict[str, list[float]]] = {
     # SP: Scene Pressure 궤도 (정규화된 에피소드 비율 기준)

@@ -23,12 +23,14 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Set
 
-from literary_system.world.knowledge_state_tracker import (
-    KnowledgeStateTracker, KnowledgeStatus, KnowledgeFact,
-)
 from literary_system.prose.contract import (
-    ProseRenderContract,
     ProseContractViolationError,
+    ProseRenderContract,
+)
+from literary_system.world.knowledge_state_tracker import (
+    KnowledgeFact,
+    KnowledgeStateTracker,
+    KnowledgeStatus,
 )
 
 

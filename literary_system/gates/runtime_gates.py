@@ -18,7 +18,6 @@ import os
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
-
 # ── 공통 결과 구조 ─────────────────────────────────────────────────────────────
 
 @dataclass
@@ -66,12 +65,10 @@ class PhysicsGate:
             RuntimeGateResult
         """
         from literary_system.physics.coefficient_store import PhysicsCoefficientStore
-        from literary_system.physics.fitness_score import (
-            NarrativeFitnessScore, NarrativeFitnessComponents
-        )
+        from literary_system.physics.fitness_score import NarrativeFitnessComponents, NarrativeFitnessScore
 
         result = RuntimeGateResult(gate_id=self.GATE_ID, passed=True)
-        result.add_trace(f"PhysicsGate (RG-1): evaluating scene fitness")
+        result.add_trace("PhysicsGate (RG-1): evaluating scene fitness")
 
         store = coefficient_store or PhysicsCoefficientStore()
 
@@ -127,7 +124,7 @@ class RuntimeEnsembleGate:
         LLM_DISABLED 시 passed=True, skipped=True 반환.
         """
         result = RuntimeGateResult(gate_id=self.GATE_ID, passed=True)
-        result.add_trace(f"EnsembleGate (RG-2): checking LLM availability")
+        result.add_trace("EnsembleGate (RG-2): checking LLM availability")
 
         llm_disabled = os.environ.get("LLM_DISABLED", "false").lower() == "true"
         if llm_disabled or llm_client is None:

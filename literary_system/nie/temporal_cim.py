@@ -11,12 +11,14 @@ ADR-021: W[t][i][j] 시간 차원 + memory decay η=0.92 + 회상 신 비교.
 """
 from __future__ import annotations
 
+import logging
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
-import logging
 
 from literary_system.nie.character_influence_matrix import (
-    CharacterInfluenceMatrix, SPARSE_N_THRESHOLD, SPARSE_W_THRESHOLD,
+    SPARSE_N_THRESHOLD,
+    SPARSE_W_THRESHOLD,
+    CharacterInfluenceMatrix,
 )
 
 logger = logging.getLogger(__name__)

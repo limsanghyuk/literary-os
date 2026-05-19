@@ -4,6 +4,7 @@ V383 — SceneFeatureExtractor
 (V385 ManuscriptLearning을 위한 피처 추출 인프라)
 """
 from __future__ import annotations
+
 from dataclasses import dataclass
 
 

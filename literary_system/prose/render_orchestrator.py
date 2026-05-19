@@ -1,17 +1,16 @@
 """V370: ClosedLoopRenderOrchestratorV2 — 7단계 산문 렌더링 루프."""
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
-from literary_system.prose.contract import (
-    ProseRenderContract, ReaderScoreBelowThresholdError
-)
 from literary_system.prose.anti_llm_filter import KoreanAntiLLMFilter
-from literary_system.prose.emotion_behavior import EmotionToBehaviorRenderer, EmotionalDelta
-from literary_system.prose.sensory_anchor import SensoryAnchorInjector, SettingSeed
+from literary_system.prose.contract import ProseRenderContract, ReaderScoreBelowThresholdError
+from literary_system.prose.emotion_behavior import EmotionalDelta, EmotionToBehaviorRenderer
 from literary_system.prose.rhythm_rewriter import KoreanRhythmRewriter
-from literary_system.prose.surface_scorer import ReaderSurfaceScorer, SurfaceScore
+from literary_system.prose.sensory_anchor import SensoryAnchorInjector, SettingSeed
 from literary_system.prose.style_dna import StyleDNA
+from literary_system.prose.surface_scorer import ReaderSurfaceScorer, SurfaceScore
 
 
 @dataclass

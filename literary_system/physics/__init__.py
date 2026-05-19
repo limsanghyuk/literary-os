@@ -6,15 +6,20 @@ V383 NarrativePhysics Engine Layer
 모든 엔진은 LLM 0회 — 순수 결정론적.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import List
 
-from literary_system.physics.conflict_collision import ConflictCollisionCalculus, ConflictCollisionResult
-from literary_system.physics.scene_energy import SceneEnergyConservationAudit, EnergyAuditResult, SceneEnergyViolation
-from literary_system.physics.motif_residue import MotifResidueGraphBuilder, MotifResidueGraph, MotifOrphanWarning
-from literary_system.physics.curiosity_gradient import AudienceCuriosityGradientEngine, CuriosityResult, CuriosityCollapseError
-from literary_system.physics.fitness_score import NarrativeFitnessScore, NarrativeFitnessComponents
 from literary_system.physics.coefficient_store import PhysicsCoefficientStore
+from literary_system.physics.conflict_collision import ConflictCollisionCalculus, ConflictCollisionResult
+from literary_system.physics.curiosity_gradient import (
+    AudienceCuriosityGradientEngine,
+    CuriosityCollapseError,
+    CuriosityResult,
+)
+from literary_system.physics.fitness_score import NarrativeFitnessComponents, NarrativeFitnessScore
+from literary_system.physics.motif_residue import MotifOrphanWarning, MotifResidueGraph, MotifResidueGraphBuilder
+from literary_system.physics.scene_energy import EnergyAuditResult, SceneEnergyConservationAudit, SceneEnergyViolation
 
 
 @dataclass

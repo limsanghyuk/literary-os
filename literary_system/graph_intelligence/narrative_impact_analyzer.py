@@ -23,7 +23,9 @@ from __future__ import annotations
 from typing import Dict, List, Set
 
 from literary_system.graph_intelligence.narrative_graph_schema import (
-    NarrativeEdgeType, NarrativeImpactReport, NarrativeNodeType,
+    NarrativeEdgeType,
+    NarrativeImpactReport,
+    NarrativeNodeType,
 )
 from literary_system.graph_intelligence.narrative_graph_store import NarrativeGraphStore
 

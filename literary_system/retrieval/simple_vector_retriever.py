@@ -20,7 +20,6 @@ import numpy as np
 
 from literary_system.retrieval.embedding_encoder import EmbeddingEncoder
 
-
 # ────────────────────────────────────────────────────────────────
 # 데이터 타입
 # ────────────────────────────────────────────────────────────────

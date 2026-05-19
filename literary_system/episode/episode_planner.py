@@ -7,13 +7,12 @@ K = f(episode_position, act_position, target_runtime, reveal_budget,
        scene_energy_required, curiosity_gradient)
 """
 from __future__ import annotations
+
 import math
 from dataclasses import dataclass, field
 from typing import List
-from .episode_state import (
-    ActPosition, EpisodeState, MicroPlotSlot,
-    NarrativeStateTensor, SeriesConfig
-)
+
+from .episode_state import ActPosition, EpisodeState, MicroPlotSlot, NarrativeStateTensor, SeriesConfig
 
 
 @dataclass

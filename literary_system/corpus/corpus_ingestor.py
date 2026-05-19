@@ -5,6 +5,7 @@ CorpusIngestor: 외부 코퍼스 수집 및 ScenarioEntry 목록 생성
 LLM-0 정책(ADR-015/031): 외부 LLM 호출 없음
 """
 from __future__ import annotations
+
 import random
 from dataclasses import dataclass, field
 from typing import List, Optional

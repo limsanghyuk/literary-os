@@ -28,7 +28,6 @@ from literary_system.orchestrators.character_intent_agent import (
     IntentPacket,
 )
 
-
 # ────────────────────────────────────────────────────────────────
 # CollisionType — 충돌의 성격
 # ────────────────────────────────────────────────────────────────

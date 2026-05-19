@@ -13,7 +13,6 @@ from __future__ import annotations
 
 from typing import Any
 
-
 # ────────────────────────────────────────────────────────────────
 # SceneDraftTool 정의 (Anthropic tools 파라미터 형식)
 # ────────────────────────────────────────────────────────────────

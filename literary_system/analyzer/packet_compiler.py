@@ -7,7 +7,6 @@ from literary_system.common.ids import make_id
 from literary_system.common.provenance import make_provenance
 from literary_system.schemas.envelope import make_envelope
 
-
 ANALYZER_VERSION = "1.0.0"
 
 

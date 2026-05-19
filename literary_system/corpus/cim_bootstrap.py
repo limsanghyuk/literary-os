@@ -4,10 +4,12 @@ CIMBootstrap: 코퍼스 공기어 통계로 CIM W[i][j] 웜스타트
 LLM-0 정책(ADR-015/031): 외부 LLM 호출 없음
 """
 from __future__ import annotations
+
 import math
 from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Dict, List, Tuple
+
 from .corpus_ingestor import ScenarioEntry
 
 

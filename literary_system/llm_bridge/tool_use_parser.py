@@ -16,7 +16,6 @@ from typing import Any
 from literary_system.action_compiler.action_packet import Action, ActionPacket
 from literary_system.llm_bridge.scene_draft_tool import TOOL_NAME
 
-
 # ────────────────────────────────────────────────────────────────
 # ToolUseParser
 # ────────────────────────────────────────────────────────────────

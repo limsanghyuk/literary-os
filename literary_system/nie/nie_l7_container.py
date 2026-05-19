@@ -10,14 +10,14 @@ V502+: CIM 통합, V509+: RAG 통합, V512+: Stability 연동.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, field
-from typing import Optional, Dict, Any
 import logging
+from dataclasses import dataclass, field
+from typing import Any, Dict, Optional
 
-from literary_system.nie.physics_reward_bridge import PhysicsRewardBridge, BridgeResult
 from literary_system.evaluation.mae_orchestrator import MAEOrchestrator
 from literary_system.evaluation.scene_metrics_collector import SceneMetrics
 from literary_system.learning.physics_coefficient_updater import PhysicsCoefficientUpdater
+from literary_system.nie.physics_reward_bridge import BridgeResult, PhysicsRewardBridge
 from literary_system.physics.coefficient_store import PhysicsCoefficientStore
 from literary_system.physics.scene_feature_extractor import SceneFeature
 

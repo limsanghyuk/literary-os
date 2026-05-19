@@ -12,11 +12,10 @@ LLM-0 정책 준수: 외부 LLM 호출 없음
 
 from __future__ import annotations
 
+import math
+import random
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
-import random
-import math
-
 
 # ─── 결과 타입 ────────────────────────────────────────────────────────────────
 

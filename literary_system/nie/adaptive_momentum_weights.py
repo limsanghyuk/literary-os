@@ -13,13 +13,14 @@ Gap 1: EmotionalMomentumTracker α_dim을 학습 가능 파라미터로 전환.
 """
 from __future__ import annotations
 
+import logging
 import math
 from dataclasses import dataclass, field
-from typing import Dict, Optional, List
-import logging
+from typing import Dict, List, Optional
 
 from literary_system.emotion.emotional_momentum_tracker import (
-    EmotionalMomentumTracker, EmotionalVector,
+    EmotionalMomentumTracker,
+    EmotionalVector,
 )
 
 logger = logging.getLogger(__name__)

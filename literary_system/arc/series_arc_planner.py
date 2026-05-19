@@ -13,13 +13,13 @@ V380: arc/series_arc_planner.py — SeriesArcPlanner
 LLM 0회.
 """
 from __future__ import annotations
-import logging
 
+import logging
 import math
 from typing import Dict, List, Optional
 
-from literary_system.arc.schema import ArcAct, ArcPlotEdge, ArcPlotEdgeType, ArcPlotNode
 from literary_system.arc.causal_plot_graph import CausalPlotGraph
+from literary_system.arc.schema import ArcAct, ArcPlotEdge, ArcPlotEdgeType, ArcPlotNode
 
 logger = logging.getLogger(__name__)
 

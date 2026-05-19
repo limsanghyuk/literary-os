@@ -16,11 +16,10 @@ LLM-0: 외부 LLM 호출 없음.
 
 from __future__ import annotations
 
-import time
 import threading
+import time
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Any, Tuple
-
+from typing import Any, Dict, List, Optional, Tuple
 
 # 장르 기본 스타일 파라미터 (전이의 출발점)
 _DEFAULT_GENRE_PROFILES: Dict[str, Dict[str, float]] = {

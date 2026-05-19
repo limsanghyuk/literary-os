@@ -9,8 +9,8 @@ from literary_system.librarian.catalog_builder import build_catalog
 from literary_system.librarian.contract_validator import ContractValidator
 from literary_system.librarian.drift_alarm import detect_state_drift
 from literary_system.librarian.duplication_checker import check_duplicates
-from literary_system.librarian.provenance_writer import build_provenance_record
 from literary_system.librarian.promotion_engine import PromotionEngine
+from literary_system.librarian.provenance_writer import build_provenance_record
 from literary_system.librarian.storage_dispatcher import StorageDispatcher
 
 

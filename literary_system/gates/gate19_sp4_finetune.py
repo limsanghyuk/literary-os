@@ -20,24 +20,34 @@ from typing import Any
 
 def _gate_sp4_finetune() -> dict[str, Any]:
     """Gate19 SP4 파인튜닝 LoRA POC 검증"""
+    import uuid
+
+    from literary_system.finetune.canary_kpi_monitor import CanaryKPIMonitor
     from literary_system.finetune.finetune_job_manager import (
-        FineTuneJobManager, FineTuneMethod,
-    )
-    from literary_system.finetune.prose_style_dataset import (
-        ProseStyleDataset, ProseStyle, DataSource, LicenseType, make_entry,
+        FineTuneJobManager,
+        FineTuneMethod,
     )
     from literary_system.finetune.model_eval_harness import (
-        ModelEvalHarness, EvalSample,
+        EvalSample,
+        ModelEvalHarness,
+    )
+    from literary_system.finetune.model_version_manager import (
+        ModelArtifact,
+        ModelStage,
+        ModelVersionManager,
+    )
+    from literary_system.finetune.prose_specializer_api import (
+        ProseSpecializerAPI,
+        ServeRequest,
+    )
+    from literary_system.finetune.prose_style_dataset import (
+        DataSource,
+        LicenseType,
+        ProseStyle,
+        ProseStyleDataset,
+        make_entry,
     )
     from literary_system.finetune.safety_regression_suite import SafetyRegressionSuite
-    from literary_system.finetune.model_version_manager import (
-        ModelVersionManager, ModelArtifact, ModelStage,
-    )
-    from literary_system.finetune.canary_kpi_monitor import CanaryKPIMonitor
-    from literary_system.finetune.prose_specializer_api import (
-        ProseSpecializerAPI, ServeRequest,
-    )
-    import uuid
 
     symbols_verified: list[str] = []
     errors: list[str] = []
@@ -212,10 +222,10 @@ def _gate_sp4_finetune() -> dict[str, Any]:
         assert ab_result.comparison_id != ""
 
         symbols_verified.append(
-            f"ModelVersionManager[v1.0-gate19, canary_pct=5%]"
+            "ModelVersionManager[v1.0-gate19, canary_pct=5%]"
         )
         symbols_verified.append(
-            f"CanaryKPIMonitor[normal→no rollback, bad_KPI→rollback triggered]"
+            "CanaryKPIMonitor[normal→no rollback, bad_KPI→rollback triggered]"
         )
         symbols_verified.append(
             f"ProseSpecializerAPI[served, AB winner={ab_result.winner}]"

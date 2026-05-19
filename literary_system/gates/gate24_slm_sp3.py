@@ -19,8 +19,8 @@ ADR-008 준수 검증:
   - DatasetCard 라이선스 필드 확인
 """
 from __future__ import annotations
-import logging
 
+import logging
 from typing import Any, Dict, List
 
 logger = logging.getLogger(__name__)
@@ -35,9 +35,9 @@ def _gate_slm_sp3_survival() -> Dict[str, Any]:
     # ── 1. TraceQualityFilterSP3 ──────────────────────────────────────
     try:
         from literary_system.slm.trace_quality_filter_sp3 import (
-            SP3Record,
             DedupReport,
             SP3FilterResult,
+            SP3Record,
             TraceQualityFilterSP3,
         )
         verified += ["SP3Record", "DedupReport", "SP3FilterResult", "TraceQualityFilterSP3"]
@@ -63,9 +63,9 @@ def _gate_slm_sp3_survival() -> Dict[str, Any]:
     # ── 2. PIIScrubberSP3 ─────────────────────────────────────────────
     try:
         from literary_system.slm.pii_scrubber_sp3 import (
-            ScrubDetailSP3,
             DatasetScrubReport,
             PIIScrubberSP3,
+            ScrubDetailSP3,
         )
         verified += ["ScrubDetailSP3", "DatasetScrubReport", "PIIScrubberSP3"]
 
@@ -93,9 +93,9 @@ def _gate_slm_sp3_survival() -> Dict[str, Any]:
     # ── 3. DatasetCardGenerator ───────────────────────────────────────
     try:
         from literary_system.slm.dataset_card_generator import (
-            DatasetStats,
             DatasetCard,
             DatasetCardGenerator,
+            DatasetStats,
         )
         verified += ["DatasetStats", "DatasetCard", "DatasetCardGenerator"]
 
@@ -130,10 +130,10 @@ def _gate_slm_sp3_survival() -> Dict[str, Any]:
     # ── 4. SyntheticAugmentorSP3 ──────────────────────────────────────
     try:
         from literary_system.slm.synthetic_augmentor_sp3 import (
+            SUPPORTED_STRATEGIES,
             AugmentedRecord,
             AugmentResultSP3,
             SyntheticAugmentorSP3,
-            SUPPORTED_STRATEGIES,
         )
         verified += ["AugmentedRecord", "AugmentResultSP3",
                      "SyntheticAugmentorSP3", "SUPPORTED_STRATEGIES"]

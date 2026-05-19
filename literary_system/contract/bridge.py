@@ -1,8 +1,10 @@
 """V360: ContractBridge v1 — GPT-Claude SceneIntentIR 공유."""
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any, Dict, List, Optional
+
 
 class SceneIntent(Enum):
     REVEAL       = "reveal"

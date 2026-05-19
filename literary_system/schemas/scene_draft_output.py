@@ -1,7 +1,9 @@
 """V328 Task17: SceneDraftOutput — Pydantic 구조화 출력 스키마."""
 from __future__ import annotations
+
 from enum import Enum
-from typing import Optional, Dict, Any
+from typing import Any, Dict, Optional
+
 
 class SceneQuality(str, Enum):
     EXCELLENT  = "excellent"
@@ -16,7 +18,7 @@ def _quality_from_score(score: float) -> SceneQuality:
     return SceneQuality.POOR
 
 try:
-    from pydantic import BaseModel, Field, ConfigDict
+    from pydantic import BaseModel, ConfigDict, Field
     _PYDANTIC = True
 except ImportError:
     _PYDANTIC = False
@@ -83,7 +85,8 @@ if _PYDANTIC:
                        quality=_quality_from_score(mae), tension_actual=ten,
                        emotional_vector=ev)
 else:
-    from dataclasses import dataclass, field as dc_field
+    from dataclasses import dataclass
+    from dataclasses import field as dc_field
     @dataclass
     class EmotionalVectorSchema:
         tension:float=0.5; sympathy:float=0.5; dread:float=0.3; catharsis:float=0.0; dominant:str="tension"
@@ -97,7 +100,8 @@ else:
         char_state_valid:bool=True; extra:dict=dc_field(default_factory=dict)
 
         def to_dict(self):
-            import dataclasses; return dataclasses.asdict(self)
+            import dataclasses
+            return dataclasses.asdict(self)
 
         @classmethod
         def from_scene_record(cls, record, episode_no=1, seq_index=0,

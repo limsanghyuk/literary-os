@@ -18,9 +18,15 @@ def _gate_sp2_tenant_survival() -> dict:
     try:
         # ── 1. TenantManager ─────────────────────────────────────────────────
         from literary_system.tenant import (
-            TenantManager, TenantRegion, TenantStatus,
-            TenantNotFoundError, TenantAlreadyExistsError, TenantInactiveError,
-            TenantRouter, QuotaEnforcer, QuotaExceededError,
+            QuotaEnforcer,
+            QuotaExceededError,
+            TenantAlreadyExistsError,
+            TenantInactiveError,
+            TenantManager,
+            TenantNotFoundError,
+            TenantRegion,
+            TenantRouter,
+            TenantStatus,
         )
 
         mgr = TenantManager()
@@ -78,9 +84,7 @@ def _gate_sp2_tenant_survival() -> dict:
         assert remaining["tokens_remaining"] == 200
 
         # ── 4. BillingEngine ─────────────────────────────────────────────────
-        from literary_system.billing import (
-            BillingEngine, InvoiceLineItem, PaymentGatewayType
-        )
+        from literary_system.billing import BillingEngine, InvoiceLineItem, PaymentGatewayType
 
         engine = BillingEngine()
         items = [InvoiceLineItem("API 사용", 1.0, 20.0)]
@@ -98,7 +102,7 @@ def _gate_sp2_tenant_survival() -> dict:
         assert refunded.status == PaymentStatus.REFUNDED
 
         # ── 5. TenantAuditLog hash chain ─────────────────────────────────────
-        from literary_system.tenant import TenantAuditLog, AuditEventType
+        from literary_system.tenant import AuditEventType, TenantAuditLog
 
         log = TenantAuditLog()
         for evt in [
@@ -114,9 +118,7 @@ def _gate_sp2_tenant_survival() -> dict:
         assert chain_result["checked"] == 3
 
         # ── 6. ProductionMonitor ─────────────────────────────────────────────
-        from literary_system.tenant import (
-            ProductionMonitor, SLOTier, RequestSample, RequestOutcome
-        )
+        from literary_system.tenant import ProductionMonitor, RequestOutcome, RequestSample, SLOTier
 
         monitor = ProductionMonitor(tier=SLOTier.BETA)
         for i in range(20):
@@ -129,7 +131,7 @@ def _gate_sp2_tenant_survival() -> dict:
         assert report.availability_pct == 1.0
 
         # ── 7. DRController RPO + ADR-018 롤백 ───────────────────────────────
-        from literary_system.dr import DRController, DRComponent, DRPolicy
+        from literary_system.dr import DRComponent, DRController, DRPolicy
 
         policy = DRPolicy(rpo_minutes=60, rto_minutes=240)
         dr = DRController(policy=policy)
