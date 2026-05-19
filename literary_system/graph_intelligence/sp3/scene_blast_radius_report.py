@@ -4,6 +4,7 @@ Consumed by PlanBuildProtocol and external dashboards.
 LLM-0 compliant.
 """
 from __future__ import annotations
+import logging
 
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
@@ -15,6 +16,8 @@ from literary_system.graph_intelligence.sp2.code_dependency_graph import CodeDep
 from literary_system.graph_intelligence.sp2.stage_patch_impact_calculator import (
     PatchType, StagePatchImpact, StagePatchImpactCalculator, StagePatchRequest,
 )
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -86,7 +89,7 @@ class BlastRadiusReportBuilder:
 
         builder = BlastRadiusReportBuilder(store, code_dep)
         report  = builder.build("sc07", PatchType.EDIT)
-        print(report.summary())
+        logger.debug(report.summary())
     """
 
     def __init__(

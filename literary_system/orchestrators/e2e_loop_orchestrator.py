@@ -24,7 +24,10 @@ LLM은 렌더링에만, 모든 판정은 로컬.
 """
 from __future__ import annotations
 
+import logging
 import time
+
+logger = logging.getLogger(__name__)
 from dataclasses import dataclass, field
 from typing import Any
 
@@ -145,9 +148,7 @@ class E2ELoopOrchestrator:
         success = False
 
         if verbose:
-            print(f"\n{'='*60}")
-            print(f" V320 E2E Loop — project={project_id} scene={scene_id}")
-            print(f"{'='*60}")
+            logger.info("V320 E2E Loop — project=%s scene=%s", project_id, scene_id)
 
         for i in range(self.MAX_LOOP_ITERATIONS):
             iter_start = time.time()
@@ -161,11 +162,11 @@ class E2ELoopOrchestrator:
             ):
                 if total_llm_calls >= self.MAX_TOTAL_LLM_CALLS:
                     if verbose:
-                        print(f"  [LOOP] 최대 LLM 호출 {self.MAX_TOTAL_LLM_CALLS}회 초과 → 중단")
+                        logger.debug(f"  [LOOP] 최대 LLM 호출 {self.MAX_TOTAL_LLM_CALLS}회 초과 → 중단")
                     break
 
                 if verbose:
-                    print(f"\n  [LOOP {i+1}] ★ V312 렌더링 시작 (LLM 호출 #{total_llm_calls+1})")
+                    logger.debug(f"\n  [LOOP {i+1}] ★ V312 렌더링 시작 (LLM 호출 #{total_llm_calls+1})")
 
                 render_result = self.bridge.run(current_bundle, timeout_seconds=120.0)
                 total_llm_calls += 1
@@ -174,7 +175,7 @@ class E2ELoopOrchestrator:
                 if "error" in render_result:
                     error = render_result["error"]
                     if verbose:
-                        print(f"  [LOOP {i+1}] 실패: {error}")
+                        logger.debug(f"  [LOOP {i+1}] 실패: {error}")
                     break
 
                 current_text   = self._extract_text(render_result)
@@ -183,8 +184,8 @@ class E2ELoopOrchestrator:
                 literary_loss  = render_result.get("literary_loss", 0)
 
                 if verbose:
-                    print(f"  [LOOP {i+1}] 렌더링 완료 | loss={literary_loss} | promo={promotion}")
-                    print(f"    텍스트: {current_text[:80]}...")
+                    logger.debug(f"  [LOOP {i+1}] 렌더링 완료 | loss={literary_loss} | promo={promotion}")
+                    logger.debug(f"    텍스트: {current_text[:80]}...")
 
             # ── Step 2: ReaderSimulator 측정 (LLM 0회) ──
             _est = self.reader_sim.estimate(current_text)
@@ -194,7 +195,7 @@ class E2ELoopOrchestrator:
                 "reader_uncertainty": _est.reader_uncertainty,
             }
             if verbose:
-                print(f"  [LOOP {i+1}] ReaderSim: pull={reader_metrics.get('reader_pull',0):.3f} "
+                logger.debug(f"  [LOOP {i+1}] ReaderSim: pull={reader_metrics.get('reader_pull',0):.3f} "
                       f"after={reader_metrics.get('reader_afterimage',0):.3f} "
                       f"unc={reader_metrics.get('reader_uncertainty',0):.3f}")
 
@@ -207,9 +208,9 @@ class E2ELoopOrchestrator:
             )
 
             if verbose:
-                print(f"  [LOOP {i+1}] Gate: {gate_result.decision.value}")
+                logger.debug(f"  [LOOP {i+1}] Gate: {gate_result.decision.value}")
                 for r in gate_result.reasons:
-                    print(f"    → {r}")
+                    logger.debug(f"    → {r}")
 
             # 반복 기록
             iter_result = LoopIteration(
@@ -228,7 +229,7 @@ class E2ELoopOrchestrator:
             if gate_result.decision == GateDecision.PASS:
                 success = True
                 if verbose:
-                    print(f"  [LOOP {i+1}] PASS — 루프 완료")
+                    logger.debug(f"  [LOOP {i+1}] PASS — 루프 완료")
                 break
 
             elif gate_result.decision == GateDecision.PATCH_ONLY:
@@ -243,7 +244,7 @@ class E2ELoopOrchestrator:
                     current_bundle, patch_result.soft_instruction
                 )
                 if verbose:
-                    print(f"  [LOOP {i+1}] PATCH [{family}] 적용: {patch_result.guidance_applied}")
+                    logger.debug(f"  [LOOP {i+1}] PATCH [{family}] 적용: {patch_result.guidance_applied}")
 
                 _est2 = self.reader_sim.estimate(current_text)
                 reader_metrics_after = {
@@ -260,7 +261,7 @@ class E2ELoopOrchestrator:
                 if gate_after.decision == GateDecision.PASS:
                     success = True
                     if verbose:
-                        print(f"  [LOOP {i+1}] 패치 후 PASS — 루프 완료")
+                        logger.debug(f"  [LOOP {i+1}] 패치 후 PASS — 루프 완료")
                     break
 
             elif gate_result.decision == GateDecision.RERENDER:
@@ -268,7 +269,7 @@ class E2ELoopOrchestrator:
                     current_bundle, gate_result.correction_hints
                 )
                 if verbose:
-                    print(f"  [LOOP {i+1}] RERENDER — 다음 반복에서 LLM 재호출")
+                    logger.debug(f"  [LOOP {i+1}] RERENDER — 다음 반복에서 LLM 재호출")
 
         # ── Step 5: TraceDatasetStore 커밋 ──
         if current_text:
@@ -282,9 +283,7 @@ class E2ELoopOrchestrator:
         total_duration = round(time.time() - start_time, 2)
 
         if verbose:
-            print(f"\n{'='*60}")
-            print(f" V320 E2E 루프 완료: LLM {total_llm_calls}회 | 패치 {total_patches}회 | {total_duration}s")
-            print(f"{'='*60}\n")
+            logger.info("V320 E2E 루프 완료: LLM %s회 | 패치 %s회 | %ss", total_llm_calls, total_patches, total_duration)
 
         return E2ELoopResult(
             project_id=project_id,

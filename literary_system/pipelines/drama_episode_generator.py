@@ -12,7 +12,7 @@ ANTHROPIC_API_KEY 설정 시 실 Claude API, 미설정 시 Mock 자동 폴백.
 사용:
   gen = DramaEpisodeGenerator.from_env(series_config)
   result = gen.generate_series(5)
-  print(result.full_script())
+  logger.debug(result.full_script())
 """
 from __future__ import annotations
 

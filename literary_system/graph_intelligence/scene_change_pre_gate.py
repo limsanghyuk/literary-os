@@ -12,6 +12,7 @@ Gate26 thresholds
 All four must pass for the gate to APPROVE.
 """
 from __future__ import annotations
+import logging
 
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
@@ -19,6 +20,8 @@ from typing import Dict, List, Optional
 from literary_system.graph_intelligence.narrative_graph_schema import NarrativeImpactReport
 from literary_system.graph_intelligence.narrative_impact_analyzer import NarrativeImpactAnalyzer
 from literary_system.graph_intelligence.narrative_graph_store import NarrativeGraphStore
+
+logger = logging.getLogger(__name__)
 
 _G26_DIRECT_MAX           = 15
 _G26_REVEAL_MAX           = 3
@@ -83,7 +86,7 @@ class SceneChangePreGate:
         if result.approved:
             ...  # safe to proceed
         else:
-            print(result.summary())
+            logger.debug(result.summary())
     """
 
     def __init__(

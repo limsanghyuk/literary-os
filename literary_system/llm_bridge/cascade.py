@@ -2,6 +2,7 @@
 V434 -- CascadeOrchestrator + SemanticCache + StreamingNormalizer
 """
 from __future__ import annotations
+import logging
 
 import hashlib
 import time
@@ -10,6 +11,8 @@ from typing import Any, Dict, Iterator, List, Optional
 
 from literary_system.llm_bridge.llm_bridge_interface import LLMBridgeInterface
 from literary_system.llm_bridge.adapter_contract import AdapterContractV2
+
+logger = logging.getLogger(__name__)
 
 
 # ---------------------------------------------------------------------------
@@ -108,7 +111,7 @@ class StreamingNormalizer:
     Usage:
         normalizer = StreamingNormalizer(provider="anthropic")
         for event in normalizer.normalize(raw_stream):
-            print(event.text, end="")
+            logger.debug(event.text, end="")
     """
 
     SUPPORTED_PROVIDERS = {"anthropic", "openai", "ollama", "plain"}

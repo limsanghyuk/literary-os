@@ -13,6 +13,7 @@ V325 - SceneGenerationOrchestrator  (Phase 3)
   - LLM 호출은 bridge.generate()를 통해서만
 """
 from __future__ import annotations
+import logging
 from typing import Optional
 
 import time
@@ -25,6 +26,8 @@ from literary_system.orchestrators.scene_focus_injector import (
     SceneFocusInjector,
     SceneFocusContext,
 )
+
+logger = logging.getLogger(__name__)
 # V327 P1-2: DRSE 실 피드백 루프 활성화 임포트
 try:
     from literary_system.evaluation.scene_metrics_collector import SceneMetricsCollector as _SceneMetricsCollector
@@ -302,7 +305,7 @@ class SceneGenerationOrchestrator:
 
                     if self.verbose:
                         status = "✅ PASS" if record.consensus else "⚠️  FAIL"
-                        print(f"  {record.scene_id} {status} "
+                        logger.debug(f"  {record.scene_id} {status} "
                               f"(retry={retries}, llm={llm_calls})")
 
         except Exception as exc:

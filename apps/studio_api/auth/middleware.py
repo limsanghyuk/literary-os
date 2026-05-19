@@ -26,7 +26,7 @@ except ImportError:
     _FA = False
 
 # ── 환경 설정 ─────────────────────────────────────────────────
-DEV_MODE: bool = os.environ.get("LITERARY_OS_DEV_MODE", "true").lower() == "true"
+DEV_MODE: bool = os.environ.get("LITERARY_OS_DEV_MODE", "false").lower() == "true"
 
 # OAuth 2.1 / OIDC 설정 (환경변수 기반)
 OAUTH_ISSUER: str      = os.environ.get("OAUTH_ISSUER", "https://auth.literary-os.dev")

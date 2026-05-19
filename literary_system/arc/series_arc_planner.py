@@ -13,12 +13,15 @@ V380: arc/series_arc_planner.py — SeriesArcPlanner
 LLM 0회.
 """
 from __future__ import annotations
+import logging
 
 import math
 from typing import Dict, List, Optional
 
 from literary_system.arc.schema import ArcAct, ArcPlotEdge, ArcPlotEdgeType, ArcPlotNode
 from literary_system.arc.causal_plot_graph import CausalPlotGraph
+
+logger = logging.getLogger(__name__)
 
 
 # 회차별 감정 목표 패턴 (16부작 기준 순환)
@@ -65,7 +68,7 @@ class SeriesArcPlanner:
     사용 예:
         planner = SeriesArcPlanner(total_episodes=16, series_title="비밀의 숲")
         graph = planner.plan()
-        print(graph.summary())
+        logger.debug(graph.summary())
     """
 
     # 4막 분배 비율 (기:승:전:결)

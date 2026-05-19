@@ -12,12 +12,15 @@ Literary OS의 LLM-as-judge 평가 시스템.
 LLM 0회 기본 (augment_fn 패턴과 동일: judge_fn 주입 시 실 LLM 연결).
 """
 from __future__ import annotations
+import logging
 
 import uuid
 import random
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Any, Callable, Optional
+
+logger = logging.getLogger(__name__)
 
 
 def _now_iso() -> str:
@@ -155,7 +158,7 @@ class LLMJudge:
     사용 예:
       judge = LLMJudge(sampling_rate=0.27)
       session = judge.evaluate(records)
-      print(session.summary())
+      logger.debug(session.summary())
     """
 
     DEFAULT_SAMPLING_RATE = 0.27   # 27% 샘플링 (신뢰구간 90%)
