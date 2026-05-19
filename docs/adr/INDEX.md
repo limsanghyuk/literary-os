@@ -45,6 +45,7 @@
 | ADR-037 | — | 1 | — |
 | ADR-038 | — | 1 | — |
 | ADR-039 | — | 3 | — |
+| ADR-040 | Multi-backend MigrationManager (LOSDB 기반) | 수락됨 | V581 |
 
 ---
 *생성 시각: V578 (2026-05-19)*

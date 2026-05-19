@@ -931,6 +931,68 @@ def _gate_async_discipline_g38() -> dict:
 
 
 
+
+def _gate_db_migration_g40() -> dict:
+    """
+    Gate 40 — DBMigration: SchemaRegistry + MigrationManager 생존 검증 (ADR-040, V581).
+
+    검증 항목:
+      1. SchemaRegistry 싱글턴 생성 및 3-백엔드 초기 버전 0.0.0 확인
+      2. register() 호출 → 버전 업데이트 확인
+      3. MigrationManager MOCK 모드 배치 마이그레이션 성공 확인
+      4. is_compatible() 호환성 검증 로직 확인
+      5. SchemaRegistry 히스토리 기록 확인
+    """
+    try:
+        from literary_system.db.schema_registry import BackendType, SchemaRegistry, MigrationRecord
+        from literary_system.db.migration_manager import (
+            MigrationManager, Migration,
+            SQLMigrationAdapter, GraphMigrationAdapter, VectorMigrationAdapter,
+        )
+
+        # 1. 싱글턴 초기화
+        SchemaRegistry.reset()
+        reg = SchemaRegistry.get_instance()
+        for b in BackendType:
+            v = reg.current_version(b)
+            assert v.version_string == "0.0.0", f"{b} 초기 버전 오류: {v.version_string}"
+
+        # 2. register() 버전 업데이트
+        reg.register(BackendType.SQL, 1, 0, 0, description="SQL v1.0 초기 스키마")
+        sql_v = reg.current_version(BackendType.SQL)
+        assert sql_v.version_string == "1.0.0", f"SQL 버전 업데이트 실패: {sql_v.version_string}"
+
+        # 3. MigrationManager MOCK 배치
+        mgr = MigrationManager(mock=True)
+        migrations = [
+            Migration("V581_001_graph_init", BackendType.GRAPH,
+                      "0.0.0", "1.0.0", "Graph 초기 스키마"),
+            Migration("V581_002_vector_init", BackendType.VECTOR,
+                      "0.0.0", "1.0.0", "Qdrant 컬렉션 초기화"),
+        ]
+        results = mgr.apply_batch(migrations, stop_on_failure=True)
+        assert all(r.success for r in results), f"배치 마이그레이션 실패: {[r.error_msg for r in results]}"
+
+        # 4. 호환성 검증
+        ok, reason = reg.is_compatible(BackendType.SQL, 1, 0)
+        assert ok, f"SQL 1.0 호환성 실패: {reason}"
+        ok2, reason2 = reg.is_compatible(BackendType.SQL, 2, 0)
+        assert not ok2, "SQL major 불일치가 호환 판정됨"
+
+        # 5. 히스토리 기록
+        history = reg.migration_history(BackendType.GRAPH)
+        assert len(history) >= 1, "Graph 마이그레이션 히스토리 누락"
+
+        SchemaRegistry.reset()
+        return {
+            "pass": True,
+            "details": "SchemaRegistry + MigrationManager(SQL/Graph/Vector) MOCK PASS",
+        }
+    except Exception as e:
+        import traceback
+        return {"pass": False, "details": str(e), "traceback": traceback.format_exc()}
+
+
 def _gate_performance_baseline_g39() -> dict:
     """
     Gate 39 — PerformanceBaseline: 핵심 연산 성능 회귀 방지 (ADR-039, V580).
@@ -1081,6 +1143,8 @@ GATES = [
     ("async_discipline_g38",      "AsyncDiscipline: deprecated async 패턴 0건 (Gate 38, ADR-036)",        _gate_async_discipline_g38),
     # ── V580: 성능 회귀 방지 (Gate 39) ──────────────────────────────────
     ("performance_baseline_g39",  "PerformanceBaseline: 핵심 연산 성능 회귀 방지 (Gate 39, ADR-039)",    _gate_performance_baseline_g39),
+    # ── V581: LOSDB SchemaRegistry + MigrationManager (Gate 40) ───────────
+    ("db_migration_g40",          "DBMigration: SchemaRegistry + MigrationManager 생존 검증 (Gate 40, ADR-040)", _gate_db_migration_g40),
 ]
 
 

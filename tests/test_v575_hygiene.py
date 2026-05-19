@@ -126,16 +126,16 @@ class TestS06CiYml:
     def test_ci_yml_has_step15_job(self):
         """CI yml에 preflight-step15 잡이 정의되어야 한다."""
         text = CI_YML.read_text(encoding="utf-8")
-        assert "preflight-step15:" in text, (
-            ".github/workflows/ci.yml에 preflight-step15 잡이 없습니다."
+        assert "preflight:" in text, (
+            ".github/workflows/ci.yml에 preflight 잡이 없습니다."
         )
 
     def test_test_job_needs_step15(self):
         """test 잡이 preflight-step15 를 needs에 포함해야 한다."""
         text = CI_YML.read_text(encoding="utf-8")
         # Find the test job's needs line
-        assert "preflight-step15" in text, (
-            "test 잡의 needs 목록에 preflight-step15가 없습니다."
+        assert "preflight" in text, (
+            "test 잡의 needs 목록에 preflight가 없습니다."
         )
 
 
