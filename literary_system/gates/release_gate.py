@@ -611,6 +611,130 @@ def _gate_corpus_quality_g30() -> dict:
         return {"pass": False, "error": str(exc)}
 
 
+
+def _gate_logging_discipline() -> dict:
+    """Gate 32 (G32) — LoggingDiscipline: literary_system/ 내 print() 0건 + bare except: 0건 (ADR-034)."""
+    import ast
+    import re
+    from pathlib import Path
+    try:
+        repo_root   = Path(__file__).resolve().parent.parent.parent
+        system_root = repo_root / "literary_system"
+
+        print_violations  = []
+        except_violations = []
+
+        for py_file in system_root.rglob("*.py"):
+            text = py_file.read_text(encoding="utf-8")
+            # print() 검사
+            for i, line in enumerate(text.splitlines(), 1):
+                if line.lstrip().startswith("#"):
+                    continue
+                if re.match(r'\s*print\s*\(', line):
+                    print_violations.append(f"{py_file.name}:{i}")
+            # bare except 검사
+            try:
+                tree = ast.parse(text)
+                for node in ast.walk(tree):
+                    if isinstance(node, ast.ExceptHandler) and node.type is None:
+                        except_violations.append(f"{py_file.name}:{node.lineno}")
+            except SyntaxError:
+                pass
+
+        total = len(print_violations) + len(except_violations)
+        if total > 0:
+            return {
+                "pass": False,
+                "error": f"print() {len(print_violations)}건, bare except {len(except_violations)}건",
+                "print_violations":  print_violations[:5],
+                "except_violations": except_violations[:5],
+            }
+        return {"pass": True, "detail": "print() 0건, bare except 0건 — 위생 규칙 준수"}
+    except Exception as exc:
+        return {"pass": False, "error": str(exc)}
+
+
+
+def _gate_schema_roundtrip_g33() -> dict:
+    """Gate 33 (G33) — SchemaRoundTrip: 스키마 직렬화/역직렬화 무결성 (ADR-034)."""
+    import json, dataclasses
+    try:
+        from literary_system.schemas.envelope import make_envelope
+        from literary_system.schemas.definitions import COMMON_ENVELOPE_REQUIRED
+
+        errors = []
+
+        # 1) make_envelope → json 직렬화 → 역직렬화 → 필수 필드 확인
+        env = make_envelope(
+            project_id="gate-g33",
+            packet_type="test_packet",
+            provenance={"agent": "gate"},
+            payload={"test": True},
+            schema_version="v1",
+        )
+        serialized   = json.dumps(env)
+        deserialized = json.loads(serialized)
+        for field in COMMON_ENVELOPE_REQUIRED:
+            if field not in deserialized:
+                errors.append(f"envelope 역직렬화 후 필드 누락: {field}")
+
+        # 2) COMMON_ENVELOPE_REQUIRED 최소 필드 수 보증 (≥ 4)
+        if len(COMMON_ENVELOPE_REQUIRED) < 4:
+            errors.append(f"COMMON_ENVELOPE_REQUIRED 필드 수 부족: {len(COMMON_ENVELOPE_REQUIRED)}")
+
+        # 3) WorkProject dataclass asdict 라운드트립
+        from literary_system.multiwork.multi_work_core import WorkProject
+        wp = WorkProject(project_id="p-g33", author_id="a-g33", title="G33 Test", genre="test")
+        wp_dict = dataclasses.asdict(wp)
+        for key in ("project_id", "author_id", "title", "genre"):
+            if key not in wp_dict:
+                errors.append(f"WorkProject.asdict 필드 누락: {key}")
+
+        if errors:
+            return {"pass": False, "error": "; ".join(errors)}
+        return {"pass": True, "detail": f"SchemaRoundTrip 3항목 통과 (envelope {len(COMMON_ENVELOPE_REQUIRED)}필드)"}
+    except Exception as exc:
+        return {"pass": False, "error": str(exc)}
+
+
+def _gate_auth_regression_g34() -> dict:
+    """Gate 34 (G34) — AuthRegression: DEV_MODE 보안 패치 회귀 방지 (ADR-034)."""
+    import re
+    from pathlib import Path
+    try:
+        repo_root  = Path(__file__).resolve().parent.parent.parent
+        middleware = repo_root / "apps" / "studio_api" / "auth" / "middleware.py"
+
+        if not middleware.exists():
+            return {"pass": False, "error": f"middleware.py 파일 없음: {middleware}"}
+
+        source = middleware.read_text(encoding="utf-8")
+
+        # 1) DEV_MODE 기본값이 "true"가 아닌지 검사 (보안 취약점 패턴)
+        forbidden_dq = 'os.environ.get("LITERARY_OS_DEV_MODE", "true")'
+        forbidden_sq = "os.environ.get('LITERARY_OS_DEV_MODE', 'true')"
+        if forbidden_dq in source or forbidden_sq in source:
+            return {
+                "pass": False,
+                "error": "DEV_MODE 기본값이 'true'로 설정됨 — 보안 취약점 (ADR-034)",
+            }
+
+        # 2) DEV_MODE 기본값이 "false"로 명시되어 있는지 확인
+        correct_dq = 'os.environ.get("LITERARY_OS_DEV_MODE", "false")'
+        correct_sq = "os.environ.get('LITERARY_OS_DEV_MODE', 'false')"
+        if correct_dq not in source and correct_sq not in source:
+            return {
+                "pass": False,
+                "error": "DEV_MODE 기본값 'false' 설정이 없음 — 패치 누락 가능성",
+            }
+
+        return {"pass": True, "detail": "DEV_MODE 기본값=false 확인 — 보안 패치 유효"}
+    except Exception as exc:
+        return {"pass": False, "error": str(exc)}
+
+
+
+
 GATES = [
     ("llm_zero",              "LLM-0 외부 호출 금지",              _gate_llm_zero),
     ("arc_integrity",         "SeriesArcPlanner 4막 비율",          _gate_arc_integrity),
@@ -647,6 +771,12 @@ GATES = [
     ("corpus_quality_gate30",     "ExternalCorpusBridge 게이트 (Gate 30, L2)",                      _gate_corpus_quality_g30),
     # ── V571 Stage C: MultiWork 게이트 (Gate31) ──────────────────────────────────
     ("multiwork_gate31",         "MultiWork Stage C 게이트 (Gate 31, L3)",                            _gate_multiwork_g31),
+    # ── V575: 위생 규칙 강제 (Gate 32) ─────────────────────────────────────────
+    ("logging_discipline_g32",   "LoggingDiscipline: print()·bare-except 금지 (Gate 32, ADR-034)",     _gate_logging_discipline),
+    # ── V576: 스키마 라운드트립 무결성 (Gate 33) ──────────────────────────────
+    ("schema_roundtrip_g33",     "SchemaRoundTrip: 직렬화/역직렬화 무결성 (Gate 33, ADR-034)",          _gate_schema_roundtrip_g33),
+    # ── V576: DEV_MODE 보안 회귀 방지 (Gate 34) ───────────────────────────────
+    ("auth_regression_g34",      "AuthRegression: DEV_MODE 기본값=false 회귀 방지 (Gate 34, ADR-034)", _gate_auth_regression_g34),
 ]
 
 

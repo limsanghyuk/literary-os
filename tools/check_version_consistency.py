@@ -1,0 +1,91 @@
+#!/usr/bin/env python3
+"""
+H-05: 버전 정합 검사 — pyproject.toml ↔ git tag ↔ README
+
+pyproject.toml의 version과 최신 git tag, README 배지가
+모두 일치하는지 검사한다.
+
+사용법:
+    python tools/check_version_consistency.py              # 보고서만
+    python tools/check_version_consistency.py --strict     # 불일치 시 exit(1)
+"""
+from __future__ import annotations
+
+import re
+import subprocess
+import sys
+import argparse
+from pathlib import Path
+
+REPO_ROOT  = Path(__file__).resolve().parent.parent
+PYPROJECT  = REPO_ROOT / "pyproject.toml"
+README     = REPO_ROOT / "README.md"
+
+
+def get_pyproject_version() -> str:
+    text = PYPROJECT.read_text(encoding="utf-8")
+    m = re.search(r'^version\s*=\s*"([^"]+)"', text, re.MULTILINE)
+    return m.group(1) if m else "N/A"
+
+
+def get_latest_git_tag() -> str:
+    try:
+        result = subprocess.run(
+            ["git", "describe", "--tags", "--abbrev=0"],
+            capture_output=True, text=True, cwd=str(REPO_ROOT)
+        )
+        tag = result.stdout.strip()
+        # Extract semver part: v8.0.0-V575 → 8.0.0
+        m = re.match(r"v?(\d+\.\d+\.\d+)", tag)
+        return m.group(1) if m else tag
+    except Exception:
+        return "N/A"
+
+
+def get_readme_version() -> str:
+    if not README.exists():
+        return "N/A"
+    text = README.read_text(encoding="utf-8")
+    m = re.search(r'version-(\d+\.\d+\.\d+)-blue', text)
+    return m.group(1) if m else "N/A"
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="버전 정합 검사")
+    parser.add_argument("--strict", action="store_true")
+    args = parser.parse_args()
+
+    pyproject_ver = get_pyproject_version()
+    git_tag_ver   = get_latest_git_tag()
+    readme_ver    = get_readme_version()
+
+    print(f"\n{'='*60}")
+    print("Version Consistency Check")
+    print(f"{'='*60}")
+    print(f"  pyproject.toml : {pyproject_ver}")
+    print(f"  git latest tag : {git_tag_ver}")
+    print(f"  README badge   : {readme_ver}")
+
+    mismatches = []
+    if git_tag_ver != "N/A" and pyproject_ver != git_tag_ver:
+        mismatches.append(f"pyproject({pyproject_ver}) ≠ git tag({git_tag_ver})")
+    if readme_ver != "N/A" and pyproject_ver != readme_ver:
+        mismatches.append(f"pyproject({pyproject_ver}) ≠ README badge({readme_ver})")
+
+    print()
+    if not mismatches:
+        print("  ✅ ALL CONSISTENT")
+    else:
+        print("  ❌ 불일치:")
+        for m in mismatches:
+            print(f"    → {m}")
+    print(f"{'='*60}\n")
+
+    if mismatches and args.strict:
+        print("Version consistency FAILED (--strict)")
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

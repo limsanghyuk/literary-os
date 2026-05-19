@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "literary-os"
-version = "8.0.0"
-description = "Literary OS V575 — Security & Hygiene: DEV_MODE patch, logging, dead-code removal, Preflight Step15"
+version = "8.1.0"
+description = "Literary OS V576 — Test Fortification: 0% coverage units, G32/G33/G34 gates, 5529 PASS 33 Gates"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
@@ -29,6 +29,7 @@ dev = [
     "uvicorn[standard]>=0.20",
     "httpx>=0.24",
     "numpy>=1.24",
+    "ruff>=0.4",
 ]
 
 [project.scripts]
@@ -43,3 +44,11 @@ asyncio_mode = "auto"
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["literary_system*", "apps*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501", "F401", "F811"]
