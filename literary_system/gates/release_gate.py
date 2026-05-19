@@ -874,6 +874,161 @@ def _gate_duplicate_zero_g37() -> dict:
         "details": details,
     }
 
+
+def _gate_async_discipline_g38() -> dict:
+    """
+    Gate 38 — AsyncDiscipline: deprecated async 패턴 0건 검증 (ADR-036).
+
+    검증 항목:
+      1. asyncio.get_event_loop() 실제 호출 0건 (Python 3.10+ deprecated)
+         - AST 기반 탐지로 문자열·주석 내 언급은 제외
+    """
+    import ast as _ast
+    import os as _os
+
+    root = _os.path.join(_os.path.dirname(__file__), "..", "..")
+    root = _os.path.abspath(root)
+    literary_root = _os.path.join(root, "literary_system")
+
+    violations = []
+
+    for dirpath, dirnames, filenames in _os.walk(literary_root):
+        dirnames[:] = [d for d in dirnames if d != "__pycache__"]
+        for fname in filenames:
+            if not fname.endswith(".py"):
+                continue
+            fpath = _os.path.join(dirpath, fname)
+            try:
+                src_text = open(fpath, encoding="utf-8").read()
+                tree = _ast.parse(src_text, filename=fpath)
+                lines = src_text.splitlines()
+                for node in _ast.walk(tree):
+                    # asyncio.get_event_loop() 실제 호출 감지
+                    if (
+                        isinstance(node, _ast.Call)
+                        and isinstance(node.func, _ast.Attribute)
+                        and node.func.attr == "get_event_loop"
+                        and isinstance(node.func.value, _ast.Name)
+                        and node.func.value.id == "asyncio"
+                    ):
+                        rel = _os.path.relpath(fpath, root)
+                        line_txt = lines[node.lineno - 1].strip() if node.lineno <= len(lines) else ""
+                        violations.append(f"{rel}:{node.lineno}: {line_txt}")
+            except Exception:
+                pass
+
+    passed = len(violations) == 0
+    return {
+        "pass": passed,
+        "violation_count": len(violations),
+        "violations": violations[:10],
+        "details": (
+            "AsyncDiscipline PASS — deprecated async 패턴 0건"
+            if passed
+            else f"deprecated async 패턴 {len(violations)}건: " + "; ".join(violations[:3])
+        ),
+    }
+
+
+
+def _gate_performance_baseline_g39() -> dict:
+    """
+    Gate 39 — PerformanceBaseline: 핵심 연산 성능 회귀 방지 (ADR-039, V580).
+
+    검증 항목:
+      1. JSON 직렬화/역직렬화 1,000회 — 기준선 500ms 이내
+      2. 텍스트 해시(SHA-256) 10,000회 — 기준선 200ms 이내
+      3. 정규식 컴파일+매칭 5,000회 — 기준선 300ms 이내
+
+    설계 원칙:
+      - 외부 LLM·네트워크 호출 없음 (LLM-0 원칙 준수)
+      - 순수 Python 표준 라이브러리만 사용
+      - 환경 편차 ±30% 허용 (느린 CI 환경 대응)
+    """
+    import time as _time
+    import json as _json
+    import hashlib as _hashlib
+    import re as _re
+
+    benchmarks = []
+    all_passed = True
+
+    # --- Benchmark 1: JSON 직렬화/역직렬화 1,000회 ---
+    _payload = {
+        "title": "literary-os 성능 기준선",
+        "version": "8.5.0",
+        "chapters": [{"id": i, "text": f"챕터 {i} 내용 샘플 텍스트"} for i in range(10)],
+        "metadata": {"gate": "G39", "adr": "ADR-039"},
+    }
+    _start = _time.perf_counter()
+    for _ in range(1000):
+        _json.loads(_json.dumps(_payload))
+    _elapsed_json = (_time.perf_counter() - _start) * 1000  # ms
+    _limit_json = 500.0 * 1.3  # 기준 500ms + 30% 여유
+    _b1_pass = _elapsed_json <= _limit_json
+    benchmarks.append({
+        "name": "json_roundtrip_1000",
+        "elapsed_ms": round(_elapsed_json, 2),
+        "limit_ms": _limit_json,
+        "pass": _b1_pass,
+    })
+    if not _b1_pass:
+        all_passed = False
+
+    # --- Benchmark 2: SHA-256 해시 10,000회 ---
+    _sample = b"literary-os narrative kernel hash benchmark payload " * 4
+    _start = _time.perf_counter()
+    for _ in range(10000):
+        _hashlib.sha256(_sample).hexdigest()
+    _elapsed_hash = (_time.perf_counter() - _start) * 1000
+    _limit_hash = 200.0 * 1.3
+    _b2_pass = _elapsed_hash <= _limit_hash
+    benchmarks.append({
+        "name": "sha256_10000",
+        "elapsed_ms": round(_elapsed_hash, 2),
+        "limit_ms": _limit_hash,
+        "pass": _b2_pass,
+    })
+    if not _b2_pass:
+        all_passed = False
+
+    # --- Benchmark 3: 정규식 컴파일+매칭 5,000회 ---
+    _pattern = _re.compile(
+        r"(?:class|def)\s+(\w+)\s*(?:\(([^)]*)\))?\s*:", _re.MULTILINE
+    )
+    _text_sample = "class FooBar(Base):\n    def __init__(self):\n        pass\n" * 20
+    _start = _time.perf_counter()
+    for _ in range(5000):
+        list(_pattern.findall(_text_sample))
+    _elapsed_re = (_time.perf_counter() - _start) * 1000
+    _limit_re = 300.0 * 1.3
+    _b3_pass = _elapsed_re <= _limit_re
+    benchmarks.append({
+        "name": "regex_5000",
+        "elapsed_ms": round(_elapsed_re, 2),
+        "limit_ms": _limit_re,
+        "pass": _b3_pass,
+    })
+    if not _b3_pass:
+        all_passed = False
+
+    _failed = [b for b in benchmarks if not b["pass"]]
+    _details = (
+        "PerformanceBaseline PASS — 모든 핵심 연산 기준선 충족"
+        if all_passed
+        else f"성능 회귀 {len(_failed)}건: " + ", ".join(
+            f"{b['name']} {b['elapsed_ms']:.0f}ms > {b['limit_ms']:.0f}ms"
+            for b in _failed
+        )
+    )
+    return {
+        "pass": all_passed,
+        "benchmarks": benchmarks,
+        "regression_count": len(_failed),
+        "details": _details,
+    }
+
+
 GATES = [
     ("llm_zero",              "LLM-0 외부 호출 금지",              _gate_llm_zero),
     ("arc_integrity",         "SeriesArcPlanner 4막 비율",          _gate_arc_integrity),
@@ -922,6 +1077,10 @@ GATES = [
     ("gate_registry_g36",        "GateRegistry: 레지스트리 단일 소스 무결성 (Gate 36, ADR-032)",       _gate_registry_g36),
     # ── V579: 중복 클래스 0건 (Gate 37) ──────────────────────────────────
     ("duplicate_zero_g37",       "DuplicateZero: literary_system 중복 클래스명 0건 (Gate 37)",           _gate_duplicate_zero_g37),
+    # ── V580: async 위생 규칙 (Gate 38) ──────────────────────────────────
+    ("async_discipline_g38",      "AsyncDiscipline: deprecated async 패턴 0건 (Gate 38, ADR-036)",        _gate_async_discipline_g38),
+    # ── V580: 성능 회귀 방지 (Gate 39) ──────────────────────────────────
+    ("performance_baseline_g39",  "PerformanceBaseline: 핵심 연산 성능 회귀 방지 (Gate 39, ADR-039)",    _gate_performance_baseline_g39),
 ]
 
 

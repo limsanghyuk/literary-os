@@ -116,6 +116,8 @@ def _build_registry() -> Dict[str, GateRegistryEntry]:
         "adapter_canonical_g35":          ("ADR-035",  "V577",  "L2"),
         "gate_registry_g36":              ("ADR-032",  "V578",  "L1"),
         "duplicate_zero_g37":             ("ADR-033",  "V579",  "L1"),
+        "async_discipline_g38":           ("ADR-036",  "V580",  "L1"),
+        "performance_baseline_g39":        ("ADR-039",  "V580",  "L1"),
     }
 
     registry: Dict[str, GateRegistryEntry] = {}

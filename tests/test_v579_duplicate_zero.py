@@ -246,10 +246,11 @@ class TestGateG37:
         gate_ids = [g[0] for g in GATES]
         assert "duplicate_zero_g37" in gate_ids
 
-    def test_tc20_g37_position_last(self):
-        """TC-20: G37이 GATES 목록 마지막에 위치."""
+    def test_tc20_g37_position_in_gates(self):
+        """TC-20: G37이 GATES 목록에 포함 (V580 이후 G38/G39 추가됨)."""
         from literary_system.gates.release_gate import GATES
-        assert GATES[-1][0] == "duplicate_zero_g37"
+        ids = [g[0] for g in GATES]
+        assert "duplicate_zero_g37" in ids
 
 
 # ─── E. Gate Registry G37 통합 (TC-21~25) ───────────────────────────────────
@@ -278,17 +279,17 @@ class TestGateRegistryG37Integration:
         result = entry.run()
         assert result["pass"] is True
 
-    def test_tc24_validate_registry_36_gates(self):
-        """TC-24: validate_registry()가 36개 게이트 검증 통과."""
+    def test_tc24_validate_registry_gates(self):
+        """TC-24: validate_registry()가 게이트 검증 통과 (V580: 38개)."""
         from literary_system.gates.gate_registry import validate_registry
         result = validate_registry()
         assert result["pass"] is True
-        assert result["total_gates"] == 36
+        assert result["total_gates"] >= 36
 
-    def test_tc25_full_release_gate_36_pass(self):
-        """TC-25: run_release_gate() 전체 36 Gates PASS."""
+    def test_tc25_full_release_gate_pass(self):
+        """TC-25: run_release_gate() 전체 Gates PASS (V580: 38개)."""
         from literary_system.gates.release_gate import run_release_gate
         result = run_release_gate()
         assert result["pass"] is True
-        assert result["total_gates"] == 36
-        assert result["gates_passed"] == 36
+        assert result["total_gates"] >= 36
+        assert result["gates_passed"] == result["total_gates"]

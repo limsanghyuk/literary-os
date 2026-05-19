@@ -162,7 +162,7 @@ class CharacterIntentAgent:
         비동기 버전 — ConcurrentIntentCollector.gather_all()에서 호출.
         실제 비동기 LLM이 없을 경우 동기 버전을 await로 래핑.
         """
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()  # V580: 실행 중인 루프 사용 (deprecated get_event_loop 대체)
         # run_in_executor로 동기 bridge 호출을 비동기화 (CPU 차단 방지)
         return await loop.run_in_executor(None, self.decide_sync, tension)
 
@@ -250,19 +250,17 @@ class ConcurrentIntentCollector:
     def collect_sync(self, tension: float = 0.5) -> list[IntentPacket]:
         """이벤트 루프 없이도 동작하는 동기 래퍼."""
         try:
-            loop = asyncio.get_event_loop()
-            if loop.is_running():
-                # Jupyter / 중첩 이벤트 루프 환경
-                import concurrent.futures
-                with concurrent.futures.ThreadPoolExecutor() as pool:
-                    futures = [
-                        pool.submit(a.decide_sync, tension) for a in self.agents
-                    ]
-                    return [f.result() for f in futures]
-            else:
-                return loop.run_until_complete(self._gather(tension))
+            # V580: get_running_loop()로 실행 중인 루프 유무 확인 (deprecated get_event_loop 대체)
+            loop = asyncio.get_running_loop()
+            # Jupyter / 중첩 이벤트 루프 환경 — 스레드 풀 사용
+            import concurrent.futures
+            with concurrent.futures.ThreadPoolExecutor() as pool:
+                futures = [
+                    pool.submit(a.decide_sync, tension) for a in self.agents
+                ]
+                return [f.result() for f in futures]
         except RuntimeError:
-            # 루프 없음 — 새로 생성
+            # 실행 중인 루프 없음 — asyncio.run()으로 새 루프 생성
             return asyncio.run(self._gather(tension))
 
     # ── 비동기 버전 ────────────────────────────────────────────
