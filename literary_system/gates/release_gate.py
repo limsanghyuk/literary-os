@@ -803,6 +803,23 @@ def _gate_adapter_canonical_g35() -> dict:
                    else f"AdapterCanonical G35 FAIL: {'; '.join(errors)}",
     }
 
+
+def _gate_registry_g36() -> dict:
+    """
+    Gate 36 — GateRegistry: 게이트 레지스트리 단일 소스 무결성 검증 (ADR-032).
+
+    검증 항목:
+      1. GATE_REGISTRY 임포트 가능
+      2. 모든 gate_id가 GATES와 1:1 매핑
+      3. 모든 fn이 callable
+      4. layer가 L0/L1/L2/L3/L4 중 하나
+    """
+    try:
+        from literary_system.gates.gate_registry import validate_registry
+        return validate_registry()
+    except Exception as exc:
+        return {"pass": False, "details": f"GateRegistry 임포트 실패: {exc}"}
+
 GATES = [
     ("llm_zero",              "LLM-0 외부 호출 금지",              _gate_llm_zero),
     ("arc_integrity",         "SeriesArcPlanner 4막 비율",          _gate_arc_integrity),
@@ -847,6 +864,8 @@ GATES = [
     ("auth_regression_g34",      "AuthRegression: DEV_MODE 기본값=false 회귀 방지 (Gate 34, ADR-034)", _gate_auth_regression_g34),
     # ── V577: G3 캐노니컬 어댑터 체계 검증 (Gate 35) ─────────────────────────
     ("adapter_canonical_g35",    "AdapterCanonical: G3 캐노니컬 어댑터 체계 검증 (Gate 35, ADR-035)", _gate_adapter_canonical_g35),
+    # ── V578: 게이트 레지스트리 단일 소스 무결성 (Gate 36) ───────────────────
+    ("gate_registry_g36",        "GateRegistry: 레지스트리 단일 소스 무결성 (Gate 36, ADR-032)",       _gate_registry_g36),
 ]
 
 
