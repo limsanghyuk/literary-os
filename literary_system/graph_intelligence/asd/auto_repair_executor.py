@@ -25,7 +25,6 @@ from enum import Enum
 from typing import Callable, Dict, List, Optional
 
 from ..narrative_graph_store import NarrativeGraphStore
-from ..narrative_impact_analyzer import NarrativeImpactAnalyzer
 from ..scene_change_pre_gate import SceneChangePreGate
 from ..sp2.code_dependency_graph import CodeDependencyGraph
 from ..sp2.gate27 import Gate27
@@ -114,8 +113,7 @@ class AutoRepairExecutor:
         self._store     = store
         self._repair_fn = repair_fn
 
-        analyzer    = NarrativeImpactAnalyzer(store)
-        gate26      = SceneChangePreGate(analyzer)
+        gate26      = SceneChangePreGate(store)  # Bug-1 fix: store 직접 전달 (SceneChangePreGate가 내부적으로 analyzer 생성)
         calculator  = StagePatchImpactCalculator(store, code_dep)
         gate27      = Gate27(code_dep, calculator)
         self._protocol = PlanBuildProtocol(

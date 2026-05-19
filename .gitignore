@@ -40,3 +40,9 @@ Thumbs.db
 *.zip
 *.tar.gz
 FILELIST.txt
+
+# Runtime outputs (gate test sessions, backups)
+out/
+
+# Dynamic trace data (updated at runtime)
+data/traces/

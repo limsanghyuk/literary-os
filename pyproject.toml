@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "literary-os"
-version = "7.8.1"
+version = "7.9.0"
 description = "Literary OS V571 — Phase6 MultiWork Stage C Full Build (MultiWork Orchestrator)"
 readme = "README.md"
 requires-python = ">=3.10"

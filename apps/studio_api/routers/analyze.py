@@ -28,9 +28,13 @@ from apps.studio_api.resilience.circuit_breaker import (
 import apps.studio_api.messages as msg  # V428 i18n
 
 if not _FA:
-    raise ImportError("FastAPI required")
-
-router = APIRouter(prefix="/api/v1", tags=["Analysis"])
+    # Bug-2 fix: FastAPI 미설치 환경(sandbox/CI)에서 stub router로 대체
+    import types
+    router = types.SimpleNamespace()
+    router.post = lambda *a, **kw: (lambda f: f)
+    router.get  = lambda *a, **kw: (lambda f: f)
+else:
+    router = APIRouter(prefix="/api/v1", tags=["Analysis"])
 
 
 # -- /analyze -----------------------------------------------------------------
