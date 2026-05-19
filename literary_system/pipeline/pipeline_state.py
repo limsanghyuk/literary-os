@@ -17,6 +17,7 @@ SOVEREIGN_OS V305의 execution_trace / checkpoint 시스템을 Literary OS에 �
   run_minimal_pipeline()        — Gate 6 전용 최소 파이프라인 실행기
 """
 from __future__ import annotations
+import logging
 
 import json
 import uuid
@@ -25,6 +26,8 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, Field, ConfigDict, ConfigDict
+
+logger = logging.getLogger(__name__)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -99,7 +102,7 @@ def append_trace(state: LiteraryPipelineState, message: str) -> None:
     ts = datetime.now(timezone.utc).strftime("%H:%M:%S.%f")[:-3]
     entry = f"[{ts}] {message}"
     state.execution_trace.append(entry)
-    print(entry)
+    logger.debug(entry)
 
 
 def save_literary_checkpoint(

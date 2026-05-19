@@ -58,7 +58,8 @@ if _PYDANTIC:
 
         def to_dict(self):
             try: return self.model_dump()
-            except: return self.dict()
+            except Exception:
+                return self.dict()
 
         @classmethod
         def from_scene_record(cls, record, episode_no=1, seq_index=0,
@@ -74,7 +75,9 @@ if _PYDANTIC:
                         tension=emotional_vector.tension, sympathy=emotional_vector.sympathy,
                         dread=emotional_vector.dread, catharsis=emotional_vector.catharsis,
                         dominant=emotional_vector.dominant_dim() if hasattr(emotional_vector,"dominant_dim") else "tension")
-                except: pass
+                except Exception:
+
+                    pass
             return cls(scene_id=str(sid), episode_no=episode_no, seq_index=seq_index,
                        scene_index=scene_index, draft_text=text, mae_score=mae,
                        quality=_quality_from_score(mae), tension_actual=ten,
@@ -110,7 +113,9 @@ else:
                         tension=emotional_vector.tension, sympathy=emotional_vector.sympathy,
                         dread=emotional_vector.dread, catharsis=emotional_vector.catharsis,
                         dominant=emotional_vector.dominant_dim() if hasattr(emotional_vector,"dominant_dim") else "tension")
-                except: pass
+                except Exception:
+
+                    pass
             return cls(scene_id=str(sid), episode_no=episode_no, seq_index=seq_index,
                        scene_index=scene_index, draft_text=text, word_count=len(text.split()),
                        mae_score=mae, quality=_quality_from_score(mae).value,

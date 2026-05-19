@@ -17,6 +17,7 @@ ADR-007 Provenance contract:
     - pipeline_version
 """
 from __future__ import annotations
+import logging
 
 import hashlib
 import uuid
@@ -30,6 +31,8 @@ from literary_system.rag.hybrid_retriever import (
 from literary_system.rag.nkg_context_adapter import (
     NKGContextAdapter, NKGNodeSnapshot, PriorityLevel, ContextSerializer,
 )
+
+logger = logging.getLogger(__name__)
 
 
 PIPELINE_VERSION = "V440"
@@ -182,8 +185,8 @@ class RetrievalPipeline:
         pipeline = RetrievalPipeline(retriever, max_context_tokens=1024)
         pipeline.index(docs)
         result = pipeline.run(query)
-        print(result.context)
-        print(result.provenance.retrieval_id)
+        logger.debug(result.context)
+        logger.debug(result.provenance.retrieval_id)
     """
 
     def __init__(

@@ -19,8 +19,11 @@ ADR-008 준수 검증:
   - DatasetCard 라이선스 필드 확인
 """
 from __future__ import annotations
+import logging
 
 from typing import Any, Dict, List
+
+logger = logging.getLogger(__name__)
 
 
 def _gate_slm_sp3_survival() -> Dict[str, Any]:
@@ -186,6 +189,6 @@ def run_gate24() -> Dict[str, Any]:
 if __name__ == "__main__":
     import json
     r = run_gate24()
-    print(json.dumps(r, ensure_ascii=False, indent=2))
+    logger.debug(json.dumps(r, ensure_ascii=False, indent=2))
     if not r["pass"]:
         raise SystemExit(1)

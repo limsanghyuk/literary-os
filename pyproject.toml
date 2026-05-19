@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "literary-os"
-version = "7.9.0"
-description = "Literary OS V571 — Phase6 MultiWork Stage C Full Build (MultiWork Orchestrator)"
+version = "8.0.0"
+description = "Literary OS V575 — Security & Hygiene: DEV_MODE patch, logging, dead-code removal, Preflight Step15"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}

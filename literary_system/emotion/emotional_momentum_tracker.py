@@ -67,7 +67,9 @@ class EmotionalMomentumTracker:
         tt   = 0.5
         if seq_plan and hasattr(seq_plan,"tension_target"):
             try: tt = float(seq_plan.tension_target)
-            except: pass
+            except Exception:
+
+                pass
         tl = text.lower(); ws = set(tl.split())
         def ks(kws): return min(1.0, sum(1 for k in kws if k in tl or k in ws)/max(1,len(kws)*0.15))
         return EmotionalVector(

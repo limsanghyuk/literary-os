@@ -4,6 +4,7 @@ by combining NarrativeImpactAnalyzer (story graph) + CodeDependencyGraph (script
 LLM-0 compliant.
 """
 from __future__ import annotations
+import logging
 
 from dataclasses import dataclass, field
 from enum import Enum
@@ -13,6 +14,8 @@ from literary_system.graph_intelligence.narrative_impact_analyzer import Narrati
 from literary_system.graph_intelligence.narrative_graph_schema import NarrativeImpactReport
 from literary_system.graph_intelligence.narrative_graph_store import NarrativeGraphStore
 from literary_system.graph_intelligence.sp2.code_dependency_graph import CodeDependencyGraph
+
+logger = logging.getLogger(__name__)
 
 
 class PatchType(Enum):
@@ -101,7 +104,7 @@ class StagePatchImpactCalculator:
 
         calc = StagePatchImpactCalculator(narrative_store, code_dep_graph)
         impact = calc.calculate(StagePatchRequest("sc07", PatchType.DELETE))
-        print(impact.summary())
+        logger.debug(impact.summary())
     """
 
     def __init__(

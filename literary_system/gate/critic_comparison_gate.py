@@ -8,9 +8,12 @@ audit_mode 전용: V312 단독 vs V323 풀 파이프라인 비교.
   - LLM 0회. 완전 로컬.
 """
 from __future__ import annotations
+import logging
 
 from dataclasses import dataclass, field
 from typing import Any
+
+logger = logging.getLogger(__name__)
 
 
 # ================================================================
@@ -91,7 +94,7 @@ class CriticComparisonGate:
     사용 예:
         gate = CriticComparisonGate(audit_mode=True)
         result = gate.compare("scene_01", v312_out, v323_out)
-        print(gate.stats())
+        logger.debug(gate.stats())
     """
 
     def __init__(self, audit_mode: bool = False):
