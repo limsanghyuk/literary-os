@@ -224,6 +224,6 @@ class TestRegistryIntegration:
         assert entry.version_added == "V580"
         assert entry.layer == "L1"
 
-    def test_tc25_total_gates_38(self):
-        """TC25: 전체 Gates 수 38개 (G1~G39, 일부 번호 병합)"""
-        assert len(GATES) == 38
+    def test_tc25_total_gates_39(self):
+        """TC25: 전체 Gates 수 39개 (G1~G39, V581 db_migration 게이트 포함)"""
+        assert len(GATES) == 39
