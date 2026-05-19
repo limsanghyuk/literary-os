@@ -4,8 +4,9 @@
 
 ```bash
 pip install -e ".[dev]"
-pytest tests/ -q                         # → 5456 passed, 20 skipped
-python literary_system/gates/release_gate.py  # → {"status": "pass", "gates_passed": 30}
+pytest tests/ -q                         # → 5529+ passed
+python -c "from literary_system.gates.release_gate import run_release_gate; r=run_release_gate(); print(r['summary'])"
+# → {"pass": true, "gates_passed": 39, "total_gates": 39}
 ```
 
 ## 핵심 설계 원칙
@@ -30,17 +31,17 @@ python literary_system/gates/release_gate.py  # → {"status": "pass", "gates_pa
 | V541~V545 | ASD — NarrativeDebt, ArcConsistency, StoryDoctor, AutoRepair, Gate28 |
 | V546~V555 | PNE — PNECore, DebtPredictor, PreemptiveGate, FeedbackLearner, Gate29 |
 | V556~V560 | Corpus — ExternalCorpusBridge, BGEM3Embedder, CIMBootstrap, Gate30 |
-| **V562~V571** | **MultiWork Stage C — 7모듈 + Gate31 (현재 최신)** |
+| V562~V571 | MultiWork Stage C — 7모듈 + Gate31 |
+| **V572~V581** | **LOSDB 기반 — SchemaRegistry + MigrationManager + ADR-040 (현재 최신)** |
 
 ## GitNexus 인덱스 현황 (V571 AST 분석 기준)
 
 ```
-literary_system/ 서브패키지: 59개
-소스 파일 (non-test): 466개
-클래스 심볼:        1,016개
-임포트 엣지:        4,111개
-릴리즈 게이트:       30/30 PASS
-테스트:           5,456 PASS
+literary_system/ 서브패키지: 60개 (db/ 신규)
+소스 파일 (non-test): 469개
+클래스 심볼:        1,024개
+릴리즈 게이트:       39/39 PASS (G1~G40, V581 db_migration_g40 포함)
+테스트:           5,529+ PASS
 ```
 
 > GitNexus analyze는 `npx gitnexus analyze --force`로 재실행 가능 (완료에 ~60초 소요).
@@ -49,6 +50,11 @@ literary_system/ 서브패키지: 59개
 
 ```
 literary_system/
+├── db/               ← V581 신규 (LOSDB 기반 레이어)
+│   ├── schema_registry.py      BackendType(SQL/Graph/Vector), SchemaVersion, SchemaRegistry (싱글턴)
+│   ├── migration_manager.py    Migration, MigrationManager, BaseMigrationAdapter, SQL/Graph/VectorMigrationAdapter
+│   └── __init__.py             공개 API (BaseMigrationAdapter 포함)
+│
 ├── multiwork/        ← V562~V571 신규 (MultiWork Stage C)
 │   ├── multi_work_core.py          WorkStatus FSM, WorkProject, WorkSession, MultiWorkCore
 │   ├── shared_character_db.py      RelationType(7), CharacterProfile, SharedCharacterDB
