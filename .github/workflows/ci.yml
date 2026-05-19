@@ -70,7 +70,7 @@ jobs:
       - run: pip install -e ".[dev]" --quiet
       - name: pytest
         run: pytest tests/ -q --tb=short --timeout=120
-      - name: Release Gate (38 Gates)
+      - name: Release Gate (39 Gates)
         run: |
           python - << 'PYEOF'
           from literary_system.gates.release_gate import run_release_gate
