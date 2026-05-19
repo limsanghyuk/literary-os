@@ -264,3 +264,40 @@ class TestGateG40:
             f"Gate 수 오류: 기대=39, 실제={result['total_gates']}"
         )
         assert result["pass"] is True, f"Release Gate FAIL: {result['issues']}"
+
+
+# ── B3 회귀 테스트 — 잘못된 버전 형식 처리 ───────────────────────────────────
+
+class TestMigrationManagerRobustness:
+    def test_malformed_version_two_parts(self, manager):
+        """B3: 'major.minor' 형식 → success=False, 히스토리 기록됨."""
+        m = Migration("bad_001", BackendType.SQL, "0.0.0", "1.0", "버전 형식 오류")
+        result = manager.apply(m)
+        assert result.success is False
+        assert result.error_msg != ""
+        # 히스토리에는 실패 기록이 남아야 함
+        reg = SchemaRegistry.get_instance()
+        history = reg.migration_history(BackendType.SQL)
+        assert len(history) == 1
+        assert history[0].success is False
+
+    def test_malformed_version_with_prefix(self, manager):
+        """B3: 'v1.0.0' 형식 → int() 파싱 실패 → success=False."""
+        m = Migration("bad_002", BackendType.GRAPH, "0.0.0", "v1.0.0", "v prefix 오류")
+        result = manager.apply(m)
+        assert result.success is False
+
+    def test_valid_after_malformed(self, manager):
+        """B3: 잘못된 마이그레이션 후 올바른 마이그레이션은 성공해야 함."""
+        bad = Migration("bad_001", BackendType.SQL, "0.0.0", "bad", "오류")
+        good = Migration("good_001", BackendType.SQL, "0.0.0", "1.0.0", "정상")
+        manager.apply(bad)
+        result = manager.apply(good)
+        assert result.success is True
+        reg = SchemaRegistry.get_instance()
+        assert reg.current_version(BackendType.SQL).version_string == "1.0.0"
+
+    def test_base_adapter_importable(self):
+        """B4: BaseMigrationAdapter가 db 패키지에서 직접 임포트 가능해야 함."""
+        from literary_system.db import BaseMigrationAdapter
+        assert BaseMigrationAdapter is not None

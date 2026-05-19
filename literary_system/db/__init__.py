@@ -1,5 +1,6 @@
 """literary_system/db — V581 LOSDB 기반 레이어 (SchemaRegistry + MigrationManager)."""
 from .migration_manager import (
+    BaseMigrationAdapter,
     GraphMigrationAdapter,
     Migration,
     MigrationManager,
@@ -14,6 +15,7 @@ __all__ = [
     "MigrationRecord",
     "SchemaRegistry",
     "SchemaVersion",
+    "BaseMigrationAdapter",
     "Migration",
     "MigrationManager",
     "MigrationResult",

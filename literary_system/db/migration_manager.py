@@ -16,7 +16,7 @@ import logging
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 from .schema_registry import BackendType, MigrationRecord, SchemaRegistry, SchemaVersion
 
@@ -217,33 +217,41 @@ class MigrationManager:
 
         try:
             success = adapter.apply(migration)
+            # 레지스트리 업데이트 (성공 시만, 파싱 포함 전체를 try 안으로)
+            if success:
+                parts = migration.to_version.split(".")
+                if len(parts) != 3:
+                    raise ValueError(
+                        f"to_version 형식 오류: '{migration.to_version}' "
+                        f"(기대: 'major.minor.patch')"
+                    )
+                self._registry.register(
+                    backend     = migration.backend,
+                    major       = int(parts[0]),
+                    minor       = int(parts[1]),
+                    patch       = int(parts[2]),
+                    description = migration.description,
+                )
         except Exception as e:
+            success = False
             error_msg = str(e)
             logger.error("Migration %s 실패: %s", migration.migration_id, e)
 
-        # 레지스트리 업데이트 (성공 시만)
-        if success:
-            parts = migration.to_version.split(".")
-            self._registry.register(
-                backend     = migration.backend,
-                major       = int(parts[0]),
-                minor       = int(parts[1]),
-                patch       = int(parts[2]),
-                description = migration.description,
+        # 히스토리 기록 (성공/실패 무관, 항상 기록)
+        try:
+            rec = MigrationRecord(
+                migration_id = migration.migration_id,
+                backend      = migration.backend,
+                from_version = prev_version,
+                to_version   = migration.to_version if success else prev_version,
+                description  = migration.description,
+                applied_at   = datetime.now(timezone.utc).isoformat(),
+                success      = success,
+                error_msg    = error_msg,
             )
-
-        # 히스토리 기록 (성공/실패 무관)
-        rec = MigrationRecord(
-            migration_id = migration.migration_id,
-            backend      = migration.backend,
-            from_version = prev_version,
-            to_version   = migration.to_version if success else prev_version,
-            description  = migration.description,
-            applied_at   = datetime.now(timezone.utc).isoformat(),
-            success      = success,
-            error_msg    = error_msg,
-        )
-        self._registry.record_migration(rec)
+            self._registry.record_migration(rec)
+        except Exception as hist_e:  # pragma: no cover
+            logger.error("히스토리 기록 실패 (무시): %s", hist_e)
 
         return MigrationResult(
             migration_id = migration.migration_id,
@@ -277,7 +285,6 @@ class MigrationManager:
         required_major: int,
         required_minor: int,
     ) -> Tuple[bool, str]:
-        from typing import Tuple  # local import for type hint
         return self._registry.is_compatible(backend, required_major, required_minor)
 
     # ── 상태 보고 ─────────────────────────────────────────────────────────────
