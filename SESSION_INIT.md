@@ -30,6 +30,6 @@
 ---
 
 ## 현재 버전
-- literary-os: **V573** (7.8.1) — CI 5잡 그린, Gate 30/30
+- literary-os: **V580** (8.5.0) — CI GREEN, Gate 39/39, 5529+ PASS
 - v1700-literary-os: **Stage130** — Gate 20/20 PASS
 - 상세 워크플로우: `docs/workflow/WORKFLOW.md`
