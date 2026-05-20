@@ -321,16 +321,16 @@ class TestConnectionAndSchema:
 class TestGateG45:
     def test_tc39_gates_count(self):
         from literary_system.gates.release_gate import GATES
-        assert len(GATES) == 44
+        assert len(GATES) == 45  # V587: G46 추가로 45개
 
     def test_tc40_gate_registry_count(self):
         from literary_system.gates.gate_registry import GATE_REGISTRY
-        assert len(GATE_REGISTRY) == 44
+        assert len(GATE_REGISTRY) == 45  # V587: G46 추가로 45개
 
     def test_tc41_run_release_gate_all_pass(self):
         from literary_system.gates.release_gate import run_release_gate
         result = run_release_gate()
-        assert result["total_gates"] == 44
+        assert result["total_gates"] == 45  # V587: G46 추가로 45개
         assert result["pass"] is True
 
     def test_tc42_gate_registry_g45_adr(self):

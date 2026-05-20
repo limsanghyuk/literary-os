@@ -260,8 +260,8 @@ class TestGateG40:
     def test_run_release_gate_39_becomes_40(self):
         from literary_system.gates.release_gate import run_release_gate
         result = run_release_gate()
-        assert result["total_gates"] == 44, (
-            f"Gate 수 오류: 기대=41, 실제={result['total_gates']}"
+        assert result["total_gates"] == 45, (
+            f"Gate 수 오류: 기대=45, 실제={result['total_gates']}"
         )  # V583: G42 추가로 41개
         assert result["pass"] is True, f"Release Gate FAIL: {result['issues']}"
 
