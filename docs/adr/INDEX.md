@@ -1,8 +1,9 @@
 # ADR 자동 추출 인덱스
 
 > 자동 생성: `tools/extract_adr.py` (ADR-032 retroactive automation)
+> **V581 업데이트**: ADR-036, ADR-039, ADR-040 문서 파일 반영
 
-총 39개 ADR 참조 발견
+총 40개 ADR 참조 발견
 
 | ADR | 문서 파일 | 소스 참조 수 | git 커밋 |
 |-----|---------|------------|---------|
@@ -41,11 +42,11 @@
 | ADR-033 | [ADR-033.md](ADR-033.md) | 4 | — |
 | ADR-034 | [ADR-034.md](ADR-034.md) | 8 | — |
 | ADR-035 | [ADR-035.md](ADR-035.md) | 15 | — |
-| ADR-036 | — | 1 | — |
+| ADR-036 | [ADR-036.md](ADR-036.md) | 3 | V580 |
 | ADR-037 | — | 1 | — |
 | ADR-038 | — | 1 | — |
-| ADR-039 | — | 3 | — |
-| ADR-040 | Multi-backend MigrationManager (LOSDB 기반) | 수락됨 | V581 |
+| ADR-039 | [ADR-039.md](ADR-039.md) | 3 | V580 |
+| ADR-040 | [ADR-040.md](ADR-040.md) | 8 | V581 |
 
 ---
-*생성 시각: V578 (2026-05-19)*
+*생성 시각: V578 (2026-05-19) / V581 업데이트: 2026-05-20*

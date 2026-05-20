@@ -78,8 +78,25 @@ docs/proposals/
 
 **우선순위 권고**: V575~V580 7주 안정화를 먼저 완료한 후 Phase 3(V451~V480 — 실제로는 V581+ 의미)를 키오프한다. v2 합의안 모두 이 순서를 전제로 한다.
 
+
+## 3. V581+ LOSDB Phase A (V581~V595)
+
+| 항목 | 값 |
+|---|---|
+| 버전 범위 | V581 ~ V595 (15 버전 / Phase A) |
+| 합의 일자 | 2026-05-20 |
+| 기반 | V575~V580 안정화 7주 완료 + V581 LOSDB 시작 |
+| 작성 주관 | Chief Architect × Chief Compiler × CSPE |
+| 핵심 산출물 | ADR-040~060 계획 · Gate G40~G43 신설 · LOSDB(Qdrant+SQL+Graph) · Constitution v1.0 · Minimal-CLI v0.1 |
+| 종료 조건 | Gates G1~G43 PASS + 5,900+ PASS + Minimal-CLI v0.1 동작 확인 |
+| 로드맵 문서 | [v581_losdb_phase_a/README.md](v581_losdb_phase_a/README.md) |
+| 설계도 | [literary_os_v581_blueprint_v2.docx](../sessions/literary_os_v581_blueprint_v2.docx) |
+| 제안서 | [literary_os_v581_proposal_v2.docx](../sessions/literary_os_v581_proposal_v2.docx) |
+
+
 ## 4. 변경 이력
 
 - **2026-05-15**: Phase 3 (V451~V480) v1 초안 → v2 합의안 (CA·CC 작성 + CSPE 감수 + 3인 합의)
 - **2026-05-19**: V575~V580 안정화 v2 합의안 (V574 보고서 비판 → CSPE 감수 → 3인 합의)
 - **2026-05-19**: 본 docs/proposals/ 구조로 GitHub 정리 (집·회사 PC 단일 진실 원천 확립)
+- **2026-05-20**: V581+ LOSDB Phase A v2 합의안 추가 (V581 완료 후 Phase A 시작)
