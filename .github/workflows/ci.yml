@@ -1,5 +1,8 @@
-# literary-os CI — V582 표준 워크플로 (CI Green 수정)
-# 트리거: main/develop push, PR, 번호-주제 브랜치
+# literary-os CI — V587 4-Tier Gate 분리 (ADR-046, ADR-048)
+# Tier L0: pre-commit 3게이트 (≤5s)
+# Tier L1: PR fast-path 10게이트 (≤30s)
+# Tier L2: main merge (전체 중 빠른 45게이트 subset)
+# Tier L3/full: release full 45게이트
 name: CI
 
 on:
@@ -7,7 +10,7 @@ on:
     branches:
       - main
       - develop
-      - "[0-9]*-*"          # /581-async-fix, /582-perf 형태
+      - "[0-9]*-*"
   pull_request:
     branches:
       - main
@@ -27,9 +30,6 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.11", cache: pip }
       - run: pip install "ruff>=0.6" --quiet
-      # E501: line-too-long  F401: unused-import  F811: redefinition
-      # E701/E702: multi-stmt  E741: ambiguous-name  E402: import-not-top
-      # F841: unused-var  F821: undefined-name  (모두 pre-existing, 점진적 개선 예정)
       - run: ruff check literary_system/ --select E,F,W,I --ignore E501,F401,F811,E701,E702,E741,E402,F841,F821,W293
 
   # ── 2. 버전 정합성 ───────────────────────────────────────────────────────────
@@ -39,7 +39,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0    # git tag 전체 이력 필요
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
       - run: python tools/check_version_consistency.py --strict
@@ -57,9 +57,54 @@ jobs:
       - run: python tools/preflight_step14.py --strict
       - run: python tools/preflight_step15.py --strict
 
-  # ── 4. 테스트 + Release Gate ─────────────────────────────────────────────────
+  # ── 4. Gate L0 — pre-commit (3게이트, ≤5s) ──────────────────────────────────
+  gate-l0:
+    name: "Gate L0 — pre-commit (3 gates)"
+    runs-on: ubuntu-latest
+    needs: [lint]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11", cache: pip }
+      - run: pip install -e ".[dev]" --quiet
+      - name: "Gate Tier L0 (≤5s 목표)"
+        run: |
+          python - << 'PYEOF'
+          from literary_system.gates.release_gate import run_release_gate_tiered
+          r = run_release_gate_tiered(tiers=['L0'])
+          passed = r['gates_passed']
+          total  = r['total_gates']
+          failed = [k for k,v in r['results'].items() if not v.get('pass')]
+          assert not failed, f"L0 Gates FAIL ({passed}/{total}): {failed}"
+          print(f"Gate L0 OK: {passed}/{total}")
+          PYEOF
+
+  # ── 5. Gate L0+L1 — PR fast-path (10게이트, ≤30s) ───────────────────────────
+  gate-pr:
+    name: "Gate L0+L1 — PR fast-path (10 gates)"
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    needs: [gate-l0, version-check, preflight]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11", cache: pip }
+      - run: pip install -e ".[dev]" --quiet
+      - name: "Gate Tier L0+L1 fast-path (≤30s 목표, ADR-046)"
+        run: |
+          python - << 'PYEOF'
+          from literary_system.gates.release_gate import run_release_gate_tiered
+          r = run_release_gate_tiered(tiers=['L0', 'L1'])
+          passed = r['gates_passed']
+          total  = r['total_gates']
+          failed = [k for k,v in r['results'].items() if not v.get('pass')]
+          assert not failed, f"L0+L1 Gates FAIL ({passed}/{total}): {failed}"
+          print(f"Gate L0+L1 OK: {passed}/{total}")
+          PYEOF
+
+  # ── 6. 테스트 + Release Gate full (45게이트) — main push ──────────────────────
   test:
-    name: Test Suite (Python ${{ matrix.python-version }})
+    name: "Test Suite + Release Gate (45 Gates, Python ${{ matrix.python-version }})"
     runs-on: ubuntu-latest
     needs: [lint, version-check, preflight]
     strategy:
@@ -73,21 +118,21 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: pip
       - run: pip install -e ".[dev]" --quiet
-      - name: pytest
-        run: pytest tests/ -q --tb=short --timeout=120
-      - name: Release Gate (39 Gates)
+      - name: pytest (전체 테스트 스위트)
+        run: pytest tests/ -q --tb=short --timeout=120 -m "not real_llm"
+      - name: "Release Gate full — 45 Gates (ADR-046)"
         run: |
           python - << 'PYEOF'
           from literary_system.gates.release_gate import run_release_gate
           r = run_release_gate()
-          total = r["total_gates"]
-          passed = r["gates_passed"]
-          failed_gates = [k for k,v in r["results"].items() if not v.get("pass")]
-          assert passed == total, f"Gates FAIL ({passed}/{total}): {failed_gates}"
-          print(f"Release Gates OK: {passed}/{total}")
+          total  = r['total_gates']
+          passed = r['gates_passed']
+          failed = [k for k,v in r['results'].items() if not v.get('pass')]
+          assert passed == total, f"Release Gate FAIL ({passed}/{total}): {failed}"
+          print(f"Release Gate OK: {passed}/{total}")
           PYEOF
 
-  # ── 5. (PR 전용) 보안 회귀 빠른 체크 ───────────────────────────────────────
+  # ── 7. (PR 전용) 보안 회귀 빠른 체크 ───────────────────────────────────────
   security-quick:
     name: Security Quick Check
     runs-on: ubuntu-latest

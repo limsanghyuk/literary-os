@@ -1,11 +1,11 @@
-# Literary OS V586
+# Literary OS V587
 
 > **판단은 로컬, 생성만 LLM, 학습은 누적**  
 > AI 기반 장편 소설·드라마 시나리오 생성 시스템
 
-[![Version](https://img.shields.io/badge/version-9.1.0-blue)]()
+[![Version](https://img.shields.io/badge/version-9.2.0-blue)]()
 [![Tests](https://img.shields.io/badge/tests-5897%20PASS-brightgreen)]()
-[![Gates](https://img.shields.io/badge/release%20gates-44%2F44%20PASS-brightgreen)]()
+[![Gates](https://img.shields.io/badge/release%20gates-45%2F45%20PASS-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 
@@ -19,7 +19,7 @@ pip install -e ".[dev]"
 
 # 전체 테스트 실행
 pytest tests/ -q
-# → 5897+ passed
+# → 5897+ passed (V587 SP-α 기준)
 
 # 릴리즈 게이트 확인
 python -c "
@@ -27,7 +27,7 @@ from literary_system.gates.release_gate import run_release_gate
 result = run_release_gate()
 print(result['summary'])
 "
-# → RELEASE GATE PASS: 44/44 gates passed
+# → RELEASE GATE PASS: 45/45 gates passed
 ```
 
 ---
@@ -45,7 +45,7 @@ literary_system/
 ├── corpus/               # 외부 코퍼스 브릿지 — BGE-M3 + CIM (V557~V561)
 ├── multiwork/            # 다중작품 관리 오케스트레이터 (V562~V571)
 ├── db/                   # LOSDB — SQL/Vector/Graph 스토리지 + Facade (V581~V586)
-├── gates/                # 릴리즈 게이트 44종 (G01~G45)
+├── gates/                # 릴리즈 게이트 45종 (G01~G46)
 ├── adapters_live/        # LLM 어댑터 (Claude / OpenAI / Ollama)
 └── ...
 ```
@@ -64,6 +64,8 @@ literary_system/
 | LOSDB Phase A | V581 | SchemaRegistry + MigrationManager (SQL/Vector/Graph Mock) | G40 |
 | LOSDB Phase B | V582~V585 | SQLiteRealAdapter / MigrationEngine / VectorRealAdapter / GraphRealAdapter | G41~G44 |
 | LOSDB Phase C | **V586** | **LOSDBClient Facade + cross_query + query_by_label** | **G45** |
+| V587 품질 강화 | **V587** | **E2EProseGate + Gate 계층화(L0~L3) + ADR-046~048** | **G46** |
+| 품질 기반 강화 | **V587** | **ADR-048 Doc Consistency CI + 정합성 6파일 검사 + Release 자동화** | **G46** |
 
 ---
 
@@ -94,12 +96,12 @@ results = client.cross_query(["sql", "vector", "graph"], label="chapter_01")
 
 ## 릴리즈 게이트
 
-총 **44개** 게이트가 전부 통과해야 릴리즈 가능한 설계입니다.
+총 **45개** 게이트가 전부 통과해야 릴리즈 가능한 설계입니다.
 
 ```python
 from literary_system.gates.release_gate import run_release_gate
 result = run_release_gate()
-# {"status": "pass", "gates_passed": 44, "total_gates": 44}
+# {"status": "pass", "gates_passed": 45, "total_gates": 45}
 ```
 
 | 범위 | 게이트 |
@@ -109,7 +111,7 @@ result = run_release_gate()
 | G17~G24 | SP3Compliance / SP5Ops / ScenePipeline / DramaEpisode / RAGSP2 / SLMSP3 / NIE / NarrativeBlast |
 | G25~G31 | CodeCoupling / StoryQuality / PNE / LLM0Static / Corpus / MultiWork / (AsyncDiscipline) |
 | G32~G39 | LoggingDiscipline / SchemaRoundTrip / AuthRegression / AdapterCanonical / GateRegistry / DuplicateZero / AsyncDiscipline / PerformanceBaseline |
-| G40~G45 | DBMigration / SQLRealAdapter / MigrationEngine / VectorRealAdapter / GraphRealAdapter / **LOSDBClient** |
+| G40~G46 | DBMigration / SQLRealAdapter / MigrationEngine / VectorRealAdapter / GraphRealAdapter / LOSDBClient / **E2EProseGate** |
 
 ---
 
@@ -130,7 +132,8 @@ pip install -r requirements.txt
 pip install -r requirements-dev.txt
 
 # 특정 패키지 테스트
-pytest tests/test_v586_losdb_client.py -v      # LOSDBClient Facade (44 tests)
+pytest tests/test_v586_losdb_client.py -v      # LOSDBClient Facade
+pytest tests/e2e/ -v -m 'not real_llm'          # E2E ProseGate G46 (45 tests)
 pytest tests/test_v585_graph_real_adapter.py -v # GraphRealAdapter
 pytest tests/test_v584_vector_real_adapter.py -v # VectorRealAdapter
 pytest tests/test_v582_sql_real_adapter.py -v   # SQLiteRealAdapter
@@ -143,7 +146,7 @@ pytest tests/test_v551_v555_pne.py -v          # PNE
 
 ## ADR 목록
 
-ADR-001 ~ ADR-045 (`docs/adr/` 디렉터리 참조)
+ADR-001 ~ ADR-048 (`docs/adr/` 디렉터리 참조)
 
 ---
 

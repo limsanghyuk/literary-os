@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-05-20T13:58:21Z",
+  "version": "V587",
+  "measurement": {
+    "tiers_measured": [
+      "L1",
+      "L0"
+    ],
+    "total_elapsed_ms": 1103.84,
+    "gate_count": 10,
+    "gates": {
+      "llm_zero": {
+        "name": "LLM-0 외부 호출 금지",
+        "tier": "L0",
+        "passed": true,
+        "elapsed_ms": 2.38
+      },
+      "llm0_static_analysis": {
+        "name": "graph_intelligence LLM-0 정적 분석 (ADR-031)",
+        "tier": "L0",
+        "passed": true,
+        "elapsed_ms": 51.73
+      },
+      "auth_regression_g34": {
+        "name": "AuthRegression: DEV_MODE 기본값=false 회귀 방지 (Gate 34, ADR-034)",
+        "tier": "L0",
+        "passed": true,
+        "elapsed_ms": 0.2
+      },
+      "adapter_canonical_g35": {
+        "name": "AdapterCanonical: G3 캐노니컬 어댑터 체계 검증 (Gate 35, ADR-035)",
+        "tier": "L1",
+        "passed": true,
+        "elapsed_ms": 9.46
+      },
+      "duplicate_zero_g37": {
+        "name": "DuplicateZero: literary_system 중복 클래스명 0건 (Gate 37)",
+        "tier": "L1",
+        "passed": true,
+        "elapsed_ms": 373.0
+      },
+      "async_discipline_g38": {
+        "name": "AsyncDiscipline: deprecated async 패턴 0건 (Gate 38, ADR-036)",
+        "tier": "L1",
+        "passed": true,
+        "elapsed_ms": 368.24
+      },
+      "performance_baseline_g39": {
+        "name": "PerformanceBaseline: 핵심 연산 성능 회귀 방지 (Gate 39, ADR-039)",
+        "tier": "L1",
+        "passed": true,
+        "elapsed_ms": 69.92
+      },
+      "graph_real_adapter_g44": {
+        "name": "GraphRealAdapter: networkx-optional 그래프 스토어 + JSON 영속화 + rollback (Gate 44, ADR-044)",
+        "tier": "L1",
+        "passed": true,
+        "elapsed_ms": 198.4
+      },
+      "losdb_client_g45": {
+        "name": "LOSDBClient: LOSDB 통합 Facade + cross_query (Gate 45, ADR-045)",
+        "tier": "L1",
+        "passed": true,
+        "elapsed_ms": 0.41
+      },
+      "e2e_prose_g46": {
+        "name": "E2EProseGate: 6-checkpoint E2E 산문 파이프라인 (Gate 46, ADR-047)",
+        "tier": "L1",
+        "passed": true,
+        "elapsed_ms": 29.92
+      }
+    }
+  },
+  "analysis": {
+    "tier_stats": {
+      "L0": {
+        "count": 3,
+        "total_ms": 54.31,
+        "avg_ms": 18.1,
+        "max_ms": 51.73
+      },
+      "L1": {
+        "count": 7,
+        "total_ms": 1049.35,
+        "avg_ms": 149.91,
+        "max_ms": 373.0
+      }
+    },
+    "l0_l1_total_ms": 1103.66,
+    "l0_l1_target_ms": 30000.0,
+    "l0_l1_pass": true,
+    "top5_slowest_gates": [
+      {
+        "gate_id": "duplicate_zero_g37",
+        "tier": "L1",
+        "elapsed_ms": 373.0
+      },
+      {
+        "gate_id": "async_discipline_g38",
+        "tier": "L1",
+        "elapsed_ms": 368.24
+      },
+      {
+        "gate_id": "graph_real_adapter_g44",
+        "tier": "L1",
+        "elapsed_ms": 198.4
+      },
+      {
+        "gate_id": "performance_baseline_g39",
+        "tier": "L1",
+        "elapsed_ms": 69.92
+      },
+      {
+        "gate_id": "llm0_static_analysis",
+        "tier": "L0",
+        "elapsed_ms": 51.73
+      }
+    ]
+  }
+}

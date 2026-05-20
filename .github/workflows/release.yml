@@ -1,104 +1,49 @@
-# literary-os Release — tag push시 ZIP + SHA256 자동 생성
-# 트리거: v*.*.* 형태의 tag push (예: v8.5.0-V580)
+# V587: post-tag GitHub Release 자동 생성 (ADR-048)
 name: Release
 
 on:
   push:
     tags:
-      - "v[0-9]*.[0-9]*.[0-9]*-V[0-9]*"   # v8.5.0-V580 형태
+      - 'v*.*.*-V*'
 
 permissions:
-  contents: write   # GitHub Release 생성에 필요
+  contents: write
 
 jobs:
-  release:
-    name: Build Release ZIP + SHA256
+  create-release:
+    name: Create GitHub Release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # ── 버전 정보 추출 ─────────────────────────────────────────────────────
       - name: Extract version info
-        id: ver
+        id: info
         run: |
-          TAG="${GITHUB_REF_NAME}"              # v8.5.0-V580
-          VERSION="${TAG#v}"                    # 8.5.0-V580
-          SHORT="${VERSION%%-*}"                # 8.5.0
-          VNUM="${VERSION##*-}"                 # V580
+          TAG="${{ github.ref_name }}"
+          SEMVER=$(echo "$TAG" | grep -oP '\d+\.\d+\.\d+' | head -1)
+          VNUM=$(echo "$TAG" | grep -oP 'V\d+' | head -1)
           echo "tag=$TAG" >> $GITHUB_OUTPUT
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "short=$SHORT" >> $GITHUB_OUTPUT
+          echo "semver=$SEMVER" >> $GITHUB_OUTPUT
           echo "vnum=$VNUM" >> $GITHUB_OUTPUT
-          echo "zipname=literary-os-${VERSION}.zip" >> $GITHUB_OUTPUT
 
-      # ── 의존성 설치 + 테스트 ─────────────────────────────────────────────────
-      - uses: actions/setup-python@v5
-        with: { python-version: "3.11", cache: pip }
-      - run: pip install -e ".[dev]" --quiet
-      - name: Full test suite
-        run: pytest tests/ -q --timeout=120
-      - name: Release Gates
-        run: |
-          python - << 'PYEOF'
-          from literary_system.gates.release_gate import run_release_gate
-          r = run_release_gate()
-          assert r["gates_passed"] == r["total_gates"], \
-              f"Gate FAIL: {r['gates_passed']}/{r['total_gates']}"
-          print(f"Gates OK: {r['gates_passed']}/{r['total_gates']}")
-          PYEOF
-
-      # ── __pycache__ 정리 + ZIP 생성 ──────────────────────────────────────────
-      - name: Clean pycache
-        run: find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null; true
-
-      - name: Create release ZIP
-        run: |
-          ZIPNAME="${{ steps.ver.outputs.zipname }}"
-          zip -r "$ZIPNAME" . \
-            --exclude ".git/*" \
-            --exclude ".github/*" \
-            --exclude "*.pyc" \
-            --exclude ".pytest_cache/*" \
-            --exclude "*.egg-info/*" \
-            --exclude "dist/*" \
-            --exclude "build/*"
-          echo "ZIP 생성: $ZIPNAME ($(du -sh $ZIPNAME | cut -f1))"
-
-      # ── SHA256 생성 ───────────────────────────────────────────────────────────
-      - name: Generate SHA256
-        run: |
-          ZIPNAME="${{ steps.ver.outputs.zipname }}"
-          sha256sum "$ZIPNAME" > "${ZIPNAME}.sha256"
-          echo "SHA256: $(cat ${ZIPNAME}.sha256)"
-
-      # ── CHANGELOG 추출 ────────────────────────────────────────────────────────
-      - name: Extract changelog body
+      - name: Extract changelog section
         id: changelog
         run: |
-          VNUM="${{ steps.ver.outputs.vnum }}"
-          CHLOG="CHANGELOG_${VNUM}.md"
-          if [ -f "$CHLOG" ]; then
-            # 파일 전체를 릴리즈 노트로 사용 (멀티라인 처리)
-            {
-              echo "body<<ENDOFBODY"
-              cat "$CHLOG"
-              echo "ENDOFBODY"
-            } >> $GITHUB_OUTPUT
-          else
-            echo "body=자동 릴리즈: ${{ steps.ver.outputs.tag }}" >> $GITHUB_OUTPUT
+          python tools/extract_changelog_section.py \
+            --version "${{ steps.info.outputs.semver }}" \
+            --output /tmp/release_body.md || echo "No changelog entry found"
+          if [ -f /tmp/release_body.md ]; then
+            echo "body_file=/tmp/release_body.md" >> $GITHUB_OUTPUT
           fi
 
-      # ── GitHub Release 생성 ───────────────────────────────────────────────────
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
+        uses: ncipollo/release-action@v1
         with:
-          tag_name: ${{ steps.ver.outputs.tag }}
-          name: "literary-os ${{ steps.ver.outputs.version }}"
-          body: ${{ steps.changelog.outputs.body }}
-          files: |
-            ${{ steps.ver.outputs.zipname }}
-            ${{ steps.ver.outputs.zipname }}.sha256
+          tag: ${{ steps.info.outputs.tag }}
+          name: "${{ steps.info.outputs.vnum }} (v${{ steps.info.outputs.semver }})"
+          bodyFile: ${{ steps.changelog.outputs.body_file }}
           draft: false
           prerelease: false
+          token: ${{ secrets.GITHUB_TOKEN }}

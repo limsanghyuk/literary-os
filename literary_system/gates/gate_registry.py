@@ -51,7 +51,9 @@ class GateRegistryEntry:
     version_added : str
         해당 게이트가 추가된 버전 (예: "V411", "V577")
     layer : str
-        게이트 계층 (L0/L1/L2/L3/L4)
+        게이트 계층 (L0/L1/L2/L3/L4) — 아키텍처 계층
+    tier : str
+        CI 티어 (ADR-046): L0=pre-commit(≤5s), L1=PR(≤30s), L2=main(≤2m), L3=release(≤5m)
     """
     gate_id: str
     name: str
@@ -59,6 +61,7 @@ class GateRegistryEntry:
     adr_ref: str = ""
     version_added: str = ""
     layer: str = "L2"
+    tier: str = "L2"
 
     def run(self) -> dict:
         """게이트 실행 — fn() 위임."""
@@ -79,6 +82,7 @@ def _build_registry() -> Dict[str, GateRegistryEntry]:
     # gate_id → (adr_ref, version_added, layer) 보충 메타데이터
     _META: Dict[str, tuple] = {
         # gate_id: (adr_ref, version_added, layer)
+        # tier (ADR-046): L0=pre-commit, L1=PR fast-path, L2=main, L3=release full
         "llm_zero":                       ("ADR-001",  "V411",  "L0"),
         "arc_integrity":                  ("ADR-002",  "V380",  "L1"),
         "reveal_budget":                  ("ADR-003",  "V380",  "L1"),
@@ -122,12 +126,19 @@ def _build_registry() -> Dict[str, GateRegistryEntry]:
         "vector_real_adapter_g43":       ("ADR-043",  "V584",  "L1"),
         "graph_real_adapter_g44":        ("ADR-044",  "V585",  "L1"),
         "losdb_client_g45":             ("ADR-045",  "V586",  "L1"),
+        "e2e_prose_g46":                 ("ADR-047",  "V587",  "L1"),
         "migration_engine_g42":          ("ADR-042",  "V583",  "L1"),
     }
 
     registry: Dict[str, GateRegistryEntry] = {}
     for gate_id, gate_name, gate_fn in GATES:
         meta = _META.get(gate_id, ("", "", "L2"))
+        # Lookup CI tier from release_gate._GATE_TIER (ADR-046)
+        try:
+            from literary_system.gates.release_gate import _GATE_TIER, _get_gate_tier
+            ci_tier = _get_gate_tier(gate_id)
+        except ImportError:
+            ci_tier = "L2"
         registry[gate_id] = GateRegistryEntry(
             gate_id=gate_id,
             name=gate_name,
@@ -135,6 +146,7 @@ def _build_registry() -> Dict[str, GateRegistryEntry]:
             adr_ref=meta[0],
             version_added=meta[1],
             layer=meta[2],
+            tier=ci_tier,
         )
     return registry
 

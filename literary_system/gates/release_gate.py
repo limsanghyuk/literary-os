@@ -1755,3 +1755,134 @@ def run_release_gate() -> dict:
             f"{passed_count}/{total} gates passed"
         ),
     }
+
+
+# ── V587 SP-β: Gate G46 E2EProseGate ────────────────────────────────────────
+def _gate_e2e_prose_g46() -> dict:
+    """Gate G46 — E2EProseGate: 6-checkpoint E2E 산문 생성 파이프라인 (ADR-047, V587 SP-β).
+
+    MOCK 모드 CI 기본 실행. tier=L1 (PR fast-path, ≤30s).
+    """
+    from literary_system.gates.e2e_prose_gate import run_gate_g46
+    return run_gate_g46()
+
+GATES.append(
+    ("e2e_prose_g46", "E2EProseGate: 6-checkpoint E2E 산문 파이프라인 (Gate 46, ADR-047)", _gate_e2e_prose_g46),
+)
+
+
+# ── V587 SP-β: 티어 필터링 릴리즈 게이트 (ADR-046) ──────────────────────────
+
+# 게이트 ID → CI 티어 매핑
+# ADR-046: L0=pre-commit(≤5s), L1=PR fast-path(≤30s), L2=main merge(≤2m), L3=release full
+_GATE_TIER: dict = {
+    # L0: Pre-commit (≤5s) — 3개
+    "llm_zero":                      "L0",
+    "llm0_static_analysis":          "L0",
+    "auth_regression_g34":           "L0",
+    # L1: PR fast-path (≤30s) — 8개 (G35/G37/G38/G39/G44/G45/G46)
+    "adapter_canonical_g35":         "L1",
+    "duplicate_zero_g37":            "L1",
+    "async_discipline_g38":          "L1",
+    "performance_baseline_g39":      "L1",
+    "graph_real_adapter_g44":        "L1",
+    "losdb_client_g45":              "L1",
+    "e2e_prose_g46":                 "L1",
+    # 나머지는 L2 이상 — 기본값 L2
+}
+
+def _get_gate_tier(gate_id: str) -> str:
+    """게이트 ID에 해당하는 CI 티어 반환. 미등록 = 'L2'."""
+    return _GATE_TIER.get(gate_id, "L2")
+
+
+def run_release_gate_tiered(tiers=None) -> dict:
+    """
+    ADR-046 Gate Hierarchy — 티어 필터링 릴리즈 게이트.
+
+    Parameters
+    ----------
+    tiers : list[str] | None
+        실행할 CI 티어 목록. None 또는 빈 리스트이면 전체(L3) 실행.
+        예시: ['L0'] → pre-commit only (3 gates)
+              ['L0', 'L1'] → PR fast-path (10 gates)
+              None → 전체 45 gates
+
+    Returns
+    -------
+    dict
+        run_release_gate() 와 동일한 형식.
+    """
+    import traceback
+
+    selected_tiers = set(tiers) if tiers else None   # None = 전체
+
+    # 티어 우선순위 순서: L0 < L1 < L2 < L3
+    _tier_rank = {"L0": 0, "L1": 1, "L2": 2, "L3": 3}
+
+    results_dict: dict = {}
+    passed_count = 0
+    failed_count = 0
+    skipped_count = 0
+
+    for gate_id, gate_name, gate_fn in GATES:
+        gate_tier = _get_gate_tier(gate_id)
+
+        # 티어 필터: selected_tiers 지정 시, 해당 티어에 속한 게이트만 실행
+        if selected_tiers is not None:
+            max_selected_rank = max(_tier_rank.get(t, 3) for t in selected_tiers)
+            gate_rank = _tier_rank.get(gate_tier, 2)
+            if gate_rank > max_selected_rank:
+                results_dict[gate_id] = {
+                    "gate_name": gate_name,
+                    "tier": gate_tier,
+                    "pass": True,
+                    "skipped": True,
+                    "reason": f"tier {gate_tier} > max selected tier",
+                }
+                skipped_count += 1
+                continue
+
+        try:
+            result = gate_fn()
+            gate_passed = result.get("pass", False)
+        except Exception:
+            result = {"pass": False, "error": traceback.format_exc()}
+            gate_passed = False
+
+        results_dict[gate_id] = {
+            "gate_name": gate_name,
+            "tier": gate_tier,
+            "pass": gate_passed,
+            **result,
+        }
+        if gate_passed:
+            passed_count += 1
+        else:
+            failed_count += 1
+
+    total = len(GATES)
+    run_count = passed_count + failed_count
+    all_passed = failed_count == 0
+    issues = [gid for gid, gv in results_dict.items()
+              if not gv.get("pass", False) and not gv.get("skipped", False)]
+
+    tier_label = "+".join(sorted(selected_tiers)) if selected_tiers else "ALL"
+    return {
+        "version": "V587",
+        "pass": all_passed,
+        "status": "pass" if all_passed else "fail",
+        "total_gates": total,
+        "gates_run": run_count,
+        "gates_passed": passed_count,
+        "gates_failed": failed_count,
+        "gates_skipped": skipped_count,
+        "tiers": tier_label,
+        "issues": issues,
+        "results": results_dict,
+        "summary": (
+            f"RELEASE GATE [{tier_label}] {'PASS' if all_passed else 'FAIL'}: "
+            f"{passed_count}/{run_count} gates passed"
+            + (f" ({skipped_count} skipped)" if skipped_count else "")
+        ),
+    }

@@ -1,0 +1,26 @@
+# V587 ADR-048: pre-commit hooks — 버전·Gate 정합 자동 검사
+repos:
+  - repo: local
+    hooks:
+      - id: version-consistency-check
+        name: Version & Gate Consistency (ADR-048)
+        entry: python tools/check_version_consistency.py --strict --no-live-gate
+        language: python
+        pass_filenames: false
+        stages: [commit]
+        always_run: true
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.4
+    hooks:
+      - id: ruff
+        args: [--select, "E,F,W", --ignore, "E501,W503"]
+        types: [python]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-merge-conflict

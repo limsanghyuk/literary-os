@@ -53,4 +53,8 @@
 ---
 *생성 시각: V578 (2026-05-19) / V583 업데이트: 2026-05-20*
 
-| ADR-043 | V584 | VectorRealAdapter — numpy-optional 벡터 스토어 (LOSDB Phase B) |
+| ADR-043 | V584 | VectorRealAdapter — numpy-optional 벡터 스토어 (LOSDB Phase B) || ADR-044 | V585 | GraphRealAdapter — Neo4j/NetworkX 그래프 백엔드 (LOSDB Phase C) |
+| ADR-045 | V586 | LOSDBClient Facade — 단일 진입점 + cross_query API |
+| ADR-046 | [ADR-046-gate-hierarchy.md](ADR-046-gate-hierarchy.md) | 5 | V587 |
+| ADR-047 | [ADR-047-e2e-prose-policy.md](ADR-047-e2e-prose-policy.md) | 5 | V587 |
+| ADR-048 | [ADR-048-doc-consistency-ci.md](ADR-048-doc-consistency-ci.md) | 4 | V587 |

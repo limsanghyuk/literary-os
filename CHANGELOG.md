@@ -4,6 +4,167 @@
 
 ---
 
+
+## [9.2.0] — V587 — 2026-05-20
+
+### SP-α 외부 신뢰 회복 (ADR-048) + SP-β Gate 계층화 + E2E 게이트
+
+- `ci.yml` Gate 수 39 → **45** 정정 (ADR-048 + G46 추가)
+- `tools/check_version_consistency.py` 6파일 SSoT 검사 확장 (ADR-048)
+- `.github/workflows/release.yml` 신규 — post-tag 자동 Release 생성
+- `CHANGELOG.md` V572~V586 15 entries 소급 추가
+- **Gate G46 (E2EProseGate)**: 6-checkpoint E2E 산문 파이프라인 — NIE/ASD/GIG/LOSDB/Constitution/CLI (ADR-047)
+- `run_release_gate_tiered(tiers=[...])` 신설 — L0/L1/L2/L3 4계층 (ADR-046)
+- L0+L1 fast-path 실측: **1103.7ms** (목표 30s ✅)
+- `ci.yml` 4-tier 잡 분리: gate-l0 / gate-pr / test(full) / security-quick
+- `docs/adr/ADR-046-gate-hierarchy.md`, `ADR-047-e2e-prose-policy.md`, `ADR-048-doc-consistency-ci.md` 신규
+- 게이트 합계: **45/45 PASS**
+
+---
+
+## [9.1.0] — V586 — 2026-05-20
+
+### LOSDB Phase C — LOSDBClient Facade 완성
+
+- `LOSDBClient` Facade: `cross_query`, `query_by_label`, `health_check` 구현 (ADR-045)
+- Gate G45 (`_gate_losdb_client_g45`) 신설 — L3 full-path
+- 전체 테스트: 5,744 PASS / 릴리즈 게이트: 44/44 PASS
+
+---
+
+## [9.0.1] — V585 — 2026-05-20
+
+### LOSDB Phase C — GraphRealAdapter
+
+- `GraphRealAdapter`: NetworkX 기반 그래프 CRUD + 선택적 NetworkX 의존성 (ADR-044)
+- Gate G44 (`_gate_graph_real_adapter_g44`) 신설
+
+---
+
+## [9.0.0] — V584 — 2026-05-20
+
+### LOSDB Phase B — VectorRealAdapter
+
+- `VectorRealAdapter`: numpy 기반 벡터 저장소 + 코사인 유사도 검색 (ADR-043)
+- numpy 선택적 의존성 처리 (없을 시 fallback)
+- Gate G43 (`_gate_vector_real_adapter_g43`) 신설
+
+---
+
+## [8.8.0] — V583 — 2026-05-20
+
+### LOSDB Phase B — MigrationEngine
+
+- `MigrationEngine`: `MigrationPlan` + `MigrationStep` + 자동 스키마 마이그레이션 (ADR-042)
+- Gate G42 (`_gate_migration_engine_g42`) 신설
+
+---
+
+## [8.7.0] — V582 — 2026-05-20
+
+### LOSDB Phase B — SQLiteRealAdapter + LOSDB CLI
+
+- `SQLiteRealAdapter`: DDL 자동 생성 + CRUD + 마이그레이션 실행 (ADR-041)
+- `literary_system/db/cli.py`: analyze / repair / generate 3 명령 스켈레톤
+- Gate G41 (`_gate_sql_real_adapter_g41`) 신설
+
+---
+
+## [8.6.0] — V581 — 2026-05-19
+
+### LOSDB Phase A — SchemaRegistry + MigrationManager (ADR-040)
+
+- `SchemaRegistry`: NKG / DKG / ProseStyle 통합 스키마 등록
+- `MigrationManager`: SQL / Graph / Vector 3백엔드 어댑터 추상화
+- Gate G40 (`_gate_db_migration_g40`) 신설 — 44번째 게이트
+- Preflight Guide 15단계 확정
+
+---
+
+## [8.5.0] — V580 — 2026-05-19
+
+### Async Discipline + Performance Baseline (ADR-036, ADR-039)
+
+- `AsyncDisciplineChecker`: `await` 누락 패턴 정적 탐지 (ADR-036)
+- `PerformanceBaselineProfiler`: 핵심 5개 모듈 타임라인 측정 (ADR-039)
+- Gate G38 + Gate G39 신설
+
+---
+
+## [8.4.0] — V579 — 2026-05-19
+
+### Duplicate Class Resolution (ADR-037)
+
+- `DuplicateClassDetector`: 동일 이름 클래스 중복 탐지
+- Gate G37 신설
+
+---
+
+## [8.3.0] — V578 — 2026-05-19
+
+### Gate Registry Single Source of Truth (ADR-032)
+
+- `gate_registry.py`: `GateRegistryEntry` 단일 소스 + `layer` 필드 (L0~L4)
+- Gate G36 신설
+
+---
+
+## [8.2.0] — V577 — 2026-05-19
+
+### LLM Adapter Canonical Bridge (ADR-035)
+
+- `CanonicalLLMBridge`: Claude / OpenAI / Ollama 단일 인터페이스
+- Gate G35 신설
+
+---
+
+## [8.1.0] — V576 — 2026-05-19
+
+### Test Fortification
+
+- Gate G33 + Gate G34 신설 (인증·로깅 회귀)
+- 테스트 5,529 PASS 달성
+
+---
+
+## [8.0.0] — V575 — 2026-05-19
+
+### Security & Hygiene (ADR-034)
+
+- DEV_MODE 기본값 `"false"` 강제 (ADR-034)
+- Preflight Step15 확정
+
+---
+
+## [7.9.0] — V574 — 2026-05-19
+
+### Hotfix: AutoRepairExecutor API + stub router
+
+- Bug-1: `AutoRepairExecutor` API 불일치 수정
+- Bug-2: `analyze.py` stub router 수정
+
+---
+
+## [7.8.1] — V573 — 2026-05-19
+
+### Hotfix: BUG-1/2/3 (Gate28 회귀 방지)
+
+- BUG-1: `release_gate.py` `overall_passed` → `approved`
+- BUG-2: `DebtReport` / `ArcReport` 타입명 + 생성자 수정
+- BUG-3: `ActionPacketParser` → `ToolUseParser` (3개 파일)
+- Preflight Step14 신설
+
+---
+
+## [7.8.0] — V572 — 2026-05-19
+
+### CI 5잡 + Preflight Step13
+
+- GitHub Actions CI 5잡 구축
+- `tools/preflight_step13.py` 신설
+
+---
+
 ## [7.7.1] — V571 — 2026-05-17 (현재)
 
 ### Phase 6 Stage C — MultiWork 완성
