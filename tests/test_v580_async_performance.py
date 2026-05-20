@@ -226,4 +226,4 @@ class TestRegistryIntegration:
 
     def test_tc25_total_gates_39(self):
         """TC25: 전체 Gates 수 40개 (G1~G40 포함, V582 sql_real_adapter G41 추가)"""
-        assert len(GATES) == 40  # V582: G41 추가로 40개
+        assert len(GATES) == 41  # V583: G42 추가로 41개
