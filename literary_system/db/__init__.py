@@ -1,4 +1,4 @@
-"""literary_system/db — V581 LOSDB 기반 레이어 (SchemaRegistry + MigrationManager)."""
+"""literary_system/db — V582 LOSDB 기반 레이어 (SchemaRegistry + MigrationManager + SQLiteRealAdapter)."""
 from .migration_manager import (
     BaseMigrationAdapter,
     GraphMigrationAdapter,
@@ -9,6 +9,7 @@ from .migration_manager import (
     VectorMigrationAdapter,
 )
 from .schema_registry import BackendType, MigrationRecord, SchemaRegistry, SchemaVersion
+from .sql_real_adapter import SQLiteRealAdapter
 
 __all__ = [
     "BackendType",
@@ -22,4 +23,5 @@ __all__ = [
     "SQLMigrationAdapter",
     "GraphMigrationAdapter",
     "VectorMigrationAdapter",
+    "SQLiteRealAdapter",
 ]

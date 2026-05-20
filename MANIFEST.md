@@ -1,6 +1,6 @@
-# MANIFEST — Literary OS V581
+# MANIFEST — Literary OS V582
 
-버전: 8.6.0  
+버전: 8.7.0  
 릴리즈일: 2026-05-20  
 빌드 타입: Clean Release
 
@@ -8,10 +8,10 @@
 
 | 항목 | 값 |
 |------|----|
-| PASS | 5,564+ |
+| PASS | 5,601+ |
 | FAIL | 0 |
 | SKIP | 20 |
-| 릴리즈 게이트 | 39/39 PASS |
+| 릴리즈 게이트 | 40/40 PASS |
 | 테스트 파일 | 221개 |
 
 ## 패키지 구성
@@ -26,8 +26,10 @@ literary_system/
 ├── billing/                # BillingEngine (Stripe + 토스페이먼츠)
 ├── causal/                 # CausalPlotGraph
 ├── corpus/                 # 외부 코퍼스 브릿지 (V557~V561)
-├── db/                     # LOSDB Phase A (V581 신설)
+├── db/                     # LOSDB Phase A (V581+V582)
 │   ├── schema_registry.py  # SchemaRegistry — 3-백엔드 스키마 버전 관리
+│   ├── sql_real_adapter.py # SQLiteRealAdapter — sqlite3 REAL 구현 (V582 신설)
+│   ├── cli.py              # LOSDB CLI — status/analyze/migrate/health (V582 신설)
 │   ├── migration_manager.py # MigrationManager + SQL/Graph/Vector 어댑터
 │   └── __init__.py         # 공개 API
 ├── drse/                   # DRSE 점수 산정
