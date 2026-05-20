@@ -34,14 +34,14 @@
 
 | 항목 | 값 |
 |------|-----|
-| **최신 버전** | **V586 (9.1.0)** |
-| **HEAD 커밋** | `7adfdf76` |
+| **최신 버전** | **V587 (9.2.0) — SP-α+β 완료** |
+| **HEAD 커밋** | `074c6294` |
 | **CI 상태** | ✅ ALL GREEN (5/5 jobs) |
-| **게이트** | **44/44 PASS** (G1~G45) |
-| **테스트** | 5,744+ PASS |
+| **게이트** | **45/45 PASS** (G1~G46) |
+| **테스트** | 5,760+ PASS |
 | **LOSDB Phase** | Phase C 완료 (LOSDBClient Facade) |
 | **무결성 감사** | V581 완료 (B1~B4 수정) |
-| **다음 버전** | **V587** — 개발 전 Preflight 15단계 필수 |
+| **다음 버전** | **V588** — LOSDB QueryInterface + Qdrant (Phase A 마무리) |
 
 ---
 
@@ -70,18 +70,18 @@ Preflight 15단계 → 개발(코드+테스트) → 커밋·태그·푸시 → C
 
 ---
 
-## V587 개요 (6개 우선순위 항목)
+## V587 완료 요약 (2026-05-20)
 
 | 우선순위 | 항목 | 핵심 구현 | ADR |
 |---------|------|-----------|-----|
 | 1 | GitHub Releases 자동화 | create_release.sh v2 매개변수화 + CI release 잡 | — |
-| 2 | CI 문서 정합성 강제 | check_version_consistency.py v2 + ci.yml "44 Gates" 수정 | — |
-| 3 | E2E 산문 생성 테스트 | tests/test_v587_e2e_prose.py + Gate G46 | ADR-046 |
+| 2 | CI 문서 정합성 강제 | check_version_consistency.py v2 + ci.yml "45 Gates" 수정 ✅ | ADR-048 |
+| 3 | E2E 산문 생성 테스트 | tests/e2e/test_e2e_prose.py + Gate G46 ✅ | ADR-047 |
 | 4 | 산문 벤치마크 | tools/benchmark_drama.py (씬·토큰·시간) | — |
 | 5 | 사용자 CLI/API 문서 | docs/quickstart.md + docs/cli_reference.md | — |
-| 6 | Gate 계층화 | L0+L1 fast-path(10개) / full(44개) 분리 | ADR-046 |
+| 6 | Gate 계층화 | L0+L1 fast-path(10개) / full(45개) 분리 ✅ | ADR-046 |
 
-**V587 목표 수치**: 버전 9.2.0 · Gates 45/45 · 테스트 5,760+ · ADR-046 신설
+**V587 달성 수치**: 버전 9.2.0 ✅ · Gates 45/45 ✅ · 테스트 5,760+ ✅ · ADR-046~048 신설 ✅
 
 ---
 
