@@ -1510,6 +1510,140 @@ def _gate_graph_real_adapter_g44() -> dict:
             "details": f"G44 FAIL at step {len(checks)+1}: {exc}",
         }
 
+
+def _gate_losdb_client_g45() -> dict:
+    """Gate 45 (G45) — LOSDBClient: LOSDB 통합 Facade + cross_query (ADR-045, L1).
+
+    8 체크포인트:
+    1) import LOSDBClient, LOSDBClientRecord
+    2) 어댑터 없이 생성 — available_backends()==[]
+    3) SQLiteRealAdapter 연결 — available_backends()==[SQL]
+    4) VectorRealAdapter 연결 — query_by_label(VECTOR, label)
+    5) GraphRealAdapter 연결 — query_by_label(GRAPH, label)
+    6) 3개 어댑터 cross_query 동작
+    7) check_all_connections() 반환 구조 검증
+    8) schema_info() 반환 구조 검증
+    """
+    results = []
+
+    def chk(name: str, ok: bool, err: str = "") -> None:
+        results.append({"checkpoint": name, "pass": ok, "error": err})
+
+    # 1) import
+    try:
+        from literary_system.db.losdb_client import LOSDBClient, LOSDBClientRecord
+        from literary_system.db.schema_registry import BackendType
+        chk("import", True)
+    except Exception as exc:
+        chk("import", False, str(exc))
+        return {"pass": False, "checkpoints": results, "error": str(exc)}
+
+    # 2) 어댑터 없이 생성
+    try:
+        client = LOSDBClient()
+        assert client.available_backends() == [], f"expected [] got {client.available_backends()}"
+        chk("empty_client", True)
+    except Exception as exc:
+        chk("empty_client", False, str(exc))
+
+    # 3) SQLiteRealAdapter 연결
+    try:
+        from literary_system.db.sql_real_adapter import SQLiteRealAdapter
+        sql = SQLiteRealAdapter(":memory:")
+        client2 = LOSDBClient(sql=sql)
+        backends = client2.available_backends()
+        assert BackendType.SQL in backends
+        assert len(backends) == 1
+        chk("sql_backend", True)
+    except Exception as exc:
+        chk("sql_backend", False, str(exc))
+
+    # 4) VectorRealAdapter 연결 + query_by_label
+    try:
+        from literary_system.db.vector_real_adapter import VectorRealAdapter
+        vec = VectorRealAdapter(dim=2)
+        vec.upsert("v1", [0.1, 0.2], {"label": "chapter"})
+        client3 = LOSDBClient(vector=vec)
+        records = client3.query_by_label(BackendType.VECTOR, "chapter")
+        assert isinstance(records, list) and len(records) == 1
+        assert records[0].backend == BackendType.VECTOR
+        chk("vector_query", True)
+    except Exception as exc:
+        chk("vector_query", False, str(exc))
+
+    # 5) GraphRealAdapter 연결 + query_by_label
+    try:
+        from literary_system.db.graph_real_adapter import GraphRealAdapter
+        gr = GraphRealAdapter()
+        gr.add_node("n1", "chapter")
+        gr.add_node("n2", "scene")
+        client4 = LOSDBClient(graph=gr)
+        records = client4.query_by_label(BackendType.GRAPH, "chapter")
+        assert isinstance(records, list) and len(records) == 1
+        assert records[0].backend == BackendType.GRAPH
+        chk("graph_query", True)
+    except Exception as exc:
+        chk("graph_query", False, str(exc))
+
+    # 6) cross_query (3개 어댑터)
+    try:
+        from literary_system.db.sql_real_adapter import SQLiteRealAdapter
+        from literary_system.db.vector_real_adapter import VectorRealAdapter
+        from literary_system.db.graph_real_adapter import GraphRealAdapter
+        sql2 = SQLiteRealAdapter(":memory:")
+        vec2 = VectorRealAdapter(dim=1)
+        vec2.upsert("cv1", [0.5], {"label": "chapter"})
+        gr2 = GraphRealAdapter()
+        gr2.add_node("cn1", "chapter")
+        client5 = LOSDBClient(sql=sql2, vector=vec2, graph=gr2)
+        recs = client5.cross_query(
+            [BackendType.SQL, BackendType.VECTOR, BackendType.GRAPH], "chapter"
+        )
+        assert isinstance(recs, list)
+        backends_seen = {r.backend for r in recs}
+        assert BackendType.VECTOR in backends_seen
+        assert BackendType.GRAPH in backends_seen
+        chk("cross_query", True)
+    except Exception as exc:
+        chk("cross_query", False, str(exc))
+
+    # 7) check_all_connections()
+    try:
+        from literary_system.db.graph_real_adapter import GraphRealAdapter
+        gr3 = GraphRealAdapter()
+        client6 = LOSDBClient(graph=gr3)
+        conn_status = client6.check_all_connections()
+        assert isinstance(conn_status, dict)
+        assert "graph" in conn_status
+        assert conn_status["graph"] is True
+        chk("check_connections", True)
+    except Exception as exc:
+        chk("check_connections", False, str(exc))
+
+    # 8) schema_info()
+    try:
+        from literary_system.db.graph_real_adapter import GraphRealAdapter
+        gr4 = GraphRealAdapter()
+        client7 = LOSDBClient(graph=gr4)
+        info = client7.schema_info()
+        assert isinstance(info, dict)
+        assert "active_backends" in info
+        assert "backends" in info
+        assert "client_version" in info
+        chk("schema_info", True)
+    except Exception as exc:
+        chk("schema_info", False, str(exc))
+
+    passed = sum(1 for r in results if r["pass"])
+    total = len(results)
+    return {
+        "pass": passed == total,
+        "checkpoints_passed": passed,
+        "checkpoints_total": total,
+        "checkpoints": results,
+    }
+
+
 GATES = [
     ("llm_zero",              "LLM-0 외부 호출 금지",              _gate_llm_zero),
     ("arc_integrity",         "SeriesArcPlanner 4막 비율",          _gate_arc_integrity),
@@ -1572,6 +1706,8 @@ GATES = [
     ("vector_real_adapter_g43",    "VectorRealAdapter: numpy-optional 벡터 스토어 + JSON 영속화 + rollback (Gate 43, ADR-043)", _gate_vector_real_adapter_g43),
     # ── V585: GraphRealAdapter networkx-optional 그래프 스토어 (Gate 44) ────────────
     ("graph_real_adapter_g44",     "GraphRealAdapter: networkx-optional 그래프 스토어 + JSON 영속화 + rollback (Gate 44, ADR-044)", _gate_graph_real_adapter_g44),
+    # ── V586: LOSDBClient 통합 Facade (Gate 45) ────────────
+    ("losdb_client_g45",            "LOSDBClient: LOSDB 통합 Facade + cross_query (Gate 45, ADR-045)", _gate_losdb_client_g45),
 ]
 
 

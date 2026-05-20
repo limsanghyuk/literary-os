@@ -306,14 +306,14 @@ class TestGraphApplyRollback:
 
 class TestGateG44:
     def test_tc38_gates_count(self):
-        assert len(GATES) == 43
+        assert len(GATES) == 44
 
     def test_tc39_gate_registry_count(self):
-        assert len(GATE_REGISTRY) == 43
+        assert len(GATE_REGISTRY) == 44
 
     def test_tc40_run_release_gate_all_pass(self):
         result = run_release_gate()
-        assert result["total_gates"] == 43
+        assert result["total_gates"] == 44
         assert result["pass"] is True
 
 

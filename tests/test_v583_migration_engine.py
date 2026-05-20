@@ -479,17 +479,17 @@ class TestGateG42:
 
     def test_tc38_total_gates_41(self):
         """TC38: 전체 Gates 수 41개 (G1~G42, V583 G42 추가)."""
-        assert len(GATES) == 43  # V583: G42 추가로 41개
+        assert len(GATES) == 44  # V583: G42 추가로 41개
 
     def test_tc39_gate_registry_total_41(self):
         """TC39: GATE_REGISTRY 총 41개."""
-        assert len(GATE_REGISTRY) == 43
+        assert len(GATE_REGISTRY) == 44
 
     def test_tc40_run_release_gate_all_pass(self):
         """TC40: run_release_gate() 전체 41 Gates PASS."""
         from literary_system.gates.release_gate import run_release_gate
         result = run_release_gate()
-        assert result["total_gates"] == 43, (
+        assert result["total_gates"] == 44, (
             f"Gate 수 오류: 기대=41, 실제={result['total_gates']}"
         )
         assert result["pass"] is True, f"Release Gate FAIL: {result['issues']}"
