@@ -104,7 +104,7 @@ def _check_sample() -> str:
 
 def _check_gen_cli_reference() -> str:
     tool = ROOT / "tools" / "gen_cli_reference.py"
-    assert tool.exists(), f"gen_cli_reference.py 없음"
+    assert tool.exists(), "gen_cli_reference.py 없음"
     import py_compile
     py_compile.compile(str(tool), doraise=True)
     return "gen_cli_reference.py 존재 및 컴파일 OK"
@@ -118,7 +118,7 @@ def _check_adr_files() -> str:
     ]
     missing = [a for a in adrs if not (ROOT / a).exists()]
     assert not missing, f"ADR 없음: {missing}"
-    return f"ADR-046~048 존재"
+    return "ADR-046~048 존재"
 
 
 def _check_perf_json() -> str:
@@ -180,25 +180,29 @@ def run_v587_exit_gate() -> V587ExitResult:
 
 
 def _cli_run():
+    import logging as _logging
+    _log = _logging.getLogger(__name__)
+    _logging.basicConfig(level=_logging.INFO, format="%(message)s")
     result = run_v587_exit_gate()
-    print("=" * 62)
-    print(f"  V587 Exit Gate — {result.checks_passed}/{result.total_checks} PASS")
-    print("=" * 62)
+    sep = "=" * 62
+    _log.info(sep)
+    _log.info("  V587 Exit Gate — %d/%d PASS", result.checks_passed, result.total_checks)
+    _log.info(sep)
     for r in result.checks:
         icon = "✅" if r.passed else "❌"
-        print(f"  {icon} [{r.check_id}] {r.name}")
-        print(f"        → {r.detail}")
-    print("=" * 62)
+        _log.info("  %s [%s] %s", icon, r.check_id, r.name)
+        _log.info("        → %s", r.detail)
+    _log.info(sep)
     if result.passed:
-        print(f"  🎉 V587 EXIT GATE PASS ({result.elapsed_ms:.1f}ms)")
-        print("     v9.2.0 태그 + 릴리즈 진행 가능")
+        _log.info("  🎉 V587 EXIT GATE PASS (%.1fms)", result.elapsed_ms)
+        _log.info("     v9.2.0 태그 + 릴리즈 진행 가능")
     else:
         failed = [r for r in result.checks if not r.passed]
-        print(f"  ⛔ FAIL — {len(failed)}개 체크 미통과:")
+        _log.error("  ⛔ FAIL — %d개 체크 미통과:", len(failed))
         for r in failed:
-            print(f"     {r.check_id}: {r.detail}")
+            _log.error("     %s: %s", r.check_id, r.detail)
         sys.exit(1)
-    print("=" * 62)
+    _log.info(sep)
 
 
 if __name__ == "__main__":
