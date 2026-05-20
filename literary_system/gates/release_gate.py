@@ -1297,7 +1297,10 @@ def _gate_vector_real_adapter_g43() -> dict:
     try:
         # 1) import
         from literary_system.db.vector_real_adapter import (
-            VectorRealAdapter, VectorRecord, _cosine_similarity, _l2_distance,
+            VectorRealAdapter,
+            VectorRecord,
+            _cosine_similarity,
+            _l2_distance,
         )
         checks.append("1) import OK")
 
@@ -1338,7 +1341,8 @@ def _gate_vector_real_adapter_g43() -> dict:
         checks.append("5) JSON 영속화/복원 OK")
 
         # 6) rollback
-        from literary_system.db.migration_manager import Migration, BackendType
+        from literary_system.db.migration_manager import Migration
+        from literary_system.db.schema_registry import BackendType
         a4 = VectorRealAdapter(dim=4)
         a4.upsert("base", [1.0, 0.0, 0.0, 0.0])
         m = Migration(

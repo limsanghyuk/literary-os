@@ -12,7 +12,8 @@ from typing import List
 
 import pytest
 
-from literary_system.db.migration_manager import BackendType, Migration
+from literary_system.db.migration_manager import Migration
+from literary_system.db.schema_registry import BackendType
 from literary_system.db.vector_real_adapter import (
     HAS_NUMPY,
     VectorRealAdapter,
