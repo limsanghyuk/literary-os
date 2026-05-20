@@ -35,6 +35,7 @@ class Migration:
     description:  str = ""
     up_script:    str = ""       # 업그레이드 스크립트 (DDL/Cypher/JSON)
     down_script:  str = ""       # 롤백 스크립트
+    vector_ops:   object = None  # Optional[List[Dict]] — VectorRealAdapter vector 연산 (V584)
 
 
 # ── 어댑터 추상 기반 ───────────────────────────────────────────────────────────

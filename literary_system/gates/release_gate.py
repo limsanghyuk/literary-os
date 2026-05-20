@@ -1285,6 +1285,106 @@ def _gate_migration_engine_g42() -> dict:
             "details": f"G42 FAIL at step {len(checks)+1}: {exc}",
         }
 
+
+
+def _gate_vector_real_adapter_g43() -> dict:
+    """Gate 43 (G43) — VectorRealAdapter: numpy-optional 벡터 스토어 (ADR-043, V584, L1)."""
+    import os
+    import tempfile
+    import traceback as tb
+
+    checks = []
+    try:
+        # 1) import
+        from literary_system.db.vector_real_adapter import (
+            VectorRealAdapter,
+            VectorRecord,
+            _cosine_similarity,
+            _l2_distance,
+        )
+        checks.append("1) import OK")
+
+        # 2) 생성
+        adapter = VectorRealAdapter(dim=4)
+        assert adapter.count() == 0
+        assert adapter.check_connection() is True
+        checks.append("2) 생성 OK (dim=4, cosine)")
+
+        # 3) upsert + search
+        adapter.upsert("v1", [1.0, 0.0, 0.0, 0.0])
+        adapter.upsert("v2", [0.0, 1.0, 0.0, 0.0])
+        adapter.upsert("v3", [0.7, 0.7, 0.0, 0.0])
+        results = adapter.search([1.0, 0.0, 0.0, 0.0], top_k=1)
+        assert results and results[0][0] == "v1", f"top1={results}"
+        checks.append("3) upsert + search OK")
+
+        # 4) 코사인 유사도 정확도
+        same = _cosine_similarity([1.0, 0.0], [1.0, 0.0])
+        perp = _cosine_similarity([1.0, 0.0], [0.0, 1.0])
+        assert abs(same - 1.0) < 1e-6, f"same={same}"
+        assert abs(perp) < 1e-6, f"perp={perp}"
+        checks.append("4) 코사인 유사도 정확도 OK")
+
+        # 5) JSON 영속화 / 복원
+        with tempfile.NamedTemporaryFile(suffix=".json", delete=False) as f:
+            path = f.name
+        try:
+            a2 = VectorRealAdapter(dim=4, path=path)
+            a2.upsert("p1", [1.0, 0.0, 0.0, 0.0])
+            a2.save()
+            a3 = VectorRealAdapter(dim=4, path=path)
+            a3.load()
+            assert a3.get("p1") is not None, "load 후 p1 없음"
+        finally:
+            if os.path.exists(path):
+                os.unlink(path)
+        checks.append("5) JSON 영속화/복원 OK")
+
+        # 6) rollback
+        from literary_system.db.migration_manager import Migration
+        from literary_system.db.schema_registry import BackendType
+        a4 = VectorRealAdapter(dim=4)
+        a4.upsert("base", [1.0, 0.0, 0.0, 0.0])
+        m = Migration(
+            migration_id="G43_rollback_test",
+            backend=BackendType.VECTOR,
+            from_version="0.0.0",
+            to_version="1.0.0",
+            vector_ops=[{"op": "upsert", "id": "new_vec", "vector": [0.0, 1.0, 0.0, 0.0]}],
+        )
+        ok_apply = a4.apply(m)
+        assert ok_apply is True, "apply 실패"
+        assert a4.get("new_vec") is not None
+        ok_rb = a4.rollback(m)
+        assert ok_rb is True, "rollback 실패"
+        assert a4.get("new_vec") is None, "rollback 후 new_vec 잔존"
+        assert a4.get("base") is not None, "rollback 후 base 소실"
+        checks.append("6) rollback OK")
+
+        # 7) numpy-optional fallback (HAS_NUMPY=False 패치)
+        from literary_system.db import vector_real_adapter as _vmod
+        orig = _vmod.HAS_NUMPY
+        _vmod.HAS_NUMPY = False
+        try:
+            s = _cosine_similarity([1.0, 0.0], [1.0, 0.0])
+            d = _l2_distance([0.0, 0.0], [3.0, 4.0])
+            assert abs(s - 1.0) < 1e-6, f"fallback cosine={s}"
+            assert abs(d - 5.0) < 1e-6, f"fallback l2={d}"
+        finally:
+            _vmod.HAS_NUMPY = orig
+        checks.append("7) numpy-optional fallback OK")
+
+        return {"pass": True, "checks": checks, "gate": "vector_real_adapter_g43", "adr": "ADR-043"}
+
+    except Exception as exc:
+        return {
+            "pass": False,
+            "checks": checks,
+            "error": str(exc),
+            "traceback": tb.format_exc(),
+            "details": f"G43 FAIL at step {len(checks)+1}: {exc}",
+        }
+
 GATES = [
     ("llm_zero",              "LLM-0 외부 호출 금지",              _gate_llm_zero),
     ("arc_integrity",         "SeriesArcPlanner 4막 비율",          _gate_arc_integrity),
@@ -1343,6 +1443,8 @@ GATES = [
     ("sql_real_adapter_g41",       "SQLRealAdapter: SQLiteRealAdapter REAL + LOSDB CLI (Gate 41, ADR-041)", _gate_sql_real_adapter_g41),
     # ── V583: MigrationEngine 통합 오케스트레이터 (Gate 42) ───────────────
     ("migration_engine_g42",       "MigrationEngine: 통합 오케스트레이터 + MigrationPlan + 롤백 체이닝 (Gate 42, ADR-042)", _gate_migration_engine_g42),
+    # ── V584: VectorRealAdapter numpy-optional 벡터 스토어 (Gate 43) ────────────
+    ("vector_real_adapter_g43",    "VectorRealAdapter: numpy-optional 벡터 스토어 + JSON 영속화 + rollback (Gate 43, ADR-043)", _gate_vector_real_adapter_g43),
 ]
 
 

@@ -52,3 +52,5 @@
 
 ---
 *생성 시각: V578 (2026-05-19) / V583 업데이트: 2026-05-20*
+
+| ADR-043 | V584 | VectorRealAdapter — numpy-optional 벡터 스토어 (LOSDB Phase B) |

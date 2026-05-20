@@ -11,6 +11,7 @@ from .migration_manager import (
 )
 from .schema_registry import BackendType, MigrationRecord, SchemaRegistry, SchemaVersion
 from .sql_real_adapter import SQLiteRealAdapter
+from .vector_real_adapter import VectorRealAdapter, VectorRecord
 
 __all__ = [
     "BackendType",
@@ -25,6 +26,8 @@ __all__ = [
     "GraphMigrationAdapter",
     "VectorMigrationAdapter",
     "SQLiteRealAdapter",
+    "VectorRealAdapter",
+    "VectorRecord",
     "MigrationEngine",
     "MigrationPlan",
     "MigrationExecutionRecord",
