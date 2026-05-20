@@ -1385,6 +1385,131 @@ def _gate_vector_real_adapter_g43() -> dict:
             "details": f"G43 FAIL at step {len(checks)+1}: {exc}",
         }
 
+
+
+def _gate_graph_real_adapter_g44() -> dict:
+    """Gate G44 — GraphRealAdapter: networkx-optional 그래프 스토어 + JSON 영속화 + rollback (ADR-044)."""
+    import os
+    import tempfile
+    import traceback as tb
+
+    checks: list = []
+    try:
+        # 1) import
+        from literary_system.db.graph_real_adapter import (
+            GraphEdgeRecord,
+            GraphRealAdapter,
+            GraphRecord,
+        )
+        from literary_system.db.migration_manager import Migration
+        from literary_system.db.schema_registry import BackendType
+
+        checks.append("import OK")
+
+        # 2) 인스턴스 생성
+        g = GraphRealAdapter()
+        assert g.node_count() == 0
+        assert g.edge_count() == 0
+        assert g.check_connection() is True
+        checks.append("인스턴스 생성 OK")
+
+        # 3) 노드/엣지 추가 및 조회
+        g.add_node("A", label="Character")
+        g.add_node("B", label="Event")
+        g.add_node("C", label="Location")
+        g.add_edge("e1", src_id="A", dst_id="B", label="causes")
+        g.add_edge("e2", src_id="B", dst_id="C", label="at")
+        assert g.node_count() == 3
+        assert g.edge_count() == 2
+        assert g.get_node("A") is not None
+        assert g.get_edge("e1") is not None
+        assert g.get_node("A").label == "Character"
+        assert g.get_edge("e1").src_id == "A"
+        checks.append("add_node/add_edge/get_node/get_edge OK")
+
+        # 4) neighbors
+        out_A = g.neighbors("A", direction="out")
+        assert "B" in out_A
+        in_B = g.neighbors("B", direction="in")
+        assert "A" in in_B
+        both_B = g.neighbors("B", direction="both")
+        assert "A" in both_B and "C" in both_B
+        checks.append("neighbors OK")
+
+        # 5) BFS / DFS
+        bfs_result = g.bfs("A")
+        assert "A" in bfs_result and "B" in bfs_result and "C" in bfs_result
+        dfs_result = g.dfs("A")
+        assert "A" in dfs_result
+        checks.append("bfs/dfs OK")
+
+        # 6) JSON save / load
+        with tempfile.NamedTemporaryFile(suffix=".json", delete=False) as f:
+            tmp_path = f.name
+        try:
+            g2 = GraphRealAdapter(path=tmp_path)
+            g2.add_node("X", label="Test")
+            g2.add_edge("ex1", src_id="X", dst_id="X", label="self")
+            g2.save()
+            g3 = GraphRealAdapter(path=tmp_path)
+            assert g3.node_count() == 1
+            assert g3.edge_count() == 1
+            assert g3.get_node("X") is not None
+        finally:
+            if os.path.exists(tmp_path):
+                os.remove(tmp_path)
+        checks.append("JSON save/load OK")
+
+        # 7) rollback 검증
+        g4 = GraphRealAdapter()
+        g4.add_node("base", label="Base")
+        m = Migration(
+            migration_id="G44_test_rollback",
+            backend=BackendType.GRAPH,
+            from_version="0.0.0",
+            to_version="1.0.0",
+            graph_ops=[{"op": "add_node", "node": {"id": "new_node", "label": "New"}}],
+        )
+        ok = g4.apply(m)
+        assert ok is True
+        assert g4.get_node("new_node") is not None
+        rb = g4.rollback(m)
+        assert rb is True
+        assert g4.get_node("new_node") is None  # rollback 후 사라져야 함
+        assert g4.get_node("base") is not None   # base는 유지
+        checks.append("rollback OK")
+
+        # 8) HAS_NETWORKX=False fallback 검증
+        import literary_system.db.graph_real_adapter as _gmod
+        orig = _gmod.HAS_NETWORKX
+        _gmod.HAS_NETWORKX = False
+        try:
+            g5 = GraphRealAdapter()
+            g5.add_node("n1", label="Node1")
+            g5.add_node("n2", label="Node2")
+            g5.add_edge("ef1", src_id="n1", dst_id="n2", label="link")
+            bfs_r = g5.bfs("n1")
+            assert "n1" in bfs_r and "n2" in bfs_r
+            nb = g5.neighbors("n1", direction="out")
+            assert "n2" in nb
+        finally:
+            _gmod.HAS_NETWORKX = orig
+        checks.append("networkx=False fallback OK")
+
+        return {
+            "pass": True,
+            "checks": checks,
+            "details": f"G44 PASS: {len(checks)} 체크포인트",
+        }
+    except Exception as exc:
+        return {
+            "pass": False,
+            "checks": checks,
+            "error": str(exc),
+            "traceback": tb.format_exc(),
+            "details": f"G44 FAIL at step {len(checks)+1}: {exc}",
+        }
+
 GATES = [
     ("llm_zero",              "LLM-0 외부 호출 금지",              _gate_llm_zero),
     ("arc_integrity",         "SeriesArcPlanner 4막 비율",          _gate_arc_integrity),
@@ -1445,6 +1570,8 @@ GATES = [
     ("migration_engine_g42",       "MigrationEngine: 통합 오케스트레이터 + MigrationPlan + 롤백 체이닝 (Gate 42, ADR-042)", _gate_migration_engine_g42),
     # ── V584: VectorRealAdapter numpy-optional 벡터 스토어 (Gate 43) ────────────
     ("vector_real_adapter_g43",    "VectorRealAdapter: numpy-optional 벡터 스토어 + JSON 영속화 + rollback (Gate 43, ADR-043)", _gate_vector_real_adapter_g43),
+    # ── V585: GraphRealAdapter networkx-optional 그래프 스토어 (Gate 44) ────────────
+    ("graph_real_adapter_g44",     "GraphRealAdapter: networkx-optional 그래프 스토어 + JSON 영속화 + rollback (Gate 44, ADR-044)", _gate_graph_real_adapter_g44),
 ]
 
 

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "literary-os"
-version = "8.9.0"
+version = "9.0.0"
 description = "Literary OS V576 — Test Fortification: 0% coverage units, G32/G33/G34 gates, 5529 PASS 33 Gates"
 readme = "README.md"
 requires-python = ">=3.10"

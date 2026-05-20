@@ -1,4 +1,6 @@
-"""literary_system/db — V583 LOSDB 기반 레이어 (SchemaRegistry + MigrationManager + SQLiteRealAdapter + MigrationEngine)."""
+"""literary_system/db — V585 LOSDB 기반 레이어 (SchemaRegistry + MigrationManager + SQLiteRealAdapter + VectorRealAdapter + GraphRealAdapter + MigrationEngine)."""
+
+from .graph_real_adapter import GraphEdgeRecord, GraphRealAdapter, GraphRecord
 from .migration_engine import MigrationEngine, MigrationExecutionRecord, MigrationPlan
 from .migration_manager import (
     BaseMigrationAdapter,
@@ -28,6 +30,9 @@ __all__ = [
     "SQLiteRealAdapter",
     "VectorRealAdapter",
     "VectorRecord",
+    "GraphRealAdapter",
+    "GraphRecord",
+    "GraphEdgeRecord",
     "MigrationEngine",
     "MigrationPlan",
     "MigrationExecutionRecord",
