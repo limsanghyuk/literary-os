@@ -1181,6 +1181,110 @@ def _gate_sql_real_adapter_g41() -> dict:
             "details": f"G41 FAIL at step {len(checks)+1}: {exc}",
         }
 
+
+# ── V583: MigrationEngine 통합 오케스트레이터 (Gate 42) ──────────────────────
+
+def _gate_migration_engine_g42() -> dict:
+    """Gate G42 — MigrationEngine 통합 오케스트레이터 (ADR-042, V583, L1)."""
+    import io
+    import sys
+    import traceback
+    checks: list[str] = []
+    try:
+        # 1. 임포트 확인
+        from literary_system.db import (
+            BackendType,
+            Migration,
+            MigrationEngine,
+            MigrationExecutionRecord,
+            MigrationPlan,
+            SQLiteRealAdapter,
+        )
+        checks.append("import OK")
+
+        # 2. SQLiteRealAdapter REAL + Mock 어댑터 조합 엔진 생성
+        real_adapter = SQLiteRealAdapter(connection_url="sqlite:///:memory:", mock=False)
+        from literary_system.db.migration_manager import SQLMigrationAdapter
+        mock_adapter = SQLMigrationAdapter(mock=True)
+        engine = MigrationEngine(adapters={"sql": real_adapter, "graph": mock_adapter})
+        assert set(engine.adapter_keys()) == {"sql", "graph"}
+        checks.append("MigrationEngine 생성 OK (sql+graph)")
+
+        # 3. MigrationPlan 생성
+        mig = Migration(
+            migration_id="G42_test_001",
+            backend=BackendType.SQL,
+            from_version="0.0.0",
+            to_version="1.0.0",
+            description="G42 게이트 검증 마이그레이션",
+            up_script="CREATE TABLE IF NOT EXISTS g42_test (id INTEGER PRIMARY KEY)",
+            down_script="DROP TABLE IF EXISTS g42_test",
+        )
+        plan = MigrationPlan(
+            plan_id="g42_plan_001",
+            migrations=[mig],
+            target_adapters=["sql", "graph"],
+            description="G42 검증 계획",
+        )
+        checks.append("MigrationPlan 생성 OK")
+
+        # 4. execute() 실행
+        record = engine.execute(plan)
+        assert isinstance(record, MigrationExecutionRecord)
+        assert record.success is True
+        assert record.rolled_back is False
+        assert record.plan_id == "g42_plan_001"
+        checks.append("execute() 성공 OK")
+
+        # 5. MigrationExecutionRecord JSON 직렬화/역직렬화
+        json_str = record.to_json()
+        assert json_str
+        restored = MigrationExecutionRecord.from_json(json_str)
+        assert restored.plan_id == record.plan_id
+        assert restored.success == record.success
+        checks.append("JSON 직렬화/역직렬화 OK")
+
+        # 6. rollback_plan() 실행
+        rb_record = engine.rollback_plan(plan)
+        assert isinstance(rb_record, MigrationExecutionRecord)
+        assert rb_record.rolled_back is True
+        checks.append("rollback_plan() OK")
+
+        # 7. 실패 시 롤백 체이닝 검증
+        bad_mig = Migration(
+            migration_id="G42_fail_001",
+            backend=BackendType.SQL,
+            from_version="0.0.0",
+            to_version="2.0.0",
+            description="의도적 실패 마이그레이션",
+            up_script="INVALID SQL STATEMENT !!!",
+            down_script="DROP TABLE IF EXISTS g42_fail",
+        )
+        bad_plan = MigrationPlan(
+            plan_id="g42_bad_plan",
+            migrations=[bad_mig],
+            target_adapters=["sql"],
+            description="실패 검증",
+        )
+        fail_record = engine.execute(bad_plan)
+        assert fail_record.success is False
+        assert fail_record.rolled_back is True
+        checks.append("실패 시 롤백 체이닝 OK")
+
+        return {
+            "pass": True,
+            "checks": checks,
+            "details": f"G42 MigrationEngine + MigrationPlan + MigrationExecutionRecord PASS ({len(checks)}개 검증)",
+        }
+    except Exception as exc:
+        return {
+            "pass": False,
+            "checks": checks,
+            "error": str(exc),
+            "traceback": traceback.format_exc(),
+            "details": f"G42 FAIL at step {len(checks)+1}: {exc}",
+        }
+
 GATES = [
     ("llm_zero",              "LLM-0 외부 호출 금지",              _gate_llm_zero),
     ("arc_integrity",         "SeriesArcPlanner 4막 비율",          _gate_arc_integrity),
@@ -1237,6 +1341,8 @@ GATES = [
     ("db_migration_g40",          "DBMigration: SchemaRegistry + MigrationManager 생존 검증 (Gate 40, ADR-040)", _gate_db_migration_g40),
     # ── V582: SQLiteRealAdapter REAL 어댑터 + LOSDB CLI (Gate 41) ───────────
     ("sql_real_adapter_g41",       "SQLRealAdapter: SQLiteRealAdapter REAL + LOSDB CLI (Gate 41, ADR-041)", _gate_sql_real_adapter_g41),
+    # ── V583: MigrationEngine 통합 오케스트레이터 (Gate 42) ───────────────
+    ("migration_engine_g42",       "MigrationEngine: 통합 오케스트레이터 + MigrationPlan + 롤백 체이닝 (Gate 42, ADR-042)", _gate_migration_engine_g42),
 ]
 
 
