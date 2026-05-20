@@ -11,10 +11,10 @@ pyproject.toml의 version과 최신 git tag, README 배지가
 """
 from __future__ import annotations
 
+import argparse
 import re
 import subprocess
 import sys
-import argparse
 from pathlib import Path
 
 REPO_ROOT  = Path(__file__).resolve().parent.parent
@@ -49,6 +49,19 @@ def get_readme_version() -> str:
     m = re.search(r'version-(\d+\.\d+\.\d+)-blue', text)
     return m.group(1) if m else "N/A"
 
+def get_current_branch() -> str:
+    """현재 git 브랜치 이름 반환."""
+    try:
+        result = subprocess.run(
+            ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+            capture_output=True, text=True, cwd=str(REPO_ROOT)
+        )
+        return result.stdout.strip()
+    except Exception:
+        return "unknown"
+
+
+
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="버전 정합 검사")
@@ -67,8 +80,13 @@ def main() -> int:
     print(f"  README badge   : {readme_ver}")
 
     mismatches = []
+    current_branch = get_current_branch()
+    is_main = current_branch in ("main", "master", "HEAD")
     if git_tag_ver != "N/A" and pyproject_ver != git_tag_ver:
-        mismatches.append(f"pyproject({pyproject_ver}) ≠ git tag({git_tag_ver})")
+        if is_main:
+            mismatches.append(f"pyproject({pyproject_ver}) ≠ git tag({git_tag_ver})")
+        else:
+            print(f"  ⚠️  git tag 미생성 (feature 브랜치={current_branch}) — main 머지 후 태그 생성 예정")
     if readme_ver != "N/A" and pyproject_ver != readme_ver:
         mismatches.append(f"pyproject({pyproject_ver}) ≠ README badge({readme_ver})")
 
@@ -85,6 +103,20 @@ def main() -> int:
         print("Version consistency FAILED (--strict)")
         return 1
     return 0
+
+
+
+
+def get_current_branch() -> str:
+    """현재 git 브랜치 이름 반환."""
+    try:
+        result = subprocess.run(
+            ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+            capture_output=True, text=True, cwd=str(REPO_ROOT)
+        )
+        return result.stdout.strip()
+    except Exception:
+        return "unknown"
 
 
 if __name__ == "__main__":
