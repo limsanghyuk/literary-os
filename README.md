@@ -3,9 +3,9 @@
 > **판단은 로컬, 생성만 LLM, 학습은 누적**  
 > AI 기반 장편 소설·드라마 시나리오 생성 시스템
 
-[![Version](https://img.shields.io/badge/version-8.9.0-blue)]()
-[![Tests](https://img.shields.io/badge/tests-5564%20PASS-brightgreen)]()
-[![Gates](https://img.shields.io/badge/release%20gates-39%2F39%20PASS-brightgreen)]()
+[![Version](https://img.shields.io/badge/version-9.0.0-blue)]()
+[![Tests](https://img.shields.io/badge/tests-5853%20PASS-brightgreen)]()
+[![Gates](https://img.shields.io/badge/release%20gates-43%2F43%20PASS-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 
