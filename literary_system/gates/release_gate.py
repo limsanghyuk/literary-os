@@ -1102,6 +1102,84 @@ def _gate_performance_baseline_g39() -> dict:
     }
 
 
+
+# ── V582: SQLiteRealAdapter REAL 어댑터 + LOSDB CLI (Gate 41) ─────────────────
+
+def _gate_sql_real_adapter_g41() -> dict:
+    """Gate G41 — SQLiteRealAdapter REAL 어댑터 + LOSDB CLI (ADR-041, V582)."""
+    checks: list[str] = []
+    try:
+        # 1. 임포트 확인
+        from literary_system.db import SQLiteRealAdapter, Migration, BackendType
+        checks.append("import OK")
+
+        # 2. MOCK 모드 check_connection
+        mock_adapter = SQLiteRealAdapter(mock=True)
+        assert mock_adapter.check_connection() is True
+        checks.append("MOCK check_connection OK")
+
+        # 3. REAL :memory: apply
+        real_adapter = SQLiteRealAdapter(connection_url="sqlite:///:memory:", mock=False)
+        mig = Migration(
+            migration_id="G41_test_001",
+            backend=BackendType.SQL,
+            from_version="0.0.0",
+            to_version="1.0.0",
+            description="G41 게이트 검증 마이그레이션",
+            up_script="CREATE TABLE IF NOT EXISTS g41_test (id INTEGER PRIMARY KEY)",
+            down_script="DROP TABLE IF EXISTS g41_test",
+        )
+        ok = real_adapter.apply(mig)
+        assert ok is True
+        checks.append("REAL apply OK")
+
+        # 4. list_applied
+        applied = real_adapter.list_applied()
+        assert len(applied) >= 1
+        assert applied[-1]["version"] == "1.0.0"
+        checks.append("list_applied OK")
+
+        # 5. rollback
+        rb = real_adapter.rollback(mig)
+        assert rb is True
+        checks.append("rollback OK")
+        real_adapter.close()
+
+        # 6. CLI build_parser 확인
+        from literary_system.db.cli import build_parser, main
+        parser = build_parser()
+        assert parser is not None
+        checks.append("CLI parser OK")
+
+        # 7. CLI status 실행
+        import io, sys
+        captured = io.StringIO()
+        old_stdout = sys.stdout
+        sys.stdout = captured
+        ret = main(["--json", "status"])
+        sys.stdout = old_stdout
+        output = captured.getvalue()
+        assert ret == 0
+        import json
+        data = json.loads(output)
+        assert data.get("command") == "status"
+        checks.append("CLI status --json OK")
+
+        return {
+            "pass": True,
+            "checks": checks,
+            "details": f"G41 SQLRealAdapter + CLI PASS ({len(checks)}개 검증)",
+        }
+    except Exception as exc:
+        import traceback
+        return {
+            "pass": False,
+            "checks": checks,
+            "error": str(exc),
+            "traceback": traceback.format_exc(),
+            "details": f"G41 FAIL at step {len(checks)+1}: {exc}",
+        }
+
 GATES = [
     ("llm_zero",              "LLM-0 외부 호출 금지",              _gate_llm_zero),
     ("arc_integrity",         "SeriesArcPlanner 4막 비율",          _gate_arc_integrity),
@@ -1156,6 +1234,8 @@ GATES = [
     ("performance_baseline_g39",  "PerformanceBaseline: 핵심 연산 성능 회귀 방지 (Gate 39, ADR-039)",    _gate_performance_baseline_g39),
     # ── V581: LOSDB SchemaRegistry + MigrationManager (Gate 40) ───────────
     ("db_migration_g40",          "DBMigration: SchemaRegistry + MigrationManager 생존 검증 (Gate 40, ADR-040)", _gate_db_migration_g40),
+    # ── V582: SQLiteRealAdapter REAL 어댑터 + LOSDB CLI (Gate 41) ───────────
+    ("sql_real_adapter_g41",       "SQLRealAdapter: SQLiteRealAdapter REAL + LOSDB CLI (Gate 41, ADR-041)", _gate_sql_real_adapter_g41),
 ]
 
 
