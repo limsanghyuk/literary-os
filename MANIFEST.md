@@ -1,6 +1,6 @@
-# MANIFEST — Literary OS V583
+# MANIFEST — Literary OS V586
 
-버전: 8.8.0  
+버전: 9.1.0  
 릴리즈일: 2026-05-20  
 빌드 타입: Clean Release
 
@@ -8,11 +8,11 @@
 
 | 항목 | 값 |
 |------|----|
-| PASS | 5,601+ |
+| PASS | 5,897+ |
 | FAIL | 0 |
 | SKIP | 20 |
-| 릴리즈 게이트 | 40/40 PASS |
-| 테스트 파일 | 221개 |
+| 릴리즈 게이트 | 44/44 PASS |
+| 테스트 파일 | 219개 |
 
 ## 패키지 구성
 
@@ -26,16 +26,19 @@ literary_system/
 ├── billing/                # BillingEngine (Stripe + 토스페이먼츠)
 ├── causal/                 # CausalPlotGraph
 ├── corpus/                 # 외부 코퍼스 브릿지 (V557~V561)
-├── db/                     # LOSDB Phase A (V581+V583)
+├── db/                     # LOSDB Phase A~C (V581~V586)
 │   ├── schema_registry.py  # SchemaRegistry — 3-백엔드 스키마 버전 관리
-│   ├── sql_real_adapter.py
-- `literary_system/db/migration_engine.py` — MigrationEngine 통합 오케스트레이터 # SQLiteRealAdapter — sqlite3 REAL 구현 (V583 신설)
-│   ├── cli.py              # LOSDB CLI — status/analyze/migrate/health (V583 신설)
 │   ├── migration_manager.py # MigrationManager + SQL/Graph/Vector 어댑터
+│   ├── migration_engine.py  # MigrationEngine 통합 오케스트레이터 (V583)
+│   ├── sql_real_adapter.py  # SQLiteRealAdapter — sqlite3 REAL 구현 (V582)
+│   ├── vector_real_adapter.py # VectorRealAdapter — numpy-optional (V584)
+│   ├── graph_real_adapter.py  # GraphRealAdapter — networkx-optional (V585)
+│   ├── losdb_client.py      # LOSDBClient Facade + cross_query (V586)
+│   ├── cli.py              # LOSDB CLI — status/analyze/migrate/health (V583)
 │   └── __init__.py         # 공개 API
 ├── drse/                   # DRSE 점수 산정
-├── gates/                  # Release Gate 시스템 (G1~G40)
-│   ├── release_gate.py     # 39개 게이트 오케스트레이터
+├── gates/                  # Release Gate 시스템 (G1~G45)
+│   ├── release_gate.py     # 44개 게이트 오케스트레이터
 │   └── gate_registry.py    # GateRegistryEntry + GATE_REGISTRY 단일 소스
 ├── graph_intelligence/     # NKG, 감정 링커, 지식 그래프 (LLM-0)
 ├── llm_bridge/             # CanonicalLLMBridge (ADR-034~035)
@@ -48,7 +51,7 @@ literary_system/
 └── ...                     # 65개 서브패키지 합계
 ```
 
-## Gate 목록 (G1~G40 / 39개 등록)
+## Gate 목록 (G1~G45)
 
 | Gate | ID | Layer | ADR | 버전 추가 |
 |------|----|-------|-----|---------|
@@ -83,15 +86,20 @@ literary_system/
 | G29 | compliance_g29 | L3 | — | V465 |
 | G30 | finetune_g30 | L3 | ADR-008 | V469 |
 | G31 | dev_mode_g31 | L1 | ADR-034 | V575 |
-| G32 | logging_discipline_g32 | L1 | — | V576 |
-| G33 | coverage_g33 | L1 | — | V576 |
-| G34 | zero_coverage_g34 | L1 | — | V576 |
+| G32 | logging_discipline_g32 | L1 | ADR-034 | V576 |
+| G33 | schema_roundtrip_g33 | L1 | ADR-034 | V576 |
+| G34 | auth_regression_g34 | L1 | ADR-034 | V576 |
 | G35 | adapter_canonical_g35 | L1 | ADR-035 | V577 |
-| G36 | adr_registry_g36 | L1 | ADR-032 | V578 |
+| G36 | gate_registry_g36 | L1 | ADR-032 | V578 |
 | G37 | duplicate_zero_g37 | L1 | ADR-033 | V579 |
 | G38 | async_discipline_g38 | L1 | ADR-036 | V580 |
 | G39 | performance_baseline_g39 | L1 | ADR-039 | V580 |
 | G40 | db_migration_g40 | L1 | ADR-040 | V581 |
+| G41 | sql_real_adapter_g41 | L1 | ADR-041 | V582 |
+| G42 | migration_engine_g42 | L1 | ADR-042 | V583 |
+| G43 | vector_real_adapter_g43 | L1 | ADR-043 | V584 |
+| G44 | graph_real_adapter_g44 | L1 | ADR-044 | V585 |
+| G45 | losdb_client_g45 | L1 | ADR-045 | **V586** |
 
 ## 핵심 불변 원칙
 
@@ -106,12 +114,21 @@ literary_system/
 | 분류 | 수 |
 |------|----|
 | 서브패키지 | 65 |
-| 소스 파일 (.py) | 435 |
-| 테스트 파일 | 221 |
-| ADR 문서 파일 | 27 (docs/adr/) |
-| 게이트 등록 | 39/39 (G1~G40) |
+| 소스 파일 (.py) | 362+ |
+| 테스트 파일 | 219 |
+| ADR 문서 파일 | 45 (docs/adr/) |
+| 게이트 등록 | 44/44 (G1~G45) |
 
-## 버전 이력 (V575~V581)
+## LOSDB Phase 완료 현황
+
+| 레이어 | Mock | REAL |
+|--------|------|------|
+| SQL | V581 ✅ | V582 ✅ |
+| Vector | V581 ✅ | V584 ✅ |
+| Graph | V581 ✅ | V585 ✅ |
+| Facade | — | V586 ✅ |
+
+## 버전 이력 (V575~V586)
 
 | 버전 | 주요 내용 | Gate |
 |------|----------|------|
@@ -119,10 +136,15 @@ literary_system/
 | V576 | 테스트 강화 + 커버리지 게이트 | G32~G34 |
 | V577 | LLM 어댑터 캐노니컬 통합 | G35 |
 | V578 | GATE_REGISTRY 단일소스 + ADR 자동 추출 | G36 |
-| V579 | 중복 클래스 해소 + mypy gradual | G37 |
+| V579 | 중복 클래스 해소 | G37 |
 | V580 | AsyncDiscipline + PerformanceBaseline | G38~G39 |
 | V581 | LOSDB Phase A — SchemaRegistry + MigrationManager | G40 |
+| V582 | LOSDB Phase B — SQLiteRealAdapter REAL | G41 |
+| V583 | LOSDB Phase B — MigrationEngine 통합 오케스트레이터 | G42 |
+| V584 | LOSDB Phase B — VectorRealAdapter (numpy-optional) | G43 |
+| V585 | LOSDB Phase B — GraphRealAdapter (networkx-optional) | G44 |
+| **V586** | **LOSDB Phase C — LOSDBClient Facade + cross_query** | **G45** |
 
 ---
 
-*생성: V581 (2026-05-20) — 이전 MANIFEST_V571_MULTIWORK.md 대체*
+*생성: V586 (2026-05-20) — 이전 MANIFEST_V581 대체*

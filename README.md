@@ -1,4 +1,4 @@
-# Literary OS V575
+# Literary OS V586
 
 > **판단은 로컬, 생성만 LLM, 학습은 누적**  
 > AI 기반 장편 소설·드라마 시나리오 생성 시스템
@@ -19,7 +19,7 @@ pip install -e ".[dev]"
 
 # 전체 테스트 실행
 pytest tests/ -q
-# → 5456 passed, 20 skipped
+# → 5897+ passed
 
 # 릴리즈 게이트 확인
 python -c "
@@ -27,7 +27,7 @@ from literary_system.gates.release_gate import run_release_gate
 result = run_release_gate()
 print(result['summary'])
 "
-# → gates_passed: 30/30, status: pass
+# → RELEASE GATE PASS: 44/44 gates passed
 ```
 
 ---
@@ -44,56 +44,62 @@ literary_system/
 ├── predictive/           # PNE — 예측적 서사 엔진 (V551~V555)
 ├── corpus/               # 외부 코퍼스 브릿지 — BGE-M3 + CIM (V557~V561)
 ├── multiwork/            # 다중작품 관리 오케스트레이터 (V562~V571)
-├── gates/                # 릴리즈 게이트 30종 (G01~G31)
+├── db/                   # LOSDB — SQL/Vector/Graph 스토리지 + Facade (V581~V586)
+├── gates/                # 릴리즈 게이트 44종 (G01~G45)
 ├── adapters_live/        # LLM 어댑터 (Claude / OpenAI / Ollama)
 └── ...
 ```
 
 ---
 
-## Phase 6 완성 현황
+## 릴리즈 이력 요약
 
 | 단계 | 버전 | 주요 내용 | 게이트 |
 |------|------|-----------|--------|
-| Stage A (Cleanup) | V546~V548 | ADR-027~031, GraphSync, Gate Hierarchy, LLM0Static | G25~G28 |
-| Stage B (PNE) | V551~V555 | PNECore / DebtPredictor / PreemptiveGate / FeedbackLearner | G29 |
-| Stage B+ (Corpus) | V557~V561 | CorpusIngestor + BGEM3Embedder + CIMBootstrap | G30 |
-| Stage C (MultiWork) | V562~V571 | MultiWorkOrchestrator + SharedCharacterDB + AuthorLicenseAPI | **G31** |
+| Phase 6 Stage A | V546~V548 | ADR-027~031, GraphSync, Gate Hierarchy, LLM0Static | G25~G28 |
+| Phase 6 Stage B | V551~V555 | PNECore / DebtPredictor / PreemptiveGate / FeedbackLearner | G29 |
+| Phase 6 Stage B+ | V557~V561 | CorpusIngestor + BGEM3Embedder + CIMBootstrap | G30 |
+| Phase 6 Stage C | V562~V571 | MultiWorkOrchestrator + SharedCharacterDB + AuthorLicenseAPI | **G31** |
+| 거버넌스 | V575~V580 | DEV_MODE 보안패치 / Logging / 어댑터 캐노니컬 / AsyncDiscipline | G32~G39 |
+| LOSDB Phase A | V581 | SchemaRegistry + MigrationManager (SQL/Vector/Graph Mock) | G40 |
+| LOSDB Phase B | V582~V585 | SQLiteRealAdapter / MigrationEngine / VectorRealAdapter / GraphRealAdapter | G41~G44 |
+| LOSDB Phase C | **V586** | **LOSDBClient Facade + cross_query + query_by_label** | **G45** |
 
 ---
 
-## 핵심 패키지 (Phase 6)
+## LOSDB 구조 (V586 기준)
 
-### `literary_system/corpus/` — 외부 코퍼스 브릿지
-| 모듈 | 역할 |
-|------|------|
-| `corpus_ingestor.py` | 시나리오 씬 수집 (1만 씬 합성) |
-| `bgem3_embedder.py` | BGE-M3 1024-dim 임베딩 |
-| `cim_bootstrap.py` | CIM 부트스트랩 |
-| `corpus_validator.py` | 라이선스·PII·품질 필터 |
+| 레이어 | Mock | REAL |
+|--------|------|------|
+| SQL | V581 ✅ | V582 ✅ |
+| Vector | V581 ✅ | V584 ✅ |
+| Graph | V581 ✅ | V585 ✅ |
+| **Facade** | — | **V586 ✅** |
 
-### `literary_system/multiwork/` — 다중작품 관리
-| 모듈 | 역할 |
-|------|------|
-| `multi_work_core.py` | WorkProject FSM, 세션 관리 |
-| `shared_character_db.py` | 공유 캐릭터 DB |
-| `shared_world_db.py` | 공유 세계관 DB |
-| `genre_transfer.py` | 장르 전이 학습 |
-| `project_isolation.py` | 프로젝트 격리 관리 |
-| `multi_work_cim.py` | 다중작품 CIM |
-| `author_license_api.py` | 저자 라이선스 API (PERSONAL / COMMERCIAL) |
-| `multi_work_orchestrator.py` | 통합 오케스트레이터 |
+```python
+from literary_system.db import LOSDBClient, LOSDBClientRecord
+from literary_system.db.sql_real_adapter import SQLiteRealAdapter
+from literary_system.db.vector_real_adapter import VectorRealAdapter
+from literary_system.db.graph_real_adapter import GraphRealAdapter
+
+client = LOSDBClient(
+    sql=SQLiteRealAdapter(db_path=":memory:"),
+    vector=VectorRealAdapter(dim=128),
+    graph=GraphRealAdapter(),
+)
+results = client.cross_query(["sql", "vector", "graph"], label="chapter_01")
+```
 
 ---
 
 ## 릴리즈 게이트
 
-총 30개 게이트가 전부 통과해야 릴리즈 가능한 설계입니다.
+총 **44개** 게이트가 전부 통과해야 릴리즈 가능한 설계입니다.
 
 ```python
 from literary_system.gates.release_gate import run_release_gate
 result = run_release_gate()
-# {"status": "pass", "gates_passed": 30, "total_gates": 30}
+# {"status": "pass", "gates_passed": 44, "total_gates": 44}
 ```
 
 | 범위 | 게이트 |
@@ -101,7 +107,9 @@ result = run_release_gate()
 | G01~G08 | LLM-0 / Arc / Budget / Leakage / Packaging / Pipeline / DRSE / Adapter |
 | G09~G16 | StudioAPI / RAG / SLM / Quality / LiveAdapter / SP2Tenant / SP1Adapter / SP4 |
 | G17~G24 | SP3Compliance / SP5Ops / ScenePipeline / DramaEpisode / RAGSP2 / SLMSP3 / NIE / NarrativeBlast |
-| G25~G31 | CodeCoupling / StoryQuality / PNE / LLM0Static / Corpus / MultiWork |
+| G25~G31 | CodeCoupling / StoryQuality / PNE / LLM0Static / Corpus / MultiWork / (AsyncDiscipline) |
+| G32~G39 | LoggingDiscipline / SchemaRoundTrip / AuthRegression / AdapterCanonical / GateRegistry / DuplicateZero / AsyncDiscipline / PerformanceBaseline |
+| G40~G45 | DBMigration / SQLRealAdapter / MigrationEngine / VectorRealAdapter / GraphRealAdapter / **LOSDBClient** |
 
 ---
 
@@ -122,16 +130,20 @@ pip install -r requirements.txt
 pip install -r requirements-dev.txt
 
 # 특정 패키지 테스트
-pytest tests/test_v562_v571_multiwork.py -v   # MultiWork (111 tests)
-pytest tests/test_v557_v561_corpus.py -v      # Corpus (33 tests)
-pytest tests/test_v551_v555_pne.py -v         # PNE
+pytest tests/test_v586_losdb_client.py -v      # LOSDBClient Facade (44 tests)
+pytest tests/test_v585_graph_real_adapter.py -v # GraphRealAdapter
+pytest tests/test_v584_vector_real_adapter.py -v # VectorRealAdapter
+pytest tests/test_v582_sql_real_adapter.py -v   # SQLiteRealAdapter
+pytest tests/test_v562_v571_multiwork.py -v    # MultiWork (111 tests)
+pytest tests/test_v557_v561_corpus.py -v       # Corpus (33 tests)
+pytest tests/test_v551_v555_pne.py -v          # PNE
 ```
 
 ---
 
 ## ADR 목록
 
-ADR-001 ~ ADR-031 (`docs/` 디렉터리 참조)
+ADR-001 ~ ADR-045 (`docs/adr/` 디렉터리 참조)
 
 ---
 
