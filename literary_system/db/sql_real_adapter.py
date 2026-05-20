@@ -193,6 +193,18 @@ class SQLiteRealAdapter(BaseMigrationAdapter):
         except Exception:
             return False
 
+    def get_rows(self, table_name: str) -> list:
+        """테이블에서 모든 행을 dict 리스트로 반환 (label=table_name 으로 LOSDBClient 호환)."""
+        if self.mock or not self.table_exists(table_name):
+            return []
+        try:
+            conn = self._get_connection()
+            cur = conn.execute(f"SELECT * FROM {table_name}")  # noqa: S608
+            cols = [d[0] for d in cur.description]
+            return [dict(zip(cols, row)) for row in cur.fetchall()]
+        except Exception:
+            return []
+
     def schema_info(self) -> dict:
         return {
             "adapter": "SQLiteRealAdapter",

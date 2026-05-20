@@ -121,6 +121,7 @@ def _build_registry() -> Dict[str, GateRegistryEntry]:
         "sql_real_adapter_g41":          ("ADR-041",  "V582",  "L1"),
         "vector_real_adapter_g43":       ("ADR-043",  "V584",  "L1"),
         "graph_real_adapter_g44":        ("ADR-044",  "V585",  "L1"),
+        "losdb_client_g45":             ("ADR-045",  "V586",  "L1"),
         "migration_engine_g42":          ("ADR-042",  "V583",  "L1"),
     }
 
