@@ -350,7 +350,7 @@ class TestGroupE_Gates:
     def test_tc35_total_gate_count(self):
         """TC35: 전체 게이트 수 41개 확인."""
         from literary_system.gates.gate_registry import GATE_REGISTRY
-        assert len(GATE_REGISTRY) == 41, f"게이트 수: {len(GATE_REGISTRY)}"  # V583: G42 추가로 41개
+        assert len(GATE_REGISTRY) == 42, f"게이트 수: {len(GATE_REGISTRY)}"  # V583: G42 추가로 41개
 
     def test_tc36_gates_list_has_g41(self):
         """TC36: GATES 리스트에 sql_real_adapter_g41 포함 확인."""
@@ -365,8 +365,8 @@ class TestGroupE_Gates:
         total = result.get("total_gates", 0)
         passed = result.get("gates_passed", 0)
         issues = result.get("issues", [])
-        assert total == 41, f"총 게이트 수 기대 41, 실제 {total}"  # V583: G42 추가로 41개
-        assert passed == 41, (
+        assert total == 42, f"총 게이트 수 기대 41, 실제 {total}"  # V583: G42 추가로 41개
+        assert passed == 42, (
             f"PASS 기대 41, 실제 {passed}. "
             f"FAIL 게이트: {issues}"
         )  # V583: G42 추가로 41개
