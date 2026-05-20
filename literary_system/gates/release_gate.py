@@ -1587,9 +1587,9 @@ def _gate_losdb_client_g45() -> dict:
 
     # 6) cross_query (3개 어댑터)
     try:
+        from literary_system.db.graph_real_adapter import GraphRealAdapter
         from literary_system.db.sql_real_adapter import SQLiteRealAdapter
         from literary_system.db.vector_real_adapter import VectorRealAdapter
-        from literary_system.db.graph_real_adapter import GraphRealAdapter
         sql2 = SQLiteRealAdapter(":memory:")
         vec2 = VectorRealAdapter(dim=1)
         vec2.upsert("cv1", [0.5], {"label": "chapter"})
