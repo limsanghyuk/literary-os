@@ -1110,7 +1110,7 @@ def _gate_sql_real_adapter_g41() -> dict:
     checks: list[str] = []
     try:
         # 1. 임포트 확인
-        from literary_system.db import SQLiteRealAdapter, Migration, BackendType
+        from literary_system.db import BackendType, Migration, SQLiteRealAdapter
         checks.append("import OK")
 
         # 2. MOCK 모드 check_connection
@@ -1152,7 +1152,8 @@ def _gate_sql_real_adapter_g41() -> dict:
         checks.append("CLI parser OK")
 
         # 7. CLI status 실행
-        import io, sys
+        import io
+        import sys
         captured = io.StringIO()
         old_stdout = sys.stdout
         sys.stdout = captured
