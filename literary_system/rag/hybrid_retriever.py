@@ -409,3 +409,91 @@ class HybridRetriever:
             "reranker": self._reranker is not None,
             "rrf_k": self._merger.k,
         }
+
+
+# ===========================================================================
+# V589 — HybridRetrieverV2 (ADR-050)
+# 기존 V438 HybridRetriever 완전 보존, V2는 독립 클래스로 추가
+# ===========================================================================
+
+class HybridRetrieverV2(HybridRetriever):
+    """BackendHealthMonitor 통합 하이브리드 검색 엔진 (SP-A.2).
+
+    V438 HybridRetriever를 상속하여:
+    - BackendHealthMonitor 주입 → Dense 검색 가용성 런타임 확인
+    - VECTOR 백엔드 불가용 시 BM25 단독 폴백
+    - health_report() — 현재 가용성 상태 반환
+    """
+
+    def __init__(
+        self,
+        bm25: BM25Retriever,
+        dense: DenseRetriever,
+        merger: Optional[RRFMerger] = None,
+        reranker: Optional[CrossEncoderReRanker] = None,
+        bm25_weight: float = 0.5,
+        dense_weight: float = 0.5,
+        candidate_multiplier: int = 3,
+        health_monitor: Optional[Any] = None,
+    ) -> None:
+        super().__init__(
+            bm25=bm25,
+            dense=dense,
+            merger=merger,
+            reranker=reranker,
+            bm25_weight=bm25_weight,
+            dense_weight=dense_weight,
+            candidate_multiplier=candidate_multiplier,
+        )
+        self._health_monitor = health_monitor
+
+    def _is_dense_available(self) -> bool:
+        """Dense(Vector) 백엔드 현재 가용 여부."""
+        if self._health_monitor is None:
+            return True
+        try:
+            from literary_system.db.schema_registry import BackendType
+            available = self._health_monitor.get_available_backends()
+            return BackendType.VECTOR in available
+        except Exception:
+            return True  # 판단 불가 시 낙관적 기본값
+
+    def search(
+        self,
+        query: str,
+        top_k: int = 10,
+        use_rerank: bool = True,
+        rerank_top_k: Optional[int] = None,
+    ) -> List[RankedResult]:
+        """HealthMonitor 가용성 확인 후 Hybrid 또는 BM25 단독 검색."""
+        if not self._is_dense_available():
+            # BM25 단독 폴백
+            bm25_hits = self._bm25.search(query, top_k=top_k)
+            results = []
+            for rank, (doc_id, score) in enumerate(bm25_hits[:top_k], start=1):
+                doc = self._doc_store.get(doc_id)
+                results.append(RankedResult(
+                    doc_id=doc_id,
+                    text=doc.text if doc else "",
+                    score=score,
+                    rank=rank,
+                    source="bm25_fallback",
+                    metadata={**(doc.metadata if doc else {}), "fallback": True},
+                ))
+            return results
+
+        # 정상 경로: 부모 HybridRetriever search
+        return super().search(query, top_k=top_k, use_rerank=use_rerank, rerank_top_k=rerank_top_k)
+
+    def health_report(self) -> Dict[str, Any]:
+        """현재 가용성 상태 반환."""
+        dense_ok = self._is_dense_available()
+        base: Dict[str, Any] = {
+            "version": "V2",
+            "dense_available": dense_ok,
+            "mode": "hybrid" if dense_ok else "bm25_fallback",
+            "indexed_docs": self.indexed_count,
+        }
+        if self._health_monitor is not None:
+            base["health_monitor"] = self._health_monitor.health_report()
+        return base

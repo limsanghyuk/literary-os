@@ -1,8 +1,8 @@
-# MANIFEST — Literary OS V588
+# MANIFEST — Literary OS V589
 
-버전: 9.3.0  
+버전: 9.4.0  
 릴리즈일: 2026-05-21  
-빌드 타입: V588 SP-A.1 릴리즈
+빌드 타입: V589 SP-A.2 릴리즈
 
 ## 테스트 결과
 

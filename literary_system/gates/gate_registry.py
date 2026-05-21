@@ -128,6 +128,7 @@ def _build_registry() -> Dict[str, GateRegistryEntry]:
         "losdb_client_g45":             ("ADR-045",  "V586",  "L1"),
         "e2e_prose_g46":                 ("ADR-047",  "V587",  "L1"),
         "query_interface_g47":          ("ADR-049",  "V588",  "L1"),
+        "partial_availability_g48":     ("ADR-050",  "V589",  "L1"),
         "migration_engine_g42":          ("ADR-042",  "V583",  "L1"),
     }
 

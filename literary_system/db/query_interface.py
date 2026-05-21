@@ -1,6 +1,7 @@
-"""ADR-049 | V588 | L1 — QueryInterface: LOSDB 통합 쿼리 레이어.
+"""ADR-049/050 | V589 | L1 — QueryInterface: LOSDB 통합 쿼리 레이어.
 
 SP-A.1: LOSDBClient Facade 위에 시나리오 도메인 쿼리 API를 제공한다.
+SP-A.2: BackendHealthMonitor 통합 — 폴백 로직 지원.
 - find_scenes(): 씬 복합 조건 검색 (캐릭터 / 유사도 / 그래프 홉 / 에피소드 범위)
 - find_characters(): 성격 벡터 유사도 기반 캐릭터 검색
 - cross_backend_aggregate(): 복수 백엔드 집계
@@ -10,7 +11,6 @@ LLM-0 원칙: 외부 LLM 호출 없음.
 from __future__ import annotations
 
 import logging
-import os
 import time
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Sequence
@@ -83,6 +83,7 @@ class QueryInterface:
 
     LOSDBClient Facade 위에 Literary OS 도메인 쿼리를 제공한다.
     응답 SLO: 1.0초 (ADR-049 C1).
+    SP-A.2: BackendHealthMonitor 통합으로 부분 가용 상태 폴백 지원.
     """
 
     SLO_RESPONSE_SEC: float = 1.0
@@ -91,14 +92,21 @@ class QueryInterface:
         self,
         client: Optional[LOSDBClient] = None,
         response_timeout_sec: float = SLO_RESPONSE_SEC,
+        health_monitor: Optional[Any] = None,
     ) -> None:
         self._client = client
         self._timeout = response_timeout_sec
+        self._health_monitor = health_monitor  # BackendHealthMonitor (선택)
         logger.debug(
-            "QueryInterface 초기화 — backends=%s timeout=%.1fs",
+            "QueryInterface 초기화 — backends=%s timeout=%.1fs health_monitor=%s",
             self._client.available_backends() if self._client else [],
             self._timeout,
+            "연결됨" if health_monitor else "없음",
         )
+
+    # ------------------------------------------------------------------
+    # 공개 API
+    # ------------------------------------------------------------------
 
     def find_scenes(
         self,
@@ -117,8 +125,10 @@ class QueryInterface:
             logger.warning("QueryInterface: LOSDBClient 미연결 — 빈 결과 반환")
             return results
 
+        available = self._get_available_backends()
+
         # 1) SQL 레이블 검색 (캐릭터 기반)
-        if character:
+        if character and BackendType.SQL in available:
             for rec in self._safe_query_label(BackendType.SQL, character):
                 ep = int(rec.metadata.get("episode", 0))
                 if episode_range and not (episode_range[0] <= ep <= episode_range[1]):
@@ -129,7 +139,7 @@ class QueryInterface:
                 ))
 
         # 2) Vector 유사도 검색
-        if similar_to:
+        if similar_to and BackendType.VECTOR in available:
             for scene_id, score in self._safe_query_similar(similar_to, limit):
                 results.append(SceneResult(
                     scene_id=scene_id, episode=0, label="scene_vector",
@@ -138,7 +148,7 @@ class QueryInterface:
                 ))
 
         # 3) Graph 홉 검색
-        if graph_within_hops is not None and character:
+        if graph_within_hops is not None and character and BackendType.GRAPH in available:
             for rec in self._safe_query_label(BackendType.GRAPH, character):
                 hops = int(rec.metadata.get("hops", 0))
                 ep = int(rec.metadata.get("episode", 0))
@@ -179,6 +189,11 @@ class QueryInterface:
             logger.warning("QueryInterface: LOSDBClient 미연결 — 빈 결과 반환")
             return results
 
+        available = self._get_available_backends()
+        if BackendType.VECTOR not in available:
+            logger.warning("QueryInterface.find_characters: VECTOR 백엔드 불가용 — 빈 결과 반환")
+            return results
+
         for char_id, score in self._safe_query_similar(similar_personality, limit):
             results.append(CharacterResult(
                 character_id=char_id, name=char_id,
@@ -207,7 +222,16 @@ class QueryInterface:
             logger.warning("QueryInterface: LOSDBClient 미연결 — 빈 결과 반환")
             return []
 
-        target_backends = list(backends) if backends else self._client.available_backends()
+        available = self._get_available_backends()
+        if backends:
+            target_backends = [b for b in backends if b in available]
+        else:
+            target_backends = [b for b in self._client.available_backends() if b in available]
+
+        if not target_backends:
+            logger.warning("QueryInterface.cross_backend_aggregate: 가용 백엔드 없음")
+            return []
+
         all_records = self._client.cross_query(target_backends, group_by)
 
         backend_counts: Dict[str, int] = {}
@@ -239,7 +263,7 @@ class QueryInterface:
             return {"status": "no_client", "backends": []}
         statuses = self._client.check_all_connections()
         all_ok = all(v for v in statuses.values())
-        return {
+        result: Dict[str, Any] = {
             "status": "HEALTHY" if all_ok else "DEGRADED",
             "backends": [b.value for b in self._client.available_backends()],
             "connection_statuses": {
@@ -247,14 +271,27 @@ class QueryInterface:
                 for k, v in statuses.items()
             },
         }
+        if self._health_monitor is not None:
+            result["health_monitor"] = self._health_monitor.health_report()
+        return result
 
     # ------------------------------------------------------------------
     # 내부 헬퍼
     # ------------------------------------------------------------------
 
+    def _get_available_backends(self) -> List[BackendType]:
+        """health_monitor가 있으면 가용 백엔드 필터링, 없으면 전체 반환."""
+        if self._health_monitor is not None:
+            return self._health_monitor.get_available_backends()
+        if self._client is not None:
+            return self._client.available_backends()
+        return []
+
     def _safe_query_label(
         self, backend: BackendType, label: str
     ) -> List[LOSDBClientRecord]:
+        if self._client is None:
+            return []
         if backend not in self._client.available_backends():
             return []
         try:
@@ -266,6 +303,8 @@ class QueryInterface:
     def _safe_query_similar(
         self, vector: List[float], limit: int
     ) -> List[tuple]:
+        if self._client is None:
+            return []
         if BackendType.VECTOR not in self._client.available_backends():
             return []
         try:
