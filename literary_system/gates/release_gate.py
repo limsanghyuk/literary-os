@@ -1789,6 +1789,7 @@ _GATE_TIER: dict = {
     "losdb_client_g45":              "L1",
     "e2e_prose_g46":                 "L1",
     "query_interface_g47":          "L1",
+    "partial_availability_g48":     "L1",
     # 나머지는 L2 이상 — 기본값 L2
 }
 
@@ -1972,4 +1973,87 @@ def _gate_query_interface_g47() -> dict:
 
 GATES.append(
     ("query_interface_g47", "QueryInterfaceGate: LOSDB 통합 쿼리 레이어 (Gate 47, ADR-049)", _gate_query_interface_g47),
+)
+
+
+def _gate_partial_availability_g48() -> dict:
+    """Gate G48: PartialAvailabilityGate — BackendHealthMonitor (ADR-050)."""
+    import pathlib
+    checks: dict = {}
+
+    # PA-1: 임포트
+    try:
+        from literary_system.db.health_monitor import (
+            BackendCircuitState,
+            AvailabilityState,
+            BackendHealthMonitor,
+            BackendHealthRecord,
+        )
+        checks["PA-1"] = True
+    except ImportError as exc:
+        return {"pass": False, "error": f"PA-1 임포트 실패: {exc}"}
+
+    # PA-2: AvailabilityState 4종 존재
+    states = {s.value for s in AvailabilityState}
+    checks["PA-2"] = states == {"FULL", "PARTIAL_DEGRADED", "CRITICAL", "OFFLINE"}
+
+    # PA-3: BackendCircuitState 3종 존재
+    cs = {s.value for s in BackendCircuitState}
+    checks["PA-3"] = cs == {"CLOSED", "OPEN", "HALF_OPEN"}
+
+    # PA-4: 빈 모니터 → OFFLINE
+    m = BackendHealthMonitor(ping_interval_sec=0.0)
+    checks["PA-4"] = m.overall_state() == AvailabilityState.OFFLINE
+
+    # PA-5: T1 시나리오 — 3 backends FULL
+    from literary_system.db.schema_registry import BackendType
+    m2 = BackendHealthMonitor(ping_interval_sec=0.0)
+    m2.register(BackendType.SQL,    ping_fn=lambda: True)
+    m2.register(BackendType.VECTOR, ping_fn=lambda: True)
+    m2.register(BackendType.GRAPH,  ping_fn=lambda: True)
+    m2.check_all()
+    checks["PA-5"] = m2.overall_state() == AvailabilityState.FULL
+
+    # PA-6: T2 시나리오 — 1 backend force_open → PARTIAL_DEGRADED
+    m2.force_open(BackendType.VECTOR)
+    checks["PA-6"] = m2.overall_state() == AvailabilityState.PARTIAL_DEGRADED
+
+    # PA-7: T3 시나리오 — 2 backends open → CRITICAL
+    m2.force_open(BackendType.GRAPH)
+    checks["PA-7"] = m2.overall_state() == AvailabilityState.CRITICAL
+
+    # PA-8: T4 시나리오 — all open → OFFLINE
+    m2.force_open(BackendType.SQL)
+    checks["PA-8"] = m2.overall_state() == AvailabilityState.OFFLINE
+
+    # PA-9: QueryInterface health_monitor 주입 지원
+    from literary_system.db.query_interface import QueryInterface
+    import inspect
+    sig = inspect.signature(QueryInterface.__init__)
+    checks["PA-9"] = "health_monitor" in sig.parameters
+
+    # PA-10: LLM-0 — health_monitor.py에 외부 LLM 호출 없음
+    src_path = pathlib.Path(__file__).parent.parent / "db" / "health_monitor.py"
+    forbidden = ["requests", "httpx", "openai", "anthropic"]
+    llm0_pass = True
+    if src_path.exists():
+        src_text = src_path.read_text(encoding="utf-8")
+        for kw in forbidden:
+            if f"import {kw}" in src_text or f"from {kw}" in src_text:
+                llm0_pass = False
+                break
+    checks["PA-10"] = llm0_pass
+
+    all_pass = all(checks.values())
+    failed = [k for k, v in checks.items() if not v]
+    return {
+        "pass": all_pass,
+        "checkpoints": checks,
+        "details": f"PartialAvailabilityGate {'PASS' if all_pass else 'FAIL'} — {sum(checks.values())}/10 체크포인트",
+        **({"failed_checkpoints": failed} if failed else {}),
+    }
+
+
+GATES.append(
+    ("partial_availability_g48", "PartialAvailabilityGate: BackendHealthMonitor T1~T4 (Gate 48, ADR-050)", _gate_partial_availability_g48),
 )
