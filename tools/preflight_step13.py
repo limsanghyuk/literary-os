@@ -31,6 +31,10 @@ WHITELIST: set[str] = {
     # pytest 플러그인들은 pytest 설치 시 함께 포함
     "pytest_asyncio",
     "_pytest",
+    # 로컬 패키지 (repo root 디렉토리)
+    "tools",
+    # 선택적 패키지 — pytest.importorskip으로 처리되어 미설치 시 테스트 자동 SKIP
+    "qdrant_client",
 }
 
 # 모듈명 → 패키지명 직접 매핑 (importlib.metadata가 못 잡는 케이스 보완)
