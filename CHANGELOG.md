@@ -5,6 +5,33 @@
 ---
 
 
+## [10.0.1] — V595.1 Integrity Hotfix — 2026-05-21
+
+### 버그 수정 12건
+
+**P0 Critical (6건):**
+- FIX-1: G32 print() 위반 수정 (phase_a_exit_gate.py → sys.stdout.write)
+- FIX-2: GraphRealAdapter unknown op → ValueError + 원자적 snapshot 롤백
+- FIX-3: BackendHealthMonitor last_check_ok 필드 — 첫 ping 실패 즉시 unavailable
+- FIX-4: literary_cli.py sc%4 → (sc-1)%4 (1-based 씬 오프셋)
+- FIX-5: _score_debt/_score_tension 빈 텍스트 조기 반환 0.0
+- FIX-6: CorpusPiiFilter.filter_entries 뮤테이션 → dataclasses.replace()
+
+**P1 High (6건):**
+- FIX-7: _score_arc 위치기반 기승전결 순서 검증
+- FIX-8: _NARRATIVE_MARKERS 한국어 조사 7개 제거 (DRSE 편향 해소)
+- FIX-9: MinHash _shingle hash() → hashlib.md5 (PYTHONHASHSEED 독립)
+- FIX-10: E2E CP-6 첫 씬 100~500자 범위 강제
+- FIX-11: SQLiteRealAdapter _quote_identifier() SQL injection 방지
+- FIX-12: GraphRealAdapter.add_edge 중복 id 처리
+
+**검증:**
+- run_release_gate.py: 51/51 PASS
+- check_version_consistency --strict: ALL CONSISTENT
+- SHA256SUMS.txt: 867 files, 0 mismatch
+
+---
+
 ## [10.0.0] — V595 — 2026-05-21
 
 ### Phase A 완료 + Integrity Hotfix
