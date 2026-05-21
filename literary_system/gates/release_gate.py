@@ -2534,3 +2534,18 @@ def _gate_constitution_g51() -> dict:
 
 
 GATES.append(("constitution_g51", "ConstitutionGate G51", _gate_constitution_g51))
+
+
+# ---------------------------------------------------------------------------
+# Gate G52 — Phase A Exit Gate (SP-A.8, V595, ADR-055)
+# ---------------------------------------------------------------------------
+def _gate_phase_a_exit_g52() -> dict:
+    """
+    Phase A Exit Gate G52: SP-A.8 Minimal-CLI + Phase A 6축 완료 검증.
+    ADR-055에 의거한 Phase A 최종 완료 기준.
+    """
+    from literary_system.gates.phase_a_exit_gate import _gate_phase_a_exit_g52 as _impl
+    return _impl()
+
+
+GATES.append(("phase_a_exit_g52", "Phase A Exit Gate G52 — Minimal-CLI + Phase A 완료 (ADR-055)", _gate_phase_a_exit_g52))
