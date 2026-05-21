@@ -106,6 +106,14 @@ def get_module_classes(module_str: str) -> tuple[Path | None, list[str]]:
     for node in tree.body:  # 최상위 레벨만
         if isinstance(node, (ast.ClassDef, ast.FunctionDef, ast.AsyncFunctionDef)):
             classes.append(node.name)
+        # 모듈 수준 상수·변수 할당도 수집 (THRESHOLD_XX = ..., DRIFT_XX = ... 등)
+        elif isinstance(node, ast.Assign):
+            for target in node.targets:
+                if isinstance(target, ast.Name):
+                    classes.append(target.id)
+        elif isinstance(node, ast.AnnAssign):
+            if isinstance(node.target, ast.Name):
+                classes.append(node.target.id)
     return abs_path, classes
 
 
