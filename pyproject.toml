@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "literary-os"
-version = "9.8.0"
+version = "9.9.0"
 description = "Literary OS V586 — LOSDBClient Facade + cross_query + Gate G45 (ADR-045), LOSDB Phase C, 5897+ PASS 44 Gates"
 readme = "README.md"
 requires-python = ">=3.10"

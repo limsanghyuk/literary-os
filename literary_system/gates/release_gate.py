@@ -2376,3 +2376,161 @@ def _gate_equivalence_g50() -> dict:  # noqa: C901
 GATES.append(
     ("equivalence_g50", "EquivalenceGate: MOCK↔REAL 5축 검증 + 골든셋 + drift 감지 (Gate 50, ADR-052)", _gate_equivalence_g50),
 )
+
+
+# =============================================================================
+# Gate G51 — ConstitutionGate (SP-A.7, V594, ADR-054)
+# =============================================================================
+
+def _gate_constitution_g51() -> dict:
+    """
+    ConstitutionGate: LOSConstitution v1.0 품질 헌법 검증.
+
+    CT-1: LOSConstitution import
+    CT-2: ConstitutionWeights 기본값 (0.30/0.20/0.20/0.15/0.15)
+    CT-3: ConstitutionWeights 합계 = 1.0
+    CT-4: score_scene() 반환값 [0,1] 범위
+    CT-5: 풍부한 장면 R(scene) >= 0.65
+    CT-6: score_work() ConstitutionWorkScore 구조
+    CT-7: score_work() mean_total >= 0.65 (10개 풍부한 장면)
+    CT-8: score_work() variance <= 0.05
+    CT-9: rlhf_reward() 범위 [-1, 1]
+    CT-10: LLM-0 준수 (외부 LLM 호출 없음)
+    """
+    checks: dict = {}
+    errors: list = []
+
+    # 공통 풍부한 장면 텍스트 (기승전결 + 갈등 + 대화)
+    _RICH_SCENE = (
+        "이도령과 춘향이 광한루에서 처음 만났다. 새로운 인연이 시작되었다. "
+        '"이도령이라 하오." 이도령이 말했다. "저는 춘향입니다." 그녀가 답했다. '
+        "이어서 두 사람은 이야기를 나눴다. 봄바람이 꽃잎을 날렸다. "
+        "하지만 변학도의 갈등이 시작되었다. 위기와 대립이 고조되었다. "
+        "마침내 이도령이 해결책을 찾아 돌아왔다. 결국 두 사람의 사랑이 승리했다. "
+        "드디어 행복한 결말이 찾아왔다. "
+    )
+
+    # CT-1: import
+    try:
+        from literary_system.constitution.los_constitution import (
+            LOSConstitution, ConstitutionWeights,
+            ConstitutionSceneScore, ConstitutionWorkScore,
+        )
+        checks["CT-1"] = True
+    except Exception as e:
+        checks["CT-1"] = False
+        errors.append(f"CT-1 import 실패: {e}")
+        return {"gate_name": "ConstitutionGate G51", "pass": False,
+                "checkpoints": checks, "errors": errors}
+
+    # CT-2: 기본값
+    try:
+        w = ConstitutionWeights()
+        assert w.drse == 0.30 and w.debt == 0.20 and w.arc == 0.20
+        assert w.tension == 0.15 and w.prose == 0.15
+        checks["CT-2"] = True
+    except Exception as e:
+        checks["CT-2"] = False
+        errors.append(f"CT-2 기본값: {e}")
+
+    # CT-3: 합계 = 1.0
+    try:
+        w = ConstitutionWeights()
+        total = w.drse + w.debt + w.arc + w.tension + w.prose
+        assert abs(total - 1.0) < 1e-6
+        checks["CT-3"] = True
+    except Exception as e:
+        checks["CT-3"] = False
+        errors.append(f"CT-3 합계: {e}")
+
+    # CT-4: score_scene 범위
+    try:
+        los = LOSConstitution()
+        s = los.score_scene("짧은 텍스트")
+        assert 0.0 <= s <= 1.0
+        checks["CT-4"] = True
+    except Exception as e:
+        checks["CT-4"] = False
+        errors.append(f"CT-4 범위: {e}")
+
+    # CT-5: 풍부한 장면 R(scene) >= 0.65
+    try:
+        los = LOSConstitution()
+        score = los.score_scene(_RICH_SCENE * 3)
+        assert score >= 0.65, f"R(scene)={score:.4f} < 0.65"
+        checks["CT-5"] = True
+    except Exception as e:
+        checks["CT-5"] = False
+        errors.append(f"CT-5 R(scene)>=0.65: {e}")
+
+    # CT-6: score_work 구조
+    try:
+        los = LOSConstitution()
+        scenes = [_RICH_SCENE * 3] * 5
+        ws = los.score_work(scenes)
+        assert hasattr(ws, "mean_total") and hasattr(ws, "variance_total")
+        assert hasattr(ws, "work_score") and ws.scene_count == 5
+        checks["CT-6"] = True
+    except Exception as e:
+        checks["CT-6"] = False
+        errors.append(f"CT-6 score_work 구조: {e}")
+
+    # CT-7: 10개 장면 mean_total >= 0.65
+    try:
+        los = LOSConstitution()
+        scenes = [_RICH_SCENE * 3] * 10
+        ws = los.score_work(scenes)
+        assert ws.mean_total >= 0.65, f"mean={ws.mean_total:.4f} < 0.65"
+        checks["CT-7"] = True
+    except Exception as e:
+        checks["CT-7"] = False
+        errors.append(f"CT-7 mean>=0.65: {e}")
+
+    # CT-8: variance <= 0.05
+    try:
+        los = LOSConstitution()
+        scenes = [_RICH_SCENE * 3] * 10
+        ws = los.score_work(scenes)
+        assert ws.variance_total <= 0.05, f"variance={ws.variance_total:.6f} > 0.05"
+        checks["CT-8"] = True
+    except Exception as e:
+        checks["CT-8"] = False
+        errors.append(f"CT-8 variance<=0.05: {e}")
+
+    # CT-9: rlhf_reward [-1, 1]
+    try:
+        los = LOSConstitution()
+        reward = los.rlhf_reward("생성된 텍스트 " * 20, "원본 텍스트 " * 20)
+        assert -1.0 <= reward <= 1.0
+        checks["CT-9"] = True
+    except Exception as e:
+        checks["CT-9"] = False
+        errors.append(f"CT-9 rlhf_reward: {e}")
+
+    # CT-10: LLM-0 준수
+    try:
+        import inspect
+        import literary_system.constitution.los_constitution as cmod
+        src = inspect.getsource(cmod)
+        forbidden = ["openai.ChatCompletion", "anthropic.Anthropic",
+                     "requests.post", "httpx.post"]
+        for pat in forbidden:
+            assert pat not in src, f"LLM-0 위반: {pat}"
+        checks["CT-10"] = True
+    except Exception as e:
+        checks["CT-10"] = False
+        errors.append(f"CT-10 LLM-0: {e}")
+
+    passed = all(checks.values())
+    passed_count = sum(1 for v in checks.values() if v)
+    return {
+        "gate_name":   "ConstitutionGate: LOSConstitution v1.0 품질 헌법 (Gate 51, ADR-054)",
+        "pass":        passed,
+        "gate":        "constitution_g51",
+        "checkpoints": checks,
+        "details":     f"ConstitutionGate {'PASS' if passed else 'FAIL'} — {passed_count}/10 체크포인트",
+        "errors":      errors,
+    }
+
+
+GATES.append(("constitution_g51", "ConstitutionGate G51", _gate_constitution_g51))
