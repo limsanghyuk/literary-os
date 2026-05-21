@@ -2,6 +2,7 @@
 
 from .graph_real_adapter import GraphEdgeRecord, GraphRealAdapter, GraphRecord
 from .losdb_client import LOSDBClient, LOSDBClientRecord
+from .query_interface import AggregateResult, CharacterResult, QueryInterface, SceneResult
 from .migration_engine import MigrationEngine, MigrationExecutionRecord, MigrationPlan
 from .migration_manager import (
     BaseMigrationAdapter,
@@ -38,5 +39,10 @@ __all__ = [
     "MigrationPlan",
     "MigrationExecutionRecord",
     "LOSDBClient",
+    "LOSDBClientRecord",
+    "QueryInterface",
+    "SceneResult",
+    "CharacterResult",
+    "AggregateResult",
     "LOSDBClientRecord",
 ]
