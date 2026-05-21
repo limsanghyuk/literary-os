@@ -5,6 +5,21 @@
 ---
 
 
+## [10.0.0] — V595 — 2026-05-21
+
+### Phase A 완료 + Integrity Hotfix
+
+**SP-A.8 신규 구현:**
+- `apps/cli/literary_cli.py` — Minimal-CLI v0.1 (analyze/repair/generate)
+- `literary_system/gates/phase_a_exit_gate.py` — Gate G52 (6축 검증)
+- ADR-055 — Phase A Exit Gate 의사결정
+
+**V595.1 버그 수정 (12건):**
+- P0: G32 print() 위반 수정, GraphRealAdapter 원자적 롤백, BackendHealthMonitor last_check_ok, sc%4→(sc-1)%4, 빈텍스트 0.19→0.0, PII 뮤테이션 방지
+- P1: _score_arc 위치기반 순서검증, DRSE 조사마커 제거, MinHash hash()→md5, E2E CP-6 100~500자 강제, SQLite identifier quoting, add_edge 중복 처리
+
+---
+
 ## [9.2.0] — V587 — 2026-05-20
 
 ### SP-α 외부 신뢰 회복 (ADR-048) + SP-β Gate 계층화 + E2E 게이트

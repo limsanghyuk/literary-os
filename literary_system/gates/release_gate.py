@@ -2456,7 +2456,7 @@ def _gate_constitution_g51() -> dict:
     # CT-5: 풍부한 장면 R(scene) >= 0.65
     try:
         los = LOSConstitution()
-        score = los.score_scene(_RICH_SCENE * 3)
+        score = los.score_scene(_RICH_SCENE)  # BUG-07 fix: 단일 씬 (반복 텍스트는 arc 위치검증에 불리)
         assert score >= 0.65, f"R(scene)={score:.4f} < 0.65"
         checks["CT-5"] = True
     except Exception as e:
@@ -2466,7 +2466,7 @@ def _gate_constitution_g51() -> dict:
     # CT-6: score_work 구조
     try:
         los = LOSConstitution()
-        scenes = [_RICH_SCENE * 3] * 5
+        scenes = [_RICH_SCENE] * 5  # BUG-07 fix: 단일 씬
         ws = los.score_work(scenes)
         assert hasattr(ws, "mean_total") and hasattr(ws, "variance_total")
         assert hasattr(ws, "work_score") and ws.scene_count == 5
@@ -2478,7 +2478,7 @@ def _gate_constitution_g51() -> dict:
     # CT-7: 10개 장면 mean_total >= 0.65
     try:
         los = LOSConstitution()
-        scenes = [_RICH_SCENE * 3] * 10
+        scenes = [_RICH_SCENE] * 10  # BUG-07 fix
         ws = los.score_work(scenes)
         assert ws.mean_total >= 0.65, f"mean={ws.mean_total:.4f} < 0.65"
         checks["CT-7"] = True
@@ -2489,7 +2489,7 @@ def _gate_constitution_g51() -> dict:
     # CT-8: variance <= 0.05
     try:
         los = LOSConstitution()
-        scenes = [_RICH_SCENE * 3] * 10
+        scenes = [_RICH_SCENE] * 10  # BUG-07 fix
         ws = los.score_work(scenes)
         assert ws.variance_total <= 0.05, f"variance={ws.variance_total:.6f} > 0.05"
         checks["CT-8"] = True

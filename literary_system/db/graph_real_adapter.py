@@ -170,6 +170,9 @@ class GraphRealAdapter(BaseMigrationAdapter):
             self.add_node(src_id, label=src_id)
         if dst_id not in self._nodes:
             self.add_node(dst_id, label=dst_id)
+        # 중복 id 처리: 기존 엣지가 있으면 adjacency 목록에서 먼저 제거
+        if id in self._edges:
+            self._del_edge(id)
         self._edges[id] = GraphEdgeRecord(
             id=id,
             src_id=src_id,
@@ -347,7 +350,10 @@ class GraphRealAdapter(BaseMigrationAdapter):
                 elif op == "remove_edge":
                     self.remove_edge(op_dict["edge_id"])
                 else:
-                    logger.warning("GraphRealAdapter.apply: 알 수 없는 op '%s'", op)
+                    raise ValueError(
+                        f"GraphRealAdapter.apply: 알 수 없는 op '{op}' "
+                        f"(migration_id={migration.migration_id!r})"
+                    )
 
             # DDL(up_script) 처리 — 주석 형태의 Cypher 시뮬레이션
             if migration.up_script:
@@ -358,6 +364,15 @@ class GraphRealAdapter(BaseMigrationAdapter):
             return True
         except Exception as exc:
             logger.error("GraphRealAdapter.apply 실패: %s | %s", migration.migration_id, exc)
+            # 스냅샷으로 원자적 롤백 (ADR-044 원자성 보장)
+            if self._snapshot is not None:
+                nodes, edges, adj, radj = self._snapshot
+                self._nodes = nodes
+                self._edges = edges
+                self._adj = defaultdict(list, adj)
+                self._radj = defaultdict(list, radj)
+                self._snapshot = None
+                logger.info("GraphRealAdapter.apply: 스냅샷 롤백 완료")
             return False
 
     def rollback(self, migration: Migration) -> bool:

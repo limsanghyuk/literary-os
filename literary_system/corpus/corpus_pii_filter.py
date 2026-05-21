@@ -17,7 +17,7 @@ ADR-053 참조.
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass, field
+from dataclasses import replace, dataclass, field
 from typing import List, Optional, TYPE_CHECKING
 
 if TYPE_CHECKING:
@@ -147,9 +147,9 @@ class CorpusPiiFilter:
             if self._strict:
                 removed += 1
             else:
-                # 플레이스홀더 대체 후 유지
-                entry.text = self.scrub(entry.text)
-                clean.append(entry)
+                # BUG-04 fix: 원본 객체 뮤테이션 방지 — 복사본 생성
+                scrubbed_entry = replace(entry, text=self.scrub(entry.text))
+                clean.append(scrubbed_entry)
 
         return clean, removed
 

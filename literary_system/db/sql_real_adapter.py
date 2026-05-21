@@ -18,6 +18,16 @@ from .schema_registry import BackendType, MigrationRecord, SchemaRegistry
 logger = logging.getLogger(__name__)
 
 
+_IDENTIFIER_RE = re.compile(r'^[A-Za-z_][A-Za-z0-9_]*$')
+
+
+def _quote_identifier(name: str) -> str:
+    """SQL 식별자 안전 인용 — injection 방지 (BUG-09 fix: SQLite table name safety)."""
+    if not _IDENTIFIER_RE.match(name):
+        raise ValueError(f"Unsafe SQL identifier: {name!r}")
+    return f'"{name}"'
+
+
 class SQLiteRealAdapter(BaseMigrationAdapter):
     """sqlite3 기반 REAL 마이그레이션 어댑터 (ADR-041, V582)."""
 
@@ -199,7 +209,7 @@ class SQLiteRealAdapter(BaseMigrationAdapter):
             return []
         try:
             conn = self._get_connection()
-            cur = conn.execute(f"SELECT * FROM {table_name}")  # noqa: S608
+            cur = conn.execute(f"SELECT * FROM {_quote_identifier(table_name)}")  # noqa: S608
             cols = [d[0] for d in cur.description]
             return [dict(zip(cols, row)) for row in cur.fetchall()]
         except Exception:

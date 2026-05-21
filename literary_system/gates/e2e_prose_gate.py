@@ -261,18 +261,25 @@ def _cp6_cli_generate() -> CPResult:
         pipeline = SceneGenerationPipeline(gateway=_MockGateway())
         result = pipeline.run()
 
-        # 결과 텍스트 추출
-        if hasattr(result, "full_text"):
-            text = result.full_text()
-        elif hasattr(result, "scenes"):
-            text = " ".join(s.text for s in result.scenes if s.success)
-        else:
-            text = str(result)
+        # 결과 텍스트 추출 — 첫 번째 성공 씬 기준 (100~500자 범위 검증)
+        # full_text()는 전체 씬 연결이므로 단일 씬 품질과 무관 → 첫 씬만 측정
+        first_scene_text = ""
+        if hasattr(result, "scenes") and result.scenes:
+            for sc in result.scenes:
+                if hasattr(sc, "success") and sc.success and hasattr(sc, "text") and sc.text.strip():
+                    first_scene_text = sc.text.strip()
+                    break
+        if not first_scene_text and hasattr(result, "full_text"):
+            first_scene_text = result.full_text().strip()
 
-        char_count = len(text.strip())
-        # MOCK 모드: 텍스트 존재 여부만 확인 (길이 완화)
+        char_count = len(first_scene_text)
         if char_count == 0:
-            raise AssertionError("SceneGenerationPipeline MOCK 산출 결과 없음")
+            raise AssertionError("SceneGenerationPipeline MOCK: 성공 씬 없음")
+        if not (100 <= char_count <= 500):
+            raise AssertionError(
+                f"CP-6: 첫 씬 {char_count}자 — 100~500자 범위 이탈. "
+                "MockLLMBridge scripted_responses 길이를 100~500자로 조정하세요."
+            )
 
         elapsed = (time.perf_counter() - t0) * 1000
         return CPResult("CP-6", "Minimal-CLI generate 100~500자", True, elapsed,

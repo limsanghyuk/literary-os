@@ -160,35 +160,57 @@ def _score_debt(text: str) -> float:
     """
     이야기 빚 해소율.
     hooks(미결) 대비 resolutions(해결) 비율.
-    hooks 없으면 0.8 (중간값), hooks > resolutions → 낮은 점수.
+    hooks 없으면 0.80 (중간값 — 미결 부채 없음), hooks > resolutions → 낮은 점수.
+    BUG-02 fix: 빈 텍스트 조기 반환 (0.0). 비빈 no-hook은 0.80 유지.
     """
+    if not text.strip():                # BUG-02 fix: 빈 텍스트만 0.0
+        return 0.0
     hook_count = sum(len(re.findall(p, text)) for p in _DEBT_HOOKS)
     res_count  = sum(len(re.findall(p, text)) for p in _DEBT_RESOLUTIONS)
     if hook_count == 0:
-        return 0.80   # 빚 없음 — 중간 이상
+        return 0.80   # 미결 훅 없음 → 부채 해소율 양호 (설계 의도 유지)
     ratio = res_count / hook_count
     return round(min(1.0, 0.5 + ratio * 0.5), 4)
 
 
 def _score_arc(text: str) -> float:
     """
-    4막(기승전결) 구조 신호 탐지.
-    4막 모두 신호 → 1.0, 3막 → 0.75, …
+    4막(기승전결) 구조 신호 탐지 — 위치 기반 순서 검증.
+    BUG-07 fix: 단순 존재 여부 → 각 1/4 구간에서 해당 막 탐지.
+    역방향(결전승기)은 정방향(기승전결)과 다른 점수를 받음.
     """
-    tl = text.lower()
-    present = sum(
-        1 for markers in _ARC_KO.values()
-        if any(m in tl for m in markers)
-    )
-    return round(present / 4.0, 4)
+    sentences = re.split(r'[.!?\n。]', text)
+    sentences = [s.strip() for s in sentences if s.strip()]
+    n = len(sentences)
+    if n < 2:
+        # 문장이 1개 이하면 전체 텍스트에서 존재 여부만 확인 (단문 씬 지원)
+        tl = text.lower()
+        present = sum(
+            1 for markers in _ARC_KO.values()
+            if any(m in tl for m in markers)
+        )
+        return round(present / 4.0, 4) * 0.5   # 단문은 최대 0.5점
+    quarter = max(1, n // 4)
+    acts = list(_ARC_KO.keys())                 # ["기", "승", "전", "결"]
+    score = 0
+    for i, act in enumerate(acts):
+        start = i * quarter
+        end = (i + 1) * quarter if i < 3 else n
+        section_text = " ".join(sentences[start:end]).lower()
+        if any(m in section_text for m in _ARC_KO[act]):
+            score += 1
+    return round(score / 4.0, 4)
 
 
 def _score_tension(text: str) -> float:
     """갈등/긴장 마커 밀도."""
     tl = text.lower()
+    wds = _words(text)
+    if not wds:                        # BUG-02 fix: 빈 텍스트만 0.0
+        return 0.0
     hits = sum(1 for m in _TENSION_KO if m in tl)
-    density = hits / max(1, len(_words(text)) / 10)
-    return round(min(1.0, density * 0.6 + 0.2), 4)  # base 0.2
+    density = hits / max(1, len(wds) / 10)
+    return round(min(1.0, density * 0.6 + 0.2), 4)   # base 0.2 유지 (비빈 텍스트)
 
 
 def _score_prose(text: str) -> float:
