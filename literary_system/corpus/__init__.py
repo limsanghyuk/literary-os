@@ -33,3 +33,15 @@ __all__ += [
     "CorpusProvenanceIndex", "CorpusProvenanceRecord",
     "CorpusPiiFilter", "CorpusPiiMatch",
 ]
+
+# SP-A.6 (V593) — CorpusEntryValidator + CorpusDatasetCardGenerator
+from literary_system.corpus.corpus_validator import (
+    CorpusEntryValidationResult,
+    CorpusEntryValidationReport,
+    CorpusEntryValidator,
+    CorpusMinHashDedup,
+)
+from literary_system.corpus.dataset_card_generator import (
+    CorpusDatasetCard,
+    CorpusDatasetCardGenerator,
+)
