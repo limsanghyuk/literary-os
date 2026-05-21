@@ -79,6 +79,60 @@ def get_readme_gate_count() -> str:
     m2 = re.search(r'gates-(\d+)/(\d+)', text)
     return m2.group(2) if m2 else "N/A"
 
+def get_readme_h1() -> str:
+    """README.md 첫 번째 H1 제목에서 버전 레이블 추출. 예: '# Literary OS V595.1' → 'V595.1'"""
+    if not README.exists():
+        return "N/A"
+    text = README.read_text(encoding="utf-8")
+    m = re.search(r'^#\s+Literary OS\s+(V[\d.]+)', text, re.MULTILINE)
+    return m.group(1) if m else "N/A"
+
+
+def get_pyproject_description_tags() -> dict:
+    """pyproject.toml description에서 버전 레이블과 gate 수를 추출."""
+    text = PYPROJECT.read_text(encoding="utf-8")
+    m = re.search(r'^description\s*=\s*"([^"]+)"', text, re.MULTILINE)
+    if not m:
+        return {"raw": "N/A", "version_label": "N/A", "gates": "N/A"}
+    raw = m.group(1)
+    # 버전 레이블: "V595.1" 형식
+    vm = re.search(r'V(\d+\.\d+)', raw)
+    # gate 수: "51 Gates" 형식
+    gm = re.search(r'(\d+)\s+Gates?', raw, re.IGNORECASE)
+    return {
+        "raw": raw[:60],
+        "version_label": f"V{vm.group(1)}" if vm else "N/A",
+        "gates": gm.group(1) if gm else "N/A",
+    }
+
+
+def get_manifest_gate_count() -> str:
+    """MANIFEST.md에서 릴리즈 게이트 수 추출."""
+    if not MANIFEST.exists():
+        return "N/A"
+    text = MANIFEST.read_text(encoding="utf-8")
+    m = re.search(r'\*\*(\d+)/(\d+)\s+(?:ALL\s+)?PASS\*\*', text)
+    if m:
+        return m.group(2)
+    m2 = re.search(r'게이트[^|]*\|\s*\*\*(\d+)/(\d+)', text)
+    return m2.group(2) if m2 else "N/A"
+
+
+def get_release_info_version() -> dict:
+    """RELEASE_INFO.txt에서 버전과 레이블 추출."""
+    ri_path = REPO_ROOT / "RELEASE_INFO.txt"
+    if not ri_path.exists():
+        return {"version": "N/A", "label": "N/A"}
+    text = ri_path.read_text(encoding="utf-8")
+    vm = re.search(r'Version\s*:\s*V[\d.]+\s*\(v(\d+\.\d+\.\d+)\)', text)
+    lm = re.search(r'Version\s*:\s*(V[\d.]+)', text)
+    return {
+        "version": vm.group(1) if vm else "N/A",
+        "label": lm.group(1) if lm else "N/A",
+    }
+
+
+
 
 def get_changelog_version() -> str:
     """CHANGELOG.md의 최상단 ## [X.Y.Z] 버전 추출."""
@@ -129,6 +183,10 @@ def main() -> int:
     args = parser.parse_args()
 
     pyproject_ver  = get_pyproject_version()
+    pyproject_desc = get_pyproject_description_tags()
+    readme_h1      = get_readme_h1()
+    release_info   = get_release_info_version()
+    manifest_gates = get_manifest_gate_count()
     git_tag_ver    = get_latest_git_tag()
     readme_ver     = get_readme_version()
     changelog_ver  = get_changelog_version()
@@ -151,6 +209,10 @@ def main() -> int:
     print(f"  CHANGELOG latest                : {changelog_ver}")
     print(f"  MANIFEST version                : {manifest_ver}")
     print(f"  ci.yml gate count               : {ci_gate_str}")
+    print(f"  README H1 label                 : {readme_h1}")
+    print(f"  pyproject description (short)   : {pyproject_desc['raw']}")
+    print(f"  RELEASE_INFO version            : {release_info['version']} ({release_info['label']})")
+    print(f"  MANIFEST gate count             : {manifest_gates}")
 
     # ── 브랜치 판별 ──────────────────────────────────────────────────────────
     github_head_ref = os.environ.get("GITHUB_HEAD_REF", "")
@@ -179,6 +241,27 @@ def main() -> int:
         else:
             branch_display = github_head_ref or current_branch
             warnings.append(f"git tag 미생성 (feature 브랜치={branch_display}) — main 머지 후 태그 생성 예정")
+
+    # 3-extra. README H1 — V레이블 최신 여부 (informational warning)
+    if readme_h1 != "N/A":
+        # pyproject version과 대응되는 레이블 구성: 10.0.2 → "V10" (major label)
+        # 더 정밀하게: description에 포함된 버전 레이블 확인
+        desc_label = pyproject_desc.get("version_label", "N/A")
+        if desc_label != "N/A" and readme_h1 != desc_label:
+            mismatches.append(f"README H1({readme_h1}) ≠ pyproject description label({desc_label})")
+
+    # 3-extra2. pyproject description gates
+    desc_gates = pyproject_desc.get("gates", "N/A")
+    if desc_gates != "N/A" and live_gate_str != "SKIP" and desc_gates != live_gate_str:
+        mismatches.append(f"pyproject description gates({desc_gates}) ≠ live gate({live_gate_str})")
+
+    # 3-extra3. RELEASE_INFO version
+    if release_info["version"] not in ("N/A", pyproject_ver):
+        mismatches.append(f"pyproject({pyproject_ver}) ≠ RELEASE_INFO version({release_info['version']})")
+
+    # 3-extra4. MANIFEST gate count
+    if manifest_gates not in ("N/A",) and live_gate_str != "SKIP" and manifest_gates != live_gate_str:
+        mismatches.append(f"MANIFEST gate({manifest_gates}) ≠ live gate({live_gate_str})")
 
     # 3. Gate 수 일치
     if live_gate_str != "SKIP":

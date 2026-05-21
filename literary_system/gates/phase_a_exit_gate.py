@@ -19,7 +19,8 @@ import inspect
 import os
 import subprocess
 import sys
-from typing import Dict, Any
+from pathlib import Path
+from typing import Any, Dict
 
 _ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 if _ROOT not in sys.path:
@@ -142,30 +143,28 @@ def _gate_phase_a_exit_g52() -> dict:
         checks["EA-5"] = False
         errors.append(f"EA-5 GATES 로드 실패: {e}")
 
-    # ----- EA-6: 테스트 총계 >= 6,000 -----
+    # ----- EA-6: test_inventory.json 읽기 (P1-3 fix: subprocess 제거) -----
     try:
-        proc = subprocess.run(
-            [sys.executable, "-m", "pytest", "--collect-only", "-q",
-             "--tb=no", "-p", "no:warnings"],
-            capture_output=True, text=True, cwd=_ROOT, timeout=120,
-        )
-        output = proc.stdout + proc.stderr
-        lines = output.strip().splitlines()
-        # "N tests collected" 또는 "N selected" 형태 파싱
-        test_count = 0
-        for line in reversed(lines):
-            if "collected" in line or "selected" in line:
-                for token in line.split():
-                    if token.isdigit():
-                        test_count = int(token)
-                        break
-                if test_count:
-                    break
-        ea6_ok = test_count >= 6000
-        checks["EA-6"] = ea6_ok
-        if not ea6_ok:
-            errors.append(f"EA-6: collected={test_count} (>= 6,000 필요)")
+        import json as _json
+        _repo_root = Path(__file__).resolve().parent.parent.parent
+        _inventory_path = _repo_root / "tools" / "test_inventory.json"
+        if not _inventory_path.exists():
+            errors.append(
+                "EA-6: test_inventory.json 없음 — "
+                "python tools/generate_test_inventory.py 실행 필요"
+            )
+            checks["EA-6"] = False
+        else:
+            _inv = _json.loads(_inventory_path.read_text(encoding="utf-8"))
+            test_count = _inv.get("test_count", 0)
+            if test_count < 6000:
+                errors.append(
+                    f"EA-6: test_count={test_count} (>= 6,000 필요) "
+                    "— python tools/generate_test_inventory.py 재실행"
+                )
+            checks["EA-6"] = test_count >= 6000
     except Exception as e:
+        errors.append(f"EA-6 test_inventory.json 읽기 실패: {e}")
         checks["EA-6"] = False
         errors.append(f"EA-6 pytest --collect-only 실패: {e}")
 

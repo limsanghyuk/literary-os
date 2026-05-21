@@ -125,9 +125,9 @@ class CorpusIngestor:
 # ADR-053: CorpusGovernance
 # =============================================================================
 
-from enum import Enum
 import hashlib
 import json
+from enum import Enum
 
 
 class CorpusFallbackOption(str, Enum):

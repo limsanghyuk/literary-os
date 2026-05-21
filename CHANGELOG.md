@@ -5,6 +5,33 @@
 ---
 
 
+## [10.0.2] — V595.2 Release Authority Finalization — 2026-05-21
+
+### 릴리즈 무결성 완성
+
+**P0 수정 (3건):**
+- SHA256SUMS git-tracked 파일 기준 재생성 (0 missing, 0 mismatch)
+- 문서 권위 통일: README H1/pyproject desc/RELEASE_INFO/MANIFEST → V595.2/51 Gates
+- REAL LLM 테스트: API key 없으면 skip, check_version_consistency 검사 범위 확장
+
+**CI 수정 (2건):**
+- Ruff I001 import 정렬 26건 자동 수정 (CI green)
+- qdrant-client optional-deps 등록 (preflight_step13 PASS)
+
+**P1 수정 (3건):**
+- LOSDBClient private field 접근 제거 (public query API 추가)
+- SQLite migration: split(";") → executescript() 교체
+- Phase A Exit Gate EA-6: pytest subprocess → test_inventory.json 읽기 방식
+
+**검증:**
+- CI: ALL GREEN (Ruff PASS + preflight_step13 PASS)
+- run_release_gate.py: 51/51 PASS
+- check_version_consistency --strict: ALL CONSISTENT
+- SHA256SUMS: 0 missing, 0 mismatch
+- pytest -m real_llm (no key): 0 passed, 2 skipped
+
+---
+
 ## [10.0.1] — V595.1 Integrity Hotfix — 2026-05-21
 
 ### 버그 수정 12건

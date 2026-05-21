@@ -1986,8 +1986,8 @@ def _gate_partial_availability_g48() -> dict:
     # PA-1: 임포트
     try:
         from literary_system.db.health_monitor import (
-            BackendCircuitState,
             AvailabilityState,
+            BackendCircuitState,
             BackendHealthMonitor,
             BackendHealthRecord,
         )
@@ -2029,8 +2029,9 @@ def _gate_partial_availability_g48() -> dict:
     checks["PA-8"] = m2.overall_state() == AvailabilityState.OFFLINE
 
     # PA-9: QueryInterface health_monitor 주입 지원
-    from literary_system.db.query_interface import QueryInterface
     import inspect
+
+    from literary_system.db.query_interface import QueryInterface
     sig = inspect.signature(QueryInterface.__init__)
     checks["PA-9"] = "health_monitor" in sig.parameters
 
@@ -2087,16 +2088,15 @@ def _gate_gpu_adapter_g49() -> dict:  # noqa: C901
     # GA-1: import
     try:
         from literary_system.finetune.gpu_adapter import (
-            GPUJobStatus,
-            GPUAdapterContract,
             CostSLO,
+            GPUAdapterContract,
             GPUJobRequest,
             GPUJobResult,
-
+            GPUJobStatus,
             GPUProvider,
-            RunPodAdapter,
-            LambdaLabsAdapter,
             HFAutoTrainAdapter,
+            LambdaLabsAdapter,
+            RunPodAdapter,
             get_adapter,
             list_providers,
         )
@@ -2198,7 +2198,8 @@ def _gate_gpu_adapter_g49() -> dict:  # noqa: C901
 
     # GA-10: LLM-0 준수 (gpu_adapter.py 내 openai/anthropic/requests LLM 호출 없음)
     try:
-        import ast, pathlib
+        import ast
+        import pathlib
         src_path = pathlib.Path(__file__).parent.parent / "finetune" / "gpu_adapter.py"
         src_text = src_path.read_text(encoding="utf-8")
         forbidden_patterns = ["openai.ChatCompletion", "anthropic.Anthropic(", "requests.post(\"https://api.openai", "client.messages.create"]
@@ -2251,13 +2252,13 @@ def _gate_equivalence_g50() -> dict:  # noqa: C901
     # EQ-1: import
     try:
         from literary_system.finetune.equivalence_tester import (
-            EquivalenceTester,
-            EquivalenceReport,
+            DRIFT_PASS_RATE_MIN,
+            THRESHOLD_BERTSCORE_F1_MIN,
+            THRESHOLD_KL_DIVERGENCE_MAX,
             EquivalenceAxis,
             EquivalenceDriftReport,
-            THRESHOLD_KL_DIVERGENCE_MAX,
-            THRESHOLD_BERTSCORE_F1_MIN,
-            DRIFT_PASS_RATE_MIN,
+            EquivalenceReport,
+            EquivalenceTester,
         )
         checks["EQ-1"] = True
     except ImportError as exc:
@@ -2413,8 +2414,10 @@ def _gate_constitution_g51() -> dict:
     # CT-1: import
     try:
         from literary_system.constitution.los_constitution import (
-            LOSConstitution, ConstitutionWeights,
-            ConstitutionSceneScore, ConstitutionWorkScore,
+            ConstitutionSceneScore,
+            ConstitutionWeights,
+            ConstitutionWorkScore,
+            LOSConstitution,
         )
         checks["CT-1"] = True
     except Exception as e:
@@ -2510,6 +2513,7 @@ def _gate_constitution_g51() -> dict:
     # CT-10: LLM-0 준수
     try:
         import inspect
+
         import literary_system.constitution.los_constitution as cmod
         src = inspect.getsource(cmod)
         forbidden = ["openai.ChatCompletion", "anthropic.Anthropic",

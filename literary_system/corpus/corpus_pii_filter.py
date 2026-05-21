@@ -17,8 +17,8 @@ ADR-053 참조.
 from __future__ import annotations
 
 import re
-from dataclasses import replace, dataclass, field
-from typing import List, Optional, TYPE_CHECKING
+from dataclasses import dataclass, field, replace
+from typing import TYPE_CHECKING, List, Optional
 
 if TYPE_CHECKING:
     from literary_system.corpus.corpus_ingestor import CorpusEntry

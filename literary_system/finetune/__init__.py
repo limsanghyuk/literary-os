@@ -65,26 +65,26 @@ __all__ = [
     "ProseSpecializerAPI", "ServeRequest", "ServeResponse", "ABComparisonResult",
     "ServingTier", "ABGroup",
 ]
+from literary_system.finetune.equivalence_tester import (
+    DRIFT_PASS_RATE_MIN,
+    THRESHOLD_BERTSCORE_F1_MIN,
+    THRESHOLD_KL_DIVERGENCE_MAX,
+    EquivalenceAxis,
+    EquivalenceDriftReport,
+    EquivalenceReport,
+    EquivalenceTester,
+)
 from literary_system.finetune.gpu_adapter import (
-    CostSLO,
     DEFAULT_COST_SLO,
+    CostSLO,
     GPUAdapterContract,
     GPUJobRequest,
     GPUJobResult,
+    GPUJobStatus,
     GPUProvider,
     HFAutoTrainAdapter,
-    GPUJobStatus,
     LambdaLabsAdapter,
     RunPodAdapter,
     get_adapter,
     list_providers,
-)
-from literary_system.finetune.equivalence_tester import (
-    EquivalenceTester,
-    EquivalenceReport,
-    EquivalenceAxis,
-    EquivalenceDriftReport,
-    DRIFT_PASS_RATE_MIN,
-    THRESHOLD_KL_DIVERGENCE_MAX,
-    THRESHOLD_BERTSCORE_F1_MIN,
 )

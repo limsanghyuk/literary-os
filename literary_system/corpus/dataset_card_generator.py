@@ -12,7 +12,7 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
-from typing import List, Optional, TYPE_CHECKING
+from typing import TYPE_CHECKING, List, Optional
 
 if TYPE_CHECKING:
     from literary_system.corpus.corpus_ingestor import CorpusEntry
@@ -76,7 +76,7 @@ class CorpusDatasetCard:
         lines.append("task_categories:")
         for task in self.task_categories:
             lines.append(f"  - {task}")
-        lines.append(f"size_categories:")
+        lines.append("size_categories:")
         lines.append(f"  - {self.size_category}")
         lines.append("---")
         return "\n".join(lines)
@@ -90,7 +90,7 @@ class CorpusDatasetCard:
             "",
             f"# {self.dataset_name}",
             "",
-            f"> **Literary OS** 코퍼스 데이터셋 (ADR-053 CorpusGovernance)",
+            "> **Literary OS** 코퍼스 데이터셋 (ADR-053 CorpusGovernance)",
             "",
             "## 설명",
             "",
@@ -98,8 +98,8 @@ class CorpusDatasetCard:
             "",
             "## 통계",
             "",
-            f"| 항목 | 값 |",
-            f"|------|-----|",
+            "| 항목 | 값 |",
+            "|------|-----|",
             f"| 총 항목 수 | {self.total_entries:,} |",
             f"| 검증 통과 | {self.passed_entries:,} |",
             f"| 통과율 | {self.pass_rate:.1%} |",

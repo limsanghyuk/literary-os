@@ -127,11 +127,11 @@ class CorpusValidator:
 import hashlib
 import math
 import random
-from dataclasses import dataclass, field as dc_field
+from dataclasses import dataclass
+from dataclasses import field as dc_field
 from typing import Dict, Set
 
 from .corpus_ingestor import CorpusEntry
-
 
 # ---------------------------------------------------------------------------
 # 허용 라이선스 집합 (SP-A.6)

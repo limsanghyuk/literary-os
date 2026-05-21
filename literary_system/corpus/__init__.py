@@ -17,15 +17,15 @@ __all__ = [
 
 # SP-A.5 (V592) 추가
 from .corpus_ingestor import (
+    AcademicCorpusIngestor,
     CorpusEntry,
     CorpusFallbackOption,
     CorpusFallbackPipeline,
     PublicDomainIngestor,
     SyntheticCorpusIngestor,
-    AcademicCorpusIngestor,
 )
-from .provenance_index import CorpusProvenanceIndex, CorpusProvenanceRecord
 from .corpus_pii_filter import CorpusPiiFilter, CorpusPiiMatch
+from .provenance_index import CorpusProvenanceIndex, CorpusProvenanceRecord
 
 __all__ += [
     "CorpusEntry", "CorpusFallbackOption", "CorpusFallbackPipeline",
@@ -36,8 +36,8 @@ __all__ += [
 
 # SP-A.6 (V593) — CorpusEntryValidator + CorpusDatasetCardGenerator
 from literary_system.corpus.corpus_validator import (
-    CorpusEntryValidationResult,
     CorpusEntryValidationReport,
+    CorpusEntryValidationResult,
     CorpusEntryValidator,
     CorpusMinHashDedup,
 )
