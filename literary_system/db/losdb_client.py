@@ -234,24 +234,38 @@ class LOSDBClient:
         """Vector 어댑터에서 label 기반 레코드 조회.
 
         VectorRealAdapter는 label을 metadata["label"]에 저장한다.
-        내부 저장소는 _store dict (id -> VectorRecord).
+        공개 query_by_label() API 사용. 레거시 어댑터는 _store 폴백.
         """
         records: List[LOSDBClientRecord] = []
-        # VectorRealAdapter: _store dict 순회
-        store = getattr(adapter, "_store", None) or getattr(adapter, "_records", None)
-        if store is not None:
-            for vid, vrec in store.items():
+        # 공개 query_by_label() API 사용 (P1-1 fix: private _store 직접 접근 제거)
+        if hasattr(adapter, "query_by_label"):
+            for vrec in adapter.query_by_label(label):
+                vid = getattr(vrec, "id", str(id(vrec)))
                 meta = getattr(vrec, "metadata", {}) or {}
-                rec_label = meta.get("label", getattr(vrec, "label", ""))
-                if rec_label == label:
-                    records.append(
-                        LOSDBClientRecord(
-                            id=vid,
-                            backend=BackendType.VECTOR,
-                            label=label,
-                            metadata=meta,
-                        )
+                records.append(
+                    LOSDBClientRecord(
+                        id=vid,
+                        backend=BackendType.VECTOR,
+                        label=label,
+                        metadata=meta,
                     )
+                )
+        else:
+            # 폴백: 공개 API 없는 구현체 (레거시 호환)
+            store = getattr(adapter, "_store", None) or getattr(adapter, "_records", None)
+            if store is not None:
+                for vid, vrec in store.items():
+                    meta = getattr(vrec, "metadata", {}) or {}
+                    rec_label = meta.get("label", getattr(vrec, "label", ""))
+                    if rec_label == label:
+                        records.append(
+                            LOSDBClientRecord(
+                                id=vid,
+                                backend=BackendType.VECTOR,
+                                label=label,
+                                metadata=meta,
+                            )
+                        )
         return records
 
     def _query_graph(
@@ -261,17 +275,30 @@ class LOSDBClient:
     ) -> List[LOSDBClientRecord]:
         """Graph 어댑터에서 label 기반 노드 조회."""
         records: List[LOSDBClientRecord] = []
-        # GraphRealAdapter: _nodes dict 순회
-        if hasattr(adapter, "_nodes"):
-            for nid, node in adapter._nodes.items():
-                node_label = getattr(node, "label", "")
-                if node_label == label:
-                    records.append(
-                        LOSDBClientRecord(
-                            id=nid,
-                            backend=BackendType.GRAPH,
-                            label=label,
-                            metadata=getattr(node, "metadata", {}),
-                        )
+        # 공개 query_nodes_by_label() API 사용 (P1-1 fix: private _nodes 직접 접근 제거)
+        if hasattr(adapter, "query_nodes_by_label"):
+            for node in adapter.query_nodes_by_label(label):
+                nid = getattr(node, "id", str(id(node)))
+                records.append(
+                    LOSDBClientRecord(
+                        id=nid,
+                        backend=BackendType.GRAPH,
+                        label=label,
+                        metadata=getattr(node, "metadata", {}),
                     )
+                )
+        else:
+            # 폴백: 공개 API 없는 구현체 (레거시 호환)
+            if hasattr(adapter, "_nodes"):
+                for nid, node in adapter._nodes.items():
+                    node_label = getattr(node, "label", "")
+                    if node_label == label:
+                        records.append(
+                            LOSDBClientRecord(
+                                id=nid,
+                                backend=BackendType.GRAPH,
+                                label=label,
+                                metadata=getattr(node, "metadata", {}),
+                            )
+                        )
         return records

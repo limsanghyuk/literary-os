@@ -345,6 +345,23 @@ class VectorRealAdapter(BaseMigrationAdapter):
         except Exception as exc:
             logger.warning("SchemaRegistry 등록 실패 (무시): %s", exc)
 
+    def query_by_label(self, label: str) -> list:
+        """공개 API: metadata["label"] 기준 레코드 목록 반환.
+
+        LOSDBClient가 private _store를 직접 참조하지 않도록 제공하는
+        공개 쿼리 인터페이스 (P1-1 ADR-048 fix).
+
+        Returns:
+            List[VectorRecord]: label이 일치하는 레코드 목록
+        """
+        results = []
+        for vid, vrec in self._store.items():
+            meta = getattr(vrec, "metadata", {}) or {}
+            rec_label = meta.get("label", getattr(vrec, "label", ""))
+            if rec_label == label:
+                results.append(vrec)
+        return results
+
     def schema_info(self) -> dict:
         """어댑터 메타 정보."""
         return {

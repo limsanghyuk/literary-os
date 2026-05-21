@@ -6,10 +6,10 @@ ADR-054 참조.
 LLM-0 준수: 외부 LLM 호출 없음.
 """
 from literary_system.constitution.los_constitution import (
-    ConstitutionWeights,
-    LOSConstitution,
     ConstitutionSceneScore,
+    ConstitutionWeights,
     ConstitutionWorkScore,
+    LOSConstitution,
 )
 
 __all__ = [

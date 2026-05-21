@@ -17,6 +17,7 @@ REAL 모드 (수동 전용):
   pytest tests/e2e/ -m "not real_llm" -v           # MOCK 전용 (명시적)
 """
 from __future__ import annotations
+import os
 
 import pytest
 
@@ -212,16 +213,25 @@ class TestGateG46Mock:
 # REAL LLM 모드 (수동 전용 — pytest -m real_llm)
 # ---------------------------------------------------------------------------
 
-@pytest.mark.real_llm
-@pytest.mark.skipif(
-    pytest.importorskip is None,
-    reason="수동 실행 전용"
+# provider key 없으면 자동 skip
+_REAL_LLM_REASON = (
+    "REAL LLM provider key not configured "
+    "(set ANTHROPIC_API_KEY or OPENAI_API_KEY)"
 )
+requires_real_llm = pytest.mark.skipif(
+    not os.getenv("ANTHROPIC_API_KEY") and not os.getenv("OPENAI_API_KEY"),
+    reason=_REAL_LLM_REASON,
+)
+
+
+@requires_real_llm
+@pytest.mark.real_llm
 class TestGateG46RealLLM:
     """
     Gate G46 REAL LLM 모드 테스트.
-    환경변수 ANTHROPIC_API_KEY 필요. CI에서는 실행되지 않음.
-    실행: pytest tests/e2e/test_e2e_prose.py -m real_llm -v
+    환경변수 ANTHROPIC_API_KEY 또는 OPENAI_API_KEY 필요.
+    key 없으면 자동 skip. CI에서는 skip됨.
+    실행: ANTHROPIC_API_KEY=... pytest tests/e2e/test_e2e_prose.py -m real_llm -v
     """
     pytestmark = pytest.mark.real_llm  # 클래스 전체 마킹
 
@@ -231,6 +241,11 @@ class TestGateG46RealLLM:
         assert result.passed, (
             f"Gate G46 REAL FAIL — 실패 CP: {result.failed_cps}"
         )
+        # REAL 모드는 반드시 mock_mode=False + provider 호출이 있어야 함
+        if hasattr(result, "mock_mode"):
+            assert result.mock_mode is False, "gate_e2e_prose(mock=False)인데 mock_mode=True"
+        if hasattr(result, "provider_calls"):
+            assert result.provider_calls > 0, "REAL LLM 호출이 0건 — mock 경로로 실행됨"
 
     def test_cp6_real_text_length(self):
         """REAL LLM 모드 — CP-6 산문 100~500자."""

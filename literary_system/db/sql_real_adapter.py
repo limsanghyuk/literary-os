@@ -118,11 +118,11 @@ class SQLiteRealAdapter(BaseMigrationAdapter):
         try:
             self._ensure_migration_table()
             if migration.up_script:
-                with self._transaction() as cur:
-                    for stmt in migration.up_script.split(";"):
-                        stmt = stmt.strip()
-                        if stmt:
-                            cur.execute(stmt)
+                # P1-2 fix: split(";")는 세미콜론 내부 포함 SQL에서 깨짐.
+                # executescript()는 connection-level 메서드; trusted migration에만 사용.
+                # executescript는 자동으로 COMMIT 처리하므로 별도 트랜잭션 불필요.
+                conn = self._get_connection()
+                conn.executescript(migration.up_script)
             now = datetime.now(timezone.utc).isoformat()
             with self._transaction() as cur:
                 cur.execute(
@@ -159,11 +159,9 @@ class SQLiteRealAdapter(BaseMigrationAdapter):
         try:
             self._ensure_migration_table()
             if migration.down_script:
-                with self._transaction() as cur:
-                    for stmt in migration.down_script.split(";"):
-                        stmt = stmt.strip()
-                        if stmt:
-                            cur.execute(stmt)
+                # P1-2 fix: executescript() 사용 (세미콜론 안전)
+                conn = self._get_connection()
+                conn.executescript(migration.down_script)
             with self._transaction() as cur:
                 cur.execute(
                     f"UPDATE {self.MIGRATION_TABLE} SET rolled_back=1 WHERE version=? AND backend='sql'",

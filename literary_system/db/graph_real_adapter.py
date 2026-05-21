@@ -412,6 +412,22 @@ class GraphRealAdapter(BaseMigrationAdapter):
         except Exception as exc:
             logger.warning("SchemaRegistry 등록 실패 (무시): %s", exc)
 
+    def query_nodes_by_label(self, label: str) -> list:
+        """공개 API: label 기준 GraphRecord 노드 목록 반환.
+
+        LOSDBClient가 private _nodes를 직접 참조하지 않도록 제공하는
+        공개 쿼리 인터페이스 (P1-1 ADR-048 fix).
+
+        Returns:
+            List[GraphRecord]: label이 일치하는 노드 목록
+        """
+        results = []
+        for nid, node in self._nodes.items():
+            node_label = getattr(node, "label", "")
+            if node_label == label:
+                results.append(node)
+        return results
+
     def schema_info(self) -> Dict[str, Any]:
         return {
             "nodes": len(self._nodes),

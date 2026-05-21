@@ -1,40 +1,63 @@
-Literary OS V595 — Phase A Complete Release Package
-====================================================
-Version      : V595 (v10.0.0)
+Literary OS V595.2 — Page A Release Authority Finalization
+===========================================================
+Version      : V595.2 (v10.0.2)
 Release Date : 2026-05-21
-Build Type   : Phase A Finalization + Integrity Hotfix
+Build Type   : Phase A Final — Release Authority Finalization
 
 Test Result  : 6,179+ PASS
 Gate         : 51/51 PASS (G01~G52)
-Phase        : Phase A Complete (SP-A.1~SP-A.8)
+Phase        : Phase A Complete (SP-A.1~SP-A.8) + V595.1 Hotfix + V595.2 Authority Fix
 
-Key Modules (V595 / Phase A)
------------------------------
-V588  SP-A.1  QueryInterface + Qdrant              G47 ADR-049
-V589  SP-A.2  BackendHealthMonitor + HybridRetrieverV2  G48 ADR-050
-V590  SP-A.3  GPUAdapterContract + CostSLO         G49 ADR-051
-V591  SP-A.4  EquivalenceTester 5-axis             G50 ADR-052
-V592  SP-A.5  CorpusGovernance (3 Ingestors)       —   ADR-053
-V593  SP-A.6  CorpusValidator + MinHash + DRSE     —   ADR-053
-V594  SP-A.7  LOSConstitution v1.0 (5-axis)        G51 ADR-054
-V595  SP-A.8  Minimal-CLI v0.1 + Phase A Exit      G52 ADR-055
+What Changed in V595.2
+------------------------
+V595.2 closes all remaining Phase A release authority gaps:
+  - README H1, pyproject description, MANIFEST fully updated to V595.2 / 51 Gates
+  - check_version_consistency.py extended to catch semantic inconsistencies
+  - SHA256SUMS regenerated from git-tracked files only (0 missing, 0 mismatch)
+  - REAL LLM tests now skip without provider API key
+  - Ruff I001 import sort (26 errors) fixed; CI green
+  - qdrant-client registered in optional-dependencies (preflight_step13 PASS)
+  - LOSDBClient private field access removed (public query API added)
+  - SQLite migration: split(";") replaced with executescript()
+  - Phase A Exit Gate EA-6: pytest subprocess replaced with test_inventory.json
 
-Bug Fixes (V595.1 Integrity Hotfix)
--------------------------------------
-FIX-1  G32 print() violation in phase_a_exit_gate.py
-FIX-2  GraphRealAdapter unknown op → ValueError + atomic rollback
-FIX-3  BackendHealthMonitor last_check_ok — immediate failure detection
-FIX-4  _enrich_text sc%4 → (sc-1)%4 (1-based correction)
-FIX-5  Empty text R(scene) 0.19 → 0.0 (debt/tension base fix)
-FIX-6  CorpusPiiFilter mutation → dataclasses.replace() immutable copy
-FIX-7  _score_arc position-based ordering validation
-FIX-8  _NARRATIVE_MARKERS: Korean particles removed (DRSE -19% bias)
-FIX-9  MinHash _shingle: hash() → hashlib.md5 (reproducible)
-FIX-10 E2E CP-6: enforce 100~500 char range
-FIX-11 SQLiteRealAdapter: SQL identifier quoting (_quote_identifier)
-FIX-12 GraphRealAdapter add_edge: duplicate id dedup
+What Changed in V595.1 (Integrity Hotfix)
+-------------------------------------------
+  FIX-1  G32 print() violation (phase_a_exit_gate.py → sys.stdout.write)
+  FIX-2  GraphRealAdapter unknown op → ValueError + atomic snapshot rollback
+  FIX-3  BackendHealthMonitor last_check_ok field — fail → unavailable
+  FIX-4  literary_cli.py sc%4 → (sc-1)%4 scene offset bug
+  FIX-5  _score_debt/_score_tension empty text → 0.0 early return
+  FIX-6  CorpusPiiFilter.filter_entries dataclasses.replace() immutability
+  FIX-7  _score_arc position-based 기승전결 order validation
+  FIX-8  _NARRATIVE_MARKERS Korean postpositions removed (7개, DRSE bias fix)
+  FIX-9  MinHash _shingle hash() → hashlib.md5 (PYTHONHASHSEED independent)
+  FIX-10 E2E CP-6 first-scene 100~500 char range enforcement
+  FIX-11 SQLiteRealAdapter _quote_identifier() SQL injection defense
+  FIX-12 GraphRealAdapter.add_edge duplicate id handling
 
-Integrity Files
----------------
-SHA256SUMS.txt   : literary_system/**/*.py + tests/**/*.py + config checksums
-SHA256SUMS.txt.sig : SHA256SUMS.txt self-checksum
+Phase A Module Summary
+-----------------------
+V588  SP-A.1  QueryInterface + Qdrant              G47  ADR-049
+V589  SP-A.2  BackendHealthMonitor + HybridRetriever G48 ADR-050
+V590  SP-A.3  GPUAdapterContract + CostSLO         G49  ADR-051
+V591  SP-A.4  EquivalenceTester 5-axis + golden20  G50  ADR-052
+V592  SP-A.5  CorpusGovernance (3 Ingestors+PII)   —    ADR-053
+V593  SP-A.6  CorpusValidator + MinHash + DRSE      —    ADR-053
+V594  SP-A.7  LOSConstitution v1.0 (5-axis+RLHF)  G51  ADR-054
+V595  SP-A.8  Minimal-CLI v0.1 + Phase A Exit      G52  ADR-055
+V595.1         Integrity Hotfix (12 fixes)          —    —
+V595.2         Release Authority Finalization       —    —
+
+Architecture Constraints (Permanent)
+--------------------------------------
+  LLM-0    : No external LLM calls in corpus/, constitution/, finetune/
+  DEV_MODE : Always defaults to "false" (ADR-034)
+  Preflight: 15-step check before every version entry
+
+Phase B Entry
+--------------
+  All Phase A gates (G01~G52): PASS
+  Version authority documents: CONSISTENT
+  SHA256 integrity: 0 mismatch
+  CI: GREEN
