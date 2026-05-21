@@ -122,3 +122,26 @@ from literary_system.finetune.lora_job_runner import (
     JobRunRecord,
     LoRAJobRunner,
 )
+
+# V598 — LoRAArtifact + LoRAModelRegistry + LoRAInferenceGateway (SP-B.1, ADR-058)
+from literary_system.finetune.lora_artifact import (
+    ArtifactStage,
+    LoRAArtifact,
+    LoRAArtifactContract,
+    compute_sha256,
+    make_artifact,
+)
+from literary_system.finetune.lora_model_registry import (
+    ArtifactNotFoundError,
+    LoRAModelRegistry,
+    RegisterConflictError,
+    StageTransitionError,
+)
+from literary_system.finetune.lora_inference_gateway import (
+    G53_LATENCY_LIMIT_MS,
+    G53_MIN_LENGTH,
+    InferenceResult,
+    LORA_PROVIDER_NAME,
+    LoRAInferenceGateway,
+    StubInferenceBackend,
+)

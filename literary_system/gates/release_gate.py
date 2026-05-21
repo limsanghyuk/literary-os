@@ -2553,3 +2553,19 @@ def _gate_phase_a_exit_g52() -> dict:
 
 
 GATES.append(("phase_a_exit_g52", "Phase A Exit Gate G52 — Minimal-CLI + Phase A 완료 (ADR-055)", _gate_phase_a_exit_g52))
+
+
+# ---------------------------------------------------------------------------
+# Gate G53 — LoRA Inference Gate (SP-B.1, V598, ADR-058)
+# ---------------------------------------------------------------------------
+def _gate_lora_inference_g53() -> dict:
+    """
+    Gate G53: LoRA 추론 게이트.
+    LoRAInferenceGateway + LoRAModelRegistry 통합 검증.
+    ADR-058에 의거한 SP-B.1 추론 레이턴시·3-tag·PROMOTED 무결성 기준.
+    """
+    from literary_system.gates.lora_inference_gate import _gate_lora_inference_g53 as _impl
+    return _impl()
+
+
+GATES.append(("lora_inference_g53", "LoRA Inference Gate G53 — 추론 레이턴시·3-tag·PROMOTED 무결성 (ADR-058)", _gate_lora_inference_g53))

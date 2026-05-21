@@ -104,7 +104,7 @@ jobs:
 
   # ── 6. 테스트 + Release Gate full (45게이트) — main push ──────────────────────
   test:
-    name: "Test Suite + Release Gate (51 Gates, Python ${{ matrix.python-version }})"
+    name: "Test Suite + Release Gate (52 Gates, Python ${{ matrix.python-version }})"
     runs-on: ubuntu-latest
     needs: [lint, version-check, preflight]
     strategy:
