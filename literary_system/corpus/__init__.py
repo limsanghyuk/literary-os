@@ -14,3 +14,22 @@ __all__ = [
     "BGEM3Embedder",
     "CIMBootstrap", "BootstrapReport",
 ]
+
+# SP-A.5 (V592) 추가
+from .corpus_ingestor import (
+    CorpusEntry,
+    CorpusFallbackOption,
+    CorpusFallbackPipeline,
+    PublicDomainIngestor,
+    SyntheticCorpusIngestor,
+    AcademicCorpusIngestor,
+)
+from .provenance_index import CorpusProvenanceIndex, CorpusProvenanceRecord
+from .corpus_pii_filter import CorpusPiiFilter, CorpusPiiMatch
+
+__all__ += [
+    "CorpusEntry", "CorpusFallbackOption", "CorpusFallbackPipeline",
+    "PublicDomainIngestor", "SyntheticCorpusIngestor", "AcademicCorpusIngestor",
+    "CorpusProvenanceIndex", "CorpusProvenanceRecord",
+    "CorpusPiiFilter", "CorpusPiiMatch",
+]
