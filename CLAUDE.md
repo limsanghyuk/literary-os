@@ -34,26 +34,52 @@ python -c "from literary_system.gates.release_gate import run_release_gate; r=ru
 | V562~V571 | MultiWork Stage C — 7모듈 + Gate31 |
 | **V572~V581** | **LOSDB 기반 — SchemaRegistry + MigrationManager + ADR-040 (현재 최신)** |
 
-## GitNexus 인덱스 현황 (V571 AST 분석 기준)
+## GitNexus 인덱스 현황 (V589 AST 분석 기준 — release_v589)
 
 ```
-literary_system/ 서브패키지: 60개 (db/ 신규)
-소스 파일 (non-test): 469개
-클래스 심볼:        1,024개
-릴리즈 게이트:       39/39 PASS (G1~G40, V581 db_migration_g40 포함)
-테스트:           5,529+ PASS
+인덱스명:               release_v589
+버전 기준:              v9.4.0 / 47 Gates / ADR-001~050
+literary_system/ 서브패키지: 60개+
+소스 파일 (non-test):   728개 (Python)
+
+심볼(Symbols):        12,297개
+  클래스:              2,207개
+  메서드:              9,360개
+  함수:                  545개
+  테스트 함수:           185개
+
+관계(Relationships):  21,237개
+  IMPORTS:             3,552개
+  USES:                5,651개
+  CALLS:               12,034개
+
+실행흐름(Exec Flows):  2,752개
+
+[V588 신규] QueryInterface 심볼:  18개
+[V589 신규] HealthMonitor 심볼:   102개 (BackendHealthMonitor, BackendCircuitState 등)
+
+릴리즈 게이트:        47/47 PASS (G1~G48)
+테스트:            5,760+ PASS
 ```
 
-> GitNexus analyze는 `npx gitnexus analyze --force`로 재실행 가능 (완료에 ~60초 소요).
+> GitNexus analyze는 `npx gitnexus analyze --force`로 재실행 가능 (완료에 ~60초 소요).  
+> 샌드박스 환경 gitnexus NPM 설치 불가 시: `python3 tools/gitnexus_analyze.py` (python_fallback)
 
 ## literary_system 서브패키지 지도
 
 ```
 literary_system/
-├── db/               ← V581 신규 (LOSDB 기반 레이어)
+├── db/               ← V581~V589 LOSDB 기반 레이어
 │   ├── schema_registry.py      BackendType(SQL/Graph/Vector), SchemaVersion, SchemaRegistry (싱글턴)
 │   ├── migration_manager.py    Migration, MigrationManager, BaseMigrationAdapter, SQL/Graph/VectorMigrationAdapter
-│   └── __init__.py             공개 API (BaseMigrationAdapter 포함)
+│   ├── migration_engine.py     MigrationEngine, MigrationPlan, MigrationExecutionRecord (V583)
+│   ├── sql_real_adapter.py     SQLiteRealAdapter, get_rows() (V582)
+│   ├── vector_real_adapter.py  VectorRealAdapter, VectorRecord, JSON영속화 (V584)
+│   ├── graph_real_adapter.py   GraphRealAdapter, GraphRecord, GraphEdgeRecord, JSON영속화 (V585)
+│   ├── losdb_client.py         LOSDBClient Facade, LOSDBClientRecord, cross_query() (V586)
+│   ├── query_interface.py      QueryInterface, SceneResult, CharacterResult, AggregateResult (V588, ADR-049)
+│   ├── health_monitor.py       BackendHealthMonitor, AvailabilityState, BackendCircuitState (V589, ADR-050)
+│   └── __init__.py             공개 API (전체 export)
 │
 ├── multiwork/        ← V562~V571 신규 (MultiWork Stage C)
 │   ├── multi_work_core.py          WorkStatus FSM, WorkProject, WorkSession, MultiWorkCore
@@ -168,7 +194,7 @@ grep -r "requests\|httpx\|openai\|anthropic" literary_system/multiwork/ --includ
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **release_v571** (28964 symbols, 56087 relationships, 190 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **release_v589** (12297 symbols, 21237 relationships, 2752 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 
@@ -191,10 +217,10 @@ This project is indexed by GitNexus as **release_v571** (28964 symbols, 56087 re
 
 | Resource | Use for |
 |----------|---------|
-| `gitnexus://repo/release_v571/context` | Codebase overview, check index freshness |
-| `gitnexus://repo/release_v571/clusters` | All functional areas |
-| `gitnexus://repo/release_v571/processes` | All execution flows |
-| `gitnexus://repo/release_v571/process/{name}` | Step-by-step execution trace |
+| `gitnexus://repo/release_v589/context` | Codebase overview, check index freshness |
+| `gitnexus://repo/release_v589/clusters` | All functional areas |
+| `gitnexus://repo/release_v589/processes` | All execution flows |
+| `gitnexus://repo/release_v589/process/{name}` | Step-by-step execution trace |
 
 ## CLI
 
