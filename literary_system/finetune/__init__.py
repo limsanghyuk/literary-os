@@ -65,3 +65,17 @@ __all__ = [
     "ProseSpecializerAPI", "ServeRequest", "ServeResponse", "ABComparisonResult",
     "ServingTier", "ABGroup",
 ]
+from literary_system.finetune.gpu_adapter import (
+    CostSLO,
+    DEFAULT_COST_SLO,
+    GPUAdapterContract,
+    GPUJobRequest,
+    GPUJobResult,
+    GPUProvider,
+    HFAutoTrainAdapter,
+    GPUJobStatus,
+    LambdaLabsAdapter,
+    RunPodAdapter,
+    get_adapter,
+    list_providers,
+)

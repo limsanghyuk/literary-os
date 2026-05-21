@@ -14,7 +14,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
-from typing import Dict, Optional
+from typing import Dict, List, Optional
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Provider Pricing Table (USD per 1,000 tokens, blended input+output avg)
@@ -224,4 +224,114 @@ class CostLedger:
             "records": {
                 pid: rec.to_dict() for pid, rec in self.records.items()
             },
+        }
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# GPUCostRecord — 단일 GPU 작업 비용 기록 (V590 SP-A.3)
+# ─────────────────────────────────────────────────────────────────────────────
+
+@dataclass
+class GPUCostRecord:
+    """GPU 작업 1건의 비용 기록."""
+    provider:       str
+    hours:          float
+    cost_per_hour:  float
+    cost_usd:       float
+    job_id:         str
+    recorded_at:    str = field(
+        default_factory=lambda: datetime.now(timezone.utc).isoformat()
+    )
+
+    def to_dict(self) -> dict:
+        return {
+            "provider":      self.provider,
+            "hours":         round(self.hours, 4),
+            "cost_per_hour": round(self.cost_per_hour, 4),
+            "cost_usd":      round(self.cost_usd, 4),
+            "job_id":        self.job_id,
+            "recorded_at":   self.recorded_at,
+        }
+
+
+@dataclass
+class GPUCostLedger:
+    """
+    월간 GPU 비용 원장 (V590 SP-A.3).
+
+    CostSLO(soft=$90 / hard=$120 / emergency=$150) 기준으로
+    gpu_track() 호출 시 SLO 평가 결과를 함께 반환.
+    """
+    month_key:  str                      = field(
+        default_factory=lambda: datetime.now(timezone.utc).strftime("%Y-%m")
+    )
+    records:    List["GPUCostRecord"]    = field(default_factory=list)  # type: ignore[name-defined]
+
+    def gpu_track(
+        self,
+        provider: str,
+        hours: float,
+        cost_per_hour: float,
+        job_id: str = "",
+    ) -> dict:
+        """
+        GPU 사용 비용 기록.
+
+        Args:
+            provider:       GPU 프로바이더 식별자 (e.g. "runpod")
+            hours:          실제 사용 시간
+            cost_per_hour:  시간당 단가 (USD)
+            job_id:         작업 ID (추적용)
+
+        Returns:
+            {"cost_usd": float, "monthly_total": float, "slo_status": str}
+        """
+        if hours < 0:
+            raise ValueError(f"hours must be >= 0, got {hours}")
+        if cost_per_hour < 0:
+            raise ValueError(f"cost_per_hour must be >= 0, got {cost_per_hour}")
+
+        cost_usd = round(hours * cost_per_hour, 4)
+        rec = GPUCostRecord(
+            provider      = provider,
+            hours         = hours,
+            cost_per_hour = cost_per_hour,
+            cost_usd      = cost_usd,
+            job_id        = job_id or str(len(self.records)),
+        )
+        self.records.append(rec)
+
+        monthly = self.monthly_total_gpu()
+        slo_status = self._assess_slo(monthly)
+        return {
+            "cost_usd":      cost_usd,
+            "monthly_total": monthly,
+            "slo_status":    slo_status,
+        }
+
+    def monthly_total_gpu(self) -> float:
+        """이번 달 GPU 비용 합계 (USD)."""
+        return round(sum(r.cost_usd for r in self.records), 4)
+
+    @staticmethod
+    def _assess_slo(monthly_spend: float) -> str:
+        """
+        SLO 수준 평가.
+        soft=$90 → WARN, hard=$120 → BLOCK, emergency=$150 → HALT
+        """
+        if monthly_spend >= 150.0:
+            return "HALT"
+        if monthly_spend >= 120.0:
+            return "BLOCK"
+        if monthly_spend >= 90.0:
+            return "WARN"
+        return "OK"
+
+    def to_dict(self) -> dict:
+        return {
+            "month_key":     self.month_key,
+            "monthly_total": self.monthly_total_gpu(),
+            "slo_status":    self._assess_slo(self.monthly_total_gpu()),
+            "record_count":  len(self.records),
+            "records":       [r.to_dict() for r in self.records],
         }

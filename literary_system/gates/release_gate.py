@@ -1790,6 +1790,7 @@ _GATE_TIER: dict = {
     "e2e_prose_g46":                 "L1",
     "query_interface_g47":          "L1",
     "partial_availability_g48":     "L1",
+    "gpu_adapter_g49":              "L1",
     # 나머지는 L2 이상 — 기본값 L2
 }
 
@@ -2056,4 +2057,168 @@ def _gate_partial_availability_g48() -> dict:
 
 GATES.append(
     ("partial_availability_g48", "PartialAvailabilityGate: BackendHealthMonitor T1~T4 (Gate 48, ADR-050)", _gate_partial_availability_g48),
+)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Gate G49 — GPUAdapterGate (SP-A.3, V590)
+# ADR-051: GPU Adapter Contract
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _gate_gpu_adapter_g49() -> dict:  # noqa: C901
+    """
+    GPUAdapterContract + 3종 Adapter + CostSLO + CostLedger GPU 확장 검증.
+
+    GA-1:  GPUAdapterContract ABC import 가능
+    GA-2:  CostSLO 데이터클래스 존재 (soft/hard/emergency 필드)
+    GA-3:  RunPodAdapter: GPUAdapterContract 구현
+    GA-4:  LambdaLabsAdapter: GPUAdapterContract 구현
+    GA-5:  HFAutoTrainAdapter: GPUAdapterContract 구현
+    GA-6:  dry_run() → GPUJobResult(status=DRY_RUN, dry_run=True)
+    GA-7:  CostSLO SLO 값 검증 (soft=90 / hard=120 / emergency=150)
+    GA-8:  GPUCostLedger.gpu_track() 메서드 존재
+    GA-9:  GPUCostLedger.monthly_total_gpu() 메서드 존재
+    GA-10: LLM-0 준수 (gpu_adapter.py 내 LLM API 호출 없음)
+    """
+    checks: dict = {}
+    failed: list = []
+
+    # GA-1: import
+    try:
+        from literary_system.finetune.gpu_adapter import (
+            GPUJobStatus,
+            GPUAdapterContract,
+            CostSLO,
+            GPUJobRequest,
+            GPUJobResult,
+
+            GPUProvider,
+            RunPodAdapter,
+            LambdaLabsAdapter,
+            HFAutoTrainAdapter,
+            get_adapter,
+            list_providers,
+        )
+        checks["GA-1"] = True
+    except ImportError as exc:
+        checks["GA-1"] = False
+        failed.append(f"GA-1 import: {exc}")
+
+    # GA-2: CostSLO 데이터클래스
+    try:
+        slo = CostSLO()
+        checks["GA-2"] = hasattr(slo, "soft") and hasattr(slo, "hard") and hasattr(slo, "emergency")
+        if not checks["GA-2"]:
+            failed.append("GA-2 CostSLO missing fields")
+    except Exception as exc:  # noqa: BLE001
+        checks["GA-2"] = False
+        failed.append(f"GA-2: {exc}")
+
+    # GA-3: RunPodAdapter
+    try:
+        import inspect
+        checks["GA-3"] = issubclass(RunPodAdapter, GPUAdapterContract) and not inspect.isabstract(RunPodAdapter)
+        if not checks["GA-3"]:
+            failed.append("GA-3 RunPodAdapter not concrete subclass")
+    except Exception as exc:  # noqa: BLE001
+        checks["GA-3"] = False
+        failed.append(f"GA-3: {exc}")
+
+    # GA-4: LambdaLabsAdapter
+    try:
+        checks["GA-4"] = issubclass(LambdaLabsAdapter, GPUAdapterContract) and not inspect.isabstract(LambdaLabsAdapter)
+        if not checks["GA-4"]:
+            failed.append("GA-4 LambdaLabsAdapter not concrete subclass")
+    except Exception as exc:  # noqa: BLE001
+        checks["GA-4"] = False
+        failed.append(f"GA-4: {exc}")
+
+    # GA-5: HFAutoTrainAdapter
+    try:
+        checks["GA-5"] = issubclass(HFAutoTrainAdapter, GPUAdapterContract) and not inspect.isabstract(HFAutoTrainAdapter)
+        if not checks["GA-5"]:
+            failed.append("GA-5 HFAutoTrainAdapter not concrete subclass")
+    except Exception as exc:  # noqa: BLE001
+        checks["GA-5"] = False
+        failed.append(f"GA-5: {exc}")
+
+    # GA-6: dry_run() 반환값 검증
+    try:
+        req = GPUJobRequest(model_name="test-model", dataset_path="/data/test", hours_estimate=2.0, dry_run=True)
+        for AdapterCls in [RunPodAdapter, LambdaLabsAdapter, HFAutoTrainAdapter]:
+            adapter = AdapterCls()
+            result = adapter.dry_run(req)
+            assert isinstance(result, GPUJobResult), f"{AdapterCls.__name__} dry_run not GPUJobResult"
+            assert result.status == GPUJobStatus.DRY_RUN, f"{AdapterCls.__name__} status != DRY_RUN"
+            assert result.dry_run is True, f"{AdapterCls.__name__} dry_run != True"
+        checks["GA-6"] = True
+    except Exception as exc:  # noqa: BLE001
+        checks["GA-6"] = False
+        failed.append(f"GA-6: {exc}")
+
+    # GA-7: CostSLO 값 검증
+    try:
+        slo = CostSLO()
+        ok = (
+            slo.soft      == 90.0  and
+            slo.hard      == 120.0 and
+            slo.emergency == 150.0
+        )
+        checks["GA-7"] = ok
+        if not ok:
+            failed.append(f"GA-7 CostSLO values wrong: {slo}")
+    except Exception as exc:  # noqa: BLE001
+        checks["GA-7"] = False
+        failed.append(f"GA-7: {exc}")
+
+    # GA-8: GPUCostLedger.gpu_track
+    try:
+        from literary_system.llm_bridge.cost_ledger import GPUCostLedger
+        ledger = GPUCostLedger()
+        result = ledger.gpu_track(provider="runpod", hours=1.0, cost_per_hour=0.39)
+        checks["GA-8"] = isinstance(result, dict) and "cost_usd" in result and "monthly_total" in result
+        if not checks["GA-8"]:
+            failed.append(f"GA-8 gpu_track bad return: {result}")
+    except Exception as exc:  # noqa: BLE001
+        checks["GA-8"] = False
+        failed.append(f"GA-8: {exc}")
+
+    # GA-9: GPUCostLedger.monthly_total_gpu
+    try:
+        ledger2 = GPUCostLedger()
+        ledger2.gpu_track(provider="runpod", hours=2.0, cost_per_hour=0.39)
+        total = ledger2.monthly_total_gpu()
+        checks["GA-9"] = isinstance(total, float) and total > 0
+        if not checks["GA-9"]:
+            failed.append(f"GA-9 monthly_total_gpu: {total}")
+    except Exception as exc:  # noqa: BLE001
+        checks["GA-9"] = False
+        failed.append(f"GA-9: {exc}")
+
+    # GA-10: LLM-0 준수 (gpu_adapter.py 내 openai/anthropic/requests LLM 호출 없음)
+    try:
+        import ast, pathlib
+        src_path = pathlib.Path(__file__).parent.parent / "finetune" / "gpu_adapter.py"
+        src_text = src_path.read_text(encoding="utf-8")
+        forbidden_patterns = ["openai.ChatCompletion", "anthropic.Anthropic(", "requests.post(\"https://api.openai", "client.messages.create"]
+        has_violation = any(p in src_text for p in forbidden_patterns)
+        checks["GA-10"] = not has_violation
+        if has_violation:
+            failed.append("GA-10 LLM-0 violation detected in gpu_adapter.py")
+    except Exception as exc:  # noqa: BLE001
+        checks["GA-10"] = False
+        failed.append(f"GA-10: {exc}")
+
+    all_pass = all(checks.values())
+    return {
+        "gate":    "gpu_adapter_g49",
+        "pass":    all_pass,
+        "checkpoints": checks,
+        "details": f"GPUAdapterGate {'PASS' if all_pass else 'FAIL'} — {sum(checks.values())}/10 체크포인트",
+        **({"failed_checkpoints": failed} if failed else {}),
+    }
+
+
+GATES.append(
+    ("gpu_adapter_g49", "GPUAdapterGate: GPUAdapterContract + 3 Adapters + CostSLO (Gate 49, ADR-051)", _gate_gpu_adapter_g49),
 )
