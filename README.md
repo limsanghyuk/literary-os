@@ -3,9 +3,9 @@
 > **판단은 로컬, 생성만 LLM, 학습은 누적**  
 > AI 기반 장편 소설·드라마 시나리오 생성 시스템
 
-[![Version](https://img.shields.io/badge/version-9.2.0-blue)]()
+[![Version](https://img.shields.io/badge/version-10.0.0-blue)]()
 [![Tests](https://img.shields.io/badge/tests-5897%20PASS-brightgreen)]()
-[![Gates](https://img.shields.io/badge/release%20gates-45%2F45%20PASS-brightgreen)]()
+[![Gates](https://img.shields.io/badge/release%20gates-51%2F51%20PASS-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 
@@ -27,7 +27,7 @@ from literary_system.gates.release_gate import run_release_gate
 result = run_release_gate()
 print(result['summary'])
 "
-# → RELEASE GATE PASS: 45/45 gates passed
+# → RELEASE GATE PASS: 51/51 gates passed
 ```
 
 ---
@@ -45,7 +45,7 @@ literary_system/
 ├── corpus/               # 외부 코퍼스 브릿지 — BGE-M3 + CIM (V557~V561)
 ├── multiwork/            # 다중작품 관리 오케스트레이터 (V562~V571)
 ├── db/                   # LOSDB — SQL/Vector/Graph 스토리지 + Facade (V581~V586)
-├── gates/                # 릴리즈 게이트 45종 (G01~G46)
+├── gates/                # 릴리즈 게이트 51종 (G01~G52)
 ├── adapters_live/        # LLM 어댑터 (Claude / OpenAI / Ollama)
 └── ...
 ```

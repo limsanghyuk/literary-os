@@ -1,8 +1,8 @@
 # literary-os CI — V587 4-Tier Gate 분리 (ADR-046, ADR-048)
 # Tier L0: pre-commit 3게이트 (≤5s)
 # Tier L1: PR fast-path 10게이트 (≤30s)
-# Tier L2: main merge (전체 중 빠른 45게이트 subset)
-# Tier L3/full: release full 45게이트
+# Tier L2: main merge (전체 중 빠른 51게이트 subset)
+# Tier L3/full: release full 51게이트 (G01~G52)
 name: CI
 
 on:
@@ -104,7 +104,7 @@ jobs:
 
   # ── 6. 테스트 + Release Gate full (45게이트) — main push ──────────────────────
   test:
-    name: "Test Suite + Release Gate (45 Gates, Python ${{ matrix.python-version }})"
+    name: "Test Suite + Release Gate (51 Gates, Python ${{ matrix.python-version }})"
     runs-on: ubuntu-latest
     needs: [lint, version-check, preflight]
     strategy:

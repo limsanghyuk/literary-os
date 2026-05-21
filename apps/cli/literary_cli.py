@@ -301,7 +301,7 @@ def _enrich_text(base_text: str, ep: int, sc: int) -> str:
             "전: 반전이 찾아왔다. ", "결: 모든 것이 해소되었다. "]
     tension = "위기가 고조되었다. 두려움과 갈등이 교차했다. "
     hook = f"[E{ep:02d}-S{sc:02d}] "
-    return hook + acts[sc % 4] + tension + base_text
+    return hook + acts[(sc - 1) % 4] + tension + base_text  # BUG-01 fix: 1-based → 0-based
 
 
 # ---------------------------------------------------------------------------

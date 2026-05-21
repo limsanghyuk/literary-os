@@ -45,13 +45,20 @@ class BackendHealthRecord:
     last_error: str = ""
     failure_threshold: int = 3
     recovery_timeout_sec: float = 60.0
+    last_check_ok: bool = True  # 마지막 ping 결과 (False=최근 실패, ADR-050 V595.1)
 
     def is_available(self) -> bool:
-        return self.circuit_state in (BackendCircuitState.CLOSED, BackendCircuitState.HALF_OPEN)
+        """Circuit이 OPEN이 아니고 마지막 ping이 성공인 경우에만 가용."""
+        return (
+            self.circuit_state != BackendCircuitState.OPEN
+            and self.last_check_ok
+        )
 
     def record_success(self) -> None:
         self.total_checks += 1
         self.consecutive_failures = 0
+        self.last_check_ok = True
+        self.last_error = ""
         self.circuit_state = BackendCircuitState.CLOSED
         self.last_check_time = time.monotonic()
 
@@ -59,6 +66,7 @@ class BackendHealthRecord:
         self.total_checks += 1
         self.total_failures += 1
         self.consecutive_failures += 1
+        self.last_check_ok = False
         self.last_failure_time = time.monotonic()
         self.last_check_time = time.monotonic()
         self.last_error = error
@@ -75,6 +83,7 @@ class BackendHealthRecord:
             elapsed = time.monotonic() - self.last_failure_time
             if elapsed >= self.recovery_timeout_sec:
                 self.circuit_state = BackendCircuitState.HALF_OPEN
+                self.last_check_ok = True   # HALF_OPEN 진입 시 재시도 허용
                 logger.info(
                     "BackendHealthMonitor: %s Circuit HALF_OPEN (%.1fs 경과)",
                     self.backend.value, elapsed,
@@ -90,6 +99,7 @@ class BackendHealthRecord:
             "total_checks": self.total_checks,
             "total_failures": self.total_failures,
             "last_error": self.last_error,
+            "last_check_ok": self.last_check_ok,
             "available": self.is_available(),
         }
 

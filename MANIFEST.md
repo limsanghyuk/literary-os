@@ -1,8 +1,8 @@
-# MANIFEST — Literary OS V594
+# MANIFEST — Literary OS V595
 
-버전: 9.9.0  
+버전: 10.0.0  
 릴리즈일: 2026-05-21  
-빌드 타입: V594 SP-A.7 릴리즈
+빌드 타입: V595 SP-A.8 릴리즈 (Phase A 완료)
 
 ## 테스트 결과
 

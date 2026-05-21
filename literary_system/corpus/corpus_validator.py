@@ -252,9 +252,15 @@ class CorpusMinHashDedup:
         self._sigs: list = []
 
     def _shingle(self, text: str, k: int = 3) -> Set[int]:
-        """문자 k-gram shingle 집합 (정수화)."""
+        """문자 k-gram shingle 집합 (정수화).
+        BUG-08 fix: Python hash() → hashlib.md5 — PYTHONHASHSEED 무관, 세션 간 재현 가능.
+        """
+        import hashlib
         text = text.lower()
-        return {hash(text[i:i+k]) & 0x7FFFFFFF for i in range(len(text) - k + 1)}
+        return {
+            int(hashlib.md5(text[i:i+k].encode("utf-8")).hexdigest(), 16) & 0x7FFFFFFF
+            for i in range(len(text) - k + 1)
+        }
 
     def _minhash(self, shingles: Set[int]) -> list:
         """MinHash 시그니처 벡터."""
@@ -294,9 +300,11 @@ class CorpusMinHashDedup:
 # DRSE S-score 계산 (LLM-0, 순수 텍스트 메트릭)
 # ---------------------------------------------------------------------------
 
+# BUG-05 fix: 한국어 기본 조사(가/이/을/를/에서/으로/때) 제거 — DRSE 편향 방지
+# 조사는 모든 문장에 등장하므로 내러티브 마커로 부적합 (corpus_validator DRSE +19% 과대평가)
 _NARRATIVE_MARKERS = [
     "했다", "였다", "이었다", "라고", "하며", "이며", "하지만", "그러나",
-    "그리고", "때문에", "때", "에서", "으로", "가", "이", "을", "를",
+    "그리고", "때문에",
 ]
 
 _DIALOGUE_MARKERS = ['"', "'", '「', '」', '『', '』', '…', '。']

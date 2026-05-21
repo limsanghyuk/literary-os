@@ -48,7 +48,7 @@ def _gate_phase_a_exit_g52() -> dict:
     EA-1: CLI import + 3 commands (analyze/repair/generate)
     EA-2: score_scene_full() 5축 분해 기능
     EA-3: CorpusFallbackPipeline collect() 기능
-    EA-4: R(scene) >= 0.60 — _RICH_SCENE * 3 기준
+    EA-4: R(scene) >= 0.60 — _RICH_SCENE 기준
     EA-5: GATES count >= 51 + constitution_g51 PASS
     EA-6: pytest --collect-only >= 6,000 테스트 수집
     """
@@ -98,11 +98,11 @@ def _gate_phase_a_exit_g52() -> dict:
         checks["EA-3"] = False
         errors.append(f"EA-3 pipeline.collect 실패: {e}")
 
-    # ----- EA-4: R(scene) >= 0.60 (_RICH_SCENE * 3) -----
+    # ----- EA-4: R(scene) >= 0.60 (_RICH_SCENE) -----
     try:
         from literary_system.constitution.los_constitution import LOSConstitution
         con = LOSConstitution()
-        score_val = con.score_scene(_RICH_SCENE * 3)
+        score_val = con.score_scene(_RICH_SCENE)
         ea4_ok = score_val >= 0.60
         checks["EA-4"] = ea4_ok
         if not ea4_ok:
@@ -188,5 +188,5 @@ def _gate_phase_a_exit_g52() -> dict:
 if __name__ == "__main__":
     import json
     result = _gate_phase_a_exit_g52()
-    print(json.dumps(result, ensure_ascii=False, indent=2))
+    sys.stdout.write(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
     sys.exit(0 if result["pass"] else 1)
