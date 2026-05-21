@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "literary-os"
-version = "10.0.3"
-description = "Literary OS V595.3 — Phase A Atomicity & Gate Freshness Final, 51 Gates PASS, 6179+ tests (v10.0.3)"
+version = "10.1.0"
+description = "Literary OS V596 — Phase B SP-B.1 LoRA Dataset Pipeline + Governance, 51 Gates PASS, 6202+ tests (v10.1.0)"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}

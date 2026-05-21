@@ -1,3 +1,11 @@
+## [10.1.0] — 2026-05-21 — V596 Phase B SP-B.1
+
+### Added
+- `literary_system/governance/`: LoRAProvenanceLedger (sha256 체인) + DSRHandler (30-day SLA)
+- `literary_system/finetune/`: LoRADatasetBuilder + DatasetSplitter (8:1:1, seed=42) + DatasetRegistry (sha256+DVC)
+- ADR-056: LoRA Dataset Format + DSR Policy
+- 11 TC → 6,202 tests total, 51/51 Gates PASS
+
 # Changelog — Literary OS
 
 상세 버전별 변경 이력은 `docs/changelog/`를 참조하세요.

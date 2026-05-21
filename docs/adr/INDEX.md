@@ -58,3 +58,4 @@
 | ADR-046 | [ADR-046-gate-hierarchy.md](ADR-046-gate-hierarchy.md) | 5 | V587 |
 | ADR-047 | [ADR-047-e2e-prose-policy.md](ADR-047-e2e-prose-policy.md) | 5 | V587 |
 | ADR-048 | [ADR-048-doc-consistency-ci.md](ADR-048-doc-consistency-ci.md) | 4 | V587 |
+| ADR-056 | V596 | LoRA Dataset Format + ProvenanceLedger + DatasetRegistry + DSR 30-day SLA |

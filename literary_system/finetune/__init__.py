@@ -57,7 +57,7 @@ from literary_system.finetune.safety_regression_suite import (
 __all__ = [
     "FineTuneJobManager", "FineTuneJob", "FineTuneMethod", "JobStatus",
     "ProseStyleDataset", "ProseEntry", "ProseStyle", "DataSource", "LicenseType",
-    "DatasetSplit", "DatasetCard", "make_entry", "ALLOWED_LICENSES",
+    "DatasetSplit", "LoRADatasetSplit", "DatasetCard", "make_entry", "ALLOWED_LICENSES",
     "ModelEvalHarness", "EvalSample", "EvalReport",
     "SafetyRegressionSuite", "SafetyViolation", "SafetyReport", "SafetyCategory",
     "ModelVersionManager", "ModelVersion", "ModelArtifact", "ModelStage", "CANARY_STEPS",
@@ -87,4 +87,22 @@ from literary_system.finetune.gpu_adapter import (
     RunPodAdapter,
     get_adapter,
     list_providers,
+)
+from literary_system.finetune.lora_dataset_builder import (
+    ALPACA_INSTRUCTION,
+    ALPACA_INPUT_TEMPLATE,
+    LoRASample,
+    LoRADatasetBuilder,
+)
+from literary_system.finetune.dataset_splitter import (
+    DEFAULT_TRAIN_RATIO,
+    DEFAULT_VAL_RATIO,
+    DEFAULT_TEST_RATIO,
+    DEFAULT_SEED,
+    LoRADatasetSplit,
+    DatasetSplitter,
+)
+from literary_system.finetune.dataset_registry import (
+    LoRADatasetVersion,
+    DatasetRegistry,
 )
