@@ -1,0 +1,23 @@
+apiVersion: v2
+name: literary-os-train-plane
+description: |
+  Literary OS TrainPlane — LoRA 학습 워크로드 격리 Helm Chart
+
+  Phase B 본안 보강 B-M-16:
+  - TrainPlane과 ServePlane을 분리하여 학습 워크로드와 추론 워크로드의
+    리소스 격리 및 독립 스케일링을 보장한다.
+  - GPU 학습 Job은 이 차트에서만 배포한다.
+  - ADR-057 §5 TrainPlane/ServePlane 격리 정책 참조.
+
+type: application
+version: 0.1.0
+appVersion: "10.2.0"
+keywords:
+  - lora
+  - fine-tuning
+  - gpu
+  - train-plane
+home: https://github.com/limsanghyuk/literary-os
+maintainers:
+  - name: limsanghyuk
+    email: sanghyuk6871@gmail.com

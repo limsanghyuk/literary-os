@@ -1,0 +1,81 @@
+# Literary OS TrainPlane — LoRA 학습 Job Template
+# ADR-057 §5 TrainPlane 격리, B-M-16
+{{- /*
+  이 Job은 literary-train 네임스페이스에서만 실행된다.
+  ServePlane(literary-serve)과 네임스페이스 격리로 GPU 리소스 충돌을 방지.
+*/ -}}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ .Release.Name }}-lora-train
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: literary-os-trainer
+    version: {{ .Chart.AppVersion | quote }}
+    component: train-plane
+    schedule-type: {{ .Values.loraJob.scheduleType | quote }}
+spec:
+  # 학습 Job은 1회 실행 (격주/주간 CronJob에서 트리거)
+  completions: 1
+  parallelism: 1
+  backoffLimit: 2
+  template:
+    metadata:
+      labels:
+        app: literary-os-trainer
+        component: train-plane
+    spec:
+      serviceAccountName: {{ .Values.serviceAccount.name }}
+      restartPolicy: OnFailure
+      nodeSelector:
+        {{- toYaml .Values.nodeSelector | nindent 8 }}
+      tolerations:
+        {{- toYaml .Values.tolerations | nindent 8 }}
+      containers:
+        - name: lora-trainer
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command:
+            - python
+            - -m
+            - literary_system.finetune.lora_job_runner
+          env:
+            - name: LORA_BASE_MODEL
+              value: {{ .Values.loraJob.baseModel | quote }}
+            - name: LORA_RANK
+              value: {{ .Values.loraJob.loraRank | quote }}
+            - name: LORA_ALPHA
+              value: {{ .Values.loraJob.loraAlpha | quote }}
+            - name: LORA_DROPOUT
+              value: {{ .Values.loraJob.loraDropout | quote }}
+            - name: LORA_NUM_EPOCHS
+              value: {{ .Values.loraJob.numEpochs | quote }}
+            - name: LORA_BATCH_SIZE
+              value: {{ .Values.loraJob.batchSize | quote }}
+            - name: LORA_SEED
+              value: {{ .Values.loraJob.seed | quote }}
+            - name: DATASET_PATH
+              value: {{ .Values.loraJob.datasetMount | quote }}
+            - name: OUTPUT_DIR
+              value: {{ .Values.loraJob.outputDir | quote }}
+            - name: HISTORY_PATH
+              value: {{ .Values.provenance.historyPath | quote }}
+            - name: SLO_HARD_USD
+              value: {{ .Values.costSlo.hardUsd | quote }}
+            - name: SLO_EMERGENCY_USD
+              value: {{ .Values.costSlo.emergencyUsd | quote }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - name: dataset-volume
+              mountPath: /data
+              readOnly: true
+            - name: output-volume
+              mountPath: /outputs
+      volumes:
+        - name: dataset-volume
+          persistentVolumeClaim:
+            claimName: {{ .Release.Name }}-dataset-pvc
+        - name: output-volume
+          persistentVolumeClaim:
+            claimName: {{ .Release.Name }}-output-pvc

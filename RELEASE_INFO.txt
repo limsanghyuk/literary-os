@@ -1,12 +1,12 @@
-Literary OS V596 — Phase A Atomicity & Gate Freshness Final
+Literary OS V597 — Phase B SP-B.1 LoRA Training Config + Job Runner + TrainPlane Helm
 ===========================================================
-Version      : V596 (v10.1.0)
+Version      : V597 (v10.2.0)
 Release Date : 2026-05-21
-Build Type   : Phase A Final — Release Authority Finalization
+Build Type   : Phase B SP-B.1 — LoRA Training Pipeline (V597)
 
-Test Result  : 6,202 PASS
+Test Result  : 6,211 PASS
 Gate         : 51/51 PASS (G01~G52)
-Phase        : Phase A Complete (SP-A.1~SP-A.8) + V595.1 Hotfix + V595.2 Authority Fix
+Phase        : Phase B SP-B.1 (V596~V600) — LoRA Fine-tuning Pipeline
 
 What Changed in V595.2
 ------------------------

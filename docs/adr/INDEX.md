@@ -59,3 +59,4 @@
 | ADR-047 | [ADR-047-e2e-prose-policy.md](ADR-047-e2e-prose-policy.md) | 5 | V587 |
 | ADR-048 | [ADR-048-doc-consistency-ci.md](ADR-048-doc-consistency-ci.md) | 4 | V587 |
 | ADR-056 | V596 | LoRA Dataset Format + ProvenanceLedger + DatasetRegistry + DSR 30-day SLA |
+| ADR-057 | V597 | LoRA 학습 설정 + GPU 격리 정책 (rank=16, 격주 학습, TrainPlane Helm) |

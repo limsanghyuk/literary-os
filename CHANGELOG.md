@@ -1,3 +1,19 @@
+## [10.2.0] — 2026-05-21 — V597 Phase B SP-B.1 LoRA Training Pipeline
+
+### Added
+- `literary_system/finetune/lora_training_config.py`: LoRATrainingConfig (rank=16, q/k/v/o_proj, bf16, B-M-05)
+- `literary_system/finetune/lora_job_runner.py`: LoRAJobRunner + BiweeklyScheduler (격주/주간 SLO $96, B-M-06)
+- `deploy/helm/train_plane/`: TrainPlane Helm Chart 스텁 — literary-train 네임스페이스 격리 (B-M-16)
+- `docs/adr/ADR-057.md`: LoRA 학습 설정 + GPU 격리 정책
+- `tests/unit/test_v597_lora_training.py`: 9 TC (TC-A1~A3, B1~B4, C1~C2)
+
+### Changed
+- `literary_system/finetune/__init__.py`: LoRATrainingConfig, LoRAJobRunner, BiweeklyScheduler export 추가
+
+### Tests
+- 6,211 collected (+9 from V596)
+- 51/51 Release Gates PASS
+
 ## [10.1.0] — 2026-05-21 — V596 Phase B SP-B.1
 
 ### Added
