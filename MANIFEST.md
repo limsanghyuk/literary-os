@@ -1,8 +1,8 @@
-# MANIFEST — Literary OS V590
+# MANIFEST — Literary OS V591
 
-버전: 9.5.0  
+버전: 9.6.0  
 릴리즈일: 2026-05-21  
-빌드 타입: V590 SP-A.3 릴리즈
+빌드 타입: V591 SP-A.4 릴리즈
 
 ## 테스트 결과
 

@@ -130,6 +130,7 @@ def _build_registry() -> Dict[str, GateRegistryEntry]:
         "query_interface_g47":          ("ADR-049",  "V588",  "L1"),
         "partial_availability_g48":     ("ADR-050",  "V589",  "L1"),
         "gpu_adapter_g49":              ("ADR-051",  "V590",  "L1"),
+        "equivalence_g50":              ("ADR-052",  "V591",  "L1"),
         "migration_engine_g42":          ("ADR-042",  "V583",  "L1"),
     }
 

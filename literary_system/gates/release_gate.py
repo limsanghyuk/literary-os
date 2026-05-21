@@ -1791,6 +1791,7 @@ _GATE_TIER: dict = {
     "query_interface_g47":          "L1",
     "partial_availability_g48":     "L1",
     "gpu_adapter_g49":              "L1",
+    "equivalence_g50":              "L1",
     # 나머지는 L2 이상 — 기본값 L2
 }
 
@@ -2221,4 +2222,157 @@ def _gate_gpu_adapter_g49() -> dict:  # noqa: C901
 
 GATES.append(
     ("gpu_adapter_g49", "GPUAdapterGate: GPUAdapterContract + 3 Adapters + CostSLO (Gate 49, ADR-051)", _gate_gpu_adapter_g49),
+)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Gate G50 — EquivalenceGate (SP-A.4, V591)
+# ADR-052: MOCK↔REAL Equivalence Tester
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _gate_equivalence_g50() -> dict:  # noqa: C901
+    """
+    EquivalenceTester 5축 검증 + 골든셋 + drift 감지 검증.
+
+    EQ-1:  equivalence_tester 모듈 import 가능
+    EQ-2:  EquivalenceTester 클래스 존재
+    EQ-3:  EquivalenceReport 데이터클래스 존재
+    EQ-4:  EquivalenceDriftReport 데이터클래스 존재
+    EQ-5:  compare() → 5축 모두 포함
+    EQ-6:  self-consistency: 동일 입력 → all_passed=True
+    EQ-7:  골든셋 기본값 20개
+    EQ-8:  run_golden_set() → pass_rate >= 0.95 (self-consistency)
+    EQ-9:  drift_detected = False (self-consistency)
+    EQ-10: LLM-0 준수 (외부 LLM 호출 없음)
+    """
+    checks: dict = {}
+    failed: list = []
+
+    # EQ-1: import
+    try:
+        from literary_system.finetune.equivalence_tester import (
+            EquivalenceTester,
+            EquivalenceReport,
+            EquivalenceAxis,
+            EquivalenceDriftReport,
+            THRESHOLD_KL_DIVERGENCE_MAX,
+            THRESHOLD_BERTSCORE_F1_MIN,
+            DRIFT_PASS_RATE_MIN,
+        )
+        checks["EQ-1"] = True
+    except ImportError as exc:
+        checks["EQ-1"] = False
+        failed.append(f"EQ-1 import: {exc}")
+
+    # EQ-2: EquivalenceTester 클래스
+    try:
+        checks["EQ-2"] = callable(EquivalenceTester)
+        if not checks["EQ-2"]:
+            failed.append("EQ-2 EquivalenceTester not callable")
+    except Exception as exc:  # noqa: BLE001
+        checks["EQ-2"] = False
+        failed.append(f"EQ-2: {exc}")
+
+    # EQ-3: EquivalenceReport
+    try:
+        checks["EQ-3"] = hasattr(EquivalenceReport, "__dataclass_fields__")
+        if not checks["EQ-3"]:
+            failed.append("EQ-3 EquivalenceReport not dataclass")
+    except Exception as exc:  # noqa: BLE001
+        checks["EQ-3"] = False
+        failed.append(f"EQ-3: {exc}")
+
+    # EQ-4: EquivalenceDriftReport
+    try:
+        checks["EQ-4"] = hasattr(EquivalenceDriftReport, "__dataclass_fields__")
+        if not checks["EQ-4"]:
+            failed.append("EQ-4 EquivalenceDriftReport not dataclass")
+    except Exception as exc:  # noqa: BLE001
+        checks["EQ-4"] = False
+        failed.append(f"EQ-4: {exc}")
+
+    # EQ-5: compare() → 5축 포함
+    try:
+        tester  = EquivalenceTester()
+        out     = {"text": "테스트 텍스트입니다."}
+        report  = tester.compare("gate_check", out, out)
+        ax_names = {a.name for a in report.axes}
+        expected = {"schema_match", "length_ratio", "kl_divergence", "bertscore_f1", "safety_pass"}
+        checks["EQ-5"] = expected == ax_names
+        if not checks["EQ-5"]:
+            failed.append(f"EQ-5 axes mismatch: {ax_names}")
+    except Exception as exc:  # noqa: BLE001
+        checks["EQ-5"] = False
+        failed.append(f"EQ-5: {exc}")
+
+    # EQ-6: self-consistency → all_passed=True
+    try:
+        tester2 = EquivalenceTester()
+        out2    = {"text": "조선 시대 기생 춘향은 이도령과 사랑에 빠졌으나 신분의 차이로 인해 고난을 겪는다."}
+        report2 = tester2.compare("self_test", out2, out2)
+        checks["EQ-6"] = report2.all_passed is True
+        if not checks["EQ-6"]:
+            failed.append(f"EQ-6 self-consistency failed: {[a.to_dict() for a in report2.axes if not a.passed]}")
+    except Exception as exc:  # noqa: BLE001
+        checks["EQ-6"] = False
+        failed.append(f"EQ-6: {exc}")
+
+    # EQ-7: 골든셋 기본값 20개
+    try:
+        tester3 = EquivalenceTester()
+        checks["EQ-7"] = tester3.golden_set_size == 20
+        if not checks["EQ-7"]:
+            failed.append(f"EQ-7 golden_set_size={tester3.golden_set_size}, expected 20")
+    except Exception as exc:  # noqa: BLE001
+        checks["EQ-7"] = False
+        failed.append(f"EQ-7: {exc}")
+
+    # EQ-8: run_golden_set() pass_rate >= 0.95
+    try:
+        tester4  = EquivalenceTester()
+        drift4   = tester4.run_golden_set()  # self-consistency
+        checks["EQ-8"] = drift4.pass_rate >= DRIFT_PASS_RATE_MIN
+        if not checks["EQ-8"]:
+            failed.append(f"EQ-8 pass_rate={drift4.pass_rate:.4f} < {DRIFT_PASS_RATE_MIN}")
+    except Exception as exc:  # noqa: BLE001
+        checks["EQ-8"] = False
+        failed.append(f"EQ-8: {exc}")
+
+    # EQ-9: drift_detected=False (self-consistency)
+    try:
+        tester5 = EquivalenceTester()
+        drift5  = tester5.run_golden_set()
+        checks["EQ-9"] = drift5.drift_detected is False
+        if not checks["EQ-9"]:
+            failed.append(f"EQ-9 drift_detected=True unexpectedly (pass_rate={drift5.pass_rate})")
+    except Exception as exc:  # noqa: BLE001
+        checks["EQ-9"] = False
+        failed.append(f"EQ-9: {exc}")
+
+    # EQ-10: LLM-0 준수
+    try:
+        import pathlib
+        src_path = pathlib.Path(__file__).parent.parent / "finetune" / "equivalence_tester.py"
+        src_text = src_path.read_text(encoding="utf-8")
+        forbidden = ["openai.ChatCompletion", "anthropic.Anthropic(", "client.messages.create", "requests.post(\"https://api.openai"]
+        has_violation = any(p in src_text for p in forbidden)
+        checks["EQ-10"] = not has_violation
+        if has_violation:
+            failed.append("EQ-10 LLM-0 violation in equivalence_tester.py")
+    except Exception as exc:  # noqa: BLE001
+        checks["EQ-10"] = False
+        failed.append(f"EQ-10: {exc}")
+
+    all_pass = all(checks.values())
+    return {
+        "gate":    "equivalence_g50",
+        "pass":    all_pass,
+        "checkpoints": checks,
+        "details": f"EquivalenceGate {'PASS' if all_pass else 'FAIL'} — {sum(checks.values())}/10 체크포인트",
+        **({"failed_checkpoints": failed} if failed else {}),
+    }
+
+
+GATES.append(
+    ("equivalence_g50", "EquivalenceGate: MOCK↔REAL 5축 검증 + 골든셋 + drift 감지 (Gate 50, ADR-052)", _gate_equivalence_g50),
 )

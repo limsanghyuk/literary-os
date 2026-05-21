@@ -79,3 +79,12 @@ from literary_system.finetune.gpu_adapter import (
     get_adapter,
     list_providers,
 )
+from literary_system.finetune.equivalence_tester import (
+    EquivalenceTester,
+    EquivalenceReport,
+    EquivalenceAxis,
+    EquivalenceDriftReport,
+    DRIFT_PASS_RATE_MIN,
+    THRESHOLD_KL_DIVERGENCE_MAX,
+    THRESHOLD_BERTSCORE_F1_MIN,
+)

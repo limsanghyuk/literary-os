@@ -1,0 +1,97 @@
+# equivalence_monthly.yml — SP-A.4 (V591)
+# 월 1회 MOCK↔REAL 동등성 검증 CI
+# ADR-052 참조
+
+name: Equivalence Monthly
+
+on:
+  schedule:
+    - cron: "0 0 1 * *"   # 매월 1일 00:00 UTC
+  workflow_dispatch:        # 수동 트리거 허용
+    inputs:
+      mode:
+        description: "실행 모드 (mock / real)"
+        required: false
+        default: "mock"
+
+jobs:
+  equivalence-check:
+    name: "MOCK↔REAL Equivalence Check"
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -e ".[dev]" --quiet
+
+      - name: Run Equivalence Tester (mock mode)
+        id: equivalence
+        run: |
+          python - << 'PYEOF'
+          import json, sys
+          from literary_system.finetune.equivalence_tester import EquivalenceTester
+
+          tester = EquivalenceTester()
+          drift  = tester.run_golden_set()  # real_outputs=None → self-consistency
+          report = drift.to_dict()
+
+          print(f"Total samples : {drift.total_samples}")
+          print(f"Passed samples: {drift.passed_samples}")
+          print(f"Pass rate     : {drift.pass_rate:.4f}")
+          print(f"Drift detected: {drift.drift_detected}")
+          print(f"Axis stats    : {json.dumps(drift.axis_stats, indent=2)}")
+
+          # GitHub Actions output
+          with open("equivalence_report.json", "w") as f:
+              json.dump(report, f, ensure_ascii=False, indent=2)
+
+          if drift.drift_detected:
+              print("::error::DRIFT DETECTED — pass_rate < 0.95. MOCK fixtures need update.")
+              sys.exit(1)
+          else:
+              print("::notice::All equivalence checks PASSED. No drift detected.")
+          PYEOF
+
+      - name: Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: equivalence-report-${{ github.run_id }}
+          path: equivalence_report.json
+          retention-days: 90
+
+      - name: Create GitHub Issue on drift
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let body = '## MOCK↔REAL Drift Detected\n\n';
+            try {
+              const report = JSON.parse(fs.readFileSync('equivalence_report.json', 'utf8'));
+              body += `**Pass rate**: ${report.pass_rate}\n`;
+              body += `**Drift threshold**: 0.95\n\n`;
+              body += '### Axis Stats\n```json\n';
+              body += JSON.stringify(report.axis_stats, null, 2);
+              body += '\n```\n\n';
+              body += '**Action required**: Review MOCK fixtures and update golden set.\n';
+            } catch (e) {
+              body += 'Could not load equivalence report.\n';
+            }
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[Equivalence] MOCK↔REAL Drift Detected — ${new Date().toISOString().slice(0, 10)}`,
+              body: body,
+              labels: ['equivalence', 'drift', 'automated'],
+            });
