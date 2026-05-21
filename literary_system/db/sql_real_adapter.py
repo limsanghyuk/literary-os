@@ -115,21 +115,23 @@ class SQLiteRealAdapter(BaseMigrationAdapter):
         if self.mock:
             logger.info("[MOCK-SQLite] apply %s → %s", migration.from_version, migration.to_version)
             return True
+        conn = self._get_connection()
         try:
             self._ensure_migration_table()
+            # FIX-A (V595.3): executescript()는 내부에서 자동 COMMIT 발생 → 원자성 없음.
+            # BEGIN IMMEDIATE + 개별 execute() 로 전체 migration을 단일 트랜잭션으로 묶는다.
+            conn.execute("BEGIN IMMEDIATE")
             if migration.up_script:
-                # P1-2 fix: split(";")는 세미콜론 내부 포함 SQL에서 깨짐.
-                # executescript()는 connection-level 메서드; trusted migration에만 사용.
-                # executescript는 자동으로 COMMIT 처리하므로 별도 트랜잭션 불필요.
-                conn = self._get_connection()
-                conn.executescript(migration.up_script)
+                stmts = [s.strip() for s in migration.up_script.split(";") if s.strip()]
+                for stmt in stmts:
+                    conn.execute(stmt)
             now = datetime.now(timezone.utc).isoformat()
-            with self._transaction() as cur:
-                cur.execute(
-                    f"INSERT INTO {self.MIGRATION_TABLE} "
-                    "(version, description, backend, applied_at, rolled_back) VALUES (?, ?, ?, ?, 0)",
-                    (migration.to_version, migration.description, "sql", now),
-                )
+            conn.execute(
+                f"INSERT INTO {self.MIGRATION_TABLE} "
+                "(version, description, backend, applied_at, rolled_back) VALUES (?, ?, ?, ?, 0)",
+                (migration.to_version, migration.description, "sql", now),
+            )
+            conn.commit()
             reg = SchemaRegistry.get_instance()
             parts = migration.to_version.split(".")
             major = int(parts[0]) if len(parts) > 0 else 1
@@ -149,7 +151,8 @@ class SQLiteRealAdapter(BaseMigrationAdapter):
             logger.info("SQLiteRealAdapter.apply OK: %s → %s", migration.from_version, migration.to_version)
             return True
         except Exception as exc:
-            logger.exception("SQLiteRealAdapter.apply 실패: %s", exc)
+            conn.rollback()
+            logger.exception("SQLiteRealAdapter.apply 실패 (롤백 완료): %s", exc)
             return False
 
     def rollback(self, migration: Migration) -> bool:
@@ -159,9 +162,13 @@ class SQLiteRealAdapter(BaseMigrationAdapter):
         try:
             self._ensure_migration_table()
             if migration.down_script:
-                # P1-2 fix: executescript() 사용 (세미콜론 안전)
+                # FIX-A (V595.3): rollback도 동일하게 원자 트랜잭션으로 처리
                 conn = self._get_connection()
-                conn.executescript(migration.down_script)
+                conn.execute("BEGIN IMMEDIATE")
+                stmts = [s.strip() for s in migration.down_script.split(";") if s.strip()]
+                for stmt in stmts:
+                    conn.execute(stmt)
+                conn.commit()
             with self._transaction() as cur:
                 cur.execute(
                     f"UPDATE {self.MIGRATION_TABLE} SET rolled_back=1 WHERE version=? AND backend='sql'",

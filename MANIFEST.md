@@ -1,6 +1,6 @@
-# MANIFEST — Literary OS V595.2
+# MANIFEST — Literary OS V595.3
 
-버전: 10.0.2  
+버전: 10.0.3  
 릴리즈일: 2026-05-21  
 빌드 타입: Phase A Final — Release Authority Finalization
 

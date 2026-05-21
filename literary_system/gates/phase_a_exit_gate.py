@@ -143,9 +143,10 @@ def _gate_phase_a_exit_g52() -> dict:
         checks["EA-5"] = False
         errors.append(f"EA-5 GATES 로드 실패: {e}")
 
-    # ----- EA-6: test_inventory.json 읽기 (P1-3 fix: subprocess 제거) -----
+    # ----- EA-6: test_inventory.json 읽기 + source_hash 검증 (FIX-D: V595.3) -----
     try:
         import json as _json
+        import sys as _sys
         _repo_root = Path(__file__).resolve().parent.parent.parent
         _inventory_path = _repo_root / "tools" / "test_inventory.json"
         if not _inventory_path.exists():
@@ -157,16 +158,39 @@ def _gate_phase_a_exit_g52() -> dict:
         else:
             _inv = _json.loads(_inventory_path.read_text(encoding="utf-8"))
             test_count = _inv.get("test_count", 0)
-            if test_count < 6000:
-                errors.append(
-                    f"EA-6: test_count={test_count} (>= 6,000 필요) "
-                    "— python tools/generate_test_inventory.py 재실행"
-                )
-            checks["EA-6"] = test_count >= 6000
+            # FIX-D: source_hash 검증 — 재고 파일이 현재 소스와 일치하는지 확인
+            if str(_repo_root) not in _sys.path:
+                _sys.path.insert(0, str(_repo_root))
+            try:
+                from tools.generate_test_inventory import source_hash as _source_hash_fn
+                _current_hash = _source_hash_fn()
+                _inventory_hash = _inv.get("source_hash")
+                if _inventory_hash != _current_hash:
+                    errors.append(
+                        f"EA-6: stale test_inventory.json "
+                        f"(inventory={_inventory_hash}, current={_current_hash}) "
+                        f"— python tools/generate_test_inventory.py 재실행 필요"
+                    )
+                    checks["EA-6"] = False
+                elif test_count < 6000:
+                    errors.append(
+                        f"EA-6: test_count={test_count} (>= 6,000 필요) "
+                        "— python tools/generate_test_inventory.py 재실행"
+                    )
+                    checks["EA-6"] = False
+                else:
+                    checks["EA-6"] = True
+            except ImportError:
+                # source_hash 임포트 불가 시 test_count만 검증 (하위 호환)
+                if test_count < 6000:
+                    errors.append(
+                        f"EA-6: test_count={test_count} (>= 6,000 필요) "
+                        "— python tools/generate_test_inventory.py 재실행"
+                    )
+                checks["EA-6"] = test_count >= 6000
     except Exception as e:
         errors.append(f"EA-6 test_inventory.json 읽기 실패: {e}")
         checks["EA-6"] = False
-        errors.append(f"EA-6 pytest --collect-only 실패: {e}")
 
     passed = all(checks.values())
     passed_count = sum(1 for v in checks.values() if v)

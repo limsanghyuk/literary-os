@@ -83,9 +83,11 @@ class BackendHealthRecord:
             elapsed = time.monotonic() - self.last_failure_time
             if elapsed >= self.recovery_timeout_sec:
                 self.circuit_state = BackendCircuitState.HALF_OPEN
-                self.last_check_ok = True   # HALF_OPEN 진입 시 재시도 허용
+                # FIX-C (V595.3): HALF_OPEN은 "probe 필요" 상태 — probe 성공 전까지 last_check_ok=False.
+                # (이전: True 설정 → probe 없이 available로 잡히는 결함)
+                self.last_check_ok = False
                 logger.info(
-                    "BackendHealthMonitor: %s Circuit HALF_OPEN (%.1fs 경과)",
+                    "BackendHealthMonitor: %s Circuit HALF_OPEN (%.1fs 경과) — probe 대기",
                     self.backend.value, elapsed,
                 )
                 return True
@@ -174,10 +176,15 @@ class BackendHealthMonitor:
         return {b: self.check(b) for b in self._records}
 
     def get_available_backends(self) -> List[BackendType]:
+        # FIX-C (V595.3): try_recover()는 HALF_OPEN 전이만 담당.
+        # HALF_OPEN 상태는 check_all() probe 성공 후 CLOSED 전이 전까지 available 아님.
         result = []
         for backend, rec in self._records.items():
             rec.try_recover()
-            if rec.is_available():
+            # CLOSED + last_check_ok=True + 오류 없음인 경우만 available
+            if (rec.circuit_state == BackendCircuitState.CLOSED
+                    and rec.last_check_ok
+                    and not rec.last_error):
                 result.append(backend)
         return result
 

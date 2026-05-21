@@ -261,18 +261,25 @@ class VectorRealAdapter(BaseMigrationAdapter):
             logger.info("[MOCK-Vector] apply %s", migration.migration_id)
             return True
 
-        # rollback 용 스냅샷 저장
+        # FIX-B (V595.3): 메모리 + 파일 양쪽 스냅샷 저장
+        # save op 이후 다른 op에서 실패해도 파일까지 완전 복원.
         self._snapshot = copy.deepcopy(self._store)
+        file_snapshot: Optional[bytes] = None
+        if self._path and os.path.exists(self._path):
+            with open(self._path, "rb") as _f:
+                file_snapshot = _f.read()
 
         vector_ops = getattr(migration, "vector_ops", None)
         if not vector_ops:
             logger.debug("apply(%s): vector_ops 없음 — 스킵", migration.migration_id)
-            # SchemaRegistry 업데이트
             self._record_migration(migration)
             return True
 
         try:
-            for op_dict in vector_ops:
+            # save op는 모든 mutation 완료 후 마지막에만 실행 (FIX-B)
+            should_save = any(op_dict.get("op") == "save" for op_dict in vector_ops)
+            mutation_ops = [op_dict for op_dict in vector_ops if op_dict.get("op") != "save"]
+            for op_dict in mutation_ops:
                 op = op_dict.get("op")
                 if op == "upsert":
                     self.upsert(
@@ -282,10 +289,10 @@ class VectorRealAdapter(BaseMigrationAdapter):
                     )
                 elif op == "delete":
                     self.delete(op_dict["id"])
-                elif op == "save":
-                    self.save()
                 else:
                     raise ValueError(f"알 수 없는 vector_op: {op!r}")
+            if should_save:
+                self.save()  # 모든 mutation 성공 후에만 저장
 
             self._record_migration(migration)
             logger.info(
@@ -294,9 +301,16 @@ class VectorRealAdapter(BaseMigrationAdapter):
             )
             return True
         except Exception as exc:
-            logger.exception("VectorRealAdapter.apply 실패: %s", exc)
-            # 자동 스냅샷 복원
+            logger.exception("VectorRealAdapter.apply 실패 (롤백 완료): %s", exc)
+            # 메모리 복원
             self._store = self._snapshot
+            # 파일 복원 (FIX-B 핵심)
+            if self._path:
+                if file_snapshot is not None:
+                    with open(self._path, "wb") as _f:
+                        _f.write(file_snapshot)
+                elif os.path.exists(self._path):
+                    os.remove(self._path)  # apply 전 파일이 없었으면 제거
             return False
 
     def rollback(self, migration: Migration) -> bool:

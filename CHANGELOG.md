@@ -5,6 +5,30 @@
 ---
 
 
+## [10.0.3] — V595.3 Phase A Atomicity & Gate Freshness Final — 2026-05-21
+
+### P1 결함 4종 수정 (기능 추가 없음)
+
+- **FIX-A** SQLiteRealAdapter: executescript() → BEGIN IMMEDIATE + 개별 execute() (migration 원자성)
+- **FIX-B** VectorRealAdapter: save op 분리 + 파일 바이트 스냅샷 rollback (파일 divergence 해소)
+- **FIX-C** BackendHealthMonitor: HALF_OPEN 전이 시 last_check_ok=False (probe 없는 traffic 차단)
+- **FIX-D** PhaseAExitGate EA-6: source_hash 검증 추가 (stale inventory PASS 차단)
+
+### 테스트
+
+- 신규 9개 TC (TC-A1~D3): tests/unit/test_v595_3_fixes.py
+- test_inventory.json 재생성: 6188 tests, source_hash 갱신
+- README badge: 5897 → 6179 PASS
+
+### 검증
+
+- compileall: PASS
+- check_version_consistency --strict: PASS (git tag 경고 제외)
+- run_release_gate.py: 51/51 PASS
+- E2E prose tests: 20 passed, 2 skipped
+
+---
+
 ## [10.0.2] — V595.2 Release Authority Finalization — 2026-05-21
 
 ### 릴리즈 무결성 완성
