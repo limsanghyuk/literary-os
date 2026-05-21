@@ -59,3 +59,28 @@ services:
     profiles:
       - observability
     restart: unless-stopped
+
+  # ── V588 SP-A.1: Qdrant 벡터 DB ───────────────────────────────────────────
+  qdrant:
+    image: qdrant/qdrant:v1.7.4
+    container_name: literary-qdrant
+    ports:
+      - "6333:6333"   # HTTP REST API
+      - "6334:6334"   # gRPC
+    volumes:
+      - qdrant_storage:/qdrant/storage
+    environment:
+      QDRANT__SERVICE__GRPC_PORT: "6334"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/readyz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    profiles:
+      - dev
+    restart: unless-stopped
+
+volumes:
+  qdrant_storage:
+    driver: local

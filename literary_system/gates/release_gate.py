@@ -1788,6 +1788,7 @@ _GATE_TIER: dict = {
     "graph_real_adapter_g44":        "L1",
     "losdb_client_g45":              "L1",
     "e2e_prose_g46":                 "L1",
+    "query_interface_g47":          "L1",
     # 나머지는 L2 이상 — 기본값 L2
 }
 
@@ -1886,3 +1887,89 @@ def run_release_gate_tiered(tiers=None) -> dict:
             + (f" ({skipped_count} skipped)" if skipped_count else "")
         ),
     }
+
+# ── V588 SP-A.1: Gate G47 QueryInterfaceGate ─────────────────────────────────
+def _gate_query_interface_g47() -> dict:
+    """Gate G47 — QueryInterface: LOSDB 통합 쿼리 레이어 (ADR-049, V588 SP-A.1).
+
+    체크포인트:
+      QI-1 QueryInterface 클래스 임포트 가능
+      QI-2 SceneResult / CharacterResult / AggregateResult 데이터클래스 존재
+      QI-3 find_scenes() no_client 호출 시 빈 리스트 반환 (안전 폴백)
+      QI-4 find_characters() no_client 호출 시 빈 리스트 반환
+      QI-5 cross_backend_aggregate() no_client 호출 시 빈 리스트 반환
+      QI-6 health() no_client 시 no_client 상태 반환
+      QI-7 SLO_RESPONSE_SEC == 1.0 (ADR-049 C1)
+      QI-8 LLM-0: query_interface.py에 외부 LLM 호출 없음
+
+    tier=L1 (PR fast-path, ≤30s)
+    """
+    import inspect
+    import pathlib
+
+    checks = {}
+
+    # QI-1: 임포트
+    try:
+        from literary_system.db.query_interface import QueryInterface
+        checks["QI-1"] = True
+    except ImportError as exc:
+        return {"pass": False, "error": f"QI-1 임포트 실패: {exc}"}
+
+    # QI-2: 데이터클래스 존재
+    try:
+        from literary_system.db.query_interface import (
+            AggregateResult,
+            CharacterResult,
+            SceneResult,
+        )
+        checks["QI-2"] = all([SceneResult, CharacterResult, AggregateResult])
+    except ImportError as exc:
+        checks["QI-2"] = False
+        return {"pass": False, "error": f"QI-2 데이터클래스 없음: {exc}"}
+
+    # QI-3~QI-5: no_client 안전 폴백
+    qi = QueryInterface(client=None)
+
+    result_3 = qi.find_scenes(character="test")
+    checks["QI-3"] = result_3 == []
+
+    result_4 = qi.find_characters([0.1, 0.2])
+    checks["QI-4"] = result_4 == []
+
+    result_5 = qi.cross_backend_aggregate(group_by="test")
+    checks["QI-5"] = result_5 == []
+
+    # QI-6: health no_client
+    h = qi.health()
+    checks["QI-6"] = h.get("status") == "no_client"
+
+    # QI-7: SLO 상수 확인
+    checks["QI-7"] = QueryInterface.SLO_RESPONSE_SEC == 1.0
+
+    # QI-8: LLM-0 — 외부 LLM 호출 없음
+    src_path = pathlib.Path(__file__).parent.parent / "db" / "query_interface.py"
+    forbidden = ["requests", "httpx", "openai", "anthropic"]
+    llm0_pass = True
+    if src_path.exists():
+        src_text = src_path.read_text(encoding="utf-8")
+        for kw in forbidden:
+            if f"import {kw}" in src_text or f"from {kw}" in src_text:
+                llm0_pass = False
+                break
+    checks["QI-8"] = llm0_pass
+
+    all_pass = all(checks.values())
+    failed = [k for k, v in checks.items() if not v]
+
+    return {
+        "pass": all_pass,
+        "checkpoints": checks,
+        "details": f"QueryInterfaceGate {'PASS' if all_pass else 'FAIL'} — {sum(checks.values())}/8 체크포인트",
+        **({"failed_checkpoints": failed} if failed else {}),
+    }
+
+
+GATES.append(
+    ("query_interface_g47", "QueryInterfaceGate: LOSDB 통합 쿼리 레이어 (Gate 47, ADR-049)", _gate_query_interface_g47),
+)
