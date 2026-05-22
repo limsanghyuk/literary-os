@@ -60,3 +60,4 @@
 | ADR-048 | [ADR-048-doc-consistency-ci.md](ADR-048-doc-consistency-ci.md) | 4 | V587 |
 | ADR-056 | V596 | LoRA Dataset Format + ProvenanceLedger + DatasetRegistry + DSR 30-day SLA |
 | ADR-057 | V597 | LoRA 학습 설정 + GPU 격리 정책 (rank=16, 격주 학습, TrainPlane Helm) |
+| ADR-060 | Fine-tuning Pipeline Gate G54 + 베이스 모델 3종 적합성 | V600 | Accepted |

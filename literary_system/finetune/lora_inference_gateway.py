@@ -34,49 +34,11 @@ except ImportError:
 # LLMBridgeInterface 의존 (literary-os 전체 코드베이스에서 임포트)
 # ---------------------------------------------------------------------------
 
-try:
-    from literary_system.llm_bridge.llm_bridge_interface import LLMBridgeInterface
-    from literary_system.llm_bridge.llm_context import LLMContext, LLMResponse, coerce_context
-    HAS_LLM_BRIDGE: bool = True
-except ImportError:
-    # 코드베이스 분리 개발 환경 — 프로토콜 스텁으로 대체
-    HAS_LLM_BRIDGE = False
-
-    class LLMContext:  # type: ignore[no-redef]
-        """LLMContext 스텁 (개발 환경 분리 시 사용)."""
-        def __init__(self, max_tokens: int = 2000, temperature: float = 0.7,
-                     timeout: int = 30, **kw: Any) -> None:
-            self.max_tokens = max_tokens
-            self.temperature = temperature
-            self.timeout = timeout
-
-    class LLMResponse:  # type: ignore[no-redef]
-        """LLMResponse 스텁."""
-        def __init__(self, text: str, provider_id: str, latency_ms: float) -> None:
-            self.text = text
-            self.provider_id = provider_id
-            self.latency_ms = latency_ms
-
-    def coerce_context(ctx: Any) -> LLMContext:  # type: ignore[misc]
-        if isinstance(ctx, LLMContext):
-            return ctx
-        return LLMContext(**(ctx or {}))
-
-    class LLMBridgeInterface:  # type: ignore[no-redef]
-        """LLMBridgeInterface 스텁 (개발 환경 분리 시 사용)."""
-        def generate(self, prompt: str, context: Any) -> str:
-            raise NotImplementedError
-        def parse_action_packet(self, raw: str) -> Any:
-            raise NotImplementedError
-        @property
-        def provider_name(self) -> str:
-            raise NotImplementedError
-        def generate_with_response(self, prompt: str, context: Any) -> LLMResponse:
-            t0 = time.monotonic()
-            text = self.generate(prompt, coerce_context(context))
-            latency = (time.monotonic() - t0) * 1000.0
-            return LLMResponse(text=text, provider_id=self.provider_name,
-                               latency_ms=round(latency, 2))
+# ADR-060: 무조건 임포트 — llm_bridge는 literary_system 핵심 모듈이므로
+# 중복 클래스 스텁 불필요 (duplicate_zero_g37 준수)
+from literary_system.llm_bridge.llm_bridge_interface import LLMBridgeInterface
+from literary_system.llm_bridge.llm_context import LLMContext, LLMResponse, coerce_context
+HAS_LLM_BRIDGE: bool = True
 
 from literary_system.finetune.lora_artifact import ArtifactStage, LoRAArtifact
 from literary_system.finetune.lora_model_registry import (

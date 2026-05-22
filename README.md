@@ -1,11 +1,11 @@
-# Literary OS V596
+# Literary OS V600
 
 > **판단은 로컬, 생성만 LLM, 학습은 누적**  
 > AI 기반 장편 소설·드라마 시나리오 생성 시스템
 
-[![Version](https://img.shields.io/badge/version-10.2.0-blue)]()
-[![Tests](https://img.shields.io/badge/tests-6225%20PASS-brightgreen)]()
-[![Gates](https://img.shields.io/badge/release%20gates-51%2F51%20PASS-brightgreen)]()
+[![Version](https://img.shields.io/badge/version-10.5.0-blue)]()
+[![Tests](https://img.shields.io/badge/tests-6382%20PASS-brightgreen)]()
+[![Gates](https://img.shields.io/badge/release%20gates-53%2F53%20PASS-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 
@@ -19,7 +19,7 @@ pip install -e ".[dev]"
 
 # 전체 테스트 실행
 pytest tests/ -q
-# → 6202+ passed (V596 기준)
+# → 6382+ passed (V600 기준)
 
 # 릴리즈 게이트 확인
 python -c "
@@ -27,7 +27,7 @@ from literary_system.gates.release_gate import run_release_gate
 result = run_release_gate()
 print(result['summary'])
 "
-# → RELEASE GATE PASS: 51/51 gates passed
+# → RELEASE GATE PASS: 53/53 gates passed
 ```
 
 ---

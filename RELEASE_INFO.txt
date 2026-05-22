@@ -1,63 +1,62 @@
-Literary OS V597 — Phase B SP-B.1 LoRA Training Config + Job Runner + TrainPlane Helm
+Literary OS V600 — Phase B SP-B.1 FinetuningGate G54 + SP-B.1 완료
 ===========================================================
-Version      : V597 (v10.2.0)
-Release Date : 2026-05-21
-Build Type   : Phase B SP-B.1 — LoRA Training Pipeline (V597)
+Version      : V600 (v10.5.0)
+Release Date : 2026-05-22
+Build Type   : Phase B SP-B.1 완료 — Gate G54 + SP-B.1 수직 통합
 
-Test Result  : 6,211 PASS
-Gate         : 51/51 PASS (G01~G52)
-Phase        : Phase B SP-B.1 (V596~V600) — LoRA Fine-tuning Pipeline
+Test Result  : 6,382+ PASS
+Gate         : 53/53 PASS (G01~G54)
+Phase        : Phase B SP-B.1 완료 ✅ → SP-B.2 (V601~, RLHF) 진입 대기
 
-What Changed in V595.2
+SP-B.1 완료 (V596~V600)
+--------------------------
+V596  LoRA Dataset Pipeline + Governance (ADR-056)
+V597  LoRA Training Config + Job Runner + TrainPlane Helm (ADR-057)
+V598  LoRAArtifact + Registry + InferenceGateway + Gate G53 (ADR-058)
+V599  PreTrainSafety + FineTuneEvalPipeline + LongContextStrategy (ADR-059)
+V600  Gate G54 (7CP 수직 통합) + finetune_ci.yml + ADR-060 ← 현재
+
+SP-B.1 완료 조건 확인
 ------------------------
-V595.2 closes all remaining Phase A release authority gaps:
-  - README H1, pyproject description, MANIFEST fully updated to V595.2 / 51 Gates
-  - check_version_consistency.py extended to catch semantic inconsistencies
-  - SHA256SUMS regenerated from git-tracked files only (0 missing, 0 mismatch)
-  - REAL LLM tests now skip without provider API key
-  - Ruff I001 import sort (26 errors) fixed; CI green
-  - qdrant-client registered in optional-dependencies (preflight_step13 PASS)
-  - LOSDBClient private field access removed (public query API added)
-  - SQLite migration: split(";") replaced with executescript()
-  - Phase A Exit Gate EA-6: pytest subprocess replaced with test_inventory.json
+  Gate G53 PASS (추론 레이턴시 ≤2초 + 100자+)        ✅ V598
+  Gate G54 PASS (7CP: Safety·Dataset·Splitter·        ✅ V600
+                 Provenance·JobRunner·Artifact·Eval)
+  테스트 6,382+ PASS (V595.2 기준 +200)               ✅ V600
+  LoRAArtifact 3-tag sha256 무결성                     ✅ ADR-058
+  월 GPU SLO $96 정책 확립                             ✅ ADR-057
+  베이스 모델 3종 호환성                                ✅ ADR-060
 
-What Changed in V595.1 (Integrity Hotfix)
--------------------------------------------
-  FIX-1  G32 print() violation (phase_a_exit_gate.py → sys.stdout.write)
-  FIX-2  GraphRealAdapter unknown op → ValueError + atomic snapshot rollback
-  FIX-3  BackendHealthMonitor last_check_ok field — fail → unavailable
-  FIX-4  literary_cli.py sc%4 → (sc-1)%4 scene offset bug
-  FIX-5  _score_debt/_score_tension empty text → 0.0 early return
-  FIX-6  CorpusPiiFilter.filter_entries dataclasses.replace() immutability
-  FIX-7  _score_arc position-based 기승전결 order validation
-  FIX-8  _NARRATIVE_MARKERS Korean postpositions removed (7개, DRSE bias fix)
-  FIX-9  MinHash _shingle hash() → hashlib.md5 (PYTHONHASHSEED independent)
-  FIX-10 E2E CP-6 first-scene 100~500 char range enforcement
-  FIX-11 SQLiteRealAdapter _quote_identifier() SQL injection defense
-  FIX-12 GraphRealAdapter.add_edge duplicate id handling
-
-Phase A Module Summary
------------------------
-V588  SP-A.1  QueryInterface + Qdrant              G47  ADR-049
-V589  SP-A.2  BackendHealthMonitor + HybridRetriever G48 ADR-050
-V590  SP-A.3  GPUAdapterContract + CostSLO         G49  ADR-051
-V591  SP-A.4  EquivalenceTester 5-axis + golden20  G50  ADR-052
-V592  SP-A.5  CorpusGovernance (3 Ingestors+PII)   —    ADR-053
-V593  SP-A.6  CorpusValidator + MinHash + DRSE      —    ADR-053
-V594  SP-A.7  LOSConstitution v1.0 (5-axis+RLHF)  G51  ADR-054
-V595  SP-A.8  Minimal-CLI v0.1 + Phase A Exit      G52  ADR-055
-V595.1         Integrity Hotfix (12 fixes)          —    —
-V595.2         Release Authority Finalization       —    —
+베이스 모델 전략 (ADR-060 확정)
+---------------------------------
+  Primary  : meta-llama/Llama-3.1-8B     (8B, 128K ctx, transformers≥4.44)
+  A/B Cand : LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct  (한국어 특화)
+  경량 Cand: meta-llama/Llama-3.2-3B-Instruct       (3B, VRAM≤8GB, rank=8)
+  공통 target_modules: q_proj / k_proj / v_proj / o_proj
+  peft ≥ 0.12.0 + transformers ≥ 4.44.0 필수
 
 Architecture Constraints (Permanent)
 --------------------------------------
-  LLM-0    : No external LLM calls in corpus/, constitution/, finetune/
+  LLM-0    : No external LLM calls in corpus/, constitution/, finetune/ (ADR-031)
+  LLM-1    : LoRA 모델 PROMOTED 단계만 서빙 허용 (ADR-058)
   DEV_MODE : Always defaults to "false" (ADR-034)
   Preflight: 15-step check before every version entry
 
-Phase B Entry
---------------
-  All Phase A gates (G01~G52): PASS
-  Version authority documents: CONSISTENT
-  SHA256 integrity: 0 mismatch
-  CI: GREEN
+Phase A Summary (완료 기준선 — 고정)
+--------------------------------------
+  Version  : v10.0.2 (V595.2)
+  Gates    : 51/51 PASS
+  Tests    : 6,182 collected
+  SHA256   : 932 files, 0 mismatch
+  ADR      : ADR-001~055
+  CI       : GREEN
+
+다음 단계 — SP-B.2 (V601~V610)
+----------------------------------
+  V601: RewardModel (Constitution 5축 → 스칼라, ADR-061)
+  V602: RLHFDatasetBuilder ((씬, 보상) 쌍 JSONL)
+  V603: PPOTrainer + ConstraintGuard + Gate G55 (KL≤0.05)
+  V604: RLHFMonitor (보상 추세 + 자동 롤백)
+  V605: A/B 테스트 + CanaryController (5/25/50/100%)
+  V606~V609: RLHF 3사이클 + SafetyRegressionV2
+  V610: Gate G56 + Gate G57 + CanonicalBridgeV2 (ADR-064)
+  목표: R(scene)≥0.75 + 5축 상관≥0.80 + 7,000+ tests

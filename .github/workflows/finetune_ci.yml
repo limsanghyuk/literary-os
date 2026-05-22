@@ -1,0 +1,66 @@
+name: Fine-tune CI (SP-B.1 Gate G54)
+
+on:
+  schedule:
+    - cron: '0 17 */14 * 1'   # 격주 월요일 02:00 KST (B-M-06)
+  workflow_dispatch:            # 수동 트리거
+    inputs:
+      run_gate_g54:
+        description: 'Gate G54 수직 통합 검증 실행'
+        required: false
+        default: 'true'
+
+jobs:
+  gate-g54:
+    name: Gate G54 — Fine-tuning Pipeline
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install base deps
+        run: pip install -e ".[dev]" --quiet
+
+      - name: Run Gate G54
+        run: |
+          python -c "
+          from literary_system.gates.lora_finetuning_gate import gate_lora_finetuning
+          import json, sys
+          result = gate_lora_finetuning()
+          print(json.dumps(result, indent=2, ensure_ascii=False))
+          if not result['pass']:
+              print('❌ Gate G54 FAIL', file=sys.stderr)
+              sys.exit(1)
+          print('✅ Gate G54 PASS:', result['details'])
+          "
+
+      - name: Run SP-B.1 unit tests
+        run: |
+          pytest tests/unit/test_v596_lora_governance.py \
+                 tests/unit/test_v597_lora_training.py \
+                 tests/unit/test_v598_lora_inference.py \
+                 tests/unit/test_v599_pretrain_safety.py \
+                 tests/unit/test_v600_finetuning_gate.py \
+                 -v --tb=short
+
+      - name: Check version consistency
+        run: python tools/check_version_consistency.py
+
+  lint:
+    name: Ruff Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install ruff --quiet
+      - run: ruff check literary_system/finetune/ literary_system/governance/ literary_system/gates/lora_finetuning_gate.py

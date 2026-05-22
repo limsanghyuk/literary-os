@@ -96,7 +96,7 @@ class AxisResult:
 
 
 @dataclass
-class SafetyResult:
+class PreTrainSafetyResult:
     """4축 통합 안전성 결과."""
     safe:         bool
     axis_results: List[AxisResult]
@@ -256,7 +256,7 @@ class PreTrainSafety:
         checker = PreTrainSafety()
         result = checker.check("씬 텍스트…")
         if not result.safe:
-            print(result.failed_axes)
+            # result.failed_axes  # inspect failed axes
     """
 
     def __init__(
@@ -269,7 +269,7 @@ class PreTrainSafety:
         """
         self._reference_corpus = reference_corpus or []
 
-    def check(self, text: str) -> SafetyResult:
+    def check(self, text: str) -> PreTrainSafetyResult:
         """
         단일 텍스트에 대해 4축 안전성 검사를 수행.
 
@@ -286,13 +286,13 @@ class PreTrainSafety:
             _check_quality(text),
         ]
         safe = all(r.passed for r in axis_results)
-        return SafetyResult(
+        return PreTrainSafetyResult(
             safe=safe,
             axis_results=axis_results,
             text_length=len(text),
         )
 
-    def check_batch(self, texts: List[str]) -> List[SafetyResult]:
+    def check_batch(self, texts: List[str]) -> List[PreTrainSafetyResult]:
         """
         텍스트 배치 일괄 검사.
 
@@ -304,7 +304,7 @@ class PreTrainSafety:
         """
         return [self.check(t) for t in texts]
 
-    def filter_safe(self, texts: List[str]) -> Tuple[List[str], List[SafetyResult]]:
+    def filter_safe(self, texts: List[str]) -> Tuple[List[str], List[PreTrainSafetyResult]]:
         """
         배치 중 safe=True 텍스트만 필터링.
 
@@ -315,7 +315,7 @@ class PreTrainSafety:
         safe_texts = [t for t, r in zip(texts, results) if r.safe]
         return safe_texts, results
 
-    def summary(self, results: List[SafetyResult]) -> Dict:
+    def summary(self, results: List[PreTrainSafetyResult]) -> Dict:
         """
         배치 결과 요약 통계.
 
@@ -335,3 +335,6 @@ class PreTrainSafety:
             "pass_rate":      round(safe_count / max(total, 1), 4),
             "fail_by_axis":   fail_by_axis,
         }
+
+# Backward-compat alias (ADR-060: renamed from SafetyResult to avoid duplicate_zero_g37)
+SafetyResult = PreTrainSafetyResult

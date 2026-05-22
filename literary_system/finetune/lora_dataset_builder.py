@@ -51,17 +51,17 @@ class LoRADatasetBuilder:
         """entries → LoRASample 리스트. DSR 삭제 항목 제외."""
         samples: List[LoRASample] = []
         for entry in entries:
-            eid = getattr(entry, "entry_id", None) or str(entry.get("entry_id", ""))
+            eid = getattr(entry, "entry_id", None) or (entry.get("entry_id", "") if hasattr(entry, "get") else "")
             if eid in self._dsr_deleted:
                 continue
-            text = getattr(entry, "text", None) or entry.get("text", "")
-            genre = getattr(entry, "genre", None) or entry.get("genre", "drama")
-            title = getattr(entry, "title", None) or entry.get("title", "unknown")
+            text = getattr(entry, "text", None) or (entry.get("text", "") if hasattr(entry, "get") else "")
+            genre = getattr(entry, "genre", None) or (entry.get("genre", "drama") if hasattr(entry, "get") else "drama")
+            title = getattr(entry, "source_title", None) or getattr(entry, "title", None) or (entry.get("title", "unknown") if hasattr(entry, "get") else "unknown")
             source_type = (
-                getattr(entry, "source_type", None) or entry.get("source_type", "synthetic")
+                getattr(entry, "source_type", None) or (entry.get("source_type", "synthetic") if hasattr(entry, "get") else "synthetic")
             )
             license_val = (
-                getattr(entry, "license", None) or entry.get("license", "CC-BY-4.0")
+                getattr(entry, "license", None) or (entry.get("license", "CC-BY-4.0") if hasattr(entry, "get") else "CC-BY-4.0")
             )
             content_hash = hashlib.sha256(text.encode()).hexdigest()[:16]
             sample = LoRASample(

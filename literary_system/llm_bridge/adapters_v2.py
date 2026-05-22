@@ -98,7 +98,10 @@ class ClaudeAdapterV2(LLMBridgeInterface):
                 self._client = None
 
     def is_available(self) -> bool:
-        return self._anthropic_available and self._client is not None
+        # Also require a non-empty API key to guard against no-key environments (Gate17)
+        return (self._anthropic_available
+                and self._client is not None
+                and bool(self._contract.key.resolve()))
 
     def generate(self, prompt: str, context: Union[LLMContext, dict] = None) -> str:
         if not self._client:

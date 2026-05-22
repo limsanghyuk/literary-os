@@ -1,3 +1,59 @@
+## [10.5.0] — 2026-05-22 — V600 Phase B SP-B.1 완료 — Gate G54 + finetune_ci.yml + 모델 적합성 갱신
+
+### Added
+- `literary_system/gates/lora_finetuning_gate.py`: Gate G54 7체크포인트 수직 통합 (ADR-060)
+- `.github/workflows/finetune_ci.yml`: 격주 파인튜닝 CI (B-M-06)
+- `docs/adr/ADR-060.md`: Fine-tuning Pipeline Gate 설계 결정
+- `lora_training_config.py`: LLAMA32_LITE_MODEL + llama32_lite() + 호환성 명시
+- `pyproject.toml`: [finetune] optional-deps (transformers/peft/trl/bitsandbytes 등)
+
+### Fixed (문서 일치화)
+- README/pyproject/MANIFEST/RELEASE_INFO/CHANGELOG: V598~V599 누락 갱신 완료
+- README badges: 10.5.0 / 53/53 / 6382 PASS
+
+### Gates
+- Gate G54: 7/7 PASS ✅ — SP-B.1 완료
+- 누적 53/53 PASS
+
+### Tests
+- `tests/unit/test_v600_finetuning_gate.py`: 21 TC (TC-A~F)
+- 누적: 6,382+ PASS (**V595.2 기준 +200 달성**)
+
+---
+
+## [10.4.0] — 2026-05-21 — V599 Phase B SP-B.1 PreTrainSafety + FineTuneEvalPipeline + LongContextStrategy
+
+### Added
+- `literary_system/finetune/pre_train_safety.py`: PreTrainSafety 4축 (PII/Toxic/Copyright/Quality, B-M-09)
+- `literary_system/finetune/finetune_eval_pipeline.py`: FineTuneEvalPipeline 5축 + Krippendorff α (B-M-07/08)
+- `literary_system/finetune/long_context_strategy.py`: LongContextStrategy 100K청크 + 16K오버랩 (B-M-11)
+- `docs/adr/ADR-059.md`: 파인튜닝 평가 기준선 + 안전성 + 장문 전략
+
+### Tests
+- `tests/unit/test_v599_pretrain_safety.py`: 17 TC PASS
+- 누적: 6,228+ PASS (V598 기준 6,211 + 17 신규)
+
+---
+
+## [10.3.0] — 2026-05-21 — V598 Phase B SP-B.1 LoRAArtifact + LoRAModelRegistry + LoRAInferenceGateway + Gate G53
+
+### Added
+- `literary_system/finetune/lora_artifact.py`: LoRAArtifact 3-tag safetensors + sha256 무결성 (B-M-03)
+- `literary_system/finetune/lora_model_registry.py`: LoRAModelRegistry CANDIDATE→VALIDATED→PROMOTED (LLM-1)
+- `literary_system/finetune/lora_inference_gateway.py`: LoRAInferenceGateway PROMOTED 전용 서빙
+- `literary_system/gates/lora_inference_gate.py`: Gate G53 8체크포인트 (레이턴시≤2초 + 100자+)
+- `docs/adr/ADR-058.md`: LoRA 추론 게이트웨이 계약
+
+### Gates
+- Gate G53: 8/8 PASS
+- 누적 52/52 PASS
+
+### Tests
+- `tests/unit/test_v598_lora_inference.py`: 14 TC PASS
+- 누적: 6,211+ PASS
+
+---
+
 ## [10.2.0] — 2026-05-21 — V597 Phase B SP-B.1 LoRA Training Pipeline
 
 ### Added

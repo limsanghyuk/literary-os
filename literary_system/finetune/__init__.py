@@ -61,6 +61,7 @@ __all__ = [
     "ModelEvalHarness", "EvalSample", "EvalReport",
     "SafetyRegressionSuite", "SafetyViolation", "SafetyReport", "SafetyCategory",
     "ModelVersionManager", "ModelVersion", "ModelArtifact", "ModelStage", "CANARY_STEPS",
+    "EXAONE_CANDIDATE_MODEL", "LLAMA32_LITE_MODEL",
     "CanaryKPIMonitor", "KPIRecord", "KPIWindow", "RollbackEvent", "KPI_THRESHOLDS",
     "ProseSpecializerAPI", "ServeRequest", "ServeResponse", "ABComparisonResult",
     "ServingTier", "ABGroup",
@@ -108,6 +109,8 @@ from literary_system.finetune.dataset_registry import (
 )
 from literary_system.finetune.lora_training_config import (
     DEFAULT_BASE_MODEL,
+    EXAONE_CANDIDATE_MODEL,
+    LLAMA32_LITE_MODEL,
     DEFAULT_LORA_RANK,
     DEFAULT_TARGET_MODULES,
     MONTHLY_SLO_USD,

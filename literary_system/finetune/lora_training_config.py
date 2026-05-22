@@ -1,13 +1,22 @@
 """
-SP-B.1 (V597) — LoRATrainingConfig: LoRA 학습 하이퍼파라미터 + GPU SLO 정책
+SP-B.1 (V597, 갱신 V600) — LoRATrainingConfig: LoRA 학습 하이퍼파라미터 + GPU SLO 정책
 
-Phase B 본안 보강 D3 / B-M-05:
-- 베이스 모델: Llama-3.1-8B (128K 컨텍스트, rank=16)
-- Target modules: q_proj / k_proj / v_proj / o_proj
+Phase B 본안 보강 D3 / B-M-04 / B-M-05:
+- 베이스 모델 전략 (B-M-04):
+    Primary  : meta-llama/Llama-3.1-8B (128K ctx, multilingual, PEFT ≥0.12 호환)
+    A/B Cand : LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct (한국어 특화, PEFT ≥0.12 호환)
+    경량 Cand: meta-llama/Llama-3.2-3B-Instruct (3B, 128K ctx, VRAM 8GB 이하 환경)
+- Target modules: q_proj / k_proj / v_proj / o_proj (Llama/EXAONE 공통 적용 가능)
 - 격주 풀 학습($48) + 주간 미세조정($48) → 월 SLO ~$96
 
-ADR-057 참조.
+호환성 요구사항:
+- transformers >= 4.44.0  (Llama-3.1/3.2 지원)
+- peft >= 0.12.0          (LoRA rank_pattern 지원)
+- trl >= 0.9.0            (SFTTrainer, PPOTrainer V601+)
+- bitsandbytes >= 0.43.0  (QLoRA INT4/NF4 지원)
+- torch >= 2.2.0          (BF16 stable, FlashAttention-2 선택적)
 
+ADR-057 참조.
 LLM-0 원칙: 이 모듈은 외부 LLM API를 직접 호출하지 않음.
 """
 from __future__ import annotations
@@ -22,8 +31,10 @@ from typing import Dict, List, Optional, Any
 # 상수 — 본안 보강 D3 / B-M-04 / B-M-05
 # ---------------------------------------------------------------------------
 
-DEFAULT_BASE_MODEL: str = "meta-llama/Llama-3.1-8B"
-EXAONE_CANDIDATE_MODEL: str = "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct"
+# 베이스 모델 (B-M-04) — PEFT ≥0.12 + transformers ≥4.44 호환
+DEFAULT_BASE_MODEL: str = "meta-llama/Llama-3.1-8B"              # 주력: 8B 128K multilingual
+EXAONE_CANDIDATE_MODEL: str = "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct"  # A/B: 한국어 특화
+LLAMA32_LITE_MODEL: str = "meta-llama/Llama-3.2-3B-Instruct"     # 경량: VRAM ≤8GB 환경
 
 DEFAULT_LORA_RANK: int = 16
 DEFAULT_LORA_ALPHA: int = 32          # alpha = 2 × rank (통상 관행)
@@ -239,8 +250,28 @@ class LoRATrainingConfig:
 
     @classmethod
     def exaone_candidate(cls) -> "LoRATrainingConfig":
-        """EXAONE A/B 후보 설정 (B-M-04)."""
+        """EXAONE A/B 후보 설정 (B-M-04): 한국어 특화 EXAONE-3.5-7.8B."""
         return cls(
             base_model=EXAONE_CANDIDATE_MODEL,
             schedule_type=LoRAScheduleType.MANUAL,
+        )
+
+    @classmethod
+    def llama32_lite(cls) -> "LoRATrainingConfig":
+        """Llama-3.2-3B 경량 설정 (B-M-04): VRAM ≤8GB 환경용.
+
+        Llama-3.2-3B-Instruct는 128K 컨텍스트를 지원하면서
+        VRAM 8GB 이하 환경에서도 BF16 단독 학습 가능.
+        rank=8로 축소하여 파라미터 효율 극대화.
+        transformers ≥4.44.0 + peft ≥0.12.0 필요.
+        """
+        return cls(
+            base_model=LLAMA32_LITE_MODEL,
+            lora_rank=8,
+            lora_alpha=16,
+            max_seq_len=2048,
+            batch_size=8,                # 3B 모델 배치 여유
+            grad_accum_steps=2,
+            quantization=LoRAQuantizationType.NF4,  # QLoRA NF4 적용
+            schedule_type=LoRAScheduleType.FINE_WEEKLY,
         )

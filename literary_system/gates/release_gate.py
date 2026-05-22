@@ -2569,3 +2569,11 @@ def _gate_lora_inference_g53() -> dict:
 
 
 GATES.append(("lora_inference_g53", "LoRA Inference Gate G53 — 추론 레이턴시·3-tag·PROMOTED 무결성 (ADR-058)", _gate_lora_inference_g53))
+
+# Gate G54 — Fine-tuning Pipeline Gate (SP-B.1, V600, ADR-060)
+def _gate_lora_finetuning_g54() -> dict:
+    """Gate G54 — Fine-tuning Pipeline Gate: SP-B.1 수직 통합 7체크포인트 (ADR-060, V600)."""
+    from literary_system.gates.lora_finetuning_gate import gate_lora_finetuning
+    return gate_lora_finetuning()
+
+GATES.append(("lora_finetuning_g54", "Fine-tuning Pipeline Gate G54 — SP-B.1 수직 통합 7CP (ADR-060)", _gate_lora_finetuning_g54))
