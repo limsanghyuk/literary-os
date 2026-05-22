@@ -348,14 +348,39 @@ class RewardModel:
                 f"가중치 축 불일치. 누락: {missing}, 추가: {extra}"
             )
 
-        capped = {k: min(v, self._marker_weight_cap) for k, v in weights.items()}
-        total = sum(capped.values())
+        total = sum(weights.values())
         if total <= 0:
             raise ValueError("가중치 합이 0 이하입니다.")
 
-        # 정규화
-        normalized = {k: v / total for k, v in capped.items()}
-        return normalized
+        cap = self._marker_weight_cap
+        # 1차 정규화
+        w = {k: v / total for k, v in weights.items()}
+
+        # 반복 상한 클램프 (고정 추적 방식):
+        # 상한 초과 축을 cap에 영구 고정하고, 나머지만 재정규화.
+        # 고정된 축은 이후 스케일에서 제외되므로 재초과 없음.
+        fixed: Dict[str, float] = {}
+        free: Dict[str, float] = dict(w)
+
+        for _ in range(len(weights) + 1):
+            over = {k for k, v in free.items() if v > cap + 1e-9}
+            if not over:
+                break
+            for k in over:
+                fixed[k] = cap
+                del free[k]
+            fixed_sum = sum(fixed.values())
+            remaining = 1.0 - fixed_sum
+            free_total = sum(free.values())
+            if free_total <= 0 or remaining <= 0:
+                break
+            scale = remaining / free_total
+            for k in free:
+                free[k] *= scale
+
+        # 최종 클램프: 부동소수점 오차로 인한 미세 초과 방지
+        merged = {**fixed, **free}
+        return {k: min(v, cap) for k, v in merged.items()}
 
     def _score_axes(self, text: str) -> Dict[str, float]:
         """
@@ -367,13 +392,17 @@ class RewardModel:
             from literary_system.constitution.los_constitution import LOSConstitution
             const = LOSConstitution()
             full_result = const.score_scene_full(text)
-            return {
+            const_s = {
                 "drse":    float(getattr(full_result, "drse",    0.5)),
                 "debt":    float(getattr(full_result, "debt",    0.5)),
                 "arc":     float(getattr(full_result, "arc",     0.5)),
                 "tension": float(getattr(full_result, "tension", 0.5)),
                 "prose":   float(getattr(full_result, "prose",   0.5)),
             }
+            # 축 점수가 0에 가까운 경우 규칙 기반 점수로 보정
+            # (LOSConstitution이 특정 축을 0으로 반환할 때 발생하는 보상 붕괴 방지)
+            rule_s = self._rule_based_scores(text)
+            return {k: rule_s[k] if v < 0.01 else v for k, v in const_s.items()}
         except Exception:
             # 폴백: 규칙 기반 추정
             return self._rule_based_scores(text)
@@ -391,12 +420,23 @@ class RewardModel:
         # debt: 서사 부채 추정 (반복 적을수록 낮은 부채)
         debt = 1.0 - min(1.0, (1.0 - unique_ratio) * 2.0)
 
-        # arc: 아크 존재 (길이 기반)
-        arc = min(1.0, length / 400.0)
+        # arc: 캐릭터 아크 (키워드 기반 + 길이 보조)
+        arc_keywords = [
+            "결심", "변화", "깨달음", "결정", "각오", "예감",
+            "달라", "새로운", "선택", "포기", "다짐", "각성",
+            "오래된", "마침내", "드디어",
+        ]
+        arc_kw_count = sum(1 for kw in arc_keywords if kw in text)
+        arc_kw_score = min(1.0, arc_kw_count / 3.0)
+        arc_len_score = min(1.0, length / 400.0)
+        arc = max(arc_kw_score, arc_len_score)
 
-        # tension: 긴장감 (감정 어휘 밀도)
-        tension_words = ["갈등", "위기", "충돌", "두려움", "결단", "반전",
-                         "절박", "분노", "슬픔", "기쁨", "놀라"]
+        # tension: 긴장감 (감정·대립 어휘 밀도)
+        tension_words = [
+            "갈등", "위기", "충돌", "두려움", "결단", "반전",
+            "절박", "분노", "슬픔", "기쁨", "놀라", "긴장감",
+            "긴장", "대치", "맞서", "침묵", "눈물",
+        ]
         tension_count = sum(1 for w in tension_words if w in text)
         tension = min(1.0, tension_count / 3.0)
 
