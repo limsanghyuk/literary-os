@@ -24,7 +24,7 @@ __all__ = [
     # V602
     "RLHFDatasetBuilder",
     "DatasetEntry",
-    "DatasetStats",
+    "RLHFDatasetStats",
     "BuildResult",
 ]
 
@@ -37,6 +37,6 @@ from literary_system.rlhf.reward_model import (
 from literary_system.rlhf.rlhf_dataset_builder import (  # noqa: E402
     BuildResult,
     DatasetEntry,
-    DatasetStats,
+    RLHFDatasetStats,
     RLHFDatasetBuilder,
 )

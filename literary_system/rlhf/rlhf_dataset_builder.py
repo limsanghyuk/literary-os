@@ -20,7 +20,7 @@ from literary_system.rlhf.reward_model import REWARD_THRESHOLD, RewardModel, Rew
 __all__ = [
     "RLHFDatasetBuilder",
     "DatasetEntry",
-    "DatasetStats",
+    "RLHFDatasetStats",
     "BuildResult",
 ]
 
@@ -43,7 +43,7 @@ class DatasetEntry:
 
 
 @dataclass
-class DatasetStats:
+class RLHFDatasetStats:
     """데이터셋 통계."""
 
     total: int = 0
@@ -62,7 +62,7 @@ class BuildResult:
     """build() / build_dual() 결과."""
 
     output_path: Path
-    stats: DatasetStats
+    stats: RLHFDatasetStats
     entry_count: int
     model_target: str
     reward_threshold: float
@@ -260,12 +260,12 @@ class RLHFDatasetBuilder:
             entries.append(entry)
         return entries
 
-    def _compute_stats(self, entries: List[DatasetEntry]) -> DatasetStats:
-        """DatasetEntry 목록에서 DatasetStats를 계산한다."""
+    def _compute_stats(self, entries: List[DatasetEntry]) -> RLHFDatasetStats:
+        """DatasetEntry 목록에서 RLHFDatasetStats를 계산한다."""
         if not entries:
-            return DatasetStats()
+            return RLHFDatasetStats()
         rewards = [e.reward for e in entries]
-        return DatasetStats(
+        return RLHFDatasetStats(
             total=len(entries),
             pass_count=sum(1 for e in entries if e.passed),
             fail_count=sum(1 for e in entries if not e.passed),

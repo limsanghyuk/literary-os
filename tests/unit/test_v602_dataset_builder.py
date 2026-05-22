@@ -17,7 +17,7 @@ import pytest
 from literary_system.rlhf.rlhf_dataset_builder import (
     BuildResult,
     DatasetEntry,
-    DatasetStats,
+    RLHFDatasetStats,
     RLHFDatasetBuilder,
 )
 from literary_system.rlhf.reward_model import REWARD_THRESHOLD
