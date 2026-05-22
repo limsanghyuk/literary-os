@@ -1,3 +1,21 @@
+
+## [10.11.0] — 2026-05-22 (V606)
+
+### Added
+- `literary_system/llm_bridge/canonical_bridge_v2.py`: CanonicalBridgeV2 v2.0 — 외부+로컬 동시 브리지, adapter injection, fallback recursion 방지 (ADR-066)
+- `literary_system/gates/rlhf_reward_gate.py`: Gate G56 — RLHF Reward Gate (mean_reward≥0.75, delta≥0.05)
+- `literary_system/gates/constitution_axis_gate.py`: Gate G57 — Constitution Axis Gate (5축 Pearson 상관 mean≥0.80, C(5,2)=10 pairs)
+- `docs/adr/ADR-066.md`: CanonicalBridgeV2 + G56/G57 설계 결정 기록
+- `tests/unit/test_v606_bridge_gates.py`: 30 TC (TC-1~30)
+- Release Gate: 54 → 56 (G56, G57 추가)
+- SP-B.2 완료: G55 (PPO Stability) + G56 (RLHF Reward) + G57 (Constitution Axis) ALL PASS
+
+### Changed
+- `literary_system/gates/release_gate.py`: G56 + G57 Gate 함수 추가 (total 56 Gates)
+- `literary_system/llm_bridge/__init__.py`: CanonicalBridgeV2, BridgeConfig, BridgeResponse, ModelType export 추가
+- `tools/test_inventory.json`: 6357 → 6387 tests (EA-6 갱신)
+- `pyproject.toml`: version 10.10.0 → 10.11.0
+
 ## [10.10.0] — 2026-05-22 — V605 SP-B.2 CanaryController + ModelServingEndpoint (ADR-065)
 
 ### Added

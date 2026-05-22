@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "literary-os"
-version = "10.10.0"
-description = "Literary OS V605 — Phase B SP-B.2 CanaryController + ModelServingEndpoint (ADR-065), 54 Gates PASS, 6357+ tests"
+version = "10.11.0"
+description = "Literary OS V606 — Phase B SP-B.2 CanonicalBridgeV2 + Gate G56 + G57 (ADR-066), 56 Gates PASS, 6387+ tests"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}

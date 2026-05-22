@@ -2713,3 +2713,218 @@ def _gate_ppo_stability_g55() -> dict:
 
 
 GATES.append(("ppo_stability_g55", "PPO Stability Gate G55 — KL 안정성·ConstraintGuard·PPOResult (ADR-063)", _gate_ppo_stability_g55))
+
+
+# Gate G56 — RLHF Reward Gate (SP-B.2, V606, ADR-066)
+def _gate_rlhf_reward_g56() -> dict:
+    """
+    Gate G56: RLHF 보상 품질 게이트.
+    mean_reward ≥ 0.75 AND delta ≥ 0.05 검증.
+
+    검증 항목:
+      CP-1: 모듈 임포트 + 상수 검증 (REWARD_THRESHOLD=0.75, DELTA_THRESHOLD=0.05)
+      CP-2: PASS 케이스 — mean=0.85, delta=0.25
+      CP-3: FAIL 케이스 — low mean_reward
+      CP-4: FAIL 케이스 — low delta
+      CP-5: 빈 rewards → FAIL + n_samples=0
+      CP-6: to_dict() 필수 키 검증
+    """
+    errors: list[str] = []
+
+    # CP-1: 모듈 임포트 + 상수
+    try:
+        from literary_system.gates.rlhf_reward_gate import (
+            DELTA_THRESHOLD,
+            GATE_ID,
+            REWARD_THRESHOLD,
+            run_rlhf_reward_gate,
+        )
+        if REWARD_THRESHOLD != 0.75:
+            errors.append(f"CP-1: REWARD_THRESHOLD={REWARD_THRESHOLD}, 기대 0.75")
+        if DELTA_THRESHOLD != 0.05:
+            errors.append(f"CP-1: DELTA_THRESHOLD={DELTA_THRESHOLD}, 기대 0.05")
+        if GATE_ID != "G56":
+            errors.append(f"CP-1: GATE_ID={GATE_ID!r}, 기대 'G56'")
+    except Exception as e:
+        errors.append(f"CP-1 import: {e}")
+        return {
+            "gate": "G56", "name": "RLHF Reward Gate",
+            "pass": False, "passed": False, "errors": errors, "checkpoints": [],
+        }
+
+    # CP-2: PASS 케이스
+    try:
+        rewards = [0.80, 0.85, 0.90]  # mean=0.85 ≥ 0.75, delta=0.25 ≥ 0.05
+        r = run_rlhf_reward_gate(rewards, baseline=0.60)
+        if not r.passed:
+            errors.append(f"CP-2: PASS 케이스 실패 — {r.reason}")
+        if abs(r.mean_reward - 0.85) > 1e-6:
+            errors.append(f"CP-2: mean_reward={r.mean_reward}, 기대 0.85")
+    except Exception as e:
+        errors.append(f"CP-2 pass case: {e}")
+
+    # CP-3: FAIL — low mean_reward
+    try:
+        r = run_rlhf_reward_gate([0.5, 0.6, 0.7], baseline=0.5)
+        if r.passed:
+            errors.append("CP-3: mean=0.6 < 0.75 → passed=False 기대")
+    except Exception as e:
+        errors.append(f"CP-3 fail mean: {e}")
+
+    # CP-4: FAIL — low delta
+    try:
+        r = run_rlhf_reward_gate([0.80, 0.80, 0.80], baseline=0.79)
+        if r.passed:
+            errors.append("CP-4: delta=0.01 < 0.05 → passed=False 기대")
+    except Exception as e:
+        errors.append(f"CP-4 fail delta: {e}")
+
+    # CP-5: 빈 rewards
+    try:
+        r = run_rlhf_reward_gate([], baseline=0.5)
+        if r.passed:
+            errors.append("CP-5: 빈 rewards → passed=False 기대")
+        if r.n_samples != 0:
+            errors.append(f"CP-5: n_samples={r.n_samples}, 기대 0")
+    except Exception as e:
+        errors.append(f"CP-5 empty: {e}")
+
+    # CP-6: to_dict() 키
+    try:
+        r = run_rlhf_reward_gate([0.8, 0.9], baseline=0.5)
+        d = r.to_dict()
+        required = {"passed", "mean_reward", "delta", "reward_threshold", "delta_threshold", "n_samples", "reason"}
+        missing = required - set(d.keys())
+        if missing:
+            errors.append(f"CP-6: to_dict() 누락 키: {missing}")
+    except Exception as e:
+        errors.append(f"CP-6 to_dict: {e}")
+
+    passed = len(errors) == 0
+    return {
+        "gate": "G56",
+        "name": "RLHF Reward Gate",
+        "pass": passed,
+        "passed": passed,
+        "errors": errors,
+        "checkpoints": ["CP-1 constants", "CP-2 pass case", "CP-3 fail mean",
+                        "CP-4 fail delta", "CP-5 empty", "CP-6 to_dict"],
+    }
+
+
+GATES.append(("rlhf_reward_g56", "RLHF Reward Gate G56 — mean_reward≥0.75·delta≥0.05 (ADR-066)", _gate_rlhf_reward_g56))
+
+
+# Gate G57 — Constitution 5-Axis Correlation Gate (SP-B.2, V606, ADR-066)
+def _gate_constitution_axis_g57() -> dict:
+    """
+    Gate G57: Constitution 5축 상관 게이트.
+    5축 간 피어슨 상관 평균 ≥ 0.80 검증.
+
+    검증 항목:
+      CP-1: 모듈 임포트 + 상수 (CORRELATION_THRESHOLD=0.80, 5축 존재)
+      CP-2: PASS 케이스 — 완전 상관 데이터
+      CP-3: FAIL 케이스 — 누락된 축
+      CP-4: 길이 불일치 → FAIL
+      CP-5: n_pairs == 10 (C(5,2))
+      CP-6: to_dict() 필수 키 + 상관값 범위 [-1,1]
+    """
+    errors: list[str] = []
+
+    # CP-1: 임포트 + 상수
+    try:
+        from literary_system.gates.constitution_axis_gate import (
+            CONSTITUTION_AXES,
+            CORRELATION_THRESHOLD,
+            GATE_ID,
+            run_constitution_axis_gate,
+        )
+        if CORRELATION_THRESHOLD != 0.80:
+            errors.append(f"CP-1: CORRELATION_THRESHOLD={CORRELATION_THRESHOLD}, 기대 0.80")
+        if GATE_ID != "G57":
+            errors.append(f"CP-1: GATE_ID={GATE_ID!r}, 기대 'G57'")
+        if len(CONSTITUTION_AXES) != 5:
+            errors.append(f"CP-1: CONSTITUTION_AXES 수={len(CONSTITUTION_AXES)}, 기대 5")
+        expected = {"safety", "coherence", "creativity", "quality", "consistency"}
+        if set(CONSTITUTION_AXES) != expected:
+            errors.append(f"CP-1: 축 불일치: {set(CONSTITUTION_AXES)} vs {expected}")
+    except Exception as e:
+        errors.append(f"CP-1 import: {e}")
+        return {
+            "gate": "G57", "name": "Constitution 5-Axis Correlation Gate",
+            "pass": False, "passed": False, "errors": errors, "checkpoints": [],
+        }
+
+    # CP-2: PASS — 완전 상관 (모든 축 동일 단조증가 데이터)
+    try:
+        vals = [0.5 + i * 0.04 for i in range(10)]
+        scores = {ax: vals[:] for ax in CONSTITUTION_AXES}
+        r = run_constitution_axis_gate(scores)
+        if not r.passed:
+            errors.append(f"CP-2: 완전 상관 데이터 → PASS 기대, 실제: {r.reason}")
+        if r.mean_correlation < 0.80:
+            errors.append(f"CP-2: mean_correlation={r.mean_correlation} < 0.80")
+    except Exception as e:
+        errors.append(f"CP-2 pass case: {e}")
+
+    # CP-3: FAIL — 누락된 축
+    try:
+        vals = [0.5 + i * 0.04 for i in range(10)]
+        scores = {ax: vals[:] for ax in CONSTITUTION_AXES}
+        del scores["safety"]
+        r = run_constitution_axis_gate(scores)
+        if r.passed:
+            errors.append("CP-3: 누락 축 → passed=False 기대")
+    except Exception as e:
+        errors.append(f"CP-3 missing axis: {e}")
+
+    # CP-4: 길이 불일치 → FAIL
+    try:
+        vals = [0.5 + i * 0.04 for i in range(10)]
+        scores = {ax: vals[:] for ax in CONSTITUTION_AXES}
+        scores["coherence"] = vals[:5]
+        r = run_constitution_axis_gate(scores)
+        if r.passed:
+            errors.append("CP-4: 길이 불일치 → passed=False 기대")
+    except Exception as e:
+        errors.append(f"CP-4 length mismatch: {e}")
+
+    # CP-5: n_pairs == 10
+    try:
+        vals = [0.5 + i * 0.04 for i in range(10)]
+        scores = {ax: vals[:] for ax in CONSTITUTION_AXES}
+        r = run_constitution_axis_gate(scores)
+        if r.n_pairs != 10:
+            errors.append(f"CP-5: n_pairs={r.n_pairs}, 기대 10 (C(5,2))")
+    except Exception as e:
+        errors.append(f"CP-5 n_pairs: {e}")
+
+    # CP-6: to_dict() 키 + 범위
+    try:
+        vals = [0.5 + i * 0.04 for i in range(10)]
+        scores = {ax: vals[:] for ax in CONSTITUTION_AXES}
+        r = run_constitution_axis_gate(scores)
+        d = r.to_dict()
+        required = {"passed", "mean_correlation", "axis_correlations", "threshold", "n_pairs", "reason"}
+        missing = required - set(d.keys())
+        if missing:
+            errors.append(f"CP-6: to_dict() 누락 키: {missing}")
+        for k, v in r.axis_correlations.items():
+            if not (-1.0 <= v <= 1.0):
+                errors.append(f"CP-6: {k} 상관값={v} 범위 초과 [-1,1]")
+    except Exception as e:
+        errors.append(f"CP-6 to_dict: {e}")
+
+    passed = len(errors) == 0
+    return {
+        "gate": "G57",
+        "name": "Constitution 5-Axis Correlation Gate",
+        "pass": passed,
+        "passed": passed,
+        "errors": errors,
+        "checkpoints": ["CP-1 constants", "CP-2 pass case", "CP-3 missing axis",
+                        "CP-4 length mismatch", "CP-5 n_pairs", "CP-6 to_dict"],
+    }
+
+
+GATES.append(("constitution_axis_g57", "Constitution Axis Gate G57 — 5축 상관≥0.80 (ADR-066)", _gate_constitution_axis_g57))

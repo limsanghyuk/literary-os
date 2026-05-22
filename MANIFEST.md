@@ -1,6 +1,6 @@
 # MANIFEST — Literary OS V604
 
-버전: 10.10.0
+버전: 10.11.0
 릴리즈일: 2026-05-22
 빌드 타입: Phase B SP-B.2 진행 중 — PPOTrainer + ConstraintGuard + Gate G55 (V604)
 

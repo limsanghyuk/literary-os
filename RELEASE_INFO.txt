@@ -1,7 +1,7 @@
-Literary OS V605
-Release: v10.10.0
+Literary OS V606
+Release: v10.11.0
 Date: 2026-05-22
-Gates: 54/54 PASS
-Tests: 6357+ PASS
+Gates: 56/56 PASS
+Tests: 6387+ PASS
 New: CanaryController v1.0 (4단계 Canary) + ModelServingEndpoint v1.0 (/model_card)
 ADR: ADR-065
