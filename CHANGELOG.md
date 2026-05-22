@@ -1,3 +1,14 @@
+## [10.9.0] — 2026-05-22 — V604 SP-B.2 RLHFMonitor v1.0 + 자동 롤백 (ADR-064)
+
+### Added
+- `literary_system/rlhf/rlhf_monitor.py`: RLHFMonitor v1.0 — 슬라이딩 윈도우 이동평균 보상 추세 + 자동 롤백 트리거
+- `docs/adr/ADR-064.md`: RLHFMonitor 설계 결정 문서
+- `tests/unit/test_v604_rlhf_monitor.py`: 27 TC (TC-1~TC-27) PASS
+
+### Changed
+- `literary_system/rlhf/__init__.py`: RLHFMonitor·MonitorConfig·MonitorState·RewardSnapshot·RollbackRecord export 추가
+- `pyproject.toml`: version 10.8.0 → 10.9.0
+
 ## [10.8.0] — 2026-05-22 — V603 SP-B.2 PPOTrainer + ConstraintGuard + Gate G55 (ADR-063)
 
 ### Added
