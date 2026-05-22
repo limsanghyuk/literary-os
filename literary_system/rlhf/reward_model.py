@@ -25,7 +25,6 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Dict, List, Optional, Sequence, Tuple
 
-
 # ---------------------------------------------------------------------------
 # 상수
 # ---------------------------------------------------------------------------
@@ -172,7 +171,7 @@ class RewardModel:
 
         rm = RewardModel()
         result = rm.compute(scene_text)
-        print(result.reward, result.passed)
+        # logger.info(result.reward, result.passed)
 
     LLM-0 원칙: 외부 LLM API 직접 호출 없음.
     ADR-061 참조.

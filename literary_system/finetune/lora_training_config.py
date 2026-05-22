@@ -24,8 +24,7 @@ from __future__ import annotations
 import warnings
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Dict, List, Optional, Any
-
+from typing import Any, Dict, List, Optional
 
 # ---------------------------------------------------------------------------
 # 상수 — 본안 보강 D3 / B-M-04 / B-M-05

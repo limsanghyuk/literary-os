@@ -27,8 +27,7 @@ LLM-1 원칙: 학습된 LoRA 모델은 PROMOTED 단계 이후에만 추론 허�
 from __future__ import annotations
 
 import time
-from typing import Dict, Any, List, Tuple
-
+from typing import Any, Dict, List, Tuple
 
 # ---------------------------------------------------------------------------
 # Gate G54 — Fine-tuning Pipeline Gate
@@ -91,8 +90,8 @@ def gate_lora_finetuning() -> Dict[str, Any]:
     # G54-2: DatasetBuilder — JSONL 산출 + sha256
     # ------------------------------------------------------------------
     try:
-        from literary_system.finetune.lora_dataset_builder import LoRADatasetBuilder
         from literary_system.corpus.corpus_ingestor import CorpusEntry
+        from literary_system.finetune.lora_dataset_builder import LoRADatasetBuilder
 
         builder = LoRADatasetBuilder()
         entries = []
@@ -163,9 +162,10 @@ def gate_lora_finetuning() -> Dict[str, Any]:
     # G54-5: LoRAJobRunner — JobRunRecord 생성 검증 (config 유효성)
     # ------------------------------------------------------------------
     try:
-        from literary_system.finetune.lora_job_runner import LoRAJobRunner, JobRunRecord
+        from literary_system.finetune.lora_job_runner import JobRunRecord, LoRAJobRunner
         from literary_system.finetune.lora_training_config import (
-            LoRATrainingConfig, LoRAScheduleType,
+            LoRAScheduleType,
+            LoRATrainingConfig,
         )
 
         # LoRAJobRunner 인스턴스 생성 (dry_run=True, GPU 미연결)
@@ -175,7 +175,7 @@ def gate_lora_finetuning() -> Dict[str, Any]:
         assert hasattr(JobRunRecord, "__dataclass_fields__"), "G54-5: JobRunRecord dataclass 아님"
         fields = set(JobRunRecord.__dataclass_fields__.keys())
         assert "job_id" in fields, f"G54-5: job_id 필드 없음 (fields={fields})"
-        assert "status" in fields, f"G54-5: status 필드 없음"
+        assert "status" in fields, "G54-5: status 필드 없음"
         assert "run_id" in fields, "G54-5: run_id 필드 없음"
         assert "cost_usd" in fields, "G54-5: cost_usd 필드 없음"
         # 초기 history 비어 있음
@@ -193,10 +193,13 @@ def gate_lora_finetuning() -> Dict[str, Any]:
     # G54-6: LoRAArtifact — 3-tag + sha256 (stub 모드, 파일 없음)
     # ------------------------------------------------------------------
     try:
-        from literary_system.finetune.lora_artifact import (
-            LoRAArtifact, ArtifactStage, make_artifact,
-        )
         import hashlib
+
+        from literary_system.finetune.lora_artifact import (
+            ArtifactStage,
+            LoRAArtifact,
+            make_artifact,
+        )
 
         # stub 아티팩트 생성
         artifact: LoRAArtifact = make_artifact(
@@ -228,8 +231,10 @@ def gate_lora_finetuning() -> Dict[str, Any]:
     # ------------------------------------------------------------------
     try:
         from literary_system.finetune.finetune_eval_pipeline import (
+            THRESHOLD_BERTSCORE_F1,
+            THRESHOLD_BLEU,
+            THRESHOLD_STYLE,
             FineTuneEvalPipeline,
-            THRESHOLD_BERTSCORE_F1, THRESHOLD_STYLE, THRESHOLD_BLEU,
         )
 
         pipeline = FineTuneEvalPipeline()

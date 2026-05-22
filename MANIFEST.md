@@ -1,8 +1,8 @@
-# MANIFEST — Literary OS V600
+# MANIFEST — Literary OS V601
 
-버전: 10.5.0
+버전: 10.6.0
 릴리즈일: 2026-05-21
-빌드 타입: Phase B SP-B.1 완료 — LoRA Fine-tuning Pipeline Gate G54 (V596~V600)
+빌드 타입: Phase B SP-B.2 진행 중 — RLHF RewardModel v1.0 (V601)
 
 ## 테스트 결과
 
@@ -27,6 +27,7 @@
 | G52 | Phase A Exit Gate (EA-1~EA-6) | V595 | ✅ PASS |
 | G53 | LoRA Inference Gate (레이턴시≤2초 + 100자+) | V598 | ✅ PASS |
 | G54 | Fine-tuning Pipeline Gate (7CP 수직 통합) | V600 | ✅ PASS |
+| — | RLHF Gate G55 (PPO Stability, KL≤0.08) | V603 | 🔄 예정 |
 | **합계** | | | **53/53 ALL PASS** |
 
 ## Phase B SP-B.1 산출물 (V596~V599)
@@ -85,6 +86,12 @@
 | LLM-1 | LoRA 학습 모델: finetune/ 내부 + PROMOTED 단계만 서빙 허용 (ADR-058) |
 | DEV_MODE | 항상 "false" 기본 (ADR-034) |
 | Preflight | 매 버전 진입 전 15단계 필수 |
+
+
+### V601 — RewardModel v1.0 + ADR-061 (SP-B.2 시작)
+- `literary_system/rlhf/reward_model.py`: MARKER_WEIGHT_CAP=0.20, 적대적 시드 5종, quality_correlation()
+- `tests/unit/test_v601_reward_model.py`: 8 TC PASS
+- 테스트 6,390+ PASS
 
 ### V600 — Gate G54 + ADR-060 + finetune_ci.yml (SP-B.1 완료)
 | 파일 | 설명 |

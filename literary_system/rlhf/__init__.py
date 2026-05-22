@@ -23,8 +23,8 @@ __all__ = [
 ]
 
 from literary_system.rlhf.reward_model import (
+    AdversarialSeed,
+    ConstitutionAxisReward,
     RewardModel,
     RewardResult,
-    ConstitutionAxisReward,
-    AdversarialSeed,
 )

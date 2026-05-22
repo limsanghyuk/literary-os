@@ -1,3 +1,17 @@
+## [10.6.0] — 2026-05-22 — V601 SP-B.2 RLHF RewardModel v1.0 (ADR-061)
+
+### Added
+- `literary_system/rlhf/__init__.py`: RLHF 패키지 초기화 (SP-B.2)
+- `literary_system/rlhf/reward_model.py`: RewardModel v1.0 — Constitution 5축→스칼라 R(scene), MARKER_WEIGHT_CAP=0.20, 적대적 시드 5종, quality_correlation() hook
+- `docs/adr/ADR-061.md`: RLHF 보상 모델 설계 결정
+- `tests/unit/test_v601_reward_model.py`: 8 TC (기본·가중치·적대적)
+
+### Changed
+- `pyproject.toml`: version 10.5.0 → 10.6.0
+- `README.md`: badges 10.6.0 / 6390 PASS / V601
+
+---
+
 ## [10.5.0] — 2026-05-22 — V600 Phase B SP-B.1 완료 — Gate G54 + finetune_ci.yml + 모델 적합성 갱신
 
 ### Added

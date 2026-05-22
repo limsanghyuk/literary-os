@@ -66,6 +66,18 @@ __all__ = [
     "ProseSpecializerAPI", "ServeRequest", "ServeResponse", "ABComparisonResult",
     "ServingTier", "ABGroup",
 ]
+from literary_system.finetune.dataset_registry import (
+    DatasetRegistry,
+    LoRADatasetVersion,
+)
+from literary_system.finetune.dataset_splitter import (
+    DEFAULT_SEED,
+    DEFAULT_TEST_RATIO,
+    DEFAULT_TRAIN_RATIO,
+    DEFAULT_VAL_RATIO,
+    DatasetSplitter,
+    LoRADatasetSplit,
+)
 from literary_system.finetune.equivalence_tester import (
     DRIFT_PASS_RATE_MIN,
     THRESHOLD_BERTSCORE_F1_MIN,
@@ -74,6 +86,19 @@ from literary_system.finetune.equivalence_tester import (
     EquivalenceDriftReport,
     EquivalenceReport,
     EquivalenceTester,
+)
+from literary_system.finetune.finetune_eval_pipeline import (
+    THRESHOLD_BERTSCORE_F1,
+    THRESHOLD_BLEU,
+    THRESHOLD_KRIPPENDORFF_ALPHA,
+    THRESHOLD_LLM_JUDGE,
+    THRESHOLD_STYLE,
+    EvalAxisResult,
+    EvalResult,
+    FineTuneEvalPipeline,
+    compute_bertscore_f1,
+    compute_bleu4,
+    compute_krippendorff_alpha,
 )
 from literary_system.finetune.gpu_adapter import (
     DEFAULT_COST_SLO,
@@ -89,41 +114,12 @@ from literary_system.finetune.gpu_adapter import (
     get_adapter,
     list_providers,
 )
-from literary_system.finetune.lora_dataset_builder import (
-    ALPACA_INSTRUCTION,
-    ALPACA_INPUT_TEMPLATE,
-    LoRASample,
-    LoRADatasetBuilder,
-)
-from literary_system.finetune.dataset_splitter import (
-    DEFAULT_TRAIN_RATIO,
-    DEFAULT_VAL_RATIO,
-    DEFAULT_TEST_RATIO,
-    DEFAULT_SEED,
-    LoRADatasetSplit,
-    DatasetSplitter,
-)
-from literary_system.finetune.dataset_registry import (
-    LoRADatasetVersion,
-    DatasetRegistry,
-)
-from literary_system.finetune.lora_training_config import (
-    DEFAULT_BASE_MODEL,
-    EXAONE_CANDIDATE_MODEL,
-    LLAMA32_LITE_MODEL,
-    DEFAULT_LORA_RANK,
-    DEFAULT_TARGET_MODULES,
-    MONTHLY_SLO_USD,
-    LoRAQuantizationType,
-    LoRAScheduleType,
-    LoRATrainingConfig,
-)
-from literary_system.finetune.lora_job_runner import (
-    BIWEEKLY_INTERVAL_DAYS,
-    WEEKLY_INTERVAL_DAYS,
-    BiweeklyScheduler,
-    JobRunRecord,
-    LoRAJobRunner,
+from literary_system.finetune.long_context_strategy import (
+    CHUNK_SIZE_TOKENS,
+    OVERLAP_TOKENS,
+    ChunkingResult,
+    LongContextStrategy,
+    TextChunk,
 )
 
 # V598 — LoRAArtifact + LoRAModelRegistry + LoRAInferenceGateway (SP-B.1, ADR-058)
@@ -134,43 +130,47 @@ from literary_system.finetune.lora_artifact import (
     compute_sha256,
     make_artifact,
 )
+from literary_system.finetune.lora_dataset_builder import (
+    ALPACA_INPUT_TEMPLATE,
+    ALPACA_INSTRUCTION,
+    LoRADatasetBuilder,
+    LoRASample,
+)
+from literary_system.finetune.lora_inference_gateway import (
+    G53_LATENCY_LIMIT_MS,
+    G53_MIN_LENGTH,
+    LORA_PROVIDER_NAME,
+    InferenceResult,
+    LoRAInferenceGateway,
+    StubInferenceBackend,
+)
+from literary_system.finetune.lora_job_runner import (
+    BIWEEKLY_INTERVAL_DAYS,
+    WEEKLY_INTERVAL_DAYS,
+    BiweeklyScheduler,
+    JobRunRecord,
+    LoRAJobRunner,
+)
 from literary_system.finetune.lora_model_registry import (
     ArtifactNotFoundError,
     LoRAModelRegistry,
     RegisterConflictError,
     StageTransitionError,
 )
-from literary_system.finetune.lora_inference_gateway import (
-    G53_LATENCY_LIMIT_MS,
-    G53_MIN_LENGTH,
-    InferenceResult,
-    LORA_PROVIDER_NAME,
-    LoRAInferenceGateway,
-    StubInferenceBackend,
+from literary_system.finetune.lora_training_config import (
+    DEFAULT_BASE_MODEL,
+    DEFAULT_LORA_RANK,
+    DEFAULT_TARGET_MODULES,
+    EXAONE_CANDIDATE_MODEL,
+    LLAMA32_LITE_MODEL,
+    MONTHLY_SLO_USD,
+    LoRAQuantizationType,
+    LoRAScheduleType,
+    LoRATrainingConfig,
 )
 from literary_system.finetune.pre_train_safety import (
+    AxisResult,
     PreTrainSafety,
     SafetyAxis,
     SafetyResult,
-    AxisResult,
-)
-from literary_system.finetune.finetune_eval_pipeline import (
-    FineTuneEvalPipeline,
-    EvalResult,
-    EvalAxisResult,
-    compute_bertscore_f1,
-    compute_bleu4,
-    compute_krippendorff_alpha,
-    THRESHOLD_BERTSCORE_F1,
-    THRESHOLD_LLM_JUDGE,
-    THRESHOLD_STYLE,
-    THRESHOLD_BLEU,
-    THRESHOLD_KRIPPENDORFF_ALPHA,
-)
-from literary_system.finetune.long_context_strategy import (
-    LongContextStrategy,
-    TextChunk,
-    ChunkingResult,
-    CHUNK_SIZE_TOKENS,
-    OVERLAP_TOKENS,
 )

@@ -1,62 +1,31 @@
-Literary OS V600 — Phase B SP-B.1 FinetuningGate G54 + SP-B.1 완료
+Literary OS V601 — SP-B.2 RLHF RewardModel v1.0 (ADR-061)
 ===========================================================
-Version      : V600 (v10.5.0)
+Version      : V601 (v10.6.0)
 Release Date : 2026-05-22
-Build Type   : Phase B SP-B.1 완료 — Gate G54 + SP-B.1 수직 통합
+Build Type   : Phase B SP-B.2 진행 중 — RLHF RewardModel v1.0
 
-Test Result  : 6,382+ PASS
-Gate         : 53/53 PASS (G01~G54)
-Phase        : Phase B SP-B.1 완료 ✅ → SP-B.2 (V601~, RLHF) 진입 대기
+Test Result  : 6,390+ PASS
+Gate         : 53/53 PASS (G01~G54)  ※ Gate G55는 V603에서 신설
+Phase        : Phase B SP-B.2 (V601~V610) 진행 중
 
-SP-B.1 완료 (V596~V600)
+SP-B.2 V601 완료 항목
 --------------------------
-V596  LoRA Dataset Pipeline + Governance (ADR-056)
-V597  LoRA Training Config + Job Runner + TrainPlane Helm (ADR-057)
-V598  LoRAArtifact + Registry + InferenceGateway + Gate G53 (ADR-058)
-V599  PreTrainSafety + FineTuneEvalPipeline + LongContextStrategy (ADR-059)
-V600  Gate G54 (7CP 수직 통합) + finetune_ci.yml + ADR-060 ← 현재
-
-SP-B.1 완료 조건 확인
-------------------------
-  Gate G53 PASS (추론 레이턴시 ≤2초 + 100자+)        ✅ V598
-  Gate G54 PASS (7CP: Safety·Dataset·Splitter·        ✅ V600
-                 Provenance·JobRunner·Artifact·Eval)
-  테스트 6,382+ PASS (V595.2 기준 +200)               ✅ V600
-  LoRAArtifact 3-tag sha256 무결성                     ✅ ADR-058
-  월 GPU SLO $96 정책 확립                             ✅ ADR-057
-  베이스 모델 3종 호환성                                ✅ ADR-060
-
-베이스 모델 전략 (ADR-060 확정)
----------------------------------
-  Primary  : meta-llama/Llama-3.1-8B     (8B, 128K ctx, transformers≥4.44)
-  A/B Cand : LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct  (한국어 특화)
-  경량 Cand: meta-llama/Llama-3.2-3B-Instruct       (3B, VRAM≤8GB, rank=8)
-  공통 target_modules: q_proj / k_proj / v_proj / o_proj
-  peft ≥ 0.12.0 + transformers ≥ 4.44.0 필수
+V601  RewardModel v1.0 — Constitution 5축→R(scene), MARKER_WEIGHT_CAP=0.20
+      적대적 시드 5종 탐지, quality_correlation() hook (ADR-061)
+      8 TC PASS (TC-A1~A3 / TC-B1~B2 / TC-C1~C3)
 
 Architecture Constraints (Permanent)
 --------------------------------------
-  LLM-0    : No external LLM calls in corpus/, constitution/, finetune/ (ADR-031)
+  LLM-0    : No external LLM calls in rlhf/ (ADR-031, ADR-061)
   LLM-1    : LoRA 모델 PROMOTED 단계만 서빙 허용 (ADR-058)
   DEV_MODE : Always defaults to "false" (ADR-034)
   Preflight: 15-step check before every version entry
 
-Phase A Summary (완료 기준선 — 고정)
+다음 단계 — SP-B.2 계속 (V602~V610)
 --------------------------------------
-  Version  : v10.0.2 (V595.2)
-  Gates    : 51/51 PASS
-  Tests    : 6,182 collected
-  SHA256   : 932 files, 0 mismatch
-  ADR      : ADR-001~055
-  CI       : GREEN
-
-다음 단계 — SP-B.2 (V601~V610)
-----------------------------------
-  V601: RewardModel (Constitution 5축 → 스칼라, ADR-061)
-  V602: RLHFDatasetBuilder ((씬, 보상) 쌍 JSONL)
-  V603: PPOTrainer + ConstraintGuard + Gate G55 (KL≤0.05)
+  V602: RLHFDatasetBuilder ((씬, 보상) 쌍 JSONL, 8B/3B 듀얼)
+  V603: PPOTrainer + ConstraintGuard + Gate G55 (KL≤0.08 cycle1)
   V604: RLHFMonitor (보상 추세 + 자동 롤백)
-  V605: A/B 테스트 + CanaryController (5/25/50/100%)
-  V606~V609: RLHF 3사이클 + SafetyRegressionV2
-  V610: Gate G56 + Gate G57 + CanonicalBridgeV2 (ADR-064)
+  V605: CanaryController 4단계 (5/25/50/100%, auto_decide=True)
+  V610: Gate G56/G57 + CanonicalBridgeV2 (ADR-064)
   목표: R(scene)≥0.75 + 5축 상관≥0.80 + 7,000+ tests
