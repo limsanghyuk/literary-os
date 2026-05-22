@@ -1,3 +1,15 @@
+## [10.8.0] — 2026-05-22 — V603 SP-B.2 PPOTrainer + ConstraintGuard + Gate G55 (ADR-063)
+
+### Added
+- `literary_system/rlhf/ppo_trainer.py`: PPOTrainer v1.0 — Clipped PPO + KL 추적 + LCG RNG (LLM-0)
+- `literary_system/rlhf/constraint_guard.py`: ConstraintGuard v1.0 — KL 하드리밋·보상 클램프·엔트로피 붕괴 감지
+- `docs/adr/ADR-063.md`: PPOTrainer + ConstraintGuard 설계 결정 문서
+- `tests/unit/test_v603_ppo_trainer.py`: 9 TC (TC-1~TC-9) PASS
+- Gate G55 (PPO Stability) — 6 CP: KL 안정성·ConstraintGuard·PPOResult 통합 검증
+
+### Changed
+- `literary_system/rlhf/__init__.py`: PPOTrainer·PPOConfig·PPOResult·PPOStep·ConstraintGuard·GuardConfig·GuardState·ViolationRecord export 추가
+
 ## [10.7.0] — 2026-05-22 — V602 SP-B.2 RLHFDatasetBuilder v1.0 (ADR-062)
 
 ### Added

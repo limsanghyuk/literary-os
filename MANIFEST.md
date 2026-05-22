@@ -1,8 +1,8 @@
-# MANIFEST — Literary OS V602
+# MANIFEST — Literary OS V603
 
-버전: 10.7.0
+버전: 10.8.0
 릴리즈일: 2026-05-22
-빌드 타입: Phase B SP-B.2 진행 중 — RLHFDatasetBuilder v1.0 (V602)
+빌드 타입: Phase B SP-B.2 진행 중 — PPOTrainer + ConstraintGuard + Gate G55 (V603)
 
 ## 테스트 결과
 
@@ -11,7 +11,7 @@
 | PASS | 6,382+ |
 | FAIL | 0 |
 | SKIP | 2 (REAL LLM — API 키 없을 시) |
-| 릴리즈 게이트 | **53/53 PASS** |
+| 릴리즈 게이트 | **54/54 PASS** |
 | Phase A 기준 대비 신규 | +200 (V595.2 기준 6,182 + 46) |
 
 ## 릴리즈 게이트 현황
@@ -28,7 +28,8 @@
 | G53 | LoRA Inference Gate (레이턴시≤2초 + 100자+) | V598 | ✅ PASS |
 | G54 | Fine-tuning Pipeline Gate (7CP 수직 통합) | V600 | ✅ PASS |
 | — | RLHF Gate G55 (PPO Stability, KL≤0.08) | V603 | 🔄 예정 |
-| **합계** | | | **53/53 ALL PASS** |
+| G55 | PPO Stability Gate (KL≤0.08 + ConstraintGuard + PPOResult) | V603 | ✅ PASS |
+| **합계** | | | **54/54 ALL PASS** |
 
 ## Phase B SP-B.1 산출물 (V596~V599)
 

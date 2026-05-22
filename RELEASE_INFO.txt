@@ -1,18 +1,21 @@
-Literary OS V602 — SP-B.2 RLHFDatasetBuilder v1.0 (ADR-062)
-===========================================================
-Version      : V602 (v10.7.0)
+Literary OS V603 — SP-B.2 PPOTrainer + ConstraintGuard + Gate G55 (ADR-063)
+===========================================================================
+Version      : V603 (v10.8.0)
 Release Date : 2026-05-22
-Build Type   : Phase B SP-B.2 진행 중 — RLHFDatasetBuilder v1.0
+Build Type   : Phase B SP-B.2 진행 중 — PPOTrainer + ConstraintGuard v1.0
 
-Test Result  : 6,390+ PASS
-Gate         : 53/53 PASS (G01~G54)  ※ Gate G55는 V603에서 신설
+Test Result  : 6,294+ PASS (EA-6 집계)
+Gate         : 54/54 PASS (G01~G55)
 Phase        : Phase B SP-B.2 (V601~V610) 진행 중
 
-SP-B.2 V601 완료 항목
+SP-B.2 완료 항목
 --------------------------
 V601  RewardModel v1.0 — Constitution 5축→R(scene), MARKER_WEIGHT_CAP=0.20
       적대적 시드 5종 탐지, quality_correlation() hook (ADR-061)
-      8 TC PASS (TC-A1~A3 / TC-B1~B2 / TC-C1~C3)
+V602  RLHFDatasetBuilder v1.0 — (씬, 보상) JSONL + 8B/3B 듀얼 (ADR-062)
+V603  PPOTrainer v1.0 — Clipped PPO + KL 추적 + LCG RNG (LLM-0, ADR-063)
+      ConstraintGuard v1.0 — KL 하드리밋 0.15 + 보상 클램프 [-10, +10]
+      Gate G55 (PPO Stability) — 6 CP PASS
 
 Architecture Constraints (Permanent)
 --------------------------------------
@@ -21,10 +24,8 @@ Architecture Constraints (Permanent)
   DEV_MODE : Always defaults to "false" (ADR-034)
   Preflight: 15-step check before every version entry
 
-다음 단계 — SP-B.2 계속 (V602~V610)
+다음 단계 — SP-B.2 계속 (V604~V610)
 --------------------------------------
-  V602: RLHFDatasetBuilder ((씬, 보상) 쌍 JSONL, 8B/3B 듀얼)
-  V603: PPOTrainer + ConstraintGuard + Gate G55 (KL≤0.08 cycle1)
   V604: RLHFMonitor (보상 추세 + 자동 롤백)
   V605: CanaryController 4단계 (5/25/50/100%, auto_decide=True)
   V610: Gate G56/G57 + CanonicalBridgeV2 (ADR-064)

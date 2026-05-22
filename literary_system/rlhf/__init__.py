@@ -26,8 +26,29 @@ __all__ = [
     "DatasetEntry",
     "RLHFDatasetStats",
     "BuildResult",
+    # V603
+    "PPOTrainer",
+    "PPOConfig",
+    "PPOResult",
+    "PPOStep",
+    "ConstraintGuard",
+    "GuardConfig",
+    "GuardState",
+    "ConstraintViolationRecord",
 ]
 
+from literary_system.rlhf.constraint_guard import (
+    ConstraintGuard,
+    ConstraintViolationRecord,
+    GuardConfig,
+    GuardState,
+)
+from literary_system.rlhf.ppo_trainer import (
+    PPOConfig,
+    PPOResult,
+    PPOStep,
+    PPOTrainer,
+)
 from literary_system.rlhf.reward_model import (
     AdversarialSeed,
     ConstitutionAxisReward,

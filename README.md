@@ -1,11 +1,11 @@
-# Literary OS V602
+# Literary OS V603
 
 > **판단은 로컬, 생성만 LLM, 학습은 누적**  
 > AI 기반 장편 소설·드라마 시나리오 생성 시스템
 
-[![Version](https://img.shields.io/badge/version-10.7.0-blue)]()
+[![Version](https://img.shields.io/badge/version-10.8.0-blue)]()
 [![Tests](https://img.shields.io/badge/tests-6390%20PASS-brightgreen)]()
-[![Gates](https://img.shields.io/badge/release%20gates-53%2F53%20PASS-brightgreen)]()
+[![Gates](https://img.shields.io/badge/release%20gates-54%2F54%20PASS-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 
@@ -19,7 +19,7 @@ pip install -e ".[dev]"
 
 # 전체 테스트 실행
 pytest tests/ -q
-# → 6294+ passed (V602 기준)
+# → 6300+ passed (V603 기준)
 
 # 릴리즈 게이트 확인
 python -c "
@@ -27,7 +27,7 @@ from literary_system.gates.release_gate import run_release_gate
 result = run_release_gate()
 print(result['summary'])
 "
-# → RELEASE GATE PASS: 53/53 gates passed
+# → RELEASE GATE PASS: 54/54 gates passed
 ```
 
 ---
@@ -45,7 +45,7 @@ literary_system/
 ├── corpus/               # 외부 코퍼스 브릿지 — BGE-M3 + CIM (V557~V561)
 ├── multiwork/            # 다중작품 관리 오케스트레이터 (V562~V571)
 ├── db/                   # LOSDB — SQL/Vector/Graph 스토리지 + Facade (V581~V586)
-├── gates/                # 릴리즈 게이트 51종 (G01~G52)
+├── gates/                # 릴리즈 게이트 51종 (G01~G55)
 ├── adapters_live/        # LLM 어댑터 (Claude / OpenAI / Ollama)
 └── ...
 ```

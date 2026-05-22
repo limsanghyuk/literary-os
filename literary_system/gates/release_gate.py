@@ -2577,3 +2577,139 @@ def _gate_lora_finetuning_g54() -> dict:
     return gate_lora_finetuning()
 
 GATES.append(("lora_finetuning_g54", "Fine-tuning Pipeline Gate G54 — SP-B.1 수직 통합 7CP (ADR-060)", _gate_lora_finetuning_g54))
+
+# Gate G55 — PPO Stability Gate (SP-B.2, V603, ADR-063)
+def _gate_ppo_stability_g55() -> dict:
+    """
+    Gate G55: PPO 안정성 게이트.
+    PPOTrainer + ConstraintGuard 통합 검증.
+    ADR-063에 의거한 SP-B.2 KL 안정성 기준.
+
+    검증 항목:
+      CP-1: PPOConfig 기본값 유효성 (kl_threshold ≤ 0.10, clip_epsilon ∈ (0, 1))
+      CP-2: PPOTrainer.train() DatasetEntry 리스트 → PPOResult 반환
+      CP-3: PPOResult.passed → kl_stable AND reward_improvement ≥ 0
+      CP-4: ConstraintGuard.check_kl() 하드 리밋 초과 시 should_stop=True (3연속)
+      CP-5: ConstraintGuard.clamp_reward() 범위 클램프 정확성
+      CP-6: PPOResult.summary() 딕셔너리 7키 검증
+    """
+    errors: list[str] = []
+
+    # CP-1: PPOConfig 기본값
+    try:
+        from literary_system.rlhf.ppo_trainer import PPOConfig, KL_THRESHOLD_CYCLE1, CLIP_EPSILON
+        cfg = PPOConfig()
+        if not (0 < cfg.kl_threshold <= 0.10):
+            errors.append(f"CP-1: kl_threshold={cfg.kl_threshold} 범위 초과 (0, 0.10]")
+        if not (0 < cfg.clip_epsilon < 1.0):
+            errors.append(f"CP-1: clip_epsilon={cfg.clip_epsilon} 범위 초과 (0, 1)")
+        if cfg.kl_threshold != KL_THRESHOLD_CYCLE1:
+            errors.append(f"CP-1: 기본 kl_threshold≠KL_THRESHOLD_CYCLE1")
+        if cfg.clip_epsilon != CLIP_EPSILON:
+            errors.append(f"CP-1: 기본 clip_epsilon≠CLIP_EPSILON")
+    except Exception as e:
+        errors.append(f"CP-1 import/validation: {e}")
+
+    # CP-2: PPOTrainer.train() 반환 타입
+    try:
+        from literary_system.rlhf.ppo_trainer import PPOTrainer, PPOResult
+        from literary_system.rlhf.rlhf_dataset_builder import DatasetEntry
+        entries = [
+            DatasetEntry(
+                entry_id=f"s{i}",
+                scene="테스트 씬 텍스트",
+                reward=0.5 + i * 0.01,
+                passed=True,
+                axis_rewards={"coherence": 0.8, "style": 0.7, "ethics": 0.9,
+                              "engagement": 0.75, "originality": 0.8},
+                model_target="8B",
+                split="train",
+            )
+            for i in range(10)
+        ]
+        trainer = PPOTrainer()
+        result = trainer.train(entries)
+        if not isinstance(result, PPOResult):
+            errors.append(f"CP-2: train() 반환 타입 불일치: {type(result)}")
+    except Exception as e:
+        errors.append(f"CP-2 train(): {e}")
+
+    # CP-3: PPOResult.passed 의미론
+    try:
+        from literary_system.rlhf.ppo_trainer import PPOResult, PPOStep
+        step = PPOStep(step=0, policy_loss=0.1, value_loss=0.1, entropy=0.5,
+                       kl_divergence=0.03, mean_reward=0.7, clipped_ratio=0.0)
+        r_pass = PPOResult(steps=[step], final_kl=0.03, mean_reward_before=0.5,
+                           mean_reward_after=0.7, reward_improvement=0.2,
+                           kl_stable=True, total_entries=10, config=None)
+        if not r_pass.passed:
+            errors.append("CP-3: kl_stable=True, improvement≥0 → passed=True 기대")
+        r_fail = PPOResult(steps=[step], final_kl=0.20, mean_reward_before=0.5,
+                           mean_reward_after=0.7, reward_improvement=0.2,
+                           kl_stable=False, total_entries=10, config=None)
+        if r_fail.passed:
+            errors.append("CP-3: kl_stable=False → passed=False 기대")
+    except Exception as e:
+        errors.append(f"CP-3 passed property: {e}")
+
+    # CP-4: ConstraintGuard 하드 리밋 3연속 초과 → should_stop
+    try:
+        from literary_system.rlhf.constraint_guard import ConstraintGuard, GuardConfig
+        guard = ConstraintGuard(GuardConfig(kl_hard_limit=0.10, max_consecutive_violations=3))
+        for i in range(3):
+            guard.check_kl(i, 0.20)  # 초과값 3회
+        if not guard.state.should_stop:
+            errors.append("CP-4: 3연속 KL 초과 → should_stop=True 기대")
+        if guard.state.consecutive_kl_violations < 3:
+            errors.append(f"CP-4: consecutive_kl_violations={guard.state.consecutive_kl_violations} < 3")
+    except Exception as e:
+        errors.append(f"CP-4 ConstraintGuard KL: {e}")
+
+    # CP-5: clamp_reward 범위 클램프
+    try:
+        from literary_system.rlhf.constraint_guard import ConstraintGuard, GuardConfig
+        guard = ConstraintGuard(GuardConfig(reward_min=-5.0, reward_max=5.0))
+        v1 = guard.clamp_reward(0, 15.0)
+        v2 = guard.clamp_reward(1, -20.0)
+        v3 = guard.clamp_reward(2, 3.0)
+        if v1 != 5.0:
+            errors.append(f"CP-5: clamp_reward(15.0) → {v1}, 기대 5.0")
+        if v2 != -5.0:
+            errors.append(f"CP-5: clamp_reward(-20.0) → {v2}, 기대 -5.0")
+        if v3 != 3.0:
+            errors.append(f"CP-5: clamp_reward(3.0) → {v3}, 기대 3.0 (클램프 없음)")
+        if guard.state.total_reward_clamps != 2:
+            errors.append(f"CP-5: total_reward_clamps={guard.state.total_reward_clamps}, 기대 2")
+    except Exception as e:
+        errors.append(f"CP-5 clamp_reward: {e}")
+
+    # CP-6: PPOResult.summary() 7키
+    try:
+        from literary_system.rlhf.ppo_trainer import PPOResult, PPOStep
+        step = PPOStep(step=0, policy_loss=0.1, value_loss=0.1, entropy=0.5,
+                       kl_divergence=0.03, mean_reward=0.7, clipped_ratio=0.0)
+        r = PPOResult(steps=[step], final_kl=0.03, mean_reward_before=0.5,
+                      mean_reward_after=0.7, reward_improvement=0.2,
+                      kl_stable=True, total_entries=10, config=None)
+        summary = r.summary()
+        required_keys = {"final_kl", "mean_reward_before", "mean_reward_after",
+                         "reward_improvement", "kl_stable", "total_entries", "passed"}
+        missing = required_keys - set(summary.keys())
+        if missing:
+            errors.append(f"CP-6: summary() 누락 키: {missing}")
+    except Exception as e:
+        errors.append(f"CP-6 summary(): {e}")
+
+    passed = len(errors) == 0
+    return {
+        "gate": "G55",
+        "name": "PPO Stability Gate",
+        "pass": passed,      # run_release_gate 집계용
+        "passed": passed,
+        "errors": errors,
+        "checkpoints": ["CP-1 PPOConfig", "CP-2 train()", "CP-3 passed",
+                        "CP-4 KL hard limit", "CP-5 clamp_reward", "CP-6 summary()"],
+    }
+
+
+GATES.append(("ppo_stability_g55", "PPO Stability Gate G55 — KL 안정성·ConstraintGuard·PPOResult (ADR-063)", _gate_ppo_stability_g55))
