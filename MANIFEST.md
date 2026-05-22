@@ -1,8 +1,8 @@
-# MANIFEST — Literary OS V601
+# MANIFEST — Literary OS V602
 
-버전: 10.6.0
-릴리즈일: 2026-05-21
-빌드 타입: Phase B SP-B.2 진행 중 — RLHF RewardModel v1.0 (V601)
+버전: 10.7.0
+릴리즈일: 2026-05-22
+빌드 타입: Phase B SP-B.2 진행 중 — RLHFDatasetBuilder v1.0 (V602)
 
 ## 테스트 결과
 

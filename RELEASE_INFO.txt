@@ -1,8 +1,8 @@
-Literary OS V601 — SP-B.2 RLHF RewardModel v1.0 (ADR-061)
+Literary OS V602 — SP-B.2 RLHFDatasetBuilder v1.0 (ADR-062)
 ===========================================================
-Version      : V601 (v10.6.0)
+Version      : V602 (v10.7.0)
 Release Date : 2026-05-22
-Build Type   : Phase B SP-B.2 진행 중 — RLHF RewardModel v1.0
+Build Type   : Phase B SP-B.2 진행 중 — RLHFDatasetBuilder v1.0
 
 Test Result  : 6,390+ PASS
 Gate         : 53/53 PASS (G01~G54)  ※ Gate G55는 V603에서 신설

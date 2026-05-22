@@ -1,3 +1,10 @@
+## [10.7.0] — 2026-05-22 — V602 SP-B.2 RLHFDatasetBuilder v1.0 (ADR-062)
+
+### Added
+- `literary_system/rlhf/rlhf_dataset_builder.py`: RLHFDatasetBuilder v1.0 — (씬,보상) JSONL + 8B/3B 듀얼 + 결정론적 80/10/10 split
+- `docs/adr/ADR-062.md`: 데이터셋 빌더 설계 결정 문서
+- `tests/unit/test_v602_dataset_builder.py`: 9 TC PASS
+
 ## [10.6.0] — 2026-05-22 — V601 SP-B.2 RLHF RewardModel v1.0 (ADR-061)
 
 ### Added
