@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "literary-os"
-version = "10.5.0"
+version = "10.6.0"
 description = "Literary OS V600 — Phase B SP-B.1 FinetuningGate G54 + SP-B.1 완료 (ADR-060), 53 Gates PASS, 6382+ tests (v10.5.0)"
 readme = "README.md"
 requires-python = ">=3.10"
