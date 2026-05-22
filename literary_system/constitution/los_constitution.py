@@ -213,16 +213,22 @@ def _score_tension(text: str) -> float:
 
 
 def _score_prose(text: str) -> float:
-    """산문 품질: 어휘 다양성 + 문장 변화."""
+    """산문 품질: 어휘 다양성(RTTR) + 문장 변화.
+
+    RTTR(Root Type Token Ratio) 사용으로 텍스트 길이에 독립적인 어휘 다양성 측정.
+    반복 텍스트에서 TTR이 과도하게 낮아지는 문제(BUG-prose) 해결.
+    """
     sentences = re.split(r'[.!?\n。！？]', text)
     sentences = [s.strip() for s in sentences if s.strip()]
     n_sent = len(sentences)
     if n_sent == 0:
         return 0.0
-    # 어휘 다양성 (TTR)
+    # 어휘 다양성: RTTR (Root Type Token Ratio) — 길이 독립적
     wds = _words(text)
-    ttr = len(set(w.lower() for w in wds)) / max(1, len(wds))
-    vocab_s = min(1.0, ttr * 1.5)
+    n_wds = max(1, len(wds))
+    n_unique = len(set(w.lower() for w in wds))
+    rttr = n_unique / math.sqrt(n_wds)   # RTTR: 길이 √N 으로 정규화
+    vocab_s = min(1.0, rttr / 4.0)       # 4.0 ≈ Korean 드라마 산문 표준 RTTR
     # 문장 길이 변화 (표준편차 / 평균)
     lens = [len(s.split()) for s in sentences]
     mean_l = sum(lens) / n_sent
@@ -231,7 +237,7 @@ def _score_prose(text: str) -> float:
     else:
         std_l = statistics.pstdev(lens) if len(lens) > 1 else 0.0
         variety_s = min(1.0, std_l / max(1, mean_l))
-    return round(0.60 * vocab_s + 0.40 * variety_s, 4)
+    return round(0.65 * vocab_s + 0.35 * variety_s, 4)
 
 
 # ---------------------------------------------------------------------------
