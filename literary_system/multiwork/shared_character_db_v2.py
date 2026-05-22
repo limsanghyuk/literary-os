@@ -16,13 +16,12 @@ from __future__ import annotations
 
 import copy
 import hashlib
-import time
 import threading
+import time
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Tuple
 
-from .shared_character_db import SharedCharacterDB, CharacterProfile
-
+from .shared_character_db import CharacterProfile, SharedCharacterDB
 
 # ────────────────────────────────────────────────────────────────
 # 보조 데이터클래스

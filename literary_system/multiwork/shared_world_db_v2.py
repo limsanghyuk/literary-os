@@ -14,13 +14,12 @@ ADR-067
 from __future__ import annotations
 
 import hashlib
-import time
 import threading
+import time
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
 from .shared_world_db import SharedWorldDB
-
 
 # ────────────────────────────────────────────────────────────────
 # 보조 데이터클래스
