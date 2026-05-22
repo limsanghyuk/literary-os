@@ -1,3 +1,17 @@
+## [10.12.0] — 2026-05-22 (V607)
+
+### Added
+- `literary_system/multiwork/shared_character_db_v2.py`: SharedCharacterDBV2 v2.0 — CharacterSnapshot 불변 체크포인트, RewardTrace RLHF 보상 이력, ConflictRecord 충돌 감지 (ADR-067)
+- `literary_system/multiwork/shared_world_db_v2.py`: SharedWorldDBV2 v2.0 — WorldSnapshot 불변 체크포인트, LocationConflict 위치 충돌 감지, timeline 일관성 점수 (ADR-067)
+- `docs/adr/ADR-067.md`: SharedCharacterDB v2.0 + SharedWorldDB v2.0 설계 결정 기록 (SP-B.3 시작)
+- `tests/unit/test_v607_multiwork_v2.py`: 27 TC (TC-01~TC-27) ALL PASS
+- SP-B.3 시작: MultiWork 협업 레이어 v2 기반 구축
+
+### Changed
+- `literary_system/multiwork/__init__.py`: CharacterSnapshot, RewardTrace, ConflictRecord, SharedCharacterDBV2, WorldSnapshot, LocationConflict, SharedWorldDBV2 export 추가
+- `docs/adr/INDEX.md`: ADR-067 항목 추가
+- `tools/test_inventory.json`: 6387 → 6414 tests (EA-6 갱신)
+- `pyproject.toml`: version 10.11.0 → 10.12.0
 
 ## [10.11.0] — 2026-05-22 (V606)
 

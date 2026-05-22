@@ -1,7 +1,8 @@
-Literary OS V606
-Release: v10.11.0
+Literary OS V607
+Release: v10.12.0
 Date: 2026-05-22
 Gates: 56/56 PASS
-Tests: 6387+ PASS
-New: CanaryController v1.0 (4단계 Canary) + ModelServingEndpoint v1.0 (/model_card)
-ADR: ADR-065
+Tests: 6414+ PASS
+New: SharedCharacterDBV2 v2.0 (CharacterSnapshot+RewardTrace+ConflictRecord) + SharedWorldDBV2 v2.0 (WorldSnapshot+LocationConflict+consistency_score)
+ADR: ADR-067
+SP: SP-B.3 시작 (MultiWork 협업 레이어)

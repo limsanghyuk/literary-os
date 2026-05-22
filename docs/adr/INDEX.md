@@ -61,3 +61,10 @@
 | ADR-056 | V596 | LoRA Dataset Format + ProvenanceLedger + DatasetRegistry + DSR 30-day SLA |
 | ADR-057 | V597 | LoRA 학습 설정 + GPU 격리 정책 (rank=16, 격주 학습, TrainPlane Helm) |
 | ADR-060 | Fine-tuning Pipeline Gate G54 + 베이스 모델 3종 적합성 | V600 | Accepted |
+| ADR-061 | V601 | RewardModel v1.0 — Constitution 5축 → 스칼라 R(scene) + 적대적 시드 |
+| ADR-062 | V602 | RLHFDatasetBuilder v1.0 — (씬, 보상) JSONL 8B/3B 듀얼 |
+| ADR-063 | V603 | PPOTrainer + ConstraintGuard (KL≤0.05, GAE λ=0.95 γ=0.99) |
+| ADR-064 | V604 | RLHFMonitor v1.0 — 슬라이딩 윈도우 이동평균 + 자동 롤백 트리거 |
+| ADR-065 | V605 | CanaryController v1.0 — 4단계 5/25/50/100% 카나리 롤아웃 |
+| ADR-066 | V606 | CanonicalBridgeV2 + Gate G56/G57 (SP-B.2 완료) |
+| ADR-067 | V607 | SharedCharacterDB v2.0 + SharedWorldDB v2.0 (SP-B.3 시작) |

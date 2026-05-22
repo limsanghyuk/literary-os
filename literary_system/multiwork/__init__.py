@@ -80,3 +80,23 @@ __all__ = [
     # V570
     "SceneProcessEvent", "OrchestratorSnapshot", "MultiWorkOrchestrator",
 ]
+
+# V607: SharedCharacterDB v2.0 + SharedWorldDB v2.0
+from .shared_character_db_v2 import (
+    CharacterSnapshot,
+    ConflictRecord,
+    RewardTrace,
+    SharedCharacterDBV2,
+)
+from .shared_world_db_v2 import (
+    LocationConflict,
+    SharedWorldDBV2,
+    WorldSnapshot,
+)
+
+__all__ += [
+    # V607 — SharedCharacterDB v2.0
+    "CharacterSnapshot", "RewardTrace", "ConflictRecord", "SharedCharacterDBV2",
+    # V607 — SharedWorldDB v2.0
+    "WorldSnapshot", "LocationConflict", "SharedWorldDBV2",
+]
