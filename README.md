@@ -1,4 +1,4 @@
-# Literary OS V603
+# Literary OS V604
 
 > **판단은 로컬, 생성만 LLM, 학습은 누적**  
 > AI 기반 장편 소설·드라마 시나리오 생성 시스템
@@ -19,7 +19,7 @@ pip install -e ".[dev]"
 
 # 전체 테스트 실행
 pytest tests/ -q
-# → 6300+ passed (V603 기준)
+# → 6321+ passed (V604 기준)
 
 # 릴리즈 게이트 확인
 python -c "

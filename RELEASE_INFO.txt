@@ -1,32 +1,15 @@
-Literary OS V603 — SP-B.2 PPOTrainer + ConstraintGuard + Gate G55 (ADR-063)
-===========================================================================
-Version      : V603 (v10.8.0)
-Release Date : 2026-05-22
-Build Type   : Phase B SP-B.2 진행 중 — PPOTrainer + ConstraintGuard v1.0
+LITERARY OS RELEASE INFO
+========================
+Version    : 10.9.0
+Codename   : V604 — RLHFMonitor + 자동 롤백
+Release    : 2026-05-22
+Gates      : 54/54 PASS (G01~G55)
+Tests      : 6321+ PASS
+ADR        : ADR-001 ~ ADR-064
 
-Test Result  : 6,294+ PASS (EA-6 집계)
-Gate         : 54/54 PASS (G01~G55)
-Phase        : Phase B SP-B.2 (V601~V610) 진행 중
-
-SP-B.2 완료 항목
---------------------------
-V601  RewardModel v1.0 — Constitution 5축→R(scene), MARKER_WEIGHT_CAP=0.20
-      적대적 시드 5종 탐지, quality_correlation() hook (ADR-061)
-V602  RLHFDatasetBuilder v1.0 — (씬, 보상) JSONL + 8B/3B 듀얼 (ADR-062)
-V603  PPOTrainer v1.0 — Clipped PPO + KL 추적 + LCG RNG (LLM-0, ADR-063)
-      ConstraintGuard v1.0 — KL 하드리밋 0.15 + 보상 클램프 [-10, +10]
-      Gate G55 (PPO Stability) — 6 CP PASS
-
-Architecture Constraints (Permanent)
---------------------------------------
-  LLM-0    : No external LLM calls in rlhf/ (ADR-031, ADR-061)
-  LLM-1    : LoRA 모델 PROMOTED 단계만 서빙 허용 (ADR-058)
-  DEV_MODE : Always defaults to "false" (ADR-034)
-  Preflight: 15-step check before every version entry
-
-다음 단계 — SP-B.2 계속 (V604~V610)
---------------------------------------
-  V604: RLHFMonitor (보상 추세 + 자동 롤백)
-  V605: CanaryController 4단계 (5/25/50/100%, auto_decide=True)
-  V610: Gate G56/G57 + CanonicalBridgeV2 (ADR-064)
-  목표: R(scene)≥0.75 + 5축 상관≥0.80 + 7,000+ tests
+SP-B.2 진행 상황:
+  V601 ✅ RewardModel (ADR-061)
+  V602 ✅ RLHFDatasetBuilder (ADR-062)
+  V603 ✅ PPOTrainer + ConstraintGuard + G55 (ADR-063)
+  V604 ✅ RLHFMonitor + 자동 롤백 (ADR-064)
+  V605 → CanaryController + ModelServingEndpoint

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "literary-os"
-version = "10.8.0"
+version = "10.9.0"
 description = "Literary OS V603 — Phase B SP-B.2 PPOTrainer + ConstraintGuard + Gate G55 (ADR-063), 54 Gates PASS, 6300+ tests"
 readme = "README.md"
 requires-python = ">=3.10"

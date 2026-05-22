@@ -35,6 +35,12 @@ __all__ = [
     "GuardConfig",
     "GuardState",
     "ConstraintViolationRecord",
+    # V604
+    "RLHFMonitor",
+    "MonitorConfig",
+    "MonitorState",
+    "RewardSnapshot",
+    "RollbackRecord",
 ]
 
 from literary_system.rlhf.constraint_guard import (
@@ -60,4 +66,11 @@ from literary_system.rlhf.rlhf_dataset_builder import (  # noqa: E402
     DatasetEntry,
     RLHFDatasetBuilder,
     RLHFDatasetStats,
+)
+from literary_system.rlhf.rlhf_monitor import (
+    MonitorConfig,
+    MonitorState,
+    RewardSnapshot,
+    RLHFMonitor,
+    RollbackRecord,
 )

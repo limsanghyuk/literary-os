@@ -1,8 +1,8 @@
-# MANIFEST — Literary OS V603
+# MANIFEST — Literary OS V604
 
-버전: 10.8.0
+버전: 10.9.0
 릴리즈일: 2026-05-22
-빌드 타입: Phase B SP-B.2 진행 중 — PPOTrainer + ConstraintGuard + Gate G55 (V603)
+빌드 타입: Phase B SP-B.2 진행 중 — PPOTrainer + ConstraintGuard + Gate G55 (V604)
 
 ## 테스트 결과
 
@@ -27,8 +27,8 @@
 | G52 | Phase A Exit Gate (EA-1~EA-6) | V595 | ✅ PASS |
 | G53 | LoRA Inference Gate (레이턴시≤2초 + 100자+) | V598 | ✅ PASS |
 | G54 | Fine-tuning Pipeline Gate (7CP 수직 통합) | V600 | ✅ PASS |
-| — | RLHF Gate G55 (PPO Stability, KL≤0.08) | V603 | 🔄 예정 |
-| G55 | PPO Stability Gate (KL≤0.08 + ConstraintGuard + PPOResult) | V603 | ✅ PASS |
+| — | RLHF Gate G55 (PPO Stability, KL≤0.08) | V604 | 🔄 예정 |
+| G55 | PPO Stability Gate (KL≤0.08 + ConstraintGuard + PPOResult) | V604 | ✅ PASS |
 | **합계** | | | **54/54 ALL PASS** |
 
 ## Phase B SP-B.1 산출물 (V596~V599)
