@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "literary-os"
-version = "10.9.0"
-description = "Literary OS V604 — Phase B SP-B.2 RLHFMonitor v1.0 + 자동 롤백 (ADR-064), 54 Gates PASS, 6321+ tests"
+version = "10.10.0"
+description = "Literary OS V605 — Phase B SP-B.2 CanaryController + ModelServingEndpoint (ADR-065), 54 Gates PASS, 6357+ tests"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}

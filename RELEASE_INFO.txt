@@ -1,15 +1,7 @@
-LITERARY OS RELEASE INFO
-========================
-Version    : 10.9.0
-Codename   : V604 — RLHFMonitor + 자동 롤백
-Release    : 2026-05-22
-Gates      : 54/54 PASS (G01~G55)
-Tests      : 6321+ PASS
-ADR        : ADR-001 ~ ADR-064
-
-SP-B.2 진행 상황:
-  V601 ✅ RewardModel (ADR-061)
-  V602 ✅ RLHFDatasetBuilder (ADR-062)
-  V603 ✅ PPOTrainer + ConstraintGuard + G55 (ADR-063)
-  V604 ✅ RLHFMonitor + 자동 롤백 (ADR-064)
-  V605 → CanaryController + ModelServingEndpoint
+Literary OS V605
+Release: v10.10.0
+Date: 2026-05-22
+Gates: 54/54 PASS
+Tests: 6357+ PASS
+New: CanaryController v1.0 (4단계 Canary) + ModelServingEndpoint v1.0 (/model_card)
+ADR: ADR-065

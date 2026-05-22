@@ -1,3 +1,15 @@
+## [10.10.0] — 2026-05-22 — V605 SP-B.2 CanaryController + ModelServingEndpoint (ADR-065)
+
+### Added
+- `literary_system/serving/canary_controller.py`: CanaryController v1.0 — 4단계 Canary (5/25/50/100%) + Gate 판정 + 자동 롤백
+- `literary_system/serving/model_serving_endpoint.py`: ModelServingEndpoint v1.0 — FastAPI /model_card 엔드포인트 (소프트-임포트)
+- `literary_system/serving/__init__.py`: serving 패키지 신규 생성
+- `docs/adr/ADR-065.md`: CanaryController + ModelServingEndpoint 설계 결정 문서
+- `tests/unit/test_v605_canary_controller.py`: 36 TC PASS
+
+### Changed
+- `pyproject.toml`: version 10.9.0 → 10.10.0
+
 ## [10.9.0] — 2026-05-22 — V604 SP-B.2 RLHFMonitor v1.0 + 자동 롤백 (ADR-064)
 
 ### Added
