@@ -2,7 +2,7 @@
 
 버전: 10.11.0
 릴리즈일: 2026-05-22
-빌드 타입: Phase B SP-B.2 진행 중 — PPOTrainer + ConstraintGuard + Gate G55 (V604)
+빌드 타입: Phase B SP-B.2 완료 — CanonicalBridgeV2 + Gate G56 + G57 (V606, ADR-066)
 
 ## 테스트 결과
 
@@ -11,7 +11,7 @@
 | PASS | 6,382+ |
 | FAIL | 0 |
 | SKIP | 2 (REAL LLM — API 키 없을 시) |
-| 릴리즈 게이트 | **54/54 PASS** |
+| 릴리즈 게이트 | **56/56 PASS** |
 | Phase A 기준 대비 신규 | +200 (V595.2 기준 6,182 + 46) |
 
 ## 릴리즈 게이트 현황
@@ -27,9 +27,10 @@
 | G52 | Phase A Exit Gate (EA-1~EA-6) | V595 | ✅ PASS |
 | G53 | LoRA Inference Gate (레이턴시≤2초 + 100자+) | V598 | ✅ PASS |
 | G54 | Fine-tuning Pipeline Gate (7CP 수직 통합) | V600 | ✅ PASS |
-| — | RLHF Gate G55 (PPO Stability, KL≤0.08) | V604 | 🔄 예정 |
 | G55 | PPO Stability Gate (KL≤0.08 + ConstraintGuard + PPOResult) | V604 | ✅ PASS |
-| **합계** | | | **54/54 ALL PASS** |
+| G56 | RLHF Reward Gate (mean_reward≥0.75, delta≥0.05) | V606 | ✅ PASS |
+| G57 | Constitution Axis Gate (5축 Pearson≥0.80) | V606 | ✅ PASS |
+| **합계** | | | **56/56 ALL PASS** |
 
 ## Phase B SP-B.1 산출물 (V596~V599)
 
