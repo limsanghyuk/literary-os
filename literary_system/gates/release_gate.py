@@ -2597,22 +2597,22 @@ def _gate_ppo_stability_g55() -> dict:
 
     # CP-1: PPOConfig 기본값
     try:
-        from literary_system.rlhf.ppo_trainer import PPOConfig, KL_THRESHOLD_CYCLE1, CLIP_EPSILON
+        from literary_system.rlhf.ppo_trainer import CLIP_EPSILON, KL_THRESHOLD_CYCLE1, PPOConfig
         cfg = PPOConfig()
         if not (0 < cfg.kl_threshold <= 0.10):
             errors.append(f"CP-1: kl_threshold={cfg.kl_threshold} 범위 초과 (0, 0.10]")
         if not (0 < cfg.clip_epsilon < 1.0):
             errors.append(f"CP-1: clip_epsilon={cfg.clip_epsilon} 범위 초과 (0, 1)")
         if cfg.kl_threshold != KL_THRESHOLD_CYCLE1:
-            errors.append(f"CP-1: 기본 kl_threshold≠KL_THRESHOLD_CYCLE1")
+            errors.append("CP-1: 기본 kl_threshold≠KL_THRESHOLD_CYCLE1")
         if cfg.clip_epsilon != CLIP_EPSILON:
-            errors.append(f"CP-1: 기본 clip_epsilon≠CLIP_EPSILON")
+            errors.append("CP-1: 기본 clip_epsilon≠CLIP_EPSILON")
     except Exception as e:
         errors.append(f"CP-1 import/validation: {e}")
 
     # CP-2: PPOTrainer.train() 반환 타입
     try:
-        from literary_system.rlhf.ppo_trainer import PPOTrainer, PPOResult
+        from literary_system.rlhf.ppo_trainer import PPOResult, PPOTrainer
         from literary_system.rlhf.rlhf_dataset_builder import DatasetEntry
         entries = [
             DatasetEntry(
