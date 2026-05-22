@@ -16,10 +16,16 @@ ADR-061~064 참조.
 from __future__ import annotations
 
 __all__ = [
+    # V601
     "RewardModel",
     "RewardResult",
     "ConstitutionAxisReward",
     "AdversarialSeed",
+    # V602
+    "RLHFDatasetBuilder",
+    "DatasetEntry",
+    "DatasetStats",
+    "BuildResult",
 ]
 
 from literary_system.rlhf.reward_model import (
@@ -27,4 +33,10 @@ from literary_system.rlhf.reward_model import (
     ConstitutionAxisReward,
     RewardModel,
     RewardResult,
+)
+from literary_system.rlhf.rlhf_dataset_builder import (  # noqa: E402
+    BuildResult,
+    DatasetEntry,
+    DatasetStats,
+    RLHFDatasetBuilder,
 )
