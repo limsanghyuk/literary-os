@@ -21,7 +21,7 @@
     "latest": "ADR-072",
     "range": "ADR-001 to ADR-072"
   },
-  "commit": "5e1d2045",
+  "commit": "6b3fb1eb",
   "tags": [
     "v10.18.0",
     "v10.18.0-V613"
