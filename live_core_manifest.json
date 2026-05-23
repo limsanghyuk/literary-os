@@ -8,19 +8,9 @@
     "subphase": "SP-B.4",
     "status": "SP-B.4 진행 중"
   },
-  "gates": {
-    "total": 59,
-    "passing": 59,
-    "range": "G01-G60"
-  },
-  "tests": {
-    "total_collected": 6603,
-    "status": "ALL PASS"
-  },
-  "adr": {
-    "latest": "ADR-075",
-    "range": "ADR-001 to ADR-075"
-  },
+  "gates": 59,
+  "tests": 6628,
+  "adr": "ADR-076",
   "commit": "2eba3d13",
   "tags": [
     "v10.20.0",
@@ -35,5 +25,9 @@
     "phase": "SP-B.4",
     "target": "Gate G60 24h 장기 실행 + Helm 검증"
   },
-  "build_notes": "V615: PerformanceSLOGate G60 v1.0 (10 CP, ADR-075) — 59/59 ALL PASS, 6603 tests"
+  "build_notes": "V615: PerformanceSLOGate G60 v1.0 (10 CP, ADR-075) — 59/59 ALL PASS, 6603 tests",
+  "version": "10.21.0",
+  "codename": "V616",
+  "description": "MemoryLeakDetector + StressTester v1.0 (SP-B.4)",
+  "updated_at": "2026-05-23T12:08:17Z"
 }

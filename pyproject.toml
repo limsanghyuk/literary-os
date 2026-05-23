@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "literary-os"
-version = "10.20.0"
-description = "Literary OS V615 — Phase B SP-B.4 PerformanceSLOGate G60 v1.0 (ADR-075), 59 Gates PASS, 6603+ tests"
+version = "10.21.0"
+description = "Literary OS V616 — Phase B SP-B.4 MemoryLeakDetector + StressTester v1.0 (ADR-076), 59 Gates PASS, 6628+ tests"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}

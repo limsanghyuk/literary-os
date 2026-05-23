@@ -361,8 +361,10 @@ def run_g60_gate() -> Dict[str, Any]:
 
 
 if __name__ == "__main__":
-    import json
+    import json, logging as _logging
+    _logging.basicConfig(level=_logging.INFO)
+    _log = _logging.getLogger(__name__)
     out = run_g60_gate()
-    print(json.dumps(out, indent=2, ensure_ascii=False))
+    _log.info(json.dumps(out, indent=2, ensure_ascii=False))
     status = "PASS" if out["pass"] else "FAIL"
-    print(f"\nGate G60 {status}: {out['passed_count']}/{out['total']} checkpoints")
+    _log.info("Gate G60 %s: %d/%d checkpoints", status, out["passed_count"], out["total"])
