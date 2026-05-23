@@ -2,48 +2,38 @@
   "manifest_version": "2.0",
   "generated_at": "2026-05-23T00:00:00Z",
   "literary_os": {
-    "version": "10.19.0",
-    "codename": "V614",
+    "version": "10.20.0",
+    "codename": "V615",
     "phase": "B",
-    "subphase": "SP-B.3",
-    "status": "SP-B.3 COMPLETE"
+    "subphase": "SP-B.4",
+    "status": "SP-B.4 진행 중"
   },
   "gates": {
-    "total": 58,
-    "passing": 58,
-    "range": "G01-G59"
+    "total": 59,
+    "passing": 59,
+    "range": "G01-G60"
   },
   "tests": {
-    "total_collected": 6583,
+    "total_collected": 6603,
     "status": "ALL PASS"
   },
   "adr": {
-    "latest": "ADR-072",
-    "range": "ADR-001 to ADR-072"
+    "latest": "ADR-075",
+    "range": "ADR-001 to ADR-075"
   },
-  "commit": "935a3997",
+  "commit": "TBD",
   "tags": [
-    "v10.19.0",
-    "v10.19.0-V614"
+    "v10.20.0",
+    "v10.20.0-V615"
   ],
-  "stray_tags": {
-    "v10.16.1": "4fa820b7",
-    "v10.16.1-V612": "4fa820b7",
-    "note": "Intermediate tags from preflight_step15 v2.0 commit. Authoritative release is v10.17.0 at 3b2d8b55."
-  },
-  "sp_b3_modules": [
-    "literary_system/multiwork/shared_character_db_v2.py",
-    "literary_system/multiwork/shared_world_db_v2.py",
-    "literary_system/multiwork/multi_work_orchestrator_v2.py",
-    "literary_system/multiwork/multi_work_cim_v2.py",
-    "literary_system/multiwork/multi_work_cim.py",
-    "literary_system/multiwork/genre_transfer.py",
-    "literary_system/serving/lora_stacking_adapter.py"
+  "sp_b4_modules": [
+    "literary_system/optimization/performance_optimizer.py",
+    "literary_system/gates/performance_slo_gate.py"
   ],
   "next": {
-    "version": "V615",
+    "version": "V616",
     "phase": "SP-B.4",
-    "target": "Gate G60 P95 SLO 검증"
+    "target": "Gate G60 24h 장기 실행 + Helm 검증"
   },
-  "build_notes": "V614 FIX: SLOReport→PerfSLOReport (G37) + EA-6 hash 재생성 — 58/58 ALL PASS"
+  "build_notes": "V615: PerformanceSLOGate G60 v1.0 (10 CP, ADR-075) — 59/59 ALL PASS, 6603 tests"
 }

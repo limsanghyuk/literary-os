@@ -3215,3 +3215,30 @@ def _gate_sp_b3_exit_g59() -> dict:
     }
 
 GATES.append(("sp_b3_exit_g59", "SP-B.3 Exit Gate G59 — 7모듈 통합 완성 (ADR-072)", _gate_sp_b3_exit_g59))
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Gate G60 — PerformanceSLOGate v1.0  (V615, ADR-075)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _gate_performance_slo_g60() -> dict:
+    """Gate G60: PerformanceSLOGate v1.0 — P95/GPU/CacheHit SLO 검증 (10 CP)."""
+    from literary_system.gates.performance_slo_gate import run_g60_gate
+    result = run_g60_gate()
+    return {
+        "gate": "G60",
+        "gate_name": result["gate_name"],
+        "pass": result["pass"],
+        "passed": result["pass"],
+        "checkpoints": result["checkpoints"],
+        "total": result["total"],
+        "passed_count": result["passed_count"],
+        "details": result.get("details", {}),
+    }
+
+
+GATES.append((
+    "performance_slo_g60",
+    "Gate G60 — PerformanceSLOGate v1.0 (P95/GPU/CacheHit SLO, ADR-075)",
+    _gate_performance_slo_g60,
+))
