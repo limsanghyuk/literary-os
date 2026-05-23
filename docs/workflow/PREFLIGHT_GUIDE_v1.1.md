@@ -606,7 +606,58 @@ if __name__ == "__main__":
 
 ---
 
-## 6. Release Block 조건 (GPT 방식 완전 계승)
+## 6. 모듈 생명주기 처분 원칙 (개발자 설계 철학)
+
+> **핵심 원칙**: 연결성 단절 = 즉각 폐기가 아니다.
+> 단절된 모듈은 먼저 새 로직과의 **승격·보완·보강** 가능성을 탐색해야 한다.
+> 폐기는 위 3단계가 모두 불가능하고 대체가 완전히 이루어진 것이 확인될 때만 허용된다.
+
+### 처분 우선순위 프로토콜
+
+```
+단절 모듈 발견
+    │
+    ▼
+1. 승격 (Promotion)  ─── 새 아키텍처의 일급 시민으로 격상 가능한가?
+    │  예: schemas/character_grid.py → SharedCharacterDBV2.grid()
+    │
+    ├─ 가능 → 승격 구현 후 import 배선 복원
+    │
+    ▼ 불가
+2. 보완 (Supplement) ─── 새 로직이 이 모듈을 호출·확장할 수 있는가?
+    │  예: schemas/intent_seed_packet.py → RAGPipelineOrchestrator intent 주입
+    │
+    ├─ 가능 → 새 로직에서 이 모듈을 import하여 보완
+    │
+    ▼ 불가
+3. 보강 (Reinforce)  ─── 새 로직이 이 모듈에 능력을 추가할 수 있는가?
+    │  예: retrieval/relation_retriever.py → NKGCurator 관계 탐색 능력 추가
+    │
+    ├─ 가능 → 새 로직 내에 기존 모듈을 흡수·강화
+    │
+    ▼ 불가
+4. 대체 확인 (Replace Verify) ─── 새 모듈이 기존 역할을 완전히 흡수했는가?
+    │  반드시 ADR(Architecture Decision Record) 문서화 필요
+    │
+    ├─ 흡수 완전 → ADR 작성 후 폐기 진행
+    │
+    ▼ 불완전
+    → 대체가 불완전하면 폐기 금지. 보강/보완으로 돌아간다.
+
+5. 폐기 (Deprecate)  ─── 1~4가 모두 불가능하고 대체가 완전할 때만 허용
+    조건: ADR 기록 + CHANGELOG 명시 + 관련 테스트 제거 검증
+```
+
+### Rule-6 단절 탐지와의 연계
+
+`preflight_step15.py` Rule-6가 단절 모듈을 발견하면:
+- **신규 단절** (KNOWN_LEGACY_ORPHANS 미등록): HIGH — 즉시 위 프로토콜 실행
+- **레거시 단절** (KNOWN_LEGACY_ORPHANS 등록): MEDIUM — 처분 방향별 집계 보고
+  - `ORPHAN_DISPOSITION` 딕셔너리가 각 모듈의 권장 처분 방향을 명시
+
+---
+
+## 6-B. Release Block 조건 (GPT 방식 완전 계승)
 
 다음 중 하나라도 발생하면 **즉시 Release Block** 처리한다.
 
@@ -624,6 +675,7 @@ if __name__ == "__main__":
 | 10 | Cache 파일이 clean ZIP에 포함 | `find . -name "__pycache__"` 존재 |
 | 11 | 버전 선언이 3개 이상 파일에서 불일치 | Step 7 버전 일관성 검사 FAIL |
 | 12 | CostLedger가 항상 0.0 반환 (미완성 상태) | V412 이월 표시 확인 — 스텁임을 명시 |
+| 13 | 단절 모듈을 무단 폐기 (처분 프로토콜 미적용) | §6 처분 우선순위(승격→보완→보강→대체→폐기) 미이행 |
 
 ---
 

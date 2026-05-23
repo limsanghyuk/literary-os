@@ -215,6 +215,44 @@ KNOWN_LEGACY_ORPHANS = {
     "literary_system/adapters/spec_designer.py",
 }
 
+# ──────────────────────────────────────────────────────────────────────────────
+# 모듈 생명주기 처분 원칙 (개발자 설계 철학)
+#
+# 연결성 단절 모듈은 무조건 제거하지 않는다.
+# 처분 우선순위:
+#   1. 승격 (Promotion)  — 새 아키텍처의 일급 시민으로 격상
+#   2. 보완 (Supplement) — 새 로직이 기존 모듈을 호출·확장
+#   3. 보강 (Reinforce)  — 새 로직이 기존 모듈에 능력을 추가
+#   4. 대체 (Replace)    — 새 모듈이 기존 역할을 완전히 흡수 (문서화 필수)
+#   5. 폐기 (Deprecate)  — 위 1~4가 모두 불가능할 때만 허용
+#
+# 각 레거시 단절 모듈의 권장 처분 방향을 명시한다.
+# ──────────────────────────────────────────────────────────────────────────────
+ORPHAN_DISPOSITION: dict[str, str] = {
+    # ── schemas/ ─────────────────────────────────────────────────────────────
+    # Pydantic 스키마 모음 — SharedCharacterDBV2/SharedWorldDBV2가 승격 흡수 가능
+    "literary_system/schemas/character_birth_gate_result.py":  "승격 검토 — SharedCharacterDBV2로 흡수 가능",
+    "literary_system/schemas/character_grid.py":               "승격 검토 — SharedCharacterDBV2.grid() 로 격상",
+    "literary_system/schemas/commander_briefing.py":           "보강 검토 — MultiWorkOrchestratorV2 briefing 레이어로 보강",
+    "literary_system/schemas/critic_decision_packet.py":       "보완 검토 — RLHFMonitor 품질 판단 레이어로 보완",
+    "literary_system/schemas/final_acceptance_packet.py":      "보강 검토 — Gate G55~G58 수락 패킷으로 보강",
+    "literary_system/schemas/format_constitution_packet.py":   "승격 검토 — LOSConstitution 포맷 레이어로 승격",
+    "literary_system/schemas/intent_seed_packet.py":           "보완 검토 — RAGPipelineOrchestrator intent 주입으로 보완",
+    "literary_system/schemas/literary_state_snapshot.py":      "보강 검토 — NarrativeGraphStore 상태 스냅샷으로 보강",
+    "literary_system/schemas/pressure_cast_plan.py":           "보완 검토 — NarrativeDebtDetector 압박 계획으로 보완",
+    "literary_system/schemas/residue_variation_plan.py":       "보완 검토 — StoryDoctorOrchestrator 변주 계획으로 보완",
+    "literary_system/schemas/scene_digest.py":                 "승격 검토 — SceneGenerationPipeline digest 출력으로 승격",
+    # ── retrieval/ ───────────────────────────────────────────────────────────
+    # 검색 계층 — HybridRetrieverV2가 일부 역할 흡수. 나머지는 보강 가능
+    "literary_system/retrieval/briefing_retriever.py":         "대체 확인 — HybridRetrieverV2가 역할 흡수했는지 검증 후 결정",
+    "literary_system/retrieval/relation_retriever.py":         "보강 검토 — NKGCurator 관계 탐색으로 보강",
+    "literary_system/retrieval/scene_retriever.py":            "보강 검토 — RAGContextBuilder 씬 검색으로 보강",
+    # ── adapters/ ────────────────────────────────────────────────────────────
+    # 어댑터 계층 — CanonicalBridgeV2 / LoRAStackingAdapter가 역할 분담
+    "literary_system/adapters/project_pipeline.py":            "대체 확인 — SceneGenerationPipeline이 역할 흡수했는지 검증 후 결정",
+    "literary_system/adapters/spec_designer.py":               "승격 검토 — MultiWorkOrchestratorV2 spec 레이어로 승격",
+}
+
 # 알려진 정상 순환 (lazy import / TYPE_CHECKING 블록, 런타임 순환 아님)
 KNOWN_SAFE_CYCLES = {
     frozenset(["literary_system/gates/gate_registry.py",
@@ -344,11 +382,21 @@ def check_orphan_modules() -> list[Violation]:
             detail="신규 단절 모듈 — 아무도 import 하지 않음 (연결성 없음)",
         ))
 
+    # 레거시 단절 모듈: 처분 방향별로 집계하여 보고
     if legacy_count:
+        promotion_targets  = [k for k, v in ORPHAN_DISPOSITION.items() if "승격" in v]
+        supplement_targets = [k for k, v in ORPHAN_DISPOSITION.items() if "보완" in v]
+        reinforce_targets  = [k for k, v in ORPHAN_DISPOSITION.items() if "보강" in v]
+        replace_targets    = [k for k, v in ORPHAN_DISPOSITION.items() if "대체" in v]
         violations.append(Violation(
             rule="Rule-6", level="MEDIUM",
             file="literary_system/schemas+retrieval+adapters", lineno=0,
-            detail=f"레거시 단절 모듈 {legacy_count}개 (V328~V400) — SP-B.4에서 정리 권장",
+            detail=(
+                f"레거시 단절 모듈 {legacy_count}개 (V328~V400) — "
+                f"승격 {len(promotion_targets)}건 / 보완 {len(supplement_targets)}건 / "
+                f"보강 {len(reinforce_targets)}건 / 대체검증 {len(replace_targets)}건. "
+                f"SP-B.4에서 처분 우선순위(승격→보완→보강→대체→폐기) 적용 권장"
+            ),
         ))
     return violations
 
