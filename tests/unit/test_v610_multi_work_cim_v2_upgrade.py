@@ -205,3 +205,118 @@ class TestGetCIMVersion:
         s = cim.stats()
         assert "version" in s
         assert s["version"] == "1.0.0"
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# T23~T30: V610 무결성 감사 수정 검증 (FIX-B1/B2/B3)
+# ADR-070 | V610-AUDIT
+# ══════════════════════════════════════════════════════════════════════════════
+
+
+class TestV610AuditFixes:
+    """최고 시스템 프린시펄 엔지니어 감사에서 발견된 B1/B2/B3 수정 회귀 테스트."""
+
+    # ────────────────────────────────────────────────────────── #
+    # FIX-B1: to_v2() 공유 참조 제거 → 이중 count 버그 수정
+    # ────────────────────────────────────────────────────────── #
+
+    def test_T23_to_v2_entries_not_shared_with_entries_v2(self) -> None:
+        """T23 (FIX-B1): to_v2() 후 entries[key] 와 _entries_v2[key] 는 별개 객체."""
+        cim_v1 = ProjectCIM(project_id="audit_p", decay=0.9)
+        cim_v1.record_interaction("A", "B")
+        migrated = cim_v1.to_v2()
+        key = ("A", "B")
+        assert migrated.entries[key] is not migrated._entries_v2[key], (
+            "entries[key]와 _entries_v2[key]가 동일 객체 — 이중 count 버그 재발"
+        )
+
+    def test_T24_to_v2_no_double_count_after_record_interaction_v2(self) -> None:
+        """T24 (FIX-B1): 마이그레이션 후 record_interaction_v2() 1회 = count +1 (이중 아님)."""
+        cim_v1 = ProjectCIM(project_id="audit_p", decay=0.9)
+        cim_v1.record_interaction("A", "B")  # count=1
+        migrated = cim_v1.to_v2()
+        migrated.record_interaction_v2("A", "B", reward=0.8)  # count → 2
+        key = ("A", "B")
+        assert migrated.entries[key].count == 2, (
+            f"entries count={migrated.entries[key].count}, expected 2"
+        )
+        assert migrated._entries_v2[key].count == 2, (
+            f"_entries_v2 count={migrated._entries_v2[key].count}, expected 2"
+        )
+
+    def test_T25_upgrade_to_v2_no_double_count_after_record_v2(self) -> None:
+        """T25 (FIX-B1): upgrade_to_v2() 후 record_v2() 1회 = count +1."""
+        v1 = MultiWorkCIM(decay=0.9)
+        v1.init_project("p1")
+        v1.record("p1", "A", "B")
+        v1.record("p1", "A", "B")  # count=2
+        v2 = v1.upgrade_to_v2()
+        v2.record_v2("p1", "A", "B", reward=0.8)  # count → 3
+        key = ("A", "B")
+        cim_p1 = v2._project_cims_v2["p1"]
+        assert cim_p1.entries[key].count == 3, (
+            f"entries count={cim_p1.entries[key].count}, expected 3"
+        )
+        assert cim_p1._entries_v2[key].count == 3, (
+            f"_entries_v2 count={cim_p1._entries_v2[key].count}, expected 3"
+        )
+
+    def test_T26_to_v2_entries_v2_reward_weight_correct_after_record(self) -> None:
+        """T26 (FIX-B1): 마이그레이션 후 record 시 reward_weighted_weight 정상 갱신."""
+        import math
+        cim_v1 = ProjectCIM(project_id="audit_p2", decay=0.9)
+        cim_v1.record_interaction("X", "Y")  # count=1
+        migrated = cim_v1.to_v2()
+        migrated.record_interaction_v2("X", "Y", reward=0.8)  # count=2
+        key = ("X", "Y")
+        e2 = migrated._entries_v2[key]
+        # count=2, reward=0.8 → weight = 1-exp(-0.9*2), rww = weight * 0.8
+        expected_weight = 1.0 - math.exp(-0.9 * 2)
+        expected_rww = round(expected_weight * 0.8, 6)
+        assert abs(e2.reward_weighted_weight - expected_rww) < 1e-5, (
+            f"reward_weighted_weight={e2.reward_weighted_weight}, expected≈{expected_rww}"
+        )
+
+    # ────────────────────────────────────────────────────────── #
+    # FIX-B2: MultiWorkCIMV2.version property 오버라이드
+    # ────────────────────────────────────────────────────────── #
+
+    def test_T27_multiworkcimv2_version_property_returns_v2(self) -> None:
+        """T27 (FIX-B2): MultiWorkCIMV2().version 는 CIMVersion.V2를 반환한다."""
+        from literary_system.multiwork.multi_work_cim_v2 import MultiWorkCIMV2
+
+        v2 = MultiWorkCIMV2()
+        assert v2.version == CIMVersion.V2, (
+            f"MultiWorkCIMV2().version={v2.version}, expected CIMVersion.V2"
+        )
+
+    def test_T28_get_cim_version_multiworkcimv2_returns_v2(self) -> None:
+        """T28 (FIX-B2): get_cim_version(MultiWorkCIMV2()) 는 V2를 반환한다."""
+        from literary_system.multiwork.multi_work_cim_v2 import MultiWorkCIMV2
+
+        v2 = MultiWorkCIMV2()
+        assert get_cim_version(v2) == CIMVersion.V2
+
+    # ────────────────────────────────────────────────────────── #
+    # FIX-B3: create_multi_work_cim v1 + v2 파라미터 경고
+    # ────────────────────────────────────────────────────────── #
+
+    def test_T29_factory_v1_with_char_db_emits_warning(self) -> None:
+        """T29 (FIX-B3): create_multi_work_cim('v1', char_db=...) 는 UserWarning을 발생시킨다."""
+        import warnings
+
+        with warnings.catch_warnings(record=True) as w:
+            warnings.simplefilter("always")
+            create_multi_work_cim("v1", char_db="MOCK_DB")
+            assert len(w) == 1
+            assert issubclass(w[0].category, UserWarning)
+            assert "char_db" in str(w[0].message)
+
+    def test_T30_factory_v2_with_char_db_no_warning(self) -> None:
+        """T30 (FIX-B3): create_multi_work_cim('v2', char_db=None) 는 경고 없음."""
+        import warnings
+
+        with warnings.catch_warnings(record=True) as w:
+            warnings.simplefilter("always")
+            create_multi_work_cim("v2", char_db=None)
+            assert len(w) == 0

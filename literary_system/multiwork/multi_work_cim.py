@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import math
 import threading
+import warnings
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import TYPE_CHECKING, Any, Dict, List, Optional, Tuple
@@ -159,6 +160,7 @@ class ProjectCIM:
         )
         # v1 entries → v2 entries (기본 weight 복사, reward_weighted_weight = weight × 0.5)
         for key, e1 in self.entries.items():
+            # v2 전용 엔트리 (reward_weighted_weight 포함)
             e2 = CIMEntryV2(
                 char_a=e1.char_a,
                 char_b=e1.char_b,
@@ -167,8 +169,12 @@ class ProjectCIM:
                 reward_weighted_weight=round(e1.weight * 0.5, 6),
             )
             v2._entries_v2[key] = e2
-            # v1 entries도 동기화
-            v2.entries[key] = e2  # type: ignore[assignment]
+            # v1 entries는 별도 CIMEntry 객체로 동기화 (공유 참조 방지 — FIX-B1)
+            # 공유 참조 시 record_interaction_v2() 호출에서 count 이중 증가 버그 발생
+            entry_v1 = CIMEntry(char_a=e1.char_a, char_b=e1.char_b)
+            entry_v1.count = e1.count
+            entry_v1.weight = e1.weight
+            v2.entries[key] = entry_v1  # type: ignore[assignment]
         return v2
 
 
@@ -354,6 +360,14 @@ def create_multi_work_cim(
     """
     ver = CIMVersion.from_str(version)
     if ver == CIMVersion.V1:
+        # FIX-B3: v1 팩토리에서 v2 전용 파라미터 지정 시 경고
+        if char_db is not None or conflict_threshold != 0.30:
+            warnings.warn(
+                "create_multi_work_cim('v1'): char_db / conflict_threshold 파라미터는 "
+                "v1 인스턴스에서 무시됩니다. v2를 사용하려면 version='v2'를 지정하세요.",
+                UserWarning,
+                stacklevel=2,
+            )
         return MultiWorkCIM(decay=decay)
 
     from .multi_work_cim_v2 import MultiWorkCIMV2  # lazy import

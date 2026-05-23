@@ -264,6 +264,12 @@ class MultiWorkCIMV2(MultiWorkCIM):
 
     VERSION = "2.0.0"
 
+    @property
+    def version(self):  # type: ignore[override]  # FIX-B2: CIMVersion.V2 반환
+        """이 인스턴스의 CIM 버전 (FIX-B2: 부모 V1 반환 오버라이드)."""
+        from .multi_work_cim import CIMVersion
+        return CIMVersion.V2
+
     def __init__(
         self,
         decay: float = 0.95,
