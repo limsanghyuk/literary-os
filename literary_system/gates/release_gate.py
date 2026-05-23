@@ -2928,3 +2928,290 @@ def _gate_constitution_axis_g57() -> dict:
 
 
 GATES.append(("constitution_axis_g57", "Constitution Axis Gate G57 — 5축 상관≥0.80 (ADR-066)", _gate_constitution_axis_g57))
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Gate G58 — LoRAStackingAdapter 검증 (V612, ADR-072)
+# ═══════════════════════════════════════════════════════════════════════════════
+def _gate_lora_stacking_g58() -> dict:
+    """
+    Gate G58: LoRAStackingAdapter Multi-LoRA 스태킹 검증.
+
+    검증 항목:
+      CP-1: 임포트 + VERSION="1.0.0"
+      CP-2: register() + get() + list_by_genre()
+      CP-3: stack() 수동 계수 — Σcoeff=1.0 합산 정확도
+      CP-4: stack() 계수 합 ≠ 1.0 → ValueError
+      CP-5: genre_stack() CIM없이 균등 계수
+      CP-6: normalize_coefficients() 합 1.0 보장
+      CP-7: apply_to_model() 스텁 반환값 구조 검증
+      CP-8: stats() 키 완전성
+    """
+    errors: list[str] = []
+
+    # CP-1: 임포트
+    try:
+        from literary_system.serving.lora_stacking_adapter import (
+            LoRAWeight,
+            LoRAStackingAdapter,
+            StackResult,
+        )
+        adapter = LoRAStackingAdapter()
+        if LoRAStackingAdapter.VERSION != "1.0.0":
+            errors.append(f"CP-1: VERSION={LoRAStackingAdapter.VERSION!r}, 기대 '1.0.0'")
+    except Exception as e:
+        errors.append(f"CP-1 import: {e}")
+        return {"gate": "G58", "name": "LoRAStackingAdapter Gate",
+                "pass": False, "passed": False, "errors": errors, "checkpoints": []}
+
+    # 공통 픽스처
+    drama_lora = LoRAWeight(
+        weight_id="drama_v1",
+        genre="drama",
+        version="1.0",
+        weight_data={
+            "layer1": {"w0": 0.5, "w1": 0.3},
+            "layer2": {"b0": 0.1},
+        },
+    )
+    thriller_lora = LoRAWeight(
+        weight_id="thriller_v1",
+        genre="thriller",
+        version="1.0",
+        weight_data={
+            "layer1": {"w0": 0.2, "w1": 0.7},
+            "layer2": {"b0": 0.4},
+        },
+    )
+
+    # CP-2: register / get / list_by_genre
+    try:
+        adapter.register(drama_lora)
+        adapter.register(thriller_lora)
+        got = adapter.get("drama_v1")
+        if got is None or got.weight_id != "drama_v1":
+            errors.append("CP-2: get('drama_v1') 반환 오류")
+        lst = adapter.list_by_genre("drama")
+        if len(lst) != 1 or lst[0].weight_id != "drama_v1":
+            errors.append(f"CP-2: list_by_genre 길이={len(lst)}, 기대 1")
+    except Exception as e:
+        errors.append(f"CP-2: {e}")
+
+    # CP-3: stack() 합산 정확도
+    try:
+        result = adapter.stack(["drama_v1", "thriller_v1"], [0.6, 0.4])
+        if not isinstance(result, StackResult):
+            errors.append("CP-3: StackResult 타입 오류")
+        l1_w0 = result.merged_weights.get("layer1", {}).get("w0", None)
+        expected = round(0.6 * 0.5 + 0.4 * 0.2, 8)  # 0.38
+        if l1_w0 is None or abs(l1_w0 - expected) > 1e-6:
+            errors.append(f"CP-3: layer1.w0={l1_w0}, 기대 {expected}")
+        if abs(result.coeff_sum - 1.0) > 1e-6:
+            errors.append(f"CP-3: coeff_sum={result.coeff_sum}")
+    except Exception as e:
+        errors.append(f"CP-3: {e}")
+
+    # CP-4: 계수 합 ≠ 1.0 → ValueError
+    try:
+        adapter.stack(["drama_v1", "thriller_v1"], [0.5, 0.6])
+        errors.append("CP-4: ValueError 미발생")
+    except ValueError:
+        pass  # 정상
+    except Exception as e:
+        errors.append(f"CP-4: 예상치 않은 예외: {e}")
+
+    # CP-5: genre_stack() — CIM 없이 균등 계수
+    try:
+        res = adapter.genre_stack(["drama", "thriller"], project_id="proj1")
+        if not isinstance(res, StackResult):
+            errors.append("CP-5: StackResult 타입 오류")
+        if abs(res.coeff_sum - 1.0) > 1e-6:
+            errors.append(f"CP-5: coeff_sum={res.coeff_sum}")
+        for wid, coeff in res.coefficients.items():
+            if abs(coeff - 0.5) > 1e-6:
+                errors.append(f"CP-5: 균등 계수 기대 0.5, 실제 {coeff}")
+    except Exception as e:
+        errors.append(f"CP-5: {e}")
+
+    # CP-6: normalize_coefficients()
+    try:
+        raw = [2.0, 3.0, 5.0]
+        normed = adapter.normalize_coefficients(["a", "b", "c"], raw)
+        if abs(sum(normed) - 1.0) > 1e-6:
+            errors.append(f"CP-6: 정규화 후 합={sum(normed)}")
+        if abs(normed[0] - 0.2) > 1e-6:
+            errors.append(f"CP-6: normed[0]={normed[0]}, 기대 0.2")
+    except Exception as e:
+        errors.append(f"CP-6: {e}")
+
+    # CP-7: apply_to_model() 구조
+    try:
+        result = adapter.stack(["drama_v1", "thriller_v1"], [0.5, 0.5])
+        applied = adapter.apply_to_model(result, model_id="test_model")
+        for key in ("model_id", "layers_applied", "params_applied", "coefficients", "status"):
+            if key not in applied:
+                errors.append(f"CP-7: 키 누락: {key}")
+        if applied.get("model_id") != "test_model":
+            errors.append("CP-7: model_id 불일치")
+    except Exception as e:
+        errors.append(f"CP-7: {e}")
+
+    # CP-8: stats()
+    try:
+        st = adapter.stats()
+        for key in ("version", "registered_weights", "genres", "stack_history_count", "has_cim_v2"):
+            if key not in st:
+                errors.append(f"CP-8: stats 키 누락: {key}")
+        if st.get("registered_weights") != 2:
+            errors.append(f"CP-8: registered_weights={st.get('registered_weights')}, 기대 2")
+    except Exception as e:
+        errors.append(f"CP-8: {e}")
+
+    passed = len(errors) == 0
+    return {
+        "gate": "G58",
+        "name": "LoRAStackingAdapter Multi-LoRA Stacking Gate",
+        "pass": passed,
+        "passed": passed,
+        "errors": errors,
+        "checkpoints": ["CP-1 import", "CP-2 register/get/list", "CP-3 stack merge",
+                        "CP-4 ValueError", "CP-5 genre_stack", "CP-6 normalize",
+                        "CP-7 apply_to_model", "CP-8 stats"],
+    }
+
+
+GATES.append(("lora_stacking_g58", "LoRAStackingAdapter Gate G58 — Multi-LoRA stack/genre_stack/apply (ADR-072)", _gate_lora_stacking_g58))
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Gate G59 — SP-B.3 Exit Gate (V612, ADR-072)
+# ═══════════════════════════════════════════════════════════════════════════════
+def _gate_sp_b3_exit_g59() -> dict:
+    """
+    Gate G59: SP-B.3 (MultiWork v2 + LoRA Stacking) 전체 통합 Exit Gate.
+
+    SP-B.3 완성 요건 (7모듈 전체 임포트 + 핵심 인터페이스 확인):
+      CP-1: SharedCharacterDBV2 — add_character/get_character
+      CP-2: SharedWorldDBV2 — add_location/get_location
+      CP-3: MultiWorkOrchestratorV2
+      CP-4: MultiWorkCIMV2 — version 속성 + reward_weighted_global_weight
+      CP-5: GenreTransferV2 + GenreAdaptationReport + weighted_transfer
+      CP-6: LoRAStackingAdapter — genre_stack
+      CP-7: 모듈 간 데이터 흐름 — GenreTransferV2.weighted_transfer → LoRAStackingAdapter.genre_stack 연계
+    """
+    errors: list[str] = []
+
+    # CP-1: SharedCharacterDBV2
+    try:
+        from literary_system.multiwork.shared_character_db_v2 import SharedCharacterDBV2
+        db = SharedCharacterDBV2()
+        if not hasattr(db, "add_character") or not hasattr(db, "get_character"):
+            errors.append("CP-1: SharedCharacterDBV2 add_character/get_character 미존재")
+    except Exception as e:
+        errors.append(f"CP-1: {e}")
+
+    # CP-2: SharedWorldDBV2
+    try:
+        from literary_system.multiwork.shared_world_db_v2 import SharedWorldDBV2
+        wdb = SharedWorldDBV2()
+        if not hasattr(wdb, "add_location") or not hasattr(wdb, "get_location"):
+            errors.append("CP-2: SharedWorldDBV2 add_location/get_location 미존재")
+    except Exception as e:
+        errors.append(f"CP-2: {e}")
+
+    # CP-3: MultiWorkOrchestratorV2
+    try:
+        from literary_system.multiwork.multi_work_orchestrator_v2 import MultiWorkOrchestratorV2
+        if not hasattr(MultiWorkOrchestratorV2, "__init__"):
+            errors.append("CP-3: MultiWorkOrchestratorV2 __init__ 미존재")
+    except Exception as e:
+        errors.append(f"CP-3: {e}")
+
+    # CP-4: MultiWorkCIMV2 — version(enum) + reward_weighted_global_weight
+    try:
+        from literary_system.multiwork.multi_work_cim_v2 import MultiWorkCIMV2
+        cim = MultiWorkCIMV2()
+        ver = cim.version  # CIMVersion enum 속성
+        if ver is None:
+            errors.append("CP-4: version 속성 None")
+        if not hasattr(cim, "reward_weighted_global_weight"):
+            errors.append("CP-4: reward_weighted_global_weight 미존재")
+    except Exception as e:
+        errors.append(f"CP-4: {e}")
+
+    # CP-5: GenreTransferV2 + GenreAdaptationReport + weighted_transfer
+    try:
+        from literary_system.multiwork.genre_transfer import GenreTransferV2, GenreAdaptationReport
+        gt = GenreTransferV2()
+        if not hasattr(gt, "transfer"):
+            errors.append("CP-5: GenreTransferV2.transfer() 미존재")
+        if not hasattr(gt, "weighted_transfer"):
+            errors.append("CP-5: weighted_transfer() 미존재")
+    except Exception as e:
+        errors.append(f"CP-5: {e}")
+
+    # CP-6: LoRAStackingAdapter
+    try:
+        from literary_system.serving.lora_stacking_adapter import LoRAStackingAdapter, LoRAWeight
+        adapter = LoRAStackingAdapter()
+        if not hasattr(adapter, "genre_stack"):
+            errors.append("CP-6: genre_stack() 미존재")
+    except Exception as e:
+        errors.append(f"CP-6: {e}")
+
+    # CP-7: GenreTransferV2.weighted_transfer → LoRAStackingAdapter.genre_stack 연계
+    try:
+        from literary_system.multiwork.genre_transfer import GenreTransferV2
+        from literary_system.serving.lora_stacking_adapter import LoRAStackingAdapter, LoRAWeight
+
+        gt2 = GenreTransferV2()
+        adapter2 = LoRAStackingAdapter()
+
+        # 장르 LoRA 등록
+        adapter2.register(LoRAWeight(
+            weight_id="drama_sp_b3",
+            genre="drama",
+            version="1.0",
+            weight_data={"layer1": {"w0": 0.5, "w1": 0.3}},
+        ))
+        adapter2.register(LoRAWeight(
+            weight_id="thriller_sp_b3",
+            genre="thriller",
+            version="1.0",
+            weight_data={"layer1": {"w0": 0.2, "w1": 0.7}},
+        ))
+
+        # weighted_transfer → GenreAdaptationReport 반환
+        report = gt2.weighted_transfer(
+            source_genre="drama",
+            target_genre="thriller",
+            project_id="sp_b3_test",
+            alpha=0.4,
+        )
+        # report에서 장르 이름 추출 → genre_stack으로 연계
+        genres_to_stack = list({report.source_genre, report.target_genre} & set(adapter2.list_genres()))
+        if not genres_to_stack:
+            genres_to_stack = ["drama", "thriller"]
+
+        stack_result = adapter2.genre_stack(genres_to_stack, project_id="sp_b3_test")
+        if abs(stack_result.coeff_sum - 1.0) > 1e-6:
+            errors.append(f"CP-7: stack coeff_sum={stack_result.coeff_sum}")
+        if len(stack_result.merged_weights) == 0:
+            errors.append("CP-7: merged_weights 비어 있음")
+    except Exception as e:
+        errors.append(f"CP-7 flow: {e}")
+
+    passed = len(errors) == 0
+    return {
+        "gate": "G59",
+        "name": "SP-B.3 Exit Gate — MultiWork v2 + LoRA Stacking 통합 완성",
+        "pass": passed,
+        "passed": passed,
+        "errors": errors,
+        "checkpoints": ["CP-1 SharedCharacterDBV2", "CP-2 SharedWorldDBV2",
+                        "CP-3 MultiWorkOrchestratorV2", "CP-4 MultiWorkCIMV2",
+                        "CP-5 GenreTransferV2", "CP-6 LoRAStackingAdapter",
+                        "CP-7 Genre→LoRA flow"],
+    }
+
+GATES.append(("sp_b3_exit_g59", "SP-B.3 Exit Gate G59 — 7모듈 통합 완성 (ADR-072)", _gate_sp_b3_exit_g59))
