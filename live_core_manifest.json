@@ -1,0 +1,45 @@
+{
+  "manifest_version": "2.0",
+  "generated_at": "2026-05-23T00:00:00Z",
+  "literary_os": {
+    "version": "10.17.0",
+    "codename": "V612",
+    "phase": "B",
+    "subphase": "SP-B.3",
+    "status": "SP-B.3 COMPLETE"
+  },
+  "gates": {
+    "total": 58,
+    "passing": 58,
+    "range": "G01-G59"
+  },
+  "tests": {
+    "total_collected": 6527,
+    "status": "ALL PASS"
+  },
+  "adr": {
+    "latest": "ADR-072",
+    "range": "ADR-001 to ADR-072"
+  },
+  "commit": "3b2d8b55",
+  "tags": ["v10.17.0", "v10.17.0-V612"],
+  "stray_tags": {
+    "v10.16.1": "4fa820b7",
+    "v10.16.1-V612": "4fa820b7",
+    "note": "Intermediate tags from preflight_step15 v2.0 commit. Authoritative release is v10.17.0 at 3b2d8b55."
+  },
+  "sp_b3_modules": [
+    "literary_system/multiwork/shared_character_db_v2.py",
+    "literary_system/multiwork/shared_world_db_v2.py",
+    "literary_system/multiwork/multi_work_orchestrator_v2.py",
+    "literary_system/multiwork/multi_work_cim_v2.py",
+    "literary_system/multiwork/multi_work_cim.py",
+    "literary_system/multiwork/genre_transfer.py",
+    "literary_system/serving/lora_stacking_adapter.py"
+  ],
+  "next": {
+    "version": "V613",
+    "phase": "SP-B.4",
+    "target": "v11.0.0 / 60 Gates / 7000+ tests"
+  }
+}
