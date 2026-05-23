@@ -91,7 +91,7 @@ class LatencyRecord:
 
 
 @dataclass
-class SLOReport:
+class PerfSLOReport:
     """SLO 달성 여부 보고서"""
     p50_ms: float
     p95_ms: float
@@ -441,7 +441,7 @@ class PerformanceOptimizer:
 
     # ── SLO 보고서 ────────────────────────────────────────────────────────
 
-    def slo_report(self) -> SLOReport:
+    def slo_report(self) -> PerfSLOReport:
         """현재 P95/GPU/캐시 SLO 달성 여부 반환"""
         summary = self._prof.summary()
         p50 = summary.get("p50_ms", 0.0)
@@ -450,7 +450,7 @@ class PerformanceOptimizer:
         gpu_mb = self._gpu.current_usage_mb()
         hit_rate = self._cache.hit_rate()
 
-        return SLOReport(
+        return PerfSLOReport(
             p50_ms=p50,
             p95_ms=p95,
             p99_ms=p99,

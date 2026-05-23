@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from literary_system.optimization.performance_optimizer import (
     PerformanceOptimizer, QuantizationConfig, KVCacheConfig,
     QuantizationManager, KVCache, LatencyProfiler, LatencyRecord,
-    GPUMemoryMonitor, SLOReport,
+    GPUMemoryMonitor, PerfSLOReport,
     QuantizationType, OptimizationStatus,
     SLO_P95_MS, SLO_GPU_MB, SLO_CACHE_HIT, VERSION,
 )
