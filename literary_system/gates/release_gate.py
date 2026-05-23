@@ -1713,7 +1713,7 @@ GATES = [
 
 
 def run_release_gate() -> dict:
-    """V571 릴리즈 게이트 실행 (30개 게이트 + Gate31 MultiWork)."""
+    """V620 릴리즈 게이트 실행 (60개 게이트, Phase B Exit Gate G61 포함)."""
     import traceback
     results_dict: dict = {}
     passed_count = 0
@@ -1721,7 +1721,27 @@ def run_release_gate() -> dict:
 
     for gate_id, gate_name, gate_fn in GATES:
         try:
-            result = gate_fn()
+            # ── BUG-A4 수정: G61은 이미 수집된 결과를 override로 주입 ──
+            # run_phase_b_exit_gate()가 run_release_gate()를 재귀 호출하는
+            # 무한 재귀를 방지한다. (아키텍처 검증 2026-05-23)
+            if gate_id == "phase_b_exit_g61":
+                from literary_system.gates.phase_b_exit_gate import run_phase_b_exit_gate
+                rg_snapshot = {
+                    "gates_passed": passed_count,
+                    "results": {k: v for k, v in results_dict.items()},
+                }
+                report = run_phase_b_exit_gate(_rg_results_override=rg_snapshot)
+                result = {
+                    "gate": "G61",
+                    "gate_name": gate_name,
+                    "pass": report.all_pass,
+                    "passed_count": report.passed_count,
+                    "total_count": report.total_count,
+                    "failed_checkpoints": report.failed_checkpoints,
+                    "summary": report.summary(),
+                }
+            else:
+                result = gate_fn()
             gate_passed = result.get("pass", False)
         except Exception:
             result = {"pass": False, "error": traceback.format_exc()}
@@ -1741,7 +1761,7 @@ def run_release_gate() -> dict:
     all_passed = failed_count == 0
     issues = [gid for gid, gv in results_dict.items() if not gv.get("pass", False)]
     return {
-        "version": "V571",
+        "version": "V620",
         "pass": all_passed,
         "status": "pass" if all_passed else "fail",
         "total_gates": total,
@@ -3245,10 +3265,25 @@ GATES.append((
 
 # Gate G61 — Phase B Exit Gate (V620, ADR-080)
 def _gate_phase_b_exit_g61() -> dict:
-    """Gate G61: Phase B Exit Gate — SP-B 6축 완료 판정 (C1~C6)."""
-    from literary_system.gates.phase_b_exit_gate import run_g61_gate
-    result = run_g61_gate()
-    result["gate_name"] = "Phase B Exit Gate G61 — SP-B 6축 완료 (ADR-080)"
+    """Gate G61: Phase B Exit Gate — SP-B 6축 완료 판정 (C1~C6).
+
+    NOTE: 이 함수는 run_release_gate() 내부에서 호출된다.
+    직접 호출 시 _rg_snapshot이 None이면 빈 결과로 판정된다.
+    프로덕션 경로는 run_release_gate() 내부의 특수 처리 로직을 통해
+    _rg_results_override가 반드시 주입된다 (BUG-A4 수정).
+    """
+    # 이 경로는 run_release_gate() 외부에서 직접 호출 시만 사용
+    from literary_system.gates.phase_b_exit_gate import run_phase_b_exit_gate
+    report = run_phase_b_exit_gate(_rg_results_override={"gates_passed": 0, "results": {}})
+    result = {
+        "gate": "G61",
+        "gate_name": "Phase B Exit Gate G61 — SP-B 6축 완료 (ADR-080)",
+        "pass": report.all_pass,
+        "passed_count": report.passed_count,
+        "total_count": report.total_count,
+        "failed_checkpoints": report.failed_checkpoints,
+        "summary": report.summary(),
+    }
     return result
 
 GATES.append((

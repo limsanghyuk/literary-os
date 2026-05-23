@@ -236,7 +236,7 @@ class TestGate30Integration:
     def test_release_gate_version(self):
         from literary_system.gates.release_gate import run_release_gate
         result = run_release_gate()
-        assert result["version"] in ("V561", "V571")
+        assert result["version"] in ("V561", "V571", "V620")
 
     def test_corpus_pipeline_end_to_end(self):
         """CorpusIngestor → Validator → BGEM3Embedder → CIMBootstrap 파이프라인."""

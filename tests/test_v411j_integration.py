@@ -172,7 +172,7 @@ def test_release_gate_has_gate10():
 def test_run_release_gate_executes():
     result = run_release_gate()
     assert "version" in result
-    assert result["version"] in ("V411", "V430", "V436", "V442", "V446", "V450", "V456", "V462", "V467", "V468", "V474", "V480", "V481", "V485", "V491", "V497", "V546", "V555", "V556", "V561", "V571")
+    assert result["version"] in ("V411", "V430", "V436", "V442", "V446", "V450", "V456", "V462", "V467", "V468", "V474", "V480", "V481", "V485", "V491", "V497", "V546", "V555", "V556", "V561", "V571", "V620")
     assert "gates_checked" in result
     assert result["gates_checked"] >= 8
 

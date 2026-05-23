@@ -196,12 +196,18 @@ class AdaptiveThrottler:
 
     @contextmanager
     def slot(self) -> Iterator[None]:
-        """Semaphore 기반 동시성 슬롯 컨텍스트 매니저."""
-        self._semaphore.acquire()
+        """Semaphore 기반 동시성 슬롯 컨텍스트 매니저.
+        
+        BUG-C3-4 수정 (2026-05-23): Semaphore를 로컬 변수로 고정하여
+        동시성 조정 중 _set_concurrency()가 새 Semaphore로 교체해도
+        acquire/release가 동일 인스턴스를 사용하도록 보장한다.
+        """
+        sem = self._semaphore  # 현재 semaphore 로컬 참조 고정
+        sem.acquire()
         try:
             yield
         finally:
-            self._semaphore.release()
+            sem.release()
 
     def record(
         self,

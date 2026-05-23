@@ -234,9 +234,10 @@ class OptimizationOrchestrator:
         # ── Stage 1: BASELINE ──────────────────────────────────────────
         t0 = time.monotonic()
         detector = MemoryLeakDetector(threshold_mb=cfg.leak_threshold_mb)
+        baseline_snap = None  # BUG-C2-3 수정: baseline_snap 저장 (2026-05-23)
         try:
             detector.start()
-            detector.baseline()
+            baseline_snap = detector.baseline()  # 반환값 저장 필수
             stage1 = StageResult(
                 stage="BASELINE",
                 passed=True,
@@ -285,10 +286,12 @@ class OptimizationOrchestrator:
         report.stages.append(stage2)
 
         # ── Stage 3: LEAK ─────────────────────────────────────────────
+        # BUG-C2-3 수정: baseline_snap(Stage 1)을 기준으로 현재 메모리와 비교
+        # 이전 코드: check(new_snap)이 new_snap vs new_snap+ε 비교 → delta≈0
+        # 수정 후: check(baseline_snap)이 기준선 vs 스트레스 후 현재 비교
         t0 = time.monotonic()
         try:
-            snap = detector.capture()
-            leak_report = detector.check(snap)
+            leak_report = detector.check(baseline_snap)  # baseline 대비 비교
             detector.stop()
             report.leak_report = leak_report
             stage3 = StageResult(

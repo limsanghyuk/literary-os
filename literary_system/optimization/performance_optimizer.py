@@ -276,14 +276,26 @@ class LatencyProfiler:
             if len(self._records) > self._window:
                 self._records.pop(0)
 
+    @staticmethod
+    def _linear_percentile(sorted_data: list, p: float) -> float:
+        """선형 보간 백분위수 (BUG-C2-1 수정 2026-05-23: StressTester와 동일 알고리즘)."""
+        if not sorted_data:
+            return 0.0
+        idx = (len(sorted_data) - 1) * p / 100.0
+        lo = int(idx)
+        hi = lo + 1
+        if hi >= len(sorted_data):
+            return sorted_data[-1]
+        frac = idx - lo
+        return sorted_data[lo] * (1 - frac) + sorted_data[hi] * frac
+
     def percentile(self, p: float) -> float:
-        """p ∈ [0, 100]"""
+        """p ∈ [0, 100] — 선형 보간 백분위수."""
         with self._lock:
             if not self._records:
                 return 0.0
             sorted_ms = sorted(r.latency_ms for r in self._records)
-            idx = max(0, int(len(sorted_ms) * p / 100) - 1)
-            return sorted_ms[idx]
+            return self._linear_percentile(sorted_ms, p)
 
     def summary(self) -> Dict[str, Any]:
         with self._lock:
@@ -291,8 +303,7 @@ class LatencyProfiler:
                 return {"count": 0, "p50_ms": 0, "p95_ms": 0, "p99_ms": 0}
             ms = sorted(r.latency_ms for r in self._records)
             def _pct(p: float) -> float:
-                idx = max(0, int(len(ms) * p / 100) - 1)
-                return round(ms[idx], 2)
+                return round(self._linear_percentile(ms, p), 2)
             return {
                 "count": len(self._records),
                 "p50_ms": _pct(50),

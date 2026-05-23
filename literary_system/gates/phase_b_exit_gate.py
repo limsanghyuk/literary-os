@@ -57,7 +57,8 @@ class PhaseBExitReport:
 
     @property
     def all_pass(self) -> bool:
-        return all(cp.passed for cp in self.checkpoints)
+        # BUG-C4-1 수정 (2026-05-23): all([]) = True 방어 — 체크포인트 0개 시 False
+        return bool(self.checkpoints) and all(cp.passed for cp in self.checkpoints)
 
     @property
     def passed_count(self) -> int:

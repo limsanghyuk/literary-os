@@ -268,16 +268,26 @@ class LoRAModelRegistry:
             "updated_at":     datetime.now(timezone.utc).isoformat(),
             "artifacts":      [a.to_dict() for a in self._artifacts.values()],
         }
-        with open(registry_path, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+        try:  # BUG-C3-3 수정: OSError 예외 처리 (2026-05-23)
+            with open(registry_path, "w", encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+        except OSError as exc:
+            import logging
+            logging.getLogger(__name__).error("레지스트리 저장 실패: %s", exc)
 
     def _load_if_exists(self) -> None:
         """레지스트리 JSON 파일이 존재하면 로드."""
         registry_path = Path(self._registry_dir) / REGISTRY_FILENAME
         if not registry_path.exists():
             return
-        with open(registry_path, encoding="utf-8") as f:
-            data = json.load(f)
+        try:  # BUG-C3-2 수정: JSONDecodeError/OSError 예외 처리 (2026-05-23)
+            with open(registry_path, encoding="utf-8") as f:
+                data = json.load(f)
+        except (json.JSONDecodeError, OSError) as exc:
+            import logging
+            logging.getLogger(__name__).warning(
+                "레지스트리 로드 실패 (%s) — 빈 레지스트리로 초기화", exc)
+            return
         self._schema_version = data.get("schema_version", REGISTRY_SCHEMA_VERSION)
         self._created_at     = data.get("created_at", self._created_at)
         for d in data.get("artifacts", []):

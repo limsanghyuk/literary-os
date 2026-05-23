@@ -1,14 +1,15 @@
 """
 test_v620_phase_b_exit_gate.py
-V620 Phase B Exit Gate G61 단위·통합 테스트 (25 TC)
+V620 Phase B Exit Gate G61 단위·통합 테스트 (34 TC)
 
 클래스 구성
 -----------
 TestCheckpointResult        (4 TC) — 필드, to_dict
-TestPhaseBExitReport        (7 TC) — 집계 프로퍼티, summary, to_dict
+TestPhaseBExitReport        (8 TC) — 집계 프로퍼티, summary, to_dict (+ 빈 리스트 방어)
 TestPhaseBExitGateRun       (8 TC) — run_phase_b_exit_gate (mock 주입)
 TestG61GateInterface        (3 TC) — run_g61_gate() 인터페이스 (mock 주입)
 TestEdgeCases               (3 TC) — 경계값 + 실패 경로
+TestCheckpointIndividualFails (8 TC) — C1~C4 단독 실패 + 복합 실패 (아키텍처·컴파일러 검증 보강)
 """
 from __future__ import annotations
 
@@ -46,6 +47,50 @@ _MOCK_RG_C1_FAIL = {
         "constitution_axis_g57":  {"pass": True,  "gate": "G57"},
         "sp_b3_exit_g59":         {"pass": True,  "gate": "G59"},
         "performance_slo_g60":    {"pass": True,  "gate": "G60"},
+    },
+}
+
+_MOCK_RG_C2_FAIL = {
+    "gates_passed": 60,
+    "results": {
+        "lora_finetuning_g54":    {"pass": True,  "gate": "G54"},
+        "rlhf_reward_g56":        {"pass": False, "gate": "G56"},  # G56 단독 실패
+        "constitution_axis_g57":  {"pass": True,  "gate": "G57"},
+        "sp_b3_exit_g59":         {"pass": True,  "gate": "G59"},
+        "performance_slo_g60":    {"pass": True,  "gate": "G60"},
+    },
+}
+
+_MOCK_RG_C2_G57_FAIL = {
+    "gates_passed": 60,
+    "results": {
+        "lora_finetuning_g54":    {"pass": True,  "gate": "G54"},
+        "rlhf_reward_g56":        {"pass": True,  "gate": "G56"},
+        "constitution_axis_g57":  {"pass": False, "gate": "G57"},  # G57 단독 실패
+        "sp_b3_exit_g59":         {"pass": True,  "gate": "G59"},
+        "performance_slo_g60":    {"pass": True,  "gate": "G60"},
+    },
+}
+
+_MOCK_RG_C3_FAIL = {
+    "gates_passed": 60,
+    "results": {
+        "lora_finetuning_g54":    {"pass": True,  "gate": "G54"},
+        "rlhf_reward_g56":        {"pass": True,  "gate": "G56"},
+        "constitution_axis_g57":  {"pass": True,  "gate": "G57"},
+        "sp_b3_exit_g59":         {"pass": False, "gate": "G59"},  # G59 단독 실패
+        "performance_slo_g60":    {"pass": True,  "gate": "G60"},
+    },
+}
+
+_MOCK_RG_C4_FAIL = {
+    "gates_passed": 60,
+    "results": {
+        "lora_finetuning_g54":    {"pass": True,  "gate": "G54"},
+        "rlhf_reward_g56":        {"pass": True,  "gate": "G56"},
+        "constitution_axis_g57":  {"pass": True,  "gate": "G57"},
+        "sp_b3_exit_g59":         {"pass": True,  "gate": "G59"},
+        "performance_slo_g60":    {"pass": False, "gate": "G60"},  # G60 단독 실패
     },
 }
 
@@ -267,3 +312,86 @@ class TestEdgeCases:
     def test_min_constants_sane(self):
         assert MIN_GATES == 60
         assert MIN_TESTS >= 6700
+
+
+# ===========================================================================
+# TestCheckpointIndividualFails  (8 TC) — 아키텍처·컴파일러 검증 보강 2026-05-23
+# C1~C4 각각의 단독 실패 + 복합 실패 시나리오
+# ===========================================================================
+
+class TestCheckpointIndividualFails:
+
+    def test_c1_fail_when_g54_fails(self):
+        """C1(G54 LoRA) 단독 실패 — all_pass=False, failed_checkpoints에 C1 포함."""
+        r = run_phase_b_exit_gate(
+            gates_passed=60, tests_passed=6728,
+            _rg_results_override=_MOCK_RG_C1_FAIL,
+        )
+        c1 = next(cp for cp in r.checkpoints if "C1" in cp.name)
+        assert c1.passed is False
+        assert r.all_pass is False
+        assert any("C1" in fc for fc in r.failed_checkpoints)
+
+    def test_c2_fail_when_g56_fails(self):
+        """C2(G56+G57 RLHF) — G56 단독 실패 시 C2 FAIL."""
+        r = run_phase_b_exit_gate(
+            gates_passed=60, tests_passed=6728,
+            _rg_results_override=_MOCK_RG_C2_FAIL,
+        )
+        c2 = next(cp for cp in r.checkpoints if "C2" in cp.name)
+        assert c2.passed is False
+        assert r.all_pass is False
+
+    def test_c2_fail_when_g57_fails(self):
+        """C2(G56+G57 RLHF) — G57 단독 실패 시 C2 FAIL (AND 조건 검증)."""
+        r = run_phase_b_exit_gate(
+            gates_passed=60, tests_passed=6728,
+            _rg_results_override=_MOCK_RG_C2_G57_FAIL,
+        )
+        c2 = next(cp for cp in r.checkpoints if "C2" in cp.name)
+        assert c2.passed is False
+        assert r.all_pass is False
+
+    def test_c3_fail_when_g59_fails(self):
+        """C3(G59 SP-B.3 Exit) 단독 실패."""
+        r = run_phase_b_exit_gate(
+            gates_passed=60, tests_passed=6728,
+            _rg_results_override=_MOCK_RG_C3_FAIL,
+        )
+        c3 = next(cp for cp in r.checkpoints if "C3" in cp.name)
+        assert c3.passed is False
+        assert r.all_pass is False
+
+    def test_c4_fail_when_g60_fails(self):
+        """C4(G60 PerformanceSLO) 단독 실패."""
+        r = run_phase_b_exit_gate(
+            gates_passed=60, tests_passed=6728,
+            _rg_results_override=_MOCK_RG_C4_FAIL,
+        )
+        c4 = next(cp for cp in r.checkpoints if "C4" in cp.name)
+        assert c4.passed is False
+        assert r.all_pass is False
+
+    def test_empty_results_all_c1_c4_fail(self):
+        """빈 results dict — C1~C4 모두 FAIL, C5/C6은 gates/tests 값에 따라 결정."""
+        r = run_phase_b_exit_gate(
+            gates_passed=0, tests_passed=0,
+            _rg_results_override={"gates_passed": 0, "results": {}},
+        )
+        assert r.all_pass is False
+        assert r.passed_count == 0
+
+    def test_all_pass_false_for_empty_checkpoints(self):
+        """BUG-C4-1 수정 검증: 빈 checkpoints 시 all_pass=False (all([]) 방어)."""
+        report = PhaseBExitReport()
+        assert report.all_pass is False  # all([]) = True 방어 확인
+
+    def test_partial_fail_failed_checkpoints_list_accuracy(self):
+        """복합 실패 시 failed_checkpoints 목록이 정확히 수집되는지 검증."""
+        r = run_phase_b_exit_gate(
+            gates_passed=59, tests_passed=6699,  # C5+C6 모두 실패
+            _rg_results_override=_MOCK_RG_ALL_PASS,
+        )
+        assert len(r.failed_checkpoints) == 2
+        assert any("C5" in fc for fc in r.failed_checkpoints)
+        assert any("C6" in fc for fc in r.failed_checkpoints)

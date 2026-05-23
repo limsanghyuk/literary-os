@@ -68,7 +68,13 @@ class MemorySnapshot:
         return obj
 
     def top_allocators(self, n: int = DEFAULT_TOP_N) -> List[AllocatorEntry]:
-        """상위 N개 할당 위치를 반환한다."""
+        """상위 N개 할당 위치를 반환한다.
+        
+        BUG-C3-1 수정 (2026-05-23): _snapshot=None 시 빈 리스트 반환
+        (MemorySnapshot(_snapshot=None)으로 생성된 인스턴스 호출 방어).
+        """
+        if self._snapshot is None:
+            return []
         stats = self._snapshot.statistics("lineno")[:n]
         result = []
         for s in stats:

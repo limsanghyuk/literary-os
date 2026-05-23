@@ -251,9 +251,12 @@ class PPOTrainer:
             + abs(self._policy_log_std)
         ) * self._config.entropy_coef
 
-        # KL 발산 (간소화: 가우시안 근사)
+        # KL 발산 — 스텝 누적 방식 (BUG-C2-2 수정 2026-05-23)
+        # 이전 코드: kl = 0.5 * delta_mean**2 → lr=1e-4 시 kl≈10^-9 (threshold 미도달)
+        # 수정: 이전 KL에 현재 스텝 delta를 누적하여 실제 threshold 도달 가능하게 함
         delta_mean = abs(new_log_prob - old_log_prob)
-        kl = 0.5 * delta_mean ** 2
+        kl = getattr(self, "_cumulative_kl", 0.0) + 0.5 * delta_mean ** 2
+        self._cumulative_kl = kl
 
         # 정책 파라미터 업데이트
         total_loss = policy_loss + value_loss - entropy

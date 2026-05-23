@@ -1,43 +1,35 @@
 {
-  "manifest_version": "2.0",
+  "manifest_version": "3.0",
   "generated_at": "2026-05-23T00:00:00Z",
-  "literary_os": {
-    "version": "10.20.0",
-    "codename": "V615",
-    "phase": "B",
-    "subphase": "SP-B.4",
-    "status": "SP-B.4 진행 중"
-  },
-  "gates": 59,
-  "tests": 6628,
-  "adr": "ADR-076",
-  "commit": "62f4b21002d737a868676a22eb70fa9f68c2ccf5",
-  "tags": [
-    "v10.20.0",
-    "v10.20.0-V615"
-  ],
-  "sp_b4_modules": [
-    "literary_system/optimization/performance_optimizer.py",
-    "literary_system/gates/performance_slo_gate.py"
-  ],
-  "next": {
-    "version": "V616",
-    "phase": "SP-B.4",
-    "target": "Gate G60 24h 장기 실행 + Helm 검증"
-  },
-  "build_notes": "V615: PerformanceSLOGate G60 v1.0 (10 CP, ADR-075) — 59/59 ALL PASS, 6603 tests",
   "version": "10.25.0",
-  "codename": "V616",
-  "description": "MemoryLeakDetector + StressTester v1.0 (SP-B.4)",
-  "updated_at": "2026-05-23T13:13:38Z",
-  "literary_os_version": "V619",
-  "release_date": "2026-05-23",
-  "tests_passing": 6678,
-  "gates_passing": 59,
-  "changelog": "V618: AdaptiveThrottler v1.0 + ADR-078 (v10.23.0)",
-  "release_tag": "v10.24.0",
-  "test_count": 6728,
-  "gate_count": 60,
   "version_tag": "V620",
-  "last_updated": "2026-05-23"
+  "codename": "Phase B Exit Gate G61",
+  "phase": "B",
+  "subphase": "SP-B.4",
+  "status": "Phase B COMPLETE — 60 Gates ALL PASS",
+  "description": "Phase B Exit Gate G61 — SP-B 6축 완료 (ADR-080)",
+  "gates": 60,
+  "gate_count": 60,
+  "test_count": 6728,
+  "tests_passing": 6728,
+  "adr": "ADR-080",
+  "release_tag": "v10.25.0",
+  "commit": "da003851",
+  "last_updated": "2026-05-23",
+  "updated_at": "2026-05-23T00:00:00Z",
+  "tags": [
+    "v10.25.0",
+    "v10.25.0-V620"
+  ],
+  "build_notes": "V620: Phase B Exit Gate G61 (6축 C1~C6, ADR-080) — 60/60 ALL PASS, 6728 tests. Audit fixes: _count_tests hotfix + 아키텍처·컴파일러 검증 패치 적용",
+  "audit_fixes": [
+    "BUG-A4: G61 무한 재귀 수정 (release_gate.py G61 특수 처리)",
+    "BUG-C2-3: OptimizationOrchestrator LEAK Stage baseline_snap 저장",
+    "BUG-C2-1: LatencyProfiler 백분위수 선형 보간 통일",
+    "BUG-C2-2: PPOTrainer KL 누적 방식 전환",
+    "BUG-C3-2/3: lora_model_registry 예외 처리 추가",
+    "BUG-C3-4: AdaptiveThrottler slot() Semaphore 로컬 참조 고정",
+    "BUG-C3-1: MemoryLeakDetector.top_allocators() None guard",
+    "BUG-C4-1: PhaseBExitReport.all_pass 빈 리스트 방어"
+  ]
 }
