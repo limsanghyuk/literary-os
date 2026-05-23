@@ -100,3 +100,15 @@ __all__ += [
     # V607 — SharedWorldDB v2.0
     "WorldSnapshot", "LocationConflict", "SharedWorldDBV2",
 ]
+
+# V608: MultiWorkOrchestratorV2
+from .multi_work_orchestrator_v2 import (
+    InterProjectConflictReport,
+    MultiWorkOrchestratorV2,
+    ProjectCheckpoint,
+)
+
+__all__ += [
+    # V608 — MultiWorkOrchestratorV2
+    "ProjectCheckpoint", "InterProjectConflictReport", "MultiWorkOrchestratorV2",
+]

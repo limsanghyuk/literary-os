@@ -1,3 +1,22 @@
+## [10.13.0] — 2026-05-23 (V608)
+
+### Added
+- MultiWorkOrchestratorV2 v2.0 (SharedCharacterDBV2 + SharedWorldDBV2 통합, ADR-068)
+- ProjectCheckpoint 데이터클래스 (프로젝트 단위 스냅샷)
+- InterProjectConflictReport 데이터클래스 (다중 프로젝트 충돌 보고)
+- process_scene_v2(event, reward_score) — 씬 처리 + RLHF 보상 기록
+- checkpoint_project / restore_project — 캐릭터+월드 체크포인트
+- detect_inter_project_conflicts — N 프로젝트 간 충돌 탐지
+- dual_consistency_score / project_char_consistency — 통합 일관성 지표
+- export_state_v2 / import_state_v2 — 완전 직렬화
+- tests/unit/test_v608_multi_work_orchestrator_v2.py: 22 TC ALL PASS
+- docs/adr/ADR-068.md
+
+### Changed
+- literary_system/multiwork/__init__.py: V608 클래스 export 추가
+- tools/test_inventory.json: 6414 → 6436 tests
+- pyproject.toml: version 10.12.0 → 10.13.0
+
 ## [10.12.0] — 2026-05-22 (V607)
 
 ### Added

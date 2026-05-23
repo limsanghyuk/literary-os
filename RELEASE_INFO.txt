@@ -1,8 +1,6 @@
-Literary OS V607
-Release: v10.12.0
-Date: 2026-05-22
-Gates: 56/56 PASS
-Tests: 6414+ PASS
-New: SharedCharacterDBV2 v2.0 (CharacterSnapshot+RewardTrace+ConflictRecord) + SharedWorldDBV2 v2.0 (WorldSnapshot+LocationConflict+consistency_score)
-ADR: ADR-067
-SP: SP-B.3 시작 (MultiWork 협업 레이어)
+Literary OS V608 — MultiWorkOrchestratorV2
+version: 10.13.0
+adr: ADR-068
+sub-phase: SP-B.3 (MultiWork 협업 레이어)
+gate: 56/56 (G01~G57; G58 예정 V613)
+tests: 6436+

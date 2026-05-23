@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "literary-os"
-version = "10.12.0"
+version = "10.13.0"
 description = "Literary OS V607 — Phase B SP-B.3 SharedCharacterDB v2.0 + SharedWorldDB v2.0 (ADR-067), 56 Gates PASS, 6414+ tests"
 readme = "README.md"
 requires-python = ">=3.10"

@@ -68,3 +68,4 @@
 | ADR-065 | V605 | CanaryController v1.0 — 4단계 5/25/50/100% 카나리 롤아웃 |
 | ADR-066 | V606 | CanonicalBridgeV2 + Gate G56/G57 (SP-B.2 완료) |
 | ADR-067 | V607 | SharedCharacterDB v2.0 + SharedWorldDB v2.0 (SP-B.3 시작) |
+| ADR-068 | V608 | MultiWorkOrchestratorV2 v2.0 — 프로젝트 체크포인트 + 충돌 탐지 + RLHF 보상 통합 (SP-B.3) |
