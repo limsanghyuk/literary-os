@@ -1,8 +1,8 @@
-# MANIFEST — Literary OS V610
+# MANIFEST — Literary OS V611
 
-버전: 10.15.0
+버전: 10.16.0
 릴리즈일: 2026-05-22
-빌드 타입: Phase B SP-B.3 시작 — MultiWorkCIM v2.0 Facade (V610, ADR-070)
+빌드 타입: Phase B SP-B.3 — GenreTransferV2 + LoRAStackingAdapter (V611, ADR-071)
 
 ## 테스트 결과
 

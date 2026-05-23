@@ -1,9 +1,9 @@
-# Literary OS V610
+# Literary OS V611
 
 > **판단은 로컬, 생성만 LLM, 학습은 누적**  
 > AI 기반 장편 소설·드라마 시나리오 생성 시스템
 
-[![Version](https://img.shields.io/badge/version-10.15.0-blue)]()
+[![Version](https://img.shields.io/badge/version-10.16.0-blue)]()
 [![Tests](https://img.shields.io/badge/tests-6480%20PASS-brightgreen)]()
 [![Gates](https://img.shields.io/badge/release%20gates-56%2F56%20PASS-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue)]()

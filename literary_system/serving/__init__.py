@@ -12,15 +12,15 @@ from literary_system.serving.canary_controller import (
     PromotionRecord,
     StageMetrics,
 )
-from literary_system.serving.model_serving_endpoint import (
-    EndpointConfig,
-    ModelCard,
-    ModelServingEndpoint,
-)
 from literary_system.serving.lora_stacking_adapter import (
     LoRAStackingAdapter,
     LoRAWeight,
     StackResult,
+)
+from literary_system.serving.model_serving_endpoint import (
+    EndpointConfig,
+    ModelCard,
+    ModelServingEndpoint,
 )
 
 __all__ = [

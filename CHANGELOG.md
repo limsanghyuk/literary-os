@@ -1,3 +1,11 @@
+## [10.16.0] — 2026-05-23
+
+### Added
+- GenreTransferV2: MultiWork v2 통합 장르 전이 엔진 + CIM 보상 보정 파이프라인
+- LoRAStackingAdapter: genre_stack() CIM v2 자동 계수 + Σcoeff=1.0 검증
+- ADR-071: GenreTransferV2 + LoRAStackingAdapter 설계 결정
+- test_v611_genre_transfer_v2.py: 12 TC (T01~T12 PASS)
+
 ## [10.15.0] — 2026-05-23
 
 ### Added (V610)

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "literary-os"
 version = "10.16.0"
-description = "Literary OS V610 — Phase B SP-B.3 MultiWorkCIM v2.0 Facade (ADR-070), 56 Gates PASS, 6458+ tests"
+description = "Literary OS V611 — Phase B SP-B.3 GenreTransferV2 + LoRAStackingAdapter (ADR-071), 56 Gates PASS, 6500+ tests"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
