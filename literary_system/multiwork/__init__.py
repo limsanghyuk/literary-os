@@ -112,3 +112,18 @@ __all__ += [
     # V608 — MultiWorkOrchestratorV2
     "ProjectCheckpoint", "InterProjectConflictReport", "MultiWorkOrchestratorV2",
 ]
+
+# V609: MultiWorkCIMV2
+from .multi_work_cim_v2 import (
+    CIMEntryV2,
+    CIMSnapshot,
+    InterProjectCIMScore,
+    MultiWorkCIMV2,
+    ProjectCIMV2,
+)
+
+__all__ += [
+    # V609 — MultiWorkCIMV2
+    "CIMEntryV2", "ProjectCIMV2", "CIMSnapshot",
+    "InterProjectCIMScore", "MultiWorkCIMV2",
+]

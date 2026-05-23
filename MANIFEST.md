@@ -1,8 +1,8 @@
-# MANIFEST — Literary OS V608
+# MANIFEST — Literary OS V609
 
-버전: 10.13.0
+버전: 10.14.0
 릴리즈일: 2026-05-22
-빌드 타입: Phase B SP-B.3 시작 — SharedCharacterDB v2.0 + SharedWorldDB v2.0 (V608, ADR-067)
+빌드 타입: Phase B SP-B.3 시작 — SharedCharacterDB v2.0 + SharedWorldDB v2.0 (V609, ADR-067)
 
 ## 테스트 결과
 
@@ -26,7 +26,7 @@
 | G56 | RLHF Reward (mean≥0.75) | v10.11.0 (V606) | ✅ PASS |
 | G57 | Constitution Axis (Pearson≥0.80) | v10.11.0 (V606) | ✅ PASS |
 
-## 신규 모듈 (V608)
+## 신규 모듈 (V609)
 
 | 모듈 | 설명 |
 |------|------|
@@ -41,5 +41,5 @@
 |-----------|----------|------|
 | SP-B.1 LoRA Fine-tuning Pipeline | V596~V600 | ✅ 완료 |
 | SP-B.2 RLHF 루프 | V601~V606 | ✅ 완료 |
-| SP-B.3 MultiWork 협업 | V608~V620 | 🔄 진행 중 (V608) |
+| SP-B.3 MultiWork 협업 | V609~V620 | 🔄 진행 중 (V609) |
 | SP-B.4 통합 최적화 + Exit | V621~V630 | ⏳ 예정 |

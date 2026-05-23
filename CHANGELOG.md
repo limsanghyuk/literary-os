@@ -1,3 +1,22 @@
+## [10.14.0] — 2026-05-23 (V609)
+
+### Added
+- `literary_system/multiwork/multi_work_cim_v2.py` — MultiWorkCIMV2 v2.0
+  - `CIMEntryV2`: reward_weighted_weight 필드 (보상 가중 CIM 엔트리)
+  - `ProjectCIMV2`: record_interaction_v2() + SharedCharacterDBV2 보상 연동
+  - `CIMSnapshot`: 프로젝트 CIM 상태 스냅샷/복원
+  - `InterProjectCIMScore`: 코사인 유사도 + is_compatible 호환성 판정
+  - `MultiWorkCIMV2`: record_v2() / snapshot_project() / restore_project()
+  - `reward_weighted_global_weight()`: 보상 가중 전역 집계
+  - `export_state_v2()` / `import_state_v2()`: 7-key 직렬화
+  - v1 API 완전 호환 (init_project, record, global_weight, stats)
+- `docs/adr/ADR-069.md`: MultiWorkCIMV2 설계 결정 (D-1~D-6)
+- `tests/unit/test_v609_multi_work_cim_v2.py`: 22 TC ALL PASS
+
+### Changed
+- `pyproject.toml`: version 10.13.0 → 10.14.0
+- `literary_system/multiwork/__init__.py`: V609 exports 추가
+
 ## [10.13.0] — 2026-05-23 (V608)
 
 ### Added

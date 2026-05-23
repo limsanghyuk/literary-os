@@ -1,6 +1,6 @@
-Literary OS V608 — MultiWorkOrchestratorV2
-version: 10.13.0
-adr: ADR-068
+Literary OS V609 — MultiWorkOrchestratorV2
+version: 10.14.0
+adr: ADR-069
 sub-phase: SP-B.3 (MultiWork 협업 레이어)
 gate: 56/56 (G01~G57; G58 예정 V613)
 tests: 6436+
