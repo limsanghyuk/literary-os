@@ -18,8 +18,10 @@ from .author_license_api import (
     LicenseViolation,
 )
 from .genre_transfer import (
+    GenreAdaptationReport,
     GenreProfile,
     GenreTransferLearning,
+    GenreTransferV2,
     TransferRecord,
 )
 from .multi_work_cim import (
@@ -69,7 +71,7 @@ __all__ = [
     # V564
     "Location", "Faction", "TimelineEvent", "LoreEntry", "SharedWorldDB",
     # V565
-    "GenreProfile", "TransferRecord", "GenreTransferLearning",
+    "GenreAdaptationReport", "GenreProfile", "GenreTransferLearning", "GenreTransferV2", "TransferRecord",
     # V566
     "AccessType", "DataScope", "IsolationPolicy", "IsolationViolation",
     "AuditEntry", "ProjectIsolationManager",

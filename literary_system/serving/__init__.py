@@ -17,8 +17,17 @@ from literary_system.serving.model_serving_endpoint import (
     ModelCard,
     ModelServingEndpoint,
 )
+from literary_system.serving.lora_stacking_adapter import (
+    LoRAStackingAdapter,
+    LoRAWeight,
+    StackResult,
+)
 
 __all__ = [
+    # lora_stacking_adapter
+    "LoRAStackingAdapter",
+    "LoRAWeight",
+    "StackResult",
     # canary_controller
     "CanaryConfig",
     "CanaryController",

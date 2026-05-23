@@ -19,7 +19,9 @@ from __future__ import annotations
 import threading
 import time
 from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional, Tuple
+import math
+from collections import Counter
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, Tuple
 
 # 장르 기본 스타일 파라미터 (전이의 출발점)
 _DEFAULT_GENRE_PROFILES: Dict[str, Dict[str, float]] = {
@@ -313,4 +315,264 @@ class GenreTransferLearning:
             "registered_genres": len(self._profiles),
             "transfer_history_count": len(self._transfer_history),
             "genres": self.list_genres(),
+        }
+
+
+# ======================================================================
+# V611: GenreTransferV2 — MultiWork v2 통합 장르 전이 엔진
+# ======================================================================
+
+if TYPE_CHECKING:
+    from .shared_character_db_v2 import SharedCharacterDBV2
+    from .shared_world_db_v2 import SharedWorldDBV2
+    from .multi_work_cim_v2 import MultiWorkCIMV2
+
+
+@dataclass
+class GenreAdaptationReport:
+    """장르 적응 보고서."""
+    project_id: str
+    source_genre: str
+    target_genre: str
+    alpha: float
+    adapted_profile: GenreProfile
+    cim_weight_boost: float          # CIM reward_weighted_weight 기반 보정 강도
+    char_reward_mean: float          # SharedCharacterDBV2 평균 보상
+    world_consistency: float         # SharedWorldDBV2 일관성 점수
+    coherence_score: float           # 프로젝트 간 장르 일관성 (0~1)
+    timestamp: float = field(default_factory=time.time)
+
+
+class GenreTransferV2(GenreTransferLearning):
+    """MultiWork v2 통합 장르 전이 엔진 (V611).
+
+    기존 GenreTransferLearning 위에:
+    - SharedCharacterDBV2 캐릭터 보상 평균 → alpha 보정
+    - SharedWorldDBV2 세계관 일관성 점수 → tension_base 조정
+    - MultiWorkCIMV2 reward_weighted_global_weight → 파라미터 가중치
+    - 프로젝트 간 장르 일관성 점수 (coherence_score)
+    - 프로젝트별 적응 보고서 이력
+
+    LLM-0: 외부 LLM 호출 없음.
+    """
+
+    VERSION = "2.0.0"
+
+    def __init__(
+        self,
+        char_db: Optional["SharedCharacterDBV2"] = None,
+        world_db: Optional["SharedWorldDBV2"] = None,
+        cim_v2: Optional["MultiWorkCIMV2"] = None,
+    ) -> None:
+        super().__init__()
+        self._char_db = char_db
+        self._world_db = world_db
+        self._cim_v2 = cim_v2
+        self._reports: List[GenreAdaptationReport] = []
+
+    # ------------------------------------------------------------------ #
+    # 의존성 주입 (지연 주입 지원)
+    # ------------------------------------------------------------------ #
+
+    def set_char_db(self, char_db: "SharedCharacterDBV2") -> None:
+        with self._lock:
+            self._char_db = char_db
+
+    def set_world_db(self, world_db: "SharedWorldDBV2") -> None:
+        with self._lock:
+            self._world_db = world_db
+
+    def set_cim_v2(self, cim_v2: "MultiWorkCIMV2") -> None:
+        with self._lock:
+            self._cim_v2 = cim_v2
+
+    # ------------------------------------------------------------------ #
+    # 핵심: weighted_transfer (CIM v2 보상 반영 전이)
+    # ------------------------------------------------------------------ #
+
+    def weighted_transfer(
+        self,
+        source_genre: str,
+        target_genre: str,
+        project_id: str,
+        alpha: float = 0.3,
+        boost_factor: float = 0.15,
+    ) -> "GenreAdaptationReport":
+        """CIM v2 보상 가중치 반영 장르 전이.
+
+        1. 기본 alpha를 CIM reward_weighted_global_weight로 보정
+           adjusted_alpha = clamp(alpha + boost_factor * cim_weight, 0, 1)
+        2. 캐릭터 보상 평균이 높으면 emotional_intensity 소폭 상향
+        3. 세계관 일관성이 낮으면 description_density 소폭 상향
+        4. 기본 transfer() 실행 후 보정 파라미터 적용
+
+        Args:
+            source_genre: 소스 장르
+            target_genre: 타깃 장르
+            project_id:   프로젝트 식별자
+            alpha:        기본 전이 강도 (0~1)
+            boost_factor: CIM 가중치 반영 계수 (기본 0.15)
+
+        Returns:
+            GenreAdaptationReport
+        """
+        # Step 1: CIM v2 가중치 조회
+        cim_weight = 0.0
+        if self._cim_v2 is not None:
+            try:
+                cim_weight = self._cim_v2.reward_weighted_global_weight(project_id)
+            except Exception:
+                cim_weight = 0.0
+
+        adjusted_alpha = max(0.0, min(1.0, alpha + boost_factor * cim_weight))
+
+        # Step 2: 기본 transfer 실행
+        profile = self.transfer(
+            source_genre=source_genre,
+            target_genre=target_genre,
+            alpha=adjusted_alpha,
+            project_id=project_id,
+        )
+
+        # Step 3: 캐릭터 보상 평균 → emotional_intensity 보정
+        char_reward_mean = 0.0
+        if self._char_db is not None and "emotional_intensity" in profile.params:
+            char_ids = list(getattr(self._char_db, "_characters", {}).keys())
+            rewards = []
+            for cid in char_ids:
+                rt = self._char_db.get_reward_trace(cid)
+                if rt is not None:
+                    m = rt.mean()
+                    if not math.isnan(m):
+                        rewards.append(m)
+            if rewards:
+                char_reward_mean = sum(rewards) / len(rewards)
+                # 보상 평균 > 0.7이면 emotional_intensity 최대 +0.05
+                delta = min(0.05, max(0.0, (char_reward_mean - 0.7) * 0.25))
+                profile.params["emotional_intensity"] = min(
+                    1.0, profile.params["emotional_intensity"] + delta
+                )
+
+        # Step 4: 세계관 일관성 → description_density 보정
+        world_consistency = 1.0
+        if self._world_db is not None and "description_density" in profile.params:
+            try:
+                world_consistency = self._world_db.consistency_score()
+            except Exception:
+                world_consistency = 1.0
+            # 일관성 < 0.7이면 description_density 최대 +0.08 (세계관 묘사 강화)
+            if world_consistency < 0.7:
+                delta = min(0.08, (0.7 - world_consistency) * 0.4)
+                profile.params["description_density"] = min(
+                    1.0, profile.params["description_density"] + delta
+                )
+
+        # Step 5: 프로젝트 간 장르 일관성 점수
+        coherence = self._compute_coherence(project_id, target_genre)
+
+        report = GenreAdaptationReport(
+            project_id=project_id,
+            source_genre=source_genre,
+            target_genre=target_genre,
+            alpha=adjusted_alpha,
+            adapted_profile=profile,
+            cim_weight_boost=cim_weight * boost_factor,
+            char_reward_mean=char_reward_mean,
+            world_consistency=world_consistency,
+            coherence_score=coherence,
+        )
+        with self._lock:
+            self._reports.append(report)
+        return report
+
+    # ------------------------------------------------------------------ #
+    # 프로젝트 간 장르 일관성
+    # ------------------------------------------------------------------ #
+
+    def _compute_coherence(self, project_id: str, genre: str) -> float:
+        """전이 이력에서 project_id의 genre 일관성 점수 계산.
+
+        같은 project_id에서 같은 target_genre로의 전이 비율.
+
+        Returns:
+            coherence ∈ [0, 1]
+        """
+        history = self.transfer_history(project_id=project_id)
+        if not history:
+            return 1.0  # 이력 없음 → 기본값 최대
+        same_genre = sum(1 for r in history if r.target_genre == genre)
+        return round(same_genre / len(history), 4)
+
+    def project_genre_coherence(self, project_id: str) -> float:
+        """프로젝트의 전체 장르 일관성 점수.
+
+        타깃 장르가 한 종류이면 1.0, 분산될수록 낮아짐.
+        """
+        history = self.transfer_history(project_id=project_id)
+        if not history:
+            return 1.0
+        counts = Counter(r.target_genre for r in history)
+        dominant_ratio = max(counts.values()) / len(history)
+        return round(dominant_ratio, 4)
+
+    # ------------------------------------------------------------------ #
+    # 추천
+    # ------------------------------------------------------------------ #
+
+    def recommend_genre(
+        self,
+        current_genre: str,
+        project_id: Optional[str] = None,
+    ) -> Tuple[str, float]:
+        """현재 장르에서 가장 자연스럽게 전이 가능한 장르 추천.
+
+        CIM 보상이 낮으면 (< 0.5) 가장 가까운 장르 추천 (안전한 전이),
+        CIM 보상이 높으면 (>= 0.5) 가장 먼 장르 추천 (도전적 전이).
+
+        Returns:
+            (recommended_genre, distance) 튜플
+        """
+        cim_weight = 0.5  # 기본값
+        if self._cim_v2 is not None and project_id:
+            try:
+                cim_weight = self._cim_v2.reward_weighted_global_weight(project_id)
+            except Exception:
+                pass
+
+        genres = [g for g in self._profiles if g != current_genre]
+        if not genres:
+            raise KeyError("No other genres registered")
+
+        distances = [(g, self.genre_distance(current_genre, g)) for g in genres]
+        if cim_weight >= 0.5:
+            # 보상 높음 → 도전적 전이 (먼 장르)
+            return max(distances, key=lambda x: x[1])
+        else:
+            # 보상 낮음 → 안전한 전이 (가까운 장르)
+            return min(distances, key=lambda x: x[1])
+
+    # ------------------------------------------------------------------ #
+    # 이력·통계
+    # ------------------------------------------------------------------ #
+
+    def adaptation_reports(
+        self,
+        project_id: Optional[str] = None,
+    ) -> List["GenreAdaptationReport"]:
+        """적응 보고서 이력 조회."""
+        with self._lock:
+            if project_id:
+                return [r for r in self._reports if r.project_id == project_id]
+            return list(self._reports)
+
+    def stats_v2(self) -> Dict[str, Any]:
+        """v2 통합 통계."""
+        base = self.stats()
+        return {
+            **base,
+            "version": self.VERSION,
+            "has_char_db": self._char_db is not None,
+            "has_world_db": self._world_db is not None,
+            "has_cim_v2": self._cim_v2 is not None,
+            "adaptation_report_count": len(self._reports),
         }
