@@ -457,5 +457,9 @@ class TestP8RetroactiveBlueprint:
     def test_changelog_v546_exists(self):
         import os
         repo = os.path.join(os.path.dirname(__file__), "..")
-        matches = list(Path(repo).glob("CHANGELOG_V546*.md"))
-        assert len(matches) >= 1, "CHANGELOG_V546.md 없음"
+        # V347 이후 CHANGELOG는 docs/changelog/로 이전됨 (루트+서브 양쪽 검색)
+        matches = (
+            list(Path(repo).glob("CHANGELOG_V546*.md"))
+            + list(Path(repo).glob("docs/changelog/CHANGELOG_V546*.md"))
+        )
+        assert len(matches) >= 1, "CHANGELOG_V546.md 없음 (루트 또는 docs/changelog/)"

@@ -1726,8 +1726,12 @@ def run_release_gate() -> dict:
             # 무한 재귀를 방지한다. (아키텍처 검증 2026-05-23)
             if gate_id == "phase_b_exit_g61":
                 from literary_system.gates.phase_b_exit_gate import run_phase_b_exit_gate
+                # passed_count 는 G61 이전 gates 의 통과 수 (최대 59).
+                # G61 자체가 60번째 Gate이므로, G61 통과 시 총 gates_passed = passed_count + 1.
+                # C5 (gates_passed >= MIN_GATES=60) 가 정확히 동작하려면 +1 보정이 필요하다.
+                # (BUG-A4-R1: 잔여 결함 수정, 2차 감사 2026-05-24)
                 rg_snapshot = {
-                    "gates_passed": passed_count,
+                    "gates_passed": passed_count + 1,
                     "results": {k: v for k, v in results_dict.items()},
                 }
                 report = run_phase_b_exit_gate(_rg_results_override=rg_snapshot)

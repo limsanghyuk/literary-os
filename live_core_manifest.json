@@ -1,7 +1,7 @@
 {
   "manifest_version": "3.0",
   "generated_at": "2026-05-23T00:00:00Z",
-  "version": "10.25.0",
+  "version": "v10.25.2",
   "version_tag": "V620",
   "codename": "Phase B Exit Gate G61",
   "phase": "B",
@@ -31,5 +31,7 @@
     "BUG-C3-4: AdaptiveThrottler slot() Semaphore 로컬 참조 고정",
     "BUG-C3-1: MemoryLeakDetector.top_allocators() None guard",
     "BUG-C4-1: PhaseBExitReport.all_pass 빈 리스트 방어"
-  ]
+  ],
+  "literary_os_version": "V620-AUDIT2",
+  "build_tag": "v10.25.2-V620-AUDIT2"
 }
