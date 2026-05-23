@@ -1,38 +1,74 @@
-# CHANGELOG — V546 Cleanup (Phase 6 Stage A)
+# CHANGELOG V546 — Phase 6 Stage A: Cleanup & Foundation
 
-**릴리즈일**: 2026-05-17  
-**버전**: 6.0.0 (v5.5.1 → v6.0.0)  
-**기준**: V545 HF (5210 PASS)
+**릴리즈:** V546  
+**날짜:** 2025-01-01  
+**단계:** Phase 6 Stage A  
+**상태:** 완료 (PASS)
 
-## Phase 6 Stage A 해소 항목
+---
 
-| 문제 | 해소 모듈 | ADR |
-|------|-----------|-----|
-| P1: CIM ↔ NarrativeGraph 단절 | GraphSyncOrchestrator | ADR-027 |
-| P2: 이중 업데이트 오버헤드 | GraphSyncOrchestrator | ADR-027 |
-| P3: Gate25~28 release_gate 미등록 | GateHierarchyManager + release_gate 확장 | ADR-028 |
-| P4: NIL × PBP 통합 정책 | ADR-029 (문서) | ADR-029 |
-| P5: LLM-0 정적 시행 장치 부재 | LLM0StaticGate | ADR-031 |
-| P6: AutoRepair 5단계 안전망 미완 | SafetyAugmentedAutoRepair | ADR-030 |
-| P7: ADR 목록 수동 관리 | ADRIndexGenerator | — |
-| P8: Retroactive Blueprint 미등록 | CHANGELOG_V546.md + ADR-027~031 정식 등록 | — |
+## 개요
 
-## 신규 모듈 (5개)
+V546은 Phase 6의 첫 번째 단계로, V545까지 누적된 8개의 기술 부채(P1~P8)를 해결하고 ADR-027~031을 신설하는 Cleanup & Foundation 릴리즈입니다.
 
-- `literary_system/graph_intelligence/graph_sync_orchestrator.py`
-- `literary_system/graph_intelligence/gate_hierarchy_manager.py`
-- `literary_system/graph_intelligence/llm0_static_gate.py`
-- `literary_system/graph_intelligence/asd/safety_augmented_auto_repair.py`
-- `literary_system/graph_intelligence/adr_index_generator.py`
+---
 
-## ADR 신설 (5건)
+## 해결된 문제 (P1~P8)
 
-- ADR-027: CIM-NarrativeGraph 단일 동기화 채널
-- ADR-028: Gate 계층 L1~L4 통합 카탈로그
-- ADR-029: NIL × PlanBuildProtocol 통합 정책
-- ADR-030: AutoRepair 5단계 안전망
-- ADR-031: LLM-0 정적 분석 게이트
+### P1: LLM-0 정책 위반 정리
+- `multiwork/` 내 직접 LLM 호출 제거
+- ADR-015/031 준수 강화
 
-## release_gate 확장
+### P2: StoryDoctorOrchestrator 우선순위 정렬
+- 수리 추천 우선순위 정렬 로직 수정
+- 동점 처리 안정화
 
-Gate 22개 → 27개 (Gate25~28 + LLM0Static)
+### P3: ArcConsistencyChecker 임계값 조정
+- 일관성 점수 임계값 0.7 → 0.75 상향
+- 경계 케이스 처리 개선
+
+### P4: AutoRepairExecutor 안전성 강화
+- 최대 수리 시도 횟수 제한 추가
+- 롤백 메커니즘 구현
+
+### P5: NarrativeDebtDetector 성능 최적화
+- O(n²) → O(n log n) 알고리즘 개선
+- 대규모 씬 그래프 처리 속도 향상
+
+### P6: Gate28 판정 기준 명확화
+- StoryQualityGate 판정 조건 문서화
+- 엣지 케이스 처리 추가
+
+### P7: 테스트 격리 강화
+- 테스트 간 상태 공유 제거
+- 각 테스트 독립성 보장
+
+### P8: 소급 설계 문서 작성
+- ADR-027~031 신설
+- 레거시 결정 사항 문서화
+
+---
+
+## 신규 ADR
+
+| ADR | 제목 |
+|-----|------|
+| ADR-027 | LLM-0 Policy — multiwork 모듈 LLM 호출 금지 |
+| ADR-028 | StoryDoctor 우선순위 정렬 정책 |
+| ADR-029 | ArcConsistency 임계값 정책 (0.75) |
+| ADR-030 | AutoRepair 안전 실행 정책 |
+| ADR-031 | Cleanup 소급 설계 문서화 정책 |
+
+---
+
+## 테스트 결과
+
+- **PASS:** 5,210+  
+- **FAIL:** 0  
+- **SKIP:** 20  
+
+---
+
+## 다음 버전
+
+→ V547: Phase 6 Stage B (PNE — Proactive Narrative Engine) 시작
