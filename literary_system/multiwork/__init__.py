@@ -127,3 +127,15 @@ __all__ += [
     "CIMEntryV2", "ProjectCIMV2", "CIMSnapshot",
     "InterProjectCIMScore", "MultiWorkCIMV2",
 ]
+
+# V610: MultiWorkCIM v2.0 팩토리 + 업그레이드 유틸리티
+from .multi_work_cim import (  # noqa: E402
+    CIMVersion,
+    create_multi_work_cim,
+    get_cim_version,
+)
+
+__all__ += [
+    # V610 — MultiWorkCIM v2.0
+    "CIMVersion", "create_multi_work_cim", "get_cim_version",
+]

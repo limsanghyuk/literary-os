@@ -1,6 +1,9 @@
-Literary OS V609 — MultiWorkOrchestratorV2
-version: 10.14.0
-adr: ADR-069
-sub-phase: SP-B.3 (MultiWork 협업 레이어)
-gate: 56/56 (G01~G57; G58 예정 V613)
-tests: 6436+
+Literary OS V610
+Version: 10.15.0
+ADR: ADR-070
+Date: 2026-05-23
+SP: SP-B.3 (V610/14)
+Files:
+  - literary_system/multiwork/multi_work_cim.py (v2.0)
+  - tests/unit/test_v610_multi_work_cim_v2_upgrade.py (22 TC)
+  - docs/adr/ADR-070.md

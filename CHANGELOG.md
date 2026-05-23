@@ -1,3 +1,21 @@
+## [10.15.0] — 2026-05-23
+
+### Added (V610)
+- `literary_system/multiwork/multi_work_cim.py` v2.0 업그레이드:
+  - `CIMVersion` 열거형 (V1/V2, `current()` → V2)
+  - `ProjectCIM.to_v2()` — v1 인스턴스 → ProjectCIMV2 비파괴적 마이그레이션
+  - `MultiWorkCIM.upgrade_to_v2()` — 전체 프로젝트 CIM v2 변환
+  - `create_multi_work_cim(version='v2')` 팩토리 함수
+  - `get_cim_version()` 런타임 버전 판별 헬퍼
+  - `stats()` 반환 dict에 `version` 키 추가
+- `docs/adr/ADR-070.md`: MultiWorkCIM v2.0 팩토리 설계 결정
+- `tests/unit/test_v610_multi_work_cim_v2_upgrade.py`: 22 TC ALL PASS
+
+### Notes
+- 하위 호환성 완전 유지 (v1 CIMEntry/ProjectCIM/MultiWorkCIM API 변경 없음)
+- lazy import 패턴으로 circular import 방지
+- SP-B.3 V610/14 완료
+
 ## [10.14.0] — 2026-05-23 (V609)
 
 ### Added

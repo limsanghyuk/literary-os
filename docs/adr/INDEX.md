@@ -70,3 +70,4 @@
 | ADR-067 | V607 | SharedCharacterDB v2.0 + SharedWorldDB v2.0 (SP-B.3 시작) |
 | ADR-068 | V608 | MultiWorkOrchestratorV2 v2.0 — 프로젝트 체크포인트 + 충돌 탐지 + RLHF 보상 통합 (SP-B.3) |
 | ADR-069 | MultiWorkCIMV2 설계 결정 | V609 | Accepted |
+| ADR-070 | MultiWorkCIM v2.0 — 팩토리 패턴 + 업그레이드 유틸리티 | V610 | Accepted |
