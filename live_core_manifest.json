@@ -26,7 +26,7 @@
     "target": "Gate G60 24h 장기 실행 + Helm 검증"
   },
   "build_notes": "V615: PerformanceSLOGate G60 v1.0 (10 CP, ADR-075) — 59/59 ALL PASS, 6603 tests",
-  "version": "10.24.0",
+  "version": "10.25.0",
   "codename": "V616",
   "description": "MemoryLeakDetector + StressTester v1.0 (SP-B.4)",
   "updated_at": "2026-05-23T13:13:38Z",
@@ -36,6 +36,8 @@
   "gates_passing": 59,
   "changelog": "V618: AdaptiveThrottler v1.0 + ADR-078 (v10.23.0)",
   "release_tag": "v10.24.0",
-  "test_count": 6703,
-  "gate_count": 59
+  "test_count": 6728,
+  "gate_count": 60,
+  "version_tag": "V620",
+  "last_updated": "2026-05-23"
 }

@@ -3242,3 +3242,17 @@ GATES.append((
     "Gate G60 — PerformanceSLOGate v1.0 (P95/GPU/CacheHit SLO, ADR-075)",
     _gate_performance_slo_g60,
 ))
+
+# Gate G61 — Phase B Exit Gate (V620, ADR-080)
+def _gate_phase_b_exit_g61() -> dict:
+    """Gate G61: Phase B Exit Gate — SP-B 6축 완료 판정 (C1~C6)."""
+    from literary_system.gates.phase_b_exit_gate import run_g61_gate
+    result = run_g61_gate()
+    result["gate_name"] = "Phase B Exit Gate G61 — SP-B 6축 완료 (ADR-080)"
+    return result
+
+GATES.append((
+    "phase_b_exit_g61",
+    "Gate G61 — Phase B Exit Gate (SP-B 6축: G54/G56+G57/G59/G60/Gates≥60/Tests≥6700, ADR-080)",
+    _gate_phase_b_exit_g61,
+))

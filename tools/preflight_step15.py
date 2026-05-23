@@ -257,6 +257,8 @@ ORPHAN_DISPOSITION: dict[str, str] = {
 KNOWN_SAFE_CYCLES = {
     frozenset(["literary_system/gates/gate_registry.py",
                "literary_system/gates/release_gate.py"]),
+    frozenset(["literary_system/gates/phase_b_exit_gate.py",
+               "literary_system/gates/release_gate.py"]),
     frozenset(["literary_system/gates/phase_a_exit_gate.py",
                "literary_system/gates/release_gate.py"]),
     frozenset(["literary_system/multiwork/multi_work_cim.py",
