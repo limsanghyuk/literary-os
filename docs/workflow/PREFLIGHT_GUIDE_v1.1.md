@@ -2,8 +2,8 @@
 
 **문서 번호**: LOS-PREFLIGHT-CLAUDE-001  
 **작성일**: 2026년 5월 15일  
-**버전**: 1.1 (V463 갱신 — DualSemanticScorer 경로 수정, Gate17 반영)  
-**적용 대상**: V430 수정 로드맵 및 이후 모든 Literary OS 개발 단계  
+**버전**: 2.0 (V612 갱신 — Step 15 v2.0 보안·위생 + 연결성 종합 게이트화)  
+**적용 대상**: Literary OS 전체 개발 단계 (Phase A/B/C/D 포함)  
 **기반 문서**: GitNexus_Development_Preflight_Guide.md (GPT 방식), 개발전에 반드시 확인 사항.docx
 
 > **v1.0 → v1.1 변경 이력**  
@@ -11,6 +11,14 @@
 > - §5 `CRITICAL_SYMBOLS`: `AdapterContractV2`, `CascadeOrchestrator` (V431~V436 SubPhase1 핵심 심볼) 추가  
 > - §5 `CRITICAL_GATES`: Gate 17 (`_gate_subphase1_adapter_survival`) 추가  
 > - Release Gate 기준: 14/14 → **15/15 PASS** (V463)
+
+> **v1.1 → v2.0 변경 이력 [V612 — 2026-05-23]**  
+> - **[최고 수석 컴파일러 × 최고 수석 아키텍처 합의]**: 연결성·단절·신경망 검사를 Step 15에 완전 통합  
+> - `tools/preflight_step15.py` v2.0: Rule 1~3(위생) + Rule 4~8(연결성) 단일 종합 게이트  
+> - §5 Survival Matrix: V596~V611 Phase B 전체 심볼 + 실제 경로 46/46 검증 반영  
+> - §10 신설: `preflight_step15.py` v2.0 8-Rule 자동화 검사 상세 참조  
+> - §3 프로토콜: Step 15가 자동 연결성 감사를 포함함을 명시  
+> - Release Gate 기준: 56/56 PASS (V611, commit 2e5e3715)
 
 ---
 
@@ -296,6 +304,53 @@ python -m pytest tests/ -q --tb=short 2>&1 | tail -5
 
 ---
 
+### Step 13. CI 의존성 정합성 검사 (자동화 — preflight_step13.py)
+
+```bash
+python tools/preflight_step13.py --strict
+```
+
+테스트 파일의 import 목록이 pyproject.toml의 [project.optional-dependencies.dev]와 일치하는지 검사.  
+누락 패키지 발견 시 CI 블로킹.
+
+---
+
+### Step 14. Gate 함수 타입 AST 대조 (자동화 — preflight_step14.py)
+
+```bash
+python tools/preflight_step14.py --strict
+```
+
+모든 Gate 함수 반환 타입이 release_gate.py의 등록 타입과 일치하는지 AST로 검사.  
+타입 불일치 발견 시 CI 블로킹.
+
+---
+
+### Step 15. 보안·위생 + 연결성 종합 검사 (자동화 — preflight_step15.py v2.0)
+
+> **[v2.0 핵심 변경]**: Step 15는 단순 위생 검사를 넘어 GitNexus 연결성 감사 전체를 담당한다.  
+> V596~V611 기간 동안 110개 신규 파일이 인덱스 미반영 상태로 누적된 문제를 자동 탐지하기 위해  
+> 최고 수석 컴파일러 × 최고 수석 아키텍처 합의로 Rule 4~8을 신설했다.
+
+```bash
+python tools/preflight_step15.py --strict
+```
+
+| Rule | 수준 | 검사 내용 | 블로킹 |
+|------|------|-----------|--------|
+| Rule-1 | CRITICAL | DEV_MODE 기본값 "true" 금지 | Y |
+| Rule-2 | HIGH | literary_system/ 내 print() 사용 금지 | Y |
+| Rule-3 | MEDIUM | bare except: 금지 | N |
+| Rule-4 | HIGH | .gitnexus staleness (신규 파일 미반영) | N (경고) |
+| Rule-5 | CRITICAL | Survival Matrix — Phase별 핵심 심볼 생존 | Y |
+| Rule-6 | HIGH | Orphan 모듈 탐지 (literary_system/* 단절) | Y |
+| Rule-7 | HIGH | 신규 모듈 연결성 (SP-B.3 신경망 연결) | Y |
+| Rule-8 | HIGH | 순환 의존 탐지 (lazy-import 정상 순환 제외) | Y |
+
+상세 규칙은 §10 참조.
+
+---
+
 ## 4. V430 수정 로드맵 전용 Preflight 체크리스트
 
 V430의 6개 우선순위 수정 전 다음 항목을 확인한다.
@@ -385,13 +440,41 @@ ls tools/packaging* scripts/pack* 2>/dev/null
 
 ---
 
-## 5. Survival Matrix 스크립트 (Python Fallback)
+## 5. Survival Matrix — V612 갱신 (Phase A/B 전체)
 
-GitNexus가 없을 때 Claude가 실행하는 최소 생존 매트릭스 검증 스크립트.  
-개발 전 `Bash`로 실행하거나 인라인으로 확인한다.
+> **⚠️ v2.0 변경**: 수동 Python Fallback 스크립트는 **DEPRECATED**.  
+> `tools/preflight_step15.py --strict` (Rule-5)가 이를 완전 자동화한다.  
+> 아래 표는 현재 `SURVIVAL_MATRIX` 딕셔너리의 등록 내용이다 (V612, 46/46 경로 검증 완료).
 
-> **⚠️ 경로 주의 (v1.1 수정)**: `DualSemanticScorer` 는 `literary_system/scoring/` 에 없다.  
-> 실제 위치는 `literary_system/drse/drse_engine.py` 이다. 이전 가이드의 경로는 오기였다.
+### Phase B 핵심 심볼 (V596~V611 신규 — v1.1에서 누락된 부분)
+
+| 레이어 | 심볼 | 실제 경로 |
+|--------|------|-----------|
+| **core** | UnifiedLLMGateway | `literary_system/llm_bridge/` |
+| **core** | RAGPipelineOrchestrator | `literary_system/pipelines/` ← (v1.1 경로 오기 수정) |
+| **core** | HybridRetrieverV2 | `literary_system/rag/` |
+| **nie** | RewardModel | `literary_system/rlhf/` ← (v1.1 경로 오기 수정) |
+| **nie** | PPOTrainer | `literary_system/rlhf/` ← (v1.1 경로 오기 수정) |
+| **gig** | NarrativeDebtDetector | `literary_system/graph_intelligence/asd/` ← (v1.1 경로 오기 수정) |
+| **gig** | StoryDoctorOrchestrator | `literary_system/graph_intelligence/asd/` ← (v1.1 경로 오기 수정) |
+| **phase_a** | V587ExitResult | `literary_system/gates/` ← (PhaseAExitGate → 실제 클래스명 수정) |
+| **phase_a** | LOSConstitution | `literary_system/constitution/` |
+| **sp_b1** | LoRADatasetBuilder | `literary_system/finetune/` |
+| **sp_b1** | ProvenanceLedger | `literary_system/storage/` ← (v1.1 경로 오기 수정) |
+| **sp_b2** | ConstraintGuard | `literary_system/rlhf/` |
+| **sp_b2** | CanaryController | `literary_system/serving/` |
+| **sp_b2** | CanonicalBridgeV2 | `literary_system/llm_bridge/` |
+| **sp_b3** | SharedCharacterDBV2 | `literary_system/multiwork/` |
+| **sp_b3** | SharedWorldDBV2 | `literary_system/multiwork/` |
+| **sp_b3** | MultiWorkOrchestratorV2 | `literary_system/multiwork/` |
+| **sp_b3** | GenreTransferV2 | `literary_system/multiwork/` |
+| **sp_b3** | LoRAStackingAdapter | `literary_system/serving/` |
+
+> **레거시 Fallback 스크립트** (v1.1 §5 인라인 Python)는 아래에 보존하나 직접 사용 금지.  
+> 자동화 대체: `python tools/preflight_step15.py --phase sp_b3` 등 레이어 필터 사용.
+
+<details>
+<summary>▶ [DEPRECATED] v1.1 Survival Matrix Python Fallback 스크립트 (참고용 보존)</summary>
 
 ```python
 #!/usr/bin/env python3
@@ -519,6 +602,8 @@ if __name__ == "__main__":
         sys.exit(1)
 ```
 
+</details>
+
 ---
 
 ## 6. Release Block 조건 (GPT 방식 완전 계승)
@@ -542,22 +627,29 @@ if __name__ == "__main__":
 
 ---
 
-## 7. Claude 개발 전 지시문 (표준 형식)
+## 7. Claude 개발 전 지시문 (표준 형식) — v2.0
 
 새 Stage 또는 수정 작업 시작 시 **이 지시문을 내부 점검 기준으로 고정**한다.
 
 ```
-개발 전 Claude-Native GitNexus Preflight Protocol을 수행한다.
+개발 전 Claude-Native GitNexus Preflight Protocol v2.0을 수행한다.
 
 1. Grep/Glob으로 변경 대상 심볼의 전체 참조 연결망을 파악한다.
-2. Survival Matrix로 과거 핵심 로직(V410~V411)이 살아있음을 확인한다.
+2. `python tools/preflight_step15.py --strict` 를 실행하여 8-Rule 종합 게이트를 통과한다.
+   - Rule 1~3: 위생 (DEV_MODE / print / bare except)
+   - Rule 5: Survival Matrix — Phase A/B 전체 핵심 심볼 생존 확인
+   - Rule 6: Orphan 모듈 탐지 — literary_system/* 단절 모듈 없음 확인
+   - Rule 7: 신규 모듈 연결성 — 최소 1개 호출자 확인
+   - Rule 8: 순환 의존 없음 확인 (알려진 lazy-import 정상 순환 제외)
 3. 변경 예정 항목의 위험도를 분류하고 (High/Medium/Low) 해당 단계를 실행한다.
 4. provider-zero·LLM-0·Gate 연결성 개념이 훼손되지 않음을 확인한다.
 5. 구현 완료 후 run_release_gate.py를 실행하여 N/N PASS를 확인한다.
 6. Gate FAIL 또는 Orphan node 발생 시 Release Block으로 처리하고 원인을 해소한다.
 7. 버전 선언은 pyproject.toml 단일 소스 기준으로 일관성을 유지한다.
+8. 신규 SP/레이어 추가 시 SURVIVAL_MATRIX 딕셔너리 (preflight_step15.py 내부)를 갱신한다.
 
 새 로직이 테스트를 통과하더라도 Gate 체계에 연결되지 않으면 완성이 아니다.
+연결성 단절은 매 단계 Step 15 v2.0이 자동으로 탐지한다.
 ```
 
 ---
@@ -580,16 +672,90 @@ if __name__ == "__main__":
 ## 9. 최종 요약
 
 ```
-Claude-Native GitNexus Preflight =
+Claude-Native GitNexus Preflight v2.0 =
   Grep/Glob (탐색 계층)
   + Bash/pytest (분석·검증 계층)
-  + Survival Matrix Script (생존 판정 계층)
+  + preflight_step13.py --strict (의존성 정합성 CI 블로킹)
+  + preflight_step14.py --strict (Gate 함수 타입 AST 블로킹)
+  + preflight_step15.py --strict (보안·위생 + 연결성 8-Rule 종합 블로킹)
+    ├─ Rule 1~3: Hygiene (DEV_MODE / print / bare except)
+    ├─ Rule 4:   .gitnexus staleness (경고)
+    ├─ Rule 5:   Survival Matrix — Phase A/B 46심볼 (CRITICAL 블로킹)
+    ├─ Rule 6:   Orphan 모듈 탐지 (HIGH 블로킹)
+    ├─ Rule 7:   신규 모듈 연결성 (HIGH 블로킹)
+    └─ Rule 8:   순환 의존 탐지 (HIGH 블로킹)
   + run_release_gate.py (최종 pass/block 계층)
 ```
 
-**현재 기준선 (V463)**: Release Gate **15/15 PASS**
+**현재 기준선 (V611, commit 2e5e3715)**: Release Gate **56/56 PASS**
 
-**모든 Literary OS 개발은 이 Preflight를 통과한 후에만 시작한다.**
+**모든 Literary OS 개발은 이 Preflight v2.0을 통과한 후에만 시작한다.**
+
+---
+
+## 10. preflight_step15.py v2.0 — 8-Rule 자동화 검사 상세
+
+`tools/preflight_step15.py`는 v2.0부터 단일 종합 CI 게이트 역할을 한다.
+
+### 주요 사용 예
+
+```bash
+# 기본 (전체 보고)
+python tools/preflight_step15.py
+
+# CI 블로킹 모드 (CRITICAL/HIGH 위반 시 exit 1)
+python tools/preflight_step15.py --strict
+
+# 위생만
+python tools/preflight_step15.py --hygiene-only
+
+# 연결성만
+python tools/preflight_step15.py --nexus-only
+
+# 특정 Phase Survival Matrix만 확인
+python tools/preflight_step15.py --phase sp_b3
+python tools/preflight_step15.py --phase core
+```
+
+### Survival Matrix 갱신 절차
+
+새 SP(SubPhase)를 추가할 때 **반드시** `preflight_step15.py` 내부의  
+`SURVIVAL_MATRIX` 딕셔너리에 새 레이어와 심볼을 등록한다:
+
+```python
+SURVIVAL_MATRIX["sp_bN"] = {
+    "NewClassName": "literary_system/new_module/",
+    ...
+}
+```
+
+### KNOWN_SAFE_CYCLES 갱신 절차
+
+새로운 lazy-import 패턴이 확인되면 `KNOWN_SAFE_CYCLES` frozenset에 추가한다:
+
+```python
+KNOWN_SAFE_CYCLES.add(frozenset([
+    "literary_system/module_a/a.py",
+    "literary_system/module_b/b.py",
+]))
+```
+
+### CONNECTIVITY_TARGETS 갱신 절차
+
+새 SP 신규 모듈이 추가될 때 `CONNECTIVITY_TARGETS`에 등록하여  
+신경망 연결 여부를 자동 검증한다:
+
+```python
+CONNECTIVITY_TARGETS["literary_system/new_module/new_class.py"] = "new_class"
+```
+
+### 결과 해석
+
+| 출력 | 의미 |
+|------|------|
+| `[PASS] ALL CLEAR` | 8-Rule 전체 통과 — 개발 진행 허가 |
+| `[WARN]` | MEDIUM 경고만 존재 — 진행 가능, 정리 권장 |
+| `[FAIL]` | CRITICAL/HIGH 위반 존재 — 반드시 해소 후 재실행 |
 
 ---
 

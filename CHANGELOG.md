@@ -1,3 +1,49 @@
+## V612 — 2026-05-23
+
+### 최고 수석 컴파일러 × 최고 수석 아키텍처 합의: Preflight Step 15 v2.0
+
+#### 문제 진단
+- V575 당시 `preflight_step15.py`는 보안·위생(Rule 1~3)만 검사했음
+- GitNexus 연결성·Survival Matrix·Orphan 탐지는 별도 수동 도구(`preflight_nexus.py`)로 분리되어 있어 자동 블로킹 없음
+- V596~V611 기간 동안 110개 신규 파일이 .gitnexus 인덱스에 미반영 상태로 누적
+- Phase B (SP-B.1~B.3) 심볼들이 v1.1 Survival Matrix에 미등록
+
+#### 해결책 (합의안)
+**`tools/preflight_step15.py` v2.0** — 단일 종합 CI 게이트로 격상
+
+| Rule | 수준 | 검사 내용 |
+|------|------|-----------|
+| Rule-1 | CRITICAL | DEV_MODE 기본값 "true" 금지 |
+| Rule-2 | HIGH | literary_system/ 내 print() 금지 |
+| Rule-3 | MEDIUM | bare except: 금지 |
+| Rule-4 | HIGH | .gitnexus staleness (경고 전용) |
+| Rule-5 | CRITICAL | Survival Matrix — Phase A/B 46심볼 생존 |
+| Rule-6 | HIGH | Orphan 모듈 탐지 |
+| Rule-7 | HIGH | 신규 모듈 연결성 확인 |
+| Rule-8 | HIGH | 순환 의존 탐지 |
+
+#### 검증 결과 (V611 코드베이스)
+- Survival Matrix: 46/46 ALIVE
+- Orphan (신규): 0건
+- Connectivity (SP-B.3 11모듈): 0건 단절
+- Circular (실질): 0건
+- `preflight_step15.py --strict` exit 0
+
+**`docs/workflow/PREFLIGHT_GUIDE_v1.1.md` → v2.0**
+
+- §3 Step 13~15 자동화 블로킹 게이트 절차 명시
+- §5 Survival Matrix: Phase B 전체 심볼 + 경로 오기 수정 (46심볼)
+- §7 개발 전 지시문: Rule 4~8 포함 8단계 v2.0
+- §9 최종 요약: 56/56 PASS 기준선, preflight_step15 v2.0 아키텍처 반영
+- §10 신설: preflight_step15.py v2.0 8-Rule 상세 가이드
+
+#### 파일 변경
+- `tools/preflight_step15.py` — v1 → v2.0 (Rule 4~8 추가, 619줄 증가)
+- `docs/workflow/PREFLIGHT_GUIDE_v1.1.md` — v1.1 → v2.0 (198줄 추가)
+
+
+---
+
 ## [10.16.0] — 2026-05-23
 
 ### Added
