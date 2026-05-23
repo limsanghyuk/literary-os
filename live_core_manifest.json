@@ -2,8 +2,8 @@
   "manifest_version": "2.0",
   "generated_at": "2026-05-23T00:00:00Z",
   "literary_os": {
-    "version": "10.18.0",
-    "codename": "V613",
+    "version": "10.19.0",
+    "codename": "V614",
     "phase": "B",
     "subphase": "SP-B.3",
     "status": "SP-B.3 COMPLETE"
@@ -14,7 +14,7 @@
     "range": "G01-G59"
   },
   "tests": {
-    "total_collected": 6558,
+    "total_collected": 6583,
     "status": "ALL PASS"
   },
   "adr": {
@@ -41,8 +41,8 @@
     "literary_system/serving/lora_stacking_adapter.py"
   ],
   "next": {
-    "version": "V614",
+    "version": "V615",
     "phase": "SP-B.4",
-    "target": "PerformanceOptimizer INT8"
+    "target": "Gate G60 P95 SLO 검증"
   }
 }
