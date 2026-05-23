@@ -208,7 +208,7 @@ def _count_tests() -> int:
     inventory_path = Path(__file__).parents[2] / "tools" / "test_inventory.json"
     try:
         data = json.loads(inventory_path.read_text())
-        return data.get("total_tests", 0)
+        return data.get("test_count", data.get("total_tests", 0))
     except Exception as exc:  # noqa: BLE001
         _log.warning("test_inventory.json 읽기 실패: %s", exc)
         return 0
