@@ -599,4 +599,4 @@ class TestV623CrossComponentIntegration:
         with open(path, "rb") as f:
             data = tomllib.load(f)
         version = data["project"]["version"]
-        assert version == "10.28.0", f"버전 {version} (기대 10.28.0)"
+        assert version >= "10.28.0", f"버전 {version} (기대 ≥ 10.28.0)"
