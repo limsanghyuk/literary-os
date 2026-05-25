@@ -1,8 +1,8 @@
-# MANIFEST — Literary OS V611
+# MANIFEST — Literary OS V630
 
-버전: 10.16.0
+버전: 11.0.0
 릴리즈일: 2026-05-22
-빌드 타입: Phase B SP-B.3 — GenreTransferV2 + LoRAStackingAdapter (V611, ADR-071)
+빌드 타입: Phase B COMPLETE — G61 7축 Exit Gate (V630, ADR-097)
 
 ## 테스트 결과
 
@@ -11,7 +11,7 @@
 | PASS | 6,414+ |
 | FAIL | 0 |
 | SKIP | 2 (REAL LLM — API 키 없을 시) |
-| 릴리즈 게이트 | **56/56 PASS** |
+| 릴리즈 게이트 | **60/60 PASS** |
 | Phase A 기준 대비 신규 | +200 (V595.2 기준 6,182 + 232) |
 
 ## 릴리즈 게이트 현황

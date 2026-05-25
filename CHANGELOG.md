@@ -1,3 +1,7 @@
+## [11.0.0] — 2026-05-25 (V630)
+
+Phase B 완전 종료. G61 7축(C1~C7) Exit Gate (ADR-097). 60 Gates ALL PASS, 7213 Tests.
+
 ## V612 — 2026-05-23
 
 ### 최고 수석 컴파일러 × 최고 수석 아키텍처 합의: Preflight Step 15 v2.0
