@@ -27,7 +27,7 @@ from literary_system.gates.release_gate import run_release_gate
 result = run_release_gate()
 print(result['summary'])
 "
-# → RELEASE GATE PASS: 54/54 gates passed
+# → RELEASE GATE PASS: 60/60 gates passed
 ```
 
 ---
@@ -45,7 +45,7 @@ literary_system/
 ├── corpus/               # 외부 코퍼스 브릿지 — BGE-M3 + CIM (V557~V561)
 ├── multiwork/            # 다중작품 관리 오케스트레이터 (V562~V571)
 ├── db/                   # LOSDB — SQL/Vector/Graph 스토리지 + Facade (V581~V586)
-├── gates/                # 릴리즈 게이트 51종 (G01~G55)
+├── gates/                # 릴리즈 게이트 60종 (G01~G61)
 ├── adapters_live/        # LLM 어댑터 (Claude / OpenAI / Ollama)
 └── ...
 ```
@@ -101,7 +101,7 @@ results = client.cross_query(["sql", "vector", "graph"], label="chapter_01")
 ```python
 from literary_system.gates.release_gate import run_release_gate
 result = run_release_gate()
-# {"status": "pass", "gates_passed": 45, "total_gates": 45}
+# {"status": "pass", "gates_passed": 60, "total_gates": 60}
 ```
 
 | 범위 | 게이트 |

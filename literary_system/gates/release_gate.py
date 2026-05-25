@@ -1713,7 +1713,7 @@ GATES = [
 
 
 def run_release_gate() -> dict:
-    """V620 릴리즈 게이트 실행 (60개 게이트, Phase B Exit Gate G61 포함)."""
+    """V630 릴리즈 게이트 실행 (60개 게이트, Phase B Exit Gate G61 포함, ADR-097)."""
     import traceback
     results_dict: dict = {}
     passed_count = 0

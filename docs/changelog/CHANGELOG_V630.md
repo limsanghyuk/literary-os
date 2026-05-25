@@ -133,3 +133,42 @@ Phase C 이행 준비 완료.
 | 60 Gates | 60/60 PASS ✓ |
 
 **3인 협의 결론:** BUG-T1(source_hash 재생성), BUG-TC1(TC 커버리지 추가), META-1(카운트 갱신) 3건 수정 완료. 추가 결함 없음. Phase B 완전 종료 선언 유효.
+
+---
+
+## [V630-AUDIT3] 3차 교차검증 보강 패치
+
+**작성자:** 최고 수석 아키텍처 + 최고 수석 컴파일러 + 최고 시스템 프린시펄 엔지니어  
+**기준 커밋:** `128f09b` → AUDIT3 패치
+
+### 발견 및 수정 결함
+
+| ID | 심각도 | 위치 | 내용 | 수정 |
+|----|--------|------|------|------|
+| WARN-M1 | LOW | `live_core_manifest.json` | `literary_os_version`=V629, `build_tag`=v10.25.2-V620-AUDIT2 stale | V630 / v11.0.0-V630-AUDIT3 갱신 |
+| WARN-D1 | LOW | `release_gate.py` L1716 | `run_release_gate()` docstring "V620" stale | "V630 ... ADR-097" 갱신 |
+| WARN-1  | LOW | `README.md` | 코드 주석 3건 stale (54/54, 51종, gates_passed:45) | 60/60, 60종 G01~G61, gates_passed:60 갱신 |
+
+### source_hash 연쇄 갱신
+
+- WARN-D1 수정(release_gate.py 소스 변경) → source_hash 재생성 필요
+- `tools/generate_test_inventory.py` 재실행 → `85711f40ff68aaac`
+
+### 3인 협의 결론 (AUDIT3)
+
+- **아키텍처 (#386):** G61 7축 설계 완전성·P_IF_TRACE_REQUIRED·TC-61~63 분기 커버리지·Gate수 정합·방어 로직 — 모두 PASS. FAIL 0건.
+- **컴파일러 (#387):** source_hash 일치·test_count 삼각·EA-6·63 TC·1016 unit TC·stale 문자열 회귀 — 모두 PASS. FAIL 0건.
+- **프린시펄 엔지니어 (#388):** WARN 4건 수정, source_hash 재갱신, 회귀 1016 PASS 확인.
+
+### 최종 검증 결과 (AUDIT3)
+
+| 항목 | 결과 |
+|------|------|
+| Unit TC | **1016 PASS** |
+| phase_b_exit_gate TC | 63/63 PASS |
+| EA-6 source_hash | `85711f40ff68aaac` ✓ |
+| test_count (삼각) | 7213 (inventory/manifest/README 일치) |
+| Gates | 60/60 PASS |
+| P0/P1 결함 | **없음** |
+
+**Phase B 완전 종료 선언 유효 — 3차 검증 통과.**

@@ -32,7 +32,7 @@
     "BUG-C3-1: MemoryLeakDetector.top_allocators() None guard",
     "BUG-C4-1: PhaseBExitReport.all_pass 빈 리스트 방어"
   ],
-  "literary_os_version": "V629",
-  "build_tag": "v10.25.2-V620-AUDIT2",
+  "literary_os_version": "V630",
+  "build_tag": "v11.0.0-V630-AUDIT3",
   "release": "V630"
 }
