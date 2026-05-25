@@ -1,0 +1,77 @@
+# Literary OS ServePlane — 추론 서비스 Deployment
+# LLM-1: PROMOTED 단계 모델만 서빙 (ADR-058)
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-server
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: literary-os-server
+    version: {{ .Chart.AppVersion | quote }}
+    component: serve-plane
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: literary-os-server
+  template:
+    metadata:
+      labels:
+        app: literary-os-server
+        component: serve-plane
+    spec:
+      serviceAccountName: {{ .Values.serviceAccount.name }}
+      nodeSelector:
+        {{- toYaml .Values.nodeSelector | nindent 8 }}
+      containers:
+        - name: literary-server
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command:
+            - python
+            - -m
+            - literary_system.serving.model_serving_endpoint
+          ports:
+            - containerPort: {{ .Values.serving.port }}
+          env:
+            - name: BASE_MODEL
+              value: {{ .Values.model.baseModel | quote }}
+            - name: MODEL_PATH
+              value: {{ .Values.model.modelMount | quote }}
+            - name: REQUIRE_PROMOTED
+              value: {{ .Values.model.requirePromoted | quote }}
+            - name: MAX_SEQ_LEN
+              value: {{ .Values.model.maxSeqLen | quote }}
+            - name: SERVE_PORT
+              value: {{ .Values.serving.port | quote }}
+            - name: WORKERS
+              value: {{ .Values.serving.workers | quote }}
+            - name: TIMEOUT_SEC
+              value: {{ .Values.serving.timeoutSec | quote }}
+            - name: LOG_LEVEL
+              value: {{ .Values.serving.logLevel | quote }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          {{- if .Values.healthCheck.enabled }}
+          livenessProbe:
+            httpGet:
+              path: {{ .Values.healthCheck.livenessPath }}
+              port: {{ .Values.serving.port }}
+            initialDelaySeconds: {{ .Values.healthCheck.initialDelaySeconds }}
+            periodSeconds: {{ .Values.healthCheck.periodSeconds }}
+            failureThreshold: {{ .Values.healthCheck.failureThreshold }}
+          readinessProbe:
+            httpGet:
+              path: {{ .Values.healthCheck.readinessPath }}
+              port: {{ .Values.serving.port }}
+            initialDelaySeconds: {{ .Values.healthCheck.initialDelaySeconds }}
+            periodSeconds: {{ .Values.healthCheck.periodSeconds }}
+          {{- end }}
+          volumeMounts:
+            - name: model-volume
+              mountPath: /models
+              readOnly: true
+      volumes:
+        - name: model-volume
+          persistentVolumeClaim:
+            claimName: {{ .Release.Name }}-models-pvc

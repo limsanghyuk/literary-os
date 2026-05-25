@@ -42,3 +42,18 @@ __all__ = [
     "ModelCard",
     "ModelServingEndpoint",
 ]
+
+from literary_system.serving.serve_plane_validator import (
+    ServePlaneChartSpec,
+    ServePlaneValidationResult,
+    ServePlaneValidator,
+    ServePlaneValuesSpec,
+)
+
+__all__ += [
+    # serve_plane_validator (V627)
+    "ServePlaneValidator",
+    "ServePlaneValidationResult",
+    "ServePlaneChartSpec",
+    "ServePlaneValuesSpec",
+]
