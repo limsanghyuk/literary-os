@@ -40,6 +40,11 @@ from literary_system.ops.production_launch_gate import (
     ProductionLaunchGate,
     SLAAxis,
 )
+from literary_system.ops.helm_validator import (
+    HelmValidator,
+    HelmValidationResult,
+    TrainPlaneChartSpec,
+)
 from literary_system.ops.user_onboarding import (
     OnboardResult,
     OnboardStep,
@@ -61,4 +66,5 @@ __all__ = [
     "UserPlan", "UserStatus", "PaymentGateway", "OnboardStep",
     "AnalyticsDashboard", "PublicAPIDoc",
     "AnalyticsEvent", "CohortReport", "NPSResult",
+    "HelmValidator", "HelmValidationResult", "TrainPlaneChartSpec",
 ]
