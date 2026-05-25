@@ -1765,7 +1765,7 @@ def run_release_gate() -> dict:
     all_passed = failed_count == 0
     issues = [gid for gid, gv in results_dict.items() if not gv.get("pass", False)]
     return {
-        "version": "V624",
+        "version": "V625",
         "pass": all_passed,
         "status": "pass" if all_passed else "fail",
         "total_gates": total,

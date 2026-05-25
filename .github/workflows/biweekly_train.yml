@@ -1,0 +1,155 @@
+# .github/workflows/biweekly_train.yml — V625 신규 (ADR-092)
+# 격주 LoRA + RLHF 자동 훈련 파이프라인
+# - 매월 1·15일 02:00 KST (17:00 UTC 전일)
+# - RunPod 가용 시 → RunPod 실행
+# - RunPod 부족 시 → Lambda Labs H100 폴백
+# - 항상 dry_run=True (실제 GPU 기동은 별도 승인 필요)
+
+name: Biweekly LoRA + RLHF Training
+
+on:
+  schedule:
+    - cron: '0 17 1,15 * *'   # 매월 1·15일 02:00 KST
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'dry_run 모드 (true=시뮬레이션, false=실제 실행)'
+        required: false
+        default: 'true'
+      backend:
+        description: 'GPU 백엔드 (auto / runpod / lambda_h100)'
+        required: false
+        default: 'auto'
+
+env:
+  PYTHON_VERSION: '3.10'
+  DEFAULT_DRY_RUN: 'true'
+
+jobs:
+  # ──────────────────────────────────────────────
+  # Job 1: RunPod 가용성 확인
+  # ──────────────────────────────────────────────
+  check-runpod:
+    name: Check RunPod Availability
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      runpod_available: ${{ steps.check.outputs.available }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install minimal deps
+        run: pip install requests --quiet
+
+      - name: Check RunPod availability
+        id: check
+        env:
+          RUNPOD_API_KEY: ${{ secrets.RUNPOD_API_KEY }}
+        run: |
+          python tools/check_runpod_availability.py --json > runpod_status.json || true
+          cat runpod_status.json
+          available=$(python -c "import json; d=json.load(open('runpod_status.json')); print(str(d.get('available',False)).lower())")
+          echo "available=$available" >> $GITHUB_OUTPUT
+          echo "RunPod available: $available"
+
+  # ──────────────────────────────────────────────
+  # Job 2: 훈련 실행 (RunPod 또는 Lambda 폴백)
+  # ──────────────────────────────────────────────
+  train:
+    name: Run Training
+    runs-on: ubuntu-latest
+    needs: check-runpod
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install Literary OS
+        run: |
+          pip install -e ".[dev]" --quiet
+
+      - name: Notify training start
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          python tools/notify_slack.py \
+            --msg "Biweekly 훈련 시작 — $(date '+%Y-%m-%d %H:%M KST')" \
+            --level info
+
+      # ── RunPod 경로 ──────────────────────────
+      - name: Run training (RunPod)
+        if: needs.check-runpod.outputs.runpod_available == 'true'
+        env:
+          RUNPOD_API_KEY: ${{ secrets.RUNPOD_API_KEY }}
+        run: |
+          python literary_system/finetune/lora_job_runner.py \
+            --base llama-3.1-8b \
+            --backend runpod \
+            --dry-run ${{ github.event.inputs.dry_run || env.DEFAULT_DRY_RUN }}
+
+      # ── Lambda 폴백 경로 ─────────────────────
+      - name: Notify Lambda fallback
+        if: needs.check-runpod.outputs.runpod_available == 'false'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          python tools/notify_slack.py \
+            --msg "RunPod 부족 — Lambda H100으로 폴백" \
+            --level warn
+
+      - name: Run training (Lambda fallback)
+        if: needs.check-runpod.outputs.runpod_available == 'false'
+        env:
+          LAMBDA_API_KEY: ${{ secrets.LAMBDA_API_KEY }}
+        run: |
+          python literary_system/finetune/lora_job_runner.py \
+            --base llama-3.1-8b \
+            --backend lambda_h100 \
+            --dry-run ${{ github.event.inputs.dry_run || env.DEFAULT_DRY_RUN }}
+
+      # ── 공통: 완료 알림 ──────────────────────
+      - name: Notify training done
+        if: always()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          python tools/notify_slack.py \
+            --msg "Training cycle done — ${{ job.status }}" \
+            --level ${{ job.status == 'success' && 'info' || 'error' }}
+
+  # ──────────────────────────────────────────────
+  # Job 3: Gate 회귀 검증 (훈련 후)
+  # ──────────────────────────────────────────────
+  post-train-gate:
+    name: Post-Training Gate Check
+    runs-on: ubuntu-latest
+    needs: train
+    if: always()
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install Literary OS
+        run: pip install -e ".[dev]" --quiet
+
+      - name: Run Release Gate (smoke)
+        run: |
+          python tools/run_release_gate.py 2>&1 | tail -5
+
+      - name: Run preflight step15
+        run: |
+          python tools/preflight_step15.py --strict 2>&1 | tail -10

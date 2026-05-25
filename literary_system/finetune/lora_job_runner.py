@@ -14,6 +14,7 @@ LLM-0 원칙: 이 모듈은 외부 LLM API를 직접 호출하지 않음.
 from __future__ import annotations
 
 import json
+import logging
 import time
 import uuid
 import warnings
@@ -22,6 +23,8 @@ from datetime import datetime, timezone
 from enum import Enum
 from pathlib import Path
 from typing import Any, Dict, List, Optional
+
+logger = logging.getLogger(__name__)
 
 from literary_system.finetune.gpu_adapter import (
     DEFAULT_COST_SLO,
@@ -424,3 +427,141 @@ class LoRAJobRunner:
                             UserWarning,
                             stacklevel=1,
                         )
+
+
+# ============================================================
+# V625 추가: AutoRecoveryScheduler + CLI 진입점
+# ============================================================
+
+class AutoRecoveryScheduler:
+    """
+    biweekly_train CI가 실패했을 때 자동 복구를 조율하는 스케줄러.
+
+    복구 전략:
+    1. RunPod 가용 확인 (check_runpod_availability 연동)
+    2. 가용 없음 → Lambda 폴백 지시
+    3. 최대 재시도 횟수 초과 → Slack 에스컬레이션
+
+    VERSION = "1.0.0"
+    """
+
+    VERSION = "1.0.0"
+    MAX_RETRIES: int = 3
+    RETRY_INTERVAL_SEC: int = 300  # 5분
+
+    BACKEND_RUNPOD = "runpod"
+    BACKEND_LAMBDA = "lambda_h100"
+
+    def __init__(
+        self,
+        max_retries: int = MAX_RETRIES,
+        retry_interval_sec: int = RETRY_INTERVAL_SEC,
+        dry_run: bool = True,
+    ) -> None:
+        self._max_retries = max_retries
+        self._retry_interval_sec = retry_interval_sec
+        self._dry_run = dry_run
+        self._attempt_log: List[Dict[str, Any]] = []
+
+    # ------------------------------------------------------------------
+    # 공개 API
+    # ------------------------------------------------------------------
+
+    def decide_backend(self, runpod_available: bool) -> str:
+        """RunPod 가용 여부에 따라 백엔드 결정."""
+        return self.BACKEND_RUNPOD if runpod_available else self.BACKEND_LAMBDA
+
+    def record_attempt(
+        self,
+        backend: str,
+        success: bool,
+        reason: str = "",
+    ) -> Dict[str, Any]:
+        """
+        실행 시도 기록.
+
+        Returns:
+            {"attempt": int, "backend": str, "success": bool, "reason": str}
+        """
+        attempt_no = len(self._attempt_log) + 1
+        record = {
+            "attempt": attempt_no,
+            "backend": backend,
+            "success": success,
+            "reason": reason,
+        }
+        self._attempt_log.append(record)
+        return record
+
+    def should_escalate(self) -> bool:
+        """재시도 한도 초과 여부."""
+        return len(self._attempt_log) >= self._max_retries and not any(
+            r["success"] for r in self._attempt_log
+        )
+
+    def recovery_summary(self) -> Dict[str, Any]:
+        """복구 시도 요약."""
+        attempts = len(self._attempt_log)
+        succeeded = sum(1 for r in self._attempt_log if r["success"])
+        return {
+            "version": self.VERSION,
+            "attempts": attempts,
+            "succeeded": succeeded,
+            "escalate": self.should_escalate(),
+            "log": list(self._attempt_log),
+        }
+
+    def reset(self) -> None:
+        """시도 이력 초기화."""
+        self._attempt_log.clear()
+
+
+# ── CLI 진입점 ─────────────────────────────────────────────────────────
+
+def _main_cli() -> None:  # pragma: no cover
+    """biweekly_train.yml에서 직접 호출하는 CLI."""
+    import argparse as _argparse
+
+    parser = _argparse.ArgumentParser(description="LoRA Job Runner CLI (V625)")
+    parser.add_argument("--base", default="llama-3.1-8b", help="기반 모델 이름")
+    parser.add_argument(
+        "--backend",
+        default="runpod",
+        choices=["runpod", "lambda_h100", "auto"],
+        help="GPU 백엔드",
+    )
+    parser.add_argument(
+        "--dry-run",
+        default="true",
+        help="true/false (기본 true)",
+    )
+    args = parser.parse_args()
+
+    dry_run = args.dry_run.lower() in ("true", "1", "yes")
+    provider_map = {
+        "runpod": GPUProvider.RUNPOD,
+        "lambda_h100": GPUProvider.LAMBDA_LABS,
+        "auto": GPUProvider.RUNPOD,  # auto는 check_runpod_availability가 결정
+    }
+    provider = provider_map.get(args.backend, GPUProvider.RUNPOD)
+
+    runner = LoRAJobRunner(provider=provider, dry_run=dry_run)
+
+    config = LoRATrainingConfig(
+        base_model=args.base,
+        dataset_version="latest",
+        schedule_type=LoRAScheduleType.FULL_TRAINING,
+    )
+
+    import sys as _sys
+    try:
+        record = runner.run(config, dataset_path="data/train.jsonl")
+        logger.info("[LoRAJobRunner] 완료: %s | 상태: %s", record.job_id, record.status)
+        _sys.exit(0)
+    except RuntimeError as exc:
+        logger.error("[LoRAJobRunner] SLO BLOCK: %s", exc)
+        _sys.exit(1)
+
+
+if __name__ == "__main__":
+    _main_cli()
