@@ -81,3 +81,24 @@ __all__ += [
     "MetricSnapshot",
     "MonitoringConfig",
 ]
+
+from literary_system.ops.ops_runbook import (
+    OpsRunbook,
+    RunbookStep,
+    RunbookResult,
+    StepResult,
+    StepStatus,
+    RunbookSeverity,
+    build_health_check_runbook,
+)
+
+__all__ += [
+    # ops_runbook (V629)
+    "OpsRunbook",
+    "RunbookStep",
+    "RunbookResult",
+    "StepResult",
+    "StepStatus",
+    "RunbookSeverity",
+    "build_health_check_runbook",
+]
