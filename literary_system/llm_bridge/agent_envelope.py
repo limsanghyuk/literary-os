@@ -1,6 +1,6 @@
 """literary_system/llm_bridge/agent_envelope.py
 
-AgentEnvelope (P-IF-01) + RoutingPolicy 4축 확장 — V621, ADR-088.
+AgentEnvelope (P-IF-01) + AgentRoutingPolicy 4축 확장 — V621, ADR-088.
 
 LLM-0 원칙: 실 API 호출 없음. 인터페이스 정의 전용.
 """
@@ -56,7 +56,7 @@ class RoutingDecision(Enum):
 
 
 @dataclass
-class RoutingPolicy:
+class AgentRoutingPolicy:
     """4축 라우팅 정책 (ADR-088 확장, 기존 3축 → 4축).
 
     4축:
@@ -77,7 +77,7 @@ class RoutingPolicy:
         total = self.cost_weight + self.latency_weight + self.quality_weight + self.role_weight
         if abs(total - 1.0) > 1e-6:
             raise ValueError(
-                f"RoutingPolicy 4축 가중치 합이 1.0이어야 합니다. 현재: {total:.4f}"
+                f"AgentRoutingPolicy 4축 가중치 합이 1.0이어야 합니다. 현재: {total:.4f}"
             )
 
     def decide_for_agent(self, env: AgentEnvelope) -> RoutingDecision:

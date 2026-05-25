@@ -30,7 +30,7 @@ from literary_system.llm_bridge.agent_envelope import (
     AgentRole,
     AgentEnvelope,
     RoutingDecision,
-    RoutingPolicy,
+    AgentRoutingPolicy as RoutingPolicy,
 )
 from literary_system.llm_bridge.canonical_bridge_v2 import (
     _bridge_generate_with_envelope,

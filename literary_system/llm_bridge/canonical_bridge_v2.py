@@ -192,14 +192,14 @@ from literary_system.llm_bridge.agent_envelope import (  # noqa: E402
     AgentEnvelope,
     AgentRole,
     RoutingDecision,
-    RoutingPolicy,
+    AgentRoutingPolicy,
 )
 
 
 def _bridge_generate_with_envelope(
     bridge: "CanonicalBridgeV2",
     prompt_or_envelope: "str | AgentEnvelope",
-    policy: "RoutingPolicy | None" = None,
+    policy: "AgentRoutingPolicy | None" = None,
     **kwargs: Any,
 ) -> BridgeResponse:
     """AgentEnvelope 또는 str을 받아 generate() 하위 호환 래퍼.
@@ -210,7 +210,7 @@ def _bridge_generate_with_envelope(
     Args:
         bridge:              CanonicalBridgeV2 인스턴스.
         prompt_or_envelope:  str 프롬프트 또는 AgentEnvelope.
-        policy:              RoutingPolicy (None이면 기본 정책 사용).
+        policy:              AgentRoutingPolicy (None이면 기본 정책 사용).
         **kwargs:            generate()에 전달할 추가 인자.
 
     Returns:
@@ -220,7 +220,7 @@ def _bridge_generate_with_envelope(
         return bridge.generate(prompt_or_envelope, **kwargs)
 
     env = prompt_or_envelope
-    effective_policy = policy or RoutingPolicy()
+    effective_policy = policy or AgentRoutingPolicy()
     decision = effective_policy.decide_for_agent(env)
 
     model_type_map = {
@@ -248,6 +248,6 @@ __all__ = [
     "AgentEnvelope",
     "AgentRole",
     "RoutingDecision",
-    "RoutingPolicy",
+    "AgentRoutingPolicy",
     "_bridge_generate_with_envelope",
 ]
