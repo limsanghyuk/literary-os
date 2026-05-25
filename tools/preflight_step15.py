@@ -62,6 +62,7 @@ class Violation(NamedTuple):
     file:   str
     lineno: int
     detail: str
+    code:   str = ""  # 선택 식별 코드 (예: V3_HANDOFF_MISSING)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -464,6 +465,50 @@ def check_circular_imports() -> list[Violation]:
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+#  V621-PRE: v3.0 핸드오프 필수 학습 파일 존재 확인 (ADR-088)
+# ══════════════════════════════════════════════════════════════════════════════
+
+REQUIRED_V3_FILES = [
+    "docs/sessions/2026-05-25_v621_v630_phase_b_main_handoff_v3.md",
+    "docs/sessions/literary_os_v621_v630_phase_b_blueprint_v3.md",
+]
+
+def verify_v3_handoff() -> dict:
+    """P-IF V621-PRE: v3.0 핸드오프 필수 파일 존재 확인.
+
+    Returns:
+        {'pass': bool, 'found': list[str], 'missing': list[str]}
+    """
+    found, missing = [], []
+    for rel in REQUIRED_V3_FILES:
+        if (REPO_ROOT / rel).exists():
+            found.append(rel)
+        else:
+            missing.append(rel)
+    return {"pass": len(missing) == 0, "found": found, "missing": missing}
+
+
+def check_v3_handoff() -> list[Violation]:
+    """Rule-9 (HIGH): V621-PRE 핸드오프 파일 존재 확인."""
+    res = verify_v3_handoff()
+    if res["pass"]:
+        return []
+    missing = res["missing"]
+    detail = (
+        f"v3 핸드오프 필수 파일 {len(missing)}건 미존재 — "
+        f"docs/sessions/에 push 필요: {missing}"
+    )
+    return [Violation(
+        code="V3_HANDOFF_MISSING",
+        rule="Rule-9",
+        level="HIGH",
+        file="docs/sessions (v3 handoff)",
+        lineno=0,
+        detail=detail,
+    )]
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 #  보고서 출력
 # ══════════════════════════════════════════════════════════════════════════════
 
@@ -565,6 +610,10 @@ def main() -> int:
         violations += check_orphan_modules()
         violations += check_module_connectivity()
         violations += check_circular_imports()
+
+    # Section C: V621-PRE 핸드오프 파일 (Rule-9)
+    if not args.hygiene_only:
+        violations += check_v3_handoff()
 
     print_report(violations, args.hygiene_only, args.nexus_only)
 

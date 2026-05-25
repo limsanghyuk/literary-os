@@ -41,3 +41,25 @@ This project is indexed by GitNexus as **release_v571** (28964 symbols, 56087 re
 | Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md` |
 
 <!-- gitnexus:end -->
+
+---
+
+## 🔴 필수 학습 (Critical Loading) — 모든 작업 시작 전
+
+작업 시작 전 반드시 읽고 컨텍스트에 포함:
+
+1. `docs/sessions/2026-05-25_v621_v630_phase_b_main_handoff_v3.md`
+2. `docs/sessions/literary_os_v621_v630_phase_b_blueprint_v3.md`
+3. `docs/sessions/literary_os_v621_v630_phase_b_blueprint_v3.docx`
+
+**3개 파일이 컨텍스트에 없으면 절대 코드 작성 금지.**
+
+docx 추출:
+```bash
+python -c "
+from docx import Document
+d = Document('docs/sessions/literary_os_v621_v630_phase_b_blueprint_v3.docx')
+for p in d.paragraphs:
+    if p.text.strip(): print(p.text)
+" | head -200
+```

@@ -1,0 +1,44 @@
+# .github/workflows/openapi_diff.yml
+# OpenAPI SemVer 브레이킹 체인지 탐지 CI (P-IF-04, V621, ADR-088)
+# Phase B 기간: warn-only 모드 (메이저 변경 시 경고만, 실패 없음)
+# Phase C+ 전환 시: --warn-only 플래그 제거 → 브레이킹 시 CI 차단
+
+name: OpenAPI Breaking Change Detection
+
+on:
+  pull_request:
+    paths:
+      - 'literary_system/serving/model_serving_endpoint.py'
+      - 'tools/detect_openapi_breaking.py'
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  openapi-diff:
+    name: OpenAPI SemVer 브레이킹 탐지
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -e ".[dev]" --break-system-packages -q || pip install -e . -q
+
+      - name: Export current OpenAPI schema
+        run: python tools/export_openapi.py --format json --output /tmp/openapi_current.json
+
+      - name: Detect breaking changes (warn-only in Phase B)
+        run: python tools/detect_openapi_breaking.py --warn-only --baseline 1
+
+      - name: Print schema summary
+        run: |
+          echo "=== API Version ===" && python -c "
+          from literary_system.serving.model_serving_endpoint import SEMVER
+          print(f'API SemVer: {SEMVER}')
+          "

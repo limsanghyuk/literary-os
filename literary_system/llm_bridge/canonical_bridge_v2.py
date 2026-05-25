@@ -182,3 +182,72 @@ class CanonicalBridgeV2:
             "fallback_count": self._fallback_count,
             "fallback_enabled": self.config.fallback_enabled,
         }
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  V621 확장 — AgentEnvelope 지원 (P-IF-01, ADR-088)
+# ══════════════════════════════════════════════════════════════════════════════
+
+from literary_system.llm_bridge.agent_envelope import (  # noqa: E402
+    AgentEnvelope,
+    AgentRole,
+    RoutingDecision,
+    RoutingPolicy,
+)
+
+
+def _bridge_generate_with_envelope(
+    bridge: "CanonicalBridgeV2",
+    prompt_or_envelope: "str | AgentEnvelope",
+    policy: "RoutingPolicy | None" = None,
+    **kwargs: Any,
+) -> BridgeResponse:
+    """AgentEnvelope 또는 str을 받아 generate() 하위 호환 래퍼.
+
+    - str 입력: 기존 generate() 그대로 위임
+    - AgentEnvelope 입력: policy 기반 라우팅 결정 후 generate() 위임
+
+    Args:
+        bridge:              CanonicalBridgeV2 인스턴스.
+        prompt_or_envelope:  str 프롬프트 또는 AgentEnvelope.
+        policy:              RoutingPolicy (None이면 기본 정책 사용).
+        **kwargs:            generate()에 전달할 추가 인자.
+
+    Returns:
+        BridgeResponse
+    """
+    if isinstance(prompt_or_envelope, str):
+        return bridge.generate(prompt_or_envelope, **kwargs)
+
+    env = prompt_or_envelope
+    effective_policy = policy or RoutingPolicy()
+    decision = effective_policy.decide_for_agent(env)
+
+    model_type_map = {
+        RoutingDecision.LOCAL_LORA:   ModelType.LOCAL,
+        RoutingDecision.EXTERNAL_LLM: ModelType.EXTERNAL,
+        RoutingDecision.CASCADE:      None,  # CASCADE: 외부 → 로컬 폴백 순서
+    }
+
+    mt = model_type_map.get(decision)
+    if mt is None:
+        # CASCADE: 외부 우선, 실패 시 로컬
+        kwargs.setdefault("model_type", ModelType.EXTERNAL)
+    else:
+        kwargs.setdefault("model_type", mt)
+
+    return bridge.generate(env.prompt, **kwargs)
+
+
+# 하위 호환 임포트를 위해 모듈 레벨에 재노출
+__all__ = [
+    "BridgeConfig",
+    "BridgeResponse",
+    "CanonicalBridgeV2",
+    "ModelType",
+    "AgentEnvelope",
+    "AgentRole",
+    "RoutingDecision",
+    "RoutingPolicy",
+    "_bridge_generate_with_envelope",
+]

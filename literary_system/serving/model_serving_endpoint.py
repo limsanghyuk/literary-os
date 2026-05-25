@@ -199,3 +199,117 @@ class ModelServingEndpoint:
             "gate_passed": self.model_card.gate_passed,
             "fastapi_available": _FASTAPI_AVAILABLE,
         }
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  V621 확장 — OpenAPI SemVer (P-IF-04, ADR-088)
+# ══════════════════════════════════════════════════════════════════════════════
+
+#: API 시맨틱 버전 상수 (P-IF-04)
+SEMVER_MAJOR: int = 1
+SEMVER_MINOR: int = 0
+SEMVER_PATCH: int = 0
+SEMVER: str = f"{SEMVER_MAJOR}.{SEMVER_MINOR}.{SEMVER_PATCH}"
+
+#: OpenAPI YAML 최소 스키마 (실 서버 없이 단위 테스트 가능)
+_OPENAPI_SCHEMA_MINIMAL: dict = {
+    "openapi": "3.1.0",
+    "info": {
+        "title": "Literary OS Model Serving API",
+        "version": SEMVER,
+        "description": "P-IF-04 OpenAPI SemVer (V621, ADR-088)",
+    },
+    "paths": {
+        "/model_card": {
+            "get": {
+                "summary": "현재 서빙 모델 카드 반환",
+                "operationId": "get_model_card",
+                "responses": {
+                    "200": {"description": "ModelCard JSON"},
+                },
+            }
+        },
+        "/openapi.yaml": {
+            "get": {
+                "summary": "OpenAPI 스펙 YAML 반환 (P-IF-04)",
+                "operationId": "get_openapi_yaml",
+                "responses": {
+                    "200": {"description": "OpenAPI 3.1 YAML"},
+                },
+            }
+        },
+        "/api_version": {
+            "get": {
+                "summary": "현재 API 시맨틱 버전 반환",
+                "operationId": "get_api_version",
+                "responses": {
+                    "200": {
+                        "description": "semver string",
+                        "content": {
+                            "application/json": {
+                                "example": {"semver": "1.0.0"}
+                            }
+                        },
+                    }
+                },
+            }
+        },
+    },
+}
+
+
+def get_api_version_response() -> dict:
+    """P-IF-04: /api_version 엔드포인트 응답 (FastAPI 없이 단위 테스트 가능).
+
+    Returns:
+        {"semver": "1.0.0"}
+    """
+    return {"semver": SEMVER}
+
+
+def get_openapi_schema() -> dict:
+    """P-IF-04: OpenAPI 3.1 스키마 딕셔너리 반환.
+
+    실 FastAPI 인스턴스 없이 단위 테스트 가능하도록 모듈 레벨 상수를 반환한다.
+    """
+    return dict(_OPENAPI_SCHEMA_MINIMAL)
+
+
+def build_app_with_semver() -> Any:
+    """P-IF-04: /openapi.yaml + /api_version 엔드포인트가 추가된 FastAPI 앱 반환.
+
+    FastAPI 미설치 환경에서는 RuntimeError.
+    """
+    if not _FASTAPI_AVAILABLE:
+        raise RuntimeError(
+            "FastAPI가 설치되어 있지 않습니다. `pip install fastapi` 후 재시도."
+        )
+
+    try:
+        import yaml as _yaml  # pyyaml
+    except ImportError:
+        import json as _json  # yaml 미설치 시 JSON 폴백
+
+        def _dump(d: dict) -> str:
+            return _json.dumps(d, ensure_ascii=False, indent=2)
+    else:
+        def _dump(d: dict) -> str:  # type: ignore[misc]
+            return _yaml.safe_dump(d, allow_unicode=True)
+
+    from fastapi.responses import PlainTextResponse, JSONResponse as _JSONResponse
+
+    app = FastAPI(
+        title="Literary OS Model Serving API",
+        version=SEMVER,
+        description="P-IF-04 OpenAPI SemVer (V621, ADR-088)",
+    )
+
+    @app.get("/openapi.yaml", response_class=PlainTextResponse)
+    async def openapi_yaml_route() -> str:
+        return _dump(get_openapi_schema())
+
+    @app.get("/api_version")
+    async def api_version_route() -> _JSONResponse:
+        return _JSONResponse(content=get_api_version_response())
+
+    return app
