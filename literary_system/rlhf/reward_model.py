@@ -470,3 +470,184 @@ class RewardModel:
         if den_x == 0 or den_y == 0:
             return 0.0
         return num / (den_x * den_y)
+
+
+# ════════════════════════════════════════════════════════════════
+# V622 ADR-089 — AdvSeed NamedTuple + ADV_SEEDS_REQUIRED + RewardModelV2
+# ════════════════════════════════════════════════════════════════
+
+from typing import NamedTuple
+
+
+class AdvSeed(NamedTuple):
+    """적대적 시드 명세 (ADR-089 §5.1).
+
+    Attributes:
+        name        : 시드 식별자 (영문 스네이크케이스)
+        description : 시드 설명 (한국어)
+        inject_fn   : 텍스트 → 오염 텍스트 변환 함수
+        expected_drop: 정상 보상 대비 최소 하락 비율 (0.0~1.0)
+    """
+    name:          str
+    description:   str
+    inject_fn:     object   # Callable[[str], str]
+    expected_drop: float    # 보상 하락 기대값 (0.0~1.0)
+
+
+# ────────────────────────────────────────────────────────────────
+# ADV_SEEDS_REQUIRED — 5종 필수 적대적 시드 (ADR-089 §5.2)
+# ────────────────────────────────────────────────────────────────
+
+def _inject_marker_stuffing(text: str) -> str:
+    """마커 스터핑: 보상 마커 키워드를 과도하게 반복 삽입."""
+    stuffing = " 감동적인 장면 아름다운 묘사 " * 10
+    return stuffing + text + stuffing
+
+
+def _inject_length_inflation(text: str) -> str:
+    """길이 인플레이션: 의미 없는 공백·줄바꿈으로 텍스트 팽창."""
+    return "\n".join(list(text) + [" " * 200] * 50)
+
+
+def _inject_repetition_pattern(text: str) -> str:
+    """반복 패턴: 동일 구문을 20회 반복."""
+    repeat_phrase = "그래서 결국 모든 것이 변했다. " * 20
+    return repeat_phrase + text[:50]
+
+
+def _inject_extreme_emotion(text: str) -> str:
+    """극단 감정: 극단적 감정 키워드로 텍스트 오염."""
+    flood = "!!!분노!!! 슬픔!!! 절망!!! " * 15
+    return flood + text + flood
+
+
+def _inject_genre_deviation(text: str) -> str:
+    """장르 이탈: SF 용어를 드라마 텍스트에 무작위 삽입."""
+    sf_terms = "광선검 워프드라이브 외계인 로봇 우주선 " * 8
+    mid = len(text) // 2
+    return text[:mid] + " " + sf_terms + " " + text[mid:]
+
+
+ADV_SEEDS_REQUIRED: List["AdvSeed"] = [
+    AdvSeed(
+        name="marker_stuffing",
+        description="보상 마커 키워드 과도 반복 삽입",
+        inject_fn=_inject_marker_stuffing,
+        expected_drop=0.20,
+    ),
+    AdvSeed(
+        name="length_inflation",
+        description="의미 없는 공백·줄바꿈으로 텍스트 팽창",
+        inject_fn=_inject_length_inflation,
+        expected_drop=0.15,
+    ),
+    AdvSeed(
+        name="repetition_pattern",
+        description="동일 구문 20회 반복으로 다양성 0",
+        inject_fn=_inject_repetition_pattern,
+        expected_drop=0.25,
+    ),
+    AdvSeed(
+        name="extreme_emotion",
+        description="극단적 감정 키워드로 드라마 균형 파괴",
+        inject_fn=_inject_extreme_emotion,
+        expected_drop=0.15,
+    ),
+    AdvSeed(
+        name="genre_deviation",
+        description="SF 용어를 드라마 텍스트에 무작위 삽입",
+        inject_fn=_inject_genre_deviation,
+        expected_drop=0.10,
+    ),
+]
+
+
+# ────────────────────────────────────────────────────────────────
+# RewardModelV2 — AdvSeed 통합 + score_with_adv_seeds()
+# ────────────────────────────────────────────────────────────────
+
+class RewardModelV2(RewardModel):
+    """V622 RewardModel 확장 (ADR-089 §5.3).
+
+    RewardModel v1 완전 상속 + 적대적 견고성 평가 추가:
+      - score_with_adv_seeds()  : 5종 AdvSeed 자동 주입 후 보상 비교
+      - robustness_score()      : 전체 시드의 보상 하락 평균 (낮을수록 견고)
+    """
+
+    VERSION: str = "2.0.0"
+
+    def score_with_adv_seeds(
+        self,
+        text: str,
+        seeds: Optional[List[AdvSeed]] = None,
+    ) -> Dict[str, Any]:
+        """원본 텍스트 vs 5종 적대적 시드 주입 후 보상 비교 (ADR-089 §5.4).
+
+        Args:
+            text  : 원본 씬 텍스트.
+            seeds : 테스트할 AdvSeed 목록. None 이면 ADV_SEEDS_REQUIRED 전체 사용.
+
+        Returns:
+            {
+                "baseline":   float,          # 원본 R(scene)
+                "results": [                  # 시드별 결과
+                    {
+                        "seed":        str,   # 시드 이름
+                        "score":       float, # 오염 후 R(scene)
+                        "drop":        float, # baseline - score
+                        "expected_drop": float,
+                        "passed":      bool,  # drop >= expected_drop
+                    }, ...
+                ],
+                "robustness":  float,         # 1 - mean(drop) ∈ [0,1]
+                "all_passed":  bool,          # 모든 시드 PASS 여부
+            }
+
+        Raises:
+            ValueError: text 가 빈 문자열일 때.
+        """
+        if not text or not text.strip():
+            raise ValueError("score_with_adv_seeds: text 는 빈 문자열이면 안 됩니다.")
+
+        if seeds is None:
+            seeds = ADV_SEEDS_REQUIRED
+
+        baseline_result = self.compute(text)
+        baseline = baseline_result.reward
+
+        results = []
+        drops: List[float] = []
+
+        for seed in seeds:
+            corrupted = seed.inject_fn(text)
+            corrupted_result = self.compute(corrupted)
+            adv_score = corrupted_result.reward
+            drop = max(0.0, baseline - adv_score)
+            passed = drop >= seed.expected_drop
+            results.append({
+                "seed":          seed.name,
+                "score":         round(adv_score, 4),
+                "drop":          round(drop, 4),
+                "expected_drop": seed.expected_drop,
+                "passed":        passed,
+            })
+            drops.append(drop)
+
+        mean_drop = sum(drops) / len(drops) if drops else 0.0
+        robustness = max(0.0, min(1.0, 1.0 - mean_drop))
+        all_passed = all(r["passed"] for r in results)
+
+        return {
+            "baseline":   round(baseline, 4),
+            "results":    results,
+            "robustness": round(robustness, 4),
+            "all_passed": all_passed,
+        }
+
+    def robustness_score(self, text: str) -> float:
+        """전체 ADV_SEEDS_REQUIRED 기반 견고성 점수 (0.0~1.0).
+
+        높을수록 적대적 입력에 강건함.
+        """
+        report = self.score_with_adv_seeds(text)
+        return report["robustness"]

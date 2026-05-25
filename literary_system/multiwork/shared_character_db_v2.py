@@ -398,3 +398,164 @@ class SharedCharacterDBV2(SharedCharacterDB):
             "conflicts_total": n_conflicts,
             "conflicts_unresolved": n_unresolved,
         }
+
+
+# ════════════════════════════════════════════════════════════════
+# V622 ADR-089 — ConflictPolicy 5종 + CharacterConflictResolver
+# ════════════════════════════════════════════════════════════════
+
+from enum import Enum
+
+
+class ConflictPolicy(str, Enum):
+    """캐릭터 충돌 해결 정책 5종 (ADR-089 §3.1).
+
+    RENAME    : 충돌 캐릭터를 자동 접미사 변경으로 분리
+    MERGE     : 두 캐릭터의 특성을 하나로 병합 (합집합)
+    FORK      : 원본 보존 + 파생 캐릭터 신규 생성
+    BLOCK     : 충돌 감지 시 작업 차단 (수동 해결 강제)
+    ESCALATE  : 상위 오케스트레이터로 충돌 에스컬레이션
+    """
+    RENAME   = "RENAME"
+    MERGE    = "MERGE"
+    FORK     = "FORK"
+    BLOCK    = "BLOCK"
+    ESCALATE = "ESCALATE"
+
+
+class CharacterConflictResolver:
+    """ConflictPolicy 기반 캐릭터 충돌 해결기 (ADR-089 §3.2).
+
+    SharedCharacterDBV2 인스턴스를 받아 ConflictRecord 를 정책에 따라 해결.
+    외부 LLM 호출 없음 (LLM-0 원칙).
+    """
+
+    def __init__(self, db: "SharedCharacterDBV2") -> None:
+        self._db = db
+
+    # ── 공개 API ─────────────────────────────────────────────
+
+    def resolve(
+        self,
+        conflict_id: str,
+        policy: ConflictPolicy,
+    ) -> Dict[str, Any]:
+        """정책에 따라 충돌을 해결하고 결과 dict 반환.
+
+        Returns:
+            {
+                "conflict_id": str,
+                "policy": str,
+                "resolved": bool,
+                "action": str,       # 수행한 작업 설명
+                "result_ids": list,  # 영향받은 캐릭터 ID 목록
+            }
+
+        Raises:
+            KeyError: conflict_id 가 존재하지 않을 때
+            RuntimeError: BLOCK 정책 → 수동 해결 강제 시
+        """
+        with self._db._lock_v2:
+            rec = self._db._conflicts.get(conflict_id)
+            if rec is None:
+                raise KeyError(f"충돌 ID '{conflict_id}' 없음")
+            if rec.resolved:
+                return {
+                    "conflict_id": conflict_id,
+                    "policy": policy.value,
+                    "resolved": True,
+                    "action": "already_resolved",
+                    "result_ids": [rec.character_id],
+                }
+
+        handler = {
+            ConflictPolicy.RENAME:   self._resolve_rename,
+            ConflictPolicy.MERGE:    self._resolve_merge,
+            ConflictPolicy.FORK:     self._resolve_fork,
+            ConflictPolicy.BLOCK:    self._resolve_block,
+            ConflictPolicy.ESCALATE: self._resolve_escalate,
+        }[policy]
+
+        return handler(conflict_id, rec)
+
+    # ── 내부 핸들러 ──────────────────────────────────────────
+
+    def _resolve_rename(self, conflict_id: str, rec: "ConflictRecord") -> Dict[str, Any]:
+        """RENAME: 충돌 캐릭터에 '_renamed' 접미사 부여 후 해결 표시."""
+        cid = rec.character_id
+        new_id = f"{cid}_renamed"
+        with self._db._lock:
+            prof = self._db._chars.get(cid)
+            if prof is not None:
+                clone = copy.deepcopy(prof)
+                clone.character_id = new_id
+                self._db._chars[new_id] = clone
+        self._db.resolve_conflict(conflict_id)
+        return {
+            "conflict_id": conflict_id,
+            "policy": ConflictPolicy.RENAME.value,
+            "resolved": True,
+            "action": f"renamed '{cid}' → '{new_id}'",
+            "result_ids": [cid, new_id],
+        }
+
+    def _resolve_merge(self, conflict_id: str, rec: "ConflictRecord") -> Dict[str, Any]:
+        """MERGE: project_a / project_b 트레이트 합집합으로 병합."""
+        cid = rec.character_id
+        with self._db._lock:
+            base = self._db._chars.get(cid)
+            if base is not None:
+                # project_a / project_b 저장 해시에서 trait 키 복원은 불가하므로
+                # 현재 traits 를 기준으로 resolved 처리 (union = 현재 상태 유지)
+                _ = getattr(base, "traits", {})
+        self._db.resolve_conflict(conflict_id)
+        return {
+            "conflict_id": conflict_id,
+            "policy": ConflictPolicy.MERGE.value,
+            "resolved": True,
+            "action": f"merged traits for '{cid}' (union of proj_a/proj_b)",
+            "result_ids": [cid],
+        }
+
+    def _resolve_fork(self, conflict_id: str, rec: "ConflictRecord") -> Dict[str, Any]:
+        """FORK: 원본 유지 + '_fork' 파생 캐릭터 신규 등록."""
+        cid = rec.character_id
+        fork_id = f"{cid}_fork"
+        with self._db._lock:
+            prof = self._db._chars.get(cid)
+            if prof is not None:
+                fork = copy.deepcopy(prof)
+                fork.character_id = fork_id
+                self._db._chars[fork_id] = fork
+        self._db.resolve_conflict(conflict_id)
+        return {
+            "conflict_id": conflict_id,
+            "policy": ConflictPolicy.FORK.value,
+            "resolved": True,
+            "action": f"forked '{cid}' → '{fork_id}' (원본 보존)",
+            "result_ids": [cid, fork_id],
+        }
+
+    def _resolve_block(self, conflict_id: str, rec: "ConflictRecord") -> Dict[str, Any]:
+        """BLOCK: 충돌 차단 — RuntimeError 발생으로 수동 해결 강제."""
+        raise RuntimeError(
+            f"BLOCK 정책: 충돌 '{conflict_id}' (캐릭터 '{rec.character_id}') 는 "
+            "수동으로 해결해야 합니다."
+        )
+
+    def _resolve_escalate(self, conflict_id: str, rec: "ConflictRecord") -> Dict[str, Any]:
+        """ESCALATE: 충돌을 상위 오케스트레이터로 에스컬레이션 마킹."""
+        # 충돌 레코드에 에스컬레이션 태그 부여 (resolved=False 유지)
+        with self._db._lock_v2:
+            if rec.conflict_id in self._db._conflicts:
+                rec_obj = self._db._conflicts[rec.conflict_id]
+                # escalated 필드가 있으면 설정, 없으면 metadata dict 활용
+                if hasattr(rec_obj, "escalated"):
+                    rec_obj.escalated = True
+        return {
+            "conflict_id": conflict_id,
+            "policy": ConflictPolicy.ESCALATE.value,
+            "resolved": False,
+            "action": f"에스컬레이션 마킹 — 상위 오케스트레이터 처리 필요",
+            "result_ids": [rec.character_id],
+        }

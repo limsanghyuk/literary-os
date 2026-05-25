@@ -535,3 +535,134 @@ class MultiWorkOrchestratorV2(MultiWorkOrchestrator):
             "char_db": self.char_db.status(),
             "world_db": self.world_db.status(),
         }
+
+
+# ════════════════════════════════════════════════════════════════
+# V622 ADR-089 — WorkloadProfile + SLO 상수 + schedule()
+# ════════════════════════════════════════════════════════════════
+
+from enum import Enum
+
+
+class WorkloadProfile(str, Enum):
+    """다중 작업 부하 프로파일 (ADR-089 §4.1).
+
+    SINGLE : 단일 프로젝트 — SLO 3,000 ms
+    DUAL   : 2개 프로젝트 동시 — SLO 5,000 ms
+    TRIPLE : 3개 이상 프로젝트 동시 — SLO 8,000 ms
+    """
+    SINGLE = "SINGLE"
+    DUAL   = "DUAL"
+    TRIPLE = "TRIPLE"
+
+
+# SLO 목표 응답시간 (ms) — 프로파일별
+SLO_SINGLE_MS: int = 3_000   # 단일 프로젝트 SLO
+SLO_DUAL_MS:   int = 5_000   # 2개 동시 SLO
+SLO_TRIPLE_MS: int = 8_000   # 3개+ 동시 SLO
+
+_SLO_MAP: Dict[WorkloadProfile, int] = {
+    WorkloadProfile.SINGLE: SLO_SINGLE_MS,
+    WorkloadProfile.DUAL:   SLO_DUAL_MS,
+    WorkloadProfile.TRIPLE: SLO_TRIPLE_MS,
+}
+
+
+def classify_workload(project_ids: List[str]) -> WorkloadProfile:
+    """프로젝트 수로 WorkloadProfile 자동 분류."""
+    n = len(project_ids)
+    if n <= 1:
+        return WorkloadProfile.SINGLE
+    elif n == 2:
+        return WorkloadProfile.DUAL
+    else:
+        return WorkloadProfile.TRIPLE
+
+
+def get_slo_ms(profile: WorkloadProfile) -> int:
+    """WorkloadProfile에 해당하는 SLO 목표(ms) 반환."""
+    return _SLO_MAP[profile]
+
+
+class ScheduleResult:
+    """schedule() 반환 결과."""
+
+    def __init__(
+        self,
+        profile: WorkloadProfile,
+        slo_ms: int,
+        project_order: List[str],
+        estimated_ms: int,
+        slo_ok: bool,
+    ) -> None:
+        self.profile: WorkloadProfile = profile
+        self.slo_ms: int = slo_ms
+        self.project_order: List[str] = project_order
+        self.estimated_ms: int = estimated_ms
+        self.slo_ok: bool = slo_ok
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "profile":       self.profile.value,
+            "slo_ms":        self.slo_ms,
+            "project_order": self.project_order,
+            "estimated_ms":  self.estimated_ms,
+            "slo_ok":        self.slo_ok,
+        }
+
+
+def schedule(
+    project_ids: List[str],
+    scene_ms_each: int = 1_000,
+) -> "ScheduleResult":
+    """WorkloadProfile 기반 스케줄 계획 반환 (ADR-089 §4.3).
+
+    Args:
+        project_ids:   처리할 프로젝트 ID 목록.
+        scene_ms_each: 프로젝트당 씬 처리 예상 시간(ms), 기본 1,000 ms.
+
+    Returns:
+        ScheduleResult — profile / slo_ms / 예상 완료 시간 / SLO 충족 여부.
+
+    알고리즘:
+        SINGLE → 단순 직렬.
+        DUAL   → 병렬 2-way (최대 처리 시간 기준).
+        TRIPLE → 병렬 N-way, Round-Robin 슬롯 배분.
+    """
+    if not project_ids:
+        return ScheduleResult(
+            profile=WorkloadProfile.SINGLE,
+            slo_ms=SLO_SINGLE_MS,
+            project_order=[],
+            estimated_ms=0,
+            slo_ok=True,
+        )
+
+    profile = classify_workload(project_ids)
+    slo_ms  = get_slo_ms(profile)
+
+    if profile == WorkloadProfile.SINGLE:
+        estimated_ms = scene_ms_each
+        order = list(project_ids)
+    elif profile == WorkloadProfile.DUAL:
+        # 병렬 2-way → 둘 중 더 긴 작업이 기준
+        estimated_ms = scene_ms_each  # 동시 처리 → 단일 SLO 내
+        order = list(project_ids)
+    else:
+        # TRIPLE: N-way 병렬 — 슬롯 수 = ceil(N / 2)
+        import math
+        slots = math.ceil(len(project_ids) / 2)
+        estimated_ms = slots * scene_ms_each
+        # Round-Robin 순서로 정렬
+        order = []
+        for i in range(slots):
+            for j in range(i, len(project_ids), slots):
+                order.append(project_ids[j])
+
+    return ScheduleResult(
+        profile=profile,
+        slo_ms=slo_ms,
+        project_order=order,
+        estimated_ms=estimated_ms,
+        slo_ok=(estimated_ms <= slo_ms),
+    )
