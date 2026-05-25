@@ -1,8 +1,8 @@
-# MANIFEST — Literary OS V630
+# MANIFEST — Literary OS V631
 
-버전: 11.0.0
+버전: 11.1.0
 릴리즈일: 2026-05-22
-빌드 타입: Phase B COMPLETE — G61 7축 Exit Gate (V630, ADR-097)
+빌드 타입: Phase C SP-C.1 진행 중 — LOSConstitutionV2 + Bayesian Optuna (V631, ADR-098)
 
 ## 테스트 결과
 

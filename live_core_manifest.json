@@ -1,19 +1,19 @@
 {
   "manifest_version": "3.0",
   "generated_at": "2026-05-25T00:00:00Z",
-  "version": "v11.0.0",
-  "version_tag": "V630",
-  "codename": "Phase B Exit Gate G61 V630",
-  "phase": "B",
-  "subphase": "SP-B.4",
-  "status": "Phase B COMPLETE — 60 Gates ALL PASS",
-  "description": "Literary OS V630 — Phase B 완전 종료, G61 7축 Exit Gate (ADR-097)",
+  "version": "v11.1.0",
+  "version_tag": "V631",
+  "codename": "SP-C.1 Constitution v2.0 Bayesian Optimiser",
+  "phase": "C",
+  "subphase": "SP-C.1",
+  "status": "Phase C SP-C.1 진행 중 — LOSConstitutionV2 + Bayesian Optuna + entropy(w)>=1.5",
+  "description": "Literary OS V631 — SP-C.1 Self-Learning Loop 시작: LOSConstitutionV2 (ADR-098)",
   "gates": 60,
   "gate_count": 60,
-  "test_count": 7213,
-  "tests_passing": 7213,
-  "adr": "ADR-097",
-  "release_tag": "v11.0.0",
+  "test_count": 7246,
+  "tests_passing": 7246,
+  "adr": "ADR-098",
+  "release_tag": "v11.1.0",
   "commit": "da003851",
   "last_updated": "2026-05-25",
   "updated_at": "2026-05-25T00:00:00Z",
@@ -21,7 +21,7 @@
     "v11.0.0",
     "v11.0.0-V630"
   ],
-  "build_notes": "V630: G61 7축(C1~C7) Exit Gate, MIN_TESTS 7000, ADR-097 (supersedes ADR-080). Phase B 완전 종료. BUG-R1~R4/V4/M1/M2 수정 (V630-AUDIT).",
+  "build_notes": "V631 SP-C.1: LOSConstitutionV2 Bayesian Optuna w1~w5, entropy(w)>=1.5 (C-M-05), ADR-098. Phase C 진입.",
   "audit_fixes": [
     "BUG-A4: G61 무한 재귀 수정 (release_gate.py G61 특수 처리)",
     "BUG-C2-3: OptimizationOrchestrator LEAK Stage baseline_snap 저장",
@@ -32,7 +32,7 @@
     "BUG-C3-1: MemoryLeakDetector.top_allocators() None guard",
     "BUG-C4-1: PhaseBExitReport.all_pass 빈 리스트 방어"
   ],
-  "literary_os_version": "V630",
-  "build_tag": "v11.0.0-V630-AUDIT3",
-  "release": "V630"
+  "literary_os_version": "V631",
+  "build_tag": "v11.1.0-V631",
+  "release": "V631"
 }
