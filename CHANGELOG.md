@@ -1,3 +1,25 @@
+## [11.1.0] — 2026-05-25 (V631)
+
+### SP-C.1 Phase C 시작 — LOSConstitution v2.0 Bayesian Weight Optimiser
+
+#### 신규 기능
+- `literary_system/constitution/los_constitution_v2.py`: LOSConstitutionV2 구현
+  - Bayesian Optimisation (Optuna TPE Sampler) w1~w5 자동 탐색
+  - entropy(w) >= 1.5 분포 제약 (C-M-05, ADR-098)
+  - save/load JSON 영속화
+  - LOSConstitution v1.0 완전 상속 (LLM-0 준수)
+
+#### 문서
+- docs/adr/ADR-098.md: LOSConstitution v2.0 Bayesian Weight Optimiser 설계 결정
+
+#### 테스트
+- tests/unit/test_v631_constitution_v2.py: 33 TC (TC-01~33) — 33/33 PASS
+- 전체: 1,049 unit PASS / 7,246 total
+
+#### 버전
+- pyproject.toml: 11.0.0 → 11.1.0
+- Phase C SP-C.1 진입
+
 ## [11.0.0] — 2026-05-25 (V630)
 
 Phase B 완전 종료. G61 7축(C1~C7) Exit Gate (ADR-097). 60 Gates ALL PASS, 7213 Tests.
