@@ -68,3 +68,16 @@ __all__ = [
     "AnalyticsEvent", "CohortReport", "NPSResult",
     "HelmValidator", "HelmValidationResult", "TrainPlaneChartSpec",
 ]
+
+from literary_system.ops.prometheus_exporter import (
+    MetricSnapshot,
+    MonitoringConfig,
+    PrometheusExporter,
+)
+
+__all__ += [
+    # prometheus_exporter (V628)
+    "PrometheusExporter",
+    "MetricSnapshot",
+    "MonitoringConfig",
+]

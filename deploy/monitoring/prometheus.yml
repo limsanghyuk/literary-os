@@ -1,0 +1,32 @@
+# Literary OS Prometheus 설정 (V628)
+# ADR-095: Grafana+Prometheus 모니터링 스택
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    project: 'literary-os'
+    phase: 'B'
+
+scrape_configs:
+  # ServePlane 메트릭 (CPU 추론 서버)
+  - job_name: 'literary-os-serve-plane'
+    static_configs:
+      - targets: ['serve-plane-svc.literary-serve.svc.cluster.local:8080']
+    metrics_path: '/metrics'
+    scheme: 'http'
+    scrape_interval: 15s
+
+  # TrainPlane 메트릭 (GPU 학습 작업)
+  - job_name: 'literary-os-train-plane'
+    static_configs:
+      - targets: ['train-plane-svc.literary-train.svc.cluster.local:8090']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # 비용 SLO 모니터
+  - job_name: 'literary-os-cost-monitor'
+    static_configs:
+      - targets: ['localhost:9091']
+    metrics_path: '/metrics'
+    scrape_interval: 60s
