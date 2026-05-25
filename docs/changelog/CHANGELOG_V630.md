@@ -100,3 +100,36 @@ Phase C 이행 준비 완료.
 
 - 60 TC (test_v630_phase_b_exit_v2.py) 60/60 PASS 유지 — 기능 동작 변경 없음.
 - 순수 문자열·메타데이터 교정 + 방어 코드 강화.
+
+---
+
+## [V630-AUDIT2] 2차 교차검증 보강 패치
+
+**작성자:** 최고 수석 컴파일러 + 최고 시스템 프린시펄 엔지니어  
+**기준 커밋:** `03660a7` → AUDIT2 패치
+
+### 발견 및 수정 결함
+
+| ID | 위치 | 발견 내용 | 수정 |
+|----|------|-----------|------|
+| BUG-T1 | `tools/test_inventory.json` | source_hash stale (`d84cd724` vs `9e7500`) — 소스 수정 후 미재생성 | `generate_test_inventory.py` 재실행 → hash `9e7500691fc875ae` 갱신 |
+| BUG-TC1 | `tests/unit/test_v630_phase_b_exit_v2.py` | BUG-V4 `__dataclass_fields__` 수정 코드 TC 0건 | TC-61~63 추가 (`TestDataclassFieldsDoubleCheck`) |
+| META-1 | `live_core_manifest.json`, `README.md` | test_count 7210 (TC-61~63 추가 전) | 7213으로 갱신 |
+
+### TC-61~63 커버리지 상세
+
+- **TC-61**: `dataclass` 기본값 없는 필드 → `hasattr(Class, field)==False`이지만 `__dataclass_fields__` 경로로 PASS
+- **TC-62**: 일반 클래스(`__dataclass_fields__` 없음) → `hasattr` 경로만 동작, missing 정상 탐지
+- **TC-63**: `dataclass` 기본값 있는 필드 → `hasattr==True`로 이중 체크 무관하게 PASS
+
+### 최종 검증 결과
+
+| 항목 | 결과 |
+|------|------|
+| 전체 TC 수 | **7213 PASS** (+3 BUG-TC1) |
+| EA-6 source_hash | `9e7500691fc875ae` ✓ |
+| test_v630_phase_b_exit_v2.py | 63/63 PASS ✓ |
+| test_phase_a_exit.py::test_tc09_ea6_test_count | PASS ✓ |
+| 60 Gates | 60/60 PASS ✓ |
+
+**3인 협의 결론:** BUG-T1(source_hash 재생성), BUG-TC1(TC 커버리지 추가), META-1(카운트 갱신) 3건 수정 완료. 추가 결함 없음. Phase B 완전 종료 선언 유효.

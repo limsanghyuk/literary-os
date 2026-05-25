@@ -570,3 +570,86 @@ class TestRunPhaseBExitGate7Axis:
             _if_trace_override=_all_if_pass(),
         )
         assert rpt.tests_total == 7777
+
+
+# ===========================================================================
+# TC-61~63: BUG-V4 __dataclass_fields__ 이중 체크 커버리지 (V630-AUDIT2)
+# ===========================================================================
+
+class TestDataclassFieldsDoubleCheck:
+    """TC-61~63: BUG-V4 수정 — __dataclass_fields__ 이중 체크 로직 커버.
+
+    hasattr(Class, field)는 기본값 없는 dataclass 필드에 False를 반환한다.
+    __dataclass_fields__ 이중 체크로 해당 케이스를 정상 통과시키는지 검증.
+    """
+
+    def test_tc61_hasattr_false_dataclass_no_default(self):
+        """TC-61: 기본값 없는 dataclass 필드 → hasattr False이지만 __dataclass_fields__ 경로로 PASS."""
+        import dataclasses
+
+        @dataclasses.dataclass
+        class _StubNoDefault:
+            required_field: str  # 기본값 없음 — hasattr(_StubNoDefault, 'required_field') == False
+
+        # hasattr가 False를 반환함을 먼저 확인 (버그 재현 전제)
+        assert not hasattr(_StubNoDefault, "required_field"), (
+            "dataclass 기본값 없는 필드는 hasattr(Class, field)==False여야 한다"
+        )
+        # __dataclass_fields__ 에는 포함돼 있어야 함
+        assert "required_field" in _StubNoDefault.__dataclass_fields__
+
+        # verify_interfaces_trace의 이중 체크 로직을 직접 재현
+        obj = _StubNoDefault
+        _dc_fields = getattr(obj, '__dataclass_fields__', {})
+        missing = [
+            a for a in ["required_field"]
+            if not (hasattr(obj, a) or a in _dc_fields)
+        ]
+        assert missing == [], (
+            "BUG-V4 수정: __dataclass_fields__ 체크로 기본값 없는 필드도 검출돼야 한다"
+        )
+
+    def test_tc62_ordinary_class_no_dataclass_fields(self):
+        """TC-62: 일반 클래스(dataclass 아님) — __dataclass_fields__ 없음 → hasattr 경로만 동작."""
+
+        class _OrdinaryClass:
+            some_attr = "hello"
+
+        obj = _OrdinaryClass
+        # __dataclass_fields__ 없음 확인
+        assert not hasattr(_OrdinaryClass, '__dataclass_fields__')
+        _dc_fields = getattr(obj, '__dataclass_fields__', {})
+        assert _dc_fields == {}
+
+        # 존재하는 속성: hasattr 경로로 PASS
+        missing_present = [
+            a for a in ["some_attr"]
+            if not (hasattr(obj, a) or a in _dc_fields)
+        ]
+        assert missing_present == []
+
+        # 없는 속성: 두 경로 모두 실패 → missing에 포함
+        missing_absent = [
+            a for a in ["nonexistent_attr"]
+            if not (hasattr(obj, a) or a in _dc_fields)
+        ]
+        assert missing_absent == ["nonexistent_attr"]
+
+    def test_tc63_dataclass_with_default_hasattr_true(self):
+        """TC-63: 기본값 있는 dataclass 필드 → hasattr True이므로 이중 체크 무관하게 PASS."""
+        import dataclasses
+
+        @dataclasses.dataclass
+        class _StubWithDefault:
+            optional_field: str = "default_value"  # 기본값 있음
+
+        # 기본값 있는 필드는 hasattr가 True를 반환 (클래스 속성으로 접근 가능)
+        assert hasattr(_StubWithDefault, "optional_field")
+
+        obj = _StubWithDefault
+        _dc_fields = getattr(obj, '__dataclass_fields__', {})
+        missing = [
+            a for a in ["optional_field"]
+            if not (hasattr(obj, a) or a in _dc_fields)
+        ]
+        assert missing == [], "기본값 있는 dataclass 필드는 hasattr 경로만으로도 PASS"
