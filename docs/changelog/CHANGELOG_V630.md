@@ -71,3 +71,32 @@ V620~V630에 걸쳐 수행된 Phase B 작업이 완료되었다:
 - **Exit Gate** (V620/V630): G61 7축 판정 (ADR-097)
 
 Phase C 이행 준비 완료.
+
+---
+
+## V630-AUDIT 패치 (2026-05-25)
+
+**최고 수석 아키텍처 + 컴파일러 감사 결과 수정 사항 (Phase B 기준점 보강)**
+
+### 수정된 결함
+
+| 결함 ID | 파일 | 설명 | 분류 |
+|---------|------|------|------|
+| BUG-R1 | `release_gate.py:3284` | `gate_name` "6축/ADR-080" → "7축/ADR-097" | 문자열 stale |
+| BUG-R2 | `release_gate.py:3295` | GATES 설명 "6축/Tests≥6700/ADR-080" → "7축/Tests≥7000/IF-Trace/ADR-097" | 문자열 stale |
+| BUG-R3 | `release_gate.py:3270` | 주석 "(V620, ADR-080)" → "(V630, ADR-097)" | 주석 stale |
+| BUG-R4 | `release_gate.py:3272` | docstring "6축(C1~C6)" → "7축(C1~C7)" | docstring stale |
+| BUG-V4 | `phase_b_exit_gate.py:194` | `verify_interfaces_trace()` hasattr + `__dataclass_fields__` 이중 안전망 | 잠재 취약점 |
+| BUG-M1 | `README.md:6-8` | 배지 v10.19.0/6728/58게이트 → v11.0.0/7210/60게이트 | 메타데이터 stale |
+| BUG-M2 | `live_core_manifest.json` | version_tag/test_count/adr/release_tag/tags stale 필드 갱신 | 메타데이터 stale |
+
+### 분석 결과 (비결함)
+
+- **BUG-V2 후보** (`overall_pass` 방어 로직): `len(results) == len(P_IF_TRACE_REQUIRED)` 체크가 이미 존재 — **실제 버그 아님** (확인).
+- **BUG-A4 재귀 방지** (`run_release_gate` G61 특수 처리): 정상 동작 확인.
+- **hasattr 현 상태**: P-IF-01~05 모든 검증 속성에 기본값 존재 → 현재는 정상. BUG-V4 수정으로 미래 회귀 방지.
+
+### 영향 범위
+
+- 60 TC (test_v630_phase_b_exit_v2.py) 60/60 PASS 유지 — 기능 동작 변경 없음.
+- 순수 문자열·메타데이터 교정 + 방어 코드 강화.

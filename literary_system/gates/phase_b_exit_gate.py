@@ -191,7 +191,13 @@ def verify_interfaces_trace(
             continue
 
         # required_attrs 검증
-        missing = [a for a in required_attrs if not hasattr(obj, a)]
+        # BUG-V4 수정 (V630-AUDIT): hasattr(Class, field)는 기본값 없는 dataclass 필드에
+        # False를 반환한다. __dataclass_fields__ 이중 체크로 안전망 추가.
+        _dc_fields = getattr(obj, '__dataclass_fields__', {})
+        missing = [
+            a for a in required_attrs
+            if not (hasattr(obj, a) or a in _dc_fields)
+        ]
         if missing:
             results[if_id] = {
                 "pass": False,

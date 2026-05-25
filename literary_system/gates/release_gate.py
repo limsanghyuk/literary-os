@@ -3267,9 +3267,9 @@ GATES.append((
     _gate_performance_slo_g60,
 ))
 
-# Gate G61 — Phase B Exit Gate (V620, ADR-080)
+# Gate G61 — Phase B Exit Gate (V630, ADR-097)
 def _gate_phase_b_exit_g61() -> dict:
-    """Gate G61: Phase B Exit Gate — SP-B 6축 완료 판정 (C1~C6).
+    """Gate G61: Phase B Exit Gate — SP-B 7축 완료 판정 (C1~C7).
 
     NOTE: 이 함수는 run_release_gate() 내부에서 호출된다.
     직접 호출 시 _rg_snapshot이 None이면 빈 결과로 판정된다.
@@ -3281,7 +3281,7 @@ def _gate_phase_b_exit_g61() -> dict:
     report = run_phase_b_exit_gate(_rg_results_override={"gates_passed": 0, "results": {}})
     result = {
         "gate": "G61",
-        "gate_name": "Phase B Exit Gate G61 — SP-B 6축 완료 (ADR-080)",
+        "gate_name": "Phase B Exit Gate G61 — SP-B 7축 완료 (ADR-097)",
         "pass": report.all_pass,
         "passed_count": report.passed_count,
         "total_count": report.total_count,
@@ -3292,6 +3292,6 @@ def _gate_phase_b_exit_g61() -> dict:
 
 GATES.append((
     "phase_b_exit_g61",
-    "Gate G61 — Phase B Exit Gate (SP-B 6축: G54/G56+G57/G59/G60/Gates≥60/Tests≥6700, ADR-080)",
+    "Gate G61 — Phase B Exit Gate (SP-B 7축: G54/G56+G57/G59/G60/Gates≥60/Tests≥7000/IF-Trace, ADR-097)",
     _gate_phase_b_exit_g61,
 ))
