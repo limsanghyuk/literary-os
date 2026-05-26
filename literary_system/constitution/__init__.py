@@ -5,6 +5,7 @@ literary_system/constitution — SP-A.7 (V594) LOSConstitution v1.0
                               + SP-C.1 (V633) PatternLibraryV2 압축+랭킹
                               + SP-C.1 (V634) RetrainingScheduler F1 drift 기반 재학습
                               + SP-C.1 (V635) AutoPromotionGate G62 자동 승격
+                              + SP-C.1 (V636) SelfLearningMonitor 파이프라인 모니터
 
 Han-dramaturgy 5-축 장면 품질 헌법.
 ADR-054 (v1.0) / ADR-098 (v2.0) / ADR-099 (WeightTracker) / ADR-075 (PatternLibraryV2)
@@ -66,4 +67,13 @@ from literary_system.gates.auto_promotion_gate import (
     GateResult,
     R_THRESHOLD,
     MAX_ROLLBACKS,
+)
+from literary_system.constitution.self_learning_monitor import (
+    SelfLearningMonitor,
+    MonitorSnapshot,
+    ComponentStatus,
+    ROLLBACK_SURGE_THRESHOLD,
+    F1_DROP_THRESHOLD,
+    GATE_FAIL_STREAK_THRESHOLD,
+    COMPONENT_NAMES,
 )
