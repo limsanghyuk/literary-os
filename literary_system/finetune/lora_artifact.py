@@ -132,6 +132,7 @@ class LoRAArtifact(LoRAArtifactContract):
     artifact_path: str        = field(default="")
     sha256: str               = field(default="")
     stage: ArtifactStage      = field(default=ArtifactStage.CANDIDATE)
+    constitution_weights_version: str = field(default="")  # C-M-06: 헌법 가중치 버전 (UUID4)
     created_at: str           = field(default="")
     metadata: Dict[str, Any]  = field(default_factory=dict)
 

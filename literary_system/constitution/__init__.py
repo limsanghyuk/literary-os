@@ -77,3 +77,13 @@ from literary_system.constitution.self_learning_monitor import (
     GATE_FAIL_STREAK_THRESHOLD,
     COMPONENT_NAMES,
 )
+
+# ConstitutionEvalV2 (SP-C.1, ADR-079)
+from literary_system.constitution.constitution_eval_v2 import (  # noqa: E402
+    ConstitutionEvalV2,
+    EvalDimension,
+    ConstitutionEvalResult,
+    EvalScore,
+    EVAL_THRESHOLD,
+    DEFAULT_DIMENSION_NAMES,
+)
