@@ -1713,7 +1713,7 @@ GATES = [
 
 
 def run_release_gate() -> dict:
-    """V631 릴리즈 게이트 실행 (60개 게이트, Phase B Exit Gate G61 포함, ADR-097, Phase C SP-C.1 진입)."""
+    """V632 릴리즈 게이트 실행 (60개 게이트, Phase B Exit Gate G61 포함, ADR-099, Phase C SP-C.1)."""
     import traceback
     results_dict: dict = {}
     passed_count = 0
@@ -1765,7 +1765,7 @@ def run_release_gate() -> dict:
     all_passed = failed_count == 0
     issues = [gid for gid, gv in results_dict.items() if not gv.get("pass", False)]
     return {
-        "version": "V631",
+        "version": "V632",
         "pass": all_passed,
         "status": "pass" if all_passed else "fail",
         "total_gates": total,
