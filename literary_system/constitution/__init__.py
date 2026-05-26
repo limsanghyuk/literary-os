@@ -110,3 +110,14 @@ from literary_system.constitution.data_augmentation_controller import (  # noqa:
     DEFAULT_AUGMENT_COUNT,
     MAX_AUGMENT_COUNT,
 )
+
+# FeedbackIntegrator (SP-C.1, ADR-082)
+from literary_system.constitution.feedback_integrator import (  # noqa: E402
+    FeedbackIntegrator,
+    FeedbackRecord,
+    IntegrationResult,
+    FEEDBACK_TYPES,
+    MIN_FEEDBACK_FOR_SIGNAL,
+    CORRECTION_WEIGHT,
+    REJECTION_PENALTY,
+)
