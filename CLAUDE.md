@@ -1,4 +1,17 @@
-# Literary OS V571 — 개발자 컨텍스트
+# Literary OS — 개발자 컨텍스트
+
+## ⚠️ 개발 착수 전 필수 실행 (DEV_PROTOCOL_v2.0 §1)
+
+```bash
+# 반드시 이 명령을 실행한 뒤 결과를 확인하고 개발을 시작한다
+python3 tools/gitnexus_analyze.py   # Step 1: 코드그래프 현황
+python3 tools/run_release_gate.py   # Step 12: Gate 기준선 확인
+```
+
+> **전체 절차**: `docs/workflow/DEV_PROTOCOL_v2.0.md` 참조  
+> Preflight 없이 착수한 커밋은 릴리즈 승인 대상이 아님.
+
+---
 
 ## 빠른 시작
 
