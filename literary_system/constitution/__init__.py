@@ -2,9 +2,10 @@
 literary_system/constitution — SP-A.7 (V594) LOSConstitution v1.0
                               + SP-C.1 (V631) LOSConstitution v2.0 Bayesian Weight Optimiser
                               + SP-C.1 (V632) ConstitutionWeightTracker LOSDB 영속화 + 롤백
+                              + SP-C.1 (V633) PatternLibraryV2 압축+랭킹
 
 Han-dramaturgy 5-축 장면 품질 헌법.
-ADR-054 (v1.0) / ADR-098 (v2.0) / ADR-099 (WeightTracker) 참조.
+ADR-054 (v1.0) / ADR-098 (v2.0) / ADR-099 (WeightTracker) / ADR-075 (PatternLibraryV2) 참조.
 LLM-0 준수: 외부 LLM 호출 없음.
 """
 from literary_system.constitution.los_constitution import (
@@ -22,6 +23,10 @@ from literary_system.constitution.constitution_weight_tracker import (
     ConstitutionWeightTracker,
     WeightRecord,
 )
+from literary_system.constitution.pattern_library_v2 import (
+    PatternEntry,
+    PatternLibraryV2,
+)
 
 __all__ = [
     # v1.0 (ADR-054)
@@ -36,4 +41,7 @@ __all__ = [
     # WeightTracker (SP-C.1, ADR-099)
     "ConstitutionWeightTracker",
     "WeightRecord",
+    # PatternLibraryV2 (SP-C.1, ADR-075)
+    "PatternEntry",
+    "PatternLibraryV2",
 ]
