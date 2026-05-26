@@ -1,16 +1,16 @@
 {
   "manifest_version": "3.0",
   "generated_at": "2026-05-25T00:00:00Z",
-  "version": "v11.15.0",
+  "version": "v11.16.0",
   "version_tag": "V631",
   "codename": "SP-C.1 Constitution v2.0 Bayesian Optimiser",
-  "phase": "C",
+  "phase": "Phase C ready",
   "subphase": "SP-C.1",
   "status": "Phase C SP-C.1 진행 중 — LOSConstitutionV2 + Bayesian Optuna + entropy(w)>=1.5",
-  "description": "MetaLearnerCycle Phase 4 완결: ConstitutionWeights 수렴 확인 (합 1.0±0.01 + entropy≥1.5)",
-  "gates": 60,
+  "description": "V645 SelfLearningGate G63 SP-C.1 완료 (ADR-105)",
+  "gates": 62,
   "gate_count": 60,
-  "test_count": 7643,
+  "test_count": 7742,
   "tests_passing": 7246,
   "adr": "ADR-098",
   "release_tag": "v11.1.0",
@@ -38,5 +38,7 @@
   "released_at": "2026-05-26",
   "v_number": "V642",
   "adr_latest": "ADR-102",
-  "total_tests": 7709
+  "total_tests": 7742,
+  "release_version": "V645",
+  "sp_c1_status": "COMPLETE"
 }

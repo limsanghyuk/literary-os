@@ -121,3 +121,17 @@ from literary_system.constitution.feedback_integrator import (  # noqa: E402
     CORRECTION_WEIGHT,
     REJECTION_PENALTY,
 )
+
+# MetaLearnerCycle (SP-C.1, ADR-101~104)
+from literary_system.constitution.meta_learner_cycle import (  # noqa: E402
+    MetaLearnerCycle,
+    CycleReport,
+    WeightConvergenceReport,
+    MetaUpdateResult,
+    FeedbackSignalSummary,
+    WEIGHT_SUM_TOLERANCE,
+    WEIGHT_ENTROPY_MIN,
+    WEIGHT_CONVERGENCE_MIN_CYCLES,
+    FEEDBACK_SIGNAL_MIN_STRENGTH,
+    FEEDBACK_ADJUSTED_LOSS_SCALE,
+)

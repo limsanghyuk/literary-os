@@ -3322,3 +3322,30 @@ GATES.append((
     "Gate G61 — Phase B Exit Gate (SP-B 7축: G54/G56+G57/G59/G60/Gates≥60/Tests≥7000/IF-Trace, ADR-097)",
     _gate_phase_b_exit_g61,
 ))
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Gate G63 — SelfLearningGate (V645, ADR-105)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _gate_self_learning_g63() -> dict:
+    """Gate G63: SelfLearningGate — SP-C.1 완료 판정 (오염 0%, KL<0.05, α≥0.70)."""
+    from literary_system.gates.self_learning_gate import run_g63_gate
+    result = run_g63_gate()
+    return {
+        "gate": "G63",
+        "gate_name": result["gate_name"],
+        "pass": result["pass"],
+        "passed": result["pass"],
+        "passed_count": result.get("passed_count", 0),
+        "total_count": result.get("total_count", 7),
+        "checkpoints": result.get("checkpoints", []),
+        "errors": result.get("errors", []),
+    }
+
+
+GATES.append((
+    "self_learning_g63",
+    "Gate G63 — SelfLearningGate SP-C.1 완료 (오염 0%/KL<0.05/α≥0.70, ADR-105)",
+    _gate_self_learning_g63,
+))
