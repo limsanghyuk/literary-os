@@ -4,6 +4,7 @@ literary_system/constitution — SP-A.7 (V594) LOSConstitution v1.0
                               + SP-C.1 (V632) ConstitutionWeightTracker LOSDB 영속화 + 롤백
                               + SP-C.1 (V633) PatternLibraryV2 압축+랭킹
                               + SP-C.1 (V634) RetrainingScheduler F1 drift 기반 재학습
+                              + SP-C.1 (V635) AutoPromotionGate G62 자동 승격
 
 Han-dramaturgy 5-축 장면 품질 헌법.
 ADR-054 (v1.0) / ADR-098 (v2.0) / ADR-099 (WeightTracker) / ADR-075 (PatternLibraryV2)
@@ -58,3 +59,11 @@ __all__ = [
     "DRIFT_THRESHOLD",
     "MIN_INTERVAL_DAYS",
 ]
+
+# AutoPromotionGate (SP-C.1, ADR-077) — gates/ 모듈이지만 constitution API로 공개
+from literary_system.gates.auto_promotion_gate import (
+    AutoPromotionGate,
+    GateResult,
+    R_THRESHOLD,
+    MAX_ROLLBACKS,
+)

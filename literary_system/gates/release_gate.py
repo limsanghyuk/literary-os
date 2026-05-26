@@ -3267,6 +3267,33 @@ GATES.append((
     _gate_performance_slo_g60,
 ))
 
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Gate G62 — AutoPromotionGate (V635, ADR-077)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _gate_auto_promotion_g62() -> dict:
+    """Gate G62: AutoPromotionGate — SP-C.1 자동 승격 (R≥0.78, 롤백 0건)."""
+    from literary_system.gates.auto_promotion_gate import run_g62_gate
+    result = run_g62_gate()
+    return {
+        "gate": "G62",
+        "gate_name": result["gate_name"],
+        "pass": result["pass"],
+        "passed": result["pass"],
+        "passed_count": result.get("passed_count", 0),
+        "total_count": result.get("total_count", 7),
+        "checkpoints": result.get("checkpoints", []),
+        "errors": result.get("errors", []),
+    }
+
+
+GATES.append((
+    "auto_promotion_g62",
+    "Gate G62 — AutoPromotionGate SP-C.1 자동 승격 (R≥0.78, 롤백 0건, ADR-077)",
+    _gate_auto_promotion_g62,
+))
+
 # Gate G61 — Phase B Exit Gate (V630, ADR-097)
 def _gate_phase_b_exit_g61() -> dict:
     """Gate G61: Phase B Exit Gate — SP-B 7축 완료 판정 (C1~C7).
