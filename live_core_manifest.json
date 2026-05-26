@@ -1,13 +1,13 @@
 {
   "manifest_version": "3.0",
   "generated_at": "2026-05-25T00:00:00Z",
-  "version": "v11.13.0",
+  "version": "v11.14.0",
   "version_tag": "V631",
   "codename": "SP-C.1 Constitution v2.0 Bayesian Optimiser",
   "phase": "C",
   "subphase": "SP-C.1",
   "status": "Phase C SP-C.1 진행 중 — LOSConstitutionV2 + Bayesian Optuna + entropy(w)>=1.5",
-  "description": "V641: MetaLearnerCycle + KrippendorffAlpha (ADR-101, SP-C.1)",
+  "description": "MetaLearnerCycle Phase 3: FeedbackIntegrator 이력 추적 및 신호 강도 트렌드 분석",
   "gates": 60,
   "gate_count": 60,
   "test_count": 7643,
@@ -15,7 +15,7 @@
   "adr": "ADR-098",
   "release_tag": "v11.1.0",
   "commit": "da003851",
-  "last_updated": "2026-05-25",
+  "last_updated": "2026-05-26",
   "updated_at": "2026-05-25T00:00:00Z",
   "tags": [
     "v11.0.0",
@@ -32,10 +32,11 @@
     "BUG-C3-1: MemoryLeakDetector.top_allocators() None guard",
     "BUG-C4-1: PhaseBExitReport.all_pass 빈 리스트 방어"
   ],
-  "literary_os_version": "V631",
+  "literary_os_version": "V643",
   "build_tag": "v11.1.0-V631",
   "release": "V631",
   "released_at": "2026-05-26",
   "v_number": "V642",
-  "adr_latest": "ADR-102"
+  "adr_latest": "ADR-102",
+  "total_tests": 7676
 }
