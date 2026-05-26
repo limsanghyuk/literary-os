@@ -6,6 +6,7 @@ literary_system/constitution — SP-A.7 (V594) LOSConstitution v1.0
                               + SP-C.1 (V634) RetrainingScheduler F1 drift 기반 재학습
                               + SP-C.1 (V635) AutoPromotionGate G62 자동 승격
                               + SP-C.1 (V636) SelfLearningMonitor 파이프라인 모니터
+                              + SP-C.1 (V638) ContaminationDetector 훈련 데이터 오염 탐지
 
 Han-dramaturgy 5-축 장면 품질 헌법.
 ADR-054 (v1.0) / ADR-098 (v2.0) / ADR-099 (WeightTracker) / ADR-075 (PatternLibraryV2)
@@ -86,4 +87,15 @@ from literary_system.constitution.constitution_eval_v2 import (  # noqa: E402
     EvalScore,
     EVAL_THRESHOLD,
     DEFAULT_DIMENSION_NAMES,
+)
+
+# ContaminationDetector (SP-C.1, ADR-080)
+from literary_system.constitution.contamination_detector import (  # noqa: E402
+    ContaminationDetector,
+    ContaminationFlag,
+    ContaminationReport,
+    LABEL_NOISE_THRESHOLD,
+    NEAR_DUPLICATE_THRESHOLD,
+    DISTRIBUTION_SHIFT_THRESHOLD,
+    POISON_THRESHOLD,
 )
