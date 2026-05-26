@@ -99,3 +99,14 @@ from literary_system.constitution.contamination_detector import (  # noqa: E402
     DISTRIBUTION_SHIFT_THRESHOLD,
     POISON_THRESHOLD,
 )
+
+# DataAugmentationController (SP-C.1, ADR-081)
+from literary_system.constitution.data_augmentation_controller import (  # noqa: E402
+    DataAugmentationController,
+    AugmentedSample,
+    AugmentationBatch,
+    AUGMENTATION_STRATEGIES,
+    DEFAULT_AUGMENT_RATIO,
+    DEFAULT_AUGMENT_COUNT,
+    MAX_AUGMENT_COUNT,
+)
