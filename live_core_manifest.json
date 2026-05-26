@@ -1,13 +1,13 @@
 {
   "manifest_version": "3.0",
   "generated_at": "2026-05-25T00:00:00Z",
-  "version": "v11.1.0",
+  "version": "v11.11.0",
   "version_tag": "V631",
   "codename": "SP-C.1 Constitution v2.0 Bayesian Optimiser",
   "phase": "C",
   "subphase": "SP-C.1",
   "status": "Phase C SP-C.1 진행 중 — LOSConstitutionV2 + Bayesian Optuna + entropy(w)>=1.5",
-  "description": "Literary OS V631 — SP-C.1 Self-Learning Loop 시작: LOSConstitutionV2 (ADR-098)",
+  "description": "V640-PATCH: SafetyRegressionV2 4축 안전 회귀 검증기 신설 (ADR-100, F9 의무)",
   "gates": 60,
   "gate_count": 60,
   "test_count": 7246,
@@ -34,5 +34,6 @@
   ],
   "literary_os_version": "V631",
   "build_tag": "v11.1.0-V631",
-  "release": "V631"
+  "release": "V631",
+  "released_at": "2026-05-26"
 }
