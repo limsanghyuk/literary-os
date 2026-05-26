@@ -44,13 +44,30 @@ def _kl_divergence_from_uniform(weights: Sequence[float]) -> float:
 
     weights 가 비어 있으면 0.0 반환.
     수치 안정성을 위해 p_i < 1e-12 항목은 건너뜀.
+
+    B-2 수정: weights는 확률 분포여야 함 (합 ≈ 1.0, 모든 원소 ≥ 0).
+    음수 원소 포함 시 ValueError, 합이 1.0에서 ±0.01 초과 시 ValueError.
     """
     n = len(weights)
     if n == 0:
         return 0.0
+    weights_list = list(weights)
+    # 음수 검증
+    if any(p < 0.0 for p in weights_list):
+        raise ValueError(
+            f"_kl_divergence_from_uniform: weights must be non-negative, "
+            f"got {weights_list}"
+        )
+    # 합 검증 (확률 분포 전제)
+    total = sum(weights_list)
+    if total > 1e-12 and abs(total - 1.0) > 0.01:
+        raise ValueError(
+            f"_kl_divergence_from_uniform: weights must sum to 1.0 "
+            f"(got {total:.6f}). Normalize before calling."
+        )
     q_i = 1.0 / n
     kl = 0.0
-    for p_i in weights:
+    for p_i in weights_list:
         if p_i < 1e-12:
             continue
         kl += p_i * math.log(p_i / q_i)
@@ -100,18 +117,25 @@ class SelfLearningGateReport:
     axes: List[SLGAxisResult]
     passed: bool
     notes: List[str] = field(default_factory=list)
+    # B-1 수정: 평가 시 사용한 임계값을 레포트에 저장 (커스텀 임계값 추적)
+    _contamination_max: float = field(default=CONTAMINATION_MAX, repr=False)
+    _kl_max: float = field(default=KL_MAX, repr=False)
+    _alpha_min: float = field(default=ALPHA_MIN, repr=False)
 
     @property
     def contamination_ok(self) -> bool:
-        return self.contamination_rate <= CONTAMINATION_MAX
+        """B-1: 모듈 전역 상수 대신 레포트 생성 시 사용한 임계값 기준."""
+        return self.contamination_rate <= self._contamination_max
 
     @property
     def kl_ok(self) -> bool:
-        return self.kl_divergence < KL_MAX
+        """B-1: 모듈 전역 상수 대신 레포트 생성 시 사용한 임계값 기준."""
+        return self.kl_divergence < self._kl_max
 
     @property
     def alpha_ok(self) -> bool:
-        return self.alpha >= ALPHA_MIN
+        """B-1: 모듈 전역 상수 대신 레포트 생성 시 사용한 임계값 기준."""
+        return self.alpha >= self._alpha_min
 
     @property
     def summary(self) -> str:
@@ -136,6 +160,10 @@ class SelfLearningGateReport:
             "axes": [a.to_dict() for a in self.axes],
             "passed": self.passed,
             "notes": list(self.notes),
+            # B-1: 임계값 직렬화
+            "threshold_contamination_max": self._contamination_max,
+            "threshold_kl_max": self._kl_max,
+            "threshold_alpha_min": self._alpha_min,
         }
 
     @classmethod
@@ -149,6 +177,10 @@ class SelfLearningGateReport:
             axes=[SLGAxisResult.from_dict(a) for a in d.get("axes", [])],
             passed=bool(d["passed"]),
             notes=list(d.get("notes", [])),
+            # B-1: 임계값 역직렬화 (하위 호환: 없으면 전역 상수)
+            _contamination_max=float(d.get("threshold_contamination_max", CONTAMINATION_MAX)),
+            _kl_max=float(d.get("threshold_kl_max", KL_MAX)),
+            _alpha_min=float(d.get("threshold_alpha_min", ALPHA_MIN)),
         )
 
 
@@ -210,15 +242,36 @@ class SelfLearningGate:
         alpha: float,
         note: str = "",
     ) -> SelfLearningGateReport:
-        """G63 평가 실행."""
+        """G63 평가 실행.
+
+        B-3 수정: 입력값 범위 검증 추가.
+          - contamination_rate: [0.0, 1.0]
+          - alpha: [0.0, 1.0]
+          - weights: 비어있지 않음 (_kl_divergence_from_uniform이 합·음수 검증)
+        """
+        # B-3: 입력값 검증
+        if not (0.0 <= contamination_rate <= 1.0):
+            raise ValueError(
+                f"contamination_rate must be in [0.0, 1.0], got {contamination_rate}"
+            )
+        if not (0.0 <= alpha <= 1.0):
+            raise ValueError(
+                f"alpha must be in [0.0, 1.0], got {alpha}"
+            )
+
         # 축 1 — 오염률
         c_ok = contamination_rate <= self._contamination_max
+        # B-5: FAIL 케이스 detail 메시지 정확화
+        if c_ok:
+            c_detail = f"contamination_rate={contamination_rate:.4f} <= {self._contamination_max} [OK]"
+        else:
+            c_detail = f"contamination_rate={contamination_rate:.4f} > {self._contamination_max} [FAIL]"
         axis_c = SLGAxisResult(
             axis_name="contamination",
             value=contamination_rate,
             threshold=self._contamination_max,
             passed=c_ok,
-            detail=f"contamination_rate={contamination_rate:.4f} <= {self._contamination_max}",
+            detail=c_detail,
         )
 
         # 축 2 — KL divergence
@@ -267,6 +320,10 @@ class SelfLearningGate:
             axes=[axis_c, axis_kl, axis_a],
             passed=passed,
             notes=notes,
+            # B-1: 평가 시 사용한 실제 임계값 기록
+            _contamination_max=self._contamination_max,
+            _kl_max=self._kl_max,
+            _alpha_min=self._alpha_min,
         )
         self._history.append(report)
         self._append_to_file(report)
@@ -282,7 +339,16 @@ class SelfLearningGate:
         return len(self._history)
 
     def clear(self) -> None:
+        """히스토리 초기화.
+
+        B-4 수정: 인메모리 히스토리와 디스크 JSONL 파일 모두 초기화.
+        store_path=':memory:' 일 때는 인메모리만 초기화.
+        """
         self._history.clear()
+        if self._store_path != _MEMORY_SENTINEL:
+            p = Path(self._store_path)
+            if p.exists():
+                p.write_text("", encoding="utf-8")
 
     @property
     def kl_max(self) -> float:

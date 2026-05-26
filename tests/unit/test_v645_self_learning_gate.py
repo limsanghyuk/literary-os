@@ -252,3 +252,56 @@ class TestRunG63Gate:
         """TC-033 run_g63_gate gate_name contains G63 or SelfLearning"""
         result = run_g63_gate()
         assert "G63" in result["gate_name"] or "SelfLearning" in result["gate_name"]
+
+
+# ──────────────────────────────────────────────
+# TC-034~038  AUDIT 수정 검증 (B-1~B-5)
+# ──────────────────────────────────────────────
+class TestAuditFixes:
+    def _w(self):
+        return [0.30, 0.20, 0.20, 0.15, 0.15]
+
+    def test_b2_kl_rejects_non_unit_sum(self):
+        """TC-034 B-2: weights 합 != 1 시 ValueError"""
+        with pytest.raises(ValueError, match="sum to 1.0"):
+            _kl_divergence_from_uniform([0.20, 0.20, 0.20, 0.12, 0.08])  # sum=0.8
+
+    def test_b2_kl_rejects_negative_weight(self):
+        """TC-035 B-2: 음수 weight 시 ValueError"""
+        with pytest.raises(ValueError, match="non-negative"):
+            _kl_divergence_from_uniform([-0.1, 0.6, 0.25, 0.15, 0.10])
+
+    def test_b1_report_properties_use_instance_threshold(self):
+        """TC-036 B-1: kl_ok/alpha_ok가 커스텀 임계값 기준"""
+        gate = SelfLearningGate(store_path=_MEM, kl_max=0.02, alpha_min=0.90)
+        report = gate.evaluate(0.0, self._w(), 0.85)
+        # 커스텀 kl_max=0.02 → kl=0.035 >= 0.02 → False
+        assert not report.kl_ok
+        # 커스텀 alpha_min=0.90 → 0.85 < 0.90 → False
+        assert not report.alpha_ok
+        # axes와 일치
+        assert report.axes[1].passed == report.kl_ok
+        assert report.axes[2].passed == report.alpha_ok
+
+    def test_b3_evaluate_rejects_negative_contamination(self):
+        """TC-037 B-3: contamination_rate < 0 거부"""
+        gate = SelfLearningGate(store_path=_MEM)
+        with pytest.raises(ValueError, match="contamination_rate"):
+            gate.evaluate(-0.5, self._w(), 0.75)
+
+    def test_b4_clear_also_clears_disk(self):
+        """TC-038 B-4: clear() 후 재인스턴스화 시 count=0"""
+        import tempfile, os
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.jsonl', delete=False) as f:
+            tmp = f.name
+        try:
+            g = SelfLearningGate(store_path=tmp)
+            g.evaluate(0.0, self._w(), 0.75)
+            g.evaluate(0.0, self._w(), 0.80)
+            assert g.count() == 2
+            g.clear()
+            g2 = SelfLearningGate(store_path=tmp)
+            assert g2.count() == 0
+        finally:
+            if os.path.exists(tmp):
+                os.unlink(tmp)
