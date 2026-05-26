@@ -41,6 +41,7 @@ dev = [
     "uvicorn[standard]>=0.20",
     "httpx>=0.24",
     "numpy>=1.24",
+    "optuna>=3.0",  # SP-C.1 LOSConstitutionV2 Bayesian Optimisation (optional)
     "ruff>=0.4",
     "qdrant-client>=1.7",
 ]
