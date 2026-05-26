@@ -1,7 +1,7 @@
 {
   "manifest_version": "3.0",
   "generated_at": "2026-05-25T00:00:00Z",
-  "version": "v11.12.0",
+  "version": "v11.13.0",
   "version_tag": "V631",
   "codename": "SP-C.1 Constitution v2.0 Bayesian Optimiser",
   "phase": "C",
@@ -10,7 +10,7 @@
   "description": "V641: MetaLearnerCycle + KrippendorffAlpha (ADR-101, SP-C.1)",
   "gates": 60,
   "gate_count": 60,
-  "test_count": 7246,
+  "test_count": 7643,
   "tests_passing": 7246,
   "adr": "ADR-098",
   "release_tag": "v11.1.0",
@@ -35,5 +35,7 @@
   "literary_os_version": "V631",
   "build_tag": "v11.1.0-V631",
   "release": "V631",
-  "released_at": "2026-05-26"
+  "released_at": "2026-05-26",
+  "v_number": "V642",
+  "adr_latest": "ADR-102"
 }

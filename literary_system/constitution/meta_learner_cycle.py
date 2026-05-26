@@ -1,5 +1,11 @@
 """
-meta_learner_cycle.py — MetaLearnerCycle V641 (ADR-101)
+meta_learner_cycle.py — MetaLearnerCycle V642 (ADR-102)
+
+V641 대비 변경사항:
+  - CycleReport.augmentation_batch 필드 추가 (Optional[AugmentationBatch])
+  - run_cycle() sample_texts 파라미터 추가 → DataAugmentationController.augment() 실 호출
+  - AlphaStability 데이터클래스 + alpha_stability() 메서드 추가
+  - ALPHA_STABILITY_MAX_VAR 상수 추가
 
 SP-C.1 Constitution v2.0 MetaLearner 4사이클 래퍼.
 blueprint v2.0 §2.2 + 목표 A1: R(scene)≥0.78, Krippendorff α≥0.70.
@@ -7,8 +13,9 @@ blueprint v2.0 §2.2 + 목표 A1: R(scene)≥0.78, Krippendorff α≥0.70.
 역할:
   1. MetaLearner (nie/) outer-loop 1사이클 실행
   2. Krippendorff α 평가자 간 신뢰도 측정 (1차)
-  3. DataAugmentationController 연계: augment_ratio 동적 조정
+  3. DataAugmentationController 연계: augment_ratio 동적 조정 + 실제 augment() 호출
   4. FeedbackIntegrator 연계: 피드백 신호를 MetaLearner 이득으로 변환
+  5. [V642 신규] α 안정성 측정: 다사이클 간 α 분산 추적
 
 설계 원칙:
   - LLM-0 준수 (외부 API 없음)
@@ -18,6 +25,7 @@ blueprint v2.0 §2.2 + 목표 A1: R(scene)≥0.78, Krippendorff α≥0.70.
 from __future__ import annotations
 
 import logging
+import statistics
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Sequence
 
@@ -29,7 +37,7 @@ from literary_system.constitution.krippendorff_alpha import (
     KrippendorffAlpha, AlphaResult, ALPHA_MIN_THRESHOLD, METRIC_INTERVAL,
 )
 from literary_system.constitution.data_augmentation_controller import (
-    DataAugmentationController,
+    DataAugmentationController, AugmentationBatch, DEFAULT_AUGMENT_RATIO,
 )
 from literary_system.constitution.feedback_integrator import (
     FeedbackIntegrator, IntegrationResult,
@@ -51,8 +59,37 @@ AUGMENT_RATIO_MAX: float = 0.40
 AUGMENT_RATIO_BOOST_THRESHOLD: float  = 0.65   # α 이하 → 증강 강화
 AUGMENT_RATIO_REDUCE_THRESHOLD: float = 0.80   # α 이상 → 증강 완화
 
+# [V642 신규] α 안정성 상수
+ALPHA_STABILITY_MAX_VAR: float = 0.01  # α 분산 허용 최대값 (안정 기준)
+ALPHA_STABILITY_MIN_CYCLES: int = 2    # 안정성 측정 최소 사이클 수
+
+# DataAugmentationController augment() 호출 기본 파라미터
+DEFAULT_AUGMENT_COUNT_PER_CYCLE: int = 3
+CYCLE_AUGMENT_DATASET_ID_PREFIX: str = "cycle-aug"
+
 
 # ─── 결과 데이터 클래스 ───────────────────────────────────────────────────────
+@dataclass
+class AlphaStability:
+    """[V642 신규] 다사이클 간 Krippendorff α 안정성 측정 결과."""
+    cycle_count: int          # 측정에 사용된 사이클 수
+    alpha_values: List[float] # 각 사이클의 α 값 목록
+    mean_alpha: float         # 평균 α
+    variance: float           # α 분산
+    is_stable: bool           # 분산 < ALPHA_STABILITY_MAX_VAR 여부
+
+    @property
+    def summary(self) -> str:
+        status = "STABLE" if self.is_stable else "UNSTABLE"
+        return (
+            f"[AlphaStability] {status} "
+            f"cycles={self.cycle_count} "
+            f"mean={self.mean_alpha:.4f} "
+            f"var={self.variance:.6f} "
+            f"threshold={ALPHA_STABILITY_MAX_VAR}"
+        )
+
+
 @dataclass
 class CycleReport:
     """1 MetaLearner 사이클 실행 결과."""
@@ -64,6 +101,8 @@ class CycleReport:
     augment_ratio_after: float
     r_scene_trend: str         # "improving" | "stable" | "declining"
     notes: List[str] = field(default_factory=list)
+    # [V642 신규] DataAugmentationController.augment() 결과
+    augmentation_batch: Optional[AugmentationBatch] = None
 
     @property
     def alpha_passed(self) -> bool:
@@ -75,8 +114,13 @@ class CycleReport:
 
     @property
     def passed(self) -> bool:
-        """V641 사이클 1 합격 조건: α PASS + R 추세 양수."""
+        """사이클 합격 조건: α PASS + R 추세 양수."""
         return self.alpha_passed and self.r_trend_positive
+
+    @property
+    def augmentation_performed(self) -> bool:
+        """[V642 신규] 이번 사이클에 실제 증강이 수행되었는지 여부."""
+        return self.augmentation_batch is not None and self.augmentation_batch.augmented_count > 0
 
     @property
     def summary(self) -> str:
@@ -89,23 +133,33 @@ class CycleReport:
             if self.meta_update else "meta=N/A"
         )
         aug_str = f"aug_ratio:{self.augment_ratio_before:.3f}→{self.augment_ratio_after:.3f}"
+        aug_batch_str = (
+            f"aug_batch={self.augmentation_batch.augmented_count}samples"
+            if self.augmentation_batch else "aug_batch=none"
+        )
         status = "CYCLE_PASS" if self.passed else "CYCLE_FAIL"
         return (
             f"[Cycle {self.cycle_number}] {status} | "
-            f"{alpha_str} | {meta_str} | R_trend={self.r_scene_trend} | {aug_str}"
+            f"{alpha_str} | {meta_str} | R_trend={self.r_scene_trend} | "
+            f"{aug_str} | {aug_batch_str}"
         )
 
 
 # ─── MetaLearnerCycle ─────────────────────────────────────────────────────────
 class MetaLearnerCycle:
     """
-    Constitution v2.0 MetaLearner 4사이클 래퍼 (V641, ADR-101).
+    Constitution v2.0 MetaLearner 4사이클 래퍼 (V641→V642, ADR-101/102).
+
+    V642 추가 기능:
+      - run_cycle() sample_texts 파라미터: DataAugmentationController.augment() 실 호출
+      - alpha_stability(): 다사이클 간 α 분산 측정
+      - CycleReport.augmentation_batch: 실제 증강 배치 결과 포함
 
     4개 V버전(V641~V644)에서 각각 1사이클씩 호출된다.
     각 사이클은:
       1. MetaLearner outer-loop 갱신
       2. Krippendorff α 측정
-      3. DataAugmentationController augment_ratio 조정
+      3. DataAugmentationController augment_ratio 조정 + 실제 augment() 호출 [V642]
       4. FeedbackIntegrator 신호를 MetaLearner 이득으로 반영
     """
 
@@ -144,9 +198,10 @@ class MetaLearnerCycle:
         r_scene: Optional[float] = None,
         *,
         cycle_number: Optional[int] = None,
+        sample_texts: Optional[List[str]] = None,
     ) -> CycleReport:
         """
-        1 MetaLearner 사이клル 실행.
+        1 MetaLearner 사이클 실행.
 
         Args:
             l_final: 이번 사이클의 최종 손실값 (MetaLearner outer-loop 입력)
@@ -154,6 +209,8 @@ class MetaLearnerCycle:
                         {rater_id: {unit_id: score}} — None이면 α 측정 스킵
             r_scene: 씬 품질 점수 (R(scene)) — 추세 판단용
             cycle_number: 강제 지정 (없으면 auto-increment)
+            sample_texts: [V642 신규] 증강 대상 텍스트 목록.
+                          제공 시 DataAugmentationController.augment() 실제 호출.
         """
         cyc = cycle_number if cycle_number is not None else self.current_cycle
         aug_before = self._current_augment_ratio  # 현재 비율 스냅샷
@@ -176,7 +233,24 @@ class MetaLearnerCycle:
         # 4. augment_ratio 조정 (α 결과 기반)
         aug_after = self._adjust_augment_ratio(alpha_result, aug_before)
 
-        # 5. FeedbackIntegrator → MetaLearner 이득 반영
+        # 5. [V642 신규] DataAugmentationController.augment() 실제 호출
+        augmentation_batch: Optional[AugmentationBatch] = None
+        if sample_texts:
+            dataset_id = f"{CYCLE_AUGMENT_DATASET_ID_PREFIX}-{cyc}"
+            augmentation_batch = self._augmentor.augment(
+                dataset_id=dataset_id,
+                texts=sample_texts,
+                augment_count=DEFAULT_AUGMENT_COUNT_PER_CYCLE,
+                augment_ratio=aug_after,
+                controller_id=f"meta_learner_cycle_{cyc}",
+                note=f"V642 cycle {cyc} auto-augment",
+            )
+            logger.info(
+                f"[Cycle {cyc}] DataAugmentationController.augment() 호출 완료: "
+                f"{augmentation_batch.summary()}"
+            )
+
+        # 6. FeedbackIntegrator → MetaLearner 이득 반영
         feedback_result: Optional[IntegrationResult] = None
         if self._feedback.feedbacks:
             feedback_result = self._feedback.integrate()
@@ -189,7 +263,7 @@ class MetaLearnerCycle:
                     f"→ adjusted_loss={adjusted_loss:.4f}"
                 )
 
-        # 6. CycleReport 생성
+        # 7. CycleReport 생성
         notes: List[str] = []
         if meta_result is not None:
             notes.append(f"MetaUpdate: {meta_result.updates}")
@@ -197,6 +271,11 @@ class MetaLearnerCycle:
             notes.append(f"α={alpha_result.alpha:.4f} < 임계값 {ALPHA_TARGET} — 증강 강화")
         if r_trend == "declining":
             notes.append("R(scene) 하락 추세 감지")
+        if augmentation_batch is not None:
+            notes.append(
+                f"증강 완료: {augmentation_batch.augmented_count}개 샘플 "
+                f"(ratio={aug_after:.3f})"
+            )
 
         report = CycleReport(
             cycle_number=cyc,
@@ -207,6 +286,7 @@ class MetaLearnerCycle:
             augment_ratio_after=aug_after,
             r_scene_trend=r_trend,
             notes=notes,
+            augmentation_batch=augmentation_batch,
         )
         self._cycle_history.append(report)
         logger.info(report.summary)
@@ -217,13 +297,20 @@ class MetaLearnerCycle:
         l_finals: Sequence[float],
         rater_data_list: Optional[Sequence[Optional[Dict[str, Dict[str, Optional[float]]]]]] = None,
         r_scenes: Optional[Sequence[Optional[float]]] = None,
+        sample_texts_list: Optional[Sequence[Optional[List[str]]]] = None,
     ) -> List[CycleReport]:
-        """여러 사이클 순차 실행 (V645 통합 검증용)."""
+        """여러 사이클 순차 실행 (V645 통합 검증용).
+        
+        [V642 신규] sample_texts_list 파라미터 추가 — 사이클별 증강 텍스트 지정.
+        """
         reports = []
         for i, lf in enumerate(l_finals):
             rd = rater_data_list[i] if rater_data_list and i < len(rater_data_list) else None
             rs = r_scenes[i] if r_scenes and i < len(r_scenes) else None
-            reports.append(self.run_cycle(lf, rd, rs, cycle_number=i + 1))
+            st = sample_texts_list[i] if sample_texts_list and i < len(sample_texts_list) else None
+            reports.append(
+                self.run_cycle(lf, rd, rs, cycle_number=i + 1, sample_texts=st)
+            )
         return reports
 
     def alpha_history(self) -> List[AlphaResult]:
@@ -233,6 +320,47 @@ class MetaLearnerCycle:
     def latest_alpha(self) -> Optional[AlphaResult]:
         history = self.alpha_history()
         return history[-1] if history else None
+
+    def alpha_stability(self) -> Optional[AlphaStability]:
+        """[V642 신규] 다사이클 간 Krippendorff α 안정성 측정.
+        
+        Returns:
+            AlphaStability 객체 (α 기록이 ALPHA_STABILITY_MIN_CYCLES 미만이면 None).
+        """
+        history = self.alpha_history()
+        if len(history) < ALPHA_STABILITY_MIN_CYCLES:
+            return None
+
+        alpha_values = [r.alpha for r in history]
+        mean_alpha = statistics.mean(alpha_values)
+        # 분산: 편차 제곱의 평균 (population variance)
+        variance = statistics.pvariance(alpha_values)
+        is_stable = variance < ALPHA_STABILITY_MAX_VAR
+
+        result = AlphaStability(
+            cycle_count=len(history),
+            alpha_values=alpha_values,
+            mean_alpha=mean_alpha,
+            variance=variance,
+            is_stable=is_stable,
+        )
+        logger.info(result.summary)
+        return result
+
+    def latest_augmentation_batch(self) -> Optional[AugmentationBatch]:
+        """[V642 신규] 가장 최근 사이클의 AugmentationBatch 반환."""
+        for report in reversed(self._cycle_history):
+            if report.augmentation_batch is not None:
+                return report.augmentation_batch
+        return None
+
+    def augmentation_batch_history(self) -> List[AugmentationBatch]:
+        """[V642 신규] 증강이 수행된 모든 사이클의 AugmentationBatch 목록."""
+        return [
+            r.augmentation_batch
+            for r in self._cycle_history
+            if r.augmentation_batch is not None
+        ]
 
     # ── 내부 헬퍼 ─────────────────────────────────────────────────────────────
     def _compute_r_trend(self) -> str:
