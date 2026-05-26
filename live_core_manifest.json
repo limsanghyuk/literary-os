@@ -1,13 +1,13 @@
 {
   "manifest_version": "3.0",
   "generated_at": "2026-05-25T00:00:00Z",
-  "version": "v11.14.0",
+  "version": "v11.15.0",
   "version_tag": "V631",
   "codename": "SP-C.1 Constitution v2.0 Bayesian Optimiser",
   "phase": "C",
   "subphase": "SP-C.1",
   "status": "Phase C SP-C.1 진행 중 — LOSConstitutionV2 + Bayesian Optuna + entropy(w)>=1.5",
-  "description": "MetaLearnerCycle Phase 3: FeedbackIntegrator 이력 추적 및 신호 강도 트렌드 분석",
+  "description": "MetaLearnerCycle Phase 4 완결: ConstitutionWeights 수렴 확인 (합 1.0±0.01 + entropy≥1.5)",
   "gates": 60,
   "gate_count": 60,
   "test_count": 7643,
@@ -32,11 +32,11 @@
     "BUG-C3-1: MemoryLeakDetector.top_allocators() None guard",
     "BUG-C4-1: PhaseBExitReport.all_pass 빈 리스트 방어"
   ],
-  "literary_os_version": "V643",
+  "literary_os_version": "V644",
   "build_tag": "v11.1.0-V631",
   "release": "V631",
   "released_at": "2026-05-26",
   "v_number": "V642",
   "adr_latest": "ADR-102",
-  "total_tests": 7676
+  "total_tests": 7709
 }

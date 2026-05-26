@@ -1,13 +1,15 @@
 """
-meta_learner_cycle.py — MetaLearnerCycle V643 (ADR-103)
+meta_learner_cycle.py — MetaLearnerCycle V644 (ADR-104)
 
-V642 대비 변경사항:
-  - FEEDBACK_SIGNAL_MIN_STRENGTH 상수 추가
-  - FeedbackSignalSummary 데이터클래스 추가 (신호 강도 추세)
-  - CycleReport.feedback_signal_effective 프로퍼티 추가
-  - feedback_signal_trend() 메서드 추가 (다사이클 신호 강도 추세)
-  - add_feedback() 단축 API (FeedbackIntegrator.record_feedback() 위임)
-  - feedback_history() 메서드 추가 (전체 IntegrationResult 이력)
+V643 대비 변경사항:
+  - WEIGHT_SUM_TOLERANCE / WEIGHT_ENTROPY_MIN / WEIGHT_CONVERGENCE_MIN_CYCLES 상수 추가
+  - WeightConvergenceReport 데이터클래스 추가 (가중치 합·엔트로피 수렴 확인)
+  - CycleReport.weight_convergence 필드 추가 (V644)
+  - CycleReport.weight_converged 프로퍼티 추가
+  - MetaLearnerCycle.__init__에 constitution 파라미터 추가 (Optional[LOSConstitutionV2])
+  - weight_convergence_check() 메서드 추가
+  - weight_convergence_history() / latest_weight_convergence() 메서드 추가
+  - run_cycle() — constitution 가중치 수렴 자동 검증 단계 추가
 
 SP-C.1 Constitution v2.0 MetaLearner 4사이클 래퍼.
 blueprint v2.0 §2.2 + 목표 A1: R(scene)≥0.78, Krippendorff α≥0.70.
@@ -18,6 +20,7 @@ blueprint v2.0 §2.2 + 목표 A1: R(scene)≥0.78, Krippendorff α≥0.70.
   3. DataAugmentationController 연계: augment_ratio 동적 조정 + 실제 augment() 호출 [V642]
   4. FeedbackIntegrator 연계: 피드백 신호를 MetaLearner 이득으로 변환 + 신호 강도 추세 [V643]
   5. α 안정성 측정: 다사이클 간 α 분산 추적 [V642]
+  6. 가중치 수렴 확인: 합 1.0±0.01 + entropy≥1.5 유지 (C-M-05) [V644]
 
 설계 원칙:
   - LLM-0 준수 (외부 API 없음)
@@ -44,6 +47,10 @@ from literary_system.constitution.data_augmentation_controller import (
 from literary_system.constitution.feedback_integrator import (
     FeedbackIntegrator, FeedbackRecord, IntegrationResult,
     MIN_FEEDBACK_FOR_SIGNAL, FEEDBACK_TYPES,
+)
+from literary_system.constitution.los_constitution import ConstitutionWeights
+from literary_system.constitution.los_constitution_v2 import (
+    LOSConstitutionV2, _shannon_entropy,
 )
 
 logger = logging.getLogger(__name__)
@@ -74,6 +81,11 @@ CYCLE_AUGMENT_DATASET_ID_PREFIX: str = "cycle-aug"
 FEEDBACK_SIGNAL_MIN_STRENGTH: float = 0.30   # 유효 신호 최소 강도
 FEEDBACK_SIGNAL_MIN_CYCLES: int = 2          # 추세 측정 최소 사이클 수
 FEEDBACK_ADJUSTED_LOSS_SCALE: float = 0.10  # 피드백 보정 → 손실 조정 스케일
+
+# [V644 신규] 가중치 수렴 확인 상수 (C-M-05)
+WEIGHT_SUM_TOLERANCE: float = 0.01    # 가중치 합 허용 오차 (1.0 ± 0.01)
+WEIGHT_ENTROPY_MIN: float = 1.5       # Shannon 엔트로피 최솟값 (C-M-05 ADR-098)
+WEIGHT_CONVERGENCE_MIN_CYCLES: int = 2  # 수렴 이력 집계 최소 사이클 수
 
 
 # ─── 결과 데이터 클래스 ───────────────────────────────────────────────────────
@@ -131,6 +143,30 @@ class FeedbackSignalSummary:
 
 
 @dataclass
+class WeightConvergenceReport:
+    """[V644 신규] MetaLearner 사이클 내 ConstitutionWeights 수렴 확인 결과.
+
+    C-M-05 (ADR-098): entropy(w) ≥ 1.5 + 합 = 1.0 ± WEIGHT_SUM_TOLERANCE.
+    """
+    weights_dict: Dict[str, float]  # 가중치 스냅샷 {axis: weight}
+    weights_sum: float              # 가중치 합 (정상: 1.0 근방)
+    entropy: float                  # Shannon 엔트로피 (bits)
+    sum_ok: bool                    # abs(weights_sum - 1.0) <= WEIGHT_SUM_TOLERANCE
+    entropy_ok: bool                # entropy >= WEIGHT_ENTROPY_MIN
+    converged: bool                 # sum_ok AND entropy_ok
+
+    @property
+    def summary(self) -> str:
+        status = "CONVERGED" if self.converged else "DIVERGED"
+        return (
+            f"[WeightConvergence] {status} "
+            f"sum={self.weights_sum:.6f}[{'OK' if self.sum_ok else 'FAIL'}] "
+            f"entropy={self.entropy:.4f}[{'OK' if self.entropy_ok else 'FAIL'}] "
+            f"(tol=±{WEIGHT_SUM_TOLERANCE}, min_H={WEIGHT_ENTROPY_MIN})"
+        )
+
+
+@dataclass
 class CycleReport:
     """1 MetaLearner 사이클 실행 결과."""
     cycle_number: int
@@ -145,6 +181,8 @@ class CycleReport:
     augmentation_batch: Optional[AugmentationBatch] = None
     # [V643 신규] 이번 사이클에 피드백 보정이 적용된 조정 손실값
     adjusted_loss: Optional[float] = None
+    # [V644 신규] 가중치 수렴 확인 결과 (constitution 연결 시)
+    weight_convergence: Optional["WeightConvergenceReport"] = None
 
     @property
     def alpha_passed(self) -> bool:
@@ -166,6 +204,13 @@ class CycleReport:
             and self.feedback_result.has_signal
             and self.feedback_result.signal_strength >= FEEDBACK_SIGNAL_MIN_STRENGTH
         )
+
+    @property
+    def weight_converged(self) -> bool:
+        """[V644 신규] 이번 사이클 가중치 수렴 여부 (constitution 미연결 시 True로 간주)."""
+        if self.weight_convergence is None:
+            return True
+        return self.weight_convergence.converged
 
     @property
     def passed(self) -> bool:
@@ -192,25 +237,30 @@ class CycleReport:
             f"[{'EFFECTIVE' if self.feedback_signal_effective else 'WEAK'}]"
             if self.feedback_result else "fb=none"
         )
+        wc_str = (
+            f"wc=[{'OK' if self.weight_convergence.converged else 'FAIL'},"
+            f"H={self.weight_convergence.entropy:.3f}]"
+            if self.weight_convergence else "wc=n/a"
+        )
         status = "CYCLE_PASS" if self.passed else "CYCLE_FAIL"
         return (
             f"[Cycle {self.cycle_number}] {status} | "
             f"{alpha_str} | {meta_str} | R_trend={self.r_scene_trend} | "
-            f"{aug_str} | {aug_batch_str} | {fb_str}"
+            f"{aug_str} | {aug_batch_str} | {fb_str} | {wc_str}"
         )
 
 
 # ─── MetaLearnerCycle ─────────────────────────────────────────────────────────
 class MetaLearnerCycle:
     """
-    Constitution v2.0 MetaLearner 4사이클 래퍼 (V641→V643, ADR-101/102/103).
+    Constitution v2.0 MetaLearner 4사이클 래퍼 (V641→V644, ADR-101/102/103/104).
 
-    V643 추가 기능:
-      - add_feedback(): FeedbackIntegrator.record_feedback() 단축 위임
-      - feedback_signal_trend(): 다사이클 신호 강도 추세 (FeedbackSignalSummary)
-      - feedback_history(): 전체 IntegrationResult 이력
-      - CycleReport.feedback_signal_effective: 유효 신호 여부 프로퍼티
-      - CycleReport.adjusted_loss: 피드백 보정이 적용된 조정 손실값
+    V644 추가 기능:
+      - weight_convergence_check(): ConstitutionWeights 합·엔트로피 수렴 확인
+      - weight_convergence_history(): 전체 WeightConvergenceReport 이력
+      - latest_weight_convergence(): 최신 수렴 결과
+      - CycleReport.weight_convergence: 수렴 결과 필드 (V644)
+      - CycleReport.weight_converged: 수렴 여부 프로퍼티
 
     4개 V버전(V641~V644)에서 각각 1사이클씩 호출된다.
     """
@@ -221,15 +271,18 @@ class MetaLearnerCycle:
         augmentation_controller: Optional[DataAugmentationController] = None,
         feedback_integrator: Optional[FeedbackIntegrator] = None,
         alpha_metric: str = METRIC_INTERVAL,
+        constitution: Optional[LOSConstitutionV2] = None,  # [V644]
     ) -> None:
         self._meta = meta_learner or MetaLearner()
         self._augmentor = augmentation_controller or DataAugmentationController()
         self._feedback = feedback_integrator or FeedbackIntegrator()
         self._alpha_calc = KrippendorffAlpha(metric=alpha_metric)
+        self._constitution: Optional[LOSConstitutionV2] = constitution  # [V644]
         self._cycle_history: List[CycleReport] = []
         self._r_scene_history: List[float] = []
         self._current_augment_ratio: float = 0.15
         self._feedback_integration_history: List[IntegrationResult] = []  # [V643]
+        self._weight_convergence_history: List[WeightConvergenceReport] = []  # [V644]
 
     # ── 공개 API ───────────────────────────────────────────────────────────────
     @property
@@ -354,7 +407,15 @@ class MetaLearnerCycle:
                     f"signal_strength={feedback_result.signal_strength:.4f}"
                 )
 
-        # 7. CycleReport 생성
+        # 7. [V644] ConstitutionWeights 수렴 확인
+        weight_convergence_report: Optional[WeightConvergenceReport] = None
+        if self._constitution is not None:
+            weights_dict = self._constitution._w.as_dict()
+            weight_convergence_report = self.weight_convergence_check(weights_dict)
+            self._weight_convergence_history.append(weight_convergence_report)  # [V644]
+            logger.info(weight_convergence_report.summary)
+
+        # 8. CycleReport 생성
         notes: List[str] = []
         if meta_result is not None:
             notes.append(f"MetaUpdate: {meta_result.updates}")
@@ -373,6 +434,14 @@ class MetaLearnerCycle:
                 f"피드백 신호: strength={feedback_result.signal_strength:.3f} [{eff_str}]"
             )
 
+        if weight_convergence_report is not None:
+            conv_str = "CONVERGED" if weight_convergence_report.converged else "DIVERGED"
+            notes.append(
+                f"가중치 수렴: {conv_str} "
+                f"(sum={weight_convergence_report.weights_sum:.4f}, "
+                f"H={weight_convergence_report.entropy:.4f})"
+            )
+
         report = CycleReport(
             cycle_number=cyc,
             meta_update=meta_result,
@@ -384,6 +453,7 @@ class MetaLearnerCycle:
             notes=notes,
             augmentation_batch=augmentation_batch,
             adjusted_loss=adjusted_loss,
+            weight_convergence=weight_convergence_report,  # [V644]
         )
         self._cycle_history.append(report)
         logger.info(report.summary)
@@ -470,6 +540,43 @@ class MetaLearnerCycle:
         )
         logger.info(result.summary)
         return result
+
+    def weight_convergence_check(
+        self, weights_dict: Dict[str, float]
+    ) -> WeightConvergenceReport:
+        """[V644 신규] ConstitutionWeights 딕셔너리의 수렴 조건 확인.
+
+        C-M-05 기준:
+          - 가중치 합 = 1.0 ± WEIGHT_SUM_TOLERANCE(0.01)
+          - Shannon 엔트로피 ≥ WEIGHT_ENTROPY_MIN(1.5)
+
+        Args:
+            weights_dict: {"drse": 0.30, "debt": 0.20, ...} 형태 가중치 딕셔너리
+
+        Returns:
+            WeightConvergenceReport
+        """
+        vals = list(weights_dict.values())
+        weights_sum = sum(vals)
+        entropy = _shannon_entropy(vals)
+        sum_ok = abs(weights_sum - 1.0) <= WEIGHT_SUM_TOLERANCE
+        entropy_ok = entropy >= WEIGHT_ENTROPY_MIN
+        return WeightConvergenceReport(
+            weights_dict=dict(weights_dict),
+            weights_sum=weights_sum,
+            entropy=entropy,
+            sum_ok=sum_ok,
+            entropy_ok=entropy_ok,
+            converged=sum_ok and entropy_ok,
+        )
+
+    def weight_convergence_history(self) -> List[WeightConvergenceReport]:
+        """[V644 신규] 전체 WeightConvergenceReport 이력 (복사본)."""
+        return list(self._weight_convergence_history)
+
+    def latest_weight_convergence(self) -> Optional[WeightConvergenceReport]:
+        """[V644 신규] 가장 최근 WeightConvergenceReport."""
+        return self._weight_convergence_history[-1] if self._weight_convergence_history else None
 
     # ── 내부 헬퍼 ─────────────────────────────────────────────────────────────
     def _compute_r_trend(self) -> str:
