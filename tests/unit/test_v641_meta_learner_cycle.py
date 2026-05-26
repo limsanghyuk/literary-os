@@ -50,10 +50,12 @@ class TestKrippendorffConstants:
 class TestKrippendorffComputation:
     @pytest.fixture
     def high_agreement_data(self):
+        # C-1 수정 반영: 올바른 Krippendorff n 분모 기준 α>0.80을 만족하는 데이터
+        # (이전 데이터 α=0.656 — 수식 버그로 고평가됐던 것)
         return {
-            'A': {'u1': 0.8, 'u2': 0.6, 'u3': 0.9, 'u4': 0.7},
-            'B': {'u1': 0.7, 'u2': 0.7, 'u3': 0.8, 'u4': 0.8},
-            'C': {'u1': 0.75, 'u2': 0.65, 'u3': 0.85, 'u4': 0.75},
+            'A': {'u1': 0.80, 'u2': 0.20, 'u3': 0.90, 'u4': 0.50},
+            'B': {'u1': 0.82, 'u2': 0.22, 'u3': 0.88, 'u4': 0.52},
+            'C': {'u1': 0.81, 'u2': 0.21, 'u3': 0.89, 'u4': 0.51},
         }
 
     @pytest.fixture
@@ -184,10 +186,11 @@ class TestMetaLearnerCycleRun:
 
     @pytest.fixture
     def rater_data_pass(self):
+        # C-1 수정 반영: 올바른 분모 기준 α≥0.70을 만족하는 데이터
         return {
-            'A': {'u1': 0.8, 'u2': 0.6, 'u3': 0.9, 'u4': 0.7},
-            'B': {'u1': 0.7, 'u2': 0.7, 'u3': 0.8, 'u4': 0.8},
-            'C': {'u1': 0.75, 'u2': 0.65, 'u3': 0.85, 'u4': 0.75},
+            'A': {'u1': 0.80, 'u2': 0.20, 'u3': 0.90, 'u4': 0.50},
+            'B': {'u1': 0.82, 'u2': 0.22, 'u3': 0.88, 'u4': 0.52},
+            'C': {'u1': 0.81, 'u2': 0.21, 'u3': 0.89, 'u4': 0.51},
         }
 
     def test_tc21_cycle_returns_report(self, primed_cycle, rater_data_pass):

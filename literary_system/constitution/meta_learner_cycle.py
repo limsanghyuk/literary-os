@@ -410,7 +410,8 @@ class MetaLearnerCycle:
         # 7. [V644] ConstitutionWeights 수렴 확인
         weight_convergence_report: Optional[WeightConvergenceReport] = None
         if self._constitution is not None:
-            weights_dict = self._constitution._w.as_dict()
+            # C-5: private _w 대신 공개 API weights.as_dict() 사용
+            weights_dict = self._constitution.weights.as_dict()
             weight_convergence_report = self.weight_convergence_check(weights_dict)
             self._weight_convergence_history.append(weight_convergence_report)  # [V644]
             logger.info(weight_convergence_report.summary)

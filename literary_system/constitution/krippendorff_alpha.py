@@ -189,7 +189,10 @@ class KrippendorffAlpha:
                     d_e += marginal[v1] * marginal[v2] * self._delta(
                         v1, v2, ordered_values, marginal
                     )
-        d_e /= (n_total * (n_total - 1))
+        # C-1 수정: Krippendorff n = Σ marginal[v] (full matrix sum = 2*n_total for symmetric)
+        # 기존 n_total (upper triangle only) 대신 실제 Krippendorff n 사용
+        n_full = sum(marginal.values())
+        d_e /= (n_full * (n_full - 1))
 
         # 7. α 계산
         if d_e < 1e-12:

@@ -249,6 +249,9 @@ class SelfLearningGate:
           - alpha: [0.0, 1.0]
           - weights: 비어있지 않음 (_kl_divergence_from_uniform이 합·음수 검증)
         """
+        # C-4: Sequence 이중 소비 방지 — evaluate() 진입 시 즉시 list 변환
+        weights = list(weights)
+
         # B-3: 입력값 검증
         if not (0.0 <= contamination_rate <= 1.0):
             raise ValueError(
@@ -277,25 +280,31 @@ class SelfLearningGate:
         # 축 2 — KL divergence
         kl = _kl_divergence_from_uniform(weights)
         kl_ok = kl < self._kl_max
+        # C-2: KL FAIL 케이스 detail 메시지 교정 (B-5 미완성 보완)
+        _kl_op = "<" if kl_ok else ">="
+        _kl_label = "[OK]" if kl_ok else "[FAIL]"
         axis_kl = SLGAxisResult(
             axis_name="kl_divergence",
             value=kl,
             threshold=self._kl_max,
             passed=kl_ok,
             detail=(
-                f"KL(w||uniform)={kl:.5f} < {self._kl_max} "
-                f"[n_weights={len(list(weights))}]"
+                f"KL(w||uniform)={kl:.5f} {_kl_op} {self._kl_max} "
+                f"[n_weights={len(weights)}] {_kl_label}"
             ),
         )
 
         # 축 3 — Krippendorff α
         a_ok = alpha >= self._alpha_min
+        # C-3: α FAIL 케이스 detail 메시지 교정 (B-5 미완성 보완)
+        _a_op = ">=" if a_ok else "<"
+        _a_label = "[OK]" if a_ok else "[FAIL]"
         axis_a = SLGAxisResult(
             axis_name="alpha",
             value=alpha,
             threshold=self._alpha_min,
             passed=a_ok,
-            detail=f"alpha={alpha:.4f} >= {self._alpha_min}",
+            detail=f"alpha={alpha:.4f} {_a_op} {self._alpha_min} {_a_label}",
         )
 
         passed = c_ok and kl_ok and a_ok
