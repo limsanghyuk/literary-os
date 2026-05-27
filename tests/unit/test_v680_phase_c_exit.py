@@ -129,7 +129,7 @@ class TestEnterprisePhaseCExitReport:
     def test_summary_contains_version(self):
         report = _make_report()
         summary = report.summary()
-        assert "12.0.0" in summary
+        assert "12.0.1" in summary
 
     def test_summary_contains_pass(self):
         report = _make_report(all_pass=True)
@@ -141,7 +141,7 @@ class TestEnterprisePhaseCExitReport:
 
     def test_default_version(self):
         report = _make_report()
-        assert report.version == "12.0.0"
+        assert report.version == "12.0.1"
 
 
 # ── EnterprisePhaseCExitGate 테스트 ─────────────────────────────────────────
@@ -153,7 +153,7 @@ class TestEnterprisePhaseCExitGate:
 
     def test_version(self):
         gate = EnterprisePhaseCExitGate()
-        assert gate.VERSION == "12.0.0"
+        assert gate.VERSION == "12.0.1"
 
     def test_min_tc(self):
         gate = EnterprisePhaseCExitGate()

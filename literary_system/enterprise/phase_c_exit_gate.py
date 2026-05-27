@@ -41,7 +41,7 @@ class EnterprisePhaseCExitReport:
     total_tc: int
     min_tc_required: int
     overall_status: PhaseCExitStatus
-    version: str = "12.0.0"
+    version: str = "12.0.1"
 
     @property
     def all_gates_passed(self) -> bool:
@@ -94,7 +94,7 @@ class EnterprisePhaseCExitGate:
 
     GATE_ID = "G79"
     MIN_TC = 8500
-    VERSION = "12.0.0"
+    VERSION = "12.0.1"
 
     # (gate_id, description, import_path, class_name)
     ENTERPRISE_GATES: list[tuple[str, str, str, str]] = [

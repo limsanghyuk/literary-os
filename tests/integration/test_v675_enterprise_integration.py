@@ -168,9 +168,9 @@ def test_enterprise_full_pipeline():
     enterprise_ready = slo_report.gate_passed and rev_report.gate_passed
     assert enterprise_ready is True
 
-def test_gate_count_75():
+def test_gate_count_80():
     from literary_system.gates.release_gate import GATES
-    assert len(GATES) == 75
+    assert len(GATES) == 80
 
 def test_sp_c4_gates_present():
     from literary_system.gates.release_gate import GATES
