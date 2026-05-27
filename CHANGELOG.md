@@ -768,3 +768,22 @@ Phase B 완전 종료. G61 7축(C1~C7) Exit Gate (ADR-097). 60 Gates ALL PASS, 7
 ## [이전 버전]
 
 V380 이전 상세 이력 → `docs/changelog/` 참조
+
+## [11.29.0] — 2026-05-27 V656
+
+### Added
+- `literary_system/sdk/` 패키지 신설 — PublicSDK v1.0 (ADR-116)
+  - `LiteraryOSClient`: 4개 코어 메서드 (`analyze` / `repair` / `predict` / `generate`)
+  - `SDKConfig`: 환경변수 우선 설정, offline_mode=True 기본
+  - `sdk_models.py`: 순수 dataclass 요청/응답 모델 (Pydantic 미사용)
+  - `sdk_exceptions.py`: 계층적 커스텀 예외 7종
+  - `_RateLimiter`: 슬라이딩 윈도우 RPM 제한기
+- `docs/adr/ADR-116.md` 작성
+- `tests/unit/test_v656_public_sdk.py` — TC 33개 추가
+
+### Changed
+- 버전 11.28.0 → 11.29.0
+- `tools/test_inventory.json` 갱신: 8,053 → 8,086 TC
+
+### Gates
+- 66/66 PASS 유지
