@@ -1,22 +1,40 @@
-# Literary OS — 개발자 컨텍스트 (V655 / v11.28.0)
+# Literary OS — 개발자 컨텍스트 (V666 / v11.39.0)
 
 ---
 
-## 🚨 세션 시작 즉시 실행 — 이 블록을 건너뛰면 작업 시작 불가
+## 🚨 [RULE-0] 버전 경계 자동 Preflight 강제 집행 (절대 불변 규칙)
 
-```bash
-# ① 최신 상태 pull
-git pull origin main
+> **이 규칙은 개발자가 별도로 지시하지 않아도 Claude가 자동으로 집행한다.**
 
-# ② 세션 시작 프로토콜 자동 실행 (Preflight Step 1 + Step 12 포함)
-python3 tools/session_start.py
+### 규칙 본문
 
-# ③ 위 결과 확인 후 개발 착수
+```
+V(N) 개발 시작 전:
+  → python3 tools/run_preflight.py 실행
+  → PREFLIGHT PASS 확인 후에만 구현 착수
+  → FAIL 시 원인 수정 후 재실행, PASS 확인 후 진행
+
+V(N) 개발 완료 후, V(N+1) 시작 전:
+  → python3 tools/run_preflight.py 재실행 (변경사항 반영 확인)
+  → PREFLIGHT PASS + Release Gate PASS 확인
+  → 그 이후에만 V(N+1) 구현 시작
 ```
 
-> **근거**: DEV_PROTOCOL_v2.0 §1 — Preflight 없이 착수한 커밋은 릴리즈 승인 대상이 아님.  
-> **전체 절차**: `docs/workflow/DEV_PROTOCOL_v2.0.md`  
-> **Preflight 12단계 상세**: `docs/workflow/PREFLIGHT_GUIDE_v1.1.md`
+### Claude 자동 집행 조건
+
+아래 패턴의 사용자 발화를 인식하면 **즉시 Preflight를 먼저 실행**:
+
+| 발화 패턴 | Claude 행동 |
+|-----------|-------------|
+| "V667 진행해", "다음 버전 시작", "SP-C.4 시작" | Preflight 13단계 먼저 실행 → PASS 후 구현 |
+| "668 해줘", "계속 진행", "이어서 개발" | 이전 버전 Preflight PASS 여부 확인 → 미확인 시 재실행 |
+| 버전 번호가 포함된 모든 개발 지시 | 버전 경계 감지 → 자동 Preflight 트리거 |
+
+### 위반 시 처리
+
+- Preflight 미실행 상태에서 구현 코드 작성 **절대 금지**
+- Release Gate FAIL 상태 커밋 **절대 금지**
+- 위반 발생 시 즉시 중단하고 Preflight 실행 후 재시작
 
 ---
 
@@ -29,64 +47,79 @@ python3 tools/session_start.py
 | **DEV_MODE** | 항상 `false` 기본값 유지 (ADR-034) |
 | **GPU SLO** | 재학습 최소 간격 7일, 월 최대 $200 (ADR-051) |
 | **Gate FAIL** | Gate FAIL 상태 절대 커밋 금지 |
+| **G_CONNECTIVITY** | 고립 패키지 2버전 연속 금지 (ADR-128) |
 
 ---
 
-## 현재 상태 (V655 기준)
+## 현재 상태 (V666 기준)
 
 | 항목 | 값 |
 |------|----|
-| 버전 | v11.28.0 |
-| 개발 이터레이션 | V655 |
-| 릴리즈 게이트 | **66/66 PASS** (G01~G67) |
-| 테스트 | **8,053 PASS** |
-| 현재 Phase | Phase C SP-C.2 완료 → SP-C.3 진입 예정 |
-| Git HEAD (main) | c361bd64 |
+| 버전 | v11.39.0 |
+| 개발 이터레이션 | V666 (Integration) |
+| 릴리즈 게이트 | **66/66 PASS** |
+| 테스트 | **8,418 PASS** |
+| 고립 패키지 | **0개** (76패키지 전체 연결) |
+| Preflight 단계 | **13단계** (Step 13: G_CONNECTIVITY) |
+| 현재 Phase | Phase C SP-C.3 완료 → **SP-C.4 진입 대기** |
+| Git HEAD (main) | b60f7507 |
 | GitHub | https://github.com/limsanghyuk/literary-os |
 
 ---
 
-## 세션 시작 프로토콜 (WORKFLOW.md §세션시작)
+## 세션 시작 프로토콜 (매 세션 필수)
 
-**집/회사 어느 환경이든 동일 순서로 실행:**
-
-```
-1. git pull origin main
-2. python3 tools/session_start.py  ← 자동으로 Step 1~12 요약 실행
-3. docs/sessions/ 최근 파일 읽어 이전 맥락 파악
-4. 현재 브랜치 보고
-5. 위 확인 완료 후 개발 착수
+```bash
+git pull origin main
+python3 tools/run_preflight.py   # ← RULE-0 집행 시작점
 ```
 
-## 세션 종료 프로토콜 (WORKFLOW.md §세션종료)
-
-```
-1. docs/sessions/YYYY-MM-DD_[환경]_[주요내용].md 저장
-2. docs/proposals/ 또는 docs/blueprints/ 커밋
-3. git commit + push
-4. 다음 세션 인수인계 요약 1문단 작성
-```
+> Preflight PASS 확인 후에만 개발 착수. 세션 시작 시 자동 실행.
 
 ---
 
-## 개발 흐름 (DEV_PROTOCOL_v2.0 요약)
+## 개발 흐름 (DEV_PROTOCOL_v2.0 + RULE-0 통합)
 
 ```
-[0] git pull → python3 tools/session_start.py
-[1] Preflight 12단계 (tools/session_start.py가 Step 1+12 자동 실행)
-[2] 구현 (신규파일 + tests/unit/test_vXXX_*.py 33TC)
-[3] 검증: pytest → generate_test_inventory.py → run_release_gate.py
-[4] GitHub 배포: commit → push → Release 태그
-[5] ZIP 패키징 + 7/7 검증 + 이전 버전 비교
-[6] 메모리 업데이트 (memory/project_vXXX_state.md)
+[RULE-0] V(N) 시작 전 → python3 tools/run_preflight.py → PASS 확인
+[1] 구현 (신규파일 + tests/unit/test_vNNN_*.py 33TC 이상)
+[2] pytest → generate_test_inventory.py → run_release_gate.py (66/66 PASS)
+[3] GitHub: commit → push → Release 태그 → ZIP 패키징
+[RULE-0] V(N+1) 시작 전 → python3 tools/run_preflight.py 재실행 → PASS 확인
+[4] V(N+1) 구현 시작
 ```
 
-**§3 검증 명령어:**
-```bash
-python3 -m pytest tests/unit/ -q --tb=short 2>&1 | tail -5
-python3 tools/generate_test_inventory.py
-python3 -m tools.run_release_gate 2>/dev/null | grep summary
-```
+**Preflight 13단계 소요 시간**: 약 30~60초 (자동 실행, 개발자 개입 불필요)
+
+---
+
+## SP-C.4 로드맵 (V667~V680)
+
+| 버전 | 내용 | Gate |
+|------|------|------|
+| V667 | 경쟁 흡수: NovelAI 분석 | G72-1 |
+| V668 | 경쟁 흡수: Sudowrite 분석 | G72-2 |
+| V669 | 경쟁 흡수: Novelcrafter 분석 | G72-3 |
+| V670 | 경쟁 흡수: NolanAI 분석 | G72-4 |
+| V671 | 경쟁 흡수: Jenova 분석 + G72 통합 | G72 |
+| V672 | DistillationExportPipeline v0.1 | ADR-095 |
+| V673 | Enterprise SLO Gate | G73 |
+| V674 | Revenue Gate | G74 |
+| V680 | Phase C Exit Gate → v12.0.0 | G75 |
+
+**SP-C.4 시작 발화**: "V667 시작해" / "SP-C.4 진행해" / "계속 개발해"  
+→ Claude가 RULE-0에 따라 자동으로 Preflight 먼저 실행 후 V667 구현 착수.
+
+---
+
+## 주요 도구
+
+| 도구 | 용도 |
+|------|------|
+| `python3 tools/run_preflight.py` | Preflight 13단계 자동 실행 (RULE-0 핵심) |
+| `python3 tools/run_release_gate.py` | G_PREFLIGHT + G_CONNECTIVITY + 66 Gates |
+| `python3 tools/generate_test_inventory.py` | test_inventory.json 갱신 |
+| `bash tools/install_hooks.sh` | 로컬 pre-commit hook 설치 (최초 1회) |
 
 ---
 
@@ -94,58 +127,24 @@ python3 -m tools.run_release_gate 2>/dev/null | grep summary
 
 ```
 literary_system/
-├── agents/               # SP-C.2 멀티에이전트 앙상블 (V646~V653)
-│   ├── director_agent.py    # DirectorAgent + MicroPlanner
-│   ├── critic_agent.py      # CriticAgent (PASS_THRESHOLD=0.65)
-│   ├── editor_agent.py      # EditorAgent + KoreanCadencePlanner
-│   ├── agent_coordinator.py # max_rounds=3
-│   ├── ensemble_memory_cache.py
-│   └── agent_safety_guard.py
-├── ensemble/             # SP-C.2 게이트 (V654~V655)
-│   ├── mae_multiwork_gate.py      # G66 P95≤8s
-│   └── suite_registration_gate.py # G67
-├── constitution/         # LOSConstitution v2 + Bayesian Opt (SP-C.1)
-├── graph_intelligence/   # NKG + 감정 링커
-├── orchestrators/        # 장편 지속 오케스트레이터
-├── predictive/           # PNE
-├── corpus/               # 외부 코퍼스 브릿지
-├── multiwork/            # 다중작품 관리
-├── db/                   # LOSDB Facade (SQL/Vector/Graph)
-├── gates/                # release_gate.py (66 Gates G01~G67)
-└── adapters_live/        # LLM 어댑터 (LLM-0 준수)
+├── sdk/          # PublicSDK (SP-C.3) — online 4종 실구현
+├── ensemble/     # AgentCoordinator (Director→Script→Critic→Editor)
+├── gates/        # 66 Release Gates + SafetyRegressionGate (V666)
+├── constitution/ # LOSConstitution v2 + Bayesian Opt
+├── world/        # PluginRegistry + 5 genre plugins (V666 통합)
+├── governance/   # ATIAMetadataAuditor (V666 통합)
+├── ops/          # AdaptiveThrottler + LongRunMonitor + APIReferenceGenerator (V666)
+└── ...           # 76패키지 전체 연결 (고립 0, ADR-128)
 ```
 
 ---
 
-## 레포지토리 목록
+## Phase C 전체 진행 현황
 
-| 레포 | 현재 버전 | URL |
-|------|-----------|-----|
-| literary-os | **V655 (v11.28.0)** | https://github.com/limsanghyuk/literary-os |
-| v1700-literary-os | Stage 144 | https://github.com/limsanghyuk/v1700-literary-os |
-
----
-
-## GitNexus 현황 (V655 기준)
-
-```
-literary_system/ 서브패키지: 70개+
-Gate 등록: 66개 (G01~G67, G53~G60 없음)
-테스트: 8,053 PASS
-SP-C.2 신규 모듈: agents/ 7개 + ensemble/ 4개
-```
-
-> 재분석: `python3 tools/gitnexus_analyze.py`
-
----
-
-## 버전 계보
-
-| Phase | 버전 범위 | 완료 게이트 |
-|-------|-----------|------------|
-| Phase 1~6 | V1~V580 | G01~G39 |
-| SP-A (Phase A) | V581~V595 | G40~G52 |
-| SP-B.1~B.4 | V596~V630 | G53~G61 |
-| SP-C.1 자기학습 | V631~V640 | G62~G63 |
-| **SP-C.2 멀티에이전트** | **V646~V655** | **G64~G67** ✅ 완료 |
-| SP-C.3 PublicSDK | V656~V665 | G68+ 예정 |
+| SubPhase | 버전 | Gates | 상태 |
+|----------|------|-------|------|
+| SP-C.1 자기학습 | V631~V640 | G62~G63 | ✅ 완료 |
+| SP-C.2 멀티에이전트 | V641~V655 | G64~G67 | ✅ 완료 |
+| SP-C.3 PublicSDK | V656~V665 | G68~G71 | ✅ 완료 |
+| V666 Integration | V666 | ADR-128 | ✅ 완료 |
+| **SP-C.4 경쟁흡수+배포** | **V667~V680** | **G72~G75** | 🔜 진입 대기 |
