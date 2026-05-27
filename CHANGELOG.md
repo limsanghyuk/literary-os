@@ -807,3 +807,20 @@ V380 이전 상세 이력 → `docs/changelog/` 참조
 
 ### Gates
 - 66/66 PASS 유지
+
+## [11.31.0] — 2026-05-27 V658
+
+### Added
+- `literary_system/sdk/b2b/` 패키지 신설 — B2B Partner API (ADR-118)
+  - `oauth.py`: OAuth 2.1 Client Credentials — OAuthClient + AccessToken + OAuth21Manager
+  - `webhook.py`: HMAC-SHA256 Webhook — WebhookManager + 6종 이벤트 타입
+  - `partner_api.py`: B2BPartnerAPI 통합 퍼사드 — RPM 1,000 + 스코프 4종
+- `docs/adr/ADR-118.md` 작성
+- `tests/unit/test_v658_b2b_partner_api.py` — TC 33개 추가
+
+### Changed
+- 버전 11.30.0 → 11.31.0
+- `tools/test_inventory.json` 갱신: 8,119 → 8,152 TC
+
+### Gates
+- 66/66 PASS 유지
