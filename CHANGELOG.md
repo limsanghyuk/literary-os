@@ -880,3 +880,28 @@ V380 이전 상세 이력 → `docs/changelog/` 참조
 - Gates: 66/66 PASS
 - Tests: 8,251
 - ADR: ADR-121
+
+## [11.35.0] — V662 — 2026-05-27
+
+### Added
+- `literary_system/serving/model_serving_endpoint_v2.py` — ModelServingEndpointV2 (419줄)
+  - HPAConfig: K8s HPA 파라미터 관리 및 유효성 검사
+  - HPAStatus: 레플리카 상태 + 스케일 방향 스냅샷
+  - ServingMetricsSnapshot: QPS/CPU/Memory/Queue 단일 시점 메트릭
+  - MetricsCollector: 슬라이딩 윈도우 집계
+  - liveness_probe() / readiness_probe(): K8s 프로브 응답
+  - compute_desired_replicas(): CPU+QPS 기반 희망 레플리카 계산
+  - generate_hpa_manifest(): HPA YAML spec 생성 (autoscaling/v2)
+- `docs/adr/ADR-122.md` — ModelServingEndpointV2 설계 결정
+- `tests/unit/test_v662_model_serving_endpoint_v2.py` — 33 TC (33/33 PASS)
+
+### Fixed
+- `MetricsSnapshot` → `ServingMetricsSnapshot` 이름 변경 (G37 DuplicateZero 충돌 해소)
+
+### Changed
+- 버전: 11.34.0 → 11.35.0
+
+### Status
+- Gates: 66/66 PASS
+- Tests: 8,284
+- ADR: ADR-122
