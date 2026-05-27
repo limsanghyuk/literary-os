@@ -3879,3 +3879,46 @@ GATES.append((
     "Gate G72 — 경쟁 흡수 통합 (5개 경쟁사 전체 PASS, SP-C.4 완료)",
     _gate_competitive_absorption_g72_unified,
 ))
+
+
+# ─── G72-D: 경쟁 흡수 증류 게이트 ────────────────────────────────────────────
+def _gate_distillation_export_g72d() -> dict:
+    """G72-D 증류 게이트 — DistillationExportPipeline 실행 후 export_ready 확인 (ADR-134)."""
+    try:
+        from literary_system.absorption.distillation import DistillationExportPipeline
+        pipeline = DistillationExportPipeline()
+        report = pipeline.run()
+        roadmap = pipeline.export_roadmap()
+        ok = report.export_ready and report.immediate_count >= 10
+        return {
+            "gate": "G72-D",
+            "gate_name": "DistillationExportGate SP-C.4 (ADR-134)",
+            "pass":    ok,
+            "passed":  ok,
+            "passed_count": 1 if ok else 0,
+            "total_count": 1,
+            "checkpoints": [
+                f"total_features={len(report.distilled_features)}",
+                f"immediate={report.immediate_count}",
+                f"next={report.next_count}",
+                f"deferred={report.deferred_count}",
+                f"export_ready={report.export_ready}",
+                f"roadmap_items={len(roadmap)}",
+            ],
+            "errors": [] if ok else ["G72-D 증류 FAIL — export_ready=False 또는 immediate<10"],
+        }
+    except Exception as exc:
+        return {
+            "gate": "G72-D",
+            "gate_name": "DistillationExportGate SP-C.4 (ADR-134)",
+            "pass": False, "passed": False,
+            "passed_count": 0, "total_count": 1,
+            "checkpoints": [], "errors": [str(exc)],
+        }
+
+
+GATES.append((
+    "distillation_export_g72d",
+    "Gate G72-D — 경쟁 흡수 증류 파이프라인 (ADR-134, SP-C.4)",
+    _gate_distillation_export_g72d,
+))

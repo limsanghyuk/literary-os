@@ -16,4 +16,8 @@ __all__ = [
     "NoveltcrafterAbsorber",
     "NolanAIAbsorber",
     "JenovaAbsorber",
+    "DistillationExportPipeline",
+    "DistilledFeature",
+    "DistillationReport",
 ]
+from .distillation import DistillationExportPipeline, DistilledFeature, DistillationReport

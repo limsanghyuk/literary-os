@@ -1,7 +1,7 @@
 {
-  "test_count": 8568,
-  "generated_at": "2026-05-27T11:01:56.524733+00:00",
+  "test_count": 8598,
+  "generated_at": "2026-05-27T11:05:57.208143+00:00",
   "pytest_version": "pytest 9.0.3",
-  "source_hash": "aebc95afa410defb",
+  "source_hash": "5a567036398b177a",
   "generator": "tools/generate_test_inventory.py"
 }
