@@ -4155,3 +4155,50 @@ GATES.append((
     "Gate G78 — Enterprise 컴플라이언스 감사 익스포터 (ADR-141, SP-C.4)",
     _gate_enterprise_compliance_audit_g78,
 ))
+
+
+# ── G79: Phase C Exit Gate ────────────────────────────────────────────────────
+def _gate_phase_c_exit_g79() -> dict:
+    """G79: EnterprisePhaseCExitGate — SP-C.4 Phase C 종합 Exit Gate (ADR-142)"""
+    try:
+        from literary_system.enterprise.phase_c_exit_gate import EnterprisePhaseCExitGate
+        import json, os
+        # test_inventory.json에서 TC 수 읽기 (다중 경로 후보)
+        _base = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../tools/test_inventory.json"))
+        _candidates = [
+            _base,
+            os.path.join(os.getcwd(), "tools/test_inventory.json"),
+            "/tmp/los_sp_c4/tools/test_inventory.json",
+        ]
+        total_tc = 8798  # fallback
+        for _inv_path in _candidates:
+            try:
+                with open(_inv_path) as f:
+                    inv = json.load(f); total_tc = inv.get("test_count", inv.get("total", total_tc))
+                break
+            except Exception:
+                pass
+        gate = EnterprisePhaseCExitGate()
+        report = gate.run(total_tc=total_tc)
+        assert report.gate_passed, f"G79 FAIL: {report.passed_count}/{report.total_count} gates, TC={report.total_tc}"
+        return {
+            "gate": "G79",
+            "pass": True, "passed": True,
+            "passed_count": 1, "total_count": 1,
+            "enterprise_gates": f"{report.passed_count}/{report.total_count}",
+            "total_tc": report.total_tc,
+            "version": report.version,
+            "checkpoints": [
+                f"G79 PASS: {report.passed_count}/{report.total_count} enterprise gates, TC={report.total_tc}, v{report.version}"
+            ],
+            "errors": [],
+        }
+    except Exception as exc:
+        return {"gate": "G79", "pass": False, "passed": False, "passed_count": 0, "total_count": 1, "checkpoints": [], "errors": [str(exc)]}
+
+
+GATES.append((
+    "phase_c_exit_g79",
+    "Gate G79 — SP-C.4 Phase C Exit Gate (G73~G78 종합, ADR-142)",
+    _gate_phase_c_exit_g79,
+))

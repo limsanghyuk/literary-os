@@ -66,3 +66,11 @@ from .compliance_audit import (
     EnterpriseAuditExporter,
     EnterpriseComplianceAuditGate,
 )
+
+# V680: Phase C Exit Gate G79
+from .phase_c_exit_gate import (
+    PhaseCExitStatus,
+    EnterprisePhaseCGateResult,
+    EnterprisePhaseCExitReport,
+    EnterprisePhaseCExitGate,
+)
