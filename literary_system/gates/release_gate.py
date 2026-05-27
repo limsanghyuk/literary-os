@@ -3708,3 +3708,55 @@ GATES.append((
     "Gate G72-3 — Novelcrafter 경쟁 흡수 + IP-ADV-003 자문 (ADR-131, SP-C.4)",
     _gate_novelcrafter_absorption_g72_3,
 ))
+
+
+def _gate_nolan_ai_absorption_g72_4() -> dict:
+    """Gate G72-4: NolanAI 경쟁 흡수 + IP 자문 검증 (SP-C.4, ADR-132, C-M-11)."""
+    try:
+        from literary_system.absorption.nolan_ai import NolanAIAbsorber
+        from literary_system.gates.competitor_absorption_gate import (
+            run_g72_subgate, run_g72_gate,
+        )
+        absorber = NolanAIAbsorber()
+        profile = absorber.analyze()
+        report  = absorber.build_report()
+        sub = run_g72_subgate(
+            competitor="NolanAI",
+            gate_id="G72-4",
+            report_passed=report.gate_passed,
+            ip_cleared=(profile.ip_advisory is not None and profile.ip_advisory.cleared),
+            absorbed_count=len(report.absorbed_features),
+            rejected_count=len(report.rejected_features),
+            summary=report.summary,
+        )
+        g72_report = run_g72_gate([sub])
+        return {
+            "gate": "G72-4",
+            "gate_name": "NolanAI AbsorptionGate SP-C.4 (ADR-132, C-M-11)",
+            "pass":    sub.passed,
+            "passed":  sub.passed,
+            "passed_count": 1 if sub.passed else 0,
+            "total_count": 1,
+            "checkpoints": [
+                f"ip_cleared={sub.ip_cleared}",
+                f"absorbed={sub.absorbed_count}",
+                f"rejected={sub.rejected_count}",
+                f"gate_passed={report.gate_passed}",
+            ],
+            "errors": [] if sub.passed else ["G72-4 NolanAI IP 미클리어 또는 리포트 FAIL"],
+        }
+    except Exception as exc:
+        return {
+            "gate": "G72-4",
+            "gate_name": "NolanAI AbsorptionGate SP-C.4 (ADR-132)",
+            "pass": False, "passed": False,
+            "passed_count": 0, "total_count": 1,
+            "checkpoints": [], "errors": [str(exc)],
+        }
+
+
+GATES.append((
+    "nolan_ai_absorption_g72_4",
+    "Gate G72-4 — NolanAI 경쟁 흡수 + IP-ADV-004 자문 (ADR-132, SP-C.4)",
+    _gate_nolan_ai_absorption_g72_4,
+))
