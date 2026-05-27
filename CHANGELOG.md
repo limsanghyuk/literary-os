@@ -824,3 +824,21 @@ V380 이전 상세 이력 → `docs/changelog/` 참조
 
 ### Gates
 - 66/66 PASS 유지
+
+## [11.32.0] — 2026-05-27 V659
+
+### Added
+- `literary_system/feedback/` 패키지 신설 — ReaderFeedbackCollector (ADR-119)
+  - PIPA 준수 익명화: 이메일·전화·주민번호·이름칭호 자동 마스킹
+  - ConsentLevel 4단계 동의 검증 (NONE→ANONYMOUS→PSEUDONYMOUS→IDENTIFIED)
+  - PIIPurgePolicy: RAW_RETENTION_DAYS=14일 자동 파기
+- `literary_system/gates/feedback_collection_gate.py` — Gate G68 구현
+- `docs/adr/ADR-119.md` 작성
+- `tests/unit/test_v659_reader_feedback.py` — TC 33개 추가
+
+### Changed
+- 버전 11.31.0 → 11.32.0
+- `tools/test_inventory.json` 갱신: 8,152 → 8,185 TC
+
+### Gates
+- 66/66 PASS 유지 + G68 신규 구현 완료
