@@ -1,20 +1,21 @@
 # Preflight 12단계 실행 로그
-**버전**: v11.49.0  |  **실행일시**: 2026-05-27T11:28:26Z  |  **실행자**: run_preflight.py v1.0
+**버전**: v11.49.0  |  **실행일시**: 2026-05-27T11:34:40Z  |  **실행자**: run_preflight.py v1.0
 **근거**: DEV_PROTOCOL_v2.0 §1 + PREFLIGHT_GUIDE_v1.1 §3
 
 ## Step 1. 코드베이스 현황 (index_status 등가)
-- Python 파일: 953개
-- 심볼(클래스): 3,006개
-- 테스트 함수: 8,455개
-- 최근 변경 py 파일 (HEAD~3): 7개
+- Python 파일: 955개
+- 심볼(클래스): 3,014개
+- 테스트 함수: 8,485개
+- 최근 변경 py 파일 (HEAD~3): 8개
   - literary_system/enterprise/__init__.py
+  - literary_system/enterprise/benchmark.py
   - literary_system/enterprise/revenue.py
   - literary_system/enterprise/slo.py
   - literary_system/gates/release_gate.py
   - tests/integration/test_v675_enterprise_integration.py
-  - tests/unit/test_v673_enterprise_slo.py
   - tests/unit/test_v674_revenue_gate.py
-- 소요: 1.18s
+  - tests/unit/test_v676_benchmark.py
+- 소요: 1.19s
 
 ## Step 2. 모듈 범위 (list_repos 등가)
 - literary_system/ 서브패키지: 79개
@@ -44,7 +45,7 @@
   - drse/ (4파일)
   - emotion/ (2파일)
   - ensemble/ (9파일)
-  - enterprise/ (4파일)
+  - enterprise/ (5파일)
   - episode/ (5파일)
   - evaluation/ (4파일)
   - feedback/ (3파일)
@@ -97,7 +98,7 @@
   - trajectory_family/ (2파일)
   - validation/ (5파일)
   - world/ (3파일)
-- 테스트 파일: 323개
+- 테스트 파일: 324개
 
 ## Step 3. 변경 예정 심볼 탐색 (query 등가)
 - SP-C.4 대상: DistillationExportPipeline, CompetitiveAbsorber, EnterpriseSLOGate, RevenueGate
@@ -131,7 +132,7 @@
   - literary_system.gates: depth-1 참조자 11개
 
 ## Step 6. 테스트 영향 분석 (detect_changes 등가)
-- SP-C.3 테스트 파일: 27개
+- SP-C.3 테스트 파일: 28개
   - test_v675_enterprise_integration.py
   - test_v650_agent_coordinator.py
   - test_v651_memory_cache.py
@@ -159,6 +160,7 @@
   - test_v673_enterprise_slo.py
   - test_v674_revenue_gate.py
   - test_v676_benchmark.py
+  - test_v677_tenant_isolation.py
 - pytest --collect-only: tests/unit/test_corpus_ingestor.py::TestCorpusEntry::test_tc01_corpus_entry_creation
 
 ## Step 7. 핵심 개념 무결성 (concept_impact 등가)
@@ -209,7 +211,7 @@
   - 문서/CHANGELOG: 🟢 Low
 
 ## Step 12. Release Gate 최종 판단 (release_gate_integration 등가)
-  - RELEASE GATE PASS: 76/76 gates passed
+  - RELEASE GATE PASS: 77/77 gates passed
 
 ## Step 13. 패키지 연결성 검사 (ADR-128 G_CONNECTIVITY)
   ✅ G_CONNECTIVITY PASS — 완전 고립 패키지 0개 (78개 전체 연결됨)
@@ -218,7 +220,7 @@
   - 실질 순환: 5개
   ⚠️  auto_promotion_gate → auto_promotion_gate
   ⚠️  release_gate → gate_registry → release_gate
-  ⚠️  self_learning_gate → self_learning_gate
+  ⚠️  release_gate → phase_b_exit_gate → release_gate
 
 ---
 ## 최종 판정
@@ -232,7 +234,7 @@
   - Gate 미연결(독립 운영): ModelServingEndpointV2
   - 순환 의존: ['literary_system.gates.auto_promotion_gate', 'literary_system.gates.auto_promotion_gate']
   - 순환 의존: ['literary_system.gates.release_gate', 'literary_system.gates.gate_registry', 'literary_system.gates.release_gate']
-  - 순환 의존: ['literary_system.gates.self_learning_gate', 'literary_system.gates.self_learning_gate']
+  - 순환 의존: ['literary_system.gates.release_gate', 'literary_system.gates.phase_b_exit_gate', 'literary_system.gates.release_gate']
 
-**실행 완료**: 2026-05-27T11:28:35Z
+**실행 완료**: 2026-05-27T11:34:49Z
 **로그 파일**: docs/sessions/preflight_v11.49.0_2026-05-27.md

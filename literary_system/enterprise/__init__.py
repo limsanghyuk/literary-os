@@ -33,3 +33,9 @@ _m.__all__ = getattr(_m, '__all__', []) + [
     "BenchmarkSample", "BenchmarkReport", "EnterpriseBenchmarkSuite",
     "BenchmarkRunner", "BenchmarkGate",
 ]
+
+from .tenant_isolation import (
+    EnterpriseTenantStatus, IsolationLevel, EnterpriseTenant,
+    EnterpriseIsolationViolation, TenantIsolationReport,
+    EnterpriseTenantRegistry, TenantIsolationAuditor, TenantIsolationGate,
+)

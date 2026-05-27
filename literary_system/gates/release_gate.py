@@ -4047,3 +4047,45 @@ GATES.append((
     "Gate G75-BM — Enterprise 성능 벤치마크 (ADR-138, SP-C.4)",
     _gate_benchmark_g75,
 ))
+
+
+# ── G76: Tenant Isolation Gate ────────────────────────────────────────────────
+
+def _gate_tenant_isolation_g76() -> dict:
+    """G76: TenantIsolationGate — Enterprise 테넌트 격리 감사 (ADR-139, SP-C.4)"""
+    try:
+        from literary_system.enterprise.tenant_isolation import TenantIsolationGate
+        gate = TenantIsolationGate()
+        report = gate.demo_run()
+        return {
+            "gate": "G76",
+            "gate_name": "TenantIsolationGate (ADR-139, SP-C.4)",
+            "pass":    report.gate_passed,
+            "passed":  report.gate_passed,
+            "passed_count": 1 if report.gate_passed else 0,
+            "total_count": 1,
+            "checkpoints": [
+                f"tenants_total={report.tenants_total}",
+                f"tenants_active={report.tenants_active}",
+                f"tenants_with_slo={report.tenants_with_slo}",
+                f"tenants_with_revenue={report.tenants_with_revenue}",
+                f"violations={report.violation_count}",
+                f"gate_passed={report.gate_passed}",
+            ],
+            "errors": [v.description for v in report.error_violations],
+        }
+    except Exception as exc:
+        return {
+            "gate": "G76",
+            "gate_name": "TenantIsolationGate (ADR-139)",
+            "pass": False, "passed": False,
+            "passed_count": 0, "total_count": 1,
+            "checkpoints": [], "errors": [str(exc)],
+        }
+
+
+GATES.append((
+    "tenant_isolation_g76",
+    "Gate G76 — Enterprise 테넌트 격리 감사 (ADR-139, SP-C.4)",
+    _gate_tenant_isolation_g76,
+))
