@@ -7,6 +7,7 @@ from .novel_ai import NovelAIAbsorber
 from .sudowrite import SudowriteAbsorber
 from .novelcrafter import NoveltcrafterAbsorber
 from .nolan_ai import NolanAIAbsorber
+from .jenova import JenovaAbsorber
 
 __all__ = [
     "CompetitorProfile", "AbsorptionReport", "FeatureGap", "IPAdvisoryCommit",
@@ -14,4 +15,5 @@ __all__ = [
     "SudowriteAbsorber",
     "NoveltcrafterAbsorber",
     "NolanAIAbsorber",
+    "JenovaAbsorber",
 ]

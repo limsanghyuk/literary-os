@@ -3760,3 +3760,122 @@ GATES.append((
     "Gate G72-4 — NolanAI 경쟁 흡수 + IP-ADV-004 자문 (ADR-132, SP-C.4)",
     _gate_nolan_ai_absorption_g72_4,
 ))
+
+
+# ─── G72-5: Jenova 흡수 게이트 ────────────────────────────────────────────────
+def _gate_jenova_absorption_g72_5() -> dict:
+    """G72-5 Jenova 경쟁 흡수 게이트 (ADR-133, IP-ADV-005, SP-C.4)."""
+    try:
+        from literary_system.absorption.jenova import JenovaAbsorber
+        from literary_system.gates.competitor_absorption_gate import run_g72_subgate, run_g72_gate
+        absorber = JenovaAbsorber()
+        profile = absorber.analyze()
+        report = absorber.build_report()
+        sub = run_g72_subgate(
+            competitor="Jenova",
+            gate_id="G72-5",
+            report_passed=report.gate_passed,
+            ip_cleared=(profile.ip_advisory is not None and profile.ip_advisory.cleared),
+            absorbed_count=len(report.absorbed_features),
+            rejected_count=len(report.rejected_features),
+            summary=report.summary,
+        )
+        g72_report = run_g72_gate([sub])
+        return {
+            "gate": "G72-5",
+            "gate_name": "Jenova AbsorptionGate SP-C.4 (ADR-133, C-M-11)",
+            "pass":    sub.passed,
+            "passed":  sub.passed,
+            "passed_count": 1 if sub.passed else 0,
+            "total_count": 1,
+            "checkpoints": [
+                f"ip_cleared={sub.ip_cleared}",
+                f"absorbed={sub.absorbed_count}",
+                f"rejected={sub.rejected_count}",
+                f"gate_passed={report.gate_passed}",
+            ],
+            "errors": [] if sub.passed else ["G72-5 Jenova IP 미클리어 또는 리포트 FAIL"],
+        }
+    except Exception as exc:
+        return {
+            "gate": "G72-5",
+            "gate_name": "Jenova AbsorptionGate SP-C.4 (ADR-133)",
+            "pass": False, "passed": False,
+            "passed_count": 0, "total_count": 1,
+            "checkpoints": [], "errors": [str(exc)],
+        }
+
+
+GATES.append((
+    "jenova_absorption_g72_5",
+    "Gate G72-5 — Jenova 경쟁 흡수 + IP-ADV-005 자문 (ADR-133, SP-C.4)",
+    _gate_jenova_absorption_g72_5,
+))
+
+
+# ─── G72: 5개 경쟁사 통합 게이트 ──────────────────────────────────────────────
+def _gate_competitive_absorption_g72_unified() -> dict:
+    """G72 통합 게이트 — NovelAI·Sudowrite·Novelcrafter·NolanAI·Jenova 전부 PASS 확인."""
+    try:
+        from literary_system.absorption.novel_ai import NovelAIAbsorber
+        from literary_system.absorption.sudowrite import SudowriteAbsorber
+        from literary_system.absorption.novelcrafter import NoveltcrafterAbsorber
+        from literary_system.absorption.nolan_ai import NolanAIAbsorber
+        from literary_system.absorption.jenova import JenovaAbsorber
+        from literary_system.gates.competitor_absorption_gate import run_g72_subgate, run_g72_gate
+
+        entries = [
+            ("NovelAI",      "G72-1", NovelAIAbsorber()),
+            ("Sudowrite",    "G72-2", SudowriteAbsorber()),
+            ("Novelcrafter", "G72-3", NoveltcrafterAbsorber()),
+            ("NolanAI",      "G72-4", NolanAIAbsorber()),
+            ("Jenova",       "G72-5", JenovaAbsorber()),
+        ]
+
+        sub_results = []
+        for competitor, gate_id, absorber in entries:
+            profile = absorber.analyze()
+            report = absorber.build_report()
+            sub = run_g72_subgate(
+                competitor=competitor,
+                gate_id=gate_id,
+                report_passed=report.gate_passed,
+                ip_cleared=(profile.ip_advisory is not None and profile.ip_advisory.cleared),
+                absorbed_count=len(report.absorbed_features),
+                rejected_count=len(report.rejected_features),
+                summary=report.summary,
+            )
+            sub_results.append(sub)
+
+        g72_report = run_g72_gate(sub_results)
+        failed = [r.gate_id for r in sub_results if not r.passed]
+        return {
+            "gate": "G72",
+            "gate_name": "G72 경쟁 흡수 통합 게이트 — SP-C.4 5개 경쟁사 완전 흡수",
+            "pass":    g72_report.all_passed,
+            "passed":  g72_report.all_passed,
+            "passed_count": len(sub_results) - len(failed),
+            "total_count": len(sub_results),
+            "checkpoints": [
+                f"total_absorbed={g72_report.total_absorbed}",
+                f"total_rejected={g72_report.total_rejected}",
+                f"all_ip_cleared={all(r.ip_cleared for r in sub_results)}",
+                f"sub_gates_passed={[r.gate_id for r in sub_results if r.passed]}",
+            ],
+            "errors": [f"FAIL: {gid}" for gid in failed],
+        }
+    except Exception as exc:
+        return {
+            "gate": "G72",
+            "gate_name": "G72 경쟁 흡수 통합 게이트",
+            "pass": False, "passed": False,
+            "passed_count": 0, "total_count": 5,
+            "checkpoints": [], "errors": [str(exc)],
+        }
+
+
+GATES.append((
+    "competitive_absorption_g72_unified",
+    "Gate G72 — 경쟁 흡수 통합 (5개 경쟁사 전체 PASS, SP-C.4 완료)",
+    _gate_competitive_absorption_g72_unified,
+))
