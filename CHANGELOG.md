@@ -787,3 +787,23 @@ V380 이전 상세 이력 → `docs/changelog/` 참조
 
 ### Gates
 - 66/66 PASS 유지
+
+## [11.30.0] — 2026-05-27 V657
+
+### Added
+- `literary_system/sdk/api_schema.py` — OpenAPI 3.1 스펙 생성기 (ADR-117)
+  - `build_openapi_schema()`: 5개 엔드포인트 스펙 dict
+  - `get_openapi_json()` / `get_openapi_yaml()`: 직렬화 헬퍼
+- `docs/sdk/postman_collection.json` — Postman Collection v2.1 (5개 요청)
+- `docs/sdk/samples_python.py` — Python 샘플
+- `docs/sdk/samples_node.js` — Node.js/fetch 샘플
+- `docs/sdk/samples_curl.sh` — cURL bash 샘플
+- `docs/adr/ADR-117.md` 작성
+- `tests/unit/test_v657_api_schema.py` — TC 33개 추가
+
+### Changed
+- 버전 11.29.0 → 11.30.0
+- `tools/test_inventory.json` 갱신: 8,086 → 8,119 TC
+
+### Gates
+- 66/66 PASS 유지
