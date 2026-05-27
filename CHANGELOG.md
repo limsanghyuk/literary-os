@@ -860,3 +860,23 @@ V380 이전 상세 이력 → `docs/changelog/` 참조
 
 ### Gates
 - 66/66 PASS 유지
+
+## [11.34.0] — V661 — 2026-05-27
+
+### Added
+- `literary_system/gates/feedback_loop_gate.py` — FeedbackLoopGate G69 (24h 무중단 파이프라인 안정성 게이트)
+  - 24 tick × 1h 시뮬레이션 (24h 완주 검증)
+  - LoopTickResult / LoopSimReport 데이터클래스
+  - purge 6h 주기 자동 실행 검증
+  - `run_g69()` 공개 진입점
+- `docs/adr/ADR-121.md` — FeedbackLoopGate G69 설계 결정
+- `tests/unit/test_v661_feedback_loop_gate.py` — 33 TC (33/33 PASS)
+- `literary_system/gates/__init__.py` — G68/G69 exports 추가
+
+### Changed
+- 버전: 11.33.0 → 11.34.0
+
+### Status
+- Gates: 66/66 PASS
+- Tests: 8,251
+- ADR: ADR-121

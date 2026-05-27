@@ -14,3 +14,13 @@ from literary_system.gates.self_learning_gate import (  # noqa: E402
     CONTAMINATION_MAX,
     N_CONSTITUTION_AXES,
 )
+from literary_system.gates.feedback_collection_gate import (
+    FeedbackCollectionGate,
+    run_g68,
+)
+from literary_system.gates.feedback_loop_gate import (
+    FeedbackLoopGate,
+    LoopSimReport,
+    LoopTickResult,
+    run_g69,
+)
