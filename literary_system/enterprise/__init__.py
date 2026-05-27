@@ -52,3 +52,17 @@ from .cost_control import (
     EnterpriseCostTracker,
     EnterpriseCostControlGate,
 )
+
+# compliance_audit exports (V679)
+from .compliance_audit import (
+    EnterpriseAuditEventType,
+    ComplianceStatus,
+    EnterpriseAuditSeverity,
+    EnterpriseAuditEvent,
+    TenantComplianceRecord,
+    EnterpriseAuditReport,
+    EnterpriseAuditEventStore,
+    EnterpriseComplianceAuditor,
+    EnterpriseAuditExporter,
+    EnterpriseComplianceAuditGate,
+)

@@ -4121,3 +4121,37 @@ GATES.append((
     "Gate G77 — Enterprise 비용 제어 예산 집행 (ADR-140, SP-C.4)",
     _gate_enterprise_cost_control_g77,
 ))
+
+
+# ── G78: Enterprise Compliance Audit Gate ─────────────────────────────────────
+def _gate_enterprise_compliance_audit_g78() -> dict:
+    """G78: EnterpriseComplianceAuditGate — 테넌트 컴플라이언스 감사 (ADR-141, SP-C.4)"""
+    try:
+        from literary_system.enterprise.compliance_audit import (
+            EnterpriseComplianceAuditGate, ComplianceStatus
+        )
+        gate = EnterpriseComplianceAuditGate()
+        report = gate.demo_run()
+        assert report.gate_passed, "gate_passed must be True"
+        assert len(report.records) == 4
+        assert report.non_compliant_tenants >= 1
+        assert report.total_events >= 1
+        return {
+            "gate": "G78",
+            "pass": True, "passed": True,
+            "passed_count": 1, "total_count": 1,
+            "tenants": len(report.records),
+            "non_compliant": report.non_compliant_tenants,
+            "total_events": report.total_events,
+            "checkpoints": [f"G78 PASS: {len(report.records)} tenants, {report.non_compliant_tenants} non-compliant, {report.total_events} events"],
+            "errors": [],
+        }
+    except Exception as exc:
+        return {"gate": "G78", "pass": False, "passed": False, "passed_count": 0, "total_count": 1, "checkpoints": [], "errors": [str(exc)]}
+
+
+GATES.append((
+    "enterprise_compliance_audit_g78",
+    "Gate G78 — Enterprise 컴플라이언스 감사 익스포터 (ADR-141, SP-C.4)",
+    _gate_enterprise_compliance_audit_g78,
+))
