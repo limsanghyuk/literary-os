@@ -905,3 +905,24 @@ V380 이전 상세 이력 → `docs/changelog/` 참조
 - Gates: 66/66 PASS
 - Tests: 8,284
 - ADR: ADR-122
+
+## [11.36.0] — V663 — 2026-05-27
+
+### Added
+- `literary_system/gates/sdk_stability_gate.py` — SDKStabilityGate G70 (264줄)
+  - BetaUserResult: 단일 사용자 4메서드 호출 결과 (analyze/repair/predict/generate)
+  - StabilityReport: 전체 베타 안정성 리포트
+  - SDKStabilityGate: 20명 × 4메서드 = 80회 호출 시뮬레이션
+  - run_g70() 공개 진입점
+- `literary_system/sdk/__init__.py` — __version__ = "1.0.0" 추가
+- `docs/adr/ADR-123.md` — SDKStabilityGate 설계 결정
+- `tests/unit/test_v663_sdk_stability_gate.py` — 33 TC (33/33 PASS)
+- `literary_system/gates/__init__.py` — G70 exports 추가
+
+### Changed
+- 버전: 11.35.0 → 11.36.0
+
+### Status
+- Gates: 66/66 PASS
+- Tests: 8,317
+- ADR: ADR-123
