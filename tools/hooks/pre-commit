@@ -1,0 +1,78 @@
+#!/bin/bash
+# Literary OS pre-commit hook — DEV_PROTOCOL_v2.0 §3 준수 강제
+# 설치: bash tools/install_hooks.sh
+
+echo ""
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "  Literary OS pre-commit 프로토콜 검사 (DEV_PROTOCOL_v2.0)"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+ROOT=$(git rev-parse --show-toplevel)
+FAIL=0
+
+# [1] test_inventory.json 갱신 여부 확인
+STAGED_PY=$(git diff --cached --name-only | grep '\.py$' | wc -l)
+if [ "$STAGED_PY" -gt 0 ]; then
+    INVENTORY_STAGED=$(git diff --cached --name-only | grep 'test_inventory.json' | wc -l)
+    if [ "$INVENTORY_STAGED" -eq 0 ]; then
+        echo "  ⚠️  Python 파일 ${STAGED_PY}개 변경 — test_inventory.json 갱신 필요"
+        echo "      실행: python3 tools/generate_test_inventory.py && git add tools/test_inventory.json"
+        FAIL=1
+    fi
+fi
+
+# [2] LLM-0 위반 검사 (corpus/constitution/finetune)
+PROTECTED_PATTERNS=("literary_system/corpus/" "literary_system/constitution/" "literary_system/finetune/")
+FORBIDDEN_PATTERNS=("import openai" "import anthropic" "requests.post(" "httpx.post(")
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.py$')
+
+for f in $STAGED_FILES; do
+    for pkg in "${PROTECTED_PATTERNS[@]}"; do
+        if [[ "$f" == *"$pkg"* ]]; then
+            for pat in "${FORBIDDEN_PATTERNS[@]}"; do
+                if git show ":$f" 2>/dev/null | grep -q "$pat"; then
+                    echo "  ❌ LLM-0 위반: $f — '$pat'"
+                    FAIL=1
+                fi
+            done
+        fi
+    done
+done
+
+# [3] DEV_MODE=True 검사
+for f in $STAGED_FILES; do
+    if git show ":$f" 2>/dev/null | grep -qE "DEV_MODE\s*=\s*True"; then
+        echo "  ❌ DEV_MODE=True 감지: $f (ADR-034 위반)"
+        FAIL=1
+    fi
+done
+
+# [4] 릴리즈 게이트 (5개 이상 Python 변경 시)
+if [ "$STAGED_PY" -ge 5 ]; then
+    echo "  🔍 Python 파일 ${STAGED_PY}개 — 릴리즈 게이트 검사..."
+    cd "$ROOT"
+    GATE_OUT=$(python3 -m tools.run_release_gate 2>/dev/null)
+    if echo "$GATE_OUT" | grep -q '"status": "pass"'; then
+        SUMMARY=$(echo "$GATE_OUT" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('summary',''))" 2>/dev/null)
+        echo "  ✅ $SUMMARY"
+    else
+        SUMMARY=$(echo "$GATE_OUT" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('summary','FAIL'))" 2>/dev/null || echo "FAIL")
+        echo "  ❌ 릴리즈 게이트 FAIL: $SUMMARY"
+        echo "     Gate 수정 후 재시도: python3 tools/session_start.py --gate"
+        FAIL=1
+    fi
+fi
+
+echo ""
+if [ $FAIL -eq 1 ]; then
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo "  커밋 차단 — 수정 후 재시도: docs/workflow/DEV_PROTOCOL_v2.0.md"
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo ""
+    exit 1
+fi
+
+echo "  ✅ pre-commit 검사 통과"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo ""
+exit 0
