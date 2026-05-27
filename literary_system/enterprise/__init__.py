@@ -18,3 +18,18 @@ __all__ = [
     "PartnerRevenueContract", "RevenueInvoice", "RevenueReport",
     "RevenueCalculator", "RevenueInvoiceGenerator", "RevenueGate",
 ]
+
+from .benchmark import (
+    BenchmarkStatus, BenchmarkTarget, BenchmarkThreshold,
+    BenchmarkSample, BenchmarkReport, EnterpriseBenchmarkSuite,
+    BenchmarkRunner, BenchmarkGate,
+)
+
+# __all__ 확장
+import sys as _sys
+_m = _sys.modules[__name__]
+_m.__all__ = getattr(_m, '__all__', []) + [
+    "BenchmarkStatus", "BenchmarkTarget", "BenchmarkThreshold",
+    "BenchmarkSample", "BenchmarkReport", "EnterpriseBenchmarkSuite",
+    "BenchmarkRunner", "BenchmarkGate",
+]

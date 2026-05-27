@@ -4002,3 +4002,48 @@ GATES.append((
     "Gate G74 — Revenue Share 계약·인보이스 검증 (ADR-136, SP-C.4)",
     _gate_revenue_g74,
 ))
+
+
+# ── G75-BM: Enterprise Benchmark Gate ────────────────────────────────────────
+
+def _gate_benchmark_g75() -> dict:
+    """G75-BM: BenchmarkGate — Enterprise SLO/Revenue 성능 벤치마크 (ADR-138, SP-C.4)"""
+    try:
+        from literary_system.enterprise.benchmark import BenchmarkGate, BenchmarkStatus
+        gate = BenchmarkGate()
+        suite = gate.demo_run()
+        checkpoints = [
+            f"reports_total={suite.total_count}",
+            f"reports_passed={suite.passed_count}",
+            f"suite_status={suite.suite_status.value}",
+        ]
+        for rep in suite.reports:
+            checkpoints.append(
+                f"{rep.target.value}: avg={rep.avg_ms:.1f}ms p99={rep.p99_ms:.1f}ms "
+                f"tput={rep.throughput_rps:.1f}rps status={rep.status.value}"
+            )
+        return {
+            "gate": "G75-BM",
+            "gate_name": "BenchmarkGate (ADR-138, SP-C.4)",
+            "pass":    suite.all_passed,
+            "passed":  suite.all_passed,
+            "passed_count": suite.passed_count,
+            "total_count":  suite.total_count,
+            "checkpoints": checkpoints,
+            "errors": [],
+        }
+    except Exception as exc:
+        return {
+            "gate": "G75-BM",
+            "gate_name": "BenchmarkGate (ADR-138)",
+            "pass": False, "passed": False,
+            "passed_count": 0, "total_count": 1,
+            "checkpoints": [], "errors": [str(exc)],
+        }
+
+
+GATES.append((
+    "benchmark_g75",
+    "Gate G75-BM — Enterprise 성능 벤치마크 (ADR-138, SP-C.4)",
+    _gate_benchmark_g75,
+))
