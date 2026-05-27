@@ -1,3 +1,23 @@
+## [V664] v11.37.0 — B2BPartnerGate G71 (LOI 3건 검증)
+
+### Added
+- `literary_system/gates/b2b_partner_gate.py`: B2BPartnerGate G71 구현
+  - LOIRecord (loi_id/partner_name/status/signed_date/contact_email/annual_value_krw/api_scope)
+  - LOIStatus Enum: DRAFT/SIGNED/EXECUTED/EXPIRED/CANCELLED
+  - LOIRepository: 인메모리 저장소, 중복 loi_id 방어
+  - B2BPartnerGate.run() → B2BPartnerReport (passed, valid_loi_count, total_annual_value_krw)
+  - _validate_loi(): 이메일/날짜/상태/금액 4종 검증
+  - run_g71(): 데모 3건 자동 등록 편의 함수
+- `docs/adr/ADR-124.md`: B2BPartnerGate G71 설계 결정
+- `tests/unit/test_v664_b2b_partner_gate.py`: 33 TC (33/33 PASS)
+
+### Gate
+- G71 (B2BPartnerGate): 유효 LOI ≥ 3건 AND 모든 필드 검증 통과
+
+### Metrics
+- Tests: 8,350 (이전 8,317 + 33)
+- Gates: 66/66 PASS (G71 비즈니스 게이트 별도)
+- Version: v11.37.0
 ## [11.28.0] — 2026-05-27 (V655)
 
 ### SP-C.2 완료 — SuiteRegistrationGate G67 + HuggingFace 등록 준비

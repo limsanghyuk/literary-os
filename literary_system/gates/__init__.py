@@ -30,3 +30,12 @@ from literary_system.gates.sdk_stability_gate import (
     BetaUserResult,
     run_g70,
 )
+from literary_system.gates.b2b_partner_gate import (
+    B2BPartnerGate,
+    B2BPartnerReport,
+    LOIRecord,
+    LOIRepository,
+    LOIStatus,
+    LOIValidationResult,
+    run_g71,
+)
