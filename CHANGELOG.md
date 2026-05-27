@@ -842,3 +842,21 @@ V380 이전 상세 이력 → `docs/changelog/` 참조
 
 ### Gates
 - 66/66 PASS 유지 + G68 신규 구현 완료
+
+## [11.33.0] — 2026-05-27 V660
+
+### Added
+- `literary_system/feedback/feedback_to_rlhf.py` — FeedbackToRLHF Adapter (ADR-120)
+  - z-score 이상치 제거 (Z_THRESHOLD=2.0, 모표준편차 기준)
+  - 정규화 점수 산출 (1~5 → 0~1)
+  - 극단 점수 신뢰 가중치 0.85
+  - AdapterStats 누적 통계
+- `docs/adr/ADR-120.md` 작성
+- `tests/unit/test_v660_feedback_to_rlhf.py` — TC 33개 추가
+
+### Changed
+- 버전 11.32.0 → 11.33.0
+- `tools/test_inventory.json` 갱신: 8,185 → 8,218 TC
+
+### Gates
+- 66/66 PASS 유지
