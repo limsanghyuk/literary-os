@@ -1,16 +1,26 @@
 # Preflight 12단계 실행 로그
-**버전**: v11.39.0  |  **실행일시**: 2026-05-27T08:41:13Z  |  **실행자**: run_preflight.py v1.0
+**버전**: v11.39.0  |  **실행일시**: 2026-05-27T10:26:31Z  |  **실행자**: run_preflight.py v1.0
 **근거**: DEV_PROTOCOL_v2.0 §1 + PREFLIGHT_GUIDE_v1.1 §3
 
 ## Step 1. 코드베이스 현황 (index_status 등가)
-- Python 파일: 930개
+- Python 파일: 931개
 - 심볼(클래스): 2,942개
 - 테스트 함수: 8,195개
-- 최근 변경 py 파일 (HEAD~3): 0개
-- 소요: 1.21s
+- 최근 변경 py 파일 (HEAD~3): 13개
+  - literary_system/causal_plan/__init__.py
+  - literary_system/gates/safety_regression_gate.py
+  - literary_system/governance/__init__.py
+  - literary_system/nkg/__init__.py
+  - literary_system/ops/__init__.py
+  - literary_system/pipeline/__init__.py
+  - literary_system/prose/__init__.py
+  - literary_system/sdk/public_sdk.py
+  - literary_system/trajectory/__init__.py
+  - literary_system/world/__init__.py
+- 소요: 1.17s
 
 ## Step 2. 모듈 범위 (list_repos 등가)
-- literary_system/ 서브패키지: 77개
+- literary_system/ 서브패키지: 78개
   - __init__.py/ (0파일)
   - action_compiler/ (4파일)
   - adapters/ (7파일)
@@ -75,6 +85,7 @@
   - rlhf/ (6파일)
   - safety/ (2파일)
   - schemas/ (19파일)
+  - schemas_ext/ (1파일)
   - scope/ (8파일)
   - sdk/ (10파일)
   - serving/ (6파일)
@@ -193,27 +204,29 @@
   - RELEASE GATE PASS: 66/66 gates passed
 
 ## Step 13. 패키지 연결성 검사 (ADR-128 G_CONNECTIVITY)
-  ✅ G_CONNECTIVITY PASS — 완전 고립 패키지 0개 (76개 전체 연결됨)
+  ⚠️  WARN: schemas_ext — 완전 고립 (←0, →0). 2버전 내 연결 필요 (ADR-128)
+  총 1개 고립, 0개 에스컬레이션
 
 ## 부록. 순환 의존 탐지
   - 실질 순환: 5개
   ⚠️  auto_promotion_gate → auto_promotion_gate
-  ⚠️  phase_a_exit_gate → release_gate → phase_a_exit_gate
   ⚠️  release_gate → phase_b_exit_gate → release_gate
+  ⚠️  phase_a_exit_gate → release_gate → phase_a_exit_gate
 
 ---
 ## 최종 판정
 ### ✅ PREFLIGHT PASS — 개발 진행 허가
 
-**경고 (블록 아님)**: 8건
+**경고 (블록 아님)**: 9건
   - Gate 미연결(독립 운영): SDKStabilityGate
   - Gate 미연결(독립 운영): B2BPartnerGate
   - Gate 미연결(독립 운영): FeedbackLoopGate
   - Gate 미연결(독립 운영): ReaderFeedbackGate
   - Gate 미연결(독립 운영): ModelServingEndpointV2
+  - 고립 패키지: schemas_ext
   - 순환 의존: ['literary_system.gates.auto_promotion_gate', 'literary_system.gates.auto_promotion_gate']
-  - 순환 의존: ['literary_system.gates.phase_a_exit_gate', 'literary_system.gates.release_gate', 'literary_system.gates.phase_a_exit_gate']
   - 순환 의존: ['literary_system.gates.release_gate', 'literary_system.gates.phase_b_exit_gate', 'literary_system.gates.release_gate']
+  - 순환 의존: ['literary_system.gates.phase_a_exit_gate', 'literary_system.gates.release_gate', 'literary_system.gates.phase_a_exit_gate']
 
-**실행 완료**: 2026-05-27T08:41:21Z
+**실행 완료**: 2026-05-27T10:26:43Z
 **로그 파일**: docs/sessions/preflight_v11.39.0_2026-05-27.md

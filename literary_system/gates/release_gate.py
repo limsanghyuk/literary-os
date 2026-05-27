@@ -1713,7 +1713,7 @@ GATES = [
 
 
 def run_release_gate() -> dict:
-    """V632 릴리즈 게이트 실행 (60개 게이트, Phase B Exit Gate G61 포함, ADR-099, Phase C SP-C.1)."""
+    """V667 릴리즈 게이트 실행 (68개 게이트 — G67+G72-1 포함, Phase C SP-C.4 진입, ADR-129)."""
     import traceback
     results_dict: dict = {}
     passed_count = 0
@@ -3533,4 +3533,66 @@ GATES.append((
     "suite_registration_g67",
     "Gate G67 — SuiteRegistrationGate SP-C.2 4조건 종합 완료 판정 (ADR-115)",
     _gate_suite_registration_g67,
+))
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Gate G72-1 — NovelAI Absorption Gate (V667, ADR-129)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _gate_novel_ai_absorption_g72_1() -> dict:
+    """Gate G72-1: NovelAI 경쟁 흡수 + IP 자문 검증 (SP-C.4, ADR-129, C-M-11)."""
+    try:
+        from literary_system.absorption.novel_ai import NovelAIAbsorber
+        from literary_system.gates.competitor_absorption_gate import (
+            run_g72_subgate, run_g72_gate,
+        )
+
+        absorber = NovelAIAbsorber()
+        profile = absorber.analyze()
+        report  = absorber.build_report()
+
+        sub = run_g72_subgate(
+            competitor="NovelAI",
+            gate_id="G72-1",
+            report_passed=report.gate_passed,
+            ip_cleared=(profile.ip_advisory is not None and profile.ip_advisory.cleared),
+            absorbed_count=len(report.absorbed_features),
+            rejected_count=len(report.rejected_features),
+            summary=report.summary,
+        )
+        g72_report = run_g72_gate([sub])
+
+        return {
+            "gate": "G72-1",
+            "gate_name": "NovelAI AbsorptionGate SP-C.4 (ADR-129, C-M-11)",
+            "pass":    sub.passed,
+            "passed":  sub.passed,
+            "passed_count": 1 if sub.passed else 0,
+            "total_count": 1,
+            "checkpoints": [
+                f"ip_cleared={sub.ip_cleared}",
+                f"absorbed={sub.absorbed_count}",
+                f"rejected={sub.rejected_count}",
+                f"gate_passed={report.gate_passed}",
+            ],
+            "errors": [] if sub.passed else ["G72-1 NovelAI IP 미클리어 또는 리포트 FAIL"],
+        }
+    except Exception as exc:
+        return {
+            "gate": "G72-1",
+            "gate_name": "NovelAI AbsorptionGate SP-C.4 (ADR-129)",
+            "pass":    False,
+            "passed":  False,
+            "passed_count": 0,
+            "total_count": 1,
+            "checkpoints": [],
+            "errors":  [str(exc)],
+        }
+
+
+GATES.append((
+    "novel_ai_absorption_g72_1",
+    "Gate G72-1 — NovelAI 경쟁 흡수 + IP-ADV-001 자문 (ADR-129, SP-C.4)",
+    _gate_novel_ai_absorption_g72_1,
 ))
