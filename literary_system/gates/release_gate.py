@@ -3961,3 +3961,44 @@ GATES.append((
     "Gate G73 — Enterprise SLO 계약·모니터링·위반 경보 (ADR-135, SP-C.4)",
     _gate_enterprise_slo_g73,
 ))
+
+
+# ── G74: Revenue Gate ────────────────────────────────────────────────────────
+
+def _gate_revenue_g74() -> dict:
+    """G74: RevenueGate — 파트너 Revenue Share 계약·인보이스 검증 (ADR-136, SP-C.4)"""
+    try:
+        from literary_system.enterprise.revenue import RevenueGate
+        gate = RevenueGate()
+        report = gate.demo_run()
+        return {
+            "gate": "G74",
+            "gate_name": "RevenueGate (ADR-136, SP-C.4)",
+            "pass":    report.gate_passed,
+            "passed":  report.gate_passed,
+            "passed_count": 1 if report.gate_passed else 0,
+            "total_count": 1,
+            "checkpoints": [
+                f"contracts={report.total_contracts}",
+                f"invoices={report.total_invoices}",
+                f"total_gross={report.total_gross}",
+                f"total_partner_pay={report.total_partner_pay}",
+                f"gate_passed={report.gate_passed}",
+            ],
+            "errors": report.errors,
+        }
+    except Exception as exc:
+        return {
+            "gate": "G74",
+            "gate_name": "RevenueGate (ADR-136)",
+            "pass": False, "passed": False,
+            "passed_count": 0, "total_count": 1,
+            "checkpoints": [], "errors": [str(exc)],
+        }
+
+
+GATES.append((
+    "revenue_g74",
+    "Gate G74 — Revenue Share 계약·인보이스 검증 (ADR-136, SP-C.4)",
+    _gate_revenue_g74,
+))

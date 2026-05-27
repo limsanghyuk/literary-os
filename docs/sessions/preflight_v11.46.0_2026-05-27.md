@@ -1,21 +1,22 @@
 # Preflight 12단계 실행 로그
-**버전**: v11.46.0  |  **실행일시**: 2026-05-27T11:13:24Z  |  **실행자**: run_preflight.py v1.0
+**버전**: v11.46.0  |  **실행일시**: 2026-05-27T11:17:30Z  |  **실행자**: run_preflight.py v1.0
 **근거**: DEV_PROTOCOL_v2.0 §1 + PREFLIGHT_GUIDE_v1.1 §3
 
 ## Step 1. 코드베이스 현황 (index_status 등가)
 - Python 파일: 948개
 - 심볼(클래스): 2,989개
 - 테스트 함수: 8,375개
-- 최근 변경 py 파일 (HEAD~3): 8개
+- 최근 변경 py 파일 (HEAD~3): 9개
   - literary_system/absorption/__init__.py
   - literary_system/absorption/distillation.py
   - literary_system/absorption/jenova.py
-  - literary_system/absorption/nolan_ai.py
+  - literary_system/enterprise/__init__.py
+  - literary_system/enterprise/slo.py
   - literary_system/gates/release_gate.py
-  - tests/unit/test_v670_nolan_ai_absorption.py
   - tests/unit/test_v671_jenova_absorption.py
   - tests/unit/test_v672_distillation_export.py
-- 소요: 1.17s
+  - tests/unit/test_v673_enterprise_slo.py
+- 소요: 1.13s
 
 ## Step 2. 모듈 범위 (list_repos 등가)
 - literary_system/ 서브패키지: 79개
@@ -215,8 +216,8 @@
 ## 부록. 순환 의존 탐지
   - 실질 순환: 5개
   ⚠️  auto_promotion_gate → auto_promotion_gate
-  ⚠️  release_gate → phase_b_exit_gate → release_gate
   ⚠️  release_gate → gate_registry → release_gate
+  ⚠️  phase_a_exit_gate → release_gate → phase_a_exit_gate
 
 ---
 ## 최종 판정
@@ -229,8 +230,8 @@
   - Gate 미연결(독립 운영): ReaderFeedbackGate
   - Gate 미연결(독립 운영): ModelServingEndpointV2
   - 순환 의존: ['literary_system.gates.auto_promotion_gate', 'literary_system.gates.auto_promotion_gate']
-  - 순환 의존: ['literary_system.gates.release_gate', 'literary_system.gates.phase_b_exit_gate', 'literary_system.gates.release_gate']
   - 순환 의존: ['literary_system.gates.release_gate', 'literary_system.gates.gate_registry', 'literary_system.gates.release_gate']
+  - 순환 의존: ['literary_system.gates.phase_a_exit_gate', 'literary_system.gates.release_gate', 'literary_system.gates.phase_a_exit_gate']
 
-**실행 완료**: 2026-05-27T11:13:33Z
+**실행 완료**: 2026-05-27T11:17:39Z
 **로그 파일**: docs/sessions/preflight_v11.46.0_2026-05-27.md
