@@ -1,0 +1,90 @@
+# Literary OS — Preflight 준수 CI 검증
+# DEV_PROTOCOL_v2.0 §1: 모든 literary_system/ 변경에 Preflight 로그 필수
+# 이 워크플로우는 집/회사 어느 환경에서 push해도 동일하게 적용된다.
+
+name: Preflight Compliance Check
+
+on:
+  push:
+    branches: [main, develop, "feature/**"]
+    paths:
+      - "literary_system/**"
+      - "tests/**"
+      - "tools/run_release_gate.py"
+  pull_request:
+    branches: [main]
+    paths:
+      - "literary_system/**"
+      - "tests/**"
+
+jobs:
+  preflight-compliance:
+    name: G_PREFLIGHT — Preflight 로그 존재 확인
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install minimal dependencies
+        run: pip install --break-system-packages toml 2>/dev/null || pip install toml
+
+      - name: Check Preflight log exists (G_PREFLIGHT)
+        run: |
+          python3 - << 'PYEOF'
+          import sys, os, re
+          from pathlib import Path
+          from datetime import datetime, timezone, timedelta
+
+          ROOT = Path(".")
+          PYPROJECT = ROOT / "pyproject.toml"
+          LOG_DIR = ROOT / "docs" / "sessions"
+
+          # 버전 읽기
+          version = "unknown"
+          for line in PYPROJECT.read_text().splitlines():
+              if line.strip().startswith("version") and "=" in line:
+                  version = line.split("=", 1)[1].strip().strip('"').strip("'")
+                  break
+
+          print(f"[G_PREFLIGHT] 대상 버전: v{version}")
+
+          # 최근 14일 내 Preflight 로그 탐색 (CI는 여유 있게 14일)
+          cutoff = datetime.now(timezone.utc) - timedelta(days=14)
+          found = []
+          for pat in [f"preflight_v{version}*.md", "preflight_v*.md"]:
+              for f in LOG_DIR.glob(pat) if LOG_DIR.exists() else []:
+                  mtime = datetime.fromtimestamp(f.stat().st_mtime, tz=timezone.utc)
+                  if mtime >= cutoff:
+                      content = f.read_text(encoding="utf-8", errors="ignore")
+                      steps = sum(1 for i in range(1, 13) if f"## Step {i}." in content)
+                      if steps >= 10 and len(content.encode()) >= 1000:
+                          found.append((f, steps))
+
+          if not found:
+              print("❌ FAIL: Preflight 로그 없음")
+              print("  반드시 개발 착수 전 실행: python3 tools/run_preflight.py")
+              print("  DEV_PROTOCOL_v2.0 §1 위반 — CI 블록")
+              sys.exit(1)
+
+          log_file, steps = max(found, key=lambda x: x[0].stat().st_mtime)
+          content = log_file.read_text(encoding="utf-8", errors="ignore")
+          is_pass = "PREFLIGHT PASS" in content or "PREFLIGHT FAIL" in content
+
+          print(f"✅ PASS: {log_file.name} (Step {steps}/12, {len(content.encode()):,}bytes)")
+          PYEOF
+
+      - name: Verify run_preflight.py exists
+        run: |
+          test -f tools/run_preflight.py && echo "✅ run_preflight.py 존재" || (echo "❌ run_preflight.py 없음" && exit 1)
+
+      - name: Verify G_PREFLIGHT in run_release_gate.py
+        run: |
+          grep -q "G_PREFLIGHT" tools/run_release_gate.py && \
+            echo "✅ G_PREFLIGHT 강제 장치 확인" || \
+            (echo "❌ G_PREFLIGHT 검사 없음 — run_release_gate.py 손상" && exit 1)

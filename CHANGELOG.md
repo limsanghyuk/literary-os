@@ -981,3 +981,41 @@ V380 이전 상세 이력 → `docs/changelog/` 참조
 - Gates: 66/66 PASS
 - Version: v11.38.0
 - SP-C.3 완전 종료 (V656~V665, Gate G68~G71 ALL PASS)
+
+## [V665-AUDIT] v11.38.1 — Preflight 강제 실행 시스템 (DEV_PROTOCOL_v2.0 준수)
+
+### 배경
+SP-C.3 (V656~V665) 개발 중 DEV_PROTOCOL_v2.0 Preflight 12단계가 미실행됨을 확인.
+동일 위반이 세 번째 반복되어 기술적 강제 장치를 코드 수준에서 구현.
+
+### 추가
+- `tools/run_preflight.py`: Preflight 12단계 완전 자동화 실행기 (443줄)
+  - Step 1~12 순서대로 실행 → `docs/sessions/preflight_vVERSION_DATE.md` 자동 생성
+  - Survival Matrix 22개 심볼 자동 검사
+  - LLM-0/G32/DEV_MODE 무결성 자동 검사
+  - Release Gate 직접 호출 (순환 참조 방지)
+- `.github/workflows/preflight_check.yml`: CI Preflight 준수 검증
+  - literary_system/ push 시 자동 실행
+  - 로그 없으면 CI FAIL → PR merge 불가
+- `tools/install_hooks.sh`: pre-commit hook 설치 스크립트
+  - literary_system/ 변경 커밋 시 Preflight 로그 자동 확인
+  - 로그 없으면 커밋 BLOCK
+
+### 변경
+- `tools/run_release_gate.py`: G_PREFLIGHT 선행 검사 추가 (핵심 강제 장치)
+  - Preflight 로그 없으면 Release Gate 자체가 FAIL → 개발 완료 선언 불가
+  - 우회 방법 없음: run_preflight.py를 실제 실행해야만 통과
+
+### 실제 Preflight 실행 결과 (V665 사후 감사)
+- Step 1~12 전체 실행 완료
+- Survival Matrix: 22/22 ALIVE (RetrainingScheduler 경로 오류 수정)
+- LLM-0: 0건, G32: 0건, DEV_MODE: 0건
+- Release Gate: 66/66 PASS
+- 로그: docs/sessions/preflight_v11.38.0_2026-05-27.md
+
+### 경고 (블록 아님)
+- SP-C.3 Gate (SDKStabilityGate 등) release_gate.py 직접 미연결 (독립 운영)
+- 순환 의존 3개 (기존 아키텍처 구조, 기능적 결함 아님)
+
+### 버전
+- v11.38.1 (v11.38.0 패치)
