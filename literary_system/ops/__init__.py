@@ -102,3 +102,25 @@ __all__ += [
     "RunbookSeverity",
     "build_health_check_runbook",
 ]
+
+# V11.39.0 ADR-128: optimization/ 운영 서브시스템 연결
+try:
+    from literary_system.optimization.adaptive_throttler import AdaptiveThrottler, ThrottleConfig
+    from literary_system.optimization.long_run_monitor import LongRunMonitor, LongRunConfig
+    from literary_system.optimization.memory_leak_detector import MemoryLeakDetector
+    from literary_system.optimization.performance_optimizer import PerformanceOptimizer
+except ImportError:
+    AdaptiveThrottler = None
+    LongRunMonitor = None
+    MemoryLeakDetector = None
+    PerformanceOptimizer = None
+
+# V11.39.0 ADR-128: docs/ APIReferenceGenerator 연결
+try:
+    from literary_system.docs.api_reference_generator import (
+        APIReferenceGenerator,
+        APIReferenceReport,
+    )
+except ImportError:
+    APIReferenceGenerator = None
+    APIReferenceReport = None

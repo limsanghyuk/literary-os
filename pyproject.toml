@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "literary-os"
-version = "11.38.1"
+version = "11.39.0"
 description = "Literary OS — AI 기반 한국 드라마·웹소설 품질 분석·생성 엔진 (Phase C SP-C.3 완료)"
 readme = "README.md"
 requires-python = ">=3.10"

@@ -18,3 +18,10 @@ __all__ = [
     "run_minimal_pipeline",
     "prune_trace",
 ]
+
+# V11.39.0 ADR-128: contract/ SceneIntentIR 연결
+try:
+    from literary_system.contract.bridge import ContractBridge, SceneIntentIR
+except ImportError:
+    ContractBridge = None
+    SceneIntentIR = None

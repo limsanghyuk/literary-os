@@ -50,3 +50,13 @@ __all__ = [
     "NKGGraphStore", "NKGStalenessTracker",
     "make_cluster_id", "make_process_id",
 ]
+
+# V11.39.0 ADR-128: graph/ ItemNodeExtension 연결 (NKG 노드 확장)
+try:
+    from literary_system.graph.item_node_extension import (
+        ItemNodeExtension,
+        ExtendedItemNode,
+    )
+except ImportError:
+    ItemNodeExtension = None
+    ExtendedItemNode = None

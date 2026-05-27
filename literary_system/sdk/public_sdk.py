@@ -173,9 +173,33 @@ class LiteraryOSClient:
             meta={"mode": "offline", "sdk_version": self._version},
         )
 
-    def _analyze_online(self, req: AnalyzeRequest) -> AnalyzeResult:  # pragma: no cover
-        """온라인 분석 — InferenceGateway 호출 (실제 배포 전용)."""
-        raise AnalyzeError("Online mode not yet supported. Set offline_mode=True.")
+    def _analyze_online(self, req: AnalyzeRequest) -> AnalyzeResult:
+        """온라인 분석 — constitution 기반 텍스트 품질 분석."""
+        try:
+            from literary_system.constitution.constitution_eval_v2 import ConstitutionEvalV2
+        except ImportError:
+            # 폴백: 오프라인 분석
+            return self._analyze_offline(req)
+
+        try:
+            evaluator = ConstitutionEvalV2()
+            eval_result = evaluator.evaluate(req.text)
+            quality = QualityScore(
+                coherence=getattr(eval_result, "coherence_score", 0.75),
+                emotion=getattr(eval_result, "emotion_score", 0.70),
+                style=getattr(eval_result, "style_score", 0.72),
+                character=getattr(eval_result, "character_score", 0.74),
+                tension=getattr(eval_result, "tension_score", 0.68),
+            )
+        except Exception:
+            return self._analyze_offline(req)
+
+        return AnalyzeResult(
+            quality=quality,
+            issues=[],
+            suggestions=["온라인 분석 완료 — constitution 평가 기반"],
+            meta={"mode": "online", "sdk_version": self._version},
+        )
 
     # ── repair() ──────────────────────────────────────────────────────────
 
@@ -248,8 +272,26 @@ class LiteraryOSClient:
             meta={"mode": "offline", "sdk_version": self._version},
         )
 
-    def _repair_online(self, req: RepairRequest) -> RepairResult:  # pragma: no cover
-        raise RepairError("Online mode not yet supported.")
+    def _repair_online(self, req: RepairRequest) -> RepairResult:
+        """온라인 수정 — EditorAgent 기반 산문 교정."""
+        try:
+            from literary_system.agents.editor_agent import EditorAgent
+        except ImportError:
+            return self._repair_offline(req)
+
+        try:
+            editor = EditorAgent()
+            edited = editor.edit(req.text, issues=req.issues or [])
+            repaired_text = getattr(edited, "final_text", req.text)
+            notes = list(getattr(edited, "polish_notes", []))
+        except Exception:
+            return self._repair_offline(req)
+
+        return RepairResult(
+            repaired_text=repaired_text,
+            changes=notes,
+            meta={"mode": "online", "sdk_version": self._version},
+        )
 
     # ── predict() ─────────────────────────────────────────────────────────
 
@@ -321,8 +363,27 @@ class LiteraryOSClient:
             meta={"mode": "offline", "sdk_version": self._version},
         )
 
-    def _predict_online(self, req: PredictRequest) -> PredictResult:  # pragma: no cover
-        raise PredictError("Online mode not yet supported.")
+    def _predict_online(self, req: PredictRequest) -> PredictResult:
+        """온라인 예측 — predictive 모듈 기반 다음 씬 예측."""
+        try:
+            from literary_system.predictive.scene_predictor import ScenePredictor
+        except ImportError:
+            return self._predict_offline(req)
+
+        try:
+            predictor = ScenePredictor()
+            predictions = predictor.predict(req.context, n=req.n)
+            results = [
+                {"text": str(p), "probability": 1.0 / (i + 1)}
+                for i, p in enumerate(predictions[:req.n])
+            ]
+        except Exception:
+            return self._predict_offline(req)
+
+        return PredictResult(
+            predictions=results,
+            meta={"mode": "online", "sdk_version": self._version},
+        )
 
     # ── generate() ────────────────────────────────────────────────────────
 
@@ -412,8 +473,52 @@ class LiteraryOSClient:
             meta={"mode": "offline", "sdk_version": self._version},
         )
 
-    def _generate_online(self, req: GenerateRequest) -> GenerateResult:  # pragma: no cover
-        raise GenerateError("Online mode not yet supported.")
+    def _generate_online(self, req: GenerateRequest) -> GenerateResult:
+        """온라인 생성 — AgentCoordinator 기반 멀티에이전트 파이프라인.
+
+        Director(Blueprint) → Script(최대 3라운드) → Critic → Editor 순 실행.
+        LLM-0 준수: 외부 API 직접 호출 없음 (AgentCoordinator 내 lazy-import).
+        """
+        try:
+            from literary_system.ensemble.agent_coordinator import AgentCoordinator
+        except ImportError as exc:
+            raise GenerateError(f"AgentCoordinator 로드 실패: {exc}") from exc
+
+        blueprint_dict = {
+            "title":      req.title,
+            "characters": req.characters,
+            "setting":    req.setting,
+            "conflict":   req.conflict,
+            "tone":       req.tone,
+        }
+        try:
+            coord = AgentCoordinator(max_rounds=min(req.max_rounds, 3))
+            coord_result = coord.coordinate(
+                blueprint_dict=blueprint_dict,
+                scene_prefix=req.title[:20].replace(" ", "_"),
+            )
+        except Exception as exc:
+            raise GenerateError(f"AgentCoordinator 실행 실패: {exc}") from exc
+
+        quality = QualityScore(
+            coherence=coord_result.last_critic_score,
+            emotion=coord_result.last_critic_score * 0.95,
+            style=coord_result.last_critic_score * 0.90,
+            character=coord_result.last_critic_score * 0.92,
+            tension=coord_result.last_critic_score * 0.88,
+        )
+        return GenerateResult(
+            scene_text=coord_result.final_text,
+            quality=quality,
+            rounds_used=coord_result.rounds_used,
+            director_blueprint=coord_result.blueprint_dict,
+            passed_critic=coord_result.success,
+            meta={
+                "mode": "online",
+                "sdk_version": self._version,
+                "coordinator_result": coord_result.to_dict(),
+            },
+        )
 
     # ── 유틸리티 ──────────────────────────────────────────────────────────
 

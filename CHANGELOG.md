@@ -1,3 +1,38 @@
+## [11.39.0] — V666 Integration — 2026-05-27
+
+### 🔴 Critical Fixes (3인 전문가 합의 ADR-128)
+
+**Fix A — SDK ↔ 내부 엔진 연결 (4개 메서드 구현)**
+- `_generate_online()`: AgentCoordinator.coordinate() 실제 연결 (DirectorAgent→ScriptAgent→CriticAgent→EditorAgent)
+- `_analyze_online()`: ConstitutionEvalV2 기반 온라인 품질 분석
+- `_repair_online()`: EditorAgent 기반 산문 교정
+- `_predict_online()`: ScenePredictor 기반 다음 씬 예측
+- 폴백: 각 메서드는 ImportError 발생 시 offline mode로 graceful fallback
+
+**Fix B — 고립 패키지 11개 해소 (10개 통합 + 1개 삭제)**
+- `scope/` → `world/__init__.py` (NarrativeScopePlugin + 장르플러그인 5종)
+- `safety/` → `gates/safety_regression_gate.py` (신규 SafetyRegressionGate)
+- `audit/` → `governance/__init__.py` (ATIAMetadataAuditor)
+- `node2_extensions/` → `prose/__init__.py` (AntiClicheSubstitutionEngine)
+- `causal/` → `causal_plan/__init__.py` (CausalContinuationPlanBuilder)
+- `optimization/` → `ops/__init__.py` (AdaptiveThrottler, LongRunMonitor)
+- `contract/` → `pipeline/__init__.py` (ContractBridge)
+- `graph/` → `nkg/__init__.py` (ItemNodeExtension)
+- `trajectory_family/` → `trajectory/__init__.py` (TrajectoryFamilyMatcher)
+- `docs/` → `ops/__init__.py` (APIReferenceGenerator)
+- `schemas_ext/` → **삭제** (빈 파일)
+
+**Fix C — DEV 프로토콜 진화 (ADR-128)**
+- `tools/run_preflight.py`: Step 13 G_CONNECTIVITY 추가 (76패키지 전수 연결성 검사)
+- `tools/run_release_gate.py`: G_CONNECTIVITY 게이트 추가 (2버전 연속 고립 시 FAIL)
+- `docs/adr/ADR-128.md`: 패키지 연결성 의무 공식화
+
+### Tests
+- `tests/unit/test_v666_integration.py`: 35 TC (35/35 PASS)
+- 총 테스트: 8,418+ PASS
+
+---
+
 ## [V664] v11.37.0 — B2BPartnerGate G71 (LOI 3건 검증)
 
 ### Added

@@ -398,6 +398,63 @@ def run_preflight(version: str | None = None, strict: bool = False) -> bool:
         issues.append("Release Gate FAIL (상세: tools/run_release_gate.py 직접 실행 확인)")
     log()
 
+
+    # ── Step 13: Connectivity Check (ADR-128) ───────────────────────────────
+    log("## Step 13. 패키지 연결성 검사 (ADR-128 G_CONNECTIVITY)")
+    import ast as _ast, re as _re
+    from collections import defaultdict as _dd
+
+    _ls_root = SYS_ROOT
+    _pkgs = set(d.name for d in _ls_root.iterdir()
+                if d.is_dir() and not d.name.startswith("_"))
+    _deps: dict = _dd(set)
+    _imported_by: dict = _dd(set)
+
+    for _pkg in _pkgs:
+        for _pyf in (_ls_root / _pkg).rglob("*.py"):
+            try:
+                _src = _pyf.read_text(encoding="utf-8", errors="ignore")
+            except Exception:
+                continue
+            for _m in _re.finditer(r"from literary_system\.(\w+)", _src):
+                _t = _m.group(1)
+                if _t in _pkgs and _t != _pkg:
+                    _deps[_pkg].add(_t)
+                    _imported_by[_t].add(_pkg)
+
+    _isolated = sorted(p for p in _pkgs
+                       if not _imported_by.get(p) and not _deps.get(p))
+
+    # 이전 Preflight 로그에서 고립 패키지 이력 추적 (2버전 연속 = FAIL)
+    _sessions_dir = REPO_ROOT / "docs" / "sessions"
+    _prev_isolated: set = set()
+    if _sessions_dir.exists():
+        _prev_logs = sorted(_sessions_dir.glob("preflight_*.md"), reverse=True)
+        for _plog in _prev_logs[1:3]:  # 바로 전 1~2개 로그
+            try:
+                _ptxt = _plog.read_text(encoding="utf-8", errors="ignore")
+                for _line in _ptxt.splitlines():
+                    if "고립 패키지:" in _line and "❌" in _line:
+                        _pname = _line.strip().split()[-1]
+                        _prev_isolated.add(_pname)
+            except Exception:
+                pass
+
+    _escalated = sorted(set(_isolated) & _prev_isolated)
+
+    if _isolated:
+        for _ip in _isolated:
+            log(f"  ⚠️  WARN: {_ip} — 완전 고립 (←0, →0). 2버전 내 연결 필요 (ADR-128)")
+            warnings.append(f"고립 패키지: {_ip}")
+        if _escalated:
+            for _ep in _escalated:
+                log(f"  ❌ FAIL: {_ep} — 2버전 연속 고립. 즉시 연결 필요 (ADR-128)")
+                issues.append(f"ADR-128 위반: {_ep} 패키지 2버전 연속 고립")
+        log(f"  총 {len(_isolated)}개 고립, {len(_escalated)}개 에스컬레이션")
+    else:
+        log(f"  ✅ G_CONNECTIVITY PASS — 완전 고립 패키지 0개 ({len(_pkgs)}개 전체 연결됨)")
+    log()
+
     # ── 순환 의존 ────────────────────────────────────────────────────────────
     log("## 부록. 순환 의존 탐지")
     cycles = _find_cycles(deps)

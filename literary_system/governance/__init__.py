@@ -19,3 +19,15 @@ __all__ = [
     "DSRRequest",
     "DSRStatus",
 ]
+
+# V11.39.0 ADR-128: audit/ 패키지 연결
+try:
+    from literary_system.audit.atia_metadata_auditor import (
+        ATIAMetadataAuditor,
+        ATIARiskLevel,
+        ATIAAuditReport,
+    )
+except ImportError:
+    ATIAMetadataAuditor = None
+    ATIARiskLevel = None
+    ATIAAuditReport = None

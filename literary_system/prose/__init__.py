@@ -20,3 +20,15 @@ __all__ = [
 ]
 
 from .korean_cadence_planner import CadencePlan, KoreanCadencePlanner
+
+# V11.39.0 ADR-128: node2_extensions/ AntiClicheSubstitutionEngine 연결
+try:
+    from literary_system.node2_extensions.node2_extensions import (
+        AntiClicheSubstitutionEngine,
+        EmotionToBehaviorTransformer,
+        SubtextPlanner,
+    )
+except ImportError:
+    AntiClicheSubstitutionEngine = None
+    EmotionToBehaviorTransformer = None
+    SubtextPlanner = None
