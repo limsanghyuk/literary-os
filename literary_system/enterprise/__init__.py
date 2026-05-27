@@ -39,3 +39,16 @@ from .tenant_isolation import (
     EnterpriseIsolationViolation, TenantIsolationReport,
     EnterpriseTenantRegistry, TenantIsolationAuditor, TenantIsolationGate,
 )
+
+# cost_control exports (V678)
+from .cost_control import (
+    CostAlertLevel,
+    CostCategory,
+    EnterpriseCostBudget,
+    CostEntry,
+    EnterpriseCostAlert,
+    EnterpriseCostReport,
+    EnterpriseCostSuiteReport,
+    EnterpriseCostTracker,
+    EnterpriseCostControlGate,
+)

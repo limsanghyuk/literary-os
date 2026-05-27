@@ -4089,3 +4089,35 @@ GATES.append((
     "Gate G76 — Enterprise 테넌트 격리 감사 (ADR-139, SP-C.4)",
     _gate_tenant_isolation_g76,
 ))
+
+
+# ── G77: Enterprise Cost Control Gate ────────────────────────────────────────
+def _gate_enterprise_cost_control_g77() -> dict:
+    """G77: EnterpriseCostControlGate — 테넌트 비용 예산 제어 (ADR-140, SP-C.4)"""
+    try:
+        from literary_system.enterprise.cost_control import EnterpriseCostControlGate, CostAlertLevel
+        gate = EnterpriseCostControlGate()
+        suite = gate.demo_run()
+        assert suite.gate_passed, "gate_passed must be True"
+        assert len(suite.reports) == 4
+        assert suite.tenants_exceeded >= 1
+        assert suite.total_suite_usd > 0
+        return {
+            "gate": "G77",
+            "pass": True, "passed": True,
+            "passed_count": 1, "total_count": 1,
+            "tenants": len(suite.reports),
+            "tenants_exceeded": suite.tenants_exceeded,
+            "total_usd": suite.total_suite_usd,
+            "checkpoints": [f"G77 PASS: {len(suite.reports)} tenants, {suite.tenants_exceeded} exceeded, total ${suite.total_suite_usd:.2f}"],
+            "errors": [],
+        }
+    except Exception as exc:
+        return {"gate": "G77", "pass": False, "passed": False, "passed_count": 0, "total_count": 1, "checkpoints": [], "errors": [str(exc)]}
+
+
+GATES.append((
+    "enterprise_cost_control_g77",
+    "Gate G77 — Enterprise 비용 제어 예산 집행 (ADR-140, SP-C.4)",
+    _gate_enterprise_cost_control_g77,
+))
