@@ -157,6 +157,8 @@ class EnterpriseSLOReport:
 class EnterpriseSLOGate:
     """G73 Enterprise SLO 게이트."""
 
+    GATE_ID = "G73"
+
     def __init__(self):
         self._monitor = SLOMonitor()
 
