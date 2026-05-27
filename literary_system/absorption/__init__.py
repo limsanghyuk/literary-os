@@ -6,10 +6,12 @@ from .base import CompetitorProfile, AbsorptionReport, FeatureGap, IPAdvisoryCom
 from .novel_ai import NovelAIAbsorber
 from .sudowrite import SudowriteAbsorber
 from .novelcrafter import NoveltcrafterAbsorber
+from .nolan_ai import NolanAIAbsorber
 
 __all__ = [
     "CompetitorProfile", "AbsorptionReport", "FeatureGap", "IPAdvisoryCommit",
     "NovelAIAbsorber",
     "SudowriteAbsorber",
     "NoveltcrafterAbsorber",
+    "NolanAIAbsorber",
 ]
