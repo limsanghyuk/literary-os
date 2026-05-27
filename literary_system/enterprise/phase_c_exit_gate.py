@@ -156,7 +156,7 @@ class EnterprisePhaseCExitGate:
             try:
                 with open(path) as f:
                     data = json.load(f)
-                return int(data.get("total", 0))
+                return int(data.get("test_count", data.get("total", 0)))
             except Exception:
                 pass
         return 0

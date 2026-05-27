@@ -261,3 +261,70 @@ class TestEnterprisePhaseCExitGate:
         summary = report.summary()
         for gid in ["G73", "G74", "G75-BM", "G76", "G77", "G78"]:
             assert gid in summary
+
+
+class TestDemoRunGetTotalTc:
+    """DEFECT-1 수정 검증: _get_total_tc()가 'test_count' 키를 올바르게 읽는지 확인."""
+
+    def test_demo_run_gate_passed(self):
+        """demo_run() 직접 호출 시 gate_passed=True 여야 함 (DEFECT-1 수정 후)."""
+        gate = EnterprisePhaseCExitGate()
+        report = gate.demo_run()
+        assert report.gate_passed is True, (
+            f"demo_run()이 FAIL을 반환함 (total_tc={report.total_tc}). "
+            "_get_total_tc()의 'test_count' 키 읽기 실패 가능."
+        )
+
+    def test_demo_run_total_tc_nonzero(self):
+        """demo_run()이 반환하는 total_tc가 0이 아니어야 함 (DEFECT-1 수정 후)."""
+        gate = EnterprisePhaseCExitGate()
+        report = gate.demo_run()
+        assert report.total_tc > 0, (
+            f"total_tc={report.total_tc}. _get_total_tc()가 0을 반환함 — "
+            "test_inventory.json의 'test_count' 키를 읽지 못한 것."
+        )
+
+    def test_demo_run_tc_satisfies_minimum(self):
+        """demo_run() 결과의 tc_satisfied=True이어야 함 (MIN_TC=8500)."""
+        gate = EnterprisePhaseCExitGate()
+        report = gate.demo_run()
+        assert report.tc_satisfied is True, (
+            f"tc_satisfied=False (total_tc={report.total_tc}, min={report.min_tc_required})."
+        )
+
+    def test_demo_run_overall_status_pass(self):
+        """demo_run() overall_status가 PASS이어야 함."""
+        gate = EnterprisePhaseCExitGate()
+        report = gate.demo_run()
+        assert report.overall_status == PhaseCExitStatus.PASS, (
+            f"overall_status={report.overall_status}"
+        )
+
+    def test_get_total_tc_returns_positive(self):
+        """_get_total_tc()가 양수를 반환해야 함."""
+        gate = EnterprisePhaseCExitGate()
+        tc = gate._get_total_tc()
+        assert tc > 0, f"_get_total_tc()={tc} — test_inventory.json 파싱 실패"
+
+    def test_get_total_tc_matches_inventory(self):
+        """_get_total_tc()가 test_inventory.json의 test_count와 일치해야 함."""
+        import json, os
+        gate = EnterprisePhaseCExitGate()
+        tc = gate._get_total_tc()
+        # test_inventory.json 직접 읽기
+        candidates = [
+            "tools/test_inventory.json",
+            os.path.join(os.path.dirname(
+                __file__), "../../tools/test_inventory.json"),
+        ]
+        expected = None
+        for path in candidates:
+            try:
+                with open(path) as f:
+                    data = json.load(f)
+                expected = data.get("test_count")
+                break
+            except Exception:
+                pass
+        assert expected is not None, "test_inventory.json 파일을 찾을 수 없음"
+        assert tc == expected, f"_get_total_tc()={tc}, test_inventory.json.test_count={expected}"
