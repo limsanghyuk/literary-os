@@ -946,3 +946,38 @@ V380 이전 상세 이력 → `docs/changelog/` 참조
 - Gates: 66/66 PASS
 - Tests: 8,317
 - ADR: ADR-123
+
+## [V665] v11.38.0 — SP-C.3 완료 보고 + PyPI 등록 준비 (ADR-125)
+
+### Added
+- `docs/proposals/SP_C3_COMPLETION_REPORT.md`: SP-C.3 공식 완료 보고서
+  - G68~G71 전체 PASS 결과 기록
+  - SP-C.3 구현 산출물 목록 (V656~V665)
+  - Phase C SP-C.4 진입 조건 충족 확인
+- `docs/adr/ADR-125.md`: pyproject.toml PyPI 메타데이터 강화 설계 결정
+- `literary_system/sdk/public_sdk.py`: `_cli_demo()` 엔트리포인트 추가
+  - literary-sdk CLI 명령어 실행 지원
+  - G32 준수: sys.stdout.write() 사용 (print() 미사용)
+- `tests/unit/test_v665_pypi_readiness.py`: 33 TC (33/33 PASS)
+  - pyproject.toml 메타데이터 검증 (TC01~TC15)
+  - PublicSDK CLI 동작 검증 (TC16~TC23)
+  - SP-C.3 완료 보고서 검증 (TC24~TC29)
+  - 워크플로우 감사 (TC30~TC33)
+
+### Changed
+- `pyproject.toml`: PyPI 등록 준비 메타데이터 전면 강화
+  - version: 11.38.0
+  - classifiers: 12종 (Development Status, License, Python, Topic)
+  - project.urls: Homepage, Repository, Bug Tracker, Changelog, Documentation
+  - extras_require: sdk (fastapi/uvicorn/httpx), all
+  - entry_points: literary-os, literary-sdk → _cli_demo
+  - package-data: py.typed, yaml/json/md 와일드카드
+
+### Gate
+- SP-C.3 완료 게이트: G68/G69/G70/G71 ALL PASS 공식 확인
+
+### Metrics
+- Tests: 8,383 (이전 8,350 + 33)
+- Gates: 66/66 PASS
+- Version: v11.38.0
+- SP-C.3 완전 종료 (V656~V665, Gate G68~G71 ALL PASS)

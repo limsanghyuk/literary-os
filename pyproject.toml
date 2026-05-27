@@ -4,12 +4,37 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "literary-os"
-version = "11.37.0"
-description = "Literary OS V631 — Phase B 완전 종료, G61 7축 Exit Gate (ADR-097), 60 Gates PASS, 7213+ tests"
+version = "11.38.0"
+description = "Literary OS — AI 기반 한국 드라마·웹소설 품질 분석·생성 엔진 (Phase C SP-C.3 완료)"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
-keywords = ["literary", "narrative", "ai", "korean-drama", "story-generation"]
+authors = [
+    {name = "Literary OS Engineering Team", email = "sanghyuk6871@gmail.com"}
+]
+maintainers = [
+    {name = "Literary OS Engineering Team", email = "sanghyuk6871@gmail.com"}
+]
+keywords = [
+    "literary", "narrative", "ai", "korean-drama",
+    "story-generation", "llm", "rlhf", "lora",
+    "multi-agent", "sdk", "b2b-api",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: Linguistic",
+    "Natural Language :: Korean",
+]
 dependencies = [
     "networkx>=3.0",
     "pydantic>=2.0.0",
@@ -20,7 +45,13 @@ vector = ["qdrant-client>=1.7"]
 semantic = ["scikit-learn>=1.3"]
 llm = ["anthropic>=0.20", "langchain-anthropic", "langchain-core"]
 server = ["fastapi>=0.100", "uvicorn[standard]>=0.20"]
-# Phase B SP-B.1 LoRA Fine-tuning (B-M-04/05, transformers ≥4.44 + peft ≥0.12)
+# Phase C SP-C.3 PublicSDK
+sdk = [
+    "fastapi>=0.100",
+    "uvicorn[standard]>=0.20",
+    "httpx>=0.24",
+]
+# Phase B SP-B.1 LoRA Fine-tuning
 finetune = [
     "transformers>=4.44.0",
     "peft>=0.12.0",
@@ -30,6 +61,17 @@ finetune = [
     "accelerate>=0.30.0",
     "safetensors>=0.4.2",
     "sentencepiece>=0.2.0",
+]
+# 전체 기능 (all extras)
+all = [
+    "qdrant-client>=1.7",
+    "scikit-learn>=1.3",
+    "anthropic>=0.20",
+    "fastapi>=0.100",
+    "uvicorn[standard]>=0.20",
+    "httpx>=0.24",
+    "numpy>=1.24",
+    "optuna>=3.0",
 ]
 dev = [
     "pytest>=8",
@@ -41,13 +83,27 @@ dev = [
     "uvicorn[standard]>=0.20",
     "httpx>=0.24",
     "numpy>=1.24",
-    "optuna>=3.0",  # SP-C.1 LOSConstitutionV2 Bayesian Optimisation (optional)
+    "optuna>=3.0",
     "ruff>=0.4",
     "qdrant-client>=1.7",
 ]
 
+[project.urls]
+Homepage = "https://github.com/limsanghyuk/literary-os"
+Repository = "https://github.com/limsanghyuk/literary-os"
+"Bug Tracker" = "https://github.com/limsanghyuk/literary-os/issues"
+Changelog = "https://github.com/limsanghyuk/literary-os/blob/main/CHANGELOG.md"
+Documentation = "https://github.com/limsanghyuk/literary-os/tree/main/docs"
+
 [project.scripts]
 literary-os = "apps.studio_api.main:cli_entry"
+literary-sdk = "literary_system.sdk.public_sdk:_cli_demo"
+
+[project.entry-points."literary_os.gates"]
+feedback_collection = "literary_system.gates.feedback_collection_gate:FeedbackCollectionGate"
+feedback_loop = "literary_system.gates.feedback_loop_gate:FeedbackLoopGate"
+sdk_stability = "literary_system.gates.sdk_stability_gate:SDKStabilityGate"
+b2b_partner = "literary_system.gates.b2b_partner_gate:B2BPartnerGate"
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
@@ -58,6 +114,10 @@ asyncio_mode = "auto"
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["literary_system*", "apps*"]
+
+[tool.setuptools.package-data]
+"literary_system" = ["py.typed"]
+"*" = ["*.yaml", "*.yml", "*.json", "*.md"]
 
 [tool.ruff]
 line-length = 120

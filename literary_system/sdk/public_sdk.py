@@ -481,3 +481,46 @@ def _extract_patterns(text: str) -> list[str]:
     if "갑자기" in text or "순간" in text:
         patterns.append("sudden_event")
     return patterns
+
+
+# ─── CLI entry point (PyPI entry_point: literary-sdk) ───────────────────────
+def _cli_demo() -> None:
+    """
+    literary-sdk CLI 데모 진입점.
+    PyPI 설치 후 `literary-sdk` 명령으로 실행.
+    """
+    import sys
+
+    def _out(msg: str = "") -> None:
+        sys.stdout.write(msg + "\n")
+
+    from literary_system.sdk.sdk_config import SDKConfig
+    client = LiteraryOSClient(config=SDKConfig(offline_mode=True))
+    _out("Literary OS PublicSDK v1.0 — Demo")
+    _out("=" * 40)
+
+    sample = "준호는 오랫동안 그 장면을 잊지 못했다. 갑자기 눈물이 흘렀다."
+    _out(f"[입력] {sample}")
+    _out()
+
+    result = client.analyze(sample)
+    _out(f"[analyze] overall={result.quality.overall:.3f}  patterns={result.patterns}")
+
+    repaired = client.repair(sample, issues=[])
+    _out(f"[repair]  improved={repaired.improved}  text='{repaired.repaired_text[:40]}...'")
+
+    pred = client.predict(sample)
+    arc = pred.predictions[0].emotion_arc if pred.predictions else "N/A"
+    _out(f"[predict] emotion_arc={arc}  count={len(pred.predictions)}")
+
+    gen = client.generate(
+        title="이별의 밤",
+        characters=["준호", "수아"],
+        setting="병원 옥상",
+        conflict="작별 인사",
+    )
+    _out(f"[generate] excerpt='{gen.scene_text[:50]}...'")
+
+    _out()
+    _out("✅ PublicSDK 동작 확인 완료 (offline_mode=True)")
+    sys.exit(0)
