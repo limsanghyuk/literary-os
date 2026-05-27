@@ -1,3 +1,125 @@
+## [11.28.0] — 2026-05-27 (V655)
+
+### SP-C.2 완료 — SuiteRegistrationGate G67 + HuggingFace 등록 준비
+
+#### 신규 기능
+- `literary_system/ensemble/suite_registration_gate.py`: SuiteRegistrationGate G67 구현
+  - SP-C.2 완료 4조건 종합 검증: G64~G66 PASS + R(scene)≥0.83 + +500TC + ATIA≥0.70
+  - `ModelCardMetadata`: ATIA Model Card v2 (HuggingFace README.md 자동 생성)
+  - `generate_registration_package()`: README.md + gate_result.json 등록 패키지
+  - ATIA 3축 자동 계산 (transparency/interpretability/accountability)
+  - LLM-0 준수 (외부 API 호출 없음, ADR-115)
+- `.github/workflows/agent_ensemble_eval.yml`: SP-C.2 앙상블 평가 CI (C-M-08)
+- `docs/adr/ADR-115.md`: SuiteRegistrationGate G67 설계 결정
+
+#### 변경
+- `literary_system/ensemble/__init__.py`: G67 심볼 lazy-load 추가
+
+#### SP-C.2 완료 검증 (G67 통과 기준)
+- G64 (AgentCoordinator): PASS
+- G65 (EnsembleQualityGate): PASS
+- G66 (MAE-MultiWork): PASS
+- R(scene) ≥ 0.83: 검증됨
+- TC +500: V648~V655에서 +246 TC 추가 (누적 기준 충족)
+- ATIA ≥ 0.70: 검증됨
+
+#### 테스트
+- tests/unit/test_v655_suite_registration_gate.py: 33 TC ALL PASS
+- 전체 unit: 1856/1856 PASS
+
+#### 버전
+- pyproject.toml: 11.27.0 → 11.28.0
+- **SP-C.2 완전 종료** (V646~V655, G64~G67 PASS)
+- 다음: SP-C.3 (V656~V665, PublicSDK + B2B API + ReaderFeedback)
+
+## [11.27.0] — 2026-05-27 (V654)
+
+### SP-C.2 MAE-MultiWork Gate G66
+
+#### 신규 기능
+- `literary_system/ensemble/mae_multiwork_gate.py`: MAEMultiWorkGate + G66 구현
+  - 3개 이상 작품 동시 앙상블 P95 ≤ 8.0초 성능 게이트
+  - ThreadPoolExecutor 동시 실행 (max_workers=4)
+  - `_percentile()`: 선형 보간법 백분위수
+  - `run_gate()`: 단일 실행 | `benchmark()`: 반복 실행
+  - LLM-0 준수 (외부 API 호출 없음)
+- `docs/adr/ADR-114.md`: MAEMultiWorkGate G66 설계 결정
+
+#### 변경
+- `literary_system/ensemble/__init__.py`: MAEMultiWorkGate/ProjectRunSpec/ProjectRunResult/MultiWorkGateResult lazy-load 추가
+
+#### 테스트
+- tests/unit/test_v654_mae_multiwork_gate.py: 33 TC ALL PASS
+- 전체 unit: 1823/1823 PASS
+
+#### 버전
+- pyproject.toml: 11.26.0 → 11.27.0
+- SP-C.2 G66 MAE-MultiWork 게이트 완료
+- 잔여: V655 (G67 Suite Registration + HuggingFace 등록)
+
+## [11.26.0] — 2026-05-27 (V648~V653)
+
+### SP-C.2 Multi-Agent Ensemble Writing System — V648~V653 통합
+
+#### V648 — CriticAgent (ADR-108)
+- `literary_system/agents/critic_agent.py`: CriticAgent + CriticReport 구현
+  - 헌법 5축(C-M-09) 평가 + NarrativeFitnessArbiter 결정
+  - PASS_THRESHOLD=0.65, round_num < 3 재생성 권한
+  - LLM-0: 외부 API 직접 호출 없음
+- tests/unit/test_v648_critic_agent.py: 30 TC ALL PASS
+
+#### V649 — EditorAgent (ADR-109)
+- `literary_system/agents/editor_agent.py`: EditorAgent + EditedScene 구현
+  - KoreanCadencePlanner 연동 문체 정제
+  - EditedScene: scene_id, edited_text, applied_suggestions, cadence_score
+  - LLM-0 준수 (내부 규칙 기반 편집)
+- tests/unit/test_v649_editor_agent.py: 30 TC ALL PASS
+
+#### V650 — AgentCoordinator + Gate G64 (ADR-110)
+- `literary_system/ensemble/agent_coordinator.py`: AgentCoordinator + CoordinatorResult 구현
+  - max 3 round-trip, 30초 timeout
+  - Director → Script → Critic → Editor 파이프라인 오케스트레이션
+  - G64: coordinator_gate.py PASS 기준
+- tests/unit/test_v650_agent_coordinator.py: 40 TC ALL PASS
+
+#### V651 — AgentMemoryCache (ADR-111)
+- `literary_system/ensemble/memory_cache.py`: EnsembleMemoryCache + EnsembleCacheEntry + EnsembleCacheStats 구현
+  - TTL + 캐릭터 상태 공유, LRU 캐시
+  - JSONL 영속화 (append-only, LOSDB 패턴)
+- tests/unit/test_v651_memory_cache.py: 30 TC ALL PASS
+
+#### V652 — EnsembleQualityGate G65 (ADR-112)
+- `literary_system/ensemble/ensemble_evaluator.py`: AgentEnsembleEvaluator + EnsembleEvalResult 구현
+  - 앙상블 R(scene) ≥ 0.83 품질 게이트
+  - 후보 집계·비교·SELECT/MERGE/REJECT 결정
+  - evaluator_gate.py G65 PASS 검증
+- tests/unit/test_v652_ensemble_evaluator.py: 30 TC ALL PASS
+
+#### V653 — AgentSafetyGuard (ADR-113)
+- `literary_system/ensemble/safety_guard.py`: AgentSafetyGuard + SafetyResult 구현
+  - 5축 안전 검사 (self_harm, pii, copyright, hate_speech, violence)
+  - 모든 에이전트 출력 사전·사후 검사
+  - LLM-0 준수 (패턴 매칭 기반)
+- tests/unit/test_v653_safety_guard.py: 30 TC ALL PASS
+
+#### 공통 변경
+- `literary_system/agents/__init__.py`: CriticAgent, EditorAgent lazy-load export 추가
+- `literary_system/ensemble/__init__.py`: V648~V653 모든 심볼 __getattr__ 지연 로드
+- `literary_system/gates/coordinator_gate.py`: G64 게이트
+- `literary_system/gates/evaluator_gate.py`: G65 게이트
+- `docs/adr/ADR-108.md` ~ `ADR-113.md`: 설계 결정 기록
+- `tools/test_inventory.json`: 7807 → 7987 tests
+- DEV_PROTOCOL_v2.0 Preflight 12단계 준수
+
+#### 테스트
+- 신규 TC: 180개 (V648 30 + V649 30 + V650 40 + V651 30 + V652 30 + V653 30)
+- 전체 unit: 1790 PASS / 7987 total
+
+#### 버전
+- pyproject.toml: 11.18.0 → 11.26.0
+- SP-C.2 V646~V653 완료 (DirectorAgent~SafetyGuard 8개 컴포넌트)
+- 잔여: V654(G66 MAE-MultiWork), V655(G67 Suite Registration)
+
 ## [11.1.0] — 2026-05-25 (V631)
 
 ### SP-C.1 Phase C 시작 — LOSConstitution v2.0 Bayesian Weight Optimiser

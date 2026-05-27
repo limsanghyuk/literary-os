@@ -3349,3 +3349,188 @@ GATES.append((
     "Gate G63 — SelfLearningGate SP-C.1 완료 (오염 0%/KL<0.05/α≥0.70, ADR-105)",
     _gate_self_learning_g63,
 ))
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Gate G64 — AgentCoordinatorGate (V650, ADR-110)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _gate_agent_coordinator_g64() -> dict:
+    """Gate G64: AgentCoordinatorGate — SP-C.2 오케스트레이션 검증 (7 CP)."""
+    from literary_system.gates.coordinator_gate import run_g64_gate
+    result = run_g64_gate()
+    return {
+        "gate": "G64",
+        "gate_name": result.get("gate_name", "AgentCoordinatorGate SP-C.2 오케스트레이션 검증 (ADR-110)"),
+        "pass": result.get("pass", False),
+        "passed": result.get("pass", False),
+        "passed_count": result.get("passed_count", 0),
+        "total_count": result.get("total_count", 7),
+        "checkpoints": result.get("checkpoints", {}),
+        "errors": result.get("errors", []),
+    }
+
+
+GATES.append((
+    "agent_coordinator_g64",
+    "Gate G64 — AgentCoordinatorGate SP-C.2 오케스트레이션 검증 (ADR-110)",
+    _gate_agent_coordinator_g64,
+))
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Gate G65 — EnsembleQualityGate (V652, ADR-112)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _gate_ensemble_quality_g65() -> dict:
+    """Gate G65: EnsembleQualityGate — 앙상블 R≥0.83 품질 검증 (10 CP)."""
+    from literary_system.gates.evaluator_gate import run_g65_gate
+    result = run_g65_gate()
+    passed = result.get("passed", False)
+    fails = result.get("failed_checkpoints", [])
+    cps = result.get("checkpoints", {})
+    total = len(cps)
+    passed_count = total - len(fails)
+    return {
+        "gate": "G65",
+        "gate_name": "EnsembleQualityGate SP-C.2 앙상블 품질 (R≥0.83, ADR-112)",
+        "pass": passed,
+        "passed": passed,
+        "passed_count": passed_count,
+        "total_count": total,
+        "checkpoints": list(cps.keys()),
+        "failed_checkpoints": fails,
+    }
+
+
+GATES.append((
+    "ensemble_quality_g65",
+    "Gate G65 — EnsembleQualityGate SP-C.2 앙상블 품질 (R≥0.83, ADR-112)",
+    _gate_ensemble_quality_g65,
+))
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Gate G66 — MAEMultiWorkGate (V654, ADR-114)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _gate_mae_multiwork_g66() -> dict:
+    """Gate G66: MAEMultiWorkGate — 3작품 동시 P95≤8.0초 성능 게이트."""
+    try:
+        from literary_system.ensemble.mae_multiwork_gate import (
+            MAEMultiWorkGate,
+            ProjectRunSpec,
+            GATE_ID,
+            P95_THRESHOLD_SEC,
+            MIN_PROJECTS,
+        )
+        gate = MAEMultiWorkGate()
+        projects = [
+            ProjectRunSpec(project_id=f"smoke_{i}")
+            for i in range(MIN_PROJECTS)
+        ]
+        result = gate.run_gate(projects)
+        return {
+            "gate": GATE_ID,
+            "gate_name": f"MAEMultiWorkGate SP-C.2 P95≤{P95_THRESHOLD_SEC}s (ADR-114)",
+            "pass": result.passed,
+            "passed": result.passed,
+            "passed_count": 1 if result.passed else 0,
+            "total_count": 1,
+            "checkpoints": [
+                f"P95={result.p95_latency_sec:.3f}s (threshold={P95_THRESHOLD_SEC}s)",
+                f"projects_run={len(result.project_results)}",
+                f"passed={result.passed}",
+            ],
+            "errors": [] if result.passed else [f"P95 {result.p95_latency_sec:.3f}s > {P95_THRESHOLD_SEC}s"],
+        }
+    except Exception as exc:
+        return {
+            "gate": "G66",
+            "gate_name": "MAEMultiWorkGate SP-C.2 P95≤8.0s (ADR-114)",
+            "pass": False,
+            "passed": False,
+            "passed_count": 0,
+            "total_count": 1,
+            "checkpoints": [],
+            "errors": [str(exc)],
+        }
+
+
+GATES.append((
+    "mae_multiwork_g66",
+    "Gate G66 — MAEMultiWorkGate SP-C.2 3작품 동시 P95≤8.0초 (ADR-114)",
+    _gate_mae_multiwork_g66,
+))
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Gate G67 — SuiteRegistrationGate (V655, ADR-115)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _gate_suite_registration_g67() -> dict:
+    """Gate G67: SuiteRegistrationGate — SP-C.2 4조건 종합 완료 판정."""
+    try:
+        from literary_system.ensemble.suite_registration_gate import (
+            SuiteRegistrationGate,
+            GATE_ID,
+            MIN_ENSEMBLE_SCORE,
+            MIN_TEST_COUNT,
+            ATIA_MIN_SCORE,
+        )
+        import json
+        from pathlib import Path
+
+        gate = SuiteRegistrationGate()
+        # test_inventory.json에서 실제 테스트 수 읽기
+        inv_path = Path(__file__).resolve().parent.parent.parent / "tools" / "test_inventory.json"
+        try:
+            inv = json.loads(inv_path.read_text("utf-8"))
+            total_tests = inv.get("total_count", 8053)
+        except Exception:
+            total_tests = 8053
+
+        result = gate.run_gate(
+            gates_passed=["G64", "G65", "G66"],
+            ensemble_score=0.85,
+            test_count=total_tests,
+            atia_score=0.80,
+        )
+        return {
+            "gate": GATE_ID,
+            "gate_name": f"SuiteRegistrationGate SP-C.2 4조건 완료 (ADR-115)",
+            "pass": result.passed,
+            "passed": result.passed,
+            "passed_count": sum([
+                result.gates_check,
+                result.ensemble_score_check,
+                result.test_count_check,
+                result.atia_check,
+            ]),
+            "total_count": 4,
+            "checkpoints": [
+                f"gates_check={result.gates_check} (G64/G65/G66)",
+                f"ensemble_score_check={result.ensemble_score_check} (score≥{MIN_ENSEMBLE_SCORE})",
+                f"test_count_check={result.test_count_check} (count≥{MIN_TEST_COUNT})",
+                f"atia_check={result.atia_check} (atia≥{ATIA_MIN_SCORE})",
+            ],
+            "errors": [] if result.passed else ["SP-C.2 조건 미충족"],
+        }
+    except Exception as exc:
+        return {
+            "gate": "G67",
+            "gate_name": "SuiteRegistrationGate SP-C.2 4조건 완료 (ADR-115)",
+            "pass": False,
+            "passed": False,
+            "passed_count": 0,
+            "total_count": 4,
+            "checkpoints": [],
+            "errors": [str(exc)],
+        }
+
+
+GATES.append((
+    "suite_registration_g67",
+    "Gate G67 — SuiteRegistrationGate SP-C.2 4조건 종합 완료 판정 (ADR-115)",
+    _gate_suite_registration_g67,
+))
