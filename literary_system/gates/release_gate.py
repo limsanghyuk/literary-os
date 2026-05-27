@@ -3922,3 +3922,42 @@ GATES.append((
     "Gate G72-D — 경쟁 흡수 증류 파이프라인 (ADR-134, SP-C.4)",
     _gate_distillation_export_g72d,
 ))
+
+
+# ─── G73: Enterprise SLO 게이트 ──────────────────────────────────────────────
+def _gate_enterprise_slo_g73() -> dict:
+    """G73 Enterprise SLO 게이트 (ADR-135, SP-C.4)."""
+    try:
+        from literary_system.enterprise.slo import EnterpriseSLOGate
+        gate = EnterpriseSLOGate()
+        report = gate.demo_run()
+        return {
+            "gate": "G73",
+            "gate_name": "EnterpriseSLOGate (ADR-135, SP-C.4)",
+            "pass":    report.gate_passed,
+            "passed":  report.gate_passed,
+            "passed_count": 1 if report.gate_passed else 0,
+            "total_count": 1,
+            "checkpoints": [
+                f"contracts_checked={report.contracts_checked}",
+                f"violations={report.violations_found}",
+                f"breaches={report.breaches}",
+                f"gate_passed={report.gate_passed}",
+            ],
+            "errors": [] if report.gate_passed else [report.summary],
+        }
+    except Exception as exc:
+        return {
+            "gate": "G73",
+            "gate_name": "EnterpriseSLOGate (ADR-135)",
+            "pass": False, "passed": False,
+            "passed_count": 0, "total_count": 1,
+            "checkpoints": [], "errors": [str(exc)],
+        }
+
+
+GATES.append((
+    "enterprise_slo_g73",
+    "Gate G73 — Enterprise SLO 계약·모니터링·위반 경보 (ADR-135, SP-C.4)",
+    _gate_enterprise_slo_g73,
+))
