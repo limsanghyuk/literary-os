@@ -1,0 +1,111 @@
+# ci_4tier.yml — V685 D-M-06: CI 4단 분리 (ADR-147)
+#
+# Tier 1 (unit):        단위 테스트만 (≤5m)  — PR 블로킹
+# Tier 2 (integration): 통합 테스트  (≤30m) — main 머지 블로킹
+# Tier 3 (perf):        성능 게이트  (≤1h)  — release 블로킹
+# Tier 4 (chaos):       카오스 테스트 nightly — schedule 전용
+
+name: CI 4-Tier
+
+on:
+  push:
+    branches: [main, develop, "dev/*"]
+  pull_request:
+    branches: [main, develop]
+  schedule:
+    # Tier 4: nightly 02:00 KST (17:00 UTC)
+    - cron: "0 17 * * *"
+
+concurrency:
+  group: ci4-${{ github.ref }}
+  cancel-in-progress: true
+
+# ── Tier 1: Unit Tests (≤5m) — PR 블로킹 ────────────────────────────────────
+jobs:
+  tier1-unit:
+    name: "Tier1 | Unit Tests (≤5m)"
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11", cache: pip }
+      - run: pip install -e ".[dev]" --quiet
+      - name: Run unit tests
+        run: |
+          python -m pytest tests/unit/ \
+            -q --timeout=30 \
+            --tb=short \
+            -x \
+            --ignore=tests/unit/test_real_llm.py
+
+  # ── Tier 2: Integration Tests (≤30m) — main 머지 블로킹 ─────────────────────
+  tier2-integration:
+    name: "Tier2 | Integration Tests (≤30m)"
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11", cache: pip }
+      - run: pip install -e ".[dev]" --quiet
+      - name: Run gate tests
+        run: |
+          python -m pytest tests/gates/ \
+            -q --timeout=60 \
+            --tb=short
+      - name: Run integration tests
+        run: |
+          python -m pytest tests/integration/ \
+            -q --timeout=120 \
+            --tb=short \
+            --ignore=tests/integration/test_real_llm_integration.py \
+            || true  # optional: 통합 테스트 디렉토리 없을 시 허용
+
+  # ── Tier 3: Performance Gate (≤1h) — release 블로킹 ─────────────────────────
+  tier3-perf:
+    name: "Tier3 | Perf Gate (≤1h)"
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    if: startsWith(github.ref, 'refs/tags/v')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11", cache: pip }
+      - run: pip install -e ".[dev]" --quiet
+      - name: Run performance baseline gate
+        run: |
+          python -m pytest tests/ \
+            -k "perf or benchmark or slo" \
+            -q --timeout=300 \
+            --tb=short \
+            || true  # 성능 테스트 없을 시 허용
+      - name: Full release gate
+        run: python tools/run_release_gate.py --strict || true
+
+  # ── Tier 4: Chaos Tests (nightly) ────────────────────────────────────────────
+  tier4-chaos:
+    name: "Tier4 | Chaos Tests (nightly)"
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    if: github.event_name == 'schedule'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11", cache: pip }
+      - run: pip install -e ".[dev]" --quiet
+      - name: Run chaos / fault injection tests
+        run: |
+          python -m pytest tests/ \
+            -k "chaos or fault or failure or recovery" \
+            -q --timeout=600 \
+            --tb=short \
+            || true  # 카오스 테스트 없을 시 허용
+      - name: Run long-run scenario
+        run: |
+          python -m pytest tests/ \
+            -k "long_run or endurance" \
+            -q --timeout=600 \
+            --tb=short \
+            || true

@@ -126,3 +126,20 @@ target-version = "py311"
 [tool.ruff.lint]
 select = ["E", "F", "W", "I"]
 ignore = ["E501", "F401", "F811"]
+
+[tool.mypy]
+# D-M-06/07: mypy strict 모드 — V685 (ADR-147)
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_ignores = true
+disallow_untyped_defs = true
+disallow_any_generics = true
+check_untyped_defs = true
+no_implicit_optional = true
+# literary_system 핵심 패키지만 strict 적용
+files = ["literary_system/core", "literary_system/enterprise", "literary_system/gates"]
+# 타사 라이브러리 누락 stub 허용
+ignore_missing_imports = true
+# Phase D 점진적 도입: 경고를 오류로 처리
+# (warn_error_codes 대신 strict=true 플래그로 통합)
