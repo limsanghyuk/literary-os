@@ -1,6 +1,7 @@
 """
 literary_system/enterprise/cost_control.py
-V678 — Enterprise 비용 제어 레이어 (ADR-140, SP-C.4)
+V683 — Enterprise 비용 제어 레이어 (ADR-140, SP-C.4)
+TD-3 수정: is_blocking → gate_passed 연결 (ADR-145)
 
 Enterprise 테넌트별 LLM 호출 비용을 추적·예산 집행·경보 발령한다.
 """
@@ -97,6 +98,20 @@ class EnterpriseCostReport:
             return self.alert.level
         return CostAlertLevel.OK
 
+    @property
+    def is_blocking(self) -> bool:
+        """alert.is_blocking 을 위임한다 (TD-3: 기존 누락 수정)."""
+        return self.alert.is_blocking if self.alert is not None else False
+
+
+@dataclass
+class CostAlertSummary:
+    """전체 테넌트 경보 집계 (TD-3 신규)."""
+    blocking: int
+    exceeded: int
+    critical: int
+    gate_passed: bool
+
 
 @dataclass
 class EnterpriseCostSuiteReport:
@@ -188,6 +203,22 @@ class EnterpriseCostControlGate:
 
     GATE_ID = "G77"
 
+    @staticmethod
+    def _evaluate_alerts(reports: List[EnterpriseCostReport]) -> CostAlertSummary:
+        """경보 집계 — is_blocking 프로퍼티를 사용하여 gate_passed 를 결정한다 (TD-3).
+
+        blocking 1건이라도 있으면 gate 실패.
+        """
+        blocking_count = sum(1 for r in reports if r.is_blocking)
+        exceeded_count = sum(1 for r in reports if r.alert_level == CostAlertLevel.EXCEEDED)
+        critical_count = sum(1 for r in reports if r.alert_level == CostAlertLevel.CRITICAL)
+        return CostAlertSummary(
+            blocking=blocking_count,
+            exceeded=exceeded_count,
+            critical=critical_count,
+            gate_passed=(blocking_count == 0),
+        )
+
     def demo_run(self) -> EnterpriseCostSuiteReport:
         """4-테넌트 비용 시나리오 데모 실행."""
         tracker = EnterpriseCostTracker()
@@ -216,11 +247,13 @@ class EnterpriseCostControlGate:
 
         reports = [tracker.report_for(tid) for tid in tracker.all_tenant_ids()]
         total_suite = sum(r.total_usd for r in reports)
-        exceeded_count = sum(1 for r in reports if r.alert_level == CostAlertLevel.EXCEEDED)
+
+        # TD-3: _evaluate_alerts() 로 gate_passed 결정
+        summary = self._evaluate_alerts(reports)
 
         return EnterpriseCostSuiteReport(
             reports=reports,
             total_suite_usd=total_suite,
-            tenants_exceeded=exceeded_count,
-            gate_passed=True,  # 게이트는 항상 PASS — 초과는 경보만 발령
+            tenants_exceeded=summary.exceeded,
+            gate_passed=summary.gate_passed,
         )
