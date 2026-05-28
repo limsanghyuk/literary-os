@@ -16,3 +16,7 @@ __all__ = [
     "TenantNotFoundError", "TenantDisabledError", "AccessDeniedError",
     "ZeroTrustMiddleware", "ZTRequest", "ZTResponse", "ZeroTrustAuditEntry",
 ]
+from .zero_trust_audit_log import (
+    ZeroTrustAuditLog,
+    AuditRecord,
+)
