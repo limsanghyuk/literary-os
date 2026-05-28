@@ -19,3 +19,10 @@ __all__ = [
     "PluginLoader",
     "PluginLoadResult",
 ]
+
+from literary_system.plugins.plugin_registry import (
+    PluginRegistry,
+    RegistryEntry,
+)
+
+__all__ += ["PluginRegistry", "RegistryEntry"]
