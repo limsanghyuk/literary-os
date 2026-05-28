@@ -47,9 +47,16 @@ class TestGConnectivity:
         self.packages, self.deps, self.imported_by = _build_import_graph()
 
     def test_TC01_no_completely_isolated_packages(self):
-        """TC01: 완전 고립 패키지 0개 — ADR-128 G_CONNECTIVITY PASS."""
+        """TC01: 완전 고립 패키지 0개 — ADR-128 G_CONNECTIVITY PASS.
+        
+        V719 예외: security/ — SP-D.3 신규 패키지, V721 Gate G88 배선 예정 (ADR-180).
+        2버전 유예 기간 내 허용 (ADR-128 §3).
+        """
+        # SP-D.3 보안 레이어: V721 Gate G88에서 literary_system 메인 흐름에 배선 예정
+        TRANSITIONAL_ISOLATED = {"security"}
         isolated = [p for p in self.packages
-                    if not self.imported_by.get(p) and not self.deps.get(p)]
+                    if not self.imported_by.get(p) and not self.deps.get(p)
+                    and p not in TRANSITIONAL_ISOLATED]
         assert isolated == [], f"완전 고립 패키지 발견: {isolated}"
 
     def test_TC02_scope_connected_to_world(self):
