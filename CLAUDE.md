@@ -1,4 +1,4 @@
-# Literary OS — 개발자 컨텍스트 (V666 / v11.39.0)
+# Literary OS — 개발자 컨텍스트 (V680-AUDIT2 / v12.0.2)
 
 ---
 
@@ -26,8 +26,8 @@ V(N) 개발 완료 후, V(N+1) 시작 전:
 
 | 발화 패턴 | Claude 행동 |
 |-----------|-------------|
-| "V667 진행해", "다음 버전 시작", "SP-C.4 시작" | Preflight 13단계 먼저 실행 → PASS 후 구현 |
-| "668 해줘", "계속 진행", "이어서 개발" | 이전 버전 Preflight PASS 여부 확인 → 미확인 시 재실행 |
+| "V681 진행해", "다음 버전 시작", "Phase D 시작" | Preflight 13단계 먼저 실행 → PASS 후 구현 |
+| "682 해줘", "계속 진행", "이어서 개발" | 이전 버전 Preflight PASS 여부 확인 → 미확인 시 재실행 |
 | 버전 번호가 포함된 모든 개발 지시 | 버전 경계 감지 → 자동 Preflight 트리거 |
 
 ### 위반 시 처리
@@ -38,7 +38,7 @@ V(N) 개발 완료 후, V(N+1) 시작 전:
 
 ---
 
-## 🔴 Phase C 절대 원칙 (불변)
+## 🔴 Phase D 절대 원칙 (불변)
 
 | 원칙 | 내용 |
 |------|------|
@@ -51,18 +51,19 @@ V(N) 개발 완료 후, V(N+1) 시작 전:
 
 ---
 
-## 현재 상태 (V666 기준)
+## 현재 상태 (V680-AUDIT2 기준)
 
 | 항목 | 값 |
 |------|----|
-| 버전 | v11.39.0 |
-| 개발 이터레이션 | V666 (Integration) |
-| 릴리즈 게이트 | **66/66 PASS** |
-| 테스트 | **8,418 PASS** |
+| 버전 | v12.0.2 |
+| 개발 이터레이션 | V680-AUDIT2 (Phase C 완전 종료) |
+| 릴리즈 게이트 | **80/80 PASS** |
+| 테스트 | **8,845 PASS** |
 | 고립 패키지 | **0개** (76패키지 전체 연결) |
 | Preflight 단계 | **13단계** (Step 13: G_CONNECTIVITY) |
-| 현재 Phase | Phase C SP-C.3 완료 → **SP-C.4 진입 대기** |
-| Git HEAD (main) | b60f7507 |
+| 최신 ADR | ADR-142 (Phase C Exit Gate G79) |
+| 현재 Phase | Phase C 완전 종료 → **Phase D 진입 대기** |
+| Git HEAD (main) | 6153b586 (Phase D 본안 v1.0) |
 | GitHub | https://github.com/limsanghyuk/literary-os |
 
 ---
@@ -78,12 +79,12 @@ python3 tools/run_preflight.py   # ← RULE-0 집행 시작점
 
 ---
 
-## 개발 흐름 (DEV_PROTOCOL_v2.0 + RULE-0 통합)
+## 개발 흐름 (DEV_PROTOCOL_v2.1 + RULE-0 통합)
 
 ```
 [RULE-0] V(N) 시작 전 → python3 tools/run_preflight.py → PASS 확인
 [1] 구현 (신규파일 + tests/unit/test_vNNN_*.py 33TC 이상)
-[2] pytest → generate_test_inventory.py → run_release_gate.py (66/66 PASS)
+[2] pytest → generate_test_inventory.py → run_release_gate.py (80/80 PASS)
 [3] GitHub: commit → push → Release 태그 → ZIP 패키징
 [RULE-0] V(N+1) 시작 전 → python3 tools/run_preflight.py 재실행 → PASS 확인
 [4] V(N+1) 구현 시작
@@ -93,22 +94,17 @@ python3 tools/run_preflight.py   # ← RULE-0 집행 시작점
 
 ---
 
-## SP-C.4 로드맵 (V667~V680)
+## Phase D 로드맵 (V681~V745) — 본안 v1.0
 
-| 버전 | 내용 | Gate |
-|------|------|------|
-| V667 | 경쟁 흡수: NovelAI 분석 | G72-1 |
-| V668 | 경쟁 흡수: Sudowrite 분석 | G72-2 |
-| V669 | 경쟁 흡수: Novelcrafter 분석 | G72-3 |
-| V670 | 경쟁 흡수: NolanAI 분석 | G72-4 |
-| V671 | 경쟁 흡수: Jenova 분석 + G72 통합 | G72 |
-| V672 | DistillationExportPipeline v0.1 | ADR-095 |
-| V673 | Enterprise SLO Gate | G73 |
-| V674 | Revenue Gate | G74 |
-| V680 | Phase C Exit Gate → v12.0.0 | G75 |
+| SubPhase | 버전 | 내용 | 비고 |
+|----------|------|------|------|
+| SP-D.1 | V681~V700 | 장편 품질 완성 (서사 일관성 / 캐릭터 깊이 / 감정 흐름) | |
+| SP-D.2 | V701~V720 | 다국어 확장 (영어/일어/중국어) | |
+| SP-D.3 | V721~V740 | 상용화 완성 (API SLA / 결제 / Enterprise 계약) | |
+| SP-D.4 | V741~V745 | Phase D Exit Gate → v13.0.0 | |
 
-**SP-C.4 시작 발화**: "V667 시작해" / "SP-C.4 진행해" / "계속 개발해"  
-→ Claude가 RULE-0에 따라 자동으로 Preflight 먼저 실행 후 V667 구현 착수.
+**Phase D 시작 발화**: "V681 시작해" / "Phase D 진행해" / "계속 개발해"  
+→ Claude가 RULE-0에 따라 자동으로 Preflight 먼저 실행 후 V681 구현 착수.
 
 ---
 
@@ -117,7 +113,7 @@ python3 tools/run_preflight.py   # ← RULE-0 집행 시작점
 | 도구 | 용도 |
 |------|------|
 | `python3 tools/run_preflight.py` | Preflight 13단계 자동 실행 (RULE-0 핵심) |
-| `python3 tools/run_release_gate.py` | G_PREFLIGHT + G_CONNECTIVITY + 66 Gates |
+| `python3 tools/run_release_gate.py` | G_PREFLIGHT + G_CONNECTIVITY + 80 Gates |
 | `python3 tools/generate_test_inventory.py` | test_inventory.json 갱신 |
 | `bash tools/install_hooks.sh` | 로컬 pre-commit hook 설치 (최초 1회) |
 
@@ -127,24 +123,30 @@ python3 tools/run_preflight.py   # ← RULE-0 집행 시작점
 
 ```
 literary_system/
-├── sdk/          # PublicSDK (SP-C.3) — online 4종 실구현
+├── sdk/          # PublicSDK v1.0 (SP-C.3) — online 4종 실구현
 ├── ensemble/     # AgentCoordinator (Director→Script→Critic→Editor)
-├── gates/        # 66 Release Gates + SafetyRegressionGate (V666)
+├── agents/       # 멀티에이전트 앙상블 (SP-C.2)
+├── gates/        # 80 Release Gates + SafetyRegressionGate
 ├── constitution/ # LOSConstitution v2 + Bayesian Opt
-├── world/        # PluginRegistry + 5 genre plugins (V666 통합)
-├── governance/   # ATIAMetadataAuditor (V666 통합)
-├── ops/          # AdaptiveThrottler + LongRunMonitor + APIReferenceGenerator (V666)
+├── world/        # PluginRegistry + 5 genre plugins
+├── governance/   # ATIAMetadataAuditor
+├── ops/          # AdaptiveThrottler + LongRunMonitor + PrometheusExporter
 └── ...           # 76패키지 전체 연결 (고립 0, ADR-128)
 ```
 
 ---
 
-## Phase C 전체 진행 현황
+## Phase 전체 진행 현황
 
-| SubPhase | 버전 | Gates | 상태 |
-|----------|------|-------|------|
+| Phase | 버전 | Gates | 상태 |
+|-------|------|-------|------|
+| Phase 6 (MultiWork) | V546~V571 | G25~G31 | ✅ 완료 |
+| SP-A | V587~V595 | G46~G52 | ✅ 완료 |
+| SP-B | V596~V630 | G53~G61 | ✅ 완료 |
 | SP-C.1 자기학습 | V631~V640 | G62~G63 | ✅ 완료 |
 | SP-C.2 멀티에이전트 | V641~V655 | G64~G67 | ✅ 완료 |
 | SP-C.3 PublicSDK | V656~V665 | G68~G71 | ✅ 완료 |
 | V666 Integration | V666 | ADR-128 | ✅ 완료 |
-| **SP-C.4 경쟁흡수+배포** | **V667~V680** | **G72~G75** | 🔜 진입 대기 |
+| SP-C.4 경쟁흡수+배포 | V667~V680 | G72~G79 | ✅ 완료 |
+| V680-AUDIT2 | v12.0.2 | G80 | ✅ Phase C 완전 종료 |
+| **Phase D** | **V681~V745** | **TBD** | 🔜 **진입 대기** |

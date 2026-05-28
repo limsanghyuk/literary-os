@@ -1,9 +1,15 @@
-Literary OS V611
-Version: 10.16.0
-ADR: ADR-071
-Date: 2026-05-23
-SP: SP-B.3 (V611/14)
+Literary OS V680-AUDIT2
+Version: 12.0.2
+ADR: ADR-142
+Date: 2026-05-28
+SP: SP-C.4 완료 + Phase C 완전 종료
+Tag: v12.0.2
+Commit: 1ce229af
 Files:
-  - literary_system/multiwork/multi_work_cim.py (v2.0)
-  - tests/unit/test_v610_multi_work_cim_v2_upgrade.py (22 TC)
-  - docs/adr/ADR-070.md
+  - literary_system/gates/ (80 Gates G01~G80)
+  - literary_system/sdk/public_sdk.py (online 4종 실구현)
+  - literary_system/world/__init__.py (PluginRegistry)
+  - literary_system/gates/safety_regression_gate.py
+  - docs/adr/ADR-142.md (Phase C Exit Gate G79)
+  - tools/test_inventory.json (8845 TC)
+Status: Phase C SP-C.4 COMPLETE — Phase D 진입 대기
