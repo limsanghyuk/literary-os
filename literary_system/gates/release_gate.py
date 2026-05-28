@@ -4202,3 +4202,72 @@ GATES.append((
     "Gate G79 — SP-C.4 Phase C Exit Gate (G73~G78 종합, ADR-142)",
     _gate_phase_c_exit_g79,
 ))
+
+
+# ── G80: Phase C Exit Gate Wrapper (D-M-13) ──────────────────────────────────
+def _gate_phase_c_exit_wrapper_g80() -> dict:
+    """G80: Phase C Exit Gate 래퍼 — D-M-13 Phase A/B 패턴 정렬 (ADR-143)"""
+    try:
+        from literary_system.gates.phase_c_exit_gate import run_phase_c_exit_gate
+        report = run_phase_c_exit_gate()
+        passed = report.gate_passed
+        return {
+            "gate": "G80",
+            "pass": passed,
+            "passed": passed,
+            "passed_count": report.passed_count,
+            "total_count": report.total_count,
+            "min_gates": report.min_gates,
+            "min_tests": report.min_tests,
+            "checkpoints": [
+                "{}: {}".format(c.name, "PASS" if c.passed else "FAIL " + c.detail)
+                for c in report.checkpoints
+            ],
+            "errors": [] if passed else ["gate_passed=False"],
+        }
+    except Exception as exc:
+        return {"gate": "G80", "pass": False, "passed": False,
+                "passed_count": 0, "total_count": 1, "checkpoints": [], "errors": [str(exc)]}
+
+
+GATES.append((
+    "phase_c_exit_wrapper_g80",
+    "Gate G80 — Phase C Exit Gate Wrapper D-M-13 (ADR-143)",
+    _gate_phase_c_exit_wrapper_g80,
+))
+
+
+# ── G81: Pre-flight Fix Gate ──────────────────────────────────────────────────
+def _gate_pre_flight_fix_g81() -> dict:
+    """G81: Pre-flight Fix Gate — TD-1/TD-2/TD-3 + D-M-13 검증 (ADR-146)"""
+    try:
+        from literary_system.gates.pre_flight_fix_gate import run_g81_gate
+        return run_g81_gate()
+    except Exception as exc:
+        return {"gate": "G81", "pass": False, "passed": False,
+                "passed_count": 0, "total_count": 1, "checkpoints": [], "errors": [str(exc)]}
+
+
+GATES.append((
+    "pre_flight_fix_g81",
+    "Gate G81 — Pre-flight Fix Gate TD-1~TD-3 + D-M-13 (ADR-146)",
+    _gate_pre_flight_fix_g81,
+))
+
+
+# ── G82: Static Type Safety Gate ─────────────────────────────────────────────
+def _gate_static_type_safety_g82() -> dict:
+    """G82: Static Type Safety Gate — pre-commit 4종 + type_stubs (ADR-149/150)"""
+    try:
+        from literary_system.gates.static_type_safety_gate import run_g82_gate
+        return run_g82_gate()
+    except Exception as exc:
+        return {"gate": "G82", "pass": False, "passed": False,
+                "passed_count": 0, "total_count": 1, "checkpoints": [], "errors": [str(exc)]}
+
+
+GATES.append((
+    "static_type_safety_g82",
+    "Gate G82 — Static Type Safety Gate pre-commit 4종 + type_stubs (ADR-149/150)",
+    _gate_static_type_safety_g82,
+))

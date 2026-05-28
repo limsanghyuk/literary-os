@@ -1,16 +1,19 @@
 # Preflight 12단계 실행 로그
-**버전**: v12.0.2  |  **실행일시**: 2026-05-28T01:58:51Z  |  **실행자**: run_preflight.py v1.0
+**버전**: v12.0.2  |  **실행일시**: 2026-05-28T02:16:37Z  |  **실행자**: run_preflight.py v1.0
 **근거**: DEV_PROTOCOL_v2.0 §1 + PREFLIGHT_GUIDE_v1.1 §3
 
 ## Step 1. 코드베이스 현황 (index_status 등가)
-- Python 파일: 963개
-- 심볼(클래스): 3,052개
-- 테스트 함수: 8,603개
-- 최근 변경 py 파일 (HEAD~3): 3개
-  - literary_system/enterprise/phase_c_exit_gate.py
-  - tests/integration/test_v675_enterprise_integration.py
-  - tests/unit/test_v680_phase_c_exit.py
-- 소요: 1.11s
+- Python 파일: 968개
+- 심볼(클래스): 3,063개
+- 테스트 함수: 8,694개
+- 최근 변경 py 파일 (HEAD~3): 6개
+  - literary_system/enterprise/benchmark.py
+  - literary_system/enterprise/cost_control.py
+  - literary_system/enterprise/revenue.py
+  - tests/unit/test_v681_benchmark_p99.py
+  - tests/unit/test_v682_revenue_contiguous.py
+  - tests/unit/test_v683_cost_control.py
+- 소요: 1.16s
 
 ## Step 2. 모듈 범위 (list_repos 등가)
 - literary_system/ 서브패키지: 79개
@@ -46,7 +49,7 @@
   - feedback/ (3파일)
   - finetune/ (21파일)
   - gate/ (5파일)
-  - gates/ (43파일)
+  - gates/ (44파일)
   - gdap/ (8파일)
   - governance/ (3파일)
   - graph/ (2파일)
@@ -93,7 +96,7 @@
   - trajectory_family/ (2파일)
   - validation/ (5파일)
   - world/ (3파일)
-- 테스트 파일: 328개
+- 테스트 파일: 332개
 
 ## Step 3. 변경 예정 심볼 탐색 (query 등가)
 - SP-C.4 대상: DistillationExportPipeline, CompetitiveAbsorber, EnterpriseSLOGate, RevenueGate
@@ -124,11 +127,12 @@
   - literary_system.sdk: depth-1 참조자 5개
   - literary_system.feedback: depth-1 참조자 4개
   - literary_system.serving: depth-1 참조자 2개
-  - literary_system.gates: depth-1 참조자 12개
+  - literary_system.gates: depth-1 참조자 13개
 
 ## Step 6. 테스트 영향 분석 (detect_changes 등가)
-- SP-C.3 테스트 파일: 32개
+- SP-C.3 테스트 파일: 36개
   - test_v681_pre_phase_c_exit_gate.py
+  - test_v684_pre_flight_fix_gate.py
   - test_v675_enterprise_integration.py
   - test_v650_agent_coordinator.py
   - test_v651_memory_cache.py
@@ -160,11 +164,16 @@
   - test_v678_cost_control.py
   - test_v679_compliance_audit.py
   - test_v680_phase_c_exit.py
+  - test_v681_benchmark_p99.py
+  - test_v682_revenue_contiguous.py
+  - test_v683_cost_control.py
 - pytest --collect-only: tests/unit/test_corpus_ingestor.py::TestCorpusEntry::test_tc01_corpus_entry_creation
 
 ## Step 7. 핵심 개념 무결성 (concept_impact 등가)
   - LLM-0 위반: 0건 ✓ 없음
-  - G32 위반: 1건
+  - G32 위반: 3건
+    ❌ literary_system/gates/pre_flight_fix_gate.py:319
+    ❌ literary_system/gates/pre_flight_fix_gate.py:322
     ❌ literary_system/gates/phase_c_exit_gate.py:290
   - DEV_MODE=True 파일: 0건 ✓ 없음
   - pyproject.toml 버전: 12.0.2
@@ -211,7 +220,7 @@
   - 문서/CHANGELOG: 🟢 Low
 
 ## Step 12. Release Gate 최종 판단 (release_gate_integration 등가)
-  - RELEASE GATE FAIL: 77/80 gates passed
+  - RELEASE GATE FAIL: 75/80 gates passed
 
 ## Step 13. 패키지 연결성 검사 (ADR-128 G_CONNECTIVITY)
   ✅ G_CONNECTIVITY PASS — 완전 고립 패키지 0개 (78개 전체 연결됨)
@@ -219,14 +228,16 @@
 ## 부록. 순환 의존 탐지
   - 실질 순환: 5개
   ⚠️  auto_promotion_gate → auto_promotion_gate
-  ⚠️  release_gate → phase_b_exit_gate → release_gate
-  ⚠️  release_gate → gate_registry → release_gate
+  ⚠️  release_gate → phase_a_exit_gate → release_gate
+  ⚠️  self_learning_gate → self_learning_gate
 
 ---
 ## 최종 판정
-### ❌ PREFLIGHT FAIL — 2건 해소 필요
-  1. G32 위반: literary_system/gates/phase_c_exit_gate.py:290
-  2. Release Gate FAIL (상세: tools/run_release_gate.py 직접 실행 확인)
+### ❌ PREFLIGHT FAIL — 4건 해소 필요
+  1. G32 위반: literary_system/gates/pre_flight_fix_gate.py:319
+  2. G32 위반: literary_system/gates/pre_flight_fix_gate.py:322
+  3. G32 위반: literary_system/gates/phase_c_exit_gate.py:290
+  4. Release Gate FAIL (상세: tools/run_release_gate.py 직접 실행 확인)
 
 **경고 (블록 아님)**: 8건
   - Gate 미연결(독립 운영): SDKStabilityGate
@@ -235,8 +246,8 @@
   - Gate 미연결(독립 운영): ReaderFeedbackGate
   - Gate 미연결(독립 운영): ModelServingEndpointV2
   - 순환 의존: ['literary_system.gates.auto_promotion_gate', 'literary_system.gates.auto_promotion_gate']
-  - 순환 의존: ['literary_system.gates.release_gate', 'literary_system.gates.phase_b_exit_gate', 'literary_system.gates.release_gate']
-  - 순환 의존: ['literary_system.gates.release_gate', 'literary_system.gates.gate_registry', 'literary_system.gates.release_gate']
+  - 순환 의존: ['literary_system.gates.release_gate', 'literary_system.gates.phase_a_exit_gate', 'literary_system.gates.release_gate']
+  - 순환 의존: ['literary_system.gates.self_learning_gate', 'literary_system.gates.self_learning_gate']
 
-**실행 완료**: 2026-05-28T01:58:59Z
+**실행 완료**: 2026-05-28T02:16:45Z
 **로그 파일**: docs/sessions/preflight_v12.0.2_2026-05-28.md
