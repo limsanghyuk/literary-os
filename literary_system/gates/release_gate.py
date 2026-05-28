@@ -4271,3 +4271,21 @@ GATES.append((
     "Gate G82 — Static Type Safety Gate pre-commit 4종 + type_stubs (ADR-149/150)",
     _gate_static_type_safety_g82,
 ))
+
+
+# ── G83: Observability Foundation Gate ───────────────────────────────────────
+def _gate_observability_foundation_g83() -> dict:
+    """G83: Observability Foundation Gate — OB-1~OB-5 (ADR-153)"""
+    try:
+        from literary_system.gates.observability_foundation_gate import run_g83_gate
+        return run_g83_gate()
+    except Exception as exc:
+        return {"gate": "G83", "pass": False, "passed": False,
+                "passed_count": 0, "total_count": 5, "checkpoints": [], "errors": [str(exc)]}
+
+
+GATES.append((
+    "observability_foundation_g83",
+    "Gate G83 — Observability Foundation Gate OB-1~OB-5 (ADR-153)",
+    _gate_observability_foundation_g83,
+))
