@@ -1,26 +1,55 @@
-# V587 ADR-048: pre-commit hooks — 버전·Gate 정합 자동 검사
-repos:
-  - repo: local
-    hooks:
-      - id: version-consistency-check
-        name: Version & Gate Consistency (ADR-048)
-        entry: python tools/check_version_consistency.py --strict --no-live-gate
-        language: python
-        pass_filenames: false
-        stages: [commit]
-        always_run: true
+# .pre-commit-config.yaml — V687 D-M-08: pre-commit 4종 (ADR-149)
+# 설치: pre-commit install
+# 수동 실행: pre-commit run --all-files
 
+repos:
+  # 1. Ruff — 빠른 린트 + import 정렬
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.4
+    rev: v0.6.9
     hooks:
       - id: ruff
-        args: [--select, "E,F,W", --ignore, "E501,W503"]
+        args: ["--select", "E,F,W,I", "--ignore", "E501,F401,F811,E402,F841"]
+        types: [python]
+      - id: ruff-format
         types: [python]
 
+  # 2. Black — 코드 포매터
+  - repo: https://github.com/psf/black
+    rev: 24.8.0
+    hooks:
+      - id: black
+        language_version: python3.11
+        args: ["--line-length", "120"]
+        types: [python]
+
+  # 3. mypy — 정적 타입 검사 (literary_system/core + enterprise + gates)
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.11.2
+    hooks:
+      - id: mypy
+        args:
+          - "--ignore-missing-imports"
+          - "--no-strict-optional"
+          - "--python-version=3.10"
+        files: "^literary_system/(core|enterprise|gates)/"
+        types: [python]
+        additional_dependencies: ["pydantic>=2.0"]
+
+  # 4. Bandit — 보안 취약점 스캐너
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.7.10
+    hooks:
+      - id: bandit
+        args: ["-c", "pyproject.toml", "-ll"]
+        files: "^literary_system/"
+        types: [python]
+
+  # 기본 파일 검사
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: check-yaml
+      - id: check-toml
       - id: check-merge-conflict
