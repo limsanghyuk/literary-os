@@ -13,6 +13,34 @@ from enum import Enum
 from typing import List, Optional
 
 
+# ---------------------------------------------------------------------------
+# NIST R-7 Percentile (D-M-09, ADR-143)
+# ---------------------------------------------------------------------------
+def percentile(data: List[float], p: float) -> float:
+    """NIST recommended linear interpolation (R-7).
+
+    p: 0.0 ~ 1.0 (예: 0.99 = P99)
+    sorted[int(n*0.99)] 대비 정확: n=50/100 엣지에서 최댓값 편향 제거.
+    
+    엣지 케이스:
+      - n=0 → 0.0
+      - n=1 → data[0]
+      - 음수값, 동일값 배열 → 정상 처리
+    """
+    if not data:
+        return 0.0
+    if len(data) == 1:
+        return float(data[0])
+    sorted_data = sorted(data)
+    n = len(sorted_data)
+    rank = p * (n - 1)
+    lo = int(rank)
+    hi = min(lo + 1, n - 1)
+    frac = rank - lo
+    return float(sorted_data[lo] + frac * (sorted_data[hi] - sorted_data[lo]))
+
+
+
 # ── Enums ─────────────────────────────────────────────────────────────────────
 
 class BenchmarkStatus(str, Enum):
@@ -127,7 +155,7 @@ class BenchmarkRunner:
 
         avg_ms = statistics.mean(elapsed_list) if elapsed_list else 0.0
         p50_ms = statistics.median(elapsed_list) if elapsed_list else 0.0
-        p99_ms = float(sorted(elapsed_list)[int(len(elapsed_list) * 0.99)]) if len(elapsed_list) >= 2 else avg_ms
+        p99_ms = percentile(elapsed_list, 0.99) if len(elapsed_list) >= 2 else avg_ms
         success_rate = success_count / len(samples) if samples else 0.0
         # 처리량: 샘플 총 시간(ms → s) 대비 성공 수
         total_ms = sum(elapsed_list)
