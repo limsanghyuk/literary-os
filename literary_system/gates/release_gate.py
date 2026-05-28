@@ -4289,3 +4289,21 @@ GATES.append((
     "Gate G83 — Observability Foundation Gate OB-1~OB-5 (ADR-153)",
     _gate_observability_foundation_g83,
 ))
+
+
+# ── G87: Plugin Registry Gate ─────────────────────────────────────────────
+def _gate_plugin_registry_g87() -> dict:
+    """G87: Plugin Registry Gate — PR-1~PR-7 (ADR-177)"""
+    try:
+        from literary_system.gates.plugin_registry_gate import run_g87_gate
+        return run_g87_gate()
+    except Exception as exc:
+        return {"gate": "G87", "pass": False, "passed": False,
+                "passed_count": 0, "total_count": 7, "checkpoints": [], "errors": [str(exc)]}
+
+
+GATES.append((
+    "plugin_registry_g87",
+    "Gate G87 — Plugin Registry Gate PR-1~PR-7 (ADR-177)",
+    _gate_plugin_registry_g87,
+))
