@@ -325,5 +325,5 @@ if __name__ == "__main__":
     import json
 
     result = run_g83_gate()
-    print(json.dumps(result, indent=2, ensure_ascii=False))
+    sys.stdout.write(json.dumps(result, indent=2, ensure_ascii=False) + "\n")
     sys.exit(0 if result["pass"] else 1)

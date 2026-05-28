@@ -197,21 +197,22 @@ class TraceContextPropagator:
 # ── 독립 실행 ────────────────────────────────────────────────
 
 if __name__ == "__main__":
+    import sys
     # 데모
     root = new_trace_context()
-    print("Root TraceContext:")
-    print("  traceparent:", root.traceparent)
-    print("  is_sampled:", root.is_sampled())
-    print("  is_valid:", root.is_valid())
+    sys.stdout.write("Root TraceContext:\n")
+    sys.stdout.write("  traceparent: " + root.traceparent + "\n")
+    sys.stdout.write("  is_sampled: " + str(root.is_sampled()) + "\n")
+    sys.stdout.write("  is_valid: " + str(root.is_valid()) + "\n")
 
     child = child_context(root)
-    print("\nChild TraceContext:")
-    print("  traceparent:", child.traceparent)
-    print("  trace_id inherited:", child.trace_id == root.trace_id)
+    sys.stdout.write("\nChild TraceContext:\n")
+    sys.stdout.write("  traceparent: " + child.traceparent + "\n")
+    sys.stdout.write("  trace_id inherited: " + str(child.trace_id == root.trace_id) + "\n")
 
     headers: Dict[str, str] = {}
     TraceContextPropagator.inject(root, headers)
-    print("\nInjected headers:", headers)
+    sys.stdout.write("\nInjected headers: " + str(headers) + "\n")
 
     extracted = TraceContextPropagator.extract(headers)
-    print("Extracted trace_id matches:", extracted and extracted.trace_id == root.trace_id)
+    sys.stdout.write("Extracted trace_id matches: " + str(extracted and extracted.trace_id == root.trace_id) + "\n")

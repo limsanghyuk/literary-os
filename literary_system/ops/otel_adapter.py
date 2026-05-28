@@ -262,6 +262,7 @@ def create_otel_adapter(
 # ── 독립 실행 데모 ───────────────────────────────────────────
 
 if __name__ == "__main__":
+    import sys
     adapter = create_otel_adapter("demo-service")
 
     # 루트 스팬
@@ -272,12 +273,12 @@ if __name__ == "__main__":
         # 자식 스팬 (컨텍스트 전파)
         outbound: Dict[str, str] = {}
         adapter.inject(root_span.ctx, outbound)
-        print("Injected headers:", outbound)
+        sys.stdout.write("Injected headers: " + str(outbound) + "\n")
 
         inbound_ctx = adapter.extract(outbound)
         with adapter.trace("child.operation", parent=inbound_ctx) as child_span:
             child_span.set_attribute("child.key", "value")
 
-    print("\nCompleted spans:", len(adapter.spans))
+    sys.stdout.write("\nCompleted spans: " + str(len(adapter.spans)) + "\n")
     for s in adapter.spans:
-        print(f"  [{s.status}] {s.name} — {s.duration_ms:.2f}ms — trace={s.trace_id[:8]}...")
+        sys.stdout.write(f"  [{s.status}] {s.name} — {s.duration_ms:.2f}ms — trace={s.trace_id[:8]}...\n")

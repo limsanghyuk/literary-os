@@ -255,8 +255,8 @@ def run_g82_gate(
 if __name__ == "__main__":
     result = run_static_type_safety_gate()
     status = "PASS" if result.gate_passed else "FAIL"
-    print("[{}] G82 Static Type Safety Gate".format(status))
+    sys.stdout.write("[{}] G82 Static Type Safety Gate\n".format(status))
     for cp in result.checkpoints:
         icon = "OK" if cp.passed else "FAIL"
-        print("  [{}] {}: {}".format(icon, cp.name, cp.detail))
+        sys.stdout.write("  [{}] {}: {}\n".format(icon, cp.name, cp.detail))
     sys.exit(0 if result.gate_passed else 1)

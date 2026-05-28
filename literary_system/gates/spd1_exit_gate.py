@@ -335,7 +335,8 @@ def run_spd1_exit_gate() -> SpD1ExitResult:
 
 if __name__ == "__main__":
     import json
+    import sys
     result = run_spd1_exit_gate()
-    print(json.dumps(result.to_dict(), indent=2, ensure_ascii=False))
+    sys.stdout.write(json.dumps(result.to_dict(), indent=2, ensure_ascii=False) + "\n")
     status = "PASS" if result.passed else "FAIL"
-    print(f"\n[SP-D.1 EXIT GATE] {status} — {result.passed_count}/6 PASS")
+    sys.stdout.write(f"\n[SP-D.1 EXIT GATE] {status} — {result.passed_count}/6 PASS\n")

@@ -287,5 +287,5 @@ def run_g79_gate() -> dict:
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     r = run_phase_c_exit_gate()
-    print(r.summary())
+    sys.stdout.write(r.summary() + "\n")
     sys.exit(0 if r.gate_passed else 1)

@@ -316,8 +316,8 @@ def run_g81_gate(
 if __name__ == "__main__":
     result = run_pre_flight_fix_gate()
     status = "PASS" if result.gate_passed else "FAIL"
-    print("[{}] G81 Pre-flight Fix Gate".format(status))
+    sys.stdout.write("[{}] G81 Pre-flight Fix Gate\n".format(status))
     for cp in result.checkpoints:
         icon = "OK" if cp.passed else "FAIL"
-        print("  [{}] {}: {}".format(icon, cp.name, cp.detail))
+        sys.stdout.write("  [{}] {}: {}\n".format(icon, cp.name, cp.detail))
     sys.exit(0 if result.gate_passed else 1)
