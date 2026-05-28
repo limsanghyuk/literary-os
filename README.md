@@ -3,7 +3,7 @@
 > **판단은 로컬, 생성만 LLM, 학습은 누적**  
 > AI 기반 장편 소설·드라마 시나리오 생성 시스템
 
-[![Version](https://img.shields.io/badge/version-12.0.2-blue)]()
+[![Version](https://img.shields.io/badge/version-12.1.0-blue)]()
 [![Tests](https://img.shields.io/badge/tests-8845%20PASS-brightgreen)]()
 [![Gates](https://img.shields.io/badge/release%20gates-80%2F80%20PASS-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue)]()
@@ -69,7 +69,7 @@ literary_system/
 | SP-C.3 | V656~V665 | PublicSDK v1.0 / OpenAPI / B2B Partner API / Feedback Loop / ModelServing | G68~G71 |
 | V666 | V666 | 패키지 연결성 통합 / SDK online 4종 실구현 / ADR-128 | ADR-128 |
 | **SP-C.4** | **V667~V680** | **경쟁흡수 / DistillationExport / Enterprise SLO / Revenue / Phase C Exit** | **G72~G79** |
-| **V680-AUDIT2** | **v12.0.2** | **Phase C 완전 종료 — 감사 완료** | **전체 80 PASS** |
+| **V680-AUDIT2** | **v12.1.0** | **Phase C 완전 종료 — 감사 완료** | **전체 80 PASS** |
 
 ---
 
