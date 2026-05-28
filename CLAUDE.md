@@ -1,4 +1,4 @@
-# Literary OS — 개발자 컨텍스트 (V680-AUDIT2 / v12.0.2)
+# Literary OS — 개발자 컨텍스트 (V710 / v12.2.0)
 
 ---
 
@@ -51,19 +51,19 @@ V(N) 개발 완료 후, V(N+1) 시작 전:
 
 ---
 
-## 현재 상태 (V680-AUDIT2 기준)
+## 현재 상태 (V710 기준)
 
 | 항목 | 값 |
 |------|----|
 | 버전 | v12.0.2 |
-| 개발 이터레이션 | V680-AUDIT2 (Phase C 완전 종료) |
-| 릴리즈 게이트 | **80/80 PASS** |
-| 테스트 | **8,845 PASS** |
+| 개발 이터레이션 | V710 (SP-D.2 MultiAgent Coordination 완전 종료) |
+| 릴리즈 게이트 | **84/84 PASS** |
+| 테스트 | **9,700 PASS** |
 | 고립 패키지 | **0개** (76패키지 전체 연결) |
 | Preflight 단계 | **13단계** (Step 13: G_CONNECTIVITY) |
 | 최신 ADR | ADR-142 (Phase C Exit Gate G79) |
 | 현재 Phase | Phase C 완전 종료 → **Phase D 진입 대기** |
-| Git HEAD (main) | 6153b586 (Phase D 본안 v1.0) |
+| Git HEAD (main) | 1a8beba1 (V710 SP-D.2 완료) |
 | GitHub | https://github.com/limsanghyuk/literary-os |
 
 ---
@@ -79,12 +79,12 @@ python3 tools/run_preflight.py   # ← RULE-0 집행 시작점
 
 ---
 
-## 개발 흐름 (DEV_PROTOCOL_v2.1 + RULE-0 통합)
+## 개발 흐름 (DEV_PROTOCOL_v3.0 + RULE-0 통합)
 
 ```
 [RULE-0] V(N) 시작 전 → python3 tools/run_preflight.py → PASS 확인
 [1] 구현 (신규파일 + tests/unit/test_vNNN_*.py 33TC 이상)
-[2] pytest → generate_test_inventory.py → run_release_gate.py (80/80 PASS)
+[2] pytest → generate_test_inventory.py → run_release_gate.py (84/84 PASS)
 [3] GitHub: commit → push → Release 태그 → ZIP 패키징
 [RULE-0] V(N+1) 시작 전 → python3 tools/run_preflight.py 재실행 → PASS 확인
 [4] V(N+1) 구현 시작

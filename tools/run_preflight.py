@@ -105,33 +105,44 @@ def _find_cycles(deps: dict[str, set[str]]) -> list[list[str]]:
     return cycles[:10]
 
 # ─── Survival Matrix ─────────────────────────────────────────────────────────
+# SURVIVAL_SYMBOLS — 기준: V710 / SP-D.2 완료 (2026-05-28)
+# 새 Sub-Phase 완료 시 이 dict와 DEV_PROTOCOL_v3.0 §1 Step 8을 동시에 갱신한다.
 SURVIVAL_SYMBOLS: dict[str, str] = {
     # Phase A/B 핵심
-    "UnifiedLLMGateway":       "literary_system/llm_bridge/",
-    "TaskRouter":               "literary_system/llm_bridge/",
-    "NKGCurator":               "literary_system/nkg/",
-    "LLMAdapterContractGate":  "literary_system/gates/",
-    "LOSDBClient":              "literary_system/db/",
-    # SP-C.1
-    "LOSConstitutionV2":       "literary_system/constitution/",
-    "MetaLearner":             "literary_system/nie/",
-    "ConstitutionWeightTracker": "literary_system/constitution/",
-    "PatternLibraryV2":        "literary_system/constitution/",
-    "RetrainingScheduler":     "literary_system/constitution/",
-    "AutoPromotionGate":       "literary_system/gates/",
-    # SP-C.2
-    "DirectorAgent":           "literary_system/agents/",
-    "ScriptAgent":             "literary_system/agents/",
-    "CriticAgent":             "literary_system/agents/",
-    "EditorAgent":             "literary_system/agents/",
-    "AgentCoordinator":        "literary_system/ensemble/",
-    # SP-C.3
-    "LiteraryOSClient":        "literary_system/sdk/",
-    "ReaderFeedbackCollector": "literary_system/feedback/",
-    "FeedbackToRLHFAdapter":   "literary_system/feedback/",
-    "ModelServingEndpointV2":  "literary_system/serving/",
-    "SDKStabilityGate":        "literary_system/gates/",
-    "B2BPartnerGate":          "literary_system/gates/",
+    "UnifiedLLMGateway":          "literary_system/llm_bridge/",
+    "TaskRouter":                  "literary_system/llm_bridge/",
+    "NKGCurator":                  "literary_system/nkg/",
+    "LLMAdapterContractGate":      "literary_system/gates/",
+    "LOSDBClient":                  "literary_system/db/",
+    # SP-C.1 자기학습
+    "LOSConstitutionV2":            "literary_system/constitution/",
+    "ConstitutionWeightTracker":    "literary_system/constitution/",
+    "RetrainingScheduler":          "literary_system/constitution/",
+    "AutoPromotionGate":            "literary_system/gates/",
+    # SP-C.2 멀티에이전트 v1
+    "DirectorAgent":                "literary_system/agents/",
+    "AgentCoordinator":             "literary_system/ensemble/",
+    # SP-C.3 PublicSDK
+    "LiteraryOSClient":             "literary_system/sdk/",
+    "ReaderFeedbackCollector":      "literary_system/feedback/",
+    "FeedbackToRLHFAdapter":        "literary_system/feedback/",
+    # SP-D.1 Observability (V681~V695)
+    "OtelSdkAdapter":               "literary_system/ops/",
+    "TraceContext":                  "literary_system/ops/",
+    "TraceSampler":                  "literary_system/ops/",
+    "ObservabilityDashboard":        "literary_system/ops/",
+    "PrometheusTraceExtension":      "literary_system/ops/",
+    # SP-D.2 MultiAgent Coordination (V696~V710)
+    "AgentBus":                     "literary_system/agents/",
+    "AgentTask":                    "literary_system/agents/",
+    "AgentCapabilityRegistry":      "literary_system/agents/",
+    "AgentTaskScheduler":           "literary_system/agents/",
+    "AgentCollaborationProtocol":   "literary_system/agents/",
+    "AgentConflictResolver":        "literary_system/agents/",
+    "AgentWorkflow":                "literary_system/agents/",
+    "AgentLoadBalancer":            "literary_system/agents/",
+    "AgentCircuitBreaker":          "literary_system/agents/",
+    "AgentSupervisor":              "literary_system/agents/",
 }
 
 def _check_survival() -> dict[str, bool]:
@@ -188,7 +199,7 @@ def run_preflight(version: str | None = None, strict: bool = False) -> bool:
 
     log(f"# Preflight 12단계 실행 로그")
     log(f"**버전**: v{ver}  |  **실행일시**: {dt_str}  |  **실행자**: run_preflight.py v1.0")
-    log(f"**근거**: DEV_PROTOCOL_v2.0 §1 + PREFLIGHT_GUIDE_v1.1 §3")
+    log(f"**근거**: DEV_PROTOCOL_v3.0 §1 (PREFLIGHT_GUIDE_v1.1 흡수 통합본)")
     log()
 
     # ── Step 1: 코드베이스 현황 ──────────────────────────────────────────────
@@ -225,13 +236,12 @@ def run_preflight(version: str | None = None, strict: bool = False) -> bool:
 
     # ── Step 3: 변경 예정 심볼 탐색 ─────────────────────────────────────────
     log("## Step 3. 변경 예정 심볼 탐색 (query 등가)")
-    log("- SP-C.4 대상: DistillationExportPipeline, CompetitiveAbsorber, EnterpriseSLOGate, RevenueGate")
-    for sym in ["DistillationExportPipeline", "CompetitiveAbsorber", "EnterpriseSLOGate", "RevenueGate"]:
-        found_files = [str(f.relative_to(REPO_ROOT)) for f in REPO_ROOT.rglob("*.py")
-                       if not any(s in f.parts for s in SKIP)
-                       and sym in f.read_text(encoding="utf-8", errors="ignore")]
-        status = f"신규 구현 예정 (미존재)" if not found_files else f"기존 파일: {found_files}"
-        log(f"  - {sym}: {status}")
+    log("- 현재 Phase D SP-D.3+ 진입 예정: 신규 모듈 존재 여부 스캔")
+    candidate_dirs = [SYS_ROOT / d for d in ["agents", "ops", "gates", "serving", "sdk"]]
+    for cdir in candidate_dirs:
+        if cdir.exists():
+            py_count = len(list(cdir.rglob("*.py")))
+            log(f"  - {cdir.name}/: {py_count}개 파일")
     log()
 
     # ── Step 4: 핵심 심볼 맥락 확인 (360도) ─────────────────────────────────
@@ -343,10 +353,12 @@ def run_preflight(version: str | None = None, strict: bool = False) -> bool:
 
     # ── Step 9: 신규 로직 Gate 연결 ──────────────────────────────────────────
     log("## Step 9. Gate 연결성 (symbol_to_branchpoint_trace 등가)")
-    sp_c3_gates = ["SDKStabilityGate", "B2BPartnerGate", "FeedbackLoopGate",
-                   "ReaderFeedbackGate", "ModelServingEndpointV2"]
+    # SP-D.2 완료 기준 핵심 Gate 연결 확인
+    key_gates = ["AgentCoordinationGate", "MultiAgentPolicyGate",
+                 "ObservabilityFoundationGate", "PreFlightFixGate",
+                 "StaticTypeSafetyGate"]
     gate_content_str = gate_content
-    for sym in sp_c3_gates:
+    for sym in key_gates:
         in_gate = sym in gate_content_str
         log(f"  {'✅' if in_gate else '⚠️ '} {sym}: {'release_gate.py 연결됨' if in_gate else 'release_gate.py 미연결 (독립 게이트)'}")
         if not in_gate:
@@ -376,9 +388,9 @@ def run_preflight(version: str | None = None, strict: bool = False) -> bool:
 
     # ── Step 11: 위험 분류 ───────────────────────────────────────────────────
     log("## Step 11. 위험 변경 분류 (change_review 등가)")
-    log("  - SP-C.4 신규 모듈 (DistillationExportPipeline, CompetitiveAbsorber): 🟡 Medium")
-    log("  - SP-C.4 Gate 추가 (EnterpriseSLOGate, RevenueGate): 🔴 High → Step 1~12 전부 실행 필요")
-    log("  - 문서/CHANGELOG: 🟢 Low")
+    log("  - 신규 Gate 추가 또는 release_gate.py 수정: 🔴 High → Step 1~13 전부 재실행")
+    log("  - 기존 모듈에 메서드/클래스 추가: 🟡 Medium → Step 7~13")
+    log("  - 독립 신규 모듈, 테스트, 문서 수정: 🟢 Low → Step 10, 11, 13")
     log()
 
     # ── Step 12: Release Gate 최종 ───────────────────────────────────────────

@@ -1,3 +1,11 @@
+> ⛔ **[SUPERSEDED]** 이 문서는 **DEV_PROTOCOL_v3.0**에 완전 흡수되었습니다.
+> - 흡수일: 2026-05-28 (V710 이후)
+> - 대체 문서: `docs/workflow/DEV_PROTOCOL_v3.0.md`
+> - **이 문서를 읽지 말 것.** DEV_PROTOCOL_v3.0만 참조하십시오.
+> - 보존 이유: 이력 추적 목적. 개발에 사용 금지.
+
+---
+
 # Claude-Native GitNexus Development Preflight Guide
 
 **문서 번호**: LOS-PREFLIGHT-CLAUDE-001  
