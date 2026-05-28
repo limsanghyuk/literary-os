@@ -55,3 +55,20 @@ __all__ = [
     "LifecycleState",
     "LifecycleRecord",
 ]
+
+from literary_system.plugins.plugin_sdk import (
+    BasePlugin,
+    PluginContext,
+    PluginSDKError,
+    MissingManifestError,
+)
+from literary_system.plugins.plugin_test_harness import PluginTestHarness
+
+__all__ += [
+    # V715
+    "BasePlugin",
+    "PluginContext",
+    "PluginSDKError",
+    "MissingManifestError",
+    "PluginTestHarness",
+]
