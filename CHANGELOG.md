@@ -1054,3 +1054,87 @@ SP-C.3 (V656~V665) 개발 중 DEV_PROTOCOL_v2.0 Preflight 12단계가 미실행�
 
 ### 버전
 - v11.38.1 (v11.38.0 패치)
+
+## [12.2.0] - 2026-05-28 (V710)
+
+### SP-D.2 MultiAgent Coordination Layer 완전 구축
+
+#### V696 - AgentMessage + AgentBus (ADR-158)
+- AgentMessage broadcast factory, MessagePriority (LOW/NORMAL/HIGH/CRITICAL)
+- AgentBus pub/sub with handler callbacks, get_messages inbox polling
+- 33/33 PASS
+
+#### V697 - AgentTask + TaskQueue (ADR-159)
+- AgentTask dataclass with priority/status/retry
+- TaskQueue min-heap + force_requeue for re-enqueue
+- 33/33 PASS
+
+#### V698 - AgentCapabilityRegistry (ADR-160)
+- AgentCapability, AgentProfile, capability-based lookup
+- agents_with_capability() returns List[AgentProfile]
+- 33/33 PASS
+
+#### V699 - AgentTaskScheduler (ADR-161)
+- Handler dispatch + tick loop + retry via force_requeue
+- G32 fix: enqueue → force_requeue in no-handler path
+- 33/33 PASS
+
+#### V700 - AgentCollaborationProtocol (ADR-162)
+- PROPOSED→ACCEPTED→ACTIVE→COMPLETED/FAILED/CANCELLED lifecycle
+- CollaborationRole: INITIATOR/PARTICIPANT/OBSERVER/COORDINATOR
+- 33/33 PASS
+
+#### V701 - AgentConflictResolver (ADR-163)
+- 5 strategies: PRIORITY_BASED/CONSENSUS/MEDIATOR/TIMESTAMP/RANDOM
+- ESCALATED state when resolution fails
+- 33/33 PASS
+
+#### V702 - AgentWorkflow DAG (ADR-164)
+- Kahn's topological sort + DFS cycle detection
+- Downstream SKIPPED on step failure
+- WorkflowContext for inter-step data
+- 33/33 PASS
+
+#### V703 - AgentLoadBalancer (ADR-165)
+- ROUND_ROBIN/LEAST_LOADED/WEIGHTED/RANDOM strategies
+- assign()/release() active_tasks tracking
+- 33/33 PASS
+
+#### V704 - AgentCircuitBreaker (ADR-166)
+- CLOSED→OPEN→HALF_OPEN auto-transition via property
+- Configurable failure/success thresholds + timeout
+- 33/33 PASS
+
+#### V705 - AgentSupervisor + AgentHealthMonitor (ADR-167)
+- HEALTHY/DEGRADED/UNHEALTHY status
+- NEVER/ON_FAILURE/ALWAYS restart policies
+- supervise() auto-restarts unhealthy agents
+- 33/33 PASS
+
+#### V706 - Gate G84 AgentCoordination Gate (ADR-168)
+- E1~E6: 6개 핵심 coordination 모듈 검증
+- 33/33 PASS
+
+#### V707 - Gate G85 AgentWorkflow Gate (ADR-169)
+- E1~E6: 4개 고급 에이전트 패턴 검증
+- 33/33 PASS
+
+#### V708 - SP-D.2 Integration Test (ADR-170)
+- 33 TC: End-to-end multi-agent coordination pipeline
+- Bus+Scheduler, Registry+LB, Collaboration+Conflict, Workflow+CB, Supervisor
+- 33/33 PASS
+
+#### V709 - SP-D.2 Exit Gate (ADR-171)
+- spd2_exit_gate.py: 6축 완료 검증
+- E1~E6 ALL PASS, v12.2.0 bump
+- 33/33 PASS
+
+#### V710 - GitHub Release + ZIP
+- v12.2.0 릴리즈 태그
+- literary-os-v710.zip 패키징
+- 메모리 업데이트
+
+### 전체 수치
+- Tests: 9,700 PASS (9,238 + 462)
+- Gates: 86/86 PASS (G84 + G85 + SP-D.2 EXIT)
+- SP-D.2 Exit Gate: 6/6 PASS (E1~E6)
