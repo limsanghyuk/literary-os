@@ -82,6 +82,51 @@ class RevenueCalculator:
     """수익 배분 계산기"""
 
     @staticmethod
+    def is_contiguous(tiers: List[RevenueTier]) -> bool:
+        """연속 티어 검증: t[i].max_amount == t[i+1].min_amount (ADR-144).
+
+        비연속 구간 예:
+          [0,100] → [200,∞]  → False (100≠200, 공백 존재)
+          [0,100] → [100,∞]  → True
+        """
+        if len(tiers) <= 1:
+            return True
+        sorted_tiers = sorted(tiers, key=lambda t: t.min_amount)
+        for i in range(len(sorted_tiers) - 1):
+            if sorted_tiers[i].max_amount != sorted_tiers[i + 1].min_amount:
+                return False
+        return True
+
+    @staticmethod
+    def calculate_tiered(
+        contract: "PartnerRevenueContract",
+        gross_revenue: float,
+    ) -> float:
+        """TIERED 모델 수익 계산 (is_contiguous 검증 포함)."""
+        if not contract.tiers:
+            return 0.0
+        if not RevenueCalculator.is_contiguous(contract.tiers):
+            raise ValueError(
+                f"Non-contiguous tiers detected in contract '{contract.contract_id}': "
+                f"{[(t.min_amount, t.max_amount) for t in contract.tiers]}. "
+                f"Use USAGE_BASED model for non-contiguous pricing."
+            )
+        total = 0.0
+        remaining = gross_revenue
+        sorted_tiers = sorted(contract.tiers, key=lambda t: t.min_amount)
+        for tier in sorted_tiers:
+            tier_max = tier.max_amount if tier.max_amount >= 0 else float("inf")
+            tier_width = tier_max - tier.min_amount
+            applicable = min(remaining, tier_width)
+            if applicable <= 0:
+                break
+            total += applicable * tier.rate
+            remaining -= applicable
+            if remaining <= 0:
+                break
+        return total
+
+    @staticmethod
     def calculate_partner_share(
         contract: PartnerRevenueContract,
         gross_revenue: float,
@@ -95,23 +140,7 @@ class RevenueCalculator:
             return gross_revenue * contract.flat_rate
 
         elif contract.model == RevenueModel.TIERED:
-            if not contract.tiers:
-                return 0.0
-            total = 0.0
-            remaining = gross_revenue
-            # 구간 정렬 (min_amount 오름차순)
-            sorted_tiers = sorted(contract.tiers, key=lambda t: t.min_amount)
-            for tier in sorted_tiers:
-                tier_max = tier.max_amount if tier.max_amount >= 0 else float("inf")
-                tier_width = tier_max - tier.min_amount
-                applicable = min(remaining, tier_width)
-                if applicable <= 0:
-                    break
-                total += applicable * tier.rate
-                remaining -= applicable
-                if remaining <= 0:
-                    break
-            return total
+            return RevenueCalculator.calculate_tiered(contract, gross_revenue)
 
         elif contract.model == RevenueModel.USAGE_BASED:
             return usage_units * contract.usage_rate
