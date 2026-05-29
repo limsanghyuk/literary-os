@@ -10,3 +10,17 @@ __all__ = [
     "CriticAgent",   "CriticReport",
     "EditorAgent",   "EditedScene",
 ]
+
+from literary_system.agents.agent_auth_bridge import (
+    AgentAuthBridge,
+    AgentAuthRecord,
+    BridgeResult,
+    AuthDecision,
+)
+__all__ += [
+    # V722
+    "AgentAuthBridge",
+    "AgentAuthRecord",
+    "BridgeResult",
+    "AuthDecision",
+]
