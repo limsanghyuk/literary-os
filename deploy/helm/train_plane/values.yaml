@@ -1,0 +1,103 @@
+# Literary OS TrainPlane Helm Values
+# ADR-057 §5 참조 — B-M-16 TrainPlane/ServePlane 격리
+
+# ---------------------------------------------------------------------------
+# 이미지 설정
+# ---------------------------------------------------------------------------
+image:
+  repository: ghcr.io/limsanghyuk/literary-os-trainer
+  tag: "10.2.0"
+  pullPolicy: IfNotPresent
+
+# ---------------------------------------------------------------------------
+# LoRA 학습 Job 설정
+# ---------------------------------------------------------------------------
+loraJob:
+  # 기반 모델 (B-M-04: Llama-3.1-8B 1차 + EXAONE A/B 후보)
+  baseModel: "meta-llama/Llama-3.1-8B"
+
+  # LoRA 하이퍼파라미터 (B-M-05: rank=16)
+  loraRank: 16
+  loraAlpha: 32
+  loraDropout: 0.05
+  targetModules: ["q_proj", "k_proj", "v_proj", "o_proj"]
+
+  # 학습 파라미터
+  numEpochs: 3
+  batchSize: 4
+  gradAccumSteps: 4
+  learningRate: 2e-4
+  maxSeqLen: 2048
+  seed: 42
+  bf16: true
+
+  # 스케줄 (B-M-06: 격주 풀 학습)
+  scheduleType: "full_biweekly"
+
+  # 데이터셋 마운트 경로
+  datasetMount: "/data/train.jsonl"
+
+  # 출력 아티팩트 경로
+  outputDir: "/outputs/lora"
+
+# ---------------------------------------------------------------------------
+# GPU 리소스 (TrainPlane 전용)
+# ---------------------------------------------------------------------------
+resources:
+  requests:
+    # 학습 전용 — ServePlane과 격리 (ADR-057 §5)
+    nvidia.com/gpu: "1"
+    memory: "32Gi"
+    cpu: "4"
+  limits:
+    nvidia.com/gpu: "1"
+    memory: "64Gi"
+    cpu: "8"
+
+# ---------------------------------------------------------------------------
+# 비용 SLO (B-M-06)
+# ---------------------------------------------------------------------------
+costSlo:
+  softUsd: 90.0
+  hardUsd: 120.0
+  emergencyUsd: 150.0
+  monthlyTargetUsd: 96.0
+
+# ---------------------------------------------------------------------------
+# 스토리지
+# ---------------------------------------------------------------------------
+persistence:
+  dataset:
+    storageClass: "standard"
+    size: "10Gi"
+    accessMode: ReadWriteOnce
+  output:
+    storageClass: "standard"
+    size: "50Gi"
+    accessMode: ReadWriteOnce
+
+# ---------------------------------------------------------------------------
+# 이력 / 프로비전스 설정
+# ---------------------------------------------------------------------------
+provenance:
+  historyPath: "/outputs/lora/job_history.jsonl"
+  ledgerPath: "/outputs/lora/provenance_ledger.jsonl"
+
+# ---------------------------------------------------------------------------
+# 보안 격리 (ServePlane 네임스페이스와 분리)
+# ---------------------------------------------------------------------------
+namespace: "literary-train"
+serviceAccount:
+  create: true
+  name: "literary-trainer"
+
+# ---------------------------------------------------------------------------
+# 노드 선택 (GPU 전용 노드)
+# ---------------------------------------------------------------------------
+nodeSelector:
+  workload-type: "gpu-training"
+
+tolerations:
+  - key: "nvidia.com/gpu"
+    operator: "Exists"
+    effect: "NoSchedule"

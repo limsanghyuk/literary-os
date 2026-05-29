@@ -1,0 +1,44 @@
+{
+  "$id": "character_grid.schema.json",
+  "type": "object",
+  "required": [
+    "grid_edges"
+  ],
+  "properties": {
+    "grid_edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source",
+          "target",
+          "relation_type",
+          "tension_axis",
+          "intensity",
+          "phase"
+        ],
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "relation_type": {
+            "type": "string"
+          },
+          "tension_axis": {
+            "type": "string"
+          },
+          "intensity": {
+            "type": "number"
+          },
+          "phase": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

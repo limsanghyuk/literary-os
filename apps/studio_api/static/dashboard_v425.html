@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Literary OS Studio — V425 Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0d1117;--bg2:#161b22;--bg3:#21262d;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--accent:#58a6ff;--green:#3fb950;--yellow:#d29922;--red:#f85149;--purple:#bc8cff;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:14px;}
+header{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:var(--bg2);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;}
+.logo{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:600;}
+.logo-icon{width:28px;height:28px;background:linear-gradient(135deg,#58a6ff,#bc8cff);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;}
+.header-right{display:flex;align-items:center;gap:12px;}
+.sel{background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:5px 10px;border-radius:6px;font-size:13px;}
+.ws-row{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text2);}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--text2);}
+.dot.ok{background:var(--green);animation:pulse 2s infinite;}
+.dot.err{background:var(--red);}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+.btn{padding:5px 12px;border-radius:6px;border:1px solid var(--border);background:var(--bg3);color:var(--text);cursor:pointer;font-size:12px;transition:background .15s;}
+.btn:hover{background:var(--border);}
+.btn-p{background:var(--accent);border-color:var(--accent);color:#000;font-weight:600;}
+.btn-p:hover{opacity:.85;}
+.main{padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:900px){.main{grid-template-columns:1fr;}}
+.panel{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+.ph{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--border);}
+.pt{font-size:13px;font-weight:600;display:flex;align-items:center;gap:7px;}
+.badge{font-size:10px;padding:2px 7px;border-radius:10px;background:var(--bg3);color:var(--text2);border:1px solid var(--border);}
+.pb{padding:14px;}
+.cb-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.cbc{background:var(--bg3);border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:10px;border:1px solid var(--border);transition:border-color .2s;}
+.cbc.open{border-color:var(--red);}.cbc.half_open{border-color:var(--yellow);}
+.cbd{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.cbi{flex:1;min-width:0;}
+.cbn{font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.cbd2{font-size:11px;color:var(--text2);margin-top:2px;}
+.ecol2{grid-column:span 2;}
+@media(max-width:900px){.ecol2{grid-column:span 1;}}
+.chart-wrap{position:relative;height:200px;}
+input.si{background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;font-size:12px;flex:1;}
+input.si:focus{outline:none;border-color:var(--accent);}
+.energy-body{display:grid;grid-template-columns:1fr 280px;gap:14px;}
+.lbars{display:flex;flex-direction:column;gap:5px;}
+.lr{display:flex;align-items:center;gap:8px;}
+.ln{font-size:11px;color:var(--text2);width:80px;flex-shrink:0;}
+.lbg{flex:1;height:8px;background:var(--bg);border-radius:4px;overflow:hidden;}
+.lbf{height:100%;border-radius:4px;transition:width .3s ease;}
+.lv{font-size:11px;color:var(--text2);width:40px;text-align:right;}
+.nkg-stats{display:flex;gap:16px;margin-top:10px;}
+.stat{text-align:center;}
+.sv{font-size:20px;font-weight:700;color:var(--accent);}
+.sl{font-size:11px;color:var(--text2);margin-top:2px;}
+.jlist{display:flex;flex-direction:column;gap:6px;max-height:220px;overflow-y:auto;}
+.ji{display:flex;align-items:center;gap:10px;padding:8px 10px;background:var(--bg3);border-radius:6px;border:1px solid var(--border);}
+.jb{font-size:10px;padding:2px 7px;border-radius:10px;font-weight:600;white-space:nowrap;}
+.jb.running{background:rgba(88,166,255,.15);color:var(--accent);}
+.jb.pending{background:rgba(210,153,34,.15);color:var(--yellow);}
+.jb.done{background:rgba(63,185,80,.15);color:var(--green);}
+.jb.failed{background:rgba(248,81,73,.15);color:var(--red);}
+.jn{flex:1;font-size:12px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.jt{font-size:11px;color:var(--text2);white-space:nowrap;}
+.empty{text-align:center;color:var(--text2);padding:24px;font-size:12px;}
+.cr{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--border);}
+.cr:last-child{border-bottom:none;}
+.cl{font-size:12px;color:var(--text2);}
+.cv{font-size:13px;font-weight:600;}
+.ctot{color:var(--accent);}
+.cbar{height:4px;background:var(--bg3);border-radius:2px;margin-top:10px;overflow:hidden;}
+.cbf{height:100%;background:linear-gradient(90deg,var(--accent),var(--purple));border-radius:2px;transition:width .5s;}
+.toasts{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:8px;z-index:999;}
+.toast{padding:10px 14px;border-radius:8px;font-size:12px;max-width:300px;background:var(--bg2);border:1px solid var(--border);box-shadow:0 4px 12px rgba(0,0,0,.4);animation:si .2s ease;}
+.toast.error{border-color:var(--red);}.toast.success{border-color:var(--green);}.toast.warn{border-color:var(--yellow);}
+@keyframes si{from{transform:translateX(20px);opacity:0;}to{transform:translateX(0);opacity:1;}}
+::-webkit-scrollbar{width:4px;height:4px;}::-webkit-scrollbar-track{background:var(--bg2);}::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><div class="logo-icon">&#9997;</div>Literary OS Studio<span class="badge">V425</span></div>
+  <div class="header-right">
+    <select class="sel" id="series-sel" onchange="onSeries()"><option value="S1">시리즈 S1</option><option value="S2">시리즈 S2</option><option value="S3">시리즈 S3</option></select>
+    <div class="ws-row"><div class="dot" id="wsdot"></div><span id="wstext">연결 중...</span></div>
+    <button class="btn btn-p" onclick="refreshAll()">&#8635; 새로고침</button>
+  </div>
+</header>
+
+<div class="main">
+  <!-- CB PANEL -->
+  <div class="panel">
+    <div class="ph"><div class="pt">&#9889; Circuit Breaker 상태 <span class="badge" id="cb-badge">로딩중</span></div><button class="btn" onclick="loadHealth()">&#8635;</button></div>
+    <div class="pb"><div class="cb-grid" id="cb-grid">
+      <div class="cbc"><div class="cbd" style="background:var(--text2)"></div><div class="cbi"><div class="cbn">drse_engine</div><div class="cbd2">로딩중...</div></div></div>
+      <div class="cbc"><div class="cbd" style="background:var(--text2)"></div><div class="cbi"><div class="cbn">nkg_store</div><div class="cbd2">로딩중...</div></div></div>
+      <div class="cbc"><div class="cbd" style="background:var(--text2)"></div><div class="cbi"><div class="cbn">endurance_gate</div><div class="cbd2">로딩중...</div></div></div>
+      <div class="cbc"><div class="cbd" style="background:var(--text2)"></div><div class="cbi"><div class="cbn">voice_manifold</div><div class="cbd2">로딩중...</div></div></div>
+    </div></div>
+  </div>
+  <!-- COST PANEL -->
+  <div class="panel">
+    <div class="ph"><div class="pt">&#128176; 비용 원장 <span class="badge" id="cost-badge">$0</span></div><button class="btn" onclick="loadCost()">&#8635;</button></div>
+    <div class="pb">
+      <div class="cr"><span class="cl">이번 달 총 비용</span><span class="cv ctot" id="cost-total">--</span></div>
+      <div class="cr"><span class="cl">DRSE 분석</span><span class="cv" id="cost-analyze">--</span></div>
+      <div class="cr"><span class="cl">게이트 실행</span><span class="cv" id="cost-gate">--</span></div>
+      <div class="cr"><span class="cl">생성 (Generate)</span><span class="cv" id="cost-gen">--</span></div>
+      <div class="cr"><span class="cl">음성 분석</span><span class="cv" id="cost-voice">--</span></div>
+      <div style="margin-top:10px;font-size:11px;color:var(--text2)">예산 사용률</div>
+      <div class="cbar"><div class="cbf" id="cbar" style="width:0%"></div></div>
+      <div style="display:flex;justify-content:space-between;margin-top:4px;font-size:10px;color:var(--text2)"><span id="cpct">0%</span><span>예산: $100</span></div>
+    </div>
+  </div>
+  <!-- ENERGY PANEL (full width) -->
+  <div class="panel ecol2">
+    <div class="ph">
+      <div class="pt">&#128202; 씬 에너지 스트림 (7-Layer ADR-001)</div>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <input class="si" id="scene-inp" placeholder="씬 ID (예: SC-001)" value="SC-001" style="width:160px;">
+        <select class="sel" id="ep-sel"><option value="1">EP 1</option><option value="2">EP 2</option><option value="3">EP 3</option></select>
+        <button class="btn btn-p" onclick="doSubscribe()">분석 &#9654;</button>
+      </div>
+    </div>
+    <div class="pb">
+      <div class="energy-body">
+        <div class="chart-wrap"><canvas id="echart"></canvas></div>
+        <div>
+          <div style="font-size:11px;color:var(--text2);margin-bottom:8px;">레이어별 에너지</div>
+          <div class="lbars" id="lbars"></div>
+          <div style="margin-top:12px;font-size:11px;color:var(--text2);">총 에너지</div>
+          <div style="font-size:22px;font-weight:700;color:var(--accent);margin-top:4px;" id="tot-e">--</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- NKG PANEL -->
+  <div class="panel">
+    <div class="ph"><div class="pt">&#128375; NKG 인과 그래프 <span class="badge" id="nkg-badge">0 노드</span></div><button class="btn" onclick="loadNKG()">&#8635;</button></div>
+    <div class="pb">
+      <canvas id="nkg-canvas" style="width:100%;height:260px;border-radius:6px;background:var(--bg3);display:block;"></canvas>
+      <div class="nkg-stats">
+        <div class="stat"><div class="sv" id="nkg-n">0</div><div class="sl">노드</div></div>
+        <div class="stat"><div class="sv" id="nkg-e">0</div><div class="sl">엣지</div></div>
+        <div class="stat"><div class="sv" id="nkg-ep">--</div><div class="sl">에피소드</div></div>
+      </div>
+    </div>
+  </div>
+  <!-- JOBS PANEL -->
+  <div class="panel">
+    <div class="ph"><div class="pt">&#9881; 작업 큐 <span class="badge" id="job-badge">0</span></div><button class="btn" onclick="loadJobs()">&#8635;</button></div>
+    <div class="pb"><div class="jlist" id="jlist"><div class="empty">작업 없음</div></div></div>
+  </div>
+</div>
+
+<div class="toasts" id="toasts"></div>
+
+<script>
+var API='http://localhost:8000',WS='ws://localhost:8000';
+var ws=null,series='S1',echart=null,ehist=[],layerLabels=['L1:물리','L2:스키마','L3:오케','L4:도메인','L5:앱','L6:API','L7:UI'],layerColors=['#58a6ff','#3fb950','#bc8cff','#ff7b72','#d29922','#79c0ff','#f2cc60'];
+
+function toast(m,t){var c=document.getElementById('toasts'),d=document.createElement('div');d.className='toast '+(t||'');d.textContent=m;c.appendChild(d);setTimeout(function(){d.remove();},3500);}
+
+async function api(p){try{var r=await fetch(API+p,{headers:{'Authorization':'Bearer dev-token'}});if(!r.ok)return null;return await r.json();}catch(e){return null;}}
+
+function mockHealth(){return{circuit_breakers:[{name:'drse_engine',state:'closed',failure_count:0,failure_threshold:5,remaining_timeout_s:0},{name:'nkg_store',state:'closed',failure_count:1,failure_threshold:5,remaining_timeout_s:0},{name:'endurance_gate',state:'closed',failure_count:0,failure_threshold:3,remaining_timeout_s:0},{name:'voice_manifold',state:'closed',failure_count:2,failure_threshold:5,remaining_timeout_s:0}]};}
+function mockCost(){return{total_cost_usd:12.47,by_endpoint:{analyze:4.20,gate:2.10,generate:5.32,voice:0.85}};}
+function mockJobs(){return[{job_id:'job-001',type:'analyze',status:'running',created_at:'2026-05-14T10:22:00Z'},{job_id:'job-002',type:'generate',status:'done',created_at:'2026-05-14T10:18:00Z'},{job_id:'job-003',type:'gate',status:'pending',created_at:'2026-05-14T10:25:00Z'},{job_id:'job-004',type:'export',status:'failed',created_at:'2026-05-14T09:55:00Z'}];}
+function mockNKG(){var n=Array.from({length:14},function(_,i){return{node_id:'N'+i,node_type:i%3===0?'scene':i%3===1?'character':'event',label:'씬'+(i+1),episode:Math.ceil((i+1)/4)};});var e=[];for(var i=0;i<n.length-1;i++){if(Math.random()>.35)e.push({source:n[i].node_id,target:n[i+1].node_id,edge_type:'causal',weight:0.3+Math.random()*0.7});}return{nodes:n,edges:e,total_nodes:n.length,total_edges:e.length};}
+
+async function loadHealth(){var d=await api('/health');if(!d)d=mockHealth();var cbs=d.circuit_breakers||[];var ok=cbs.every(function(c){return c.state==='closed';});var badge=document.getElementById('cb-badge');badge.textContent=ok?'전체 정상':cbs.filter(function(c){return c.state!=='closed';}).length+'개 이상';badge.style.color=ok?'var(--green)':'var(--red)';var g=document.getElementById('cb-grid');g.innerHTML='';cbs.forEach(function(cb){var col=cb.state==='closed'?'var(--green)':cb.state==='open'?'var(--red)':'var(--yellow)';var ko=cb.state==='closed'?'정상':cb.state==='open'?'차단':'복구중';var det=cb.state==='open'?'복구까지 '+cb.remaining_timeout_s+'s':'실패 '+cb.failure_count+'/'+cb.failure_threshold;g.innerHTML+='<div class="cbc '+cb.state+'"><div class="cbd" style="background:'+col+'"></div><div class="cbi"><div class="cbn">'+cb.name+'</div><div class="cbd2">'+ko+' — '+det+'</div></div></div>';});}
+
+async function loadCost(){var d=await api('/api/v1/cost/summary');if(!d)d=mockCost();var tot=d.total_cost_usd||0,by=d.by_endpoint||{};document.getElementById('cost-total').textContent='$'+tot.toFixed(2);document.getElementById('cost-analyze').textContent='$'+(by.analyze||0).toFixed(2);document.getElementById('cost-gate').textContent='$'+(by.gate||0).toFixed(2);document.getElementById('cost-gen').textContent='$'+(by.generate||0).toFixed(2);document.getElementById('cost-voice').textContent='$'+(by.voice||0).toFixed(2);document.getElementById('cost-badge').textContent='$'+tot.toFixed(2);var pct=Math.min(100,(tot/100)*100);document.getElementById('cbar').style.width=pct+'%';document.getElementById('cpct').textContent=pct.toFixed(1)+'%';}
+
+async function loadJobs(){var jobs=await api('/api/v1/jobs');if(!jobs)jobs=mockJobs();var list=document.getElementById('jlist');document.getElementById('job-badge').textContent=jobs.length;if(!jobs.length){list.innerHTML='<div class="empty">작업 없음</div>';return;}list.innerHTML=jobs.map(function(j){var t=j.created_at?new Date(j.created_at).toLocaleTimeString('ko',{hour:'2-digit',minute:'2-digit'}):'';return'<div class="ji"><span class="jb '+j.status+'">'+j.status+'</span><span class="jn">'+j.job_id+' — '+(j.type||'')+'</span><span class="jt">'+t+'</span></div>';}).join('');}
+
+async function loadNKG(){var d=await api('/api/v1/nkg/'+series+'?page_size=100');if(!d||!d.nodes)d=mockNKG();document.getElementById('nkg-n').textContent=d.total_nodes||d.nodes.length;document.getElementById('nkg-e').textContent=d.total_edges||d.edges.length;document.getElementById('nkg-badge').textContent=(d.total_nodes||d.nodes.length)+' 노드';var eps=[...new Set((d.nodes||[]).map(function(n){return n.episode;}))].filter(Boolean);document.getElementById('nkg-ep').textContent=eps.length||'--';drawNKG(d.nodes||[],d.edges||[]);}
+
+function drawNKG(nodes,edges){var cv=document.getElementById('nkg-canvas'),ctx=cv.getContext('2d');cv.width=cv.offsetWidth;cv.height=cv.offsetHeight;var W=cv.width,H=cv.height;ctx.clearRect(0,0,W,H);if(!nodes.length){ctx.fillStyle='#8b949e';ctx.font='13px sans-serif';ctx.textAlign='center';ctx.fillText('데이터 없음',W/2,H/2);return;}
+var cols=Math.ceil(Math.sqrt(nodes.length)),rows=Math.ceil(nodes.length/cols);var pos=nodes.map(function(_,i){return{x:W*0.12+(W*0.76)*((i%cols)/(Math.max(1,cols-1)||1)),y:H*0.15+(H*0.7)*(Math.floor(i/cols)/(Math.max(1,rows-1)||1))};});var ni={};nodes.forEach(function(n,i){ni[n.node_id]=i;});var tc={scene:'#58a6ff',character:'#3fb950',event:'#bc8cff'};
+ctx.lineWidth=1;edges.forEach(function(e){var si=ni[e.source],ti=ni[e.target];if(si===undefined||ti===undefined)return;var a=Math.max(.15,Math.min(.6,e.weight||.5));ctx.strokeStyle='rgba(139,148,158,'+a+')';ctx.beginPath();ctx.moveTo(pos[si].x,pos[si].y);ctx.lineTo(pos[ti].x,pos[ti].y);ctx.stroke();});
+nodes.forEach(function(n,i){var p=pos[i],c=tc[n.node_type]||'#8b949e';ctx.beginPath();ctx.arc(p.x,p.y,6,0,Math.PI*2);ctx.fillStyle=c;ctx.fill();ctx.fillStyle='#e6edf3';ctx.font='10px sans-serif';ctx.textAlign='center';ctx.fillText(n.label||n.node_id,p.x,p.y-11);});}
+
+function initChart(){var ctx=document.getElementById('echart').getContext('2d');echart=new Chart(ctx,{type:'line',data:{labels:[],datasets:[{label:'에너지',data:[],borderColor:'#58a6ff',backgroundColor:'rgba(88,166,255,.1)',fill:true,tension:.4,pointRadius:3,borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,animation:{duration:200},plugins:{legend:{display:false}},scales:{x:{grid:{color:'rgba(48,54,61,.5)'},ticks:{color:'#8b949e',maxTicksLimit:8}},y:{grid:{color:'rgba(48,54,61,.5)'},ticks:{color:'#8b949e'},min:0,max:1.5}}}});}
+
+function initBars(){var c=document.getElementById('lbars');c.innerHTML=layerLabels.map(function(l,i){return'<div class="lr"><div class="ln">'+l+'</div><div class="lbg"><div class="lbf" id="lb'+i+'" style="width:0%;background:'+layerColors[i]+'"></div></div><div class="lv" id="lv'+i+'">0.000</div></div>';}).join('');}
+
+function updBar(i,s){var mx=1.5,p=Math.min(100,(s/mx)*100);var b=document.getElementById('lb'+i),v=document.getElementById('lv'+i);if(b)b.style.width=p+'%';if(v)v.textContent=s.toFixed(3);}
+function pushPt(sid,step,score){ehist.push({l:sid+':'+step,s:score});if(ehist.length>50)ehist.shift();echart.data.labels=ehist.map(function(e){return e.l;});echart.data.datasets[0].data=ehist.map(function(e){return e.s;});echart.update('none');}
+
+function connectWS(){if(ws){ws.close();ws=null;}var dot=document.getElementById('wsdot'),txt=document.getElementById('wstext');dot.className='dot';txt.textContent='WebSocket 연결 중...';try{var url=WS+'/ws/energy/'+series+'?token=dev-token&episode=1';var w=new WebSocket(url);w.onopen=function(){dot.className='dot ok';txt.textContent=series+' 연결됨';};w.onmessage=function(ev){try{handleWS(JSON.parse(ev.data));}catch(e){}};w.onclose=function(){dot.className='dot err';txt.textContent='WS 끊김 (DEV 모드)';};w.onerror=function(){dot.className='dot';txt.textContent='WS 없음 — DEV 모드';};ws=w;}catch(e){dot.className='dot';txt.textContent='WS 없음 — DEV 모드';}}
+
+function handleWS(msg){if(msg.type==='energy_update'){pushPt(msg.scene_id||'?',msg.step,msg.energy_score||0);updBar((msg.step||1)-1,msg.energy_score||0);}else if(msg.type==='stream_end'){var t=msg.total_energy||0;document.getElementById('tot-e').textContent=t.toFixed(4);toast('씬 '+msg.scene_id+' 완료 (total:'+t.toFixed(3)+')', 'success');}else if(msg.type==='cb_open'){toast('CB OPEN: '+msg.name+' — '+msg.remaining_s+'s 후 복구','warn');loadHealth();}else if(msg.type==='error'){toast('WS 오류: '+msg.detail,'error');}}
+
+function doSubscribe(){var sid=document.getElementById('scene-inp').value||'SC-001',ep=parseInt(document.getElementById('ep-sel').value)||1;for(var i=0;i<7;i++)updBar(i,0);document.getElementById('tot-e').textContent='--';if(ws&&ws.readyState===1){ws.send(JSON.stringify({type:'subscribe',scene_id:sid,episode:ep}));toast('씬 '+sid+' 분석 요청 전송');}else{simStream(sid);}}
+
+function simStream(sid){toast('DEV 모드: '+sid+' 시뮬레이션');var sc=[0.48,0.53,0.61,0.44,0.39,0.55,0.50],i=0;var t=setInterval(function(){if(i>=sc.length){clearInterval(t);var tot=sc.reduce(function(a,b){return a+b;},0);document.getElementById('tot-e').textContent=tot.toFixed(4);toast('시뮬레이션 완료 (total:'+tot.toFixed(3)+')','success');return;}pushPt(sid,i+1,sc[i]);updBar(i,sc[i]);i++;},200);}
+
+function onSeries(){series=document.getElementById('series-sel').value;loadNKG();connectWS();}
+
+async function refreshAll(){await Promise.all([loadHealth(),loadCost(),loadJobs(),loadNKG()]);toast('새로고침 완료','success');}
+
+document.addEventListener('DOMContentLoaded',function(){initChart();initBars();connectWS();refreshAll();setInterval(function(){loadHealth();loadJobs();},30000);});
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "$id": "residue_variation_plan.schema.json",
+  "type": "object",
+  "required": [
+    "motif",
+    "recall_mode",
+    "recurrence_budget_cost",
+    "variation_budget_cost",
+    "intended_emotional_effect"
+  ],
+  "properties": {
+    "motif": {
+      "type": "string"
+    },
+    "recall_mode": {
+      "type": "string"
+    },
+    "recurrence_budget_cost": {
+      "type": "integer"
+    },
+    "variation_budget_cost": {
+      "type": "integer"
+    },
+    "intended_emotional_effect": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

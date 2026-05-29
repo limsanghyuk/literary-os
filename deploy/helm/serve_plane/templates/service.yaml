@@ -1,0 +1,17 @@
+# Literary OS ServePlane — Kubernetes Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-svc
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: literary-os-server
+    component: serve-plane
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+      protocol: TCP
+  selector:
+    app: literary-os-server

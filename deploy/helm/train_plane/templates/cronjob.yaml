@@ -1,0 +1,83 @@
+# Literary OS TrainPlane — 격주 학습 / 주간 미세조정 CronJob
+# ADR-057 §4, B-M-06: 격주 풀 학습 + 주간 미세조정
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ .Release.Name }}-full-train-cron
+  namespace: {{ .Values.namespace }}
+  labels:
+    component: train-plane
+    schedule-type: full-biweekly
+spec:
+  # 격주 월요일 오전 2시 (KST 기준 +9h → UTC 일요일 17:00)
+  schedule: "0 17 * * 0/14"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 2
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: lora-full-trainer
+              image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+              command:
+                - python
+                - -c
+                - |
+                  from literary_system.finetune.lora_training_config import LoRATrainingConfig
+                  from literary_system.finetune.lora_job_runner import LoRAJobRunner
+                  import os
+                  cfg = LoRATrainingConfig.default_full()
+                  runner = LoRAJobRunner(dry_run=False,
+                                         history_path=os.getenv('HISTORY_PATH'))
+                  runner.run(cfg, dataset_path=os.getenv('DATASET_PATH', '/data/train.jsonl'))
+              env:
+                - name: DATASET_PATH
+                  value: {{ .Values.loraJob.datasetMount | quote }}
+                - name: HISTORY_PATH
+                  value: {{ .Values.provenance.historyPath | quote }}
+              resources:
+                {{- toYaml .Values.resources | nindent 16 }}
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ .Release.Name }}-fine-tune-cron
+  namespace: {{ .Values.namespace }}
+  labels:
+    component: train-plane
+    schedule-type: fine-weekly
+spec:
+  # 매주 수요일 오전 2시 KST → UTC 화요일 17:00
+  schedule: "0 17 * * 2"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 2
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: lora-fine-tuner
+              image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+              command:
+                - python
+                - -c
+                - |
+                  from literary_system.finetune.lora_training_config import LoRATrainingConfig
+                  from literary_system.finetune.lora_job_runner import LoRAJobRunner
+                  import os
+                  cfg = LoRATrainingConfig.default_fine()
+                  runner = LoRAJobRunner(dry_run=False,
+                                         history_path=os.getenv('HISTORY_PATH'))
+                  runner.run(cfg, dataset_path=os.getenv('DATASET_PATH', '/data/train.jsonl'))
+              env:
+                - name: DATASET_PATH
+                  value: {{ .Values.loraJob.datasetMount | quote }}
+                - name: HISTORY_PATH
+                  value: {{ .Values.provenance.historyPath | quote }}
+              resources:
+                {{- toYaml .Values.resources | nindent 16 }}

@@ -1,0 +1,24 @@
+{
+  "$id": "format_constitution_packet.schema.json",
+  "type": "object",
+  "required": [
+    "media_type",
+    "output_schema",
+    "critic_pattern_set"
+  ],
+  "properties": {
+    "media_type": {
+      "type": "string"
+    },
+    "output_schema": {
+      "type": "string"
+    },
+    "critic_pattern_set": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

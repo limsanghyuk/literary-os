@@ -1,0 +1,22 @@
+# Literary OS Studio API — V430 의존성
+# 핵심
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.7.0
+pydantic-settings>=2.2.0
+
+# 인증 (ADR-002)
+python-jose[cryptography]>=3.3.0
+httpx>=0.27.0
+
+# 관측성 (ADR-003)
+opentelemetry-sdk>=1.24.0
+opentelemetry-instrumentation-fastapi>=0.45b0
+opentelemetry-exporter-otlp-proto-grpc>=1.24.0
+opentelemetry-exporter-prometheus>=0.45b0
+
+# 스트리밍 (WebSocket)
+websockets>=12.0
+
+# 유틸리티
+python-multipart>=0.0.9

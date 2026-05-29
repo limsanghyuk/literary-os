@@ -1,0 +1,28 @@
+# requirements-lock.txt — V685 D-M-07: 의존성 잠금 (ADR-147)
+# Generated: 2026-05-28
+# Python: 3.11
+# 이 파일은 재현 가능한 빌드를 위해 핵심 의존성을 고정한다.
+# 업데이트: pip-compile requirements.txt -o requirements-lock.txt
+
+# ── Core ─────────────────────────────────────────────────────────────────────
+networkx==3.3
+pydantic==2.7.4
+
+# ── Test ─────────────────────────────────────────────────────────────────────
+pytest==8.3.2
+pytest-cov==5.0.0
+pytest-timeout==2.3.1
+pytest-asyncio==0.23.8
+ruff==0.6.9
+
+# ── Optional: vector ──────────────────────────────────────────────────────────
+# qdrant-client==1.11.1  # install with: pip install literary-os[vector]
+
+# ── Optional: ML ─────────────────────────────────────────────────────────────
+# scikit-learn==1.5.2   # install with: pip install literary-os[semantic]
+# numpy==1.26.4         # install with: pip install literary-os[all]
+# optuna==3.6.1         # install with: pip install literary-os[all]
+
+# ── Optional: type checking ───────────────────────────────────────────────────
+# mypy==1.11.2          # install with: pip install mypy
+# types-networkx        # install with: pip install types-networkx

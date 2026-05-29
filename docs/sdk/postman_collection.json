@@ -1,0 +1,73 @@
+{
+  "info": {
+    "name": "Literary OS PublicSDK",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "version": "1.0.0",
+    "description": "Literary OS PublicSDK API — 4개 코어 엔드포인트"
+  },
+  "variable": [
+    {"key": "base_url", "value": "http://localhost:8080", "type": "string"},
+    {"key": "api_key", "value": "YOUR_API_KEY", "type": "string"}
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [{"key": "key", "value": "X-API-Key"}, {"key": "value", "value": "{{api_key}}"}]
+  },
+  "item": [
+    {
+      "name": "Analyze",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/analyze",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"영수는 창문을 바라보았다. 눈물이 고였다. 배신감이 폭발했다.\",\n  \"context\": \"\",\n  \"lang\": \"ko\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Repair",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/repair",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"짧은 씬이다.\",\n  \"issues\": [\"too_few_sentences\", \"text_too_short\"],\n  \"target_score\": 0.75\n}"
+        }
+      }
+    },
+    {
+      "name": "Predict",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/predict",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"context\": \"두 사람이 처음 마주쳤다. 분위기가 묘하게 흘렀다.\",\n  \"n\": 3,\n  \"style_hint\": \"melodrama\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Generate",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/generate",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"운명의 교차로\",\n  \"characters\": [\"이지수\", \"박민호\"],\n  \"setting\": \"비 오는 골목길\",\n  \"conflict\": \"오래된 비밀이 드러나다\",\n  \"tone\": \"dramatic\",\n  \"max_rounds\": 3\n}"
+        }
+      }
+    },
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/health"
+      }
+    }
+  ]
+}

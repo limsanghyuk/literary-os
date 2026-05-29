@@ -1,0 +1,35 @@
+{
+  "$id": "scene_digest.schema.json",
+  "type": "object",
+  "required": [
+    "scene_id",
+    "scene_goal",
+    "scene_focus",
+    "active_characters",
+    "active_tension_axes"
+  ],
+  "properties": {
+    "scene_id": {
+      "type": "string"
+    },
+    "scene_goal": {
+      "type": "string"
+    },
+    "scene_focus": {
+      "type": "string"
+    },
+    "active_characters": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "active_tension_axes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

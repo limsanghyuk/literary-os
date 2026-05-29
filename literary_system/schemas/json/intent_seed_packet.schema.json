@@ -1,0 +1,51 @@
+{
+  "$id": "intent_seed_packet.schema.json",
+  "type": "object",
+  "required": [
+    "project_id",
+    "project_mode",
+    "master_seed",
+    "media_type",
+    "pdi_profile",
+    "created_at"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "project_mode": {
+      "type": "string",
+      "enum": [
+        "novel",
+        "drama",
+        "screenplay",
+        "documentary",
+        "shorts"
+      ]
+    },
+    "master_seed": {
+      "type": "string",
+      "minLength": 1
+    },
+    "media_type": {
+      "type": "string",
+      "enum": [
+        "prose",
+        "drama",
+        "screenplay",
+        "documentary",
+        "shorts"
+      ]
+    },
+    "pdi_profile": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "created_at": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
