@@ -4546,3 +4546,38 @@ def _gate_spd4_aux_g92_g93_g94() -> dict:
 GATES.append(("spd4_aux_g92", "Gate G92 — Performance SLO (ADR-205, V744)", _gate_spd4_aux_g92_g93_g94))
 GATES.append(("spd4_aux_g93", "Gate G93 — Security Posture (ADR-206, V744)", _gate_spd4_aux_g92_g93_g94))
 GATES.append(("spd4_aux_g94", "Gate G94 — Observability Completeness (ADR-207, V744)", _gate_spd4_aux_g92_g93_g94))
+
+
+# ---------------------------------------------------------------------------
+# Gate G95: Phase D Exit Gate (V745, ADR-208)
+# ---------------------------------------------------------------------------
+
+def _gate_phase_d_exit_g95() -> dict:
+    """G95 Phase D Exit Gate — SC-1~SC-8 8축 종합 판정."""
+    try:
+        from literary_system.gates.phase_d_exit_gate import run_phase_d_exit_gate
+        result = run_phase_d_exit_gate()
+        passed = result.get("passed", False)
+        return {
+            "gate": "G95",
+            "pass": passed,
+            "passed": passed,
+            "gates_total": result.get("gates_total", 0),
+            "tests_total": result.get("tests_total", 0),
+            "adr_total": result.get("adr_total", 0),
+            "checkpoints": result.get("checkpoints", []),
+            "errors": [],
+        }
+    except Exception as exc:
+        return {
+            "gate": "G95", "pass": False, "passed": False,
+            "gates_total": 0, "tests_total": 0, "adr_total": 0,
+            "checkpoints": [], "errors": [str(exc)],
+        }
+
+
+GATES.append((
+    "phase_d_exit_g95",
+    "Gate G95 — Phase D Exit Gate (SC-1~SC-8, ADR-208, V745)",
+    _gate_phase_d_exit_g95,
+))
