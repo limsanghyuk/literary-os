@@ -72,3 +72,26 @@ __all__ += [
     "MissingManifestError",
     "PluginTestHarness",
 ]
+
+from literary_system.plugins.plugin_auth import (
+    PluginAuthAdapter,
+    PluginAuthResult,
+    PluginAuthError,
+    PluginTokenInvalid,
+    PluginTokenExpired,
+    PluginAccessDenied,
+    PluginTenantNotFound,
+    PERMISSION_ROLE_MAP,
+)
+
+__all__ += [
+    # V721 — Zero-Trust 인증 어댑터
+    "PluginAuthAdapter",
+    "PluginAuthResult",
+    "PluginAuthError",
+    "PluginTokenInvalid",
+    "PluginTokenExpired",
+    "PluginAccessDenied",
+    "PluginTenantNotFound",
+    "PERMISSION_ROLE_MAP",
+]
