@@ -97,7 +97,7 @@ class TestCR1ChaosEngine:
     def test_tc12_engine_inject_all_active(self, chaos_engine, fault_spec_factory):
         from literary_system.chaos.chaos_engine import FaultType
         chaos_engine.register(fault_spec_factory("fa1", FaultType.CPU_SPIKE))
-        chaos_engine.register(fault_spec_factory("fa2", FaultType.MEMORY_LEAK))
+        chaos_engine.register(fault_spec_factory("fa2", FaultType.MEMORY_PRESSURE))
         chaos_engine.activate("fa1")
         chaos_engine.activate("fa2")
         results = chaos_engine.inject_all_active()
@@ -176,7 +176,7 @@ class TestCR3ChaosScenario:
         presets = list(ChaosScenario.PRESET_SCENARIOS.keys())
         scenario = ChaosScenario.from_preset(presets[0], chaos_engine)
         result = scenario.run()
-        assert result.state in (ScenarioState.PASSED, ScenarioState.FAILED)
+        assert result.state in (ScenarioState.DONE, ScenarioState.FAILED)
 
     def test_tc22_unknown_preset_raises(self, chaos_engine):
         from literary_system.chaos.chaos_scenario import ChaosScenario

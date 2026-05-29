@@ -4518,3 +4518,31 @@ GATES.append((
     "Gate G91 — DR Gate DR-1~DR-5 (ADR-202~204, V743)",
     _gate_dr_g91,
 ))
+
+
+def _gate_spd4_aux_g92_g93_g94() -> dict:
+    """G92 Performance SLO / G93 Security Posture / G94 Observability Completeness."""
+    try:
+        from literary_system.gates.spd4_aux_gates import run_spd4_aux_gates
+        result = run_spd4_aux_gates()
+        passed = result.get("approved", False)
+        return {
+            "gate": "G92-G94", "pass": passed, "passed": passed,
+            "gates_passed": result.get("gates_passed", 0),
+            "total_gates": result.get("total_gates", 3),
+            "checks_passed": result.get("checks_passed", 0),
+            "total_checks": result.get("total_checks", 15),
+            "errors": result.get("errors", []),
+        }
+    except Exception as exc:
+        return {
+            "gate": "G92-G94", "pass": False, "passed": False,
+            "gates_passed": 0, "total_gates": 3,
+            "checks_passed": 0, "total_checks": 15,
+            "errors": [str(exc)],
+        }
+
+
+GATES.append(("spd4_aux_g92", "Gate G92 — Performance SLO (ADR-205, V744)", _gate_spd4_aux_g92_g93_g94))
+GATES.append(("spd4_aux_g93", "Gate G93 — Security Posture (ADR-206, V744)", _gate_spd4_aux_g92_g93_g94))
+GATES.append(("spd4_aux_g94", "Gate G94 — Observability Completeness (ADR-207, V744)", _gate_spd4_aux_g92_g93_g94))

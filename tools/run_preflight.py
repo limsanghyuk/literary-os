@@ -110,7 +110,7 @@ def _find_cycles(deps: dict[str, set[str]]) -> list[list[str]]:
     return cycles[:10]
 
 # ─── Survival Matrix ─────────────────────────────────────────────────────────
-# SURVIVAL_SYMBOLS — 기준: V730 / SP-D.3 완료 (2026-05-29)
+# SURVIVAL_SYMBOLS — 기준: V744 / SP-D.4 완료 (2026-05-30)
 # 새 Sub-Phase 완료 시 이 dict와 DEV_PROTOCOL_v3.0 §1 Step 8을 동시에 갱신한다.
 SURVIVAL_SYMBOLS: dict[str, str] = {
     # Phase A/B 핵심
@@ -170,6 +170,13 @@ SURVIVAL_SYMBOLS: dict[str, str] = {
     "ChaosCircuitBreaker":          "literary_system/chaos/",
     "ChaosRunner":                  "literary_system/chaos/",
     "SPD3ExitGate":                 "literary_system/gates/",
+    # SP-D.4 AuxGates + DR + FL (V731~V744)
+    "AuxCheckResult":               "literary_system/gates/",
+    "AuxGateResult":                "literary_system/gates/",
+    "PhaseEManifestValidator":      "literary_system/deploy/",
+    "DRBackupManager":              "literary_system/disaster_recovery/",
+    "DRRestoreManager":             "literary_system/disaster_recovery/",
+    "FLCoordinator":                "literary_system/federation/",
 }
 
 def _check_survival() -> dict[str, bool]:

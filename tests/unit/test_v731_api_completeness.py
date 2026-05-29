@@ -255,7 +255,7 @@ def test_tc46_g86_position_before_g87():
 
 def test_tc47_gates_total_91():
     from literary_system.gates.release_gate import GATES
-    assert len(GATES) == 91
+    assert len(GATES) == 96
 
 def test_tc48_g86_callable():
     from literary_system.gates.release_gate import GATES

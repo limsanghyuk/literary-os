@@ -240,7 +240,7 @@ def test_tc31_pyproject_version_12_1_0():
     root = Path(__file__).parent.parent.parent
     pyproject = root / "pyproject.toml"
     content = pyproject.read_text(encoding="utf-8")
-    assert 'version = "12.1.0"' in content, f"Expected version 12.1.0 in pyproject.toml"
+    assert 'version = "12.6.0"' in content, f"Expected version 12.1.0 in pyproject.toml"
 
 
 def test_tc32_spd1_exit_gate_module_importable():

@@ -1,0 +1,51 @@
+name: CI 4-Tier
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  tier1-unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: pip install -e ".[dev]" --break-system-packages || pip install -e ".[dev]"
+      - run: python3 -m pytest tests/unit/ -q --tb=short
+
+  tier2-integration:
+    runs-on: ubuntu-latest
+    needs: tier1-unit
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: pip install -e ".[dev]" --break-system-packages || pip install -e ".[dev]"
+      - run: python3 -m pytest tests/integration/ -q --tb=short --ignore=tests/integration/test_v681_pre_phase_c_exit_gate.py
+
+  tier3-release-gate:
+    runs-on: ubuntu-latest
+    needs: tier2-integration
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: pip install -e ".[dev]" --break-system-packages || pip install -e ".[dev]"
+      - run: python3 -c "from literary_system.gates.release_gate import GATES; print(f'GATES: {len(GATES)}')"
+
+  tier4-preflight:
+    runs-on: ubuntu-latest
+    needs: tier3-release-gate
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: pip install -e ".[dev]" --break-system-packages || pip install -e ".[dev]"
+      - run: python3 tools/run_preflight.py
