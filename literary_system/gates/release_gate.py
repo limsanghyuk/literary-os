@@ -4485,3 +4485,36 @@ GATES.append((
     "Gate G90 — FL Gate FL-1~FL-5 (ADR-198, V737)",
     _gate_fl_g90,
 ))
+
+
+# ---------------------------------------------------------------------------
+# Gate G91: Disaster Recovery Gate (V743, ADR-202~204)
+# ---------------------------------------------------------------------------
+
+def _gate_dr_g91() -> dict:
+    """G91 Disaster Recovery Gate — DR-1~DR-5, RPO ≤ 1h."""
+    try:
+        from literary_system.gates.dr_gate import run_dr_gate
+        result = run_dr_gate()
+        passed_count = result["passed"]
+        total_count = result["total_checks"]
+        approved = result["approved"]
+        return {
+            "gate": "G91",
+            "pass": approved,
+            "passed": approved,
+            "passed_count": passed_count,
+            "total_count": total_count,
+            "checks": result["checks"],
+            "errors": [],
+        }
+    except Exception as exc:
+        return {"gate": "G91", "pass": False, "passed": False,
+                "passed_count": 0, "total_count": 5, "checks": [], "errors": [str(exc)]}
+
+
+GATES.append((
+    "dr_g91",
+    "Gate G91 — DR Gate DR-1~DR-5 (ADR-202~204, V743)",
+    _gate_dr_g91,
+))
