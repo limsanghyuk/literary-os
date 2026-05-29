@@ -4290,6 +4290,61 @@ GATES.append((
     _gate_observability_foundation_g83,
 ))
 
+# ── G84: Agent Coordination Gate ─────────────────────────────────────────────
+def _gate_agent_coordination_g84() -> dict:
+    """G84: Agent Coordination Gate — E1~E6 (ADR-168)"""
+    try:
+        from literary_system.gates.agent_coordination_gate import AgentCoordinationGate
+        gate = AgentCoordinationGate()
+        passed, results = gate.run()
+        return {
+            "gate": "G84",
+            "pass": passed,
+            "passed": passed,
+            "passed_count": sum(1 for r in results if r.passed),
+            "total_count": len(results),
+            "checkpoints": [r.to_dict() for r in results],
+            "errors": [],
+        }
+    except Exception as exc:
+        return {"gate": "G84", "pass": False, "passed": False,
+                "passed_count": 0, "total_count": 6, "checkpoints": [], "errors": [str(exc)]}
+
+
+GATES.append((
+    "agent_coordination_g84",
+    "Gate G84 — Agent Coordination Gate E1~E6 (ADR-168)",
+    _gate_agent_coordination_g84,
+))
+
+
+# ── G85: Agent Workflow Gate ─────────────────────────────────────────────────
+def _gate_agent_workflow_g85() -> dict:
+    """G85: Agent Workflow Gate — E1~E6 (ADR-169)"""
+    try:
+        from literary_system.gates.agent_workflow_gate import AgentWorkflowGate
+        gate = AgentWorkflowGate()
+        passed, results = gate.run()
+        return {
+            "gate": "G85",
+            "pass": passed,
+            "passed": passed,
+            "passed_count": sum(1 for r in results if r.passed),
+            "total_count": len(results),
+            "checkpoints": [r.to_dict() for r in results],
+            "errors": [],
+        }
+    except Exception as exc:
+        return {"gate": "G85", "pass": False, "passed": False,
+                "passed_count": 0, "total_count": 6, "checkpoints": [], "errors": [str(exc)]}
+
+
+GATES.append((
+    "agent_workflow_g85",
+    "Gate G85 — Agent Workflow Gate E1~E6 (ADR-169)",
+    _gate_agent_workflow_g85,
+))
+
 
 # ── G87: Plugin Registry Gate ─────────────────────────────────────────────
 def _gate_plugin_registry_g87() -> dict:
