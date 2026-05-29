@@ -1,23 +1,21 @@
 # Preflight 12단계 실행 로그
-**버전**: v12.4.0  |  **실행일시**: 2026-05-29T12:16:29Z  |  **실행자**: run_preflight.py v1.0
+**버전**: v12.4.0  |  **실행일시**: 2026-05-29T12:55:43Z  |  **실행자**: run_preflight.py v1.0
 **근거**: DEV_PROTOCOL_v3.0 §1 (PREFLIGHT_GUIDE_v1.1 흡수 통합본)
 
 ## Step 1. 코드베이스 현황 (index_status 등가)
 - Python 파일: 1,060개
 - 심볼(클래스): 3,276개
 - 테스트 함수: 10,011개
-- 최근 변경 py 파일 (HEAD~3): 13개
-  - literary_system/chaos/__init__.py
-  - literary_system/chaos/chaos_circuit_breaker.py
-  - literary_system/chaos/chaos_runner.py
-  - literary_system/chaos/chaos_scenario.py
+- 최근 변경 py 파일 (HEAD~3): 8개
   - literary_system/gates/chaos_resilience_gate.py
   - literary_system/gates/release_gate.py
   - literary_system/gates/spd3_exit_gate.py
-  - literary_system/gates/zero_trust_security_gate.py
-  - tests/unit/test_v725_zero_trust_security_gate.py
-  - tests/unit/test_v726_v728_chaos_advanced.py
-- 소요: 1.35s
+  - tests/unit/test_v729_chaos_resilience_gate.py
+  - tests/unit/test_v730_spd3_exit_gate.py
+  - tools/phase_e_manifest_validator.py
+  - tools/run_preflight.py
+  - tools/spd4_risk_guard.py
+- 소요: 1.26s
 
 ## Step 2. 모듈 범위 (list_repos 등가)
 - literary_system/ 서브패키지: 83개
@@ -246,7 +244,7 @@
   ✅ ALIVE  SPD3ExitGate
 
 ## Step 9. Gate 연결성 (symbol_to_branchpoint_trace 등가)
-  ⚠️  AgentCoordinationGate: release_gate.py 미연결 (독립 게이트)
+  ✅ AgentCoordinationGate: release_gate.py 연결됨
   ⚠️  MultiAgentPolicyGate: release_gate.py 미연결 (독립 게이트)
   ⚠️  ObservabilityFoundationGate: release_gate.py 미연결 (독립 게이트)
   ⚠️  PreFlightFixGate: release_gate.py 미연결 (독립 게이트)
@@ -270,23 +268,22 @@
 ## 부록. 순환 의존 탐지
   - 실질 순환: 7개
   ⚠️  auto_promotion_gate → auto_promotion_gate
+  ⚠️  pre_flight_fix_gate → phase_c_exit_gate → release_gate → pre_flight_fix_gate
   ⚠️  release_gate → gate_registry → release_gate
-  ⚠️  phase_c_exit_gate → release_gate → phase_c_exit_gate
 
 ---
 ## 최종 판정
 ### ✅ PREFLIGHT PASS — 개발 진행 허가
 
-**경고 (블록 아님)**: 9건
-  - Gate 미연결(독립 운영): AgentCoordinationGate
+**경고 (블록 아님)**: 8건
   - Gate 미연결(독립 운영): MultiAgentPolicyGate
   - Gate 미연결(독립 운영): ObservabilityFoundationGate
   - Gate 미연결(독립 운영): PreFlightFixGate
   - Gate 미연결(독립 운영): StaticTypeSafetyGate
   - Step12 TIMEOUT: Release Gate 단독 실행 필요
   - 순환 의존: ['literary_system.gates.auto_promotion_gate', 'literary_system.gates.auto_promotion_gate']
+  - 순환 의존: ['literary_system.gates.pre_flight_fix_gate', 'literary_system.gates.phase_c_exit_gate', 'literary_system.gates.release_gate', 'literary_system.gates.pre_flight_fix_gate']
   - 순환 의존: ['literary_system.gates.release_gate', 'literary_system.gates.gate_registry', 'literary_system.gates.release_gate']
-  - 순환 의존: ['literary_system.gates.phase_c_exit_gate', 'literary_system.gates.release_gate', 'literary_system.gates.phase_c_exit_gate']
 
-**실행 완료**: 2026-05-29T12:17:01Z
+**실행 완료**: 2026-05-29T12:56:12Z
 **로그 파일**: docs/sessions/preflight_v12.4.0_2026-05-29.md

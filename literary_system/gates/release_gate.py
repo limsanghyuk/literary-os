@@ -4345,6 +4345,33 @@ GATES.append((
     _gate_agent_workflow_g85,
 ))
 
+# ── G86: API Completeness Gate ────────────────────────────────────────────────
+def _gate_api_completeness_g86() -> dict:
+    """G86: API Completeness Gate — A1~A6 (ADR-193, DEFECT-2 수정)"""
+    try:
+        from literary_system.gates.api_completeness_gate import ApiCompletenessGate
+        gate = ApiCompletenessGate()
+        passed, results = gate.run()
+        return {
+            "gate": "G86",
+            "pass": passed,
+            "passed": passed,
+            "passed_count": sum(1 for r in results if r.passed),
+            "total_count": len(results),
+            "checkpoints": [r.to_dict() for r in results],
+            "errors": [],
+        }
+    except Exception as exc:
+        return {"gate": "G86", "pass": False, "passed": False,
+                "passed_count": 0, "total_count": 6, "checkpoints": [], "errors": [str(exc)]}
+
+
+GATES.append((
+    "api_completeness_g86",
+    "Gate G86 — API Completeness Gate A1~A6 (ADR-193)",
+    _gate_api_completeness_g86,
+))
+
 
 # ── G87: Plugin Registry Gate ─────────────────────────────────────────────
 def _gate_plugin_registry_g87() -> dict:
