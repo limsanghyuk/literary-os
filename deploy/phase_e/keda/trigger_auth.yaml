@@ -1,0 +1,11 @@
+# Literary OS Phase E — KEDA TriggerAuthentication (stub, V739)
+apiVersion: keda.sh/v1alpha1
+kind: TriggerAuthentication
+metadata:
+  name: literary-os-trigger-auth
+  namespace: literary-os
+spec:
+  secretTargetRef:
+    - parameter: bearerToken
+      name: literary-os-prometheus-secret
+      key: token

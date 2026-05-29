@@ -1,0 +1,53 @@
+# Literary OS Phase E — Default Values (V738)
+replicaCount: 3
+
+image:
+  repository: literary-os/app
+  pullPolicy: IfNotPresent
+  tag: "13.0.0"
+
+service:
+  type: ClusterIP
+  port: 8080
+  grpcPort: 50051
+
+ingress:
+  enabled: true
+  className: nginx
+  hosts:
+    - host: literary-os.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+
+resources:
+  limits:
+    cpu: 2000m
+    memory: 4Gi
+  requests:
+    cpu: 500m
+    memory: 1Gi
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 20
+  targetCPUUtilizationPercentage: 70
+
+tenancy:
+  mode: multi
+  maxTenantsPerPod: 50
+
+fl:
+  enabled: true
+  minClients: 2
+  maxRounds: 10
+  dpEpsilon: 1.0
+
+observability:
+  otel:
+    enabled: true
+    endpoint: "http://otel-collector:4317"
+  prometheus:
+    enabled: true
+    port: 9090

@@ -1,0 +1,15 @@
+# Literary OS Phase E — Helm Chart (stub, V738)
+apiVersion: v2
+name: literary-os
+description: Literary OS Phase E Production Deployment (gRPC + FL + Multi-tenant)
+type: application
+version: 13.0.0
+appVersion: "13.0.0"
+keywords:
+  - literary-os
+  - phase-e
+  - llm
+  - federated-learning
+maintainers:
+  - name: Literary OS Team
+home: https://github.com/limsanghyuk/literary-os

@@ -1,0 +1,41 @@
+# Literary OS Phase E — ArgoCD Application (stub, V739)
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: literary-os
+  namespace: argocd
+  labels:
+    app.kubernetes.io/name: literary-os
+    phase: e
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: literary-os
+  source:
+    repoURL: https://github.com/limsanghyuk/literary-os
+    targetRevision: main
+    path: deploy/phase_e/helm/literary-os
+    helm:
+      valueFiles:
+        - values.yaml
+      parameters:
+        - name: image.tag
+          value: "13.0.0"
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: literary-os
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
+    retry:
+      limit: 5
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 3m
+  revisionHistoryLimit: 5

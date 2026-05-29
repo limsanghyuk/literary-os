@@ -1,0 +1,35 @@
+# Literary OS Phase E — KEDA ScaledObject (stub, V739)
+# Scales literary-os pods based on queue depth and CPU
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: literary-os-scaler
+  namespace: literary-os
+  labels:
+    app.kubernetes.io/name: literary-os
+    app.kubernetes.io/component: autoscaler
+spec:
+  scaleTargetRef:
+    name: literary-os-app
+  pollingInterval: 15
+  cooldownPeriod: 60
+  minReplicaCount: 2
+  maxReplicaCount: 20
+  fallback:
+    failureThreshold: 3
+    replicas: 3
+  triggers:
+    - type: cpu
+      metadata:
+        type: Utilization
+        value: "70"
+    - type: memory
+      metadata:
+        type: Utilization
+        value: "80"
+    - type: prometheus
+      metadata:
+        serverAddress: http://prometheus:9090
+        metricName: literary_os_queue_depth
+        threshold: "100"
+        query: sum(literary_os_request_queue_depth{namespace="literary-os"})

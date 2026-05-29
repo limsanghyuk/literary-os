@@ -1,0 +1,32 @@
+# Literary OS Phase E — ArgoCD AppProject (stub, V739)
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: literary-os
+  namespace: argocd
+spec:
+  description: Literary OS Phase E Production Project
+  sourceRepos:
+    - https://github.com/limsanghyuk/literary-os
+  destinations:
+    - namespace: literary-os
+      server: https://kubernetes.default.svc
+    - namespace: monitoring
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: ""
+      kind: Namespace
+    - group: "keda.sh"
+      kind: ScaledObject
+  namespaceResourceWhitelist:
+    - group: "apps"
+      kind: Deployment
+    - group: ""
+      kind: Service
+    - group: "networking.k8s.io"
+      kind: Ingress
+  roles:
+    - name: deploy-bot
+      description: CI/CD deployment role
+      policies:
+        - p, proj:literary-os:deploy-bot, applications, sync, literary-os/*, allow

@@ -1,0 +1,50 @@
+# Literary OS Phase E — Deployment Template (stub, V738)
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-app
+  labels:
+    app.kubernetes.io/name: {{ .Chart.Name }}
+    app.kubernetes.io/version: {{ .Chart.AppVersion }}
+    app.kubernetes.io/component: api
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-app
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-app
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "{{ .Values.observability.prometheus.port }}"
+    spec:
+      containers:
+        - name: literary-os
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port }}
+            - name: grpc
+              containerPort: {{ .Values.service.grpcPort }}
+          env:
+            - name: PHASE_E_ENABLED
+              value: "true"
+            - name: FL_ENABLED
+              value: "{{ .Values.fl.enabled }}"
+          livenessProbe:
+            httpGet:
+              path: /health/live
+              port: http
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          readinessProbe:
+            httpGet:
+              path: /health/ready
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
