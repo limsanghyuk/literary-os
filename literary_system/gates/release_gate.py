@@ -4455,3 +4455,33 @@ GATES.append((
     "SP-D.3 Exit Gate — E1~E6 (ADR-191)",
     _gate_spd3_exit,
 ))
+
+
+# ── G90: FL Gate ──────────────────────────────────────────────────────────────
+def _gate_fl_g90() -> dict:
+    """G90: FL Gate — FL-1~FL-5 (ADR-198, V737)"""
+    try:
+        from literary_system.gates.fl_gate import run_fl_gate
+        result = run_fl_gate()
+        passed_count = sum(1 for c in result.get("checks", []) if c.get("passed"))
+        total_count = len(result.get("checks", []))
+        ok = result.get("approved", False)
+        return {
+            "gate": "G90",
+            "pass": ok,
+            "passed": ok,
+            "passed_count": passed_count,
+            "total_count": total_count,
+            "checks": result.get("checks", []),
+            "summary": result.get("summary", ""),
+        }
+    except Exception as exc:
+        return {"gate": "G90", "pass": False, "passed": False,
+                "passed_count": 0, "total_count": 5, "checks": [], "errors": [str(exc)]}
+
+
+GATES.append((
+    "fl_g90",
+    "Gate G90 — FL Gate FL-1~FL-5 (ADR-198, V737)",
+    _gate_fl_g90,
+))
