@@ -1,13 +1,23 @@
 # Preflight 12단계 실행 로그
-**버전**: v12.4.0  |  **실행일시**: 2026-05-29T10:32:30Z  |  **실행자**: run_preflight.py v1.0
+**버전**: v12.4.0  |  **실행일시**: 2026-05-29T12:16:29Z  |  **실행자**: run_preflight.py v1.0
 **근거**: DEV_PROTOCOL_v3.0 §1 (PREFLIGHT_GUIDE_v1.1 흡수 통합본)
 
 ## Step 1. 코드베이스 현황 (index_status 등가)
-- Python 파일: 1,058개
+- Python 파일: 1,060개
 - 심볼(클래스): 3,276개
 - 테스트 함수: 10,011개
-- 최근 변경 py 파일 (HEAD~3): 0개
-- 소요: 1.27s
+- 최근 변경 py 파일 (HEAD~3): 13개
+  - literary_system/chaos/__init__.py
+  - literary_system/chaos/chaos_circuit_breaker.py
+  - literary_system/chaos/chaos_runner.py
+  - literary_system/chaos/chaos_scenario.py
+  - literary_system/gates/chaos_resilience_gate.py
+  - literary_system/gates/release_gate.py
+  - literary_system/gates/spd3_exit_gate.py
+  - literary_system/gates/zero_trust_security_gate.py
+  - tests/unit/test_v725_zero_trust_security_gate.py
+  - tests/unit/test_v726_v728_chaos_advanced.py
+- 소요: 1.35s
 
 ## Step 2. 모듈 범위 (list_repos 등가)
 - literary_system/ 서브패키지: 83개
@@ -185,7 +195,7 @@
   - pyproject.toml 버전: 12.4.0
 
 ## Step 8. Survival Matrix (핵심 심볼 생존 확인)
-  - 검사 심볼: 32개  |  생존: 32개  |  사망: 0개
+  - 검사 심볼: 48개  |  생존: 48개  |  사망: 0개
   ✅ ALIVE  UnifiedLLMGateway
   ✅ ALIVE  TaskRouter
   ✅ ALIVE  NKGCurator
@@ -215,9 +225,25 @@
   ✅ ALIVE  AgentLoadBalancer
   ✅ ALIVE  AgentCircuitBreaker
   ✅ ALIVE  AgentSupervisor
+  ✅ ALIVE  PluginManifest
+  ✅ ALIVE  PluginLoader
+  ✅ ALIVE  PluginRegistry
+  ✅ ALIVE  PluginLifecycleManager
+  ✅ ALIVE  BasePlugin
+  ✅ ALIVE  PluginSandbox
+  ✅ ALIVE  PluginWhitelist
+  ✅ ALIVE  PluginAuthAdapter
   ✅ ALIVE  ZeroTrustTokenService
   ✅ ALIVE  TenantAuthority
   ✅ ALIVE  ZeroTrustMiddleware
+  ✅ ALIVE  ZeroTrustAuditLog
+  ✅ ALIVE  AgentAuthBridge
+  ✅ ALIVE  ChaosEngine
+  ✅ ALIVE  FaultInjector
+  ✅ ALIVE  ChaosScenario
+  ✅ ALIVE  ChaosCircuitBreaker
+  ✅ ALIVE  ChaosRunner
+  ✅ ALIVE  SPD3ExitGate
 
 ## Step 9. Gate 연결성 (symbol_to_branchpoint_trace 등가)
   ⚠️  AgentCoordinationGate: release_gate.py 미연결 (독립 게이트)
@@ -245,7 +271,7 @@
   - 실질 순환: 7개
   ⚠️  auto_promotion_gate → auto_promotion_gate
   ⚠️  release_gate → gate_registry → release_gate
-  ⚠️  release_gate → phase_a_exit_gate → release_gate
+  ⚠️  phase_c_exit_gate → release_gate → phase_c_exit_gate
 
 ---
 ## 최종 판정
@@ -260,7 +286,7 @@
   - Step12 TIMEOUT: Release Gate 단독 실행 필요
   - 순환 의존: ['literary_system.gates.auto_promotion_gate', 'literary_system.gates.auto_promotion_gate']
   - 순환 의존: ['literary_system.gates.release_gate', 'literary_system.gates.gate_registry', 'literary_system.gates.release_gate']
-  - 순환 의존: ['literary_system.gates.release_gate', 'literary_system.gates.phase_a_exit_gate', 'literary_system.gates.release_gate']
+  - 순환 의존: ['literary_system.gates.phase_c_exit_gate', 'literary_system.gates.release_gate', 'literary_system.gates.phase_c_exit_gate']
 
-**실행 완료**: 2026-05-29T10:33:01Z
+**실행 완료**: 2026-05-29T12:17:01Z
 **로그 파일**: docs/sessions/preflight_v12.4.0_2026-05-29.md

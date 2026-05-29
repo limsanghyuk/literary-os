@@ -110,7 +110,7 @@ def _find_cycles(deps: dict[str, set[str]]) -> list[list[str]]:
     return cycles[:10]
 
 # ─── Survival Matrix ─────────────────────────────────────────────────────────
-# SURVIVAL_SYMBOLS — 기준: V710 / SP-D.2 완료 (2026-05-28)
+# SURVIVAL_SYMBOLS — 기준: V730 / SP-D.3 완료 (2026-05-29)
 # 새 Sub-Phase 완료 시 이 dict와 DEV_PROTOCOL_v3.0 §1 Step 8을 동시에 갱신한다.
 SURVIVAL_SYMBOLS: dict[str, str] = {
     # Phase A/B 핵심
@@ -148,10 +148,28 @@ SURVIVAL_SYMBOLS: dict[str, str] = {
     "AgentLoadBalancer":            "literary_system/agents/",
     "AgentCircuitBreaker":          "literary_system/agents/",
     "AgentSupervisor":              "literary_system/agents/",
-    # SP-D.3 Plugin Registry + Zero-Trust Security (V711~V730)
+    # SP-D.3 Plugin Registry (V711~V720)
+    "PluginManifest":               "literary_system/plugins/",
+    "PluginLoader":                 "literary_system/plugins/",
+    "PluginRegistry":               "literary_system/plugins/",
+    "PluginLifecycleManager":       "literary_system/plugins/",
+    "BasePlugin":                   "literary_system/plugins/",
+    "PluginSandbox":                "literary_system/plugins/",
+    "PluginWhitelist":              "literary_system/plugins/",
+    "PluginAuthAdapter":            "literary_system/plugins/",
+    # SP-D.3 Zero-Trust Security (V717~V723)
     "ZeroTrustTokenService":        "literary_system/security/",
     "TenantAuthority":              "literary_system/security/",
     "ZeroTrustMiddleware":          "literary_system/security/",
+    "ZeroTrustAuditLog":            "literary_system/security/",
+    "AgentAuthBridge":              "literary_system/agents/",
+    # SP-D.3 Chaos Engineering (V724~V730)
+    "ChaosEngine":                  "literary_system/chaos/",
+    "FaultInjector":                "literary_system/chaos/",
+    "ChaosScenario":                "literary_system/chaos/",
+    "ChaosCircuitBreaker":          "literary_system/chaos/",
+    "ChaosRunner":                  "literary_system/chaos/",
+    "SPD3ExitGate":                 "literary_system/gates/",
 }
 
 def _check_survival() -> dict[str, bool]:
