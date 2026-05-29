@@ -1,40 +1,72 @@
-# Literary OS V571 — Phase 6 Stage C: MultiWork
+# Literary OS V730 — Phase D SP-D.3: Plugin Registry + ZeroTrust + Chaos Engineering
 
-**Version:** 7.7.1 · **Tag:** v7.7.1-V571 · **Date:** 2026-05-17
-**Tests:** 5,456 PASS / 0 FAIL / 20 SKIP · **Gates:** 30/30 PASS
+**Version:** 12.4.0 · **Tag:** v12.4.0 · **Date:** 2026-05-29  
+**Tests:** 9,766+ PASS / 0 FAIL · **Gates:** 88/88 PASS  
+**Preflight:** 13단계 ALL PASS (DEV_PROTOCOL_v3.0)
 
 ---
 
-## 이번 릴리즈 — MultiWork Stage C (V562~V571)
+## SP-D.3 완전 종료 — 3대 축 구현
 
-| 모듈 | 버전 | 역할 |
-|------|------|------|
-| MultiWorkCore | V562 | WorkProject FSM, 세션 관리 |
-| SharedCharacterDB | V563 | 작품 간 공유 캐릭터 DB |
-| SharedWorldDB | V564 | 공유 세계관 DB |
-| GenreTransferLearning | V565 | 장르 간 전이 학습 (α 블렌딩) |
-| ProjectIsolationManager | V566 | 프로젝트 격리 정책 |
-| MultiWorkCIM | V567 | CIM W[i][j] = 1−exp(−0.95×count) |
-| AuthorLicenseAPI | V568 | PERSONAL/COMMERCIAL/ENTERPRISE/RESEARCH |
-| MultiWorkOrchestrator | V569 | 통합 오케스트레이터 |
-| Gate31 + Tests | V570~V571 | 111/111 PASS |
+### 축 1: Plugin Registry (V711~V716, G87)
 
-## 설계 갭 수정 3건
+| 모듈 | 역할 |
+|------|------|
+| PluginManifest | plugin_id·entry_point·semver·permission 스키마 검증 |
+| PluginRegistry | CRUD + 태그 검색 + 이벤트 훅 |
+| PluginWhitelist | 허가된 플러그인 ID 화이트리스트 |
+| PluginSandbox | RestrictedPython 기반 격리 실행 환경 |
+| PluginLifecycleManager | 6-state FSM (UNLOADED→LOADED→ACTIVE→...) |
+| BasePlugin + PluginTestHarness | 플러그인 SDK + 격리 테스트 헬퍼 |
+| G87 PluginRegistryGate | PR-1~PR-7: 7 체크포인트 ALL PASS |
 
-- GAP-1: `pyproject.toml` description 갱신
-- GAP-2: `MANIFEST_V571_MULTIWORK.md` 신규 생성
-- GAP-3: `MultiWorkOrchestrator.create_project()` COMMERCIAL 라이선스 docstring
+### 축 2: ZeroTrust Security (V717~V725, G88)
 
-## 버전 계보
+| 모듈 | 역할 |
+|------|------|
+| ZeroTrustTokenService | HMAC-SHA256 JWT 발급·검증·만료·TTL |
+| TenantAuthority | 테넌트 등록·격리·인가·비활성 |
+| ZeroTrustMiddleware | 요청 인터셉터 + 훅 + 감사 |
+| ZeroTrustAuditLog | HMAC 체인 무결성 + 변조 감지 |
+| PluginAuthAdapter | plugins→security 단방향 의존 (ADR-128 고립 해소) |
+| AgentAuthBridge | agents→security 연결 + 세션 관리 |
+| G88 ZeroTrustSecurityGate | ZT-1~ZT-7: 7 체크포인트 ALL PASS |
 
-```
-V400 Foundation → V430 StudioAPI → V491 RAG
-→ V525 NIE v2.0 → V540 GIG → V545 ASD
-→ V546 Cleanup → V555 PNE → V561 Corpus
-→ V571 MultiWork [현재]
-```
+### 축 3: Chaos Engineering (V724~V729, G89)
+
+| 모듈 | 역할 |
+|------|------|
+| ChaosEngine | FaultSpec 등록·활성화·주입·이력 |
+| FaultInjector | BEFORE/AFTER/BOTH 데코레이터 주입 |
+| ChaosScenario | preset 기반 장애 시나리오 실행 |
+| ChaosCircuitBreaker | AgentCircuitBreaker + 장애 주입 통합 |
+| ChaosRunner + AutoRecovery | 복수 시나리오 실행 + 자동 복구 |
+| G89 ChaosResilienceGate | CR-1~CR-6: 6 체크포인트 ALL PASS |
+
+---
+
+## V729 — G89 Chaos Resilience Gate (ADR-190)
+
+- G88 release_gate.py 미등록 발견 → V729에서 동시 등록 (85→87 Gates)
+- G89 CR-3 버그: `ScenarioState.PASSED` 미존재 → `result.success` 기반으로 수정
+- Preflight 13단계 실행 후 발견·수정 (DEV_PROTOCOL_v3.0 준수)
+
+## V730 — SP-D.3 Exit Gate + v12.4.0 (ADR-191)
+
+Exit Gate 6축:
+- E1: G87 Plugin Registry 7/7 ✅
+- E2: G88 ZeroTrust Security 7/7 ✅
+- E3: G89 Chaos Resilience 6/6 ✅
+- E4: ADR-128 연결성 — security·chaos·plugins 고립 0 ✅
+- E5: SP-D.3 Survival Matrix 9/9 ALIVE ✅
+- E6: pyproject.toml v12.4.0 ✅
+
+---
 
 ## 알려진 제약
 
-- KL-001: PERSONAL 라이선스 → MultiWork 사용 불가 (설계 의도)
-- KL-002: OTel tracer 1 FAIL (V474+, 런타임 비영향)
+- KL-003: PluginSandbox는 `RestrictedPython` 필요 (`pip install RestrictedPython`)
+
+## 다음: SP-D.4 (V731~)
+
+Phase D Exit Gate → v13.0.0 예정

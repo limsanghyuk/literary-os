@@ -4307,3 +4307,69 @@ GATES.append((
     "Gate G87 — Plugin Registry Gate PR-1~PR-7 (ADR-177)",
     _gate_plugin_registry_g87,
 ))
+
+
+# ── G88: Zero-Trust Security Gate ─────────────────────────────────────────────
+def _gate_zerotrust_security_g88() -> dict:
+    """G88: Zero-Trust Security Gate — ZT-1~ZT-7 (ADR-186)"""
+    try:
+        from literary_system.gates.zero_trust_security_gate import run_zero_trust_security_gate
+        passed, results = run_zero_trust_security_gate()
+        checkpoints = [{"checkpoint": r.checkpoint, "passed": r.passed, "detail": r.detail}
+                       for r in results]
+        passed_count = sum(1 for r in results if r.passed)
+        return {
+            "gate": "G88",
+            "pass": passed,
+            "passed": passed,
+            "passed_count": passed_count,
+            "total_count": len(results),
+            "checkpoints": checkpoints,
+            "errors": [r.detail for r in results if not r.passed],
+        }
+    except Exception as exc:
+        return {"gate": "G88", "pass": False, "passed": False,
+                "passed_count": 0, "total_count": 7, "checkpoints": [], "errors": [str(exc)]}
+
+
+GATES.append((
+    "zerotrust_security_g88",
+    "Gate G88 — Zero-Trust Security Gate ZT-1~ZT-7 (ADR-186)",
+    _gate_zerotrust_security_g88,
+))
+
+
+# ── G89: Chaos Resilience Gate ────────────────────────────────────────────────
+def _gate_chaos_resilience_g89() -> dict:
+    """G89: Chaos Resilience Gate — CR-1~CR-6 (ADR-190)"""
+    try:
+        from literary_system.gates.chaos_resilience_gate import run_g89_gate
+        return run_g89_gate()
+    except Exception as exc:
+        return {"gate": "G89", "pass": False, "passed": False,
+                "passed_count": 0, "total_count": 6, "checkpoints": [], "errors": [str(exc)]}
+
+
+GATES.append((
+    "chaos_resilience_g89",
+    "Gate G89 — Chaos Resilience Gate CR-1~CR-6 (ADR-190)",
+    _gate_chaos_resilience_g89,
+))
+
+
+# ── SP-D.3 Exit Gate ──────────────────────────────────────────────────────────
+def _gate_spd3_exit() -> dict:
+    """SP-D.3 Exit Gate — E1~E6 (ADR-191)"""
+    try:
+        from literary_system.gates.spd3_exit_gate import run_spd3_exit_gate
+        return run_spd3_exit_gate()
+    except Exception as exc:
+        return {"gate": "SP-D3-EXIT", "pass": False, "passed": False,
+                "passed_count": 0, "total_count": 6, "axes": [], "errors": [str(exc)]}
+
+
+GATES.append((
+    "spd3_exit",
+    "SP-D.3 Exit Gate — E1~E6 (ADR-191)",
+    _gate_spd3_exit,
+))

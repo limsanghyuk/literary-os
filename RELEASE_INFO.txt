@@ -1,15 +1,22 @@
-Literary OS V680-AUDIT2
-Version: 12.0.2
-ADR: ADR-142
-Date: 2026-05-28
-SP: SP-C.4 완료 + Phase C 완전 종료
-Tag: v12.0.2
-Commit: 1ce229af
+Literary OS V730 — SP-D.3 완전 종료
+Version: 12.4.0
+ADR: ADR-191
+Date: 2026-05-29
+SP: SP-D.3 완료 (Plugin Registry G87 + ZeroTrust Security G88 + Chaos Engineering G89)
+Tag: v12.4.0
 Files:
-  - literary_system/gates/ (80 Gates G01~G80)
-  - literary_system/sdk/public_sdk.py (online 4종 실구현)
-  - literary_system/world/__init__.py (PluginRegistry)
-  - literary_system/gates/safety_regression_gate.py
-  - docs/adr/ADR-142.md (Phase C Exit Gate G79)
-  - tools/test_inventory.json (8845 TC)
-Status: Phase C SP-C.4 COMPLETE — Phase D 진입 대기
+  - literary_system/gates/chaos_resilience_gate.py (G89 CR-1~CR-6)
+  - literary_system/gates/spd3_exit_gate.py (E1~E6)
+  - literary_system/gates/release_gate.py (88 Gates: +G88+G89+SP-D3-EXIT)
+  - literary_system/plugins/ (10파일: Manifest/Registry/Sandbox/Lifecycle/Auth/SDK)
+  - literary_system/security/ (5파일: ZeroTrustToken/TenantAuthority/Middleware/AuditLog)
+  - literary_system/chaos/ (6파일: Engine/Injector/Scenario/CircuitBreaker/Runner)
+  - docs/adr/ADR-190.md (G89 ChaosResilienceGate)
+  - docs/adr/ADR-191.md (SP-D.3 ExitGate)
+  - tests/unit/test_v729_chaos_resilience_gate.py (33 TC)
+  - tests/unit/test_v730_spd3_exit_gate.py (33 TC)
+  - docs/workflow/DEV_PROTOCOL_v3.0.md (PREFLIGHT_GUIDE_v1.1 흡수 통합)
+Status: SP-D.3 COMPLETE — SP-D.4 (V731~) 진입 대기
+Gates: 88/88 PASS
+Tests: 9766+ PASS
+Preflight: 13단계 ALL PASS (DEV_PROTOCOL_v3.0)

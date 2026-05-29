@@ -1,3 +1,67 @@
+## [12.4.0] — V729~V730 — SP-D.3 완전 종료
+
+### GitNexus Preflight 분석 결과 (DEV_PROTOCOL v3.0 §1)
+
+**연결성 분석 (V729)**
+- chaos/ 패키지: chaos_engine ↔ fault_injector ↔ chaos_scenario ↔ chaos_circuit_breaker ↔ chaos_runner (5-node 완전 연결)
+- security/ ← plugins/ ← (plugin_auth.py) 의존 — 고립 없음 PASS
+- G88 파일 존재하나 release_gate.py 미등록 발견 → V729에서 동시 등록
+
+**영향력 분석 (V730)**
+- G89 (Chaos Resilience) → G88 (ZeroTrust) 호출 (depth-1 의존)
+- SP-D.3 Exit Gate → G87+G88+G89 통합 (depth-2 집약)
+- Survival Matrix: 9심볼 전수 생존 확인
+
+---
+
+### V729 — G89 Chaos Resilience Gate + G88 등록 (ADR-190)
+
+#### Added
+- `literary_system/gates/chaos_resilience_gate.py` — G89 (ADR-190)
+  - CRCheckResult (frozen) / ChaosResilienceReport
+  - CR-1: ChaosEngine 등록·활성화·주입·이력·통계
+  - CR-2: FaultInjector BEFORE/AFTER/wrap 주입
+  - CR-3: ChaosScenario preset 실행·ScenarioState 전이
+  - CR-4: ChaosCircuitBreaker CLOSED→OPEN 전이·reset
+  - CR-5: ChaosRunner+AutoRecovery resilience_ratio·RECOVERED
+  - CR-6: G88 zero_trust_security_gate PASS + ZT-7 확인
+  - run_g89_gate() / ChaosResilienceGate 클래스
+- `docs/adr/ADR-190.md`
+- `tests/unit/test_v729_chaos_resilience_gate.py`: 33 TC (TC01~TC33)
+
+#### Changed
+- `literary_system/gates/release_gate.py`:
+  - G88 _gate_zerotrust_security_g88 등록 (run_zero_trust_security_gate 래핑)
+  - G89 _gate_chaos_resilience_g89 등록 (run_g89_gate 래핑)
+  - 85 Gates → 87 Gates
+
+### V730 — SP-D.3 Exit Gate + v12.4.0 릴리즈 (ADR-191)
+
+#### Added
+- `literary_system/gates/spd3_exit_gate.py` — SP-D.3 Exit Gate (ADR-191)
+  - ExitAxisResult (frozen) / SPD3ExitReport
+  - E1: G87 PluginRegistryGate PASS
+  - E2: G88 ZeroTrustSecurityGate PASS
+  - E3: G89 ChaosResilienceGate PASS
+  - E4: security·chaos·plugins 고립 없음 (ADR-128)
+  - E5: SP-D.3 Survival Matrix 9심볼 ALIVE
+  - E6: pyproject.toml v12.4.0 확인
+  - run_spd3_exit_gate() / SPD3ExitGate 클래스
+- `docs/adr/ADR-191.md`
+- `tests/unit/test_v730_spd3_exit_gate.py`: 33 TC (TC01~TC33)
+
+#### Changed
+- `pyproject.toml`: version 12.3.9 → **12.4.0**
+- `literary_system/gates/release_gate.py`: SP-D.3 Exit Gate 등록 (88 Gates)
+- `CLAUDE.md`: V730 / v12.4.0 상태 업데이트
+- `RELEASE_INFO.txt`: SP-D.3 완전 종료 기록
+
+### Metrics
+- Tests: ~9,700 + 66 (V729 33 + V730 33) = **9,766+ PASS**
+- Gates: 85 → 87 (G88+G89) → **88 Gates** (SP-D.3 Exit 포함)
+- SP-D.3 Exit Gate: **6/6 PASS** (E1~E6)
+- Version: **v12.4.0**
+- SP-D.3 완전 종료 ✅
 ## [11.39.0] — V666 Integration — 2026-05-27
 
 ### 🔴 Critical Fixes (3인 전문가 합의 ADR-128)

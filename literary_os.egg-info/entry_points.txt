@@ -1,0 +1,9 @@
+[console_scripts]
+literary-os = apps.studio_api.main:cli_entry
+literary-sdk = literary_system.sdk.public_sdk:_cli_demo
+
+[literary_os.gates]
+b2b_partner = literary_system.gates.b2b_partner_gate:B2BPartnerGate
+feedback_collection = literary_system.gates.feedback_collection_gate:FeedbackCollectionGate
+feedback_loop = literary_system.gates.feedback_loop_gate:FeedbackLoopGate
+sdk_stability = literary_system.gates.sdk_stability_gate:SDKStabilityGate

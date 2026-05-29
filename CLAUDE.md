@@ -1,4 +1,4 @@
-# Literary OS — 개발자 컨텍스트 (V710 / v12.2.0)
+# Literary OS — 개발자 컨텍스트 (V730 / v12.4.0)
 
 ---
 
@@ -22,12 +22,10 @@ V(N) 개발 완료 후, V(N+1) 시작 전:
 
 ### Claude 자동 집행 조건
 
-아래 패턴의 사용자 발화를 인식하면 **즉시 Preflight를 먼저 실행**:
-
 | 발화 패턴 | Claude 행동 |
 |-----------|-------------|
-| "V681 진행해", "다음 버전 시작", "Phase D 시작" | Preflight 13단계 먼저 실행 → PASS 후 구현 |
-| "682 해줘", "계속 진행", "이어서 개발" | 이전 버전 Preflight PASS 여부 확인 → 미확인 시 재실행 |
+| "V731 진행해", "다음 버전 시작", "SP-D.4 시작" | Preflight 13단계 먼저 실행 → PASS 후 구현 |
+| "732 해줘", "계속 진행", "이어서 개발" | 이전 버전 Preflight PASS 여부 확인 → 미확인 시 재실행 |
 | 버전 번호가 포함된 모든 개발 지시 | 버전 경계 감지 → 자동 Preflight 트리거 |
 
 ### 위반 시 처리
@@ -48,22 +46,22 @@ V(N) 개발 완료 후, V(N+1) 시작 전:
 | **GPU SLO** | 재학습 최소 간격 7일, 월 최대 $200 (ADR-051) |
 | **Gate FAIL** | Gate FAIL 상태 절대 커밋 금지 |
 | **G_CONNECTIVITY** | 고립 패키지 2버전 연속 금지 (ADR-128) |
+| **G32** | literary_system/ 내 print() 절대 금지 (sys.stdout.write 사용) |
 
 ---
 
-## 현재 상태 (V710 기준)
+## 현재 상태 (V730 기준)
 
 | 항목 | 값 |
 |------|----|
-| 버전 | v12.0.2 |
-| 개발 이터레이션 | V710 (SP-D.2 MultiAgent Coordination 완전 종료) |
-| 릴리즈 게이트 | **84/84 PASS** |
-| 테스트 | **9,700 PASS** |
-| 고립 패키지 | **0개** (76패키지 전체 연결) |
-| Preflight 단계 | **13단계** (Step 13: G_CONNECTIVITY) |
-| 최신 ADR | ADR-142 (Phase C Exit Gate G79) |
-| 현재 Phase | Phase C 완전 종료 → **Phase D 진입 대기** |
-| Git HEAD (main) | 1a8beba1 (V710 SP-D.2 완료) |
+| 버전 | v12.4.0 |
+| 개발 이터레이션 | V730 (SP-D.3 완전 종료) |
+| 릴리즈 게이트 | **88/88 PASS** |
+| 테스트 | **9,766+ PASS** |
+| 고립 패키지 | **0개** (83개 전체 연결) |
+| Preflight 단계 | **13단계** (DEV_PROTOCOL_v3.0) |
+| 최신 ADR | ADR-191 (SP-D.3 Exit Gate) |
+| 현재 Phase | Phase D SP-D.3 완전 종료 → **SP-D.4 진입 대기** |
 | GitHub | https://github.com/limsanghyuk/literary-os |
 
 ---
@@ -84,27 +82,29 @@ python3 tools/run_preflight.py   # ← RULE-0 집행 시작점
 ```
 [RULE-0] V(N) 시작 전 → python3 tools/run_preflight.py → PASS 확인
 [1] 구현 (신규파일 + tests/unit/test_vNNN_*.py 33TC 이상)
-[2] pytest → generate_test_inventory.py → run_release_gate.py (84/84 PASS)
+[2] pytest → generate_test_inventory.py → run_release_gate.py (88/88 PASS)
 [3] GitHub: commit → push → Release 태그 → ZIP 패키징
 [RULE-0] V(N+1) 시작 전 → python3 tools/run_preflight.py 재실행 → PASS 확인
 [4] V(N+1) 구현 시작
 ```
 
-**Preflight 13단계 소요 시간**: 약 30~60초 (자동 실행, 개발자 개입 불필요)
-
 ---
 
-## Phase D 로드맵 (V681~V745) — 본안 v1.0
+## SP-D.3 완료 현황 (V711~V730)
 
-| SubPhase | 버전 | 내용 | 비고 |
-|----------|------|------|------|
-| SP-D.1 | V681~V700 | 장편 품질 완성 (서사 일관성 / 캐릭터 깊이 / 감정 흐름) | |
-| SP-D.2 | V701~V720 | 다국어 확장 (영어/일어/중국어) | |
-| SP-D.3 | V721~V740 | 상용화 완성 (API SLA / 결제 / Enterprise 계약) | |
-| SP-D.4 | V741~V745 | Phase D Exit Gate → v13.0.0 | |
+| 구성 | 버전 | Gate | 상태 |
+|------|------|------|------|
+| Plugin Registry | V711~V716 | G87 (PR-1~PR-7) | ✅ PASS |
+| ZeroTrust Security | V717~V725 | G88 (ZT-1~ZT-7) | ✅ PASS |
+| Auth Bridge | V721~V723 | — | ✅ PASS |
+| Chaos Engineering | V724~V728 | — | ✅ PASS |
+| G89 ChaosResilience | V729 | G89 (CR-1~CR-6) | ✅ PASS |
+| SP-D.3 Exit Gate | V730 | E1~E6 | ✅ PASS |
 
-**Phase D 시작 발화**: "V681 시작해" / "Phase D 진행해" / "계속 개발해"  
-→ Claude가 RULE-0에 따라 자동으로 Preflight 먼저 실행 후 V681 구현 착수.
+## 다음 단계: SP-D.4 (V731~)
+
+**SP-D.4 시작 발화**: "V731 시작해" / "SP-D.4 진행해" / "계속 개발해"  
+→ Claude가 RULE-0에 따라 자동으로 Preflight 먼저 실행 후 V731 구현 착수.
 
 ---
 
@@ -112,8 +112,8 @@ python3 tools/run_preflight.py   # ← RULE-0 집행 시작점
 
 | 도구 | 용도 |
 |------|------|
-| `python3 tools/run_preflight.py` | Preflight 13단계 자동 실행 (RULE-0 핵심) |
-| `python3 tools/run_release_gate.py` | G_PREFLIGHT + G_CONNECTIVITY + 80 Gates |
+| `python3 tools/run_preflight.py` | Preflight 13단계 자동 실행 (RULE-0 핵심, DEV_PROTOCOL_v3.0) |
+| `python3 tools/run_release_gate.py` | G_PREFLIGHT + G_CONNECTIVITY + 88 Gates |
 | `python3 tools/generate_test_inventory.py` | test_inventory.json 갱신 |
 | `bash tools/install_hooks.sh` | 로컬 pre-commit hook 설치 (최초 1회) |
 
@@ -125,13 +125,16 @@ python3 tools/run_preflight.py   # ← RULE-0 집행 시작점
 literary_system/
 ├── sdk/          # PublicSDK v1.0 (SP-C.3) — online 4종 실구현
 ├── ensemble/     # AgentCoordinator (Director→Script→Critic→Editor)
-├── agents/       # 멀티에이전트 앙상블 (SP-C.2)
-├── gates/        # 80 Release Gates + SafetyRegressionGate
+├── agents/       # MultiAgent Coordination (SP-D.2: Bus/Workflow/CB/Supervisor)
+├── plugins/      # Plugin Registry + Sandbox + Lifecycle + Auth (SP-D.3)
+├── security/     # ZeroTrust 4종 + PluginAuthAdapter (SP-D.3)
+├── chaos/        # Chaos Engineering 5종: Engine/Injector/Scenario/CB/Runner (SP-D.3)
+├── gates/        # 88 Release Gates (G01~G89 + SP-D3-EXIT)
+├── ops/          # Observability: OtelSdkAdapter + TraceSampler + Dashboard (SP-D.1)
 ├── constitution/ # LOSConstitution v2 + Bayesian Opt
 ├── world/        # PluginRegistry + 5 genre plugins
 ├── governance/   # ATIAMetadataAuditor
-├── ops/          # AdaptiveThrottler + LongRunMonitor + PrometheusExporter
-└── ...           # 76패키지 전체 연결 (고립 0, ADR-128)
+└── ...           # 83개 패키지 전체 연결 (고립 0, ADR-128)
 ```
 
 ---
@@ -146,7 +149,8 @@ literary_system/
 | SP-C.1 자기학습 | V631~V640 | G62~G63 | ✅ 완료 |
 | SP-C.2 멀티에이전트 | V641~V655 | G64~G67 | ✅ 완료 |
 | SP-C.3 PublicSDK | V656~V665 | G68~G71 | ✅ 완료 |
-| V666 Integration | V666 | ADR-128 | ✅ 완료 |
-| SP-C.4 경쟁흡수+배포 | V667~V680 | G72~G79 | ✅ 완료 |
-| V680-AUDIT2 | v12.0.2 | G80 | ✅ Phase C 완전 종료 |
-| **Phase D** | **V681~V745** | **TBD** | 🔜 **진입 대기** |
+| SP-C.4 경쟁흡수+배포 | V666~V680 | G72~G80 | ✅ 완료 |
+| SP-D.1 Observability | V681~V695 | G81~G83 | ✅ 완료 |
+| SP-D.2 MultiAgent Coord | V696~V710 | G84~G85 | ✅ 완료 |
+| **SP-D.3 Plugin+ZT+Chaos** | **V711~V730** | **G87~G89** | **✅ 완료** |
+| **SP-D.4** | **V731~** | **TBD** | **🔜 진입 대기** |
