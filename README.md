@@ -1,15 +1,17 @@
-# Literary OS V730
+# Literary OS V745
 
 > **판단은 로컬, 생성만 LLM, 학습은 누적**  
 > AI 기반 장편 소설·드라마 시나리오 생성 시스템
 
-[![Version](https://img.shields.io/badge/version-12.4.0-blue)]()
-[![Tests](https://img.shields.io/badge/tests-9766%20PASS-brightgreen)]()
-[![Gates](https://img.shields.io/badge/release%20gates-88%2F88%20PASS-brightgreen)]()
+[![Version](https://img.shields.io/badge/version-13.0.0-blue)]()
+[![Tests](https://img.shields.io/badge/tests%20(V730)-9766-yellow)]()
+[![Gates](https://img.shields.io/badge/gates%20(V730)-88%2F88-yellow)]()
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 
 ---
+
+> ⚠️ **수치 주의**: 버전은 V745 / v13.0.0(태그 권위). 단 tests·gates 카운트는 V730 기준이며 V745 재생성 대기 상태(SP-E.0 TD-E0-2). 최신값은 `python3 tools/run_release_gate.py` 및 `python3 tools/generate_test_inventory.py`로 확인.
 
 ## 빠른 시작
 

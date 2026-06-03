@@ -43,6 +43,6 @@
 **모델의 여러 문제를 해결하기 위한 논의 단계.** 핵심 미해결 명제 = "구조(에이전트 오케스트레이션)가 강한 LLM 베이스라인보다 일관된 앙상블 서사를 만드는가"(G_VALUE_PROOF). 진입 방식 = 검증 우선 입구 관문(SP-E.0 무결성 → 사전실험 → 최소슬라이스 검증 → go/no-go). 정리·검증이 끝나면 본격 Phase E 설계로 이행.
 
 ## 6. 알려진 보완 사항 (정직한 기록)
-1. **루트 README.md가 stale**: `V730 / v12.4.0 / 9766 tests / 88 gates` 표기 = 현재 V745 / v13.0.0와 불일치. 권위 있는 수치로 갱신 필요(개발 모드).
-2. **docs/sessions 정리 잔여**: 빌드 산출물(.js) 분리·구버전 격리·preflight 하위폴더화 (상세 `sessions/INDEX.md §3`).
+1. ✅ **루트 README 갱신 완료**: 제목·버전 V745/v13.0.0으로 정정. 단 tests·gates 카운트는 V730 기준 vintage 표기 + 재생성 안내(권위 V745 수치 부재 — SP-E.0 TD-E0-2 재생성 대기).
+2. ✅ **docs/sessions 정리**: .js→`tools/doc_builders/`, preflight 26개→`sessions/preflight/`, v587 구버전→`sessions/_archive/`. 추가 다버전 격리는 개발자 판단 보류 (`sessions/INDEX.md §3`).
 3. **본 지도 유지**: 신규 문서·폴더 추가 시 §2·§3 갱신.
