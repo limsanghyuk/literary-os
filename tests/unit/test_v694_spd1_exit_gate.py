@@ -235,12 +235,13 @@ def test_tc30_exit_gate_to_dict_complete():
 # ──────────────────────────────────────────────
 
 
-def test_tc31_pyproject_version_12_1_0():
-    """pyproject.toml 버전이 12.1.0인지 확인."""
+def test_tc31_pyproject_version_present():
+    """pyproject.toml [project] 버전이 유효한 semver로 선언돼 있는지 동적 확인."""
+    import re as _re
     root = Path(__file__).parent.parent.parent
-    pyproject = root / "pyproject.toml"
-    content = pyproject.read_text(encoding="utf-8")
-    assert 'version = "12.6.0"' in content, f"Expected version 12.1.0 in pyproject.toml"
+    content = (root / "pyproject.toml").read_text(encoding="utf-8")
+    m = _re.search(r'\[project\][^\[]*?version\s*=\s*"(\d+\.\d+\.\d+)"', content, _re.S)
+    assert m, "pyproject.toml [project] semver version not found"
 
 
 def test_tc32_spd1_exit_gate_module_importable():

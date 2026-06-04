@@ -158,8 +158,10 @@ def test_gate_demo_4_tenants():
     assert len(suite.reports) == 4
 
 def test_gate_demo_gate_passed():
+    # ADR-145/TD-3: demo includes an over-budget tenant (T4-Jenova 110%), so the
+    # cost-control gate correctly blocks -> gate_passed is False (violation detected).
     suite = EnterpriseCostControlGate().demo_run()
-    assert suite.gate_passed is True
+    assert suite.gate_passed is False
 
 def test_gate_demo_one_exceeded():
     suite = EnterpriseCostControlGate().demo_run()

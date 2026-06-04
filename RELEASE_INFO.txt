@@ -1,22 +1,16 @@
-Literary OS V730 — SP-D.3 완전 종료
-Version: 12.4.0
-ADR: ADR-191
-Date: 2026-05-29
-SP: SP-D.3 완료 (Plugin Registry G87 + ZeroTrust Security G88 + Chaos Engineering G89)
-Tag: v12.4.0
-Files:
-  - literary_system/gates/chaos_resilience_gate.py (G89 CR-1~CR-6)
-  - literary_system/gates/spd3_exit_gate.py (E1~E6)
-  - literary_system/gates/release_gate.py (88 Gates: +G88+G89+SP-D3-EXIT)
-  - literary_system/plugins/ (10파일: Manifest/Registry/Sandbox/Lifecycle/Auth/SDK)
-  - literary_system/security/ (5파일: ZeroTrustToken/TenantAuthority/Middleware/AuditLog)
-  - literary_system/chaos/ (6파일: Engine/Injector/Scenario/CircuitBreaker/Runner)
-  - docs/adr/ADR-190.md (G89 ChaosResilienceGate)
-  - docs/adr/ADR-191.md (SP-D.3 ExitGate)
-  - tests/unit/test_v729_chaos_resilience_gate.py (33 TC)
-  - tests/unit/test_v730_spd3_exit_gate.py (33 TC)
-  - docs/workflow/DEV_PROTOCOL_v3.0.md (PREFLIGHT_GUIDE_v1.1 흡수 통합)
-Status: SP-D.3 COMPLETE — SP-D.4 (V731~) 진입 대기
-Gates: 88/88 PASS
-Tests: 9766+ PASS
-Preflight: 13단계 ALL PASS (DEV_PROTOCOL_v3.0)
+Literary OS V745 — Phase D 완전 종료 (Phase D Exit)
+Version: 13.0.0
+ADR: ADR-208 (최신)
+Date: 2026-06-04
+SP: SP-D.4 완료 (Federated Learning + DR Gate + Phase D Exit G95)
+Tag: v13.0.0 (= v13.0.0-V745)
+Gates: 97 (release_gate.GATES) — Phase D Exit G95 8/8 checkpoints PASS
+Tests: 10788+ PASS
+Preflight: 13단계 ALL PASS (DEV_PROTOCOL_v3.0, G_CONNECTIVITY 고립 0 / 85패키지)
+
+V745-PATCH1 (2026-06-04, 적합성 정합):
+  - requirements.txt + pyproject: RestrictedPython>=6.0 의존성 선언 (plugins 샌드박스)
+  - tools/test_inventory.json 재생성 (10788 tests, source_hash 갱신)
+  - .github/workflows/biweekly_train.yml 복원 (V625 격주 재학습)
+  - G77 cost-control 릴리즈 게이트/Phase C Exit 집계 ADR-145 정합
+  - test_v678/test_v694 노후 단언 ADR-145/동적버전 갱신

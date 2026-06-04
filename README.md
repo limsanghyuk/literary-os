@@ -4,8 +4,8 @@
 > AI 기반 장편 소설·드라마 시나리오 생성 시스템
 
 [![Version](https://img.shields.io/badge/version-13.0.0-blue)]()
-[![Tests](https://img.shields.io/badge/tests%20(V730)-9766-yellow)]()
-[![Gates](https://img.shields.io/badge/gates%20(V730)-88%2F88-yellow)]()
+[![Tests](https://img.shields.io/badge/tests%20(V745)-10788-brightgreen)]()
+[![Gates](https://img.shields.io/badge/gates%20(V745)-97-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 

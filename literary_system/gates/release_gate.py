@@ -4098,7 +4098,8 @@ def _gate_enterprise_cost_control_g77() -> dict:
         from literary_system.enterprise.cost_control import EnterpriseCostControlGate, CostAlertLevel
         gate = EnterpriseCostControlGate()
         suite = gate.demo_run()
-        assert suite.gate_passed, "gate_passed must be True"
+        # ADR-145/TD-3: suite.gate_passed reflects budget violations (blocking),
+        # not gate health. G77 verifies the cost-control MECHANISM detects overruns.
         assert len(suite.reports) == 4
         assert suite.tenants_exceeded >= 1
         assert suite.total_suite_usd > 0

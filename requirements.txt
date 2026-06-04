@@ -20,3 +20,6 @@ websockets>=12.0
 
 # 유틸리티
 python-multipart>=0.0.9
+
+# 플러그인 샌드박스 (V713 SP-D.3, plugin_sandbox.py 필수)
+RestrictedPython>=6.0

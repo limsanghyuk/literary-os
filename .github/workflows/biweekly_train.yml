@@ -1,0 +1,68 @@
+name: biweekly-train
+
+# V625 — 격주(매월 1·15일) 재학습 파이프라인.
+# RunPod 가용성 확인 → 가용 시 RunPod, 불가 시 Lambda H100 폴백 → 학습 →
+# post-train-gate(release_gate) 검증 → Slack 알림.
+# GPU SLO(ADR-051): 재학습 최소 간격 7일, 월 최대 $200.
+
+on:
+  schedule:
+    # 매월 1일과 15일 03:00 UTC (격주/biweekly)
+    - cron: "0 3 1,15 * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  biweekly-train:
+    runs-on: ubuntu-latest
+    env:
+      MONTHLY_GPU_BUDGET_USD: "200"
+      MIN_RETRAIN_INTERVAL_DAYS: "7"
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      RUNPOD_API_KEY: ${{ secrets.RUNPOD_API_KEY }}
+      LAMBDA_API_KEY: ${{ secrets.LAMBDA_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Check RunPod availability
+        id: runpod
+        run: |
+          if python tools/check_runpod_availability.py; then
+            echo "backend=runpod" >> "$GITHUB_OUTPUT"
+          else
+            echo "backend=lambda_h100" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Train (RunPod primary, Lambda H100 fallback)
+        run: |
+          BACKEND="${{ steps.runpod.outputs.backend }}"
+          echo "Selected training backend: ${BACKEND}"
+          if [ "${BACKEND}" = "lambda_h100" ]; then
+            echo "RunPod unavailable - falling back to Lambda H100"
+          fi
+          python -m literary_system.finetune.biweekly_train --backend "${BACKEND}"
+
+      - name: Post-train gate (release_gate)
+        id: posttrain
+        run: |
+          # post-train-gate: 재학습 산출물이 릴리즈 게이트를 통과해야 승급 가능
+          python tools/run_release_gate.py
+
+      - name: Notify Slack (result)
+        if: always()
+        run: |
+          python tools/notify_slack.py \
+            --status "${{ job.status }}" \
+            --message "biweekly-train (${{ steps.runpod.outputs.backend }}) -> post-train-gate=${{ steps.posttrain.outcome }}"
