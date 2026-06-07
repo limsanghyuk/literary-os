@@ -1,0 +1,271 @@
+{
+ "scenes": [
+  {
+   "scene_id": "s01",
+   "present_characters": [
+    "성기훈",
+    "빚쟁이들",
+    "의문의 남자"
+   ],
+   "location": "지하철역",
+   "beat": "벼랑 끝에 몰린 기훈이 딱지치기 제안을 받고 명함을 받음.",
+   "subplot_refs": [
+    "sp1"
+   ],
+   "macro_phase": "발단",
+   "target_emotion": "절망, 호기심",
+   "scene_features": {
+    "conflict_intensity": 0.6,
+    "scene_energy_ratio": 0.4,
+    "motif_residue_score": 0.2,
+    "curiosity_gradient": 0.8
+   }
+  },
+  {
+   "scene_id": "s02",
+   "present_characters": [
+    "성기훈",
+    "조상우",
+    "강새벽",
+    "알리",
+    "참가자들",
+    "프론트맨"
+   ],
+   "location": "게임장 내부",
+   "beat": "참가자들이 게임에 참여하고 첫 번째 게임 '무궁화 꽃이 피었습니다'에서 대규모 탈락이 발생하며 공포를 경험함.",
+   "subplot_refs": [
+    "sp1",
+    "sp2",
+    "sp3"
+   ],
+   "macro_phase": "상승",
+   "target_emotion": "공포, 혼란",
+   "scene_features": {
+    "conflict_intensity": 0.9,
+    "scene_energy_ratio": 0.9,
+    "motif_residue_score": 0.7,
+    "curiosity_gradient": 0.6
+   }
+  },
+  {
+   "scene_id": "s03",
+   "present_characters": [
+    "성기훈",
+    "조상우",
+    "강새벽",
+    "알리",
+    "오일남",
+    "참가자들"
+   ],
+   "location": "숙소, 게임장",
+   "beat": "참가자들이 팀을 이루고 '줄다리기' 게임에서 협력과 배신을 겪으며 생존의지를 다짐.",
+   "subplot_refs": [
+    "sp1",
+    "sp2",
+    "sp3",
+    "sp4"
+   ],
+   "macro_phase": "상승",
+   "target_emotion": "긴장, 연대, 배신감",
+   "scene_features": {
+    "conflict_intensity": 0.8,
+    "scene_energy_ratio": 0.7,
+    "motif_residue_score": 0.5,
+    "curiosity_gradient": 0.5
+   }
+  },
+  {
+   "scene_id": "s04",
+   "present_characters": [
+    "성기훈",
+    "조상우",
+    "강새벽",
+    "알리",
+    "오일남"
+   ],
+   "location": "구슬치기 게임장",
+   "beat": "각자의 파트너와 '구슬치기' 게임을 하며 깊은 감정적 유대와 비극적인 이별을 경험함.",
+   "subplot_refs": [
+    "sp1",
+    "sp2",
+    "sp3",
+    "sp4"
+   ],
+   "macro_phase": "위기",
+   "target_emotion": "슬픔, 절망, 죄책감",
+   "scene_features": {
+    "conflict_intensity": 0.9,
+    "scene_energy_ratio": 0.8,
+    "motif_residue_score": 0.9,
+    "curiosity_gradient": 0.4
+   }
+  },
+  {
+   "scene_id": "s05",
+   "present_characters": [
+    "성기훈",
+    "조상우",
+    "강새벽",
+    "VIP들",
+    "프론트맨"
+   ],
+   "location": "유리다리 게임장",
+   "beat": "VIP들이 게임을 관람하는 가운데, '유리다리 건너기' 게임에서 극한의 선택과 희생이 발생함.",
+   "subplot_refs": [
+    "sp1",
+    "sp2",
+    "sp3",
+    "sp5"
+   ],
+   "macro_phase": "위기",
+   "target_emotion": "공포, 분노, 무력감",
+   "scene_features": {
+    "conflict_intensity": 1.0,
+    "scene_energy_ratio": 1.0,
+    "motif_residue_score": 0.8,
+    "curiosity_gradient": 0.3
+   }
+  },
+  {
+   "scene_id": "s06",
+   "present_characters": [
+    "성기훈",
+    "조상우",
+    "강새벽"
+   ],
+   "location": "숙소",
+   "beat": "최후의 3인만이 남은 상황에서 상우가 새벽을 살해하며 인간성의 파괴를 보여줌.",
+   "subplot_refs": [
+    "sp1",
+    "sp2",
+    "sp3"
+   ],
+   "macro_phase": "절정",
+   "target_emotion": "충격, 배신감, 허무함",
+   "scene_features": {
+    "conflict_intensity": 0.9,
+    "scene_energy_ratio": 0.7,
+    "motif_residue_score": 0.9,
+    "curiosity_gradient": 0.2
+   }
+  },
+  {
+   "scene_id": "s07",
+   "present_characters": [
+    "성기훈",
+    "조상우"
+   ],
+   "location": "오징어 게임장",
+   "beat": "마지막 '오징어 게임'에서 기훈과 상우가 처절하게 싸우고, 상우가 자살하며 기훈이 최종 승자가 됨.",
+   "subplot_refs": [
+    "sp1",
+    "sp2"
+   ],
+   "macro_phase": "해소",
+   "target_emotion": "비애, 허탈감, 승리감",
+   "scene_features": {
+    "conflict_intensity": 1.0,
+    "scene_energy_ratio": 1.0,
+    "motif_residue_score": 1.0,
+    "curiosity_gradient": 0.1
+   }
+  },
+  {
+   "scene_id": "s08",
+   "present_characters": [
+    "성기훈",
+    "오일남(회상)",
+    "프론트맨(회상)"
+   ],
+   "location": "현실 세계, 공항",
+   "beat": "상금을 얻었으나 공허함을 느끼던 기훈이 오일남의 정체를 알게 되고, 시스템을 부수기 위한 각성을 함.",
+   "subplot_refs": [
+    "sp1",
+    "sp5"
+   ],
+   "macro_phase": "잔향",
+   "target_emotion": "분노, 각성, 결의",
+   "scene_features": {
+    "conflict_intensity": 0.7,
+    "scene_energy_ratio": 0.6,
+    "motif_residue_score": 0.9,
+    "curiosity_gradient": 0.9
+   }
+  }
+ ],
+ "foreshadow_pairs": [
+  {
+   "id": "f1",
+   "plant_scene": "s01",
+   "plant": "기훈이 딱지치기에서 계속 빨간색 딱지를 선택함.",
+   "payoff_scene": "s08",
+   "payoff": "기훈이 붉은 머리로 염색하고 시스템에 맞서기로 결심함."
+  },
+  {
+   "id": "f2",
+   "plant_scene": "s02",
+   "plant": "오일남이 첫 게임에서 아이처럼 즐거워하며 웃는 모습.",
+   "payoff_scene": "s08",
+   "payoff": "오일남이 게임의 주최자이자 VIP 중 한 명이었음이 밝혀짐."
+  },
+  {
+   "id": "f3",
+   "plant_scene": "s03",
+   "plant": "상우가 팀원들에게 냉정하게 조언하며 승리를 위해 수단과 방법을 가리지 않는 모습.",
+   "payoff_scene": "s06",
+   "payoff": "상우가 새벽을 살해하고, 마지막 게임에서 자살을 선택하며 극단적인 이기심과 절망을 보여줌."
+  },
+  {
+   "id": "f4",
+   "plant_scene": "s04",
+   "plant": "새벽이 북한에 있는 가족을 데려오기 위해 돈이 필요하다고 말함.",
+   "payoff_scene": "s06",
+   "payoff": "새벽이 죽음을 맞이하며 가족과의 재회 꿈이 좌절됨."
+  },
+  {
+   "id": "f5",
+   "plant_scene": "s02",
+   "plant": "참가자들이 게임 중 사망할 경우 상금이 늘어나는 것을 알게 됨.",
+   "payoff_scene": "s07",
+   "payoff": "최후의 1인만이 상금을 독차지하게 되는 잔혹한 시스템이 완성됨."
+  }
+ ],
+ "subplots": [
+  {
+   "id": "sp1",
+   "name": "기훈의 인간성 회복과 각성",
+   "characters": [
+    "성기훈"
+   ]
+  },
+  {
+   "id": "sp2",
+   "name": "상우의 몰락과 인간성 상실",
+   "characters": [
+    "조상우"
+   ]
+  },
+  {
+   "id": "sp3",
+   "name": "새벽의 생존과 가족 재회",
+   "characters": [
+    "강새벽"
+   ]
+  },
+  {
+   "id": "sp4",
+   "name": "오일남의 정체",
+   "characters": [
+    "오일남"
+   ]
+  },
+  {
+   "id": "sp5",
+   "name": "VIP들의 존재와 시스템의 본질",
+   "characters": [
+    "VIP들",
+    "프론트맨"
+   ]
+  }
+ ]
+}
