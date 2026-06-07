@@ -1,0 +1,19 @@
+{
+ "reweight": {
+  "old_rho": 0.399,
+  "new_rho": 0.587,
+  "weights": {
+   "conflict_intensity": 0.119,
+   "scene_energy_ratio": 0.191,
+   "motif_residue_score": 0.264,
+   "curiosity_gradient": 0.055,
+   "reader_surface_score": 0.199,
+   "arc_tension_score": 0.173
+  }
+ },
+ "drse_embed": {
+  "n": 17,
+  "mean_cos": 0.71,
+  "tfidf_mean": 0.024
+ }
+}
