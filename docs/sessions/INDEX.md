@@ -1,40 +1,32 @@
 # docs/sessions 마스터 색인 (INDEX)
-집 로컬·미래 협업자가 이 파일 하나로 탐색. 자동생성+큐레이션.
-**루트 80개 문서** + preflight(26) + _archive(2) · 갱신 2026-06-07
+이 파일 하나로 전체 탐색. 갱신 2026-06-07.
+**루트 87개** + preflight(26) + _archive(2)
 
 ---
-## 0. 시작은 여기 (정본 읽는 순서)
-| 순서 | 문서 |
-|---|---|
-| ★ 최신 종합 | 2026-06-07_home_handoff_v3.md (집 이어받기 정본) |
-| 아키텍처 | 2026-06-02_agentic_orchestration_consensus_v1.docx |
-| 기획 | 2026-06-02_phase_efg_planning_report_v1.docx / pre_phaseE_agenda_map_v1.docx |
-| 데이터 | 2026-06-05_data_model_v2_layered_blueprint.docx / 2026-06-07_data_architecture_upgrade_v1.docx / 2026-06-07_data_sourcing_method.md |
-| 공식 검증 | 2026-06-06_formula_validation_roadmap_v1.docx / 2026-06-07_formula_validation_followup_results.md |
-| 상태/갭 | 2026-06-05_status_priorities_gaps.md |
+## 0. 시작은 여기 (정본 순서)
+1. **2026-06-07_MASTER_synthesis_priorities.md** — 전체 종합·우선순위(현 시점 정본)
+2. 2026-06-07_home_handoff_v3.md — 집 이어작업
+3. 2026-06-07_P1-P5_completeness_audit.md — 완성도·보강계획
+4. 2026-06-02_agentic_orchestration_consensus_v1.docx — 아키텍처
+5. 데이터: 2026-06-05_data_model_v2 / 2026-06-07_data_architecture_upgrade / data_sourcing_method / reference_based_validation_protocol
 
-## 1. 전체 카탈로그 (분류별)
+## 1. 분류 카탈로그
 
-### 세션 기록·핸드오프·플레이북 (10)
+### ★ 종합·진입(먼저 읽기) (5)
 | 파일 | 크기 |
 |---|---|
-| 2026-05-19_company_github_strategy.docx | 381KB |
-| 2026-05-19_home_proposals_v2_handoff.md | 2KB |
-| 2026-05-19_home_session_summary.md | 1KB |
-| 2026-05-19_home_session_v575.md | 1KB |
-| 2026-05-19_home_v573_gitnexus_session.md | 1KB |
-| 2026-06-02_home_continuation_playbook.md | 7KB |
-| 2026-06-02_session_summary.md | 4KB |
 | 2026-06-05_status_priorities_gaps.md | 5KB |
+| 2026-06-07_MASTER_synthesis_priorities.md | 9KB |
+| 2026-06-07_P1-P5_completeness_audit.md | 3KB |
 | 2026-06-07_home_handoff_v2.md | 3KB |
 | 2026-06-07_home_handoff_v3.md | 4KB |
 
-### 아키텍처(에이전트 오케스트레이션) (1)
+### 아키텍처 (1)
 | 파일 | 크기 |
 |---|---|
 | 2026-06-02_agentic_orchestration_consensus_v1.docx | 17KB |
 
-### 코어 알고리즘·공식 검증 (11)
+### 코어 알고리즘·공식 검증 (15)
 | 파일 | 크기 |
 |---|---|
 | 2026-06-05_generation_orchestration_algorithm_v1.docx | 16KB |
@@ -48,8 +40,12 @@
 | 2026-06-06_narrative_analyzer_l1_algorithm_v1.docx | 13KB |
 | 2026-06-06_rag_context_builder_algorithm_v1.docx | 14KB |
 | 2026-06-07_formula_validation_followup_results.md | 1KB |
+| 2026-06-07_refcheck_POC_results.md | 1KB |
+| 2026-06-07_reference_based_validation_protocol.md | 3KB |
+| 2026-06-07_reweight_heldout_CV_results.md | 1KB |
+| 2026-06-07_tristore_harness_integration.md | 1KB |
 
-### 데이터(모델·코퍼스·소싱·트라이스토어) (8)
+### 데이터(모델·코퍼스·소싱·트라이스토어) (9)
 | 파일 | 크기 |
 |---|---|
 | 2026-06-02_corpus_pipeline_blueprint_v1.docx | 17KB |
@@ -58,6 +54,7 @@
 | 2026-06-06_pilot_L2_DRSE_results.md | 1KB |
 | 2026-06-07_data_architecture_upgrade_v1.docx | 15KB |
 | 2026-06-07_data_sourcing_method.md | 2KB |
+| 2026-06-07_gold_candidate_availability.md | 2KB |
 | 2026-06-07_pathB_legal_script_procedure.md | 1KB |
 | 2026-06-07_tristore_poc_results.md | 1KB |
 
@@ -135,9 +132,22 @@
 | literary_os_v588_v595_phase_a_blueprint.docx | 25KB |
 | literary_os_v588_v595_phase_a_proposal.docx | 23KB |
 
-### 하위 폴더
-- preflight/ (26) · _archive/ (2)
+### 세션 기록·핸드오프 (6)
+| 파일 | 크기 |
+|---|---|
+| 2026-05-19_company_github_strategy.docx | 381KB |
+| 2026-05-19_home_proposals_v2_handoff.md | 2KB |
+| 2026-05-19_home_session_summary.md | 1KB |
+| 2026-05-19_home_v573_gitnexus_session.md | 1KB |
+| 2026-06-02_home_continuation_playbook.md | 7KB |
+| 2026-06-02_session_summary.md | 4KB |
 
-### 코드·데이터(루트)
-- tools/: formula_validation/harness.py · tri_store/build_tristore.py · corpus_migrate.py · run_formula_pilot.py
-- data/corpus_seed/: corpus_seed_L0.json(178편) · L1/L2 POC · 검증·5편 씬셋
+### 기타 (1)
+| 파일 | 크기 |
+|---|---|
+| 2026-05-19_home_session_v575.md | 1KB |
+
+### 하위·코드
+- preflight/(26) · _archive/(2)
+- tools/: formula_validation/(harness·heldout_cv·integrate_tristore·refcheck_oai) · tri_store/build_tristore · corpus_migrate · run_formula_pilot
+- data/corpus_seed/: L0 178편 · POC · 검증 씬셋(3·5편)
