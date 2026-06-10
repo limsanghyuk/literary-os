@@ -1,4 +1,4 @@
-# Literary OS — 개발자 컨텍스트 (V730 / v12.4.0)
+# Literary OS — 개발자 컨텍스트 (V745 / v13.0.0)
 
 ---
 
@@ -50,18 +50,19 @@ V(N) 개발 완료 후, V(N+1) 시작 전:
 
 ---
 
-## 현재 상태 (V730 기준)
+## 현재 상태 (V745 기준)
 
 | 항목 | 값 |
 |------|----|
-| 버전 | v12.4.0 |
-| 개발 이터레이션 | V730 (SP-D.3 완전 종료) |
-| 릴리즈 게이트 | **88/88 PASS** |
-| 테스트 | **9,766+ PASS** |
-| 고립 패키지 | **0개** (83개 전체 연결) |
-| Preflight 단계 | **13단계** (DEV_PROTOCOL_v3.0) |
-| 최신 ADR | ADR-191 (SP-D.3 Exit Gate) |
-| 현재 Phase | Phase D SP-D.3 완전 종료 → **SP-D.4 진입 대기** |
+| 버전 | v13.0.0 |
+| 개발 이터레이션 | V745 (Phase D 완전 종료 · Phase D Exit G95) |
+| 릴리즈 게이트 | **97 등록** · Phase D Exit G95 8/8 PASS |
+| 테스트 | **10,788 PASS** |
+| 고립 패키지 | **0개** (85개 전체 연결, ADR-128) |
+| Preflight 단계 | **13단계** (DEV_PROTOCOL_v3.0, RULE-0) |
+| 최신 ADR | ADR-208 |
+| 현재 Phase | Phase D 완전 종료 → **Phase E 기획 중** (검증 우선 · LLM-0→2.5) |
+| 정본 진입 | docs/sessions/INDEX.md → MASTER_synthesis_priorities → home_handoff_v3 |
 | GitHub | https://github.com/limsanghyuk/literary-os |
 
 ---

@@ -48,11 +48,13 @@ This project is indexed by GitNexus as **release_v571** (28964 symbols, 56087 re
 
 작업 시작 전 반드시 읽고 컨텍스트에 포함:
 
-1. `docs/sessions/2026-05-25_v621_v630_phase_b_main_handoff_v3.md`
-2. `docs/sessions/literary_os_v621_v630_phase_b_blueprint_v3.md`
-3. `docs/sessions/literary_os_v621_v630_phase_b_blueprint_v3.docx`
+1. `docs/sessions/INDEX.md` (전체 색인·정본 순서)
+2. `docs/sessions/2026-06-07_MASTER_synthesis_priorities.md` (현 시점 종합·우선순위)
+3. `docs/sessions/2026-06-07_home_handoff_v3.md` (이어작업 정본)
+4. `CLAUDE.md` (RULE-0) · `docs/workflow/DEV_PROTOCOL_v3.0.md`
 
-**3개 파일이 컨텍스트에 없으면 절대 코드 작성 금지.**
+**위 파일이 컨텍스트에 없으면 절대 코드 작성 금지.**
+(주: GitNexus 인덱스는 release_v571 기준 — V745 재인덱싱 `npx gitnexus analyze` 권장.)
 
 docx 추출:
 ```bash

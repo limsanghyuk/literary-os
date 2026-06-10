@@ -11,7 +11,7 @@
 
 ---
 
-> ⚠️ **수치 주의**: 버전은 V745 / v13.0.0(태그 권위). 단 tests·gates 카운트는 V730 기준이며 V745 재생성 대기 상태(SP-E.0 TD-E0-2). 최신값은 `python3 tools/run_release_gate.py` 및 `python3 tools/generate_test_inventory.py`로 확인.
+> **현재 상태**: V745 / v13.0.0 · 릴리즈 게이트 97 · 테스트 10,788 · Phase D 완전 종료(G95) → Phase E 기획 중. 재검증: `python3 tools/run_release_gate.py` · `python3 tools/generate_test_inventory.py`.
 
 ## 빠른 시작
 
@@ -29,7 +29,7 @@ python3 tools/run_preflight.py
 
 # 릴리즈 게이트 확인
 python3 tools/run_release_gate.py
-# → RELEASE GATE PASS: 88/88 gates passed
+# → RELEASE GATE PASS: 97 gates passed
 ```
 
 ---
@@ -44,7 +44,7 @@ literary_system/
 ├── sdk/          # PublicSDK v1.0 (SP-C.3) — analyze/repair/predict/generate
 ├── ensemble/     # AgentCoordinator (Director→Script→Critic→Editor, SP-C.2)
 ├── agents/       # 멀티에이전트 앙상블 + MultiAgent Coordination (SP-D.2)
-├── gates/        # 릴리즈 게이트 88종 (G01~G89 + SP-D3-EXIT)
+├── gates/        # 릴리즈 게이트 97종 (G01~G95 + SP-D Exit)
 ├── plugins/      # Plugin Registry + Sandbox + Lifecycle (SP-D.3)
 ├── security/     # ZeroTrust Token + TenantAuthority + Middleware + AuditLog (SP-D.3)
 ├── chaos/        # Chaos Engineering: Engine/Injector/Scenario/CircuitBreaker/Runner (SP-D.3)
