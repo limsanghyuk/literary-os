@@ -49,9 +49,9 @@ REGISTRY: dict[str, FormulaEntry]   # 1차 등록: physics 5(fitness+4계수)·D
 STAGES = {
  1: dict(gt='quality_proxy',  metric='spearman', tau=0.40, min_n=30),
  2: dict(gt='plant_payoff',   metric='spearman', tau=0.40, min_n=20),
- 3: dict(gt='payoff_actual',  metric='f1',       tau=0.60, min_n=1_work),   # P1-P5 보강 §4
+ 3: dict(gt='payoff_actual',  metric='f1',       tau=0.60, min_works=1),    # P1-P5 보강 §4
  4: dict(gt='panel_median',   metric='spearman', tau=0.40, min_n=30),
- 5: dict(gt='labeled_curves', metric='dtw_pct',  tau=0.30, min_n=2_works),
+ 5: dict(gt='labeled_curves', metric='dtw_pct',  tau=0.30, min_works=2),
  6: dict(gt='blind_pref',     metric='spearman', tau=0.50, min_n=30),
 }
 
