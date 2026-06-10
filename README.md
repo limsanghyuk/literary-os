@@ -84,7 +84,7 @@ literary_system/
 
 ---
 
-## 릴리즈 게이트 — 88/88 PASS
+## 릴리즈 게이트 — 97 PASS
 
 ```python
 from literary_system.gates.release_gate import GATES
@@ -119,7 +119,7 @@ pytest tests/ -q  # → 9766 PASS
 python3 tools/run_preflight.py  # → 13단계 ALL PASS
 
 # 릴리즈 게이트
-python3 tools/run_release_gate.py  # → 88/88 PASS
+python3 tools/run_release_gate.py  # → 97 gates PASS
 ```
 
 ---
