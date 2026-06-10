@@ -1,6 +1,6 @@
 # docs/sessions 마스터 색인 (INDEX)
 이 파일 하나로 전체 탐색. 갱신 2026-06-10.
-**루트 91개** + preflight(26) + _archive(2)
+**루트 92개** + preflight(26) + _archive(2)
 
 ---
 ## 0. 시작은 여기 (정본 순서)
@@ -8,11 +8,12 @@
 2. **2026-06-10_P1-P5_reinforcement_architect_x_compiler_v1.md** — P1~P5 보강+장기 진화 로드맵(아키텍트×컴파일러 교차)
 3. **2026-06-10_phase_EFG_reinforcement_formula_agent_ui_v1.md** — EFG 보강: 공식 5역할×에이전트 결합(LLM-0→2.5+)·UI 5화면·진보 4제안
 4. **2026-06-10_sonnet_dev_handoff_L4_workpackages_v1.md** — 저연산(Sonnet) 개발 실행 명세: WP-0~4(V746~V760)·DoD·에스컬레이션(개발 착수점)
-5. 2026-06-10_comparative_evaluation_literary_os_vs_field.md — 객관 비교평가: 7종(상용4·연구3) 10축 교차 (최신)
-6. 2026-06-07_home_handoff_v3.md — 집 이어작업
-7. 2026-06-07_P1-P5_completeness_audit.md — 완성도·보강계획
-8. 2026-06-02_agentic_orchestration_consensus_v1.docx — 아키텍처
-9. 데이터: 2026-06-05_data_model_v2 / 2026-06-07_data_architecture_upgrade / data_sourcing_method / reference_based_validation_protocol
+5. 2026-06-10_comparative_evaluation_literary_os_vs_field.md — 객관 비교평가: 7종 10축 교차
+6. **2026-06-10_mode2_pilot_unsu_results.md** — Mode2 첫 실측(PD 명작): H1 FAIL·H2 PASS·진단 (최신)
+7. 2026-06-07_home_handoff_v3.md — 집 이어작업
+8. 2026-06-07_P1-P5_completeness_audit.md — 완성도·보강계획
+9. 2026-06-02_agentic_orchestration_consensus_v1.docx — 아키텍처
+10. 데이터: 2026-06-05_data_model_v2 / 2026-06-07_data_architecture_upgrade / data_sourcing_method / reference_based_validation_protocol
 
 ## 1. 분류 카탈로그
 
