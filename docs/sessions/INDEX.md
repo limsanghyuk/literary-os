@@ -1,14 +1,15 @@
 # docs/sessions 마스터 색인 (INDEX)
-이 파일 하나로 전체 탐색. 갱신 2026-06-07.
-**루트 87개** + preflight(26) + _archive(2)
+이 파일 하나로 전체 탐색. 갱신 2026-06-10.
+**루트 88개** + preflight(26) + _archive(2)
 
 ---
 ## 0. 시작은 여기 (정본 순서)
-1. **2026-06-07_MASTER_synthesis_priorities.md** — 전체 종합·우선순위(현 시점 정본)
-2. 2026-06-07_home_handoff_v3.md — 집 이어작업
-3. 2026-06-07_P1-P5_completeness_audit.md — 완성도·보강계획
-4. 2026-06-02_agentic_orchestration_consensus_v1.docx — 아키텍처
-5. 데이터: 2026-06-05_data_model_v2 / 2026-06-07_data_architecture_upgrade / data_sourcing_method / reference_based_validation_protocol
+1. **2026-06-07_MASTER_synthesis_priorities.md** — 전체 종합·우선순위(정본)
+2. **2026-06-10_P1-P5_reinforcement_architect_x_compiler_v1.md** — P1~P5 보강+장기 진화 로드맵(아키텍트×컴파일러 교차, 최신)
+3. 2026-06-07_home_handoff_v3.md — 집 이어작업
+4. 2026-06-07_P1-P5_completeness_audit.md — 완성도·보강계획
+5. 2026-06-02_agentic_orchestration_consensus_v1.docx — 아키텍처
+6. 데이터: 2026-06-05_data_model_v2 / 2026-06-07_data_architecture_upgrade / data_sourcing_method / reference_based_validation_protocol
 
 ## 1. 분류 카탈로그
 
@@ -17,6 +18,7 @@
 |---|---|
 | 2026-06-05_status_priorities_gaps.md | 5KB |
 | 2026-06-07_MASTER_synthesis_priorities.md | 9KB |
+| 2026-06-10_P1-P5_reinforcement_architect_x_compiler_v1.md | 14KB |
 | 2026-06-07_P1-P5_completeness_audit.md | 3KB |
 | 2026-06-07_home_handoff_v2.md | 3KB |
 | 2026-06-07_home_handoff_v3.md | 4KB |
