@@ -13,8 +13,10 @@
 7. 2026-06-11_longform_measurement_architect_x_compiler_v1.md — 장기 실측: R 변별 부재·arc 게임화·NKG/DRSE 미배선
 8. 2026-06-11_followup_pairwise_literariness_results.md — 절대 채점 붕괴·쌍대 11/11 발견
 9. 2026-06-11_three_expert_deliberation_pairwise_redesign.md — 3인 심의: 쌍대 재설계 + 실험 H 11/11
-10. **2026-06-11_longform_episode_style_antillm_results.md** — 장편 1편 실측: 문체기능 달성 6/6·LLM심판 화려체 편향·안티LLM 커버리지 공백 (최신)
-11. 2026-06-07_home_handoff_v3.md — 집 이어작업
+10. 2026-06-11_longform_episode_style_antillm_results.md — 장편 1편 실측: 문체 6/6·심판 편향·안티LLM 공백
+11. **2026-06-11_pairwise_redesign_proposal_blueprint_v1.md** — 쌍대 재설계 정식 제안서+설계도(WP-4b 집행 명세, 결정요청 D-PW1~3)
+12. **2026-06-11_session_synthesis_validation_week.md** — 검증 주간 종합(방식·체인·발견5·다음) (최신 정리)
+13. 2026-06-07_home_handoff_v3.md — 집 이어작업
 8. 2026-06-07_P1-P5_completeness_audit.md — 완성도·보강계획
 9. 2026-06-02_agentic_orchestration_consensus_v1.docx — 아키텍처
 10. 데이터: 2026-06-05_data_model_v2 / 2026-06-07_data_architecture_upgrade / data_sourcing_method / reference_based_validation_protocol
