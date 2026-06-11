@@ -4,7 +4,8 @@
 
 ---
 ## 0. 시작은 여기 (정본 순서)
-1. **2026-06-07_MASTER_synthesis_priorities.md** — 전체 종합·우선순위(정본)
+0. **2026-06-11_unified_priority_map_P0P5_EFG_sonnet.md** — ★통합 지도(P0~P5×EFG·실행큐·Sonnet 사용법) — 최우선 진입점
+1. 2026-06-07_MASTER_synthesis_priorities.md — 전체 종합·우선순위(06-07 정본)
 2. **2026-06-10_P1-P5_reinforcement_architect_x_compiler_v1.md** — P1~P5 보강+장기 진화 로드맵(아키텍트×컴파일러 교차)
 3. **2026-06-10_phase_EFG_reinforcement_formula_agent_ui_v1.md** — EFG 보강: 공식 5역할×에이전트 결합(LLM-0→2.5+)·UI 5화면·진보 4제안
 4. **2026-06-10_sonnet_dev_handoff_L4_workpackages_v1.md** — 저연산(Sonnet) 개발 실행 명세: WP-0~4(V746~V760)·DoD·에스컬레이션(개발 착수점)
@@ -16,7 +17,7 @@
 10. 2026-06-11_longform_episode_style_antillm_results.md — 장편 1편 실측: 문체 6/6·심판 편향·안티LLM 공백
 11. **2026-06-11_pairwise_redesign_proposal_blueprint_v1.md** — 쌍대 재설계 정식 제안서+설계도(WP-4b 집행 명세, 결정요청 D-PW1~3)
 12. 2026-06-11_session_synthesis_validation_week.md — 검증 주간 종합(방식·체인·발견5·다음)
-13. **2026-06-11_multiwork_pd_replication_results.md** — 다작품 재현(3작가 28/29·27/29)+쌍대↔기존 공식 관계 정본 (최신)
+13. 2026-06-11_multiwork_pd_replication_results.md — 다작품 재현(3작가 28/29·27/29)+공식 관계 정본
 14. 2026-06-07_home_handoff_v3.md — 집 이어작업
 8. 2026-06-07_P1-P5_completeness_audit.md — 완성도·보강계획
 9. 2026-06-02_agentic_orchestration_consensus_v1.docx — 아키텍처
