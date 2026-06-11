@@ -5,6 +5,7 @@
 ---
 ## 0. 시작은 여기 (정본 순서)
 0. **2026-06-11_unified_priority_map_P0P5_EFG_sonnet.md** — ★통합 지도(P0~P5×EFG·실행큐·Sonnet 사용법) — 최우선 진입점
+0b. **2026-06-11_generation_core_L4_spec_v1.md** — 생성 본체 7패스 L4(WP-5a~c, V764~770) — 빈칸1 해소
 1. 2026-06-07_MASTER_synthesis_priorities.md — 전체 종합·우선순위(06-07 정본)
 2. **2026-06-10_P1-P5_reinforcement_architect_x_compiler_v1.md** — P1~P5 보강+장기 진화 로드맵(아키텍트×컴파일러 교차)
 3. **2026-06-10_phase_EFG_reinforcement_formula_agent_ui_v1.md** — EFG 보강: 공식 5역할×에이전트 결합(LLM-0→2.5+)·UI 5화면·진보 4제안
