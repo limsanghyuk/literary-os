@@ -53,6 +53,7 @@
 | 2026-06-07_reference_based_validation_protocol.md | 3KB |
 | 2026-06-07_reweight_heldout_CV_results.md | 1KB |
 | 2026-06-07_tristore_harness_integration.md | 1KB |
+| 2026-06-11_longform_measurement_architect_x_compiler_v1.md | 7KB |
 
 ### 데이터(모델·코퍼스·소싱·트라이스토어) (9)
 | 파일 | 크기 |
