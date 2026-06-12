@@ -7,6 +7,7 @@ LLM 호출 0회 — 완전 로컬.
 from __future__ import annotations
 
 import json
+import sys
 import math
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -102,7 +103,7 @@ class Harness:
 
         harness = Harness()
         report  = harness.run(stage_id=1, db_path="data/corpus_seed/scenes_5works.jsonl")
-        print(report.to_json())
+        sys.stdout.write(report.to_json() + "\n")
     """
 
     def __init__(self, registry: Optional[Dict[str, Any]] = None) -> None:

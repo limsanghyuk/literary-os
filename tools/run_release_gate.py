@@ -4,6 +4,7 @@ Literary OS — run_release_gate.py (v13.0.1, ADR-128/209)
 G_PREFLIGHT:           Preflight 로그 없으면 전체 실행 블록
 G_CONNECTIVITY:        완전 고립 패키지 2버전 연속 존재 시 FAIL
 G_INTEGRITY_MANIFEST:  SHA256SUMS + test_inventory 자기검증 (ADR-209, WP-0)
+G_NO_ABSOLUTE_REWARD:  rlhf/finetune/ 절대 점수 보상 패턴 차단 (ADR-211, WP-4b)
 """
 from __future__ import annotations
 
@@ -99,6 +100,40 @@ def _check_connectivity() -> dict:
                    else ("경고: 1버전 고립 중" if isolated else "OK")),
     }
 
+
+
+# ── G_NO_ABSOLUTE_REWARD 검사 (ADR-211, WP-4b) ──────────────────────────────
+
+def _check_no_absolute_reward() -> dict:
+    """
+    G_NO_ABSOLUTE_REWARD: rlhf/ + finetune/ 경로에서
+    reward 변수에 절대 float 리터럴 직접 할당 패턴 탐지.
+    주석 '# G_NO_ABSOLUTE_REWARD_OK'로 예외 허용.
+    """
+    violations: list = []
+    scan_dirs = [SYS_ROOT / "rlhf", SYS_ROOT / "finetune"]
+    bad_pattern = re.compile(r"\breward\s*=\s*[0-9]+\.?[0-9]*\b")
+
+    for d in scan_dirs:
+        if not d.exists():
+            continue
+        for f in sorted(d.rglob("*.py")):
+            try:
+                text = f.read_text(errors="ignore")
+            except OSError:
+                continue
+            for lineno, line in enumerate(text.splitlines(), 1):
+                if bad_pattern.search(line) and "# G_NO_ABSOLUTE_REWARD_OK" not in line:
+                    violations.append(
+                        f"{f.relative_to(SYS_ROOT.parent) if f.is_relative_to(SYS_ROOT.parent) else f.name}:{lineno}: {line.strip()[:80]}"
+                    )
+
+    return {
+        "pass": len(violations) == 0,
+        "gate": "G_NO_ABSOLUTE_REWARD",
+        "violations": violations,
+        "reason": "OK" if not violations else f"위반 {len(violations)}건",
+    }
 
 # ── G_INTEGRITY_MANIFEST 검사 ────────────────────────────────────────────────
 
@@ -330,6 +365,7 @@ def main() -> None:
         "G_PREFLIGHT": {**pf, "pass": True},
         "G_CONNECTIVITY": conn,
         "G_INTEGRITY_MANIFEST": manifest,
+        "G_NO_ABSOLUTE_REWARD": _check_no_absolute_reward(),
         "preflight_verified": True,
         "timestamp": datetime.now(timezone.utc).isoformat(),
     }

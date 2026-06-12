@@ -1,3 +1,51 @@
+## [13.2.0] — V748 — WP-4b: Pairwise 패러다임 프로토콜 (ADR-211)
+
+### Preflight 분석 결과 (DEV_PROTOCOL v3.0 §1)
+
+- 생존 심볼: ALIVE (변동 없음)
+- 고립 패키지: 0 (85패키지 전체 연결)
+- PREFLIGHT NEXUS: PASS (CRITICAL 0, HIGH 0)
+- LLM-0 위반: 0
+- G32 위반: 0 (formula_harness.py print→sys.stdout.write 수정 완료)
+
+---
+
+### V748 — Pairwise 패러다임 프로토콜 (WP-4b, ADR-211)
+
+#### Added
+- `literary_system/validation/pairwise.py` — PairwiseJudgment TypedDict + compare()/tournament()/bt_scores()/transitivity_check()/get_anchor_sha()
+  - §0 금지 사항 5종 강제 (절대 점수/문체질문/naive anchor/O(n²)/docs add-f)
+  - ANCHOR_SET_V1: 5 PD 씬 SHA256 핀
+  - Bradley-Terry MLE 200 iter
+  - D-PW3: preference+문체 trait → ValueError
+  - tournament(): O(kn) only (k=5 기본값)
+- `docs/adr/ADR-211.md` — WP-4b 쌍대 비교 패러다임 결정 기록
+- `tests/validation/test_pairwise.py` — 17 TC (DoD 8/8)
+  - test_compare_blind_position_randomized
+  - test_trait_mode_rejects_preference_prompt
+  - test_bt_scores_monotonic_with_winrate
+  - test_transitivity_detector_finds_cycle
+  - test_anchor_set_sha_pinned
+  - test_cost_cap_aborts
+  - test_no_absolute_reward_type_guard
+  - test_regression_f_protocol_fixture (11쌍 ≥9/11)
+
+#### Changed
+- `tools/run_release_gate.py` — G_NO_ABSOLUTE_REWARD 게이트 추가 (_check_no_absolute_reward)
+  - rlhf/, finetune/ 내 `reward = <float>` 패턴 스캔
+  - 예외: `# G_NO_ABSOLUTE_REWARD_OK` 주석
+- `pyproject.toml`: 13.1.0 → 13.2.0
+- `CLAUDE.md`: V748 / v13.2.0 기준
+- `.gitnexus/meta.json`: 4702 파일 재인덱스
+
+#### Gates
+- G_NO_ABSOLUTE_REWARD: ✅ NEW (V748)
+- G_PAIRWISE_REGRESSION: 예정 (V749)
+- G_TRANSITIVITY: 예정 (V749)
+
+#### Tests
+- tests/validation/test_pairwise.py: +17 TC → 누적 10,853 TC
+
 ## [13.1.0] — V747 — WP-1: validation/ 공식 생애주기 상설화 (ADR-210)
 
 ### Preflight 분석 결과 (DEV_PROTOCOL v3.0 §1)
