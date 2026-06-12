@@ -9,7 +9,8 @@
 0c. **2026-06-12_realdrama_sg_ep9_results.md** — 실제 드라마 대본 첫 검증(SG 17/20·복선 rank2·Δfitness 포맷전이 FAIL)+입수 경로 정본
 0d. **2026-06-12_stage36_pairwise_threshold_revision_v1.md** — Stage3~6 쌍대 임계 개정안 v1.0(prereg v2·B_NTC2 실측 정정·soft formula 조건부 강등, D-SR1~3)
 0e. **2026-06-12_fyc_script_archive_survey_v1.md** — FYC 대본 아카이브 전수 조사(Deadline 130편·입수 우선 큐 10·추출 SOP·병목 재평가: 구조 축 입수 사실상 해소)
-0f. **2026-06-12_filmmakers_korean_script_assessment_v1.md** — 필름메이커스 자료실 평가(한국영화 시나리오 415편·2×2 언어×매체 매트릭스 완성·회색지대 조건부 사용 3항·파일럿 5편 선별) (최신)
+0f. **2026-06-12_filmmakers_korean_script_assessment_v1.md** — 필름메이커스 자료실 평가(한국영화 시나리오 415편·2×2 언어×매체 매트릭스 완성·회색지대 조건부 사용 3항·파일럿 5편 선별)
+0g. **2026-06-12_ko_script_ingest_wp_design_v1.md** — WP-KO 설계(한국어 각본 인입 6단계 파이프라인·license_status 게이트·드라마 소스 체크리스트·운영사 허가 문안) (최신)
 1. 2026-06-07_MASTER_synthesis_priorities.md — 전체 종합·우선순위(06-07 정본)
 2. **2026-06-10_P1-P5_reinforcement_architect_x_compiler_v1.md** — P1~P5 보강+장기 진화 로드맵(아키텍트×컴파일러 교차)
 3. **2026-06-10_phase_EFG_reinforcement_formula_agent_ui_v1.md** — EFG 보강: 공식 5역할×에이전트 결합(LLM-0→2.5+)·UI 5화면·진보 4제안
