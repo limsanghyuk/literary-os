@@ -16,7 +16,8 @@
 0i. **2026-06-13_literary_elements_gap_plan_v1.md** — 문학 요소 갭 기획(능동 감사 1회차): LE-1~9(인물 음성·결말 설계·스테이크·사건 다양성·POV·인물 창조·서브텍스트·유머·주제)) — **D-LE1 승인됨(06-13)**
 0j. **2026-06-13_le3_blind_speaker_results_v1.md** — LE-3 첫 실측: 블라인드 화자 판별 7인 **PASS 2.07×**(사전등록 임계, 박빙)·표면 자질 한계 진단·지표 v2 설계·정합성 검토 충돌 0
 0k. **2026-06-13_le3_v2_generation_gap_results_v1.md** — LE-3 v2+생성 갭: 표면 음성 천장 0.30~0.37 수렴·**생성물 −30% 음성 손실 첫 수치화(H-GAP 지지)**·프롬프트 주입 무효(H-VOICE 기각→학습 경로 근거)·Stage6.5 ba_ratio 등재 스펙
-0l. **2026-06-13_le6_ending_v0_results_v1.md** — LE-6 v0: 사전등록 **FAIL 5/10** — 필연성 축 생존(8/10, zI +0.78)·놀라움 조작화 오류(K드라마 클리프행어=단절 아닌 미해소)·재조작화 2안(payoff_debt 연결 우선) (최신)
+0l. **2026-06-13_le6_ending_v0_results_v1.md** — LE-6 v0: 사전등록 **FAIL 5/10** — 필연성 축 생존(8/10, zI +0.78)·놀라움 조작화 오류(K드라마 클리프행어=단절 아닌 미해소)·재조작화 2안(payoff_debt 연결 우선)
+0m. **2026-06-13_gd_series_validation_results_v1.md** — ★신품 전 20부 시리즈 검증 GD-1~4 **전부 PASS**: 사전등록 예측 첫 적중(GD-4 부채 모티프 ratio 10×, sha 선커밋)·음성 일반화 2.17×·시퀀스 100pct·엔딩 콜백 3/4. ⚠ep15~20=자막형(대본 재입수 요청) (최신)
 1. 2026-06-07_MASTER_synthesis_priorities.md — 전체 종합·우선순위(06-07 정본)
 2. **2026-06-10_P1-P5_reinforcement_architect_x_compiler_v1.md** — P1~P5 보강+장기 진화 로드맵(아키텍트×컴파일러 교차)
 3. **2026-06-10_phase_EFG_reinforcement_formula_agent_ui_v1.md** — EFG 보강: 공식 5역할×에이전트 결합(LLM-0→2.5+)·UI 5화면·진보 4제안
