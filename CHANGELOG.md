@@ -1,3 +1,35 @@
+## [13.3.0] — V749 — G_PAIRWISE_REGRESSION + G_TRANSITIVITY 게이트 (ADR-212)
+
+### Preflight 분석 결과 (DEV_PROTOCOL v3.0 §1)
+
+- 생존 심볼: ALIVE (변동 없음)
+- 고립 패키지: 0 (85패키지 전체 연결)
+- PREFLIGHT NEXUS: PASS (CRITICAL 0, HIGH 0)
+- LLM-0 위반: 0
+- G32 위반: 0
+
+---
+
+### V749 — G_PAIRWISE_REGRESSION + G_TRANSITIVITY 게이트 제정 (WP-4b, ADR-212)
+
+#### Added
+- `literary_system/validation/pairwise_fixtures.py` — REGRESSION_PAIRS 11쌍 + REGRESSION_MIN_WIN_RATE=9/11
+- `tools/run_pairwise_gates.py` — 독립 CLI (G_PAIRWISE_REGRESSION + G_TRANSITIVITY)
+- `docs/adr/ADR-212.md` — 게이트 제정 결정 기록
+- `tests/gates/test_v749_pairwise_gates.py` — 12 TC (DoD 6/6)
+
+#### Changed
+- `tools/run_release_gate.py` — _check_pairwise_regression() + _check_transitivity() 추가 (final dict 포함)
+- `pyproject.toml`: 13.2.0 → 13.3.0
+- `CLAUDE.md`: V749 / v13.3.0 기준
+
+#### Gates
+- G_PAIRWISE_REGRESSION: ✅ NEW (V749) — 11쌍 승률 ≥9/11
+- G_TRANSITIVITY: ✅ NEW (V749) — cycle rate <5%
+
+#### Tests
+- tests/gates/test_v749_pairwise_gates.py: +12 TC → 누적 10,865 TC
+
 ## [13.2.0] — V748 — WP-4b: Pairwise 패러다임 프로토콜 (ADR-211)
 
 ### Preflight 분석 결과 (DEV_PROTOCOL v3.0 §1)

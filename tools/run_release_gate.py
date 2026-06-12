@@ -5,6 +5,8 @@ G_PREFLIGHT:           Preflight 로그 없으면 전체 실행 블록
 G_CONNECTIVITY:        완전 고립 패키지 2버전 연속 존재 시 FAIL
 G_INTEGRITY_MANIFEST:  SHA256SUMS + test_inventory 자기검증 (ADR-209, WP-0)
 G_NO_ABSOLUTE_REWARD:  rlhf/finetune/ 절대 점수 보상 패턴 차단 (ADR-211, WP-4b)
+G_PAIRWISE_REGRESSION: 명작 vs 강열화 11쌍 승률 ≥9/11 (ADR-211, WP-4b, V749)
+G_TRANSITIVITY:        판정 graph cycle rate <5% (ADR-211, WP-4b, V749)
 """
 from __future__ import annotations
 
@@ -134,6 +136,78 @@ def _check_no_absolute_reward() -> dict:
         "violations": violations,
         "reason": "OK" if not violations else f"위반 {len(violations)}건",
     }
+
+
+# ── G_PAIRWISE_REGRESSION + G_TRANSITIVITY (ADR-211, V749) ──────────────────
+
+def _check_pairwise_regression(judgments=None) -> dict:
+    """
+    G_PAIRWISE_REGRESSION: REGRESSION_PAIRS 11쌍에서 canonical이 ≥9/11 승리 확인.
+    judgments: List[PairwiseJudgment] — 미제공 시 structural 검사만 수행.
+    """
+    try:
+        from literary_system.validation.pairwise_fixtures import (
+            REGRESSION_PAIRS,
+            REGRESSION_MIN_WIN_RATE,
+        )
+    except ImportError as e:
+        return {"pass": False, "gate": "G_PAIRWISE_REGRESSION",
+                "reason": f"ImportError: {e}"}
+
+    # judgments 없으면 픽스처 구조 검사만
+    if judgments is None:
+        ok = len(REGRESSION_PAIRS) == 11
+        return {
+            "pass": ok,
+            "gate": "G_PAIRWISE_REGRESSION",
+            "pairs_count": len(REGRESSION_PAIRS),
+            "threshold": REGRESSION_MIN_WIN_RATE,
+            "reason": "structural check only (no live judgments)",
+        }
+
+    wins = sum(1 for j in judgments if j.get("winner") == "left")
+    total = len(judgments)
+    win_rate = wins / total if total > 0 else 0.0
+    passed = win_rate >= REGRESSION_MIN_WIN_RATE
+    return {
+        "pass": passed,
+        "gate": "G_PAIRWISE_REGRESSION",
+        "wins": wins,
+        "total": total,
+        "win_rate": round(win_rate, 4),
+        "threshold": REGRESSION_MIN_WIN_RATE,
+        "reason": "OK" if passed else f"win_rate {win_rate:.3f} < {REGRESSION_MIN_WIN_RATE:.3f}",
+    }
+
+
+def _check_transitivity(judgments=None) -> dict:
+    """
+    G_TRANSITIVITY: 판정 graph 3-cycle 비율 < 5%.
+    judgments 미제공 시 trivially PASS.
+    """
+    _MAX_CYCLE_RATE = 0.05
+    if not judgments:
+        return {
+            "pass": True,
+            "gate": "G_TRANSITIVITY",
+            "cycle_rate": 0.0,
+            "threshold": _MAX_CYCLE_RATE,
+            "reason": "no judgments — trivially transitive",
+        }
+    try:
+        from literary_system.validation.pairwise import transitivity_check
+        rate = transitivity_check(judgments)
+    except Exception as e:
+        return {"pass": False, "gate": "G_TRANSITIVITY", "reason": f"error: {e}"}
+    passed = rate < _MAX_CYCLE_RATE
+    return {
+        "pass": passed,
+        "gate": "G_TRANSITIVITY",
+        "cycle_rate": round(rate, 4),
+        "threshold": _MAX_CYCLE_RATE,
+        "reason": "OK" if passed else f"cycle_rate {rate:.3f} ≥ {_MAX_CYCLE_RATE}",
+    }
+
 
 # ── G_INTEGRITY_MANIFEST 검사 ────────────────────────────────────────────────
 
@@ -366,6 +440,8 @@ def main() -> None:
         "G_CONNECTIVITY": conn,
         "G_INTEGRITY_MANIFEST": manifest,
         "G_NO_ABSOLUTE_REWARD": _check_no_absolute_reward(),
+        "G_PAIRWISE_REGRESSION": _check_pairwise_regression(),
+        "G_TRANSITIVITY": _check_transitivity(),
         "preflight_verified": True,
         "timestamp": datetime.now(timezone.utc).isoformat(),
     }

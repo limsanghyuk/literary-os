@@ -1,13 +1,23 @@
 # Preflight 12단계 실행 로그
-**버전**: v13.2.0  |  **실행일시**: 2026-06-12T08:31:54Z  |  **실행자**: run_preflight.py v1.0
+**버전**: v13.2.0  |  **실행일시**: 2026-06-12T08:35:35Z  |  **실행자**: run_preflight.py v1.0
 **근거**: DEV_PROTOCOL_v3.0 §1 (PREFLIGHT_GUIDE_v1.1 흡수 통합본)
 
 ## Step 1. 코드베이스 현황 (index_status 등가)
 - Python 파일: 1,119개
 - 심볼(클래스): 3,380개
 - 테스트 함수: 10,563개
-- 최근 변경 py 파일 (HEAD~3): 0개
-- 소요: 1.18s
+- 최근 변경 py 파일 (HEAD~3): 29개
+  - literary_system/validation/__init__.py
+  - literary_system/validation/formula_harness.py
+  - literary_system/validation/formula_registry.py
+  - literary_system/validation/ledger.py
+  - literary_system/validation/pairwise.py
+  - literary_system/validation/stage_registry.py
+  - tests/gates/test_v746_integrity_manifest.py
+  - tests/validation/__init__.py
+  - tests/validation/test_formula_harness.py
+  - tests/validation/test_pairwise.py
+- 소요: 1.21s
 
 ## Step 2. 모듈 범위 (list_repos 등가)
 - literary_system/ 서브패키지: 86개
@@ -270,7 +280,7 @@
   - 실질 순환: 8개
   ⚠️  auto_promotion_gate → auto_promotion_gate
   ⚠️  pre_flight_fix_gate → phase_c_exit_gate → release_gate → pre_flight_fix_gate
-  ⚠️  release_gate → gate_registry → release_gate
+  ⚠️  release_gate → phase_a_exit_gate → release_gate
 
 ---
 ## 최종 판정
@@ -284,7 +294,7 @@
   - Step12 TIMEOUT: Release Gate 단독 실행 필요
   - 순환 의존: ['literary_system.gates.auto_promotion_gate', 'literary_system.gates.auto_promotion_gate']
   - 순환 의존: ['literary_system.gates.pre_flight_fix_gate', 'literary_system.gates.phase_c_exit_gate', 'literary_system.gates.release_gate', 'literary_system.gates.pre_flight_fix_gate']
-  - 순환 의존: ['literary_system.gates.release_gate', 'literary_system.gates.gate_registry', 'literary_system.gates.release_gate']
+  - 순환 의존: ['literary_system.gates.release_gate', 'literary_system.gates.phase_a_exit_gate', 'literary_system.gates.release_gate']
 
-**실행 완료**: 2026-06-12T08:32:22Z
+**실행 완료**: 2026-06-12T08:36:04Z
 **로그 파일**: docs/sessions/preflight_v13.2.0_2026-06-12.md
