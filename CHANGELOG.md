@@ -1,3 +1,51 @@
+## [13.1.0] — V747 — WP-1: validation/ 공식 생애주기 상설화 (ADR-210)
+
+### Preflight 분석 결과 (DEV_PROTOCOL v3.0 §1)
+
+- 생존 심볼: 54/54 ALIVE
+- 고립 패키지: 0 (85패키지 전체 연결)
+- PREFLIGHT NEXUS: PASS (.gitnexus/meta.json 신규 생성)
+- LLM-0 위반: 0
+- G32 위반: 0
+
+---
+
+### V747 — validation/ 공식 생애주기 상설화 (WP-1, ADR-210)
+
+#### Added
+- `literary_system/validation/formula_registry.py` — FormulaEntry TypedDict + REGISTRY (F-06_fitness)
+- `literary_system/validation/stage_registry.py` — Stage 1~6 임계값 사전등록 상수 (immutable in code)
+- `literary_system/validation/formula_harness.py` — Harness + StageReport + FormulaResult (SQLite/JSONL 이중 소스)
+- `literary_system/validation/ledger.py` — record()/transition()/get_lifecycle() + 2회 연속 미달 → deprecated 자동 승격
+- `tools/run_formula_validation.py` — CLI (--stage N --db PATH --cost-cap X --json)
+- `tests/validation/test_formula_harness.py` — 15 TC (DoD 6/6 포함)
+- `docs/adr/ADR-210.md` — WP-1 결정 기록
+- `docs/formula_ledger.md` — 공식 생애주기 원장 (커밋 대상)
+- `docs/sessions/2026-06-12_wp1_report.md` — WP-1 완료 보고
+- `.gitnexus/meta.json` — GitNexus 인덱스 (1110 파일, commit 5a851986)
+
+#### Changed
+- `literary_system/validation/__init__.py` — 공개 API 재구성 (FormulaEntry/REGISTRY/STAGES/Harness/StageReport/FormulaResult/record/transition/get_lifecycle)
+- `tools/preflight_nexus.py` — KNOWN_SAFE_CYCLES에 Phase B/C/D exit gate 쌍 추가 (lazy import, 런타임 안전)
+- `pyproject.toml` — 13.0.1 → 13.1.0
+- `CLAUDE.md` — V747 / v13.1.0 기준 갱신
+
+#### Moved (이력 보존)
+- `tools/formula_validation/harness.py` → `tools/formula_validation/_archive/`
+- `tools/formula_validation/heldout_cv.py` → `_archive/`
+- `tools/formula_validation/integrate_tristore.py` → `_archive/`
+- `tools/formula_validation/refcheck.py` → `_archive/`
+- `tools/formula_validation/refcheck_oai.py` → `_archive/`
+- `tools/formula_validation/longform/` → `_archive/`
+- `tools/formula_validation/pilot_unsu/` → `_archive/`
+
+#### Tests
+- V746: 10,821 TC → V747: 10,836 TC (+15)
+- DoD 6/6: registry/report/tau-immutable/ledger/deprecated-2x/cost-cap
+
+
+---
+
 ## [13.0.1] — V746 — WP-0: G_INTEGRITY_MANIFEST (ADR-209)
 
 ### Preflight 분석 결과 (DEV_PROTOCOL v3.0 §1)

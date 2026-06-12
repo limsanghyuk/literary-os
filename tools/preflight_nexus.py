@@ -127,6 +127,13 @@ KNOWN_SAFE_CYCLES = {
                "literary_system/gates/release_gate.py"]),
     frozenset(["literary_system/gates/phase_a_exit_gate.py",
                "literary_system/gates/release_gate.py"]),
+    # Phase B/C/D exit gates — lazy import (함수 내부), 런타임 순환 아님
+    frozenset(["literary_system/gates/phase_b_exit_gate.py",
+               "literary_system/gates/release_gate.py"]),
+    frozenset(["literary_system/gates/phase_c_exit_gate.py",
+               "literary_system/gates/release_gate.py"]),
+    frozenset(["literary_system/gates/phase_d_exit_gate.py",
+               "literary_system/gates/release_gate.py"]),
     frozenset(["literary_system/multiwork/multi_work_cim.py",
                "literary_system/multiwork/multi_work_cim_v2.py"]),
 }
