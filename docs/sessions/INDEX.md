@@ -4,6 +4,7 @@
 
 ---
 ## 0. 시작은 여기 (정본 순서)
+00. **2026-06-12_company_session_handoff_v1.md** — ★06-12 세션 단일 정본(데이터 개통의 날): 산출물 0d~0h 체인·집 이어작업 순서·⚠️대본 파일 이동 안내(비커밋이라 허브에 없음)
 0. **2026-06-11_unified_priority_map_P0P5_EFG_sonnet.md** — ★통합 지도(P0~P5×EFG·실행큐·Sonnet 사용법) — 최우선 진입점
 0b. 2026-06-11_generation_core_L4_spec_v1.md — 생성 본체 7패스 L4(WP-5a~c, V764~770)
 0c. **2026-06-12_realdrama_sg_ep9_results.md** — 실제 드라마 대본 첫 검증(SG 17/20·복선 rank2·Δfitness 포맷전이 FAIL)+입수 경로 정본
