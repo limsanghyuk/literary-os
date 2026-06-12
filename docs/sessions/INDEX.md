@@ -12,7 +12,8 @@
 0e. **2026-06-12_fyc_script_archive_survey_v1.md** — FYC 대본 아카이브 전수 조사(Deadline 130편·입수 우선 큐 10·추출 SOP·병목 재평가: 구조 축 입수 사실상 해소)
 0f. **2026-06-12_filmmakers_korean_script_assessment_v1.md** — 필름메이커스 자료실 평가(한국영화 시나리오 415편·2×2 언어×매체 매트릭스 완성·회색지대 조건부 사용 3항·파일럿 5편 선별)
 0g. **2026-06-12_ko_script_ingest_wp_design_v1.md** — WP-KO 설계(한국어 각본 인입 6단계 파이프라인·license_status 게이트·드라마 소스 체크리스트·운영사 허가 문안)
-0h. **2026-06-12_gentleman_dignity_acquisition_v1.md** — 신사의 품격(김은숙) 1~10부 입수 확인: 428씬/60만자, **Stage 3 가동 조건 첫 충족**, 검증 메뉴 5(회차 간 복선·payoff_debt 사전등록 예측) (최신)
+0h. **2026-06-12_gentleman_dignity_acquisition_v1.md** — 신사의 품격(김은숙) 1~10부 입수 확인: 428씬/60만자, **Stage 3 가동 조건 첫 충족**, 검증 메뉴 5(회차 간 복선·payoff_debt 사전등록 예측)
+0i. **2026-06-13_literary_elements_gap_plan_v1.md** — 문학 요소 갭 기획(능동 감사 1회차): LE-1~9(인물 음성·결말 설계·스테이크·사건 다양성·POV·인물 창조·서브텍스트·유머·주제), D-LE1 결정 대기 (최신)
 1. 2026-06-07_MASTER_synthesis_priorities.md — 전체 종합·우선순위(06-07 정본)
 2. **2026-06-10_P1-P5_reinforcement_architect_x_compiler_v1.md** — P1~P5 보강+장기 진화 로드맵(아키텍트×컴파일러 교차)
 3. **2026-06-10_phase_EFG_reinforcement_formula_agent_ui_v1.md** — EFG 보강: 공식 5역할×에이전트 결합(LLM-0→2.5+)·UI 5화면·진보 4제안
