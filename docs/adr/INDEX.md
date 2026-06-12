@@ -72,3 +72,5 @@
 | ADR-069 | MultiWorkCIMV2 설계 결정 | V609 | Accepted |
 | ADR-070 | MultiWorkCIM v2.0 — 팩토리 패턴 + 업그레이드 유틸리티 | V610 | Accepted |
 - [ADR-193](ADR-193.md) — G86 API Completeness Gate 신설 (V731, DEFECT-2 수정)
+
+- [ADR-209](ADR-209.md) — G_INTEGRITY_MANIFEST: SHA256 자기검증 + 테스트 인벤토리 상시화 (V746, WP-0)

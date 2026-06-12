@@ -1,3 +1,34 @@
+## [13.0.1] — V746 — WP-0: G_INTEGRITY_MANIFEST (ADR-209)
+
+### Preflight 분석 결과 (DEV_PROTOCOL v3.0 §1)
+
+- 생존 심볼: 54/54 ALIVE
+- 고립 패키지: 0 (85패키지 전체 연결)
+- LLM-0 위반: 0
+- G32 위반: 0
+
+---
+
+### V746 — G_INTEGRITY_MANIFEST 게이트 (WP-0, ADR-209)
+
+#### Added
+- `tools/generate_sha256sums.py` — SHA256 생성·검증 모듈 (generate_sums/write_sums/verify_sums/check_minisig)
+- `tests/gates/test_v746_integrity_manifest.py` — 33 TC (WP-0 DoD 5종 포함)
+- `docs/adr/ADR-209.md` — G_INTEGRITY_MANIFEST 결정 기록
+
+#### Changed
+- `tools/run_release_gate.py` — G_INTEGRITY_MANIFEST 단계 추가 (G_PREFLIGHT→G_CONNECTIVITY→G_INTEGRITY_MANIFEST 순서), `--verify-only` 플래그 신설
+- `pyproject.toml` — version 13.0.0 → 13.0.1
+- `CLAUDE.md` — V746 / v13.0.1 기준으로 갱신
+
+#### DoD 달성
+- 33 TC green (`tests/gates/test_v746_integrity_manifest.py`)
+- `python tools/run_release_gate.py --verify-only` PASS (sha256_match=1652, mismatch=0, missing=0)
+- inventory_before=10788 → inventory_after=10821 (TC 증가 확인)
+- minisig 미존재: WARN (차단 아님) — Phase E.5 ADR-235 예약
+
+---
+
 ## [12.4.0] — V729~V730 — SP-D.3 완전 종료
 
 ### GitNexus Preflight 분석 결과 (DEV_PROTOCOL v3.0 §1)

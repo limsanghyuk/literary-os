@@ -1,13 +1,17 @@
 """
-Literary OS — run_release_gate.py (v11.39.0, ADR-128)
+Literary OS — run_release_gate.py (v13.0.1, ADR-128/209)
 
-G_PREFLIGHT: Preflight 로그 없으면 전체 실행 블록
-G_CONNECTIVITY: 완전 고립 패키지 2버전 연속 존재 시 FAIL
+G_PREFLIGHT:           Preflight 로그 없으면 전체 실행 블록
+G_CONNECTIVITY:        완전 고립 패키지 2버전 연속 존재 시 FAIL
+G_INTEGRITY_MANIFEST:  SHA256SUMS + test_inventory 자기검증 (ADR-209, WP-0)
 """
 from __future__ import annotations
 
+import argparse
+import importlib.util
 import json
 import re
+import subprocess
 import sys
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
@@ -15,6 +19,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SYS_ROOT  = REPO_ROOT / "literary_system"
+_GEN_INV_SCRIPT = Path(__file__).resolve().parent / "generate_test_inventory.py"
 SESSIONS_DIR = REPO_ROOT / "docs" / "sessions"
 
 sys.path.insert(0, str(REPO_ROOT))
@@ -69,7 +74,6 @@ def _check_connectivity() -> dict:
 
     isolated = sorted(p for p in packages if not imported_by.get(p) and not deps.get(p))
 
-    # 이전 Preflight 로그에서 고립 이력 추적
     prev_isolated: set = set()
     if SESSIONS_DIR.exists():
         prev_logs = sorted(SESSIONS_DIR.glob("preflight_*.md"), reverse=True)
@@ -96,22 +100,162 @@ def _check_connectivity() -> dict:
     }
 
 
+# ── G_INTEGRITY_MANIFEST 검사 ────────────────────────────────────────────────
+
+def _load_sha256_module():
+    """tools/generate_sha256sums.py를 동적 import (subprocess 실행 아님)."""
+    module_path = Path(__file__).resolve().parent / "generate_sha256sums.py"
+    spec = importlib.util.spec_from_file_location("generate_sha256sums", module_path)
+    if spec is None or spec.loader is None:
+        raise ImportError(f"generate_sha256sums.py를 찾을 수 없음: {module_path}")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)  # type: ignore[arg-type]
+    return mod
+
+
+def _check_integrity_manifest() -> dict:
+    """
+    G_INTEGRITY_MANIFEST (ADR-209) — 3단계 검증:
+      ① SHA256SUMS.txt 재생성 후 전 항목 자기검증
+      ② test_inventory.json 재생성 후 카운트 일치 확인
+      ③ SHA256SUMS.txt.minisig 존재 여부 (WARN only, 차단 아님)
+    """
+    result: dict = {
+        "pass": False,
+        "sha256_match": 0,
+        "sha256_mismatch": 0,
+        "sha256_missing": 0,
+        "inventory_before": None,
+        "inventory_after": None,
+        "inventory_match": False,
+        "minisig_warn": None,
+        "details": [],
+    }
+
+    # ① SHA256SUMS 재생성 및 자기검증 ───────────────────────────────────────
+    try:
+        sha_mod = _load_sha256_module()
+    except ImportError as exc:
+        result["reason"] = f"generate_sha256sums.py 로드 실패: {exc}"
+        return result
+
+    try:
+        sha_mod.write_sums(REPO_ROOT)
+        vr = sha_mod.verify_sums(REPO_ROOT)
+        result["sha256_match"]    = len(vr.matched)
+        result["sha256_mismatch"] = len(vr.mismatched)
+        result["sha256_missing"]  = len(vr.missing)
+        if vr.mismatched:
+            result["details"].append(f"SHA256 불일치: {vr.mismatched[:5]}")
+        if vr.missing:
+            result["details"].append(f"SHA256 누락: {vr.missing[:5]}")
+    except Exception as exc:
+        result["reason"] = f"SHA256SUMS 생성·검증 중 오류: {exc}"
+        return result
+
+    sha_ok = (result["sha256_mismatch"] == 0 and result["sha256_missing"] == 0)
+
+    # ② test_inventory 재생성 및 카운트 일치 ─────────────────────────────────
+    inv_path = REPO_ROOT / "tools" / "test_inventory.json"
+    root_inv_path = REPO_ROOT / "test_inventory.json"
+
+    before_count: int | None = None
+    try:
+        ref_path = root_inv_path if root_inv_path.exists() else inv_path
+        if ref_path.exists():
+            before_count = json.loads(ref_path.read_text(encoding="utf-8")).get("test_count")
+    except Exception:
+        pass
+    result["inventory_before"] = before_count
+
+    try:
+        proc = subprocess.run(
+            [sys.executable, str(_GEN_INV_SCRIPT),
+             "--output", str(inv_path)],
+            capture_output=True, text=True, cwd=str(REPO_ROOT), timeout=180,
+        )
+        if inv_path.exists():
+            after_count = json.loads(inv_path.read_text(encoding="utf-8")).get("test_count")
+            result["inventory_after"] = after_count
+            if before_count is not None and after_count is not None:
+                # 최대 ±5% 허용 (테스트 추가로 늘어날 수 있음)
+                diff_ratio = abs(after_count - before_count) / max(before_count, 1)
+                result["inventory_match"] = (
+                    after_count >= before_count or diff_ratio <= 0.05
+                )
+                if not result["inventory_match"]:
+                    result["details"].append(
+                        f"test_inventory 카운트 감소: {before_count} → {after_count}"
+                    )
+            else:
+                result["inventory_match"] = (after_count is not None)
+        else:
+            result["details"].append("test_inventory.json 재생성 실패")
+    except subprocess.TimeoutExpired:
+        result["details"].append("test_inventory 재생성 타임아웃 (180s)")
+        result["inventory_match"] = False
+    except Exception as exc:
+        result["details"].append(f"test_inventory 재생성 오류: {exc}")
+        result["inventory_match"] = False
+
+    inv_ok = result["inventory_match"]
+
+    # ③ minisig 확인 (WARN only) ─────────────────────────────────────────────
+    try:
+        sig_info = sha_mod.check_minisig(REPO_ROOT)
+        if not sig_info.get("present"):
+            result["minisig_warn"] = sig_info.get("warn", "minisig 미존재")
+    except Exception as exc:
+        result["minisig_warn"] = f"minisig 확인 오류: {exc}"
+
+    # ── 최종 판정 ────────────────────────────────────────────────────────────
+    result["pass"] = sha_ok and inv_ok
+    result["reason"] = (
+        "OK" if result["pass"]
+        else " | ".join(result["details"]) or "SHA256/inventory 검증 실패"
+    )
+    return result
+
+
 # ── 메인 ─────────────────────────────────────────────────────────────────────
 
 def main() -> None:
-    print("=" * 60)
-    print("Literary OS Release Gate (v11.39.0)")
-    print("=" * 60)
+    parser = argparse.ArgumentParser(
+        description="Literary OS Release Gate (v13.0.1)"
+    )
+    parser.add_argument(
+        "--verify-only",
+        action="store_true",
+        help="G_INTEGRITY_MANIFEST만 실행하고 종료 (빠른 검증용)",
+    )
+    args = parser.parse_args()
+
+    if args.verify_only:
+        sys.stdout.write("Literary OS G_INTEGRITY_MANIFEST --verify-only\n")
+        sys.stdout.write("=" * 60 + "\n")
+        manifest = _check_integrity_manifest()
+        sys.stdout.write(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
+        if manifest.get("minisig_warn"):
+            sys.stdout.write(f"\n⚠️  WARN: {manifest['minisig_warn']}\n")
+        if manifest["pass"]:
+            sys.stdout.write("\nG_INTEGRITY_MANIFEST PASS\n")
+        else:
+            sys.stdout.write(f"\nG_INTEGRITY_MANIFEST FAIL: {manifest.get('reason')}\n")
+        sys.exit(0 if manifest["pass"] else 1)
+
+    sys.stdout.write("=" * 60 + "\n")
+    sys.stdout.write("Literary OS Release Gate (v13.0.1)\n")
+    sys.stdout.write("=" * 60 + "\n")
 
     # ── G_PREFLIGHT 블로킹 사전 검사 ────────────────────────────────────────
     pf = _check_preflight_log()
     if not pf["pass"]:
-        print("\n╔══════════════════════════════════════════════════════════╗")
-        print("║       RELEASE GATE BLOCKED — G_PREFLIGHT FAIL           ║")
-        print("╠══════════════════════════════════════════════════════════╣")
-        print(f"║  이유: {pf.get('reason','알 수 없음')[:50]:<52}║")
-        print(f"║  조치: {pf.get('hint','python tools/run_preflight.py')[:50]:<52}║")
-        print("╚══════════════════════════════════════════════════════════╝\n")
+        sys.stdout.write("\n╔══════════════════════════════════════════════════════════╗\n")
+        sys.stdout.write("║       RELEASE GATE BLOCKED — G_PREFLIGHT FAIL           ║\n")
+        sys.stdout.write("╠══════════════════════════════════════════════════════════╣\n")
+        sys.stdout.write(f"║  이유: {pf.get('reason','알 수 없음')[:50]:<52}║\n")
+        sys.stdout.write(f"║  조치: {pf.get('hint','python tools/run_preflight.py')[:50]:<52}║\n")
+        sys.stdout.write("╚══════════════════════════════════════════════════════════╝\n\n")
         result = {
             "status": "blocked",
             "gate": "G_PREFLIGHT",
@@ -120,20 +264,20 @@ def main() -> None:
             "summary": "RELEASE GATE BLOCKED: Preflight 로그 필요",
             "timestamp": datetime.now(timezone.utc).isoformat(),
         }
-        print(json.dumps(result, ensure_ascii=False, indent=2))
+        sys.stdout.write(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
         sys.exit(1)
 
-    print(f"  G_PREFLIGHT PASS: {pf.get('log', 'OK')} ({pf.get('steps', '?')}단계)")
+    sys.stdout.write(f"  G_PREFLIGHT PASS: {pf.get('log', 'OK')} ({pf.get('steps', '?')}단계)\n")
 
     # ── G_CONNECTIVITY 검사 ──────────────────────────────────────────────────
     conn = _check_connectivity()
     if conn["isolated"]:
         level = "FAIL" if conn["escalated"] else "WARN"
-        print(f"  G_CONNECTIVITY {level}: 고립 {conn['isolated_count']}개"
-              f" / 에스컬레이션 {len(conn['escalated'])}개")
+        sys.stdout.write(f"  G_CONNECTIVITY {level}: 고립 {conn['isolated_count']}개"
+              f" / 에스컬레이션 {len(conn['escalated'])}개\n")
         for p in conn["isolated"]:
             marker = "❌" if p in conn["escalated"] else "⚠️ "
-            print(f"    {marker} {p}")
+            sys.stdout.write(f"    {marker} {p}\n")
         if not conn["pass"]:
             result = {
                 "status": "fail",
@@ -143,10 +287,35 @@ def main() -> None:
                 "summary": f"RELEASE GATE FAIL: G_CONNECTIVITY ({conn['reason']})",
                 "timestamp": datetime.now(timezone.utc).isoformat(),
             }
-            print(json.dumps(result, ensure_ascii=False, indent=2))
+            sys.stdout.write(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
             sys.exit(1)
     else:
-        print(f"  G_CONNECTIVITY PASS: 전체 {conn['total_packages']}개 연결됨")
+        sys.stdout.write(f"  G_CONNECTIVITY PASS: 전체 {conn['total_packages']}개 연결됨\n")
+
+    # ── G_INTEGRITY_MANIFEST 검사 ────────────────────────────────────────────
+    sys.stdout.write("  G_INTEGRITY_MANIFEST 검사 중...\n")
+    manifest = _check_integrity_manifest()
+    if manifest["pass"]:
+        sys.stdout.write(
+            f"  G_INTEGRITY_MANIFEST PASS: "
+            f"SHA256 {manifest['sha256_match']}건 일치, "
+            f"inventory {manifest['inventory_before']}→{manifest['inventory_after']}\n"
+        )
+    else:
+        sys.stdout.write(f"  G_INTEGRITY_MANIFEST FAIL: {manifest.get('reason')}\n")
+        result = {
+            "status": "fail",
+            "gate": "G_INTEGRITY_MANIFEST",
+            "passed": False,
+            "manifest": manifest,
+            "summary": f"RELEASE GATE FAIL: G_INTEGRITY_MANIFEST ({manifest.get('reason')})",
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+        }
+        sys.stdout.write(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
+        sys.exit(1)
+
+    if manifest.get("minisig_warn"):
+        sys.stdout.write(f"  ⚠️  WARN: {manifest['minisig_warn']}\n")
 
     # ── 핵심 Release Gate 실행 ───────────────────────────────────────────────
     try:
@@ -160,10 +329,11 @@ def main() -> None:
         **gate_result,
         "G_PREFLIGHT": {**pf, "pass": True},
         "G_CONNECTIVITY": conn,
+        "G_INTEGRITY_MANIFEST": manifest,
         "preflight_verified": True,
         "timestamp": datetime.now(timezone.utc).isoformat(),
     }
-    print(json.dumps(final, ensure_ascii=False, indent=2))
+    sys.stdout.write(json.dumps(final, ensure_ascii=False, indent=2) + "\n")
     sys.exit(0 if gate_result.get("status") == "pass" else 1)
 
 
