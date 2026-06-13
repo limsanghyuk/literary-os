@@ -1,0 +1,182 @@
+[
+{
+"high": "밀양",
+"low": "동갑내기과외하기",
+"votes": {
+"구조분석가": "A",
+"대사전문가": "A",
+"긴장비평가": "A"
+},
+"high_letter": "A",
+"panel_pick_high": true,
+"n_high_votes": 3
+},
+{
+"high": "괴물",
+"low": "댄싱퀸",
+"votes": {
+"구조분석가": "B",
+"대사전문가": "B",
+"긴장비평가": "B"
+},
+"high_letter": "B",
+"panel_pick_high": true,
+"n_high_votes": 3
+},
+{
+"high": "추격자",
+"low": "해운대",
+"votes": {
+"구조분석가": "A",
+"대사전문가": "A",
+"긴장비평가": "A"
+},
+"high_letter": "A",
+"panel_pick_high": true,
+"n_high_votes": 3
+},
+{
+"high": "가족의탄생",
+"low": "댄싱퀸",
+"votes": {
+"구조분석가": "A",
+"대사전문가": "A",
+"긴장비평가": "A"
+},
+"high_letter": "A",
+"panel_pick_high": true,
+"n_high_votes": 3
+},
+{
+"high": "괴물",
+"low": "내머리속의지우개",
+"votes": {
+"구조분석가": "A",
+"대사전문가": "A",
+"긴장비평가": "B"
+},
+"high_letter": "B",
+"panel_pick_high": false,
+"n_high_votes": 1
+},
+{
+"high": "마더",
+"low": "품행제로",
+"votes": {
+"구조분석가": "A",
+"대사전문가": "A",
+"긴장비평가": "A"
+},
+"high_letter": "A",
+"panel_pick_high": true,
+"n_high_votes": 3
+},
+{
+"high": "살인의추억",
+"low": "해운대",
+"votes": {
+"구조분석가": "A",
+"대사전문가": "A",
+"긴장비평가": "A"
+},
+"high_letter": "A",
+"panel_pick_high": true,
+"n_high_votes": 3
+},
+{
+"high": "마더",
+"low": "해운대",
+"votes": {
+"구조분석가": "A",
+"대사전문가": "A",
+"긴장비평가": "A"
+},
+"high_letter": "A",
+"panel_pick_high": true,
+"n_high_votes": 3
+},
+{
+"high": "마더",
+"low": "간신",
+"votes": {
+"구조분석가": "A",
+"대사전문가": "A",
+"긴장비평가": "A"
+},
+"high_letter": "B",
+"panel_pick_high": false,
+"n_high_votes": 0
+},
+{
+"high": "곡성",
+"low": "해운대",
+"votes": {
+"구조분석가": "A",
+"대사전문가": "A",
+"긴장비평가": "B"
+},
+"high_letter": "B",
+"panel_pick_high": false,
+"n_high_votes": 1
+},
+{
+"high": "공동경비구역JSA",
+"low": "댄싱퀸",
+"votes": {
+"구조분석가": "B",
+"대사전문가": "A",
+"긴장비평가": "B"
+},
+"high_letter": "B",
+"panel_pick_high": true,
+"n_high_votes": 2
+},
+{
+"high": "공동경비구역JSA",
+"low": "해운대",
+"votes": {
+"구조분석가": "A",
+"대사전문가": "B",
+"긴장비평가": "B"
+},
+"high_letter": "B",
+"panel_pick_high": true,
+"n_high_votes": 2
+},
+{
+"high": "괴물",
+"low": "품행제로",
+"votes": {
+"구조분석가": "A",
+"대사전문가": "A",
+"긴장비평가": "A"
+},
+"high_letter": "A",
+"panel_pick_high": true,
+"n_high_votes": 3
+},
+{
+"high": "추격자",
+"low": "댄싱퀸",
+"votes": {
+"구조분석가": "B",
+"대사전문가": "B",
+"긴장비평가": "B"
+},
+"high_letter": "B",
+"panel_pick_high": true,
+"n_high_votes": 3
+},
+{
+"high": "추격자",
+"low": "미인도",
+"votes": {
+"구조분석가": "A",
+"대사전문가": "A",
+"긴장비평가": "A"
+},
+"high_letter": "B",
+"panel_pick_high": false,
+"n_high_votes": 0
+}
+]
