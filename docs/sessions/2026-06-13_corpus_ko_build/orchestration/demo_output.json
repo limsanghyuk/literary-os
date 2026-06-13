@@ -1,0 +1,308 @@
+{
+ "workspec": {
+  "title": "균열",
+  "genre": "thriller",
+  "n_episodes": 1,
+  "master_theme": "정의와 복수의 경계",
+  "conflict_axis": "진실을 쫓는 형사 vs 조직을 지키려는 내부자",
+  "core_dilemma": "법을 지킬 것인가, 정의를 위해 법을 넘을 것인가",
+  "characters": [
+   {
+    "name": "강도훈",
+    "role": "주인공/형사",
+    "want": "진실규명",
+    "flaw": "분노조절"
+   },
+   {
+    "name": "서민재",
+    "role": "적대자/내부자",
+    "want": "조직보호",
+    "flaw": "가족집착"
+   },
+   {
+    "name": "윤하경",
+    "role": "조력자/검사",
+    "want": "기소",
+    "flaw": "불신"
+   }
+  ],
+  "arc_summary": "정의와 복수의 경계를 축으로 진실을 쫓는 형사 vs 조직을 지키려는 내부자 대립이 법을 지킬 것인가, 정의를 위해 법을 넘을 것인가로 수렴"
+ },
+ "beats": [
+  {
+   "beat_id": "B01",
+   "function": "setup",
+   "pos": 0.04,
+   "causal_parent": null,
+   "intent": "세계·인물·결핍 제시",
+   "plant_motifs": [
+    "낡은 회중시계",
+    "빗속 골목"
+   ],
+   "payoff_motifs": [],
+   "target_tension": 0.0
+  },
+  {
+   "beat_id": "B02",
+   "function": "inciting",
+   "pos": 0.12,
+   "causal_parent": "setup",
+   "intent": "균형을 깨는 사건",
+   "plant_motifs": [
+    "낡은 회중시계",
+    "빗속 골목"
+   ],
+   "payoff_motifs": [],
+   "target_tension": 0.291
+  },
+  {
+   "beat_id": "B03",
+   "function": "rising",
+   "pos": 0.3,
+   "causal_parent": "inciting",
+   "intent": "갈등 상승·정보 통제",
+   "plant_motifs": [
+    "무전기 잡음"
+   ],
+   "payoff_motifs": [],
+   "target_tension": 0.657
+  },
+  {
+   "beat_id": "B04",
+   "function": "midpoint",
+   "pos": 0.5,
+   "causal_parent": "rising",
+   "intent": "판을 뒤집는 전환",
+   "plant_motifs": [],
+   "payoff_motifs": [],
+   "target_tension": 0.111
+  },
+  {
+   "beat_id": "B05",
+   "function": "crisis",
+   "pos": 0.68,
+   "causal_parent": "midpoint",
+   "intent": "최저점·딜레마 직면",
+   "plant_motifs": [],
+   "payoff_motifs": [],
+   "target_tension": 0.527
+  },
+  {
+   "beat_id": "B06",
+   "function": "climax",
+   "pos": 0.85,
+   "causal_parent": "crisis",
+   "intent": "핵심 대결·선택",
+   "plant_motifs": [],
+   "payoff_motifs": [
+    "낡은 회중시계"
+   ],
+   "target_tension": 0.196
+  },
+  {
+   "beat_id": "B07",
+   "function": "resolution",
+   "pos": 0.96,
+   "causal_parent": "climax",
+   "intent": "여파·잔향(미해소 여지)",
+   "plant_motifs": [],
+   "payoff_motifs": [
+    "빗속 골목"
+   ],
+   "target_tension": 0.132
+  }
+ ],
+ "scene_briefs": [
+  {
+   "scene_id": "균열::S01",
+   "beat_id": "B01",
+   "slug": {
+    "location": "TBD(LLM/RAG)",
+    "time": "낮",
+    "int_ext": "실내"
+   },
+   "characters": [
+    "강도훈",
+    "서민재"
+   ],
+   "dramatic_function": "setup",
+   "targets": {
+    "tension_band": [
+     0,
+     0.12
+    ],
+    "conflict_intensity_min": 0.0,
+    "callback_motifs": []
+   },
+   "rag_refs": [],
+   "draft": null,
+   "gate": null,
+   "panel": null
+  },
+  {
+   "scene_id": "균열::S02",
+   "beat_id": "B02",
+   "slug": {
+    "location": "TBD(LLM/RAG)",
+    "time": "낮",
+    "int_ext": "실내"
+   },
+   "characters": [
+    "강도훈",
+    "서민재",
+    "윤하경"
+   ],
+   "dramatic_function": "inciting",
+   "targets": {
+    "tension_band": [
+     0.17,
+     0.41
+    ],
+    "conflict_intensity_min": 0.0,
+    "callback_motifs": []
+   },
+   "rag_refs": [],
+   "draft": null,
+   "gate": null,
+   "panel": null
+  },
+  {
+   "scene_id": "균열::S03",
+   "beat_id": "B03",
+   "slug": {
+    "location": "TBD(LLM/RAG)",
+    "time": "낮",
+    "int_ext": "실내"
+   },
+   "characters": [
+    "강도훈",
+    "서민재",
+    "윤하경"
+   ],
+   "dramatic_function": "rising",
+   "targets": {
+    "tension_band": [
+     0.54,
+     0.78
+    ],
+    "conflict_intensity_min": 0.0,
+    "callback_motifs": []
+   },
+   "rag_refs": [],
+   "draft": null,
+   "gate": null,
+   "panel": null
+  },
+  {
+   "scene_id": "균열::S04",
+   "beat_id": "B04",
+   "slug": {
+    "location": "TBD(LLM/RAG)",
+    "time": "낮",
+    "int_ext": "실내"
+   },
+   "characters": [
+    "강도훈",
+    "서민재",
+    "윤하경"
+   ],
+   "dramatic_function": "midpoint",
+   "targets": {
+    "tension_band": [
+     0,
+     0.23
+    ],
+    "conflict_intensity_min": 0.0,
+    "callback_motifs": []
+   },
+   "rag_refs": [],
+   "draft": null,
+   "gate": null,
+   "panel": null
+  },
+  {
+   "scene_id": "균열::S05",
+   "beat_id": "B05",
+   "slug": {
+    "location": "TBD(LLM/RAG)",
+    "time": "낮",
+    "int_ext": "실내"
+   },
+   "characters": [
+    "강도훈",
+    "서민재",
+    "윤하경"
+   ],
+   "dramatic_function": "crisis",
+   "targets": {
+    "tension_band": [
+     0.41,
+     0.65
+    ],
+    "conflict_intensity_min": 0.2,
+    "callback_motifs": []
+   },
+   "rag_refs": [],
+   "draft": null,
+   "gate": null,
+   "panel": null
+  },
+  {
+   "scene_id": "균열::S06",
+   "beat_id": "B06",
+   "slug": {
+    "location": "TBD(LLM/RAG)",
+    "time": "낮",
+    "int_ext": "실내"
+   },
+   "characters": [
+    "강도훈",
+    "서민재",
+    "윤하경"
+   ],
+   "dramatic_function": "climax",
+   "targets": {
+    "tension_band": [
+     0.08,
+     0.32
+    ],
+    "conflict_intensity_min": 0.2,
+    "callback_motifs": [
+     "낡은 회중시계"
+    ]
+   },
+   "rag_refs": [],
+   "draft": null,
+   "gate": null,
+   "panel": null
+  },
+  {
+   "scene_id": "균열::S07",
+   "beat_id": "B07",
+   "slug": {
+    "location": "TBD(LLM/RAG)",
+    "time": "낮",
+    "int_ext": "실내"
+   },
+   "characters": [
+    "강도훈",
+    "서민재"
+   ],
+   "dramatic_function": "resolution",
+   "targets": {
+    "tension_band": [
+     0.01,
+     0.25
+    ],
+    "conflict_intensity_min": 0.0,
+    "callback_motifs": [
+     "빗속 골목"
+    ]
+   },
+   "rag_refs": [],
+   "draft": null,
+   "gate": null,
+   "panel": null
+  }
+ ]
+}
