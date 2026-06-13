@@ -4,10 +4,10 @@
  "source_acquired_by": "developer (legal manual acquisition, C:\\claude\\Scripts)",
  "counts": {
   "source_files": 118,
-  "converted_works": 107,
-  "scenes": 9744,
-  "chroma_scene_vectors": 10837,
-  "chroma_slide_vectors": 7705,
+  "converted_works": 122,
+  "scenes": 10594,
+  "chroma_scene_vectors": 11724,
+  "chroma_slide_vectors": 8309,
   "nkg_next_edges": 9437,
   "nkg_characters": 836,
   "nkg_char_scene_edges": 4681
@@ -111,5 +111,8 @@
   "char_extraction": "regex(name-on-line/colon/tab) + LLM-1(gpt-4o-mini, grounded by text-occurrence) for 24 hard-format works",
   "embedding_coverage": "9744/9744 scenes (100%)"
  },
- "note": "parser fixed: numbered headings w/o trailing space (광해 10→128). Re-embedded fresh on local disk to avoid stale-id contamination."
+ "note": "parser fixed: numbered headings w/o trailing space (광해 10→128). Re-embedded fresh on local disk to avoid stale-id contamination.",
+ "drama_corpus": {
+  "태양의후예": "1~16부 전회 촬영고 PDF(텍스트), 태후01~16, ~810씬. 첫 완전 드라마."
+ }
 }
