@@ -4,10 +4,10 @@
  "source_acquired_by": "developer (legal manual acquisition, C:\\claude\\Scripts)",
  "counts": {
   "source_files": 118,
-  "converted_works": 122,
-  "scenes": 10594,
-  "chroma_scene_vectors": 11724,
-  "chroma_slide_vectors": 8309,
+  "converted_works": 205,
+  "scenes": 18802,
+  "chroma_scene_vectors": 20116,
+  "chroma_slide_vectors": 12709,
   "nkg_next_edges": 9437,
   "nkg_characters": 836,
   "nkg_char_scene_edges": 4681
@@ -113,6 +113,7 @@
  },
  "note": "parser fixed: numbered headings w/o trailing space (광해 10→128). Re-embedded fresh on local disk to avoid stale-id contamination.",
  "drama_corpus": {
-  "태양의후예": "1~16부 전회 촬영고 PDF(텍스트), 태후01~16, ~810씬. 첫 완전 드라마."
+  "태양의후예": "1~16부 전회 촬영고 PDF(텍스트), 태후01~16, ~810씬. 첫 완전 드라마.",
+  "신규8편(2026-06-13)": "알게될거야19·위대한유산17·장밋빛인생24·적도의남자18·두번째프러포즈22(3묶음)·강적들·귀여운여인. rar(열여덟스물아홉) 보류."
  }
 }
