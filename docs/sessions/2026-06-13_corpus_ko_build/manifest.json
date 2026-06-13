@@ -4,10 +4,10 @@
  "source_acquired_by": "developer (legal manual acquisition, C:\\claude\\Scripts)",
  "counts": {
   "source_files": 118,
-  "converted_works": 205,
-  "scenes": 18802,
-  "chroma_scene_vectors": 20116,
-  "chroma_slide_vectors": 12709,
+  "converted_works": 395,
+  "scenes": 31225,
+  "chroma_scene_vectors": 32813,
+  "chroma_slide_vectors": 19183,
   "nkg_next_edges": 9437,
   "nkg_characters": 836,
   "nkg_char_scene_edges": 4681
@@ -114,6 +114,7 @@
  "note": "parser fixed: numbered headings w/o trailing space (광해 10→128). Re-embedded fresh on local disk to avoid stale-id contamination.",
  "drama_corpus": {
   "태양의후예": "1~16부 전회 촬영고 PDF(텍스트), 태후01~16, ~810씬. 첫 완전 드라마.",
-  "신규8편(2026-06-13)": "알게될거야19·위대한유산17·장밋빛인생24·적도의남자18·두번째프러포즈22(3묶음)·강적들·귀여운여인. rar(열여덟스물아홉) 보류."
+  "신규8편(2026-06-13)": "알게될거야19·위대한유산17·장밋빛인생24·적도의남자18·두번째프러포즈22(3묶음)·강적들·귀여운여인. rar(열여덟스물아홉) 보류.",
+  "신규15편(2026-06-13 후반)": "개와늑대의시간16·궁24·넌어느별16·넌내게반했어15·네자매이야기·밤이면밤마다17·별순검S1·S2·어느멋진날16·여우야뭐하니16·역전의여왕31·옥탑방고양이16·원더풀라이프16·트리플17·장난스런키스. rar(열여덟스물아홉) 보류."
  }
 }
