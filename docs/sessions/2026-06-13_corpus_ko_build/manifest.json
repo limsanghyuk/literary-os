@@ -1,0 +1,115 @@
+{
+ "corpus": "corpus_ko (Korean film/drama scripts, eval-only, verbatim NOT committed to hub)",
+ "built": "2026-06-13",
+ "source_acquired_by": "developer (legal manual acquisition, C:\\claude\\Scripts)",
+ "counts": {
+  "source_files": 118,
+  "converted_works": 107,
+  "scenes": 9744,
+  "chroma_scene_vectors": 10837,
+  "chroma_slide_vectors": 7705,
+  "nkg_next_edges": 9437,
+  "nkg_characters": 836,
+  "nkg_char_scene_edges": 4681
+ },
+ "embedding_model": "openai/text-embedding-3-small (1536d, cosine)",
+ "tri_store": {
+  "vector": "ChromaDB (chroma_export.tar.gz; built on local fs due to FUSE sqlite limit)",
+  "feature_table": "scene_features.db (SQLite)",
+  "graph": "nkg.json"
+ },
+ "tier1_coverage": {
+  "present": 17,
+  "of": 50,
+  "present_list": [
+   "올드보이",
+   "살인의추억",
+   "마더",
+   "박쥐",
+   "곡성",
+   "밀양",
+   "추격자",
+   "신세계",
+   "부당거래",
+   "달콤한인생",
+   "친절한금자씨",
+   "공동경비구역JSA",
+   "광해",
+   "택시운전사",
+   "부산행",
+   "괴물",
+   "타짜"
+  ],
+  "missing_list": [
+   "기생충",
+   "아가씨",
+   "헤어질결심",
+   "버닝",
+   "시",
+   "박하사탕",
+   "봄날은간다",
+   "8월의크리스마스",
+   "오아시스",
+   "황해",
+   "내부자들",
+   "아수라",
+   "왕의남자",
+   "관상",
+   "사도",
+   "명량",
+   "남한산성",
+   "최종병기활",
+   "1987",
+   "암살",
+   "변호인",
+   "동주",
+   "국제시장",
+   "설국열차",
+   "극한직업",
+   "7번방의선물",
+   "과속스캔들",
+   "베테랑",
+   "도둑들",
+   "범죄도시",
+   "벌새",
+   "미나리",
+   "말모이"
+  ]
+ },
+ "unconverted": {
+  "image_pdf_need_ocr": [
+   "감시자들",
+   "검은사제들",
+   "과속스캔들",
+   "그때그사람들",
+   "범죄의재구성",
+   "변호인",
+   "작전",
+   "홍당무"
+  ],
+  "corrupt_hwp": [
+   "연애의목적"
+  ],
+  "rar_no_extractor": [
+   "황해"
+  ]
+ },
+ "qc": {
+  "works": 106,
+  "clean": 96,
+  "flagged": {
+   "LOW_SCENES/UNSTRUCTURED(subtitle-form)": [
+    "신품 15-20부",
+    "ing",
+    "내깡패같은애인",
+    "가족의탄생"
+   ],
+   "OVERSEG(nested shot numbering)": [
+    "반칙왕"
+   ]
+  },
+  "char_extraction": "regex(name-on-line/colon/tab) + LLM-1(gpt-4o-mini, grounded by text-occurrence) for 24 hard-format works",
+  "embedding_coverage": "9744/9744 scenes (100%)"
+ },
+ "note": "parser fixed: numbered headings w/o trailing space (광해 10→128). Re-embedded fresh on local disk to avoid stale-id contamination."
+}

@@ -1,0 +1,850 @@
+[
+{
+"work": "10부",
+"scenes": 44,
+"chars": 1,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "11부",
+"scenes": 41,
+"chars": 1,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "12부",
+"scenes": 38,
+"chars": 2,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "13부",
+"scenes": 46,
+"chars": 1,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "14부",
+"scenes": 52,
+"chars": 2,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "15부",
+"scenes": 1,
+"chars": 4,
+"method": "fallback_block",
+"char_method": "llm",
+"flags": "LOW_SCENES;UNSTRUCTURED"
+},
+{
+"work": "16부",
+"scenes": 1,
+"chars": 3,
+"method": "fallback_block",
+"char_method": "llm",
+"flags": "LOW_SCENES;UNSTRUCTURED"
+},
+{
+"work": "17부",
+"scenes": 1,
+"chars": 5,
+"method": "fallback_block",
+"char_method": "llm",
+"flags": "LOW_SCENES;UNSTRUCTURED"
+},
+{
+"work": "18부",
+"scenes": 1,
+"chars": 6,
+"method": "fallback_block",
+"char_method": "llm",
+"flags": "LOW_SCENES;UNSTRUCTURED"
+},
+{
+"work": "19부",
+"scenes": 6,
+"chars": 12,
+"method": "fallback_block",
+"char_method": "llm",
+"flags": "LOW_SCENES;UNSTRUCTURED"
+},
+{
+"work": "1부",
+"scenes": 45,
+"chars": 1,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "20부",
+"scenes": 11,
+"chars": 10,
+"method": "fallback_block",
+"char_method": "llm",
+"flags": "UNSTRUCTURED"
+},
+{
+"work": "2부",
+"scenes": 44,
+"chars": 2,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "3부",
+"scenes": 50,
+"chars": 2,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "4부",
+"scenes": 40,
+"chars": 2,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "5부",
+"scenes": 42,
+"chars": 10,
+"method": "num",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "6부",
+"scenes": 40,
+"chars": 1,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "7부",
+"scenes": 39,
+"chars": 1,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "8부",
+"scenes": 45,
+"chars": 10,
+"method": "num",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "9부",
+"scenes": 39,
+"chars": 2,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "ing",
+"scenes": 29,
+"chars": 4,
+"method": "fallback_block",
+"char_method": "regex",
+"flags": "UNSTRUCTURED"
+},
+{
+"work": "가족의탄생",
+"scenes": 6,
+"chars": 9,
+"method": "slug",
+"char_method": "llm",
+"flags": "LOW_SCENES"
+},
+{
+"work": "각설탕",
+"scenes": 32,
+"chars": 7,
+"method": "num",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "간신",
+"scenes": 134,
+"chars": 19,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "건축학개론",
+"scenes": 128,
+"chars": 5,
+"method": "slug",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "결혼은미친짓이다",
+"scenes": 92,
+"chars": 7,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "곡성",
+"scenes": 144,
+"chars": 14,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "공동경비구역JSA",
+"scenes": 98,
+"chars": 6,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "광식이동생광태",
+"scenes": 109,
+"chars": 7,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "광해",
+"scenes": 128,
+"chars": 3,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "괴물",
+"scenes": 101,
+"chars": 13,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "국가대표",
+"scenes": 119,
+"chars": 11,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "그녀를믿지마세요",
+"scenes": 185,
+"chars": 7,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "그림자살인",
+"scenes": 114,
+"chars": 9,
+"method": "num",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "그해여름",
+"scenes": 114,
+"chars": 15,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "끝까지간다",
+"scenes": 85,
+"chars": 9,
+"method": "slug",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "나의결혼원정기",
+"scenes": 123,
+"chars": 8,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "내깡패같은애인",
+"scenes": 66,
+"chars": 2,
+"method": "fallback_block",
+"char_method": "regex",
+"flags": "UNSTRUCTURED"
+},
+{
+"work": "내머리속의지우개",
+"scenes": 118,
+"chars": 13,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "내생애가장아름다운일주일",
+"scenes": 169,
+"chars": 25,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "너는내운명",
+"scenes": 111,
+"chars": 13,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "넘버3",
+"scenes": 105,
+"chars": 15,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "달콤살벌한연인",
+"scenes": 9,
+"chars": 1,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "달콤한 인생",
+"scenes": 128,
+"chars": 3,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "댄서의순정",
+"scenes": 127,
+"chars": 2,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "댄싱퀸",
+"scenes": 121,
+"chars": 2,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "도가니",
+"scenes": 136,
+"chars": 17,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "동갑내기과외하기",
+"scenes": 109,
+"chars": 14,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "라디오스타",
+"scenes": 11,
+"chars": 11,
+"method": "num",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "마더",
+"scenes": 73,
+"chars": 13,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "미녀는괴로워",
+"scenes": 112,
+"chars": 7,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "미스터소크라테스24",
+"scenes": 111,
+"chars": 9,
+"method": "num",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "미인도",
+"scenes": 99,
+"chars": 4,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "밀양",
+"scenes": 119,
+"chars": 11,
+"method": "num",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "밀정",
+"scenes": 120,
+"chars": 12,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "바람난가족",
+"scenes": 119,
+"chars": 13,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "바람의전설",
+"scenes": 128,
+"chars": 7,
+"method": "num",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "바르게살자",
+"scenes": 115,
+"chars": 9,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "박쥐",
+"scenes": 142,
+"chars": 10,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "반창꼬",
+"scenes": 14,
+"chars": 10,
+"method": "slug",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "반칙왕",
+"scenes": 333,
+"chars": 12,
+"method": "num",
+"char_method": "regex",
+"flags": "OVERSEG"
+},
+{
+"work": "번지점프를하다",
+"scenes": 100,
+"chars": 14,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "범죄",
+"scenes": 100,
+"chars": 15,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "베를린",
+"scenes": 136,
+"chars": 12,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "부당거래",
+"scenes": 111,
+"chars": 8,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "부산행",
+"scenes": 120,
+"chars": 12,
+"method": "slug",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "브라보마이라이프",
+"scenes": 112,
+"chars": 7,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "비열한거리",
+"scenes": 173,
+"chars": 11,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "살인의추억",
+"scenes": 122,
+"chars": 13,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "성난펭귄",
+"scenes": 118,
+"chars": 1,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "스승의은혜",
+"scenes": 110,
+"chars": 11,
+"method": "num",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "스캔들",
+"scenes": 102,
+"chars": 5,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "신세계",
+"scenes": 15,
+"chars": 5,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "써니",
+"scenes": 94,
+"chars": 17,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "아는여자",
+"scenes": 79,
+"chars": 7,
+"method": "num",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "아저씨",
+"scenes": 107,
+"chars": 1,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "악마를보았다",
+"scenes": 144,
+"chars": 8,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "약속",
+"scenes": 8,
+"chars": 12,
+"method": "slug",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "엽기적인그녀",
+"scenes": 123,
+"chars": 9,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "오직그대만",
+"scenes": 94,
+"chars": 2,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "올드보이",
+"scenes": 112,
+"chars": 7,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "와니와준하",
+"scenes": 135,
+"chars": 7,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "완득이",
+"scenes": 107,
+"chars": 7,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "우리들의행복한시간",
+"scenes": 125,
+"chars": 7,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "우리생애최고의순간",
+"scenes": 70,
+"chars": 19,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "우아한거짓말",
+"scenes": 115,
+"chars": 9,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "우아한세계",
+"scenes": 12,
+"chars": 1,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "음란서생",
+"scenes": 93,
+"chars": 7,
+"method": "num",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "의뢰인",
+"scenes": 134,
+"chars": 15,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "의형제",
+"scenes": 148,
+"chars": 7,
+"method": "num",
+"char_method": "llm",
+"flags": "OK"
+},
+{
+"work": "인사동스캔들",
+"scenes": 102,
+"chars": 6,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "좋지아니한가",
+"scenes": 104,
+"chars": 6,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "지구를지켜라",
+"scenes": 16,
+"chars": 6,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "질투는나의힘",
+"scenes": 99,
+"chars": 8,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "천하장사마돈나",
+"scenes": 114,
+"chars": 4,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "추격자",
+"scenes": 200,
+"chars": 2,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "친절한금자씨",
+"scenes": 151,
+"chars": 12,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "클래식",
+"scenes": 11,
+"chars": 8,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "타짜",
+"scenes": 92,
+"chars": 15,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "태양의후예 10회",
+"scenes": 13,
+"chars": 6,
+"method": "slug",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "택시운전사",
+"scenes": 110,
+"chars": 18,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "품행제로",
+"scenes": 119,
+"chars": 5,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "해운대",
+"scenes": 184,
+"chars": 1,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "해피엔드",
+"scenes": 108,
+"chars": 6,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "홍반장",
+"scenes": 116,
+"chars": 8,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+},
+{
+"work": "효자동이발사",
+"scenes": 124,
+"chars": 3,
+"method": "num",
+"char_method": "regex",
+"flags": "OK"
+}
+]
