@@ -1526,10 +1526,16 @@
 },
 "건축학개론": {
 "n_scenes": 124,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"승민",
+"서연",
+"은채",
+"아버지",
+"구소장"
+],
+"n_characters": 5,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "결혼은미친짓이다": {
 "n_scenes": 92,
@@ -2186,59 +2192,150 @@
 },
 "궁01": {
 "n_scenes": 24,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"채경",
+"황후",
+"황태후",
+"황제",
+"효린",
+"순영",
+"히숭",
+"강현",
+"어의",
+"의성군",
+"화영"
+],
+"n_characters": 11,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "궁02": {
 "n_scenes": 23,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"채경",
+"황후",
+"황태후",
+"아빠",
+"엄마",
+"효린",
+"채준"
+],
+"n_characters": 7,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "궁03": {
 "n_scenes": 19,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"채경",
+"최상궁",
+"황후",
+"황태후",
+"방나인",
+"서상궁",
+"순영",
+"의성군",
+"히숭",
+"공내관",
+"채준",
+"강현"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "궁04": {
 "n_scenes": 28,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"채경",
+"효린",
+"화영",
+"교수",
+"황후",
+"황제",
+"황태후",
+"공내관",
+"최국장",
+"남선생",
+"히숭",
+"순영"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "궁05": {
 "n_scenes": 24,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"채경",
+"효린",
+"히숭",
+"강현",
+"순영",
+"최상궁",
+"익위사",
+"황후",
+"황태후",
+"공내관",
+"황제",
+"방나인"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "궁06": {
 "n_scenes": 25,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"채경",
+"황태후",
+"화영",
+"황후",
+"황제",
+"순영",
+"히숭",
+"강현",
+"김내관",
+"최국장",
+"공내관",
+"민효린"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "궁07": {
 "n_scenes": 29,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"채경",
+"효린",
+"화영",
+"황태후",
+"황제",
+"황후",
+"곽상궁",
+"담임"
+],
+"n_characters": 8,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "궁08": {
 "n_scenes": 25,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"채경",
+"공내관",
+"효린",
+"황태후",
+"황후",
+"아빠",
+"최상궁",
+"엄마",
+"채준"
+],
+"n_characters": 9,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "궁09": {
 "n_scenes": 44,
@@ -2425,10 +2522,22 @@
 },
 "궁12": {
 "n_scenes": 20,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"채경",
+"태후",
+"황제",
+"화영",
+"황후",
+"혜명",
+"효린",
+"공내관",
+"혜정궁",
+"서상궁",
+"최상궁"
+],
+"n_characters": 11,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "궁13": {
 "n_scenes": 52,
@@ -2818,10 +2927,21 @@
 },
 "궁18": {
 "n_scenes": 29,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"채경",
+"효린",
+"화영",
+"강현",
+"히숭",
+"황후",
+"공내관",
+"태황태후",
+"순영",
+"최상궁"
+],
+"n_characters": 10,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "궁19": {
 "n_scenes": 35,
@@ -3145,10 +3265,21 @@
 },
 "궁23": {
 "n_scenes": 15,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"채경",
+"태자",
+"화영",
+"태황태후",
+"황후",
+"황제",
+"공내관",
+"충화",
+"혜명",
+"최상궁"
+],
+"n_characters": 10,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "궁24": {
 "n_scenes": 56,
@@ -5031,115 +5162,277 @@
 },
 "넌어느별에서왔니01": {
 "n_scenes": 63,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"승희",
+"복실",
+"순옥",
+"혜수",
+"정훈",
+"조선생",
+"기자"
+],
+"n_characters": 7,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "넌어느별에서왔니02": {
 "n_scenes": 69,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"복실",
+"정훈",
+"조선생",
+"미현",
+"순옥",
+"여주",
+"남주",
+"최승희"
+],
+"n_characters": 8,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "넌어느별에서왔니03": {
 "n_scenes": 66,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"복실",
+"승희",
+"정훈",
+"미현",
+"진희",
+"선정",
+"찬호",
+"영노",
+"순옥",
+"조선생"
+],
+"n_characters": 10,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "넌어느별에서왔니04": {
 "n_scenes": 74,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"복실",
+"승희",
+"순옥",
+"진희",
+"조선생",
+"정훈",
+"찬호",
+"선정",
+"혜림"
+],
+"n_characters": 9,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "넌어느별에서왔니05": {
 "n_scenes": 67,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"복실",
+"승희",
+"진희",
+"미현",
+"순옥",
+"찬호",
+"기사",
+"영노",
+"정훈",
+"조선생",
+"수일",
+"혜수"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "넌어느별에서왔니06": {
 "n_scenes": 69,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"복실",
+"승희",
+"진희",
+"미현",
+"찬호",
+"정훈",
+"영노",
+"순옥",
+"조선생"
+],
+"n_characters": 9,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "넌어느별에서왔니07": {
 "n_scenes": 72,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"승희",
+"복실",
+"진희",
+"미현",
+"영노",
+"상욱",
+"정훈",
+"순옥",
+"선정",
+"최승희"
+],
+"n_characters": 10,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "넌어느별에서왔니08": {
 "n_scenes": 64,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"복실",
+"승희",
+"진희",
+"미현",
+"정훈",
+"혜림",
+"감독님",
+"영노",
+"순옥",
+"조선생",
+"혜수"
+],
+"n_characters": 11,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "넌어느별에서왔니09": {
 "n_scenes": 57,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"복실",
+"승희",
+"정훈",
+"미현",
+"상욱",
+"찬호",
+"진희",
+"영노",
+"가정부"
+],
+"n_characters": 9,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "넌어느별에서왔니10": {
 "n_scenes": 69,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"복실",
+"승희",
+"진희",
+"상욱",
+"정훈",
+"미현",
+"순옥",
+"찬호"
+],
+"n_characters": 8,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "넌어느별에서왔니11": {
 "n_scenes": 66,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"복실",
+"승희",
+"진희",
+"정훈",
+"미현",
+"혜림",
+"찬호",
+"수일",
+"선정"
+],
+"n_characters": 9,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "넌어느별에서왔니12": {
 "n_scenes": 70,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"승희",
+"복실",
+"진희",
+"정훈",
+"순옥",
+"미현",
+"조선생",
+"영노",
+"수일"
+],
+"n_characters": 9,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "넌어느별에서왔니13": {
 "n_scenes": 58,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"승희",
+"복실",
+"순옥",
+"정훈",
+"미현",
+"진희",
+"영노",
+"상욱",
+"수일"
+],
+"n_characters": 9,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "넌어느별에서왔니14": {
 "n_scenes": 61,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"승희",
+"복실",
+"진희",
+"화연",
+"영노",
+"미현",
+"순옥",
+"상욱",
+"조선생"
+],
+"n_characters": 9,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "넌어느별에서왔니15": {
 "n_scenes": 65,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"복실",
+"승희",
+"진희",
+"정훈",
+"순옥",
+"상욱",
+"미현",
+"영노",
+"수일"
+],
+"n_characters": 9,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "넌어느별에서왔니16": {
 "n_scenes": 54,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"승희",
+"복실",
+"진희",
+"영노",
+"정훈",
+"상욱",
+"혜림",
+"미현"
+],
+"n_characters": 8,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "넘버3": {
 "n_scenes": 105,
@@ -7060,10 +7353,18 @@
 },
 "바람의전설": {
 "n_scenes": 128,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"연화",
+"소리",
+"경순",
+"박반장",
+"희선",
+"꽃미남",
+"박풍식"
+],
+"n_characters": 7,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "바르게살자": {
 "n_scenes": 115,
@@ -8913,17 +9214,43 @@
 },
 "별순검S101": {
 "n_scenes": 1,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"복근",
+"강우",
+"최무성",
+"여진",
+"승조",
+"홍연",
+"장석환",
+"오덕",
+"금산",
+"능금",
+"류검률",
+"순검1"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "별순검S202": {
 "n_scenes": 42,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"무영",
+"대한",
+"다경",
+"조씨",
+"금화",
+"윤산갈",
+"나검률",
+"알렉세이",
+"조씨부인",
+"김진규",
+"강희",
+"봉순검"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "부당거래": {
 "n_scenes": 109,
@@ -9019,10 +9346,23 @@
 },
 "부산행": {
 "n_scenes": 119,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"석우",
+"수안",
+"상화",
+"성경",
+"용석",
+"영국",
+"기장",
+"노숙자",
+"진희",
+"종길",
+"인길",
+"기철"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "브라보마이라이프": {
 "n_scenes": 112,
@@ -18997,10 +19337,18 @@
 },
 "음란서생": {
 "n_scenes": 93,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"정빈",
+"황가",
+"조내시",
+"윤서부",
+"필사장이",
+"모사장이",
+"윤서처"
+],
+"n_characters": 7,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "의뢰인": {
 "n_scenes": 134,
@@ -19246,297 +19594,772 @@
 },
 "장밋빛인생01": {
 "n_scenes": 78,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"성문",
+"영이",
+"끝순",
+"미자",
+"맹씨",
+"희망",
+"소망",
+"슈퍼",
+"주인",
+"손님",
+"반장"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생02": {
 "n_scenes": 79,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"성문",
+"영이",
+"성해",
+"미자",
+"끝순",
+"원만",
+"맹씨",
+"소망",
+"희망"
+],
+"n_characters": 10,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생03": {
 "n_scenes": 68,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"성문",
+"영이",
+"끝순",
+"미스봉",
+"원만",
+"미자",
+"직원",
+"여보"
+],
+"n_characters": 9,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생04": {
 "n_scenes": 88,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"성문",
+"끝순",
+"영이",
+"정도",
+"미스봉",
+"원만",
+"성해",
+"손님",
+"장미",
+"맹씨",
+"기사"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생05": {
 "n_scenes": 77,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"미스봉",
+"성문",
+"영이",
+"끝순",
+"성해",
+"미자",
+"정도",
+"소망",
+"반장",
+"장미",
+"여자1"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생06": {
 "n_scenes": 82,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"성문",
+"영이",
+"소망",
+"희망",
+"정도",
+"끝순",
+"원만",
+"미스봉",
+"성해",
+"맹씨",
+"슈퍼"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생07": {
 "n_scenes": 77,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"성문",
+"순이",
+"영이",
+"정도",
+"미자",
+"장미",
+"맹씨",
+"슈퍼"
+],
+"n_characters": 8,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생08": {
 "n_scenes": 76,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"성문",
+"끝순",
+"소망",
+"영이",
+"맹씨",
+"미스봉",
+"희망",
+"장미",
+"정도",
+"지점장"
+],
+"n_characters": 11,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생09": {
 "n_scenes": 63,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"영이",
+"성문",
+"끝순",
+"장미",
+"성해",
+"정도",
+"미스봉",
+"소망",
+"의사",
+"미자",
+"희망이"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생10": {
 "n_scenes": 62,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"영이",
+"정도",
+"미자",
+"성문",
+"성해",
+"끝순",
+"장미",
+"원만",
+"소망",
+"미스봉",
+"희망"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생11": {
 "n_scenes": 70,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"영이",
+"순이",
+"정도",
+"장미",
+"소망",
+"성문",
+"미자",
+"희망"
+],
+"n_characters": 8,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생12": {
 "n_scenes": 62,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"영이",
+"순이",
+"정도",
+"성문",
+"끝순",
+"장미",
+"미스봉",
+"태동",
+"소망이",
+"희망이",
+"사장",
+"성해"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생13": {
 "n_scenes": 68,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"엄마",
+"영이",
+"성문",
+"끝순",
+"소망",
+"지박사",
+"미스봉",
+"맹씨",
+"기사",
+"미자",
+"희망"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생14": {
 "n_scenes": 72,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"성문",
+"순이",
+"영이",
+"엄마",
+"끝순",
+"미자",
+"고모",
+"원만",
+"성해",
+"간호사",
+"영감",
+"태동"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생15": {
 "n_scenes": 59,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"영이",
+"성문",
+"순이",
+"박사",
+"정도",
+"지점장"
+],
+"n_characters": 6,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생16": {
 "n_scenes": 62,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"성문",
+"영이",
+"맹씨",
+"원만",
+"박사",
+"의사"
+],
+"n_characters": 7,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생17": {
 "n_scenes": 66,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"성문",
+"영이",
+"끝순",
+"박사",
+"성해",
+"맹씨",
+"미스봉",
+"의사",
+"슈퍼"
+],
+"n_characters": 10,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생18": {
 "n_scenes": 75,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"성문",
+"영이",
+"끝순",
+"미스봉",
+"소망",
+"원만",
+"희망",
+"인턴",
+"점쟁이",
+"간호사"
+],
+"n_characters": 11,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생19": {
 "n_scenes": 78,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"성문",
+"영이",
+"박사",
+"원만",
+"맹씨",
+"끝순",
+"성해",
+"미스봉",
+"엄마",
+"슈퍼",
+"소망"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생20": {
 "n_scenes": 65,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"영이",
+"성문",
+"박사",
+"소망",
+"맹씨",
+"미스봉",
+"끝순",
+"슈퍼",
+"원만",
+"성해",
+"희망"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생21": {
 "n_scenes": 63,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"성문",
+"영이",
+"맹씨",
+"박사",
+"끝순",
+"성해",
+"소망",
+"원만",
+"희망"
+],
+"n_characters": 10,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생22": {
 "n_scenes": 46,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"영이",
+"성문",
+"박사",
+"미스봉",
+"끝순",
+"성해",
+"소망",
+"원만",
+"희망",
+"슈퍼"
+],
+"n_characters": 11,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생23": {
 "n_scenes": 50,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"순이",
+"영이",
+"성문",
+"엄마",
+"박사",
+"미스봉",
+"성해",
+"철수"
+],
+"n_characters": 8,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "장밋빛인생24": {
 "n_scenes": 84,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"성문",
+"순이",
+"영이",
+"소망",
+"희망",
+"끝순",
+"박사",
+"맹씨",
+"미스봉",
+"슈퍼",
+"원만"
+],
+"n_characters": 11,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자01": {
 "n_scenes": 62,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"선우",
+"장일",
+"경필",
+"용배",
+"땡보",
+"지원",
+"담임",
+"금줄",
+"진노식",
+"차실장",
+"깡패2",
+"깡패1"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자02": {
 "n_scenes": 57,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"선우",
+"장일",
+"용배",
+"광춘",
+"노식",
+"수미"
+],
+"n_characters": 6,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자03": {
 "n_scenes": 76,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"장일",
+"수미",
+"용배",
+"광춘",
+"지원",
+"노식",
+"금줄",
+"경필",
+"장택",
+"김선우"
+],
+"n_characters": 10,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자04": {
 "n_scenes": 70,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"선우",
+"장일",
+"수미",
+"용배",
+"금줄",
+"노식",
+"윤주",
+"아줌마",
+"명식",
+"진회장"
+],
+"n_characters": 10,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자05": {
 "n_scenes": 64,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"선우",
+"장일",
+"수미",
+"금줄",
+"지원",
+"용배",
+"희정",
+"광춘",
+"윤주",
+"명석"
+],
+"n_characters": 10,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자06": {
 "n_scenes": 59,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"선우",
+"장일",
+"지원",
+"수미",
+"금줄",
+"용배"
+],
+"n_characters": 6,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자07": {
 "n_scenes": 50,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"선우",
+"지원",
+"장일",
+"용배",
+"광춘",
+"노식",
+"금줄",
+"윤주",
+"마희정"
+],
+"n_characters": 9,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자08": {
 "n_scenes": 62,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"선우",
+"지원",
+"장일",
+"수미",
+"노식",
+"윤주",
+"용배",
+"희정",
+"금줄",
+"차실장",
+"광춘",
+"진노식"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자09": {
 "n_scenes": 58,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"선우",
+"장일",
+"수미",
+"지원",
+"광춘",
+"태주",
+"금줄",
+"실장",
+"경필",
+"고순",
+"황백"
+],
+"n_characters": 11,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자10": {
 "n_scenes": 70,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"선우",
+"지원",
+"장일",
+"태주",
+"노식",
+"윤주",
+"차실장"
+],
+"n_characters": 7,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자11": {
 "n_scenes": 58,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"선우",
+"장일",
+"지원",
+"용배",
+"준호",
+"광춘",
+"진노식",
+"순태",
+"소영",
+"데이빗 김",
+"백구"
+],
+"n_characters": 11,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자12": {
 "n_scenes": 52,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"장일",
+"선우",
+"수미",
+"지원",
+"노식",
+"용배",
+"희정",
+"윤주",
+"진노식",
+"소영"
+],
+"n_characters": 10,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자13": {
 "n_scenes": 56,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"장일",
+"선우",
+"수미",
+"노식",
+"윤주",
+"준호",
+"태주",
+"용배",
+"진노식",
+"부장",
+"김경필"
+],
+"n_characters": 11,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자14": {
 "n_scenes": 46,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"선우",
+"지원",
+"장일",
+"수미",
+"광춘",
+"준호",
+"노식",
+"용배",
+"희정",
+"윤주",
+"경필"
+],
+"n_characters": 11,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자15": {
 "n_scenes": 37,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"선우",
+"장일",
+"용배",
+"광춘",
+"지원",
+"노식",
+"수미",
+"희정",
+"태주",
+"준호",
+"진회장",
+"윤주"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자16": {
 "n_scenes": 48,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"선우",
+"장일",
+"지원",
+"노식",
+"금줄",
+"희정",
+"준호",
+"용배",
+"최수미",
+"진회장",
+"김경필"
+],
+"n_characters": 11,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자17": {
 "n_scenes": 29,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"선우",
+"장일",
+"노식",
+"수미",
+"용배",
+"윤주",
+"희정",
+"준호",
+"광춘",
+"진회장",
+"태주",
+"김경필"
+],
+"n_characters": 12,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "적도의남자18": {
 "n_scenes": 48,
-"characters": [],
-"n_characters": 0,
+"characters": [
+"선우",
+"장일",
+"노식",
+"용배",
+"수미",
+"광춘",
+"지원",
+"금줄",
+"윤주",
+"차실장"
+],
+"n_characters": 10,
 "top_pairs": [],
-"char_method": ""
+"char_method": "llm"
 },
 "좋지아니한가": {
 "n_scenes": 91,
