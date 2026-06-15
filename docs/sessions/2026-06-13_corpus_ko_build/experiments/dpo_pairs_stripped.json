@@ -1,0 +1,104 @@
+[
+{
+"func": "inciting",
+"genre": "thriller",
+"ref_id": "추격자::S80",
+"winner": "ref"
+},
+{
+"func": "climax",
+"genre": "melo",
+"ref_id": "올드보이::S7",
+"winner": "draft"
+},
+{
+"func": "inciting",
+"genre": "melo",
+"ref_id": "추격자::S143",
+"winner": "draft"
+},
+{
+"func": "inciting",
+"genre": "crime",
+"ref_id": "살인의추억::S89",
+"winner": "draft"
+},
+{
+"func": "rising",
+"genre": "crime",
+"ref_id": "국제시장::S10",
+"winner": "draft"
+},
+{
+"func": "inciting",
+"genre": "romance",
+"ref_id": "미생05::S61",
+"winner": "draft"
+},
+{
+"func": "midpoint",
+"genre": "romance",
+"ref_id": "국제시장::S107",
+"winner": "ref"
+},
+{
+"func": "midpoint",
+"genre": "melo",
+"ref_id": "올드보이::S73",
+"winner": "draft"
+},
+{
+"func": "midpoint",
+"genre": "thriller",
+"ref_id": "미생05::S30",
+"winner": "ref"
+},
+{
+"func": "rising",
+"genre": "thriller",
+"ref_id": "국제시장::S83",
+"winner": "draft"
+},
+{
+"func": "midpoint",
+"genre": "thriller",
+"ref_id": "태후08::S1",
+"winner": "ref"
+},
+{
+"func": "climax",
+"genre": "thriller",
+"ref_id": "국제시장::S87",
+"winner": "draft"
+},
+{
+"func": "rising",
+"genre": "romance",
+"ref_id": "미생05::S91",
+"winner": "ref"
+},
+{
+"func": "rising",
+"genre": "crime",
+"ref_id": "태후08::S11",
+"winner": "draft"
+},
+{
+"func": "setup",
+"genre": "melo",
+"ref_id": "곡성::S41",
+"winner": "ref"
+},
+{
+"func": "rising",
+"genre": "romance",
+"ref_id": "올드보이::S85",
+"winner": "ref"
+},
+{
+"func": "crisis",
+"genre": "thriller",
+"ref_id": "태후08::S14",
+"winner": "draft"
+}
+]

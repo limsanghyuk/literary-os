@@ -4,9 +4,9 @@
  "source_acquired_by": "developer (legal manual acquisition, C:\\claude\\Scripts)",
  "counts": {
   "source_files": 118,
-  "converted_works": 395,
-  "scenes": 31225,
-  "chroma_scene_vectors": 32813,
+  "converted_works": 455,
+  "scenes": 34536,
+  "chroma_scene_vectors": 36683,
   "chroma_slide_vectors": 19183,
   "nkg_next_edges": 9437,
   "nkg_characters": 836,
