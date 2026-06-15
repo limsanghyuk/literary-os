@@ -38,13 +38,17 @@ class LLMCritic(CriticInterface):
         return (f"너는 '{self.axis.value}' 전문 비평가다. 두 드라마 씬 A/B를 "
                 f"**{crit}** 기준으로만 비교해 더 우수한 쪽을 고른다.{g}\n"
                 f"참고(유사 실제 씬):\n{refs}\n"
-                f"마지막 줄에 반드시 'WINNER: A' / 'WINNER: B' / 'WINNER: TIE' 중 하나.\n\n"
+                f"분석은 1문장 이내로 짧게. 그리고 **반드시 마지막 줄에 정확히** "
+                f"'WINNER: A' 또는 'WINNER: B' 또는 'WINNER: TIE' 만 출력(다른 텍스트 금지).\n\n"
                 f"=== 씬 A ===\n{A}\n\n=== 씬 B ===\n{B}\n")
 
     @staticmethod
     def _parse(resp: str) -> str:
         m = re.search(r"WINNER\s*[:：]\s*(A|B|TIE)", resp or "", re.I)
-        return {"A": "a", "B": "b", "TIE": "tie"}[m.group(1).upper()] if m else "tie"
+        if m:
+            return {"A": "a", "B": "b", "TIE": "tie"}[m.group(1).upper()]
+        m2 = re.search(r"(?:우수|나은|선택|승)[^\n]{0,8}?[:：(]?\s*(A|B)\b", resp or "", re.I)
+        return {"A": "a", "B": "b"}[m2.group(1).upper()] if m2 else "tie"
 
     def _judge(self, a_text: str, b_text: str, ctx: CriticContext) -> Tuple[str, str]:
         if self._llm is None:

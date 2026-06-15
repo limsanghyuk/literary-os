@@ -1,3 +1,14 @@
+## [13.9.0] — V756 — CriticEnsemble + G_LLM1_RAG (Phase E.2, ADR-216)
+
+### V756 — 5축 합의 앙상블 (Pass7 패널 승격)
+- `literary_system/critic/ensemble.py` — CriticEnsemble(5축 BT 합의)·EnsembleResult·as_judge(Pass7 어댑터)
+- `tools/run_llm1_rag_gate.py` — G_LLM1_RAG(critic RAG 강제 검증)
+- llm_critics: 프롬프트 'WINNER:' 형식 강제 + _parse 폴백(V754 tie 기본처리 보강)
+- `tests/unit/test_v756_critic_ensemble.py` 18 TC (critic 전체 69 TC PASS)
+- 버전 13.8.0 → 13.9.0
+
+---
+
 ## [13.8.0] — V754 — 실 LLM 축별 Critic 5종 (Phase E.2, ADR-215)
 
 ### V754 — LLMCritic 5종 (a)

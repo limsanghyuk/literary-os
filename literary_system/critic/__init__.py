@@ -15,3 +15,6 @@ from literary_system.critic.llm_critics import (
 )
 __all__ += ["LLMCritic", "StructureCritic", "CharacterCritic", "DialogueCritic",
             "EmotionCritic", "GenreCritic", "ALL_CRITICS", "make_ensemble", "evaluate_all_axes"]
+
+from literary_system.critic.ensemble import CriticEnsemble, EnsembleResult
+__all__ += ["CriticEnsemble", "EnsembleResult"]
