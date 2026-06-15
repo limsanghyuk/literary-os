@@ -1,3 +1,13 @@
+## [13.13.0] — V760 — 심판 상향: 3페르소나 합의 critic (V755 잔여 해소, ADR-220)
+
+### V760 — 다중 페르소나 합의 판정
+- LLMCritic `n_judges`/페르소나(문학평론가·드라마투르그·일반시청자) — 다수결 합의(동률 tie), 하위호환(기본 1)
+- make_ensemble/CriticEnsemble `n_judges` 전파, 심판 모델 주입형(gpt-5 선택)
+- `tests/unit/test_v760_judge_consensus.py` 14 TC. (b)의 단일심판 TIE 문제·V755 잔여 ⓑ 해소
+- 버전 13.12.0 → 13.13.0
+
+---
+
 ## [13.12.0] — V759 — Arbitration Protocol v1 (Phase E.2 마무리, ADR-219)
 
 ### V759 — 공식↔critic 중재

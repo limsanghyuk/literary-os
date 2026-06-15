@@ -23,8 +23,9 @@ class EnsembleResult:
 
 class CriticEnsemble:
     """5축 LLM critic 합의. RAG 필수·쌍대만."""
-    def __init__(self, llm: Optional[Callable[[str], str]] = None, seed: Optional[int] = None) -> None:
-        self._critics = make_ensemble(llm=llm, seed=seed)
+    def __init__(self, llm: Optional[Callable[[str], str]] = None, seed: Optional[int] = None,
+                 n_judges: int = 1) -> None:
+        self._critics = make_ensemble(llm=llm, seed=seed, n_judges=n_judges)
 
     def evaluate(self, a_text: str, b_text: str, ctx: CriticContext,
                  a_id: str = "a", b_id: str = "b") -> EnsembleResult:
