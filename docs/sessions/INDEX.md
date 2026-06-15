@@ -183,3 +183,4 @@
 - tools/: formula_validation/(harness·heldout_cv·integrate_tristore·refcheck_oai) · tri_store/build_tristore · corpus_migrate · run_formula_pilot
 - data/corpus_seed/: L0 178편 · POC · 검증 씬셋(3·5편)
 - 2026-06-15_human_gt_protocol_L4_v1.md — 인간 GT(작가 평가) 운영 프로토콜 L4 (P2 절대검증 갭 충전)
+- ★ 2026-06-15_home_company_handoff_v1.md — 오늘(06-15) 종합: 인간GT·char_ner·생성본체·LLM-1 진입 (V745→V754, 집→회사 연속)
