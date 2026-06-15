@@ -1,3 +1,18 @@
+## [13.6.0] — V752 — 생성 본체 Pass4~7 (우선순위3)
+
+### V752 — Pass4 RAG결선 · Pass5 초안 · Pass6 구조게이트 · Pass7 패널보상 (GENERATION_BODY_L4 구현)
+- `docs/sessions/2026-06-13_corpus_ko_build/orchestration/passes4_7.py`
+  - Pass4 pass4_rag: 유사씬(ChromaDB)+NKG 인물상태+DRSE 미회수 콜백 → SceneBrief.rag_refs
+  - Pass5 pass5_draft: SceneBrief→draft (LLM 주입형, 레퍼런스 복제 금지)
+  - Pass6 pass6_gate: 씬 단위 구조 sanity(길이·갈등존재·콜백반영, 절대점수 아님=G_NO_ABSOLUTE_REWARD)
+  - Pass7 pass7_panel: 게이트통과 draft vs 실대본 레퍼런스 쌍대→선호쌍 로그(보상)
+  - run_pass4_7: 짧은 루프 A(구조 FAIL→재생성) 포함. retrieve/generate/judge/reference_of 전부 주입형
+- 아키텍처 실동작: 공식=구조 게이트, 패널=품질 보상
+- `tests/pipeline/test_passes4_7.py` 15 TC + --selftest 7체크 PASS
+- 버전: 13.5.0 → 13.6.0
+
+---
+
 ## [13.5.0] — V751 — char_ner: 시리즈 단위 인물 NER (우선순위2)
 
 ### V751 — 시리즈 단위 다중신호 NER (CHAR_NER_PROPOSAL 구현)
