@@ -18,3 +18,8 @@ __all__ += ["LLMCritic", "StructureCritic", "CharacterCritic", "DialogueCritic",
 
 from literary_system.critic.ensemble import CriticEnsemble, EnsembleResult
 __all__ += ["CriticEnsemble", "EnsembleResult"]
+
+from literary_system.critic.alignment_monitor import (
+    AlignmentReport, measure_alignment, ALIGNMENT_MIN,
+)
+__all__ += ["AlignmentReport", "measure_alignment", "ALIGNMENT_MIN"]

@@ -1,3 +1,13 @@
+## [13.10.0] — V757 — AlignmentMonitor + G_LLM1_ALIGNMENT (Phase E.2, ADR-217)
+
+### V757 — Critic↔인간 GT 일치율
+- `literary_system/critic/alignment_monitor.py` — measure_alignment·AlignmentReport(≥0.80)
+- `tools/run_llm1_alignment_gate.py` — G_LLM1_ALIGNMENT (human_gt 재사용)
+- `tests/unit/test_v757_alignment.py` 14 TC
+- 버전 13.9.0 → 13.10.0
+
+---
+
 ## [13.9.0] — V756 — CriticEnsemble + G_LLM1_RAG (Phase E.2, ADR-216)
 
 ### V756 — 5축 합의 앙상블 (Pass7 패널 승격)
