@@ -1,3 +1,14 @@
+## [13.12.0] — V759 — Arbitration Protocol v1 (Phase E.2 마무리, ADR-219)
+
+### V759 — 공식↔critic 중재
+- `critic/arbitration.py` — classify(5분기)·formula_winner(R 비교)·arbitrate(records+큐)
+- `tools/run_arbitration_check.py` · `tests/unit/test_v759_arbitration.py` 16 TC
+- pending→disagreement_queue(인간 큐), formula_defect→공식 recalibrate, critic_defect→critic 개선
+- 버전 13.11.0 → 13.12.0
+- ※ Phase E.2 LLM-1 Critic 코어(critic/ base·5종·ensemble·alignment·safety·cost·arbitration) 완비
+
+---
+
 ## [13.11.0] — V758 — CorpusGate(SAFETY) + LLM1Metrics(COST) (Phase E.2, ADR-218)
 
 ### V758 — LLM-1 안전·비용 게이트

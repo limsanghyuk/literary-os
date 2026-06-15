@@ -27,3 +27,8 @@ __all__ += ["AlignmentReport", "measure_alignment", "ALIGNMENT_MIN"]
 from literary_system.critic.corpus_gate import CorpusGate, MIN_CORPUS_WORKS
 from literary_system.critic.llm1_metrics import LLM1Metrics, COST_HARD_USD, COST_SOFT_USD
 __all__ += ["CorpusGate", "MIN_CORPUS_WORKS", "LLM1Metrics", "COST_HARD_USD", "COST_SOFT_USD"]
+
+from literary_system.critic.arbitration import (
+    DisagreementRecord, classify, formula_winner, arbitrate,
+)
+__all__ += ["DisagreementRecord", "classify", "formula_winner", "arbitrate"]
