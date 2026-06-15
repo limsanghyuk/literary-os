@@ -1,3 +1,14 @@
+## [13.5.0] — V751 — char_ner: 시리즈 단위 인물 NER (우선순위2)
+
+### V751 — 시리즈 단위 다중신호 NER (CHAR_NER_PROPOSAL 구현)
+- `docs/sessions/2026-06-13_corpus_ko_build/pipeline/char_ner.py` — 8단계: 시리즈 풀링·화자 후보·장소 제외(접미 -실/방/관)·재등장 임계(≥2회차)·mecab(선택)·친족 분리·LLM 폴백(선택)·char-scene 엣지
+- 원리: "화자 위치=강한 인물 신호 / 장소=헤딩에만" 분리 → 드라마 166편 NOCHAR·장소누출 해소
+- `tests/pipeline/test_char_ner.py` — 17 TC + char_ner `--selftest` 7체크 PASS
+- 입력=scenes/*.jsonl, 출력=char_ner.json (verbatim 미저장, 인물명·엣지만). 개발자가 로컬 실데이터에 실행
+- 버전: 13.4.0 → 13.5.0
+
+---
+
 ## [13.4.0] — V750 — G_HUMAN_GT_ALIGNMENT: 인간 GT(작가 평가) 인프라 (ADR-213)
 
 ### V750 — 인간 GT 운영 인프라 (우선순위1-b, ADR-213)
