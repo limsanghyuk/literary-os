@@ -1,3 +1,15 @@
+## [13.7.0] — V753 — LLM-1 Critic 진입: CriticInterface 5축 + G_LLM1_BOUNDARY (Phase E.2, ADR-214)
+
+### V753 — LLM-0→1 전이 진입 (Phase E.2 첫 코드)
+- `literary_system/critic/` 신설: base.py(CriticAxis 5축·CriticContext[RAG필수]·CriticVerdict[쌍대]·CriticInterface·MockCritic·aggregate_verdicts)
+- `tools/run_llm1_boundary_gate.py` — G_LLM1_BOUNDARY: corpus/constitution/finetune 외부 LLM 0건(PASS)
+- critic 합의=validation.pairwise BT 집계(G_CONNECTIVITY 결선, 고립 0)
+- `tests/unit/test_v753_critic_base.py` 27 TC
+- 승인 반영: D-E2-1(ADR 214~) · D-E2-2(V753 즉시) · D-E2-4(5축 확정)
+- 버전: 13.6.0 → 13.7.0
+
+---
+
 ## [13.6.0] — V752 — 생성 본체 Pass4~7 (우선순위3)
 
 ### V752 — Pass4 RAG결선 · Pass5 초안 · Pass6 구조게이트 · Pass7 패널보상 (GENERATION_BODY_L4 구현)
