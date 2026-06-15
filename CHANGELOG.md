@@ -1,3 +1,17 @@
+## [13.4.0] — V750 — G_HUMAN_GT_ALIGNMENT: 인간 GT(작가 평가) 인프라 (ADR-213)
+
+### V750 — 인간 GT 운영 인프라 (우선순위1-b, ADR-213)
+- `literary_system/validation/human_gt.py` — GTMode(A/B/C)·GTPair·GTRecord, build_blind_sheet(블라인드·DB앵커검증), record_from_sheet(좌우역변환), aggregate_winrate(bt_scores), inter_rater_alpha(Krippendorff), panel_alignment, run_g_human_gt_alignment
+- `literary_system/validation/human_gt_fixtures.py` — 명작vs열화 6쌍·평가자3명 합성 GT
+- `tools/run_human_gt_gate.py` — G_HUMAN_GT_ALIGNMENT CLI (α≥0.6)
+- `tests/validation/test_human_gt.py` — 43 TC
+- `docs/adr/ADR-213.md`
+- 원칙: 절대점수 금지·DB앵커강제(LLM회상 차단)·수집만(학습은 Phase F)
+- 설계: docs/sessions/2026-06-15_human_gt_protocol_L4_v1.md
+- 버전: 13.3.0 → 13.4.0
+
+---
+
 ## [13.3.0] — V749 — G_PAIRWISE_REGRESSION + G_TRANSITIVITY 게이트 (ADR-212)
 
 ### Preflight 분석 결과 (DEV_PROTOCOL v3.0 §1)
