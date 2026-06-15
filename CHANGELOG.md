@@ -1,3 +1,14 @@
+## [13.8.0] — V754 — 실 LLM 축별 Critic 5종 (Phase E.2, ADR-215)
+
+### V754 — LLMCritic 5종 (a)
+- `literary_system/critic/llm_critics.py` — LLMCritic + Structure/Character/Dialogue/Emotion/Genre Critic
+- 주입형 llm(gpt-5/4o-mini/fake), 블라인드 좌우 무작위, 절대점수 금지, RAG 필수
+- evaluate_all_axes: 5축 verdict → pairwise BT 합의
+- `tests/unit/test_v754_llm_critics.py` 24 TC + 실 LLM 스모크 PASS
+- 버전: 13.7.0 → 13.8.0
+
+---
+
 ## [13.7.0] — V753 — LLM-1 Critic 진입: CriticInterface 5축 + G_LLM1_BOUNDARY (Phase E.2, ADR-214)
 
 ### V753 — LLM-0→1 전이 진입 (Phase E.2 첫 코드)

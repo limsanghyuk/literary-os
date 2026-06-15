@@ -8,3 +8,10 @@ from literary_system.critic.base import (
 )
 __all__ = ["CriticAxis", "AXIS_DESC", "CriticContext", "CriticVerdict",
            "CriticInterface", "MockCritic", "aggregate_verdicts"]
+
+from literary_system.critic.llm_critics import (
+    LLMCritic, StructureCritic, CharacterCritic, DialogueCritic,
+    EmotionCritic, GenreCritic, ALL_CRITICS, make_ensemble, evaluate_all_axes,
+)
+__all__ += ["LLMCritic", "StructureCritic", "CharacterCritic", "DialogueCritic",
+            "EmotionCritic", "GenreCritic", "ALL_CRITICS", "make_ensemble", "evaluate_all_axes"]
