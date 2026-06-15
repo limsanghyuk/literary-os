@@ -1,17 +1,17 @@
-# Literary OS V749
+# Literary OS V761
 
 > **판단은 로컬, 생성만 LLM, 학습은 누적**  
 > AI 기반 장편 소설·드라마 시나리오 생성 시스템
 
-[![Version](https://img.shields.io/badge/version-13.3.0-blue)]()
-[![Tests](https://img.shields.io/badge/tests%20(V749)-10853-brightgreen)]()
-[![Gates](https://img.shields.io/badge/gates%20(V749)-97%2B4WP-brightgreen)]()
+[![Version](https://img.shields.io/badge/version-13.14.0-blue)]()
+[![Tests](https://img.shields.io/badge/tests%20(V761)-11079-brightgreen)]()
+[![Phase](https://img.shields.io/badge/Phase%20E.2-LLM--1%20Critic%20Exit-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 
 ---
 
-> **현재 상태**: V745 / v13.0.0 · 릴리즈 게이트 97 · 테스트 10,788 · Phase D 완전 종료(G95) → Phase E 기획 중. 재검증: `python3 tools/run_release_gate.py` · `python3 tools/generate_test_inventory.py`.
+> **현재 상태**: V761 / v13.14.0 · 테스트 11,079 · **Phase E.2(LLM-1 Critic) 완전 종료**(SP-E2-EXIT, ADR-221) — `critic/` 8모듈(base·5종·ensemble·alignment·corpus_gate·llm1_metrics·arbitration·spe2_exit) + LLM-1 5게이트. 다음: Phase E.3(작가 UI MVP)·E.4(RLAIF) 병렬 → E.5(Exit)로 Phase E 종료. 재검증: `python3 tools/run_release_gate.py` · `python3 tools/generate_test_inventory.py`.
 
 ## 빠른 시작
 

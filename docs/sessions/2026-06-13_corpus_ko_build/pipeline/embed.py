@@ -1,6 +1,6 @@
 import os,glob,json,time,urllib.request,numpy as np
 ROOT="/sessions/upbeat-focused-bohr/mnt/literary/corpus_ko"
-CHK=ROOT+"/chunks"; CACHE="/sessions/upbeat-focused-bohr/emb2"
+CHK=ROOT+"/chunks"; CACHE=ROOT+"/emb_cache"
 KEY=open("/tmp/oai.key").read().strip()
 def load_chunks():
     items=[]

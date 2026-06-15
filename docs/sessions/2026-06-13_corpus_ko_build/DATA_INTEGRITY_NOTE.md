@@ -30,3 +30,19 @@
 
 ## 교훈(기록)
 FUSE 마운트엔 sqlite/대용량 tar를 직접 쓰지 말 것 → 로컬디스크 빌드 후 복사. scene_features.db·chroma는 항상 emb_cache(원천)에서 재생성 가능하므로 emb_cache만 보존되면 무손실.
+
+---
+
+## 🔄 갱신 (2026-06-15) — 인코딩 결함 교정 + 전면 재처리
+
+**중대**: 위 "무손상" 기준은 **인코딩 교정 전(stale)**. 2026-06-15 NER 폴백이 깨진 이름(ȯⱸ)을 반환 → 추적 결과 **소스 UTF-16을 utf-8로 읽어 112편(코퍼스 25%)이 모지바케**였음. `fix_encoding.py`(utf-16→cp949→utf-8 한글비율 폴백, idempotent)로 일괄 교정 후 **tri-store 전면 재처리**.
+
+### 현재 권위 상태 (교정본)
+- 코퍼스 **455편 / 62,514 벡터**(emb_cache 313샤드). txt 0-깨짐(`fix_encoding.py` 재실행 시 fixed=0/skipped=455 확인).
+- 청크 62,514 = 임베딩 62,514 = ChromaDB 62,514(scene 38,450 + slide 24,064). 고아 0.
+- features 36,291행 / 455작품. 상세 입증: `experiments/INTEGRITY_PROOF_2026-06-15.md`.
+
+### 집 복원 — 갱신된 주의
+1. **Drive `corpus_ko.zip`(456M)은 교정 전 버전 → 재업로드 필요**(또는 교정된 워크스페이스 폴더 동기화). 그대로 복원하면 모지바케 112편이 되살아남.
+2. `scene_features.db`·ChromaDB는 여전히 FUSE 직접쓰기 불가 → **교정된 emb_cache로 로컬 재빌드**: `store_chroma.py` + `features.py`(둘 다 CACHE=emb_cache로 갱신됨).
+3. `연애의목적.hwp`(HWP5) 1편은 추출 실패(txt 0바이트, 455 카운트 밖) — 재추출 과제.

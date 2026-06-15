@@ -1,6 +1,6 @@
 import os,glob,json,re,sqlite3,numpy as np,math
 ROOT="/sessions/upbeat-focused-bohr/mnt/literary/corpus_ko"
-SCN=ROOT+"/scenes"; CACHE="/sessions/upbeat-focused-bohr/emb2"; FEAT=ROOT+"/features"
+SCN=ROOT+"/scenes"; CACHE=ROOT+"/emb_cache"; FEAT=ROOT+"/features"
 os.makedirs(FEAT,exist_ok=True)
 # 1) load scene embeddings: avg parts per (work,scene)
 from collections import defaultdict

@@ -1,6 +1,6 @@
 import os,glob,json,numpy as np,chromadb
 ROOT="/sessions/upbeat-focused-bohr/mnt/literary/corpus_ko"
-CACHE="/sessions/upbeat-focused-bohr/emb2"; CHK=ROOT+"/chunks"
+CACHE=ROOT+"/emb_cache"; CHK=ROOT+"/chunks"
 # id -> text
 txt={}
 for f in glob.glob(CHK+"/*.jsonl"):
