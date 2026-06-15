@@ -182,3 +182,4 @@
 - preflight/(26) · _archive/(2)
 - tools/: formula_validation/(harness·heldout_cv·integrate_tristore·refcheck_oai) · tri_store/build_tristore · corpus_migrate · run_formula_pilot
 - data/corpus_seed/: L0 178편 · POC · 검증 씬셋(3·5편)
+- 2026-06-15_human_gt_protocol_L4_v1.md — 인간 GT(작가 평가) 운영 프로토콜 L4 (P2 절대검증 갭 충전)
