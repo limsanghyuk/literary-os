@@ -10,7 +10,8 @@ NUM=[("S#n",re.compile(r'^\s*S\s*#\s*(\d{1,3})')),
      ("n)",re.compile(r'^\s*(\d{1,3})\s*\)'))]
 TIME=r'(낮|밤|아침|저녁|새벽|오후|오전|일몰|정오|해질|황혼|심야|동틀)'
 INOUT=r'(실내|실외|내부|외부|INT|EXT|인서트|insert)'
-slug=re.compile(r'^\s{0,8}.{0,40}('+TIME+r'|'+INOUT+r')\b.{0,20}$')
+slug=re.compile(r'^\s{0,8}.{0,42}('+TIME+r'|'+INOUT+r')\s*[.)\]]?\s*$')
+slug_slash=re.compile(r'^\s{0,8}.{2,40}\s*/\s*.{0,15}('+TIME+r'|'+INOUT+r'|아침|저녁)')
 prolog=re.compile(r'^\s*(프롤로그|에필로그|prologue|epilogue|타이틀|엔딩)\b',re.I)
 
 def clean(t):
@@ -30,7 +31,7 @@ def split_slug(lines):
     for i,L in enumerate(lines):
         s=L.strip()
         if not s: continue
-        if prolog.match(s) or (len(s)<=40 and slug.match(L) and len(s)>=3):
+        if prolog.match(s) or (len(s)<=42 and (slug.match(L) or slug_slash.match(L)) and len(s)>=3):
             idx.append((i,len(idx)+1))
     return idx
 
@@ -42,8 +43,12 @@ def build_scenes(text):
         ix=split_numbered(lines,rx)
         if len(ix)>bc: bc=len(ix);best=(name,ix)
     method=None;cuts=None
-    if best:
+    # 슬러그 후보도 미리 계산해 번호방식과 씬수 비교(허위 번호헤딩이 강슬러그를 이기는 버그 방지)
+    slug_ix=split_slug(lines)
+    if best and not (len(slug_ix)>=15 and len(slug_ix) > len(best[1])*2):
         method="num:"+best[0]; cuts=best[1]
+    elif len(slug_ix)>=5:
+        method="slug"; cuts=slug_ix
         if len(cuts)>220:
             HEAD=re.compile(r'(낮|밤|아침|저녁|새벽|오후|오전|일몰|심야|실내|실외|내부|외부|/|\s-\s)')
             ref=[(i,n) for (i,n) in cuts if HEAD.search(lines[i]) or len(lines[i].strip())<=14]
