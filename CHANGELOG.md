@@ -1,3 +1,14 @@
+## [13.14.0] — V761 — SP-E.2 Exit (Phase E.2 LLM-1 Critic 완전 종료, ADR-221)
+
+### V761 — SP-E.2 Exit Gate
+- `critic/spe2_exit.py` SP-E2-EXIT: 5 LLM-1 게이트 + critic 7모듈 + ADR 연속 = 7체크포인트 PASS
+- `tools/run_spe2_exit_gate.py` · `tests/unit/test_v761_spe2_exit.py` 10 TC
+- **Phase E.2(LLM-1 Critic) 완전 종료** — critic/ base·5종·ensemble·alignment·safety·cost·arbitration·exit
+- 다음: Phase E.3(작가 UI MVP) / 로컬 실명작·작가 GT 실측
+- 버전 13.13.0 → 13.14.0
+
+---
+
 ## [13.13.0] — V760 — 심판 상향: 3페르소나 합의 critic (V755 잔여 해소, ADR-220)
 
 ### V760 — 다중 페르소나 합의 판정

@@ -32,3 +32,6 @@ from literary_system.critic.arbitration import (
     DisagreementRecord, classify, formula_winner, arbitrate,
 )
 __all__ += ["DisagreementRecord", "classify", "formula_winner", "arbitrate"]
+
+from literary_system.critic.spe2_exit import run_spe2_exit
+__all__ += ["run_spe2_exit"]
