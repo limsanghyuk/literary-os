@@ -1,16 +1,9 @@
-Literary OS V745 — Phase D 완전 종료 (Phase D Exit)
-Version: 13.0.0
-ADR: ADR-208 (최신)
-Date: 2026-06-04
-SP: SP-D.4 완료 (Federated Learning + DR Gate + Phase D Exit G95)
-Tag: v13.0.0 (= v13.0.0-V745)
-Gates: 97 (release_gate.GATES) — Phase D Exit G95 8/8 checkpoints PASS
-Tests: 10788+ PASS
-Preflight: 13단계 ALL PASS (DEV_PROTOCOL_v3.0, G_CONNECTIVITY 고립 0 / 85패키지)
-
-V745-PATCH1 (2026-06-04, 적합성 정합):
-  - requirements.txt + pyproject: RestrictedPython>=6.0 의존성 선언 (plugins 샌드박스)
-  - tools/test_inventory.json 재생성 (10788 tests, source_hash 갱신)
-  - .github/workflows/biweekly_train.yml 복원 (V625 격주 재학습)
-  - G77 cost-control 릴리즈 게이트/Phase C Exit 집계 ADR-145 정합
-  - test_v678/test_v694 노후 단언 ADR-145/동적버전 갱신
+Literary OS V749 — Phase E 진입 (WP-0/1/4b 실행)
+Version: 13.3.0
+ADR: ADR-212 (최신)
+Date: 2026-06-13
+WP: WP-0 무결성(G_INTEGRITY_MANIFEST, V746) · WP-1 validation/ 공식 생애주기(V747, ADR-210) · WP-4b 쌍대 패러다임(V748~V749, ADR-211/212)
+Gates: release_gate.GATES 97 + WP 게이트 4종(G_INTEGRITY_MANIFEST·G_NO_ABSOLUTE_REWARD·G_PAIRWISE_REGRESSION·G_TRANSITIVITY) — tools/run_release_gate.py·run_pairwise_gates.py
+Tests: 10,853
+Preflight: 13단계 (DEV_PROTOCOL_v3.0, RULE-0)
+Note: 실 코퍼스 corpus_ko tri-store(영화+드라마, verbatim 비커밋) + 공식 검증 1차 완결(FE-7 τ+0.196·DRSE 0.702·패널 73%, 공식=구조 게이트로 강등). 다음 본류=생성 본체 WP-5a~5c.
