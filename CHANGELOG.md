@@ -1,3 +1,13 @@
+## [13.11.0] — V758 — CorpusGate(SAFETY) + LLM1Metrics(COST) (Phase E.2, ADR-218)
+
+### V758 — LLM-1 안전·비용 게이트
+- `critic/corpus_gate.py` — G_LLM1_SAFETY(코퍼스<50 차단)
+- `critic/llm1_metrics.py` — G_LLM1_COST(월≤$50, 모델별 가격), 비용·호출 추적
+- `tools/run_llm1_ops_gates.py` · `tests/unit/test_v758_corpus_cost.py` 16 TC
+- 버전 13.10.0 → 13.11.0
+
+---
+
 ## [13.10.0] — V757 — AlignmentMonitor + G_LLM1_ALIGNMENT (Phase E.2, ADR-217)
 
 ### V757 — Critic↔인간 GT 일치율
