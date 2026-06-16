@@ -23,3 +23,5 @@ from .provider_router import ProviderRouter, RoutingSignals, RoutingDecision, va
 from .split_pipeline import SplitPipeline, SplitReport, StagePlan, run_split_poc  # V769
 
 from .pareto_router import (ParetoRouter, ParetoCandidate, pareto_frontier, TrainingMode, dispatch_training)  # V770
+
+from .first_training_kit import (build_training_plan, prepare_dpo, make_smoke_dataset, baseline_winrate, winrate_delta)  # V771

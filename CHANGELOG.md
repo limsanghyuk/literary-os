@@ -1,3 +1,12 @@
+## [13.24.0] — V771 — 4070 첫 실 학습 실행 킷 (ADR-231)
+
+### V771 — 첫 학습 실행 패키지(개발자 4070)
+- `learning/first_training_kit.py`: build_training_plan/prepare_dpo/make_smoke_dataset/baseline_winrate/winrate_delta
+- 킷 docs/sessions/2026-06-16_first_training_kit/: README·SETUP_4070_WINDOWS·run_first_training·eval_winrate·합성 스모크
+- 저작권: 실 텍스트 미동봉, 개발자 로컬 dpo_pairs.jsonl 지향. 1회=메커니즘 증명. 12 TC. 13.23→13.24
+
+---
+
 ## [13.23.0] — V770 — ParetoRouter + 모드 디스패처 (ADR-230)
 
 ### V770 — 파레토 라우팅(E2) + 개발자 모드 지정
