@@ -25,6 +25,7 @@ class GPUProvider(str, Enum):
     RUNPOD       = "runpod"
     LAMBDA_LABS  = "lambda_labs"
     HF_AUTOTRAIN = "hf_autotrain"
+    LOCAL        = "local"          # V767: 로컬 워크스테이션 GPU (RTX 4070 등)
 
 
 class GPUJobStatus(str, Enum):
@@ -430,6 +431,184 @@ class HFAutoTrainAdapter(GPUAdapterContract):
         )
 
 
+
+# ---------------------------------------------------------------------------
+# LocalPreflight — 로컬 GPU 사전조건 게이트 (V767, ADR-227)
+# ---------------------------------------------------------------------------
+
+@dataclass
+class LocalPreflightResult:
+    """로컬 GPU 학습 사전조건 점검 결과."""
+    ok:               bool
+    gpu_available:    bool
+    vram_total_gb:    float
+    missing_packages: List[str]
+    detail:           str = ""
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "ok":               self.ok,
+            "gpu_available":    self.gpu_available,
+            "vram_total_gb":    self.vram_total_gb,
+            "missing_packages": list(self.missing_packages),
+            "detail":           self.detail,
+        }
+
+
+class LocalPreflight:
+    """
+    로컬 워크스테이션이 QLoRA 학습을 띄울 수 있는지 사전 점검.
+
+    검사: nvidia-smi(=GPU·VRAM) + torch/transformers/peft/trl/bitsandbytes 설치.
+    어느 하나라도 미충족이면 ok=False → 라우터가 CLOUD 폴백.
+    LLM-0: 외부 API 미호출, 순수 환경 점검.
+    """
+    REQUIRED_PACKAGES = ["torch", "transformers", "peft", "trl", "bitsandbytes"]
+
+    def __init__(self, min_vram_gb: float = 12.0) -> None:
+        self._min_vram = min_vram_gb
+
+    def _detect_gpu(self) -> tuple[bool, float]:
+        import shutil, subprocess
+        if shutil.which("nvidia-smi") is None:
+            return (False, 0.0)
+        try:
+            out = subprocess.run(
+                ["nvidia-smi", "--query-gpu=memory.total", "--format=csv,noheader,nounits"],
+                capture_output=True, text=True, timeout=10,
+            )
+            if out.returncode != 0 or not out.stdout.strip():
+                return (False, 0.0)
+            mib = float(out.stdout.strip().splitlines()[0])
+            return (True, round(mib / 1024.0, 1))
+        except Exception:
+            return (False, 0.0)
+
+    def _missing_packages(self) -> List[str]:
+        import importlib.util
+        return [pkg for pkg in self.REQUIRED_PACKAGES
+                if importlib.util.find_spec(pkg) is None]
+
+    def run(self) -> LocalPreflightResult:
+        gpu, vram = self._detect_gpu()
+        missing = self._missing_packages()
+        ok = gpu and (vram + 0.5 >= self._min_vram) and not missing
+        if not gpu:
+            detail = "GPU 미탐지(nvidia-smi 없음) → CLOUD 폴백 권장"
+        elif vram + 0.5 < self._min_vram:
+            detail = f"VRAM {vram}GB < 요구 {self._min_vram}GB → CLOUD 폴백"
+        elif missing:
+            detail = f"미설치 패키지 {missing} → setup 가이드 후 재시도 또는 CLOUD"
+        else:
+            detail = f"PASS: GPU {vram}GB, 패키지 OK"
+        return LocalPreflightResult(ok, gpu, vram, missing, detail)
+
+
+# ---------------------------------------------------------------------------
+# LocalGPUAdapter — 로컬 4070 QLoRA 4bit ($0/h) (V767, ADR-227)
+# ---------------------------------------------------------------------------
+
+class LocalGPUAdapter(GPUAdapterContract):
+    """
+    로컬 워크스테이션 GPU 어댑터 (RTX 4070 12GB 기준).
+
+    - cost_per_hour = $0 (전기료는 metadata 추정치로만 기록)
+    - QLoRA 4bit 기준 모델별 VRAM 추정 → 12GB 초과 시 폴백 신호
+    - 실제 학습은 train_local.py 를 사용자 PC에서 실행 (샌드박스 아님)
+    LLM-0: 외부 LLM API 미호출.
+    """
+
+    _PROVIDER_ID   = GPUProvider.LOCAL
+    _COST_PER_HOUR = 0.0
+    _ELECTRICITY_KW = 0.22          # 4070 시스템 평균 소비 kW(추정)
+    _ELECTRICITY_USD_PER_KWH = 0.12 # 추정 단가
+    # QLoRA 4bit 모델별 VRAM 추정(GB)
+    _VRAM_QLORA_GB = {"3b": 6.0, "7b": 11.0, "8b": 11.5, "13b": 18.0, "70b": 46.0}
+
+    def __init__(self, vram_limit_gb: float = 12.0, preflight: Optional["LocalPreflight"] = None) -> None:
+        self._vram_limit = vram_limit_gb
+        self._preflight = preflight or LocalPreflight(min_vram_gb=vram_limit_gb)
+
+    @property
+    def provider_id(self) -> GPUProvider:
+        return self._PROVIDER_ID
+
+    @property
+    def cost_per_hour(self) -> float:
+        return self._COST_PER_HOUR
+
+    def estimate_cost(self, hours: float) -> float:
+        """금전 비용 $0 (클라우드 비교용). 전기료는 estimate_electricity()."""
+        return 0.0
+
+    def estimate_electricity(self, hours: float) -> float:
+        return round(hours * self._ELECTRICITY_KW * self._ELECTRICITY_USD_PER_KWH, 4)
+
+    def estimate_vram_gb(self, model_name: str) -> float:
+        key = model_name.lower()
+        for size, gb in self._VRAM_QLORA_GB.items():
+            if size in key:
+                return gb
+        return 11.0  # 미상 모델은 7B급 보수 추정
+
+    def fits_locally(self, model_name: str) -> bool:
+        return self.estimate_vram_gb(model_name) <= self._vram_limit
+
+    def dry_run(self, request: GPUJobRequest) -> GPUJobResult:
+        pf = self._preflight.run()
+        vram_need = self.estimate_vram_gb(request.model_name)
+        fits = vram_need <= self._vram_limit
+        return GPUJobResult(
+            job_id        = request.job_id,
+            provider      = self._PROVIDER_ID,
+            status        = GPUJobStatus.DRY_RUN,
+            actual_hours  = request.hours_estimate,
+            cost_usd      = 0.0,
+            dry_run       = True,
+            artifact_path = "",
+            metadata      = {
+                "model_name":       request.model_name,
+                "dataset_path":     request.dataset_path,
+                "vram_estimate_gb": vram_need,
+                "vram_limit_gb":    self._vram_limit,
+                "fits_locally":     fits,
+                "electricity_usd":  self.estimate_electricity(request.hours_estimate),
+                "preflight":        pf.to_dict(),
+                "fallback_cloud":   (not pf.ok) or (not fits),
+            },
+        )
+
+    def launch_job(self, request: GPUJobRequest) -> GPUJobResult:
+        """
+        실제 로컬 학습 기동.
+        dry_run=True거나 사전조건 미충족/VRAM 초과 → dry_run 결과(폴백 신호) 반환.
+        실 실행은 train_local.py 가 사용자 PC에서 수행(여기서는 위임 경로만 기록).
+        """
+        if request.dry_run:
+            return self.dry_run(request)
+        pf = self._preflight.run()
+        if (not pf.ok) or (not self.fits_locally(request.model_name)):
+            res = self.dry_run(request)
+            res.status = GPUJobStatus.FAILED
+            res.error  = f"로컬 사전조건 미충족 → CLOUD 폴백 필요: {pf.detail}"
+            return res
+        # 사전조건 PASS: train_local.py 호출 자리 (사용자 PC)
+        return GPUJobResult(
+            job_id        = request.job_id,
+            provider      = self._PROVIDER_ID,
+            status        = GPUJobStatus.COMPLETED,
+            actual_hours  = request.hours_estimate,
+            cost_usd      = 0.0,
+            dry_run       = False,
+            artifact_path = f"local://lora_adapters/{request.job_id}",
+            metadata      = {
+                "model_name":      request.model_name,
+                "electricity_usd": self.estimate_electricity(request.hours_estimate),
+                "runner":          "train_local.py",
+            },
+        )
+
+
 # ---------------------------------------------------------------------------
 # Factory
 # ---------------------------------------------------------------------------
@@ -438,6 +617,7 @@ _ADAPTER_REGISTRY: Dict[GPUProvider, type] = {
     GPUProvider.RUNPOD:       RunPodAdapter,
     GPUProvider.LAMBDA_LABS:  LambdaLabsAdapter,
     GPUProvider.HF_AUTOTRAIN: HFAutoTrainAdapter,
+    GPUProvider.LOCAL:        LocalGPUAdapter,
 }
 
 

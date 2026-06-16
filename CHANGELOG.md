@@ -1,3 +1,13 @@
+## [13.20.0] — V767 — LocalGPUAdapter: 로컬 4070 QLoRA 경로 (GPU 3-모드 ①, ADR-227)
+
+### V767 — 로컬 학습 어댑터
+- `finetune/gpu_adapter.py`: GPUProvider.LOCAL + LocalGPUAdapter(계약 5메서드, cost $0, VRAM 가드 12GB) + LocalPreflight(nvidia-smi·패키지 점검)
+- `finetune/train_local.py`: 사용자 PC QLoRA DPO 학습 스크립트(의존 main 내부 import)
+- RLAIFTrigger provider=LOCAL 라우팅 경로 동작. 14 TC. 13.19.0→13.20.0
+- 설계: docs/sessions/2026-06-16_gpu_3mode_blueprint_v1.docx, 로드맵: 2026-06-16_roadmap_reconciliation_v1.md
+
+---
+
 ## [13.19.0] — V766 — E.5 Phase E LLM-1 전이 Exit Gate (ADR-226)
 
 ### V766 — 전이 트랙 종료 판정

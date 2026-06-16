@@ -55,6 +55,7 @@ from literary_system.finetune.safety_regression_suite import (
 )
 
 __all__ = [
+    "LocalGPUAdapter", "LocalPreflight", "LocalPreflightResult",
     "FineTuneJobManager", "FineTuneJob", "FineTuneMethod", "JobStatus",
     "ProseStyleDataset", "ProseEntry", "ProseStyle", "DataSource", "LicenseType",
     "DatasetSplit", "LoRADatasetSplit", "DatasetCard", "make_entry", "ALLOWED_LICENSES",
@@ -108,6 +109,9 @@ from literary_system.finetune.gpu_adapter import (
     GPUJobResult,
     GPUJobStatus,
     GPUProvider,
+    LocalGPUAdapter,
+    LocalPreflight,
+    LocalPreflightResult,
     HFAutoTrainAdapter,
     LambdaLabsAdapter,
     RunPodAdapter,
