@@ -15,3 +15,5 @@ from literary_system.learning.rlaif_orchestrator import (
     RLAIFTrainingSpec, RLAIFOrchestrator,
 )
 from literary_system.learning.rlaif_trigger import TriggerResult, RLAIFTrigger
+
+from .phase_e_exit import run_phase_e_exit  # V766

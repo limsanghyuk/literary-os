@@ -1,3 +1,13 @@
+## [13.19.0] — V766 — E.5 Phase E LLM-1 전이 Exit Gate (ADR-226)
+
+### V766 — 전이 트랙 종료 판정
+- `literary_system/learning/phase_e_exit.py` run_phase_e_exit: 7 CP(E.0 GT/NER/Pass4-7 + E.2 LLM-1 Critic + E.4 RLAIF→GPU 트리거 + ADR 연속)
+- `tools/run_phase_e_exit_gate.py` CLI, 7/7 PASS
+- LLM-0→LLM-1 전이 트랙 종료. 공식 Phase E 로드맵(V746~V820)은 별개 계속
+- `tests/unit/test_v766_phase_e_exit.py` 10 TC, 13.18.0→13.19.0
+
+---
+
 ## [13.18.0] — V765 — RLAIFTrigger: GPU 학습 트리거 (Phase E.4, ADR-225)
 
 ### V765 — LoRAJobRunner 연결
