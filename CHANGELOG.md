@@ -1,3 +1,12 @@
+## [13.23.0] — V770 — ParetoRouter + 모드 디스패처 (ADR-230)
+
+### V770 — 파레토 라우팅(E2) + 개발자 모드 지정
+- `learning/pareto_router.py` ParetoRouter: 비용/예상품질 비지배 최적(선호 cost|balanced|quality), 하드제약 선행
+- TrainingMode(CLOUD/LOCAL/HYBRID/AUTO) + dispatch_training 단일 진입점 — 3방식 지정 작동
+- 품질=용량기반 추정치(측정 아님) 명시. 15 TC. 13.22.0→13.23.0
+
+---
+
 ## [13.22.0] — V769 — SplitPipeline: 하이브리드 분업 PoC (ADR-229)
 
 ### V769 — 로컬 선별 → 클라우드 강화 분업

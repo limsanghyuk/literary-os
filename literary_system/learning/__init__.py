@@ -21,3 +21,5 @@ from .phase_e_exit import run_phase_e_exit  # V766
 from .provider_router import ProviderRouter, RoutingSignals, RoutingDecision, validate_routing  # V768
 
 from .split_pipeline import SplitPipeline, SplitReport, StagePlan, run_split_poc  # V769
+
+from .pareto_router import (ParetoRouter, ParetoCandidate, pareto_frontier, TrainingMode, dispatch_training)  # V770
