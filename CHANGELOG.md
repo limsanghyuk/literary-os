@@ -1,3 +1,13 @@
+## [13.21.0] — V768 — ProviderRouter: GPU 3-모드 자동 라우팅 (ADR-228)
+
+### V768 — 3-모드 라우팅 정책
+- `learning/provider_router.py` ProviderRouter: 5규칙(R1 force/R2 민감→LOCAL/R3 8B초과→CLOUD/R4 biweekly→CLOUD/R5 기본→LOCAL/R6 폴백)
+- `validate_routing` = G_GPU_ROUTING(민감 데이터 클라우드 금지 등), `route_trigger`(결정→RLAIFTrigger 자동)
+- `tools/run_gpu_routing_gate.py` 6시나리오. 클라우드/로컬/하이브리드 3-모드 완성
+- 28 TC(V767 포함). 13.20.0→13.21.0
+
+---
+
 ## [13.20.0] — V767 — LocalGPUAdapter: 로컬 4070 QLoRA 경로 (GPU 3-모드 ①, ADR-227)
 
 ### V767 — 로컬 학습 어댑터
