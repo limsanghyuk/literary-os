@@ -1,6 +1,15 @@
 # docs/sessions 마스터 색인 (INDEX)
-이 파일 하나로 전체 탐색. 갱신 2026-06-10.
+이 파일 하나로 전체 탐색. 갱신 2026-06-16(V772).
 **루트 94개** + preflight(26) + _archive(2)
+
+---
+## ★최신 권위 상태 (2026-06-16, V772 / v13.25.0)
+- **README = 정본 버전 동기화 완료**: V772 · 테스트 11,207 · LLM-1 전이 Exit(V766) → E.4 RLAIF+GPU 3-모드 진행 중.
+- `2026-06-16_roadmap_reconciliation_v1.md` — ★Plan↔Actual 8분기 정합화(E.3 UI 의도적 후순위·RLAIF 선행·GPU 3-모드 삽입).
+- `2026-06-16_real_dpo_proof/` — 진짜 DPO 학습 실증(Mock 아님, 손실↓·보상정확도→1.0).
+- `2026-06-16_e2e_home_local_measurement_v1.md` — 집 로컬 E2E(ChromaDB 불요).
+- `2026-06-16_v773_loopC_closure_design_v1.md` — ★V773 설계: loop-C 폐회로 실연결(부품→닫힌 학습-측정 루프, ADR-233 제안).
+- `2026-06-13_corpus_ko_build/` — corpus_ko 455편(인코딩교정·무결성입증·NER 100%·집 핸드오프).
 
 ---
 ## 0. 시작은 여기 (정본 순서)

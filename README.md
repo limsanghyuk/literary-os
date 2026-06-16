@@ -1,17 +1,17 @@
-# Literary OS V761
+# Literary OS V772
 
 > **판단은 로컬, 생성만 LLM, 학습은 누적**  
 > AI 기반 장편 소설·드라마 시나리오 생성 시스템
 
-[![Version](https://img.shields.io/badge/version-13.14.0-blue)]()
-[![Tests](https://img.shields.io/badge/tests%20(V761)-11079-brightgreen)]()
-[![Phase](https://img.shields.io/badge/Phase%20E.2-LLM--1%20Critic%20Exit-brightgreen)]()
+[![Version](https://img.shields.io/badge/version-13.25.0-blue)]()
+[![Tests](https://img.shields.io/badge/tests%20(V772)-11207-brightgreen)]()
+[![Phase](https://img.shields.io/badge/RLAIF-loop--C%20GPU%203--mode-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 
 ---
 
-> **현재 상태**: V761 / v13.14.0 · 테스트 11,079 · **Phase E.2(LLM-1 Critic) 완전 종료**(SP-E2-EXIT, ADR-221) — `critic/` 8모듈(base·5종·ensemble·alignment·corpus_gate·llm1_metrics·arbitration·spe2_exit) + LLM-1 5게이트. 다음: Phase E.3(작가 UI MVP)·E.4(RLAIF) 병렬 → E.5(Exit)로 Phase E 종료. 재검증: `python3 tools/run_release_gate.py` · `python3 tools/generate_test_inventory.py`.
+> **현재 상태**: V772 / v13.25.0 · 테스트 11,207 · **LLM-1 전이 트랙 Exit 완료**(V766, PHASE-E-LLM1-EXIT 7/7) → **E.4 RLAIF + GPU 학습 3-모드 진행 중**. 완료: E.0 무결성·E.2 LLM-1 Critic(8모듈)·E.4 RLAIF 코어(loop_c·reward_model·rlaif_orchestrator·trigger, ADR-222~225)·GPU 3-모드(LocalGPUAdapter 4070·ProviderRouter·SplitPipeline·RealRunPodAdapter, ADR-227~232). **실 DPO 학습 실증**(손실↓·보상정확도→1.0, tiny모델). 잔여(2단계 후순위): E.3 작가 UI·E.5 KEDA 배포·E.6 공식 Exit(v14.0.0). **다음 V773 제안**: loop-C 폐회로 실연결(설계: `docs/sessions/2026-06-16_v773_loopC_closure_design_v1.md`). 재검증: `python3 tools/run_release_gate.py` · `python3 tools/generate_test_inventory.py`.
 
 ## 빠른 시작
 
