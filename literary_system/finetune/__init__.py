@@ -178,3 +178,5 @@ from literary_system.finetune.pre_train_safety import (
     SafetyAxis,
     SafetyResult,
 )
+
+from .runpod_real_adapter import RealRunPodAdapter, make_real_runpod, RUNPOD_REST_BASE  # V772

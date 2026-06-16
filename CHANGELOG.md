@@ -1,3 +1,13 @@
+## [13.25.0] — V772 — RealRunPodAdapter: RunPod 실 REST API 연동 (ADR-232)
+
+### V772 — Mock→실 클라우드 어댑터
+- `finetune/runpod_real_adapter.py` RealRunPodAdapter: REST v1 Bearer, verify_key/launch_job(POST /pods)/poll
+- 키 주입 시 실 파드 생성, 키없음/dry_run=네트워크 미호출(안전). 키 결과 직렬화 미포함(보안)
+- 주입형 transport 단위테스트 13 TC. 13.24→13.25
+- 실측 산출물(RESULT/RESULT_2 + 스크립트) docs/sessions/2026-06-16_real_dpo_proof/ 허브 적재 확인
+
+---
+
 ## [13.24.0] — V771 — 4070 첫 실 학습 실행 킷 (ADR-231)
 
 ### V771 — 첫 학습 실행 패키지(개발자 4070)
