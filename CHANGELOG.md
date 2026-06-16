@@ -1,3 +1,14 @@
+## [13.17.0] — V764 — RLAIF 오케스트레이션 (Phase E.4 코어 완성, ADR-224)
+
+### V764 — loop-C → 학습 결선
+- `literary_system/learning/rlaif_orchestrator.py` RLAIFOrchestrator: 선호쌍→DPO 데이터셋+학습스펙(Llama-3.1-8B/rank16/dpo)+job_request
+- learning→finetune 결선, 실 GPU 학습은 LoRAJobRunner(Phase F·GPU SLO)
+- 개발자 17쌍 → prepared(baseline 승률 0.588). 13 TC
+- **E.4 RLAIF 코어 완성**: Pass7 패널 → loop_c → reward_model → rlaif_orchestrator → finetune LoRA
+- 버전 13.16.0 → 13.17.0
+
+---
+
 ## [13.16.0] — V763 — PairwiseRewardModel (Phase E.4 RLAIF, ADR-223)
 
 ### V763 — 쌍대 보상모델

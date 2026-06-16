@@ -11,3 +11,6 @@ from literary_system.learning.loop_c import (
 from literary_system.learning.reward_model import (
     RewardScore, PairwiseRewardModel, reward_from_pairs, ensemble_reward_model,
 )
+from literary_system.learning.rlaif_orchestrator import (
+    RLAIFTrainingSpec, RLAIFOrchestrator,
+)
