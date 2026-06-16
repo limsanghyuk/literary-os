@@ -9,6 +9,7 @@
 - `2026-06-16_real_dpo_proof/` — 진짜 DPO 학습 실증(Mock 아님, 손실↓·보상정확도→1.0).
 - `2026-06-16_e2e_home_local_measurement_v1.md` — 집 로컬 E2E(ChromaDB 불요).
 - `2026-06-16_v773_loopC_closure_design_v1.md` — ★V773 설계: loop-C 폐회로 실연결(부품→닫힌 학습-측정 루프, ADR-233 제안).
+- `2026-06-16_nextep_bench_review_v1.md` — ★검토(REVIEW): 연속-생성 평가(N화→N+1 vs 원작) + 품질 판별 학습. 판정 GO(누출=무명작+계측, 평가=쌍대품질, Critic 판별게이트 선결).
 - `2026-06-13_corpus_ko_build/` — corpus_ko 455편(인코딩교정·무결성입증·NER 100%·집 핸드오프).
 
 ---
