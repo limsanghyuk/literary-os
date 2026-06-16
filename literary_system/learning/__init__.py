@@ -8,3 +8,6 @@ from literary_system.learning.loop_c import (
     PreferencePair, load_preference_pairs, to_dpo_dataset, write_dpo_jsonl,
     generation_win_rate, reference_strength, LoopCReport, summarize,
 )
+from literary_system.learning.reward_model import (
+    RewardScore, PairwiseRewardModel, reward_from_pairs, ensemble_reward_model,
+)

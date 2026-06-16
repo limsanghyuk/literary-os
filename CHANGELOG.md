@@ -1,3 +1,13 @@
+## [13.16.0] — V763 — PairwiseRewardModel (Phase E.4 RLAIF, ADR-223)
+
+### V763 — 쌍대 보상모델
+- `literary_system/learning/reward_model.py` — PairwiseRewardModel(draft vs 명작풀 승률=보상)·reward_from_pairs·ensemble_reward_model(3페르소나)
+- critic 앙상블 결선, 절대점수 금지(쌍대 파생). DPO 보상불요/PPO용
+- `tests/unit/test_v763_reward_model.py` 13 TC
+- 버전 13.15.0 → 13.16.0
+
+---
+
 ## [13.15.0] — V762 — loop-C 선호쌍 + DPO 적재 (Phase E.4 RLAIF, ADR-222)
 
 ### V762 — E.4 RLAIF loop-C 인프라
