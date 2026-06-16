@@ -1,3 +1,13 @@
+## [13.15.0] — V762 — loop-C 선호쌍 + DPO 적재 (Phase E.4 RLAIF, ADR-222)
+
+### V762 — E.4 RLAIF loop-C 인프라
+- `literary_system/learning/loop_c.py` — PreferencePair·load(dpo_pairs.jsonl 포맷)·to_dpo_dataset·generation_win_rate·reference_strength(BT)·summarize
+- 개발자 실 17쌍 인입 → 생성 승률 0.588 재현(코드↔데이터 결선)
+- `tests/unit/test_v762_loop_c.py` 16 TC. finetune.lora_*로 GPU 학습 결선(Phase F)
+- 버전 13.14.0 → 13.15.0
+
+---
+
 ## [13.14.0] — V761 — SP-E.2 Exit (Phase E.2 LLM-1 Critic 완전 종료, ADR-221)
 
 ### V761 — SP-E.2 Exit Gate
