@@ -522,8 +522,7 @@ class LocalGPUAdapter(GPUAdapterContract):
     _COST_PER_HOUR = 0.0
     _ELECTRICITY_KW = 0.22          # 4070 시스템 평균 소비 kW(추정)
     _ELECTRICITY_USD_PER_KWH = 0.12 # 추정 단가
-    # QLoRA 4bit 모델별 VRAM 추정(GB)
-    _VRAM_QLORA_GB = {"3b": 6.0, "7b": 11.0, "8b": 11.5, "13b": 18.0, "70b": 46.0}
+    # QLoRA 4bit 파라미터 규모별 VRAM 추정(GB) — 정규식으로 b수 추출 후 임계 매핑
 
     def __init__(self, vram_limit_gb: float = 12.0, preflight: Optional["LocalPreflight"] = None) -> None:
         self._vram_limit = vram_limit_gb
@@ -545,11 +544,17 @@ class LocalGPUAdapter(GPUAdapterContract):
         return round(hours * self._ELECTRICITY_KW * self._ELECTRICITY_USD_PER_KWH, 4)
 
     def estimate_vram_gb(self, model_name: str) -> float:
-        key = model_name.lower()
-        for size, gb in self._VRAM_QLORA_GB.items():
-            if size in key:
-                return gb
-        return 11.0  # 미상 모델은 7B급 보수 추정
+        import re
+        m = re.search(r"(\d+(?:\.\d+)?)\s*b\b", model_name.lower())
+        if not m:
+            return 11.0  # 미상 모델은 7B급 보수 추정
+        b = float(m.group(1))           # 파라미터 수(십억)
+        if b <= 3:  return 6.0
+        if b <= 7:  return 11.0
+        if b <= 8:  return 11.5
+        if b <= 13: return 18.0
+        if b <= 34: return 24.0
+        return 46.0
 
     def fits_locally(self, model_name: str) -> bool:
         return self.estimate_vram_gb(model_name) <= self._vram_limit

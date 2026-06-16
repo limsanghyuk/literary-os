@@ -1,3 +1,12 @@
+## [13.22.0] — V769 — SplitPipeline: 하이브리드 분업 PoC (ADR-229)
+
+### V769 — 로컬 선별 → 클라우드 강화 분업
+- `learning/split_pipeline.py` SplitPipeline: StageA 3B 로컬 후보선별(보상모델) + StageB 대형 클라우드 강화
+- 비용 정량화: 13B 분업 20% 절감 / 8B 이하 완전 로컬 100% 절감 / 민감→전 스테이지 LOCAL 강제
+- VRAM 추정 정규식 수정("3b" in "13b" 오매칭 해소). 13 TC. 13.21.0→13.22.0
+
+---
+
 ## [13.21.0] — V768 — ProviderRouter: GPU 3-모드 자동 라우팅 (ADR-228)
 
 ### V768 — 3-모드 라우팅 정책
