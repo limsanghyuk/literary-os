@@ -1,3 +1,14 @@
+## [13.18.0] — V765 — RLAIFTrigger: GPU 학습 트리거 (Phase E.4, ADR-225)
+
+### V765 — LoRAJobRunner 연결
+- `literary_system/learning/rlaif_trigger.py` RLAIFTrigger: 스펙→LoRAJobRunner.run(dry_run)
+- 환경 사양 조사: GPU 없음(2CPU·3.8GB·torch 미설치) → dry_run 비용추정, 실 GPU=클라우드(RunPod/Lambda)·GPU SLO
+- 개발자 17쌍 → dry_run 트리거(≈$0.78/2h). E.4 RLAIF 사슬 GPU까지 연결
+- `tests/unit/test_v765_rlaif_trigger.py` 12 TC
+- 버전 13.17.0 → 13.18.0
+
+---
+
 ## [13.17.0] — V764 — RLAIF 오케스트레이션 (Phase E.4 코어 완성, ADR-224)
 
 ### V764 — loop-C → 학습 결선

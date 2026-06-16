@@ -14,3 +14,4 @@ from literary_system.learning.reward_model import (
 from literary_system.learning.rlaif_orchestrator import (
     RLAIFTrainingSpec, RLAIFOrchestrator,
 )
+from literary_system.learning.rlaif_trigger import TriggerResult, RLAIFTrigger
