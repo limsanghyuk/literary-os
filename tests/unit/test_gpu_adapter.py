@@ -251,10 +251,11 @@ class TestFactory:
             assert adapter.provider_id == provider
 
     def test_tc25_list_providers(self):
-        """TC25: list_providers() — 3개 항목 반환."""
+        """TC25: list_providers() — 4개 항목 반환(V767 LocalGPUAdapter 포함)."""
         providers = list_providers()
-        assert len(providers) == 3
+        assert len(providers) == 4
         provider_names = {p["provider"] for p in providers}
         assert "runpod"       in provider_names
         assert "lambda_labs"  in provider_names
         assert "hf_autotrain" in provider_names
+        assert "local"        in provider_names
