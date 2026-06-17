@@ -84,6 +84,34 @@ def _build_dep_graph() -> dict[str, set[str]]:
                 deps[mod].add(node.module)
     return deps
 
+# ─── 모듈레벨 전용 의존 그래프 (순환 검출용; 함수 내부 지연 import 제외) ──────
+def _build_module_level_deps() -> dict[str, set[str]]:
+    """
+    모듈 *로드 시점*에 실행되는 import만 수집(함수/메서드 본문의 지연 import 제외).
+    순환 회피용 lazy import를 순환으로 오탐하지 않기 위함. (V780, ADR-240)
+    """
+    deps: dict[str, set[str]] = defaultdict(set)
+
+    def _collect(node: ast.AST, mods: set[str]) -> None:
+        for child in ast.iter_child_nodes(node):
+            if isinstance(child, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                continue  # 함수 본문 = import 시점에 미실행 → 순환 무관
+            if isinstance(child, ast.ImportFrom) and child.module:
+                mods.add(child.module)
+            _collect(child, mods)
+
+    for f in SYS_ROOT.rglob("*.py"):
+        if any(s in f.parts for s in SKIP):
+            continue
+        mod = str(f.relative_to(REPO_ROOT)).replace(os.sep, ".")[:-3]
+        try:
+            tree = ast.parse(f.read_text(encoding="utf-8", errors="ignore"))
+        except Exception:
+            continue
+        _collect(tree, deps[mod])
+    return deps
+
+
 # ─── 순환 의존 탐지 ──────────────────────────────────────────────────────────
 def _find_cycles(deps: dict[str, set[str]]) -> list[list[str]]:
     cycles: list[list[str]] = []
@@ -513,7 +541,7 @@ def run_preflight(version: str | None = None, strict: bool = False) -> bool:
 
     # ── 순환 의존 ────────────────────────────────────────────────────────────
     log("## 부록. 순환 의존 탐지")
-    cycles = _find_cycles(deps)
+    cycles = _find_cycles(_build_module_level_deps())
     log(f"  - 실질 순환: {len(cycles)}개")
     for c in cycles[:3]:
         log(f"  ⚠️  {' → '.join(p.split('.')[-1] for p in c)}")
