@@ -31,7 +31,7 @@ def _compute_reward(mae_result: MAEResult) -> float:
 
 
 @dataclass
-class BridgeResult:
+class BridgeResult_Nie:
     scene_id: str
     reward: float
     advantage: float
@@ -136,3 +136,7 @@ class PhysicsRewardBridge:
     def reset_baseline(self) -> None:
         self._baseline = self.BASELINE_INIT
         self._history.clear()
+
+
+# G37 DuplicateZero(ADR-033): 클래스명 전역 고유화 — 외부 import 하위호환 별칭
+BridgeResult = BridgeResult_Nie

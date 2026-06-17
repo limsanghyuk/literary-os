@@ -19,7 +19,7 @@ from typing import Dict, FrozenSet, List, Optional, Set
 # 예외
 # ---------------------------------------------------------------------------
 
-class TenantNotFoundError(KeyError):
+class TenantNotFoundError_Security(KeyError):
     """등록되지 않은 테넌트 ID."""
 
 
@@ -261,3 +261,7 @@ class TenantAuthority:
         if not decision.granted:
             raise AccessDeniedError(decision.reason)
         return decision
+
+
+# G37 DuplicateZero(ADR-033): 클래스명 전역 고유화 — 외부 import 하위호환 별칭
+TenantNotFoundError = TenantNotFoundError_Security

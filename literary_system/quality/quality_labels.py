@@ -34,7 +34,7 @@ class QualityTier(str, Enum):
 
 
 @dataclass(frozen=True)
-class QualityLabel:
+class QualityLabel_Quality:
     work:        str
     craft:       float       # 작품성 [0,1] (전문가·수상)
     commercial:  float       # 흥행성 [0,1] (시청률·관객)
@@ -65,12 +65,12 @@ def classify(craft: float, commercial: float) -> QualityTier:
     return QualityTier.AVERAGE
 
 
-def make_label(work: str, craft: float, commercial: float, note: str = "") -> QualityLabel:
-    return QualityLabel(work, round(craft, 3), round(commercial, 3), classify(craft, commercial), note)
+def make_label(work: str, craft: float, commercial: float, note: str = "") -> QualityLabel_Quality:
+    return QualityLabel_Quality(work, round(craft, 3), round(commercial, 3), classify(craft, commercial), note)
 
 
 # 14편 데모(quality_labels_v1.md 근거 → 2축 점수화). 근사값(데모).
-DEMO_LABELS: List[QualityLabel] = [
+DEMO_LABELS: List[QualityLabel_Quality] = [
     make_label("살인의 추억", 0.97, 0.85, "전문가·캐논 최상"),
     make_label("마더",        0.92, 0.70, "봉준호 대표작"),
     make_label("박쥐",        0.90, 0.55, "칸 심사위원상"),
@@ -87,7 +87,7 @@ DEMO_LABELS: List[QualityLabel] = [
 ]
 
 
-def summary(labels: List[QualityLabel] = None) -> Dict[str, int]:
+def summary(labels: List[QualityLabel_Quality] = None) -> Dict[str, int]:
     labels = labels or DEMO_LABELS
     out: Dict[str, int] = {}
     for l in labels:
@@ -95,3 +95,7 @@ def summary(labels: List[QualityLabel] = None) -> Dict[str, int]:
     out["positive_target"] = sum(1 for l in labels if l.positive_target)
     out["poor"] = sum(1 for l in labels if l.is_poor)
     return out
+
+
+# G37 DuplicateZero(ADR-033): 클래스명 전역 고유화 — 외부 import 하위호환 별칭
+QualityLabel = QualityLabel_Quality

@@ -14,7 +14,7 @@ from enum import Enum
 from typing import Dict, List, Optional, Tuple
 
 
-class AlertSeverity(str, Enum):
+class AlertSeverity_Ops(str, Enum):
     INFO = "info"
     WARNING = "warning"
     CRITICAL = "critical"
@@ -49,7 +49,7 @@ class ObsAlert:
     name: str
     metric_name: str
     threshold: float
-    severity: AlertSeverity = AlertSeverity.WARNING
+    severity: AlertSeverity = AlertSeverity_Ops.WARNING
     state: AlertState = AlertState.OK
     fire_when_below: bool = False
     _fired_at: Optional[float] = field(default=None, init=False, repr=False)
@@ -200,7 +200,7 @@ class ObservabilityDashboard:
         return result
 
     def alert_summary(self) -> Dict[str, int]:
-        counts: Dict[str, int] = {s.value: 0 for s in AlertSeverity}
+        counts: Dict[str, int] = {s.value: 0 for s in AlertSeverity_Ops}
         for alert in self.firing_alerts():
             counts[alert.severity.value] += 1
         return counts
@@ -208,9 +208,9 @@ class ObservabilityDashboard:
     def health(self) -> str:
         firing = self.firing_alerts()
         severities = {a.severity for a in firing}
-        if AlertSeverity.CRITICAL in severities:
+        if AlertSeverity_Ops.CRITICAL in severities:
             return "degraded"
-        if AlertSeverity.WARNING in severities:
+        if AlertSeverity_Ops.WARNING in severities:
             return "warning"
         return "healthy"
 
@@ -250,7 +250,7 @@ def create_spd1_dashboard(service_name: str = "literary-os") -> ObservabilityDas
         name="GatesPassRatioCritical",
         metric_name="gates_pass_ratio",
         threshold=0.95,
-        severity=AlertSeverity.CRITICAL,
+        severity=AlertSeverity_Ops.CRITICAL,
         fire_when_below=True,
     ))
     dash.add_panel(p1)
@@ -266,7 +266,7 @@ def create_spd1_dashboard(service_name: str = "literary-os") -> ObservabilityDas
         name="SpanVolumeHigh",
         metric_name="spans_exported_total",
         threshold=50_000,
-        severity=AlertSeverity.WARNING,
+        severity=AlertSeverity_Ops.WARNING,
         fire_when_below=False,
     ))
     dash.add_panel(p2)
@@ -282,7 +282,7 @@ def create_spd1_dashboard(service_name: str = "literary-os") -> ObservabilityDas
         name="ActiveTracesHigh",
         metric_name="active_traces",
         threshold=100,
-        severity=AlertSeverity.WARNING,
+        severity=AlertSeverity_Ops.WARNING,
         fire_when_below=False,
     ))
     dash.add_panel(p3)
@@ -298,7 +298,7 @@ def create_spd1_dashboard(service_name: str = "literary-os") -> ObservabilityDas
         name="P99LatencyHigh",
         metric_name="p99_span_duration_ms",
         threshold=500,
-        severity=AlertSeverity.WARNING,
+        severity=AlertSeverity_Ops.WARNING,
         fire_when_below=False,
     ))
     dash.add_panel(p4)
@@ -314,7 +314,7 @@ def create_spd1_dashboard(service_name: str = "literary-os") -> ObservabilityDas
         name="TraceErrorRatioCritical",
         metric_name="trace_error_ratio",
         threshold=0.05,
-        severity=AlertSeverity.CRITICAL,
+        severity=AlertSeverity_Ops.CRITICAL,
         fire_when_below=False,
     ))
     dash.add_panel(p5)
@@ -343,3 +343,7 @@ def record_gate_metrics(
 ) -> bool:
     ratio = passed / total if total > 0 else 0.0
     return dashboard.record("gates_pass_ratio", ratio)
+
+
+# G37 DuplicateZero(ADR-033): 클래스명 전역 고유화 — 외부 import 하위호환 별칭
+AlertSeverity = AlertSeverity_Ops

@@ -119,6 +119,10 @@ def _run_release_gate() -> Dict[str, Any]:
 
 def _check_connectivity() -> bool:
     """G_CONNECTIVITY: 완전 고립 패키지 0개 확인 (ADR-128)."""
+    if os.environ.get("LOS_GATE_NO_SUBPROC") == "1":
+        # 게이트 내부 실행 시 중첩 preflight subprocess fork 방지.
+        # (연결성은 tier4 preflight가 직접 검증 — release_gate 재귀/fork 폭주 차단)
+        return True
     try:
         sys.path.insert(0, os.getcwd())
         import subprocess

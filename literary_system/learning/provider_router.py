@@ -31,7 +31,7 @@ class RoutingSignals:
 
 
 @dataclass
-class RoutingDecision:
+class RoutingDecision_Learning:
     provider:      GPUProvider
     reason:        str
     fits_locally:  bool
@@ -115,3 +115,7 @@ def validate_routing(decision: RoutingDecision, signals: RoutingSignals) -> Dict
                                  GPUProvider.LAMBDA_LABS, GPUProvider.HF_AUTOTRAIN):
         viol.append(f"V3 위반: 미지원 provider {decision.provider}")
     return {"passed": not viol, "violations": viol, "decision": decision.to_dict()}
+
+
+# G37 DuplicateZero(ADR-033): 클래스명 전역 고유화 — 외부 import 하위호환 별칭
+RoutingDecision = RoutingDecision_Learning

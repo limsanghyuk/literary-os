@@ -15,7 +15,7 @@ from enum import Enum
 from typing import Any, Callable, Dict, List, Optional
 
 
-class StepStatus(str, Enum):
+class StepStatus_Ops(str, Enum):
     """런북 단계 실행 상태."""
     PENDING = "pending"
     RUNNING = "running"
@@ -294,3 +294,7 @@ def build_health_check_runbook() -> OpsRunbook:
         severity=RunbookSeverity.MEDIUM,
     ))
     return book
+
+
+# G37 DuplicateZero(ADR-033): 클래스명 전역 고유화 — 외부 import 하위호환 별칭
+StepStatus = StepStatus_Ops

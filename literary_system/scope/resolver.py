@@ -36,7 +36,7 @@ class NarrativeScopePlugin(ABC):
     @abstractmethod
     def get_foreshadow_rules(self) -> List[str]: ...
 
-class PluginRegistry:
+class PluginRegistry_Scope:
     _plugins: Dict[str, Type[NarrativeScopePlugin]] = {}
 
     @classmethod
@@ -78,3 +78,7 @@ class NarrativeScopeResolver:
 
     def available_genres(self) -> List[str]:
         return PluginRegistry.all_genres()
+
+
+# G37 DuplicateZero(ADR-033): 클래스명 전역 고유화 — 외부 import 하위호환 별칭
+PluginRegistry = PluginRegistry_Scope

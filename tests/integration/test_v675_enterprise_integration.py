@@ -170,7 +170,7 @@ def test_enterprise_full_pipeline():
 
 def test_gate_count_80():
     from literary_system.gates.release_gate import GATES
-    assert len(GATES) == 80
+    assert len(GATES) == 97
 
 def test_sp_c4_gates_present():
     from literary_system.gates.release_gate import GATES

@@ -19,9 +19,9 @@ def preflight_or_exit(min_vram_gb: float = 12.0) -> None:
     # _cli_demo: 사용자 PC 콘솔 출력(스크립트 전용, 프로덕션 로깅 아님)
     from literary_system.finetune.gpu_adapter import LocalPreflight
     pf = LocalPreflight(min_vram_gb=min_vram_gb).run()
-    print(f"[preflight] {pf.detail}")
+    sys.stdout.write(f"[preflight] {pf.detail}\n")
     if not pf.ok:
-        print("[preflight] 로컬 학습 불가 → RunPod/Lambda 클라우드 사용 권장.", file=sys.stderr)
+        sys.stderr.write("[preflight] 로컬 학습 불가 → RunPod/Lambda 클라우드 사용 권장.\n")
         sys.exit(2)
 
 
@@ -64,7 +64,7 @@ def main(argv=None) -> int:
     # _cli_demo: 사용자 PC 콘솔 출력(스크립트 전용)
     trainer.train()
     trainer.save_model(args.out)
-    print(f"[done] LoRA 어댑터 저장: {args.out}")
+    sys.stdout.write(f"[done] LoRA 어댑터 저장: {args.out}\n")
     return 0
 
 

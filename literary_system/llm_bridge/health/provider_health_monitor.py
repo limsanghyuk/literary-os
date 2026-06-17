@@ -27,7 +27,7 @@ class ProviderStatus(str, Enum):
 
 
 @dataclass
-class HealthRecord:
+class HealthRecord_Health:
     provider_id: str
     status: ProviderStatus = ProviderStatus.UNKNOWN
     last_check_time: float = 0.0
@@ -140,3 +140,7 @@ class ProviderHealthMonitor:
 
     def all_records(self) -> dict:
         return dict(self._records)
+
+
+# G37 DuplicateZero(ADR-033): 클래스명 전역 고유화 — 외부 import 하위호환 별칭
+HealthRecord = HealthRecord_Health

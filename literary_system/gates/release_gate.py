@@ -1715,6 +1715,9 @@ GATES = [
 def run_release_gate() -> dict:
     """V667 릴리즈 게이트 실행 (68개 게이트 — G67+G72-1 포함, Phase C SP-C.4 진입, ADR-129)."""
     import traceback
+    import os as _os
+    _prev_nosub = _os.environ.get("LOS_GATE_NO_SUBPROC")
+    _os.environ["LOS_GATE_NO_SUBPROC"] = "1"  # 중첩 preflight subprocess fork 방지(BUG: g80 재귀/포크)
     results_dict: dict = {}
     passed_count = 0
     failed_count = 0
@@ -1744,6 +1747,15 @@ def run_release_gate() -> dict:
                     "failed_checkpoints": report.failed_checkpoints,
                     "summary": report.summary(),
                 }
+            elif gate_id == "phase_c_exit_wrapper_g80":
+                # BUG 수정: G80이 run_phase_c_exit_gate→run_release_gate를 무한 재귀하던 것을
+                # G61과 동일하게 결과 스냅샷 override로 차단(2026-06-17).
+                from literary_system.gates.phase_c_exit_gate import run_phase_c_exit_gate as _rpce
+                _snap = {"gates_passed": passed_count, "results": {k: v for k, v in results_dict.items()}}
+                _rep = _rpce(_rg_results_override=_snap)
+                result = {"gate": "G80", "pass": _rep.gate_passed, "passed": _rep.gate_passed,
+                          "passed_count": sum(1 for c in _rep.checkpoints if c.passed),
+                          "total_count": len(_rep.checkpoints)}
             else:
                 result = gate_fn()
             gate_passed = result.get("pass", False)
@@ -1761,6 +1773,10 @@ def run_release_gate() -> dict:
         else:
             failed_count += 1
 
+    if _prev_nosub is None:
+        _os.environ.pop("LOS_GATE_NO_SUBPROC", None)
+    else:
+        _os.environ["LOS_GATE_NO_SUBPROC"] = _prev_nosub
     total = len(GATES)
     all_passed = failed_count == 0
     issues = [gid for gid, gv in results_dict.items() if not gv.get("pass", False)]

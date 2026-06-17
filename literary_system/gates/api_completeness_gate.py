@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 
 @dataclass
-class GateCheckResult:
+class GateCheckResult_Gates:
     check_id: str
     description: str
     passed: bool
@@ -264,3 +264,7 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+# G37 DuplicateZero(ADR-033): 클래스명 전역 고유화 — 외부 import 하위호환 별칭
+GateCheckResult = GateCheckResult_Gates

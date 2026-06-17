@@ -52,7 +52,7 @@ class SemanticModelState(Enum):
     RECONCILE = "reconcile"
     FROZEN    = "frozen"
 
-class ConflictType(Enum):
+class ConflictType_Nkg(Enum):
     ANTAGONIST = "antagonist"
     ALLY       = "ally"
     RIVAL      = "rival"
@@ -124,7 +124,7 @@ class ThemeNode(NKGNode):
 class ConflictClusterNode(NKGNode):
     cluster_id:     str          = ""
     member_ids:     List[str]    = field(default_factory=list)
-    conflict_type:  ConflictType = ConflictType.NEUTRAL
+    conflict_type:  ConflictType = ConflictType_Nkg.NEUTRAL
     cohesion_score: float        = 0.0
     primary_scene:  str          = ""
     def __post_init__(self): self.node_type = NKGNodeType.CONFLICT_CLUSTER
@@ -168,3 +168,7 @@ def _sha256_short(text: str) -> str:
     """V329 레거시 호환 — content_hash 보조 함수."""
     import hashlib
     return hashlib.sha256(text.encode()).hexdigest()[:12]
+
+
+# G37 DuplicateZero(ADR-033): 클래스명 전역 고유화 — 외부 import 하위호환 별칭
+ConflictType = ConflictType_Nkg

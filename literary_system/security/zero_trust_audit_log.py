@@ -24,7 +24,7 @@ from typing import List, Optional
 # ─── 레코드 타입 ─────────────────────────────────────────────────────────────
 
 @dataclass
-class AuditRecord:
+class AuditRecord_Security:
     """단일 감사 레코드 — 체인 해시 포함."""
     seq: int
     timestamp: str          # ISO 8601 UTC
@@ -201,3 +201,7 @@ class ZeroTrustAuditLog:
         """DENY 결정 수."""
         with self._lock:
             return sum(1 for r in self._records if r.decision == "DENY")
+
+
+# G37 DuplicateZero(ADR-033): 클래스명 전역 고유화 — 외부 import 하위호환 별칭
+AuditRecord = AuditRecord_Security

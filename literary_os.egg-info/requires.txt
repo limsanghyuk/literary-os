@@ -1,5 +1,6 @@
 networkx>=3.0
 pydantic>=2.0.0
+RestrictedPython>=6.0
 
 [all]
 qdrant-client>=1.7

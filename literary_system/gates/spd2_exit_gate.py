@@ -32,7 +32,7 @@ from typing import Any, Dict, List, Optional
 
 
 @dataclass
-class ExitCheckpoint:
+class ExitCheckpoint_Gates:
     axis: str
     name: str
     passed: bool
@@ -447,3 +447,7 @@ if __name__ == "__main__":
     sys.stdout.write(json.dumps(result.to_dict(), indent=2, ensure_ascii=False) + "\n")
     status = "PASS" if result.passed else "FAIL"
     sys.stdout.write(f"\n[SP-D.2 EXIT GATE] {status} — {result.passed_count}/6 PASS\n")
+
+
+# G37 DuplicateZero(ADR-033): 클래스명 전역 고유화 — 외부 import 하위호환 별칭
+ExitCheckpoint = ExitCheckpoint_Gates

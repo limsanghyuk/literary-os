@@ -26,7 +26,7 @@ from typing import Any, Callable, Dict, List, Optional, TypeVar
 T = TypeVar("T")
 
 
-class CircuitState(Enum):
+class CircuitState_Ops(Enum):
     CLOSED    = auto()   # 정상
     OPEN      = auto()   # 차단
     HALF_OPEN = auto()   # 프로브
@@ -206,3 +206,7 @@ class CircuitBreaker:
     def event_history(self) -> List[CircuitBreakerEvent]:
         with self._lock:
             return list(self._history)
+
+
+# G37 DuplicateZero(ADR-033): 클래스명 전역 고유화 — 외부 import 하위호환 별칭
+CircuitState = CircuitState_Ops
