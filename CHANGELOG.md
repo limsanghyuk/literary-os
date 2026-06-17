@@ -1,3 +1,12 @@
+## [13.31.0] — V778 — E.4 확장 트랙 Exit Gate (ADR-238)
+
+### V778 — V767~V777 통합 종료
+- `learning/e4ext_exit.py` run_e4ext_exit: 7 CP(GPU 3-모드+클라우드운영+분업/파레토+폐회로+품질판별+학습킷+ADR연속)
+- `tools/run_e4ext_exit_gate.py` 7/7 PASS. E.4 확장 종료
+- 10 TC. 13.30→13.31
+
+---
+
 ## [13.30.0] — V777 — RunPod 운영 라이프사이클: 데이터 동기화+어댑터 회수 (ADR-237)
 
 ### V777 — 클라우드 학습 운영 완결

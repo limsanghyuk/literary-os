@@ -28,3 +28,5 @@ from .first_training_kit import (build_training_plan, prepare_dpo, make_smoke_da
 
 from .winrate_gate import g_loopc_winrate, WinrateGateResult  # V774
 from .loopc_closure import LoopCClosure, LoopCRoundReport  # V774
+
+from .e4ext_exit import run_e4ext_exit  # V778
