@@ -106,13 +106,17 @@ class RealRunPodAdapter(GPUAdapterContract):
             "env": {
                 "BASE_MODEL": request.model_name,
                 "DATASET": request.dataset_path,
+                "DATASET_URL": str(request.extra.get("dataset_url", "")),
+                "OUTPUT_URL": str(request.extra.get("output_url", "")),
                 "OBJECTIVE": str(request.extra.get("objective", "dpo")),
                 "RLAIF": "1",
             },
-            # 컨테이너 기동 시 학습 스크립트 실행(데이터 동기화는 운영 시 연결)
+            # 기동 스크립트: DATASET_URL 다운로드 → 학습 → OUTPUT_URL 업로드(운영 동기화)
             "dockerStartCmd": ["bash", "-lc",
-                               "python -m literary_system.finetune.train_local "
-                               "--dataset $DATASET --base $BASE_MODEL --out /workspace/lora_out || sleep 60"],
+                               "set -e; D=/workspace/dpo.jsonl; "
+                               "[ -n \"$DATASET_URL\" ] && curl -fsSL \"$DATASET_URL\" -o $D || cp \"$DATASET\" $D; "
+                               "python -m literary_system.finetune.train_local --dataset $D --base $BASE_MODEL --out /workspace/lora_out; "
+                               "[ -n \"$OUTPUT_URL\" ] && curl -fsS -T /workspace/lora_out/adapter_model.safetensors \"$OUTPUT_URL\" || true"],
         }
 
     def launch_job(self, request: GPUJobRequest) -> GPUJobResult:

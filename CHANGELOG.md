@@ -1,3 +1,12 @@
+## [13.30.0] — V777 — RunPod 운영 라이프사이클: 데이터 동기화+어댑터 회수 (ADR-237)
+
+### V777 — 클라우드 학습 운영 완결
+- `finetune/runpod_lifecycle.py` RunPodJobLifecycle: 업로드→학습→폴링→회수→등재(업로더/다운로더 주입)
+- RealRunPodAdapter 페이로드 DATASET_URL/OUTPUT_URL + 다운로드/업로드 기동 스크립트
+- dry_run/키없음=계획만, 키 직렬화 미포함. 13 TC. 13.29→13.30
+
+---
+
 ## [13.29.0] — V776 — 품질 라벨 자동 집계 엔진 (ADR-236)
 
 ### V776 — 다신호 → 2축 자동 라벨링

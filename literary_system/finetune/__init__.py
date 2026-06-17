@@ -180,3 +180,5 @@ from literary_system.finetune.pre_train_safety import (
 )
 
 from .runpod_real_adapter import RealRunPodAdapter, make_real_runpod, RUNPOD_REST_BASE  # V772
+
+from .runpod_lifecycle import RunPodJobLifecycle, LifecycleReport, LifecycleStage  # V777
