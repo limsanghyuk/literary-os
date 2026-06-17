@@ -110,28 +110,28 @@ class TestBenchmarkRunnerUsesPercentile:
         """TC-13: n=50 리포트 P99 ≠ 최댓값."""
         runner = BenchmarkRunner()
         samples = self._make_samples(list(range(1, 51)))
-        report = runner.run(BenchmarkTarget.GENERATE, samples)
+        report = runner.run(BenchmarkTarget.SLO_MONITOR, samples)
         assert report.p99_ms < 50.0  # 구버전이면 50.0 반환
 
     def test_report_p99_n2_valid(self):
         """TC-14: n=2 리포트 P99 = 선형보간값."""
         runner = BenchmarkRunner()
         samples = self._make_samples([10.0, 20.0])
-        report = runner.run(BenchmarkTarget.GENERATE, samples)
+        report = runner.run(BenchmarkTarget.SLO_MONITOR, samples)
         assert 10.0 <= report.p99_ms <= 20.0
 
     def test_report_p99_single_sample_equals_avg(self):
         """TC-15: n=1 → p99_ms = avg_ms."""
         runner = BenchmarkRunner()
         samples = self._make_samples([99.0])
-        report = runner.run(BenchmarkTarget.GENERATE, samples)
+        report = runner.run(BenchmarkTarget.SLO_MONITOR, samples)
         assert report.p99_ms == report.avg_ms
 
     def test_report_structure_intact(self):
         """TC-16: 보고서 구조 유지 (avg, p50, p99, violations 포함)."""
         runner = BenchmarkRunner()
         samples = self._make_samples([50.0] * 20)
-        report = runner.run(BenchmarkTarget.ANALYZE, samples)
+        report = runner.run(BenchmarkTarget.SLO_MONITOR, samples)
         assert hasattr(report, 'avg_ms')
         assert hasattr(report, 'p50_ms')
         assert hasattr(report, 'p99_ms')
