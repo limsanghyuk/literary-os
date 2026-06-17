@@ -26,13 +26,13 @@ class TriggerResult:
 
 class RLAIFTrigger:
     """RLAIFTrainingSpec → LoRAJobRunner. 이 환경=dry_run, 실 GPU=클라우드(Phase F)."""
-    def __init__(self, provider=None, dry_run: bool = True, hours_estimate: float = 2.0) -> None:
+    def __init__(self, provider=None, dry_run: bool = True, hours_estimate: float = 2.0, adapter=None) -> None:
         from literary_system.finetune.gpu_adapter import GPUProvider
         from literary_system.finetune.lora_job_runner import LoRAJobRunner
         self._provider = provider or GPUProvider.RUNPOD
         self._dry_run = dry_run
         self._hours = hours_estimate
-        self._runner = LoRAJobRunner(provider=self._provider, dry_run=dry_run)
+        self._runner = LoRAJobRunner(provider=self._provider, dry_run=dry_run, adapter=adapter)
 
     def _config(self, spec: RLAIFTrainingSpec):
         from literary_system.finetune.lora_training_config import (

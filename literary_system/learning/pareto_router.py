@@ -123,27 +123,54 @@ class TrainingMode(str, Enum):
     AUTO   = "auto"      # 파레토 최적 자동
 
 
+def _cloud_adapter(provider: GPUProvider, use_real: bool, api_key: str):
+    """클라우드 provider면서 use_real이면 RealRunPodAdapter 주입(없으면 None=기본 Mock)."""
+    if use_real and provider == GPUProvider.RUNPOD:
+        from literary_system.finetune.runpod_real_adapter import RealRunPodAdapter
+        return RealRunPodAdapter(api_key=api_key)
+    return None
+
+
 def dispatch_training(spec: RLAIFTrainingSpec, mode: TrainingMode,
                       signals: Optional[RoutingSignals] = None,
-                      dry_run: bool = True, preference: str = "balanced") -> Dict[str, Any]:
+                      dry_run: bool = True, preference: str = "balanced",
+                      real: bool = False, api_key: Optional[str] = None) -> Dict[str, Any]:
     """
-    개발자가 지정한 모드로 학습 디스패치. 3가지 방식 모두 단일 진입점에서 작동.
-    returns {"mode","provider"/"stages","status",...}.
+    개발자가 지정한 모드로 학습 디스패치. 3방식(CLOUD/LOCAL/HYBRID)+AUTO 단일 진입점.
+    real=True 또는 RUNPOD_API_KEY 존재 시 클라우드 단계가 RealRunPodAdapter(실 RunPod)로 흐름.
+    dry_run=True(기본)면 실 어댑터라도 네트워크 미호출(안전). 실 학습은 dry_run=False+키 필요.
     """
+    import os
+    from literary_system.learning.rlaif_trigger import RLAIFTrigger
     sig = signals or RoutingSignals()
+    key = api_key or os.environ.get("RUNPOD_API_KEY", "")
+    use_real = bool(real or key)
+
     if mode == TrainingMode.HYBRID:
         from literary_system.learning.split_pipeline import SplitPipeline
         rep = SplitPipeline().plan(sig)
-        return {"mode": "hybrid", "stages": [s.to_dict() for s in rep.stages],
-                "hybrid_cost_usd": rep.hybrid_cost_usd, "savings_pct": rep.savings_pct,
-                "status": "planned", "summary": rep.summary}
+        out = {"mode": "hybrid", "stages": [s.to_dict() for s in rep.stages],
+               "hybrid_cost_usd": rep.hybrid_cost_usd, "savings_pct": rep.savings_pct,
+               "status": "planned", "summary": rep.summary, "real_cloud": use_real}
+        # StageB(클라우드)면 실 어댑터로 트리거(로컬 단계는 PC에서 train_local 실행)
+        cloud = next((st for st in rep.stages if st.provider != "local"), None)
+        if cloud is not None:
+            prov = GPUProvider(cloud.provider)
+            adp = _cloud_adapter(prov, use_real, key)
+            r = RLAIFTrigger(provider=prov, dry_run=dry_run, adapter=adp).trigger(spec)
+            out["cloud_stage"] = {"provider": prov.value, "status": r.status,
+                                  "real_adapter": adp is not None, "summary": r.summary}
+        return out
+
     if mode == TrainingMode.AUTO:
         dec = ParetoRouter(preference=preference).select(spec, sig)
     elif mode == TrainingMode.LOCAL:
         dec = ProviderRouter().select(spec, RoutingSignals(force_provider=GPUProvider.LOCAL))
     else:  # CLOUD
         dec = ProviderRouter().select(spec, RoutingSignals(force_provider=GPUProvider.RUNPOD))
-    from literary_system.learning.rlaif_trigger import RLAIFTrigger
-    res = RLAIFTrigger(provider=dec.provider, dry_run=dry_run).trigger(spec)
+
+    adp = None if dec.provider == GPUProvider.LOCAL else _cloud_adapter(dec.provider, use_real, key)
+    res = RLAIFTrigger(provider=dec.provider, dry_run=dry_run, adapter=adp).trigger(spec)
     return {"mode": mode.value, "provider": dec.provider.value, "rule": dec.rule,
-            "reason": dec.reason, "status": res.status, "summary": res.summary}
+            "reason": dec.reason, "status": res.status, "summary": res.summary,
+            "real_adapter": adp is not None}

@@ -219,6 +219,7 @@ class LoRAJobRunner:
         dry_run: bool = True,
         cost_slo: CostSLO = DEFAULT_COST_SLO,
         history_path: Optional[str] = None,
+        adapter: Optional[GPUAdapterContract] = None,
     ) -> None:
         """
         Args:
@@ -228,7 +229,8 @@ class LoRAJobRunner:
             history_path:  실행 이력 JSONL 저장 경로 (None이면 영속화 안 함)
         """
         self._provider_id = provider
-        self._adapter: GPUAdapterContract = get_adapter(provider)
+        # adapter 주입 시 그대로 사용(실 RunPod 등), 없으면 registry(기본 Mock)
+        self._adapter: GPUAdapterContract = adapter or get_adapter(provider)
         self._dry_run = dry_run
         self._cost_slo = cost_slo
         self._history_path = Path(history_path) if history_path else None

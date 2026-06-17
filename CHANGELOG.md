@@ -1,3 +1,13 @@
+## [13.26.0] — V773 — 클라우드 실 배선: dispatch→RealRunPod (ADR-233)
+
+### V773 — 3방식 끝까지 실행 완성
+- 어댑터 주입: LoRAJobRunner/RLAIFTrigger/dispatch_training(real, api_key)
+- CLOUD/AUTO/HYBRID(StageB)가 키 있으면 RealRunPodAdapter로, 없으면 안전 dry_run. LOCAL 유지
+- RUNPOD_API_KEY 자동감지, 키 직렬화 미포함(보안). 13 TC. 13.25→13.26
+- **사용자가 LOCAL/CLOUD/HYBRID 선택→끝까지 실행 가능**
+
+---
+
 ## [13.25.0] — V772 — RealRunPodAdapter: RunPod 실 REST API 연동 (ADR-232)
 
 ### V772 — Mock→실 클라우드 어댑터
