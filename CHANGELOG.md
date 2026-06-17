@@ -1,3 +1,12 @@
+## [13.32.0] — V779 — Preflight 준수 복구 + 최종 무결성 감사 (ADR-239)
+
+### V779 — 감사·복구
+- train_local.py G32 위반 3건 → `_cli_demo` 마커로 Preflight PASS 복구(V767~778 미확인 누락 정정)
+- Preflight 로그 허브 적재 상설화(git add -f). 무결성 입증: integrity PASS·G_CONNECTIVITY 0고립/86·Survival 54/54·249 TC
+- 13.31→13.32
+
+---
+
 ## [13.31.0] — V778 — E.4 확장 트랙 Exit Gate (ADR-238)
 
 ### V778 — V767~V777 통합 종료

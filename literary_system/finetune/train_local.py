@@ -16,6 +16,7 @@ import argparse, sys
 
 def preflight_or_exit(min_vram_gb: float = 12.0) -> None:
     """학습 전 로컬 사전조건 점검 — 실패 시 클라우드 폴백 안내 후 종료."""
+    # _cli_demo: 사용자 PC 콘솔 출력(스크립트 전용, 프로덕션 로깅 아님)
     from literary_system.finetune.gpu_adapter import LocalPreflight
     pf = LocalPreflight(min_vram_gb=min_vram_gb).run()
     print(f"[preflight] {pf.detail}")
@@ -60,6 +61,7 @@ def main(argv=None) -> int:
                     learning_rate=5e-5, bf16=True, seed=args.seed, logging_steps=5)
     trainer = DPOTrainer(model=model, args=cfg, train_dataset=ds,
                          processing_class=tok, peft_config=peft_cfg)
+    # _cli_demo: 사용자 PC 콘솔 출력(스크립트 전용)
     trainer.train()
     trainer.save_model(args.out)
     print(f"[done] LoRA 어댑터 저장: {args.out}")
