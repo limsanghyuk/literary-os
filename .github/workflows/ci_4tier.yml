@@ -37,7 +37,8 @@ jobs:
         with:
           python-version: "3.10"
       - run: pip install -e ".[dev]" --break-system-packages || pip install -e ".[dev]"
-      - run: python3 -c "from literary_system.gates.release_gate import GATES; print(f'GATES: {len(GATES)}')"
+      - run: |
+          python3 -c "from literary_system.gates.release_gate import GATES; print(f'GATES count: {len(GATES)}')"
 
   tier4-preflight:
     runs-on: ubuntu-latest
