@@ -58,7 +58,7 @@ literary_system/
 ├── corpus/               # 외부 코퍼스 브릿지 — BGE-M3 + CIM
 ├── multiwork/            # 다중작품 관리 오케스트레이터
 ├── adapters_live/        # LLM 어댑터 (Claude / OpenAI / Ollama)
-└── ...           # 83개 패키지 전체 연결 (고립 0, ADR-128)
+└── ...           # 86개 패키지 전체 연결 (고립 0, ADR-128 G_CONNECTIVITY)
 ```
 
 ---
@@ -80,7 +80,13 @@ literary_system/
 | SP-D.1 | V681~V695 | Observability Stack (Trace/Sampler/Dashboard/OtelSdk) | G81~G83 |
 | SP-D.2 | V696~V710 | MultiAgent Coordination Layer (Bus/Workflow/CircuitBreaker/Supervisor) | G84~G85 |
 | **SP-D.3** | **V711~V730** | **Plugin Registry + ZeroTrust + Chaos Engineering** | **G87~G89** |
-| **V730** | **v12.4.0** | **SP-D.3 완전 종료 — 88 Gates / 9766+ Tests** | **SP-D3-EXIT ✅** |
+| SP-D.4 | V731~V745 | 보조 게이트 + Phase D Exit | G92~G95 |
+| 검증주간 | V746~V749 | 무결성·Pairwise·Transitivity·인간GT 인프라 | G_INTEGRITY/PAIRWISE/HUMAN_GT |
+| **Phase E.2** | **V753~V761** | **LLM-1 Critic (5축·ensemble·alignment·arbitration)** | **G_LLM1_BOUNDARY/RAG/ALIGNMENT/SAFETY/COST** |
+| **Phase E.4** | **V762~V766** | **RLAIF loop-C (보상·오케·트리거) + LLM-1 전이 Exit** | **PHASE-E-LLM1-EXIT** |
+| GPU 3-모드 | V767~V773 | LocalGPU(4070)·ProviderRouter·SplitPipeline·RealRunPod·클라우드 배선 | G_GPU_ROUTING |
+| **E.4 확장** | **V774~V780** | **loop-C 폐회로·2축 품질라벨+Critic 판별·자동집계·RunPod 운영·E.4 Exit** | **G_LOOPC_WINRATE** |
+| **V780** | **v13.33.0** | **현재 — 11,292 Tests / 97 Gates / CI 4-tier green** | **✅** |
 
 ---
 
@@ -88,7 +94,7 @@ literary_system/
 
 ```python
 from literary_system.gates.release_gate import GATES
-print(len(GATES))  # → 88
+print(len(GATES))  # → 97
 ```
 
 | 범위 | 게이트 | 내용 |
@@ -106,6 +112,10 @@ print(len(GATES))  # → 88
 | **G87** | **SP-D.3** | **Plugin Registry (PR-1~PR-7)** |
 | **G88** | **SP-D.3** | **ZeroTrust Security (ZT-1~ZT-7)** |
 | **G89** | **SP-D.3** | **Chaos Resilience (CR-1~CR-6)** |
+| **G92~G95** | **SP-D.4** | **보조 게이트 3종 + Phase D Exit Gate** |
+| **named** | **검증주간** | **G_INTEGRITY_MANIFEST / G_PAIRWISE_REGRESSION / G_TRANSITIVITY / G_HUMAN_GT_ALIGNMENT** |
+| **named** | **Phase E.2** | **G_LLM1_BOUNDARY / RAG / ALIGNMENT / SAFETY / COST (LLM-1 Critic 8모듈)** |
+| **named** | **Phase E.4** | **G_LOOPC_WINRATE / PHASE-E-LLM1-EXIT / G_GPU_ROUTING** |
 
 ---
 
@@ -113,7 +123,7 @@ print(len(GATES))  # → 88
 
 ```bash
 # 전체 테스트
-pytest tests/ -q  # → 9766 PASS
+pytest tests/ -q  # → 11,292 PASS
 
 # Preflight — 각 버전 개발 전 필수 (DEV_PROTOCOL_v3.0 RULE-0)
 python3 tools/run_preflight.py  # → 13단계 ALL PASS
@@ -126,7 +136,7 @@ python3 tools/run_release_gate.py  # → 97 gates PASS
 
 ## ADR 목록
 
-ADR-001 ~ ADR-191 (`docs/adr/` 디렉터리 참조)
+ADR-001 ~ ADR-240 (`docs/adr/` 디렉터리 참조)
 
 | ADR 범위 | 내용 |
 |----------|------|
@@ -139,6 +149,12 @@ ADR-001 ~ ADR-191 (`docs/adr/` 디렉터리 참조)
 | ADR-182~189 | SP-D.3 Auth Bridge + Chaos Engineering (V721~V728) |
 | **ADR-190** | **G89 ChaosResilienceGate (V729)** |
 | **ADR-191** | **SP-D.3 Exit Gate (V730)** |
+| ADR-192~208 | SP-D.4 보조 게이트 + Phase D Exit (V731~V745) |
+| ADR-209~213 | 검증주간 — 무결성/Pairwise/Transitivity/인간GT (V746~V750) |
+| **ADR-214~221** | **Phase E.2 LLM-1 Critic 8종 (V753~V761)** |
+| **ADR-222~226** | **Phase E.4 RLAIF 코어 + LLM-1 전이 Exit (V762~V766)** |
+| **ADR-227~233** | **GPU 학습 3-모드 + 클라우드 배선 (V767~V773)** |
+| **ADR-234~240** | **loop-C 폐회로·2축 품질라벨·RunPod 운영·E.4 Exit·무결성·gates 정리 (V774~V780)** |
 
 ---
 
