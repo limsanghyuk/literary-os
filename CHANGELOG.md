@@ -1,3 +1,12 @@
+## [13.29.0] — V776 — 품질 라벨 자동 집계 엔진 (ADR-236)
+
+### V776 — 다신호 → 2축 자동 라벨링
+- `quality/quality_aggregator.py`: 시청률(채널보정)/관객수→commercial, expert+수상→craft, 2축 독립
+- `tools/build_quality_labels.py`: meta_gt_drama 29편 자동(긍정11/졸작6). 전 코퍼스 확장 기반
+- label_summary poor 이중계수 수정. 14 TC. 13.28→13.29
+
+---
+
 ## [13.28.0] — V775 — 2축 품질 라벨 + Critic 판별 게이트 (ADR-235)
 
 ### V775 — 흥행작 명작계열 포함 + 판별력 검증
