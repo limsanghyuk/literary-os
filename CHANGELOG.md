@@ -1,3 +1,13 @@
+## [13.28.0] — V775 — 2축 품질 라벨 + Critic 판별 게이트 (ADR-235)
+
+### V775 — 흥행작 명작계열 포함 + 판별력 검증
+- `quality/quality_labels.py`: 2축(craft/commercial) 분리, 흥행작=COMMERCIAL_HIT(긍정 목표). 14편 데모
+- `quality/critic_discrimination_gate.py` G_CRITIC_DISCRIMINATION: 긍정>졸작 AUC≥0.70 판별력 검증
+- 사용자 정정(흥행 성공=명작 계열) 반영 + 인기≠작품성 2축 통제. NextEpisodeBench 선결조건
+- 15 TC. 13.27→13.28
+
+---
+
 ## [13.27.0] — V774 — loop-C 폐회로: LoopCClosure + G_LOOPC_WINRATE (ADR-234)
 
 ### V774 — 1단계 품질 반복 엔진
