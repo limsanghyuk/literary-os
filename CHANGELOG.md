@@ -1,3 +1,13 @@
+## [13.27.0] — V774 — loop-C 폐회로: LoopCClosure + G_LOOPC_WINRATE (ADR-234)
+
+### V774 — 1단계 품질 반복 엔진
+- `learning/winrate_gate.py` G_LOOPC_WINRATE: ΔW>0·KL≤τ·구조R 비퇴행 → adopt/rollback (표본<50 신뢰약 표기)
+- `learning/loopc_closure.py` LoopCClosure: 선호쌍→학습계획→실측W₁→수용판정→다음행동
+- `tools/run_loopc_round.py` CLI. 회사 설계도 구현, ADR-233(배선)↔ADR-234(폐회로) 정합
+- 15 TC. 13.26→13.27
+
+---
+
 ## [13.26.0] — V773 — 클라우드 실 배선: dispatch→RealRunPod (ADR-233)
 
 ### V773 — 3방식 끝까지 실행 완성
