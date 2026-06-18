@@ -35,3 +35,5 @@ __all__ += ["DisagreementRecord", "classify", "formula_winner", "arbitrate"]
 
 from literary_system.critic.spe2_exit import run_spe2_exit
 __all__ += ["run_spe2_exit"]
+
+from literary_system.critic.critic_qualification import (qualify_critic, QualificationResult, degrade, build_ladder, DegradeAxis, WIN_MIN)  # V782 M1

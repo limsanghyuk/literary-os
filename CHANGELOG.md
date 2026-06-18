@@ -1,3 +1,12 @@
+## [13.35.0] — V782 — M1 Critic 자격검정: 정적-닻 자체평가 (ADR-243)
+
+### V782 — 인간없는 자체평가 닻 (M1)
+- `critic/critic_qualification.py`: 축별 등급화 열화(감정/복선/인과/어휘) + qualify_critic(명작>열화 단조 변별)
+- alignment_monitor 빈 인간GT 닻을 명작>열화판 판별로 부분 대체. critic 심판 자격 검정
+- 14 TC. 천장=모작(독창성=인간 최종시험). 다음 M2 NextEp·M3 분포가드. 13.34→13.35
+
+---
+
 ## [13.34.0] — V781 — 생성 본체 7-pass L4 승격 (T3, ADR-241)
 
 ### V781 — generation/ 정식 파이프라인 (허브 a98b5cd3 위 통합)
