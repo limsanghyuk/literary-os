@@ -182,3 +182,6 @@ from literary_system.finetune.pre_train_safety import (
 from .runpod_real_adapter import RealRunPodAdapter, make_real_runpod, RUNPOD_REST_BASE  # V772
 
 from .runpod_lifecycle import RunPodJobLifecycle, LifecycleReport, LifecycleStage  # V777
+
+from .cloud_storage import CloudStore, PresignedHttpStore, encrypt_bytes, decrypt_bytes  # V786
+from .cloud_training_node import CloudTrainingNode, CloudNodeReport  # V786

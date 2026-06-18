@@ -1,3 +1,12 @@
+## [13.39.0] — V786 — 클라우드 비공개 저장 + 실측 학습 노드 (ADR-247)
+
+### V786 — 클라우드 학습 노드 마무리 (회사 PC 경로)
+- `finetune/cloud_storage.py`: PresignedHttpStore(암호화 업로드·자동삭제), encrypt/decrypt_bytes
+- `finetune/cloud_training_node.py` CloudTrainingNode: 암호화업로드→RunPod학습→회수→자동삭제→ΔW→수용판정
+- 저작권 안전(verbatim 비공개·임시·삭제). 15 TC. 13.38→13.39
+
+---
+
 ## [13.38.0] — V785 — 자체평가→loop-C 통합 배선 (ADR-246)
 
 ### V785 — M1+M2+M3 한 파이프라인
