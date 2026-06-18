@@ -41,3 +41,5 @@ from literary_system.critic.critic_qualification import (qualify_critic, Qualifi
 from literary_system.critic.next_episode_bench import (run_next_episode_bench, NextEpItem, BenchResult, ngram_overlap, to_preference_pairs as nextep_pairs)  # V783 M2
 
 from literary_system.critic.distribution_guard import (distribution_guard, GuardResult, compute_stats, apply_guard_to_reward, NORMAL_BANDS)  # V784 M3
+
+from literary_system.critic.self_eval_pipeline import (SelfEvalPipeline, SelfEvalReport)  # V785
