@@ -37,3 +37,5 @@ from literary_system.critic.spe2_exit import run_spe2_exit
 __all__ += ["run_spe2_exit"]
 
 from literary_system.critic.critic_qualification import (qualify_critic, QualificationResult, degrade, build_ladder, DegradeAxis, WIN_MIN)  # V782 M1
+
+from literary_system.critic.next_episode_bench import (run_next_episode_bench, NextEpItem, BenchResult, ngram_overlap, to_preference_pairs as nextep_pairs)  # V783 M2
