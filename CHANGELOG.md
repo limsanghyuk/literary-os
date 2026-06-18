@@ -1,3 +1,12 @@
+## [13.34.0] — V781 — 생성 본체 7-pass L4 승격 (T3, ADR-241)
+
+### V781 — generation/ 정식 파이프라인 (허브 a98b5cd3 위 통합)
+- `generation/schema.py` 타입계약(WorkSpec/Beat/SceneBrief) + `pass_pipeline.py` PassPipeline(Pass1~7)
+- 주입형 훅 retrieve(RAG)/generate(loop-C 생성기)/judge(critic). Pass5=생성↔학습 연결점
+- 씨드→7pass→loop-C 선호쌍 E2E. 14 TC. ADR-242(풀스펙)·ADR-243(자체평가) 구현 대상 골격. 13.33→13.34
+
+---
+
 ## [13.33.0] — V780 — gates/ 순환 오탐 정리 (ADR-240)
 
 ### V780 — 모듈레벨 순환 검출
