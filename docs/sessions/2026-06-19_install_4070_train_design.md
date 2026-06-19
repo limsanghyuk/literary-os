@@ -19,13 +19,13 @@ LocalPreflight(점검)→LocalGPUAdapter(QLoRA 4bit·VRAM 12GB 가드)→train_4
 ## 5. 오픈소스 LM 검토(4070 12GB·한국어·상업)
 | 모델 | 한국어 | 라이선스 | 권고 |
 |---|---|---|---|
-| **Qwen2.5-3B-Instruct** | 우수 | Apache2.0(상업OK) | ★출발(비게이트·즉시·반복빠름) |
-| **Qwen2.5-7B-Instruct** | 우수 | Apache2.0(상업OK) | ★★품질(QLoRA≈8GB fit) |
+| **Llama-3.1-8B-Instruct** | 양호+강한 스토리텔링 | Llama 커뮤니티(상업OK*) | ★★★**1순위**: 4bit ~6-7GB + QLoRA 헤드룸 5GB = 4070 최적. 게이트(동의+토큰) |
+| Qwen2.5-7B-Instruct | 우수 | Apache2.0(상업OK) | ★★비게이트 대안(즉시·동의불요) |
+| Qwen2.5-3B-Instruct | 우수 | Apache2.0(상업OK) | ★빠른 반복·스모크 |
 | EXAONE-3.5-7.8B | 최상(한국특화) | 비상업(EXAONE License) | 연구·실험만(제품 부적합) |
-| Llama-3.2-3B / 3.1-8B | 양호 | 커뮤니티(상업OK*) | 게이트(동의+토큰), 대안 |
 | Gemma-2-9B | 양호 | Gemma | 12GB 경계, 비권장 |
 
-**권고**: Qwen2.5-3B(출발)→Qwen2.5-7B(품질). 둘 다 Apache2.0=상업 안전. EXAONE은 한국어 최상이나 비상업이라 제품 가중치 부적합(연구만).
+**권고(갱신)**: **Llama-3.1-8B-Instruct를 1순위**로 채택. 근거: 4bit ~6-7GB만 쓰고 남은 5GB를 QLoRA 그래디언트에 활용 = 4070 12GB 최적 사이즈, 글로벌 표준 스토리텔링. **시스템 RAM 64GB면 8B 학습 시 오프로딩·데이터로딩 여유로 더 안정적**(OOM 방지). 단 게이트 모델이라 HF 라이선스 동의+토큰 선행. 비게이트 즉시 대안 = Qwen2.5-7B-Instruct. EXAONE은 한국어 최상이나 비상업이라 제품 부적합.
 
 ## 6. 준비 상태
 설치·연결·루프·게이트 전부 코드 완비. 남은 건 이 설계대로 4070 1라운드 실행. 클라우드 대체=RunPod GPU 키 시 CloudTrainingNode 동일 루프.
