@@ -18,9 +18,10 @@ def test_tc04_no_positive_reward():
     assert distribution_guard(_NORMAL).penalty <= 0.0
 def test_tc05_emotion_overload_penalized():
     g=distribution_guard(_EMO); assert g.penalty<0 and any(p["metric"]=="emotion_word_rate" for p in g.pathologies)
-def test_tc06_no_dialogue_penalized():
-    flat="그는 갔다 방에 있었다 사람이 있었다 시간이 지났다 상황이 전개됐다 회의가 길게 이어졌다 설명만 나열됐다 끝없이 계속됐다 그리고 또"
-    g=distribution_guard(flat); assert any(p["metric"]=="dialogue_ratio" for p in g.pathologies)
+def test_tc06_excess_dialogue_penalized():
+    # V787 재보정: 대사 0%는 정상(시나리오), 과잉 대사(>0.76)만 병리
+    over=' '.join(['"왜?" "몰라." "정말?" "그래." "어떻게." "지금." "여기." "빨리."']*3)
+    g=distribution_guard(over); assert any(p["metric"]=="dialogue_ratio" and p["side"]=="above" for p in g.pathologies)
 def test_tc07_is_pathological_flag():
     assert distribution_guard(_EMO).is_pathological and not distribution_guard(_NORMAL).is_pathological
 def test_tc08_reject_threshold():
@@ -31,7 +32,8 @@ def test_tc09_apply_guard_normal_unchanged():
 def test_tc10_apply_guard_pathology_penalized():
     assert apply_guard_to_reward(0.7,_EMO) < 0.7
 def test_tc11_rejected_strong_floor():
-    assert apply_guard_to_reward(0.9,_EMO)==-9.99
+    # V787: 감정어폭주(-1) 단독은 임계 -1.0에서 기각
+    assert apply_guard_to_reward(0.9,_EMO, reject_threshold=-1.0)==-9.99
 def test_tc12_to_dict():
     assert "penalty" in distribution_guard(_NORMAL).to_dict()
 def test_tc13_export():
