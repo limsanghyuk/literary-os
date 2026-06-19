@@ -1,3 +1,12 @@
+## [13.40.0] — V787 — M3 분포 가드 실 corpus 재보정 (ADR-248)
+
+### V787 — db/corpus_ko 학습 반영
+- M3 dialogue_ratio 하한 0.10→0.0 오보정 수정(실 corpus 중앙값 0=시나리오 정상)
+- CORPUS_FEATURE_BANDS(전수 122,681씬 p02/p98) + distribution_guard_features(실 SceneFeature 가드)
+- 실 명작 오기각 해소. 12 TC. 13.39→13.40
+
+---
+
 ## [13.39.0] — V786 — 클라우드 비공개 저장 + 실측 학습 노드 (ADR-247)
 
 ### V786 — 클라우드 학습 노드 마무리 (회사 PC 경로)

@@ -15,7 +15,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 # 명작 코퍼스 통계에서 유도된 '정상 범위'(데모 근사). 범위 *밖*(병리)만 감점.
 NORMAL_BANDS: Dict[str, Tuple[float, float]] = {
-    "dialogue_ratio":   (0.10, 0.75),   # 대사 비율: 0%(설명만)·~100%(지문없음) 병리
+    "dialogue_ratio":   (0.0, 0.76),    # 실 corpus 재보정(V787): 시나리오는 대사 0%도 정상(p02=0·p98=0.76)
     "emotion_word_rate": (0.0, 0.20),   # 감정어 비율 상한(과잉 신파 차단). 하한 없음
     "avg_sentence_len": (2.0, 60.0),    # 평균 문장 길이(토큰): 한국어 단문체 허용, 폭주만 병리
     "scene_len_tokens": (20.0, 1200.0), # 씬 길이: 빈약/폭주 병리
@@ -23,6 +23,17 @@ NORMAL_BANDS: Dict[str, Tuple[float, float]] = {
 EMOTION_WORDS = ["사랑", "분노", "슬픔", "두려움", "절망", "환희", "그리움", "외로움",
                  "행복", "고통", "기쁨", "눈물", "심장", "가슴", "떨림"]
 PATHOLOGY_PENALTY = -1.0    # 병리 1건당 감점(누적). 정상=0(무보상)
+
+# 실 corpus_ko 2,030작품/122,681씬 SceneFeature 백분위 p02/p98 (병리 임계, V787 학습).
+# 출처: db/corpus_ko/features 전수 계산. 이 밴드 *밖*만 병리.
+CORPUS_FEATURE_BANDS: Dict[str, Tuple[float, float]] = {
+    "conflict_intensity":  (0.0, 1.775),
+    "scene_energy_ratio":  (0.0, 8.333),
+    "motif_residue_score": (0.234, 0.666),
+    "curiosity_gradient":  (0.078, 0.567),
+    "dialogue_ratio":      (0.0, 0.76),
+    "n_chars":             (21.0, 1742.0),
+}
 
 
 def _tokens(text: str) -> List[str]:
@@ -97,3 +108,25 @@ def apply_guard_to_reward(base_reward: float, text: str, **kw) -> float:
     if g.rejected:
         return -9.99
     return round(base_reward + g.penalty, 4)
+
+
+def distribution_guard_features(features: Dict[str, float],
+                                bands: Optional[Dict[str, Tuple[float, float]]] = None,
+                                reject_threshold: float = -2.0) -> GuardResult:
+    """
+    실 SceneFeature(conflict/energy/motif/curiosity/dialogue/n_chars)로 분포 가드 (V787).
+    corpus 백분위 밴드 *밖*(병리)만 감점, 안=0(전형성 무보상). 텍스트 추정보다 정확.
+    """
+    bands = bands or CORPUS_FEATURE_BANDS
+    paths: List[Dict[str, Any]] = []
+    penalty = 0.0
+    for key, (lo, hi) in bands.items():
+        if key not in features:
+            continue
+        v = float(features[key])
+        if v < lo:
+            paths.append({"metric": key, "value": v, "band": [lo, hi], "side": "below"}); penalty += PATHOLOGY_PENALTY
+        elif v > hi:
+            paths.append({"metric": key, "value": v, "band": [lo, hi], "side": "above"}); penalty += PATHOLOGY_PENALTY
+    penalty = round(penalty, 3)
+    return GuardResult(penalty, paths, dict(features), rejected=penalty <= reject_threshold)
