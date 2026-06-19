@@ -1,3 +1,19 @@
+## [13.44.0] — V791 — E4 암기·표절 하드게이트 구현 + 멀티에이전트 독립 교차검토
+
+### V791 — 코드 신규(LLM-0 결정론)
+- `literary_system/learning/memorization_gate.py` 신규: `g_memorization` 결정론 표절 하드게이트(char-level, 한국어 안전, 외부 의존성 0)
+- 3신호: LCS비율·최장연속일치(절대 25자≈15형태소)·char 5-gram Jaccard. hard=동시발화 또는 단독상한 초과 → reject/review/pass
+- `apply_memorization_penalty`: 표절 판정 시 보상을 PENALTY(-9.99)로 덮어쓰기(R 바닥 동작, G_NO_ABSOLUTE_REWARD 정합)
+- `tests/unit/test_v791_memorization_gate.py` 12 테스트 green(동일/근접중복/축자삽입/짧은면제/무관씬/결정론)
+
+### DELIBERATION-v1 §8 보강 — 멀티에이전트 독립 교차검토
+- §7 "동일모델 페르소나" 한계 해소: 독립 서브에이전트 3기(ARCH/DATA/COMP) 병렬 외부검증
+- ARCH: B2 "DPO 원리적 불가" 과장 교정 → "현 N-vs-N+1 페어링 광역아크 부적합 + 장문 페어 미검증" + 크레딧 할당 계약 빈칸 등록
+- DATA: P1 길이교란 재유입 차단 → 혼합비 30/40/20/10 → **15/55/20/10**, 열화쌍 길이매칭 강제
+- COMP: E4 char-level 결정론 명세 → 본 회차 실구현 완료
+
+---
+
 ## [13.43.0] — V790 — 데이터·페어링·평가 3인 교차 논의 설계 초안서 (DELIBERATION-v1)
 
 ### V790 — 설계 문서(코드 무변경)
