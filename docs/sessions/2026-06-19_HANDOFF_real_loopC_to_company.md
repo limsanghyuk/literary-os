@@ -79,5 +79,14 @@ self-preference 편향 제거 위해 **LLM 심판 제거, 명작 정적 닻**(AD
 
 관련: 2026-06-19_real_4070_dpo_round_and_scaled_data, 2026-06-19_install_4070_train_design, 2026-06-18_real_6metrics.
 
-## 10. 라운드 #2 최종 결과 (학습 종료 후 기입)
-- [PENDING] HELD W0→W1, M0→M1, KL, VERDICT — result.txt 최종 블록 확정 시 추가 커밋.
+## 10. 라운드 #2 최종 결과 (확정, 2026-06-19)
+**held-out 56쌍 (미학습)** — 라운드 #1과 결정적 차이: 진짜 일반화.
+| 지표 | 전 | 후 | Δ |
+|---|---|---|---|
+| abs-pref-acc | 0.161 | 0.357 | **dW +0.196** |
+| reward-margin | -242.61 | -80.1 | dM +162.5 |
+| KL/token | — | 0.117 | τ=0.50 |
+
+G_LOOPC_WINRATE: `[PASS]` dW>0(held 일반화) · `[PASS]` KL≤τ(0.117≪0.50, 비해킹) · `[N/A]` 구조비퇴행 → **VERDICT: ADOPT-candidate**.
+해석: 명작 선호 16%→36%(2배+), 마진 -243→-80. **실 8B/4070에서 일반화 ΔW 첫 확보**. 단 절대값 36%(아직 역전 전)·마진 음수 → 데이터/에폭 추가로 추가 전진 여지. 최종 채택은 구조게이트(옵션 C) 통과 후.
+어댑터=`lora_out_4070/adapter_model.safetensors`(C:\claude, 로컬). 장부=rounds_ledger.jsonl 1행.
