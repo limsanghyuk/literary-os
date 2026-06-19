@@ -1,3 +1,14 @@
+## [13.41.0] — V788 — c3 구조게이트 실체화 + KL 표준 0.50 + per-token 재측정 (SGATE-v1)
+
+### V788 — Round#2 후속 ①②③④
+- `critic/structure_conformance.py` 신규: c3(구조 비퇴행) R 생산자 — R_struct(5가중)/R_pair(쌍대)/R_path(병리). 종전 N/A 자동통과 해소
+- `learning/winrate_gate.py`: TAU_KL_DEFAULT 0.1→0.50(KL/token 표준, 실험 τ 정합)
+- `learning/loopc_closure.py`: compute_structural_r() + run_round(before/after_scenes) R 자동주입(비파괴)
+- `learning/pertoken_winrate.py` + `experiments/pertoken/remeasure_pertoken.py` 신규: 길이정규화 W(sum vs pertoken) — Round#2 길이교란(짧은쪽=승자 자명규칙 라벨 95.5% 설명) 진단
+- 22 TC(test_v788_*). inventory 11,386→11,405. 13.40→13.41
+
+---
+
 ## [13.40.0] — V787 — M3 분포 가드 실 corpus 재보정 (ADR-248)
 
 ### V787 — db/corpus_ko 학습 반영

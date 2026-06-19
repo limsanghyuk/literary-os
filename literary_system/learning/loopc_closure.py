@@ -14,7 +14,7 @@ from literary_system.learning.pareto_router import dispatch_training, TrainingMo
 from literary_system.learning.provider_router import RoutingSignals
 from literary_system.learning.rlaif_orchestrator import RLAIFOrchestrator
 from literary_system.learning.loop_c import load_preference_pairs, generation_win_rate
-from literary_system.learning.winrate_gate import g_loopc_winrate, WinrateGateResult
+from literary_system.learning.winrate_gate import g_loopc_winrate, WinrateGateResult, TAU_KL_DEFAULT
 
 TARGET_W_DEFAULT = 0.60         # 단계적 상향(0.55→0.60→...) 목표 승률
 
@@ -41,7 +41,7 @@ class LoopCClosure:
     """1 라운드: 선호쌍 → 학습계획 → (실측 W₁ 주입) → 수용판정 → 다음행동."""
 
     def __init__(self, mode: TrainingMode = TrainingMode.LOCAL,
-                 target_w: float = TARGET_W_DEFAULT, tau_kl: float = 0.1,
+                 target_w: float = TARGET_W_DEFAULT, tau_kl: float = TAU_KL_DEFAULT,
                  base_model: str = "meta-llama/Llama-3.2-3B") -> None:
         self._mode = mode
         self._target = target_w
@@ -79,13 +79,28 @@ class LoopCClosure:
                    f"| {'신뢰O' if gate.reliable else '신뢰약(표본↑)'}")
         return LoopCRoundReport(round_idx, n_pairs, w0, w1, training_plan or {}, gate, action, summary)
 
+
+    def compute_structural_r(self, before_scenes, after_scenes,
+                             rag_refs=None, critic=None):
+        """before/after 생성 작품(SceneBrief 시퀀스) → c3 구조 R (r_before, r_after, 판정).
+        winrate_gate.c3의 결손 생산자(구조 비퇴행)를 실제로 계산해 주입값을 만든다.
+        반환 dict: {r_before, r_after, nonregression(상세)}. LLM-0(결정론)."""
+        from literary_system.critic.structure_conformance import structural_nonregression
+        nr = structural_nonregression(before_scenes, after_scenes,
+                                      rag_refs=rag_refs, critic=critic)
+        return {"r_before": nr.r_before, "r_after": nr.r_after, "nonregression": nr.to_dict()}
+
     def run_round(self, pairs_path: str, round_idx: int = 1,
                   measured_w1: Optional[float] = None, kl: float = 0.0,
                   r_before: Optional[float] = None, r_after: Optional[float] = None,
+                  before_scenes=None, after_scenes=None,
                   signals: Optional[RoutingSignals] = None,
                   real: bool = False, api_key: Optional[str] = None) -> LoopCRoundReport:
         """계획 + (실측 W₁ 있으면) 수용판정까지. 실측 없으면 계획만(학습 대기)."""
         plan = self.plan_round(pairs_path, signals, real, api_key)
+        if (r_before is None or r_after is None) and before_scenes and after_scenes:
+            _r = self.compute_structural_r(before_scenes, after_scenes)
+            r_before, r_after = _r["r_before"], _r["r_after"]
         if measured_w1 is None:
             return LoopCRoundReport(round_idx, plan["n_pairs"], plan["w0"], None, plan,
                                     None, "await_training(GPU 학습 후 W₁ 재측정 필요)",

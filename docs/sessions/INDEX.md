@@ -3,6 +3,9 @@
 **루트 94개** + preflight(26) + _archive(2)
 
 ---
+## ★최신 권위 상태 (2026-06-19, SGATE-v788)
+- **2026-06-19_sgate_v788_c3_kl_pertoken.md** — ★c3 구조게이트 실체화(R 생산자 신규)+KL 표준 0.50 통일+per-token 길이정규화 재측정 도구. Round#2 길이교란 실측(짧은쪽=승자 자명규칙이 라벨 95.5% 설명→W1=0.357 길이인공물 위험). 집 GPU 라운드#3 절차 포함. 테스트 70 passed.
+
 ## ★최신 권위 상태 (2026-06-16, V772 / v13.25.0)
 - **README = 정본 버전 동기화 완료**: V772 · 테스트 11,207 · LLM-1 전이 Exit(V766) → E.4 RLAIF+GPU 3-모드 진행 중.
 - `2026-06-16_roadmap_reconciliation_v1.md` — ★Plan↔Actual 8분기 정합화(E.3 UI 의도적 후순위·RLAIF 선행·GPU 3-모드 삽입).

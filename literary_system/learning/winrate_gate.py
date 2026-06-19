@@ -13,7 +13,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Dict, Optional
 
-TAU_KL_DEFAULT = 0.1
+TAU_KL_DEFAULT = 0.50          # KL/token 표준(DESIGN-SGATE-v1): 구 0.1 폐기. 실험 train_4070 τ=0.50과 정합
 R_REGRESSION_TOL = 0.0          # 구조 R 비퇴행 허용 오차
 MIN_PAIRS_RELIABLE = 50         # 이하면 ΔW 통계적 신뢰 약함(경고)
 

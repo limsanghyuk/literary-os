@@ -15,7 +15,8 @@ def test_tc01_gate_adopt():
 def test_tc02_gate_c1_fail_no_winrate():
     g=g_loopc_winrate(0.6,0.55,n_pairs=80); assert not g.c1_winrate and g.decision=="rollback"
 def test_tc03_gate_c2_fail_kl():
-    g=g_loopc_winrate(0.5,0.7,kl=0.5,n_pairs=80); assert not g.c2_kl and not g.passed
+    # τ_KL 표준 0.50(DESIGN-SGATE-v1)로 상향됨에 따라 경계 초과값 0.6 사용
+    g=g_loopc_winrate(0.5,0.7,kl=0.6,n_pairs=80); assert not g.c2_kl and not g.passed
 def test_tc04_gate_c3_fail_structure():
     g=g_loopc_winrate(0.5,0.7,r_before=0.8,r_after=0.6,n_pairs=80); assert not g.c3_structure and not g.passed
 def test_tc05_gate_delta():
