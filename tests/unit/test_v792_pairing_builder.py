@@ -216,7 +216,7 @@ def test_overgen_is_1_3():
 def test_process_candidate_no_ref_passes():
     p = RawPair("n", "w0", "p3", chosen_text=_tok_text(40), rejected_text=_tok_text(40))
     v = process_candidate(p, WhitespaceTokenizer())
-    assert v.accept is True and v.e4_decision == "pass"
+    assert v.accept is True and v.e4_decision == "skipped"
 
 def test_report_mix_target_equals_mix():
     assert build(_mk_pairs()).report.mix_target == dict(MIX)
@@ -235,3 +235,19 @@ def test_credit_uniform_shares():
 def test_credit_empty_returns_empty():
     from literary_system.learning.pairing.credit import UniformCreditAssigner
     assert UniformCreditAssigner().assign([], 1.0) == {}
+
+
+# ---- V792 감사 후 보강(I4 work_id fail-closed · E4 skipped 정직표기) ----
+def test_i4_empty_work_id_failclosed():
+    with pytest.raises(ValueError):
+        work_level_split([{"pair_id": "a", "work_id": ""}], min_held=1)
+
+def test_i4_missing_work_id_failclosed():
+    with pytest.raises(ValueError):
+        work_level_split([{"pair_id": "a"}], min_held=1)
+
+def test_e4_skipped_recorded_in_report():
+    # ref 없는 쌍 → e4 "skipped"가 report에 집계(거짓 pass 아님)
+    res = build(_mk_pairs())
+    assert res.report.e4_breakdown.get("skipped", 0) == len(res.accepted)
+    assert "pass" not in res.report.e4_breakdown  # ref 없는 입력이므로

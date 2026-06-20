@@ -63,7 +63,9 @@ def process_candidate(raw: RawPair, tokenizer: Tokenizer) -> PairVerdict:
                            soft_flag=not lm.char_soft_ok)
 
     # E4는 길이매칭 후 실행(매칭이 텍스트를 바꾸므로 사후 — 설계 C2/C3)
-    e4 = "pass"
+    # ref_text 없으면 E4 검사 불가 → 정직하게 "skipped"로 기록(거짓 "pass" 금지).
+    # 감사 가능성을 위해 report.e4_breakdown에 집계된다.
+    e4 = "skipped"
     if raw.ref_text:
         res = g_memorization(candidate=raw.chosen_text, reference=raw.ref_text)
         e4 = res.decision

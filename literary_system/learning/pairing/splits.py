@@ -31,9 +31,16 @@ def work_level_split(pairs: Sequence[dict], min_held: int = MIN_HELD,
                      work_key: str = "work_id") -> PairSplitResult:
     """작품 단위로 held를 채운다. 작품을 work_id 정렬 순서로 held에 누적,
     held 쌍 수 ≥ min_held가 되면 나머지를 train으로. held가 끝내 부족하면 fail-fast."""
+    # I4 보강: work_id 누락/빈값은 서로 다른 작품을 한 버킷("")으로 병합시켜
+    # 누설 보장을 무력화한다 → fail-closed.
     by_work: Dict[str, List[dict]] = {}
     for p in pairs:
-        by_work.setdefault(str(p.get(work_key, "")), []).append(dict(p))
+        wid = str(p.get(work_key, "")).strip()
+        if not wid:
+            raise ValueError(
+                f"I4 위반: work_id 누락/빈값 쌍 발견(pair_id={p.get('pair_id')!r}). "
+                f"작품 식별자 없는 쌍은 분리 불가 — 입력에서 제거/보강 필요.")
+        by_work.setdefault(wid, []).append(dict(p))
 
     works_sorted = sorted(by_work.keys())
     held: List[dict] = []

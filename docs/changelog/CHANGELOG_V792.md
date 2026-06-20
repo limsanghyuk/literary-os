@@ -32,3 +32,15 @@ DESIGN-P0-PAIRING-BUILDER-v1 확정안의 코드 실체화. `literary_system/lea
 
 ## 버전
 - pyproject 13.40.0 → 13.45.0
+
+## v13.45.1 — 검증 라운드 하드닝 (2026-06-20)
+독립 에이전트 코드 감사 결과 발견·검증된 결함 2건 수정(+테스트 3):
+- **G-A (E4 의미 정합):** strategies/base.py — ref_text 없는 후보의 E4 라벨을
+  "pass"→"skipped". 미평가를 통과로 오기록하던 문제 차단(암기게이트 무력화 방지).
+- **G-B (I4 fail-closed):** splits.py — work_id 누락/빈값 쌍을 단일 ""버킷으로
+  병합해 train/held 누수를 유발하던 경로를 ValueError로 차단.
+- 테스트 45 passed(+3: e4_skipped_recorded, i4_empty_work_id, i4_missing_work_id)
+- 회귀 217 passed · Release Gate 90/97 유지(신규 회귀 0) · Integrity SHA256 2061 일치
+- 감사 캐비엇(미수정·문서화): winner_pertoken=P0 미사용 DEAD CODE(GPU단 이관),
+  pertoken_winrate.pairwise_winner는 scheme="sum" 여전히 허용(GPU 채점 단계 리스크),
+  I1 "3중 차단"은 빌드시 1차(assert_no_sum)+ledger 하드코딩 2중이 실제(과대표현 정정).
