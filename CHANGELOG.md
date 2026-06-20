@@ -1,3 +1,42 @@
+## [13.45.1] — V792 검증 라운드 하드닝 — E4 skipped-label + I4 fail-closed
+
+### 수정 (독립 감사 → grep 전수 재확인 → 패치 → 테스트)
+- **G-A (E4 의미 정합):** `learning/pairing/strategies/base.py` — `ref_text` 없는 후보의 E4 라벨을 `"pass"`→`"skipped"`. 미평가를 통과로 오기록하던 경로 차단(암기게이트 무력화 방지). 테스트 `test_e4_skipped_recorded`
+- **G-B (I4 fail-closed):** `learning/pairing/splits.py` — `work_id` 누락/빈값 쌍을 단일 `""`버킷으로 병합해 train/held 누수를 유발하던 경로를 `ValueError`로 차단. 테스트 `test_i4_empty_work_id`, `test_i4_missing_work_id`
+- 페어링 테스트 42→**45 passed** · 회귀 **217 passed** · Release Gate **90/97 유지**(신규 회귀 0) · Integrity SHA256 **2,061 일치**
+
+### 캐비엇 (미수정·문서화 — 조기 성공 선언 금지)
+- `scoring.winner_pertoken` 호출자 0 (DEAD CODE) — P3 GPU 단계서 배선 예정
+- `pertoken_winrate.pairwise_winner`가 `scheme="sum"` 여전 허용 — **P3 GPU 채점단 1순위 차단 권고**(I1 길이교란 재유입 방지)
+- `assert_no_verbatim` 정규식 `[가-힣]{20,}` 약함 — 강화 권고
+- (정정) 기존 보고의 I1 "3중 차단"은 과대표현 → 실제는 빌드시 `assert_no_sum` + ledger 하드코딩 **2중**
+
+---
+
+## [13.45.0] — V792 — P0 선호쌍 빌더 (learning/pairing/, DESIGN-P0-PAIRING-BUILDER-v1)
+
+### V792 — 코드 신규 (per-token 전용 선호쌍 빌더, 불변식 I1~I5 코드화)
+- `literary_system/learning/pairing/` 패키지 신규(14파일):
+  - `tokenizer.py` — I5 토크나이저 잠금(tokenizer_sha 동결)
+  - `length_match.py` — I2 길이중립(token ≤5% HARD / char ≤8% SOFT)
+  - `scoring.py` — I1 per-token 전용 + `assert_no_sum` 가드
+  - `splits.py` — I4 작품단위 train/held 분리(held≥250, leak fail-fast)
+  - `strategies/{base,p1,p2,p3,p4}.py` — 파이프라인 순서강제(길이매칭→E4) + 혼합비 15/55/20/10
+  - `credit.py` — P4 크레딧 스텁(uniform; HIER-PLANNER 도입 시 교체)
+  - `emit.py` — I3 no-verbatim ledger(본문 텍스트 0 · 통계/해시만)
+  - `report.py` · `builder.py` — 임계위반·E4 리포트 + fail-fast 오케스트레이터
+- `learning/memorization_gate.py`(E4 하드게이트) · `learning/pertoken_winrate.py`(per-token 승률) · `critic/structure_conformance.py`(구조 적합 게이트, R 주입)
+- `tests/unit/test_v792_pairing_builder.py` — 45 TC(§3 최소 33 충족): I1 sum차단/winner, I2 5%/8% 경계, I3 no-verbatim/ledger, I4 leak/held≥250, I5 tokenizer_sha, E4 암기쌍 폐기
+
+### 수정 (regression, 본 변경 내 자체 발견·교정)
+- G37 DuplicateZero 교정: `BuildResult`→`PairBuildResult`, `SplitResult`→`PairSplitResult`(rlhf_dataset_builder/trace_quality_filter 와의 클래스명 충돌 제거) + G61 C5-TotalGates 캐스케이드 동반 해소
+
+### 게이트·버전
+- Release Gate **90/97**(잔여 7 = Phase D 미완 WIP: studio_api_contract·g80·g82·spd3_exit·spd4 g92/g93/g94 — 본 변경 무관) · G_CONNECTIVITY PASS(고립 0)
+- pyproject 13.40.0 → **13.45.1** (태그 v13.45.0/v13.45.1 정합)
+
+---
+
 ## [13.44.0] — V791 — E4 암기·표절 하드게이트 구현 + 멀티에이전트 독립 교차검토
 
 ### V791 — 코드 신규(LLM-0 결정론)

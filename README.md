@@ -1,17 +1,17 @@
-# Literary OS V780
+# Literary OS V792
 
 > **판단은 로컬, 생성만 LLM, 학습은 누적**  
 > AI 기반 장편 소설·드라마 시나리오 생성 시스템
 
-[![Version](https://img.shields.io/badge/version-13.33.0-blue)]()
-[![Tests](https://img.shields.io/badge/tests%20(V780)-11292-brightgreen)]()
+[![Version](https://img.shields.io/badge/version-13.45.1-blue)]()
+[![Tests](https://img.shields.io/badge/tests%20(V792)-11462-brightgreen)]()
 [![Phase](https://img.shields.io/badge/RLAIF-loop--C%20GPU%203--mode-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 
 ---
 
-> **현재 상태**: V780 / v13.33.0 · 테스트 11,292 · **LLM-1 전이 트랙 Exit(V766) + E.4 RLAIF 확장 트랙 Exit(V778)** 완료. 진행 누적: loop-C 폐회로(V774 LoopCClosure·G_LOOPC_WINRATE, ADR-234) · 2축 품질라벨+Critic 판별게이트(V775) · 품질라벨 자동집계(V776) · RunPod 운영 라이프사이클(V777) · 무결성 감사·gates 정리(V779~780). GPU 학습 3-모드(LocalGPUAdapter 4070·ProviderRouter·SplitPipeline·RealRunPodAdapter, ADR-227~233) + 실 DPO 학습 실증(손실↓·보상정확도→1.0, tiny모델). **다음(4트랙)**: T1 실GPU loop-C 라운드(개발자) · T3 생성본체 7-pass L4(★최대 빈칸, 로컬 V781 generation/ 착수·미push) · T2 NextEpisodeBench · T4 공식 Phase E 후반(UI·KEDA·Exit). 잔여: E.3 작가 UI·E.5 배포·E.6 공식 Exit(v14.0.0)는 2단계 후순위. CI(ci_4tier) 녹색 복구(YAML startup·stale 테스트 수정, 2026-06-17). 재검증: `python3 tools/run_release_gate.py` · `python3 tools/generate_test_inventory.py`.
+> **현재 상태**: V792 / v13.45.1 · 테스트 11,462 · 97 Gates(90 PASS, 잔여 7 = Phase D 미완 WIP). **P0 선호쌍 빌더 + E4 암기게이트 + per-token 승률 + 구조 적합 게이트** 완료. 진행 누적(V781~V792): 생성본체 7-pass L4 승격(V781) · M1 Critic 자격검정(V782) · M2 NextEpisodeBench 은닉GT(V783) · M3 분포 가드레일·재보정(V784·V787) · 자체평가→loop-C 통합(V785) · 클라우드 비공개 저장·실측 학습노드(V786) · KL 표준 0.50+구조게이트+per-token 재측정(V788) · LLM 자율성 사다리 설계(V789) · 데이터·평가 3인 교차논의(V790) · E4 암기·표절 하드게이트(V791) · **P0 선호쌍 빌더 패키지 learning/pairing/(I1~I5 불변식 코드화) + 검증 라운드 하드닝 G-A/G-B(V792)**. 핵심 학습 불변식: I1 per-token 전용 · I2 길이중립 · I3 무단복제 0 · I4 작품단위 분리 · I5 토크나이저 잠금 · E4 암기 하드게이트. **다음**: P3 GPU ΔW 1라운드(pairwise_winner sum 경로 차단 + winner_pertoken 배선) · P2.5 구조계층 추출패스 · Phase D 미완 7게이트(별도 트랙). 재검증: `python3 tools/run_release_gate.py` · `python3 tools/generate_test_inventory.py`.
 
 ## 빠른 시작
 
@@ -86,7 +86,10 @@ literary_system/
 | **Phase E.4** | **V762~V766** | **RLAIF loop-C (보상·오케·트리거) + LLM-1 전이 Exit** | **PHASE-E-LLM1-EXIT** |
 | GPU 3-모드 | V767~V773 | LocalGPU(4070)·ProviderRouter·SplitPipeline·RealRunPod·클라우드 배선 | G_GPU_ROUTING |
 | **E.4 확장** | **V774~V780** | **loop-C 폐회로·2축 품질라벨+Critic 판별·자동집계·RunPod 운영·E.4 Exit** | **G_LOOPC_WINRATE** |
-| **V780** | **v13.33.0** | **현재 — 11,292 Tests / 97 Gates / CI 4-tier green** | **✅** |
+| 생성·자체평가 | V781~V787 | 7-pass L4 승격·M1/M2/M3 자체평가·loop-C 통합·클라우드 학습노드·분포 재보정 | ADR-241~248 |
+| SGATE·암기 | V788~V791 | KL 표준 0.50+구조게이트+per-token 재측정 · LLM 사다리·3인 교차논의 설계 · E4 암기 하드게이트 | G_STRUCTURE_CONFORMANCE |
+| **P0 페어링** | **V792** | **선호쌍 빌더 learning/pairing/(I1~I5)+E4 게이트+per-token 승률 + 검증 하드닝(G-A/G-B)** | **I1~I5 / E4** |
+| **V792** | **v13.45.1** | **현재 — 11,462 Tests / 97 Gates(90 PASS) / 무결성 SHA256 2,061 일치** | **✅** |
 
 ---
 
