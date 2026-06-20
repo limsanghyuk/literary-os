@@ -9,17 +9,17 @@ from typing import Dict, List, Optional, Sequence
 
 from .strategies.base import RawPair, PairVerdict, process_candidate, MIX, allocate
 from .scoring import assert_no_sum, ALLOWED_SCHEME
-from .splits import work_level_split, SplitResult, MIN_HELD
+from .splits import work_level_split, PairSplitResult, MIN_HELD
 from .emit import ledger_rows, input_set_hash, assert_no_verbatim, write_ledger
 from .report import build_report, BuildReport
 from .tokenizer import Tokenizer, WhitespaceTokenizer, tokenizer_sha
 
 
 @dataclass
-class BuildResult:
+class PairBuildResult:
     verdicts: List[PairVerdict]
     accepted: List[PairVerdict]
-    split: SplitResult
+    split: PairSplitResult
     report: BuildReport
     ledger: List[dict]
     tokenizer_sha: str
@@ -30,7 +30,7 @@ def build(candidates: Sequence[RawPair],
           tokenizer: Optional[Tokenizer] = None,
           scheme: str = ALLOWED_SCHEME,
           min_held: int = MIN_HELD,
-          ledger_path: Optional[str] = None) -> BuildResult:
+          ledger_path: Optional[str] = None) -> PairBuildResult:
     # I1 가드 1/3 — sum 진입 즉시 실패
     assert_no_sum(scheme)
     tok = tokenizer or WhitespaceTokenizer()
@@ -53,6 +53,6 @@ def build(candidates: Sequence[RawPair],
         write_ledger(rows, ledger_path)
 
     rep = build_report(verdicts, held_count=len(split.held))
-    return BuildResult(verdicts=verdicts, accepted=accepted, split=split,
+    return PairBuildResult(verdicts=verdicts, accepted=accepted, split=split,
                        report=rep, ledger=rows,
                        tokenizer_sha=tsha, input_set_hash=ihash)

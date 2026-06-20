@@ -15,7 +15,7 @@ class LeakError(RuntimeError):
 
 
 @dataclass(frozen=True)
-class SplitResult:
+class PairSplitResult:
     train: List[dict]
     held: List[dict]
     held_works: List[str]
@@ -28,7 +28,7 @@ class SplitResult:
 
 
 def work_level_split(pairs: Sequence[dict], min_held: int = MIN_HELD,
-                     work_key: str = "work_id") -> SplitResult:
+                     work_key: str = "work_id") -> PairSplitResult:
     """작품 단위로 held를 채운다. 작품을 work_id 정렬 순서로 held에 누적,
     held 쌍 수 ≥ min_held가 되면 나머지를 train으로. held가 끝내 부족하면 fail-fast."""
     by_work: Dict[str, List[dict]] = {}
@@ -52,7 +52,7 @@ def work_level_split(pairs: Sequence[dict], min_held: int = MIN_HELD,
             f"held shortfall: {len(held)} < min_held={min_held} "
             f"(전체 {len(pairs)}쌍/{len(works_sorted)}작품으로 부족 — 입력 확대 필요)")
 
-    res = SplitResult(train=train, held=held,
+    res = PairSplitResult(train=train, held=held,
                       held_works=held_works, train_works=train_works)
     res.assert_no_leak()
     return res

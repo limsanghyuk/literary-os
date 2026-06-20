@@ -10,12 +10,12 @@ DPO 학습용 선호쌍을 결정론(GPU 불요)으로 생성한다. 오염 3대
 - I4 work-level split     : 같은 작품이 train/held 동시출현 금지, held ≥ 250
 - I5 tokenizer lock       : 단일 토크나이저 + tokenizer_sha 기록·동결
 """
-from .splits import work_level_split, SplitResult, LeakError
+from .splits import work_level_split, PairSplitResult, LeakError
 from .length_match import length_match_decision, LengthMatch, TOKEN_HARD, CHAR_SOFT
 from .tokenizer import Tokenizer, WhitespaceTokenizer, tokenizer_sha
 
 __all__ = [
-    "work_level_split", "SplitResult", "LeakError",
+    "work_level_split", "PairSplitResult", "LeakError",
     "length_match_decision", "LengthMatch", "TOKEN_HARD", "CHAR_SOFT",
     "Tokenizer", "WhitespaceTokenizer", "tokenizer_sha",
 ]
