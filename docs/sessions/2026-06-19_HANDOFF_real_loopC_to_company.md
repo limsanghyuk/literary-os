@@ -90,3 +90,15 @@ self-preference 편향 제거 위해 **LLM 심판 제거, 명작 정적 닻**(AD
 G_LOOPC_WINRATE: `[PASS]` dW>0(held 일반화) · `[PASS]` KL≤τ(0.117≪0.50, 비해킹) · `[N/A]` 구조비퇴행 → **VERDICT: ADOPT-candidate**.
 해석: 명작 선호 16%→36%(2배+), 마진 -243→-80. **실 8B/4070에서 일반화 ΔW 첫 확보**. 단 절대값 36%(아직 역전 전)·마진 음수 → 데이터/에폭 추가로 추가 전진 여지. 최종 채택은 구조게이트(옵션 C) 통과 후.
 어댑터=`lora_out_4070/adapter_model.safetensors`(C:\claude, 로컬). 장부=rounds_ledger.jsonl 1행.
+
+## 11. ★정정 (2026-06-20) — 10장 무효: per-token 재측정 결과
+10장의 "ADOPT-candidate"는 **per-token 재측정으로 무효(LENGTH ARTIFACT)**. 저장 어댑터로 held 56쌍 ledger 방출(학습없이)·길이정규화 재측정:
+- sum(길이편향) W 0.161→0.357 (+0.196) vs **per-token W 0.000→0.000 (+0.000)**. dW+0.196은 전적으로 길이착시(ref 424자<draft 593자). per-token 마진만 -1.51→-1.08(+0.434, 임계미달).
+- **G_LOOPC c1 per-token FAIL → ROLLBACK(어댑터 폐기)**. 상세=`docs/sessions/2026-06-20_pertoken_remeasure_result.md`. 재현=`tools/loop_c_4070_kit/REMEASURE.bat`.
+
+### 회사에서 다음 작업 (확정 우선순위 — DELIBERATION-v1 §3)
+1. **페어링 재설계** 믹스 15/55/20/10: P1(등급화 열화·**길이매칭**) / **P3(AI 초고끼리·암기위험0·주력)** / P2(온폴리시) / P4(동점). 모든 쌍 길이매칭 + `learning/memorization_gate.py`(E4) 통과 + **작품단위** train/held 분리.
+2. 학습 시 **logp ledger(sumlogp+n_tokens) 방출** → **per-token으로만 ΔW 판정**(sum 금지, ADR-LADDER-3). held≥250.
+3. **c3 구조게이트 켜기**: 생성 씬을 loopc_closure `run_round(before_scenes=, after_scenes=)`에 연결.
+4. 광역 아크 목표는 DPO 밖 → 계층 플래너 별도 트랙(DESIGN-HIER-PLANNER 미착수).
+관련 최신 코드(git pull로 수신): `critic/structure_conformance.py`·`learning/pertoken_winrate.py`·`learning/memorization_gate.py`, 설계=DESIGN-LLM-LADDER-v1·DESIGN-DATA-EVAL-DELIBERATION-v1.
