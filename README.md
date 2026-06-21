@@ -11,6 +11,8 @@
 
 ---
 
+> ⚠️ 태그 `v13.45.2`는 v13.45.1 오태그(내용 동일) — 정식 권위=**v13.45.1**.
+>
 > **현재 상태**: V792 / v13.45.1 · 테스트 11,462 · 97 Gates(90 PASS, 잔여 7 = Phase D 미완 WIP). **P0 선호쌍 빌더 + E4 암기게이트 + per-token 승률 + 구조 적합 게이트** 완료. 진행 누적(V781~V792): 생성본체 7-pass L4 승격(V781) · M1 Critic 자격검정(V782) · M2 NextEpisodeBench 은닉GT(V783) · M3 분포 가드레일·재보정(V784·V787) · 자체평가→loop-C 통합(V785) · 클라우드 비공개 저장·실측 학습노드(V786) · KL 표준 0.50+구조게이트+per-token 재측정(V788) · LLM 자율성 사다리 설계(V789) · 데이터·평가 3인 교차논의(V790) · E4 암기·표절 하드게이트(V791) · **P0 선호쌍 빌더 패키지 learning/pairing/(I1~I5 불변식 코드화) + 검증 라운드 하드닝 G-A/G-B(V792)**. 핵심 학습 불변식: I1 per-token 전용 · I2 길이중립 · I3 무단복제 0 · I4 작품단위 분리 · I5 토크나이저 잠금 · E4 암기 하드게이트. **다음**: P3 GPU ΔW 1라운드(pairwise_winner sum 경로 차단 + winner_pertoken 배선) · P2.5 구조계층 추출패스 · Phase D 미완 7게이트(별도 트랙). 재검증: `python3 tools/run_release_gate.py` · `python3 tools/generate_test_inventory.py`.
 
 ## 빠른 시작
