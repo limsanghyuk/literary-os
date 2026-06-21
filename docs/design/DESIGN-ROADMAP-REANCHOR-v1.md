@@ -6,12 +6,14 @@
 
 ---
 
+> ⚠️ **[2026-06-21 SSOT 정정 — 본 문서 일부 SUPERSEDED]** 본 문서는 기준 HEAD 720141d 시점 스냅샷이다. 그 직후 집 RTX 4070(12GB) 단독으로 **per-token loop-C 혼합 5/5 ADOPT**가 실증되어 **SP-E.9는 완료**됐다(정본 = `docs/sessions/2026-06-21_MASTER_session_summary.md`). 따라서 아래의 "SP-E.9 ⛔차단(RunPod 키)" 서술은 **무효**다. 현재 칸 = **SP-E.9 완료 → SP-E.10(통합 누적 루프) 진입**. RunPod는 졸업 비차단(편의 옵션)으로 강등.
+
 ## 0. 문제 제기 (왜 이 문서)
 Phase A~D, Phase E.2(V753~761)·E.4(V762~766)까지는 **SP-x.x 단위**라 "지금 어느 칸"이 명확했다.
 그러나 **V767부터(E.4확장·생성본체·자체평가·SGATE·LADDER·DELIBERATION·MEMGATE·P0·데이터스케일)는 명명 트랙(named track)으로 흩어져 SP-E.x 라벨이 끊겼다.** 버전(V767→V793)은 올랐으나 Phase 좌표가 사라졌다. 본 문서가 그 좌표를 복원한다.
 
 ## 1. 현재 위치 (한 줄)
-**Phase E (LLM-1) · v13.45.1 / V793. E.4 전이 Exit 통과 후, "LLM-1 졸업 선결조건" 트랙 거의 완료. 유일한 미실행 관문 = P3 실 GPU per-token dW 1라운드(RunPod 키만 차단).**
+**Phase E (LLM-1) · v13.45.1 / V793. SP-E.9(per-token loop-C 졸업급 측정) 완료(4070 단독 5/5 ADOPT). 현재 칸 = SP-E.10 통합 누적 루프 진입. RunPod = 졸업 비차단(편의).**
 
 ## 2. 대축 정합 — Phase ↔ 자율성 사다리 ↔ 버전
 | Phase | 사다리 | 버전대(계획) | 핵심 | 상태 |
@@ -34,16 +36,16 @@ Phase A~D, Phase E.2(V753~761)·E.4(V762~766)까지는 **SP-x.x 단위**라 "지
 | **SP-E.5** | V767~780 | GPU 3-모드·클라우드 실연동·분업·loop-C 폐회로·2축 품질라벨 | G_LOOPC_WINRATE·G_GPU_ROUTING | ✅ |
 | **SP-E.6** | V781~787 | 생성본체 7-pass L4·자체평가 M1/M2/M3·클라우드 저장노드·M3 재보정 | G_E2E_PROSE·자체평가닻 | ✅ |
 | **SP-E.7** | V788~792 | 측정정합: per-token 표준·구조게이트 c3·KL0.50·암기게이트 E4·P0 페어링 빌더(I1~I5) | G_STRUCTURE_CONFORMANCE·I1~I5·E4 | ✅ |
-| **SP-E.8** | V793 | 데이터 스케일: 한국드라마03 편입(2,030→2,339)·임베딩 전수 | (데이터 무결성) | ◀ 진행(임베딩 완료, 집 ChromaDB/features 잔여) |
-| **SP-E.9** | V794~ | **★P3 실 GPU per-token dW 1라운드 → LLM-1 졸업 게이트 실측** | **G_LOOPC_WINRATE(per-token)** | ⛔ **차단(RunPod 키)** |
-| **SP-E.10** | V795 | Phase E Exit — LLM-1→2 졸업 확정(v14.0.0) | PHASE-E-EXIT | ◻ |
+| **SP-E.8** | V793 | 데이터 스케일: 한국드라마03 편입(2,030→2,339)·임베딩 전수 | (데이터 무결성) | ✅ (임베딩 2,339·ChromaDB 239,768·features 충전 전수 완료, 2026-06-21) |
+| **SP-E.9** | V794~ | **★per-token loop-C 졸업급 측정(혼합 5/5 ADOPT)** | **G_LOOPC_WINRATE(per-token)** | ✅ (4070 단독, 2026-06-21) |
+| **SP-E.10** | V795 | Phase E Exit — 통합 누적 루프(어댑터 체이닝 5연속 adopt) → LLM-1→2 졸업 확정(v14.0.0) | PHASE-E-EXIT | ◀ 진입 |
 
-> V767~793이 "어디였는지"가 이제 SP-E.5~E.8로 복원됨. 현재 칸 = **SP-E.8 마무리 / SP-E.9 진입 직전**.
+> V767~793이 "어디였는지"가 SP-E.5~E.8로 복원됨. SP-E.8·E.9 완료(2026-06-21). 현재 칸 = **SP-E.10 진입(통합 누적 루프)**.
 
-## 4. 현재 관문 상세 — SP-E.9 = P3 졸업 라운드
-- **선결(완료)**: P0 페어링 빌더(길이매칭·per-token·E4 암기·작품분리), 구조게이트 c3, 데이터 2,339편+임베딩 24만 청크.
-- **실행(미完)**: 실 GPU에서 P0 산출 선호쌍으로 DPO 1라운드 → `G_LOOPC_WINRATE = c1(per-token dW>0) ∧ c2(KL≤0.50) ∧ c3(구조 비퇴행)` 실측.
-- **왜 차단**: Round#2 교훈(sum-logp dW는 길이 인공물, per-token dW=0)으로 **단발이 아니라 신뢰 라운드가 필요**. 집 4070(12GB)은 단발 측정엔 가능하나 졸업(누적 adopt)엔 클라우드 권장 → **RunPod GPU 키가 유일 차단점**(미제공).
+## 4. 현재 관문 상세 — SP-E.10 = 통합 누적 루프 (SP-E.9는 완료)
+- **SP-E.9 완료(2026-06-21)**: 집 4070(12GB) QLoRA DPO로 per-token loop-C 실증 — Round#2 길이착시 ROLLBACK → P1 메커니즘 → P3 craft(+0.404) → c3 안전 → **혼합 P1+P3+P2 독립분할 5/5 ADOPT**(dW_pt +0.20~0.26, KL 0.06~0.08, CI하한~0.65>0.5). standalone 측정·게이트 증명 종료. A100/H100·RunPod 불요.
+- **SP-E.10 실행(진입)**: `loopc_closure.run_round`가 라운드 r마다 (a)직전 어댑터 로드 (b)신규 P0쌍 DPO (c)held per-token dW+KL (d)c3 (e)adopt면 어댑터 승격·rollback면 폐기. **5연속 adopt → Phase E Exit(v14.0.0)**.
+- **RunPod 위상 변경**: 졸업 단일 차단점 → **비차단 편의 옵션**(4070으로 누적 라운드 가능, 클라우드는 가속용).
 
 ## 5. Phase E Exit (v14.0.0) 졸업 계약 (LLM-1→2)
 DESIGN-LLM-LADDER §3.3 준수: **adopt≥5연속(롤백0) · Σn_pairs≥250 · per-token W₁ 95%CI 하한>0.5 · 길이단순규칙 재현율≤0.60 · 전라운드 c3 PASS · 비용 게이트 녹색.** sumlogP 원점수 금지(ADR-LADDER-3).
@@ -55,7 +57,7 @@ DESIGN-LLM-LADDER §3.3 준수: **adopt≥5연속(롤백0) · Σn_pairs≥250 ·
 
 ## 7. 즉시 액션 (개발자 합의 요청)
 1. **README SSOT에 SP-E.5~E.10 라벨 복원**(본 §3 반영) → "지금 어느 칸" 상시 가시화.
-2. **SP-E.9(P3 라운드)를 Phase E의 단일 차단 관문으로 공식화** → RunPod 키 확보를 최우선 의제로.
+2. ~~SP-E.9를 단일 차단 관문으로 공식화~~ → **[정정] SP-E.9 완료. 현 관문 = SP-E.10 통합 누적 루프(어댑터 체이닝 구현 + 5연속 adopt 실측).** RunPod는 비차단 편의.
 3. P2.5 구조추출패스·Phase D 잔여 7게이트는 **병렬 보조 트랙**(졸업 비차단).
 4. 데이터: SP-E.8 잔여(집 ChromaDB/features 풀런)는 집 1회 작업으로 종결.
 
