@@ -1,4 +1,18 @@
-> **버전 권위 주의 (2026-06-21)**: 태그 `v13.45.2`는 `v13.45.1`과 **내용 동일한 오태그(over-tag)**입니다. 정식 버전 권위는 **v13.45.1**(README·pyproject·본 CHANGELOG 일치). 차기 정식 릴리즈는 v13.46.0+에서 발행.
+> **버전 권위 (2026-06-24)**: 현재 정식 권위 = **v14.0.0**(SP-E.10 졸업 / Phase E Exit · README·pyproject·본 CHANGELOG 일치). 과거: 태그 `v13.45.2`는 `v13.45.1`과 내용 동일한 오태그.
+
+## [14.0.0] — V793 — SP-E.10 졸업 → Phase E Exit (per-token loop-C 5/5 ADOPT)
+
+### 졸업 (집 RTX 4070 실측 · graduation_invariant 6/6 · violations 0)
+- **per-token loop-C show/tell 5라운드 연속 ADOPT**: W₁ 0.600→0.620→0.644→0.708→**0.808**(W₀ 0.580→0.712 단조상승), 전 라운드 CI하한>0.5 · length_rule_rate=0(완전 길이중립) · c3 PASS · n_pairs=250(Σ=1,250).
+- 개발자 실제 `literary_system/learning/loopc_closure.py::graduation_invariant` 교차통과 → `graduated=true`, `exit_version="v14.0.0"`. = **LLM-1(쌍대 Critic 노트 능력) 실증.**
+- 방법 = Path B 하드 신호 **커리큘럼**(rejected 완성도를 라운드마다 ↑로 격차 축소 → 포화 회피·5연속 진짜 학습). v1(KL폭발)·v2(포화·maintain 스트릭 절단) 실패를 정면 해소. 상세 ADR-249.
+- 증거 원장: `tools/loop_c_4070_kit/round_records_v3.json`(메트릭 전용, verbatim corpus 비커밋). 트레이너/생성기 `train_4070_cumulative_v3.py`·`gen_pathB_curriculum.py` 동 디렉터리.
+
+### 경계 (조기 성공 선언 금지)
+- 졸업 = show/tell **한 craft 축**. 거시 기획(작가팀 대체, 16/24부작)은 차기 단계 LLM-2 거시플래너 빈칸(Synopsis Assembler + 로그라인 역생성)로 분리 — docs/sessions/2026-06-23_PLAN_post_llm1_llm2_macro_planner.md.
+- floor는 방향 쏠림 미차단(3-전문가팀 심의) → 차기 단계서 양성축·축간 균형 메타게이트.
+
+---
 
 ## [13.45.1] — V792 검증 라운드 하드닝 — E4 skipped-label + I4 fail-closed
 

@@ -3,7 +3,7 @@
 > **판단은 로컬, 생성만 LLM, 학습은 누적**  
 > AI 기반 장편 소설·드라마 시나리오 생성 시스템
 
-[![Version](https://img.shields.io/badge/version-13.45.1-blue)]()
+[![Version](https://img.shields.io/badge/version-14.0.0-blue)]()
 [![Tests](https://img.shields.io/badge/tests%20(V792)-11462-brightgreen)]()
 [![Phase](https://img.shields.io/badge/RLAIF-loop--C%20GPU%203--mode-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)]()
@@ -13,7 +13,7 @@
 
 > ⚠️ 태그 `v13.45.2`는 v13.45.1 오태그(내용 동일) — 정식 권위=**v13.45.1**.
 >
-> **현재 상태**: V792 / v13.45.1 · 테스트 11,462 · 97 Gates(90 PASS, 잔여 7 = Phase D 미완 WIP). **P0 선호쌍 빌더 + E4 암기게이트 + per-token 승률 + 구조 적합 게이트** 완료. 진행 누적(V781~V792): 생성본체 7-pass L4 승격(V781) · M1 Critic 자격검정(V782) · M2 NextEpisodeBench 은닉GT(V783) · M3 분포 가드레일·재보정(V784·V787) · 자체평가→loop-C 통합(V785) · 클라우드 비공개 저장·실측 학습노드(V786) · KL 표준 0.50+구조게이트+per-token 재측정(V788) · LLM 자율성 사다리 설계(V789) · 데이터·평가 3인 교차논의(V790) · E4 암기·표절 하드게이트(V791) · **P0 선호쌍 빌더 패키지 learning/pairing/(I1~I5 불변식 코드화) + 검증 라운드 하드닝 G-A/G-B(V792)**. 핵심 학습 불변식: I1 per-token 전용 · I2 길이중립 · I3 무단복제 0 · I4 작품단위 분리 · I5 토크나이저 잠금 · E4 암기 하드게이트. **진행(2026-06-21)**: SP-E.9 per-token loop-C **완료**(집 4070 단독 혼합 5/5 ADOPT, dW_pt +0.20~0.26·KL 0.06~0.08·CI하한~0.65>0.5) · 데이터 SP-E.8 종결(임베딩 2,339·ChromaDB 239,768 vec·features motif/curiosity 전수충전). **다음**: SP-E.10 통합 누적 루프(어댑터 체이닝 5연속 adopt → Phase E Exit v14.0.0) · 보조 트랙=P2.5 구조추출패스·Phase D 미완 7게이트. 재검증: `python3 tools/run_release_gate.py` · `python3 tools/generate_test_inventory.py`.
+> **현재 상태**: V793 / v14.0.0 (Phase E Exit · SP-E.10 졸업) · 테스트 11,462 · 97 Gates(90 PASS, 잔여 7 = Phase D 미완 WIP). **P0 선호쌍 빌더 + E4 암기게이트 + per-token 승률 + 구조 적합 게이트** 완료. 진행 누적(V781~V792): 생성본체 7-pass L4 승격(V781) · M1 Critic 자격검정(V782) · M2 NextEpisodeBench 은닉GT(V783) · M3 분포 가드레일·재보정(V784·V787) · 자체평가→loop-C 통합(V785) · 클라우드 비공개 저장·실측 학습노드(V786) · KL 표준 0.50+구조게이트+per-token 재측정(V788) · LLM 자율성 사다리 설계(V789) · 데이터·평가 3인 교차논의(V790) · E4 암기·표절 하드게이트(V791) · **P0 선호쌍 빌더 패키지 learning/pairing/(I1~I5 불변식 코드화) + 검증 라운드 하드닝 G-A/G-B(V792)**. 핵심 학습 불변식: I1 per-token 전용 · I2 길이중립 · I3 무단복제 0 · I4 작품단위 분리 · I5 토크나이저 잠금 · E4 암기 하드게이트. **진행(2026-06-21)**: SP-E.9 per-token loop-C **완료**(집 4070 단독 혼합 5/5 ADOPT, dW_pt +0.20~0.26·KL 0.06~0.08·CI하한~0.65>0.5) · 데이터 SP-E.8 종결(임베딩 2,339·ChromaDB 239,768 vec·features motif/curiosity 전수충전). **SP-E.10 졸업 완료(2026-06-24)**: 집 4070 커리큘럼 hardB 5/5 ADOPT(per-token W 0.580→0.808 단조상승·CI하한>0.5·length_rule_rate=0·c3 PASS) → 개발자 graduation_invariant 6/6 충족(violations 0) → **Phase E Exit v14.0.0**. **다음**: LLM-2 거시플래너(차기 단계) · 보조 트랙=P2.5 구조추출패스·Phase D 미완 7게이트. 재검증: `python3 tools/run_release_gate.py` · `python3 tools/generate_test_inventory.py`.
 
 ## 빠른 시작
 
@@ -91,7 +91,8 @@ literary_system/
 | 생성·자체평가 | V781~V787 | 7-pass L4 승격·M1/M2/M3 자체평가·loop-C 통합·클라우드 학습노드·분포 재보정 | ADR-241~248 |
 | SGATE·암기 | V788~V791 | KL 표준 0.50+구조게이트+per-token 재측정 · LLM 사다리·3인 교차논의 설계 · E4 암기 하드게이트 | G_STRUCTURE_CONFORMANCE |
 | **P0 페어링** | **V792** | **선호쌍 빌더 learning/pairing/(I1~I5)+E4 게이트+per-token 승률 + 검증 하드닝(G-A/G-B)** | **I1~I5 / E4** |
-| **V792** | **v13.45.1** | **현재 — 11,462 Tests / 97 Gates(90 PASS) / 무결성 SHA256 2,061 일치** | **✅** |
+| V792 | v13.45.1 | 11,462 Tests / 97 Gates(90 PASS) / SHA256 2,061 일치 | ✅ |
+| **V793** | **v14.0.0** | **SP-E.10 졸업 — loop-C 5/5 ADOPT · graduation_invariant 6/6 · Phase E Exit** | **✅** |
 
 ---
 

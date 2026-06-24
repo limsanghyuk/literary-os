@@ -1,0 +1,62 @@
+[
+ {
+  "round": 1,
+  "decision": "adopt",
+  "n_pairs": 250,
+  "w0": 0.58,
+  "w1": 0.6,
+  "w1_ci_lower": 0.5393,
+  "kl_per_round": 0.016,
+  "length_rule_rate": 0.0,
+  "c3_passed": true,
+  "epochs": 1.0
+ },
+ {
+  "round": 2,
+  "decision": "adopt",
+  "n_pairs": 250,
+  "w0": 0.596,
+  "w1": 0.62,
+  "w1_ci_lower": 0.5598,
+  "kl_per_round": 0.0107,
+  "length_rule_rate": 0.0,
+  "c3_passed": true,
+  "epochs": 1.0
+ },
+ {
+  "round": 3,
+  "decision": "adopt",
+  "n_pairs": 250,
+  "w0": 0.616,
+  "w1": 0.644,
+  "w1_ci_lower": 0.5846,
+  "kl_per_round": 0.0181,
+  "length_rule_rate": 0.0,
+  "c3_passed": true,
+  "epochs": 1.0
+ },
+ {
+  "round": 4,
+  "decision": "adopt",
+  "n_pairs": 250,
+  "w0": 0.64,
+  "w1": 0.708,
+  "w1_ci_lower": 0.6516,
+  "kl_per_round": 0.0281,
+  "length_rule_rate": 0.0,
+  "c3_passed": true,
+  "epochs": 1.0
+ },
+ {
+  "round": 5,
+  "decision": "adopt",
+  "n_pairs": 250,
+  "w0": 0.712,
+  "w1": 0.808,
+  "w1_ci_lower": 0.7592,
+  "kl_per_round": 0.0246,
+  "length_rule_rate": 0.0,
+  "c3_passed": true,
+  "epochs": 1.0
+ }
+]
