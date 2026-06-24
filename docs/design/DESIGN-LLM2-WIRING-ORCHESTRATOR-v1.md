@@ -93,8 +93,11 @@ S3  EpisodeRevealBudget.from_arc_graph(graph)               → budget          
        ※ precedent 갭 교정: 현재 minimal은 fresh budget을 쓴다 → graph 주입으로 연결
 S4  KnowledgeStateTracker(project_id).register_fact(…)      → 지식 원장          [world/knowledge_state_tracker.py:100]
 S5  PayoffScheduler.generate_schedule(project_id, N,
-       residue_ids=graph.residue_ids, strategy, curve)      → PayoffSchedule    [causal_plan/payoff_scheduler.py:61]
+       residue_ids=⟨graph 노드 forbidden_reveals에서 파생⟩,
+       strategy, macroarc_pressure_curve)                   → PayoffSchedule    [causal_plan/payoff_scheduler.py:61]
        ※ 16부 전역 복선원장 = 루프 밖 보유(CAPACITY-DIVISION §3)
+       ※ [재검토 교정] graph.residue_ids는 존재 안 함(유령 속성) → 노드 specs/forbidden_reveals에서 파생
+       ※ [재검토 교정] kwarg명 = macroarc_pressure_curve (curve 아님)
 S6  SeriesConfig 구성 + NarrativeStateTensor 초기화          → 통합 버스 생성     [episode/episode_state.py:82,119]
 ```
 
@@ -102,8 +105,10 @@ S6  SeriesConfig 구성 + NarrativeStateTensor 초기화          → 통합 버
 
 ```
 for ep in 1..N:
-  S7  brief = get_episode_brief(payoff_schedule, knowledge, tensor, ep)   ← 원장→회차 brief 주입
-  S8  EpisodePlanner.plan(series_config, ep, narrative_state=tensor)      → EpisodePlan   [episode/episode_planner.py:66]
+  S7  brief = PayoffScheduler.get_episode_brief(payoff_schedule, ep)      ← 원장→회차 brief 주입 [payoff_scheduler.py:140]
+       ※ [재검토 교정] 이미 구현됨(자기점검#1 정정) — 신규구현 아님, 결속만
+  S8  EpisodePlanner.plan(series_config, episode_idx=ep, narrative_state=tensor)  → EpisodePlan [episode/episode_planner.py:66]
+       ※ [재검토 교정] 3인자 모두 필수 위치인자(narrative_state 선택 아님)
   S9  EpisodeStructureCalculator.calculate(EpisodeStructureConfig)        → EpisodeStructure [episode/episode_structure_calculator.py:260]
   S10 SequencePlanner.plan(macro_arc_packet, episode_no=ep,…)             → list[SequencePlan] [orchestrators/sequence_planner.py:230]
   S11 CharacterIntentAgent.decide_sync(tension) ▸ Collector.collect_sync  → list[IntentPacket] [orchestrators/character_intent_agent.py:140]
@@ -111,12 +116,15 @@ for ep in 1..N:
   S13 [씬 생성] SceneGenerationPipeline.run() ▸ GenerativePort.generate    → 산문 텍스트  [scene_generation_pipeline.py:296]
   S14 EmotionalMomentumTracker.update(scene_record, seq_plan)             → EmotionalVector [emotion/…:44]
   S15 NarrativeTensionCurve.record(scene_idx, total, actual_tension)      → TensionPoint  [nie/…:109]
+  ── S17(MicroPlotMatrix.build)는 루프 밖으로 이동 — 전체 EpisodePlan 리스트 필요 ──
   S16 ── write-back ──  tensor.conflict_pressure        ← S12.intensity
                         tensor.avg_emotional_momentum   ← S14
                         tensor.scene_energy_required    ← S15
                         tensor.used_reveal_budget       ← S13 소비
        → 화 N+1의 S8(EpisodePlanner)이 갱신된 텐서를 읽음 = 화↔화 피드백 폐회로
-  S17 MicroPlotMatrix.build(누적 EpisodePlan들)                           → MicroPlotMatrix [episode/microplot_matrix.py:69]
+
+S17  MicroPlotMatrix.build(누적된 전체 EpisodePlan 리스트)                → MicroPlotMatrix [episode/microplot_matrix.py:69]
+       ※ [재검토 교정] 루프 안 아님 — build()는 List[EpisodePlan] 전체를 요구. 루프 종료 후 1회 호출
 ```
 
 ### 4.3 사후 검증 패스 (전 화 완료 후 · 비구속)
@@ -170,15 +178,11 @@ class GenerativePort(Protocol):
 
 ---
 
-## 7. 결과·다음
+## 8. 재검토 결과 — 독립 감사 (코드 시그니처 대비)
 
-- **산출**: 12 고립 기관 → 위상정렬 배선 순서(S0~S19) + 텐서 통합 버스 + Stage 어댑터/GenerativePort 계약 + 무GPU E2E 배관증명 6단계.
-- **핵심**: 화↔화 피드백이 타입 정합으로 이미 가능(텐서 버스) — 배선은 발명 아닌 결속.
-- **다음 후보**: W1~W2 어댑터 PoC 구현(무GPU·회사세션 가능), 또는 빈칸 ⑤ causal_spine 1급화와 병합.
+설계 직후 독립 감사관이 본 배선을 실 코드와 대조했다. **결론: "수정 후 빌드 가능"(buildable-with-fixes).** 핵심 주장은 검증 통과, 차단 결함 2건은 교정 반영.
 
-### 자기점검 (논리적 약점)
-1. **`get_episode_brief`(S7) 미구현**: CAPACITY-DIVISION 설계상 답이나 코드 부재 — W1 전 선결 또는 W2에서 최소구현 필요.
-2. **`macro_arc_packet`(S10) 출처**: SequencePlanner는 dict를 받는데 그 dict 생산자(MacroArcCompiler)가 16기관 밖 — 어댑터가 CausalPlotGraph→dict 변환을 책임져야(미설계).
-3. **`SeedCompiler`·`SceneGenerationPipeline` 외 일부 시그니처는 단위 인용**: W1 착수 시 전수 재확인 필요(미선언).
-4. **자율 머리(Synopsis Assembler) 미포함**: 본 문서는 *배선*만. S0 seed→S6 config의 *창작*(로그라인·세계관·인물 역생성)은 빈칸 5종의 몫 — 본 배선은 그 위층이 채워질 자리를 *비워둔 채* 사람-상수로도 돌게 설계(점진 이양).
-5. **텐서 write-back 경합**: 멀티에이전트 동시쓰기 시 idempotent 보장 미검증(DAG 단방향 가정).
+| # | 검증 항목 | 판정 | 근거 |
+|---|---|---|---|
+| 1 | S-step 메서드 존재·시그니처 | ✅ 대부분 PASS | 14개 모두 인용 line ±1 일치 |
+| 2 | **핵심: 화↔화 피드백 루프** | ✅ **PASS(필드단위 검증)** | `EpisodePlanner.plan`이 `narrative_state.conflict_pressure`(:85)·`avg_emotional_momentum`(:86)·`scen
