@@ -1,6 +1,6 @@
 > **버전 권위 (2026-06-24)**: 현재 정식 권위 = **v14.0.0**(SP-E.10 졸업 / Phase E Exit · README·pyproject·본 CHANGELOG 일치). 과거: 태그 `v13.45.2`는 `v13.45.1`과 내용 동일한 오태그.
 
-## [14.0.0] — V793 — SP-E.10 졸업 → Phase E Exit (per-token loop-C 5/5 ADOPT)
+## [14.0.0] — V795 — SP-E.10 졸업 → Phase E Exit (per-token loop-C 5/5 ADOPT)
 
 ### 졸업 (집 RTX 4070 실측 · graduation_invariant 6/6 · violations 0)
 - **per-token loop-C show/tell 5라운드 연속 ADOPT**: W₁ 0.600→0.620→0.644→0.708→**0.808**(W₀ 0.580→0.712 단조상승), 전 라운드 CI하한>0.5 · length_rule_rate=0(완전 길이중립) · c3 PASS · n_pairs=250(Σ=1,250).

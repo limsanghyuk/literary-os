@@ -75,4 +75,4 @@
 
 - [ADR-209](ADR-209.md) — G_INTEGRITY_MANIFEST: SHA256 자기검증 + 테스트 인벤토리 상시화 (V746, WP-0)
 
-- [ADR-249](ADR-249.md) — SP-E.10 졸업: per-token loop-C 5/5 ADOPT → Phase E Exit v14.0.0 (V793, 2026-06-24)
+- [ADR-249](ADR-249.md) — SP-E.10 졸업: per-token loop-C 5/5 ADOPT → Phase E Exit v14.0.0 (V795, 2026-06-24)

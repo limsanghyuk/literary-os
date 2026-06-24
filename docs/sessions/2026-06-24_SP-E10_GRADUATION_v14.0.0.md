@@ -1,4 +1,4 @@
-# SP-E.10 졸업 기록 — Phase E Exit v14.0.0 (2026-06-24)
+# SP-E.10 졸업 기록 — V795 Phase E Exit v14.0.0 (2026-06-24)
 
 ## 한 줄
 집 RTX 4070에서 per-token loop-C(show/tell 하드 신호 커리큘럼) **5라운드 연속 ADOPT** 달성 → 개발자 `graduation_invariant` 6/6 충족 → **Phase E Exit v14.0.0**.
@@ -22,5 +22,5 @@
 차기 발전 단계(LLM-1 이후) — LLM-2 거시플래너: ② 인과 그래프/플롯 트랙 추출(시그널+대장금 파일럿) → ③ Synopsis Assembler 재설계(PD 10요소 + 인과 척추 1급). 기획 정본: docs/sessions/2026-06-23_PLAN_post_llm1_llm2_macro_planner.md.
 
 ## 산출물
-- ADR-249, CHANGELOG [14.0.0], pyproject 14.0.0, README V793/v14.0.0.
+- ADR-249, CHANGELOG [14.0.0], pyproject 14.0.0, README V795 행·v14.0.0.
 - tools/loop_c_4070_kit/round_records_v3.json (졸업 증거 원장).
