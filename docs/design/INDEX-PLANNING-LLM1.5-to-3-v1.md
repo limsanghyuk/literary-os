@@ -38,6 +38,23 @@
 ### (바) 제품 트랙(병행, 별개)
 - Phase E 본안 v1.0 (메모리 project-phase-e-v1): UI·코퍼스·SDK·RLAIF — 제품 경로. ★계획↔실제 분기: v14.0.0은 제품경로 계획이었으나 실제는 메인트랙 loop-C로 달성.
 
+
+## 3.5 ★집 컴퓨터 누적 클러스터 (2026-06-24, 커밋 e95ac2b~164d76f) — INDEX 위 직접 적재
+- `docs/design/DESIGN-LLM2-SYNOPSIS-ASSEMBLER-IO-MERGE-v1.md` — 졸업 의미 평이화 + IO 계약 상세 + 내 §3 causal_spine 병합 제안.
+- `docs/design/DESIGN-LLM2-BLANK-SLOTS-v1.md` — ★빈칸 3→5종 확정 + 16기관 정교함 등급(상3/중7/하6, 15/16 LLM 0회). CausalPlotGraph 엣지추론=act 휴리스틱→LLM 인과패스 격상 지점 재확인.
+- `docs/design/DESIGN-BROAD-MEASUREMENT-v1.md` — 좁은 졸업→넓은 실측. ToT 3안 중 **A(거시일관성)+B(다축 craft)+axis-balance 메타게이트** 채택, C(인간명작 직접대조)=천장 시험 보류. → O11·O13 진전.
+- `docs/design/BLUEPRINT-MASTER-ADR001-to-LLM3-v1.md` — ADR-001~249 × Phase A~천장 단일 롤업 청사진.
+- `docs/design/DESIGN-LLM2-WIRING-ORCHESTRATOR-v1.md` (+§8 독립감사 교정) — 12 고립기관 배선 설계(위상정렬 S0~S19 + NarrativeStateTensor 통합버스 + GenerativePort 교체좌석).
+- `docs/design/WIRING-ORCHESTRATOR-POC-RESULTS-v1.md` + `examples/wiring_poc.py`·`test_wiring_poc.py` — ★**실코드 PoC: 12기관 E2E 배관증명 PASS(GPU 0회)**.
+
+## 3.6 ★마일스톤 — 배선 오케스트레이터 PoC (코드, 검증됨)
+- 감사 발견: `DramaEpisodeGenerator.generate_series`가 16기관 중 **1개만 호출**, 나머지 12개는 **고립된 섬**이었음. PoC가 그 빈칸(최상위 자율 조립)을 메움.
+- 16/24부작 E2E: 씨드→SeriesArcPlanner→CausalPlotGraph→reveal/knowledge/payoff→화루프(EpisodePlanner가 NarrativeStateTensor READ→K산정→갈등강도 write-back=N→N+1 피드백)→MicroPlotMatrix 사후1회.
+- **독립 검증(이 세션 재실행)**: K궤적 [4,3,4,4,4,4,5,6,6,6,5,5,5,4,4,4](아크형), 갈등압력 0.057→0.405 단조, 24부작 무수정 통과, 회귀 5/5 PASS. **재현 확인.**
+- GenerativePort = 교체 좌석(현 FormulaFallbackPort 템플릿 → LLM1Port → FrontierPort 무수정 교체). = 내 CAPACITY-DIVISION 역할분담의 코드 실체.
+- 정직 경계(집 명시): 산문 품질 미증명(템플릿)·residue=에피소드 태그(진짜 사실ID 아님)·S9~S15 미배선.
+- 교정: `CausalPlotGraph.residue_ids`는 유령속성(없음)→`derive_residue_ids` 글루 신설 / `get_episode_brief`는 실재(내 CAPACITY 주장 검증됨).
+
 ## 4. 열린 의견 의제 (★의견 수립 중 — 결정 아님)
 | # | 의제 | 갈래 | 어디서 누적 |
 |---|---|---|---|
@@ -51,9 +68,9 @@
 | O8 | 수정 전파 엔진(작가 개입→인과 재계산) | G | SYNOPSIS-ASSEMBLER §4 / CAPACITY §5 |
 | O9 | 판단 이양 PoC(8B→프론티어 / 플로어 LLM 재현) | F 선행 | PHASE-F §3 |
 | O10 | 1급 트랙축 분류 강화(태그없는 회상 미탐) | ②/G | SYNOPSIS-ASSEMBLER §4 |
-| O11 | 양성 평가축 + 축간 균형 메타게이트 | G | PLAN/심의 |
+| O11 | 양성 평가축 + 축간 균형 메타게이트 | G | ★진전: BROAD-MEASUREMENT A+B+메타게이트 채택 |
 | O12 | 제작가능성·시장 게이트 스코프 | G 후반/제품 | PLAN/심의 |
-| O13 | 인간 GT(최종시험) 도입 시점 | F~G | PLAN |
+| O13 | 인간 GT(최종시험) 도입 시점 | F~G | ★진전: BROAD-MEASUREMENT가 '천장 시험'으로 보류 확정 |
 
 ## 5. 오늘(2026-06-24) 누적된 방향 (결정 아님, 방향 정리)
 1. **졸업 마감**: v14.0.0 공식 종료(검증·버전권위 V795·매니페스트·Release).
