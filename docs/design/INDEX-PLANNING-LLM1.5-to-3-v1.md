@@ -55,6 +55,12 @@
 - 정직 경계(집 명시): 산문 품질 미증명(템플릿)·residue=에피소드 태그(진짜 사실ID 아님)·S9~S15 미배선.
 - 교정: `CausalPlotGraph.residue_ids`는 유령속성(없음)→`derive_residue_ids` 글루 신설 / `get_episode_brief`는 실재(내 CAPACITY 주장 검증됨).
 
+
+## 3.7 ★① 착수 + 품질 기준선 (2026-06-24 후반, 커밋 76224694·10296d9f)
+- `examples/generative_ports.py`(LLM1Port 집4070 / FrontierPort API) + `examples/wiring_poc_water.py` — 배관에 실 생성 좌석. **FrontierPort 스모크 PASS**(실 한국어 대본 산문 통과·피드백 생존). 진짜 ①=LLM1Port 4070 실행(`WIRING-WATER-FrontierPort-RESULTS-v1.md` §4 런북).
+- `examples/quality_baseline_eval.py` + `QUALITY-BASELINE-EVAL-v1.md` — 프론티어생성 vs 명작 블라인드 쌍대. ★결과 15/15 전승=**평가 편향**(AI-judge-AI+길이+맥락+형식)→기준선 무효. 유효요건=이종심사·공정입력·인간GT·5축분해.
+- 종합 핸드오프: `docs/sessions/2026-06-24_SESSION_SUMMARY_handoff.md` (회사 이어가기).
+
 ## 4. 열린 의견 의제 (★의견 수립 중 — 결정 아님)
 | # | 의제 | 갈래 | 어디서 누적 |
 |---|---|---|---|
