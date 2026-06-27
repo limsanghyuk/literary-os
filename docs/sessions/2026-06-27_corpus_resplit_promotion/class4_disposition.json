@@ -1,0 +1,16 @@
+{
+  "class4_total": 211,
+  "applied_resplit": 203,
+  "no_action_or_skip": 8,
+  "details": {
+    "우리생애최고의순간": "HEALTHY-NO-ACTION: 67 scenes already correct; markerless film, max 4760 = genuine handball-final climax (no internal headings).",
+    "우아한세계": "SET-ASIDE: bare-location screenplay, 6 mega-blocks, no reliable heading markers (# tags are montage labels, not sluglines). Not deterministically recoverable.",
+    "스카이캐슬_01": "SET-ASIDE: 15121-char blob 씬16 absorbs 씬17~57 which lost their headings; 0 usable internal markers.",
+    "신사의품격_15": "SKIP: space-stripped degenerate, single 6050 blob, nl_ratio~0.001, no markers.",
+    "신사의품격_16": "SKIP: same degenerate family.",
+    "신사의품격_17": "SKIP: same degenerate family.",
+    "신사의품격_18": "SKIP: same degenerate family.",
+    "선덕여왕_00": "SKIP: 47279 markerless blob, character-intro sheet not dramatic scenes."
+  },
+  "note": "203 applied + 8 dispositioned = 211 class4 fully accounted. Breakdown: 1 healthy-no-action(우리생애최고의순간) + 2 set-aside(우아한세계,스카이캐슬_01) + 5 skip(신사의품격×4,선덕여왕_00)."
+}

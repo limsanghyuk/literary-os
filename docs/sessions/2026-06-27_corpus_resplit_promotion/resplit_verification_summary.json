@@ -1,0 +1,31 @@
+{
+  "audit": "225/213 결함화 재분할 통합검증",
+  "defect_total_triage": 213,
+  "classes": {
+    "c3_megamerge": 2,
+    "c4_LLM_noheads": 178,
+    "c4_LLM_residual": 33
+  },
+  "applied": 205,
+  "dispositioned": 8,
+  "accounted": 213,
+  "lossless_violations": 0,
+  "max_ge_4000_CHECK": 6,
+  "CHECK_episodes": {
+    "베를린": 7921,
+    "국가대표": 5943,
+    "좋지아니한가": 5784,
+    "브라보마이라이프": 5448,
+    "지구를지켜라": 5104,
+    "음란서생": 4240
+  },
+  "CHECK_note": "all genuine long single-scenes (climax/montage, 0 internal headings) — lossless+faithful preferred over false sub-split",
+  "density": {
+    "min": 22,
+    "median": 60,
+    "max": 947,
+    "in_band_46_84": 142
+  },
+  "uncovered": 0,
+  "verdict": "PASS — 213 fully accounted, 0 lossless violations, original corpus untouched (sidecar scenes_resplit/)."
+}
