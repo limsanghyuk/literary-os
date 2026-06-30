@@ -1,0 +1,22 @@
+{
+  "work_id": "마왕_02",
+  "scene_count": 85,
+  "core_dist": {
+    "INTRO": 1,
+    "REVELATION": 22,
+    "CONFLICT": 11,
+    "ORACLE": 11,
+    "PERIL": 7,
+    "DESIRE": 8,
+    "BOND": 9,
+    "LOSS": 4,
+    "RELIEF": 2,
+    "ROMANCE": 3,
+    "HOOK": 2,
+    "REUNION": 1,
+    "ESTABLISH": 2,
+    "REVERSAL": 2
+  },
+  "episode_function": "1화 엔딩을 이어받아 사이코메트리 단서가 현실 증거와 일치하는 장면으로 오수의 신뢰를 확보한다. 조동섭의 배후에 승하가 있음을 시청자에게 점진 노출하고, 두 번째 타로카드('정의')로 예고살인의 다음 단계를 예고한다. 조동섭 자수 후 승하가 그의 대리인으로 나타나는 반전으로 막을 내려 승하의 복수 플롯이 수사와 정면 충돌하는 구도를 완성한다.",
+  "by": "sonnet-4.6"
+}

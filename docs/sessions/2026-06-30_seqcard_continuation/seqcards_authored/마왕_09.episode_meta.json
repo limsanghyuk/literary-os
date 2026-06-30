@@ -1,0 +1,21 @@
+{
+  "work_id": "마왕_09",
+  "episode": 9,
+  "scene_count": 80,
+  "core_dist": {
+    "CONFLICT": 14,
+    "ESTABLISH": 10,
+    "ORACLE": 10,
+    "REVELATION": 8,
+    "PUNISH": 8,
+    "PERIL": 7,
+    "DESIRE": 6,
+    "BOND": 6,
+    "LOSS": 5,
+    "ROMANCE": 2,
+    "REVERSAL": 2,
+    "HOOK": 2
+  },
+  "episode_function": "오수의 죄책·잠복 vs 승하의 철저한 복수 설계 충돌. 정연 살인(PUNISH 실행)·인수 집 폭발(LOSS)·333 숫자 단서(ORACLE) 발견. 복수자 정체 미노출, 오수와 해인의 잔상 수사 시작.",
+  "by": "sonnet-4.6"
+}

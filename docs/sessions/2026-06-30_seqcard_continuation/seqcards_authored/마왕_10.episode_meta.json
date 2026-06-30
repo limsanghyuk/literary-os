@@ -1,0 +1,22 @@
+{
+  "work_id": "마왕_10",
+  "episode": 10,
+  "scene_count": 88,
+  "core_dist": {
+    "ORACLE": 12,
+    "ESTABLISH": 9,
+    "PERIL": 9,
+    "REVELATION": 9,
+    "CONFLICT": 9,
+    "PUNISH": 9,
+    "ROMANCE": 7,
+    "BOND": 6,
+    "LOSS": 6,
+    "DESIRE": 6,
+    "REVERSAL": 3,
+    "HOOK": 2,
+    "INTRO": 1
+  },
+  "episode_function": "준표 독자 수사→태성·승하 신원 역전 REVELATION(씬85~86) 달성. 해인 잔상(편의점 단서)으로 준표 타로 발송자 확인(ORACLE→REVELATION). 석진·순기 각자 파국 전야. 오수·해인 로맨스 긴장 고조. 엔딩=준표의 폭탄 발언으로 오수에게 진실이 넘어가려는 직전 HOOK.",
+  "by": "sonnet-4.6"
+}
