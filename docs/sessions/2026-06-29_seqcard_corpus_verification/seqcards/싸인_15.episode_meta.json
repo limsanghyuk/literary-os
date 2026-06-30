@@ -1,0 +1,21 @@
+{
+ "work_id": "싸인_15",
+ "scene_count": 74,
+ "core_dist": {
+  "ESTABLISH": 17,
+  "DESIRE": 5,
+  "CONFLICT": 10,
+  "REVERSAL": 2,
+  "BOND": 3,
+  "LOSS": 6,
+  "PERIL": 9,
+  "ORACLE": 7,
+  "PUNISH": 2,
+  "REVELATION": 8,
+  "HOOK": 3,
+  "ROMANCE": 1,
+  "RELIEF": 1
+ },
+ "episode_function": "재수사 공식화·주선우 타살 증명 (15회분, 2-in-1 원본에서 16회분 분리)",
+ "by": "sonnet-4.6"
+}

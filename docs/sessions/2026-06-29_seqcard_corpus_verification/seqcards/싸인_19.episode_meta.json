@@ -1,0 +1,22 @@
+{
+  "work_id": "싸인_19",
+  "scene_count": 67,
+  "core_dist": {
+    "CONFLICT": 11,
+    "ESTABLISH": 11,
+    "HOOK": 6,
+    "BOND": 6,
+    "LOSS": 6,
+    "ROMANCE": 6,
+    "ORACLE": 4,
+    "REVELATION": 4,
+    "PERIL": 3,
+    "RELIEF": 3,
+    "RESCUE": 2,
+    "DESIRE": 2,
+    "REVERSAL": 2,
+    "PUNISH": 1
+  },
+  "episode_function": "이호진 자살로 마무리 · 정문수 마지막 증언 탈취 + 지훈-서연 최후 대결 · 지훈의 CCTV 복사본 역전 선언",
+  "by": "sonnet-4.6"
+}

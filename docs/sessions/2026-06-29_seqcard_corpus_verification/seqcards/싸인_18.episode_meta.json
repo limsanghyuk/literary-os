@@ -1,0 +1,20 @@
+{
+  "work_id": "싸인_18",
+  "scene_count": 66,
+  "core_dist": {
+    "PERIL": 13,
+    "CONFLICT": 10,
+    "ORACLE": 10,
+    "ESTABLISH": 9,
+    "REVELATION": 7,
+    "RESCUE": 5,
+    "LOSS": 4,
+    "HOOK": 2,
+    "BOND": 2,
+    "REVERSAL": 2,
+    "PUNISH": 1,
+    "REUNION": 1
+  },
+  "episode_function": "우진 구조 · 이호진 체포 · 공범 우재원 추적 및 검거 · 우진 의식 회복 + 이호진 석방 · 다경 복도 위기 클리프행어",
+  "by": "sonnet-4.6"
+}

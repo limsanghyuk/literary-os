@@ -1,0 +1,22 @@
+{
+  "work_id": "싸인_14",
+  "scene_count": 69,
+  "core_dist": {
+    "LOSS": 5,
+    "ORACLE": 32,
+    "CONFLICT": 14,
+    "REVERSAL": 6,
+    "DESIRE": 14,
+    "ESTABLISH": 10,
+    "REVELATION": 20,
+    "BOND": 4,
+    "RELIEF": 2,
+    "REUNION": 2,
+    "HOOK": 7,
+    "PERIL": 7,
+    "ROMANCE": 1,
+    "RESCUE": 1
+  },
+  "episode_function": "이수정 감전사 해명·서윤형 살해 진상 재구성·증거 인멸과 대체 증거 확보: 이수정 사망으로 핵심 증인을 잃지만 부검으로 감전사를 밝히고 일기장·스텝복으로 강서연의 서윤형 청산가리 살해 전모를 재구성한다. 스텝복 소각 위기를 오선주의 별도 보관으로 역전하며 최종 대결 구도를 확정한다.",
+  "by": "sonnet-4.6"
+}

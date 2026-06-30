@@ -1,0 +1,20 @@
+{
+  "work_id": "싸인_17",
+  "scene_count": 75,
+  "core_dist": {
+    "PERIL": 17,
+    "ESTABLISH": 10,
+    "LOSS": 9,
+    "CONFLICT": 7,
+    "ORACLE": 7,
+    "REVELATION": 6,
+    "HOOK": 4,
+    "BOND": 4,
+    "ROMANCE": 4,
+    "REVERSAL": 3,
+    "RESCUE": 3,
+    "REUNION": 1
+  },
+  "episode_function": "서윤형 사건 증거 말살 완성 + 한 달 후 일상 재개 + 이호진 시나리오 살인 시작 · 우진 피습 클리프행어",
+  "by": "sonnet-4.6"
+}

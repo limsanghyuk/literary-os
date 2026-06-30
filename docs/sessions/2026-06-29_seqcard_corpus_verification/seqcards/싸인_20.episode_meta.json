@@ -1,0 +1,22 @@
+{
+  "work_id": "싸인_20",
+  "scene_count": 68,
+  "core_dist": {
+    "DESIRE": 10,
+    "LOSS": 9,
+    "CONFLICT": 8,
+    "ESTABLISH": 7,
+    "REVERSAL": 7,
+    "REVELATION": 7,
+    "RELIEF": 5,
+    "BOND": 3,
+    "RESCUE": 3,
+    "REUNION": 3,
+    "PERIL": 2,
+    "PUNISH": 2,
+    "ORACLE": 1,
+    "HOOK": 1
+  },
+  "episode_function": "지훈의 죽음과 다경의 부검을 통한 진상 규명—강서연 체포, 강중혁 사퇴, 이명한 퇴장, 다경의 계승 선언으로 마무리되는 최종회. LOSS·REVERSAL·REVELATION이 전반부를 지배하고, RELIEF·REUNION·BOND가 에필로그를 채워 완전한 종결을 이룬다.",
+  "by": "sonnet-4.6"
+}
