@@ -1,0 +1,41 @@
+{
+  "work_id": "도깨비",
+  "episode": "04",
+  "scene_count": 56,
+  "core_dist": {
+    "DESIRE": 9,
+    "ESTABLISH": 8,
+    "BOND": 7,
+    "ROMANCE": 6,
+    "CONFLICT": 5,
+    "REVELATION": 4,
+    "PUNISH": 4,
+    "REVERSAL": 3,
+    "LOSS": 3,
+    "REUNION": 2,
+    "HOOK": 1,
+    "ORACLE": 1,
+    "PERIL": 1,
+    "RELIEF": 1,
+    "RESCUE": 1
+  },
+  "core_dist_incl_secondary": {
+    "CONFLICT": 16,
+    "BOND": 13,
+    "DESIRE": 13,
+    "ESTABLISH": 11,
+    "RELIEF": 10,
+    "ROMANCE": 10,
+    "LOSS": 9,
+    "HOOK": 7,
+    "REVELATION": 5,
+    "REVERSAL": 4,
+    "PUNISH": 4,
+    "ORACLE": 2,
+    "REUNION": 2,
+    "RESCUE": 2,
+    "PERIL": 1
+  },
+  "episode_function": "신부 확정·동거 결정·첫 사랑 고백(S#56)으로 이르는 관계 진전 에피소드. ROMANCE·CONFLICT·BOND가 삼위일체로 작동하며, 죽음 결심(S#49 플래시백)과 사랑 고백이 같은 씬에 공존하는 비극적 아이러니를 내장한다. 저승-써니 부관계의 도입(S#37~53)과 이모 처벌(S#18~19)로 세계관 확장.",
+  "by": "sonnet-4.6"
+}
