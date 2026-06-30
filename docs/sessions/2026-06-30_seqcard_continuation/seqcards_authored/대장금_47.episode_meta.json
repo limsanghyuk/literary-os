@@ -1,0 +1,24 @@
+{
+  "work_id": "daejangeum",
+  "episode": 47,
+  "total_scenes": 66,
+  "verified_scene_count": 66,
+  "core_distribution": {
+    "CONFLICT": 17.0,
+    "DESIRE": 15.0,
+    "PERIL": 14.0,
+    "HOOK": 11.5,
+    "REVELATION": 11.0,
+    "ORACLE": 8.0,
+    "ESTABLISH": 4.5,
+    "REVERSAL": 4.0,
+    "PUNISH": 3.5,
+    "RELIEF": 3,
+    "BOND": 2.0,
+    "LOSS": 2.0,
+    "REVEAL": 0.5
+  },
+  "episode_function": "유서·어음·납치·고변이 얽힌 정치적 체스게임. 최상궁·오겸호 자중지란, 영로 죽음, 대비 공작, 정윤수 부활 등장의 반전으로 유황오리 진실 규명 절정 진입.",
+  "authored_by": "sonnet-4.6",
+  "authored_date": "2026-06-30"
+}

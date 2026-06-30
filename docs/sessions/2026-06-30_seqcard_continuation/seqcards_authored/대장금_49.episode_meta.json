@@ -1,0 +1,30 @@
+{
+  "work_id": "대장금_49",
+  "episode": 49,
+  "scene_count": 86,
+  "authored_by": "sonnet-4.6",
+  "authored_date": "2026-06-30",
+  "episode_function": "활인서 전환기·중전의 살인 밀명·민정호와의 로맨스 성숙 — 장금이 활인서로 나가 민간 의술과 민정호와의 일상을 쌓는 가운데, 중전이 세자를 죽이라는 밀명을 내린다. 장금이 이를 거절하고 중종이 이를 엿들으며 전담의관 선언을 내린다. 민상궁의 최고상궁 승격과 두 사람의 청혼에 가까운 대화가 부선을 이룬다.",
+  "core_dist": {
+    "DESIRE": 17,
+    "PERIL": 16,
+    "BOND": 12,
+    "ESTABLISH": 7,
+    "ROMANCE": 7,
+    "CONFLICT": 7,
+    "LOSS": 4,
+    "REVERSAL": 4,
+    "REVELATION": 3,
+    "HOOK": 3,
+    "REUNION": 2,
+    "RELIEF": 1,
+    "INTRO": 1,
+    "RESCUE": 1,
+    "ORACLE": 1
+  },
+  "top3_core": [
+    "DESIRE",
+    "PERIL",
+    "BOND"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "work_id": "대장금_51",
+  "episode": 51,
+  "total_scenes": 67,
+  "scene_no_note": "원본 씬6이 씬6/씬6-1(연못가)/씬6(대전) 세 헤더로 표기됨 → scene_no 순서대로 1~67 부여",
+  "episode_function": "경원대군 두창 발병이 장금을 궁으로 돌아오게 하는 전환점. 두창 치료를 통한 의술 실증으로 중종이 장금을 종6품 주부로 연속 품계 상향하며 정식 주치의관의 길을 열어준다. 신익필의 내적 전환(반대→지지)이 핵심 반전.",
+  "core_dist_primary": {
+    "ESTABLISH": 11,
+    "CONFLICT": 10,
+    "PERIL": 8,
+    "REVERSAL": 7,
+    "REVELATION": 6,
+    "RELIEF": 5,
+    "BOND": 4,
+    "DESIRE": 4,
+    "LOSS": 3,
+    "RESCUE": 3,
+    "PUNISH": 2,
+    "HOOK": 2,
+    "ORACLE": 2
+  },
+  "by": "sonnet-4.6"
+}

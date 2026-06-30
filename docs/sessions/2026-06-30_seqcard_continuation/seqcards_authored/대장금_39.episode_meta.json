@@ -1,0 +1,19 @@
+{
+  "work_id": "대장금_39",
+  "total_scenes": 71,
+  "core_dist": {
+    "BOND": 4,
+    "CONFLICT": 20,
+    "DESIRE": 2,
+    "ESTABLISH": 9,
+    "LOSS": 3,
+    "PERIL": 15,
+    "PUNISH": 3,
+    "RELIEF": 5,
+    "RESCUE": 4,
+    "REVELATION": 3,
+    "ROMANCE": 3
+  },
+  "episode_function": "금영·열이의 공모로 장금을 중전 신임 오용 혐의로 징계·역병 지역 추방(A). 역병 마을에서도 열이·정윤수가 소개령을 이용해 장금을 마을 안에 봉쇄(B). 약재 구하러 나간 장금이 배신을 깨닫고 고립(C). 민정호가 경계를 돌파해 장금을 찾아오며 '버려짐'을 위로하는 엔딩(D). 연생의 중종 재회 서브플롯 삽입.",
+  "by": "sonnet-4.6"
+}
