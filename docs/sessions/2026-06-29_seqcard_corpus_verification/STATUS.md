@@ -33,3 +33,10 @@
 
 ## episode_function 진화 thesis (1화→7화)
 1화 ESTABLISH12 / 2화 CONFLICT17·PERIL14·REVELATION12 / 3화 ESTABLISH14(1년후 리셋) / 4화 REVELATION13+ESTABLISH12 / 5화 REVELATION16=ESTABLISH16+PERIL8 / 6화 REVELATION19(단독최다)+RESCUE5(신규)+PERIL10 / **7화 REVELATION12+ESTABLISH10=RESCUE10(5→10 증폭)+PERIL8 앙상블(이봉 구조)**. '보조 함수가 회차마다 교체'된다는 thesis 재강화.
+
+## 진행 갱신 (2026-06-29, Cowork Opus 오케 + Sonnet 4.6 저작)
+- ★싸인_03 재생성 완료 — 전 52씬(절단 해소, by=sonnet-4.6).
+- ★싸인 08·09·10·11·12 SeqCard 신규 완성 (by=sonnet-4.6): 08=49 / 09=57 / 10=56 / 11=71 / 12=62씬. null-free, episode_meta 포함.
+- **싸인 현황: 01~12화 완성** (01·02·04~07=opus_reading, 03·08~12=sonnet-4.6). 잔여 = 13~20화 + series_arc.json.
+- 방식: Cowork(Opus) 오케스트레이터가 원본(original_extracted/싸인_NN.txt) 배정 → Sonnet 4.6 서브에이전트 정독 저작(세션별 누적). 사용자 지시 "Sonnet 4.6 높은 모드".
+- 다음 배치: 싸인 13~16 → 17~20(20부 마커 '씬/N' 0개라 형식 별도 확인 필요) → 완주 후 series_arc.json → κ게이트.

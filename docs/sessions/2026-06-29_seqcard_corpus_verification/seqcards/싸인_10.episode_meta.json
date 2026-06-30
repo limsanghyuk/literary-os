@@ -1,0 +1,24 @@
+{
+  "work_id": "싸인",
+  "episode": "10",
+  "scene_count": 56,
+  "core_dist": {
+    "ESTABLISH": 7,
+    "DESIRE": 7,
+    "ORACLE": 4,
+    "PERIL": 9,
+    "BOND": 6,
+    "REVERSAL": 3,
+    "CONFLICT": 2,
+    "LOSS": 1,
+    "REVELATION": 5,
+    "HOOK": 3,
+    "RESCUE": 3,
+    "RELIEF": 2,
+    "PUNISH": 2,
+    "REUNION": 2
+  },
+  "core_dist_total_check": 56,
+  "episode_function": "블라인드 혈흔·군번 음각이라는 우연한 증거로 저스틴을 체포하고 다경을 복직시키는 해결-회복 회차. 조작 함정 폭로(반전)→추격 체포(구출)→다경 복귀(재결합) 구조이며, 20년 전 의문사 다큐로 다음 시즌 갈등의 씨앗을 심는 HOOK 엔딩으로 마감된다.",
+  "by": "sonnet-4.6"
+}

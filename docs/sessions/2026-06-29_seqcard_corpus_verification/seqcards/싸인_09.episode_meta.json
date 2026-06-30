@@ -1,0 +1,21 @@
+{
+  "work_id": "싸인",
+  "episode": "09",
+  "scene_count": 57,
+  "core_dist": {
+    "CONFLICT": 11,
+    "PERIL": 8,
+    "ESTABLISH": 7,
+    "REVELATION": 7,
+    "BOND": 6,
+    "ORACLE": 3,
+    "DESIRE": 10,
+    "HOOK": 1,
+    "RELIEF": 1,
+    "REVERSAL": 1,
+    "LOSS": 2
+  },
+  "core_dist_total_check": 57,
+  "episode_function": "위법 부검과 파라블럼탄 적출로 미군 범행을 입증하는 결정적 행동 회차. 지훈의 이명한 압박(선전포고)→다경의 불법 부검 결행→탄환 적출→해임이라는 3단 갈등 상승이 구조적 축을 이루며, 지훈-다경 신뢰 관계가 '첫 부검 축하' 장면에서 정점에 달한다.",
+  "by": "sonnet-4.6"
+}

@@ -1,0 +1,20 @@
+{
+  "work_id": "싸인_11",
+  "scene_count": 71,
+  "core_dist": {
+    "PERIL": 19,
+    "ESTABLISH": 15,
+    "CONFLICT": 15,
+    "HOOK": 14,
+    "REVELATION": 13,
+    "DESIRE": 13,
+    "LOSS": 12,
+    "BOND": 11,
+    "ORACLE": 11,
+    "REVERSAL": 1,
+    "RELIEF": 1,
+    "PUNISH": 1
+  },
+  "episode_function": "한영그룹 연속 의문사(3건→4건)를 통해 20년 전 아버지 타살 의혹이 불거지고, 국가기록원에서 정병도 서명 부검소견서 발견으로 신뢰 붕괴가 시작된다. 정병도의 목맴 자살로 클라이맥스 도달.",
+  "by": "sonnet-4.6"
+}

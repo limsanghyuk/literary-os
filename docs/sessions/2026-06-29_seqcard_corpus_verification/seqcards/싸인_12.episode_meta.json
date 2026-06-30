@@ -1,0 +1,22 @@
+{
+  "work_id": "싸인_12",
+  "scene_count": 62,
+  "core_dist": {
+    "ORACLE": 18,
+    "LOSS": 17,
+    "CONFLICT": 17,
+    "REVELATION": 14,
+    "ESTABLISH": 9,
+    "PERIL": 9,
+    "DESIRE": 8,
+    "BOND": 7,
+    "PUNISH": 6,
+    "HOOK": 6,
+    "RESCUE": 3,
+    "REVERSAL": 2,
+    "REUNION": 1,
+    "RELIEF": 1
+  },
+  "episode_function": "정병도 장례 이후 지훈이 20년 전 안티몬 독살 전모를 밝히고, 정차영 체포·시민위원회 회부로 현재 사건이 해결된다. 그러나 지훈이 증인석에서 한태주를 '자연사'로 번복해 진실/명예 사이의 윤리 딜레마를 열린 결말로 남긴다.",
+  "by": "sonnet-4.6"
+}

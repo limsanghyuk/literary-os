@@ -1,0 +1,22 @@
+{
+  "work_id": "싸인_08",
+  "scene_count": 49,
+  "core_dist": {
+    "RESCUE": 2,
+    "REUNION": 1,
+    "ESTABLISH": 9,
+    "BOND": 2,
+    "REVERSAL": 2,
+    "RELIEF": 5,
+    "ORACLE": 6,
+    "REVELATION": 4,
+    "PERIL": 6,
+    "CONFLICT": 3,
+    "DESIRE": 1,
+    "LOSS": 4,
+    "ROMANCE": 3,
+    "HOOK": 1
+  },
+  "episode_function": "일본 일제강점기 백골사체 신원 규명(결핵 아키짱, 이름 불명)으로 역사적 비극을 마무리하는 동시에, 강서연의 일본 현출로 서윤형 사건 재점화와 주범 추격을 시작하며 국내 총기사건 진실 라인을 병렬 개시한다.",
+  "by": "sonnet-4.6"
+}
