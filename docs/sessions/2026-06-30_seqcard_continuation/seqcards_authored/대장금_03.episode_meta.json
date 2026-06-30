@@ -1,0 +1,19 @@
+{
+  "work_id": "대장금_03",
+  "scene_count": 61,
+  "core_dist": {
+    "LOSS": 4,
+    "ESTABLISH": 10,
+    "DESIRE": 10,
+    "CONFLICT": 6,
+    "PERIL": 12,
+    "BOND": 7,
+    "REVELATION": 4,
+    "HOOK": 2,
+    "ORACLE": 2,
+    "REVERSAL": 2,
+    "INTRO": 2
+  },
+  "episode_function": "고아가 된 장금의 유랑·덕구 가족과의 인연→중종반정 술병 전달 역할→반정 성공 후 훈육상궁의 궁녀 발탁→생각시 입궁 및 영로의 신분 차별 갈등→야밤 퇴선간 침입과 한상궁 발각 직전까지. 장금이 어머니 유언(수랏간 최고상궁)을 향해 첫 발을 내딛는 입궁 이행 에피소드. PERIL·DESIRE·ESTABLISH가 핵심 기능축.",
+  "by": "sonnet-4.6"
+}
