@@ -109,12 +109,23 @@
     "PERIL": 121
    },
    "CONFLICT_persist": 0.258
+  },
+  "최강칠우": {
+   "eps": 20,
+   "scenes": 1398,
+   "top": {
+    "PERIL": 361,
+    "REVELATION": 170,
+    "CONFLICT": 155,
+    "ORACLE": 121
+   },
+   "CONFLICT_persist": 0.252
   }
  },
  "totals": {
-  "series_count": 10,
-  "eps": 215,
-  "scenes": 14738
+  "series_count": 11,
+  "eps": 235,
+  "scenes": 16136
  },
- "note": "10시리즈 장르별 core분포+CONFLICT지속률 (2026-07-01 갱신: 시티헌터20/경성스캔들16/워킹맘16 완주 반영, 목표 최소50시리즈 중 10 착수)"
+ "note": "11시리즈 장르별 core분포+CONFLICT지속률 (2026-07-01 갱신: 최강칠우 20/20 완주 반영, 목표 최소50시리즈 중 11 착수 — 모래시계24/역전의여왕31 원본확보·저작대기)"
 }
