@@ -138,3 +138,16 @@
    "top": {
     "CONFLICT": 380,
     "REVELATION": 268,
+    "LOSS": 175,
+    "PERIL": 164
+   },
+   "CONFLICT_persist": 0.263
+  }
+ },
+ "totals": {
+  "series_count": 13,
+  "eps": 290,
+  "scenes": 19376
+ },
+ "note": "13시리즈 장르별 core분포+CONFLICT지속률 (2026-07-01 갱신: 모래시계24/24·역전의여왕31/31 완주 반영, 목표 최소50시리즈 중 13 착수, 정치느와르+오피스로맨스 장르 추가)"
+}
