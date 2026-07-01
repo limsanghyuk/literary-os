@@ -1,0 +1,22 @@
+{
+  "work_id": "모래시계_04",
+  "scene_count": 66,
+  "core_dist": {
+    "ESTABLISH": 6,
+    "REVELATION": 5,
+    "HOOK": 5,
+    "BOND": 5,
+    "RELIEF": 4,
+    "CONFLICT": 10,
+    "ROMANCE": 5,
+    "DESIRE": 2,
+    "PERIL": 10,
+    "REVERSAL": 3,
+    "PUNISH": 4,
+    "ORACLE": 1,
+    "LOSS": 4,
+    "RESCUE": 2
+  },
+  "episode_function": "노주명의 카지노를 빼앗으려는 장도식의 기획이 태수의 단독 기습으로 실행되어 종도의 배신적 칼부림으로 승리하지만 성범에게 응징당하고 노주명의 표적이 되며, 한편 우석은 사법고시 시험 중 태수를 구하러 뛰쳐나가 시험을 포기함으로써 두 주인공의 우정과 희생이 정치느와르 플롯과 청춘멜로 플롯을 동시에 전진시킨다.",
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,22 @@
+{
+  "work_id": "모래시계_15",
+  "scene_count": 63,
+  "core_dist": {
+    "ESTABLISH": 11,
+    "ORACLE": 12,
+    "REVELATION": 11,
+    "PERIL": 7,
+    "DESIRE": 6,
+    "CONFLICT": 4,
+    "RESCUE": 3,
+    "LOSS": 2,
+    "INTRO": 2,
+    "REUNION": 1,
+    "HOOK": 1,
+    "PUNISH": 1,
+    "REVERSAL": 1,
+    "BOND": 1
+  },
+  "episode_function": "박회장이 이권 다툼 끝에 청부살해당하며 시작된 사건을 우석이 집요하게 추적해 배후로 윤재용 회장을 지목하는 데 성공하지만, 그 과정이 지나치게 순조로워 자신이 더 큰 정치적 암투에 이용당하고 있다는 의구심에 부딪힌다. 동시에 태수-우석-혜린-재희의 얽힌 관계가 재확인되고, 종도의 배신과 혜린 납치극이 겹치며 회차 말미 재희의 활약으로 위기가 겨우 봉합된다.",
+  "by": "sonnet_reading"
+}

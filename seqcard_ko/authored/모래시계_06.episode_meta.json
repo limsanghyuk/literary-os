@@ -1,0 +1,21 @@
+{
+  "work_id": "모래시계_06",
+  "scene_count": 81,
+  "core_dist": {
+    "ESTABLISH": 10,
+    "BOND": 6,
+    "CONFLICT": 16,
+    "PERIL": 18,
+    "RELIEF": 4,
+    "ORACLE": 4,
+    "DESIRE": 6,
+    "REVELATION": 4,
+    "LOSS": 2,
+    "PUNISH": 5,
+    "RESCUE": 2,
+    "REUNION": 1,
+    "HOOK": 3
+  },
+  "episode_function": "정일노조 신민당사 농성이 태수패와 경찰의 합동 진압으로 참혹하게 무너지며 태수와 혜린이 최악의 순간에 재회하는 전반부, 그리고 1980년 서울의 봄과 5월 계엄 확대 속에서 재희가 혜린을 구출하고 태수는 광주에서 잠시 안식을 얻지만 계엄군 출동으로 위기가 재점화되는 후반부로 구성된다. 세 남녀 주인공(태수·혜린·재희)의 얽힌 인연이 시대의 폭력 앞에서 재구축되는 6화이다.",
+  "by": "sonnet_reading"
+}

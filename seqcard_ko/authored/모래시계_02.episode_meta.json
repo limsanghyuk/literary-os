@@ -1,0 +1,24 @@
+{
+  "work_id": "모래시계_02",
+  "scene_count": 59,
+  "core_dist": {
+    "ESTABLISH": 3,
+    "INTRO": 3,
+    "CONFLICT": 6,
+    "PERIL": 11,
+    "HOOK": 6,
+    "ROMANCE": 3,
+    "BOND": 4,
+    "RESCUE": 3,
+    "REVELATION": 2,
+    "LOSS": 5,
+    "REVERSAL": 2,
+    "ORACLE": 4,
+    "RELIEF": 4,
+    "PUNISH": 1,
+    "REUNION": 1,
+    "DESIRE": 1
+  },
+  "episode_function": "우석과 혜린의 첫 만남과 연애 감정이 싹트는 현재 서사와, 부친의 억울한 절도 누명·야반도주·판사가 되라는 유훈, 그리고 태수와의 우정이 계급 차이로 단절되는 두 개의 대규모 회상이 교차한다. 우석이라는 인물의 원칙주의와 정의감의 뿌리를 과거에서 규명하는 동시에, 현재의 유신 반대 시위 국면 속에서 혜린을 위험에서 구해내며 두 사람의 유대를 다지는 것으로 2화가 마무리된다.",
+  "by": "sonnet_reading"
+}
