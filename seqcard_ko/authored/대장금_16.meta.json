@@ -1,0 +1,28 @@
+{
+  "work_id": "대장금_16",
+  "total_scenes": 87,
+  "core_dist": {
+    "CONFLICT": 21,
+    "ESTABLISH": 11,
+    "LOSS": 8,
+    "BOND": 7,
+    "ROMANCE": 7,
+    "DESIRE": 6,
+    "REVELATION": 5,
+    "PERIL": 4,
+    "PUNISH": 3,
+    "ORACLE": 3,
+    "REVERSAL": 3,
+    "RELIEF": 3,
+    "RESCUE": 3,
+    "HOOK": 2,
+    "INTRO": 1
+  },
+  "dominant_cores": [
+    "CONFLICT",
+    "ESTABLISH",
+    "LOSS"
+  ],
+  "episode_function": "패배→정성 각성: 장금이 1차 경합 패배 후 운암사에서 처사를 통해 '비법은 정성'임을 깨닫는 전체 호. 훈육·이별·위기·발견·로맨스 복선 설정.",
+  "authored_by": "sonnet-4.6"
+}

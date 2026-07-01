@@ -1,0 +1,27 @@
+{
+  "work_id": "대장금_17",
+  "total_scenes": 62,
+  "core_dist": {
+    "CONFLICT": 11,
+    "LOSS": 8,
+    "RELIEF": 7,
+    "DESIRE": 6,
+    "PERIL": 5,
+    "ESTABLISH": 4,
+    "HOOK": 4,
+    "BOND": 4,
+    "REVELATION": 4,
+    "ROMANCE": 3,
+    "REVERSAL": 3,
+    "REUNION": 1,
+    "ORACLE": 1,
+    "PUNISH": 1
+  },
+  "dominant_cores": [
+    "CONFLICT",
+    "LOSS",
+    "RELIEF"
+  ],
+  "episode_function": "이별→음모: 금영의 포기, 민정호 수사 완결, 2차 경합 과제 도입, 정상궁 축출 음모 실행까지. 감정·권력·수사 세 트랙이 교차하며 3막 클리프행어로 마감.",
+  "authored_by": "sonnet-4.6"
+}

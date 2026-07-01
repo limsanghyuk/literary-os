@@ -1,15 +1,15 @@
 {
  "series": {
-  "대장금": {
-   "eps": 54,
-   "scenes": 3630,
+  "싸인": {
+   "eps": 20,
+   "scenes": 1358,
    "top": {
-    "CONFLICT": 679,
-    "PERIL": 483,
-    "ESTABLISH": 429,
-    "DESIRE": 371
+    "ESTABLISH": 218,
+    "REVELATION": 202,
+    "CONFLICT": 172,
+    "PERIL": 164
    },
-   "CONFLICT_persist": 0.323
+   "CONFLICT_persist": 0.233
   },
   "도깨비": {
    "eps": 16,
@@ -22,6 +22,17 @@
    },
    "CONFLICT_persist": 0.159
   },
+  "대장금": {
+   "eps": 54,
+   "scenes": 3630,
+   "top": {
+    "CONFLICT": 679,
+    "PERIL": 483,
+    "ESTABLISH": 429,
+    "DESIRE": 371
+   },
+   "CONFLICT_persist": 0.323
+  },
   "마왕": {
    "eps": 20,
    "scenes": 1585,
@@ -32,6 +43,17 @@
     "ORACLE": 160
    },
    "CONFLICT_persist": 0.178
+  },
+  "하얀거탑": {
+   "eps": 20,
+   "scenes": 1304,
+   "top": {
+    "CONFLICT": 296,
+    "DESIRE": 174,
+    "PERIL": 165,
+    "BOND": 127
+   },
+   "CONFLICT_persist": 0.321
   },
   "미안하다사랑한다": {
    "eps": 16,
@@ -44,39 +66,55 @@
    },
    "CONFLICT_persist": 0.211
   },
-  "싸인": {
-   "eps": 20,
-   "scenes": 1358,
-   "top": {
-    "ESTABLISH": 218,
-    "REVELATION": 202,
-    "CONFLICT": 172,
-    "PERIL": 164
-   },
-   "CONFLICT_persist": 0.233
-  },
   "커피프린스": {
-   "eps": 15,
-   "scenes": 842,
+   "eps": 17,
+   "scenes": 949,
    "top": {
-    "BOND": 134,
-    "CONFLICT": 116,
-    "ROMANCE": 112,
-    "DESIRE": 111
+    "BOND": 152,
+    "CONFLICT": 138,
+    "ROMANCE": 120,
+    "DESIRE": 114
    },
-   "CONFLICT_persist": 0.325
+   "CONFLICT_persist": 0.312
   },
-  "하얀거탑": {
+  "시티헌터": {
    "eps": 20,
-   "scenes": 1304,
+   "scenes": 1365,
    "top": {
-    "CONFLICT": 296,
-    "DESIRE": 174,
-    "PERIL": 165,
-    "BOND": 127
+    "CONFLICT": 241,
+    "PERIL": 203,
+    "REVELATION": 172,
+    "BOND": 96
    },
-   "CONFLICT_persist": 0.317
+   "CONFLICT_persist": 0.174
+  },
+  "경성스캔들": {
+   "eps": 16,
+   "scenes": 1187,
+   "top": {
+    "CONFLICT": 209,
+    "PERIL": 132,
+    "LOSS": 121,
+    "BOND": 111
+   },
+   "CONFLICT_persist": 0.244
+  },
+  "워킹맘": {
+   "eps": 16,
+   "scenes": 1161,
+   "top": {
+    "CONFLICT": 217,
+    "DESIRE": 153,
+    "RELIEF": 129,
+    "PERIL": 121
+   },
+   "CONFLICT_persist": 0.258
   }
  },
- "note": "7시리즈 장르별 core분포+CONFLICT지속률"
+ "totals": {
+  "series_count": 10,
+  "eps": 215,
+  "scenes": 14738
+ },
+ "note": "10시리즈 장르별 core분포+CONFLICT지속률 (2026-07-01 갱신: 시티헌터20/경성스캔들16/워킹맘16 완주 반영, 목표 최소50시리즈 중 10 착수)"
 }
