@@ -1,0 +1,40 @@
+{
+  "work_id": "경성스캔들_03",
+  "title": "경성스캔들",
+  "episode": 3,
+  "genre_skin": "일제강점기 시대극 로맨스",
+  "scene_count": 84,
+  "core_distribution": {
+    "HOOK": 9,
+    "INTRO": 4,
+    "ESTABLISH": 10,
+    "CONFLICT": 17,
+    "REVELATION": 9,
+    "PERIL": 6,
+    "LOSS": 5,
+    "PUNISH": 2,
+    "BOND": 6,
+    "REVERSAL": 1,
+    "RELIEF": 2,
+    "ROMANCE": 5,
+    "DESIRE": 5,
+    "ORACLE": 1,
+    "RESCUE": 2
+  },
+  "core2_distribution": {
+    "HOOK": 6,
+    "ROMANCE": 6,
+    "BOND": 4,
+    "LOSS": 6,
+    "REVELATION": 2,
+    "PUNISH": 2,
+    "REVERSAL": 2,
+    "CONFLICT": 1,
+    "INTRO": 1,
+    "PERIL": 2,
+    "DESIRE": 1
+  },
+  "split_pattern": "(?m)^\\s*((?:씬\\s*/?|[Ss]\\s*#|#)\\s*\\d+)",
+  "source_file": "경성스캔들_03.txt",
+  "authored_by": "sonnet_reading"
+}

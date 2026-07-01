@@ -1,0 +1,22 @@
+{
+  "work_id": "시티헌터_04",
+  "scene_count": 73,
+  "core_dist": {
+    "PERIL": 12,
+    "LOSS": 11,
+    "REVELATION": 10,
+    "CONFLICT": 9,
+    "ORACLE": 7,
+    "BOND": 5,
+    "HOOK": 5,
+    "RESCUE": 5,
+    "RELIEF": 3,
+    "ESTABLISH": 2,
+    "PUNISH": 1,
+    "REUNION": 1,
+    "DESIRE": 1,
+    "REVERSAL": 1
+  },
+  "episode_function": "진표가 서용학을 28년 전 오인 중 최유력 용의자로 지목해 저격까지 시도하지만 정전으로 실패하며 부자간 복수방식 대립이 행동으로 격화되고, 경희와 응찬·진표의 재회로 출생의 비밀이 조각조각 드러나며, 나나의 경매·눈물과 윤성의 동요로 로맨스가 심화되고 영주-윤성의 삼각 구도가 선물 경쟁으로 표면화된다",
+  "by": "sonnet_reading"
+}

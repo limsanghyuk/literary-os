@@ -1,0 +1,24 @@
+{
+  "work_id": "시티헌터_02",
+  "scene_count": 70,
+  "core_dist": {
+    "ESTABLISH": 10,
+    "ORACLE": 5,
+    "INTRO": 1,
+    "BOND": 4,
+    "CONFLICT": 12,
+    "REVERSAL": 1,
+    "LOSS": 4,
+    "PUNISH": 2,
+    "REVELATION": 9,
+    "REUNION": 2,
+    "RELIEF": 6,
+    "ROMANCE": 1,
+    "PERIL": 7,
+    "RESCUE": 3,
+    "DESIRE": 2,
+    "HOOK": 1
+  },
+  "episode_function": "청와대 취업 초기 윤성-나나의 애증 관계를 다지며 이경완의 뇌물·결식아동보조금 비리를 수첩 탈취, 도청, 장부 복원, 통화 녹음 등 시티헌터의 액션으로 파헤쳐 검찰에 결정적 증거를 넘기지만, 국회 표결에서 정치권력이 사법정의를 뒤집는 반전으로 끝나 윤성의 복수 결의를 다음 화로 강하게 이어간다.",
+  "by": "sonnet_reading"
+}

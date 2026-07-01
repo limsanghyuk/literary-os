@@ -1,0 +1,24 @@
+{
+  "work_id": "시티헌터_01",
+  "scene_count": 83,
+  "core_dist": {
+    "ESTABLISH": 15,
+    "ORACLE": 3,
+    "INTRO": 2,
+    "BOND": 7,
+    "CONFLICT": 9,
+    "REVERSAL": 0,
+    "LOSS": 7,
+    "PUNISH": 1,
+    "REVELATION": 4,
+    "REUNION": 0,
+    "RELIEF": 2,
+    "ROMANCE": 1,
+    "PERIL": 16,
+    "RESCUE": 4,
+    "DESIRE": 9,
+    "HOOK": 3
+  },
+  "episode_function": "1983년 아웅산 테러의 배신으로 아버지와 전우들을 잃은 이진표가 친구의 아들 윤성을 복수의 도구로 키워내는 17년의 과거사를 압축 제시하고, 성인이 된 윤성이 위장 신분으로 서울에 잠입해 복수를 개시하는 동시에 훗날의 연인이자 조력자가 될 나나와 운명적으로 얽히기 시작하는 지점까지 이르는 시리즈 전체의 기원 서사이자 첫 회 훅을 완성한다.",
+  "by": "sonnet_reading"
+}
