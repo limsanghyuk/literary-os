@@ -1,0 +1,19 @@
+{
+  "work_id": "싸인_11",
+  "scene_count": 71,
+  "core_dist": {
+    "ESTABLISH": 9,
+    "BOND": 7,
+    "PERIL": 9,
+    "LOSS": 7,
+    "ORACLE": 5,
+    "CONFLICT": 9,
+    "INTRO": 1,
+    "DESIRE": 9,
+    "REVELATION": 10,
+    "RELIEF": 1,
+    "HOOK": 4
+  },
+  "episode_function": "20년 전 한영그룹 연속 의문사 은폐 진실이 복수의 수사선에서 동시에 폭로되며 정병도의 자멸로 수렴하는 폭로·붕괴의 회차",
+  "by": "sonnet_reading"
+}

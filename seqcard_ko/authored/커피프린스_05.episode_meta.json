@@ -1,0 +1,22 @@
+{
+  "work_id": "커피프린스_05",
+  "scene_count": 61,
+  "core_dist": {
+    "BOND": 13,
+    "ROMANCE": 10,
+    "RELIEF": 8,
+    "ESTABLISH": 7,
+    "DESIRE": 6,
+    "REVERSAL": 4,
+    "CONFLICT": 3,
+    "PERIL": 3,
+    "REVELATION": 2,
+    "LOSS": 1,
+    "RESCUE": 1,
+    "REUNION": 1,
+    "PUNISH": 1,
+    "ORACLE": 1
+  },
+  "episode_function": "한성-은찬 새벽 전화로 로맨스 감정선을 세우는 동시에 사과농장 단합대회로 프린스 팀 결속을 극대화하고, 은찬 변신 엔딩으로 외향 로맨스 갈등을 가속한다",
+  "by": "sonnet_reading"
+}

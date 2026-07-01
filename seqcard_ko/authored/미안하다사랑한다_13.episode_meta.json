@@ -1,0 +1,20 @@
+{
+  "work_id": "미안하다사랑한다_13",
+  "scene_count": 97,
+  "core_dist": {
+    "BOND": 16,
+    "CONFLICT": 10,
+    "DESIRE": 11,
+    "ESTABLISH": 2,
+    "HOOK": 5,
+    "LOSS": 21,
+    "PERIL": 15,
+    "PUNISH": 5,
+    "RELIEF": 1,
+    "RESCUE": 2,
+    "REUNION": 1,
+    "REVELATION": 8
+  },
+  "episode_function": "진실 폭로 이후 은채의 감금·탈출·재회를 거쳐 무혁이 장기 기증을 선언하고 이복 형제임을 고백하는 파국으로의 가속 회차",
+  "by": "sonnet_reading"
+}

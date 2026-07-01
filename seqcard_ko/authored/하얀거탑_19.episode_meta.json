@@ -1,0 +1,21 @@
+{
+  "work_id": "하얀거탑",
+  "scene_count": 74,
+  "core_dist": {
+    "REVERSAL": 6,
+    "BOND": 30,
+    "ESTABLISH": 15,
+    "PERIL": 29,
+    "CONFLICT": 16,
+    "ORACLE": 11,
+    "LOSS": 14,
+    "DESIRE": 3,
+    "RELIEF": 4,
+    "RESCUE": 1,
+    "REUNION": 1,
+    "REVELATION": 3,
+    "HOOK": 1
+  },
+  "episode_function": "준혁이 도영에게 환자로 찾아가 EUS 검사를 받고, 이주완이 집도하는 수술이 시작되며 '그만 닫지'라는 선언으로 복막파종 말기가 확정되는 비극의 정점 회차다.",
+  "by": "sonnet_reading"
+}

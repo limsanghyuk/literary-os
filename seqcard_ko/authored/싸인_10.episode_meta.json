@@ -1,0 +1,22 @@
+{
+  "work_id": "싸인_10",
+  "scene_count": 56,
+  "core_dist": {
+    "BOND": 5,
+    "CONFLICT": 4,
+    "DESIRE": 5,
+    "ESTABLISH": 5,
+    "HOOK": 3,
+    "LOSS": 1,
+    "ORACLE": 4,
+    "PERIL": 7,
+    "PUNISH": 1,
+    "RELIEF": 3,
+    "RESCUE": 3,
+    "REUNION": 2,
+    "REVELATION": 7,
+    "REVERSAL": 6
+  },
+  "episode_function": "위기의 진실 추적: 조작된 현장을 뚫고 진범을 특정·응징하며 다경의 공포 극복과 복직으로 팀 재결합을 완성하고, 20년 전 의문사 복선으로 다음 국면을 열다",
+  "by": "sonnet_reading"
+}

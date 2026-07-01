@@ -1,0 +1,23 @@
+{
+  "work_id": "마왕",
+  "episode": 16,
+  "title": "불신과 배신이 친구들을 지옥문으로 인도한다",
+  "scene_count": 97,
+  "by": "sonnet-4.6",
+  "episode_function": "복수 실행(순기 사망)+자중지란 실현+최종 발각 직전",
+  "core_dist": {
+    "PERIL": 20,
+    "CONFLICT": 18,
+    "ORACLE": 14,
+    "DESIRE": 13,
+    "ESTABLISH": 6,
+    "PUNISH": 6,
+    "LOSS": 6,
+    "REVELATION": 5,
+    "REVERSAL": 3,
+    "ROMANCE": 3,
+    "BOND": 2,
+    "RELIEF": 1
+  },
+  "notes": "씬73-1=서브씬 포함 scene_no=74로 처리(scene_no 1부터 순번 부여). 씬91=순기 독살(핵심 LOSS). 씬96=포토메일로 확인(REVELATION). 씬97=승하 엔딩(LOSS+HOOK). 16화 서브씬 73-1 포함 총97씬."
+}

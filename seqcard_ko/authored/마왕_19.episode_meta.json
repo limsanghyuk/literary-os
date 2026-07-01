@@ -1,0 +1,46 @@
+{
+  "work_id": "마왕",
+  "episode": 19,
+  "total_scenes": 73,
+  "source_file": "마왕_19.txt",
+  "note": "[2026-06-30 정정] 이전 '마왕_20.txt 없음' 판단은 오류—원본 80씬 존재 확인, 20화 저작 완주(by=opus_reading).",
+  "episode_title": "당신의 친구는 오이디푸스의 의무를 다할겁니다",
+  "episode_function": "석진 거짓자백→나희 알리바이 진술→형 희수가 범인임을 확인하는 이중 REVELATION 화. 오수의 내적 갈등 정점. 영철 압수수색 및 추격으로 엔딩.",
+  "core_dist": {
+    "ESTABLISH": 12,
+    "REVELATION": 12,
+    "PERIL": 11,
+    "CONFLICT": 10,
+    "HOOK": 7,
+    "BOND": 7,
+    "DESIRE": 3,
+    "REVERSAL": 3,
+    "LOSS": 3,
+    "ORACLE": 2,
+    "ROMANCE": 1,
+    "RESCUE": 1,
+    "RELIEF": 1
+  },
+  "core2_dist": {
+    "PERIL": 12,
+    "BOND": 11,
+    "HOOK": 11,
+    "LOSS": 9,
+    "CONFLICT": 8,
+    "ESTABLISH": 8,
+    "REVERSAL": 3,
+    "REVELATION": 3,
+    "DESIRE": 2,
+    "ORACLE": 2,
+    "ROMANCE": 1,
+    "REUNION": 1
+  },
+  "key_functions": [
+    "REVELATION(x12)—희수 범인 특정",
+    "PERIL(x11)—수사망 포위",
+    "CONFLICT(x10)—형제/법리/감정 대결",
+    "HOOK(x7)—영철 추격 엔딩"
+  ],
+  "authored_by": "sonnet-4.6",
+  "authored_date": "2026-06-30"
+}

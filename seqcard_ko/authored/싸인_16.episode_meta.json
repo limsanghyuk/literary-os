@@ -1,0 +1,19 @@
+{
+  "work_id": "싸인_16",
+  "scene_count": 68,
+  "core_dist": {
+    "CONFLICT": 9,
+    "REVELATION": 13,
+    "ORACLE": 5,
+    "ESTABLISH": 9,
+    "PERIL": 7,
+    "DESIRE": 4,
+    "REVERSAL": 8,
+    "LOSS": 4,
+    "HOOK": 3,
+    "BOND": 1,
+    "RESCUE": 5
+  },
+  "episode_function": "공개토론 패배와 여론 역전으로 정의가 거듭 좌절되나, 주선우의 유언 편지가 파란 쿠션의 진실을 열어 종반 반격을 점화하는 전환 회차",
+  "by": "opus_reading"
+}

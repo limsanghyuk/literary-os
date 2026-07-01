@@ -1,0 +1,38 @@
+{
+  "work_id": "도깨비",
+  "episode": "05",
+  "scene_count": 55,
+  "core_dist": {
+    "ROMANCE": 13,
+    "BOND": 10,
+    "CONFLICT": 8,
+    "ESTABLISH": 8,
+    "LOSS": 3,
+    "REVELATION": 3,
+    "DESIRE": 3,
+    "PERIL": 2,
+    "REVERSAL": 1,
+    "RESCUE": 1,
+    "RELIEF": 1,
+    "REUNION": 1,
+    "ORACLE": 1
+  },
+  "core_dist_incl_secondary": {
+    "BOND": 19,
+    "ROMANCE": 18,
+    "CONFLICT": 17,
+    "DESIRE": 13,
+    "ESTABLISH": 12,
+    "RELIEF": 9,
+    "LOSS": 9,
+    "REVELATION": 3,
+    "PERIL": 2,
+    "HOOK": 2,
+    "REVERSAL": 1,
+    "RESCUE": 1,
+    "REUNION": 1,
+    "ORACLE": 1
+  },
+  "episode_function": "동거 정착·일상 친밀도 축적·10년 후 미래 목격(S#55)으로 마감하는 관계 심화 에피소드. ROMANCE·BOND의 일상 계층이 두껍게 쌓이는 가운데, ORACLE(미래 목격)과 LOSS(도깨비 부재 확인)가 엔딩에서 충돌하며 죽음 결심을 예고한다. 저승-써니 첫 전화(S#52)와 이름 상담(S#40)으로 부관계 가속.",
+  "by": "sonnet-4.6"
+}

@@ -1,0 +1,21 @@
+{
+  "work_id": "하얀거탑",
+  "scene_count": 86,
+  "core_dist": {
+    "CONFLICT": 36,
+    "DESIRE": 11,
+    "PERIL": 7,
+    "PUNISH": 5,
+    "BOND": 5,
+    "LOSS": 5,
+    "ORACLE": 5,
+    "ESTABLISH": 4,
+    "REVELATION": 3,
+    "REVERSAL": 2,
+    "INTRO": 1,
+    "RESCUE": 1,
+    "HOOK": 1
+  },
+  "episode_function": "소송이 법정 공방과 증인 조작으로 진행되는 동안 병원 조직이 도영을 연수로 배제하고 순일 처를 특실 회유로 무너뜨려 유가족이 소를 취하하기 직전까지 몰리지만, 도영이 연수 서류를 찢고 준혁을 뿌리치며 김훈 사무실로 밀고 들어감으로써 굴복 대신 저항을 선택하는 전환점 회차.",
+  "by": "sonnet_reading"
+}

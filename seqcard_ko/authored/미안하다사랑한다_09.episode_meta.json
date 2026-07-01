@@ -1,0 +1,21 @@
+{
+  "work_id": "미안하다사랑한다_09",
+  "episode": 9,
+  "scene_count": 85,
+  "episode_function": "윤 교통사고 후 생사 위기·회복, 은채의 죄책감 마비, 무혁의 죽음 예고(두통·코피)가 삼중으로 전개되는 감정 밀도 최고 회차. CONFLICT 12·LOSS 12·PERIL 10이 삼각축을 이루며 비극 국면을 견인하고, DESIRE 10·ROMANCE 6이 무혁-은채 감정선 진전을 담보한다. 민현석의 출생 비밀 폭로(REVELATION 7)와 무혁 정체 해제(엘리베이터)가 정보 전환점. 끝 씬 코피 PERIL이 무혁의 죽음 예고를 엔딩 훅으로 확정.",
+  "core_dist": {
+    "BOND": 9,
+    "CONFLICT": 12,
+    "DESIRE": 10,
+    "ESTABLISH": 10,
+    "HOOK": 2,
+    "LOSS": 12,
+    "ORACLE": 2,
+    "PERIL": 10,
+    "PUNISH": 2,
+    "RELIEF": 1,
+    "RESCUE": 2,
+    "REVELATION": 7,
+    "ROMANCE": 6
+  }
+}

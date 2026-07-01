@@ -1,0 +1,25 @@
+{
+  "work_id": "대장금_32",
+  "episode_no": 32,
+  "scene_count": 68,
+  "episode_function": "장금 이적행위 혐의 위기를 중종의 역린으로 해소하고, 도창법으로 신동 지함을 치료하며 의녀로서의 능력을 입증한다. 마지막에 의녀 시험 합격과 전의감 수련 진입이라는 새로운 상승 동력을 확보하되, 신익필의 적대 선언으로 다음 화 갈등을 예고한다.",
+  "core_dist": {
+    "CONFLICT": 17,
+    "DESIRE": 16,
+    "ESTABLISH": 13,
+    "BOND": 11,
+    "PERIL": 7,
+    "LOSS": 7,
+    "ORACLE": 6,
+    "RELIEF": 6,
+    "REVERSAL": 5,
+    "HOOK": 4,
+    "REVELATION": 4,
+    "RESCUE": 3,
+    "ROMANCE": 3,
+    "PUNISH": 1,
+    "REUNION": 1
+  },
+  "authored_by": "sonnet-4.6",
+  "authored_date": "2026-06-30"
+}

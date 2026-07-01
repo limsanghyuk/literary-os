@@ -1,0 +1,19 @@
+{
+  "work_id": "싸인_12",
+  "scene_count": 62,
+  "core_dist": {
+    "ESTABLISH": 10,
+    "ORACLE": 6,
+    "LOSS": 7,
+    "PERIL": 6,
+    "REVELATION": 12,
+    "CONFLICT": 6,
+    "DESIRE": 6,
+    "REVERSAL": 4,
+    "HOOK": 1,
+    "PUNISH": 3,
+    "BOND": 1
+  },
+  "episode_function": "정병도의 죽음이 남긴 진실과 은폐의 충돌—안티몬 독살 체계의 폭로와 지훈의 응징 vs 침묵 선택이 교차하며 법의학 정의의 한계를 시험하는 회",
+  "by": "sonnet_reading"
+}

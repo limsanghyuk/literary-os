@@ -1,0 +1,18 @@
+{
+  "work_id": "싸인_02",
+  "scene_count": 74,
+  "core_dist": {
+    "ESTABLISH": 15,
+    "CONFLICT": 17,
+    "PERIL": 14,
+    "REVELATION": 12,
+    "BOND": 2,
+    "LOSS": 5,
+    "DESIRE": 3,
+    "HOOK": 2,
+    "REVERSAL": 3,
+    "PUNISH": 1
+  },
+  "episode_function": "서윤형 사건의 타살 정황과 은폐 세력을 부각해 지훈·다경의 진실 추적과 권력형 비리 대결 구도를 본격 가동하는 회차",
+  "by": "opus_reading"
+}

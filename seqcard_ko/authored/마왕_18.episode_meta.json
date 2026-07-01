@@ -1,0 +1,22 @@
+{
+  "work_id": "마왕",
+  "episode": 18,
+  "title": "눈에 보이는 것과 보이지 않는 것",
+  "scene_count": 67,
+  "by": "sonnet-4.6",
+  "episode_function": "승하 변호인 침투+해인 정태성 인정+오수 협력구도+석진-나희 불륜 폭로(오수 붕괴)",
+  "core_dist": {
+    "CONFLICT": 13,
+    "PERIL": 11,
+    "DESIRE": 9,
+    "ROMANCE": 9,
+    "LOSS": 8,
+    "REVELATION": 6,
+    "ORACLE": 5,
+    "ESTABLISH": 2,
+    "REVERSAL": 2,
+    "RELIEF": 1,
+    "BOND": 1
+  },
+  "notes": "씬1~2 전회연결(2씬). 씬16=승하-오수 협력선언(핵심 반전). 씬36=광두 승희 방문(정태성 확인 시도). 씬53=성당 씬(해인 고백+승하 거부). 씬63=한강 둔치(증거 암시). 씬64=나희-석진 불륜 오수 인식(최종 REVELATION). 씬67=엔딩 오수 붕괴(HOOK)."
+}

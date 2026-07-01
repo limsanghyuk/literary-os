@@ -1,0 +1,23 @@
+{
+  "work_id": "싸인_19",
+  "scene_count": 67,
+  "core_dist": {
+    "ESTABLISH": 11,
+    "ORACLE": 6,
+    "REVELATION": 6,
+    "PERIL": 6,
+    "ROMANCE": 6,
+    "BOND": 5,
+    "CONFLICT": 5,
+    "LOSS": 4,
+    "RELIEF": 4,
+    "HOOK": 4,
+    "PUNISH": 3,
+    "DESIRE": 3,
+    "REVERSAL": 2,
+    "RESCUE": 1,
+    "REUNION": 1
+  },
+  "episode_function": "국과수 이탈·서윤형 사건 정면 충돌로 최종 대결 직전 전열을 재편하는 결전 전야 회차",
+  "by": "sonnet_reading"
+}

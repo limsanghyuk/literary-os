@@ -1,0 +1,23 @@
+{
+  "work_id": "대장금_33",
+  "episode_no": 33,
+  "scene_count": 53,
+  "episode_function": "신익필의 체계적 배제라는 교육적 억압을 정면으로 다룬다. 장금이 연회 거부·봉사 자청·겸손 깨달음의 세 단계를 거쳐 내적 성장을 이루고, 동병이치·이병동치 발표로 의학적 깊이를 증명하지만 세 번째 불통 직전이라는 긴장으로 엔딩된다. 민정호의 연대 구축 서사가 병행된다.",
+  "core_dist": {
+    "CONFLICT": 23,
+    "DESIRE": 15,
+    "ESTABLISH": 10,
+    "BOND": 7,
+    "LOSS": 6,
+    "REVERSAL": 5,
+    "REVELATION": 5,
+    "RELIEF": 4,
+    "PERIL": 4,
+    "HOOK": 2,
+    "PUNISH": 2,
+    "INTRO": 1,
+    "ROMANCE": 1
+  },
+  "authored_by": "sonnet-4.6",
+  "authored_date": "2026-06-30"
+}

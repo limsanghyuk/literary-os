@@ -1,0 +1,22 @@
+{
+  "work_id": "도깨비_02",
+  "scene_count": 62,
+  "core_dist": {
+    "ROMANCE": 9,
+    "HOOK": 5,
+    "BOND": 18,
+    "RELIEF": 8,
+    "ESTABLISH": 10,
+    "ORACLE": 7,
+    "PUNISH": 1,
+    "REVELATION": 2,
+    "LOSS": 11,
+    "CONFLICT": 10,
+    "PERIL": 13,
+    "DESIRE": 17,
+    "INTRO": 2,
+    "RESCUE": 5
+  },
+  "episode_function": "캐나다 동행→귀환 후 갈등 증폭→납치 위기·구조 출동. 두 사람 감정 거리가 좁혀지면서 도깨비 검 부재 딜레마가 고조되는 서사 허브 화.",
+  "by": "sonnet-4.6"
+}

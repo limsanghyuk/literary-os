@@ -1,0 +1,23 @@
+{
+  "work_id": "미안하다사랑한다_02",
+  "episode_no": 2,
+  "scene_count": 75,
+  "core_dist": {
+    "BOND": 19,
+    "CONFLICT": 14,
+    "DESIRE": 9,
+    "ESTABLISH": 10,
+    "HOOK": 7,
+    "INTRO": 5,
+    "LOSS": 12,
+    "ORACLE": 11,
+    "PERIL": 7,
+    "PUNISH": 1,
+    "RELIEF": 1,
+    "RESCUE": 3,
+    "REVELATION": 8,
+    "REVERSAL": 2,
+    "ROMANCE": 3
+  },
+  "by": "sonnet_reading"
+}

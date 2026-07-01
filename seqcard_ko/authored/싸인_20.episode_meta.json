@@ -1,0 +1,22 @@
+{
+  "work_id": "싸인_20",
+  "scene_count": 68,
+  "core_dist": {
+    "DESIRE": 9,
+    "REVELATION": 9,
+    "ESTABLISH": 7,
+    "LOSS": 7,
+    "PERIL": 6,
+    "PUNISH": 6,
+    "CONFLICT": 5,
+    "REVERSAL": 5,
+    "RELIEF": 4,
+    "ORACLE": 3,
+    "BOND": 2,
+    "ROMANCE": 2,
+    "REUNION": 2,
+    "HOOK": 1
+  },
+  "episode_function": "진범 응징과 진실 확정으로 시리즈 스루라인을 종결하는 최종회",
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,23 @@
+{
+  "work_id": "대장금_02",
+  "scene_count": 88,
+  "core_dist": {
+    "ESTABLISH": 8,
+    "INTRO": 2,
+    "CONFLICT": 7,
+    "PERIL": 26,
+    "DESIRE": 7,
+    "BOND": 8,
+    "ORACLE": 4,
+    "REVELATION": 5,
+    "PUNISH": 2,
+    "LOSS": 8,
+    "RELIEF": 2,
+    "RESCUE": 4,
+    "REUNION": 2,
+    "HOOK": 1,
+    "REVERSAL": 2
+  },
+  "episode_function": "박나인 일가의 8년 은거(백정마을)→갑자사화로 인한 천수 압송→모녀 한양 도주 추격전→탕춘대 재회와 납치→동굴에서의 박나인 사망과 유언까지. 장금의 탄생 내력과 어머니 박나인의 비극을 완결하며, '수랏간 최고상궁이 되어 원한을 풀어라'는 핵심 사명이 부여되는 화. 전체 서사의 동기(動機) 기반 구축 에피소드.",
+  "by": "sonnet-4.6"
+}

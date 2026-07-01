@@ -1,0 +1,18 @@
+{
+  "work_id": "싸인_01",
+  "scene_count": 49,
+  "core_dist": {
+    "ESTABLISH": 12,
+    "HOOK": 6,
+    "INTRO": 5,
+    "BOND": 4,
+    "REVELATION": 5,
+    "CONFLICT": 8,
+    "DESIRE": 1,
+    "REVERSAL": 2,
+    "PERIL": 5,
+    "RESCUE": 1
+  },
+  "episode_function": "법의관 윤지훈과 국과수 인물군을 소개하고 서윤형 돌연사 사건을 던져 시리즈 전체의 추리축을 발단시키는 도입 회차",
+  "by": "opus_reading"
+}

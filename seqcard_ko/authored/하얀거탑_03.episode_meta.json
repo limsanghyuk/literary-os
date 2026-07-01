@@ -1,0 +1,20 @@
+{
+  "work_id": "하얀거탑_03",
+  "scene_count": 76,
+  "core_dist": {
+    "CONFLICT": 30,
+    "DESIRE": 14,
+    "BOND": 10,
+    "REVERSAL": 6,
+    "ROMANCE": 4,
+    "ESTABLISH": 3,
+    "PUNISH": 2,
+    "INTRO": 2,
+    "REVELATION": 2,
+    "ORACLE": 1,
+    "PERIL": 1,
+    "RELIEF": 1
+  },
+  "episode_function": "브랜치 굴욕을 당한 준혁이 의사회 회장 유필상이라는 외부 세력을 포섭하여 용길을 포위하고 발령 번복을 이끌어 내는 반격의 화이며, 동시에 노민국이라는 최강 경쟁자의 등장으로 새로운 갈등 축이 열리는 전환점",
+  "by": "sonnet_reading"
+}

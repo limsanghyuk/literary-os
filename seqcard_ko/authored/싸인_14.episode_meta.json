@@ -1,0 +1,19 @@
+{
+  "work_id": "싸인_14",
+  "scene_count": 69,
+  "core_dist": {
+    "ESTABLISH": 17,
+    "REVELATION": 16,
+    "PERIL": 8,
+    "CONFLICT": 6,
+    "REVERSAL": 5,
+    "DESIRE": 5,
+    "LOSS": 3,
+    "RESCUE": 3,
+    "ORACLE": 3,
+    "RELIEF": 2,
+    "HOOK": 1
+  },
+  "episode_function": "이수정 감전사 부검으로 자백 조작과 서윤형 사건 진상이 드러나고, 두 팀이 음료수 스텝복 증거를 구출하는 동시에 강서연과 최종 대결의 문을 여는 진실 폭로의 터닝포인트 회차",
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,19 @@
+{
+  "work_id": "커피프린스_14",
+  "episode": 14,
+  "scene_count": 42,
+  "core_dist": {
+    "BOND": 13,
+    "DESIRE": 7,
+    "CONFLICT": 5,
+    "ROMANCE": 5,
+    "REVERSAL": 3,
+    "REVELATION": 3,
+    "ESTABLISH": 2,
+    "ORACLE": 2,
+    "HOOK": 1,
+    "PERIL": 1
+  },
+  "episode_function": "한결이 미국행을 포기하고 잔류를 결심하며 은찬과의 관계를 공개하고, 할머니의 반발 속에서도 두 사람의 유대가 확인되는 한편 유주의 임신 공개로 서브플롯에 새 전환이 마련된다.",
+  "by": "sonnet_reading"
+}

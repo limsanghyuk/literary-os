@@ -1,0 +1,21 @@
+{
+  "work_id": "커피프린스_04",
+  "scene_count": 54,
+  "core_dist": {
+    "BOND": 11,
+    "ROMANCE": 10,
+    "CONFLICT": 8,
+    "PERIL": 6,
+    "RELIEF": 5,
+    "ESTABLISH": 5,
+    "DESIRE": 2,
+    "LOSS": 2,
+    "REVERSAL": 1,
+    "INTRO": 1,
+    "REVELATION": 1,
+    "PUNISH": 1,
+    "ORACLE": 1
+  },
+  "episode_function": "오리지널 원두 전환 피벗으로 커피프린스 정체성을 확립하고, 한결-은찬 친밀도를 단계적으로 쌓아 생일 설렘 엔딩으로 로맨스 동력을 점화한다",
+  "by": "sonnet_reading"
+}

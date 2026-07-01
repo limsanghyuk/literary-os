@@ -1,0 +1,21 @@
+{
+  "work_id": "미안하다사랑한다_04",
+  "scene_count": 73,
+  "episode_function": "무혁의 유대와 복수심 교차, 윤-민주 공개 연인 선언, 은채 첫 키스 충격 — 세 축이 동시에 설정되며 복수 스릴러와 로맨스의 토대를 동시에 깔아 다음 회 기어를 올리는 출발점 회차",
+  "core_dist": {
+    "ESTABLISH": 14,
+    "CONFLICT": 9,
+    "ORACLE": 9,
+    "BOND": 17,
+    "DESIRE": 5,
+    "PERIL": 2,
+    "REVERSAL": 3,
+    "RESCUE": 1,
+    "LOSS": 6,
+    "RELIEF": 4,
+    "PUNISH": 1,
+    "REVELATION": 1,
+    "HOOK": 1
+  },
+  "by": "sonnet_reading"
+}

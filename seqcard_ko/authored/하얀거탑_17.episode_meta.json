@@ -1,0 +1,18 @@
+{
+  "work_id": "하얀거탑",
+  "scene_count": 55,
+  "core_dist": {
+    "ESTABLISH": 6,
+    "CONFLICT": 32,
+    "REVELATION": 7,
+    "PERIL": 11,
+    "LOSS": 12,
+    "DESIRE": 20,
+    "ORACLE": 7,
+    "HOOK": 3,
+    "BOND": 11,
+    "RELIEF": 1
+  },
+  "episode_function": "유미라 증언·동일 위증 압박·동일의 법정 번복이 맞물리며 항소심의 결정적 반전을 이끌고 대질 허가로 클리프행어를 형성하는 재판 전환점 회차다.",
+  "by": "sonnet_reading"
+}

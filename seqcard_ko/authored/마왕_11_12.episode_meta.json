@@ -1,0 +1,51 @@
+{
+  "ep11": {
+    "work_id": "마왕_11",
+    "episode": 11,
+    "title": "마왕",
+    "genre": "복수심리스릴러",
+    "total_scenes": 68,
+    "core_dist": {
+      "PERIL": 23,
+      "LOSS": 16,
+      "CONFLICT": 13,
+      "DESIRE": 9,
+      "ORACLE": 9,
+      "BOND": 9,
+      "ROMANCE": 8,
+      "REVELATION": 6,
+      "REVERSAL": 5,
+      "PUNISH": 5,
+      "ESTABLISH": 5,
+      "HOOK": 2,
+      "REVEAL": 1
+    },
+    "episode_function": "준표가 승하의 정체를 파악해 도전하는 한편, 오수는 내면 붕괴 직전까지 몰리며 준표·순기·영철을 둘러싼 다중 위협이 수렴한다. 오르골 사진-법원-어머니 사망으로 이어지는 복수 기원 몽타주가 완성되고, 엔딩에서 준표가 승하 집 앞에 '정태성'으로 출현하는 클리프행어로 극적 전환점이 열린다.",
+    "authored_by": "sonnet-4.6"
+  },
+  "ep12": {
+    "work_id": "마왕_12",
+    "episode": 12,
+    "title": "마왕",
+    "genre": "복수심리스릴러",
+    "total_scenes": 84,
+    "core_dist": {
+      "PERIL": 36,
+      "CONFLICT": 20,
+      "DESIRE": 14,
+      "BOND": 12,
+      "REVELATION": 9,
+      "ORACLE": 8,
+      "ESTABLISH": 8,
+      "REVERSAL": 7,
+      "PUNISH": 7,
+      "ROMANCE": 7,
+      "LOSS": 6,
+      "HOOK": 3,
+      "RELIEF": 2,
+      "RESCUE": 1
+    },
+    "episode_function": "준표가 '잘못된 선택(동현과 거래)'을 하고 결국 트럭에 치여 쓰러지면서 승하의 복수 계획이 한 단계 실현된다. 해인-영철·해인-승하의 감정선이 깊어지고, 오수는 텅 빈 골목에서 복수자를 향해 절규하며 자기 정체성의 위기를 폭발시킨다. 박하사탕을 씹으며 슬픈 눈빛의 승하 엔딩으로 내면 비극이 클로즈업된다.",
+    "authored_by": "sonnet-4.6"
+  }
+}

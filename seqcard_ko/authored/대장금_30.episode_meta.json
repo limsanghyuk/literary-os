@@ -1,0 +1,23 @@
+{
+  "work_id": "대장금_30",
+  "scene_count_authored": 61,
+  "scene_count_raw_markers": 61,
+  "synopsis": "의녀 수련 개시: 장금이 의녀의 길을 유일한 귀환 루트로 확정하고 장덕에게 의술을 배우기 시작한다. 궁에서는 연생이 중종의 승은을 입고, 금영과 최상궁이 갈등을 폭발시킨다. 정운백이 복량을 고백하며 홍삼의 비밀이 밝혀지고, 장덕이 원수 앞에서 결국 살리는 침을 택하며 분노와 의술의 화두를 장금에게 넘긴다.",
+  "core_dist": {
+    "ESTABLISH": 14,
+    "CONFLICT": 14,
+    "DESIRE": 6,
+    "REVELATION": 6,
+    "PERIL": 4,
+    "LOSS": 4,
+    "BOND": 3,
+    "HOOK": 2,
+    "ORACLE": 2,
+    "ROMANCE": 2,
+    "REVERSAL": 2,
+    "INTRO": 1,
+    "REUNION": 1
+  },
+  "episode_function": "ESTABLISH+ORACLE: 장금의 의녀 서사를 공식 개막하고 장덕-정운백의 분노/의술 대립을 통해 에피소드 핵심 화두를 설정한다.",
+  "by": "sonnet-4.6"
+}

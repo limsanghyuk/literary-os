@@ -1,0 +1,22 @@
+{
+  "work_id": "싸인_08",
+  "scene_count": 49,
+  "core_dist": {
+    "INTRO": 1,
+    "ESTABLISH": 12,
+    "BOND": 3,
+    "HOOK": 2,
+    "CONFLICT": 6,
+    "RELIEF": 1,
+    "ORACLE": 4,
+    "REVELATION": 5,
+    "PERIL": 6,
+    "DESIRE": 1,
+    "LOSS": 4,
+    "REUNION": 1,
+    "ROMANCE": 1,
+    "REVERSAL": 2
+  },
+  "episode_function": "일제강점기 백골사체 신원 미궁 종결·진범 강서연 최초 출현·이한-우진 수사 공조 발화",
+  "by": "sonnet_reading"
+}

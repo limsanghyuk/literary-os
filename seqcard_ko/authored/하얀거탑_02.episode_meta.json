@@ -1,0 +1,19 @@
+{
+  "work_id": "하얀거탑_02",
+  "scene_count": 54,
+  "core_dist": {
+    "CONFLICT": 14,
+    "BOND": 10,
+    "DESIRE": 7,
+    "PERIL": 5,
+    "ORACLE": 4,
+    "RESCUE": 3,
+    "PUNISH": 3,
+    "REVERSAL": 3,
+    "ESTABLISH": 3,
+    "RELIEF": 1,
+    "HOOK": 1
+  },
+  "episode_function": "준혁의 무단 전화 수술 여파로 촉발된 권력 갈등이 브랜치 발령 위협으로 구체화되고, 윤진 수술 성공으로 일시 화해 국면이 열렸다가 뇌물 공작 역풍으로 준혁이 무릎 꿇고 강제 자원 발령되는 굴욕으로 끝나는 반전의 화",
+  "by": "sonnet_reading"
+}

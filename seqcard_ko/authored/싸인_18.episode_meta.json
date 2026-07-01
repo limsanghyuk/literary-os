@@ -1,0 +1,20 @@
+{
+  "work_id": "싸인_18",
+  "scene_count": 70,
+  "core_dist": {
+    "ESTABLISH": 15,
+    "CONFLICT": 14,
+    "ORACLE": 8,
+    "PERIL": 7,
+    "REVELATION": 7,
+    "RESCUE": 5,
+    "LOSS": 5,
+    "BOND": 3,
+    "REVERSAL": 3,
+    "REUNION": 1,
+    "PUNISH": 1,
+    "HOOK": 1
+  },
+  "episode_function": "재원 연쇄살인 광역수사 본격화·지훈팀 압박 고조로 종반 추격전을 점화하는 위기 전개 회차",
+  "by": "sonnet_reading"
+}

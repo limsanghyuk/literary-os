@@ -1,0 +1,24 @@
+{
+  "work_id": "대장금",
+  "episode": 23,
+  "scene_count": 73,
+  "authored_by": "sonnet-4.6",
+  "authored_date": "2026-06-30",
+  "core_distribution": {
+    "BOND": 23,
+    "CONFLICT": 23,
+    "DESIRE": 18,
+    "ESTABLISH": 17,
+    "PERIL": 14,
+    "RELIEF": 11,
+    "HOOK": 11,
+    "REVELATION": 7,
+    "REVERSAL": 6,
+    "ORACLE": 5,
+    "LOSS": 5,
+    "PUNISH": 4,
+    "REUNION": 1
+  },
+  "episode_function": "재경합 역전 승리·공식 취임식·포용적 리더십 확립, 출납 비리 조사 개시, 서첩 탈취로 새 위기의 씨앗을 심는 에피소드.",
+  "null_core2_count": 1
+}

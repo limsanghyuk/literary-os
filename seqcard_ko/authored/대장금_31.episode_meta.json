@@ -1,0 +1,24 @@
+{
+  "work_id": "대장금_31",
+  "scene_count_authored": 61,
+  "scene_count_raw_markers": 61,
+  "synopsis": "시침 공포 돌파와 왜구 위기: 시침 실패 트라우마에 갇힌 장금이 왜구 점령이라는 극한 상황에서 덕구의 목숨을 지키기 위해 처음으로 시침을 성공한다. 민정호의 구출 작전과 장금의 계략으로 관아를 해방하고, 두 사람은 진정한 로맨스를 나눈다. 그러나 왜장을 살린 것이 이적행위로 몰려 장금이 의금부 압송 교지를 받으며 엔딩.",
+  "core_dist": {
+    "PERIL": 14,
+    "ESTABLISH": 8,
+    "BOND": 7,
+    "RESCUE": 7,
+    "CONFLICT": 6,
+    "DESIRE": 5,
+    "REVELATION": 3,
+    "HOOK": 2,
+    "LOSS": 2,
+    "ORACLE": 2,
+    "RELIEF": 2,
+    "REUNION": 1,
+    "REVERSAL": 1,
+    "ROMANCE": 1
+  },
+  "episode_function": "RESCUE+REVERSAL+HOOK: 시침 공포를 실전으로 돌파한 장금의 내면 성장과 왜구 격퇴의 극적 반전을 동시에 달성하고, 이적행위 교지로 다음 위기를 개막한다.",
+  "by": "sonnet-4.6"
+}

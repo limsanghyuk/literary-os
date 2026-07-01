@@ -1,0 +1,24 @@
+{
+  "work_id": "대장금_53",
+  "episode": 53,
+  "total_scenes": 71,
+  "scene_no_note": "원본 씬49 중복·씬54/55 순서 혼용·씬49-1/55-1 서브씬 → 서사 흐름 기준 1~71 순서 부여. 서브씬은 선행 씬에 흡수",
+  "episode_function": "장금·민정호·중종의 연모 삼각관계 클라이맥스. 대장금 칭호 하사로 장금 신분이 정점에 오르는 동시에 민정호가 유배 퇴장한다. 후반부 세월 경과 몽타주 후 중종 장폐색 위기와 침 마취 개복 수술 제안이라는 의술 혁신 훅으로 마무리.",
+  "core_dist_primary": {
+    "PERIL": 10,
+    "DESIRE": 10,
+    "LOSS": 10,
+    "CONFLICT": 9,
+    "ESTABLISH": 7,
+    "REVERSAL": 5,
+    "ROMANCE": 4,
+    "PUNISH": 4,
+    "REVELATION": 3,
+    "ORACLE": 3,
+    "BOND": 2,
+    "RESCUE": 2,
+    "RELIEF": 1,
+    "HOOK": 1
+  },
+  "by": "sonnet-4.6"
+}

@@ -1,0 +1,25 @@
+{
+  "work_id": "커피프린스_01",
+  "series": "커피프린스 1호점",
+  "episode": 1,
+  "air_date": "2007-07-02",
+  "scene_count": 66,
+  "genre": ["로맨틱코미디"],
+  "core_dist": {
+    "ESTABLISH": 16,
+    "CONFLICT": 11,
+    "DESIRE": 10,
+    "LOSS": 8,
+    "INTRO": 5,
+    "RELIEF": 5,
+    "BOND": 3,
+    "REVERSAL": 3,
+    "ORACLE": 1,
+    "ROMANCE": 1,
+    "REUNION": 1,
+    "PERIL": 1,
+    "HOOK": 1
+  },
+  "arc_summary": "은찬(배달부·태권도사범)과 한결(재벌 손자)의 첫 만남. 은찬은 반지 분실·전세금 인상·해고라는 3중 경제 위기에 처하고, 한결은 할머니의 맞선 압박을 받는다. 날치기 사건으로 엉킨 두 사람은 화장실 대치 끝에 '내 애인 할래?'라는 제안으로 1화가 끝난다. 유주·한성 이별 상처 서브플롯이 병행 설정된다.",
+  "by": "sonnet_reading"
+}

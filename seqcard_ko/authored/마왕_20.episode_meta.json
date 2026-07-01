@@ -1,0 +1,44 @@
+{
+  "work_id": "마왕_20",
+  "scene_count": 80,
+  "core_dist": {
+    "PERIL": 9,
+    "ESTABLISH": 8,
+    "LOSS": 16,
+    "BOND": 6,
+    "REVELATION": 8,
+    "CONFLICT": 8,
+    "ROMANCE": 7,
+    "HOOK": 9,
+    "ORACLE": 2,
+    "PUNISH": 2,
+    "REVERSAL": 2,
+    "DESIRE": 2,
+    "REUNION": 1
+  },
+  "core2_dist": {
+    "ESTABLISH": 2,
+    "HOOK": 14,
+    "BOND": 4,
+    "LOSS": 11,
+    "ORACLE": 5,
+    "CONFLICT": 7,
+    "REVELATION": 9,
+    "RELIEF": 3,
+    "DESIRE": 6,
+    "PERIL": 15,
+    "REVERSAL": 1,
+    "ROMANCE": 2,
+    "RESCUE": 1
+  },
+  "episode_function": "마지막회. 영철의 자진출두·방면(증거 불충분)과 민이범의 자백으로 강희수가 순기 살해 배후로 폭로·체포되고, 충격을 받은 동현이 심장발작으로 사망한다. 용구가 승하를 칼로 찌르고, 폐차장에서 오수와 승하가 최후로 대면한다. 오수는 복수(살해)를 거부하고 '살아, 태성아…용서해라'라며 승하를 구원하지만 몸싸움 중 총에 맞아 숨지고, 자상을 입은 승하도 형제처럼 오수에게 기대어 죽는다. 예고살인·복수 서사를 가해와 피해의 연쇄가 모두를 파멸시키는 비극으로 닫되, 마지막 순간의 상호 용서로 구원의 합일을 남긴다.",
+  "key_functions": [
+    "REVELATION/PUNISH—강희수 배후 폭로·체포(씬40·41·44)",
+    "LOSS—동현 사망(씬53·56·59)·주인공 오수 사망(씬78·80)",
+    "RESCUE—오수가 자멸하려는 승하를 용서로 구원(씬78)",
+    "REUNION—죽음 속 형제적 화해·구원의 합일(씬80)"
+  ],
+  "note": "원본 마왕_20.txt 존재(80씬)—이전 핸드오프의 '20화 원본 미존재' 판단은 오류였고, 본 회차로 정정·완주함.",
+  "by": "opus_reading",
+  "authored_date": "2026-06-30"
+}

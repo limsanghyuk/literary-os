@@ -1,0 +1,19 @@
+{
+  "work_id": "미안하다사랑한다_07",
+  "episode": 7,
+  "scene_count": 72,
+  "episode_function": "무혁이 '차 매니저' 신분으로 윤의 일상에 진입하면서 은채와의 감정선이 형성되는 회차. ESTABLISH와 REVELATION이 각각 16·12로 주도 — 신규 관계망 설정과 비밀 노출이 병행 진행된다. DESIRE 11개는 무혁의 은채에 대한 감정이 표면화되기 시작하는 단계를 반영하며, 노래방 포옹·키스 장면(씬72 ROMANCE)이 회차 감정 정점.",
+  "core_dist": {
+    "BOND": 7,
+    "CONFLICT": 7,
+    "DESIRE": 11,
+    "ESTABLISH": 16,
+    "HOOK": 3,
+    "LOSS": 7,
+    "PERIL": 3,
+    "RELIEF": 1,
+    "REUNION": 3,
+    "REVELATION": 12,
+    "ROMANCE": 2
+  }
+}

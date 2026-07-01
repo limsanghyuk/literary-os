@@ -1,0 +1,22 @@
+{
+  "work_id": "미안하다사랑한다_08",
+  "episode": 8,
+  "scene_count": 87,
+  "episode_function": "서경 납치·인질 위협→무혁 단독 구출로 외부 위기가 정점에 달하는 액션 집중 회차. CONFLICT 17·PERIL 14가 전체의 36%를 차지해 긴장-위험 이중 구조를 형성. ESTABLISH 13은 무혁의 능력·정체성을 단계별로 재확립하는 씬들이며, REVELATION 9는 비밀·과거 노출 밀도가 높아 이전 회차 대비 폭로 가속 단계임을 나타낸다.",
+  "core_dist": {
+    "BOND": 11,
+    "CONFLICT": 17,
+    "DESIRE": 3,
+    "ESTABLISH": 13,
+    "HOOK": 2,
+    "LOSS": 5,
+    "ORACLE": 2,
+    "PERIL": 14,
+    "PUNISH": 2,
+    "RELIEF": 1,
+    "RESCUE": 1,
+    "REUNION": 2,
+    "REVELATION": 9,
+    "ROMANCE": 5
+  }
+}

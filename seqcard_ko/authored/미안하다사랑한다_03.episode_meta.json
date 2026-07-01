@@ -1,0 +1,23 @@
+{
+  "work_id": "미안하다사랑한다_03",
+  "episode_no": 3,
+  "scene_count": 68,
+  "core_dist": {
+    "BOND": 17,
+    "CONFLICT": 15,
+    "DESIRE": 8,
+    "ESTABLISH": 6,
+    "HOOK": 5,
+    "INTRO": 1,
+    "LOSS": 21,
+    "ORACLE": 13,
+    "PERIL": 7,
+    "PUNISH": 2,
+    "RELIEF": 3,
+    "RESCUE": 4,
+    "REVELATION": 2,
+    "REVERSAL": 2,
+    "ROMANCE": 2
+  },
+  "by": "sonnet_reading"
+}

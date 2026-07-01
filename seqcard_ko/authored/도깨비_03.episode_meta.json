@@ -1,0 +1,23 @@
+{
+  "work_id": "도깨비_03",
+  "scene_count": 51,
+  "core_dist": {
+    "RESCUE": 3,
+    "REVELATION": 5,
+    "RELIEF": 9,
+    "BOND": 13,
+    "LOSS": 11,
+    "PERIL": 7,
+    "ESTABLISH": 8,
+    "PUNISH": 3,
+    "CONFLICT": 8,
+    "REVERSAL": 1,
+    "ORACLE": 6,
+    "DESIRE": 12,
+    "ROMANCE": 11,
+    "REUNION": 1,
+    "HOOK": 2
+  },
+  "episode_function": "납치 구출·화해·이별 각서→도깨비 떠남 준비 중 은탁이 직접 찾아와 검이 처음부터 보였다고 고백, 신부 정체 확정 반전 완성 화.",
+  "by": "sonnet-4.6"
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "work_id": "대장금_10",
+    "episode": 10,
+    "scene_count": 85,
+    "core_dist": {
+      "CONFLICT": 21,
+      "PERIL": 16,
+      "HOOK": 13,
+      "DESIRE": 9,
+      "REVELATION": 5,
+      "ROMANCE": 4,
+      "LOSS": 4,
+      "ESTABLISH": 3,
+      "RELIEF": 2,
+      "BOND": 2,
+      "PUNISH": 2,
+      "ORACLE": 2,
+      "INTRO": 1,
+      "REUNION": 1
+    },
+    "null_core2_count": 37,
+    "episode_function": "퇴선간 음모(부적 은닉)·누명 위기·어머니 음식발기 발견. 장금이 발기를 찾고 금영이 부적을 숨기는 서사가 충돌하며 두 사람 모두 광에 갇히는 절정까지. CONFLICT·PERIL이 지배적이고 DESIRE·REVELATION이 보조.",
+    "by": "sonnet-4.6"
+  },
+  {
+    "work_id": "대장금_11",
+    "episode": 11,
+    "scene_count": 68,
+    "core_dist": {
+      "CONFLICT": 17,
+      "ORACLE": 10,
+      "PERIL": 8,
+      "BOND": 7,
+      "ESTABLISH": 5,
+      "LOSS": 5,
+      "RELIEF": 5,
+      "REVELATION": 4,
+      "REVERSAL": 3,
+      "HOOK": 2,
+      "RESCUE": 1,
+      "INTRO": 1
+    },
+    "null_core2_count": 18,
+    "episode_function": "광 탈출(정상궁 소신 굴절)·원자 마비 사건 발생·덕구 추국·장금의 자기실험 증명. 첫 절반은 부적 사건 봉합(RELIEF·CONFLICT), 후반부는 독 원인 탐색 미스터리(ORACLE·REVELATION·PERIL)로 이원 구조. 엔딩은 희생적 단서 발견 HOOK.",
+    "by": "sonnet-4.6"
+  }
+]

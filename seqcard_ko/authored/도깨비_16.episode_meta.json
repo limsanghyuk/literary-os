@@ -1,0 +1,19 @@
+{
+  "work_id": "도깨비_16",
+  "scene_count": 58,
+  "core_dist": {
+    "ROMANCE": 12,
+    "LOSS": 15,
+    "RELIEF": 7,
+    "REUNION": 6,
+    "BOND": 5,
+    "REVELATION": 4,
+    "ESTABLISH": 4,
+    "DESIRE": 2,
+    "PERIL": 1,
+    "PUNISH": 1,
+    "ORACLE": 1
+  },
+  "episode_function": "최종회. 청혼·결혼 서약으로 ROMANCE를 완성한 뒤 은탁의 희생적 LOSS를 축으로 저승 찻집 이별·30년 기다림을 거쳐 환생 REUNION으로 종결한다. LOSS(15)가 전체 서사 중심을 지탱하고 ROMANCE(12)·REUNION(6)·RELIEF(7)이 비극을 감싸는 해소층을 형성하며, 모든 조연 서사(써니/저승사자/덕화/귀신들)가 이 회에서 봉합된다.",
+  "by": "sonnet-4.6"
+}

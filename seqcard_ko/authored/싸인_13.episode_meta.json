@@ -1,0 +1,22 @@
+{
+  "work_id": "싸인_13",
+  "scene_count": 80,
+  "core_dist": {
+    "CONFLICT": 4,
+    "ESTABLISH": 6,
+    "REVELATION": 10,
+    "BOND": 4,
+    "ORACLE": 9,
+    "PERIL": 19,
+    "REVERSAL": 4,
+    "LOSS": 6,
+    "HOOK": 3,
+    "ROMANCE": 3,
+    "DESIRE": 6,
+    "REUNION": 1,
+    "RELIEF": 1,
+    "RESCUE": 4
+  },
+  "episode_function": "정차영 처단과 수사팀 붕괴 이후 진실 봉인 위기가 새로운 두 전선(교도소 이수정·시골 시신)으로 동시 확장되는 전환 회차",
+  "by": "sonnet_reading"
+}

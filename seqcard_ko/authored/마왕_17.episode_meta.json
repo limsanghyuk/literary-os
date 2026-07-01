@@ -1,0 +1,22 @@
+{
+  "work_id": "마왕",
+  "episode": 17,
+  "title": "용서란 말은 가해자가 하는게 아닙니다",
+  "scene_count": 81,
+  "by": "sonnet-4.6",
+  "episode_function": "순기 사망 확인+오수 붕괴+석진 누명 체포+해인 정태성 정체 확인(소년승하 사진)",
+  "core_dist": {
+    "CONFLICT": 19,
+    "PERIL": 17,
+    "LOSS": 9,
+    "ROMANCE": 7,
+    "REVERSAL": 6,
+    "REVELATION": 5,
+    "DESIRE": 5,
+    "BOND": 4,
+    "PUNISH": 3,
+    "ESTABLISH": 3,
+    "ORACLE": 3
+  },
+  "notes": "씬1~3 전회연결(3씬). 씬16=17화 최고조(오수-승하 대결/고백). 씬26=이마 자학(지옥 시각화). 씬45=손가락 사진(복수대상 공식화). 씬70=오르골+노인 목소리(해인 인식전환). 씬81=소년승하 사진 엔딩(17화 최종 HOOK)."
+}
