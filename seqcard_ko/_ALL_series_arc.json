@@ -120,12 +120,21 @@
     "ORACLE": 121
    },
    "CONFLICT_persist": 0.252
-  }
- },
- "totals": {
-  "series_count": 11,
-  "eps": 235,
-  "scenes": 16136
- },
- "note": "11시리즈 장르별 core분포+CONFLICT지속률 (2026-07-01 갱신: 최강칠우 20/20 완주 반영, 목표 최소50시리즈 중 11 착수 — 모래시계24/역전의여왕31 원본확보·저작대기)"
-}
+  },
+  "모래시계": {
+   "eps": 24,
+   "scenes": 1365,
+   "top": {
+    "PERIL": 192,
+    "ESTABLISH": 178,
+    "CONFLICT": 164,
+    "ORACLE": 163
+   },
+   "CONFLICT_persist": 0.191
+  },
+  "역전의여왕": {
+   "eps": 31,
+   "scenes": 1875,
+   "top": {
+    "CONFLICT": 380,
+    "REVELATION": 268,
