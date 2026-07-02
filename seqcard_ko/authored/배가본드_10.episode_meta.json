@@ -1,0 +1,20 @@
+{
+  "work_id": "배가본드_10",
+  "scene_count": 61,
+  "core_dist": {
+    "ESTABLISH": 10,
+    "PERIL": 13,
+    "INTRO": 1,
+    "RELIEF": 3,
+    "HOOK": 5,
+    "PUNISH": 5,
+    "REUNION": 1,
+    "CONFLICT": 10,
+    "REVELATION": 7,
+    "DESIRE": 2,
+    "LOSS": 3,
+    "BOND": 1
+  },
+  "episode_function": "전회 엔딩에서 이어진 대사관 총격전과 폭탄 반전으로 달건 일행이 위기를 벗어나지만, 정부(청와대·국정원)의 개입과 은폐가 구체화되며 태웅의 배신처럼 보이는 거짓 기자회견으로 이들이 오히려 쫓기는 신세가 되고, 강주철 생존과 김우기 동시다발 출현이라는 이중 반전으로 다음 화의 반격을 예고한다.",
+  "by": "sonnet_reading"
+}
