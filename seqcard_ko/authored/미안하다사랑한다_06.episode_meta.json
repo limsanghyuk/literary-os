@@ -2,19 +2,20 @@
   "work_id": "미안하다사랑한다_06",
   "scene_count": 75,
   "core_dist": {
-    "ORACLE": 5,
-    "BOND": 14,
-    "DESIRE": 12,
+    "LOSS": 13,
     "ESTABLISH": 12,
-    "LOSS": 25,
-    "CONFLICT": 13,
-    "PERIL": 6,
-    "REVERSAL": 7,
-    "RELIEF": 5,
-    "PUNISH": 2,
-    "HOOK": 6,
+    "BOND": 10,
+    "CONFLICT": 10,
+    "DESIRE": 7,
+    "ORACLE": 5,
     "RESCUE": 5,
-    "REVELATION": 3
+    "PERIL": 4,
+    "RELIEF": 3,
+    "HOOK": 2,
+    "REVELATION": 2,
+    "REVERSAL": 1,
+    "PUNISH": 1
   },
-  "episode_function": "6회는 3대 감정축이 동시에 폭발하는 회차다. ①무혁·서경 서사: 서경 성폭력 피해(LOSS·PERIL)→무혁이 욕실서 눈물로 닦아주기(BOND 절정), ②스캔들 폭발 서사: 무혁 제보(REVERSAL)→은채 가족 충격·오들희 충돌·윤-은채 관계 균열(PUNISH·CONFLICT)→은채 진실 고백 인터뷰(REVELATION), ③은채·무혁 감정 씨앗: 뒷통수 받쳐줌·차 안 울음 볼륨·소외 위로 거절 엇갈림(BOND·DESIRE), ④복수 클라이맥스: 민주 엄마 암 고백→무혁 돌연 키스, 은채 목격 충격 엔딩 훅(HOOK). LOSS가 최다인 6회는 무혁의 복수가 의도치 않게 은채를 피 흘리게 만든다는 자책을 잉태한다."
+  "episode_function": "6회는 3대 감정축이 동시에 폭발하는 회차다. ①무혁·서경 서사: 서경 성폭력 피해(LOSS·PERIL)→무혁이 욕실서 눈물로 닦아주기(BOND 절정), ②스캔들 폭발 서사: 무혁 제보(REVERSAL)→은채 가족 충격·오들희 충돌·윤-은채 관계 균열(PUNISH·CONFLICT)→은채 진실 고백 인터뷰(REVELATION), ③은채·무혁 감정 씨앗: 뒷통수 받쳐줌·차 안 울음 볼륨·소외 위로 거절 엇갈림(BOND·DESIRE), ④복수 클라이맥스: 민주 엄마 암 고백→무혁 돌연 키스, 은채 목격 충격 엔딩 훅(HOOK). LOSS가 최다인 6회는 무혁의 복수가 의도치 않게 은채를 피 흘리게 만든다는 자책을 잉태한다.",
+  "by": "sonnet_reading"
 }

@@ -1,6 +1,5 @@
 {
-  "work_id": "도깨비",
-  "episode": "05",
+  "work_id": "도깨비_05",
   "scene_count": 55,
   "core_dist": {
     "ROMANCE": 13,
@@ -14,22 +13,6 @@
     "REVERSAL": 1,
     "RESCUE": 1,
     "RELIEF": 1,
-    "REUNION": 1,
-    "ORACLE": 1
-  },
-  "core_dist_incl_secondary": {
-    "BOND": 19,
-    "ROMANCE": 18,
-    "CONFLICT": 17,
-    "DESIRE": 13,
-    "ESTABLISH": 12,
-    "RELIEF": 9,
-    "LOSS": 9,
-    "REVELATION": 3,
-    "PERIL": 2,
-    "HOOK": 2,
-    "REVERSAL": 1,
-    "RESCUE": 1,
     "REUNION": 1,
     "ORACLE": 1
   },

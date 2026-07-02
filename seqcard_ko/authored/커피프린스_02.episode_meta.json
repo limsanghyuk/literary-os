@@ -1,23 +1,19 @@
 {
   "work_id": "커피프린스_02",
-  "episode_no": 2,
-  "series": "커피프린스 1호점",
-  "air_date": "2007-07-09",
   "scene_count": 56,
-  "genre": ["로맨틱코미디"],
-  "arc_summary": "은찬-한결 애인대행 계약 체결. 맞선 깽판 3연속으로 계약 이행 시작. 한성·유주 재결합 진전. 은찬이 도장 관장 야반도주로 은신처를 잃고 한결과 동거 전단계에 돌입. 한결이 왕자커피를 인수해 경영권 확보—번개 간판 추락 위기로 엔딩.",
   "core_dist": {
-    "ESTABLISH": 4,
-    "ORACLE": 2,
+    "DESIRE": 11,
     "BOND": 11,
     "CONFLICT": 10,
-    "DESIRE": 11,
     "LOSS": 6,
     "RELIEF": 5,
     "REUNION": 4,
-    "REVERSAL": 1,
+    "ESTABLISH": 4,
+    "ORACLE": 2,
     "PUNISH": 1,
+    "REVERSAL": 1,
     "HOOK": 1
   },
+  "episode_function": "",
   "by": "sonnet_reading"
 }

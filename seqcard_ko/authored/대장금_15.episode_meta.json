@@ -1,8 +1,6 @@
 {
-  "work_id": "대장금_ep15",
-  "episode": 15,
-  "total_scenes": 72,
-  "note_duplicate_marker": "원본 #1.(전화) + 1.(씬1)이 별개 씬으로 존재. #1=14화 엔딩 연결 오버랩, 1=정자 누각 새 씬. 전수 scene_no 1~72 부여.",
+  "work_id": "대장금_15",
+  "scene_count": 72,
   "core_dist": {
     "ESTABLISH": 13,
     "DESIRE": 13,
@@ -20,6 +18,5 @@
     "ORACLE": 1
   },
   "episode_function": "미각 회복 확정(REVERSAL) → 대비 주관 경합 시작(ESTABLISH). 전화 해소와 새 경합 구도 확립이 구조 양대 축. 금영의 경쟁자 인정(BOND), 민정호 이별 예고(LOSS), 흉년 과제 반전(REVERSAL), 백정마을 재료 확보(RESCUE)가 핵심. DESIRE 13씬으로 전 화 최다 — 모든 인물이 자기 목표를 향해 능동적으로 움직이는 화이다.",
-  "by": "sonnet-4.6",
-  "authored_date": "2026-06-30"
+  "by": "sonnet-4.6"
 }

@@ -1,23 +1,19 @@
 {
   "work_id": "커피프린스_03",
-  "episode_no": 3,
-  "series": "커피프린스 1호점",
-  "air_date": "2007-07-09",
   "scene_count": 46,
-  "genre": ["로맨틱코미디"],
-  "arc_summary": "할머니 압박에 한결이 왕자커피 리모델링을 결심. 은찬을 남자 직원으로 공식 채용하며 커피프린스 팀 구성(하림·민엽). 한성-유주 재결합 진전 중 유주 전 남친 언급으로 한성 질투 삭이기. 한결-유주 와인 벽화 밤 데이트로 감정 절정. 은찬은 한결-유주 친밀함 목격으로 삼각 감정 자각. 민엽 실수 원두 과주문 사태로 한결이 은찬 호되게 질책하며 엔딩.",
   "core_dist": {
-    "ESTABLISH": 7,
-    "ORACLE": 1,
     "BOND": 11,
     "CONFLICT": 9,
     "DESIRE": 9,
-    "LOSS": 2,
+    "ESTABLISH": 7,
     "RELIEF": 3,
+    "LOSS": 2,
+    "ORACLE": 1,
+    "PERIL": 1,
     "RESCUE": 1,
     "REUNION": 1,
-    "ROMANCE": 1,
-    "PERIL": 1
+    "ROMANCE": 1
   },
+  "episode_function": "",
   "by": "sonnet_reading"
 }

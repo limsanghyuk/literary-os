@@ -1,0 +1,19 @@
+{
+  "work_id": "대장금_36",
+  "scene_count": 59,
+  "core_dist": {
+    "CONFLICT": 15,
+    "ESTABLISH": 10,
+    "PERIL": 6,
+    "DESIRE": 6,
+    "BOND": 5,
+    "REVERSAL": 4,
+    "RELIEF": 4,
+    "REVELATION": 3,
+    "HOOK": 3,
+    "PUNISH": 2,
+    "RESCUE": 1
+  },
+  "episode_function": "",
+  "by": "sonnet_reading"
+}

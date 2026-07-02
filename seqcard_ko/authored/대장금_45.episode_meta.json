@@ -1,25 +1,22 @@
 {
-  "work_id": "daejangeum",
-  "episode": 45,
-  "total_scenes": 82,
-  "verified_scene_count": 82,
-  "core_distribution": {
-    "DESIRE": 22.0,
-    "ORACLE": 20.0,
-    "PERIL": 18.0,
-    "CONFLICT": 11.5,
-    "HOOK": 8.5,
-    "ESTABLISH": 6.5,
-    "REVELATION": 6.0,
-    "REVERSAL": 5.0,
-    "PUNISH": 5.0,
-    "BOND": 5.0,
-    "LOSS": 4.0,
-    "RELIEF": 3.0,
+  "work_id": "대장금_45",
+  "scene_count": 82,
+  "core_dist": {
+    "DESIRE": 17,
+    "ORACLE": 16,
+    "PERIL": 13,
+    "CONFLICT": 8,
+    "ESTABLISH": 5,
+    "REVERSAL": 4,
+    "REVELATION": 4,
+    "PUNISH": 4,
     "RESCUE": 3,
-    "REUNION": 1
+    "HOOK": 2,
+    "RELIEF": 2,
+    "LOSS": 2,
+    "REUNION": 1,
+    "BOND": 1
   },
   "episode_function": "호혹병 진단 대립→왕 실명 위기→의녀의 목숨 건 치료로 왕의 눈을 뜨이게 하는 의술 역전 서사. 오진 폭로·법도 충돌·고문 위기·새벽 구조를 거쳐 장금의 의술적 승리로 마무리.",
-  "authored_by": "sonnet-4.6",
-  "authored_date": "2026-06-30"
+  "by": "sonnet_reading"
 }

@@ -1,23 +1,6 @@
 {
   "work_id": "도깨비_06",
-  "episode": 6,
   "scene_count": 50,
-  "authored_by": "sonnet-4.6",
-  "authored_date": "2026-06-30",
-  "scene_range": "S#36~S#60 (서브씬 포함)",
-  "episode_function": "저승-써니 로맨스 개시(S#36~39-3), 도깨비-은탁 감정 정점(필사책 '첫사랑'·책방 골목 독백), 이별 준비 3인 부탁(유회장·덕화·저승), 검 뽑기 첫 시도→메밀밭 첫 입맞춤 반전으로 마무리",
-  "dominant_cores": [
-    "DESIRE",
-    "ROMANCE",
-    "LOSS",
-    "ESTABLISH"
-  ],
-  "arc_note": "도깨비의 감정이 외면→고백→이별 준비→검 뽑기 시도로 전개되며 은탁의 서약서와 도깨비의 유언장이 병치됨",
-  "omit_scenes": [
-    "S#47",
-    "S#49",
-    "S#50"
-  ],
   "core_dist": {
     "DESIRE": 9,
     "ROMANCE": 6,
@@ -33,5 +16,7 @@
     "ORACLE": 1,
     "RESCUE": 1,
     "REVERSAL": 1
-  }
+  },
+  "episode_function": "저승-써니 로맨스 개시(S#36~39-3), 도깨비-은탁 감정 정점(필사책 '첫사랑'·책방 골목 독백), 이별 준비 3인 부탁(유회장·덕화·저승), 검 뽑기 첫 시도→메밀밭 첫 입맞춤 반전으로 마무리",
+  "by": "sonnet_reading"
 }

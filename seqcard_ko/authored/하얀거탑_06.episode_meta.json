@@ -1,1 +1,18 @@
-{"work_id":"하얀거탑","scene_count":26,"core_dist":{"DESIRE":8,"CONFLICT":5,"PERIL":3,"ORACLE":4,"BOND":3,"ROMANCE":2,"ESTABLISH":4,"REVERSAL":1,"RESCUE":1,"PUNISH":1,"LOSS":1,"HOOK":1,"RELIEF":0,"REUNION":0,"REVELATION":0},"episode_function":"오경환 위원장 등장이라는 예상 밖 변수를 기점으로 두 진영이 조직적 표 공작과 감정 전선(도영-진주, 노민국-윤진)을 동시에 확장하며 과장 선거의 본격 열전이 시작된다","by":"sonnet_reading"}
+{
+  "work_id": "하얀거탑_06",
+  "scene_count": 26,
+  "core_dist": {
+    "DESIRE": 5,
+    "PERIL": 4,
+    "ESTABLISH": 4,
+    "CONFLICT": 4,
+    "BOND": 3,
+    "ORACLE": 2,
+    "REVERSAL": 1,
+    "RESCUE": 1,
+    "ROMANCE": 1,
+    "HOOK": 1
+  },
+  "episode_function": "오경환 위원장 등장이라는 예상 밖 변수를 기점으로 두 진영이 조직적 표 공작과 감정 전선(도영-진주, 노민국-윤진)을 동시에 확장하며 과장 선거의 본격 열전이 시작된다",
+  "by": "sonnet_reading"
+}

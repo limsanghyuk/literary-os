@@ -1,7 +1,5 @@
 {
-  "work_id": "daejanggeum_06",
-  "episode": 6,
-  "title": "대장금 제6부",
+  "work_id": "대장금_06",
   "scene_count": 71,
   "core_dist": {
     "PERIL": 19,
@@ -19,19 +17,6 @@
     "INTRO": 1,
     "LOSS": 1
   },
-  "core2_dist": {
-    "BOND": 7,
-    "LOSS": 6,
-    "PERIL": 5,
-    "CONFLICT": 5,
-    "RELIEF": 5,
-    "DESIRE": 3,
-    "PUNISH": 2,
-    "ESTABLISH": 1,
-    "HOOK": 1,
-    "RESCUE": 1
-  },
   "episode_function": "공주 단식 해결(숯죽 아이디어)로 장금·금영 공신 구도 확립 후, 금계 분실 사고를 계기로 두 생각시가 야반 출궁에 나서고 장금이 민정호를 구한 채 귀환 실패로 체포·출궁 선고를 받는 위기 클리프행어",
-  "authored_by": "sonnet-4.6",
-  "authored_date": "2026-06-30"
+  "by": "sonnet_reading"
 }

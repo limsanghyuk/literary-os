@@ -1,16 +1,14 @@
 {
   "work_id": "대장금_26",
-  "episode": 26,
   "scene_count": 56,
-  "scene_marker_note": "원본 씬 마커 56개, 씬번호 1~56 연속, 중복 없음",
   "core_dist": {
-    "ESTABLISH": 5,
-    "PERIL": 8,
     "CONFLICT": 13,
-    "ORACLE": 3,
+    "PERIL": 8,
     "DESIRE": 7,
-    "PUNISH": 4,
+    "ESTABLISH": 5,
     "RESCUE": 5,
+    "PUNISH": 4,
+    "ORACLE": 3,
     "REVELATION": 3,
     "BOND": 3,
     "LOSS": 3,
@@ -18,6 +16,5 @@
     "ROMANCE": 1
   },
   "episode_function": "중종 급변 사건을 계기로 최판술·최상궁·오겸호 연합의 수라간 음모가 가동된다. 유황 오리라는 물적 증거가 발견되고 한상궁이 의금부에 압송되며 장금까지 대역죄로 연행된다. 민정호가 내금위장을 통해 추국을 일시 중단시키는 첫 반전이 이루어진다. 금영의 사랑 고백과 노리개 발견이 감정 축을 강화한다.",
-  "authored_by": "sonnet-4.6",
-  "authored_date": "2026-06-30"
+  "by": "sonnet_reading"
 }

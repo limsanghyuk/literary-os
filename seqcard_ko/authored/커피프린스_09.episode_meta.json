@@ -1,0 +1,18 @@
+{
+  "work_id": "커피프린스_09",
+  "scene_count": 54,
+  "core_dist": {
+    "CONFLICT": 10,
+    "LOSS": 9,
+    "REVELATION": 9,
+    "BOND": 7,
+    "ROMANCE": 7,
+    "HOOK": 5,
+    "INTRO": 2,
+    "REVERSAL": 2,
+    "RELIEF": 2,
+    "ESTABLISH": 1
+  },
+  "episode_function": "",
+  "by": "sonnet_reading"
+}

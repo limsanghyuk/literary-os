@@ -1,7 +1,5 @@
 {
-  "work_id": "daejanggeum_07",
-  "episode": 7,
-  "title": "대장금 제7부",
+  "work_id": "대장금_07",
   "scene_count": 82,
   "core_dist": {
     "LOSS": 11,
@@ -20,21 +18,6 @@
     "INTRO": 1,
     "REUNION": 1
   },
-  "core2_dist": {
-    "CONFLICT": 10,
-    "DESIRE": 7,
-    "BOND": 5,
-    "PUNISH": 4,
-    "PERIL": 3,
-    "LOSS": 3,
-    "HOOK": 3,
-    "REVERSAL": 3,
-    "RELIEF": 3,
-    "RESCUE": 2,
-    "ESTABLISH": 2,
-    "ORACLE": 1
-  },
   "episode_function": "장금 출궁 위기 탈출 후 다재헌 유배, 침체와 절망 극복 서사(LOSS→DESIRE 전환), 백본 재배 성공·비리 발각·운백 자폭적 선의로 장금이 수랏간 복귀를 예고받는 성장 훅 엔딩",
-  "authored_by": "sonnet-4.6",
-  "authored_date": "2026-06-30"
+  "by": "sonnet_reading"
 }

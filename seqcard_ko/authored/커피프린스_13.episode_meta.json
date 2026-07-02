@@ -1,19 +1,18 @@
 {
   "work_id": "커피프린스_13",
-  "episode": 13,
   "scene_count": 61,
   "core_dist": {
-    "BOND": 10,
     "DESIRE": 10,
+    "BOND": 10,
     "RELIEF": 8,
     "ROMANCE": 6,
     "REUNION": 5,
     "CONFLICT": 4,
     "REVELATION": 4,
-    "ESTABLISH": 3,
-    "HOOK": 3,
-    "LOSS": 3,
     "ORACLE": 3,
+    "ESTABLISH": 3,
+    "LOSS": 3,
+    "HOOK": 3,
     "PERIL": 2
   },
   "episode_function": "한결의 입양 비밀과 친부 정체가 폭로되면서 연인 관계의 위기감이 증폭되고, 미국행 이별 위기 속에서도 은찬과 한결의 유대가 깊어지는 전환점 회차.",

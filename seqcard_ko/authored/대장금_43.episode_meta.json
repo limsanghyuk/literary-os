@@ -1,34 +1,20 @@
 {
   "work_id": "대장금_43",
-  "episode": 43,
   "scene_count": 67,
   "core_dist": {
-    "PERIL": 30,
-    "CONFLICT": 25,
-    "HOOK": 16,
-    "ESTABLISH": 15,
-    "DESIRE": 12,
-    "REVELATION": 9,
-    "PUNISH": 8,
-    "ORACLE": 6,
-    "BOND": 4,
-    "RESCUE": 2,
-    "RELIEF": 2,
+    "PERIL": 19,
+    "CONFLICT": 18,
+    "REVELATION": 8,
+    "ESTABLISH": 6,
+    "DESIRE": 5,
+    "PUNISH": 3,
     "REVERSAL": 2,
-    "LOSS": 1
+    "HOOK": 2,
+    "RESCUE": 1,
+    "ORACLE": 1,
+    "BOND": 1,
+    "RELIEF": 1
   },
-  "episode_function": {
-    "opening_cores": [
-      "RESCUE",
-      "CONFLICT",
-      "CONFLICT"
-    ],
-    "closing_cores": [
-      "RELIEF",
-      "HOOK",
-      "HOOK"
-    ],
-    "dominant": "PERIL"
-  },
+  "episode_function": "",
   "by": "sonnet-4.6"
 }

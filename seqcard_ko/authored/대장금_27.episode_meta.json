@@ -1,22 +1,19 @@
 {
   "work_id": "대장금_27",
-  "episode": 27,
   "scene_count": 51,
-  "scene_marker_note": "원본 씬 마커 50개(씬3 중복 표기 1회 포함), 논리적 씬 51개로 처리. scene_no 1~51 연속 부여.",
   "core_dist": {
-    "BOND": 9,
     "CONFLICT": 11,
-    "REVERSAL": 3,
-    "ESTABLISH": 1,
+    "BOND": 9,
     "PERIL": 9,
-    "LOSS": 5,
     "PUNISH": 8,
-    "REVELATION": 1,
+    "LOSS": 5,
+    "REVERSAL": 3,
     "DESIRE": 2,
+    "ESTABLISH": 1,
+    "REVELATION": 1,
     "RESCUE": 1,
     "ORACLE": 1
   },
   "episode_function": "수랏간 재연 실험에서 금영의 전복초 독약 공작으로 홍이가 고열로 쓰러지며 악당 진영이 승기를 잡는다. 치계전의 허위 자백과 종사부관 추국사망으로 참수가 결정되나 내금위장이 민정호 호소에 움직여 형을 관비 유배로 감한다. 한상궁이 장금을 살리기 위해 단독 자백하고, 업혀 가는 길에서 한상궁이 사망한다. 불씨 테마가 확립된다.",
-  "authored_by": "sonnet-4.6",
-  "authored_date": "2026-06-30"
+  "by": "sonnet_reading"
 }

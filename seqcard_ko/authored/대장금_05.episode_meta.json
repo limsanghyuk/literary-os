@@ -1,0 +1,20 @@
+{
+  "work_id": "대장금_05",
+  "scene_count": 63,
+  "core_dist": {
+    "CONFLICT": 12,
+    "PERIL": 11,
+    "DESIRE": 8,
+    "ESTABLISH": 8,
+    "BOND": 7,
+    "ORACLE": 5,
+    "REVELATION": 3,
+    "REVERSAL": 3,
+    "HOOK": 2,
+    "LOSS": 2,
+    "RELIEF": 1,
+    "INTRO": 1
+  },
+  "episode_function": "",
+  "by": "sonnet_reading"
+}

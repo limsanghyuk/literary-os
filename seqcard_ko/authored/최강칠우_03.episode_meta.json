@@ -1,1 +1,22 @@
-{"work_id": "최강칠우_03", "scene_count": 67, "core_dist": {"ESTABLISH": 5, "ORACLE": 5, "INTRO": 1, "BOND": 9, "CONFLICT": 5, "REVERSAL": 0, "LOSS": 3, "PUNISH": 4, "REVELATION": 10, "REUNION": 1, "RELIEF": 9, "ROMANCE": 4, "PERIL": 6, "RESCUE": 3, "DESIRE": 2, "HOOK": 0}, "episode_function": "이번 화는 허원도 살해 이후 정체를 숨긴 자객 칠우와 그를 쫓는 사관 민승국의 대결 구도를 심화시키는 동시에, 한씨 문중의 거짓 열녀 사건을 통해 칠우가 위선적 권력자를 응징하는 '낮엔 개, 밤엔 자객'이라는 정체성을 완성하고, 승국이 왕의 사초관이라는 반전으로 다음 화의 정면 대립을 예고하는 역할을 한다.", "by": "sonnet_reading"}
+{
+  "work_id": "최강칠우_03",
+  "scene_count": 67,
+  "core_dist": {
+    "REVELATION": 10,
+    "RELIEF": 9,
+    "BOND": 9,
+    "PERIL": 6,
+    "ESTABLISH": 5,
+    "CONFLICT": 5,
+    "ORACLE": 5,
+    "PUNISH": 4,
+    "ROMANCE": 4,
+    "LOSS": 3,
+    "RESCUE": 3,
+    "DESIRE": 2,
+    "INTRO": 1,
+    "REUNION": 1
+  },
+  "episode_function": "이번 화는 허원도 살해 이후 정체를 숨긴 자객 칠우와 그를 쫓는 사관 민승국의 대결 구도를 심화시키는 동시에, 한씨 문중의 거짓 열녀 사건을 통해 칠우가 위선적 권력자를 응징하는 '낮엔 개, 밤엔 자객'이라는 정체성을 완성하고, 승국이 왕의 사초관이라는 반전으로 다음 화의 정면 대립을 예고하는 역할을 한다.",
+  "by": "sonnet_reading"
+}

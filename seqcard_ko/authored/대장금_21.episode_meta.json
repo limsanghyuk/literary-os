@@ -1,34 +1,22 @@
 {
   "work_id": "대장금_21",
-  "episode": 21,
   "scene_count": 74,
   "core_dist": {
-    "BOND": 12,
-    "BOND(2)": 8,
     "CONFLICT": 16,
-    "CONFLICT(2)": 8,
-    "DESIRE": 4,
-    "DESIRE(2)": 9,
-    "ESTABLISH": 6,
-    "HOOK": 1,
+    "BOND": 12,
     "LOSS": 7,
-    "LOSS(2)": 7,
-    "ORACLE": 4,
-    "ORACLE(2)": 2,
-    "PERIL": 3,
-    "PERIL(2)": 7,
-    "PUNISH(2)": 3,
+    "ESTABLISH": 6,
     "RELIEF": 6,
-    "RELIEF(2)": 7,
-    "RESCUE": 4,
-    "REUNION": 1,
     "REVELATION": 5,
+    "RESCUE": 4,
+    "DESIRE": 4,
     "REVERSAL": 4,
-    "REVERSAL(2)": 5,
+    "ORACLE": 4,
+    "PERIL": 3,
+    "REUNION": 1,
     "ROMANCE": 1,
-    "ROMANCE(2)": 1
+    "HOOK": 1
   },
   "episode_function": "주기능: CONFLICT(16씬), BOND(12씬), LOSS(7씬)",
-  "authored_by": "sonnet-4.6",
-  "source_file": "대장금_21.seqcard.jsonl"
+  "by": "sonnet_reading"
 }

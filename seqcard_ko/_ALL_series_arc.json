@@ -1,93 +1,5 @@
 {
  "series": {
-  "싸인": {
-   "eps": 20,
-   "scenes": 1358,
-   "top": {
-    "ESTABLISH": 218,
-    "REVELATION": 202,
-    "CONFLICT": 172,
-    "PERIL": 164
-   },
-   "CONFLICT_persist": 0.233
-  },
-  "도깨비": {
-   "eps": 16,
-   "scenes": 900,
-   "top": {
-    "ROMANCE": 115,
-    "DESIRE": 96,
-    "ESTABLISH": 95,
-    "LOSS": 90
-   },
-   "CONFLICT_persist": 0.159
-  },
-  "대장금": {
-   "eps": 54,
-   "scenes": 3630,
-   "top": {
-    "CONFLICT": 679,
-    "PERIL": 483,
-    "ESTABLISH": 429,
-    "DESIRE": 371
-   },
-   "CONFLICT_persist": 0.323
-  },
-  "마왕": {
-   "eps": 20,
-   "scenes": 1585,
-   "top": {
-    "CONFLICT": 242,
-    "PERIL": 231,
-    "REVELATION": 220,
-    "ORACLE": 160
-   },
-   "CONFLICT_persist": 0.178
-  },
-  "하얀거탑": {
-   "eps": 20,
-   "scenes": 1304,
-   "top": {
-    "CONFLICT": 296,
-    "DESIRE": 174,
-    "PERIL": 165,
-    "BOND": 127
-   },
-   "CONFLICT_persist": 0.321
-  },
-  "미안하다사랑한다": {
-   "eps": 16,
-   "scenes": 1299,
-   "top": {
-    "LOSS": 199,
-    "CONFLICT": 166,
-    "BOND": 154,
-    "PERIL": 152
-   },
-   "CONFLICT_persist": 0.211
-  },
-  "커피프린스": {
-   "eps": 17,
-   "scenes": 949,
-   "top": {
-    "BOND": 152,
-    "CONFLICT": 138,
-    "ROMANCE": 120,
-    "DESIRE": 114
-   },
-   "CONFLICT_persist": 0.312
-  },
-  "시티헌터": {
-   "eps": 20,
-   "scenes": 1365,
-   "top": {
-    "CONFLICT": 241,
-    "PERIL": 203,
-    "REVELATION": 172,
-    "BOND": 96
-   },
-   "CONFLICT_persist": 0.174
-  },
   "경성스캔들": {
    "eps": 16,
    "scenes": 1187,
@@ -97,73 +9,7 @@
     "LOSS": 121,
     "BOND": 111
    },
-   "CONFLICT_persist": 0.244
-  },
-  "워킹맘": {
-   "eps": 16,
-   "scenes": 1161,
-   "top": {
-    "CONFLICT": 217,
-    "DESIRE": 153,
-    "RELIEF": 129,
-    "PERIL": 121
-   },
-   "CONFLICT_persist": 0.258
-  },
-  "최강칠우": {
-   "eps": 20,
-   "scenes": 1398,
-   "top": {
-    "PERIL": 361,
-    "REVELATION": 170,
-    "CONFLICT": 155,
-    "ORACLE": 121
-   },
-   "CONFLICT_persist": 0.252
-  },
-  "모래시계": {
-   "eps": 24,
-   "scenes": 1365,
-   "top": {
-    "PERIL": 192,
-    "ESTABLISH": 178,
-    "CONFLICT": 164,
-    "ORACLE": 163
-   },
-   "CONFLICT_persist": 0.191
-  },
-  "역전의여왕": {
-   "eps": 31,
-   "scenes": 1875,
-   "top": {
-    "CONFLICT": 380,
-    "REVELATION": 268,
-    "LOSS": 175,
-    "PERIL": 164
-   },
-   "CONFLICT_persist": 0.263
-  },
-  "시그널": {
-   "eps": 16,
-   "scenes": 1287,
-   "top": {
-    "REVELATION": 343,
-    "PERIL": 224,
-    "CONFLICT": 161,
-    "HOOK": 154
-   },
-   "CONFLICT_persist": 0.248
-  },
-  "배가본드": {
-   "eps": 16,
-   "scenes": 993,
-   "top": {
-    "PERIL": 211,
-    "CONFLICT": 159,
-    "REVELATION": 142,
-    "ESTABLISH": 134
-   },
-   "CONFLICT_persist": 0.195
+   "CONFLICT_persist": 0.245
   },
   "공주의남자": {
    "eps": 24,
@@ -175,17 +21,6 @@
     "REVELATION": 175
    },
    "CONFLICT_persist": 0.252
-  },
-  "카인과아벨": {
-   "eps": 20,
-   "scenes": 1080,
-   "top": {
-    "PERIL": 202,
-    "CONFLICT": 180,
-    "REVELATION": 174,
-    "ESTABLISH": 86
-   },
-   "CONFLICT_persist": 0.184
   },
   "너의목소리가들려": {
    "eps": 18,
@@ -209,6 +44,160 @@
    },
    "CONFLICT_persist": 0.164
   },
+  "대장금": {
+   "eps": 54,
+   "scenes": 3630,
+   "top": {
+    "CONFLICT": 679,
+    "PERIL": 483,
+    "ESTABLISH": 429,
+    "DESIRE": 371
+   },
+   "CONFLICT_persist": 0.323
+  },
+  "도깨비": {
+   "eps": 16,
+   "scenes": 900,
+   "top": {
+    "ROMANCE": 115,
+    "DESIRE": 96,
+    "ESTABLISH": 95,
+    "LOSS": 90
+   },
+   "CONFLICT_persist": 0.159
+  },
+  "마왕": {
+   "eps": 20,
+   "scenes": 1585,
+   "top": {
+    "CONFLICT": 242,
+    "PERIL": 231,
+    "REVELATION": 220,
+    "ORACLE": 160
+   },
+   "CONFLICT_persist": 0.178
+  },
+  "모래시계": {
+   "eps": 24,
+   "scenes": 1365,
+   "top": {
+    "PERIL": 192,
+    "ESTABLISH": 178,
+    "CONFLICT": 164,
+    "ORACLE": 163
+   },
+   "CONFLICT_persist": 0.191
+  },
+  "미안하다사랑한다": {
+   "eps": 16,
+   "scenes": 1299,
+   "top": {
+    "LOSS": 199,
+    "CONFLICT": 166,
+    "BOND": 154,
+    "PERIL": 152
+   },
+   "CONFLICT_persist": 0.211
+  },
+  "배가본드": {
+   "eps": 16,
+   "scenes": 993,
+   "top": {
+    "PERIL": 211,
+    "CONFLICT": 159,
+    "REVELATION": 142,
+    "ESTABLISH": 134
+   },
+   "CONFLICT_persist": 0.195
+  },
+  "시그널": {
+   "eps": 16,
+   "scenes": 1287,
+   "top": {
+    "REVELATION": 343,
+    "PERIL": 224,
+    "CONFLICT": 161,
+    "HOOK": 154
+   },
+   "CONFLICT_persist": 0.248
+  },
+  "시티헌터": {
+   "eps": 20,
+   "scenes": 1365,
+   "top": {
+    "CONFLICT": 241,
+    "PERIL": 203,
+    "REVELATION": 172,
+    "BOND": 96
+   },
+   "CONFLICT_persist": 0.171
+  },
+  "싸인": {
+   "eps": 20,
+   "scenes": 1358,
+   "top": {
+    "ESTABLISH": 218,
+    "REVELATION": 202,
+    "CONFLICT": 172,
+    "PERIL": 164
+   },
+   "CONFLICT_persist": 0.233
+  },
+  "역전의여왕": {
+   "eps": 31,
+   "scenes": 1875,
+   "top": {
+    "CONFLICT": 380,
+    "REVELATION": 268,
+    "LOSS": 175,
+    "PERIL": 164
+   },
+   "CONFLICT_persist": 0.263
+  },
+  "워킹맘": {
+   "eps": 16,
+   "scenes": 1161,
+   "top": {
+    "CONFLICT": 217,
+    "DESIRE": 153,
+    "RELIEF": 129,
+    "PERIL": 121
+   },
+   "CONFLICT_persist": 0.259
+  },
+  "최강칠우": {
+   "eps": 20,
+   "scenes": 1398,
+   "top": {
+    "PERIL": 361,
+    "REVELATION": 170,
+    "CONFLICT": 155,
+    "ORACLE": 121
+   },
+   "CONFLICT_persist": 0.252
+  },
+  "카인과아벨": {
+   "eps": 20,
+   "scenes": 1080,
+   "top": {
+    "PERIL": 202,
+    "CONFLICT": 180,
+    "REVELATION": 174,
+    "ESTABLISH": 86
+   },
+   "CONFLICT_persist": 0.184
+  },
+  "커피프린스": {
+   "eps": 17,
+   "scenes": 949,
+   "top": {
+    "BOND": 152,
+    "CONFLICT": 138,
+    "ROMANCE": 120,
+    "DESIRE": 114
+   },
+   "CONFLICT_persist": 0.309
+  },
   "태양의후예": {
    "eps": 16,
    "scenes": 852,
@@ -219,12 +208,41 @@
     "CONFLICT": 86
    },
    "CONFLICT_persist": 0.174
+  },
+  "하얀거탑": {
+   "eps": 20,
+   "scenes": 1304,
+   "top": {
+    "CONFLICT": 296,
+    "DESIRE": 174,
+    "PERIL": 165,
+    "BOND": 127
+   },
+   "CONFLICT_persist": 0.317
   }
  },
  "totals": {
-  "series_count": 20,
-  "eps": 424,
-  "scenes": 28088
+  "works": 20,
+  "episodes": 424,
+  "scenes": 28088,
+  "core_dist": {
+   "CONFLICT": 4409,
+   "PERIL": 3988,
+   "REVELATION": 3099,
+   "ESTABLISH": 2448,
+   "LOSS": 2154,
+   "BOND": 2088,
+   "DESIRE": 1997,
+   "HOOK": 1507,
+   "RELIEF": 1345,
+   "ORACLE": 1165,
+   "ROMANCE": 1078,
+   "PUNISH": 812,
+   "REVERSAL": 806,
+   "RESCUE": 604,
+   "REUNION": 367,
+   "INTRO": 221
+  }
  },
- "note": "20시리즈 완주 (2026-07-02): 목표 20시리즈 전량 달성. 마지막 태양의후예16/16 완주 반영, 밀리터리로맨스 장르 추가(2단 촬영고 PDF pdfplumber bbox 좌우분리 추출). 총 424화/28,088씬. 장르 스펙트럼: 수사/의학/사극/시대극/멜로/코미디/첩보/법정스릴러/초능력/동학농민운동/밀리터리 등 다양화 완료."
+ "note": "SeqCard 의도층 집계. core-only. κ 미검증 분석용 prior. by=cowork opus aggregation 2026-07-02"
 }

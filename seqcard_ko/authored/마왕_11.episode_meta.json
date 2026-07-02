@@ -1,0 +1,20 @@
+{
+  "work_id": "마왕_11",
+  "scene_count": 68,
+  "core_dist": {
+    "PERIL": 16,
+    "LOSS": 9,
+    "CONFLICT": 7,
+    "ORACLE": 7,
+    "ROMANCE": 6,
+    "DESIRE": 5,
+    "REVELATION": 5,
+    "BOND": 4,
+    "REVERSAL": 3,
+    "ESTABLISH": 3,
+    "PUNISH": 2,
+    "HOOK": 1
+  },
+  "episode_function": "",
+  "by": "sonnet_reading"
+}

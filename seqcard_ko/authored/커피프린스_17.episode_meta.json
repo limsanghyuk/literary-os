@@ -1,1 +1,18 @@
-{"work_id":"커피프린스_17","scene_count":67,"core_dist":{"BOND":28,"CONFLICT":4,"DESIRE":9,"ESTABLISH":8,"HOOK":1,"LOSS":18,"PERIL":3,"RELIEF":9,"REUNION":6,"ROMANCE":36},"episode_function":"유학-이별-2년-귀환의 전체 호를 한 회에 담아 한결-은찬이 고백·이별·재결합을 완성하고 카페 공동체 전원이 제자리로 돌아오는 해피엔딩 피날레로, ROMANCE·BOND·REUNION이 전체 태그의 약 70%를 차지하며 감정적 보상을 최대화","by":"sonnet_reading"}
+{
+  "work_id": "커피프린스_17",
+  "scene_count": 67,
+  "core_dist": {
+    "ROMANCE": 23,
+    "BOND": 11,
+    "LOSS": 9,
+    "ESTABLISH": 7,
+    "REUNION": 5,
+    "PERIL": 3,
+    "DESIRE": 3,
+    "CONFLICT": 3,
+    "RELIEF": 2,
+    "HOOK": 1
+  },
+  "episode_function": "유학-이별-2년-귀환의 전체 호를 한 회에 담아 한결-은찬이 고백·이별·재결합을 완성하고 카페 공동체 전원이 제자리로 돌아오는 해피엔딩 피날레로, ROMANCE·BOND·REUNION이 전체 태그의 약 70%를 차지하며 감정적 보상을 최대화",
+  "by": "sonnet_reading"
+}

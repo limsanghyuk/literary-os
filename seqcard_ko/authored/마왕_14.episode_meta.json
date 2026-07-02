@@ -1,11 +1,9 @@
 {
   "work_id": "마왕_14",
-  "episode_no": 14,
-  "title": "마왕 제14회 — 지금까지의 모든 규칙을 버려라",
   "scene_count": 71,
   "core_dist": {
-    "REVELATION": 14,
     "CONFLICT": 15,
+    "REVELATION": 14,
     "ORACLE": 9,
     "DESIRE": 7,
     "PERIL": 6,
@@ -14,10 +12,9 @@
     "LOSS": 4,
     "HOOK": 4,
     "REVERSAL": 2,
-    "PUNISH": 1,
-    "ESTABLISH": 1
+    "ESTABLISH": 1,
+    "PUNISH": 1
   },
   "episode_function": "해인이 '나도 고마워'라는 말의 섬광 기시감을 통해 승하=태성 동일 인물임을 무의식적으로 감지하기 시작한다(ORACLE). 영철의 12년 전 회상이 '오수가 태훈을 찔렀다'는 진실을 발화한다(REVELATION). 요양원에서 오수가 가져온 USB칩은 음악만 담겨 있는 반전(REVERSAL)으로 오수를 좌절시키고, 승희가 비밀리에 간직했던 진짜 칩을 승하에게 건네며 '착한 내 동생'이라 부른다(REVELATION·BOND 절정). 오수는 '정태성은 이미 죽은 사람'이라는 준표 대사를 반추하며 태성 생존 가능성을 직감한다. 에피소드 클라이맥스는 오수가 영장 없이 황대필 집에 침입해 복수 편지 더미를 발견하는 순간 뒤에서 둔기로 얻어맞는 엔딩(PERIL)으로, 형사의 월권과 위험이 동시에 폭발한다.",
-  "authored_by": "sonnet-4.6",
-  "authored_date": "2026-06-30"
+  "by": "sonnet_reading"
 }

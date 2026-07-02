@@ -1,0 +1,21 @@
+{
+  "work_id": "도깨비_09",
+  "scene_count": 63,
+  "core_dist": {
+    "DESIRE": 12,
+    "BOND": 11,
+    "ROMANCE": 7,
+    "REVELATION": 5,
+    "REUNION": 5,
+    "RELIEF": 5,
+    "RESCUE": 4,
+    "LOSS": 3,
+    "ORACLE": 3,
+    "PERIL": 3,
+    "ESTABLISH": 2,
+    "CONFLICT": 2,
+    "HOOK": 1
+  },
+  "episode_function": "",
+  "by": "sonnet_reading"
+}

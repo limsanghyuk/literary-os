@@ -1,0 +1,21 @@
+{
+  "work_id": "도깨비_13",
+  "scene_count": 47,
+  "core_dist": {
+    "LOSS": 9,
+    "CONFLICT": 8,
+    "PERIL": 5,
+    "PUNISH": 5,
+    "BOND": 3,
+    "REVELATION": 3,
+    "DESIRE": 3,
+    "ROMANCE": 3,
+    "ESTABLISH": 2,
+    "RESCUE": 2,
+    "REVERSAL": 2,
+    "RELIEF": 1,
+    "REUNION": 1
+  },
+  "episode_function": "",
+  "by": "sonnet_reading"
+}

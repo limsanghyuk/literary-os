@@ -1,21 +1,17 @@
 {
   "work_id": "대장금_13",
-  "episode_no": 13,
-  "title": "대장금 제13회",
   "scene_count": 59,
   "core_dist": {
-    "REVELATION": 10,
-    "DESIRE": 4,
     "ESTABLISH": 26,
-    "RELIEF": 1,
-    "BOND": 1,
+    "REVELATION": 10,
     "CONFLICT": 8,
     "PERIL": 5,
+    "DESIRE": 4,
     "ROMANCE": 3,
+    "RELIEF": 1,
+    "BOND": 1,
     "ORACLE": 1
   },
   "episode_function": "한상궁이 장금에게 '맛을 그리는 능력'을 실증(REVELATION)해 미각 없이도 대하찜·두부전골을 완성시키며 가능성을 확증한다. 최상궁은 고려 수랏간 비서를 꺼내 금영에게 전수하며 비밀 패를 드러낸다. 덕구·민정호·장금의 삼각 엇갈림(ROMANCE 미완)이 코미디로 전개된다. 궁 장고의 장맛 변질 사건이 발생해 경합 첫 과제가 되고, 소나무 아래 장독이 비결이라는 장금의 직관적 통찰(REVELATION)로 에피소드가 마감된다.",
-  "note_scene_numbering": "#55가 원본에 두 번 등장(궁 전경·대전). 씬55=궁 전경, 씬56=#55b 대전으로 처리. 총 59씬.",
-  "authored_by": "sonnet-4.6",
-  "authored_date": "2026-06-30"
+  "by": "sonnet_reading"
 }

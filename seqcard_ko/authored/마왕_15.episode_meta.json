@@ -1,10 +1,6 @@
 {
-  "work_id": "마왕",
-  "episode": 15,
-  "title": "이젠 당신이 선택할 차례야",
+  "work_id": "마왕_15",
   "scene_count": 71,
-  "by": "sonnet-4.6",
-  "episode_function": "복수계획 진전+형사 위기+진실 접근+로맨스 교차",
   "core_dist": {
     "CONFLICT": 13,
     "REVELATION": 10,
@@ -18,5 +14,6 @@
     "HOOK": 2,
     "RELIEF": 1
   },
-  "notes": "씬71=배후조종자 오승하 인식(엔딩HOOK). 씬13 수선화=내년봄 복선. 씬70 타로뒤집기=승하결심. 씬73-1 없음(15화에 해당 씬 없음)."
+  "episode_function": "복수계획 진전+형사 위기+진실 접근+로맨스 교차",
+  "by": "sonnet-4.6"
 }

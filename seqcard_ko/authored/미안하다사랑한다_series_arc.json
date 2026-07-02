@@ -1,0 +1,449 @@
+{
+  "series": "미안하다사랑한다",
+  "episodes_total": 16,
+  "scenes_total": 1299,
+  "series_core_dist": {
+    "LOSS": 199,
+    "CONFLICT": 166,
+    "BOND": 154,
+    "PERIL": 152,
+    "ESTABLISH": 146,
+    "DESIRE": 119,
+    "REVELATION": 85,
+    "ORACLE": 61,
+    "HOOK": 49,
+    "ROMANCE": 46,
+    "RESCUE": 32,
+    "REVERSAL": 23,
+    "RELIEF": 22,
+    "REUNION": 20,
+    "PUNISH": 18,
+    "INTRO": 7
+  },
+  "episode_top_core_trajectory": [
+    "LOSS",
+    "CONFLICT",
+    "ORACLE",
+    "BOND",
+    "ESTABLISH",
+    "LOSS",
+    "ESTABLISH",
+    "CONFLICT",
+    "CONFLICT",
+    "PERIL",
+    "CONFLICT",
+    "LOSS",
+    "LOSS",
+    "PERIL",
+    "DESIRE",
+    "LOSS"
+  ],
+  "scene_transition_grammar_top20": [
+    {
+      "transition": "LOSS>LOSS",
+      "count": 45
+    },
+    {
+      "transition": "PERIL>PERIL",
+      "count": 44
+    },
+    {
+      "transition": "BOND>BOND",
+      "count": 43
+    },
+    {
+      "transition": "CONFLICT>CONFLICT",
+      "count": 35
+    },
+    {
+      "transition": "CONFLICT>LOSS",
+      "count": 33
+    },
+    {
+      "transition": "ESTABLISH>ESTABLISH",
+      "count": 27
+    },
+    {
+      "transition": "LOSS>ESTABLISH",
+      "count": 24
+    },
+    {
+      "transition": "PERIL>CONFLICT",
+      "count": 22
+    },
+    {
+      "transition": "CONFLICT>PERIL",
+      "count": 22
+    },
+    {
+      "transition": "LOSS>PERIL",
+      "count": 21
+    },
+    {
+      "transition": "CONFLICT>ESTABLISH",
+      "count": 21
+    },
+    {
+      "transition": "PERIL>LOSS",
+      "count": 20
+    },
+    {
+      "transition": "DESIRE>DESIRE",
+      "count": 20
+    },
+    {
+      "transition": "ESTABLISH>CONFLICT",
+      "count": 20
+    },
+    {
+      "transition": "REVELATION>LOSS",
+      "count": 20
+    },
+    {
+      "transition": "DESIRE>BOND",
+      "count": 19
+    },
+    {
+      "transition": "LOSS>CONFLICT",
+      "count": 19
+    },
+    {
+      "transition": "BOND>LOSS",
+      "count": 18
+    },
+    {
+      "transition": "REVELATION>REVELATION",
+      "count": 18
+    },
+    {
+      "transition": "ESTABLISH>DESIRE",
+      "count": 17
+    }
+  ],
+  "conflict_persist": 0.211,
+  "episodes": [
+    {
+      "episode": 1,
+      "scene_count": 82,
+      "top_core": "LOSS",
+      "core_dist": {
+        "LOSS": 17,
+        "ESTABLISH": 13,
+        "CONFLICT": 12,
+        "PERIL": 9,
+        "DESIRE": 6,
+        "BOND": 6,
+        "ORACLE": 5,
+        "REVERSAL": 4,
+        "ROMANCE": 3,
+        "RESCUE": 3,
+        "INTRO": 2,
+        "RELIEF": 1,
+        "HOOK": 1
+      }
+    },
+    {
+      "episode": 2,
+      "scene_count": 75,
+      "top_core": "CONFLICT",
+      "core_dist": {
+        "CONFLICT": 13,
+        "ESTABLISH": 10,
+        "BOND": 10,
+        "ORACLE": 7,
+        "PERIL": 6,
+        "LOSS": 6,
+        "REVELATION": 5,
+        "HOOK": 5,
+        "DESIRE": 4,
+        "RESCUE": 3,
+        "ROMANCE": 2,
+        "REVERSAL": 1,
+        "INTRO": 1,
+        "PUNISH": 1,
+        "RELIEF": 1
+      }
+    },
+    {
+      "episode": 3,
+      "scene_count": 68,
+      "top_core": "ORACLE",
+      "core_dist": {
+        "ORACLE": 11,
+        "BOND": 11,
+        "LOSS": 10,
+        "CONFLICT": 9,
+        "PERIL": 6,
+        "HOOK": 5,
+        "DESIRE": 5,
+        "ESTABLISH": 5,
+        "RESCUE": 2,
+        "REVELATION": 1,
+        "PUNISH": 1,
+        "ROMANCE": 1,
+        "RELIEF": 1
+      }
+    },
+    {
+      "episode": 4,
+      "scene_count": 73,
+      "top_core": "BOND",
+      "core_dist": {
+        "BOND": 17,
+        "ESTABLISH": 14,
+        "CONFLICT": 9,
+        "ORACLE": 9,
+        "LOSS": 6,
+        "DESIRE": 5,
+        "RELIEF": 4,
+        "REVERSAL": 3,
+        "PERIL": 2,
+        "RESCUE": 1,
+        "PUNISH": 1,
+        "REVELATION": 1,
+        "HOOK": 1
+      }
+    },
+    {
+      "episode": 5,
+      "scene_count": 69,
+      "top_core": "ESTABLISH",
+      "core_dist": {
+        "ESTABLISH": 18,
+        "CONFLICT": 10,
+        "PERIL": 9,
+        "ORACLE": 6,
+        "BOND": 5,
+        "LOSS": 4,
+        "DESIRE": 4,
+        "RESCUE": 4,
+        "RELIEF": 3,
+        "HOOK": 2,
+        "INTRO": 1,
+        "REUNION": 1,
+        "REVELATION": 1,
+        "REVERSAL": 1
+      }
+    },
+    {
+      "episode": 6,
+      "scene_count": 75,
+      "top_core": "LOSS",
+      "core_dist": {
+        "LOSS": 13,
+        "ESTABLISH": 12,
+        "BOND": 10,
+        "CONFLICT": 10,
+        "DESIRE": 7,
+        "ORACLE": 5,
+        "RESCUE": 5,
+        "PERIL": 4,
+        "RELIEF": 3,
+        "HOOK": 2,
+        "REVELATION": 2,
+        "REVERSAL": 1,
+        "PUNISH": 1
+      }
+    },
+    {
+      "episode": 7,
+      "scene_count": 72,
+      "top_core": "ESTABLISH",
+      "core_dist": {
+        "ESTABLISH": 16,
+        "REVELATION": 12,
+        "DESIRE": 11,
+        "CONFLICT": 7,
+        "BOND": 7,
+        "LOSS": 7,
+        "REUNION": 3,
+        "HOOK": 3,
+        "PERIL": 3,
+        "ROMANCE": 2,
+        "RELIEF": 1
+      }
+    },
+    {
+      "episode": 8,
+      "scene_count": 87,
+      "top_core": "CONFLICT",
+      "core_dist": {
+        "CONFLICT": 17,
+        "PERIL": 14,
+        "ESTABLISH": 13,
+        "BOND": 11,
+        "REVELATION": 9,
+        "ROMANCE": 5,
+        "LOSS": 5,
+        "DESIRE": 3,
+        "REUNION": 2,
+        "HOOK": 2,
+        "PUNISH": 2,
+        "ORACLE": 2,
+        "RESCUE": 1,
+        "RELIEF": 1
+      }
+    },
+    {
+      "episode": 9,
+      "scene_count": 85,
+      "top_core": "CONFLICT",
+      "core_dist": {
+        "CONFLICT": 12,
+        "LOSS": 12,
+        "ESTABLISH": 10,
+        "PERIL": 10,
+        "DESIRE": 10,
+        "BOND": 9,
+        "REVELATION": 7,
+        "ROMANCE": 6,
+        "ORACLE": 2,
+        "PUNISH": 2,
+        "HOOK": 2,
+        "RESCUE": 2,
+        "RELIEF": 1
+      }
+    },
+    {
+      "episode": 10,
+      "scene_count": 81,
+      "top_core": "PERIL",
+      "core_dist": {
+        "PERIL": 17,
+        "LOSS": 11,
+        "DESIRE": 10,
+        "BOND": 10,
+        "ROMANCE": 9,
+        "CONFLICT": 6,
+        "ESTABLISH": 4,
+        "HOOK": 4,
+        "REVELATION": 3,
+        "REVERSAL": 3,
+        "REUNION": 2,
+        "ORACLE": 1,
+        "RELIEF": 1
+      }
+    },
+    {
+      "episode": 11,
+      "scene_count": 79,
+      "top_core": "CONFLICT",
+      "core_dist": {
+        "CONFLICT": 16,
+        "LOSS": 15,
+        "PERIL": 11,
+        "REVELATION": 9,
+        "ROMANCE": 8,
+        "ESTABLISH": 5,
+        "BOND": 5,
+        "DESIRE": 4,
+        "HOOK": 3,
+        "REVERSAL": 2,
+        "REUNION": 1
+      }
+    },
+    {
+      "episode": 12,
+      "scene_count": 86,
+      "top_core": "LOSS",
+      "core_dist": {
+        "LOSS": 17,
+        "CONFLICT": 15,
+        "ESTABLISH": 9,
+        "REVELATION": 8,
+        "BOND": 7,
+        "PERIL": 7,
+        "DESIRE": 7,
+        "RESCUE": 4,
+        "REUNION": 3,
+        "ORACLE": 2,
+        "RELIEF": 2,
+        "HOOK": 2,
+        "REVERSAL": 1,
+        "ROMANCE": 1,
+        "PUNISH": 1
+      }
+    },
+    {
+      "episode": 13,
+      "scene_count": 97,
+      "top_core": "LOSS",
+      "core_dist": {
+        "LOSS": 21,
+        "BOND": 16,
+        "PERIL": 15,
+        "DESIRE": 11,
+        "CONFLICT": 10,
+        "REVELATION": 8,
+        "PUNISH": 5,
+        "HOOK": 5,
+        "RESCUE": 2,
+        "ESTABLISH": 2,
+        "RELIEF": 1,
+        "REUNION": 1
+      }
+    },
+    {
+      "episode": 14,
+      "scene_count": 67,
+      "top_core": "PERIL",
+      "core_dist": {
+        "PERIL": 21,
+        "LOSS": 11,
+        "DESIRE": 9,
+        "CONFLICT": 8,
+        "BOND": 8,
+        "HOOK": 5,
+        "REVELATION": 3,
+        "RESCUE": 1,
+        "RELIEF": 1
+      }
+    },
+    {
+      "episode": 15,
+      "scene_count": 99,
+      "top_core": "DESIRE",
+      "core_dist": {
+        "DESIRE": 13,
+        "PERIL": 12,
+        "LOSS": 12,
+        "ESTABLISH": 10,
+        "REVELATION": 10,
+        "BOND": 8,
+        "CONFLICT": 7,
+        "ROMANCE": 6,
+        "REVERSAL": 5,
+        "HOOK": 4,
+        "ORACLE": 4,
+        "REUNION": 3,
+        "RESCUE": 2,
+        "INTRO": 2,
+        "PUNISH": 1
+      }
+    },
+    {
+      "episode": 16,
+      "scene_count": 104,
+      "top_core": "LOSS",
+      "core_dist": {
+        "LOSS": 32,
+        "BOND": 14,
+        "DESIRE": 10,
+        "ORACLE": 7,
+        "PERIL": 6,
+        "REVELATION": 6,
+        "ESTABLISH": 5,
+        "CONFLICT": 5,
+        "REUNION": 4,
+        "HOOK": 3,
+        "ROMANCE": 3,
+        "PUNISH": 3,
+        "RESCUE": 2,
+        "REVERSAL": 2,
+        "INTRO": 1,
+        "RELIEF": 1
+      }
+    }
+  ],
+  "by": "cowork opus aggregation"
+}

@@ -1,8 +1,6 @@
 {
-  "work_id": "대장금_ep14",
-  "episode": 14,
-  "total_scenes": 64,
-  "note_duplicate_marker": "원본 씬49 마커가 두 곳(다재헌/채마밭 일각)에 중복 등장. scene_no 49=다재헌 대화, scene_no 50=채마밭 일각으로 순번 부여.",
+  "work_id": "대장금_14",
+  "scene_count": 64,
   "core_dist": {
     "CONFLICT": 13,
     "ESTABLISH": 9,
@@ -19,6 +17,5 @@
     "REVERSAL": 1
   },
   "episode_function": "미각 상실 비밀 폭로 및 고래고기 도전으로 절정 → 미각 회복 조짐 엔딩. 장금의 극한 역경과 결기를 확립하는 위기-고조 화이다. 봉침(PERIL→RESCUE), 소금물 시험(LOSS), 민정호 로맨스(ROMANCE 4씬), 최상궁 폭로(REVELATION)가 4대 기능 축. 한상궁 '맛을 그려내는' 교육 철학이 드라마 핵심 명제로 언명됨.",
-  "by": "sonnet-4.6",
-  "authored_date": "2026-06-30"
+  "by": "sonnet-4.6"
 }

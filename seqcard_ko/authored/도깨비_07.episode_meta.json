@@ -1,28 +1,6 @@
 {
   "work_id": "도깨비_07",
-  "episode": 7,
   "scene_count": 58,
-  "authored_by": "sonnet-4.6",
-  "authored_date": "2026-06-30",
-  "scene_range": "S#1~S#53 (서브씬 포함)",
-  "episode_function": "메밀밭 반전 후속 처리(검 미잡힘 확정), 저승-써니 로맨스 진전(명함·카페 데이트), 도깨비 질투/태희 등장, 수능 완수·예식장 재회, 야외 주차장 백허그·검 잡힘 7부 엔딩",
-  "dominant_cores": [
-    "CONFLICT",
-    "ESTABLISH",
-    "DESIRE",
-    "REVELATION"
-  ],
-  "arc_note": "검이 안 잡힌다는 반전을 소화하며 일상 갈등을 통해 두 사람 감정이 심화되고, 저승-써니 로맨스가 본격 진행됨. 김선 족자 씬으로 저승의 전생 연결 복선 삽입. 엔딩에서 은탁의 진심 고백→포옹→검 잡힘으로 8부 이별을 예비한다",
-  "omit_scenes": [
-    "S#10",
-    "S#11",
-    "S#12",
-    "S#18",
-    "S#23",
-    "S#24",
-    "S#38",
-    "S#52"
-  ],
   "core_dist": {
     "CONFLICT": 13,
     "ESTABLISH": 11,
@@ -37,5 +15,7 @@
     "BOND": 1,
     "PUNISH": 1,
     "RESCUE": 1
-  }
+  },
+  "episode_function": "메밀밭 반전 후속 처리(검 미잡힘 확정), 저승-써니 로맨스 진전(명함·카페 데이트), 도깨비 질투/태희 등장, 수능 완수·예식장 재회, 야외 주차장 백허그·검 잡힘 7부 엔딩",
+  "by": "sonnet_reading"
 }

@@ -1,24 +1,21 @@
 {
   "work_id": "대장금_12",
-  "episode_no": 12,
-  "title": "대장금 제12회",
   "scene_count": 68,
   "core_dist": {
-    "HOOK": 2,
-    "REVELATION": 4,
-    "RELIEF": 1,
-    "ESTABLISH": 13,
-    "REUNION": 1,
-    "BOND": 4,
     "CONFLICT": 16,
-    "PERIL": 5,
-    "LOSS": 9,
-    "PUNISH": 1,
+    "ESTABLISH": 13,
     "DESIRE": 10,
+    "LOSS": 9,
+    "PERIL": 5,
+    "REVELATION": 4,
+    "BOND": 4,
+    "HOOK": 2,
+    "RELIEF": 1,
+    "REUNION": 1,
+    "PUNISH": 1,
     "REVERSAL": 1,
     "ORACLE": 1
   },
   "episode_function": "인삼·육두구 식품 궁합으로 원자 환후 원인을 자기실험으로 규명(REVELATION)한 장금이 그 후유증으로 미각을 상실(LOSS)한다. 정상궁은 몸이 편찮은 채로 제조상궁 생신에 전골을 올리지만 장금의 간 실수로 망신을 당하고, 적대 세력의 권력 공세를 역으로 뒤집어 한상궁·최상궁 경합(REVERSAL)을 임금에게 청한다. 한상궁은 미각 잃은 장금에게 '맛을 그리는 능력'을 선언하며 다음 화 역전을 예고하는 HOOK으로 마감한다.",
-  "authored_by": "sonnet-4.6",
-  "authored_date": "2026-06-30"
+  "by": "sonnet_reading"
 }

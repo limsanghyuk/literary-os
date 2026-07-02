@@ -1,24 +1,21 @@
 {
-  "work_id": "대장금",
-  "episode": 22,
+  "work_id": "대장금_22",
   "scene_count": 58,
-  "authored_by": "sonnet-4.6",
-  "authored_date": "2026-06-30",
-  "core_distribution": {
-    "CONFLICT": 24,
-    "LOSS": 12,
-    "BOND": 12,
-    "PERIL": 11,
-    "ESTABLISH": 11,
-    "HOOK": 10,
-    "DESIRE": 7,
-    "RELIEF": 6,
-    "PUNISH": 5,
-    "RESCUE": 5,
-    "REVERSAL": 5,
-    "ORACLE": 4,
-    "INTRO": 1
+  "core_dist": {
+    "CONFLICT": 16,
+    "LOSS": 9,
+    "PERIL": 5,
+    "ESTABLISH": 5,
+    "PUNISH": 4,
+    "ORACLE": 3,
+    "BOND": 3,
+    "RELIEF": 3,
+    "HOOK": 3,
+    "RESCUE": 3,
+    "DESIRE": 2,
+    "INTRO": 1,
+    "REVERSAL": 1
   },
   "episode_function": "정상궁 타계로 인한 상실·그리움 절정과, 한상궁의 고립-위기 심화 끝에 장금의 개입으로 역전을 준비하는 에피소드.",
-  "null_core2_count": 3
+  "by": "sonnet_reading"
 }

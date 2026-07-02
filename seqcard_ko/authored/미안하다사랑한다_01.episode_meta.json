@@ -1,21 +1,21 @@
 {
   "work_id": "미안하다사랑한다_01",
-  "episode_no": 1,
   "scene_count": 82,
   "core_dist": {
-    "BOND": 8,
-    "CONFLICT": 21,
-    "DESIRE": 15,
+    "LOSS": 17,
     "ESTABLISH": 13,
-    "HOOK": 2,
-    "INTRO": 3,
-    "LOSS": 21,
-    "ORACLE": 6,
-    "PERIL": 15,
-    "RELIEF": 1,
+    "CONFLICT": 12,
+    "PERIL": 9,
+    "DESIRE": 6,
+    "BOND": 6,
+    "ORACLE": 5,
+    "REVERSAL": 4,
+    "ROMANCE": 3,
     "RESCUE": 3,
-    "REVERSAL": 7,
-    "ROMANCE": 3
+    "INTRO": 2,
+    "RELIEF": 1,
+    "HOOK": 1
   },
+  "episode_function": "",
   "by": "sonnet_reading"
 }

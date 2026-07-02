@@ -1,0 +1,19 @@
+{
+  "work_id": "커피프린스_07",
+  "scene_count": 73,
+  "core_dist": {
+    "DESIRE": 16,
+    "ROMANCE": 15,
+    "LOSS": 10,
+    "BOND": 8,
+    "CONFLICT": 8,
+    "ESTABLISH": 6,
+    "RELIEF": 5,
+    "ORACLE": 2,
+    "REUNION": 1,
+    "HOOK": 1,
+    "PERIL": 1
+  },
+  "episode_function": "",
+  "by": "sonnet_reading"
+}
