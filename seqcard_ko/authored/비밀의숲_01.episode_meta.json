@@ -1,0 +1,22 @@
+{
+  "work_id": "비밀의숲_01",
+  "scene_count": 72,
+  "core_dist": {
+    "INTRO": 2,
+    "ESTABLISH": 9,
+    "ORACLE": 13,
+    "LOSS": 6,
+    "REVELATION": 8,
+    "CONFLICT": 7,
+    "PERIL": 11,
+    "DESIRE": 8,
+    "RESCUE": 1,
+    "RELIEF": 2,
+    "PUNISH": 1,
+    "REUNION": 1,
+    "BOND": 1,
+    "HOOK": 2
+  },
+  "episode_function": "1화는 시목이라는 감정 차단 검사를 도입하고 박무성 살인사건을 통해 검찰 내부 부패 권력(이창준·서동재)의 존재를 드러내는 동시에, 억울한 진범 교체와 증거 조작이라는 사법 불의를 확립하여 시리즈 전체의 핵심 갈등축을 설치한다.",
+  "by": "sonnet_reading"
+}

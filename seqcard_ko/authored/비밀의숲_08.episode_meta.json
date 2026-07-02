@@ -1,0 +1,21 @@
+{
+  "work_id": "비밀의숲_08",
+  "scene_count": 73,
+  "core_dist": {
+    "ESTABLISH": 17,
+    "CONFLICT": 13,
+    "PERIL": 6,
+    "PUNISH": 2,
+    "LOSS": 5,
+    "REVELATION": 6,
+    "BOND": 6,
+    "INTRO": 1,
+    "ORACLE": 7,
+    "REVERSAL": 3,
+    "HOOK": 5,
+    "RELIEF": 1,
+    "REUNION": 1
+  },
+  "episode_function": "동재의 증거조작 발각에서 시작해 조직적 은폐와 인권 유린, 비리 폭로의 공론화를 거쳐 창준이 시목을 특임검사로 지명하는 충격적 반전으로 마무리되며, 진실과 권력 사이의 긴장을 최고조로 끌어올리는 에피소드다.",
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,16 @@
+{
+  "work_id": "비밀의숲_15",
+  "scene_count": 59,
+  "core_dist": {
+    "BOND": 2,
+    "CONFLICT": 14,
+    "ESTABLISH": 6,
+    "HOOK": 9,
+    "LOSS": 6,
+    "PERIL": 2,
+    "REVELATION": 17,
+    "REVERSAL": 3
+  },
+  "episode_function": "연쇄살인범의 체포와 자백을 통해 범행 동기의 비극적 전모를 드러내는 동시에, 창준-우병준 배후 공모의 실체가 논리적으로 수렴되어 사건이 새 국면으로 전환되는 폭로·전환 회차이다.",
+  "by": "sonnet_reading"
+}

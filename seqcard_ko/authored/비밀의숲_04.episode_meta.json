@@ -1,0 +1,18 @@
+{
+  "work_id": "비밀의숲_04",
+  "scene_count": 59,
+  "core_dist": {
+    "ORACLE": 14,
+    "ESTABLISH": 3,
+    "PERIL": 9,
+    "BOND": 6,
+    "CONFLICT": 5,
+    "REVELATION": 8,
+    "RELIEF": 1,
+    "PUNISH": 3,
+    "HOOK": 7,
+    "LOSS": 3
+  },
+  "episode_function": "범인의 치밀한 공모 설계를 해독하는 수사 심화 회차로, 박무성 마지막 목격자 확보·범인 키 특정·민아 단서 추적·교복 단서 포착이 연쇄적으로 전개되고, 민아 납치·피살로 사건이 새 국면에 진입하며 창준의 공모 청사진이 수면 위로 떠오른다.",
+  "by": "sonnet_reading"
+}

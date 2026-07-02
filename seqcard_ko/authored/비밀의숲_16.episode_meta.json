@@ -1,0 +1,20 @@
+{
+  "work_id": "비밀의숲_16",
+  "scene_count": 75,
+  "core_dist": {
+    "BOND": 10,
+    "ESTABLISH": 9,
+    "REVELATION": 8,
+    "CONFLICT": 8,
+    "LOSS": 8,
+    "HOOK": 7,
+    "PUNISH": 7,
+    "PERIL": 6,
+    "RELIEF": 6,
+    "ORACLE": 3,
+    "RESCUE": 2,
+    "REVERSAL": 1
+  },
+  "episode_function": "공범 이창준의 자결과 자필 유언으로 한조 게이트 전모가 폭로되고 윤범 구속·부패 청산으로 이어지는 응보와 해소의 피날레로서, 검찰과 경찰 모두가 법 앞의 제자리를 찾으며 시목이 새로운 싸움을 향해 열린 결말로 나아간다.",
+  "by": "sonnet_reading"
+}

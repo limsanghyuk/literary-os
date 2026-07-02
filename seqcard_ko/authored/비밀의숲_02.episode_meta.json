@@ -1,0 +1,21 @@
+{
+  "work_id": "비밀의숲_02",
+  "scene_count": 54,
+  "core_dist": {
+    "HOOK": 7,
+    "ESTABLISH": 9,
+    "PERIL": 6,
+    "LOSS": 3,
+    "CONFLICT": 5,
+    "ORACLE": 8,
+    "REVELATION": 6,
+    "INTRO": 1,
+    "BOND": 3,
+    "DESIRE": 1,
+    "RELIEF": 1,
+    "REVERSAL": 1,
+    "PUNISH": 3
+  },
+  "episode_function": "검찰과 경찰의 조직적 은폐 구조를 해부하며, 황시목과 한여진이 진실 추적 동맹을 결성하고 내부감사라는 조직적 역풍에 직면하는 과정을 보여준다.",
+  "by": "sonnet_reading"
+}

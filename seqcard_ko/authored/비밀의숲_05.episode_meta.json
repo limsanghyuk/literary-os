@@ -1,0 +1,20 @@
+{
+  "work_id": "비밀의숲_05",
+  "scene_count": 61,
+  "core_dist": {
+    "ESTABLISH": 12,
+    "REVELATION": 9,
+    "CONFLICT": 9,
+    "ORACLE": 8,
+    "PERIL": 6,
+    "HOOK": 5,
+    "REVERSAL": 5,
+    "BOND": 3,
+    "RESCUE": 1,
+    "LOSS": 1,
+    "REUNION": 1,
+    "PUNISH": 1
+  },
+  "episode_function": "연쇄 살인 피해자 생존이라는 역전 상황에서 시목이 내부 배신자를 추적하는 동시에 자신이 희생양으로 지목되는 이중 압박 구조를 구축하고, 은수의 자백과 여진의 의혹으로 다음 회 폭발을 예비하는 포위망 형성 회차.",
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,19 @@
+{
+  "work_id": "비밀의숲_11",
+  "scene_count": 58,
+  "core_dist": {
+    "BOND": 1,
+    "CONFLICT": 14,
+    "DESIRE": 3,
+    "ESTABLISH": 4,
+    "HOOK": 11,
+    "LOSS": 2,
+    "ORACLE": 3,
+    "PERIL": 10,
+    "PUNISH": 2,
+    "RESCUE": 2,
+    "REVELATION": 6
+  },
+  "episode_function": "서장 체포로 1차 수사 분기가 완결되는 동시에 방산 비리 카르텔의 윤곽이 폭로되고 가영의 파편 기억과 지하실 단서로 다음 국면을 열어젖히는 전환·연결 에피소드다.",
+  "by": "sonnet_reading"
+}

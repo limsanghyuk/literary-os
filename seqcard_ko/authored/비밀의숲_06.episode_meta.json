@@ -1,0 +1,20 @@
+{
+  "work_id": "비밀의숲_06",
+  "scene_count": 56,
+  "core_dist": {
+    "BOND": 8,
+    "CONFLICT": 7,
+    "ESTABLISH": 6,
+    "HOOK": 10,
+    "LOSS": 3,
+    "ORACLE": 6,
+    "PERIL": 5,
+    "RELIEF": 1,
+    "RESCUE": 1,
+    "REUNION": 1,
+    "REVELATION": 5,
+    "REVERSAL": 3
+  },
+  "episode_function": "동재·서장을 용의자로 확정하고 시목-여진 연대를 구축하면서, 창준의 내사망이 시목을 죄어오는 위기와 동재 방 수색 작전을 병치해 긴장을 압축한다.",
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,20 @@
+{
+  "work_id": "비밀의숲_10",
+  "scene_count": 61,
+  "core_dist": {
+    "REUNION": 1,
+    "HOOK": 5,
+    "PERIL": 7,
+    "ESTABLISH": 8,
+    "RESCUE": 2,
+    "CONFLICT": 17,
+    "REVELATION": 9,
+    "REVERSAL": 3,
+    "ORACLE": 5,
+    "PUNISH": 2,
+    "DESIRE": 1,
+    "BOND": 1
+  },
+  "episode_function": "피해자 생존으로 시작된 증거 확보 경쟁이 서장 소환과 창준의 청와대 등극으로 절정에 달하며, 수사 대 권력 은폐의 대결 구도를 폭로와 역전의 연속으로 확장하는 에피소드다.",
+  "by": "sonnet_reading"
+}

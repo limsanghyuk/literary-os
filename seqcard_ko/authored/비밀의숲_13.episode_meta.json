@@ -1,0 +1,19 @@
+{
+  "work_id": "비밀의숲_13",
+  "scene_count": 70,
+  "core_dist": {
+    "CONFLICT": 12,
+    "RELIEF": 1,
+    "HOOK": 10,
+    "ESTABLISH": 7,
+    "PERIL": 13,
+    "BOND": 5,
+    "REVELATION": 3,
+    "ORACLE": 7,
+    "LOSS": 9,
+    "PUNISH": 2,
+    "REVERSAL": 1
+  },
+  "episode_function": "특임팀 해산의 허탈감 속에서 침입 경고·제보자 추적·인사 격변이 교차하다가 영은수의 살해 발견으로 수사를 정면 파괴하는 최대 반전 회차.",
+  "by": "sonnet_reading"
+}

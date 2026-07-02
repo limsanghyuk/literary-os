@@ -1,0 +1,18 @@
+{
+  "work_id": "비밀의숲_07",
+  "scene_count": 78,
+  "core_dist": {
+    "ESTABLISH": 12,
+    "PERIL": 13,
+    "HOOK": 8,
+    "CONFLICT": 13,
+    "ORACLE": 13,
+    "REVELATION": 6,
+    "REVERSAL": 4,
+    "BOND": 3,
+    "LOSS": 2,
+    "PUNISH": 4
+  },
+  "episode_function": "동재의 증거 조작 및 허위 용의자 만들기 시도가 시목·여진의 역추적에 의해 현행범 체포로 무너지는 동시에, 창준이 파일을 삭제하며 진짜 범인의 존재를 암시하는 반전으로 수사의 긴장을 다음 회로 넘긴다.",
+  "by": "sonnet_reading"
+}

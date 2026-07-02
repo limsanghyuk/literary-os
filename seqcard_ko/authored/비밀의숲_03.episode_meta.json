@@ -1,0 +1,19 @@
+{
+  "work_id": "비밀의숲_03",
+  "scene_count": 67,
+  "core_dist": {
+    "CONFLICT": 6,
+    "ESTABLISH": 11,
+    "HOOK": 6,
+    "RELIEF": 1,
+    "REVELATION": 8,
+    "REVERSAL": 4,
+    "BOND": 7,
+    "ORACLE": 9,
+    "LOSS": 4,
+    "PUNISH": 6,
+    "PERIL": 5
+  },
+  "episode_function": "시목이 방송으로 수사 주도권을 공개 선언한 뒤 내부 권력의 반격과 과거 폭로에 맞서며, 동시에 무성의 마지막 행적을 현장에서 직접 재연·추적해 핵심 목격자에게 도달하는 반격·추적 병행 회차이다.",
+  "by": "sonnet_reading"
+}

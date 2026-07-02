@@ -1,0 +1,20 @@
+{
+  "work_id": "비밀의숲_09",
+  "scene_count": 66,
+  "core_dist": {
+    "ESTABLISH": 14,
+    "CONFLICT": 8,
+    "PERIL": 8,
+    "PUNISH": 4,
+    "ORACLE": 5,
+    "BOND": 6,
+    "LOSS": 5,
+    "HOOK": 4,
+    "RELIEF": 1,
+    "REVERSAL": 5,
+    "REVELATION": 5,
+    "DESIRE": 1
+  },
+  "episode_function": "9회는 특임 공식 발족과 팀 결성을 토대로 서동재 압수수색·조사 압박이 절정에 달하는 한편, 살인 피해자 가영의 의식 회복이라는 반전으로 수사의 새 국면을 여는 회차다.",
+  "by": "sonnet_reading"
+}

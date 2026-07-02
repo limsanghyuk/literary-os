@@ -1,0 +1,20 @@
+{
+  "work_id": "비밀의숲_12",
+  "scene_count": 55,
+  "core_dist": {
+    "ESTABLISH": 6,
+    "REVELATION": 7,
+    "CONFLICT": 9,
+    "PUNISH": 1,
+    "LOSS": 3,
+    "ORACLE": 6,
+    "PERIL": 7,
+    "BOND": 7,
+    "REVERSAL": 4,
+    "HOOK": 2,
+    "RELIEF": 2,
+    "ROMANCE": 1
+  },
+  "episode_function": "납치 현장 재수사와 군수비리 폭로가 교차하는 가운데 특임팀 해체 위기를 집단 연대로 돌파하고, 마지막 순간 윤과장의 UDT 문신이 드러나며 내부 배신자 정체를 폭발적으로 반전시키는 에피소드.",
+  "by": "sonnet_reading"
+}
