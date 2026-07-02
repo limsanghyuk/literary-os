@@ -1,0 +1,18 @@
+{
+  "work_id": "베토벤바이러스_09",
+  "scene_count": 39,
+  "core_dist": {
+    "LOSS": 2,
+    "HOOK": 1,
+    "CONFLICT": 10,
+    "BOND": 8,
+    "REVELATION": 3,
+    "ESTABLISH": 1,
+    "ROMANCE": 9,
+    "RELIEF": 1,
+    "DESIRE": 1,
+    "PERIL": 3
+  },
+  "episode_function": "정단원 20여 명이 집단 사표를 던지며 공연이 위기에 처하고, 강마에는 합창단을 설득하고 건우에게 지휘를 맡기며 사과로 이탈 단원을 달래는 한편, 수해까지 겹친 공연 준비 속에서 루미가 강마에를 향한 마음을 고백하는 회차",
+  "by": "opus_reading"
+}

@@ -1,0 +1,19 @@
+{
+  "work_id": "베토벤바이러스_10",
+  "scene_count": 43,
+  "core_dist": {
+    "REVELATION": 12,
+    "CONFLICT": 9,
+    "ROMANCE": 4,
+    "HOOK": 4,
+    "BOND": 3,
+    "ESTABLISH": 2,
+    "PERIL": 2,
+    "DESIRE": 1,
+    "ORACLE": 1,
+    "RELIEF": 4,
+    "LOSS": 1
+  },
+  "episode_function": "관객도 합창단도 없이 악기까지 망가진 최악의 조건에서 강마에가 부상당한 팔로 창립공연을 강행하고, 수해현장 트라우마와 자살 기도의 과거를 이재민 대표에게 고백하며 공연을 성공시킨 뒤 쓰러지고, 회복 후 혁권의 돈문제가 새 불씨로 떠오르는 회차",
+  "by": "opus_reading"
+}

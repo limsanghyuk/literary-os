@@ -1,0 +1,18 @@
+{
+  "work_id": "베토벤바이러스_06",
+  "scene_count": 28,
+  "core_dist": {
+    "HOOK": 2,
+    "CONFLICT": 7,
+    "ESTABLISH": 4,
+    "PERIL": 1,
+    "BOND": 4,
+    "REVELATION": 5,
+    "DESIRE": 1,
+    "LOSS": 2,
+    "RELIEF": 1,
+    "REVERSAL": 1
+  },
+  "episode_function": "옛 단원들이 비공개 시향 오디션에 도전하나 전원 탈락하고 건우만 트럼펫으로 뽑히며, 루미의 청각 종양이 밝혀지고 혁권의 사회생활 굴욕이 교차하는 회차",
+  "by": "opus_reading"
+}

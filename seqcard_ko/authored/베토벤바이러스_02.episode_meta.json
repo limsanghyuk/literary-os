@@ -1,0 +1,19 @@
+{
+  "work_id": "베토벤바이러스_02",
+  "scene_count": 55,
+  "core_dist": {
+    "INTRO": 2,
+    "ESTABLISH": 5,
+    "CONFLICT": 22,
+    "DESIRE": 2,
+    "BOND": 3,
+    "LOSS": 1,
+    "PERIL": 6,
+    "REVELATION": 11,
+    "RESCUE": 1,
+    "REVERSAL": 1,
+    "REUNION": 1
+  },
+  "episode_function": "강마에가 건우집에 눌러앉고 토벤이 음독 협박으로 지휘를 수락하며, 정명환과의 과거 라이벌 관계가 드러나 떨거지 오케스트라를 정면으로 맡기로 결심하는 회차",
+  "by": "opus_reading"
+}

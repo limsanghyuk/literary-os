@@ -1,0 +1,20 @@
+{
+  "work_id": "베토벤바이러스_08",
+  "scene_count": 40,
+  "core_dist": {
+    "HOOK": 3,
+    "PERIL": 2,
+    "RESCUE": 1,
+    "ESTABLISH": 3,
+    "REVELATION": 6,
+    "RELIEF": 3,
+    "DESIRE": 3,
+    "BOND": 8,
+    "ROMANCE": 3,
+    "CONFLICT": 6,
+    "LOSS": 1,
+    "REUNION": 1
+  },
+  "episode_function": "물에 빠진 루미가 구조되어 강마에 집에서 회복하는 사이 미묘한 감정이 싹트고, 치매 증상이 드러난 갑용을 강마에가 내치지만 단원들이 그를 돕고, 프로 단원들과 합류한 연구단원들이 합창교향곡 연습에서 충돌하는 회차",
+  "by": "opus_reading"
+}

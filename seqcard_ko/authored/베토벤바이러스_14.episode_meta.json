@@ -1,0 +1,18 @@
+{
+  "work_id": "베토벤바이러스_14",
+  "scene_count": 37,
+  "core_dist": {
+    "CONFLICT": 6,
+    "ESTABLISH": 5,
+    "BOND": 6,
+    "ROMANCE": 2,
+    "RELIEF": 2,
+    "PERIL": 5,
+    "LOSS": 5,
+    "HOOK": 4,
+    "REVELATION": 1,
+    "REVERSAL": 1
+  },
+  "episode_function": "강마에가 뒤로 밀어준 야외공연이 시청의 공사 방해로 무너지며 건우가 지휘자로서 참담한 좌절을 겪는 사이, 해체 위기의 단원들에게 뜻밖의 기업 투자 제안이 들어오고, 루미의 청력 상실이 강마에에게 발각되며, 강마에가 챔버오케스트라를 만들겠다 나서고 예술홀 오디션 심사위원석에 강마에가 앉아 건우와 정면으로 마주서는 회차",
+  "by": "opus_reading"
+}

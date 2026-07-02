@@ -1,0 +1,19 @@
+{
+  "work_id": "베토벤바이러스_01",
+  "scene_count": 66,
+  "core_dist": {
+    "INTRO": 13,
+    "ESTABLISH": 1,
+    "LOSS": 5,
+    "CONFLICT": 10,
+    "DESIRE": 12,
+    "HOOK": 4,
+    "REVELATION": 11,
+    "BOND": 5,
+    "PERIL": 3,
+    "RESCUE": 1,
+    "REVERSAL": 1
+  },
+  "episode_function": "강마에·건우·루미 삼각 인물 소개와 프로젝트 오케스트라 결성, 강마에 귀환 훅으로 마무리하는 파일럿",
+  "by": "opus_reading"
+}

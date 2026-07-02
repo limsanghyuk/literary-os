@@ -1,0 +1,21 @@
+{
+  "work_id": "베토벤바이러스_05",
+  "scene_count": 47,
+  "core_dist": {
+    "LOSS": 2,
+    "DESIRE": 5,
+    "BOND": 5,
+    "ESTABLISH": 3,
+    "REVELATION": 6,
+    "CONFLICT": 9,
+    "PERIL": 6,
+    "REVERSAL": 1,
+    "RESCUE": 2,
+    "RELIEF": 2,
+    "REUNION": 1,
+    "ROMANCE": 3,
+    "HOOK": 2
+  },
+  "episode_function": "솔로에서 빠진 건우와 남편에게 끌려간 희연의 위기, 루미의 돌발 이명 속에서 공연이 강행되고, 건우의 음악 각성과 희연의 극적 복귀로 공연을 성공시키지만 강마에는 시향 지휘를 거절하는 회차",
+  "by": "opus_reading"
+}
