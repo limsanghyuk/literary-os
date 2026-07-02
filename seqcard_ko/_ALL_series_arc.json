@@ -142,12 +142,23 @@
     "PERIL": 164
    },
    "CONFLICT_persist": 0.263
+  },
+  "시그널": {
+   "eps": 16,
+   "scenes": 1287,
+   "top": {
+    "REVELATION": 343,
+    "PERIL": 224,
+    "CONFLICT": 161,
+    "HOOK": 154
+   },
+   "CONFLICT_persist": 0.248
   }
  },
  "totals": {
-  "series_count": 13,
-  "eps": 290,
-  "scenes": 19376
+  "series_count": 14,
+  "eps": 306,
+  "scenes": 20663
  },
- "note": "13시리즈 장르별 core분포+CONFLICT지속률 (2026-07-01 갱신: 모래시계24/24·역전의여왕31/31 완주 반영, 목표 최소50시리즈 중 13 착수, 정치느와르+오피스로맨스 장르 추가)"
+ "note": "14시리즈 장르별 core분포+CONFLICT지속률 (2026-07-01 갱신: 시그널16/16 완주 반영, 목표 최소50시리즈 중 14 착수, 수사/타임슬립스릴러 장르 추가)"
 }
