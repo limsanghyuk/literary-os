@@ -1,0 +1,33 @@
+{"scene_no": 1, "episode_role": "opening", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "introduce protagonist conflict"}
+{"scene_no": 2, "episode_role": "setup", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "reinforce protagonist resolve"}
+{"scene_no": 3, "episode_role": "setup", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "new character introduction jump"}
+{"scene_no": 4, "episode_role": "setup", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "character trait through action"}
+{"scene_no": 5, "episode_role": "setup", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "introduce secondary character conflict"}
+{"scene_no": 6, "episode_role": "setup", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "show character duality"}
+{"scene_no": 7, "episode_role": "setup", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "establish project setting"}
+{"scene_no": 8, "episode_role": "complication", "tension_role": "peak", "hook_flag": true, "continuity_break": true, "scene_blocks_need": true, "reason": "dramatic crisis introduction"}
+{"scene_no": 9, "episode_role": "complication", "tension_role": "peak", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "reveal financial disaster"}
+{"scene_no": 10, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "concealment of crisis"}
+{"scene_no": 11, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "external pressure introduced"}
+{"scene_no": 12, "episode_role": "complication", "tension_role": "peak", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "raise stakes tension"}
+{"scene_no": 13, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "introduce supporting characters"}
+{"scene_no": 14, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "character coping mechanism"}
+{"scene_no": 15, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "recruitment effort begins"}
+{"scene_no": 16, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "introduce veteran character"}
+{"scene_no": 17, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "show character loss"}
+{"scene_no": 18, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "introduce oppressed character"}
+{"scene_no": 19, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "show character burden"}
+{"scene_no": 20, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "seed character desire"}
+{"scene_no": 21, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "show protagonist desperation"}
+{"scene_no": 22, "episode_role": "complication", "tension_role": "peak", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "first failure and setback"}
+{"scene_no": 23, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "follow clue advance plot"}
+{"scene_no": 24, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "pursuit of lead"}
+{"scene_no": 25, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "reunion and conflict"}
+{"scene_no": 26, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "character nature revealed"}
+{"scene_no": 27, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "introduce deception attempt"}
+{"scene_no": 28, "episode_role": "development", "tension_role": "release", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "backstory revealed"}
+{"scene_no": 29, "episode_role": "development", "tension_role": "release", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "identity disclosed"}
+{"scene_no": 30, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "continued deception attempt"}
+{"scene_no": 31, "episode_role": "midpoint", "tension_role": "peak", "hook_flag": true, "continuity_break": false, "scene_blocks_need": false, "reason": "key alliance formed"}
+{"scene_no": 32, "episode_role": "complication", "tension_role": "peak", "hook_flag": true, "continuity_break": true, "scene_blocks_need": true, "reason": "deadline pressure introduced"}
+{"scene_no": 33, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "deadline confirmed"}

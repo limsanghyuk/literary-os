@@ -1,0 +1,12 @@
+{"edge_id":"E-싸인_03-4-7","edge_type":"causal","src":{"work_id":"싸인_03","scene_no":4},"tgt":{"work_id":"싸인_03","scene_no":7},"label":"CONFLICT","gap_episodes":0,"confidence":"high","by":"opus_reading"}
+{"edge_id":"E-싸인_03-6-11","edge_type":"causal","src":{"work_id":"싸인_03","scene_no":6},"tgt":{"work_id":"싸인_03","scene_no":11},"label":"REVERSAL","gap_episodes":0,"confidence":"high","by":"opus_reading"}
+{"edge_id":"E-싸인_03-5-51","edge_type":"plant_payoff","src":{"work_id":"싸인_03","scene_no":5},"tgt":{"work_id":"싸인_03","scene_no":51},"label":"REVELATION","gap_episodes":0,"confidence":"high","by":"opus_reading"}
+{"edge_id":"E-싸인_03-11-17","edge_type":"causal","src":{"work_id":"싸인_03","scene_no":11},"tgt":{"work_id":"싸인_03","scene_no":17},"label":"LOSS","gap_episodes":0,"confidence":"high","by":"opus_reading"}
+{"edge_id":"E-싸인_03-8-16","edge_type":"causal","src":{"work_id":"싸인_03","scene_no":8},"tgt":{"work_id":"싸인_03","scene_no":16},"label":"DESIRE","gap_episodes":0,"confidence":"high","by":"opus_reading"}
+{"edge_id":"E-싸인_03-27-49","edge_type":"plant_payoff","src":{"work_id":"싸인_03","scene_no":27},"tgt":{"work_id":"싸인_03","scene_no":49},"label":"REUNION","gap_episodes":0,"confidence":"high","by":"opus_reading"}
+{"edge_id":"E-싸인_03-45-52","edge_type":"plant_payoff","src":{"work_id":"싸인_03","scene_no":45},"tgt":{"work_id":"싸인_03","scene_no":52},"label":"HOOK","gap_episodes":0,"confidence":"high","by":"opus_reading"}
+{"edge_id":"E-싸인_03-50-52","edge_type":"causal","src":{"work_id":"싸인_03","scene_no":50},"tgt":{"work_id":"싸인_03","scene_no":52},"label":"REVELATION","gap_episodes":0,"confidence":"high","by":"opus_reading"}
+{"edge_id":"E-싸인_03-23-25","edge_type":"subplot_counterpoint","src":{"work_id":"싸인_03","scene_no":23},"tgt":{"work_id":"싸인_03","scene_no":25},"label":"LOSS","gap_episodes":0,"confidence":"high","by":"opus_reading"}
+{"edge_id":"E-싸인_03-32-33","edge_type":"subplot_counterpoint","src":{"work_id":"싸인_03","scene_no":32},"tgt":{"work_id":"싸인_03","scene_no":33},"label":"CONFLICT","gap_episodes":0,"confidence":"high","by":"opus_reading"}
+{"edge_id":"E-싸인_03-13-16","edge_type":"causal","src":{"work_id":"싸인_03","scene_no":13},"tgt":{"work_id":"싸인_03","scene_no":16},"label":"DESIRE","gap_episodes":0,"confidence":"uncertain","by":"opus_reading"}
+{"edge_id":"E-싸인_03-48-49","edge_type":"callback","src":{"work_id":"싸인_03","scene_no":48},"tgt":{"work_id":"싸인_03","scene_no":49},"label":"REUNION","gap_episodes":0,"confidence":"high","by":"opus_reading"}

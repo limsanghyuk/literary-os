@@ -1,0 +1,52 @@
+{"scene_no": 1, "episode_role": "opening", "tension_role": "bridge", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "episode start title setting"}
+{"scene_no": 2, "episode_role": "setup", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "conflict over autopsy cause"}
+{"scene_no": 3, "episode_role": "setup", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "preparing public re-autopsy"}
+{"scene_no": 4, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "secret confession raises stakes"}
+{"scene_no": 5, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "crime reconstruction reveals truth"}
+{"scene_no": 6, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "blackmail with past secret"}
+{"scene_no": 7, "episode_role": "complication", "tension_role": "peak", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "moral hesitation at autopsy"}
+{"scene_no": 8, "episode_role": "development", "tension_role": "build", "hook_flag": true, "continuity_break": false, "scene_blocks_need": true, "reason": "confrontation with cover-up mentor"}
+{"scene_no": 9, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "hesitation before critical call"}
+{"scene_no": 10, "episode_role": "development", "tension_role": "release", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "thematic statement by mentor"}
+{"scene_no": 11, "episode_role": "complication", "tension_role": "peak", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "false report and resignation"}
+{"scene_no": 12, "episode_role": "complication", "tension_role": "release", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "mentor's last advice"}
+{"scene_no": 13, "episode_role": "development", "tension_role": "bridge", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "emotional motivation revealed"}
+{"scene_no": 14, "episode_role": "development", "tension_role": "bridge", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "origin of protagonist's drive"}
+{"scene_no": 15, "episode_role": "development", "tension_role": "bridge", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "mentor-student bond origin"}
+{"scene_no": 16, "episode_role": "development", "tension_role": "peak", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "protagonist's resolve amid loss"}
+{"scene_no": 17, "episode_role": "complication", "tension_role": "release", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "mentor's departure emotional"}
+{"scene_no": 18, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "moral conflict in prosecutor"}
+{"scene_no": 19, "episode_role": "development", "tension_role": "release", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "prosecutor's inner turmoil"}
+{"scene_no": 20, "episode_role": "development", "tension_role": "bridge", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "prosecutor's turning point"}
+{"scene_no": 21, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "comic relief and relationship"}
+{"scene_no": 22, "episode_role": "development", "tension_role": "release", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "comic buffer in tension"}
+{"scene_no": 23, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "love triangle seed planted"}
+{"scene_no": 24, "episode_role": "development", "tension_role": "release", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "quiet emotional bonding"}
+{"scene_no": 25, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "prosecutor's conflicted feelings"}
+{"scene_no": 26, "episode_role": "development", "tension_role": "release", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "shared professional conviction"}
+{"scene_no": 27, "episode_role": "development", "tension_role": "bridge", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "foreshadowing future workplace"}
+{"scene_no": 28, "episode_role": "development", "tension_role": "release", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "night montage closure"}
+{"scene_no": 29, "episode_role": "complication", "tension_role": "peak", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "power shift and protagonist's demotion"}
+{"scene_no": 30, "episode_role": "complication", "tension_role": "peak", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "official power consolidation"}
+{"scene_no": 31, "episode_role": "complication", "tension_role": "release", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "protagonist's defeat shown"}
+{"scene_no": 32, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "ironic oath of falsehood"}
+{"scene_no": 33, "episode_role": "complication", "tension_role": "release", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "visual metaphor of loss"}
+{"scene_no": 34, "episode_role": "resolution", "tension_role": "bridge", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "time jump and new start"}
+{"scene_no": 35, "episode_role": "resolution", "tension_role": "bridge", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "setting for protagonist's home"}
+{"scene_no": 36, "episode_role": "resolution", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "family conflict and deception"}
+{"scene_no": 37, "episode_role": "resolution", "tension_role": "bridge", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "setting shift to prosecution"}
+{"scene_no": 38, "episode_role": "resolution", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "prosecutor's rejection and frustration"}
+{"scene_no": 39, "episode_role": "resolution", "tension_role": "peak", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "prosecutor's anger and betrayal"}
+{"scene_no": 40, "episode_role": "resolution", "tension_role": "release", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "principled conflict in prosecution"}
+{"scene_no": 41, "episode_role": "resolution", "tension_role": "bridge", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "setting shift to power line"}
+{"scene_no": 42, "episode_role": "resolution", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "power and money revealed"}
+{"scene_no": 43, "episode_role": "resolution", "tension_role": "release", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "power network and comic relief"}
+{"scene_no": 44, "episode_role": "resolution", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "office politics and comedy"}
+{"scene_no": 45, "episode_role": "complication", "tension_role": "peak", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "evidence destruction ordered"}
+{"scene_no": 46, "episode_role": "complication", "tension_role": "release", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "exiled characters regroup"}
+{"scene_no": 47, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "protagonist's harsh work conditions"}
+{"scene_no": 48, "episode_role": "complication", "tension_role": "build", "hook_flag": true, "continuity_break": false, "scene_blocks_need": false, "reason": "mysterious visitor suspense"}
+{"scene_no": 49, "episode_role": "complication", "tension_role": "peak", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "newcomer arrival and tension"}
+{"scene_no": 50, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "missing key evidence revealed"}
+{"scene_no": 51, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "suspect's escape prep and clue"}
+{"scene_no": 52, "episode_role": "climax", "tension_role": "peak", "hook_flag": true, "continuity_break": false, "scene_blocks_need": false, "reason": "major case restart cliffhanger"}

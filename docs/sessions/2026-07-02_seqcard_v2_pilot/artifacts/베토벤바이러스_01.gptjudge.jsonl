@@ -1,0 +1,66 @@
+{"scene_no": 1, "episode_role": "opening", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "introduce protagonist conflict"}
+{"scene_no": 2, "episode_role": "setup", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "reinforce protagonist resolve"}
+{"scene_no": 3, "episode_role": "setup", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "new character introduction jump"}
+{"scene_no": 4, "episode_role": "setup", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "character trait through action"}
+{"scene_no": 5, "episode_role": "setup", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "introduce secondary character conflict"}
+{"scene_no": 6, "episode_role": "setup", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "show character duality"}
+{"scene_no": 7, "episode_role": "setup", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "establish project setting"}
+{"scene_no": 8, "episode_role": "complication", "tension_role": "peak", "hook_flag": true, "continuity_break": true, "scene_blocks_need": true, "reason": "dramatic crisis introduction"}
+{"scene_no": 9, "episode_role": "complication", "tension_role": "peak", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "reveal financial disaster"}
+{"scene_no": 10, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "concealment of crisis"}
+{"scene_no": 11, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "external pressure introduced"}
+{"scene_no": 12, "episode_role": "complication", "tension_role": "peak", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "raise stakes tension"}
+{"scene_no": 13, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "introduce supporting characters"}
+{"scene_no": 14, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "character coping mechanism"}
+{"scene_no": 15, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "recruitment effort begins"}
+{"scene_no": 16, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "introduce veteran character"}
+{"scene_no": 17, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "show character loss"}
+{"scene_no": 18, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "introduce oppressed character"}
+{"scene_no": 19, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "show character burden"}
+{"scene_no": 20, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "seed character desire"}
+{"scene_no": 21, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "show protagonist desperation"}
+{"scene_no": 22, "episode_role": "complication", "tension_role": "peak", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "first failure and setback"}
+{"scene_no": 23, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "follow clue advance plot"}
+{"scene_no": 24, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "pursuit of lead"}
+{"scene_no": 25, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "reunion and conflict"}
+{"scene_no": 26, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "character nature revealed"}
+{"scene_no": 27, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "introduce deception attempt"}
+{"scene_no": 28, "episode_role": "development", "tension_role": "release", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "backstory revealed"}
+{"scene_no": 29, "episode_role": "development", "tension_role": "release", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "identity disclosed"}
+{"scene_no": 30, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "continued deception attempt"}
+{"scene_no": 31, "episode_role": "midpoint", "tension_role": "peak", "hook_flag": true, "continuity_break": false, "scene_blocks_need": false, "reason": "key alliance formed"}
+{"scene_no": 32, "episode_role": "complication", "tension_role": "peak", "hook_flag": true, "continuity_break": true, "scene_blocks_need": true, "reason": "deadline pressure introduced"}
+{"scene_no": 33, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "deadline confirmed"}
+{"scene_no": 34, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "루미 절망, 욕망과 필요 충돌"}
+{"scene_no": 35, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "급모임, 욕망과 현실 충돌"}
+{"scene_no": 36, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "자격 하향, 절박함 희극화"}
+{"scene_no": 37, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "장소변경, 회유 시도 충돌"}
+{"scene_no": 38, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "새장소, 혁권 처지 공개"}
+{"scene_no": 39, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "루미 부탁, 욕망과 필요 충돌"}
+{"scene_no": 40, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "혁권 자존심 상실 심화"}
+{"scene_no": 41, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "가족과 점심, 몰락 심화"}
+{"scene_no": 42, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": true, "reason": "참여 여부 매달림 긴장"}
+{"scene_no": 43, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "혁권 합류 결심 전환"}
+{"scene_no": 44, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "첫 지원자 등장 희망"}
+{"scene_no": 45, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "결심 첼로 도전 심화"}
+{"scene_no": 46, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "첫 집결 자리 다툼"}
+{"scene_no": 47, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "트럼펫 결원 불안 증폭"}
+{"scene_no": 48, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "강요 합류, 욕망 충돌"}
+{"scene_no": 49, "episode_role": "midpoint", "tension_role": "peak", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "강마에 전설 회상 전환"}
+{"scene_no": 50, "episode_role": "midpoint", "tension_role": "peak", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "강마에 저항 회상 심화"}
+{"scene_no": 51, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "일침, 루미 내적 갈등"}
+{"scene_no": 52, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "합류 제안 갈등 고조"}
+{"scene_no": 53, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "돈 압박 긴장 증폭"}
+{"scene_no": 54, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "희생 결단 긴장 고조"}
+{"scene_no": 55, "episode_role": "development", "tension_role": "release", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "건우 선함 재확인 완화"}
+{"scene_no": 56, "episode_role": "development", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "건우 구원 등장 긴장"}
+{"scene_no": 57, "episode_role": "development", "tension_role": "release", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "서드 자리 확정 완화"}
+{"scene_no": 58, "episode_role": "bridge", "tension_role": "bridge", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "과거 회상 브릿지 역할"}
+{"scene_no": 59, "episode_role": "bridge", "tension_role": "bridge", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "강마에 전설 시작 브릿지"}
+{"scene_no": 60, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "괴담 긴장 조성"}
+{"scene_no": 61, "episode_role": "climax", "tension_role": "peak", "hook_flag": true, "continuity_break": true, "scene_blocks_need": false, "reason": "충격 사건 최고조 긴장"}
+{"scene_no": 62, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": true, "reason": "추궁 긴장 고조"}
+{"scene_no": 63, "episode_role": "complication", "tension_role": "build", "hook_flag": true, "continuity_break": true, "scene_blocks_need": false, "reason": "수수께끼 긴장 견인"}
+{"scene_no": 64, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": true, "scene_blocks_need": false, "reason": "정체 확인 긴장 유지"}
+{"scene_no": 65, "episode_role": "complication", "tension_role": "build", "hook_flag": false, "continuity_break": false, "scene_blocks_need": false, "reason": "강마에 정체 공개 긴장"}
+{"scene_no": 66, "episode_role": "tag", "tension_role": "build", "hook_flag": true, "continuity_break": true, "scene_blocks_need": false, "reason": "냉소 대사 다음화 견인"}
