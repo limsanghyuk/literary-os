@@ -1,0 +1,21 @@
+{
+  "work_id": "스카이캐슬",
+  "scene_count": 70,
+  "core_dist": {
+    "HOOK": 6,
+    "CONFLICT": 11,
+    "REVELATION": 13,
+    "RELIEF": 5,
+    "LOSS": 6,
+    "BOND": 8,
+    "DESIRE": 4,
+    "PERIL": 7,
+    "PUNISH": 4,
+    "ESTABLISH": 1,
+    "REVERSAL": 3,
+    "ORACLE": 1,
+    "RESCUE": 1
+  },
+  "episode_function": "6화는 강준상-한서진 부부의 과거 상처(김은혜)가 재점화되고, 강준상이 의료사고 환자의 습격(총격 사건)으로 센터장 승진에 실패해 황치영에게 밀려나는 몰락 축을 그린다. 동시에 예빈의 도벽·가출이 본격화되며 이수임 가족과의 유대가 깊어지고, 김주영 코디의 미국 시절 정체(제니퍼/케이)를 둘러싼 미스터리가 처음 표면화된다. 엔딩은 영재의 태블릿PC 영상(자식 노릇 다 했으니 절연하겠다는 선언)이 발각되며 다음 화 서스펜스를 강하게 예고(HOOK/REVELATION/PERIL 밀집)한다.",
+  "by": "cowork opus authoring"
+}

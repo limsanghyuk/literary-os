@@ -1,0 +1,24 @@
+{
+  "work_id": "스카이캐슬",
+  "scene_count": 72,
+  "core_dist": {
+    "ESTABLISH": 1,
+    "ORACLE": 2,
+    "INTRO": 1,
+    "BOND": 2,
+    "CONFLICT": 15,
+    "REVERSAL": 1,
+    "LOSS": 7,
+    "PUNISH": 8,
+    "REVELATION": 7,
+    "REUNION": 2,
+    "RELIEF": 1,
+    "ROMANCE": 0,
+    "PERIL": 10,
+    "RESCUE": 0,
+    "DESIRE": 3,
+    "HOOK": 12
+  },
+  "episode_function": "우주의 생일파티에서 시작해 혜나의 추락사와 병원 이송 실패, 사망, 그리고 은폐공작으로 이어지는 15부의 핵심 사건회. 강준상의 병원 내 권력남용으로 혜나가 골든타임을 놓치고, 한서진은 증거를 인멸하며 예서를 감싸는 동시에 진진희를 회유해 위험을 관리한다. 형사 수사가 시작되며 부모들 간 책임전가와 몸싸움이 폭발하고, 각 가정(차민혁-세리, 황치영-우주)의 균열이 노출된다. 엔딩에서 예서가 김주영에게 완전히 의탁하고, 김주영은 우주를 희생양으로 삼자는 제안으로 다음 화의 갈등을 예고(HOOK)한다.",
+  "by": "cowork opus authoring"
+}

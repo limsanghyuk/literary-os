@@ -1,0 +1,20 @@
+{
+  "work_id": "스카이캐슬",
+  "scene_count": 82,
+  "core_dist": {
+    "ESTABLISH": 14,
+    "INTRO": 9,
+    "CONFLICT": 15,
+    "DESIRE": 10,
+    "BOND": 4,
+    "REVERSAL": 3,
+    "RELIEF": 4,
+    "HOOK": 9,
+    "REVELATION": 4,
+    "ORACLE": 4,
+    "PERIL": 5,
+    "LOSS": 1
+  },
+  "episode_function": "스카이 캐슬이라는 초상류층 폐쇄 공동체의 입시 경쟁 생태계를 소개하며, 포트폴리오를 둘러싼 암투와 전설의 코디 김주영 영입을 거쳐 이명주의 의문의 총격 사건으로 다음 화를 향한 강력한 서스펜스를 던지는 도입부",
+  "by": "cowork opus authoring"
+}

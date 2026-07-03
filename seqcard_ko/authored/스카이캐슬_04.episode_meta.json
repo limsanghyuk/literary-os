@@ -1,0 +1,22 @@
+{
+  "work_id": "스카이캐슬",
+  "scene_count": 68,
+  "core_dist": {
+    "CONFLICT": 13,
+    "HOOK": 9,
+    "PERIL": 8,
+    "DESIRE": 7,
+    "PUNISH": 6,
+    "REVELATION": 5,
+    "ORACLE": 4,
+    "RELIEF": 4,
+    "BOND": 4,
+    "ESTABLISH": 2,
+    "REVERSAL": 2,
+    "LOSS": 2,
+    "ROMANCE": 1,
+    "REUNION": 1
+  },
+  "episode_function": "1~3부에서 시작된 한서진의 곽미향 정체 위기가 이수임과의 정면 대치로 폭발하고, 독서토론 투표 반란(9대4)으로 캐슬 학부모 사회의 권력 구도가 흔들리며, 한서진이 무릎까지 꿇으며 김주영을 되찾는 대가로 감수 서약을 하는 사이 영재가 예고 없이 귀환해 다음 위기를 예고하는 중간 반환점 에피소드",
+  "by": "cowork opus authoring"
+}

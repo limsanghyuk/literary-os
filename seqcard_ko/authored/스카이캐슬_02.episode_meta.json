@@ -1,0 +1,20 @@
+{
+  "work_id": "스카이캐슬",
+  "scene_count": 89,
+  "core_dist": {
+    "ESTABLISH": 4,
+    "LOSS": 12,
+    "HOOK": 8,
+    "DESIRE": 10,
+    "CONFLICT": 19,
+    "RELIEF": 2,
+    "BOND": 5,
+    "ORACLE": 1,
+    "REVELATION": 12,
+    "INTRO": 2,
+    "PERIL": 12,
+    "PUNISH": 2
+  },
+  "episode_function": "이명주의 장례로 문을 열어 죽음의 여파(박수창의 사표, 스카이캐슬의 술렁임)를 그리고, 태블릿 PC에 담긴 영재의 일기를 통해 사건 당일의 학대와 절연, 도화정 대결까지 비극의 전모를 회상으로 완성하며, 새 이웃 이수임 가족의 등장과 한서진의 정체 위기, 그리고 한서진이 김주영을 뺨 때리는 충격적 대결로 다음 화를 향한 강력한 긴장을 남기는 화",
+  "by": "cowork opus authoring"
+}

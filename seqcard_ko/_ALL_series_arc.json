@@ -137,6 +137,17 @@
    },
    "CONFLICT_persist": 0.205
   },
+  "스카이캐슬": {
+   "eps": 20,
+   "scenes": 1353,
+   "top": {
+    "CONFLICT": 307,
+    "REVELATION": 175,
+    "HOOK": 145,
+    "PERIL": 120
+   },
+   "CONFLICT_persist": 0.277
+  },
   "시그널": {
    "eps": 16,
    "scenes": 1287,
@@ -249,27 +260,27 @@
   }
  },
  "totals": {
-  "works": 22,
-  "episodes": 457,
-  "scenes": 29873,
+  "works": 23,
+  "episodes": 477,
+  "scenes": 31226,
   "core_dist": {
-   "CONFLICT": 4730,
-   "PERIL": 4157,
-   "REVELATION": 3323,
-   "ESTABLISH": 2638,
-   "LOSS": 2288,
-   "BOND": 2273,
-   "DESIRE": 2058,
-   "HOOK": 1669,
-   "RELIEF": 1390,
-   "ORACLE": 1285,
-   "ROMANCE": 1112,
-   "REVERSAL": 859,
-   "PUNISH": 850,
-   "RESCUE": 619,
-   "REUNION": 382,
-   "INTRO": 240
+   "CONFLICT": 5037,
+   "PERIL": 4277,
+   "REVELATION": 3498,
+   "ESTABLISH": 2688,
+   "LOSS": 2398,
+   "BOND": 2371,
+   "DESIRE": 2160,
+   "HOOK": 1814,
+   "RELIEF": 1447,
+   "ORACLE": 1332,
+   "ROMANCE": 1120,
+   "PUNISH": 906,
+   "REVERSAL": 902,
+   "RESCUE": 622,
+   "REUNION": 399,
+   "INTRO": 255
   }
  },
- "note": "SeqCard 의도층 집계. core-only. κ 미검증 분석용 prior. by=cowork opus aggregation 2026-07-02 | 2026-07-03 갱신: CONFLICT_persist 22작 중 16작 재계산 정정(원본 jsonl 기준 회차내부 전이만 산정, 8a8ce608 정규화 시 원인불명 수치 오류 발견·수정). 베토벤바이러스 15화 결번 명시(원본 손상, 17/18화 완본)."
+ "note": "SeqCard 의도층 집계. core-only. κ 미검증 분석용 prior. by=cowork opus aggregation 2026-07-02 | 2026-07-03 갱신: 스카이캐슬(23번째 작품, 20화/1353씬) 추가, 22→23작."
 }
