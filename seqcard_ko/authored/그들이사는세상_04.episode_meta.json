@@ -1,0 +1,19 @@
+{
+  "work_id": "그들이사는세상",
+  "scene_count": 48,
+  "core_dist": {
+    "DESIRE": 3,
+    "REVELATION": 5,
+    "ROMANCE": 5,
+    "BOND": 7,
+    "CONFLICT": 16,
+    "LOSS": 2,
+    "INTRO": 1,
+    "PERIL": 2,
+    "HOOK": 2,
+    "RELIEF": 4,
+    "REUNION": 1
+  },
+  "episode_function": "4부는 준영과 지오가 처음 밤을 함께 보내며 관계가 본격화되는 로맨스 플롯과, 방송국 내 편성 다툼·규호의 갑질·지오 부모의 생활 갈등이 교차하는 서브플롯을 병렬로 전개한다. 싱가폴 로케이션에서 벌어지는 준영-경래-윤영의 현장 갈등과 화해를 거쳐, 엔딩에서는 지오와 준영이 밤바다에서 서로를 안고 잠드는 장면으로 두 사람의 관계가 한 단계 깊어졌음을 확인하며 마무리된다.",
+  "by": "cowork opus authoring"
+}

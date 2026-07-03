@@ -1,0 +1,18 @@
+{
+  "work_id": "그들이사는세상",
+  "scene_count": 50,
+  "core_dist": {
+    "ESTABLISH": 9,
+    "CONFLICT": 8,
+    "LOSS": 8,
+    "REVELATION": 6,
+    "BOND": 5,
+    "HOOK": 4,
+    "DESIRE": 3,
+    "REVERSAL": 3,
+    "ROMANCE": 3,
+    "PERIL": 1
+  },
+  "episode_function": "준영-수경-준기의 삼각관계가 우정으로 정리되며 수경-준영 커플이 형성되고, 규호-해진의 이별과 윤영-민철의 은밀한 로맨스가 교차 진행된다. 지오는 연희의 진심 고백을 받고, 이명이라는 신체 이상 징후가 처음 드러나며, 싱가폴 로케이션에서 준영과 수경의 다정한 모습을 지켜보던 지오가 결국 준영과 정면충돌해 완전한 결별을 선언하는, 절대 길들여지지 않는 감정들을 조명한 에피소드.",
+  "by": "cowork opus authoring"
+}

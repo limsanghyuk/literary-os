@@ -33,6 +33,17 @@
    },
    "CONFLICT_persist": 0.252
   },
+  "그들이사는세상": {
+   "eps": 16,
+   "scenes": 801,
+   "top": {
+    "CONFLICT": 203,
+    "BOND": 86,
+    "LOSS": 76,
+    "REVELATION": 73
+   },
+   "CONFLICT_persist": 0.337
+  },
   "너의목소리가들려": {
    "eps": 18,
    "scenes": 1080,
@@ -315,27 +326,27 @@
   }
  },
  "totals": {
-  "works": 28,
-  "episodes": 561,
-  "scenes": 36365,
+  "works": 29,
+  "episodes": 577,
+  "scenes": 37166,
   "core_dist": {
-   "CONFLICT": 5967,
-   "PERIL": 4797,
-   "REVELATION": 4230,
-   "ESTABLISH": 3057,
-   "BOND": 2801,
-   "LOSS": 2787,
-   "DESIRE": 2401,
-   "HOOK": 2259,
-   "RELIEF": 1742,
-   "ORACLE": 1473,
-   "ROMANCE": 1232,
-   "REVERSAL": 1103,
-   "PUNISH": 1036,
-   "RESCUE": 706,
-   "REUNION": 460,
-   "INTRO": 314
+   "CONFLICT": 6170,
+   "PERIL": 4845,
+   "REVELATION": 4303,
+   "ESTABLISH": 3122,
+   "BOND": 2887,
+   "LOSS": 2863,
+   "DESIRE": 2429,
+   "HOOK": 2310,
+   "RELIEF": 1802,
+   "ORACLE": 1478,
+   "ROMANCE": 1282,
+   "REVERSAL": 1113,
+   "PUNISH": 1062,
+   "RESCUE": 707,
+   "REUNION": 469,
+   "INTRO": 324
   }
  },
- "note": "SeqCard 의도층 집계. core-only. κ 미검증 분석용 prior. by=cowork opus aggregation 2026-07-02 | 2026-07-03 갱신: 스카이캐슬·추적자·스토브리그·W·시크릿가든·밀회 추가, 27→28작."
+ "note": "SeqCard 의도층 집계. core-only. κ 미검증 분석용 prior. by=cowork opus aggregation 2026-07-02 | 2026-07-03 갱신: 스카이캐슬·추적자·스토브리그·W·시크릿가든·밀회·그들이사는세상 추가, 27→29작(신규 7편 배치 완료)."
 }

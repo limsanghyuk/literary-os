@@ -1,0 +1,18 @@
+{
+  "work_id": "그들이사는세상",
+  "scene_count": 30,
+  "core_dist": {
+    "ESTABLISH": 4,
+    "CONFLICT": 10,
+    "ROMANCE": 3,
+    "HOOK": 3,
+    "RELIEF": 2,
+    "PUNISH": 1,
+    "BOND": 2,
+    "DESIRE": 1,
+    "PERIL": 2,
+    "REVELATION": 2
+  },
+  "episode_function": "민철과 윤영의 15년 묵은 파경 사연을 회상으로 공개하며 두 사람의 관계를 재점화하는 동시에, 준영과 지오의 은밀한 연애가 연희의 잔재와 얽혀 흔들리는 과정을 그린다. 방송국 제작 현장의 고된 군상극을 배경으로 순정과 집착의 경계를 둘러싼 논쟁이 반복되며, 결말부에서 윤영모의 위독으로 다음 화 긴장을 예고한다.",
+  "by": "cowork opus authoring"
+}

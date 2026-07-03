@@ -1,0 +1,19 @@
+{
+  "work_id": "그들이사는세상",
+  "scene_count": 44,
+  "core_dist": {
+    "ESTABLISH": 8,
+    "CONFLICT": 4,
+    "HOOK": 1,
+    "LOSS": 5,
+    "RELIEF": 8,
+    "BOND": 7,
+    "ROMANCE": 2,
+    "REVELATION": 1,
+    "REUNION": 3,
+    "PERIL": 4,
+    "PUNISH": 1
+  },
+  "episode_function": "시리즈 최종화. 지오의 시력 상실과 연출 하차라는 최대 위기(PERIL/PUNISH)를 통과시켜 준영을 메인 연출로 자립시키고, 수경-준영-지오의 삼각관계를 완전히 정리(LOSS→RELIEF)한 뒤 지오-준영, 민철-윤영, 규호-해진 세 커플의 관계를 모두 화해·재회로 수렴시킨다. 1년 후 시점으로 점프하여 시청률 성공과 일상의 행복(임신 해프닝으로 마무리되는 해피엔딩)을 보여주며 '드라마처럼 살아라'라는 시리즈 전체의 주제를 완결짓는 마지막 화.",
+  "by": "cowork opus authoring"
+}

@@ -1,0 +1,17 @@
+{
+  "work_id": "그들이사는세상",
+  "scene_count": 42,
+  "core_dist": {
+    "ESTABLISH": 2,
+    "CONFLICT": 22,
+    "HOOK": 3,
+    "DESIRE": 3,
+    "LOSS": 2,
+    "BOND": 4,
+    "REVELATION": 1,
+    "PUNISH": 4,
+    "ROMANCE": 1
+  },
+  "episode_function": "2화는 방송국 내 권력구조(부장·국장단의 자리다툼, 감독-배우-작가 사이의 서열)와 조연출 수경의 굴욕적 재배치를 통해 '일의 설레임이 권력 앞에서 무너진다'는 프롤로그의 명제를 현실 에피소드로 구체화하고, 동시에 지오-연희의 완전한 파국(임신 고백)과 지오-준영 사이 오래된 감정의 재점화를 나란히 배치해 이번 시즌 로맨스 축의 재편을 예고한다.",
+  "by": "cowork opus authoring"
+}

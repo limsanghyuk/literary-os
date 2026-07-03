@@ -1,0 +1,24 @@
+{
+  "work_id": "그들이사는세상",
+  "scene_count": 50,
+  "core_dist": {
+    "ESTABLISH": 8,
+    "ORACLE": 0,
+    "INTRO": 4,
+    "BOND": 2,
+    "CONFLICT": 12,
+    "REVERSAL": 1,
+    "LOSS": 4,
+    "PUNISH": 3,
+    "REVELATION": 1,
+    "REUNION": 0,
+    "RELIEF": 1,
+    "ROMANCE": 0,
+    "PERIL": 10,
+    "RESCUE": 0,
+    "DESIRE": 2,
+    "HOOK": 2
+  },
+  "episode_function": "1화는 방송 당일 사고(스턴트맨 낙상, 테입 손상)를 실시간 카운트다운 몽타주로 그려 방송국 오피스의 긴박한 생리를 각인시키고, 준영-지오의 이별한 동료/연인 관계와 준영-준기의 반복되는 이별이라는 두 축을 통해 '동지가 적이 되는 순간'이라는 작품의 핵심 화두를 제시하며, 신인(수경, 해진) 등장으로 앞으로의 인물 확장을 예고하는 도입부다.",
+  "by": "cowork opus authoring"
+}
