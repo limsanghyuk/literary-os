@@ -86,15 +86,9 @@ _"2>1>3 순서, 저작은 8인 이상 병렬" 지시의 전체 배치 완주 기
 - 엣지 레이어(causal/callback/plant_payoff/subplot_counterpoint, 6작품 243개)는 이번에도 교차판정 미실시 — 다음 라운드 과제.
 - 코퍼스 확장(목표 30작+) 지속 여부, 또는 v2 확정 필드(hook_flag)만 전체 29작 소급 라벨링 착수 여부.
 
-## 8. 정직한 경계
-- v2 연구는 여전히 silver 라벨, 통계적 검정력 주장 안 함(6장르×1화=391씬은 파일럿보다 크지만 각 작품 전체 화수 대비 표본).
-- 판정자 2모델(Claude+GPT-4.1) 조합의 공유편향 가능성 미해소, 인간 앵커 미도입(개발자 결정사항).
-- CONFLICT_persist 재계산은 이번에 22→29작 전체에 일관 적용했으나, "군상극 낮음" 가설 자체가 폐기됐다는 것이지 새로운 대체가설은 미수립.
-- 신규 7편 중 밀회 13화는 재시도 성공으로 마무리됐으나, 유사한 "허위완료" 사고가 다른 화에서 미탐지 상태로 남아있을 가능성은 낮지만 0은 아님(전 화 bash 재검증은 수행했으므로 데이터 무결성 자체는 확인됨).
+## 7-1. 회사 컴퓨터 이어작업 — 실행 가능한 체크리스트 (재현 검증 완료)
+v2 본연구에 쓴 도구 5종을 `docs/sessions/2026-07-03_seqcard_v2_full_study/tools/`에 **이번에 신규로 push**했다(원래 파일럿 스크립트 `run_full_study.py`는 실행 시 OpenAI 400에러가 나는 미수정 버그가 있었음 — 아래 §7-2). 전부 스모크테스트로 end-to-end 동작 검증 완료.
 
-## 부록: 산출물 위치
-- 신규 7편 seqcard: `seqcard_ko/authored/{작품}_{화번호}.seqcard.jsonl` + `.episode_meta.json` + `.series_arc.json` (허브 각 커밋)
-- 통합 집계: `seqcard_ko/_ALL_series_arc.json`
-- v2 본연구: `docs/sessions/2026-07-03_seqcard_v2_full_study/`(결과보고서+24개 산출물) — 허브
-- v2 파일럿(전일): `docs/sessions/2026-07-02_seqcard_v2_pilot/`
-- 본 핸드오프: `C:\claude\db\seqcard_ko\2026-07-03_SESSION-HANDOFF-seqcard-batch-and-v2study.md` (로컬) → 허브 `docs/sessions/2026-07-03_session_handoff/`(이번 push)
+- [ ] **환경 준비**: uploads의 "키 (1).docx"에서 `OPENAI_API_KEY`(gpt 키) 재추출(세션 휘발) → `export OPENAI_API_KEY=...`
+- [ ] **1단계(Claude 라벨링 확장)**: 아직 라벨링 안 한 작품/화에 새 v2.1 필드 추가하려면, 이번 세션 6개 에이전트 프롬프트(`docs/sessions/2026-07-03_seqcard_v2_full_study/2026-07-03_SeqCard-v2_본연구_결과.md` §부록 참고, 원문 프롬프트는 이번 대화 로그) 패턴 그대로 `{work}.newfields.jsonl` + `{work}.edges.jsonl` 생성.
+- [ ] **2단계(GPT 판정)**: `tools/run_one.py <work> <work>.seqcard.jsonl <run_idx 1|2|3> gpt-4.1` 을 run_idx=1,2,3 각각 실행(파일당 30~40초, 여러 작품은 `&`+`wait`로 병렬화 가능). **씬 100개 이상 대작은 셸 45초 제한에 걸리므로 `tools/batch_judge.py <work> <path> <run_idx> gpt-4.1 <start> <end>` 로 33씬 단위 분할 후 `tools/merge_batches.py <work> <run_idx> <start1>
