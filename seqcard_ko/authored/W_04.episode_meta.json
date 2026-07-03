@@ -1,0 +1,19 @@
+{
+  "work_id": "W",
+  "scene_count": 52,
+  "core_dist": {
+    "CONFLICT": 11,
+    "PERIL": 10,
+    "REVELATION": 10,
+    "LOSS": 5,
+    "ESTABLISH": 4,
+    "ORACLE": 4,
+    "ROMANCE": 3,
+    "DESIRE": 2,
+    "REVERSAL": 1,
+    "PUNISH": 1,
+    "REUNION": 1
+  },
+  "episode_function": "3화 엔딩 총격의 진실 공개(연주=불사신)로 시작, 강철-연주 거래 성립과 동거·로맨스 밀당 심화, 부산에서 강철-현석의 '맥락 없는 사건들'·외계인 가설 추리 전개, 스카이라운지 발각→도주→체포로 연주가 목격자에서 살인미수 용의자로 전락해 구치소 수감, 강철의 소희 해고, 면회실에서 연주가 '이곳이 내가 보는 만화 속'이라는 세계관 핵심 진실을 고백하며 소환 해제로 4화 종료",
+  "by": "cowork opus authoring"
+}

@@ -1,0 +1,21 @@
+{
+  "work_id": "W",
+  "scene_count": 107,
+  "core_dist": {
+    "BOND": 3,
+    "CONFLICT": 2,
+    "DESIRE": 1,
+    "ESTABLISH": 4,
+    "HOOK": 9,
+    "LOSS": 3,
+    "PERIL": 44,
+    "PUNISH": 4,
+    "RELIEF": 1,
+    "REUNION": 3,
+    "REVELATION": 25,
+    "REVERSAL": 5,
+    "ROMANCE": 3
+  },
+  "episode_function": "성무의 회복과 진범의 탈주가 교차하며 강철과 철호가 각자의 진실을 좇는 가운데, 진범이 성무 행세로 연주를 납치·살해하려다 강철에게 처단되지만 연주가 부상으로 위독해지는 클라이맥스 회차",
+  "by": "cowork opus authoring"
+}

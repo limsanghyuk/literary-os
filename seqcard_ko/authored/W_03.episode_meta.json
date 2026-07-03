@@ -1,0 +1,21 @@
+{
+  "work_id": "W",
+  "scene_count": 70,
+  "core_dist": {
+    "ORACLE": 7,
+    "REVELATION": 11,
+    "RELIEF": 8,
+    "CONFLICT": 13,
+    "BOND": 5,
+    "HOOK": 2,
+    "LOSS": 4,
+    "ESTABLISH": 2,
+    "DESIRE": 2,
+    "PERIL": 10,
+    "REVERSAL": 3,
+    "RESCUE": 2,
+    "ROMANCE": 1
+  },
+  "episode_function": "만화 밖 현실에서 성무가 창조주로서 강철을 지워 없애려는 진실이 드러나고, 성무의 두 차례 암살 시도(트럭, 괴한)를 강철이 초자연적으로 극복하며 창조자-피조물 간의 전면전이 시작되고, 연주가 강철의 사적 공간에 억류된 채 총구 앞 클리프행어로 마무리되는 회차.",
+  "by": "cowork opus authoring"
+}
