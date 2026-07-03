@@ -1,0 +1,24 @@
+{
+  "work_id": "시크릿가든",
+  "scene_count": 39,
+  "core_dist": {
+    "ESTABLISH": 3,
+    "ORACLE": 1,
+    "INTRO": 0,
+    "BOND": 10,
+    "CONFLICT": 7,
+    "REVERSAL": 1,
+    "LOSS": 1,
+    "PUNISH": 0,
+    "REVELATION": 4,
+    "REUNION": 0,
+    "RELIEF": 4,
+    "ROMANCE": 3,
+    "PERIL": 2,
+    "RESCUE": 0,
+    "DESIRE": 0,
+    "HOOK": 3
+  },
+  "episode_function": "14부는 13부 엔딩의 재결합 고백을 로맨틱하게 완성한 뒤, 오스카의 표절 스캔들과 라임 해고 위기라는 이중 갈등을 통해 두 커플 모두를 시험대에 올리고, 비로 촉발된 몸바뀜 재발동을 계기로 주원과 라임의 신뢰와 유대를 심화시키지만, 종국에는 몸바뀐 정체가 오스카와 종수에게 발각되는 클리프행어로 다음 화의 위기를 예고하는 기능을 한다.",
+  "by": "cowork opus authoring"
+}

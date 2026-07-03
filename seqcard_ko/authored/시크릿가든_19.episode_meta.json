@@ -1,0 +1,21 @@
+{
+  "work_id": "시크릿가든",
+  "scene_count": 36,
+  "core_dist": {
+    "BOND": 3,
+    "LOSS": 2,
+    "REVELATION": 9,
+    "CONFLICT": 6,
+    "INTRO": 1,
+    "ORACLE": 1,
+    "ROMANCE": 3,
+    "RELIEF": 5,
+    "PUNISH": 2,
+    "REUNION": 1,
+    "PERIL": 1,
+    "RESCUE": 1,
+    "HOOK": 1
+  },
+  "episode_function": "기억을 잃은 주원과 라임의 재접근 코미디로 시작해, 소방관 아버지의 순직과 라임의 정체가 밝혀지며 관계가 급랭했다가, 라이브러리의 인어공주 편지를 계기로 주원의 전체 기억이 폭풍처럼 되살아난다. 엘리베이터 참사 회상에서 익선의 희생적 구조와 마지막 유언이 전해지며 두 사람은 완전히 재결합하고, 주원은 거짓말한 엄마 분홍과 결별을 선언하며 라임의 남편으로 살겠다 다짐하는 시리즈 최종 엔딩으로 마무리된다.",
+  "by": "cowork opus authoring"
+}

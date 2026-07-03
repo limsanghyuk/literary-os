@@ -1,0 +1,21 @@
+{
+  "work_id": "시크릿가든",
+  "scene_count": 45,
+  "core_dist": {
+    "ESTABLISH": 1,
+    "HOOK": 3,
+    "INTRO": 3,
+    "CONFLICT": 13,
+    "PERIL": 5,
+    "PUNISH": 2,
+    "REVELATION": 4,
+    "BOND": 4,
+    "ROMANCE": 4,
+    "REUNION": 1,
+    "REVERSAL": 2,
+    "DESIRE": 1,
+    "RESCUE": 2
+  },
+  "episode_function": "1화는 판타지적 몸바뀌기 전조(주원의 TV 환청)를 심고, 재벌 사장 주원/톱스타 오스카/스턴트우먼 라임/상속녀 윤슬/무술감독 종수 5인의 세계를 각각 소개한 뒤, 라임의 부상과 오인된 만남을 계기로 주원-라임의 첫 인연을 형성하며 삼각(사각) 구도의 씨앗을 뿌리고 끝난다.",
+  "by": "cowork opus authoring"
+}
