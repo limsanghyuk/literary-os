@@ -1,0 +1,21 @@
+{
+  "work_id": "추적자",
+  "scene_count": 67,
+  "core_dist": {
+    "HOOK": 7,
+    "PUNISH": 2,
+    "BOND": 9,
+    "INTRO": 2,
+    "ESTABLISH": 6,
+    "CONFLICT": 5,
+    "REVERSAL": 3,
+    "LOSS": 9,
+    "PERIL": 6,
+    "RELIEF": 7,
+    "REVELATION": 6,
+    "RESCUE": 3,
+    "DESIRE": 2
+  },
+  "episode_function": "1부는 딸 백수정을 잃은 아버지 백홍석의 복수를 예고하는 오프닝(법정 총격)으로 시작해 3개월 전으로 돌아가, 평범하고 다정했던 부녀의 일상(BOND)을 쌓은 뒤 PK준과 서지수의 뺑소니 사고(PERIL/LOSS)로 급전직하한다. 수정을 살리려는 아버지의 사투(RESCUE/RELIEF)와, 사위 강동윤이 장인 서회장의 권력에 굴복했다가 아내의 뺑소니를 폭로해 반격하는 정치 서브플롯(REVERSAL/CONFLICT)이 교차 편집된다. 결말부에서 동윤 측이 매수한 의사 창민이 회복 중인 수정을 살해(LOSS/PUNISH)함으로써 은폐가 완성되고, 진실을 알게 된 홍석이 상주 자리를 창민에게 맡기고 복수의 추적을 시작하며(DESIRE/HOOK) 대선 출정식의 강동윤과 교차되는 스틸컷으로 1부가 마무리된다. 핵심 기능은 아버지의 사랑(BOND)과 상실(LOSS)의 낙차를 극대화하여 이후 전개될 복수극의 정서적 동력을 마련하는 것이다.",
+  "by": "cowork opus authoring"
+}

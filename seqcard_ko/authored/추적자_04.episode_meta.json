@@ -1,0 +1,22 @@
+{
+  "work_id": "추적자",
+  "scene_count": 67,
+  "core_dist": {
+    "PERIL": 14,
+    "LOSS": 6,
+    "CONFLICT": 10,
+    "RELIEF": 2,
+    "REVELATION": 9,
+    "DESIRE": 8,
+    "REUNION": 1,
+    "REVERSAL": 2,
+    "ORACLE": 6,
+    "ESTABLISH": 4,
+    "PUNISH": 1,
+    "BOND": 2,
+    "RESCUE": 1,
+    "HOOK": 1
+  },
+  "episode_function": "4부는 미연의 투신이라는 핵심 LOSS를 축으로 홍석이 벼랑 끝으로 몰리며, 딸의 죽음과 아내의 죽음이 연쇄적으로 홍석을 파국으로 몰아간다. 법정 난입과 오발로 인한 PK준 사망은 REVERSAL이자 PUNISH로 작동해 서사의 무게중심을 완전히 뒤바꾸고, 이 과정에서 발견한 동윤-PK준 매수 동영상은 강동윤의 배후를 드러내는 REVELATION으로 극의 정치스릴러 축을 본격화한다. 민찬의 증거 탈취와 취조에 이은 홍석의 대검 탈주는 RESCUE와 HOOK으로 마무리되어, 5부 이후 동윤 추적전의 시작을 강하게 견인한다.",
+  "by": "cowork opus authoring"
+}

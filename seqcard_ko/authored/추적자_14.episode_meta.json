@@ -1,0 +1,18 @@
+{
+  "work_id": "추적자",
+  "scene_count": 50,
+  "core_dist": {
+    "HOOK": 6,
+    "DESIRE": 2,
+    "CONFLICT": 12,
+    "BOND": 10,
+    "REVERSAL": 4,
+    "REVELATION": 7,
+    "PERIL": 2,
+    "PUNISH": 2,
+    "RELIEF": 3,
+    "LOSS": 2
+  },
+  "episode_function": "선거일 하루 동안 벌어지는 최종 결전. 홍석 일행이 몰카 함정으로 강동윤의 자백을 확보하고, 지원의 특종 보도와 20억 계좌 폭로로 알리바이 조작을 무너뜨려 여론을 뒤집는다. 동윤은 위선이 폭로되며 붕괴하고, 홍석은 아내와 딸에게 작별을 고한 뒤 스스로 체포되며 시청자에게 '진실이 이긴다'는 카타르시스와 함께 최종회로의 강한 훅을 남긴다.",
+  "by": "cowork opus authoring"
+}

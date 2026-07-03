@@ -1,0 +1,21 @@
+{
+  "work_id": "추적자",
+  "scene_count": 55,
+  "core_dist": {
+    "ESTABLISH": 9,
+    "CONFLICT": 12,
+    "RELIEF": 3,
+    "PERIL": 7,
+    "BOND": 2,
+    "DESIRE": 5,
+    "LOSS": 2,
+    "REVERSAL": 6,
+    "ORACLE": 2,
+    "HOOK": 3,
+    "ROMANCE": 1,
+    "RESCUE": 2,
+    "REVELATION": 1
+  },
+  "episode_function": "대선 D-1부터 투표일까지, 혜라의 재계약과 조형사 피격이라는 이중 위기 속에서 동윤이 검찰청 깜짝 출두와 사퇴 선언이라는 승부수로 홍석의 기자회견을 무산시키고, 밀항 위장극과 가짜 핸드폰 반전으로 압도적 지지율을 굳히지만, 정작 이발소에 나타난 백홍석과 마주하며 13화가 충격적 클리프행어로 끝나는 전환부.",
+  "by": "cowork opus authoring"
+}

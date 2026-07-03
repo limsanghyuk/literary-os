@@ -1,0 +1,23 @@
+{
+  "work_id": "추적자",
+  "scene_count": 64,
+  "core_dist": {
+    "LOSS": 1,
+    "REUNION": 1,
+    "BOND": 5,
+    "CONFLICT": 8,
+    "ESTABLISH": 3,
+    "REVELATION": 8,
+    "PERIL": 10,
+    "REVERSAL": 7,
+    "DESIRE": 2,
+    "ORACLE": 2,
+    "INTRO": 2,
+    "HOOK": 9,
+    "RELIEF": 1,
+    "RESCUE": 3,
+    "PUNISH": 2
+  },
+  "episode_function": "주인공 홍석이 황반장의 배신 시도와 눈물의 제압을 거쳐 장병호·유태진의 신당으로 향하며 강동윤 폭로를 결심하는 전환부. 서회장-동윤 장인사위 담판, 지수-혜라의 희생양 공작, 정우-지원의 진실 접근이 교차하며 기자회견 직전 백수정 뺑소니 진범 자수라는 대반전으로 8화가 마무리된다.",
+  "by": "cowork opus authoring"
+}

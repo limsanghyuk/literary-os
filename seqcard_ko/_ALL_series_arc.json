@@ -214,6 +214,17 @@
    },
    "CONFLICT_persist": 0.252
   },
+  "추적자": {
+   "eps": 16,
+   "scenes": 884,
+   "top": {
+    "CONFLICT": 143,
+    "PERIL": 116,
+    "REVELATION": 101,
+    "HOOK": 90
+   },
+   "CONFLICT_persist": 0.224
+  },
   "카인과아벨": {
    "eps": 20,
    "scenes": 1080,
@@ -260,27 +271,27 @@
   }
  },
  "totals": {
-  "works": 23,
-  "episodes": 477,
-  "scenes": 31226,
+  "works": 24,
+  "episodes": 493,
+  "scenes": 32110,
   "core_dist": {
-   "CONFLICT": 5037,
-   "PERIL": 4277,
-   "REVELATION": 3498,
-   "ESTABLISH": 2688,
-   "LOSS": 2398,
-   "BOND": 2371,
-   "DESIRE": 2160,
-   "HOOK": 1814,
-   "RELIEF": 1447,
-   "ORACLE": 1332,
-   "ROMANCE": 1120,
-   "PUNISH": 906,
-   "REVERSAL": 902,
-   "RESCUE": 622,
-   "REUNION": 399,
-   "INTRO": 255
+   "CONFLICT": 5180,
+   "PERIL": 4393,
+   "REVELATION": 3599,
+   "ESTABLISH": 2732,
+   "LOSS": 2471,
+   "BOND": 2439,
+   "DESIRE": 2200,
+   "HOOK": 1904,
+   "RELIEF": 1482,
+   "ORACLE": 1357,
+   "ROMANCE": 1124,
+   "REVERSAL": 974,
+   "PUNISH": 938,
+   "RESCUE": 646,
+   "REUNION": 407,
+   "INTRO": 264
   }
  },
- "note": "SeqCard 의도층 집계. core-only. κ 미검증 분석용 prior. by=cowork opus aggregation 2026-07-02 | 2026-07-03 갱신: 스카이캐슬(23번째 작품, 20화/1353씬) 추가, 22→23작."
+ "note": "SeqCard 의도층 집계. core-only. κ 미검증 분석용 prior. by=cowork opus aggregation 2026-07-02 | 2026-07-03 갱신: 스카이캐슬·추적자 추가, 23→24작."
 }
