@@ -1,0 +1,22 @@
+{
+  "work_id": "밀회",
+  "scene_count": 104,
+  "core_dist": {
+    "INTRO": 2,
+    "ESTABLISH": 14,
+    "BOND": 11,
+    "ROMANCE": 1,
+    "HOOK": 6,
+    "CONFLICT": 21,
+    "REVELATION": 10,
+    "ORACLE": 9,
+    "DESIRE": 4,
+    "PERIL": 12,
+    "PUNISH": 1,
+    "RELIEF": 9,
+    "RESCUE": 3,
+    "REUNION": 1
+  },
+  "episode_function": "클래식 음악계 상류층 부부 오혜원과 강준형, 그리고 하층 청년 배달원 이선재가 각자의 세계에서 살아가다가, 음악제 당일 선재가 우연히 벌인 소동과 그가 숨기지 못한 천재적 연주 재능을 계기로 두 세계가 처음 연결되기 시작하는 파일럿 에피소드. 혜원의 위태로운 결혼생활과 상류층 위선, 준형의 열등감, 선재의 신분을 넘는 재능이라는 세 축을 동시에 설정한다.",
+  "by": "cowork opus authoring"
+}

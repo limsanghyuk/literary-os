@@ -1,0 +1,21 @@
+{
+  "work_id": "밀회",
+  "scene_count": 64,
+  "core_dist": {
+    "ESTABLISH": 5,
+    "INTRO": 3,
+    "HOOK": 12,
+    "CONFLICT": 12,
+    "BOND": 2,
+    "REVELATION": 4,
+    "ROMANCE": 3,
+    "PERIL": 5,
+    "RELIEF": 4,
+    "DESIRE": 4,
+    "REVERSAL": 3,
+    "LOSS": 5,
+    "RESCUE": 2
+  },
+  "episode_function": "선재의 데뷔 연주회라는 공적 축제와 무대 뒤에서 벌어지는 선재-혜원의 위태로운 밀회를 교차시켜 두 사람의 관계를 절정으로 밀어올린 뒤, 준형의 목격과 서회장 자택에 들이닥친 검찰 수사를 통해 사생활과 권력 스캔들을 동시에 폭발 직전까지 몰아가며 다음 화의 파국을 예고하는 전환점 에피소드다.",
+  "by": "cowork opus authoring"
+}

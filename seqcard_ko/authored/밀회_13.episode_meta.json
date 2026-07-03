@@ -1,0 +1,20 @@
+{
+  "work_id": "밀회",
+  "scene_count": 76,
+  "core_dist": {
+    "BOND": 4,
+    "CONFLICT": 19,
+    "ESTABLISH": 25,
+    "HOOK": 4,
+    "INTRO": 1,
+    "LOSS": 7,
+    "ORACLE": 1,
+    "PERIL": 2,
+    "PUNISH": 1,
+    "RELIEF": 2,
+    "REVELATION": 9,
+    "REVERSAL": 1
+  },
+  "episode_function": "혜원의 밀회가 다미의 항의와 도청, 사진 증거로 발각되며 성숙·민학장·인겸이 협공을 준비하고, 서회장 출소 후 회사 이권 거래와 usb 증거 인계로 혜원이 표면상 굴복하는 척하며 반격을 준비한다. 선재는 혜원의 '척하기' 요구에 반발하면서도 학생들과의 오중주로 위안을 얻지만, 준형 부부의 위장 인터뷰 촬영에 동원되어 밀회의 처절한 그림자를 재확인한다.",
+  "by": "cowork opus authoring"
+}

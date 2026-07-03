@@ -1,0 +1,24 @@
+{
+  "work_id": "밀회",
+  "scene_count": 59,
+  "core_dist": {
+    "ESTABLISH": 6,
+    "ORACLE": 1,
+    "INTRO": 0,
+    "BOND": 5,
+    "CONFLICT": 16,
+    "REVERSAL": 0,
+    "LOSS": 4,
+    "PUNISH": 0,
+    "REVELATION": 2,
+    "REUNION": 0,
+    "RELIEF": 1,
+    "ROMANCE": 7,
+    "PERIL": 12,
+    "RESCUE": 0,
+    "DESIRE": 2,
+    "HOOK": 3
+  },
+  "episode_function": "혜원과 선재가 감시망을 피해 펜션에서 첫 밤을 함께 보내며 서로의 상처와 애정을 확인하지만(피아노맨 시퀀스, 선재의 이멜 구애 고백), 트럭남·승용차 남을 통한 물증 채집으로 파국이 예고되고, 준형은 질투와 의심으로 혜원을 몰아세우며, 성숙은 회장의 은닉 자금을 노리고 다미의 방문으로 다음 위기가 예고되는 회.",
+  "by": "cowork opus authoring"
+}

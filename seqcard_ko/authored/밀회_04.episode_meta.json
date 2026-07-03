@@ -1,0 +1,24 @@
+{
+  "work_id": "밀회",
+  "scene_count": 76,
+  "core_dist": {
+    "ESTABLISH": 2,
+    "ORACLE": 0,
+    "INTRO": 1,
+    "BOND": 8,
+    "CONFLICT": 22,
+    "REVERSAL": 0,
+    "LOSS": 12,
+    "PUNISH": 4,
+    "REVELATION": 6,
+    "REUNION": 2,
+    "RELIEF": 3,
+    "ROMANCE": 0,
+    "PERIL": 2,
+    "RESCUE": 1,
+    "DESIRE": 7,
+    "HOOK": 6
+  },
+  "episode_function": "혜원과 선재의 첫 밀회 이후 혜원이 냉정하게 부인하며 선재를 밀어내지만, 억눌린 분노가 폭발한 선재가 폭행 사건으로 유치장에 갇히면서 두 사람의 관계가 위기와 은밀한 개입으로 전환되는 화. 서회장家(성숙-영우-서회장)의 권력 다툼과 혜원의 이중·삼중 첩자 처세가 서브플롯으로 교차되며, 준형이 위선적으로 선재를 구제해 자기 곁에 묶어두는 결말로 다음 화의 동거 국면을 예고한다.",
+  "by": "cowork opus authoring"
+}
