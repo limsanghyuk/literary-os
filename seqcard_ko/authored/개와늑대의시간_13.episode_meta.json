@@ -1,0 +1,21 @@
+{
+  "work_id": "개와늑대의시간_13",
+  "scene_count": 53,
+  "core_dist": {
+    "PERIL": 11,
+    "ESTABLISH": 9,
+    "DESIRE": 8,
+    "CONFLICT": 6,
+    "LOSS": 4,
+    "REVELATION": 3,
+    "ROMANCE": 3,
+    "REVERSAL": 2,
+    "ORACLE": 2,
+    "BOND": 2,
+    "PUNISH": 1,
+    "REUNION": 1,
+    "HOOK": 1
+  },
+  "episode_function": "기억을 되찾은 수현이 자멸 충동·탈출 실패·정부장 포획·처형 명령을 거쳐 이중 정체로 버티는 동안, 마약 거래 현장에 침투한 민기가 약물 심문으로 정체 폭로 직전에 몰리며 극한 위기로 마감한다",
+  "by": "sonnet_reading"
+}

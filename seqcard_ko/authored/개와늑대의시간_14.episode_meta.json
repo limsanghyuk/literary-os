@@ -1,0 +1,22 @@
+{
+  "work_id": "개와늑대의시간_14",
+  "scene_count": 51,
+  "core_dist": {
+    "CONFLICT": 7,
+    "DESIRE": 7,
+    "PERIL": 6,
+    "RESCUE": 5,
+    "ESTABLISH": 5,
+    "ORACLE": 5,
+    "REVELATION": 4,
+    "REUNION": 3,
+    "BOND": 2,
+    "REVERSAL": 2,
+    "LOSS": 2,
+    "ROMANCE": 1,
+    "PUNISH": 1,
+    "HOOK": 1
+  },
+  "episode_function": "수현의 이중첩자 정체가 조직 내부에서 의심받기 시작하고, 민기·지우가 진실을 공유하며 구조에 나서는 가운데, 창고 함정에서 지우가 수현을 몸으로 막는 총격 클리프행어로 위기가 극한에 달한다.",
+  "by": "sonnet_reading"
+}

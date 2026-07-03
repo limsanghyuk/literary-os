@@ -1,0 +1,23 @@
+{
+  "work_id": "개와늑대의시간_04",
+  "scene_count": 50,
+  "core_dist": {
+    "BOND": 2,
+    "CONFLICT": 7,
+    "DESIRE": 6,
+    "ESTABLISH": 3,
+    "HOOK": 1,
+    "INTRO": 1,
+    "LOSS": 3,
+    "ORACLE": 3,
+    "PERIL": 6,
+    "PUNISH": 2,
+    "RELIEF": 1,
+    "RESCUE": 6,
+    "REUNION": 1,
+    "REVERSAL": 2,
+    "ROMANCE": 6
+  },
+  "episode_function": "방콕을 무대로 수현의 첩보 침투와 함정 위기, 민기의 비공식 구출 작전, 지우와 마오의 재회라는 세 축이 교차하며 임무, 의리, 로맨스가 동시에 임계점에 도달한다.",
+  "by": "sonnet_reading"
+}

@@ -1,352 +1,363 @@
 {
- "series": {
-  "W": {
-   "eps": 16,
-   "scenes": 1220,
-   "top": {
-    "REVELATION": 262,
-    "PERIL": 223,
-    "HOOK": 132,
-    "LOSS": 100
-   },
-   "CONFLICT_persist": 0.163
+  "series": {
+    "W": {
+      "eps": 16,
+      "scenes": 1220,
+      "top": {
+        "REVELATION": 262,
+        "PERIL": 223,
+        "HOOK": 132,
+        "LOSS": 100
+      },
+      "CONFLICT_persist": 0.163
+    },
+    "경성스캔들": {
+      "eps": 16,
+      "scenes": 1187,
+      "top": {
+        "CONFLICT": 209,
+        "PERIL": 132,
+        "LOSS": 121,
+        "BOND": 111
+      },
+      "CONFLICT_persist": 0.245
+    },
+    "공주의남자": {
+      "eps": 24,
+      "scenes": 1784,
+      "top": {
+        "CONFLICT": 309,
+        "PERIL": 296,
+        "LOSS": 179,
+        "REVELATION": 175
+      },
+      "CONFLICT_persist": 0.252
+    },
+    "그들이사는세상": {
+      "eps": 16,
+      "scenes": 801,
+      "top": {
+        "CONFLICT": 203,
+        "BOND": 86,
+        "LOSS": 76,
+        "REVELATION": 73
+      },
+      "CONFLICT_persist": 0.337
+    },
+    "너의목소리가들려": {
+      "eps": 18,
+      "scenes": 1080,
+      "top": {
+        "REVELATION": 176,
+        "CONFLICT": 148,
+        "PERIL": 147,
+        "ESTABLISH": 120
+      },
+      "CONFLICT_persist": 0.142
+    },
+    "녹두꽃": {
+      "eps": 24,
+      "scenes": 1636,
+      "top": {
+        "PERIL": 342,
+        "CONFLICT": 225,
+        "REVELATION": 185,
+        "HOOK": 161
+      },
+      "CONFLICT_persist": 0.164
+    },
+    "대장금": {
+      "eps": 54,
+      "scenes": 3630,
+      "top": {
+        "CONFLICT": 679,
+        "PERIL": 483,
+        "ESTABLISH": 429,
+        "DESIRE": 371
+      },
+      "CONFLICT_persist": 0.323
+    },
+    "도깨비": {
+      "eps": 16,
+      "scenes": 900,
+      "top": {
+        "ROMANCE": 115,
+        "DESIRE": 96,
+        "ESTABLISH": 95,
+        "LOSS": 90
+      },
+      "CONFLICT_persist": 0.159
+    },
+    "마왕": {
+      "eps": 20,
+      "scenes": 1585,
+      "top": {
+        "CONFLICT": 242,
+        "PERIL": 231,
+        "REVELATION": 220,
+        "ORACLE": 160
+      },
+      "CONFLICT_persist": 0.178
+    },
+    "모래시계": {
+      "eps": 24,
+      "scenes": 1365,
+      "top": {
+        "PERIL": 192,
+        "ESTABLISH": 178,
+        "CONFLICT": 164,
+        "ORACLE": 163
+      },
+      "CONFLICT_persist": 0.191
+    },
+    "미안하다사랑한다": {
+      "eps": 16,
+      "scenes": 1299,
+      "top": {
+        "LOSS": 199,
+        "CONFLICT": 166,
+        "BOND": 154,
+        "PERIL": 152
+      },
+      "CONFLICT_persist": 0.211
+    },
+    "밀회": {
+      "eps": 16,
+      "scenes": 1144,
+      "top": {
+        "CONFLICT": 288,
+        "BOND": 117,
+        "REVELATION": 107,
+        "ESTABLISH": 97
+      },
+      "CONFLICT_persist": 0.381
+    },
+    "배가본드": {
+      "eps": 16,
+      "scenes": 993,
+      "top": {
+        "PERIL": 211,
+        "CONFLICT": 159,
+        "REVELATION": 142,
+        "ESTABLISH": 134
+      },
+      "CONFLICT_persist": 0.195
+    },
+    "베토벤바이러스": {
+      "eps": 17,
+      "scenes": 748,
+      "top": {
+        "CONFLICT": 169,
+        "BOND": 113,
+        "REVELATION": 105,
+        "LOSS": 66
+      },
+      "CONFLICT_persist": 0.313,
+      "complete": false,
+      "missing_episodes": [
+        15
+      ],
+      "note": "15화 원본 HWP가 8KB로 본문 텍스트 없음(추출 불가, corpus_ko 트랙에서도 동일 결번 확인) — 18부작 중 17화만 완본. eps=17은 실제 존재하는 회차 수(1~14,16~18)."
+    },
+    "비밀의숲": {
+      "eps": 16,
+      "scenes": 1037,
+      "top": {
+        "CONFLICT": 152,
+        "ESTABLISH": 149,
+        "PERIL": 124,
+        "ORACLE": 119
+      },
+      "CONFLICT_persist": 0.205
+    },
+    "스카이캐슬": {
+      "eps": 20,
+      "scenes": 1353,
+      "top": {
+        "CONFLICT": 307,
+        "REVELATION": 175,
+        "HOOK": 145,
+        "PERIL": 120
+      },
+      "CONFLICT_persist": 0.277
+    },
+    "스토브리그": {
+      "eps": 16,
+      "scenes": 1003,
+      "top": {
+        "CONFLICT": 202,
+        "REVELATION": 127,
+        "BOND": 112,
+        "ESTABLISH": 108
+      },
+      "CONFLICT_persist": 0.277
+    },
+    "시그널": {
+      "eps": 16,
+      "scenes": 1287,
+      "top": {
+        "REVELATION": 343,
+        "PERIL": 224,
+        "CONFLICT": 161,
+        "HOOK": 154
+      },
+      "CONFLICT_persist": 0.248
+    },
+    "시크릿가든": {
+      "eps": 20,
+      "scenes": 888,
+      "top": {
+        "CONFLICT": 198,
+        "REVELATION": 135,
+        "BOND": 87,
+        "LOSS": 77
+      },
+      "CONFLICT_persist": 0.338
+    },
+    "시티헌터": {
+      "eps": 20,
+      "scenes": 1365,
+      "top": {
+        "CONFLICT": 241,
+        "PERIL": 203,
+        "REVELATION": 172,
+        "BOND": 96
+      },
+      "CONFLICT_persist": 0.171
+    },
+    "싸인": {
+      "eps": 20,
+      "scenes": 1358,
+      "top": {
+        "ESTABLISH": 218,
+        "REVELATION": 202,
+        "CONFLICT": 172,
+        "PERIL": 164
+      },
+      "CONFLICT_persist": 0.233
+    },
+    "역전의여왕": {
+      "eps": 31,
+      "scenes": 1875,
+      "top": {
+        "CONFLICT": 380,
+        "REVELATION": 268,
+        "LOSS": 175,
+        "PERIL": 164
+      },
+      "CONFLICT_persist": 0.263
+    },
+    "워킹맘": {
+      "eps": 16,
+      "scenes": 1161,
+      "top": {
+        "CONFLICT": 217,
+        "DESIRE": 153,
+        "RELIEF": 129,
+        "PERIL": 121
+      },
+      "CONFLICT_persist": 0.259
+    },
+    "최강칠우": {
+      "eps": 20,
+      "scenes": 1398,
+      "top": {
+        "PERIL": 361,
+        "REVELATION": 170,
+        "CONFLICT": 155,
+        "ORACLE": 121
+      },
+      "CONFLICT_persist": 0.252
+    },
+    "추적자": {
+      "eps": 16,
+      "scenes": 884,
+      "top": {
+        "CONFLICT": 143,
+        "PERIL": 116,
+        "REVELATION": 101,
+        "HOOK": 90
+      },
+      "CONFLICT_persist": 0.224
+    },
+    "카인과아벨": {
+      "eps": 20,
+      "scenes": 1080,
+      "top": {
+        "PERIL": 202,
+        "CONFLICT": 180,
+        "REVELATION": 174,
+        "ESTABLISH": 86
+      },
+      "CONFLICT_persist": 0.184
+    },
+    "커피프린스": {
+      "eps": 17,
+      "scenes": 949,
+      "top": {
+        "BOND": 152,
+        "CONFLICT": 138,
+        "ROMANCE": 120,
+        "DESIRE": 114
+      },
+      "CONFLICT_persist": 0.309
+    },
+    "태양의후예": {
+      "eps": 16,
+      "scenes": 852,
+      "top": {
+        "PERIL": 121,
+        "RELIEF": 107,
+        "ROMANCE": 102,
+        "CONFLICT": 86
+      },
+      "CONFLICT_persist": 0.174
+    },
+    "하얀거탑": {
+      "eps": 20,
+      "scenes": 1304,
+      "top": {
+        "CONFLICT": 296,
+        "DESIRE": 174,
+        "PERIL": 165,
+        "BOND": 127
+      },
+      "CONFLICT_persist": 0.317
+    },
+    "개와늑대의시간": {
+      "eps": 16,
+      "scenes": 880,
+      "top": {
+        "PERIL": 139,
+        "ESTABLISH": 130,
+        "CONFLICT": 128,
+        "LOSS": 73
+      },
+      "CONFLICT_persist": 0.195
+    }
   },
-  "경성스캔들": {
-   "eps": 16,
-   "scenes": 1187,
-   "top": {
-    "CONFLICT": 209,
-    "PERIL": 132,
-    "LOSS": 121,
-    "BOND": 111
-   },
-   "CONFLICT_persist": 0.245
+  "totals": {
+    "works": 30,
+    "episodes": 593,
+    "scenes": 38046,
+    "core_dist": {
+      "CONFLICT": 6298,
+      "PERIL": 4984,
+      "REVELATION": 4345,
+      "ESTABLISH": 3252,
+      "BOND": 2950,
+      "LOSS": 2936,
+      "DESIRE": 2500,
+      "HOOK": 2328,
+      "RELIEF": 1816,
+      "ORACLE": 1535,
+      "ROMANCE": 1328,
+      "REVERSAL": 1144,
+      "PUNISH": 1078,
+      "RESCUE": 733,
+      "REUNION": 484,
+      "INTRO": 335
+    }
   },
-  "공주의남자": {
-   "eps": 24,
-   "scenes": 1784,
-   "top": {
-    "CONFLICT": 309,
-    "PERIL": 296,
-    "LOSS": 179,
-    "REVELATION": 175
-   },
-   "CONFLICT_persist": 0.252
-  },
-  "그들이사는세상": {
-   "eps": 16,
-   "scenes": 801,
-   "top": {
-    "CONFLICT": 203,
-    "BOND": 86,
-    "LOSS": 76,
-    "REVELATION": 73
-   },
-   "CONFLICT_persist": 0.337
-  },
-  "너의목소리가들려": {
-   "eps": 18,
-   "scenes": 1080,
-   "top": {
-    "REVELATION": 176,
-    "CONFLICT": 148,
-    "PERIL": 147,
-    "ESTABLISH": 120
-   },
-   "CONFLICT_persist": 0.142
-  },
-  "녹두꽃": {
-   "eps": 24,
-   "scenes": 1636,
-   "top": {
-    "PERIL": 342,
-    "CONFLICT": 225,
-    "REVELATION": 185,
-    "HOOK": 161
-   },
-   "CONFLICT_persist": 0.164
-  },
-  "대장금": {
-   "eps": 54,
-   "scenes": 3630,
-   "top": {
-    "CONFLICT": 679,
-    "PERIL": 483,
-    "ESTABLISH": 429,
-    "DESIRE": 371
-   },
-   "CONFLICT_persist": 0.323
-  },
-  "도깨비": {
-   "eps": 16,
-   "scenes": 900,
-   "top": {
-    "ROMANCE": 115,
-    "DESIRE": 96,
-    "ESTABLISH": 95,
-    "LOSS": 90
-   },
-   "CONFLICT_persist": 0.159
-  },
-  "마왕": {
-   "eps": 20,
-   "scenes": 1585,
-   "top": {
-    "CONFLICT": 242,
-    "PERIL": 231,
-    "REVELATION": 220,
-    "ORACLE": 160
-   },
-   "CONFLICT_persist": 0.178
-  },
-  "모래시계": {
-   "eps": 24,
-   "scenes": 1365,
-   "top": {
-    "PERIL": 192,
-    "ESTABLISH": 178,
-    "CONFLICT": 164,
-    "ORACLE": 163
-   },
-   "CONFLICT_persist": 0.191
-  },
-  "미안하다사랑한다": {
-   "eps": 16,
-   "scenes": 1299,
-   "top": {
-    "LOSS": 199,
-    "CONFLICT": 166,
-    "BOND": 154,
-    "PERIL": 152
-   },
-   "CONFLICT_persist": 0.211
-  },
-  "밀회": {
-   "eps": 16,
-   "scenes": 1144,
-   "top": {
-    "CONFLICT": 288,
-    "BOND": 117,
-    "REVELATION": 107,
-    "ESTABLISH": 97
-   },
-   "CONFLICT_persist": 0.381
-  },
-  "배가본드": {
-   "eps": 16,
-   "scenes": 993,
-   "top": {
-    "PERIL": 211,
-    "CONFLICT": 159,
-    "REVELATION": 142,
-    "ESTABLISH": 134
-   },
-   "CONFLICT_persist": 0.195
-  },
-  "베토벤바이러스": {
-   "eps": 17,
-   "scenes": 748,
-   "top": {
-    "CONFLICT": 169,
-    "BOND": 113,
-    "REVELATION": 105,
-    "LOSS": 66
-   },
-   "CONFLICT_persist": 0.313,
-   "complete": false,
-   "missing_episodes": [
-    15
-   ],
-   "note": "15화 원본 HWP가 8KB로 본문 텍스트 없음(추출 불가, corpus_ko 트랙에서도 동일 결번 확인) — 18부작 중 17화만 완본. eps=17은 실제 존재하는 회차 수(1~14,16~18)."
-  },
-  "비밀의숲": {
-   "eps": 16,
-   "scenes": 1037,
-   "top": {
-    "CONFLICT": 152,
-    "ESTABLISH": 149,
-    "PERIL": 124,
-    "ORACLE": 119
-   },
-   "CONFLICT_persist": 0.205
-  },
-  "스카이캐슬": {
-   "eps": 20,
-   "scenes": 1353,
-   "top": {
-    "CONFLICT": 307,
-    "REVELATION": 175,
-    "HOOK": 145,
-    "PERIL": 120
-   },
-   "CONFLICT_persist": 0.277
-  },
-  "스토브리그": {
-   "eps": 16,
-   "scenes": 1003,
-   "top": {
-    "CONFLICT": 202,
-    "REVELATION": 127,
-    "BOND": 112,
-    "ESTABLISH": 108
-   },
-   "CONFLICT_persist": 0.277
-  },
-  "시그널": {
-   "eps": 16,
-   "scenes": 1287,
-   "top": {
-    "REVELATION": 343,
-    "PERIL": 224,
-    "CONFLICT": 161,
-    "HOOK": 154
-   },
-   "CONFLICT_persist": 0.248
-  },
-  "시크릿가든": {
-   "eps": 20,
-   "scenes": 888,
-   "top": {
-    "CONFLICT": 198,
-    "REVELATION": 135,
-    "BOND": 87,
-    "LOSS": 77
-   },
-   "CONFLICT_persist": 0.338
-  },
-  "시티헌터": {
-   "eps": 20,
-   "scenes": 1365,
-   "top": {
-    "CONFLICT": 241,
-    "PERIL": 203,
-    "REVELATION": 172,
-    "BOND": 96
-   },
-   "CONFLICT_persist": 0.171
-  },
-  "싸인": {
-   "eps": 20,
-   "scenes": 1358,
-   "top": {
-    "ESTABLISH": 218,
-    "REVELATION": 202,
-    "CONFLICT": 172,
-    "PERIL": 164
-   },
-   "CONFLICT_persist": 0.233
-  },
-  "역전의여왕": {
-   "eps": 31,
-   "scenes": 1875,
-   "top": {
-    "CONFLICT": 380,
-    "REVELATION": 268,
-    "LOSS": 175,
-    "PERIL": 164
-   },
-   "CONFLICT_persist": 0.263
-  },
-  "워킹맘": {
-   "eps": 16,
-   "scenes": 1161,
-   "top": {
-    "CONFLICT": 217,
-    "DESIRE": 153,
-    "RELIEF": 129,
-    "PERIL": 121
-   },
-   "CONFLICT_persist": 0.259
-  },
-  "최강칠우": {
-   "eps": 20,
-   "scenes": 1398,
-   "top": {
-    "PERIL": 361,
-    "REVELATION": 170,
-    "CONFLICT": 155,
-    "ORACLE": 121
-   },
-   "CONFLICT_persist": 0.252
-  },
-  "추적자": {
-   "eps": 16,
-   "scenes": 884,
-   "top": {
-    "CONFLICT": 143,
-    "PERIL": 116,
-    "REVELATION": 101,
-    "HOOK": 90
-   },
-   "CONFLICT_persist": 0.224
-  },
-  "카인과아벨": {
-   "eps": 20,
-   "scenes": 1080,
-   "top": {
-    "PERIL": 202,
-    "CONFLICT": 180,
-    "REVELATION": 174,
-    "ESTABLISH": 86
-   },
-   "CONFLICT_persist": 0.184
-  },
-  "커피프린스": {
-   "eps": 17,
-   "scenes": 949,
-   "top": {
-    "BOND": 152,
-    "CONFLICT": 138,
-    "ROMANCE": 120,
-    "DESIRE": 114
-   },
-   "CONFLICT_persist": 0.309
-  },
-  "태양의후예": {
-   "eps": 16,
-   "scenes": 852,
-   "top": {
-    "PERIL": 121,
-    "RELIEF": 107,
-    "ROMANCE": 102,
-    "CONFLICT": 86
-   },
-   "CONFLICT_persist": 0.174
-  },
-  "하얀거탑": {
-   "eps": 20,
-   "scenes": 1304,
-   "top": {
-    "CONFLICT": 296,
-    "DESIRE": 174,
-    "PERIL": 165,
-    "BOND": 127
-   },
-   "CONFLICT_persist": 0.317
-  }
- },
- "totals": {
-  "works": 29,
-  "episodes": 577,
-  "scenes": 37166,
-  "core_dist": {
-   "CONFLICT": 6170,
-   "PERIL": 4845,
-   "REVELATION": 4303,
-   "ESTABLISH": 3122,
-   "BOND": 2887,
-   "LOSS": 2863,
-   "DESIRE": 2429,
-   "HOOK": 2310,
-   "RELIEF": 1802,
-   "ORACLE": 1478,
-   "ROMANCE": 1282,
-   "REVERSAL": 1113,
-   "PUNISH": 1062,
-   "RESCUE": 707,
-   "REUNION": 469,
-   "INTRO": 324
-  }
- },
- "note": "SeqCard 의도층 집계. core-only. κ 미검증 분석용 prior. by=cowork opus aggregation 2026-07-02 | 2026-07-03 갱신: 스카이캐슬·추적자·스토브리그·W·시크릿가든·밀회·그들이사는세상 추가, 27→29작(신규 7편 배치 완료)."
+  "note": "SeqCard 의도층 집계. core-only. κ 미검증 분석용 prior. by=cowork opus aggregation 2026-07-02 | 2026-07-03 갱신: 스카이캐슬·추적자·스토브리그·W·시크릿가든·밀회·그들이사는세상 추가, 27→29작(신규 7편 배치 완료). | 2026-07-03 개와늑대의시간(16화 880씬) 추가, 29→30작(30편 목표 달성)."
 }

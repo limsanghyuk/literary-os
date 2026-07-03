@@ -1,0 +1,22 @@
+{
+  "work_id": "개와늑대의시간_05",
+  "scene_count": 54,
+  "core_dist": {
+    "ESTABLISH": 13,
+    "LOSS": 9,
+    "CONFLICT": 8,
+    "BOND": 3,
+    "ORACLE": 3,
+    "ROMANCE": 3,
+    "REVERSAL": 3,
+    "PERIL": 3,
+    "DESIRE": 2,
+    "INTRO": 2,
+    "RESCUE": 2,
+    "RELIEF": 1,
+    "REUNION": 1,
+    "HOOK": 1
+  },
+  "episode_function": "수현이 가짜 죽음을 통해 잠입 요원으로 전환하는 운명적 전환점 화로, 귀국-결단-출발-2년 후 재등장의 4막 구조로 인물 관계 재배치와 방산 스파이 역공작 작전 가동을 동시에 수행한다.",
+  "by": "sonnet_reading"
+}

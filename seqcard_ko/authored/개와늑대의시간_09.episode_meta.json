@@ -1,0 +1,21 @@
+{
+  "work_id": "개와늑대의시간_09",
+  "scene_count": 62,
+  "core_dist": {
+    "ESTABLISH": 10,
+    "BOND": 3,
+    "ORACLE": 7,
+    "REVELATION": 2,
+    "CONFLICT": 15,
+    "PERIL": 11,
+    "LOSS": 8,
+    "ROMANCE": 1,
+    "INTRO": 1,
+    "RELIEF": 1,
+    "RESCUE": 1,
+    "REVERSAL": 1,
+    "HOOK": 1
+  },
+  "episode_function": "수현의 생존이 NIS에 확인되고 중호가 수현을 빼내려다 죽음으로써 조직 전체에 감정적 파열을 일으키는 전환점 화이자, 민기-수현의 첫 직접 충돌로 이중 정체성 서사의 폭발을 유보시키는 클리프행어 회차다.",
+  "by": "sonnet_reading"
+}

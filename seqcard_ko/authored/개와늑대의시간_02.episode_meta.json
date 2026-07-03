@@ -1,0 +1,22 @@
+{
+  "work_id": "개와늑대의시간_02",
+  "scene_count": 62,
+  "core_dist": {
+    "ESTABLISH": 14,
+    "BOND": 8,
+    "PERIL": 6,
+    "ROMANCE": 6,
+    "DESIRE": 6,
+    "CONFLICT": 4,
+    "ORACLE": 4,
+    "REVELATION": 4,
+    "REUNION": 3,
+    "LOSS": 2,
+    "RELIEF": 2,
+    "RESCUE": 1,
+    "INTRO": 1,
+    "HOOK": 1
+  },
+  "episode_function": "태국-과거 유대 형성기(어린 수현-민기 형제 서약)에서 현재 NIS 정식 배치로 이행하면서, 핵심 빌런 마오의 입국 포착과 삼각 로맨스 갈등 점화를 동시에 완수해 시리즈 전체 서사의 기폭 장치로 기능한다.",
+  "by": "sonnet_reading"
+}

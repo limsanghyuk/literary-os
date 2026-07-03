@@ -1,0 +1,21 @@
+{
+  "work_id": "개와늑대의시간_15",
+  "scene_count": 57,
+  "core_dist": {
+    "RESCUE": 3,
+    "PERIL": 10,
+    "CONFLICT": 9,
+    "REVELATION": 2,
+    "REUNION": 1,
+    "BOND": 2,
+    "ESTABLISH": 12,
+    "DESIRE": 8,
+    "REVERSAL": 4,
+    "ORACLE": 1,
+    "LOSS": 3,
+    "PUNISH": 1,
+    "HOOK": 1
+  },
+  "episode_function": "수현이 행사장 침투 작전으로 제조기지 위치를 확보하고 NIS 타격팀이 기지를 급습하는 한편, 변씨가 수현을 구하다 희생되고 탈출하는 마오에게 수현이 총구를 겨누는 순간 지우의 목소리로 복수와 사랑의 기로가 16화로 유보된다.",
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,21 @@
+{
+  "work_id": "개와늑대의시간_06",
+  "scene_count": 55,
+  "core_dist": {
+    "BOND": 4,
+    "CONFLICT": 6,
+    "DESIRE": 7,
+    "ESTABLISH": 13,
+    "HOOK": 1,
+    "LOSS": 3,
+    "ORACLE": 2,
+    "PERIL": 11,
+    "PUNISH": 1,
+    "RELIEF": 2,
+    "RESCUE": 1,
+    "REVERSAL": 1,
+    "ROMANCE": 3
+  },
+  "episode_function": "수현의 마오 소굴 침투 완성과 한국 귀환으로 잠입 작전이 본격 가동되는 동시에, 지우의 수현 시계 봉납과 살아있는 수현의 귀환이 충돌하는 클리프행어로 두 서사축—첩보 임무와 상실 로맨스—을 최고조로 교차시키는 전환 화.",
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,22 @@
+{
+  "work_id": "개와늑대의시간_01",
+  "scene_count": 65,
+  "core_dist": {
+    "BOND": 8,
+    "CONFLICT": 4,
+    "DESIRE": 5,
+    "ESTABLISH": 5,
+    "HOOK": 1,
+    "INTRO": 6,
+    "LOSS": 10,
+    "ORACLE": 1,
+    "PERIL": 13,
+    "RESCUE": 2,
+    "REUNION": 1,
+    "REVELATION": 2,
+    "REVERSAL": 1,
+    "ROMANCE": 6
+  },
+  "episode_function": "방콕 배경 과거(12세)에서 시작해 수현·지우의 운명적 첫 만남과 이별, 청방 수사 공조의 출발, 경화의 죽음 암시까지를 단일 회차에 압축하여 시리즈 전체의 정서·갈등·인물 구조를 동시에 설립하는 파일럿 정초 회차.",
+  "by": "sonnet_reading"
+}

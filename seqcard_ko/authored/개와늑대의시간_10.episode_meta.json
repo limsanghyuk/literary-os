@@ -1,0 +1,21 @@
+{
+  "work_id": "개와늑대의시간_10",
+  "scene_count": 46,
+  "core_dist": {
+    "ESTABLISH": 7,
+    "LOSS": 4,
+    "CONFLICT": 12,
+    "REVELATION": 1,
+    "ORACLE": 3,
+    "PERIL": 5,
+    "BOND": 4,
+    "DESIRE": 3,
+    "ROMANCE": 3,
+    "RESCUE": 1,
+    "REVERSAL": 1,
+    "PUNISH": 1,
+    "HOOK": 1
+  },
+  "episode_function": "중호의 죽음이 남긴 슬픔과 죄책감을 각 인물이 방식을 달리해 흡수하는 가운데, 청방 내부 균열(사장단 습격 모의)과 NIS 내부 균열(배신자 개입·민기 독자 행동)이 동시에 폭발하며, 케이-지우 로맨스가 감정적 교차점을 통과해 민기와 수현의 운명적 조우라는 클리프행어로 수렴한다.",
+  "by": "sonnet_reading"
+}

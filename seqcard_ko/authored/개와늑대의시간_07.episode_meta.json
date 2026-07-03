@@ -1,0 +1,20 @@
+{
+  "work_id": "개와늑대의시간_07",
+  "scene_count": 57,
+  "core_dist": {
+    "DESIRE": 2,
+    "BOND": 4,
+    "ESTABLISH": 8,
+    "ORACLE": 3,
+    "CONFLICT": 7,
+    "LOSS": 5,
+    "REVELATION": 5,
+    "PERIL": 15,
+    "REVERSAL": 4,
+    "RESCUE": 2,
+    "REUNION": 1,
+    "HOOK": 1
+  },
+  "episode_function": "7화는 마오가 지우의 생부임을 수현에게 폭탄 공개하는 최대 반전을 중심으로, 언더커버 요원의 감정·임무·정체성이 동시에 붕괴되고 기억상실이라는 새 서사 조건이 발동되며 조직 간 전면전 선포까지 이루어지는 전환점 회차다.",
+  "by": "sonnet_reading"
+}

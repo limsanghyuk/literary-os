@@ -1,0 +1,20 @@
+{
+  "work_id": "개와늑대의시간_08",
+  "scene_count": 54,
+  "core_dist": {
+    "PERIL": 12,
+    "CONFLICT": 10,
+    "ESTABLISH": 7,
+    "ORACLE": 6,
+    "DESIRE": 5,
+    "LOSS": 4,
+    "REVELATION": 2,
+    "REVERSAL": 2,
+    "BOND": 2,
+    "HOOK": 2,
+    "RELIEF": 1,
+    "PUNISH": 1
+  },
+  "episode_function": "기억 없는 수현이 포로에서 마오의 신임을 얻는 내부자로 반전 편입되는 동안, NIS는 정보 자산 가동에도 단절된 채 방치되고, 지우는 상실 착각과 마오의 전화·방문으로 두 서사 충돌의 뇌관 앞에 선다.",
+  "by": "sonnet_reading"
+}
