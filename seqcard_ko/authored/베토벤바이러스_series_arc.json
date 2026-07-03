@@ -1,6 +1,11 @@
 {
   "series": "베토벤바이러스",
   "episodes_total": 17,
+  "complete": false,
+  "missing_episodes": [
+    15
+  ],
+  "note": "15화 원본 HWP가 8KB로 본문 텍스트 없음(추출 불가, corpus_ko 트랙에서도 동일 결번 확인) — 18부작 중 17화만 완본.",
   "scenes_total": 748,
   "series_core_dist": {
     "CONFLICT": 169,
@@ -120,7 +125,7 @@
       "count": 9
     }
   ],
-  "conflict_persist": 0.071,
+  "conflict_persist": 0.313,
   "episodes": [
     {
       "episode": 1,
