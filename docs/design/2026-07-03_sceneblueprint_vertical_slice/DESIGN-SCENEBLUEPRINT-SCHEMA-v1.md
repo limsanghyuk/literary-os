@@ -115,7 +115,11 @@ SeriesArc      (series_arc.json)      : 이미 30작 존재
 2. Critic 앙상블(3+)이 "의도 기능 충족"을 blind 비교.
 3. 포함본이 유의하게 우세하면 **필드 load-bearing 입증→채택**.
 
-슬라이스에서 intent_gist는 이 게이트를 통과(S5 ablation: 제거 시 인물 각인 소실). renderer_prompt_constraints는 다음 라운드 최우선 검증 대상(길이 결함이 가장 크고 측정 명료).
+슬라이스에서 intent_gist는 이 게이트를 통과(S5 ablation: 제거 시 인물 각인 소실).
+
+**[2026-07-04 검증 완료] renderer_prompt_constraints = load-bearing 입증.** 최악 팽창 3씬(S6·S4·S2)을 목표 분량(원본 char±20%)+긴장(core 유도)+밀도 지침 주입으로 재렌더 → 길이 팽창 **평균 7.1× → 1.13×** 붕괴(S6 10.1→0.98·S4 8.4→1.08·S2 2.7→1.33), 산문은 잘림 없이 대사 중심·방송형식 유지. **∴ 슬라이스의 밀도/길이 2.0점(WEAK)은 SeqCard 의도층 한계가 아니라 이 필드의 부재였다.** 사실충실 2.0(환각)은 별개 갭(plant/payoff/information_reveal)으로 잔존→차기 검증 대상.
+
+**계층 귀속(중요):** renderer_prompt_constraints의 *값*(목표 분량)은 SceneBlueprint가 산정하지 않는다. **SequenceBlueprint 층**이 60분 방영시간→씬 수→씬당 분량을 배분하고, 그 예산이 각 SceneBlueprint로 캐스케이드된다(본 실험은 원본 char수를 프록시 예산으로 사용). = 방영시간→대사량→씬 구성이라는 실제 극작 워크플로우와 1:1 대응.
 
 ---
 
@@ -126,4 +130,4 @@ SeriesArc      (series_arc.json)      : 이미 30작 존재
 - **약점3**: 신규 8필드 저작 비용. → 30작 전량 아님. ablation으로 **필드당 가치 먼저 입증→통과분만** 확대 저작(fail-fast).
 - **약점4**: GPT 필드명 그대로 채택 시 우리 core 택소노미와 의미 충돌 가능. → 매핑표(§3)로 명시 정합, 신규는 우리 명명 규칙 준수.
 
-**개선된 최종 권고**: 전략 B 채택. 다음 실행 단위 = renderer_prompt_constraints 1필드 ablation(길이 결함, 최대·최명료) → 통과 시 dramatic_conflict·plant/payoff 순차. 30작 재저작은 필드 가치 입증 전까지 보류.
+**개선된 최종 권고**: 전략 B 채택. renderer_prompt_constraints는 2026-07-04 ablation 통과(§6). **다음 실행 단위 = 사실충실 갭 필드**(dramatic_conflict → plant_operations/payoff_operations → information_reveal) ablation, S7 환각 유형이 타깃(측정: 환각률·원본 대비 사실일치). 병렬로 renderer_prompt_constraints의 예산 산정을 SequenceBlueprint 층에 정식 배치. 30작 재저작은 사실충실 필드군 가치 입증 전까지 보류.

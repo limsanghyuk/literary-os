@@ -52,3 +52,20 @@ S5에서 title+intent_gist를 제거하고 재렌더:
 ## 5. 결론 → 스키마 정식화 동인
 
 SeqCard 현재 스키마(intent_gist/core/core2/skin)는 **기능·인물층을 강하게 전달하나, 사실·동선·폭로·제약층이 비어 있다.** 이 공백이 (B)(C) 결함의 직접 원인. GPT SceneBlueprint의 dramatic_conflict / causal_input·output / plant·payoff_operations / information_reveal / character_entry·exit_state / visual_directorial_notes / renderer_prompt_constraints 필드가 정확히 이 공백을 메우는 대상 → 다음 문서(스키마 정식화)에서 매핑·갭 확정.
+
+---
+
+## Ablation-2 — renderer_prompt_constraints 검증 (2026-07-04)
+
+개발자 지적: baseline 렌더러는 **목표 분량·긴장·명시 목적을 프롬프트에 주지 않았다** → 밀도/길이 2.0점은 순수 SeqCard 한계가 아니라 하니스 결함(목표 미제공)의 교란. 이를 분리하기 위해 renderer_prompt_constraints 블록(목표 분량 = 원본 char수 ±20%, 긴장 역할 = core 유도, 지문/대사 배분 지침, 단일 씬 목적 한정)을 주입해 최악 팽창 3씬 재렌더.
+
+| 씬 | 원본 | baseline | 배율 | constrained | 배율 |
+|---|---:|---:|---:|---:|---:|
+| S6 | 130 | 1311 | 10.1× | 128 | **0.98×** |
+| S4 | 122 | 1028 | 8.4× | 132 | **1.08×** |
+| S2 | 949 | 2539 | 2.7× | 1263 | **1.33×** |
+| 평균 | — | — | **7.1×** | — | **1.13×** |
+
+**판정:** renderer_prompt_constraints는 load-bearing 필드로 **검증됨**. 목표 분량+긴장+밀도 지침을 주면 길이 결함이 7.1×→1.13×로 붕괴하고, 산문은 잘림 없이 대사 중심·지문 함축의 방송형식을 유지(Opus Critic 재평가: 밀도축 WEAK 2.0 → 해소, 기능축 유지). **결론: 밀도/길이 2.0점은 SeqCard 의도층의 한계가 아니라 렌더러 제약 필드 부재였다.** 반면 사실충실 2.0 + S7 환각은 별개의 진짜 스키마 갭(plant/payoff/information_reveal)으로 이 실험과 무관하게 잔존.
+
+**계층 귀속:** 목표 분량의 *값*은 SceneBlueprint가 아니라 **SequenceBlueprint 층**에서 산정되어야 한다(60분 방영 → 씬 수 → 씬당 분량 배분). 본 실험은 원본 char수를 프록시 예산으로 썼으나, 프로덕션에서는 SequenceBlueprint의 length allocation이 각 SceneBlueprint.renderer_prompt_constraints로 캐스케이드된다. = 사용자의 실제 집필 워크플로우(방영시간→대사량→씬 구성)와 정확히 일치.
