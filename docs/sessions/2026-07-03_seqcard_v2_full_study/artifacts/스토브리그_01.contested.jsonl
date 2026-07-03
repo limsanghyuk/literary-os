@@ -1,0 +1,44 @@
+{"scene_no": 4, "fields": ["tension_role"]}
+{"scene_no": 6, "fields": ["episode_role", "scene_blocks_need"]}
+{"scene_no": 7, "fields": ["episode_role"]}
+{"scene_no": 8, "fields": ["episode_role"]}
+{"scene_no": 9, "fields": ["episode_role", "tension_role"]}
+{"scene_no": 10, "fields": ["episode_role"]}
+{"scene_no": 11, "fields": ["episode_role"]}
+{"scene_no": 12, "fields": ["episode_role"]}
+{"scene_no": 13, "fields": ["episode_role"]}
+{"scene_no": 14, "fields": ["episode_role"]}
+{"scene_no": 15, "fields": ["scene_blocks_need"]}
+{"scene_no": 19, "fields": ["tension_role", "scene_blocks_need"]}
+{"scene_no": 23, "fields": ["tension_role", "scene_blocks_need"]}
+{"scene_no": 25, "fields": ["tension_role"]}
+{"scene_no": 33, "fields": ["episode_role"]}
+{"scene_no": 34, "fields": ["episode_role", "scene_blocks_need"]}
+{"scene_no": 35, "fields": ["episode_role"]}
+{"scene_no": 36, "fields": ["episode_role", "tension_role"]}
+{"scene_no": 37, "fields": ["episode_role"]}
+{"scene_no": 38, "fields": ["episode_role", "tension_role"]}
+{"scene_no": 39, "fields": ["episode_role", "tension_role"]}
+{"scene_no": 40, "fields": ["episode_role"]}
+{"scene_no": 41, "fields": ["episode_role"]}
+{"scene_no": 42, "fields": ["episode_role"]}
+{"scene_no": 43, "fields": ["tension_role", "continuity_break", "scene_blocks_need"]}
+{"scene_no": 47, "fields": ["tension_role", "continuity_break"]}
+{"scene_no": 49, "fields": ["continuity_break", "scene_blocks_need"]}
+{"scene_no": 50, "fields": ["episode_role"]}
+{"scene_no": 51, "fields": ["episode_role"]}
+{"scene_no": 52, "fields": ["episode_role", "tension_role"]}
+{"scene_no": 53, "fields": ["episode_role"]}
+{"scene_no": 54, "fields": ["episode_role"]}
+{"scene_no": 55, "fields": ["episode_role"]}
+{"scene_no": 56, "fields": ["episode_role", "scene_blocks_need"]}
+{"scene_no": 57, "fields": ["continuity_break"]}
+{"scene_no": 58, "fields": ["scene_blocks_need"]}
+{"scene_no": 59, "fields": ["continuity_break"]}
+{"scene_no": 60, "fields": ["tension_role", "scene_blocks_need"]}
+{"scene_no": 61, "fields": ["tension_role", "continuity_break"]}
+{"scene_no": 62, "fields": ["continuity_break"]}
+{"scene_no": 63, "fields": ["tension_role", "continuity_break", "scene_blocks_need"]}
+{"scene_no": 64, "fields": ["tension_role", "continuity_break", "scene_blocks_need"]}
+{"scene_no": 65, "fields": ["hook_flag"]}
+{"scene_no": 66, "fields": ["episode_role", "tension_role", "scene_blocks_need"]}

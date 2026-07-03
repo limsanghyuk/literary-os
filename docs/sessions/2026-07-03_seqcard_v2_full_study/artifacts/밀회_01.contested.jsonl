@@ -1,0 +1,86 @@
+{"scene_no": 1, "fields": ["continuity_break"]}
+{"scene_no": 3, "fields": ["tension_role"]}
+{"scene_no": 10, "fields": ["episode_role"]}
+{"scene_no": 11, "fields": ["episode_role"]}
+{"scene_no": 12, "fields": ["scene_blocks_need"]}
+{"scene_no": 13, "fields": ["continuity_break", "scene_blocks_need"]}
+{"scene_no": 14, "fields": ["continuity_break", "scene_blocks_need"]}
+{"scene_no": 15, "fields": ["scene_blocks_need"]}
+{"scene_no": 16, "fields": ["tension_role", "scene_blocks_need"]}
+{"scene_no": 17, "fields": ["scene_blocks_need"]}
+{"scene_no": 18, "fields": ["scene_blocks_need"]}
+{"scene_no": 19, "fields": ["episode_role", "scene_blocks_need"]}
+{"scene_no": 20, "fields": ["episode_role"]}
+{"scene_no": 21, "fields": ["episode_role", "continuity_break"]}
+{"scene_no": 22, "fields": ["episode_role"]}
+{"scene_no": 23, "fields": ["episode_role"]}
+{"scene_no": 24, "fields": ["episode_role", "continuity_break"]}
+{"scene_no": 25, "fields": ["episode_role"]}
+{"scene_no": 26, "fields": ["episode_role", "tension_role"]}
+{"scene_no": 27, "fields": ["episode_role"]}
+{"scene_no": 28, "fields": ["episode_role"]}
+{"scene_no": 29, "fields": ["episode_role", "continuity_break", "scene_blocks_need"]}
+{"scene_no": 30, "fields": ["episode_role"]}
+{"scene_no": 31, "fields": ["episode_role"]}
+{"scene_no": 32, "fields": ["episode_role"]}
+{"scene_no": 33, "fields": ["episode_role", "tension_role", "continuity_break"]}
+{"scene_no": 34, "fields": ["episode_role", "tension_role"]}
+{"scene_no": 35, "fields": ["episode_role", "hook_flag"]}
+{"scene_no": 36, "fields": ["episode_role", "continuity_break"]}
+{"scene_no": 37, "fields": ["episode_role"]}
+{"scene_no": 38, "fields": ["episode_role"]}
+{"scene_no": 39, "fields": ["episode_role"]}
+{"scene_no": 40, "fields": ["episode_role"]}
+{"scene_no": 41, "fields": ["scene_blocks_need"]}
+{"scene_no": 42, "fields": ["continuity_break"]}
+{"scene_no": 44, "fields": ["scene_blocks_need"]}
+{"scene_no": 49, "fields": ["continuity_break"]}
+{"scene_no": 51, "fields": ["continuity_break"]}
+{"scene_no": 52, "fields": ["episode_role"]}
+{"scene_no": 53, "fields": ["episode_role", "tension_role"]}
+{"scene_no": 54, "fields": ["episode_role", "continuity_break"]}
+{"scene_no": 55, "fields": ["episode_role"]}
+{"scene_no": 56, "fields": ["episode_role"]}
+{"scene_no": 57, "fields": ["episode_role", "continuity_break"]}
+{"scene_no": 58, "fields": ["episode_role", "tension_role", "scene_blocks_need"]}
+{"scene_no": 59, "fields": ["episode_role", "tension_role", "scene_blocks_need"]}
+{"scene_no": 60, "fields": ["episode_role", "continuity_break", "scene_blocks_need"]}
+{"scene_no": 61, "fields": ["episode_role", "scene_blocks_need"]}
+{"scene_no": 62, "fields": ["episode_role", "scene_blocks_need"]}
+{"scene_no": 63, "fields": ["episode_role", "tension_role", "scene_blocks_need"]}
+{"scene_no": 64, "fields": ["episode_role", "continuity_break"]}
+{"scene_no": 65, "fields": ["episode_role"]}
+{"scene_no": 66, "fields": ["episode_role", "continuity_break", "scene_blocks_need"]}
+{"scene_no": 67, "fields": ["continuity_break"]}
+{"scene_no": 69, "fields": ["scene_blocks_need"]}
+{"scene_no": 70, "fields": ["tension_role", "hook_flag", "scene_blocks_need"]}
+{"scene_no": 71, "fields": ["episode_role"]}
+{"scene_no": 72, "fields": ["episode_role", "tension_role"]}
+{"scene_no": 73, "fields": ["episode_role", "scene_blocks_need"]}
+{"scene_no": 74, "fields": ["episode_role"]}
+{"scene_no": 75, "fields": ["episode_role", "tension_role", "scene_blocks_need"]}
+{"scene_no": 76, "fields": ["tension_role"]}
+{"scene_no": 77, "fields": ["tension_role"]}
+{"scene_no": 78, "fields": ["tension_role"]}
+{"scene_no": 80, "fields": ["scene_blocks_need"]}
+{"scene_no": 81, "fields": ["scene_blocks_need"]}
+{"scene_no": 83, "fields": ["episode_role", "scene_blocks_need"]}
+{"scene_no": 84, "fields": ["episode_role", "tension_role", "continuity_break"]}
+{"scene_no": 85, "fields": ["episode_role", "scene_blocks_need"]}
+{"scene_no": 87, "fields": ["tension_role"]}
+{"scene_no": 88, "fields": ["tension_role", "scene_blocks_need"]}
+{"scene_no": 89, "fields": ["continuity_break", "scene_blocks_need"]}
+{"scene_no": 90, "fields": ["tension_role", "scene_blocks_need"]}
+{"scene_no": 91, "fields": ["scene_blocks_need"]}
+{"scene_no": 93, "fields": ["episode_role"]}
+{"scene_no": 94, "fields": ["episode_role", "scene_blocks_need"]}
+{"scene_no": 95, "fields": ["episode_role", "scene_blocks_need"]}
+{"scene_no": 96, "fields": ["episode_role", "scene_blocks_need"]}
+{"scene_no": 97, "fields": ["episode_role", "scene_blocks_need"]}
+{"scene_no": 98, "fields": ["episode_role", "continuity_break"]}
+{"scene_no": 99, "fields": ["episode_role", "scene_blocks_need"]}
+{"scene_no": 100, "fields": ["episode_role", "scene_blocks_need"]}
+{"scene_no": 101, "fields": ["episode_role", "continuity_break", "scene_blocks_need"]}
+{"scene_no": 102, "fields": ["episode_role", "hook_flag"]}
+{"scene_no": 103, "fields": ["episode_role", "tension_role"]}
+{"scene_no": 104, "fields": ["tension_role", "scene_blocks_need"]}
