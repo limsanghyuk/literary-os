@@ -1,0 +1,19 @@
+{
+  "work_id": "스토브리그",
+  "scene_count": 54,
+  "core_dist": {
+    "REUNION": 1,
+    "BOND": 6,
+    "INTRO": 2,
+    "ESTABLISH": 9,
+    "CONFLICT": 12,
+    "PUNISH": 5,
+    "REVERSAL": 2,
+    "HOOK": 5,
+    "REVELATION": 6,
+    "LOSS": 4,
+    "RELIEF": 2
+  },
+  "episode_function": "승수가 비활동기간 훈련 규정을 둘러싸고 선수협회장 강두기와 정면충돌하며 벌금 위기를 감수하고, 성복의 원칙적 훈련중지 결정을 역이용해 감독의 리더쉽을 세우는 동시에 오프시즌 훈련법 책자와 호주 윈터리그 파견이라는 대안을 관철시킨다. 한편 재송그룹에서는 경준의 경멸과 조롱 속에 경민의 열등감이 폭발하여 경준을 폭행하는 파국으로 치닫는다.",
+  "by": "cowork opus authoring"
+}

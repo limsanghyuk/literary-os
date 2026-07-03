@@ -1,0 +1,24 @@
+{
+  "work_id": "스토브리그",
+  "scene_count": 98,
+  "core_dist": {
+    "ESTABLISH": 14,
+    "ORACLE": 4,
+    "INTRO": 1,
+    "BOND": 10,
+    "CONFLICT": 19,
+    "REVERSAL": 4,
+    "LOSS": 5,
+    "PUNISH": 5,
+    "REVELATION": 2,
+    "REUNION": 0,
+    "RELIEF": 20,
+    "ROMANCE": 0,
+    "PERIL": 10,
+    "RESCUE": 0,
+    "DESIRE": 1,
+    "HOOK": 3
+  },
+  "episode_function": "드림즈와 바이킹스의 전지훈련 2연전을 통해 강두기·유민호·길창주 등 투수진의 성장통과 임동규의 트레이드 이후 고립을 교차 서술하고, 승수의 원칙 경영이 시구자 명단·감사팀 투입 등 프런트 내부 권력 다툼(강선의 실각과 경민의 권력 장악)으로 확대되며 다음 국면의 갈등을 예고하는 회차.",
+  "by": "cowork opus authoring"
+}

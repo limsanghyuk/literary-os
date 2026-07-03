@@ -148,6 +148,17 @@
    },
    "CONFLICT_persist": 0.277
   },
+  "스토브리그": {
+   "eps": 16,
+   "scenes": 1003,
+   "top": {
+    "CONFLICT": 202,
+    "REVELATION": 127,
+    "BOND": 112,
+    "ESTABLISH": 108
+   },
+   "CONFLICT_persist": 0.277
+  },
   "시그널": {
    "eps": 16,
    "scenes": 1287,
@@ -271,27 +282,27 @@
   }
  },
  "totals": {
-  "works": 24,
-  "episodes": 493,
-  "scenes": 32110,
+  "works": 25,
+  "episodes": 509,
+  "scenes": 33113,
   "core_dist": {
-   "CONFLICT": 5180,
-   "PERIL": 4393,
-   "REVELATION": 3599,
-   "ESTABLISH": 2732,
-   "LOSS": 2471,
-   "BOND": 2439,
-   "DESIRE": 2200,
-   "HOOK": 1904,
-   "RELIEF": 1482,
-   "ORACLE": 1357,
-   "ROMANCE": 1124,
-   "REVERSAL": 974,
-   "PUNISH": 938,
-   "RESCUE": 646,
-   "REUNION": 407,
-   "INTRO": 264
+   "CONFLICT": 5382,
+   "PERIL": 4442,
+   "REVELATION": 3726,
+   "ESTABLISH": 2840,
+   "BOND": 2551,
+   "LOSS": 2534,
+   "DESIRE": 2237,
+   "HOOK": 1998,
+   "RELIEF": 1559,
+   "ORACLE": 1395,
+   "ROMANCE": 1125,
+   "REVERSAL": 1011,
+   "PUNISH": 969,
+   "RESCUE": 650,
+   "REUNION": 415,
+   "INTRO": 279
   }
  },
- "note": "SeqCard 의도층 집계. core-only. κ 미검증 분석용 prior. by=cowork opus aggregation 2026-07-02 | 2026-07-03 갱신: 스카이캐슬·추적자 추가, 23→24작."
+ "note": "SeqCard 의도층 집계. core-only. κ 미검증 분석용 prior. by=cowork opus aggregation 2026-07-02 | 2026-07-03 갱신: 스카이캐슬·추적자·스토브리그 추가, 24→25작."
 }

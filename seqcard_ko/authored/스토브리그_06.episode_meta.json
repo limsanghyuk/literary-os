@@ -1,0 +1,19 @@
+{
+  "work_id": "스토브리그",
+  "scene_count": 57,
+  "core_dist": {
+    "CONFLICT": 12,
+    "REVELATION": 9,
+    "HOOK": 9,
+    "BOND": 6,
+    "ESTABLISH": 6,
+    "LOSS": 4,
+    "RELIEF": 4,
+    "PERIL": 3,
+    "INTRO": 2,
+    "DESIRE": 1,
+    "PUNISH": 1
+  },
+  "episode_function": "길창주 영입 논란(병역기피)이 기자회견에서 정면 격돌하며 시작되고, 승수-영수 형제의 오래 억눌린 상처가 전력분석원 면접이라는 장치를 통해 폭발적으로 드러나는 화. 영수가 익명 세이버메트릭스 필자 '로빈슨'이었음이 밝혀지며 형제 갈등이 정점을 찍은 뒤 화해로 봉합되고, 동시에 구단주 일가의 압박(연봉 30% 삭감)과 에이전트 고세혁의 이면 공작이 다음 갈등을 예고하며 마무리된다.",
+  "by": "cowork opus authoring"
+}

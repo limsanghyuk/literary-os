@@ -1,0 +1,20 @@
+{
+  "work_id": "스토브리그",
+  "scene_count": 49,
+  "core_dist": {
+    "ESTABLISH": 4,
+    "DESIRE": 3,
+    "CONFLICT": 6,
+    "RELIEF": 8,
+    "LOSS": 6,
+    "ORACLE": 3,
+    "BOND": 5,
+    "PERIL": 2,
+    "INTRO": 1,
+    "HOOK": 6,
+    "REVELATION": 3,
+    "REVERSAL": 2
+  },
+  "episode_function": "5화는 미국 원정에서 마일스·그리핀·허버트 등 정공법 영입이 잇따라 좌절되는 과정을 통해 자금력의 한계를 체감시킨 뒤, 우연히 발견한 방출 선수 길창주(로버트 길)의 숨겨진 실력과 병역 기피라는 아픈 과거를 파헤쳐 파격적인 저비용 고효율 영입을 성사시키는 '역발상 스카우팅'의 전형을 완성하는 전환점 회차이다.",
+  "by": "cowork opus authoring"
+}

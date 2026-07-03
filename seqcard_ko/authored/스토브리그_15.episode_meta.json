@@ -1,0 +1,19 @@
+{
+  "work_id": "스토브리그",
+  "scene_count": 67,
+  "core_dist": {
+    "CONFLICT": 9,
+    "LOSS": 11,
+    "BOND": 6,
+    "ESTABLISH": 6,
+    "REVELATION": 15,
+    "RELIEF": 5,
+    "HOOK": 6,
+    "PUNISH": 3,
+    "REUNION": 4,
+    "PERIL": 1,
+    "REVERSAL": 1
+  },
+  "episode_function": "강두기 트레이드로 촉발된 배신과 균열이 팀 전체의 저항으로 확산되고, 승수가 이면 계약서를 확보해 야구협회에 폭로함으로써 트레이드를 무효화시키는 전반부와, 재송그룹의 빅딜 성사에 따른 드림즈 해체 발표 및 승수의 전면 매각 선언으로 이어지는 후반부로 구성된 반전축 에피소드.",
+  "by": "cowork opus authoring"
+}

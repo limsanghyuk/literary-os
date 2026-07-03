@@ -1,0 +1,22 @@
+{
+  "work_id": "스토브리그",
+  "scene_count": 66,
+  "core_dist": {
+    "CONFLICT": 8,
+    "PUNISH": 3,
+    "RESCUE": 1,
+    "BOND": 8,
+    "REVERSAL": 2,
+    "REVELATION": 14,
+    "PERIL": 4,
+    "HOOK": 3,
+    "DESIRE": 6,
+    "ESTABLISH": 4,
+    "INTRO": 1,
+    "LOSS": 1,
+    "ORACLE": 5,
+    "RELIEF": 6
+  },
+  "episode_function": "권경민 사장의 인사 개입(재희 발령)으로 단장-사장 갈등이 심화되는 한편, 프로야구 전체를 뒤흔드는 약물 스캔들이 터져 강두기에 대한 의혹과 임동규의 과거 잘못이 얽히며, 승수가 데이터와 신뢰를 무기로 강두기의 결백을 증명하고 임동규의 원정도박 자진신고를 유도해 재영입을 준비하는 전환점 에피소드다.",
+  "by": "cowork opus authoring"
+}
