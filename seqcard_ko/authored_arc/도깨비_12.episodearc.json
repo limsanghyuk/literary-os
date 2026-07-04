@@ -1,0 +1,65 @@
+{
+ "episode_no": 12,
+ "scene_count": 51,
+ "sequence_count": 6,
+ "dramatic_question": "박중헌 악귀가 저승이 왕여임을 폭로하고 도깨비가 원수를 대면할 때, 900년의 원한과 현재의 우정 사이에서 무엇을 선택하는가?",
+ "act_structure": [
+  {
+   "act": "설정",
+   "seq_span": [
+    1,
+    2
+   ],
+   "beat": "박중헌 악귀·덕화 신 정체 공개·유회장 사망으로 세계관 확장과 상실"
+  },
+  {
+   "act": "전개",
+   "seq_span": [
+    3,
+    4
+   ],
+   "beat": "상실 위로·전생 부하 재회·은탁-도깨비 일상 회복"
+  },
+  {
+   "act": "심화",
+   "seq_span": [
+    5,
+    5
+   ],
+   "beat": "박중헌 폭로·써니 전생 각성·은탁 진실 비밀 유지"
+  },
+  {
+   "act": "회말전환",
+   "seq_span": [
+    6,
+    6
+   ],
+   "beat": "왕여-저승 폭로·절 계단 900년 대면—원한의 절정"
+  }
+ ],
+ "entry_state": "박중헌 악귀가 은탁을 위협하며 세계관에 진짜 적이 등장한다.",
+ "exit_state": "저승이 왕여임이 완전히 폭로되고 도깨비가 절 계단에서 900년 만에 대면한다.",
+ "turning_point": {
+  "seq_index": 6,
+  "desc": "절 계단 900년 대면—원한의 최고조와 화해의 출발점"
+ },
+ "central_conflict_axis": "박중헌(악귀) 대 도깨비·저승·은탁의 연합, 그리고 도깨비-저승 원한",
+ "episode_function": "12화는 유회장 상실로 불멸의 고독을 환기하고, 박중헌-써니 전생 각성-왕여 폭로의 연쇄로 서사를 폭발적으로 심화하며 900년 원한의 절정으로 마무리한다.",
+ "core_dist": {
+  "REVELATION": 10,
+  "CONFLICT": 9,
+  "LOSS": 8,
+  "BOND": 8,
+  "ROMANCE": 8,
+  "ORACLE": 5,
+  "PUNISH": 5,
+  "PERIL": 4,
+  "HOOK": 4,
+  "RELIEF": 4,
+  "RESCUE": 2,
+  "REVERSAL": 2,
+  "INTRO": 1
+ },
+ "work_id": "도깨비_12",
+ "by": "sonnet_reading"
+}

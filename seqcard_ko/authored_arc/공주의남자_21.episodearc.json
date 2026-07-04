@@ -1,0 +1,51 @@
+{
+  "work_id": "공주의남자_21",
+  "episode_no": 21,
+  "scene_count": 69,
+  "sequence_count": 10,
+  "dramatic_question": "수양의 조건과 측근 기습 속에서 승유와 세령이 함께 살아남을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "침묵·조건 제시"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "반발·세령 수용·내부 충돌·측근 기습"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "승유 중상·수양 개입·치료 맹세"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        10
+      ],
+      "beat": "협약 제안·최종 결정 대기"
+    }
+  ],
+  "entry_state": "수양 무기 내려놓음, 조건 협상 시작",
+  "exit_state": "측근 기습, 승유 중상, 수양의 협약 제안",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "측근 기습 — 협상 국면에서 생존 위기로 급전환"
+  },
+  "central_conflict_axis": "수양의 조건 vs 승유-세령 내부 충돌, 측근의 독자 행동",
+  "episode_function": "최후 대결 협상·측근 기습·중상 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

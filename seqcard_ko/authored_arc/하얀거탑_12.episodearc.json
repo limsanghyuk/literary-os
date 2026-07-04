@@ -1,0 +1,66 @@
+{
+  "work_id": "하얀거탑",
+  "episode_no": 12,
+  "scene_count": 86,
+  "sequence_count": 13,
+  "dramatic_question": "면허 정지 이후 준혁이 재기를 모색하는 과정에서 담관암이라는 새로운 운명에 직면할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "label": "세계와 갈등 도입",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "전개",
+      "label": "갈등 심화와 대결 구도 확립",
+      "seq_span": [
+        4,
+        8
+      ]
+    },
+    {
+      "act": "심화",
+      "label": "위기 절정과 전환점",
+      "seq_span": [
+        9,
+        12
+      ]
+    },
+    {
+      "act": "회말전환",
+      "label": "회말 반전과 다음 회 훅",
+      "seq_span": [
+        13,
+        13
+      ]
+    }
+  ],
+  "entry_state": "준혁이 면허 정지 후 사회적 고립 상태에 놓임",
+  "exit_state": "담관암 진단 확정으로 준혁이 삶과 죽음의 분기점에 선다",
+  "turning_point": {
+    "seq_index": 12,
+    "description": "담관암 진단 확정"
+  },
+  "central_conflict_axis": "재기 욕망 vs 신체가 선고한 내면 심판",
+  "episode_function": "공적 몰락에서 존재론적 위기로—드라마 3막 전환",
+  "core_dist": {
+    "CONFLICT": 67,
+    "DESIRE": 26,
+    "PERIL": 13,
+    "ESTABLISH": 10,
+    "PUNISH": 10,
+    "ORACLE": 10,
+    "BOND": 10,
+    "LOSS": 9,
+    "REVELATION": 7,
+    "REVERSAL": 6,
+    "INTRO": 1,
+    "RELIEF": 1,
+    "RESCUE": 1,
+    "HOOK": 1
+  },
+  "by": "claude-sonnet-4-6"
+}

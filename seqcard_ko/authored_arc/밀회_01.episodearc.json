@@ -1,0 +1,51 @@
+{
+  "work_id": "밀회",
+  "episode_no": 1,
+  "scene_count": 104,
+  "sequence_count": 16,
+  "dramatic_question": "배달 청년 선재와 상류층 실무자 혜원은 왜 서로에게 이끌리는가, 그리고 그 만남이 두 세계를 어떻게 흔드는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        6
+      ],
+      "label": "두 계급 세계의 확립과 첫 교차"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        7,
+        13
+      ],
+      "label": "음악으로 연결된 익명 인연과 조직 갈등 심화"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        14,
+        16
+      ],
+      "label": "선재·혜원의 운명적 첫 대면으로 새 국면 개막"
+    }
+  ],
+  "entry_state": "선재는 밤거리 배달 노동자, 혜원은 서한 재단 실무 관리자로 완전히 분리된 세계에 있다",
+  "exit_state": "준형 집에서 선재와 혜원이 마주하며 두 세계의 인물이 한 공간에 처음으로 서게 된다",
+  "turning_point": {
+    "seq_index": 11,
+    "label": "선재 아트센터 추격과 준형 구조",
+    "description": "선재가 아트센터에 잠입해 발각될 위기에 처하고 준형이 그를 구해주며 두 사람이 처음 공범으로 얽힌다"
+  },
+  "central_conflict_axis": "계급 간 단절 vs 음악과 익명성을 매개로 싹트는 감정적 연결",
+  "episode_function": "ESTABLISH — 두 주인공과 서한 권력 세계를 동시 도입하고 첫 만남으로 서사를 개막",
+  "core_dist": {
+    "CONFLICT": 0.209,
+    "ESTABLISH": 0.192,
+    "BOND": 0.145,
+    "ORACLE": 0.116,
+    "RELIEF": 0.116,
+    "HOOK": 0.105
+  },
+  "by": "cowork_opus_reading"
+}

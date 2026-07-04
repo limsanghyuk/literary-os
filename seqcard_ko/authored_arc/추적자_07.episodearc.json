@@ -1,0 +1,55 @@
+{
+  "work_id": "추적자_07",
+  "episode_no": 7,
+  "scene_count": 73,
+  "sequence_count": 7,
+  "dramatic_question": "홍석 팀이 지원을 구출하고 동윤의 암살 시도를 역이용해 증거를 언론에 넘길 수 있는가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        2
+      ],
+      "label": "지원 구출·정우 사법 압박"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        3,
+        4
+      ],
+      "label": "동윤 서회장 결별·증거 이전"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        5,
+        7
+      ],
+      "label": "암살 모면과 언론 폭로 시도"
+    }
+  ],
+  "entry_state": "홍석 팀이 지원 구출 작전을 실행한다",
+  "exit_state": "홍석 팀이 동윤의 범행을 언론에 폭로하려 한다",
+  "turning_point": {
+    "seq_index": 3,
+    "label": "서회장 최후 결별",
+    "description": "동윤이 서회장에게 독립을 선언하며 제거 지시를 받아 생명 위협이 발생한다"
+  },
+  "central_conflict_axis": "증거 폭로 vs 동윤의 방해 공작과 암살 위협",
+  "episode_function": "지원 구출·서회장 결별·암살 위협 속 언론 폭로 시도",
+  "core_dist": {
+    "PERIL": 4,
+    "CONFLICT": 4,
+    "HOOK": 3,
+    "REVELATION": 2,
+    "RESCUE": 2,
+    "REVERSAL": 2,
+    "BOND": 1,
+    "ORACLE": 1,
+    "DESIRE": 1,
+    "PUNISH": 1
+  },
+  "by": "cowork_opus_reading"
+}

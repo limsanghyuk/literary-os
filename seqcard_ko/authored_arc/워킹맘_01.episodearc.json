@@ -1,0 +1,55 @@
+{
+  "work_id": "워킹맘_01",
+  "episode_no": 1,
+  "scene_count": 85,
+  "sequence_count": 13,
+  "dramatic_question": "가영은 남편의 외도를 발견하고 이혼을 선택할 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        5,
+        9
+      ]
+    },
+    {
+      "act": "파국",
+      "seq_span": [
+        10,
+        13
+      ]
+    }
+  ],
+  "entry_state": "피로한 워킹맘, 의심은 있으나 일상 유지",
+  "exit_state": "외도 확인 후 이혼 결심, 복실과 연대 결성",
+  "turning_point": {
+    "seq_index": 11
+  },
+  "central_conflict_axis": "가영 vs 재성(외도·불성실) + 가영 vs 워킹맘 편견",
+  "episode_function": "ESTABLISH",
+  "core_dist": {
+    "DESIRE": 0.176,
+    "CONFLICT": 0.165,
+    "PUNISH": 0.106,
+    "ESTABLISH": 0.082,
+    "REVELATION": 0.082,
+    "LOSS": 0.071,
+    "REVERSAL": 0.059,
+    "PERIL": 0.059,
+    "BOND": 0.047,
+    "HOOK": 0.047,
+    "RELIEF": 0.035,
+    "INTRO": 0.024,
+    "ORACLE": 0.024,
+    "ROMANCE": 0.012,
+    "REUNION": 0.012
+  },
+  "by": "sonnet_reading"
+}

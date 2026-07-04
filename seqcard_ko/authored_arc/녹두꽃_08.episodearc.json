@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_08",
+  "episode_no": 8,
+  "scene_count": 70,
+  "sequence_count": 8,
+  "dramatic_question": "동학군이 전주성을 함락할 수 있는가, 그리고 형제 절연 이후 이강과 이현은 어디로 향하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "형제 절연·백가 도주·자인 트라우마"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "회전포 정보·황룡촌 승리"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "피 묻은 돈·이현 이방·석주 고백"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "전봉준 결기·전주 함락"
+    }
+  ],
+  "entry_state": "형제 절연 직후, 민보군 위기에서 이현이 이강을 구하고 절연을 선언한다.",
+  "exit_state": "전주성 함락으로 동학 혁명이 정점에 달하고, 이현이 이방으로 취임하며 두 형제의 길이 완전히 갈린다.",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "황룡촌에서 장태 전술로 동학군이 승리하는 장면이 혁명의 전술적 정점을 구현한다"
+  },
+  "central_conflict_axis": "동학 혁명(전봉준·이강) 대 진압 세력, 이현의 이방 야심 vs 이강의 혁명 참여",
+  "episode_function": "황룡촌 전투 승리와 전주 함락으로 동학 혁명의 역사적 정점을 구현하고, 이현의 이방 취임으로 형제 갈등의 새 단계를 설치한다.",
+  "core_dist": {
+    "CONFLICT": 11,
+    "PERIL": 8,
+    "REVELATION": 13,
+    "LOSS": 9,
+    "BOND": 5,
+    "REVERSAL": 8,
+    "RELIEF": 8,
+    "HOOK": 5,
+    "RESCUE": 4,
+    "REUNION": 4,
+    "ESTABLISH": 4,
+    "DESIRE": 3,
+    "PUNISH": 4,
+    "ROMANCE": 1,
+    "ORACLE": 0,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

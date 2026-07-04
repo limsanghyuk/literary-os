@@ -1,0 +1,65 @@
+{
+  "work_id": "스토브리그_12",
+  "episode_no": 12,
+  "scene_count": 98,
+  "sequence_count": 14,
+  "dramatic_question": "임동규와의 연습경기에서 드림즈는 진정한 팀으로 거듭날 수 있으며, 경민의 권력 장악을 막을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "연습경기 준비와 임동규의 고독한 각오"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        7
+      ],
+      "beat": "1차전 드림즈 승리·유민호 입스 현실화·임동규 봉쇄 완성"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        11
+      ],
+      "beat": "2차전 임동규 역전홈런·귀환·시구자 갈등·강선 몰락"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        12,
+        14
+      ],
+      "beat": "경민 감사팀 투입으로 승수 압박 최대 위기"
+    }
+  ],
+  "entry_state": "임동규와의 연습경기가 시작되는 전지훈련 마지막 단계.",
+  "exit_state": "1승1패 연습경기 후 귀환하지만 경민이 감사팀을 투입해 새 위기를 예고한다.",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "임동규 역전 홈런—유민호 입스와 임동규 저력이 동시에 드러남"
+  },
+  "central_conflict_axis": "드림즈 팀 성장(승수) 대 임동규·경민의 이중 저항",
+  "episode_function": "12화는 임동규와의 연습경기를 통해 드림즈의 성장을 시험하고, 경민의 권력 장악 전선을 추가한다.",
+  "core_dist": {
+    "RELIEF": 52,
+    "CONFLICT": 42,
+    "PERIL": 23,
+    "BOND": 18,
+    "ESTABLISH": 14,
+    "HOOK": 12,
+    "PUNISH": 10,
+    "LOSS": 7,
+    "REVERSAL": 6,
+    "ORACLE": 5,
+    "REVELATION": 5,
+    "INTRO": 1,
+    "DESIRE": 1
+  },
+  "by": "sonnet_reading"
+}

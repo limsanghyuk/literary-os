@@ -1,0 +1,60 @@
+{
+  "scene_count": 99,
+  "dramatic_question": "재한은 이진형을 체포하고 원경을 구출할 수 있는가, 그리고 그 너머의 더 큰 비밀은 무엇인가?",
+  "core_dist": {
+    "CONFLICT": 3,
+    "REVELATION": 2,
+    "PERIL": 1,
+    "RESCUE": 1,
+    "LOSS": 1,
+    "DESIRE": 1,
+    "ORACLE": 1,
+    "HOOK": 1
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "설정 단계"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        9
+      ],
+      "beat": "전개 단계"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        10,
+        15
+      ],
+      "beat": "심화 단계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        16,
+        18
+      ],
+      "beat": "회말전환 단계"
+    }
+  ],
+  "work_id": "시그널",
+  "by": "sonnet_reading",
+  "sequence_count": 18,
+  "turning_point": {
+    "seq_index": 6,
+    "event": "회말 위기 전환"
+  },
+  "episode_no": 4,
+  "entry_state": "수현이 경기남부 살인사건 현장 분석에서 블랙박스 단서를 포착하고, 과거 재한이 원경 위기 상황에 개입한다.",
+  "exit_state": "과거 재한이 이천구를 체포해 원경을 구하고, 현재 팀은 이진형을 진범으로 특정해 사건을 종결한다.",
+  "central_conflict_axis": "이천구·이진형 부자의 범죄 은폐 대 두 시대 형사들의 추적",
+  "episode_function": "경기남부 사건을 완결짓고 과거·현재의 복합 가족 범죄 구조를 드러내며 감정 축(재한의 희생)을 심화한다."
+}

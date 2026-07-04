@@ -1,0 +1,51 @@
+{
+  "work_id": "밀회",
+  "episode_no": 15,
+  "scene_count": 69,
+  "sequence_count": 7,
+  "dramatic_question": "혜원의 자수와 내부 고발이 서한 권력 구조를 실제로 흔들 수 있는가, 그 과정에서 선재는 무엇을 잃고 얻는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        2
+      ],
+      "label": "분리 이후 혜원의 수사 압박과 법적 포위"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        3,
+        5
+      ],
+      "label": "혜원의 내부 고발 자료 준비와 서한 역공"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        6,
+        7
+      ],
+      "label": "영우 체포, 혜원 자수 문자 발송으로 새 국면 개막"
+    }
+  ],
+  "entry_state": "분리가 확정된 후 혜원이 검찰 압박을 받으며 내부 고발 실행을 준비하는 상태",
+  "exit_state": "혜원이 자수 문자를 발송하고 영우가 공항에서 체포되며 서한 권력 구조의 해체가 본격 시작된다",
+  "turning_point": {
+    "seq_index": 7,
+    "label": "혜원 자수 문자 발송",
+    "description": "혜원이 서한 비리 자료를 검찰에 넘기고 자수 문자를 발송하며 돌이킬 수 없는 선택을 한다"
+  },
+  "central_conflict_axis": "혜원의 내부 고발 결행과 자수 vs 서한 권력의 역공과 법적 응징",
+  "episode_function": "REVERSAL — 혜원의 자수와 내부 고발로 권력 구조가 역전되기 시작하는 대반전 에피소드",
+  "core_dist": {
+    "CONFLICT": 0.33,
+    "PERIL": 0.213,
+    "RELIEF": 0.146,
+    "DESIRE": 0.116,
+    "BOND": 0.097,
+    "REVELATION": 0.097
+  },
+  "by": "cowork_opus_reading"
+}

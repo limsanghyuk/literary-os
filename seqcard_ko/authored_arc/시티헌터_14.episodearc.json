@@ -1,0 +1,67 @@
+{
+  "work_id": "시티헌터_14",
+  "episode_no": 14,
+  "scene_count": 66,
+  "sequence_count": 10,
+  "dramatic_question": "천재만의 배후 실체를 밝히고 1983년의 진실을 규명할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "처단 여파·다음 표적"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "모자 재회·새 대결 구도"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "이중 수사·진실 접근"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        10
+      ],
+      "beat": "영주 살해 지시 도청·구출"
+    }
+  ],
+  "entry_state": "김종식 처단 직후 여파와 영주의 정체 추궁.",
+  "exit_state": "영주 구출 성공, 그러나 천재만은 여전히 자유롭고 1983년 진실이 더 가까워졌다.",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "28년 만의 모자 재회: 복수극이 혈육의 회복으로 전환"
+  },
+  "central_conflict_axis": "천재만 수사(영주/윤성) vs 진표의 자력 접근",
+  "episode_function": "14화: 모자 28년 재회와 천재만 수사 본격화—복수극이 가족 회복의 감정으로 전환된다.",
+  "core_dist": {
+    "PERIL": 14,
+    "REVELATION": 15,
+    "CONFLICT": 14,
+    "HOOK": 10,
+    "ORACLE": 9,
+    "BOND": 7,
+    "LOSS": 3,
+    "ESTABLISH": 1,
+    "DESIRE": 14,
+    "ROMANCE": 7,
+    "RELIEF": 7,
+    "PUNISH": 2,
+    "REUNION": 2,
+    "INTRO": 1,
+    "RESCUE": 1
+  },
+  "by": "sonnet_reading"
+}

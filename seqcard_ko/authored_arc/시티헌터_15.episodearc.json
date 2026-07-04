@@ -1,0 +1,66 @@
+{
+  "work_id": "시티헌터_15",
+  "episode_no": 15,
+  "scene_count": 63,
+  "sequence_count": 10,
+  "dramatic_question": "천재만 산업재해 은폐의 증거를 확보하고, 영주가 윤성의 정체를 완전히 파악하게 될 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "원본 확보·가족 심화"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "수사 교차·비리 구체화"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "수사 결정적 진전·식중 화해"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        10
+      ],
+      "beat": "공장 잠입·가스 위기·훅"
+    }
+  ],
+  "entry_state": "극비문서 원본 확보와 식중 복귀, 가족 감정 확장.",
+  "exit_state": "산업재해 증거 확보 시도, 일산화탄소 위기, 영주의 '푸차이' 언급으로 훅.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "영주의 태국인 마약범 면담: 천재만 수사 결정적 전환"
+  },
+  "central_conflict_axis": "천재만 산업재해 은폐 수사(윤성/영주) vs 천재만의 역추적",
+  "episode_function": "15화: 가족 감정의 절정과 천재만 수사 결정적 진전, 정체 노출 위기 훅으로 클라이맥스를 준비한다.",
+  "core_dist": {
+    "RESCUE": 2,
+    "ORACLE": 13,
+    "CONFLICT": 17,
+    "REVELATION": 14,
+    "DESIRE": 5,
+    "PERIL": 10,
+    "RELIEF": 12,
+    "BOND": 14,
+    "INTRO": 1,
+    "ROMANCE": 10,
+    "LOSS": 5,
+    "ESTABLISH": 3,
+    "REVERSAL": 1,
+    "HOOK": 1
+  },
+  "by": "sonnet_reading"
+}

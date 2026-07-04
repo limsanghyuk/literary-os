@@ -1,0 +1,65 @@
+{
+  "work_id": "스토브리그_10",
+  "episode_no": 10,
+  "scene_count": 54,
+  "sequence_count": 9,
+  "dramatic_question": "승수는 협회·코치 갈등·경민의 복합 공세를 견디며 팀의 훈련 문화를 바꿀 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "팀 재결합·협회 벌금 공문으로 새 전선 설정"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "강두기 협회장 변수·코치 갈등·경민의 균열 포착"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "다중 전선 관리·이철민 화해·훈련법 책자 완성"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        9
+      ],
+      "beat": "경민 열등감·자기혐오 노출로 반전 예고"
+    }
+  ],
+  "entry_state": "승수 복귀 후 협회 벌금 공문과 코치 갈등으로 새 전선이 열리는 상황.",
+  "exit_state": "이철민과의 협력으로 훈련 문화를 바꾸지만 경민의 자기혐오가 예상 밖 변수로 떠오른다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "이철민과 훈련법 책자 공동 작업—갈등이 협력으로 전환"
+  },
+  "central_conflict_axis": "훈련 문화 혁신(승수·이철민) 대 협회·경민의 다중 방해",
+  "episode_function": "10화는 협회·코치·경민의 삼중 압박 속에서 승수가 이철민과 협력하여 팀 문화를 바꾸는 과정을 그린다.",
+  "core_dist": {
+    "CONFLICT": 20,
+    "REVELATION": 19,
+    "ESTABLISH": 14,
+    "BOND": 12,
+    "HOOK": 11,
+    "RELIEF": 8,
+    "LOSS": 8,
+    "PUNISH": 6,
+    "REVERSAL": 4,
+    "INTRO": 3,
+    "REUNION": 1,
+    "PERIL": 1,
+    "DESIRE": 1
+  },
+  "by": "sonnet_reading"
+}

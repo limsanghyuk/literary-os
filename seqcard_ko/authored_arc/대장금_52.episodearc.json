@@ -1,0 +1,64 @@
+{
+  "work_id": "대장금_52",
+  "episode_no": 52,
+  "scene_count": 61,
+  "sequence_count": 9,
+  "dramatic_question": "왕의 장폐색 위기—장금의 개복 수술 제안이 처음 나오는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "왕에게 새로운 건강 위기가 닥치고 기존 치료법의 한계가 드러난다.",
+  "exit_state": "장금이 개복 수술의 가능성을 처음으로 탐구하기 시작한다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "장금이 개복 수술의 가능성을 처음 인식한다"
+  },
+  "central_conflict_axis": "왕의 건강 위기 vs 개복 수술이라는 금기 도전",
+  "episode_function": "52화는 장금이 개복 수술이라는 시대적 금기에 도전하는 전환점을 제시한다.",
+  "core_dist": {
+    "REVERSAL": 2,
+    "ESTABLISH": 10,
+    "CONFLICT": 28,
+    "HOOK": 3,
+    "DESIRE": 11,
+    "LOSS": 7,
+    "BOND": 19,
+    "RELIEF": 4,
+    "ROMANCE": 11,
+    "PERIL": 12,
+    "REVELATION": 8,
+    "PUNISH": 1
+  },
+  "by": "sonnet_reading"
+}

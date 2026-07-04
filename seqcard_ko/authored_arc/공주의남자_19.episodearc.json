@@ -1,0 +1,51 @@
+{
+  "work_id": "공주의남자_19",
+  "episode_no": 19,
+  "scene_count": 67,
+  "sequence_count": 10,
+  "dramatic_question": "수양의 마지막 선택지와 한명회의 독단 사이에서 승유와 세령은 살아남을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "수양 선택지 제시·세령 거부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "한명회 독자 처형·위기·세령 개입·수양 한명회 제거"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "혼란·탈출 성공·재결합"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "최후 대결 결심·약속"
+    }
+  ],
+  "entry_state": "수양의 침묵 직후, 세령 수양 집무실",
+  "exit_state": "한명회 제거, 탈출 성공, 최후 대결 약속",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "수양의 한명회 제거 — 적대 구도 단순화, 최후 대결 불가피"
+  },
+  "central_conflict_axis": "한명회 독자 행동 vs 수양의 내부 정리, 탈출과 최후 대결",
+  "episode_function": "한명회 제거·최후 대결 약속 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

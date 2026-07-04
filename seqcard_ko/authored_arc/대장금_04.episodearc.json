@@ -1,0 +1,65 @@
+{
+  "work_id": "대장금_04",
+  "episode_no": 4,
+  "scene_count": 74,
+  "sequence_count": 11,
+  "dramatic_question": "궁에 들어온 장금은 최씨가의 음모 속에서도 제 자리를 지킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        11
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "장금이 궁에 입성하여 수랏간 수련생으로 생활을 시작한다.",
+  "exit_state": "최씨가의 공작으로 장금이 위기에 처하지만 한상궁의 보호로 버텨낸다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "최씨가가 장금을 표적으로 삼아 첫 공세를 펼친다"
+  },
+  "central_conflict_axis": "수련생 장금의 성장(음식·궁 예절) vs 최씨가의 방해",
+  "episode_function": "4화는 장금의 수랏간 수련과 최씨가와의 갈등 구조를 확립한다.",
+  "core_dist": {
+    "ESTABLISH": 11,
+    "PERIL": 12,
+    "REVERSAL": 3,
+    "CONFLICT": 30,
+    "RELIEF": 3,
+    "LOSS": 7,
+    "PUNISH": 4,
+    "ORACLE": 14,
+    "BOND": 11,
+    "INTRO": 1,
+    "REVELATION": 11,
+    "DESIRE": 17,
+    "HOOK": 7
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,52 @@
+{
+  "work_id": "마왕_17",
+  "episode_no": 17,
+  "scene_count": 81,
+  "sequence_count": 12,
+  "dramatic_question": "친구 석진을 의심하는 오수가 진실과 우정 사이에서 어느 쪽을 선택하는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "순기 사망 후폭풍",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "석진 불신·팀 재정렬",
+      "seq_span": [
+        5,
+        9
+      ]
+    },
+    {
+      "act": "C",
+      "label": "증거 가속·승하 소년 사진",
+      "seq_span": [
+        10,
+        12
+      ]
+    }
+  ],
+  "entry_state": "복수가 완성되고 순기가 사망한 직후 충격 상태",
+  "exit_state": "오수가 석진 연루 증거에 근접하고 해인이 소년 승하 사진을 확보한 상태",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "석진 연루 증거 근접—친구를 의심해야 하는 가장 어려운 선택"
+  },
+  "central_conflict_axis": "오수(우정vs진실)↔석진(은폐)",
+  "episode_function": "순기 사망 후폭풍·석진 연루 파악·소년 승하",
+  "core_dist": {
+    "CONFLICT": 3,
+    "DESIRE": 3,
+    "REVELATION": 2,
+    "LOSS": 1,
+    "BOND": 1,
+    "ORACLE": 1,
+    "ESTABLISH": 1,
+    "PERIL": 1
+  },
+  "by": "sonnet_reading"
+}

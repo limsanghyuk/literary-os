@@ -1,0 +1,66 @@
+{
+  "work_id": "공주의남자_02",
+  "episode_no": 2,
+  "scene_count": 72,
+  "sequence_count": 9,
+  "dramatic_question": "수양의 금혼령과 추격 속에서 승유와 세령의 감정은 현실의 장벽을 넘어 성장할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "부마지명 충격 수습과 강가 첫 솔직 교감"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "기방 위기·금혼령·강론 신경전·길례 충돌"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "청풍관 격투·세 남자 의리·로맨스 심화"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        9
+      ],
+      "beat": "벌판 동행 중 수양 추격—위기와 로맨스 동시 최고조"
+    }
+  ],
+  "entry_state": "부마지명 충격 직후 세 가문이 각자 대응에 나서고 승유·세령의 로맨스는 현실의 벽 앞에서 흔들린다.",
+  "exit_state": "벌판 추격 위기 속에서도 승유와 세령의 감정은 더 깊어지며 수양의 포위망이 좁혀온다.",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "벌판 추격—로맨스와 위기가 동시 최고조, 비극 가속"
+  },
+  "central_conflict_axis": "수양의 금혼령·추격(외부 장벽) 대 승유·세령의 자유의지 감정",
+  "episode_function": "2화는 첫 만남의 혼란을 수습하며 로맨스를 정식 개시하고, 기방·청풍관 위기 등을 통해 수양 세력의 실체와 정치 압박을 구체화한다.",
+  "core_dist": {
+    "RESCUE": 1,
+    "BOND": 16,
+    "REVERSAL": 7,
+    "CONFLICT": 28,
+    "REVELATION": 9,
+    "INTRO": 4,
+    "ROMANCE": 9,
+    "DESIRE": 3,
+    "HOOK": 18,
+    "ESTABLISH": 5,
+    "PERIL": 11,
+    "LOSS": 1,
+    "PUNISH": 1,
+    "RELIEF": 2
+  },
+  "by": "sonnet_reading"
+}

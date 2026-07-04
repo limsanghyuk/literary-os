@@ -1,0 +1,66 @@
+{
+  "work_id": "배가본드_12",
+  "episode_no": 12,
+  "scene_count": 53,
+  "sequence_count": 9,
+  "dramatic_question": "법정에서 우기 증언으로 B357 진실을 공식화할 수 있는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "label": "설정",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": 2,
+      "label": "전개",
+      "seq_span": [
+        3,
+        4
+      ]
+    },
+    {
+      "act": 3,
+      "label": "심화",
+      "seq_span": [
+        5,
+        7
+      ]
+    },
+    {
+      "act": 4,
+      "label": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ]
+    }
+  ],
+  "entry_state": "B357 소송 첫 공판",
+  "exit_state": "달건, 법정에 우기 데려오다",
+  "turning_point": {
+    "seq_index": 5,
+    "seq_id": "배가본드_12_S05",
+    "description": "재식, 생존—병원에서 군 배신자 증거 전달"
+  },
+  "central_conflict_axis": "진실 공개 시도 vs 제시카 법정 방어",
+  "episode_function": "절정—법정 결전과 결정적 반전",
+  "core_dist": {
+    "PERIL": 0.261,
+    "CONFLICT": 0.148,
+    "REVELATION": 0.125,
+    "HOOK": 0.114,
+    "RESCUE": 0.091,
+    "ESTABLISH": 0.068,
+    "PUNISH": 0.068,
+    "DESIRE": 0.057,
+    "REUNION": 0.023,
+    "REVERSAL": 0.011,
+    "RELIEF": 0.011,
+    "LOSS": 0.011,
+    "BOND": 0.011
+  },
+  "by": "sonnet_reading"
+}

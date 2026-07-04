@@ -1,0 +1,65 @@
+{
+  "work_id": "커피프린스_10",
+  "episode_no": 10,
+  "scene_count": 56,
+  "sequence_count": 9,
+  "dramatic_question": "한결이 감정을 인정하면서도 행동하지 못하는 사이 비밀 노출과 이별 위기가 동시에 다가오는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "감정 공식 인정·복귀 후 냉전"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "정체성 위기 폭발·연주회 성황·이별 결단"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "서브플롯 전환·비밀 노출 임박"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        9
+      ],
+      "beat": "벽화 키스: 감정 정리 실패 인정"
+    }
+  ],
+  "entry_state": "한결이 은찬 해고 통보 후 감정을 억제하며 복귀한 상태",
+  "exit_state": "한결이 벽화 앞에서 은찬에게 키스하며 감정 정리 실패를 선언하고, 비밀 노출이 임박한 긴장 속에 회차가 닫힌다",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "벽화 키스: 감정 억제 완전 붕괴"
+  },
+  "central_conflict_axis": "한결 감정 억제 vs 은찬 정체성 위기·비밀 노출 임박",
+  "episode_function": "10회는 한결이 감정을 처음으로 공식 인정하고 연주회 성황과 유주-한성 이별 카운트다운이 교차하다, 벽화 키스로 감정이 폭발하며 비밀 노출 임박의 긴장으로 마무리되는 회차다",
+  "core_dist": {
+    "CONFLICT": 10,
+    "DESIRE": 9,
+    "LOSS": 9,
+    "HOOK": 8,
+    "REVELATION": 7,
+    "BOND": 7,
+    "ESTABLISH": 6,
+    "ORACLE": 3,
+    "REVERSAL": 3,
+    "PERIL": 2,
+    "RELIEF": 2,
+    "REUNION": 1,
+    "PUNISH": 1
+  },
+  "by": "sonnet_reading"
+}

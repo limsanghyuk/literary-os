@@ -1,0 +1,67 @@
+{
+  "work_id": "대장금_46",
+  "episode_no": 46,
+  "scene_count": 74,
+  "sequence_count": 11,
+  "dramatic_question": "최씨가의 붕괴—추국이 시작되고 권력 구조가 무너지는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        11
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "홍삼 처방 성공 이후 추국청이 설치되고 최씨가 세력이 체포된다.",
+  "exit_state": "최판술·오겸호가 체포되고 최상궁이 도주하는 등 최씨가가 무너지기 시작한다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "최씨가의 핵심 인물들이 줄줄이 체포된다"
+  },
+  "central_conflict_axis": "최씨가 권력 청산(추국) vs 최씨가의 마지막 저항",
+  "episode_function": "46화는 최씨가의 붕괴와 추국으로 대장금 서사의 갈등 해소가 시작된다.",
+  "core_dist": {
+    "REVERSAL": 6,
+    "RELIEF": 5,
+    "CONFLICT": 34,
+    "PUNISH": 6,
+    "DESIRE": 18,
+    "ROMANCE": 1,
+    "REUNION": 1,
+    "LOSS": 6,
+    "ESTABLISH": 6,
+    "BOND": 3,
+    "PERIL": 29,
+    "REVELATION": 8,
+    "ORACLE": 1,
+    "RESCUE": 1,
+    "HOOK": 8
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,55 @@
+{
+  "work_id": "추적자_02",
+  "episode_no": 2,
+  "scene_count": 82,
+  "sequence_count": 10,
+  "dramatic_question": "홍석이 블랙박스 영상으로 가해자를 특정할 수 있는가, 그리고 PK준을 직접 응징할 수 있는가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        4
+      ],
+      "label": "제도적 장벽 확인·미연 동의·진실 단서"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        5,
+        8
+      ],
+      "label": "블랙박스 추격·PK준 협박·가해자 확정"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        9,
+        10
+      ],
+      "label": "PK준 추격 실패 후 호텔 이중 응징"
+    }
+  ],
+  "entry_state": "사고 현장 증거 인멸이 시작되고 홍석은 영장 거절로 무력감을 느낀다",
+  "exit_state": "홍석이 PK준을 응징하고 장례식장 앞에서 약속을 지킨다",
+  "turning_point": {
+    "seq_index": 7,
+    "label": "블랙박스 가해자 확정",
+    "description": "블랙박스 영상에서 사고 차량과 가해자를 확정적으로 확인한다"
+  },
+  "central_conflict_axis": "진실 추적 vs 권력의 증거 인멸",
+  "episode_function": "증거 확보·PK준 1단계 응징으로 복수 첫 성과",
+  "core_dist": {
+    "PERIL": 4,
+    "CONFLICT": 3,
+    "HOOK": 3,
+    "REVELATION": 3,
+    "LOSS": 3,
+    "BOND": 2,
+    "PUNISH": 2,
+    "REVERSAL": 1,
+    "RELIEF": 1,
+    "DESIRE": 1
+  },
+  "by": "cowork_opus_reading"
+}

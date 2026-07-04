@@ -1,0 +1,64 @@
+{
+  "work_id": "스토브리그_09",
+  "episode_no": 9,
+  "scene_count": 79,
+  "sequence_count": 12,
+  "dramatic_question": "해고당한 승수 없이 드림즈는 2차 드래프트를 성공시킬 수 있으며, 승수는 어떤 조건으로 복귀할 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "해고 수용·내부 충격·USB 발견으로 반격 씨앗 생성"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "beat": "승수 지방 어머니 방문·세영팀 드래프트 출정"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "드래프트 승리·세영 기자회견 역습·영수 해명"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        12
+      ],
+      "beat": "길창주 입대 문제→승수 복귀 조건 협상→눈물"
+    }
+  ],
+  "entry_state": "승수 해고 직후, 드림즈가 혼란에 빠진 상황.",
+  "exit_state": "승수가 복귀하고 경민이 계약서로 새 전선을 형성하며 길창주 문제가 남는다.",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "길창주 국적 회복 선언—승수 복귀의 결정적 계기"
+  },
+  "central_conflict_axis": "드림즈 생존(세영·영수·팀) 대 경민의 조직 와해 공작",
+  "episode_function": "9화는 승수 부재를 통해 드림즈 전체의 결속을 시험하고, 복귀를 통해 시즌 후반 전선을 재설정한다.",
+  "core_dist": {
+    "BOND": 25,
+    "REVELATION": 24,
+    "CONFLICT": 21,
+    "RELIEF": 18,
+    "LOSS": 17,
+    "HOOK": 16,
+    "ESTABLISH": 11,
+    "PERIL": 9,
+    "REVERSAL": 7,
+    "PUNISH": 4,
+    "DESIRE": 3,
+    "REUNION": 3
+  },
+  "by": "sonnet_reading"
+}

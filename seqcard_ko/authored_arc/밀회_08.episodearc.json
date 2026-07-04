@@ -1,0 +1,51 @@
+{
+  "work_id": "밀회",
+  "episode_no": 8,
+  "scene_count": 65,
+  "sequence_count": 8,
+  "dramatic_question": "감시가 극한에 달한 상황에서 혜원과 선재가 함께하는 시간이 가능한가, 그 시간은 어떤 의미를 갖는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        4
+      ],
+      "label": "은밀한 동거와 피아노 연주, 조직 내 감시 강화"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        5,
+        7
+      ],
+      "label": "두 사람의 감정이 가장 가까워지는 순간들"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        8,
+        8
+      ],
+      "label": "마지막 밤 연주와 함께 발각 직전의 임박감"
+    }
+  ],
+  "entry_state": "7부 말 자포자기 상황 이후 혜원과 선재가 선재 집에서 은밀한 시간을 갖게 된 상태",
+  "exit_state": "두 사람이 함께한 시간이 최절정에 이르면서 동시에 서한 측의 감시망이 완전히 좁혀온다",
+  "turning_point": {
+    "seq_index": 5,
+    "label": "혜원·선재 감정 최고조 시간",
+    "description": "선재 집에서 두 사람이 가장 오랜 단둘의 시간을 보내며 관계의 정점을 형성한다"
+  },
+  "central_conflict_axis": "감시와 발각 위험 vs 두 사람이 음악으로 나누는 유일하게 진실한 시간",
+  "episode_function": "INTIMACY PEAK — 발각 직전 두 사람의 감정이 최고조에 달하는 드라마의 정서적 정점",
+  "core_dist": {
+    "CONFLICT": 0.449,
+    "DESIRE": 0.196,
+    "BOND": 0.165,
+    "RELIEF": 0.137,
+    "ORACLE": 0.118,
+    "ROMANCE": 0.059
+  },
+  "by": "cowork_opus_reading"
+}

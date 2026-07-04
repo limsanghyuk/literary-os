@@ -1,0 +1,66 @@
+{
+  "work_id": "대장금_15",
+  "episode_no": 15,
+  "scene_count": 72,
+  "sequence_count": 11,
+  "dramatic_question": "한상궁의 음식 철학 마지막 전수—장금은 '맛을 기억하는 능력'을 계승할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        11
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "한상궁이 장금에게 마지막 비법을 전수한다.",
+  "exit_state": "장금이 '맛을 그리는 능력'의 의미를 깨닫고 계승을 선언한다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "한상궁이 장금에게 음식 철학의 핵심을 전수한다"
+  },
+  "central_conflict_axis": "한상궁의 음식 철학 계승(장금 수업) vs 최씨가의 방해",
+  "episode_function": "15화는 한상궁과 장금의 사제 관계 정점—음식 철학의 계승을 확인한다.",
+  "core_dist": {
+    "REVERSAL": 6,
+    "HOOK": 3,
+    "RELIEF": 11,
+    "ESTABLISH": 18,
+    "REUNION": 3,
+    "CONFLICT": 21,
+    "REVELATION": 4,
+    "LOSS": 5,
+    "BOND": 15,
+    "DESIRE": 25,
+    "RESCUE": 3,
+    "ROMANCE": 6,
+    "ORACLE": 3,
+    "PERIL": 8
+  },
+  "by": "sonnet_reading"
+}

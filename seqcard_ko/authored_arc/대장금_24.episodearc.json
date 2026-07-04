@@ -1,0 +1,66 @@
+{
+  "work_id": "대장금_24",
+  "episode_no": 24,
+  "scene_count": 62,
+  "sequence_count": 9,
+  "dramatic_question": "어머니 서찰의 비밀을 찾는 장금—최씨가가 정체를 알아내면 어떻게 되는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "서찰이 최씨가의 손에 넘어가고 장금의 정체가 위협받는다.",
+  "exit_state": "한상궁이 땅에 묻혀 있던 서찰을 발견하고 장금과 극적으로 만난다.",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "한상궁이 어머니 서찰을 발굴하여 장금과 극적으로 마주친다(씬59~62)"
+  },
+  "central_conflict_axis": "최씨가의 정체 추적 vs 장금의 서찰 탐색·정체 수호",
+  "episode_function": "24화는 서찰 추적과 최씨가의 정체 공작을 통해 장금의 정체 위기를 극적으로 해소한다.",
+  "core_dist": {
+    "PERIL": 14,
+    "ESTABLISH": 12,
+    "HOOK": 2,
+    "REVERSAL": 4,
+    "CONFLICT": 30,
+    "RELIEF": 5,
+    "BOND": 4,
+    "PUNISH": 8,
+    "REVELATION": 12,
+    "LOSS": 4,
+    "DESIRE": 16,
+    "ORACLE": 7,
+    "ROMANCE": 1,
+    "REUNION": 4
+  },
+  "by": "sonnet_reading"
+}

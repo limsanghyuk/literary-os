@@ -1,0 +1,63 @@
+{
+  "work_id": "하얀거탑",
+  "episode_no": 2,
+  "scene_count": 54,
+  "sequence_count": 8,
+  "dramatic_question": "무단 수술 징계 위협을 받은 준혁이 권력의 응징을 피하고 반격 발판을 마련할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "label": "세계와 갈등 도입",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "전개",
+      "label": "갈등 심화와 대결 구도 확립",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": "심화",
+      "label": "위기 절정과 전환점",
+      "seq_span": [
+        6,
+        7
+      ]
+    },
+    {
+      "act": "회말전환",
+      "label": "회말 반전과 다음 회 훅",
+      "seq_span": [
+        8,
+        8
+      ]
+    }
+  ],
+  "entry_state": "용길이 수술실을 감시하며 징계를 예고하는 상황",
+  "exit_state": "준혁이 굴욕적 무릎꿇기 끝에 브랜치 발령이 확정됨",
+  "turning_point": {
+    "seq_index": 7,
+    "description": "그림 뇌물 역풍·용길 앞 무릎꿇기 굴욕"
+  },
+  "central_conflict_axis": "준혁의 생존 vs 용길-주완 연합의 응징 기제",
+  "episode_function": "굴욕과 패배를 통한 준혁의 반격 동기 강화—역설적 캐릭터 성장",
+  "core_dist": {
+    "CONFLICT": 24,
+    "BOND": 16,
+    "DESIRE": 12,
+    "PERIL": 8,
+    "ORACLE": 8,
+    "REVERSAL": 8,
+    "PUNISH": 6,
+    "ESTABLISH": 6,
+    "RESCUE": 3,
+    "RELIEF": 3,
+    "HOOK": 1
+  },
+  "by": "claude-sonnet-4-6"
+}

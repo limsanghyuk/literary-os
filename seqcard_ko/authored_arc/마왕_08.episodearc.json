@@ -1,0 +1,52 @@
+{
+  "work_id": "마왕_08",
+  "episode_no": 8,
+  "scene_count": 77,
+  "sequence_count": 12,
+  "dramatic_question": "오수와 영철의 과거 관계가 수사의 판도를 어떻게 바꾸는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "복귀 결심·소라 귀환·트라우마",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "잔상 연결·태훈 추적",
+      "seq_span": [
+        5,
+        8
+      ]
+    },
+    {
+      "act": "C",
+      "label": "영철 접촉·과거 폭로",
+      "seq_span": [
+        9,
+        12
+      ]
+    }
+  ],
+  "entry_state": "오수가 사직을 거두고 복귀를 결심한 상태",
+  "exit_state": "영철이 오수에게 '오랜만이다'로 돌아서며 과거 관계가 폭로된 상태",
+  "turning_point": {
+    "seq_index": 11,
+    "desc": "영철이 '오랜만이다'로 돌아서며—과거 관계 폭로로 수사 전환"
+  },
+  "central_conflict_axis": "오수(수사·트라우마)↔영철(과거 회피)",
+  "episode_function": "영철-오수 과거 관계 폭로·태훈 추적",
+  "core_dist": {
+    "REVELATION": 4,
+    "DESIRE": 2,
+    "LOSS": 1,
+    "RELIEF": 1,
+    "REVERSAL": 1,
+    "BOND": 1,
+    "CONFLICT": 1,
+    "ESTABLISH": 1
+  },
+  "by": "sonnet_reading"
+}

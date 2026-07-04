@@ -1,0 +1,51 @@
+{
+  "work_id": "마왕_10",
+  "episode_no": 10,
+  "scene_count": 88,
+  "sequence_count": 13,
+  "dramatic_question": "준표가 아는 12년 전 뺑소니 진실이 수사를 어디로 이끄는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "트라우마 악몽·순기 재확인",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "광두 연루·준표 뺑소니 수사",
+      "seq_span": [
+        5,
+        9
+      ]
+    },
+    {
+      "act": "C",
+      "label": "전략 재수립·준표 예고",
+      "seq_span": [
+        10,
+        13
+      ]
+    }
+  ],
+  "entry_state": "영철이 협력을 거부하고 승하 누나 방문으로 복수 동기가 재확인된 상태",
+  "exit_state": "준표가 '강형사님이 아셔야 할 얘기'를 예고하며 10화가 끝난 상태",
+  "turning_point": {
+    "seq_index": 11,
+    "desc": "준표 '강형사님이 아셔야 할 얘기' 예고—뺑소니 진실 공개 직전"
+  },
+  "central_conflict_axis": "오수(과거 파악)↔광두(가문 보호)",
+  "episode_function": "뺑소니 연결·준표 예고·광두 방어",
+  "core_dist": {
+    "REVELATION": 3,
+    "CONFLICT": 3,
+    "DESIRE": 2,
+    "ORACLE": 2,
+    "HOOK": 1,
+    "BOND": 1,
+    "PUNISH": 1
+  },
+  "by": "sonnet_reading"
+}

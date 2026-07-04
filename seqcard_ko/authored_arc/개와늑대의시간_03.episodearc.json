@@ -1,0 +1,50 @@
+{
+  "work_id": "개와늑대의시간_03",
+  "episode_no": 3,
+  "scene_count": 52,
+  "sequence_count": 9,
+  "dramatic_question": "수현은 마오의 배신자 색출 속에서 신분을 지키고 지우를 보호할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "마오 임무와 강진 압박",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "B",
+      "label": "위기와 지우 충격",
+      "seq_span": [
+        4,
+        6
+      ]
+    },
+    {
+      "act": "C",
+      "label": "색출·신뢰 형성",
+      "seq_span": [
+        7,
+        9
+      ]
+    }
+  ],
+  "entry_state": "마오 직접 지시 수령 후 긴장 고조된 수현",
+  "exit_state": "지우가 수현을 신뢰하기로 결심, 위험한 선택",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "마오의 배신자 색출—수현 의심 심화"
+  },
+  "central_conflict_axis": "수현(신분)↔마오(색출)·지우(보호)",
+  "episode_function": "색출 위기 심화·지우 신뢰 획득",
+  "core_dist": {
+    "PERIL": 3,
+    "CONFLICT": 2,
+    "ORACLE": 1,
+    "LOSS": 1,
+    "ROMANCE": 1,
+    "REVELATION": 1
+  },
+  "by": "sonnet_reading"
+}

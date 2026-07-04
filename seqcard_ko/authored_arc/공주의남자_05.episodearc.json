@@ -1,0 +1,66 @@
+{
+  "work_id": "공주의남자_05",
+  "episode_no": 5,
+  "scene_count": 79,
+  "sequence_count": 8,
+  "dramatic_question": "아버지를 잃고 모든 것이 무너진 승유는 복수와 사랑 중 무엇을 선택하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "계유정난 직후 혼란—승유 복수 결의, 세령 충격"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "추격전·경혜의 선택·수양 권력 공식화"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "마지막 만남과 이별·탈출 성공"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "탈출 후 유랑—복수와 사랑 사이 선택 기로"
+    }
+  ],
+  "entry_state": "계유정난으로 세계가 무너진 승유는 복수를 다짐하고 도주를 시작한다.",
+  "exit_state": "탈출에 성공한 승유는 유랑 속에서 복수와 사랑 사이의 갈림길에 선다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "승유와 세령의 마지막 만남—이별의 필연성 인식, 복수 결의 강화"
+  },
+  "central_conflict_axis": "수양의 숙청(체포 압박) 대 승유의 생존과 복수 결의",
+  "episode_function": "5화는 계유정난 직후 혼란을 수습하며 승유의 도주와 이별을 통해 복수 서사와 로맨스를 동시에 다음 국면으로 전진시킨다.",
+  "core_dist": {
+    "PERIL": 10,
+    "BOND": 13,
+    "REVELATION": 6,
+    "LOSS": 13,
+    "CONFLICT": 17,
+    "DESIRE": 14,
+    "HOOK": 13,
+    "ORACLE": 7,
+    "REVERSAL": 2,
+    "PUNISH": 4,
+    "RELIEF": 10,
+    "ESTABLISH": 9,
+    "ROMANCE": 3,
+    "REUNION": 2
+  },
+  "by": "sonnet_reading"
+}

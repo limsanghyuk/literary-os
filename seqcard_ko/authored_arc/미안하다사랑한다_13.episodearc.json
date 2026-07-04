@@ -1,0 +1,64 @@
+{
+  "work_id": "미안하다사랑한다_13",
+  "episode_no": 13,
+  "scene_count": 97,
+  "sequence_count": 14,
+  "dramatic_question": "무혁이 자기파괴와 상실의 연속 속에서도 은채·이윤과의 마지막 유대를 만들어가는 동안, 무혁의 종말은 어떤 속도로 다가오고 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "연속된 상실과 자기파괴로 무혁이 극한으로 내몰린다"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        8
+      ],
+      "beat": "위기와 구출이 교차하며, 무혁이 은채와의 마지막 소망을 나눈다"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        9,
+        11
+      ],
+      "beat": "감추어진 진실이 드러나고 무혁이 극한의 상실에 직면한다"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        12,
+        14
+      ],
+      "beat": "마지막 유대와 예상 외 재결합이 이루어지며 종말이 임박함을 알린다"
+    }
+  ],
+  "entry_state": "무혁의 상태가 급격히 악화되고 있다.",
+  "exit_state": "모든 감추어진 진실이 드러나고 마지막 관계 정리가 시작된다. 무혁의 마지막이 눈앞에 다가왔다.",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "감추어진 진실이 폭발하며 무혁의 마지막이 현실로 확정된다"
+  },
+  "central_conflict_axis": "무혁의 희생 완성 의지 대 연속된 상실과 외부 위협",
+  "episode_function": "13화는 자기파괴-상실-진실 폭로-마지막 유대의 연쇄로 비극의 가속도가 최고조에 이르는 화차다. 무혁의 마지막이 초읽기에 들어간다.",
+  "core_dist": {
+    "LOSS": 21,
+    "REVELATION": 8,
+    "CONFLICT": 10,
+    "PERIL": 15,
+    "DESIRE": 11,
+    "RELIEF": 1,
+    "PUNISH": 5,
+    "BOND": 16,
+    "RESCUE": 2,
+    "ESTABLISH": 2,
+    "HOOK": 5,
+    "REUNION": 1
+  },
+  "by": "sonnet_reading"
+}

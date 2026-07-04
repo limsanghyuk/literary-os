@@ -1,0 +1,58 @@
+{
+  "work_id": "모래시계_17",
+  "episode_no": 17,
+  "scene_count": 48,
+  "sequence_count": 8,
+  "dramatic_question": "결단 이후 새 국면에서 태수는 욕망과 생존의 충돌을 어떻게 해결하는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "결단 이후 재편",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "B",
+      "label": "욕망 절정과 위기",
+      "seq_span": [
+        4,
+        6
+      ]
+    },
+    {
+      "act": "C",
+      "label": "상실과 결말 전야",
+      "seq_span": [
+        7,
+        8
+      ]
+    }
+  ],
+  "entry_state": "결단 이후의 새 국면",
+  "exit_state": "결말 전야의 재결단",
+  "turning_point": {
+    "seq_index": 5,
+    "description": "욕망 절정과 위기"
+  },
+  "central_conflict_axis": "욕망과 생존—결단의 연쇄와 대가",
+  "episode_function": "클라이맥스 에피소드—욕망 절정과 결말 전야",
+  "core_dist": {
+    "ESTABLISH": 0.17,
+    "DESIRE": 0.13,
+    "PERIL": 0.13,
+    "REVELATION": 0.1,
+    "BOND": 0.1,
+    "LOSS": 0.06,
+    "CONFLICT": 0.08,
+    "RELIEF": 0.06,
+    "ORACLE": 0.06,
+    "REVERSAL": 0.02,
+    "RESCUE": 0.02,
+    "INTRO": 0.04,
+    "REUNION": 0.02,
+    "ROMANCE": 0.01
+  },
+  "by": "cowork_opus_reading"
+}

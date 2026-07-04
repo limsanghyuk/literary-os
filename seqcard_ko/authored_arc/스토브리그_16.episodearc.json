@@ -1,0 +1,66 @@
+{
+  "work_id": "스토브리그_16",
+  "episode_no": 16,
+  "scene_count": 43,
+  "sequence_count": 8,
+  "dramatic_question": "매각이라는 마지막 카드로 드림즈를 지킨 승수는 어떤 결말을 선택하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "담판 실패와 해체 발표—최종 기회의 창"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "일주일 확보·PF 협상 시작으로 반전 모색"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "인수 성사·경민 변화·승수 배제 조건 수락의 희생"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "한국시리즈 진출과 승수의 새 종목 도전으로 열린 결말"
+    }
+  ],
+  "entry_state": "해체 발표가 공식화되고 매각이라는 마지막 카드만 남은 상황.",
+  "exit_state": "드림즈가 인수·재창단되어 한국시리즈에 진출하고, 승수는 새 종목 도전으로 열린 결말을 맞는다.",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "인수 성사—드림즈가 살아남음"
+  },
+  "central_conflict_axis": "드림즈 생존·재창단(승수·팀) 대 해체 불가역화(경민·회장)",
+  "episode_function": "16화는 인수 성사를 통해 드림즈를 살리면서, 승수의 희생적 배제와 새 종목 도전으로 시리즈 전체의 주제(데이터·인간·꿈)를 마무리한다.",
+  "core_dist": {
+    "BOND": 15,
+    "CONFLICT": 11,
+    "RELIEF": 10,
+    "DESIRE": 8,
+    "HOOK": 8,
+    "REVELATION": 7,
+    "ESTABLISH": 6,
+    "ORACLE": 6,
+    "REVERSAL": 5,
+    "PERIL": 4,
+    "LOSS": 3,
+    "PUNISH": 1,
+    "RESCUE": 1,
+    "REUNION": 1
+  },
+  "by": "sonnet_reading"
+}

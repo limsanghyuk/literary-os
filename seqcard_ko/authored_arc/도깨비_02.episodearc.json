@@ -1,0 +1,67 @@
+{
+ "episode_no": 2,
+ "scene_count": 62,
+ "sequence_count": 7,
+ "dramatic_question": "이제 막 도깨비를 인식한 은탁이 신부로서의 사명을 받아들일 수 있는가, 그리고 도깨비는 그 신부를 믿을 수 있는가?",
+ "act_structure": [
+  {
+   "act": "설정",
+   "seq_span": [
+    1,
+    2
+   ],
+   "beat": "은탁의 신부 자각 시작—검을 뽑아야 한다는 사명 인식"
+  },
+  {
+   "act": "전개",
+   "seq_span": [
+    3,
+    5
+   ],
+   "beat": "삼신 개입·도깨비-은탁 충돌·저승 등장으로 관계 3각 형성"
+  },
+  {
+   "act": "심화",
+   "seq_span": [
+    6,
+    6
+   ],
+   "beat": "은탁의 죽음 위기와 도깨비의 구조—신뢰 기반 형성"
+  },
+  {
+   "act": "회말전환",
+   "seq_span": [
+    7,
+    7
+   ],
+   "beat": "캐나다 광활한 평원에서 29세 은탁 비전—운명의 복잡성 예고"
+  }
+ ],
+ "entry_state": "은탁이 처음으로 도깨비의 존재를 진지하게 인식하기 시작한다.",
+ "exit_state": "캐나다 비전에서 도깨비가 은탁의 29세 미래를 목격하며 둘의 운명이 더욱 복잡해진다.",
+ "turning_point": {
+  "seq_index": 7,
+  "desc": "29세 은탁 비전—신부의 운명이 단순 소멸 도구가 아님 예고"
+ },
+ "central_conflict_axis": "소멸을 원하는 도깨비(검 뽑기 촉구) 대 사명을 두려워하는 은탁",
+ "episode_function": "2화는 은탁을 신부로 확정하고 저승을 도입하면서 도깨비-은탁-저승의 삼각 관계를 구축한다. 캐나다 비전으로 단순한 소멸 이야기가 아님을 암시한다.",
+ "core_dist": {
+  "BOND": 8,
+  "ESTABLISH": 7,
+  "CONFLICT": 7,
+  "RESCUE": 5,
+  "ORACLE": 5,
+  "REVELATION": 5,
+  "RELIEF": 4,
+  "ROMANCE": 4,
+  "DESIRE": 3,
+  "PERIL": 3,
+  "HOOK": 3,
+  "LOSS": 3,
+  "REVERSAL": 2,
+  "REUNION": 1,
+  "PUNISH": 1
+ },
+ "work_id": "도깨비_02",
+ "by": "sonnet_reading"
+}

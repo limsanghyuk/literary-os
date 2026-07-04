@@ -1,0 +1,65 @@
+{
+  "work_id": "하얀거탑",
+  "episode_no": 5,
+  "scene_count": 49,
+  "sequence_count": 7,
+  "dramatic_question": "수술 과정에서 강제로 보조 역할로 밀려난 준혁이 선거 판세를 다시 뒤집을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "label": "세계와 갈등 도입",
+      "seq_span": [
+        1,
+        1
+      ]
+    },
+    {
+      "act": "전개",
+      "label": "갈등 심화와 대결 구도 확립",
+      "seq_span": [
+        2,
+        4
+      ]
+    },
+    {
+      "act": "심화",
+      "label": "위기 절정과 전환점",
+      "seq_span": [
+        5,
+        6
+      ]
+    },
+    {
+      "act": "회말전환",
+      "label": "회말 반전과 다음 회 훅",
+      "seq_span": [
+        7,
+        7
+      ]
+    }
+  ],
+  "entry_state": "주완의 인터폰 개입으로 준혁이 수술 주도권을 빼앗긴 상황",
+  "exit_state": "오경환이 예상을 깨고 선출위원장에 취임하며 선거 구도가 요동침",
+  "turning_point": {
+    "seq_index": 6,
+    "description": "수정의 희재 문자 발견—삼각관계 균열 시작"
+  },
+  "central_conflict_axis": "준혁의 선거 미디어 전략 vs 주완 진영의 오경환 공략",
+  "episode_function": "수술 협업으로 라이벌 관계 복잡화·오경환 변수 부상—선거 최종 국면",
+  "core_dist": {
+    "DESIRE": 17,
+    "CONFLICT": 12,
+    "BOND": 10,
+    "ORACLE": 10,
+    "ESTABLISH": 6,
+    "REVELATION": 5,
+    "PERIL": 4,
+    "LOSS": 4,
+    "ROMANCE": 4,
+    "RELIEF": 3,
+    "REVERSAL": 3,
+    "PUNISH": 1,
+    "HOOK": 1
+  },
+  "by": "claude-sonnet-4-6"
+}

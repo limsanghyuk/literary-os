@@ -1,0 +1,51 @@
+{
+  "work_id": "마왕_07",
+  "episode_no": 7,
+  "scene_count": 78,
+  "sequence_count": 12,
+  "dramatic_question": "태훈 사망의 진실과 승하의 소라 접촉은 오수를 어디로 몰아가는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "트라우마 폭발과 복귀",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "영철 추적·연결 파악",
+      "seq_span": [
+        5,
+        9
+      ]
+    },
+    {
+      "act": "C",
+      "label": "승하 소라 납치·위기 전환",
+      "seq_span": [
+        10,
+        12
+      ]
+    }
+  ],
+  "entry_state": "태훈 발견 고백으로 오수가 과거에 충격받은 상태",
+  "exit_state": "승하가 소라를 데리고 사라지며 7화가 위기 국면으로 끝난 상태",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "승하가 소라를 차에 태우며 의도를 드러낸다—소라 위기 현실화"
+  },
+  "central_conflict_axis": "오수(트라우마·수사)↔승하(소라 접촉 선제)",
+  "episode_function": "트라우마 폭발·영철 추적·소라 위기",
+  "core_dist": {
+    "PERIL": 3,
+    "DESIRE": 2,
+    "REVELATION": 2,
+    "HOOK": 2,
+    "LOSS": 1,
+    "RESCUE": 1,
+    "BOND": 1
+  },
+  "by": "sonnet_reading"
+}

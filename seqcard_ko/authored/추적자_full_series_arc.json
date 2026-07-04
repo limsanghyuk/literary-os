@@ -1,0 +1,79 @@
+{
+  "series": "추적자",
+  "episodes_total": 16,
+  "scenes_total": 884,
+  "sequences_total": 98,
+  "logline": "딸을 잃은 경찰 홍석이 배후 권력자 동윤에 맞서 불굴의 수사를 펼치는 법정 스릴러—아버지의 사랑과 정의가 충돌하는 이야기",
+  "central_dramatic_question": "홍석은 딸의 죽음 뒤에 숨은 권력자 동윤을 법의 심판대에 세울 수 있는가?",
+  "theme_statement": "개인의 비극은 구조적 불의의 산물이며, 진실을 밝히려는 의지만이 그 구조에 균열을 낼 수 있다",
+  "protagonist": "홍석 (딸 수정을 잃은 전직 경찰, 진실 추적)",
+  "antagonist": "동윤 (국회의원, 서씨 재벌과 결탁한 실권자)",
+  "season_structure": [
+    {
+      "act": "1막—사건 발단과 수사 개시",
+      "episode_span": [
+        1,
+        4
+      ],
+      "beat": "수정 사망→홍석 수사 시작→동윤 윤곽 노출"
+    },
+    {
+      "act": "2막—증거 수집과 권력의 방해",
+      "episode_span": [
+        5,
+        10
+      ],
+      "beat": "언론 폭로 시도→동윤 반격→증거 확보 위기"
+    },
+    {
+      "act": "3막—법정 대결과 결말",
+      "episode_span": [
+        11,
+        16
+      ],
+      "beat": "재판 개막→황반장 희생→판결·동윤 유죄"
+    }
+  ],
+  "macro_turning_points": [
+    {
+      "episode_no": 3,
+      "desc": "홍석이 동윤이 배후임을 처음 확인하며 수사 방향이 확정된다"
+    },
+    {
+      "episode_no": 7,
+      "desc": "지원 구출 성공—핵심 증인을 확보하며 공세로 전환한다"
+    },
+    {
+      "episode_no": 10,
+      "desc": "동윤 체포—1차 사법 대결의 정점"
+    },
+    {
+      "episode_no": 13,
+      "desc": "새 사건 비리 네트워크 발각—2차 추적이 시작된다"
+    },
+    {
+      "episode_no": 15,
+      "desc": "황반장 희생—결정적 증거가 법원에 도달하며 판결을 향해 치닫는다"
+    }
+  ],
+  "resolution": "동윤이 유죄 선고를 받고, 홍석은 딸 수정에 대한 기억과 화해하며 새 삶을 시작한다. 황반장의 희생으로 정의가 실현된다.",
+  "open_ending": false,
+  "tone": "법정 스릴러·사회고발·부성애·복수극",
+  "conflict_persist": 0.68,
+  "series_core_dist": {
+    "CONFLICT": 0.24,
+    "PERIL": 0.12,
+    "REVERSAL": 0.11,
+    "DESIRE": 0.1,
+    "ORACLE": 0.08,
+    "HOOK": 0.07,
+    "LOSS": 0.07,
+    "RESCUE": 0.06,
+    "PUNISH": 0.05,
+    "REVELATION": 0.04,
+    "BOND": 0.03,
+    "ESTABLISH": 0.02,
+    "RELIEF": 0.01
+  },
+  "by": "sonnet_reading"
+}

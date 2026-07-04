@@ -1,0 +1,64 @@
+{
+  "work_id": "커피프린스_06",
+  "episode_no": 6,
+  "scene_count": 56,
+  "sequence_count": 9,
+  "dramatic_question": "감정을 부정하는 한결과 정체를 숨겨야 하는 은찬은 서로의 진실에 다가설 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "파티 삼각 긴장·한결 감정 혼란 재설치"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "UCC 흥행·주변 감지·유주-한성 균열"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "포옹 사건·한성 감정 시작·비밀 공유"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        9
+      ],
+      "beat": "나레이션: 은찬 고백 욕망 노출"
+    }
+  ],
+  "entry_state": "파티 충격 이후 은찬이 한성 품에 넘어지며 삼각구도를 재점화한다",
+  "exit_state": "한결이 포옹 후 은찬이 진실을 말하고 싶어진다는 나레이션으로 감정 폭발이 임박했음을 예고한다",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "한결 포옹·은찬 고백 욕망: 감정 억제 한계 도달"
+  },
+  "central_conflict_axis": "한결-은찬 감정 가속 vs 비밀 유지 의무",
+  "episode_function": "6회는 UCC 흥행 기쁨 속에서 한결이 은찬을 향한 끌림을 부정할 수 없게 되고, 한성-유주 관계에 균열이 시작되며 삼각 감정 구도 전반이 임계점에 진입하는 회차다",
+  "core_dist": {
+    "ROMANCE": 12,
+    "DESIRE": 10,
+    "PERIL": 7,
+    "BOND": 7,
+    "RELIEF": 6,
+    "CONFLICT": 5,
+    "REVERSAL": 3,
+    "LOSS": 3,
+    "ORACLE": 2,
+    "REVELATION": 2,
+    "ESTABLISH": 2,
+    "HOOK": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_23",
+  "episode_no": 23,
+  "scene_count": 77,
+  "sequence_count": 8,
+  "dramatic_question": "전봉준 사형과 이강 재등장—혁명의 불씨는 꺼지지 않는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "이강 결의·어머니 생존·봉길 최후통첩"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "백가 위선·전봉준 마지막 만남"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "배신자 처단·봉길 죽음·자인 오열"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "전봉준 사형·이강 재등장·이현 부임"
+    }
+  ],
+  "entry_state": "이강이 이현을 직접 끝내겠다고 다짐하고 배신자 처단이 시작된다.",
+  "exit_state": "전봉준이 사형 선고를 받고 이강이 재등장하며 이현이 신관사또로 부임한다—최후의 대결이 임박한다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "이강의 뜻밖은 재등장과 이현의 신관사또 부임이 최후 형제 결전의 무대를 설치한다"
+  },
+  "central_conflict_axis": "전봉준 사형(역사) 대 이강의 소임(혁명 유산), 이현의 부임 vs 이강의 재등장",
+  "episode_function": "전봉준 사형으로 혁명의 공식적 종식을 선언하고, 이강 재등장과 이현 부임으로 최후 결전의 무대를 설치한다.",
+  "core_dist": {
+    "CONFLICT": 8,
+    "PERIL": 12,
+    "REVELATION": 14,
+    "LOSS": 17,
+    "BOND": 9,
+    "REVERSAL": 5,
+    "RELIEF": 5,
+    "HOOK": 9,
+    "RESCUE": 3,
+    "REUNION": 4,
+    "ESTABLISH": 5,
+    "DESIRE": 3,
+    "PUNISH": 9,
+    "ROMANCE": 3,
+    "ORACLE": 1,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

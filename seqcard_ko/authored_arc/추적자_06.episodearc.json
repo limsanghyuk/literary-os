@@ -1,0 +1,52 @@
+{
+  "work_id": "추적자_06",
+  "episode_no": 6,
+  "scene_count": 64,
+  "sequence_count": 6,
+  "dramatic_question": "폭탄 음모를 저지한 홍석 팀이 납치된 지원을 구하며 동윤을 사법적으로 압박할 수 있는가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        2
+      ],
+      "label": "폭탄 음모 저지·지원 납치"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        3,
+        4
+      ],
+      "label": "서회장 대결·구출 작전 개시"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        5,
+        6
+      ],
+      "label": "사법 압박 완성과 최후 국면 진입"
+    }
+  ],
+  "entry_state": "홍석 팀이 선거캠프 폭탄을 저지하지만 지원이 납치된다",
+  "exit_state": "홍석 팀과 정우가 동시에 동윤을 압박하며 최후 국면에 진입한다",
+  "turning_point": {
+    "seq_index": 2,
+    "label": "지원 납치",
+    "description": "폭탄 저지 직후 지원이 동윤 측에 납치되며 새로운 위기가 발생한다"
+  },
+  "central_conflict_axis": "지원 구출과 사법 압박 vs 동윤의 조직적 저항",
+  "episode_function": "폭탄 저지·지원 납치·압박 완성으로 클라이맥스 진입",
+  "core_dist": {
+    "PERIL": 4,
+    "CONFLICT": 4,
+    "HOOK": 3,
+    "RESCUE": 2,
+    "REVELATION": 2,
+    "BOND": 1,
+    "ORACLE": 1
+  },
+  "by": "cowork_opus_reading"
+}

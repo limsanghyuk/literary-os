@@ -1,0 +1,58 @@
+{
+  "work_id": "너의목소리가들려_05",
+  "episode_no": 5,
+  "scene_count": 65,
+  "sequence_count": 7,
+  "dramatic_question": "로맨스의 절정에서 대반전이 올 때 수하와 관우의 관계는 어떻게 흔들리는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "로맨스 절정",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "B",
+      "label": "갈등과 감정 확인",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": "C",
+      "label": "반전과 관계 위기",
+      "seq_span": [
+        6,
+        7
+      ]
+    }
+  ],
+  "entry_state": "로맨스 절정의 행복",
+  "exit_state": "대반전 이후 관계 위기",
+  "turning_point": {
+    "seq_index": 3,
+    "description": "갈등과 감정 확인"
+  },
+  "central_conflict_axis": "로맨스의 투명함 vs 사건의 복잡성—행복이 가장 취약한 순간",
+  "episode_function": "로맨스 절정과 대반전—관계 시험의 에피소드",
+  "core_dist": {
+    "CONFLICT": 0.14,
+    "REVERSAL": 0.12,
+    "ESTABLISH": 0.12,
+    "PERIL": 0.12,
+    "ROMANCE": 0.09,
+    "BOND": 0.09,
+    "REVELATION": 0.08,
+    "RESCUE": 0.05,
+    "DESIRE": 0.05,
+    "RELIEF": 0.05,
+    "HOOK": 0.03,
+    "LOSS": 0.03,
+    "INTRO": 0.02,
+    "REUNION": 0.01
+  },
+  "by": "cowork_opus_reading"
+}

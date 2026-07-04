@@ -1,0 +1,65 @@
+{
+  "work_id": "대장금_03",
+  "episode_no": 3,
+  "scene_count": 61,
+  "sequence_count": 9,
+  "dramatic_question": "고아가 된 장금은 어머니의 유언을 품고 궁에 들어갈 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "홀로 남겨진 어린 장금이 어머니 유언을 들고 길을 나선다.",
+  "exit_state": "장금이 한상궁을 만나 수랏간에 들어갈 가능성을 발견하고 첫 발을 내딛는다.",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "장금이 한상궁에게 도움을 청하고 궁 입성의 실마리를 얻는다"
+  },
+  "central_conflict_axis": "어린 장금의 고아 생존(입궁 목표) vs 신분·세상의 장벽",
+  "episode_function": "3화는 어린 장금의 자립과 궁 입성 여정의 시작을 통해 성장 서사의 1장을 연다.",
+  "core_dist": {
+    "LOSS": 8,
+    "ORACLE": 9,
+    "DESIRE": 15,
+    "ESTABLISH": 12,
+    "CONFLICT": 9,
+    "HOOK": 9,
+    "PERIL": 16,
+    "BOND": 11,
+    "INTRO": 5,
+    "REVELATION": 6,
+    "RELIEF": 2,
+    "REVERSAL": 2,
+    "ROMANCE": 2
+  },
+  "by": "sonnet_reading"
+}

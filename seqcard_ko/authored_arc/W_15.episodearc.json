@@ -1,0 +1,66 @@
+{
+  "work_id": "W_15",
+  "episode_no": 15,
+  "sequence_count": 16,
+  "scene_count": 103,
+  "turning_point": {
+    "seq_index": 4,
+    "description": "결정적 위기 또는 반전"
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "설정 단계"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        9
+      ],
+      "beat": "전개 단계"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        10,
+        14
+      ],
+      "beat": "심화 단계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        15,
+        16
+      ],
+      "beat": "회말전환 단계"
+    }
+  ],
+  "by": "cowork_opus_reading",
+  "entry_state": "모든 것이 결말을 향해 수렴되고 두 세계의 운명이 결정될 마지막 행위가 준비된다.",
+  "exit_state": "결말의 대부분이 완성되며 마지막 화의 여운이 예고된다.",
+  "central_conflict_axis": "두 세계의 존속 대 그것을 위해 치러야 할 희생",
+  "episode_function": "시리즈 결론의 도입부로서 주요 갈등이 해소되고 마지막 감정적 여운만이 남은 상태로 진입한다.",
+  "dramatic_question": "W 15화의 핵심 드라마틱 질문: 강철과 오연주는 웹툰과 현실의 경계를 넘어 생존할 수 있는가?",
+  "core_dist": {
+    "PERIL": 8,
+    "REVELATION": 21,
+    "HOOK": 30,
+    "CONFLICT": 5,
+    "REVERSAL": 7,
+    "LOSS": 7,
+    "ESTABLISH": 6,
+    "RELIEF": 2,
+    "ORACLE": 4,
+    "BOND": 4,
+    "PUNISH": 4,
+    "DESIRE": 2,
+    "RESCUE": 1,
+    "REUNION": 2
+  }
+}

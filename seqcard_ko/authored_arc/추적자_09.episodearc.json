@@ -1,0 +1,55 @@
+{
+  "work_id": "추적자_09",
+  "episode_no": 9,
+  "scene_count": 54,
+  "sequence_count": 6,
+  "dramatic_question": "동윤 체포 후 잔존하는 서회장 세력을 홍석과 정우가 소탕할 수 있는가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        2
+      ],
+      "label": "동윤 체포 여파·심리적 공백"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        3,
+        4
+      ],
+      "label": "재판 준비·잔존 세력 최후 발악"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        5,
+        6
+      ],
+      "label": "홍석 팀 위기와 잔존 세력 붕괴"
+    }
+  ],
+  "entry_state": "동윤이 체포된 후 서회장과 영욱의 잔존 세력이 잠복한다",
+  "exit_state": "서회장 자진 출두, 영욱 체포로 잔존 세력이 완전히 붕괴된다",
+  "turning_point": {
+    "seq_index": 5,
+    "label": "홍석 팀 위기",
+    "description": "잔존 세력이 홍석을 공격하며 팀 전체가 마지막 위기를 맞는다"
+  },
+  "central_conflict_axis": "잔존 세력 소탕 vs 마지막 저항",
+  "episode_function": "잔존 세력 완전 소탕으로 2부 마무리",
+  "core_dist": {
+    "PERIL": 3,
+    "CONFLICT": 3,
+    "LOSS": 2,
+    "BOND": 2,
+    "REVELATION": 2,
+    "REVERSAL": 2,
+    "DESIRE": 1,
+    "ESTABLISH": 1,
+    "ORACLE": 1,
+    "RELIEF": 1
+  },
+  "by": "cowork_opus_reading"
+}

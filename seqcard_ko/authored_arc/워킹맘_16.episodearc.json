@@ -1,0 +1,53 @@
+{
+  "work_id": "워킹맘_16",
+  "episode_no": 16,
+  "scene_count": 68,
+  "sequence_count": 10,
+  "dramatic_question": "가영의 투쟁은 완전한 승리로 끝나고 새 삶이 완성되는가?",
+  "act_structure": [
+    {
+      "act": "승리",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "재편",
+      "seq_span": [
+        4,
+        7
+      ]
+    },
+    {
+      "act": "완성",
+      "seq_span": [
+        8,
+        10
+      ]
+    }
+  ],
+  "entry_state": "최후 법정 결전 직전",
+  "exit_state": "전면 승소·직장 개혁·세 여성 연대 완성·가영 새 삶",
+  "turning_point": {
+    "seq_index": 1
+  },
+  "central_conflict_axis": "가영 vs 직장 시스템(최종 해소) + 가영 새 가족·커플 완성",
+  "episode_function": "RESOLUTION",
+  "core_dist": {
+    "RELIEF": 0.221,
+    "BOND": 0.191,
+    "DESIRE": 0.132,
+    "CONFLICT": 0.103,
+    "REVELATION": 0.088,
+    "ORACLE": 0.074,
+    "PERIL": 0.044,
+    "ESTABLISH": 0.044,
+    "PUNISH": 0.029,
+    "ROMANCE": 0.029,
+    "LOSS": 0.015,
+    "REVERSAL": 0.015,
+    "REUNION": 0.015
+  },
+  "by": "sonnet_reading"
+}

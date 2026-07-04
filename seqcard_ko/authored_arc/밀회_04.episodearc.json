@@ -1,0 +1,51 @@
+{
+  "work_id": "밀회",
+  "episode_no": 4,
+  "scene_count": 76,
+  "sequence_count": 10,
+  "dramatic_question": "키스 이후 혜원이 관계를 단절하고 선재가 붕괴하는 상황에서 두 사람은 서로를 어떻게 감당하는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        3
+      ],
+      "label": "혜원의 부인과 응징, 선재의 분노 폭발"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        4,
+        7
+      ],
+      "label": "서한 권력 재편, 영우 해외 출국, 학내 부패 일상화"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        8,
+        10
+      ],
+      "label": "혜원이 개입 결심, 준형이 선재를 구조하며 삼각 재편"
+    }
+  ],
+  "entry_state": "3부 말 키스의 여운이 채 가시기 전, 혜원이 선재의 뺨을 때리며 선을 긋는다",
+  "exit_state": "준형이 경찰서에서 선재를 구하고 혜원도 등장해 불편한 삼각관계가 재편된 채로 귀가한다",
+  "turning_point": {
+    "seq_index": 9,
+    "label": "혜원의 선재 구출 결심",
+    "description": "혜원이 다미의 말에서 선재의 구금 소식을 알고 비밀리에 돕기로 결심한다"
+  },
+  "central_conflict_axis": "혜원의 자기모순과 방어 vs 선재의 상처받은 분노와 무너짐",
+  "episode_function": "FALL — 키스 이후 혜원의 부인과 응징으로 관계가 최저점을 찍고 서한 내부 권력이 재편된다",
+  "core_dist": {
+    "CONFLICT": 0.508,
+    "LOSS": 0.203,
+    "BOND": 0.12,
+    "HOOK": 0.12,
+    "DESIRE": 0.111,
+    "PUNISH": 0.083
+  },
+  "by": "cowork_opus_reading"
+}

@@ -1,0 +1,64 @@
+{
+  "work_id": "커피프린스_07",
+  "episode_no": 7,
+  "scene_count": 73,
+  "sequence_count": 11,
+  "dramatic_question": "감정 폭발과 퇴직이라는 위기 후 한결과 은찬은 어떻게 화해에 이르고, 할머니 위기라는 현실을 함께 감당할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "포옹 여진·한결 감정 심화"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "레고 선물·질투·폭언·퇴직"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "그리움·유주 조언·화해 시도"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        11
+      ],
+      "beat": "화해 후 할머니 위암 폭로"
+    }
+  ],
+  "entry_state": "한결이 은찬에게 끌리면서도 부인하다가 폭언으로 갈등이 폭발한 상태",
+  "exit_state": "코피 화해로 관계를 회복했지만 할머니 위암 말기라는 새 위기가 두 사람 앞에 놓인다",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "화해 직후 할머니 위기: 관계 회복이 곧 새 시련의 시작"
+  },
+  "central_conflict_axis": "한결 감정 혼란(끌림 부인) vs 은찬 짝사랑 지속·비밀 유지 부담",
+  "episode_function": "7회는 폭언-퇴직 위기를 거쳐 코피 화해로 관계를 봉합하지만, 할머니 위암 말기라는 새 위기를 맞으며 한결과 은찬의 유대가 한 단계 깊어지는 회차다",
+  "core_dist": {
+    "ROMANCE": 14,
+    "DESIRE": 13,
+    "LOSS": 10,
+    "CONFLICT": 8,
+    "BOND": 8,
+    "RELIEF": 6,
+    "ORACLE": 3,
+    "ESTABLISH": 3,
+    "PERIL": 2,
+    "REUNION": 1,
+    "REVERSAL": 1,
+    "HOOK": 2
+  },
+  "by": "sonnet_reading"
+}

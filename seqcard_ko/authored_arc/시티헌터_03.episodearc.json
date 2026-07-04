@@ -1,0 +1,66 @@
+{
+  "work_id": "시티헌터_03",
+  "episode_no": 3,
+  "scene_count": 70,
+  "sequence_count": 11,
+  "dramatic_question": "이경완 처단 이후 다음 표적 서용학을 어떻게 무너뜨릴 것이며, 경희는 안전한가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "이경완 방탄 확인·공동체 유대"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "함정 설치·작전 준비"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "처단 성공·여진"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        11
+      ],
+      "beat": "경희 위기·훅"
+    }
+  ],
+  "entry_state": "이경완이 자백 영상으로 무너지기 직전—함정이 가동된다.",
+  "exit_state": "이경완 처단 성공, 그러나 경희가 청와대 경호관들에게 끌려가 위기에 처한다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "이경완 자백 영상 생중계·검찰 인도: 첫 표적 완전 처단"
+  },
+  "central_conflict_axis": "비리 정치인 이경완 처단 vs 진표의 자력 응징 고집",
+  "episode_function": "3화: 시티헌터식 처단의 첫 완성—생중계 폭로와 검찰 인도라는 방식을 확립하고, 경희 위기로 다음 갈등을 점화한다.",
+  "core_dist": {
+    "PUNISH": 8,
+    "CONFLICT": 25,
+    "REVELATION": 14,
+    "HOOK": 11,
+    "BOND": 16,
+    "RESCUE": 6,
+    "RELIEF": 15,
+    "PERIL": 13,
+    "LOSS": 5,
+    "REVERSAL": 3,
+    "DESIRE": 1,
+    "REUNION": 1,
+    "ESTABLISH": 2,
+    "ORACLE": 2
+  },
+  "by": "sonnet_reading"
+}

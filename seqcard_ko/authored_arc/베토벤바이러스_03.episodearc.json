@@ -1,0 +1,54 @@
+{
+  "work_id": "베토벤바이러스_03",
+  "episode_no": 3,
+  "scene_count": 39,
+  "sequence_count": 6,
+  "dramatic_question": "3화: 인물들의 선택과 갈등이 이야기를 어디로 이끌 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "회차의 출발점—즐거운 연습 논쟁에서 상황과 긴장을 확립한다"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 구체화되고 인물들의 선택이 이야기를 추동한다"
+    },
+    {
+      "act": "전환",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "비행기표 건네는 루미로 마무리되며 다음 회를 향한 전환점을 남긴다"
+    }
+  ],
+  "entry_state": "직전 회의 여운을 안고 즐거운 연습 논쟁에서 새 회차가 열린다.",
+  "exit_state": "비행기표 건네는 루미로 회차가 닫히며 다음 국면의 씨앗이 뿌려진다.",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "핵심 갈등이 폭발하거나 예상치 못한 선택이 이야기의 방향을 바꾼다"
+  },
+  "central_conflict_axis": "주인공의 욕망 대 현실의 장벽, 관계 내부의 갈등",
+  "episode_function": "3화는 갈등의 핵을 드러내며 등장인물의 이해관계가 충돌하는 국면을 설계한다.",
+  "core_dist": {
+    "CONFLICT": 13,
+    "RELIEF": 4,
+    "BOND": 8,
+    "DESIRE": 2,
+    "LOSS": 6,
+    "ESTABLISH": 2,
+    "HOOK": 7,
+    "REVELATION": 11,
+    "ROMANCE": 2,
+    "REVERSAL": 1
+  },
+  "by": "sonnet_reading"
+}

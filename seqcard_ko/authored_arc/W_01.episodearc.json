@@ -1,0 +1,63 @@
+{
+  "work_id": "W_01",
+  "episode_no": 1,
+  "sequence_count": 7,
+  "scene_count": 43,
+  "turning_point": {
+    "seq_index": 3,
+    "description": "결정적 위기 또는 반전"
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "설정 단계"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "전개 단계"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "심화 단계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "회말전환 단계"
+    }
+  ],
+  "by": "cowork_opus_reading",
+  "entry_state": "강철이 웹툰 작가로서 오연주를 창조하고, 완성된 웹툰 캐릭터 오연주가 현실에 나타나 강철에게 자신의 존재를 확인시킨다.",
+  "exit_state": "강철이 자신이 웹툰 세계의 창조자임을 인지하고, 오연주와 웹툰-현실 경계를 초월한 관계를 시작한다.",
+  "central_conflict_axis": "현실(강철)과 웹툰 세계(오연주)의 경계 붕괴 대 두 세계 논리의 충돌",
+  "episode_function": "핵심 SF 설정(웹툰 캐릭터의 현실 침범)을 도입하고 두 주인공의 관계를 확립하며 시리즈 전체의 미스터리를 시작한다.",
+  "dramatic_question": "W 1화의 핵심 드라마틱 질문: 강철과 오연주는 웹툰과 현실의 경계를 넘어 생존할 수 있는가?",
+  "core_dist": {
+    "ESTABLISH": 4,
+    "REVERSAL": 1,
+    "LOSS": 1,
+    "PUNISH": 2,
+    "INTRO": 5,
+    "REVELATION": 13,
+    "HOOK": 8,
+    "PERIL": 2,
+    "RESCUE": 5,
+    "DESIRE": 1,
+    "RELIEF": 1
+  }
+}

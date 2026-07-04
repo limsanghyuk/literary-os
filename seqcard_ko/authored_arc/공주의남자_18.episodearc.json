@@ -1,0 +1,51 @@
+{
+  "work_id": "공주의남자_18",
+  "episode_no": 18,
+  "scene_count": 67,
+  "sequence_count": 10,
+  "dramatic_question": "서신 공개가 수양을 무너뜨릴 것인가, 아니면 더 강한 역공을 불러올 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "강행 결단·공개 성공·조정 혼란"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "위조 반박·증언자·파장·역모 고발"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "집단 체포·승유 포위·세령 능동 호소"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        10
+      ],
+      "beat": "수양의 침묵·결말 직전 정적"
+    }
+  ],
+  "entry_state": "서신 공개 강행 결단",
+  "exit_state": "서신 파장, 역모 고발, 집단 와해, 세령 호소에 수양 침묵",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "수양의 역모 고발 — 복수 공세에서 생존 위기로 완전 역전"
+  },
+  "central_conflict_axis": "서신 공개 파장 vs 수양의 역모 고발 반격",
+  "episode_function": "서신 공개 충격·역모 고발·집단 와해 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

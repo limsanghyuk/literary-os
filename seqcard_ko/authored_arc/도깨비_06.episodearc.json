@@ -1,0 +1,63 @@
+{
+ "episode_no": 6,
+ "scene_count": 50,
+ "sequence_count": 7,
+ "dramatic_question": "은탁이 검을 뽑아 도깨비를 해방할 수 있는가, 아니면 그 행위가 사랑의 종말을 의미하는가?",
+ "act_structure": [
+  {
+   "act": "설정",
+   "seq_span": [
+    1,
+    2
+   ],
+   "beat": "저승-써니 소개팅·로또 에피소드로 일상 코미디 절정"
+  },
+  {
+   "act": "전개",
+   "seq_span": [
+    3,
+    5
+   ],
+   "beat": "삼신 등장·도깨비 이별 결심·서약서 병행 저술"
+  },
+  {
+   "act": "심화",
+   "seq_span": [
+    6,
+    6
+   ],
+   "beat": "두 사람의 문 사이 정반대 감정—이별 vs 결합 대립"
+  },
+  {
+   "act": "회말전환",
+   "seq_span": [
+    7,
+    7
+   ],
+   "beat": "메밀밭 첫눈—서약서 사인과 동시에 검이 뽑혀 도깨비 소멸"
+  }
+ ],
+ "entry_state": "도깨비가 이별을 준비하고 은탁은 도깨비와의 관계를 지키려 한다.",
+ "exit_state": "첫눈 메밀밭에서 은탁이 무의식적으로 검을 뽑아 도깨비가 소멸한다.",
+ "turning_point": {
+  "seq_index": 7,
+  "desc": "검이 뽑혀 도깨비 소멸—시리즈 첫 번째 대위기"
+ },
+ "central_conflict_axis": "도깨비의 이별 결심 대 은탁의 관계 유지 의지",
+ "episode_function": "6화는 도깨비-은탁의 이별 의지와 결합 의지가 문을 사이에 두고 충돌하는 극적 대립 끝에, 메밀밭 첫눈에서 검이 뽑히며 도깨비가 처음으로 소멸하는 전환점을 만든다.",
+ "core_dist": {
+  "ROMANCE": 7,
+  "LOSS": 7,
+  "DESIRE": 6,
+  "BOND": 6,
+  "CONFLICT": 5,
+  "ESTABLISH": 5,
+  "RELIEF": 4,
+  "REVELATION": 3,
+  "PUNISH": 3,
+  "REVERSAL": 2,
+  "HOOK": 2
+ },
+ "work_id": "도깨비_06",
+ "by": "sonnet_reading"
+}

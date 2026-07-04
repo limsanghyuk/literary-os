@@ -1,0 +1,65 @@
+{
+  "work_id": "역전의여왕_21",
+  "episode_no": 21,
+  "scene_count": 62,
+  "sequence_count": 9,
+  "dramatic_question": "21화: 인물들의 선택과 갈등이 이야기를 어디로 이끌 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "회차의 출발점—용식의 기습 키스에서 상황과 긴장을 확립한다"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 구체화되고 인물들의 선택이 이야기를 추동한다"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "긴장이 정점을 향해 치닫고 위기가 가시화된다"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "가지 말라는 태희의 고백로 마무리되며 다음 회를 향한 전환점을 남긴다"
+    }
+  ],
+  "entry_state": "직전 회의 여운을 안고 용식의 기습 키스에서 새 회차가 열린다.",
+  "exit_state": "가지 말라는 태희의 고백로 회차가 닫히며 다음 국면의 씨앗이 뿌려진다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "핵심 갈등이 폭발하거나 예상치 못한 선택이 이야기의 방향을 바꾼다"
+  },
+  "central_conflict_axis": "주인공의 욕망 대 현실의 장벽, 관계 내부의 갈등",
+  "episode_function": "21화는 갈등의 핵을 드러내며 등장인물의 이해관계가 충돌하는 국면을 설계한다.",
+  "core_dist": {
+    "ROMANCE": 8,
+    "CONFLICT": 18,
+    "REVELATION": 15,
+    "PERIL": 7,
+    "LOSS": 11,
+    "ESTABLISH": 2,
+    "HOOK": 11,
+    "INTRO": 2,
+    "DESIRE": 7,
+    "BOND": 6,
+    "REVERSAL": 5,
+    "RELIEF": 5,
+    "RESCUE": 1
+  },
+  "by": "sonnet_reading"
+}

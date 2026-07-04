@@ -1,0 +1,90 @@
+{
+  "series": "그들이사는세상",
+  "episodes_total": 16,
+  "scenes_total": 801,
+  "sequences_total": 123,
+  "logline": "방송국 드라마 PD 준호와 스태프 지오가 직업적 성공과 사랑 사이에서 각자의 자리를 만들어가는 방송계 로맨스.",
+  "central_dramatic_question": "직업과 사랑, 두 가지를 동시에 지킬 수 있는가? 그리고 그 과정에서 두 사람은 어떻게 성장하는가?",
+  "theme_statement": "드라마를 만드는 사람들도 자신의 삶에서 주인공이 되는 법을 배운다. 진짜 사랑은 상대를 위해 물러서는 것이 아니라 함께 서는 것이다.",
+  "protagonist": "이준호 — 드라마에 모든 것을 건 PD, 직업 원칙과 감정 사이에서 선택을 배우는 인물",
+  "antagonist": "국장 — 시청률과 권력 논리로 준호의 연출 원칙을 끊임없이 흔드는 방송국 권력자",
+  "season_structure": [
+    {
+      "phase": "만남·감정 시작",
+      "episode_span": [
+        1,
+        4
+      ],
+      "desc": "팀 구성, 지오 첫 출근, 준호 감정 인식 시작"
+    },
+    {
+      "phase": "감정 심화·갈등",
+      "episode_span": [
+        5,
+        8
+      ],
+      "desc": "시청률 위기, 드라마 완성, 준호 고백, 지오 선택"
+    },
+    {
+      "phase": "관계 공개·외압",
+      "episode_span": [
+        9,
+        12
+      ],
+      "desc": "방송국 압박, 외부 제안, 관계 위기"
+    },
+    {
+      "phase": "성장·재설계·결말",
+      "episode_span": [
+        13,
+        16
+      ],
+      "desc": "지오 독립 성장, 관계 공개, 국장 극복, 새 챕터"
+    }
+  ],
+  "macro_turning_points": [
+    {
+      "episode": 4,
+      "desc": "준호의 감정 인식 — 일방 감정에서 상호 감정 구도"
+    },
+    {
+      "episode": 8,
+      "desc": "준호의 고백, 지오의 자발적 선택 — 관계 시작"
+    },
+    {
+      "episode": 12,
+      "desc": "외부 제안 수락, 관계 위기 — 커리어 vs 사랑"
+    },
+    {
+      "episode": 14,
+      "desc": "지오의 독립 자신감 — 의존에서 동반자로 전환"
+    },
+    {
+      "episode": 16,
+      "desc": "지오의 국장 직접 대응 — 완전한 독립 행위자"
+    }
+  ],
+  "resolution": "준호와 지오는 국장의 최후 압박을 공동 돌파하고, 방송국 최고 승인을 받으며 새 드라마 프로젝트를 시작한다.",
+  "open_ending": "두 사람은 다음 드라마 준비를 함께 시작하며, 더 어려울 새 챕터를 함께 맞이할 것이라는 것을 안다.",
+  "tone": "현실적 로맨스 — 직업적 성취와 사랑이 교차하는 방송계 일상의 따뜻한 서사",
+  "conflict_persist": 0.58,
+  "series_core_dist": {
+    "CONFLICT": 16,
+    "BOND": 16,
+    "ESTABLISH": 14,
+    "ROMANCE": 12,
+    "RISE": 10,
+    "REVEAL": 10,
+    "STALL": 8,
+    "HOOK": 8,
+    "LOSS": 6,
+    "REVERSAL": 5,
+    "RELIEF": 3,
+    "REVELATION": 2,
+    "PERIL": 2,
+    "PUNISH": 2,
+    "INTRO": 2,
+    "DESIRE": 2
+  },
+  "by": "opus_reading"
+}

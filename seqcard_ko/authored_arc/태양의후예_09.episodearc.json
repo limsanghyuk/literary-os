@@ -1,0 +1,64 @@
+{
+  "work_id": "태양의후예_09",
+  "episode_no": 9,
+  "scene_count": 52,
+  "sequence_count": 8,
+  "dramatic_question": "사랑은 평화로운 순간에도 위험 속에서 피어나는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "지뢰밭 데이트·첫 키스"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "의료 안착·도체비 마을 발견·아구스"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "인신매매 조직 수사·급습"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "아구스 총격·모연 수술 훅"
+    }
+  ],
+  "entry_state": "지뢰밭 낭만",
+  "exit_state": "아구스 생사 위기",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "도체비 마을 인신매매 발견"
+  },
+  "central_conflict_axis": "이상(정의) vs 임무(군사)",
+  "episode_function": "밀리터리+로맨스 융합: 데이트+인신매매 소탕",
+  "core_dist": {
+    "ESTABLISH": 5,
+    "RELIEF": 4,
+    "HOOK": 5,
+    "REVELATION": 6,
+    "ROMANCE": 11,
+    "BOND": 2,
+    "CONFLICT": 4,
+    "INTRO": 2,
+    "PERIL": 8,
+    "RESCUE": 1,
+    "REVERSAL": 3,
+    "PUNISH": 1
+  },
+  "by": "sonnet_reading"
+}

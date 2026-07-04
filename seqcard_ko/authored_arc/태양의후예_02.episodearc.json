@@ -1,0 +1,67 @@
+{
+  "work_id": "태양의후예_02",
+  "episode_no": 2,
+  "scene_count": 57,
+  "sequence_count": 7,
+  "dramatic_question": "낯선 땅 우르크에서 두 사람은 서로를 선택할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "아프간 항명·영창으로 시진 캐릭터 강화"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "우르크 도착·재회·서브 커플 첫 만남"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        6
+      ],
+      "beat": "의료팀 위기 적응·시진 음지 보호"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "다이로스 등장으로 본격 위기 예고"
+    }
+  ],
+  "entry_state": "영창 후 귀국",
+  "exit_state": "다이로스 위협 고조",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "다이로스 무기상이 기지를 정면 압박"
+  },
+  "central_conflict_axis": "임무 수행 vs 감정 보호",
+  "episode_function": "우르크 세계 구축·주적 등장",
+  "core_dist": {
+    "BOND": 3,
+    "ESTABLISH": 7,
+    "CONFLICT": 6,
+    "PERIL": 6,
+    "RELIEF": 10,
+    "RESCUE": 1,
+    "ROMANCE": 4,
+    "HOOK": 5,
+    "LOSS": 4,
+    "REVERSAL": 2,
+    "DESIRE": 1,
+    "REUNION": 3,
+    "PUNISH": 2,
+    "INTRO": 2,
+    "REVELATION": 1
+  },
+  "by": "sonnet_reading"
+}

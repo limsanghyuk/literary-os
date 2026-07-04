@@ -1,0 +1,52 @@
+{
+  "work_id": "마왕_02",
+  "episode_no": 2,
+  "scene_count": 85,
+  "sequence_count": 13,
+  "dramatic_question": "오수는 승하와 협력하며 두 번째 예고살인을 막을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "합류와 의심",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "B",
+      "label": "수사 전진과 단서 추적",
+      "seq_span": [
+        4,
+        9
+      ]
+    },
+    {
+      "act": "C",
+      "label": "두 번째 예고와 심리 부담",
+      "seq_span": [
+        10,
+        13
+      ]
+    }
+  ],
+  "entry_state": "승하의 수사 합류로 팀 내 긴장이 표면화된 상태",
+  "exit_state": "두 번째 타로카드 도착—연쇄 살인의 다음 단계가 시작된 상태",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "편지 범행 동기 '법 불평등'—오수가 범인의 철학적 동기를 특정한다"
+  },
+  "central_conflict_axis": "오수(수사)↔승하(복수 agenda)",
+  "episode_function": "두 번째 예고살인 도착·수사 확장",
+  "core_dist": {
+    "REVELATION": 3,
+    "CONFLICT": 2,
+    "PERIL": 2,
+    "LOSS": 2,
+    "BOND": 1,
+    "DESIRE": 1,
+    "ORACLE": 1,
+    "ROMANCE": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,57 @@
+{
+  "work_id": "너의목소리가들려_10",
+  "episode_no": 10,
+  "scene_count": 59,
+  "sequence_count": 7,
+  "dramatic_question": "반전의 연속 속에서 수하와 관우의 감정과 관계는 어떻게 검증되는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "새 국면과 진실 연쇄",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "B",
+      "label": "로맨스 절정과 복잡화",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": "C",
+      "label": "반전 연속과 예고",
+      "seq_span": [
+        6,
+        7
+      ]
+    }
+  ],
+  "entry_state": "새 국면 진입",
+  "exit_state": "위기 최고조와 다음 예고",
+  "turning_point": {
+    "seq_index": 4,
+    "description": "로맨스 절정과 복잡화"
+  },
+  "central_conflict_axis": "진실 연쇄 vs 반전의 연속—감정 절정과 관계 검증",
+  "episode_function": "로맨스 절정과 반전 연속—관계 검증 에피소드",
+  "core_dist": {
+    "CONFLICT": 0.17,
+    "REVELATION": 0.15,
+    "HOOK": 0.12,
+    "REVERSAL": 0.1,
+    "PERIL": 0.08,
+    "BOND": 0.07,
+    "ESTABLISH": 0.07,
+    "REUNION": 0.05,
+    "ROMANCE": 0.05,
+    "DESIRE": 0.05,
+    "LOSS": 0.05,
+    "PUNISH": 0.02,
+    "ORACLE": 0.02
+  },
+  "by": "cowork_opus_reading"
+}

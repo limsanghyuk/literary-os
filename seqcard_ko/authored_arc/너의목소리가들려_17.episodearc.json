@@ -1,0 +1,60 @@
+{
+  "work_id": "너의목소리가들려_17",
+  "episode_no": 17,
+  "scene_count": 78,
+  "sequence_count": 7,
+  "dramatic_question": "모든 진실이 폭로되고 역전이 완성될 때 두 사람의 관계는 어떤 결말을 향하는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "피날레 전야와 구출",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "B",
+      "label": "최후 대결 정점",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": "C",
+      "label": "상실과 마무리",
+      "seq_span": [
+        6,
+        7
+      ]
+    }
+  ],
+  "entry_state": "피달레 전야 최후 긴장",
+  "exit_state": "마무리와 로맨스 완성, 피날레 예고",
+  "turning_point": {
+    "seq_index": 4,
+    "description": "최후 대결 정점"
+  },
+  "central_conflict_axis": "최후 대결 vs 역전의 완성—상실과 재회의 동시성",
+  "episode_function": "피날레 전야 에피소드—최후 대결, 역전, 상실, 로맨스 완성",
+  "core_dist": {
+    "PERIL": 0.18,
+    "RESCUE": 0.12,
+    "REVELATION": 0.15,
+    "CONFLICT": 0.08,
+    "RELIEF": 0.01,
+    "BOND": 0.06,
+    "LOSS": 0.06,
+    "HOOK": 0.08,
+    "REVERSAL": 0.04,
+    "REUNION": 0.03,
+    "ROMANCE": 0.03,
+    "ESTABLISH": 0.03,
+    "DESIRE": 0.02,
+    "ORACLE": 0.01,
+    "PUNISH": 0.01,
+    "INTRO": 0.01
+  },
+  "by": "cowork_opus_reading"
+}

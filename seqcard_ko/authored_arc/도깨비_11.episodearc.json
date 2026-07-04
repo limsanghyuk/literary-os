@@ -1,0 +1,64 @@
+{
+ "episode_no": 11,
+ "scene_count": 54,
+ "sequence_count": 7,
+ "dramatic_question": "저승이 왕여임이 확정될 때 도깨비는 원수를 용서할 수 있는가, 그리고 은탁의 죽음 예고는 어떻게 극복되는가?",
+ "act_structure": [
+  {
+   "act": "설정",
+   "seq_span": [
+    1,
+    2
+   ],
+   "beat": "전생 전면 공개·4인 공식 대면·왕여-박중헌 비극 완성"
+  },
+  {
+   "act": "전개",
+   "seq_span": [
+    3,
+    4
+   ],
+   "beat": "저승의 현재 자아 정립·도깨비 사랑 고백·과거-현재 운명 연결"
+  },
+  {
+   "act": "심화",
+   "seq_span": [
+    5,
+    6
+   ],
+   "beat": "은탁 죽음 예고 폭탄과 용기 있는 선택"
+  },
+  {
+   "act": "회말전환",
+   "seq_span": [
+    7,
+    7
+   ],
+   "beat": "복수귀신 의뢰 완수·박중헌 현생 등장—이중 훅"
+  }
+ ],
+ "entry_state": "저승이 왕여임을 확인하고 도깨비와의 900년 원한이 드러난다.",
+ "exit_state": "은탁 2주 뒤 추락사 예고와 박중헌 현생 등장으로 이중 위기가 설치된다.",
+ "turning_point": {
+  "seq_index": 5,
+  "desc": "은탁 죽음 예고 폭탄—행복의 절정에서 운명의 역습"
+ },
+ "central_conflict_axis": "은탁의 죽음 운명 대 도깨비-저승의 원한 화해",
+ "episode_function": "11화는 과거 서사를 완전히 현재에 통합하고, 은탁의 죽음 예고라는 새로운 위기를 투하하며, 박중헌의 현생 등장으로 다음 위기를 이중으로 예비한다.",
+ "core_dist": {
+  "CONFLICT": 9,
+  "REVELATION": 8,
+  "ROMANCE": 7,
+  "BOND": 6,
+  "ORACLE": 5,
+  "PERIL": 5,
+  "LOSS": 5,
+  "PUNISH": 4,
+  "RESCUE": 3,
+  "DESIRE": 3,
+  "RELIEF": 3,
+  "REVERSAL": 2
+ },
+ "work_id": "도깨비_11",
+ "by": "sonnet_reading"
+}

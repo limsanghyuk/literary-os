@@ -1,0 +1,66 @@
+{
+  "work_id": "공주의남자_06",
+  "episode_no": 6,
+  "scene_count": 83,
+  "sequence_count": 8,
+  "dramatic_question": "복수를 결의한 채 변장하고 돌아온 승유와, 아버지의 진실을 알아가는 세령은 서로를 알아볼 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "유랑 복수 결의와 수양 권력 공고화"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "세령 내면 갈등, 변장 재회, 정체 파악 직전 긴장"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "자객 추격 위기와 은밀한 보호"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "세령 직감—극적 아이러니 최고조, 서스펜스 훅"
+    }
+  ],
+  "entry_state": "유랑 중 복수를 결의한 승유와 내면 갈등 중인 세령이 각자의 방식으로 다음 국면을 준비한다.",
+  "exit_state": "변장 재회의 긴장이 최고조에 달하며 세령이 승유의 정체를 직감하는 강력한 훅으로 마무리된다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "세령의 직감—변장 재회 긴장 최고조, 정체 발각 임박"
+  },
+  "central_conflict_axis": "변장한 승유의 복수 계획(정체 은폐) 대 세령의 진실 추구(정체 파악)",
+  "episode_function": "6화는 변장 재회를 통해 극적 아이러니를 최고조로 끌어올리며 복수와 사랑이 뒤엉키는 새로운 국면을 개시한다.",
+  "core_dist": {
+    "ESTABLISH": 12,
+    "PERIL": 15,
+    "CONFLICT": 23,
+    "ROMANCE": 9,
+    "LOSS": 12,
+    "DESIRE": 10,
+    "REVELATION": 12,
+    "PUNISH": 3,
+    "REUNION": 3,
+    "BOND": 7,
+    "HOOK": 10,
+    "RELIEF": 3,
+    "RESCUE": 2,
+    "REVERSAL": 3
+  },
+  "by": "sonnet_reading"
+}

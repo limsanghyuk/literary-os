@@ -1,0 +1,55 @@
+{
+  "work_id": "모래시계_06",
+  "episode_no": 6,
+  "scene_count": 81,
+  "sequence_count": 13,
+  "dramatic_question": "다중 전선의 폭력 속에서 태수는 어떻게 살아남고 무엇을 잃는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "갈등 점화",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "폭력 정점과 보복",
+      "seq_span": [
+        5,
+        8
+      ]
+    },
+    {
+      "act": "C",
+      "label": "종속과 예고",
+      "seq_span": [
+        9,
+        13
+      ]
+    }
+  ],
+  "entry_state": "소강 이후 새 긴장",
+  "exit_state": "권력 종속 심화와 다음 충돌 예고",
+  "turning_point": {
+    "seq_index": 5,
+    "description": "폭력 정점과 보복"
+  },
+  "central_conflict_axis": "조직 폭력 vs 정치 권력—태수의 이중 종속",
+  "episode_function": "폭력 정점 에피소드—다중 갈등 동시 폭발과 정치-조직 유착 심화",
+  "core_dist": {
+    "PERIL": 0.22,
+    "CONFLICT": 0.2,
+    "ESTABLISH": 0.1,
+    "ORACLE": 0.07,
+    "PUNISH": 0.07,
+    "LOSS": 0.06,
+    "REVELATION": 0.07,
+    "BOND": 0.06,
+    "RESCUE": 0.05,
+    "DESIRE": 0.05,
+    "RELIEF": 0.05
+  },
+  "by": "cowork_opus_reading"
+}

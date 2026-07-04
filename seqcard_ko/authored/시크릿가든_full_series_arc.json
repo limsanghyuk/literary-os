@@ -1,0 +1,94 @@
+{
+  "series": "시크릿가든",
+  "episodes_total": 20,
+  "scenes_total": 888,
+  "sequences_total": 160,
+  "logline": "재벌 2세 주원과 스턴트우먼 길라임이 영혼교환 현상을 겪으며 신분 차이를 넘어 진정한 사랑을 완성하는 판타지 로맨스.",
+  "central_dramatic_question": "신분과 출신의 벽을 넘어 두 사람의 사랑은 완성될 수 있는가?",
+  "theme_statement": "진정한 사랑은 신분과 육체의 경계를 초월한다.",
+  "protagonist": {
+    "name": "김주원/길라임",
+    "want": "서로에 대한 사랑 인정·결합",
+    "need": "진정한 자아와 상대방 이해",
+    "arc": "오만한 재벌에서 진정한 사랑을 깨닫는 인간으로 변화"
+  },
+  "antagonist": {
+    "name": "주원의 가문·사회적 편견",
+    "function": "신분 차이와 가족의 반대라는 외부 장벽"
+  },
+  "season_structure": [
+    {
+      "act": "1막(만남·설정)",
+      "episode_span": [
+        1,
+        5
+      ],
+      "desc": "두 인물 만남·첫 영혼교환·반목"
+    },
+    {
+      "act": "2막(관계 발전)",
+      "episode_span": [
+        6,
+        12
+      ],
+      "desc": "사랑 싹틈·가족 반대·갈등"
+    },
+    {
+      "act": "3막(위기·시련)",
+      "episode_span": [
+        13,
+        17
+      ],
+      "desc": "비밀 폭로·이별·재회 시도"
+    },
+    {
+      "act": "4막(결말)",
+      "episode_span": [
+        18,
+        20
+      ],
+      "desc": "최종 결합·해피엔딩"
+    }
+  ],
+  "macro_turning_points": [
+    {
+      "episode": 3,
+      "desc": "첫 영혼교환 발생—장르 판타지 요소 도입"
+    },
+    {
+      "episode": 8,
+      "desc": "주원의 사랑 고백—관계 전환점"
+    },
+    {
+      "episode": 14,
+      "desc": "라임의 진짜 정체 폭로—위기"
+    },
+    {
+      "episode": 20,
+      "desc": "최종 재결합—해피엔딩"
+    }
+  ],
+  "resolution": "주원과 라임은 영혼교환의 비밀을 풀고 신분의 벽을 넘어 진정한 사랑을 완성한다.",
+  "open_ending": false,
+  "tone": "판타지·로맨틱코미디",
+  "conflict_persist": 0.15,
+  "series_core_dist": {
+    "ROMANCE": 200,
+    "CONFLICT": 100,
+    "ESTABLISH": 80,
+    "BOND": 120,
+    "RELIEF": 100,
+    "DESIRE": 80,
+    "REVELATION": 60,
+    "PERIL": 40,
+    "ORACLE": 30,
+    "REVERSAL": 30,
+    "LOSS": 20,
+    "PUNISH": 10,
+    "RESCUE": 30,
+    "HOOK": 50,
+    "INTRO": 30,
+    "REUNION": 20
+  },
+  "by": "cowork_opus_reading"
+}

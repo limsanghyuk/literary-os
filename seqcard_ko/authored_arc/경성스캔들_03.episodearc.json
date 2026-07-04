@@ -1,0 +1,54 @@
+{
+  "work_id": "경성스캔들_03",
+  "episode_no": 3,
+  "scene_count": 84,
+  "sequence_count": 13,
+  "dramatic_question": "송주의 과거와 칠필살 수사가 교차하는 가운데 완·여경·수현의 감정 삼각관계는 어디서 균열을 드러낼 것인가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        4
+      ],
+      "label": "송주 취조 무산과 10년 전 송주·수현 인연 회상"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        5,
+        9
+      ],
+      "label": "여경-완-수현 감정 교차와 칠필살 단서 진전"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        10,
+        13
+      ],
+      "label": "여경 연행과 완의 즉각 경찰서 출동 클리프행어"
+    }
+  ],
+  "entry_state": "강구의 송주 취조가 무산되고 수현이 비공개 배경을 갖고 있음이 암시된다",
+  "exit_state": "강구가 여경을 연행하고 수현이 개입해 보호하는 가운데 완이 경찰서로 달려가는 삼각 구출 장면으로 마무리된다",
+  "turning_point": {
+    "seq_index": 9,
+    "label": "선우관-수현 대면과 배신 서사 재점화",
+    "description": "선우관이 마모루를 찾아가 수현과 대면해 두 사람 모두 굳어버리며 완의 집안과 수현 배신 서사가 본격 교차 연결된다"
+  },
+  "central_conflict_axis": "송주의 기생 과거와 수현과의 첫 인연 폭로, 완·여경 유대 형성, 강구의 칠필살 수사 연결",
+  "episode_function": "송주·수현 과거 관계 공개, 완과 여경의 감정적 유대 첫 형성, 칠필살 수사와 애물단 실체 연결 고리 설치",
+  "core_dist": {
+    "REVERSAL": 1,
+    "REVELATION": 2,
+    "CONFLICT": 2,
+    "DESIRE": 1,
+    "BOND": 1,
+    "HOOK": 2,
+    "PERIL": 1,
+    "ORACLE": 1,
+    "RESCUE": 2
+  },
+  "by": "cowork_opus_reading"
+}

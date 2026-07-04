@@ -1,0 +1,50 @@
+{
+  "work_id": "마왕_03",
+  "episode_no": 3,
+  "scene_count": 78,
+  "sequence_count": 12,
+  "dramatic_question": "승하의 동섭 변호 선언은 수사를 어떻게 흔드는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "구도 역전과 충격",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "순기 석방·법리 전쟁",
+      "seq_span": [
+        5,
+        8
+      ]
+    },
+    {
+      "act": "C",
+      "label": "여론 압박·오수-승하 대면",
+      "seq_span": [
+        9,
+        12
+      ]
+    }
+  ],
+  "entry_state": "수사팀이 두 번째 타로카드 충격에서 정리 중인 상태",
+  "exit_state": "오수와 승하가 한 테이블에서 직접 대면하게 된 상태",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "순기 석방—승하가 법리로 판세를 뒤집어 수사팀에 충격을 준다"
+  },
+  "central_conflict_axis": "오수(수사)↔승하(법적 역공)",
+  "episode_function": "순기 석방·동섭 변호·팀 내 균열",
+  "core_dist": {
+    "REVELATION": 3,
+    "CONFLICT": 3,
+    "REVERSAL": 2,
+    "DESIRE": 2,
+    "HOOK": 1,
+    "ORACLE": 1
+  },
+  "by": "sonnet_reading"
+}

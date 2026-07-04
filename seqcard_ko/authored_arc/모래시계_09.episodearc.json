@@ -1,0 +1,55 @@
+{
+  "work_id": "모래시계_09",
+  "episode_no": 9,
+  "scene_count": 52,
+  "sequence_count": 9,
+  "dramatic_question": "사방이 적인 포위 상황에서 태수는 어떻게 돌파구를 찾는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "수세와 전략",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "B",
+      "label": "대결과 극한 위기",
+      "seq_span": [
+        4,
+        7
+      ]
+    },
+    {
+      "act": "C",
+      "label": "반전과 예고",
+      "seq_span": [
+        8,
+        9
+      ]
+    }
+  ],
+  "entry_state": "수세와 포위 상태의 태수",
+  "exit_state": "반전 이후 결전을 향한 강력 예고",
+  "turning_point": {
+    "seq_index": 5,
+    "description": "대결과 극한 위기"
+  },
+  "central_conflict_axis": "포위된 개인 vs 다중 적—탈출구 없는 구조",
+  "episode_function": "극한 위기와 반전 에피소드—처벌과 포위의 교차",
+  "core_dist": {
+    "PERIL": 0.21,
+    "ORACLE": 0.17,
+    "CONFLICT": 0.17,
+    "PUNISH": 0.1,
+    "REVELATION": 0.08,
+    "LOSS": 0.06,
+    "RESCUE": 0.04,
+    "DESIRE": 0.06,
+    "ESTABLISH": 0.06,
+    "REUNION": 0.02,
+    "RELIEF": 0.03
+  },
+  "by": "cowork_opus_reading"
+}

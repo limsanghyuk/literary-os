@@ -1,0 +1,60 @@
+{
+  "work_id": "카인과아벨_05",
+  "episode_no": 5,
+  "scene_count": 44,
+  "sequence_count": 7,
+  "dramatic_question": "귀국 후 초인은 한국 의료계 권력과 선우의 공작을 동시에 막을 수 있는가?",
+  "entry_state": "한국 귀국 직후 초인이 병원에서 선우 측의 압박에 처해 있다.",
+  "exit_state": "초인이 병원 내부 단서를 확보하며 선우의 한국 공작 규모를 실감한다.",
+  "turning_point": {
+    "seq_index": 5,
+    "description": "초인이 자신의 병원 내 지위가 위협받는다는 사실을 처음 인식하는 순간"
+  },
+  "central_conflict_axis": "초인의 의료계 내 진실 추구 대 선우와 병원 권력의 합동 봉쇄",
+  "episode_function": "5화는 귀국 직후 초인이 한국 의료계에서 새로운 압박에 직면하며 사건의 무대가 국내로 전환된다.",
+  "core_dist": {
+    "PERIL": 31.8,
+    "REVELATION": 13.6,
+    "CONFLICT": 13.6,
+    "REVERSAL": 9.1,
+    "ESTABLISH": 9.1,
+    "RELIEF": 4.5,
+    "LOSS": 4.5,
+    "INTRO": 2.3
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "function": "인물·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "function": "갈등 심화와 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        5,
+        6
+      ],
+      "function": "위기 폭발과 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        7,
+        7
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

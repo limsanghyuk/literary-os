@@ -1,0 +1,52 @@
+{
+  "work_id": "마왕_13",
+  "episode_no": 13,
+  "scene_count": 78,
+  "sequence_count": 12,
+  "dramatic_question": "영철이 협력하면 오수는 배후 구조를 완성하고 승하를 막을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "준표 피습·팀 재정렬",
+      "seq_span": [
+        1,
+        5
+      ]
+    },
+    {
+      "act": "B",
+      "label": "영철 협력·배후 구조 완성",
+      "seq_span": [
+        6,
+        9
+      ]
+    },
+    {
+      "act": "C",
+      "label": "단독 추적·승하 내면 붕괴",
+      "seq_span": [
+        10,
+        12
+      ]
+    }
+  ],
+  "entry_state": "준표 폭로 후 오수가 확신 완성을 시도하는 상태",
+  "exit_state": "영철이 협력을 결심하고 승하가 내면 붕괴를 드러낸 상태",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "영철 협력 결심—수사 배후 구조 완성 가속"
+  },
+  "central_conflict_axis": "오수(배후 구조 완성)↔승하(내면 붕괴)",
+  "episode_function": "영철 협력·준표 피습·배후 구조 진전",
+  "core_dist": {
+    "DESIRE": 3,
+    "REVELATION": 3,
+    "CONFLICT": 1,
+    "REVERSAL": 1,
+    "ESTABLISH": 1,
+    "HOOK": 1,
+    "BOND": 1,
+    "LOSS": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,55 @@
+{
+  "work_id": "모래시계_08",
+  "episode_no": 8,
+  "scene_count": 57,
+  "sequence_count": 9,
+  "dramatic_question": "최대 상실 앞에서 태수는 인간으로 남을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "소강과 재편",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "B",
+      "label": "연속 상실과 붕괴",
+      "seq_span": [
+        4,
+        6
+      ]
+    },
+    {
+      "act": "C",
+      "label": "재기와 새 위협",
+      "seq_span": [
+        7,
+        9
+      ]
+    }
+  ],
+  "entry_state": "소강기의 성찰 시도",
+  "exit_state": "상실 딛고 결전을 향한 각오",
+  "turning_point": {
+    "seq_index": 4,
+    "description": "연속 상실과 붕괴"
+  },
+  "central_conflict_axis": "상실과 재기—폭력의 대가와 인간성의 경계",
+  "episode_function": "내면 붕괴와 재기 에피소드—감정 저점과 새 각오",
+  "core_dist": {
+    "ESTABLISH": 0.14,
+    "ORACLE": 0.12,
+    "LOSS": 0.16,
+    "PERIL": 0.14,
+    "REVERSAL": 0.07,
+    "RELIEF": 0.07,
+    "DESIRE": 0.05,
+    "BOND": 0.07,
+    "INTRO": 0.04,
+    "REVELATION": 0.07,
+    "CONFLICT": 0.07
+  },
+  "by": "cowork_opus_reading"
+}

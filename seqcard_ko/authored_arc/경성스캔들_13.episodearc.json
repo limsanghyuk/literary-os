@@ -1,0 +1,19 @@
+{
+  "work_id": "경성스캔들_13",
+  "episode_no": 13,
+  "scene_count": 73,
+  "sequence_count": 7,
+  "dramatic_question": "완과 수현이 형 민의 진실로 화해하고 여경이 위장연애의 진실을 알지만, 탁구 발각과 코우지-마모루 갈등으로 조직은 최종 거사를 준비할 수 있을까?",
+  "act_structure": [
+    {"act": 1, "seq_span": [1, 3], "label": "여경의 고백과 완-수현 화해 — 진실로 재결합"},
+    {"act": 2, "seq_span": [4, 5], "label": "위장연애 진실 폭로와 감정 흔들림"},
+    {"act": 3, "seq_span": [6, 7], "label": "탁구 총기 발각과 회식 결속 — 거사 전야"}
+  ],
+  "entry_state": "12화 인호 실종 편지로 완이 진실을 추궁하는 상태",
+  "exit_state": "지라시팀이 결속 회식을 열고 완이 여경에게 사격 상처를 숨기며 여경이 완의 상처에서 진심을 확인한다",
+  "turning_point": {"seq_index": 2, "label": "완-수현 화해 — 형 민의 진실 공유", "description": "과거 회상에서 민의 희생과 수현의 밀고 전말이 완전히 공개되고 완과 수현이 야외에서 눈물로 화해하며 10년 배신 서사가 종결된다"},
+  "central_conflict_axis": "완-수현 배신 서사 종결과 화해, 위장연애 진실 폭로로 여경 감정 흔들림, 탁구 발각으로 거사 전 조직 위기",
+  "episode_function": "완-수현 10년 배신 서사 화해 종결, 위장연애 진실 공개, 탁구 발각과 결속 회식으로 최종 거사 전야 설정",
+  "core_dist": {"CONFLICT": 1, "BOND": 2, "PERIL": 2, "ROMANCE": 2},
+  "by": "cowork_opus_reading"
+}

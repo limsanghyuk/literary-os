@@ -1,0 +1,63 @@
+{
+  "work_id": "스카이캐슬_13",
+  "episode_no": 13,
+  "scene_count": 61,
+  "sequence_count": 10,
+  "dramatic_question": "코디 실체가 공개된 후 욕망을 멈출 수 없는 자들에게 어떤 결말이 기다리는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "코디 실체 폭로·공동체 충격·세리 사기"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "강은혜 붕괴·한서진 욕망 지속·이수임 전선 형성·예서 혜나 위기"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "차민혁 가정 붕괴·김주영 도주 암시"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        10
+      ],
+      "beat": "혜나 추락 직전—비극 카운트다운"
+    }
+  ],
+  "entry_state": "코디 실체가 공동체에 폭로되며 욕망 시스템이 전면 붕괴 위기에 처한다.",
+  "exit_state": "혜나의 추락 사고가 직전에 다가오고 욕망 시스템이 연쇄 붕괴를 시작한다.",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "혜나 추락 직전—욕망 시스템의 가장 어두운 대가"
+  },
+  "central_conflict_axis": "코디 실체·진실(이수임) 대 맹목적 욕망(한서진)·욕망이 낳은 비극(혜나·예서)",
+  "episode_function": "13화는 코디 실체 폭로, 세리 사기, 차민혁 이혼, 혜나 추락 직전의 연쇄 붕괴를 통해 욕망 시스템의 가장 어두운 대가를 설치한다.",
+  "core_dist": {
+    "REVELATION": 16,
+    "CONFLICT": 17,
+    "PERIL": 3,
+    "LOSS": 5,
+    "BOND": 4,
+    "ROMANCE": 1,
+    "HOOK": 9,
+    "REVERSAL": 1,
+    "PUNISH": 2,
+    "DESIRE": 2,
+    "REUNION": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,66 @@
+{
+  "work_id": "스토브리그_13",
+  "episode_no": 13,
+  "scene_count": 66,
+  "sequence_count": 10,
+  "dramatic_question": "약물 스캔들이 드림즈를 덮치는 가운데 임동규는 스스로 정화하고 팀으로 돌아올 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "변치훈 구출과 재희 갈등 봉합—내부 결속 재정비"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "약물 스캔들 폭발·경민의 정치적 활용·임동규의 시련"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "진실 추적·강두기 결백·임동규 자발적 정화"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "자진 신고와 재영입 선언으로 팀 화합 완성"
+    }
+  ],
+  "entry_state": "약물 브로커 적발 뉴스가 드림즈에 직격탄을 날리는 상황.",
+  "exit_state": "임동규가 자진 신고하고 승수가 재영입을 선언하며 팀이 새 출발을 다진다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "임동규의 자발적 약물 파기—스스로 정화함으로써 재영입의 길이 열림"
+  },
+  "central_conflict_axis": "임동규 구원(강두기·승수) 대 약물 스캔들·경민의 정치적 활용",
+  "episode_function": "13화는 약물 스캔들을 배경으로 임동규가 스스로 선택으로 정화하는 서사를 통해 개인 성장과 팀 화합을 보여준다.",
+  "core_dist": {
+    "REVELATION": 22,
+    "BOND": 16,
+    "CONFLICT": 15,
+    "RELIEF": 15,
+    "HOOK": 13,
+    "DESIRE": 10,
+    "PERIL": 9,
+    "PUNISH": 7,
+    "ESTABLISH": 7,
+    "ORACLE": 6,
+    "LOSS": 5,
+    "REVERSAL": 5,
+    "RESCUE": 1,
+    "INTRO": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,60 @@
+{
+  "work_id": "카인과아벨_18",
+  "episode_no": 18,
+  "scene_count": 58,
+  "sequence_count": 10,
+  "dramatic_question": "잔여 위협을 정리하고 초인은 진정한 의미의 새 출발을 할 수 있는가?",
+  "entry_state": "17화의 새 위협이 가시화되어 초인이 다시 행동에 나선다.",
+  "exit_state": "잔여 위협이 제거되고 초인이 의료인으로서 한 발 더 나아간다.",
+  "turning_point": {
+    "seq_index": 7,
+    "description": "잔재 세력이 최후 행동을 취하며 초인이 의료인 신념으로 맞서는 대결"
+  },
+  "central_conflict_axis": "초인의 잔여 위협 제거와 의료인 복귀 대 잔재 세력의 마지막 저항",
+  "episode_function": "18화는 잔여 갈등을 정리하며 초인이 의사로서의 정체성을 재확립하는 과정을 그린다.",
+  "core_dist": {
+    "PERIL": 39.7,
+    "CONFLICT": 20.7,
+    "REVELATION": 13.8,
+    "DESIRE": 6.9,
+    "RELIEF": 5.2,
+    "ESTABLISH": 3.4,
+    "REVERSAL": 3.4,
+    "RESCUE": 3.4
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "function": "인물·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "function": "갈등 심화와 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        7,
+        8
+      ],
+      "function": "위기 폭발과 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        9,
+        10
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

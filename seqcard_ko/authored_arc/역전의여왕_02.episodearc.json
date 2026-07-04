@@ -1,0 +1,65 @@
+{
+  "work_id": "역전의여왕_02",
+  "episode_no": 2,
+  "scene_count": 63,
+  "sequence_count": 10,
+  "dramatic_question": "태희와 준수의 감정은 직장 내 권력 다툼과 방해 속에서도 싹을 틔울 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "회차의 출발점—여진, 태희 자리 찬탈에서 상황과 긴장을 확립한다"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "갈등이 구체화되고 인물들의 선택이 이야기를 추동한다"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "긴장이 정점을 향해 치닫고 위기가 가시화된다"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "태희, 사표 던지고 통쾌한 퇴장로 마무리되며 다음 회를 향한 전환점을 남긴다"
+    }
+  ],
+  "entry_state": "준수의 공개 선언 이후 태희와 준수 사이의 긴장이 미묘하게 변화한다.",
+  "exit_state": "두 사람이 서로의 감정을 조금씩 인식하게 되지만, 외부의 방해가 시작된다.",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "태희가 준수에게 마음이 기울기 시작하는 결정적 장면이 연출된다"
+  },
+  "central_conflict_axis": "감정의 진전 vs 직장 권력과 외부 방해",
+  "episode_function": "2화는 태희와 준수의 감정이 점진적으로 가까워지는 과정을 담으며, 방해 세력과의 갈등을 통해 두 사람의 관계가 본격화되는 계기를 만든다.",
+  "core_dist": {
+    "REVERSAL": 6,
+    "CONFLICT": 17,
+    "PUNISH": 18,
+    "LOSS": 3,
+    "BOND": 6,
+    "RELIEF": 9,
+    "REVELATION": 9,
+    "DESIRE": 6,
+    "ROMANCE": 2,
+    "HOOK": 6,
+    "PERIL": 1,
+    "ESTABLISH": 3,
+    "INTRO": 3
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,57 @@
+{
+  "work_id": "너의목소리가들려_16",
+  "episode_no": 16,
+  "scene_count": 53,
+  "sequence_count": 5,
+  "dramatic_question": "능력의 비밀이 완전히 노출될 때 수하와 관우의 관계는 어떻게 완성되는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "최후 긴장과 비밀 노출",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "B",
+      "label": "수용과 로맨스 절정",
+      "seq_span": [
+        3,
+        4
+      ]
+    },
+    {
+      "act": "C",
+      "label": "최후 결전",
+      "seq_span": [
+        5,
+        5
+      ]
+    }
+  ],
+  "entry_state": "결말 전 최후 긴장",
+  "exit_state": "최후 결전과 에피소드 마무리",
+  "turning_point": {
+    "seq_index": 3,
+    "description": "수용과 로맨스 절정"
+  },
+  "central_conflict_axis": "비밀 완전 노출 vs 관계 완성—수용이 만드는 새 관계",
+  "episode_function": "비밀 노출과 수용, 로맨스 절정, 최후 결전",
+  "core_dist": {
+    "HOOK": 0.15,
+    "REVELATION": 0.17,
+    "PERIL": 0.11,
+    "BOND": 0.08,
+    "RELIEF": 0.08,
+    "DESIRE": 0.08,
+    "ESTABLISH": 0.09,
+    "REVERSAL": 0.04,
+    "REUNION": 0.06,
+    "ROMANCE": 0.04,
+    "CONFLICT": 0.04,
+    "LOSS": 0.04,
+    "ORACLE": 0.02
+  },
+  "by": "cowork_opus_reading"
+}

@@ -1,0 +1,54 @@
+{
+  "work_id": "추적자_08",
+  "episode_no": 8,
+  "scene_count": 64,
+  "sequence_count": 6,
+  "dramatic_question": "홍석 팀이 언론 폭로 좌절 후 민찬 회유와 증거 전달로 동윤을 체포시킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        2
+      ],
+      "label": "폭로 좌절·민찬 균열"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        3,
+        4
+      ],
+      "label": "동윤 서회장 세력 제거·증거 전달"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        5,
+        6
+      ],
+      "label": "동윤 체포와 복수 완결"
+    }
+  ],
+  "entry_state": "언론 폭로 시도가 동윤 측에 막혀 홍석 팀이 마지막 수단을 찾는다",
+  "exit_state": "동윤이 체포되고 홍석이 딸의 묘소에 서서 약속을 완성한다",
+  "turning_point": {
+    "seq_index": 4,
+    "label": "결정적 증거 전달",
+    "description": "황반장이 마지막 증거를 정우에게 전달하며 동윤 체포의 길을 연다"
+  },
+  "central_conflict_axis": "증거 전달 vs 동윤의 최후 저항",
+  "episode_function": "동윤 체포와 1부 복수 완결",
+  "core_dist": {
+    "PERIL": 3,
+    "CONFLICT": 3,
+    "REVELATION": 2,
+    "HOOK": 2,
+    "BOND": 2,
+    "LOSS": 2,
+    "PUNISH": 2,
+    "RESCUE": 1,
+    "RELIEF": 1
+  },
+  "by": "cowork_opus_reading"
+}

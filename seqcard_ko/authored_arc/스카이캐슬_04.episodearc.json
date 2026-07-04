@@ -1,0 +1,66 @@
+{
+  "work_id": "스카이캐슬_04",
+  "episode_no": 4,
+  "scene_count": 68,
+  "sequence_count": 11,
+  "dramatic_question": "코디 시스템은 예서를 성공시킬 수 있는가, 이수임의 진실 탐색은 얼마나 멀리 갈 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "이수임 대치·예서 훈련 강화"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "강은혜 부부 균열·영재 정보 확보·차민혁 폭력 일상화·코디 효과"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "김주영 통제 심화·이수임 외부 조사·박수창 위협 재점화"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        11
+      ],
+      "beat": "영재 증거 확보·예서 위기—대결 직전"
+    }
+  ],
+  "entry_state": "이수임이 한서진의 위선을 의심하고, 예서는 코디 훈련에 돌입해 있다.",
+  "exit_state": "영재가 결정적 증거를 확보하고 예서가 위기에 직면하며, 복수와 붕괴의 이중 후크가 닫힌다.",
+  "turning_point": {
+    "seq_index": 11,
+    "desc": "영재 증거 확보—복수 행동이 임박했음을 알리는 결정적 후크"
+  },
+  "central_conflict_axis": "욕망 시스템(한서진·코디) 대 진실과 반격(이수임의 탐색·영재의 복수)",
+  "episode_function": "4화는 코디 시스템의 첫 효과, 이수임의 외부 조사 확장, 영재의 증거 확보를 병렬로 전개하며 욕망 시스템과 진실 반격의 이중 긴장을 심화시킨다.",
+  "core_dist": {
+    "REVELATION": 5,
+    "ORACLE": 4,
+    "PERIL": 8,
+    "CONFLICT": 13,
+    "RELIEF": 4,
+    "HOOK": 9,
+    "PUNISH": 6,
+    "ROMANCE": 1,
+    "DESIRE": 7,
+    "BOND": 4,
+    "ESTABLISH": 2,
+    "REVERSAL": 2,
+    "LOSS": 2,
+    "REUNION": 1
+  },
+  "by": "sonnet_reading"
+}

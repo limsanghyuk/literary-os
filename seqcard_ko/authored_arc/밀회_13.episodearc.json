@@ -1,0 +1,51 @@
+{
+  "work_id": "밀회",
+  "episode_no": 13,
+  "scene_count": 76,
+  "sequence_count": 9,
+  "dramatic_question": "혜원이 서한 비리의 내부 고발자로 전환하는 순간 선재와의 관계는 어떻게 재정의되는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        4
+      ],
+      "label": "서한 조직의 전면 공세와 혜원의 완전한 고립"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        5,
+        7
+      ],
+      "label": "혜원이 반격을 준비하는 내면 전환"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        8,
+        9
+      ],
+      "label": "혜원이 내부 고발 결심과 동시에 선재와 최후의 신호를 주고받는다"
+    }
+  ],
+  "entry_state": "12부 말 조직적 응징이 본격화되어 혜원이 아트센터와 서한 모두에서 배제되기 시작한 상태",
+  "exit_state": "혜원이 서한 비리 내부 고발을 결심하고 선재에게 마지막 의지를 전달하며 14부 이별 전야를 예고한다",
+  "turning_point": {
+    "seq_index": 8,
+    "label": "혜원의 내면 전환과 내부 고발 결심",
+    "description": "혜원이 고립 속에서 피해자에서 능동적 행위자로 전환하며 내부 고발 결심을 굳힌다"
+  },
+  "central_conflict_axis": "서한 권력의 전면 공세로 혜원의 고립이 심화되는 것 vs 혜원 자신의 내면 전환과 저항",
+  "episode_function": "REVERSAL SETUP — 혜원이 피해자에서 능동적 저항자로 전환하는 내면 전환점",
+  "core_dist": {
+    "CONFLICT": 0.325,
+    "ESTABLISH": 0.325,
+    "HOOK": 0.117,
+    "REVELATION": 0.1,
+    "LOSS": 0.092,
+    "BOND": 0.092
+  },
+  "by": "cowork_opus_reading"
+}

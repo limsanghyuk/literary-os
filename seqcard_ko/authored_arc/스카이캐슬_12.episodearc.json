@@ -1,0 +1,66 @@
+{
+  "work_id": "스카이캐슬_12",
+  "episode_no": 12,
+  "scene_count": 66,
+  "sequence_count": 10,
+  "dramatic_question": "혜나 친자 확인 이후 스카이캐슬은 어떻게 재편되는가, 예서와 혜나의 충돌은 어디로 향하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "친자 확인 충격·한서진 분노·혜나 차별"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "목걸이 충돌·이수임 전모 파악·한서진 배제 시도·김주영 새 계획"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "차민혁 이혼 위기·강준상 공식 인정"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        10
+      ],
+      "beat": "예서 혜나 물리적 위기 예고"
+    }
+  ],
+  "entry_state": "강준상의 비밀 딸 혜나가 공개되며 스카이캐슬 전체가 충격에 빠진다.",
+  "exit_state": "강준상의 공식 인정으로 파문이 확산되고, 예서와 혜나의 갈등이 물리적 위기로 치달아 닫힌다.",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "예서 혜나 물리적 위기 예고—추락 사고의 카운트다운"
+  },
+  "central_conflict_axis": "욕망과 방어(한서진·예서) 대 진실의 침투와 희생(혜나·강준상)",
+  "episode_function": "12화는 혜나 친자 확인의 폭발, 공동체 재편, 예서·혜나 물리적 위기 예고를 통해 시리즈의 핵심 비극인 혜나 사고의 카운트다운을 설치한다.",
+  "core_dist": {
+    "REVELATION": 8,
+    "DESIRE": 5,
+    "CONFLICT": 16,
+    "HOOK": 5,
+    "LOSS": 5,
+    "ORACLE": 4,
+    "ESTABLISH": 4,
+    "PUNISH": 2,
+    "ROMANCE": 1,
+    "PERIL": 9,
+    "REVERSAL": 1,
+    "BOND": 3,
+    "REUNION": 2,
+    "RESCUE": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,51 @@
+{
+  "work_id": "공주의남자_22",
+  "episode_no": 22,
+  "scene_count": 69,
+  "sequence_count": 10,
+  "dramatic_question": "협약 거부와 최후 도주 결정이 두 사람을 안전하게 이끌 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "세령 독자 검토·협약 내용 공개"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "반발·교착·화해·도주 결정"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "최후 추격·세령 위험·실종"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        10
+      ],
+      "beat": "세령 국경 근처 도달·대기"
+    }
+  ],
+  "entry_state": "수양의 협약 제안, 승유 회복 중",
+  "exit_state": "협약 거부, 도주 결정, 세령 실종 후 국경 근처 도달",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "도주 결정 — 협상 포기, 탈출로의 완전 전환"
+  },
+  "central_conflict_axis": "협약 수용 vs 거부·도주, 최후 추격",
+  "episode_function": "협약 거부·도주 결정·최후 추격 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

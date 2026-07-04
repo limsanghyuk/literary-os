@@ -1,0 +1,63 @@
+{
+  "work_id": "스카이캐슬_14",
+  "episode_no": 14,
+  "scene_count": 58,
+  "sequence_count": 9,
+  "dramatic_question": "혜나 추락 사고의 진실은 어디에 있으며, 스카이캐슬은 이 비극에서 무엇을 선택하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "비밀 폭발·코디 해고 대결·혜나 추락 사고"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "예서 침묵·한서진 위선·이수임 추적·강준상 부성 각성"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "공동체 집단 공모 확인"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        9
+      ],
+      "beat": "우주 무고 구속—이수임 가족 희생양"
+    }
+  ],
+  "entry_state": "조선생의 폭로로 한서진의 비밀이 무너지고 혜나가 추락하는 비극이 발생한다.",
+  "exit_state": "우주가 무고로 구속되며 이수임 가족이 욕망 시스템의 희생양이 되는 충격으로 닫힌다.",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "우주 무고 구속—진실 추적자 가족이 희생양이 되는 역설"
+  },
+  "central_conflict_axis": "욕망과 봉합(한서진·공동체) 대 진실과 희생(혜나·이수임·우주)",
+  "episode_function": "14화는 혜나 추락 비극, 공동체의 집단 공모, 우주의 무고 구속을 통해 욕망 시스템이 진실 추적자 가족을 희생양으로 삼는 가장 어두운 구조를 폭로한다.",
+  "core_dist": {
+    "REVELATION": 6,
+    "CONFLICT": 19,
+    "LOSS": 7,
+    "DESIRE": 7,
+    "HOOK": 4,
+    "BOND": 6,
+    "PUNISH": 2,
+    "RELIEF": 2,
+    "PERIL": 2,
+    "ROMANCE": 2,
+    "ESTABLISH": 1
+  },
+  "by": "sonnet_reading"
+}

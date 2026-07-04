@@ -1,0 +1,52 @@
+{
+  "work_id": "워킹맘_09",
+  "episode_no": 9,
+  "scene_count": 67,
+  "sequence_count": 10,
+  "dramatic_question": "가영은 혼자 셋째를 낳아 키우기로 결심하는가?",
+  "act_structure": [
+    {
+      "act": "결심",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "대응",
+      "seq_span": [
+        4,
+        7
+      ]
+    },
+    {
+      "act": "투쟁",
+      "seq_span": [
+        8,
+        10
+      ]
+    }
+  ],
+  "entry_state": "임신 유지 vs 낙태 고민",
+  "exit_state": "임신 유지 결심, 직장 임신 공개 투쟁 예고",
+  "turning_point": {
+    "seq_index": 1
+  },
+  "central_conflict_axis": "가영 vs 임신·싱글맘 현실 + 가영 vs 직장 압박",
+  "episode_function": "CONFLICT",
+  "core_dist": {
+    "CONFLICT": 0.179,
+    "PERIL": 0.179,
+    "DESIRE": 0.134,
+    "RELIEF": 0.119,
+    "PUNISH": 0.104,
+    "ORACLE": 0.075,
+    "BOND": 0.06,
+    "REVERSAL": 0.045,
+    "REVELATION": 0.03,
+    "ROMANCE": 0.03,
+    "HOOK": 0.03,
+    "LOSS": 0.015
+  },
+  "by": "sonnet_reading"
+}

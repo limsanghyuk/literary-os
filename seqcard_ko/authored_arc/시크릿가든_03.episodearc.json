@@ -1,0 +1,64 @@
+{
+  "work_id": "시크릿가든_03",
+  "episode_no": 3,
+  "scene_count": 46,
+  "sequence_count": 8,
+  "dramatic_question": "이 회차에서 주인공은 어떤 선택에 직면하며 어떻게 돌파하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황 도입 및 회차 갈등 설치"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등 심화 및 사건 연쇄 확장"
+    },
+    {
+      "act": "절정",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "위기 고조 및 반전 직전"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "전환점·클리프행어 제시"
+    }
+  ],
+  "entry_state": "직전 회차의 긴장이 이어지며 회차가 열린다.",
+  "exit_state": "핵심 갈등이 한 단계 진전되며 다음 회차로 이어진다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "회차 전환점: 핵심 반전 또는 결정적 선택"
+  },
+  "central_conflict_axis": "주인공의 의지 대 외부 권력·제도의 억압",
+  "episode_function": "ep03: 핵심 갈등을 진전시키고 인물 관계를 심화하며 시리즈 호를 유지한다.",
+  "core_dist": {
+    "HOOK": 7,
+    "CONFLICT": 8,
+    "LOSS": 4,
+    "REVELATION": 9,
+    "PUNISH": 4,
+    "PERIL": 1,
+    "DESIRE": 6,
+    "ESTABLISH": 1,
+    "REUNION": 2,
+    "RELIEF": 2,
+    "ROMANCE": 1,
+    "BOND": 1
+  },
+  "by": "cowork_opus_reading"
+}

@@ -1,0 +1,64 @@
+{
+  "work_id": "대장금_05",
+  "episode_no": 5,
+  "scene_count": 63,
+  "sequence_count": 10,
+  "dramatic_question": "장금은 첫 경합에서 최씨가를 이길 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "수랏간 경합이 예고되고 장금과 최씨가의 대립이 심화된다.",
+  "exit_state": "경합에서 장금의 재능이 빛나지만 최씨가의 공작으로 결과가 뒤집힐 위기를 맞는다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "경합 현장에서 최씨가의 방해 공작이 드러난다"
+  },
+  "central_conflict_axis": "장금의 실력(음식 재능) vs 최씨가의 수단 방법 가리지 않는 공작",
+  "episode_function": "5화는 수랏간 경합을 중심으로 장금의 성장과 최씨가의 권력 남용을 대비시킨다.",
+  "core_dist": {
+    "DESIRE": 11,
+    "BOND": 13,
+    "ORACLE": 19,
+    "HOOK": 4,
+    "CONFLICT": 21,
+    "REVERSAL": 5,
+    "RELIEF": 6,
+    "ESTABLISH": 9,
+    "PERIL": 17,
+    "LOSS": 3,
+    "REVELATION": 6,
+    "INTRO": 1
+  },
+  "by": "sonnet_reading"
+}

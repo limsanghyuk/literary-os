@@ -1,0 +1,65 @@
+{
+  "work_id": "대장금_18",
+  "episode_no": 18,
+  "scene_count": 55,
+  "sequence_count": 8,
+  "dramatic_question": "최씨가의 최후 공세—장금과 한상궁은 제주 유배의 판결을 뒤집을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "경합 무산 후 최씨가가 장금·한상궁을 유배시키려 한다.",
+  "exit_state": "장금과 한상궁이 제주로 유배를 떠나게 된다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "장금과 한상궁의 제주 유배 판결이 확정된다"
+  },
+  "central_conflict_axis": "장금·한상궁의 무고함 vs 최씨가의 음모 관철",
+  "episode_function": "18화는 유배 판결로 장금의 1막이 완전히 닫히고 제주 성장 서사로 전환된다.",
+  "core_dist": {
+    "HOOK": 2,
+    "ESTABLISH": 13,
+    "CONFLICT": 30,
+    "LOSS": 2,
+    "REVELATION": 5,
+    "ORACLE": 3,
+    "PERIL": 17,
+    "BOND": 7,
+    "PUNISH": 2,
+    "REVERSAL": 3,
+    "DESIRE": 12,
+    "ROMANCE": 2,
+    "RELIEF": 1
+  },
+  "by": "sonnet_reading"
+}

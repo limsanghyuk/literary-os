@@ -1,0 +1,66 @@
+{
+  "work_id": "역전의여왕_01",
+  "episode_no": 1,
+  "scene_count": 57,
+  "sequence_count": 9,
+  "dramatic_question": "신입 준수는 강자 태희의 기세에 굴하지 않고 자신의 자리를 지킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "회차의 출발점—출근길 태희 첫등장에서 상황과 긴장을 확립한다"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 구체화되고 인물들의 선택이 이야기를 추동한다"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "긴장이 정점을 향해 치닫고 위기가 가시화된다"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "여진이 팀장 자리에로 마무리되며 다음 회를 향한 전환점을 남긴다"
+    }
+  ],
+  "entry_state": "직장 내 최강자 태희가 신입 준수를 처음 만나며 견제를 시작한다.",
+  "exit_state": "준수가 공개적으로 여진에게 냉정한 경계를 선언하며 태희의 관심을 끈다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "준수가 여진의 매달림을 공개 차단하며 태희와의 관계에 분기점이 생긴다"
+  },
+  "central_conflict_axis": "태희의 직장 권력 vs 준수의 자존심과 순수한 감정",
+  "episode_function": "1화는 직장 내 최강자 태희와 신입 준수의 충돌과 첫 감정의 싹을 심으며, 여진이라는 방해 삼각관계와 태희의 권력 도전 구도를 설치한다.",
+  "core_dist": {
+    "ESTABLISH": 3,
+    "INTRO": 5,
+    "CONFLICT": 21,
+    "PUNISH": 7,
+    "REVELATION": 11,
+    "HOOK": 9,
+    "DESIRE": 9,
+    "ROMANCE": 14,
+    "REVERSAL": 8,
+    "PERIL": 3,
+    "BOND": 4,
+    "RELIEF": 3,
+    "REUNION": 1,
+    "LOSS": 1
+  },
+  "by": "sonnet_reading"
+}

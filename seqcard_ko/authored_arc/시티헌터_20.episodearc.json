@@ -1,0 +1,65 @@
+{
+  "work_id": "시티헌터_20",
+  "episode_no": 20,
+  "scene_count": 73,
+  "sequence_count": 11,
+  "dramatic_question": "아버지 이진표와의 마지막 대결에서 복수극은 어떻게 끝날 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "영주 애도·오적 직면"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "부자 직면·결전 결심·장부 확보"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "처단 완성·부자 최후 대결"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        11
+      ],
+      "beat": "에필로그·새 출발"
+    }
+  ],
+  "entry_state": "영주 절명 이후 충격, 기밀문서 확인과 오적 전모 드러남.",
+  "exit_state": "응찬 탄핵·처단 완성, 진표 절명, 3년 후 모두 새 출발—복수극 완결.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "응찬 탄핵·처단 완성: 20년 복수극의 마지막 표적 처단"
+  },
+  "central_conflict_axis": "최응찬 처단(윤성) vs 진표의 자력 처단 고집",
+  "episode_function": "20화: 5번째 표적 응찬 처단 완성과 진표와의 최후 대결, 에필로그로 복수극을 완결한다.",
+  "core_dist": {
+    "LOSS": 9,
+    "PERIL": 21,
+    "ORACLE": 5,
+    "CONFLICT": 20,
+    "DESIRE": 6,
+    "PUNISH": 6,
+    "REVELATION": 16,
+    "REVERSAL": 2,
+    "HOOK": 1,
+    "BOND": 10,
+    "RELIEF": 11,
+    "ROMANCE": 3,
+    "ESTABLISH": 4
+  },
+  "by": "sonnet_reading"
+}

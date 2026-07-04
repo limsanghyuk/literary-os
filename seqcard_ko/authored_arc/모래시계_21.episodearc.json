@@ -1,0 +1,53 @@
+{
+  "work_id": "모래시계_21",
+  "episode_no": 21,
+  "scene_count": 24,
+  "sequence_count": 4,
+  "dramatic_question": "모든 것이 압축된 이 짧은 화에서 태수의 결단은 어디로 향하는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "대결 전야",
+      "seq_span": [
+        1,
+        1
+      ]
+    },
+    {
+      "act": "B",
+      "label": "충돌과 역전",
+      "seq_span": [
+        2,
+        3
+      ]
+    },
+    {
+      "act": "C",
+      "label": "결말 예고",
+      "seq_span": [
+        4,
+        4
+      ]
+    }
+  ],
+  "entry_state": "압축된 긴장 상태",
+  "exit_state": "결단과 결말 예고",
+  "turning_point": {
+    "seq_index": 2,
+    "description": "충돌과 역전"
+  },
+  "central_conflict_axis": "압축된 결단—짧음이 만드는 강렬함",
+  "episode_function": "특수 압축 화—모든 이야기가 결말 직전으로 수렴",
+  "core_dist": {
+    "ORACLE": 0.29,
+    "CONFLICT": 0.21,
+    "ESTABLISH": 0.17,
+    "BOND": 0.08,
+    "REVELATION": 0.04,
+    "DESIRE": 0.04,
+    "PERIL": 0.04,
+    "PUNISH": 0.08,
+    "LOSS": 0.04
+  },
+  "by": "cowork_opus_reading"
+}

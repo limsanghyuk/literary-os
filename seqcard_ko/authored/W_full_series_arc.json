@@ -1,0 +1,68 @@
+{
+  "episodes_total": 16,
+  "protagonist": "오연주",
+  "antagonist": "웹툰 세계 범인·작가 오성무",
+  "season_structure": [
+    {
+      "phase": 1,
+      "label": "두 세계 연결·발견",
+      "episode_span": [
+        1,
+        6
+      ],
+      "description": "연주가 웹툰 세계로 넘어가고 강철이 자신의 실체를 인식하기 시작한다"
+    },
+    {
+      "phase": 2,
+      "label": "진실 추적·위기 심화",
+      "episode_span": [
+        7,
+        12
+      ],
+      "description": "범인의 실체와 두 세계의 비밀이 드러나며 갈등이 정점에 달한다"
+    },
+    {
+      "phase": 3,
+      "label": "최후 대결·결말",
+      "episode_span": [
+        13,
+        16
+      ],
+      "description": "두 세계의 운명이 결정되고 강철과 연주가 새 길을 찾는다"
+    }
+  ],
+  "macro_turning_points": [
+    {
+      "episode": 4,
+      "description": "강철 자신이 웹툰 캐릭터임 인식"
+    },
+    {
+      "episode": 8,
+      "description": "오성무 과거·창조 비밀 수면 위로"
+    },
+    {
+      "episode": 10,
+      "description": "두 세계 경계 붕괴 직전"
+    },
+    {
+      "episode": 13,
+      "description": "최후 대결 시작"
+    },
+    {
+      "episode": 16,
+      "description": "두 세계 결말"
+    }
+  ],
+  "by": "cowork_opus_reading",
+  "scenes_total": 1220,
+  "sequences_total": 203,
+  "series": "W",
+  "open_ending": "",
+  "central_dramatic_question": "",
+  "tone": "",
+  "logline": "",
+  "resolution": "",
+  "theme_statement": "",
+  "series_core_dist": "",
+  "conflict_persist": ""
+}

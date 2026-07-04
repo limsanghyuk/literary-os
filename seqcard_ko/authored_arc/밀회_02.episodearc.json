@@ -1,0 +1,51 @@
+{
+  "work_id": "밀회",
+  "episode_no": 2,
+  "scene_count": 73,
+  "sequence_count": 11,
+  "dramatic_question": "선재의 음악적 재능이 혜원의 감정을 흔들 수 있는가, 그리고 서한의 비리 구조 속에서 그 인연이 살아남을 수 있는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        3
+      ],
+      "label": "영우 압박과 입시 비리 권력 갈등 전면화"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        4,
+        9
+      ],
+      "label": "선재 연주에 빠진 혜원과 감정 경계 붕괴"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        10,
+        11
+      ],
+      "label": "선재 집 방문과 스킨십으로 삼각구도 물리적 완성"
+    }
+  ],
+  "entry_state": "비밀 오디션 직후 영우가 갑자기 등장하며 이중 위기가 점화된 상태",
+  "exit_state": "준형 부부가 선재 집에 방문하고 끈끈이 사건으로 혜원이 선재 품에 안기며 경계가 처음으로 무너진다",
+  "turning_point": {
+    "seq_index": 6,
+    "label": "혜원·선재 슈베르트 판타지아 연주",
+    "description": "혜원이 선재와 함께 슈베르트 판타지아를 연주하며 감정적 위험지대에 처음 진입한다"
+  },
+  "central_conflict_axis": "예술적 교감이 촉발하는 감정 vs 결혼·계층·비리 조직이 강제하는 현실",
+  "episode_function": "ESCALATE — 입시 비리 구조를 드러내고 선재·혜원의 감정을 급속도로 끌어올린다",
+  "core_dist": {
+    "BOND": 0.185,
+    "CONFLICT": 0.151,
+    "RELIEF": 0.123,
+    "HOOK": 0.116,
+    "REVELATION": 0.103,
+    "DESIRE": 0.096
+  },
+  "by": "cowork_opus_reading"
+}

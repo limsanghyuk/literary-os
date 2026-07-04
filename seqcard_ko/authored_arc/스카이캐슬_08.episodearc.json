@@ -1,0 +1,63 @@
+{
+  "work_id": "스카이캐슬_08",
+  "episode_no": 8,
+  "scene_count": 74,
+  "sequence_count": 11,
+  "dramatic_question": "이수임의 결정적 행동은 코디 시스템을 무너뜨릴 수 있는가, 한서진은 이중 위협에서 살아남을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "박수창 폭주·설득·새 종속 구조"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "영재 복수 후 공허·이수임 진실 확인·예서 첫 저항·차민혁 가정 위기"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "강은혜 충격·한서진 최대 고립·예서 최종 통제"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        11
+      ],
+      "beat": "이수임 결정적 행동 예고—시스템 붕괴 직전"
+    }
+  ],
+  "entry_state": "박수창의 폭주로 스카이캐슬 전체가 새로운 위기에 진입한다.",
+  "exit_state": "이수임이 결정적 행동을 예고하며, 한서진의 이중 위협과 차민혁 가정 위기가 동시에 정점에 달한다.",
+  "turning_point": {
+    "seq_index": 11,
+    "desc": "이수임 결정적 행동 예고—욕망 시스템 붕괴의 전조"
+  },
+  "central_conflict_axis": "욕망 시스템(박수창·한서진·김주영) 대 진실과 저항(이수임·예서·노승혜)",
+  "episode_function": "8화는 박수창의 폭주, 예서의 첫 저항, 이수임의 진실 확인이라는 세 전선을 동시에 진행하며 욕망 시스템 붕괴의 전조를 설치한다.",
+  "core_dist": {
+    "PERIL": 10,
+    "PUNISH": 4,
+    "BOND": 7,
+    "RELIEF": 7,
+    "CONFLICT": 14,
+    "DESIRE": 9,
+    "HOOK": 9,
+    "LOSS": 5,
+    "REVELATION": 6,
+    "ORACLE": 2,
+    "INTRO": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,51 @@
+{
+  "work_id": "공주의남자_10",
+  "episode_no": 10,
+  "scene_count": 70,
+  "sequence_count": 11,
+  "dramatic_question": "어머니를 함정 삼은 압박 속에서 승유와 세령이 구출 작전을 성공시킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "재정비·어머니 구금 공개 압박"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "함정 파악·공동 계획·정보 수집"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "고문·구출 충돌·실패"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        11
+      ],
+      "beat": "세령 단독 잠입·갈등과 새 정보"
+    }
+  ],
+  "entry_state": "어머니 구금 압박에 구출 계획 수립 중",
+  "exit_state": "구출 1차 실패, 세령 단독 행동으로 새 정보 획득",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "세령 단독 잠입 — 수동적 집단에서 능동적 개인 행동으로 전환"
+  },
+  "central_conflict_axis": "어머니를 볼모로 한 한명회의 압박 vs 승유 집단의 구출 작전",
+  "episode_function": "구출 작전 1차 실패와 세령 주도성 부각 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

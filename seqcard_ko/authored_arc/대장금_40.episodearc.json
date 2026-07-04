@@ -1,0 +1,66 @@
+{
+  "work_id": "대장금_40",
+  "episode_no": 40,
+  "scene_count": 68,
+  "sequence_count": 10,
+  "dramatic_question": "장금이 역병에 걸렸다고 의심받는 최악의 위기—민정호는 어떻게 구하러 오는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "역병 의심자로 몰린 장금이 불 속에 갇힌다.",
+  "exit_state": "민정호가 불 속에 뛰어들어 장금을 구하고, 식중독이 공식 확인되어 사태가 해결된다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "민정호가 불 속에 뛰어들어 장금을 구출한다(씬29~34)"
+  },
+  "central_conflict_axis": "불 속 장금 구출(민정호) vs 역병 오판의 폭력적 위기",
+  "episode_function": "40화는 불 속 구출과 식중독 확인으로 장금과 민정호의 사랑과 신뢰를 극화한다.",
+  "core_dist": {
+    "ESTABLISH": 8,
+    "CONFLICT": 16,
+    "BOND": 6,
+    "REVERSAL": 8,
+    "PERIL": 23,
+    "DESIRE": 11,
+    "ROMANCE": 4,
+    "LOSS": 7,
+    "REVELATION": 11,
+    "PUNISH": 3,
+    "RESCUE": 5,
+    "RELIEF": 8,
+    "ORACLE": 6,
+    "HOOK": 7
+  },
+  "by": "sonnet_reading"
+}

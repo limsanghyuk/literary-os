@@ -1,0 +1,65 @@
+{
+ "episode_no": 1,
+ "scene_count": 55,
+ "sequence_count": 7,
+ "dramatic_question": "도깨비 신부를 찾아 900년을 살아온 불멸의 도깨비가 '죽고 싶다'는 소원을 안고 이 시대에 존재할 수 있는가?",
+ "act_structure": [
+  {
+   "act": "설정",
+   "seq_span": [
+    1,
+    2
+   ],
+   "beat": "도깨비의 불멸 고독과 신부의 존재 예언—세계관과 인물 확립"
+  },
+  {
+   "act": "전개",
+   "seq_span": [
+    3,
+    5
+   ],
+   "beat": "고시원 이탈 은탁 구조·소환 첫 접촉, 신부 여부 의혹 구체화"
+  },
+  {
+   "act": "심화",
+   "seq_span": [
+    6,
+    6
+   ],
+   "beat": "저승과 삼신의 개입—신부 확정 예언과 도깨비의 내적 갈등"
+  },
+  {
+   "act": "회말전환",
+   "seq_span": [
+    7,
+    7
+   ],
+   "beat": "은탁의 첫 소환 성공—둘의 운명적 연결이 본격 시작"
+  }
+ ],
+ "entry_state": "불멸에 지쳐 죽음을 원하는 도깨비가 일상적인 기적을 베풀며 홀로 시간을 보낸다.",
+ "exit_state": "은탁이 도깨비를 소환하는 데 성공하고, 두 사람의 운명적 만남이 시작된다.",
+ "turning_point": {
+  "seq_index": 7,
+  "desc": "은탁의 첫 소환 성공으로 도깨비-신부 운명 연결 개시"
+ },
+ "central_conflict_axis": "죽고 싶은 도깨비(검을 뽑아줄 신부 필요) 대 신부임을 모르는 은탁",
+ "episode_function": "1화는 도깨비의 900년 불멸 고독과 죽음 욕망, 그리고 신부 은탁의 탄생 배경을 동시에 확립하여 두 운명적 존재의 첫 접촉으로 시리즈 중심 갈등을 설치한다.",
+ "core_dist": {
+  "ORACLE": 6,
+  "ESTABLISH": 5,
+  "BOND": 5,
+  "RESCUE": 4,
+  "RELIEF": 4,
+  "CONFLICT": 3,
+  "REVERSAL": 2,
+  "REUNION": 2,
+  "DESIRE": 2,
+  "HOOK": 2,
+  "LOSS": 2,
+  "PERIL": 1,
+  "REVELATION": 1
+ },
+ "work_id": "도깨비_01",
+ "by": "sonnet_reading"
+}

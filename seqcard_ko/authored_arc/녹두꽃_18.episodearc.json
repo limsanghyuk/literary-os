@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_18",
+  "episode_no": 18,
+  "scene_count": 61,
+  "sequence_count": 7,
+  "dramatic_question": "2차 봉기는 성공할 수 있는가, 이강과 자인은 다시 함께할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "자인 거병 호소·무기 합의·민종렬 괘서"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "명심 구출·이현 자각"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "집강소 재건·2차 봉기 준비"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "이강 각성·보부상 동행 제안"
+    }
+  ],
+  "entry_state": "자인이 거병 지원을 호소하고 이현이 다케다의 야욕을 알게 된다.",
+  "exit_state": "이강이 각성하고 자인에게 보부상 동행을 제안하며 2차 봉기 준비가 구체화된다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "이강의 각성과 자인에 대한 보부상 동행 제안이 이강-자인의 화해와 혁명 재참여를 동시에 선언한다"
+  },
+  "central_conflict_axis": "2차 봉기 준비(전봉준·자인) 대 외세·진압 세력, 이강-자인의 화해 vs 봉기의 위험",
+  "episode_function": "명심 구출과 집강소 재건으로 혁명의 인간적 가치를 재확인하고, 이강의 각성으로 2차 봉기 참여를 완성한다.",
+  "core_dist": {
+    "CONFLICT": 13,
+    "PERIL": 11,
+    "REVELATION": 10,
+    "LOSS": 9,
+    "BOND": 9,
+    "REVERSAL": 5,
+    "RELIEF": 6,
+    "HOOK": 5,
+    "RESCUE": 4,
+    "REUNION": 4,
+    "ESTABLISH": 6,
+    "DESIRE": 3,
+    "PUNISH": 3,
+    "ROMANCE": 2,
+    "ORACLE": 0,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

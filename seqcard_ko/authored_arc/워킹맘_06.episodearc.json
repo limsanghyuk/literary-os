@@ -1,0 +1,52 @@
+{
+  "work_id": "워킹맘_06",
+  "episode_no": 6,
+  "scene_count": 71,
+  "sequence_count": 11,
+  "dramatic_question": "가영은 외도 상대의 직장 침입을 극복하고 직장을 지킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "회복",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "갈등",
+      "seq_span": [
+        5,
+        7
+      ]
+    },
+    {
+      "act": "진전",
+      "seq_span": [
+        8,
+        11
+      ]
+    }
+  ],
+  "entry_state": "법원 유리한 분위기, 복실 회복",
+  "exit_state": "외도 상대 직장 방문 사건 발생, 위기 고조",
+  "turning_point": {
+    "seq_index": 11
+  },
+  "central_conflict_axis": "가영 vs 외도 상대(직장 침입) + 이혼 합의 진전",
+  "episode_function": "CONFLICT",
+  "core_dist": {
+    "CONFLICT": 0.169,
+    "RELIEF": 0.127,
+    "REVELATION": 0.127,
+    "PERIL": 0.113,
+    "PUNISH": 0.113,
+    "DESIRE": 0.099,
+    "HOOK": 0.056,
+    "RESCUE": 0.056,
+    "ORACLE": 0.042,
+    "LOSS": 0.042,
+    "ROMANCE": 0.042,
+    "INTRO": 0.014
+  },
+  "by": "sonnet_reading"
+}

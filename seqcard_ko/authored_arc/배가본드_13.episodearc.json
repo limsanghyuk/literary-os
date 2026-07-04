@@ -1,0 +1,65 @@
+{
+  "work_id": "배가본드_13",
+  "episode_no": 13,
+  "scene_count": 55,
+  "sequence_count": 9,
+  "dramatic_question": "달건이 법정 안팎의 위협을 막으며 우기 증언을 완성할 수 있는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "label": "설정",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": 2,
+      "label": "전개",
+      "seq_span": [
+        3,
+        4
+      ]
+    },
+    {
+      "act": 3,
+      "label": "심화",
+      "seq_span": [
+        5,
+        7
+      ]
+    },
+    {
+      "act": 4,
+      "label": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ]
+    }
+  ],
+  "entry_state": "제시카-릴리 균열, 저격수 등장",
+  "exit_state": "달건, 훈이 영상 수신—개인 위협 부상",
+  "turning_point": {
+    "seq_index": 5,
+    "seq_id": "배가본드_13_S05",
+    "description": "달건, 법정 내외 이중 방어—우기 보호"
+  },
+  "central_conflict_axis": "진실 공개 vs 에드워드 차단 명령",
+  "episode_function": "위기—법정 공방 절정과 새 개인 위협",
+  "core_dist": {
+    "REVELATION": 0.193,
+    "CONFLICT": 0.159,
+    "PUNISH": 0.136,
+    "PERIL": 0.091,
+    "ROMANCE": 0.08,
+    "BOND": 0.068,
+    "HOOK": 0.068,
+    "ESTABLISH": 0.057,
+    "RELIEF": 0.057,
+    "LOSS": 0.034,
+    "REVERSAL": 0.034,
+    "DESIRE": 0.023
+  },
+  "by": "sonnet_reading"
+}

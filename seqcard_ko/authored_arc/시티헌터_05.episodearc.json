@@ -1,0 +1,67 @@
+{
+  "work_id": "시티헌터_05",
+  "episode_no": 5,
+  "scene_count": 72,
+  "sequence_count": 11,
+  "dramatic_question": "나나를 표적으로 삼은 천재만·석두식의 위협에서 윤성은 그녀를 지킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "저격 후 수습·협력 결의"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "수사 진전·감정 갈등·나나 위협"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "고기준 실토·석두식 격퇴"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        11
+      ],
+      "beat": "경매 확인·분노 폭발"
+    }
+  ],
+  "entry_state": "저격 실패 후 도주 성공, 진표-윤성 조건부 협력 결의.",
+  "exit_state": "석두식 스크랩북 회수는 성공이나 나나는 여전히 표적—분노로 질주하며 윤성을 추궁한다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "천재만의 나나 표적 지목: 복수극이 나나의 생존 위협으로 확장"
+  },
+  "central_conflict_axis": "서용학 비리 수사(영주/윤성) vs 천재만·석두식의 역추적",
+  "episode_function": "5화: 나나가 표적이 되는 전환과 윤성의 진심 경호 확립—감정선과 위기가 한 축에 수렴한다.",
+  "core_dist": {
+    "REVERSAL": 2,
+    "PERIL": 18,
+    "RESCUE": 4,
+    "BOND": 12,
+    "RELIEF": 5,
+    "ORACLE": 22,
+    "INTRO": 4,
+    "CONFLICT": 14,
+    "LOSS": 4,
+    "DESIRE": 3,
+    "HOOK": 6,
+    "REVELATION": 6,
+    "ROMANCE": 9,
+    "PUNISH": 4,
+    "ESTABLISH": 1
+  },
+  "by": "sonnet_reading"
+}

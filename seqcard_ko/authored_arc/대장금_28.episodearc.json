@@ -1,0 +1,68 @@
+{
+  "work_id": "대장금_28",
+  "episode_no": 28,
+  "scene_count": 80,
+  "sequence_count": 12,
+  "dramatic_question": "재연 검증 이후—장금과 한상궁의 운명은 어떻게 결정되는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        10
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        12
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "재연 검증 결과를 놓고 판세가 뒤집히며 최종 판결이 임박한다.",
+  "exit_state": "최씨가가 아직 건재하고 장금은 새로운 위기에 직면한다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "최씨가가 검증 결과를 뒤집는 새 공작을 펼친다"
+  },
+  "central_conflict_axis": "진실 규명의 완성(장금) vs 최씨가의 마지막 저항",
+  "episode_function": "28화는 검증 이후 최씨가의 저항과 장금의 최후 결전을 예고한다.",
+  "core_dist": {
+    "LOSS": 10,
+    "PUNISH": 13,
+    "PERIL": 26,
+    "DESIRE": 20,
+    "RESCUE": 12,
+    "ESTABLISH": 18,
+    "BOND": 14,
+    "CONFLICT": 16,
+    "REVELATION": 2,
+    "ROMANCE": 7,
+    "INTRO": 1,
+    "HOOK": 5,
+    "REVERSAL": 7,
+    "REUNION": 1,
+    "RELIEF": 4,
+    "ORACLE": 1
+  },
+  "by": "sonnet_reading"
+}

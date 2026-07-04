@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_24",
+  "episode_no": 24,
+  "scene_count": 70,
+  "sequence_count": 8,
+  "dramatic_question": "이현은 이강을 구할 수 있는가, 혁명의 불씨는 이어질 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "이현 부임·버들 희생"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "형제 재회·전봉준 처형"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "이현 결별·이현 희생"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "재회·대단원"
+    }
+  ],
+  "entry_state": "이현이 신관사또로 부임하고 이강이 빈소에 숨는다.",
+  "exit_state": 8,
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "이강의 생존(혁명 유산) 대 이현의 자결(속죄), 전봉준 처형 vs 의병 대단원"
+  },
+  "central_conflict_axis": "이현의 희생으로 형제 갈등을 비극적으로 해소하고, 대단원 의병 집결로 혁명의 유산이 이어짐을 선언한다.",
+  "episode_function": {
+    "CONFLICT": 9,
+    "PERIL": 8,
+    "REVELATION": 10,
+    "LOSS": 17,
+    "BOND": 9,
+    "REVERSAL": 4,
+    "RELIEF": 8,
+    "HOOK": 5,
+    "RESCUE": 2,
+    "REUNION": 6,
+    "ESTABLISH": 7,
+    "DESIRE": 2,
+    "PUNISH": 6,
+    "ROMANCE": 4,
+    "ORACLE": 0,
+    "INTRO": 1
+  },
+  "core_dist": "전봉준 처형과 이현의 자결이라는 이중 비극 속에서, 이강-자인의 재회와 의병 집결로 혁명의 정신적 유산이 계속됨을 선언한다.",
+  "by": "sonnet_reading"
+}

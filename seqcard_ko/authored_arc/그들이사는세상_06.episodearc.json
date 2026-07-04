@@ -1,0 +1,51 @@
+{
+  "work_id": "그들이사는세상_06",
+  "episode_no": 6,
+  "scene_count": 55,
+  "sequence_count": 8,
+  "dramatic_question": "국장의 압박에 맞서 준호가 지오를 지지하면서 두 사람의 감정이 폭발하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "아이디어 채택·베테랑 반발"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "준호 지지·감정 심화·국장 압박"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "권력 실감·솔직 대화"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "감정 확인·결정 기로"
+    }
+  ],
+  "entry_state": "지오 아이디어 채택, 팀 반발",
+  "exit_state": "국장 압박, 솔직 대화, 감정 확인",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "솔직한 대화 — 감정을 숨기는 국면에서 확인하는 국면으로"
+  },
+  "central_conflict_axis": "국장 압박 vs 준호·지오 결속, 감정 폭발 직전",
+  "episode_function": "감정 폭발 직전·국장 압박 심화 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

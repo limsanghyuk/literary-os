@@ -1,0 +1,58 @@
+{
+  "work_id": "모래시계_12",
+  "episode_no": 12,
+  "scene_count": 57,
+  "sequence_count": 10,
+  "dramatic_question": "연속 상실의 정점에서 태수는 재기의 씨앗을 찾을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "실행과 즉각 반격",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "상실 정점",
+      "seq_span": [
+        5,
+        6
+      ]
+    },
+    {
+      "act": "C",
+      "label": "재기 조짐과 예고",
+      "seq_span": [
+        7,
+        10
+      ]
+    }
+  ],
+  "entry_state": "각오 이후 행동 개시",
+  "exit_state": "연속 상실과 재기 조짐 공존",
+  "turning_point": {
+    "seq_index": 5,
+    "description": "상실 정점"
+  },
+  "central_conflict_axis": "재기 의지 vs 상실의 연쇄—폭로와 진실의 대가",
+  "episode_function": "상실 정점과 재기 에피소드—중반부 저점 통과",
+  "core_dist": {
+    "PERIL": 0.16,
+    "LOSS": 0.19,
+    "ORACLE": 0.12,
+    "HOOK": 0.09,
+    "CONFLICT": 0.07,
+    "ESTABLISH": 0.07,
+    "REVELATION": 0.05,
+    "BOND": 0.05,
+    "DESIRE": 0.01,
+    "RELIEF": 0.04,
+    "REVERSAL": 0.02,
+    "REUNION": 0.02,
+    "PUNISH": 0.04,
+    "INTRO": 0.02
+  },
+  "by": "cowork_opus_reading"
+}

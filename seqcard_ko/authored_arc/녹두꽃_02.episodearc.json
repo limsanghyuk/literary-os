@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_02",
+  "episode_no": 2,
+  "scene_count": 72,
+  "sequence_count": 8,
+  "dramatic_question": "민중 봉기의 첫 불꽃이 타오른 뒤—이강과 동학군, 자인과 백가는 각자의 생존을 위해 무엇을 선택할 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "민란 개시·인물 재편"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "해방 감격·백가 위기·이강 구출"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "탈출·신관 부임·봉기 중단"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "감영군 귀환·이강 귀환·새 갈등축 설치"
+    }
+  ],
+  "entry_state": "관아 습격 성공으로 1차 봉기가 개시됐지만, 감영군의 개입으로 백가는 피습·도주하고 이강은 신분 도구로 동원된다.",
+  "exit_state": "박원명 신관 부임과 감영군 귀환으로 1차 봉기가 수습되지만, 이강의 불구 손과 백가-이강 갈등이 2차 봉기를 예고한다.",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "이강 교수형 직전 유월의 구출과 홍가의 밀고가 봉기의 내부 균열과 인물 재배치를 동시에 점화한다"
+  },
+  "central_conflict_axis": "민중 해방(전봉준·동학군) 대 신분 질서 수호(백가·감영군), 이강의 도구성 vs 인간 각성",
+  "episode_function": "1차 고부 민란의 성공과 수습 과정을 통해 핵심 갈등축(이강-백가, 자인-이현, 전봉준-감영)을 재편성한다.",
+  "core_dist": {
+    "CONFLICT": 15,
+    "PERIL": 20,
+    "REVELATION": 12,
+    "REVERSAL": 8,
+    "RELIEF": 5,
+    "LOSS": 4,
+    "RESCUE": 4,
+    "BOND": 4,
+    "HOOK": 7,
+    "REUNION": 3,
+    "ESTABLISH": 3,
+    "DESIRE": 3,
+    "PUNISH": 2,
+    "ROMANCE": 1,
+    "ORACLE": 0,
+    "INTRO": 1
+  },
+  "by": "sonnet_reading"
+}

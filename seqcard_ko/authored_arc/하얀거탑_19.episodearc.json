@@ -1,0 +1,65 @@
+{
+  "work_id": "하얀거탑",
+  "episode_no": 19,
+  "scene_count": 74,
+  "sequence_count": 11,
+  "dramatic_question": "준혁의 죽음이 임박한 가운데 사건이 의료계와 관련 인물들에게 어떤 유산을 남기는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "label": "세계와 갈등 도입",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "전개",
+      "label": "갈등 심화와 대결 구도 확립",
+      "seq_span": [
+        3,
+        7
+      ]
+    },
+    {
+      "act": "심화",
+      "label": "위기 절정과 전환점",
+      "seq_span": [
+        8,
+        10
+      ]
+    },
+    {
+      "act": "회말전환",
+      "label": "회말 반전과 다음 회 훅",
+      "seq_span": [
+        11,
+        11
+      ]
+    }
+  ],
+  "entry_state": "준혁의 병세가 급격히 악화되는 상황",
+  "exit_state": "준혁이 마지막 편지를 완성하고 오경환과 마지막 대화를 나눔",
+  "turning_point": {
+    "seq_index": 10,
+    "description": "준혁의 신체 악화·임종 준비"
+  },
+  "central_conflict_axis": "죽음의 다가옴 vs 의미 있는 유산 창조",
+  "episode_function": "각 인물의 변화 확인과 준혁의 마지막 준비—에필로그 도입",
+  "core_dist": {
+    "BOND": 30,
+    "PERIL": 29,
+    "CONFLICT": 16,
+    "ESTABLISH": 15,
+    "LOSS": 14,
+    "ORACLE": 11,
+    "REVERSAL": 6,
+    "RELIEF": 4,
+    "DESIRE": 3,
+    "REVELATION": 3,
+    "RESCUE": 1,
+    "REUNION": 1,
+    "HOOK": 1
+  },
+  "by": "claude-sonnet-4-6"
+}

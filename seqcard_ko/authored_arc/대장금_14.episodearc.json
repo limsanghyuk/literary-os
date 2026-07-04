@@ -1,0 +1,67 @@
+{
+  "work_id": "대장금_14",
+  "episode_no": 14,
+  "scene_count": 64,
+  "sequence_count": 10,
+  "dramatic_question": "최상궁의 권력과 오겸호의 결탁—장금과 한상궁은 맞설 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "최씨가와 오겸호의 결탁이 드러나고 민정호가 위협받는다.",
+  "exit_state": "민정호가 위험에 처하고 장금이 어머니 서찰 단서를 얻는다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "오겸호가 민정호 제거를 명한다"
+  },
+  "central_conflict_axis": "최씨가·오겸호 연합의 권력 독점 vs 장금·민정호의 진실 추구",
+  "episode_function": "14화는 권력 연합의 위험성과 그에 맞서는 장금·민정호의 연대를 심화한다.",
+  "core_dist": {
+    "RELIEF": 4,
+    "ESTABLISH": 12,
+    "DESIRE": 13,
+    "CONFLICT": 27,
+    "BOND": 5,
+    "ORACLE": 6,
+    "HOOK": 4,
+    "PUNISH": 4,
+    "PERIL": 12,
+    "REUNION": 1,
+    "REVELATION": 8,
+    "ROMANCE": 4,
+    "LOSS": 5,
+    "RESCUE": 2,
+    "REVERSAL": 1
+  },
+  "by": "sonnet_reading"
+}

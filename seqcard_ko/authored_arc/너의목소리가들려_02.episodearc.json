@@ -1,0 +1,60 @@
+{
+  "work_id": "너의목소리가들려_02",
+  "episode_no": 2,
+  "scene_count": 52,
+  "sequence_count": 7,
+  "dramatic_question": "수하는 관우의 능력을 알게 될 때 그 관계를 어떻게 재정의할 것인가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "여파와 탐구",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "B",
+      "label": "협력과 로맨스 씨앗",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": "C",
+      "label": "진실 역전과 심화",
+      "seq_span": [
+        6,
+        7
+      ]
+    }
+  ],
+  "entry_state": "전회 여파 처리 중",
+  "exit_state": "갈등 속 관계 심화 예고",
+  "turning_point": {
+    "seq_index": 4,
+    "description": "협력과 로맨스 씨앗"
+  },
+  "central_conflict_axis": "능력의 비밀 vs 협력의 필요—신뢰 형성의 과정",
+  "episode_function": "협력 관계 본격 형성과 로맨스 씨앗",
+  "core_dist": {
+    "CONFLICT": 0.02,
+    "ESTABLISH": 0.19,
+    "REVELATION": 0.13,
+    "DESIRE": 0.02,
+    "PERIL": 0.08,
+    "REVERSAL": 0.06,
+    "ORACLE": 0.04,
+    "RELIEF": 0.01,
+    "RESCUE": 0.04,
+    "ROMANCE": 0.04,
+    "INTRO": 0.02,
+    "BOND": 0.02,
+    "HOOK": 0.02,
+    "LOSS": 0.02,
+    "REUNION": 0.01,
+    "PUNISH": 0.01
+  },
+  "by": "cowork_opus_reading"
+}

@@ -1,0 +1,64 @@
+{
+ "episode_no": 13,
+ "scene_count": 47,
+ "sequence_count": 7,
+ "dramatic_question": "왕여 자각과 900년 원한 대면 이후 도깨비-저승이 화해할 수 있는가, 그리고 박중헌을 소멸시키는 동시에 은탁의 죽음을 막을 수 있는가?",
+ "act_structure": [
+  {
+   "act": "설정",
+   "seq_span": [
+    1,
+    2
+   ],
+   "beat": "왕여 자각·공동체 해체·각자의 상실과 첫 화해 신호"
+  },
+  {
+   "act": "전개",
+   "seq_span": [
+    3,
+    4
+   ],
+   "beat": "저승 자아 정립·왕여 기억 복원·도깨비-저승 화해"
+  },
+  {
+   "act": "심화",
+   "seq_span": [
+    5,
+    6
+   ],
+   "beat": "박중헌 응징 준비·마지막 일상·이별 키스"
+  },
+  {
+   "act": "회말전환",
+   "seq_span": [
+    7,
+    7
+   ],
+   "beat": "은탁 손으로 검 뽑혀 중헌 소멸·도깨비 소멸—두 번째 대위기"
+  }
+ ],
+ "entry_state": "저승이 왕여임을 자각하고 공동체가 뿔뿔이 흩어진다.",
+ "exit_state": "박중헌이 소멸되고 도깨비도 함께 사라진다.",
+ "turning_point": {
+  "seq_index": 7,
+  "desc": "도깨비 소멸—박중헌 응징과 동시에 두 번째 이별"
+ },
+ "central_conflict_axis": "박중헌 소멸(공동 목표) 대 도깨비의 자기 소멸 감수",
+ "episode_function": "13화는 왕여 자각과 화해, 마지막 일상과 이별 키스를 거쳐 박중헌 소멸과 도깨비의 두 번째 소멸로 최대 비극을 완성한다.",
+ "core_dist": {
+  "LOSS": 8,
+  "CONFLICT": 8,
+  "DESIRE": 6,
+  "REVELATION": 6,
+  "PUNISH": 5,
+  "BOND": 5,
+  "PERIL": 5,
+  "ROMANCE": 4,
+  "REVERSAL": 3,
+  "RESCUE": 2,
+  "REUNION": 2,
+  "ESTABLISH": 1
+ },
+ "work_id": "도깨비_13",
+ "by": "sonnet_reading"
+}

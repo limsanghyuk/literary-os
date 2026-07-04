@@ -1,0 +1,66 @@
+{
+  "work_id": "미안하다사랑한다_08",
+  "episode_no": 8,
+  "scene_count": 87,
+  "sequence_count": 11,
+  "dramatic_question": "무혁의 뇌종양이 오은채와 주변에 공개되는 충격 속에서, 남은 사람들은 이 비극을 어떻게 받아들이고 무혁을 대면할 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "뇌종양 사실이 드러나며 모든 관계에 충격파가 번진다"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "오은채의 혼란, 오들희의 죄책감, 이윤의 반응이 교차하며 갈등이 복잡해진다"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "무혁이 이제 자신의 마지막을 어떻게 쓸지 결정하기 시작한다"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        11
+      ],
+      "beat": "무혁의 핵심 결심이 윤곽을 드러내며 후반부의 방향이 설정된다"
+    }
+  ],
+  "entry_state": "무혁의 뇌종양 사실이 드러나기 직전 혹은 막 드러난 상태.",
+  "exit_state": "뇌종양 공개 이후 모든 관계가 새로운 국면에 접어들었고, 무혁은 마지막을 어떻게 쓸지 생각하기 시작했다.",
+  "turning_point": {
+    "seq_index": 11,
+    "desc": "무혁이 이윤에게 심장을 기증하겠다는 결심의 씨앗을 품는다"
+  },
+  "central_conflict_axis": "무혁의 자기희생 욕망 대 오은채·오들희의 무혁 생존 의지",
+  "episode_function": "8화는 뇌종양 폭로라는 비극의 핵심 사건으로 서사가 전환되며, 무혁이 희생이라는 결말을 향해 내적으로 방향을 잡기 시작하는 결정적 전환화다.",
+  "core_dist": {
+    "CONFLICT": 17,
+    "ESTABLISH": 13,
+    "ROMANCE": 5,
+    "BOND": 11,
+    "REUNION": 2,
+    "DESIRE": 3,
+    "PERIL": 14,
+    "LOSS": 5,
+    "REVELATION": 9,
+    "HOOK": 2,
+    "RESCUE": 1,
+    "PUNISH": 2,
+    "ORACLE": 2,
+    "RELIEF": 1
+  },
+  "by": "sonnet_reading"
+}

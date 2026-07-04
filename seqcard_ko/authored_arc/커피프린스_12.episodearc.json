@@ -1,0 +1,64 @@
+{
+  "work_id": "커피프린스_12",
+  "episode_no": 12,
+  "scene_count": 56,
+  "sequence_count": 9,
+  "dramatic_question": "해고 후 단절된 한결과 은찬이 밤 줍기 재회를 통해 진정한 화해에 이를 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "해고·퇴장·한성 화해 전화"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "유주-한성 이별·상호 위로·한결-한성 화해"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "재회 직전 긴장·밤 줍기 재회"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "복귀·공식 커플 선언"
+    }
+  ],
+  "entry_state": "한결이 은찬을 해고하고 단절된 상태",
+  "exit_state": "밤 줍기 재회로 화해하고 한결이 여자라고 공개 선언하며 공식 커플이 확정된다",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "밤 줍기 재회: 단절 이후 감정 인정과 공식 화해"
+  },
+  "central_conflict_axis": "한결 두려움(감정 인정) vs 은찬 상실(해고·거부)",
+  "episode_function": "12회는 유주-한성 이별의 비극과 한결-은찬 재회의 기쁨을 교차시키며, 밤 줍기 재회와 공개 커플 선언으로 1부 로맨스 갈등을 봉합하는 전환 회차다",
+  "core_dist": {
+    "LOSS": 10,
+    "BOND": 10,
+    "REUNION": 6,
+    "ROMANCE": 6,
+    "CONFLICT": 6,
+    "DESIRE": 6,
+    "HOOK": 4,
+    "RELIEF": 4,
+    "ESTABLISH": 4,
+    "REVERSAL": 3,
+    "PERIL": 2,
+    "ORACLE": 2
+  },
+  "by": "sonnet_reading"
+}

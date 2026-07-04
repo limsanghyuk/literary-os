@@ -1,0 +1,63 @@
+{
+  "work_id": "태양의후예_12",
+  "episode_no": 12,
+  "scene_count": 51,
+  "sequence_count": 8,
+  "dramatic_question": "죽음도 진짜 이별이 아닐 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "시진 전사 통보·모연 충격"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "상실 적응·생환 반전"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "재회·화해"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "서브 위기·새 위협 훅"
+    }
+  ],
+  "entry_state": "전사 통보",
+  "exit_state": "새 위협 예고",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "시진이 살아 귀환하는 극적 반전"
+  },
+  "central_conflict_axis": "사망 통보라는 군인의 비극",
+  "episode_function": "전사→생환 반전: 시리즈 최대 반전 회차",
+  "core_dist": {
+    "HOOK": 2,
+    "PERIL": 13,
+    "ESTABLISH": 6,
+    "REVELATION": 2,
+    "CONFLICT": 2,
+    "RESCUE": 2,
+    "BOND": 3,
+    "RELIEF": 10,
+    "ROMANCE": 6,
+    "REUNION": 2,
+    "LOSS": 3
+  },
+  "by": "sonnet_reading"
+}

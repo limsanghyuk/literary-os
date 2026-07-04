@@ -1,0 +1,51 @@
+{
+  "work_id": "공주의남자_17",
+  "episode_no": 17,
+  "scene_count": 66,
+  "sequence_count": 10,
+  "dramatic_question": "한명회의 독자 습격을 막으면서 서신 공개를 강행할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "수양 물러남 후 전략 수립·한명회 독자 행동"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "습격 인지·피신·수양-한명회 균열"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "서신 공개 결정·이탈 발생"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        10
+      ],
+      "beat": "강행 vs 연기 최후 기로"
+    }
+  ],
+  "entry_state": "수양 물러남 후 서신 공개 전략 논의",
+  "exit_state": "한명회 독자 습격 격퇴, 서신 공개 직전 이탈 변수 발생",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "수양-한명회 균열 공개화 — 단일 적대에서 내부 분열 활용으로 전환"
+  },
+  "central_conflict_axis": "서신 공개 타이밍 vs 한명회 독자 위협, 수양-한명회 균열 이용",
+  "episode_function": "서신 공개 직전 최대 갈등 고조 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

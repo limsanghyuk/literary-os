@@ -1,0 +1,51 @@
+{
+  "work_id": "밀회",
+  "episode_no": 7,
+  "scene_count": 72,
+  "sequence_count": 8,
+  "dramatic_question": "혜원과 선재의 관계가 서한 조직 전체의 적대적 압박 속에서 어떤 형태로 버텨낼 수 있는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        4
+      ],
+      "label": "서한 조직과 준형의 압박이 최고조에 달하며 선재가 위기에 처한다"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        5,
+        6
+      ],
+      "label": "감정이 극한에 달한 두 사람이 위험을 무릅쓰고 접근한다"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        7,
+        8
+      ],
+      "label": "선재의 자포자기와 혜원의 반격으로 8부 위기가 예고된다"
+    }
+  ],
+  "entry_state": "성숙 귀국 이후 서한 내 긴장이 최고조, 혜원과 선재의 관계가 서한 조직에 포착 직전인 상태",
+  "exit_state": "선재가 자포자기 행동을 하고 혜원과의 관계가 서한 측에 더 가깝게 포착되며 8부 발각 위기를 예고한다",
+  "turning_point": {
+    "seq_index": 5,
+    "label": "서한 조직의 선재 도구화 시도",
+    "description": "준형과 서한 조직이 선재를 도구로 삼아 혜원을 압박하기 시작하며 관계가 시스템적 위협에 직면한다"
+  },
+  "central_conflict_axis": "서한 권력 전체의 적대적 포위 vs 두 사람의 감정적 저항",
+  "episode_function": "PRESSURE — 외부 조직적 압박이 최고조에 달하며 관계의 지속 자체가 위협받는 전환점",
+  "core_dist": {
+    "CONFLICT": 0.481,
+    "LOSS": 0.221,
+    "BOND": 0.154,
+    "REVELATION": 0.135,
+    "ESTABLISH": 0.125,
+    "DESIRE": 0.087
+  },
+  "by": "cowork_opus_reading"
+}

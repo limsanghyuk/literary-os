@@ -1,0 +1,63 @@
+{
+  "work_id": "W_07",
+  "episode_no": 7,
+  "sequence_count": 9,
+  "scene_count": 53,
+  "turning_point": {
+    "seq_index": 3,
+    "description": "결정적 위기 또는 반전"
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "설정 단계"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "전개 단계"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "심화 단계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        9
+      ],
+      "beat": "회말전환 단계"
+    }
+  ],
+  "by": "cowork_opus_reading",
+  "entry_state": "강철과 오연주가 세계 경계의 규칙을 파악하려 하지만 예측 불가능한 요소들이 개입한다.",
+  "exit_state": "새로운 위기가 발생하며 두 세계의 논리 충돌이 더 심화된다.",
+  "central_conflict_axis": "두 세계의 물리 법칙 충돌 대 강철의 창작적 해법 모색",
+  "episode_function": "시리즈 중반부로서 웹툰-현실 연동의 복잡성을 심화하고 최종 대결을 향한 긴장감을 고조시킨다.",
+  "dramatic_question": "W 7화의 핵심 드라마틱 질문: 강철과 오연주는 웹툰과 현실의 경계를 넘어 생존할 수 있는가?",
+  "core_dist": {
+    "ESTABLISH": 4,
+    "LOSS": 5,
+    "HOOK": 11,
+    "REVELATION": 12,
+    "CONFLICT": 5,
+    "PERIL": 3,
+    "RELIEF": 4,
+    "BOND": 4,
+    "REVERSAL": 1,
+    "RESCUE": 2,
+    "REUNION": 2
+  }
+}

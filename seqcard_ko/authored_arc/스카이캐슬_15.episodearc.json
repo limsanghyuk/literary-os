@@ -1,0 +1,66 @@
+{
+  "work_id": "스카이캐슬_15",
+  "episode_no": 15,
+  "scene_count": 72,
+  "sequence_count": 11,
+  "dramatic_question": "예서의 침묵은 얼마나 오래 지속될 수 있으며, 이수임의 반격은 성공할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "우주 생일 표면·예서 심문·한서진 침묵 코치"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "이수임 반격·강준상 고민·노승혜 이혼 확정·예서 침묵 균열"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "한서진 각성 직전·이수임 증거 확보·공모 균열"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        11
+      ],
+      "beat": "예서 진실 고백 직전—진실의 카운트다운"
+    }
+  ],
+  "entry_state": "우주 생일잔치 아래 죄책감이 흐르고 예서가 심문을 받는다.",
+  "exit_state": "예서의 진실 고백이 직전에 달하고 이수임의 반격이 준비되며 진실의 카운트다운이 시작된다.",
+  "turning_point": {
+    "seq_index": 11,
+    "desc": "예서 진실 고백 직전—욕망 시스템 붕괴의 첫 도미노"
+  },
+  "central_conflict_axis": "공모(한서진·공동체) 대 진실과 반격(이수임·예서·강준상)",
+  "episode_function": "15화는 예서 침묵의 균열, 이수임의 반격 준비, 한서진의 각성 직전을 통해 욕망 시스템 붕괴의 첫 도미노를 설치한다.",
+  "core_dist": {
+    "ESTABLISH": 1,
+    "BOND": 2,
+    "CONFLICT": 15,
+    "REVELATION": 7,
+    "ORACLE": 2,
+    "DESIRE": 3,
+    "PERIL": 10,
+    "HOOK": 12,
+    "LOSS": 7,
+    "INTRO": 1,
+    "PUNISH": 8,
+    "REUNION": 2,
+    "RELIEF": 1,
+    "REVERSAL": 1
+  },
+  "by": "sonnet_reading"
+}

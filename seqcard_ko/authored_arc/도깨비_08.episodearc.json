@@ -1,0 +1,65 @@
+{
+ "episode_no": 8,
+ "scene_count": 64,
+ "sequence_count": 8,
+ "dramatic_question": "도깨비가 은탁을 진심으로 사랑한다면, 그 사랑이 은탁의 소멸이라는 운명적 딜레마를 어떻게 직면하는가?",
+ "act_structure": [
+  {
+   "act": "설정",
+   "seq_span": [
+    1,
+    2
+   ],
+   "beat": "초능력 노출 수습·신부 확정 기쁨·족자 미스터리 동시 심화"
+  },
+  {
+   "act": "전개",
+   "seq_span": [
+    3,
+    5
+   ],
+   "beat": "저승 전생 고백·일상 코미디·버스 사고 미래 투시와 구조"
+  },
+  {
+   "act": "심화",
+   "seq_span": [
+    6,
+    7
+   ],
+   "beat": "생명 수호 숙연함·사랑 고백·저승-써니 로맨스·과거 운명 연결"
+  },
+  {
+   "act": "회말전환",
+   "seq_span": [
+    8,
+    8
+   ],
+   "beat": "삼신이 검 뽑으면 소멸이라는 진실 전달—비극적 딜레마 확정"
+  }
+ ],
+ "entry_state": "도깨비가 살아 돌아온 뒤 은탁이 신부임이 확정되어 행복해한다.",
+ "exit_state": "삼신의 폭로로 검 뽑기=도깨비 소멸이라는 진실이 드러나 은탁-도깨비 딜레마가 확정된다.",
+ "turning_point": {
+  "seq_index": 8,
+  "desc": "검 뽑기=소멸 진실 폭로—사랑과 해방이 동시에 비극임을 확정"
+ },
+ "central_conflict_axis": "사랑하기에 검을 뽑아주고 싶은 은탁 대 소멸이 곧 사라짐인 도깨비",
+ "episode_function": "8화는 버스 사고 구조 시퀀스로 도깨비의 힘과 책임감을 보여주고, 과거 운명의 정보를 축적하면서, 마지막 폭로로 시리즈 최대 딜레마를 완성한다.",
+ "core_dist": {
+  "ROMANCE": 8,
+  "RELIEF": 7,
+  "LOSS": 6,
+  "ESTABLISH": 6,
+  "ORACLE": 5,
+  "REVELATION": 5,
+  "RESCUE": 5,
+  "BOND": 5,
+  "PERIL": 4,
+  "DESIRE": 4,
+  "CONFLICT": 4,
+  "HOOK": 2,
+  "REVERSAL": 1
+ },
+ "work_id": "도깨비_08",
+ "by": "sonnet_reading"
+}

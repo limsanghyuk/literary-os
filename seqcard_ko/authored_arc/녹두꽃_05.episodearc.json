@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_05",
+  "episode_no": 5,
+  "scene_count": 69,
+  "sequence_count": 7,
+  "dramatic_question": "이강은 동학군의 일원이 될 수 있는가, 그리고 혁명은 이 땅을 바꿀 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "이현 징집·이강 합류 거절·자인 군상 선언"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "관아 함락·철두 묻기·화약고 습격"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        5
+      ],
+      "beat": "이강 폭발 구출·전봉준 합류 허락"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "호남창의대장소 결성·혁명 총결집"
+    }
+  ],
+  "entry_state": "석주의 이현 징집 명령과 이강의 별동대 체포로 형제가 서로 다른 전선에 놓인다.",
+  "exit_state": "이강이 동학군에 합류하고 호남창의대장소 결성으로 혁명이 최고조에 달한다—감영군과의 총력 대결이 임박한다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "이강이 화약고 폭발을 헤치고 전봉준에게 합류를 허락받는 장면이 혁명 참여를 확정한다"
+  },
+  "central_conflict_axis": "동학 혁명(이강·전봉준) 대 진압 세력(석주·향병대), 이강의 각성 완성 vs 이현의 현실주의",
+  "episode_function": "이강의 동학군 합류 완성과 호남창의대장소 결성으로 1차 봉기의 조직적 정점을 구현한다.",
+  "core_dist": {
+    "CONFLICT": 11,
+    "PERIL": 12,
+    "REVELATION": 7,
+    "LOSS": 9,
+    "BOND": 5,
+    "REVERSAL": 9,
+    "RELIEF": 8,
+    "HOOK": 5,
+    "RESCUE": 3,
+    "REUNION": 1,
+    "ESTABLISH": 9,
+    "DESIRE": 2,
+    "PUNISH": 2,
+    "ROMANCE": 2,
+    "ORACLE": 0,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

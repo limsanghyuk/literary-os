@@ -1,0 +1,51 @@
+{
+  "work_id": "마왕_09",
+  "episode_no": 9,
+  "scene_count": 80,
+  "sequence_count": 12,
+  "dramatic_question": "영철을 설득하지 못하는 오수가 순기를 세 번째 예고에서 지킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "영철 거부와 3차 예고",
+      "seq_span": [
+        1,
+        5
+      ]
+    },
+    {
+      "act": "B",
+      "label": "협력 시도와 순기 보호",
+      "seq_span": [
+        6,
+        9
+      ]
+    },
+    {
+      "act": "C",
+      "label": "영철 완강·승하 인간적 면모",
+      "seq_span": [
+        10,
+        12
+      ]
+    }
+  ],
+  "entry_state": "영철-오수 과거 관계가 폭로된 상태",
+  "exit_state": "영철이 협력을 거부하고 승하의 내면 슬픔이 처음 드러난 상태",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "영철 협력 완전 거부—오수가 영철 없는 수사 대안을 모색한다"
+  },
+  "central_conflict_axis": "오수(영철 설득)↔영철(극단적 거부)",
+  "episode_function": "순기 3차 예고·영철 거부·승하 누나",
+  "core_dist": {
+    "DESIRE": 3,
+    "PERIL": 2,
+    "BOND": 2,
+    "ESTABLISH": 2,
+    "LOSS": 1,
+    "REVELATION": 1,
+    "CONFLICT": 1
+  },
+  "by": "sonnet_reading"
+}

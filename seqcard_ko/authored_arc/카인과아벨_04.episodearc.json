@@ -1,0 +1,60 @@
+{
+  "work_id": "카인과아벨_04",
+  "episode_no": 4,
+  "scene_count": 49,
+  "sequence_count": 8,
+  "dramatic_question": "중국 공안의 압박과 선우의 음모가 겹치는 가운데 초인은 살아남고 진실을 지킬 수 있는가?",
+  "entry_state": "중국 공안 당국이 초인을 압박하고 선우의 추격이 동시에 진행된다.",
+  "exit_state": "초인이 중국 아지트에서 마지막 단서를 확보하고 한국 귀국을 결의한다.",
+  "turning_point": {
+    "seq_index": 6,
+    "description": "선우와 초인이 창고에서 마주치는 극적 대면과 내면 충돌"
+  },
+  "central_conflict_axis": "초인의 생존과 진실 사수 대 선우·공안의 이중 포위",
+  "episode_function": "4화는 중국 현지 위기의 정점에서 선우의 범죄가 국제적 규모임을 확인하고 초인이 귀국 결정을 내린다.",
+  "core_dist": {
+    "CONFLICT": 18.4,
+    "PERIL": 16.3,
+    "REVELATION": 14.3,
+    "RESCUE": 12.2,
+    "ESTABLISH": 10.2,
+    "BOND": 10.2,
+    "LOSS": 6.1,
+    "INTRO": 2.0
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "function": "인물·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "function": "갈등 심화와 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        5,
+        6
+      ],
+      "function": "위기 폭발과 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        7,
+        8
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

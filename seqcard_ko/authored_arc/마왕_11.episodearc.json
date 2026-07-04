@@ -1,0 +1,50 @@
+{
+  "work_id": "마왕_11",
+  "episode_no": 11,
+  "scene_count": 68,
+  "sequence_count": 11,
+  "dramatic_question": "준표가 승하를 '정태성'으로 폭로하면 복수 계획이 무너지는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "과거 기원 회상·신분 세탁 추적",
+      "seq_span": [
+        1,
+        5
+      ]
+    },
+    {
+      "act": "B",
+      "label": "팀 위기·가문 과거 공유",
+      "seq_span": [
+        6,
+        9
+      ]
+    },
+    {
+      "act": "C",
+      "label": "승하 정체 폭로",
+      "seq_span": [
+        10,
+        11
+      ]
+    }
+  ],
+  "entry_state": "준표가 '강형사님이 아셔야 할 얘기'를 예고한 상태",
+  "exit_state": "준표가 승하에게 '정태성'으로 통성명하겠다며 정체를 폭로한 상태",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "준표 승하 집 폭로—오수가 승하=정태성 가설 확신 직전"
+  },
+  "central_conflict_axis": "준표(폭로)↔승하(복수 계획 유지)",
+  "episode_function": "승하 이중 정체 폭로·가문 부분 공개",
+  "core_dist": {
+    "DESIRE": 3,
+    "REVELATION": 3,
+    "ESTABLISH": 2,
+    "LOSS": 1,
+    "PERIL": 1,
+    "CONFLICT": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,94 @@
+{
+  "series": "최강칠우",
+  "episodes_total": 20,
+  "scenes_total": 1398,
+  "sequences_total": 208,
+  "logline": "조선 인조 시대, 의금부 나장 칠우는 낮에는 법의 집행자, 밤에는 자객으로 살아가며 부패한 권력과 강상의 이름으로 자행되는 폭력에 맞서 복수와 정의 사이에서 갈등한다.",
+  "central_dramatic_question": "칠우는 법과 정의 사이에서 선택을 강요받을 때 어떤 인간으로 살아갈 것인가?",
+  "theme_statement": "억압된 자의 분노와 복수는 정의가 될 수 있는가, 아니면 또 다른 폭력인가.",
+  "protagonist": {
+    "name": "최칠우",
+    "want": "복수와 정의 실현",
+    "need": "진정한 자아와 평화 회복",
+    "arc": "복수의 화신에서 진정한 정의의 수호자로 성장"
+  },
+  "antagonist": {
+    "name": "민승국·부패 관료집단",
+    "function": "제도적 억압과 권력 남용의 화신"
+  },
+  "season_structure": [
+    {
+      "act": "1막(도입·복수 시작)",
+      "episode_span": [
+        1,
+        5
+      ],
+      "desc": "무륜당 학살 기억·나장 시절·한씨문중 사건·복수 시작"
+    },
+    {
+      "act": "2막(갈등 심화)",
+      "episode_span": [
+        6,
+        12
+      ],
+      "desc": "민승국 등장·정체 추적·내부 갈등"
+    },
+    {
+      "act": "3막(위기·반전)",
+      "episode_span": [
+        13,
+        17
+      ],
+      "desc": "배신·체포 위기·동맹 재편"
+    },
+    {
+      "act": "4막(결말)",
+      "episode_span": [
+        18,
+        20
+      ],
+      "desc": "최종 대결·복수 완수·새 질서"
+    }
+  ],
+  "macro_turning_points": [
+    {
+      "episode": 1,
+      "desc": "우영의 죽음—칠우의 복수 결의"
+    },
+    {
+      "episode": 6,
+      "desc": "민승국과의 실력 대결—두 인물의 대립 구조 확립"
+    },
+    {
+      "episode": 12,
+      "desc": "칠우의 정체 노출 위기"
+    },
+    {
+      "episode": 18,
+      "desc": "최종 대결 직전 동맹 붕괴"
+    }
+  ],
+  "resolution": "칠우는 부패 세력을 응징하고 정의를 세우지만, 복수의 대가로 상실을 안고 새로운 삶을 모색한다.",
+  "open_ending": false,
+  "tone": "액션·역사·복수극",
+  "conflict_persist": 0.35,
+  "series_core_dist": {
+    "CONFLICT": 120,
+    "DESIRE": 100,
+    "ESTABLISH": 150,
+    "PERIL": 80,
+    "REVELATION": 90,
+    "LOSS": 70,
+    "PUNISH": 60,
+    "RESCUE": 50,
+    "BOND": 80,
+    "ROMANCE": 60,
+    "HOOK": 80,
+    "RELIEF": 100,
+    "ORACLE": 70,
+    "REVERSAL": 50,
+    "INTRO": 30,
+    "REUNION": 10
+  },
+  "by": "cowork_opus_reading"
+}

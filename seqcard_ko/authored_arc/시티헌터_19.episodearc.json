@@ -1,0 +1,67 @@
+{
+  "work_id": "시티헌터_19",
+  "episode_no": 19,
+  "scene_count": 65,
+  "sequence_count": 10,
+  "dramatic_question": "영주의 죽음과 친부 최응찬의 배신—윤성은 마지막 복수를 완성할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "천재만 탈주·협력 심화"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "beat": "출생 비밀·분노 수용"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "진실 조각·결전 무대"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        10
+      ],
+      "beat": "세희 습격·영주 절명"
+    }
+  ],
+  "entry_state": "천재만 탈주·수배, 정체 노출 이후 수습.",
+  "exit_state": "기밀문서 확보, 그러나 영주가 총에 맞고 절명—비극적 희생.",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "친부 최응찬 확인: 복수극이 가족 정체성의 위기로 전환"
+  },
+  "central_conflict_axis": "천재만·응찬 처단(윤성) vs 영주 보호, 친부 정체 혼란",
+  "episode_function": "19화: 출생 비밀 확인과 기밀문서 사투, 영주의 죽음으로 복수극이 최종 비극으로 전환된다.",
+  "core_dist": {
+    "REVELATION": 18,
+    "CONFLICT": 18,
+    "PERIL": 15,
+    "REVERSAL": 1,
+    "HOOK": 3,
+    "RELIEF": 3,
+    "BOND": 8,
+    "ESTABLISH": 1,
+    "ROMANCE": 5,
+    "LOSS": 8,
+    "ORACLE": 21,
+    "DESIRE": 5,
+    "PUNISH": 2,
+    "REUNION": 1,
+    "RESCUE": 2
+  },
+  "by": "sonnet_reading"
+}

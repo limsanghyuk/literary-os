@@ -1,0 +1,65 @@
+{
+  "work_id": "태양의후예_08",
+  "episode_no": 8,
+  "scene_count": 66,
+  "sequence_count": 10,
+  "dramatic_question": "극한의 위기는 사랑을 시험하는가, 증명하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "독극물 위기·강군 구출"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "독극물 해결·한밤 대화·서브 커플 공식화"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "방송 고백 코미디·새 위협"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "모연 협박·구출·훅"
+    }
+  ],
+  "entry_state": "독극물 비상",
+  "exit_state": "새 위협 예고",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "방송 사고로 시진 고백 전체 공개"
+  },
+  "central_conflict_axis": "임무 수행 vs 감정 보호",
+  "episode_function": "코미디+위기: 장르 혼합 절정",
+  "core_dist": {
+    "ROMANCE": 9,
+    "LOSS": 5,
+    "RELIEF": 12,
+    "BOND": 5,
+    "INTRO": 1,
+    "CONFLICT": 7,
+    "ESTABLISH": 2,
+    "DESIRE": 2,
+    "REVELATION": 4,
+    "HOOK": 1,
+    "PERIL": 12,
+    "PUNISH": 5,
+    "REUNION": 1
+  },
+  "by": "sonnet_reading"
+}

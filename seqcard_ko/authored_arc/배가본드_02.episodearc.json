@@ -1,0 +1,65 @@
+{
+  "work_id": "배가본드_02",
+  "episode_no": 2,
+  "scene_count": 62,
+  "sequence_count": 10,
+  "dramatic_question": "달건이 배후 조직에 맞서 귀국·공조 기반을 확보할 수 있는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "label": "설정",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": 2,
+      "label": "전개",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": 3,
+      "label": "심화",
+      "seq_span": [
+        6,
+        8
+      ]
+    },
+    {
+      "act": 4,
+      "label": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ]
+    }
+  ],
+  "entry_state": "제롬 도주·달건 모로코 탈출 시도",
+  "exit_state": "해리 국정원 입사, 아버지 인연 확인",
+  "turning_point": {
+    "seq_index": 6,
+    "seq_id": "배가본드_02_S06",
+    "description": "달건, 제시카 카이 접촉 시도—적의 심장부로"
+  },
+  "central_conflict_axis": "달건 복수 의지 vs 조직 은폐 시스템",
+  "episode_function": "전개—귀국과 동맹 구축 첫 시동",
+  "core_dist": {
+    "CONFLICT": 0.168,
+    "REVELATION": 0.168,
+    "HOOK": 0.116,
+    "PERIL": 0.116,
+    "ESTABLISH": 0.095,
+    "BOND": 0.084,
+    "DESIRE": 0.063,
+    "LOSS": 0.053,
+    "INTRO": 0.042,
+    "PUNISH": 0.042,
+    "RELIEF": 0.032,
+    "REVERSAL": 0.021
+  },
+  "by": "sonnet_reading"
+}

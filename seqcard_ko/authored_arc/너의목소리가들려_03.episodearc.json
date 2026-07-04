@@ -1,0 +1,59 @@
+{
+  "work_id": "너의목소리가들려_03",
+  "episode_no": 3,
+  "scene_count": 45,
+  "sequence_count": 6,
+  "dramatic_question": "사건의 복잡성이 드러날수록 수하와 관우의 신뢰는 어떻게 깊어지는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "사건 개막과 신뢰",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "B",
+      "label": "진실 연쇄와 갈등",
+      "seq_span": [
+        3,
+        4
+      ]
+    },
+    {
+      "act": "C",
+      "label": "구출과 로맨스 예고",
+      "seq_span": [
+        5,
+        6
+      ]
+    }
+  ],
+  "entry_state": "새 사건 개막",
+  "exit_state": "로맨스 예고와 관계 심화",
+  "turning_point": {
+    "seq_index": 4,
+    "description": "진실 연쇄와 갈등"
+  },
+  "central_conflict_axis": "사건 진실 vs 감정 발전—복잡성이 연결을 만드는 역설",
+  "episode_function": "사건 복잡성과 관계 심화, 로맨스 씨앗 성장",
+  "core_dist": {
+    "REVELATION": 0.24,
+    "PERIL": 0.13,
+    "CONFLICT": 0.13,
+    "ESTABLISH": 0.11,
+    "BOND": 0.09,
+    "HOOK": 0.07,
+    "RESCUE": 0.04,
+    "ROMANCE": 0.04,
+    "RELIEF": 0.04,
+    "REVERSAL": 0.02,
+    "PUNISH": 0.02,
+    "INTRO": 0.02,
+    "LOSS": 0.02,
+    "DESIRE": 0.01,
+    "REUNION": 0.01
+  },
+  "by": "cowork_opus_reading"
+}

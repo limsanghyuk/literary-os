@@ -1,0 +1,51 @@
+{
+  "work_id": "공주의남자_11",
+  "episode_no": 11,
+  "scene_count": 71,
+  "sequence_count": 11,
+  "dramatic_question": "승유가 수양과 근접 대치하면서도 복수의 주도권을 유지할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "2차 작전 준비·교란"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "구출 성공·재회·한명회 내부 의심"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "측근 비리 포착·수양 재고"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        11
+      ],
+      "beat": "근접 대치·전략 재조정"
+    }
+  ],
+  "entry_state": "2차 구출 작전 직전, 세령의 정보 확보",
+  "exit_state": "어머니 구출 성공, 승유-수양 첫 대치 후 양측 전략 재설정",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "승유-수양 근접 대치 — 간접 대결에서 직접 대결로 전환"
+  },
+  "central_conflict_axis": "복수 집단의 구출 작전 vs 수양-한명회 추격·응징 체계",
+  "episode_function": "구출 완료·직접 대결 예고 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

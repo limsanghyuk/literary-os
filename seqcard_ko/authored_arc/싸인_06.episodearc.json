@@ -1,0 +1,60 @@
+{
+  "work_id": "싸인_06",
+  "episode_no": 6,
+  "scene_count": 59,
+  "sequence_count": 10,
+  "dramatic_question": "고속도로 추격 위기 속 지훈은 핵심 증거를 보호하고 탈출할 수 있는가?",
+  "entry_state": "5화 탈출 직후, 배후 세력의 추격이 시작되고 도로 위 생존 위기가 계속된다.",
+  "exit_state": "지훈이 증거를 지키며 탈출하지만 유현주 사망으로 사건이 새 국면에 접어든다.",
+  "turning_point": {
+    "seq_index": 7,
+    "description": "유현주 사망으로 사건 규모가 확대되는 반전"
+  },
+  "central_conflict_axis": "지훈·다경의 증거 보호 탈출 대 배후 세력의 추격·증거 탈취",
+  "episode_function": "6화는 속도감 있는 추격전으로 긴장을 극한까지 끌어올리고 유현주 사망이라는 새 희생을 통해 사건 규모를 확장한다.",
+  "core_dist": {
+    "REVELATION": 32.2,
+    "PERIL": 16.9,
+    "ESTABLISH": 15.3,
+    "RESCUE": 8.5,
+    "CONFLICT": 8.5,
+    "REVERSAL": 6.8,
+    "HOOK": 5.1,
+    "DESIRE": 3.4
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "function": "인물·상황·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "function": "갈등 심화와 단서 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        7,
+        8
+      ],
+      "function": "위기 폭발과 결정적 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        9,
+        10
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

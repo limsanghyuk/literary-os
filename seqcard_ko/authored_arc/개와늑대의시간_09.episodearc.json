@@ -1,0 +1,50 @@
+{
+  "work_id": "개와늑대의시간_09",
+  "episode_no": 9,
+  "scene_count": 62,
+  "sequence_count": 10,
+  "dramatic_question": "수현은 마오의 함정에서 지우를 구출할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "작전 계획과 봉쇄",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "역정보·포섭·자금 차단",
+      "seq_span": [
+        5,
+        7
+      ]
+    },
+    {
+      "act": "C",
+      "label": "지우 독자 행동·함정",
+      "seq_span": [
+        8,
+        10
+      ]
+    }
+  ],
+  "entry_state": "공동 전선 수립, 마오 봉쇄 시작",
+  "exit_state": "마오 함정 완성, 수현 긴급 대응 출발",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "영길의 배신 결심—내부 균열의 실질적 시작"
+  },
+  "central_conflict_axis": "수현(구출)↔마오(함정)·영길(배신)",
+  "episode_function": "역정보·포섭·지우 독자 행동·함정",
+  "core_dist": {
+    "PERIL": 3,
+    "CONFLICT": 2,
+    "ORACLE": 2,
+    "ESTABLISH": 1,
+    "REVERSAL": 1,
+    "RESCUE": 1
+  },
+  "by": "sonnet_reading"
+}

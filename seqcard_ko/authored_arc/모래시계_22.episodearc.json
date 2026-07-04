@@ -1,0 +1,58 @@
+{
+  "work_id": "모래시계_22",
+  "episode_no": 22,
+  "scene_count": 76,
+  "sequence_count": 10,
+  "dramatic_question": "최후 결전에서 태수는 무엇을 지키고 무엇을 잃는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "최종 배치와 공세",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "B",
+      "label": "갈등 최고조와 연대",
+      "seq_span": [
+        4,
+        7
+      ]
+    },
+    {
+      "act": "C",
+      "label": "최후 결전과 상실",
+      "seq_span": [
+        8,
+        10
+      ]
+    }
+  ],
+  "entry_state": "후반부 최종 배치 완료",
+  "exit_state": "최후 결전 이후 연속 상실 정점",
+  "turning_point": {
+    "seq_index": 5,
+    "description": "갈등 최고조와 연대"
+  },
+  "central_conflict_axis": "최후 공세 vs 마지막 저항—구출과 상실의 동시성",
+  "episode_function": "최후 결전 에피소드—로맨스 마지막 빛, 전면 충돌, 상실 정점",
+  "core_dist": {
+    "PERIL": 0.18,
+    "ESTABLISH": 0.14,
+    "LOSS": 0.08,
+    "RESCUE": 0.11,
+    "ORACLE": 0.1,
+    "REVELATION": 0.09,
+    "CONFLICT": 0.09,
+    "BOND": 0.04,
+    "RELIEF": 0.05,
+    "DESIRE": 0.04,
+    "ROMANCE": 0.03,
+    "HOOK": 0.03,
+    "PUNISH": 0.01,
+    "REVERSAL": 0.01
+  },
+  "by": "cowork_opus_reading"
+}

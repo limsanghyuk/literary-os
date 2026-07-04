@@ -1,0 +1,60 @@
+{
+  "work_id": "카인과아벨_12",
+  "episode_no": 12,
+  "scene_count": 44,
+  "sequence_count": 7,
+  "dramatic_question": "고립된 초인이 단독으로 선우의 음모 전체를 폭로할 수 있는가?",
+  "entry_state": "초인이 혼자 남아 선우의 공작 전모를 폭로할 방법을 모색한다.",
+  "exit_state": "초인의 단독 행동이 예상치 못한 방향으로 흘러 새 국면이 열린다.",
+  "turning_point": {
+    "seq_index": 5,
+    "description": "단독 행동 중 초인이 선우와 직접 대면하는 위기 고조"
+  },
+  "central_conflict_axis": "초인의 단독 폭로 시도 대 선우의 선제 봉쇄",
+  "episode_function": "12화는 초인이 가장 고립된 상태에서 단독 행동으로 위기를 돌파하려는 절박한 시도를 그린다.",
+  "core_dist": {
+    "REVELATION": 25.0,
+    "CONFLICT": 20.5,
+    "PERIL": 13.6,
+    "ROMANCE": 11.4,
+    "HOOK": 6.8,
+    "LOSS": 6.8,
+    "DESIRE": 4.5,
+    "REUNION": 4.5
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "function": "인물·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "function": "갈등 심화와 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        5,
+        6
+      ],
+      "function": "위기 폭발과 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        7,
+        7
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

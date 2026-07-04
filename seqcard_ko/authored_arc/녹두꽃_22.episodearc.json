@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_22",
+  "episode_no": 22,
+  "scene_count": 69,
+  "sequence_count": 7,
+  "dramatic_question": "전봉준 체포 이후 혁명의 잔불은 어디서 타오를 수 있는가, 이강의 남은 소임은 무엇인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "소탕 개시·백가 배신·유월 연행"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "홍가 희생·김개남 최후"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        5
+      ],
+      "beat": "전봉준 체포·석주 처형"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "봉길 제압·이강-유월 재회·소임 고백"
+    }
+  ],
+  "entry_state": "우금티 패배 이후 소탕이 시작되고 백가가 유월을 배신하며 혼란이 극대화된다.",
+  "exit_state": "전봉준이 체포되고 이강이 남은 소임을 고백하며 이현이 재회를 확신한다—최후의 결전이 예고된다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "이강이 남은 소임을 고백하는 장면이 혁명의 마지막 불꽃과 형제 재회의 예고를 동시에 담는다"
+  },
+  "central_conflict_axis": "전봉준 체포 이후 잔여 혁명(이강) 대 소탕 세력, 이강-이현 형제 최후 결전",
+  "episode_function": "전봉준 체포와 석주 처형으로 혁명의 몰락을 구현하고, 이강의 소임 고백으로 마지막 불꽃을 점화한다.",
+  "core_dist": {
+    "CONFLICT": 5,
+    "PERIL": 12,
+    "REVELATION": 12,
+    "LOSS": 18,
+    "BOND": 6,
+    "REVERSAL": 3,
+    "RELIEF": 5,
+    "HOOK": 7,
+    "RESCUE": 4,
+    "REUNION": 7,
+    "ESTABLISH": 6,
+    "DESIRE": 2,
+    "PUNISH": 11,
+    "ROMANCE": 2,
+    "ORACLE": 0,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

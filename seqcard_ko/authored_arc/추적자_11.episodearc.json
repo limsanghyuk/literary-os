@@ -1,0 +1,53 @@
+{
+  "work_id": "추적자_11",
+  "episode_no": 11,
+  "scene_count": 40,
+  "sequence_count": 4,
+  "dramatic_question": "항소심에서도 동윤의 형이 확정되며 홍석이 삶을 재건할 수 있는가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        2
+      ],
+      "label": "항소심 준비·홍석 재건 시도"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        3,
+        3
+      ],
+      "label": "추가 비리 폭로와 항소 기각"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        4,
+        4
+      ],
+      "label": "형 확정과 삶의 재출발"
+    }
+  ],
+  "entry_state": "동윤이 1심 유죄 후 항소하며 홍석은 일상 복귀를 시도한다",
+  "exit_state": "동윤의 형이 확정되고 홍석이 수정의 묘소에 꽃을 올린다",
+  "turning_point": {
+    "seq_index": 3,
+    "label": "항소심 추가 폭로",
+    "description": "정우가 동윤의 추가 비리를 폭로하여 항소를 기각시킨다"
+  },
+  "central_conflict_axis": "형 확정 vs 동윤 변호팀의 반격",
+  "episode_function": "항소심 기각으로 최종 사법 완결 확정",
+  "core_dist": {
+    "CONFLICT": 3,
+    "REVELATION": 2,
+    "BOND": 2,
+    "LOSS": 2,
+    "HOOK": 2,
+    "PUNISH": 1,
+    "RELIEF": 1,
+    "ESTABLISH": 1
+  },
+  "by": "cowork_opus_reading"
+}

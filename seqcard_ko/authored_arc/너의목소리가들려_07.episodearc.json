@@ -1,0 +1,58 @@
+{
+  "work_id": "너의목소리가들려_07",
+  "episode_no": 7,
+  "scene_count": 59,
+  "sequence_count": 7,
+  "dramatic_question": "사건 복잡화와 감정 폭발이 동시에 올 때 수하와 관우는 서로에게 무엇을 확인하는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "새 사건과 협력",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "B",
+      "label": "역전과 로맨스 확인",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": "C",
+      "label": "감정 폭발과 상실",
+      "seq_span": [
+        6,
+        7
+      ]
+    }
+  ],
+  "entry_state": "새 사건 개막",
+  "exit_state": "상실 속 관계의 진가 확인",
+  "turning_point": {
+    "seq_index": 4,
+    "description": "역전과 로맨스 확인"
+  },
+  "central_conflict_axis": "사건의 복잡성 vs 감정의 단순함—역전과 상실의 교차",
+  "episode_function": "사건 복잡화와 감정 폭발, 상실—중반부 관계 검증",
+  "core_dist": {
+    "CONFLICT": 0.15,
+    "PERIL": 0.14,
+    "LOSS": 0.1,
+    "REVELATION": 0.1,
+    "BOND": 0.08,
+    "DESIRE": 0.08,
+    "ESTABLISH": 0.1,
+    "ROMANCE": 0.05,
+    "REVERSAL": 0.05,
+    "RELIEF": 0.05,
+    "HOOK": 0.03,
+    "RESCUE": 0.03,
+    "INTRO": 0.02,
+    "REUNION": 0.02
+  },
+  "by": "cowork_opus_reading"
+}

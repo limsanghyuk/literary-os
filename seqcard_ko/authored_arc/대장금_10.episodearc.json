@@ -1,0 +1,67 @@
+{
+  "work_id": "대장금_10",
+  "episode_no": 10,
+  "scene_count": 85,
+  "sequence_count": 13,
+  "dramatic_question": "퇴선간 부적 사건에서 장금은 금영과의 관계를 어떻게 풀어가는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        10
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        13
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "장금이 퇴선간에 배치되고 부적 사건의 의혹이 싹튼다.",
+  "exit_state": "금영이 부적을 숨긴 범인으로 밝혀지고 장금도 광에 감금되어 의금부행이 결정된다.",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "연생의 증언으로 금영이 폭로되고 장금도 함께 의금부로 넘겨진다(씬74~85)"
+  },
+  "central_conflict_axis": "최씨가의 부적 공작(왕자를 공주로) vs 장금·정상궁의 진실 추적",
+  "episode_function": "10화는 부적 사건으로 장금과 금영의 내면 갈등을 심화시키고 의금부행이라는 최대 위기를 설치한다.",
+  "core_dist": {
+    "RELIEF": 2,
+    "REVERSAL": 4,
+    "BOND": 4,
+    "CONFLICT": 37,
+    "ESTABLISH": 6,
+    "ROMANCE": 5,
+    "LOSS": 6,
+    "DESIRE": 11,
+    "HOOK": 15,
+    "INTRO": 1,
+    "PERIL": 29,
+    "REVELATION": 7,
+    "REUNION": 1,
+    "PUNISH": 3,
+    "ORACLE": 2
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,60 @@
+{
+  "work_id": "싸인_02",
+  "episode_no": 2,
+  "scene_count": 74,
+  "sequence_count": 13,
+  "dramatic_question": "지훈은 부검 결과 은폐를 막고 이명한의 권력 압박을 뚫을 수 있는가?",
+  "entry_state": "1화 밀실부검 선언 직후, 지훈이 메스를 들고 이명한과 대치 중이다.",
+  "exit_state": "지훈이 감추어진 독극물 증거를 확보하며 이명한의 은폐 시도가 첫 균열을 맞는다.",
+  "turning_point": {
+    "seq_index": 9,
+    "description": "지훈이 이명한의 방해를 무릅쓰고 독성 물질의 존재를 확인하는 반전"
+  },
+  "central_conflict_axis": "법의학적 진실 추구(지훈) 대 검찰 권력의 조작과 은폐(이명한)",
+  "episode_function": "2화는 지훈-이명한의 정면 충돌을 점화하고 의료계 비리의 윤곽을 드러내며 수사 대립 구도를 정착시킨다.",
+  "core_dist": {
+    "CONFLICT": 23.0,
+    "ESTABLISH": 20.3,
+    "PERIL": 18.9,
+    "REVELATION": 16.2,
+    "LOSS": 6.8,
+    "DESIRE": 4.1,
+    "REVERSAL": 4.1,
+    "BOND": 2.7
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "function": "인물·상황·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        7
+      ],
+      "function": "갈등 심화와 단서 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        8,
+        10
+      ],
+      "function": "위기 폭발과 결정적 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        11,
+        13
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

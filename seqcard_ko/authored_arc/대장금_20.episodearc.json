@@ -1,0 +1,64 @@
+{
+  "work_id": "대장금_20",
+  "episode_no": 20,
+  "scene_count": 67,
+  "sequence_count": 10,
+  "dramatic_question": "제주에서 장금은 한상궁을 지키며 어떤 의학 지식을 쌓는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "제주에서 한상궁과 장금이 함께 생활하며 의학 지식에 눈을 뜬다.",
+  "exit_state": "한상궁이 장금에게 음식과 의학의 연결 원리를 전수하며 사제 관계가 강화된다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "한상궁이 음식·의학 연결의 핵심 원리를 장금에게 전수한다"
+  },
+  "central_conflict_axis": "장금의 의학 수련(제주 자연 활용) vs 한상궁의 건강 위기",
+  "episode_function": "20화는 제주 자연 속 한상궁의 마지막 가르침으로 장금의 의학 소명을 확립한다.",
+  "core_dist": {
+    "ESTABLISH": 15,
+    "ORACLE": 10,
+    "HOOK": 5,
+    "REVELATION": 5,
+    "DESIRE": 15,
+    "BOND": 9,
+    "CONFLICT": 26,
+    "RELIEF": 5,
+    "LOSS": 6,
+    "PERIL": 21,
+    "RESCUE": 3,
+    "REVERSAL": 1
+  },
+  "by": "sonnet_reading"
+}

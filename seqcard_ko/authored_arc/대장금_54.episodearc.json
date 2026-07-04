@@ -1,0 +1,68 @@
+{
+  "work_id": "대장금_54",
+  "episode_no": 54,
+  "scene_count": 84,
+  "sequence_count": 13,
+  "dramatic_question": "마지막 개복 수술과 유랑—장금은 세상을 바꾸고 사랑을 되찾는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        10
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        13
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "중종이 장금을 몰래 빼내 민정호와 재회시키고 임종한다.",
+  "exit_state": "세월 후 장금이 딸 소헌과 함께 백성 시료를 계속하고, 개복 수술 성공으로 시대를 바꾼다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "중종 임종 이후 세월 경과—장금과 민정호·소헌 가족의 새 삶(씬32~57)"
+  },
+  "central_conflict_axis": "개복 수술 도전과 사랑의 재결합(장금·민정호) vs 시대의 금기와 제도의 벽",
+  "episode_function": "54화(최종화)는 중종의 죽음·대장금의 유랑·개복 수술 성공으로 장금의 삶이 완성되며 '사람의 의술은 시대를 바꾼다'는 주제를 완결한다.",
+  "core_dist": {
+    "PERIL": 18,
+    "DESIRE": 12,
+    "CONFLICT": 10,
+    "ORACLE": 5,
+    "REVERSAL": 5,
+    "PUNISH": 3,
+    "HOOK": 9,
+    "BOND": 20,
+    "ROMANCE": 3,
+    "LOSS": 10,
+    "REUNION": 14,
+    "RELIEF": 30,
+    "RESCUE": 5,
+    "ESTABLISH": 10,
+    "INTRO": 2,
+    "REVELATION": 4
+  },
+  "by": "sonnet_reading"
+}

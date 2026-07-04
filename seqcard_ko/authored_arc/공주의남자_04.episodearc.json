@@ -1,0 +1,66 @@
+{
+  "work_id": "공주의남자_04",
+  "episode_no": 4,
+  "scene_count": 77,
+  "sequence_count": 8,
+  "dramatic_question": "혼례와 계유정난이라는 이중 비극 속에서 승유와 세령의 사랑은 어떤 방식으로 살아남을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "혼례 전날·혼례 당일—두 여인의 상실과 체념"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "혼례 직후 상실·세령 정체 발각·첫 균열"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "수양의 제거 압박과 야간 급습"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "계유정난 발발—김종서 사망, 비극 엔진 점화"
+    }
+  ],
+  "entry_state": "혼례를 앞두고 세령과 경혜는 체념하고 승유는 낯선 신부를 맞이해야 하는 현실을 받아들인다.",
+  "exit_state": "계유정난으로 김종서가 사망하며 승유의 세계가 완전히 무너지고 복수 서사가 본격화된다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "계유정난 발발·김종서 사망—비극 엔진 점화, 복수 서사 시작"
+  },
+  "central_conflict_axis": "수양의 권력 찬탈(계유정난) 대 승유·세령의 사랑과 생존",
+  "episode_function": "4화는 혼례로 정략혼을 완성한 뒤 계유정난으로 김종서를 제거함으로써 승유·세령 비극 로맨스의 핵심 동력(복수+사랑)을 동시에 점화한다.",
+  "core_dist": {
+    "ESTABLISH": 6,
+    "CONFLICT": 26,
+    "PERIL": 21,
+    "HOOK": 15,
+    "REVELATION": 8,
+    "REVERSAL": 4,
+    "LOSS": 18,
+    "BOND": 2,
+    "RELIEF": 3,
+    "DESIRE": 3,
+    "PUNISH": 1,
+    "ROMANCE": 3,
+    "RESCUE": 1,
+    "REUNION": 1
+  },
+  "by": "sonnet_reading"
+}

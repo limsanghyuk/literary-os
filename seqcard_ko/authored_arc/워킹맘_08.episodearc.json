@@ -1,0 +1,52 @@
+{
+  "work_id": "워킹맘_08",
+  "episode_no": 8,
+  "scene_count": 69,
+  "sequence_count": 11,
+  "dramatic_question": "이혼 후 싱글맘 가영에게 임신이라는 예상치 못한 변수가 닥친다",
+  "act_structure": [
+    {
+      "act": "재건",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "임신발각",
+      "seq_span": [
+        5,
+        8
+      ]
+    },
+    {
+      "act": "결정기로",
+      "seq_span": [
+        9,
+        11
+      ]
+    }
+  ],
+  "entry_state": "이혼 후 새 일상 재건 시작",
+  "exit_state": "임신 확인, 유지·낙태 결정 기로",
+  "turning_point": {
+    "seq_index": 7
+  },
+  "central_conflict_axis": "가영 vs 임신 현실 + 가영 vs 직장·육아 현실",
+  "episode_function": "CONFLICT",
+  "core_dist": {
+    "CONFLICT": 0.159,
+    "DESIRE": 0.116,
+    "RELIEF": 0.116,
+    "REVELATION": 0.101,
+    "PERIL": 0.101,
+    "ORACLE": 0.072,
+    "HOOK": 0.072,
+    "BOND": 0.072,
+    "PUNISH": 0.072,
+    "REVERSAL": 0.058,
+    "LOSS": 0.043,
+    "ROMANCE": 0.014
+  },
+  "by": "sonnet_reading"
+}

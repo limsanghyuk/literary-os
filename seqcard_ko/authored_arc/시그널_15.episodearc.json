@@ -1,0 +1,56 @@
+{
+  "scene_count": 73,
+  "dramatic_question": "해영은 범주의 함정에서 탈출하고 재한은 살아남을 수 있는가?",
+  "core_dist": {
+    "CONFLICT": 1,
+    "BOND": 1,
+    "RESCUE": 1,
+    "PERIL": 2
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "설정 단계"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        8
+      ],
+      "beat": "전개 단계"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        9,
+        12
+      ],
+      "beat": "심화 단계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        13,
+        14
+      ],
+      "beat": "회말전환 단계"
+    }
+  ],
+  "work_id": "시그널",
+  "by": "sonnet_reading",
+  "sequence_count": 14,
+  "turning_point": {
+    "seq_index": 2,
+    "event": "회말 위기 전환"
+  },
+  "episode_no": 15,
+  "entry_state": "최후 결전의 여파 속에서 살아남은 인물들이 마지막 진실에 다가간다.",
+  "exit_state": "진범이 단죄되거나 정의의 최후 행위가 완성되며 결말이 임박한다.",
+  "central_conflict_axis": "완전한 정의 실현 대 권력의 최후 발악",
+  "episode_function": "시리즈 결론의 도입부로서 핵심 악인이 처벌받고 나머지 진실이 정리되며 마지막 여운을 준비한다."
+}

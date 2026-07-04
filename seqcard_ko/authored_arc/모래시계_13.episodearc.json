@@ -1,0 +1,56 @@
+{
+  "work_id": "모래시계_13",
+  "episode_no": 13,
+  "scene_count": 51,
+  "sequence_count": 9,
+  "dramatic_question": "진실이 드러난 뒤 관계는 회복되는가 아니면 더 복잡해지는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "진실 폭로와 재편",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "B",
+      "label": "일시적 평화와 새 위협",
+      "seq_span": [
+        3,
+        6
+      ]
+    },
+    {
+      "act": "C",
+      "label": "안도와 결전 예고",
+      "seq_span": [
+        7,
+        9
+      ]
+    }
+  ],
+  "entry_state": "진실 폭로 직후의 혼돈",
+  "exit_state": "일시 안도와 차회 결전 예고",
+  "turning_point": {
+    "seq_index": 3,
+    "description": "일시적 평화와 새 위협"
+  },
+  "central_conflict_axis": "진실과 관계—폭로가 회복인가 파괴인가",
+  "episode_function": "중반부 전환 에피소드—진실 폭로 이후 관계 재편과 새 균형",
+  "core_dist": {
+    "ESTABLISH": 0.16,
+    "ORACLE": 0.12,
+    "CONFLICT": 0.12,
+    "REVELATION": 0.1,
+    "REUNION": 0.08,
+    "BOND": 0.08,
+    "RELIEF": 0.08,
+    "LOSS": 0.08,
+    "DESIRE": 0.06,
+    "INTRO": 0.06,
+    "ROMANCE": 0.04,
+    "HOOK": 0.02
+  },
+  "by": "cowork_opus_reading"
+}

@@ -1,0 +1,66 @@
+{
+  "work_id": "스토브리그_04",
+  "episode_no": 4,
+  "scene_count": 68,
+  "sequence_count": 10,
+  "dramatic_question": "고세혁 해고와 이창권 등장으로 구단 권력 지형이 요동치는 가운데, 승수는 미국 출장에서 원석을 발굴할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "유민호 혹사 진실과 고세혁 해고—권력 재편 충격"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "beat": "고세혁 이별·앤디 소식·칼퇴근 로맨스로 다층 전선 형성"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "앤디 전략·미국 출장 결정·재희 서프라이즈 동행"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "원석 탐색 희망과 155km 배신으로 충격 반전"
+    }
+  ],
+  "entry_state": "고세혁 해고 후 이창권이 등장하고 앤디 방출 소식으로 새 국면이 시작된다.",
+  "exit_state": "미국 출장 끝에 155km 배신으로 좌절하며 다음 원석을 찾아야 한다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "미국 출장 결정과 재희 동행—팀 결속이 실질적 행동으로 발현"
+  },
+  "central_conflict_axis": "구단 인적 자원 발굴(승수) 대 권력 간섭·예산 제약(경민)",
+  "episode_function": "4화는 고세혁 해고라는 권력 지형 변화를 배경으로 승수가 미래 자원(원석) 탐색에 나서며 팀 유대를 강화한다.",
+  "core_dist": {
+    "CONFLICT": 23,
+    "HOOK": 19,
+    "BOND": 18,
+    "ESTABLISH": 17,
+    "REVELATION": 15,
+    "LOSS": 9,
+    "RELIEF": 7,
+    "PERIL": 6,
+    "REVERSAL": 6,
+    "PUNISH": 5,
+    "ORACLE": 4,
+    "DESIRE": 3,
+    "ROMANCE": 2,
+    "INTRO": 2
+  },
+  "by": "sonnet_reading"
+}

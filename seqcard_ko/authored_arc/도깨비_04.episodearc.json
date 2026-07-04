@@ -1,0 +1,65 @@
+{
+ "episode_no": 4,
+ "scene_count": 56,
+ "sequence_count": 7,
+ "dramatic_question": "도깨비와 은탁이 캐나다에서 처음으로 단둘이 있을 때 감정의 경계가 무너지는가?",
+ "act_structure": [
+  {
+   "act": "설정",
+   "seq_span": [
+    1,
+    2
+   ],
+   "beat": "캐나다 1차 동행—낯선 공간에서의 친밀감 형성 시작"
+  },
+  {
+   "act": "전개",
+   "seq_span": [
+    3,
+    5
+   ],
+   "beat": "은탁의 과거 상처 공개·도깨비의 과거 첫 고백·감정 교류"
+  },
+  {
+   "act": "심화",
+   "seq_span": [
+    6,
+    6
+   ],
+   "beat": "두 사람의 공유된 외로움이 연결로 전환"
+  },
+  {
+   "act": "회말전환",
+   "seq_span": [
+    7,
+    7
+   ],
+   "beat": "첫눈 속 함께—감정이 로맨스로 본격 진입"
+  }
+ ],
+ "entry_state": "은탁과 도깨비가 캐나다로 우발적 동행을 시작한다.",
+ "exit_state": "첫눈 속 캐나다 동행으로 두 사람의 감정이 로맨스의 문턱에 이른다.",
+ "turning_point": {
+  "seq_index": 7,
+  "desc": "첫눈 동행—도깨비-은탁 로맨스 본격 시작"
+ },
+ "central_conflict_axis": "감정을 받아들이려는 은탁 대 소멸 운명 때문에 감정을 억누르는 도깨비",
+ "episode_function": "4화는 캐나다라는 새로운 공간에서 두 주인공의 과거 상처를 공유하며 로맨스의 가능성을 열고, 써니-저승 관계도 진전시킨다.",
+ "core_dist": {
+  "BOND": 9,
+  "ESTABLISH": 8,
+  "ROMANCE": 7,
+  "CONFLICT": 6,
+  "RELIEF": 5,
+  "DESIRE": 5,
+  "ORACLE": 4,
+  "REVELATION": 4,
+  "RESCUE": 4,
+  "LOSS": 3,
+  "REUNION": 3,
+  "PERIL": 2,
+  "REVERSAL": 2
+ },
+ "work_id": "도깨비_04",
+ "by": "sonnet_reading"
+}

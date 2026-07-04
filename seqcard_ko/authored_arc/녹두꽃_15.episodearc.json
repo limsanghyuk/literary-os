@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_15",
+  "episode_no": 15,
+  "scene_count": 69,
+  "sequence_count": 7,
+  "dramatic_question": "경복궁 함락 이후 이강과 자인은 각자의 임무를 위해 헤어질 수 있는가, 청일전쟁은 혁명을 어떻게 바꿀 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "경복궁 진격·이현 등장·도채비 협박"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "궁 함락·도채비 정체 확산"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "자인 첩자 발탁·이강-자인 이별"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "청일전쟁 발발"
+    }
+  ],
+  "entry_state": "일본군이 경복궁을 공격하며 조선이 무너지고 이강이 참상을 목격한다.",
+  "exit_state": "청일전쟁 발발로 혁명의 전쟁 배경이 확정되고 이강-자인은 각자의 임무를 위해 이별한다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "청일전쟁 발발 확정이 동학 혁명의 2막을 열고 이강-자인의 이별을 역사적 사건으로 비극화한다"
+  },
+  "central_conflict_axis": "일본군 침략(다케다) 대 동학·왕실 저항, 이강-자인의 이별 vs 각자 임무",
+  "episode_function": "경복궁 함락과 청일전쟁 발발이라는 역사적 위기 속에서 이강-자인의 이별과 각자의 임무를 구현한다.",
+  "core_dist": {
+    "CONFLICT": 13,
+    "PERIL": 14,
+    "REVELATION": 12,
+    "LOSS": 11,
+    "BOND": 4,
+    "REVERSAL": 4,
+    "RELIEF": 2,
+    "HOOK": 6,
+    "RESCUE": 3,
+    "REUNION": 2,
+    "ESTABLISH": 3,
+    "DESIRE": 3,
+    "PUNISH": 4,
+    "ROMANCE": 3,
+    "ORACLE": 3,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

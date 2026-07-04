@@ -1,0 +1,61 @@
+{
+  "scene_count": 113,
+  "dramatic_question": "진우를 잡아 홍원동 연쇄살인을 종결할 수 있는가, 그리고 인주 여고생 사건의 진실은 무엇인가?",
+  "core_dist": {
+    "PERIL": 1,
+    "REVELATION": 3,
+    "RESCUE": 1,
+    "RELIEF": 1,
+    "BOND": 1,
+    "LOSS": 1,
+    "ESTABLISH": 1,
+    "ORACLE": 1,
+    "HOOK": 1
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        6
+      ],
+      "beat": "설정 단계"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        7,
+        13
+      ],
+      "beat": "전개 단계"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        14,
+        19
+      ],
+      "beat": "심화 단계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        20,
+        22
+      ],
+      "beat": "회말전환 단계"
+    }
+  ],
+  "work_id": "시그널",
+  "by": "sonnet_reading",
+  "sequence_count": 22,
+  "turning_point": {
+    "seq_index": 5,
+    "event": "회말 위기 전환"
+  },
+  "episode_no": 11,
+  "entry_state": "전반부 수사의 결실이 위기에 처하고, 주요 인물들이 생사의 갈림길에 선다.",
+  "exit_state": "희생과 새로운 결의를 통해 최종 결전을 향한 재정비가 이루어진다.",
+  "central_conflict_axis": "희생을 요구하는 진실 추적 대 생존 본능 사이의 도덕적 딜레마",
+  "episode_function": "감정적 정점을 형성하며 남은 수사의 동력(분노와 책임감)을 점화하고, 최종 대결의 코스트를 제시한다."
+}

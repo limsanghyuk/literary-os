@@ -1,0 +1,60 @@
+{
+  "work_id": "싸인_15",
+  "episode_no": 15,
+  "scene_count": 143,
+  "sequence_count": 24,
+  "dramatic_question": "지훈이 총체적 위기 속에서 법의학의 마지막 수호자로 살아남고 최후의 진실을 세상에 알릴 수 있는가?",
+  "entry_state": "전방위적 위기가 동시에 터지며 지훈이 가장 극단적인 압박에 놓인다.",
+  "exit_state": "지훈이 결정적 국면을 돌파하며 최후의 진실 공개를 향해 나아간다.",
+  "turning_point": {
+    "seq_index": 17,
+    "description": "지훈이 죽음의 위협을 뚫고 핵심 증거를 지켜내는 극적 역전"
+  },
+  "central_conflict_axis": "지훈의 진실 사수와 생존 대 권력의 전면적 공세와 증거 소각",
+  "episode_function": "15화는 가장 방대한 분량으로 복수의 위기를 동시에 전개하며 마지막 대결의 모든 말들을 배치한다.",
+  "core_dist": {
+    "ESTABLISH": 16.1,
+    "CONFLICT": 16.1,
+    "REVELATION": 12.6,
+    "DESIRE": 11.9,
+    "LOSS": 10.5,
+    "ORACLE": 8.4,
+    "PERIL": 7.0,
+    "REVERSAL": 5.6
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        6
+      ],
+      "function": "인물·상황·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        7,
+        12
+      ],
+      "function": "갈등 심화와 단서 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        13,
+        18
+      ],
+      "function": "위기 폭발과 결정적 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        19,
+        24
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_10",
+  "episode_no": 10,
+  "scene_count": 83,
+  "sequence_count": 8,
+  "dramatic_question": "자인의 위험한 결단은 전주화약으로 이어질 수 있는가, 그리고 이강은 자인의 마음을 어떻게 받아들일 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "번개 죽음·이현 승계·청군 파병"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "완산 퇴각·자인 결단"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "성문 거래·일본 상륙·이강 엿듣기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "봉길 위기·이강 절규"
+    }
+  ],
+  "entry_state": "이강이 이현을 놓치고 번개를 잃은 상실 속에서, 청군 파병과 일본군 상륙이라는 외세 개입이 확정된다.",
+  "exit_state": "봉길의 거사가 발각되고 이강이 절규하는 가운데, 자인의 이강을 향한 감정이 드러나며 혁명의 내외부 위기가 동시에 폭발한다.",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "자인이 아버지를 위해 성문 개방을 제안하는 위험한 결단이 봉기의 전략적 분기점이 된다"
+  },
+  "central_conflict_axis": "외세 개입(청군·일본군) 대 동학 혁명의 자립, 이강-자인의 감정 성장 vs 봉길의 거사 위기",
+  "episode_function": "청군·일본군 개입이라는 외압과 봉길 위기·자인 감정 노출이라는 내압이 동시에 폭발하며 전주화약을 향한 위기를 고조시킨다.",
+  "core_dist": {
+    "CONFLICT": 13,
+    "PERIL": 14,
+    "REVELATION": 12,
+    "LOSS": 8,
+    "BOND": 7,
+    "REVERSAL": 5,
+    "RELIEF": 4,
+    "HOOK": 8,
+    "RESCUE": 2,
+    "REUNION": 2,
+    "ESTABLISH": 3,
+    "DESIRE": 5,
+    "PUNISH": 3,
+    "ROMANCE": 7,
+    "ORACLE": 0,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

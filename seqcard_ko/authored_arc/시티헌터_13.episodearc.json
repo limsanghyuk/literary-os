@@ -1,0 +1,66 @@
+{
+  "work_id": "시티헌터_13",
+  "episode_no": 13,
+  "scene_count": 69,
+  "sequence_count": 11,
+  "dramatic_question": "윤성이 김종식과 진표를 동시에 파멸시키는 선언을 어떻게 실행할 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "작전 구체화·잠입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "부자 관계 폭로·상호 탐지"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "식중 위기·결전 결심"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        11
+      ],
+      "beat": "폭로·납치·파멸 선언"
+    }
+  ],
+  "entry_state": "진표의 악마화 계획과 김종식의 뻔뻔한 기자회견으로 처단 압박이 최고조.",
+  "exit_state": "강당 비리 폭로와 납치, 부자 파멸 선언—복수극 결전이 선포됐다.",
+  "turning_point": {
+    "seq_index": 11,
+    "desc": "김종식 비리 생중계 폭로·납치: 3번째 표적 결전 선포"
+  },
+  "central_conflict_axis": "김종식 처단(윤성) vs 영주의 추격, 진표의 방해",
+  "episode_function": "13화: 김종식 처단의 결전이 선포되고 부자 파멸 계획이 드러나는 전환회차.",
+  "core_dist": {
+    "PERIL": 19,
+    "CONFLICT": 16,
+    "BOND": 3,
+    "REVELATION": 9,
+    "DESIRE": 11,
+    "ORACLE": 10,
+    "RELIEF": 8,
+    "INTRO": 1,
+    "ESTABLISH": 5,
+    "HOOK": 6,
+    "LOSS": 3,
+    "RESCUE": 4,
+    "PUNISH": 1,
+    "REVERSAL": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,67 @@
+{
+  "work_id": "시티헌터_12",
+  "episode_no": 12,
+  "scene_count": 76,
+  "sequence_count": 12,
+  "dramatic_question": "진표의 기습 총격에서 살아남은 윤성과 나나는 김종식 비자금 처단을 완성할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "나나 구조·부자 단절"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        8
+      ],
+      "beat": "팀 재결집·작전 설계·감정 심화"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        9,
+        11
+      ],
+      "beat": "비리 확인·탈취 성공"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        12,
+        12
+      ],
+      "beat": "자축·진표 총격 훅"
+    }
+  ],
+  "entry_state": "나나 총상 구조·부자 단절·팀 재결집.",
+  "exit_state": "2천억 탈취·등록금 환급 성공, 그러나 진표의 기습 총격으로 훅.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "부자 관계 단절: 진표의 나나 제거 지시·사망 거짓말 폭로"
+  },
+  "central_conflict_axis": "김종식 비자금 처단(윤성) vs 진표의 자력 복수와 방해",
+  "episode_function": "12화: 부자 단절 이후 팀 재결집과 2천억 처단 성공—시티헌터 방식이 사회적 정의로 확장된다.",
+  "core_dist": {
+    "PERIL": 12,
+    "BOND": 9,
+    "RESCUE": 3,
+    "ORACLE": 10,
+    "ESTABLISH": 4,
+    "ROMANCE": 7,
+    "REVELATION": 13,
+    "HOOK": 9,
+    "CONFLICT": 15,
+    "LOSS": 6,
+    "RELIEF": 12,
+    "DESIRE": 9,
+    "REVERSAL": 3,
+    "INTRO": 1,
+    "PUNISH": 2
+  },
+  "by": "sonnet_reading"
+}

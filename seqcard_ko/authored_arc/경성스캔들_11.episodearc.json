@@ -1,0 +1,19 @@
+{
+  "work_id": "경성스캔들_11",
+  "episode_no": 11,
+  "scene_count": 76,
+  "sequence_count": 8,
+  "dramatic_question": "완과 여경이 공식 연인이 되었지만 미유키 일본 유학 임무와 강구의 VIP룸 납치가 겹치면 두 사람은 비밀을 지킬 수 있을까?",
+  "act_structure": [
+    {"act": 1, "seq_span": [1, 3], "label": "연인 공식화와 미유키 유학 임무 — 달콤함과 공작의 교차"},
+    {"act": 2, "seq_span": [4, 6], "label": "공남작 시신 발견과 강구의 VIP룸 납치 — 이중 위기"},
+    {"act": 3, "seq_span": [7, 8], "label": "수현 구출과 수장 정체 반전 — 클리프행어"}
+  ],
+  "entry_state": "10화 키스로 완-여경 로맨스가 공식화된 상태",
+  "exit_state": "수현이 강구의 VIP룸 납치를 저지하고, 근덕이 일본행 암살 임무를 발표하자 수현이 애물단의 수장임이 폭로된다",
+  "turning_point": {"seq_index": 8, "label": "수현=애물단 수장 반전 공개", "description": "근덕이 완의 일본행 암살 임무를 발표하고 수현이 격분하자 수현이 애물단의 수장임이 드러나는 최대 반전이 발생한다"},
+  "central_conflict_axis": "완의 미유키 유학 유인 임무 vs 여경의 질투, 공남작 시신 발견으로 수사 급진전, 강구의 VIP룸 납치와 수장 신원 폭로",
+  "episode_function": "완-여경 연인 공식화 후 첫 갈등, 수현=애물단 수장 최대 반전, 일본행 암살 임무 설정",
+  "core_dist": {"ROMANCE": 2, "DESIRE": 1, "PERIL": 2, "RESCUE": 1, "HOOK": 1, "LOSS": 1},
+  "by": "cowork_opus_reading"
+}

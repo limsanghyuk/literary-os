@@ -1,0 +1,66 @@
+{
+  "work_id": "시티헌터_17",
+  "episode_no": 17,
+  "scene_count": 54,
+  "sequence_count": 8,
+  "dramatic_question": "석두식의 조폭 습격에서 살아남고, 천재만의 의료민영화 음모를 막을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "오찬 습격·과거 비극"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "beat": "결전 가열·감정 화해"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "전선 복잡화"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "뇌물 시도·조폭 습격 훅"
+    }
+  ],
+  "entry_state": "응찬 앨범 발견과 결전 초읽기, 오찬 경호 착수.",
+  "exit_state": "상국의 뇌물 제보 실패, 석두식 조폭의 진표 습격으로 훅.",
+  "turning_point": {
+    "seq_index": 3,
+    "desc": "천재만의 경희 낙태 강요 과거 드러남: 1983년 비극의 핵심 확인"
+  },
+  "central_conflict_axis": "천재만 의료민영화 음모 차단(영주/윤성) vs 석두식·조폭의 역공",
+  "episode_function": "17화: 1983년 비극의 핵심과 결전 가열—감정 화해와 전선 복잡화 속에서 조폭 습격으로 훅.",
+  "core_dist": {
+    "BOND": 11,
+    "ESTABLISH": 5,
+    "ORACLE": 7,
+    "CONFLICT": 20,
+    "REVELATION": 16,
+    "PERIL": 10,
+    "RELIEF": 6,
+    "DESIRE": 4,
+    "RESCUE": 1,
+    "LOSS": 3,
+    "ROMANCE": 6,
+    "PUNISH": 3,
+    "REVERSAL": 3,
+    "HOOK": 2
+  },
+  "by": "sonnet_reading"
+}

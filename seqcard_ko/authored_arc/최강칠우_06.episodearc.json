@@ -1,0 +1,67 @@
+{
+  "work_id": "최강칠우_06",
+  "episode_no": 6,
+  "scene_count": 71,
+  "sequence_count": 11,
+  "dramatic_question": "이 회차에서 주인공은 어떤 선택에 직면하며 어떻게 돌파하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황 도입 및 회차 갈등 설치"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "갈등 심화 및 사건 연쇄 확장"
+    },
+    {
+      "act": "절정",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "위기 고조 및 반전 직전"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        11
+      ],
+      "beat": "전환점·클리프행어 제시"
+    }
+  ],
+  "entry_state": "직전 회차의 긴장이 이어지며 회차가 열린다.",
+  "exit_state": "핵심 갈등이 한 단계 진전되며 다음 회차로 이어진다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "회차 전환점: 핵심 반전 또는 결정적 선택"
+  },
+  "central_conflict_axis": "주인공의 의지 대 외부 권력·제도의 억압",
+  "episode_function": "ep06: 핵심 갈등을 진전시키고 인물 관계를 심화하며 시리즈 호를 유지한다.",
+  "core_dist": {
+    "ESTABLISH": 7,
+    "BOND": 2,
+    "ROMANCE": 5,
+    "ORACLE": 8,
+    "PERIL": 11,
+    "INTRO": 1,
+    "DESIRE": 4,
+    "RELIEF": 12,
+    "REVELATION": 11,
+    "PUNISH": 4,
+    "CONFLICT": 1,
+    "REUNION": 1,
+    "LOSS": 2,
+    "RESCUE": 1,
+    "HOOK": 1
+  },
+  "by": "cowork_opus_reading"
+}

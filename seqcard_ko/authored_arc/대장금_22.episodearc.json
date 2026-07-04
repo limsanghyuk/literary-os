@@ -1,0 +1,65 @@
+{
+  "work_id": "대장금_22",
+  "episode_no": 22,
+  "scene_count": 58,
+  "sequence_count": 9,
+  "dramatic_question": "한상궁의 죽음을 맞이한 장금은 어떻게 홀로 일어서는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "한상궁이 세상을 떠나고 장금이 깊은 슬픔에 빠진다.",
+  "exit_state": "장금이 한상궁의 유지를 계승하여 의녀의 길을 걷기로 결심한다.",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "장금이 한상궁의 죽음을 받아들이고 의학의 길을 선택한다"
+  },
+  "central_conflict_axis": "상실과 절망(한상궁 사망) vs 장금의 재기 결심",
+  "episode_function": "22화는 한상궁의 죽음으로 장금의 인생 가장 큰 상실을 치르고 의학적 자아를 확립한다.",
+  "core_dist": {
+    "LOSS": 12,
+    "PERIL": 11,
+    "ESTABLISH": 11,
+    "ORACLE": 4,
+    "BOND": 12,
+    "CONFLICT": 24,
+    "HOOK": 10,
+    "RELIEF": 6,
+    "PUNISH": 5,
+    "RESCUE": 5,
+    "DESIRE": 7,
+    "REVERSAL": 5,
+    "INTRO": 1
+  },
+  "by": "sonnet_reading"
+}

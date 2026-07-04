@@ -1,0 +1,64 @@
+{
+  "work_id": "스카이캐슬_02",
+  "episode_no": 2,
+  "scene_count": 89,
+  "sequence_count": 14,
+  "dramatic_question": "이명주의 죽음 이후에도 욕망을 멈추지 못하는 이들—욕망과 죄책감 중 무엇이 이길 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "명주 장례·영재 귀환·복수 점화"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        8
+      ],
+      "beat": "한서진 위선적 일상·코디 계약 성립·이수임 위로"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        9,
+        12
+      ],
+      "beat": "영재 복수 착수·차민혁 폭력 지속·예서 훈련 개시·긴장 고조"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        13,
+        14
+      ],
+      "beat": "영재 복수 선언 암시·이수임 진실 탐색 착수—이중 후크"
+    }
+  ],
+  "entry_state": "이명주의 장례로 스카이캐슬 전체가 충격에 잠긴다.",
+  "exit_state": "영재의 복수와 이수임의 진실 탐색이 동시에 착수되며, 한서진은 코디 계약을 체결해 욕망의 두 번째 장을 연다.",
+  "turning_point": {
+    "seq_index": 13,
+    "desc": "영재의 복수 선언—어른들의 욕망이 불러온 자녀의 반격"
+  },
+  "central_conflict_axis": "어른들의 욕망(한서진 코디 계약·코디 시스템) 대 자녀의 분노와 반격(영재의 복수·이수임의 진실 탐색)",
+  "episode_function": "2화는 명주 사건 직후에도 욕망이 멈추지 않음을 보이며, 한서진의 코디 계약 성립과 영재의 복수 착수라는 이중 동력을 설치한다.",
+  "core_dist": {
+    "ESTABLISH": 4,
+    "LOSS": 12,
+    "HOOK": 8,
+    "DESIRE": 10,
+    "CONFLICT": 19,
+    "RELIEF": 2,
+    "BOND": 5,
+    "ORACLE": 1,
+    "REVELATION": 12,
+    "INTRO": 2,
+    "PERIL": 12,
+    "PUNISH": 2
+  },
+  "by": "sonnet_reading"
+}

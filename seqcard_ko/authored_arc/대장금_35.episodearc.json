@@ -1,0 +1,65 @@
+{
+  "work_id": "대장금_35",
+  "episode_no": 35,
+  "scene_count": 54,
+  "sequence_count": 8,
+  "dramatic_question": "복귀한 장금이 중전 치료 과제를 맡고 조봉사의 음해를 어떻게 넘기는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "장금이 복귀하여 중전 진맥 담당으로 배치된다.",
+  "exit_state": "중전 의식불명 사태에서 장금이 의심받고 새 위기가 시작된다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "중전이 의식불명에 빠지고 장금이 의심을 받는다(씬52~54)"
+  },
+  "central_conflict_axis": "조봉사의 음해 vs 장금의 진단 신뢰",
+  "episode_function": "35화는 조봉사의 음해와 중전 위기로 장금의 의학 역량이 극한 시험을 받는다.",
+  "core_dist": {
+    "REUNION": 6,
+    "CONFLICT": 25,
+    "PERIL": 13,
+    "REVELATION": 5,
+    "HOOK": 7,
+    "LOSS": 6,
+    "ESTABLISH": 4,
+    "DESIRE": 10,
+    "BOND": 3,
+    "REVERSAL": 3,
+    "RELIEF": 2,
+    "ORACLE": 1,
+    "PUNISH": 1
+  },
+  "by": "sonnet_reading"
+}

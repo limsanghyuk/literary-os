@@ -1,0 +1,64 @@
+{
+  "work_id": "태양의후예_15",
+  "episode_no": 15,
+  "scene_count": 60,
+  "sequence_count": 9,
+  "dramatic_question": "상실 끝에도 삶은 계속되는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "최종 임무·이별·전투"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "모연 기다림·전사 통보·상실"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "애도·서브 재결합·모연 회복"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "일상 재건·반전 예고"
+    }
+  ],
+  "entry_state": "마지막 이별",
+  "exit_state": "생환 반전 예고",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "두 번째 시진 전사 통보"
+  },
+  "central_conflict_axis": "이별과 상실의 반복",
+  "episode_function": "최대 비극: 상실→회복 서사 집중",
+  "core_dist": {
+    "ROMANCE": 5,
+    "CONFLICT": 3,
+    "BOND": 5,
+    "HOOK": 2,
+    "RELIEF": 11,
+    "PERIL": 5,
+    "LOSS": 18,
+    "PUNISH": 1,
+    "ESTABLISH": 6,
+    "REUNION": 2,
+    "REVELATION": 1,
+    "REVERSAL": 1
+  },
+  "by": "sonnet_reading"
+}

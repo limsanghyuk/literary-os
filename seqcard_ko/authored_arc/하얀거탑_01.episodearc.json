@@ -1,0 +1,66 @@
+{
+  "work_id": "하얀거탑",
+  "episode_no": 1,
+  "scene_count": 68,
+  "sequence_count": 10,
+  "dramatic_question": "장준혁은 병원 권력의 견제를 뚫고 외과 과장 자리를 노릴 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "label": "세계와 갈등 도입",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "전개",
+      "label": "갈등 심화와 대결 구도 확립",
+      "seq_span": [
+        3,
+        6
+      ]
+    },
+    {
+      "act": "심화",
+      "label": "위기 절정과 전환점",
+      "seq_span": [
+        7,
+        9
+      ]
+    },
+    {
+      "act": "회말전환",
+      "label": "회말 반전과 다음 회 훅",
+      "seq_span": [
+        10,
+        10
+      ]
+    }
+  ],
+  "entry_state": "준혁이 뛰어난 실력에도 주완과 용길의 견제 속에 브랜치 발령 위협을 받는 상황",
+  "exit_state": "준혁이 무단 수술을 강행했고 용길이 참관실에 나타나 위기가 발생함",
+  "turning_point": {
+    "seq_index": 9,
+    "description": "용길이 수술 참관실에 기습 등장—무단 수술 발각 위기"
+  },
+  "central_conflict_axis": "장준혁의 야망 vs 이주완·오용길 권력 연합의 후임 봉쇄",
+  "episode_function": "세계 설정과 주요 갈등 축 도입—의료 권력 투쟁의 시작",
+  "core_dist": {
+    "CONFLICT": 29,
+    "ESTABLISH": 16,
+    "ORACLE": 15,
+    "DESIRE": 14,
+    "BOND": 7,
+    "PERIL": 5,
+    "INTRO": 4,
+    "PUNISH": 3,
+    "REVERSAL": 3,
+    "LOSS": 3,
+    "RESCUE": 2,
+    "ROMANCE": 2,
+    "REVELATION": 1,
+    "HOOK": 1
+  },
+  "by": "claude-sonnet-4-6"
+}

@@ -1,0 +1,67 @@
+{
+  "work_id": "대장금_29",
+  "episode_no": 29,
+  "scene_count": 59,
+  "sequence_count": 9,
+  "dramatic_question": "제주에서 장덕과 만난 장금—의녀의 소명을 확인하고 궁으로 돌아갈 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "장금이 제주에서 의원 장덕을 만나 의학 지식을 쌓는다.",
+  "exit_state": "전의감 교지가 내려와 장금이 내의원 내의녀로 복귀할 희망을 얻는다.",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "전의감 교지—내의원 내의녀로 복귀하라는 어명(씬57~59)"
+  },
+  "central_conflict_axis": "장금의 의학 수련(장덕 사사) vs 궁 복귀 욕망",
+  "episode_function": "29화는 장덕과의 만남으로 장금이 의학자로 성장하고 내의원 복귀의 길이 열린다.",
+  "core_dist": {
+    "HOOK": 6,
+    "CONFLICT": 21,
+    "INTRO": 2,
+    "ROMANCE": 3,
+    "REVELATION": 14,
+    "ESTABLISH": 10,
+    "BOND": 25,
+    "LOSS": 1,
+    "DESIRE": 10,
+    "ORACLE": 2,
+    "RELIEF": 5,
+    "PUNISH": 6,
+    "PERIL": 4,
+    "RESCUE": 7,
+    "REVERSAL": 1
+  },
+  "by": "sonnet_reading"
+}

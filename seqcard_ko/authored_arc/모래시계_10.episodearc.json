@@ -1,0 +1,58 @@
+{
+  "work_id": "모래시계_10",
+  "episode_no": 10,
+  "scene_count": 54,
+  "sequence_count": 10,
+  "dramatic_question": "행복의 절정에서 폭력이 침범할 때 태수는 무엇을 선택하는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "재출발과 로맨스",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "행복 붕괴와 압박",
+      "seq_span": [
+        5,
+        7
+      ]
+    },
+    {
+      "act": "C",
+      "label": "위기 심화와 예고",
+      "seq_span": [
+        8,
+        10
+      ]
+    }
+  ],
+  "entry_state": "상실 딛고 행복을 시도하는 태수",
+  "exit_state": "행복 깨지고 결전 직전 처벌 선납",
+  "turning_point": {
+    "seq_index": 5,
+    "description": "행복 붕괴와 압박"
+  },
+  "central_conflict_axis": "사랑과 폭력—행복이 가장 위험한 순간",
+  "episode_function": "로맨스 절정과 행복 붕괴—결전 직전 정서적 준비",
+  "core_dist": {
+    "ORACLE": 0.15,
+    "PERIL": 0.13,
+    "CONFLICT": 0.11,
+    "ROMANCE": 0.09,
+    "LOSS": 0.09,
+    "ESTABLISH": 0.09,
+    "RELIEF": 0.07,
+    "BOND": 0.07,
+    "PUNISH": 0.06,
+    "RESCUE": 0.04,
+    "DESIRE": 0.04,
+    "HOOK": 0.02,
+    "REVERSAL": 0.02,
+    "REVELATION": 0.02
+  },
+  "by": "cowork_opus_reading"
+}

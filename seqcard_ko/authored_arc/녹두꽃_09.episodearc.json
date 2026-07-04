@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_09",
+  "episode_no": 9,
+  "scene_count": 70,
+  "sequence_count": 8,
+  "dramatic_question": "이현은 도채비로서 얼마나 더 깊이 들어갈 수 있는가, 이강은 형제를 멈출 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "이현 조종·이강-자인 감정 쌓임"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "이현 저격·야간 공포 조성"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "별동대장 지명·미끼 작전"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "이현 총 맞음·이강-이현 재대면"
+    }
+  ],
+  "entry_state": "전주성 대치 속에서 이현이 저격수로 자원하고 이강과 자인 사이의 감정이 쌓인다.",
+  "exit_state": "이강의 미끼 작전으로 이현이 총에 맞고 두 형제가 마주한다—형제 결전의 서막이 열린다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "이강이 이현을 총으로 명중시키고 마주하는 장면이 형제 갈등의 전환점이 된다"
+  },
+  "central_conflict_axis": "이현의 도채비 활동(어둠) 대 이강의 공개적 혁명(빛), 형제의 불가피한 충돌",
+  "episode_function": "이현의 도채비 야간 저격과 이강의 미끼 작전이 충돌하며 형제 갈등의 첫 물리적 대결을 구현한다.",
+  "core_dist": {
+    "CONFLICT": 13,
+    "PERIL": 11,
+    "REVELATION": 9,
+    "LOSS": 6,
+    "BOND": 7,
+    "REVERSAL": 6,
+    "RELIEF": 4,
+    "HOOK": 7,
+    "RESCUE": 1,
+    "REUNION": 0,
+    "ESTABLISH": 3,
+    "DESIRE": 5,
+    "PUNISH": 3,
+    "ROMANCE": 5,
+    "ORACLE": 0,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

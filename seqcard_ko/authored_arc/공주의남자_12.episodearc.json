@@ -1,0 +1,51 @@
+{
+  "work_id": "공주의남자_12",
+  "episode_no": 12,
+  "scene_count": 77,
+  "sequence_count": 12,
+  "dramatic_question": "측근 비리 공개가 수양을 흔들 수 있는가, 아니면 역으로 총공세를 불러오는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "증거 확보 완성·첩자 발견"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "측근 감시·이동 갈등·비리 공개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "총공세·동료 체포·정보 누출 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        12
+      ],
+      "beat": "역정보 성공·유대 재확인·수양 전략 전환"
+    }
+  ],
+  "entry_state": "측근 비리 증거 확보 직전, 세령 첩자 노출 위기",
+  "exit_state": "동료 피해, 세령 역정보로 위기 모면, 수양의 전략이 승유 제거로 집중",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "총공세 동료 체포 — 주도권 상실, 수세 전환"
+  },
+  "central_conflict_axis": "비리 폭로 vs 수양의 총공세 반격",
+  "episode_function": "공세적 복수 국면 종료·수세 전환 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

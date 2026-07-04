@@ -1,0 +1,65 @@
+{
+  "work_id": "스카이캐슬_19",
+  "episode_no": 19,
+  "scene_count": 76,
+  "sequence_count": 10,
+  "dramatic_question": "욕망 대가를 치른 후 진정한 재건과 온기는 가능한가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "법적 결말 진행·우주 완전 승리·예서 자아 회복"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "강준상 책임 완성·한서진 대가 수용·차민혁 화해 실패·스카이캐슬 일몰"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "한서진 재건 시동·이수임 온기 지속"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        10
+      ],
+      "beat": "결말 직전—재건의 문턱"
+    }
+  ],
+  "entry_state": "시험지 유출의 법적 결말이 진행되고 각 가족이 대가를 치른다.",
+  "exit_state": "한서진 가족의 재건 시동과 이수임 가족의 온기 지속이 확인되며 결말을 향한 문턱에 선다.",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "결말 직전 정지—재건과 온기의 문턱"
+  },
+  "central_conflict_axis": "욕망 대가(한서진·강준상·차민혁) 대 재건과 온기(이수임 가족·예서)",
+  "episode_function": "19화는 법적 결말, 예서의 자아 회복, 한서진 가족의 재건 시동을 통해 욕망 시스템 이후의 삶이 어떤 모습인지 보인다.",
+  "core_dist": {
+    "DESIRE": 1,
+    "CONFLICT": 19,
+    "LOSS": 10,
+    "ORACLE": 1,
+    "PERIL": 12,
+    "REVELATION": 6,
+    "HOOK": 6,
+    "BOND": 4,
+    "REVERSAL": 6,
+    "ESTABLISH": 1,
+    "RELIEF": 4,
+    "PUNISH": 3,
+    "REUNION": 3
+  },
+  "by": "sonnet_reading"
+}

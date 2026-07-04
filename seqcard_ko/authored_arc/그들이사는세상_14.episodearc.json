@@ -1,0 +1,51 @@
+{
+  "work_id": "그들이사는세상_14",
+  "episode_no": 14,
+  "scene_count": 50,
+  "sequence_count": 8,
+  "dramatic_question": "준호의 복귀가 두 사람의 관계를 동반자로 재설계하는 기회가 되는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "복귀 가능성·지오 복잡 감정"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "지오 자신감·준호 귀환·자존감 위협"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "지오 먼저 다가감·동반자 재설계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "복귀 시점 결정 압박"
+    }
+  ],
+  "entry_state": "준호 외부 프로젝트 중간, 지오 단독 팀 운영",
+  "exit_state": "지오 독립 자신감, 준호 귀환, 동반자 관계 재설계",
+  "turning_point": {
+    "seq_index": 3,
+    "desc": "지오 독립 자신감 발견 — 의존에서 동반자로 전환"
+  },
+  "central_conflict_axis": "준호 복귀 후 역학 변화 vs 관계 재설계",
+  "episode_function": "지오 완전 독립·동반자 관계 재설계 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

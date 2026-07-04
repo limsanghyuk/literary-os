@@ -1,0 +1,65 @@
+{
+  "work_id": "베토벤바이러스_01",
+  "episode_no": 1,
+  "scene_count": 66,
+  "sequence_count": 10,
+  "dramatic_question": "독불장군 지휘자 강마에는 평범한 아마추어 악단에서 무엇을 발견하게 될 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "회차의 출발점—지휘를 거부하는 강마에에서 상황과 긴장을 확립한다"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "갈등이 구체화되고 인물들의 선택이 이야기를 추동한다"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "긴장이 정점을 향해 치닫고 위기가 가시화된다"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "변한 게 없다는 냉소로 마무리되며 다음 회를 향한 전환점을 남긴다"
+    }
+  ],
+  "entry_state": "강마에가 아마추어 시립 오케스트라를 처음 만나며 완벽주의자의 기준을 들이댄다.",
+  "exit_state": "강마에와 단원들의 첫 충돌이 발생하며 함께하기 어려운 동행이 예고된다.",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "강마에의 혹독한 기준이 단원들을 좌절시키는 동시에 변화의 씨앗을 심는다"
+  },
+  "central_conflict_axis": "강마에의 완벽주의 vs 아마추어 단원들의 현실과 열정",
+  "episode_function": "1화는 강마에의 음악적 완벽주의와 아마추어 악단의 현실 사이의 근본적 긴장을 설정하며, 두림·루나 등 핵심 인물을 도입하고 시리즈 갈등의 틀을 세운다.",
+  "core_dist": {
+    "INTRO": 16,
+    "CONFLICT": 18,
+    "DESIRE": 14,
+    "ESTABLISH": 4,
+    "ORACLE": 2,
+    "LOSS": 7,
+    "PERIL": 4,
+    "REVELATION": 13,
+    "HOOK": 7,
+    "BOND": 6,
+    "RESCUE": 1,
+    "RELIEF": 1,
+    "REVERSAL": 1
+  },
+  "by": "sonnet_reading"
+}

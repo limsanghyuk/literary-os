@@ -1,0 +1,67 @@
+{
+  "work_id": "공주의남자_03",
+  "episode_no": 3,
+  "scene_count": 83,
+  "sequence_count": 10,
+  "dramatic_question": "왕명과 수양의 강압 앞에서 승유와 세령의 사랑은 어떻게 운명적 3각 비극으로 굳어지는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "냇가 로맨스 절정과 추격 위기 실체화"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "혼담 진실 직면·수양 강압·승유 무기력 확인"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "명절 로맨스 절정과 자유 박탈"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "부마 간택 강행→왕명으로 3각 비극 구조 완성"
+    }
+  ],
+  "entry_state": "벌판 추격 위기 속에서도 세령과 승유의 감정은 냇가에서 정점을 찍는다.",
+  "exit_state": "문종의 왕명으로 운명이 확정되며 세령·경혜·승유의 3각 비극 구조가 돌이킬 수 없이 굳어진다.",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "문종의 마지막 명—3각 비극 구조 완성, 돌아갈 수 없는 지점"
+  },
+  "central_conflict_axis": "수양의 강압적 혼담 완성(왕명 활용) 대 세령·승유의 사랑과 자유",
+  "episode_function": "3화는 로맨스를 명절 절정으로 끌어올린 뒤 수양의 강압과 왕명으로 세령·경혜·승유 3각 비극 구조를 돌이킬 수 없이 완성한다.",
+  "core_dist": {
+    "ROMANCE": 12,
+    "BOND": 7,
+    "PERIL": 21,
+    "HOOK": 19,
+    "REVELATION": 16,
+    "CONFLICT": 22,
+    "RESCUE": 2,
+    "ESTABLISH": 6,
+    "LOSS": 8,
+    "REVERSAL": 2,
+    "PUNISH": 4,
+    "DESIRE": 6,
+    "REUNION": 1,
+    "RELIEF": 1,
+    "INTRO": 1
+  },
+  "by": "sonnet_reading"
+}

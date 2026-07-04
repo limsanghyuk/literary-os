@@ -1,0 +1,60 @@
+{
+  "work_id": "카인과아벨_15",
+  "episode_no": 15,
+  "scene_count": 55,
+  "sequence_count": 9,
+  "dramatic_question": "모든 갈등이 수렴하는 마지막 대결에서 초인은 정의를 선택하고 살아남을 수 있는가?",
+  "entry_state": "선우와 초인이 마지막 대결을 앞두고 있으며 모든 주변 인물들이 입장을 정한 상태이다.",
+  "exit_state": "최후 대결의 무대가 갖춰지고 결말만이 남은 상황이 된다.",
+  "turning_point": {
+    "seq_index": 6,
+    "description": "선우가 마지막 패를 꺼내며 초인이 결정적 선택을 강요받는 클라이맥스"
+  },
+  "central_conflict_axis": "초인의 최후 정의 실현 대 선우의 마지막 저항",
+  "episode_function": "15화는 두 형제의 최후 대결을 앞두고 모든 서브플롯을 정리하며 최종회를 향한 결전 준비를 완료한다.",
+  "core_dist": {
+    "PERIL": 23.6,
+    "CONFLICT": 18.2,
+    "ROMANCE": 18.2,
+    "LOSS": 12.7,
+    "REVELATION": 9.1,
+    "RESCUE": 5.5,
+    "BOND": 5.5,
+    "ESTABLISH": 3.6
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "function": "인물·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        5
+      ],
+      "function": "갈등 심화와 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        6,
+        7
+      ],
+      "function": "위기 폭발과 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        8,
+        9
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

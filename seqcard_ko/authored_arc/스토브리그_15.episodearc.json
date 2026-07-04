@@ -1,0 +1,64 @@
+{
+  "work_id": "스토브리그_15",
+  "episode_no": 15,
+  "scene_count": 67,
+  "sequence_count": 9,
+  "dramatic_question": "강두기 트레이드와 드림즈 해체 결정에 맞서 승수는 공개 폭로와 매각 선언으로 팀을 살릴 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "트레이드 분노·팬 시위·훈련 보이콧으로 팀 위기 최고조"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        5
+      ],
+      "beat": "승수 복귀·성복 설득·이면 계약서 확보로 반격 준비"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "공개 폭로·여론전·강두기 복귀 확정으로 역전"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        9
+      ],
+      "beat": "해체 발표와 매각 선언—최후의 반격"
+    }
+  ],
+  "entry_state": "강두기 트레이드 폭탄 직후 팀이 보이콧 위기에 빠진 상황.",
+  "exit_state": "강두기 트레이드는 무효되지만 해체가 공식화되고 승수가 매각을 선언한다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "강두기 복귀 확정—여론 역전으로 경민의 전선이 무너짐"
+  },
+  "central_conflict_axis": "드림즈 생존(승수·팀) 대 해체 추진(경민·일도·강성)",
+  "episode_function": "15화는 전반적 위기를 돌파하는 여러 전선(트레이드 무효·여론전·해체 저항)을 동시에 전개하며 클라이맥스를 준비한다.",
+  "core_dist": {
+    "REVELATION": 28,
+    "CONFLICT": 22,
+    "BOND": 18,
+    "LOSS": 14,
+    "HOOK": 12,
+    "ESTABLISH": 11,
+    "RELIEF": 10,
+    "PUNISH": 6,
+    "REUNION": 5,
+    "PERIL": 4,
+    "REVERSAL": 3,
+    "DESIRE": 1
+  },
+  "by": "sonnet_reading"
+}

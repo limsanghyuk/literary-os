@@ -1,0 +1,60 @@
+{
+  "work_id": "싸인_03",
+  "episode_no": 3,
+  "scene_count": 52,
+  "sequence_count": 9,
+  "dramatic_question": "국과수 내부의 배신자를 찾고 서윤형 죽음의 배후 권력을 규명할 수 있는가?",
+  "entry_state": "독극물 증거를 확보한 직후, 국과수 내부 분열과 원장실의 압박이 시작된다.",
+  "exit_state": "배신자의 윤곽이 드러나고 지훈이 사건의 배후 권력이 더 깊다는 것을 직감한다.",
+  "turning_point": {
+    "seq_index": 6,
+    "description": "국과수 내부 배신 행위가 처음 실체로 드러나는 반전"
+  },
+  "central_conflict_axis": "진실을 향한 지훈·다경의 내부 추적 대 원장실·배후 세력의 은폐·방해",
+  "episode_function": "3화는 국과수 내부 권력 갈등과 배신자 존재를 드러내며 수사의 무게를 외부에서 내부 조직으로 이동시킨다.",
+  "core_dist": {
+    "CONFLICT": 21.2,
+    "ORACLE": 13.5,
+    "ESTABLISH": 13.5,
+    "LOSS": 11.5,
+    "BOND": 7.7,
+    "HOOK": 5.8,
+    "RELIEF": 5.8,
+    "REVELATION": 3.8
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "function": "인물·상황·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        5
+      ],
+      "function": "갈등 심화와 단서 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        6,
+        7
+      ],
+      "function": "위기 폭발과 결정적 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        8,
+        9
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

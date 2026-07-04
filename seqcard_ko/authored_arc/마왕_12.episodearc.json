@@ -1,0 +1,51 @@
+{
+  "work_id": "마왕_12",
+  "episode_no": 12,
+  "scene_count": 84,
+  "sequence_count": 13,
+  "dramatic_question": "준표 폭로 이후 승하의 복수 계획은 유지될 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "정체 충돌·배후 분석",
+      "seq_span": [
+        1,
+        5
+      ]
+    },
+    {
+      "act": "B",
+      "label": "팀 전환·영철 내면 변화",
+      "seq_span": [
+        6,
+        9
+      ]
+    },
+    {
+      "act": "C",
+      "label": "확신 완성·승하 내면 슬픔",
+      "seq_span": [
+        10,
+        13
+      ]
+    }
+  ],
+  "entry_state": "준표가 승하에게 '정태성'으로 통성명한 상태",
+  "exit_state": "오수가 승하=정태성 확신을 완성하고 승하가 내면 슬픔을 드러낸 상태",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "오수 승하=정태성 확신 완성—수사 최후 국면 진입"
+  },
+  "central_conflict_axis": "오수(확신 완성)↔승하(복수 유지)",
+  "episode_function": "준표 정체 폭로 후 수사 전환·영철 내면 변화",
+  "core_dist": {
+    "REVELATION": 3,
+    "CONFLICT": 2,
+    "DESIRE": 2,
+    "REVERSAL": 2,
+    "ORACLE": 2,
+    "BOND": 1,
+    "LOSS": 1
+  },
+  "by": "sonnet_reading"
+}

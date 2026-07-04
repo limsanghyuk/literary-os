@@ -1,0 +1,67 @@
+{
+ "episode_no": 7,
+ "scene_count": 58,
+ "sequence_count": 8,
+ "dramatic_question": "도깨비가 살아 돌아온 후 질투·태희 갈등·이별 비전을 통해 감정을 다시 회수할 수 있는가?",
+ "act_structure": [
+  {
+   "act": "설정",
+   "seq_span": [
+    1,
+    2
+   ],
+   "beat": "검 미뽑힘 귀환·저승 역설 도발·수능 준비 일상 복귀"
+  },
+  {
+   "act": "전개",
+   "seq_span": [
+    3,
+    5
+   ],
+   "beat": "수능 당일 감동·인형뽑기·공포영화·태희 등장으로 질투 폭발"
+  },
+  {
+   "act": "심화",
+   "seq_span": [
+    6,
+    6
+   ],
+   "beat": "태희 비밀·서약서 교체 시도·도깨비 극한 질투 절정"
+  },
+  {
+   "act": "회말전환",
+   "seq_span": [
+    7,
+    8
+   ],
+   "beat": "저승-써니 고백과 해프닝·예식장 재회와 화해로 이별 여운 해소"
+  }
+ ],
+ "entry_state": "검이 뽑히지 않은 채 도깨비가 돌아와 소멸 실패 후 일상으로 복귀한다.",
+ "exit_state": "예식장 재회와 화해로 도깨비-은탁 관계가 복원되고, 저승-써니 로맨스도 진전된다.",
+ "turning_point": {
+  "seq_index": 8,
+  "desc": "예식장 재회·화해—감정 복원과 운명적 연결 재확인"
+ },
+ "central_conflict_axis": "도깨비의 질투(태희)와 감정 억제 대 은탁의 첫사랑 발각",
+ "episode_function": "7화는 소멸 실패 후 코미디적 일상 복귀로 숨을 고르고, 태희를 통한 질투 코미디와 과거 운명의 복선(족자·저승)을 심화하며 예식장 재회로 마무리한다.",
+ "core_dist": {
+  "CONFLICT": 9,
+  "ROMANCE": 8,
+  "DESIRE": 6,
+  "ESTABLISH": 6,
+  "REVELATION": 6,
+  "BOND": 5,
+  "RELIEF": 5,
+  "ORACLE": 4,
+  "REVERSAL": 4,
+  "REUNION": 4,
+  "LOSS": 3,
+  "PUNISH": 3,
+  "RESCUE": 2,
+  "HOOK": 1,
+  "PERIL": 1
+ },
+ "work_id": "도깨비_07",
+ "by": "sonnet_reading"
+}

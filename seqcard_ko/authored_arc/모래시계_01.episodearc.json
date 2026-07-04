@@ -1,0 +1,54 @@
+{
+  "work_id": "모래시계_01",
+  "episode_no": 1,
+  "scene_count": 67,
+  "sequence_count": 12,
+  "dramatic_question": "부산 건달 세계에 발을 디딘 태수는 청춘의 유대와 계층의 벽 앞에서 어떤 선택을 할 것인가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "세계 도입",
+      "seq_span": [
+        1,
+        5
+      ]
+    },
+    {
+      "act": "B",
+      "label": "청춘의 절정",
+      "seq_span": [
+        6,
+        10
+      ]
+    },
+    {
+      "act": "C",
+      "label": "상실과 이별",
+      "seq_span": [
+        11,
+        12
+      ]
+    }
+  ],
+  "entry_state": "가능성 열린 청춘",
+  "exit_state": "상실과 계층 각인으로 닫힌 청춘",
+  "turning_point": {
+    "seq_index": 7,
+    "description": "청춘의 절정"
+  },
+  "central_conflict_axis": "건달 세계 vs 제도 사회—계층과 폭력의 공모",
+  "episode_function": "세 주인공의 원형 관계와 세계관 확립",
+  "core_dist": {
+    "BOND": 0.25,
+    "ESTABLISH": 0.22,
+    "ORACLE": 0.15,
+    "LOSS": 0.09,
+    "PERIL": 0.06,
+    "DESIRE": 0.07,
+    "REVELATION": 0.07,
+    "RESCUE": 0.04,
+    "CONFLICT": 0.03,
+    "INTRO": 0.02
+  },
+  "by": "cowork_opus_reading"
+}

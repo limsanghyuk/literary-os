@@ -1,0 +1,66 @@
+{
+  "work_id": "대장금_36",
+  "episode_no": 36,
+  "scene_count": 59,
+  "sequence_count": 9,
+  "dramatic_question": "중전의 위기—장금의 처방이 통하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "중전 의식불명 상태에서 장금의 처방이 시작된다.",
+  "exit_state": "처방이 효과를 보이며 장금이 위기에서 벗어나는 발판을 마련한다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "장금의 처방이 효과를 보인다"
+  },
+  "central_conflict_axis": "중전 치료(장금 처방) vs 기존 의관의 반대",
+  "episode_function": "36화는 중전 치료 성공으로 장금의 처방 철학이 공인받는 전환점을 제공한다.",
+  "core_dist": {
+    "CONFLICT": 25,
+    "REVELATION": 5,
+    "ESTABLISH": 12,
+    "PERIL": 9,
+    "REVERSAL": 5,
+    "LOSS": 4,
+    "PUNISH": 2,
+    "DESIRE": 15,
+    "BOND": 12,
+    "ORACLE": 1,
+    "RELIEF": 8,
+    "RESCUE": 1,
+    "HOOK": 8,
+    "REUNION": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,51 @@
+{
+  "work_id": "밀회",
+  "episode_no": 9,
+  "scene_count": 73,
+  "sequence_count": 10,
+  "dramatic_question": "발각이 임박한 상황에서 혜원과 선재는 서로를 선택할 수 있는가, 그 선택의 대가는 무엇인가",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        4
+      ],
+      "label": "연주 정점과 서한 조직의 감시망 완전 포위"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        5,
+        8
+      ],
+      "label": "위험을 알면서도 가까워지는 두 사람의 마지막 밀월"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        9,
+        10
+      ],
+      "label": "발각 직전의 임박감과 열린 위기"
+    }
+  ],
+  "entry_state": "8부 말 감시가 극한에 달했고 두 사람의 관계가 서한 조직에 거의 알려진 상태",
+  "exit_state": "두 사람의 관계가 사실상 서한 조직에 포착되며 발각의 공식화가 10부로 유예된다",
+  "turning_point": {
+    "seq_index": 7,
+    "label": "발각 직전 두 사람의 마지막 밀월",
+    "description": "서한 조직의 정보 수집이 완료되고 두 사람이 이를 알면서도 함께하기를 선택하는 순간"
+  },
+  "central_conflict_axis": "두 사람의 자발적 선택과 의지 vs 서한 권력의 완전한 포위와 발각 카운트다운",
+  "episode_function": "PRECIPICE — 발각 카운트다운 속에서 두 사람의 관계가 마지막 밀도를 형성하는 벼랑 끝 에피소드",
+  "core_dist": {
+    "CONFLICT": 0.375,
+    "REVELATION": 0.201,
+    "PERIL": 0.192,
+    "ROMANCE": 0.119,
+    "DESIRE": 0.11,
+    "BOND": 0.101
+  },
+  "by": "cowork_opus_reading"
+}

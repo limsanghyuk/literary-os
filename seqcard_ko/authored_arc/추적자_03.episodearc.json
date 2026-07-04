@@ -1,0 +1,55 @@
+{
+  "work_id": "추적자_03",
+  "episode_no": 3,
+  "scene_count": 55,
+  "sequence_count": 7,
+  "dramatic_question": "PK준이 병보석으로 출소하며 미연을 위협하는데 홍석은 막을 수 있는가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        2
+      ],
+      "label": "PK준 선고와 동윤 권력 재편"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        3,
+        5
+      ],
+      "label": "정우 등장·탄원 실패·미연 결심"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        6,
+        7
+      ],
+      "label": "PK준 출감과 미연 공포 최고조"
+    }
+  ],
+  "entry_state": "PK준 8년 선고로 1단계 복수가 마무리되었지만 진짜 배후 동윤은 건재하다",
+  "exit_state": "PK준이 병원에 나타나 미연을 극한의 공포로 몰아붙인다",
+  "turning_point": {
+    "seq_index": 7,
+    "label": "PK준 병원 출현",
+    "description": "PK준이 병보석으로 출소해 미연이 입원한 병원에 나타나 공포를 심어준다"
+  },
+  "central_conflict_axis": "사법적 한계 vs 배후 권력의 잔존 위협",
+  "episode_function": "사법 1단계 완결·미연 심리 붕괴 심화·PK준 위협 고조",
+  "core_dist": {
+    "PERIL": 3,
+    "LOSS": 3,
+    "CONFLICT": 3,
+    "REVERSAL": 3,
+    "BOND": 2,
+    "REVELATION": 2,
+    "DESIRE": 2,
+    "HOOK": 2,
+    "ORACLE": 1,
+    "RELIEF": 1
+  },
+  "by": "cowork_opus_reading"
+}

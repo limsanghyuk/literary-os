@@ -1,0 +1,64 @@
+{
+ "episode_no": 15,
+ "scene_count": 58,
+ "sequence_count": 5,
+ "dramatic_question": "캐나다에서 도깨비와 재회한 은탁이 9년의 기억을 완전히 회복하고, 써니-저승이 현생의 이별을 완성할 수 있는가?",
+ "act_structure": [
+  {
+   "act": "설정",
+   "seq_span": [
+    1,
+    2
+   ],
+   "beat": "캐나다 재회·5화 비전 회수·두 쌍 재연결 전야"
+  },
+  {
+   "act": "전개",
+   "seq_span": [
+    3,
+    3
+   ],
+   "beat": "은탁 기억 회복 전야·써니-저승 현생 이별 완성"
+  },
+  {
+   "act": "심화",
+   "seq_span": [
+    4,
+    4
+   ],
+   "beat": "기억 완전 회복·공항 재회·캐나다 호텔 행복"
+  },
+  {
+   "act": "회말전환",
+   "seq_span": [
+    5,
+    5
+   ],
+   "beat": "도깨비 청혼·이모 충돌·써니 이사·모든 첫사랑이 너 선언"
+  }
+ ],
+ "entry_state": "캐나다 빨간 문에서 은탁과 도깨비가 재회한다.",
+ "exit_state": "기억 완전 회복과 청혼 수락, 써니의 이별 결심과 도깨비의 청혼 선언으로 결말이 준비된다.",
+ "turning_point": {
+  "seq_index": 3,
+  "desc": "써니-저승의 현생 이별 완성—이별의 아픔으로 결말을 준비"
+ },
+ "central_conflict_axis": "은탁의 기억 회복 여정 대 써니-저승의 이별 결심",
+ "episode_function": "15화는 캐나다에서의 기억 회복 여정과 써니-저승의 현생 이별을 나란히 배치하며, 청혼과 모든 첫사랑 고백으로 대단원의 감정적 토대를 완성한다.",
+ "core_dist": {
+  "ROMANCE": 10,
+  "LOSS": 9,
+  "REUNION": 8,
+  "DESIRE": 7,
+  "REVELATION": 7,
+  "ORACLE": 5,
+  "BOND": 5,
+  "ESTABLISH": 5,
+  "CONFLICT": 4,
+  "RELIEF": 3,
+  "PERIL": 2,
+  "RESCUE": 1
+ },
+ "work_id": "도깨비_15",
+ "by": "sonnet_reading"
+}

@@ -1,0 +1,51 @@
+{
+  "work_id": "그들이사는세상_10",
+  "episode_no": 10,
+  "scene_count": 25,
+  "sequence_count": 5,
+  "dramatic_question": "지오의 죄책감을 준호가 해소시키고 관계를 재정립할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "미묘한 거리·솔직 요청"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        3
+      ],
+      "beat": "죄책감 고백"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        4,
+        4
+      ],
+      "beat": "준호 설득"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        5,
+        5
+      ],
+      "beat": "관계 방향 합의"
+    }
+  ],
+  "entry_state": "지오 죄책감으로 인한 미묘한 거리",
+  "exit_state": "죄책감 해소, 관계 방향 합의",
+  "turning_point": {
+    "seq_index": 3,
+    "desc": "지오의 고백 — 내부 균열 직면·해소"
+  },
+  "central_conflict_axis": "죄책감 vs 진정한 소통",
+  "episode_function": "내부 균열 해소·관계 재정립 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

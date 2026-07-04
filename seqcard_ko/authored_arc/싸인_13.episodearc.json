@@ -1,0 +1,60 @@
+{
+  "work_id": "싸인_13",
+  "episode_no": 13,
+  "scene_count": 80,
+  "sequence_count": 14,
+  "dramatic_question": "납치된 인질을 구하고 배후 세력의 실체를 공식적으로 폭로할 수 있는가?",
+  "entry_state": "배후 세력이 인질을 잡고 지훈과 협상을 시도하는 위기 상황이다.",
+  "exit_state": "지훈이 인질 구출을 위해 목숨을 건 행동에 나서며 최종 결전이 임박했음을 알린다.",
+  "turning_point": {
+    "seq_index": 10,
+    "description": "배후 세력의 인질 위협이 최고조에 달하는 극한 위기"
+  },
+  "central_conflict_axis": "지훈의 인질 구출·배후 폭로 시도 대 배후 세력의 인질 협박·증거 인멸",
+  "episode_function": "13화는 납치·감금 사태를 클라이맥스로 사용하며 최종 대결을 향한 결전의 분위기를 고조시킨다.",
+  "core_dist": {
+    "PERIL": 23.8,
+    "REVELATION": 12.5,
+    "ORACLE": 11.2,
+    "ESTABLISH": 7.5,
+    "LOSS": 7.5,
+    "DESIRE": 7.5,
+    "CONFLICT": 5.0,
+    "BOND": 5.0
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "function": "인물·상황·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        8
+      ],
+      "function": "갈등 심화와 단서 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        9,
+        11
+      ],
+      "function": "위기 폭발과 결정적 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        12,
+        14
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

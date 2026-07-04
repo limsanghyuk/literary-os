@@ -1,0 +1,66 @@
+{
+  "work_id": "배가본드_04",
+  "episode_no": 4,
+  "scene_count": 69,
+  "sequence_count": 11,
+  "dramatic_question": "달건이 제시카와 배후 조직의 핵심에 접근할 수 있는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "label": "설정",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": 2,
+      "label": "전개",
+      "seq_span": [
+        4,
+        6
+      ]
+    },
+    {
+      "act": 3,
+      "label": "심화",
+      "seq_span": [
+        7,
+        8
+      ]
+    },
+    {
+      "act": 4,
+      "label": "회말전환",
+      "seq_span": [
+        9,
+        11
+      ]
+    }
+  ],
+  "entry_state": "에드-제시카 입찰 신경전, 달건 암살 취소",
+  "exit_state": "달건, 제시카 앞에 다시 나타나다",
+  "turning_point": {
+    "seq_index": 7,
+    "seq_id": "배가본드_04_S07",
+    "description": "배후의 새 암살자 투입—달건 위협 배가"
+  },
+  "central_conflict_axis": "달건 공세 vs 제시카 방어망",
+  "episode_function": "전개—배후 구조 탐색, 직접 대결 시동",
+  "core_dist": {
+    "PERIL": 0.25,
+    "REVELATION": 0.159,
+    "HOOK": 0.159,
+    "CONFLICT": 0.148,
+    "LOSS": 0.08,
+    "ESTABLISH": 0.08,
+    "BOND": 0.034,
+    "RELIEF": 0.023,
+    "REVERSAL": 0.023,
+    "DESIRE": 0.011,
+    "PUNISH": 0.011,
+    "RESCUE": 0.011,
+    "REUNION": 0.011
+  },
+  "by": "sonnet_reading"
+}

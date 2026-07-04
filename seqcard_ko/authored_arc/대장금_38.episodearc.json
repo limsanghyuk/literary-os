@@ -1,0 +1,66 @@
+{
+  "work_id": "대장금_38",
+  "episode_no": 38,
+  "scene_count": 64,
+  "sequence_count": 10,
+  "dramatic_question": "역병 의심 마을에서 장금과 민정호는 어떻게 환자들을 돕는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "역병으로 의심되는 마을에 장금이 파견된다.",
+  "exit_state": "장금이 역병이 아닌 식중독임을 발견하고 치료에 나선다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "장금이 역병이 아닌 식물 식중독임을 발견한다"
+  },
+  "central_conflict_axis": "역병 두려움과 오판 vs 장금의 정확한 역학 조사",
+  "episode_function": "38화는 식중독 오진 사건을 통해 장금의 과학적 의학 방법론이 빛을 발한다.",
+  "core_dist": {
+    "ESTABLISH": 8,
+    "PERIL": 16,
+    "CONFLICT": 18,
+    "REVELATION": 7,
+    "ORACLE": 2,
+    "DESIRE": 19,
+    "LOSS": 3,
+    "BOND": 19,
+    "HOOK": 4,
+    "REVERSAL": 5,
+    "PUNISH": 4,
+    "RELIEF": 7,
+    "REUNION": 2,
+    "ROMANCE": 12
+  },
+  "by": "sonnet_reading"
+}

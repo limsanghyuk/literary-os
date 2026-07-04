@@ -1,0 +1,67 @@
+{
+  "work_id": "대장금_30",
+  "episode_no": 30,
+  "scene_count": 61,
+  "sequence_count": 9,
+  "dramatic_question": "내의원에 의녀로 돌아온 장금은 새로운 적대와 어떻게 맞서는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "장금이 내의원에 의녀로 입성하여 새로운 환경을 맞닥뜨린다.",
+  "exit_state": "내의원 내부의 권력 구조와 정윤수의 적대가 드러난다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "내의원 권력 구조와 장금을 향한 적대가 드러난다"
+  },
+  "central_conflict_axis": "의녀 장금의 내의원 적응 vs 내의원 기득권 세력의 배척",
+  "episode_function": "30화는 장금의 내의원 입성으로 의녀 서사의 1막을 열고 새 적대 구조를 확립한다.",
+  "core_dist": {
+    "HOOK": 4,
+    "DESIRE": 12,
+    "ESTABLISH": 18,
+    "CONFLICT": 24,
+    "ORACLE": 5,
+    "PERIL": 10,
+    "BOND": 12,
+    "ROMANCE": 3,
+    "RELIEF": 2,
+    "INTRO": 1,
+    "REVERSAL": 4,
+    "LOSS": 7,
+    "REVELATION": 12,
+    "PUNISH": 1,
+    "REUNION": 1
+  },
+  "by": "sonnet_reading"
+}

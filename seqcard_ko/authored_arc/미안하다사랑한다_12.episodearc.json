@@ -1,0 +1,67 @@
+{
+  "work_id": "미안하다사랑한다_12",
+  "episode_no": 12,
+  "scene_count": 86,
+  "sequence_count": 12,
+  "dramatic_question": "이윤을 구출하는 위기와 연속된 상실 속에서 모든 진실이 드러나고, 무혁의 마지막이 돌이킬 수 없이 가까워질 때 남은 인물들은 어떻게 대응하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "위기 상황에서 이윤을 구출하고 갈등이 새 국면을 맞는다"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "beat": "연속된 상실과 일시적 안도가 교차하며 감정이 복잡하게 뒤섞인다"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "무혁이 내면적으로 무너지고 가족들의 재결합이 이루어진다"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        12
+      ],
+      "beat": "진실들이 연쇄 폭로되며 마지막을 예고하는 단서들이 쌓인다"
+    }
+  ],
+  "entry_state": "무혁의 결심은 굳어졌지만 주변의 갈등이 계속된다.",
+  "exit_state": "모든 진실이 드러나고 오들희와 이윤의 관계도 재편되었다. 무혁의 마지막이 현실로 다가온다.",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "진실들이 연쇄 폭로되어 모든 관계가 새로운 국면에 접어든다"
+  },
+  "central_conflict_axis": "무혁의 희생 완성 욕망 대 상실을 견디는 가족들의 고통",
+  "episode_function": "12화는 위기-구출-상실-진실 폭로의 연쇄로 비극이 절정을 향해 가속화되며, 모든 감추어진 것이 드러나는 전면적 진실 공개의 화차다.",
+  "core_dist": {
+    "ESTABLISH": 9,
+    "BOND": 7,
+    "PERIL": 7,
+    "CONFLICT": 15,
+    "LOSS": 17,
+    "RESCUE": 4,
+    "REVELATION": 8,
+    "DESIRE": 7,
+    "ORACLE": 2,
+    "REVERSAL": 1,
+    "RELIEF": 2,
+    "ROMANCE": 1,
+    "REUNION": 3,
+    "PUNISH": 1,
+    "HOOK": 2
+  },
+  "by": "sonnet_reading"
+}

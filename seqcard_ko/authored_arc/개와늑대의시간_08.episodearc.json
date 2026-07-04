@@ -1,0 +1,49 @@
+{
+  "work_id": "개와늑대의시간_08",
+  "episode_no": 8,
+  "scene_count": 54,
+  "sequence_count": 9,
+  "dramatic_question": "수현·강진·지우의 공동 전선은 마오를 제압할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "협상과 역정보",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "B",
+      "label": "구출 작전",
+      "seq_span": [
+        4,
+        6
+      ]
+    },
+    {
+      "act": "C",
+      "label": "도주·정체 공개·공동 전선",
+      "seq_span": [
+        7,
+        9
+      ]
+    }
+  ],
+  "entry_state": "지우 인질, 협상 돌입",
+  "exit_state": "강진 정체 완전 공개, 공동 전선 수립",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "지우 구출 성공—3자 공동 전선의 시작"
+  },
+  "central_conflict_axis": "수현·강진(공동)↔마오(전면전)",
+  "episode_function": "지우 구출·강진 정체 공개·전면전",
+  "core_dist": {
+    "PERIL": 3,
+    "CONFLICT": 2,
+    "BOND": 2,
+    "RESCUE": 1,
+    "REVEAL": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,66 @@
+{
+  "work_id": "시티헌터_18",
+  "episode_no": 18,
+  "scene_count": 70,
+  "sequence_count": 11,
+  "dramatic_question": "천재만 처단이 완성됐지만 마스크가 벗겨진 윤성의 정체는 어떻게 수습될 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "수조 구출·수사 막힘"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "팀 재결집·천재만 파산"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "정의 구현·처단 완성"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        11
+      ],
+      "beat": "마스크 훅"
+    }
+  ],
+  "entry_state": "나나 수조 감금 위기와 윤성의 구출 직전.",
+  "exit_state": "천재만 처단 완성, 마스크 벗겨짐으로 정체 노출 훅.",
+  "turning_point": {
+    "seq_index": 2,
+    "desc": "나나 극적 구출: 복수극의 소중한 것을 지키는 의지 확인"
+  },
+  "central_conflict_axis": "천재만 파산 처단(윤성/진표) vs 정체 노출 위기",
+  "episode_function": "18화: 나나 구출과 천재만 처단 완성—4번째 표적을 끝낸 직후 정체 노출 위기로 회말이 터진다.",
+  "core_dist": {
+    "CONFLICT": 20,
+    "ORACLE": 11,
+    "PERIL": 18,
+    "REVELATION": 13,
+    "ESTABLISH": 5,
+    "DESIRE": 14,
+    "RELIEF": 10,
+    "HOOK": 2,
+    "RESCUE": 1,
+    "BOND": 6,
+    "LOSS": 1,
+    "ROMANCE": 3,
+    "PUNISH": 13,
+    "REVERSAL": 4
+  },
+  "by": "sonnet_reading"
+}

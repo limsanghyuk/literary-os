@@ -1,0 +1,51 @@
+{
+  "work_id": "밀회",
+  "episode_no": 6,
+  "scene_count": 71,
+  "sequence_count": 9,
+  "dramatic_question": "성숙 귀국 이후 감시와 위험이 강화된 상황에서 혜원과 선재의 밀애가 유지될 수 있는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        4
+      ],
+      "label": "준형 의심 속 혜원의 은밀한 선재 방문"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        5,
+        7
+      ],
+      "label": "공식 방문과 피아노 재회, 성숙 귀국으로 긴장 재가동"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        8,
+        9
+      ],
+      "label": "성숙의 권력 재장악과 스쿠터 위 낭만으로 대조 종결"
+    }
+  ],
+  "entry_state": "4부 말 삼각구도 재편 이후 혜원과 선재가 어색한 거리를 유지하는 상태",
+  "exit_state": "성숙이 귀국해 권력을 재장악하고 선재가 피아노를 회수하며 스쿠터 위 친밀함으로 감정이 고조된다",
+  "turning_point": {
+    "seq_index": 7,
+    "label": "성숙 귀국과 권력 재장악",
+    "description": "성숙이 귀국해 혜원을 압박하고 서한 권력 질서를 재편하며 외부 위협이 현실화된다"
+  },
+  "central_conflict_axis": "혜원·선재의 은밀한 감정 vs 성숙·준형의 감시와 서한 권력의 재조직화",
+  "episode_function": "TENSION — 두 사람 관계의 밀도가 오르는 동시에 외부 감시망이 좁혀오는 이중 나선형 긴장",
+  "core_dist": {
+    "CONFLICT": 0.225,
+    "BOND": 0.197,
+    "DESIRE": 0.169,
+    "HOOK": 0.122,
+    "REVELATION": 0.113,
+    "LOSS": 0.085
+  },
+  "by": "cowork_opus_reading"
+}

@@ -1,0 +1,66 @@
+{
+  "work_id": "대장금_26",
+  "episode_no": 26,
+  "scene_count": 56,
+  "sequence_count": 9,
+  "dramatic_question": "최씨가의 마지막 음모—장금과 한상궁은 어떻게 함께 위기를 넘기는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "최씨가가 장금과 한상궁을 동시에 제거하려는 마지막 공세를 펼친다.",
+  "exit_state": "장금과 한상궁이 옥에 갇히지만 서로의 연대로 희망을 유지한다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "최씨가가 장금과 한상궁을 옥에 가두는 데 성공한다"
+  },
+  "central_conflict_axis": "최씨가의 최후 제거 공작 vs 장금·한상궁의 연대",
+  "episode_function": "26화는 옥중 연대로 장금과 한상궁의 사제 결속이 완성되는 최후의 시험을 치른다.",
+  "core_dist": {
+    "ESTABLISH": 9,
+    "HOOK": 3,
+    "PERIL": 19,
+    "CONFLICT": 24,
+    "ORACLE": 3,
+    "DESIRE": 17,
+    "PUNISH": 7,
+    "RESCUE": 5,
+    "REVELATION": 5,
+    "BOND": 5,
+    "LOSS": 3,
+    "REVERSAL": 2,
+    "ROMANCE": 6,
+    "RELIEF": 1
+  },
+  "by": "sonnet_reading"
+}

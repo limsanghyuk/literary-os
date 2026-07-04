@@ -1,0 +1,64 @@
+{
+  "work_id": "하얀거탑",
+  "episode_no": 6,
+  "scene_count": 26,
+  "sequence_count": 4,
+  "dramatic_question": "오경환이 선출위원장이 된 상황에서 준혁이 과장 선거를 승리로 이끌 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "label": "세계와 갈등 도입",
+      "seq_span": [
+        1,
+        1
+      ]
+    },
+    {
+      "act": "전개",
+      "label": "갈등 심화와 대결 구도 확립",
+      "seq_span": [
+        2,
+        2
+      ]
+    },
+    {
+      "act": "심화",
+      "label": "위기 절정과 전환점",
+      "seq_span": [
+        3,
+        3
+      ]
+    },
+    {
+      "act": "회말전환",
+      "label": "회말 반전과 다음 회 훅",
+      "seq_span": [
+        4,
+        4
+      ]
+    }
+  ],
+  "entry_state": "오경환 위원장 취임으로 선거 변수가 최대화된 상황",
+  "exit_state": "준혁 16표 대 주완 14표로 준혁이 과장 선거에서 승리함",
+  "turning_point": {
+    "seq_index": 4,
+    "description": "개표—준혁 16표 승리"
+  },
+  "central_conflict_axis": "준혁-용길 연합의 표 전략 vs 주완-오경환 진영의 마지막 저항",
+  "episode_function": "과장 선거 승리로 권력 이행 완성—드라마 1막 마무리",
+  "core_dist": {
+    "DESIRE": 13,
+    "CONFLICT": 9,
+    "ORACLE": 6,
+    "BOND": 5,
+    "PERIL": 4,
+    "ESTABLISH": 4,
+    "ROMANCE": 3,
+    "LOSS": 2,
+    "REVERSAL": 1,
+    "RESCUE": 1,
+    "PUNISH": 1,
+    "HOOK": 1
+  },
+  "by": "claude-sonnet-4-6"
+}

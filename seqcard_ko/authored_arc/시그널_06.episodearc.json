@@ -1,0 +1,57 @@
+{
+  "scene_count": 90,
+  "dramatic_question": "신여진을 구출하고 진범 세규를 잡을 수 있는가, 그리고 수현은 살아남는가?",
+  "core_dist": {
+    "RESCUE": 2,
+    "CONFLICT": 1,
+    "REVELATION": 2,
+    "LOSS": 1,
+    "PERIL": 1
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "설정 단계"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        8
+      ],
+      "beat": "전개 단계"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        9,
+        13
+      ],
+      "beat": "심화 단계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        14,
+        15
+      ],
+      "beat": "회말전환 단계"
+    }
+  ],
+  "work_id": "시그널",
+  "by": "sonnet_reading",
+  "sequence_count": 15,
+  "turning_point": {
+    "seq_index": 5,
+    "event": "회말 위기 전환"
+  },
+  "episode_no": 6,
+  "entry_state": "인주 여고생 연쇄살인의 전모가 드러나고 해영과 수현이 진범 추적에 집중한다.",
+  "exit_state": "진범의 정체가 충격적으로 밝혀지며 과거 재한이 결정적 위기에 처한다.",
+  "central_conflict_axis": "권력에 의해 은폐된 진실 대 두 시대 수사팀의 실체 폭로",
+  "episode_function": "인주 여고생 사건을 클라이맥스로 끌어올리며 시리즈 핵심 악역의 윤곽을 드러낸다."
+}

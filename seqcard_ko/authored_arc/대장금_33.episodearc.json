@@ -1,0 +1,65 @@
+{
+  "work_id": "대장금_33",
+  "episode_no": 33,
+  "scene_count": 53,
+  "sequence_count": 8,
+  "dramatic_question": "정윤수의 함정에서 장금은 어떻게 빠져나오는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "정윤수가 장금을 음해하는 함정을 파기 시작한다.",
+  "exit_state": "장금이 함정을 인식하고 대응 전략을 모색한다.",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "정윤수의 음해 함정이 드러난다"
+  },
+  "central_conflict_axis": "정윤수의 음해 공작 vs 장금의 자기 방어",
+  "episode_function": "33화는 내의원 권력 정치 속에서 장금이 정윤수와의 대결 구도에 놓임을 확립한다.",
+  "core_dist": {
+    "CONFLICT": 23,
+    "ESTABLISH": 10,
+    "BOND": 7,
+    "LOSS": 6,
+    "RELIEF": 4,
+    "INTRO": 1,
+    "REVERSAL": 5,
+    "DESIRE": 15,
+    "PERIL": 4,
+    "ROMANCE": 1,
+    "HOOK": 2,
+    "REVELATION": 5,
+    "PUNISH": 2
+  },
+  "by": "sonnet_reading"
+}

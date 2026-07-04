@@ -1,0 +1,60 @@
+{
+  "work_id": "싸인_17",
+  "episode_no": 17,
+  "scene_count": 75,
+  "sequence_count": 13,
+  "dramatic_question": "강서연과 게임 회사 비리를 중심으로 펼쳐지는 최후의 음모를 지훈이 분쇄할 수 있는가?",
+  "entry_state": "강서연이 새 위험에 처하고 게임 회사 관련 비리가 표면화된다.",
+  "exit_state": "마지막 음모의 실체가 드러나고 지훈이 최종 대결을 향한 준비를 마친다.",
+  "turning_point": {
+    "seq_index": 9,
+    "description": "게임 회사 비리와 강서연 사건이 연결되며 배후의 최종 구조가 드러나는 폭로"
+  },
+  "central_conflict_axis": "지훈의 강서연 관련 비리 추적 대 게임 회사와 연결된 권력의 마지막 방어선",
+  "episode_function": "17화는 강서연을 중심으로 사건의 마지막 가닥들을 정리하며 결말을 향한 수렴을 시작한다.",
+  "core_dist": {
+    "PERIL": 21.3,
+    "LOSS": 12.0,
+    "ESTABLISH": 9.3,
+    "REVELATION": 9.3,
+    "CONFLICT": 8.0,
+    "RESCUE": 6.7,
+    "DESIRE": 6.7,
+    "HOOK": 6.7
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "function": "인물·상황·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        7
+      ],
+      "function": "갈등 심화와 단서 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        8,
+        10
+      ],
+      "function": "위기 폭발과 결정적 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        11,
+        13
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

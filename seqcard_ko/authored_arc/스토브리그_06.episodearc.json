@@ -1,0 +1,64 @@
+{
+  "work_id": "스토브리그_06",
+  "episode_no": 6,
+  "scene_count": 57,
+  "sequence_count": 9,
+  "dramatic_question": "야구 사고로 무너진 동생 영수를 승수는 어떻게 드림즈의 일원으로 받아들이면서 자신의 상처도 감당할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "길창주 기자회견과 승수 형제의 내면 개방"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "팀 내 인사 문제(낙하산·이진범)와 전력분석원 면접 준비"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "영수 등장→동생 공개 선언→세영의 아버지 고백으로 감정 교차"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "영수 합격, 고세혁 공작·삭감 통보로 새 위기 예고"
+    }
+  ],
+  "entry_state": "길창주 영입 완료 후 영수의 취업 면접 장면에서 형제 상처가 드러나기 시작한다.",
+  "exit_state": "영수가 드림즈에 합격하고, 고세혁의 공작과 연봉 삭감으로 새 위기가 예고된다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "승수가 영수를 동생으로 공개 선언—형제 상처와 팀의 관계가 교차"
+  },
+  "central_conflict_axis": "형제 화해(승수·영수) 대 구단 내 권력 공작(경민·고세혁)",
+  "episode_function": "6화는 영수의 취업을 통해 승수의 개인사를 드러내고, 고세혁 공작으로 다음 연봉 전쟁을 예고한다.",
+  "core_dist": {
+    "CONFLICT": 25,
+    "REVELATION": 14,
+    "HOOK": 12,
+    "BOND": 12,
+    "LOSS": 10,
+    "ESTABLISH": 10,
+    "RELIEF": 8,
+    "DESIRE": 7,
+    "PERIL": 6,
+    "INTRO": 4,
+    "PUNISH": 3,
+    "REUNION": 3
+  },
+  "by": "sonnet_reading"
+}

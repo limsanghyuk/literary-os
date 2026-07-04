@@ -1,0 +1,66 @@
+{
+  "work_id": "하얀거탑",
+  "episode_no": 15,
+  "scene_count": 75,
+  "sequence_count": 11,
+  "dramatic_question": "준혁의 죽음 이후 명인대 외과와 관련 인물들이 사건의 교훈을 내면화할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "label": "세계와 갈등 도입",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "전개",
+      "label": "갈등 심화와 대결 구도 확립",
+      "seq_span": [
+        3,
+        7
+      ]
+    },
+    {
+      "act": "심화",
+      "label": "위기 절정과 전환점",
+      "seq_span": [
+        8,
+        10
+      ]
+    },
+    {
+      "act": "회말전환",
+      "label": "회말 반전과 다음 회 훅",
+      "seq_span": [
+        11,
+        11
+      ]
+    }
+  ],
+  "entry_state": "준혁 수술 성공 이후 회복기와 각 인물의 변화 시작",
+  "exit_state": "각 인물이 사건을 각자의 방식으로 소화하며 새 삶으로 진입",
+  "turning_point": {
+    "seq_index": 10,
+    "description": "수정과의 진심 어린 사과"
+  },
+  "central_conflict_axis": "사건의 교훈 내면화 vs 시스템 변화의 관성",
+  "episode_function": "관련 인물들의 변화 궤적 확인—에필로그 1부",
+  "core_dist": {
+    "ORACLE": 23,
+    "CONFLICT": 21,
+    "PERIL": 21,
+    "LOSS": 17,
+    "DESIRE": 16,
+    "BOND": 14,
+    "ESTABLISH": 11,
+    "RESCUE": 7,
+    "REVELATION": 6,
+    "PUNISH": 4,
+    "RELIEF": 3,
+    "REVERSAL": 2,
+    "HOOK": 1,
+    "INTRO": 1
+  },
+  "by": "claude-sonnet-4-6"
+}

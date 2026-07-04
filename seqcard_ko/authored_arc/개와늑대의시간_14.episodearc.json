@@ -1,0 +1,49 @@
+{
+  "work_id": "개와늑대의시간_14",
+  "episode_no": 14,
+  "scene_count": 51,
+  "sequence_count": 8,
+  "dramatic_question": "수현은 지우를 다시 만나 함께 새 출발을 할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "귀환·임무 종료",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "B",
+      "label": "지우 새 삶·재회 추진",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": "C",
+      "label": "재회·새 출발",
+      "seq_span": [
+        6,
+        8
+      ]
+    }
+  ],
+  "entry_state": "한국 귀환, 사후 보고",
+  "exit_state": "수현·지우 재회, 새 출발 다짐",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "수현·지우 극적 재회—사랑의 완결"
+  },
+  "central_conflict_axis": "수현(재회)↔지우(새 삶)·강진(응원)",
+  "episode_function": "임무 종료·재회 추진·극적 재회",
+  "core_dist": {
+    "ROMANCE": 2,
+    "BOND": 2,
+    "DESIRE": 2,
+    "ESTABLISH": 1,
+    "RELIEF": 1
+  },
+  "by": "sonnet_reading"
+}

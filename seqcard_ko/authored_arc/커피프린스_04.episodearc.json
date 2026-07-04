@@ -1,0 +1,65 @@
+{
+  "work_id": "커피프린스_04",
+  "episode_no": 4,
+  "scene_count": 54,
+  "sequence_count": 8,
+  "dramatic_question": "커피프린스는 살아남을 것이며, 은찬과 한결 사이에는 무언가 싹트고 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        1
+      ],
+      "beat": "원두 위기 공수전환·은찬 억울함 해소"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        2,
+        4
+      ],
+      "beat": "한성-은찬 유대 심화·팀 완성·개업 소동·비밀 공모"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "단합대회 징벌·팀 결속·철학 충돌·생일 준비"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "입바람 눈맞춤—감정 폭발 직전 훅"
+    }
+  ],
+  "entry_state": "원두 위기를 겪은 커피프린스가 개업하고, 한성이 은찬의 비밀을 알게 된다.",
+  "exit_state": "팀이 단합하고 커피프린스가 자리를 잡기 시작하나, 은찬과 한결 사이에 감정의 불씨가 켜졌다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "입바람 눈맞춤—은찬의 감정이 한결을 향해 처음으로 의식화되는 순간"
+  },
+  "central_conflict_axis": "한결의 무심함 vs 은찬의 자존심—감정 비대칭이 서서히 동등해지는 과정",
+  "episode_function": "4화는 원두 위기 돌파·팀 완성·개업 소동을 거쳐 커피프린스가 공동체로 자리잡는 과정을 그리며, 생일 준비와 입바람 눈맞춤으로 은찬의 감정 자각을 섬세하게 예고한다.",
+  "core_dist": {
+    "BOND": 14,
+    "ROMANCE": 8,
+    "DESIRE": 8,
+    "CONFLICT": 7,
+    "RELIEF": 7,
+    "PERIL": 5,
+    "ESTABLISH": 5,
+    "REVELATION": 4,
+    "LOSS": 3,
+    "PUNISH": 2,
+    "ORACLE": 2,
+    "HOOK": 2,
+    "INTRO": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,63 @@
+{
+  "work_id": "대장금_39",
+  "episode_no": 39,
+  "scene_count": 71,
+  "sequence_count": 11,
+  "dramatic_question": "역병 위기가 확산되는 상황—장금은 어떻게 민정호와 함께 해결하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        11
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "역병(식중독) 피해가 확산되고 장금과 민정호가 현장을 누빈다.",
+  "exit_state": "원인 채소를 특정하고 확산 차단에 성공하지만 장금이 감염 의심을 받는다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "역병 원인이 밝혀지지만 장금이 역병 감염 의심을 받는다"
+  },
+  "central_conflict_axis": "식중독 확산 차단(장금·민정호) vs 백성의 공포와 외부 위협",
+  "episode_function": "39화는 역병 확산 위기 속에서 장금과 민정호의 협력과 헌신을 극화한다.",
+  "core_dist": {
+    "BOND": 13,
+    "DESIRE": 13,
+    "CONFLICT": 31,
+    "PERIL": 32,
+    "LOSS": 13,
+    "ESTABLISH": 9,
+    "RELIEF": 6,
+    "ROMANCE": 4,
+    "PUNISH": 5,
+    "REVELATION": 4,
+    "RESCUE": 5
+  },
+  "by": "sonnet_reading"
+}

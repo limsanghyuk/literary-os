@@ -1,0 +1,51 @@
+{
+  "work_id": "그들이사는세상_04",
+  "episode_no": 4,
+  "scene_count": 48,
+  "sequence_count": 8,
+  "dramatic_question": "준호의 감정 인식이 두 사람의 관계를 어떻게 바꾸는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "성과 점검·국장 이동 압박"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "권력 구도 인식·밤샘 작업·거리 좁힘"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "팀원 의심·준호 감정 인식"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "보호 행동·더 큰 갈등 예고"
+    }
+  ],
+  "entry_state": "중반부 성과 점검, 준호 감정 미인식",
+  "exit_state": "준호 감정 인식 시작, 팀원 의심, 보호 행동",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "준호의 감정 인식 — 일방이 아닌 양방 감정 구도 확립"
+  },
+  "central_conflict_axis": "국장의 이동 압박 vs 준호의 드라마 완성 의지, 두 사람 감정선 확립",
+  "episode_function": "준호 감정 인식·팀 내 긴장 시작 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

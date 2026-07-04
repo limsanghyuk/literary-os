@@ -1,0 +1,63 @@
+{
+  "work_id": "태양의후예_16",
+  "episode_no": 16,
+  "scene_count": 43,
+  "sequence_count": 7,
+  "dramatic_question": "모든 이별 끝에 반드시 재회가 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "시진 생환·극적 재회"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "서브 해피엔딩·현실 조율"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        5
+      ],
+      "beat": "모든 관계 해소"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "시진·모연 영원한 사랑·새 이별 속 신뢰 완결"
+    }
+  ],
+  "entry_state": "체념",
+  "exit_state": "사랑의 완결과 성숙한 이별",
+  "turning_point": {
+    "seq_index": 2,
+    "desc": "시진 생환·모연과 극적 재회"
+  },
+  "central_conflict_axis": "사랑의 완결 가능성",
+  "episode_function": "최종 해피엔딩: 반복 이별 사이클의 긍정적 완결",
+  "core_dist": {
+    "REUNION": 5,
+    "HOOK": 4,
+    "BOND": 4,
+    "RESCUE": 1,
+    "RELIEF": 10,
+    "ROMANCE": 7,
+    "REVERSAL": 1,
+    "CONFLICT": 3,
+    "DESIRE": 2,
+    "ESTABLISH": 4,
+    "REVELATION": 2
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,60 @@
+{
+  "work_id": "카인과아벨_02",
+  "episode_no": 2,
+  "scene_count": 65,
+  "sequence_count": 11,
+  "dramatic_question": "중국에서 선우를 추적하는 초인은 범죄의 진실을 밝히고도 형제 관계를 유지할 수 있는가?",
+  "entry_state": "상하이 주가각에서 초인이 선우를 추적하기 시작한다.",
+  "exit_state": "초인이 간이 진료소에서 결정적 단서를 포착하지만 선우의 음모 규모가 예상보다 크다는 것을 깨닫는다.",
+  "turning_point": {
+    "seq_index": 8,
+    "description": "선우의 배후 조직과 연결된 결정적 단서가 드러나는 반전"
+  },
+  "central_conflict_axis": "초인의 진실 추구 대 선우의 은폐와 자기보호 본능",
+  "episode_function": "2화는 중국을 배경으로 두 형제의 첫 추격전을 전개하며 선우의 범죄 배후를 조금씩 드러낸다.",
+  "core_dist": {
+    "CONFLICT": 35.4,
+    "REVELATION": 13.8,
+    "PERIL": 12.3,
+    "ESTABLISH": 9.2,
+    "REUNION": 6.2,
+    "ROMANCE": 6.2,
+    "INTRO": 4.6,
+    "BOND": 3.1
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "function": "인물·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "function": "갈등 심화와 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        7,
+        9
+      ],
+      "function": "위기 폭발과 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        10,
+        11
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

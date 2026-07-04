@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_03",
+  "episode_no": 3,
+  "scene_count": 60,
+  "sequence_count": 7,
+  "dramatic_question": "이강은 이방직으로 살아남을 것인가, 아니면 인간으로서의 각성을 선택할 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "이용태 공포정치·이강 불구·홍가 배신"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "이방직 유혹·형제 다짐·이현 명심 접점"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "수탈 갈등·재봉기 예고"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "이강 이방 거부·인간 각성"
+    }
+  ],
+  "entry_state": "이용태의 공포정치로 고부 민심이 짓눌리고, 부상당한 이강은 이방직 제안을 받는다.",
+  "exit_state": "이강이 수탈 현장에서 처녀를 구하고 이방직을 거부하며 각성을 선택—2차 봉기의 인간적 동력이 점화된다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "수탈 현장에서 이강이 처녀를 구하고 이방을 거부하는 장면이 도구적 신분에서 각성으로의 전환을 확정한다"
+  },
+  "central_conflict_axis": "공포통치(이용태·백가) 대 각성하는 민중(이강·동학), 이강의 도구성 vs 인간 선택",
+  "episode_function": "이용태 공포정치 속에서 이강이 이방직의 유혹을 거부하고 각성을 선택함으로써 2차 봉기의 내면적 동력을 구축한다.",
+  "core_dist": {
+    "CONFLICT": 15,
+    "PERIL": 12,
+    "REVELATION": 10,
+    "LOSS": 8,
+    "BOND": 7,
+    "REVERSAL": 5,
+    "RELIEF": 2,
+    "HOOK": 5,
+    "ESTABLISH": 3,
+    "DESIRE": 3,
+    "PUNISH": 2,
+    "RESCUE": 2,
+    "ROMANCE": 2,
+    "REUNION": 2,
+    "ORACLE": 0,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

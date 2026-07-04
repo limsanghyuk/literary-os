@@ -1,0 +1,51 @@
+{
+  "work_id": "추적자_12",
+  "episode_no": 12,
+  "scene_count": 43,
+  "sequence_count": 5,
+  "dramatic_question": "홍석이 사회 변화의 상징이 되며 경찰에 복직하고 딸과 작별할 수 있는가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        1
+      ],
+      "label": "사회 변화 촉발자 부상"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        2,
+        2
+      ],
+      "label": "팀 재정립"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        3,
+        5
+      ],
+      "label": "홍석의 재기와 딸에 대한 작별"
+    }
+  ],
+  "entry_state": "형 확정 후 홍석이 사회적 변화의 촉발자로 부각된다",
+  "exit_state": "홍석이 수정의 방에서 작별하고 경찰에 복직 신청을 한다",
+  "turning_point": {
+    "seq_index": 2,
+    "label": "팀 재정립",
+    "description": "정우, 황반장, 조형사, 지원이 각자의 다음 삶으로 나아가며 팀이 해체된다"
+  },
+  "central_conflict_axis": "상실을 안고 새 삶을 시작하는 것",
+  "episode_function": "사회적 반향과 팀 해체·홍석의 재건 시작",
+  "core_dist": {
+    "BOND": 3,
+    "ESTABLISH": 2,
+    "CONFLICT": 2,
+    "HOOK": 2,
+    "LOSS": 2,
+    "RELIEF": 1
+  },
+  "by": "cowork_opus_reading"
+}

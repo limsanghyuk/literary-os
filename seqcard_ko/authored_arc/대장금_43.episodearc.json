@@ -1,0 +1,65 @@
+{
+  "work_id": "대장금_43",
+  "episode_no": 43,
+  "scene_count": 67,
+  "sequence_count": 10,
+  "dramatic_question": "왕의 이상 증세—장금의 진단이 맞는가, 기존 의관의 처방이 맞는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "왕의 이상 증세로 장금의 처방과 기존 의관의 처방이 충돌한다.",
+  "exit_state": "장금의 진단이 옳음이 드러나지만 최씨가의 방해로 처방이 막힌다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "장금의 처방이 맞지만 최씨가의 압력으로 저지당한다"
+  },
+  "central_conflict_axis": "정확한 의학 진단(장금) vs 권력 압력(최씨가)",
+  "episode_function": "43화는 진단 논쟁을 통해 장금의 의학 철학과 권력의 충돌을 최고조로 끌어올린다.",
+  "core_dist": {
+    "RESCUE": 2,
+    "RELIEF": 2,
+    "CONFLICT": 25,
+    "PERIL": 30,
+    "DESIRE": 12,
+    "REVELATION": 9,
+    "HOOK": 16,
+    "ESTABLISH": 15,
+    "PUNISH": 8,
+    "BOND": 4,
+    "ORACLE": 6,
+    "LOSS": 1,
+    "REVERSAL": 2
+  },
+  "by": "sonnet_reading"
+}

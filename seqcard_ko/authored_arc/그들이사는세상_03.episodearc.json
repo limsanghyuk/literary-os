@@ -1,0 +1,51 @@
+{
+  "work_id": "그들이사는세상_03",
+  "episode_no": 3,
+  "scene_count": 50,
+  "sequence_count": 8,
+  "dramatic_question": "준호와 지오의 관계가 직업적 경계를 넘어가기 시작하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "안정 궤도·국장 압력"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "야외 탐색·개인 유대·감정 인정"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "베테랑 반발·통합 접근"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "준호의 특별 대우·감정 미인식"
+    }
+  ],
+  "entry_state": "드라마 중반부 안정 궤도 진입",
+  "exit_state": "지오 감정 인정, 준호 특별 대우 시작",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "지오의 감정 인정 — 일방적 감정에서 상호 관계 가능성으로"
+  },
+  "central_conflict_axis": "국장 간섭 vs 연출 원칙, 준호·지오 감정 선 진입",
+  "episode_function": "감정선 진입·팀 화합 위기 해소 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

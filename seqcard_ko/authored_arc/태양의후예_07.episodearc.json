@@ -1,0 +1,63 @@
+{
+  "work_id": "태양의후예_07",
+  "episode_no": 7,
+  "scene_count": 46,
+  "sequence_count": 7,
+  "dramatic_question": "위기 속에서 인간은 무엇을 선택하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "시진 재회·구조 작전 총력"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "트롤리 딜레마·고반장 희생"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        5
+      ],
+      "beat": "애도·결속"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "서브 커플 고백·새 위협 훅"
+    }
+  ],
+  "entry_state": "재난 현장 재회",
+  "exit_state": "새 위협 등장",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "고반장 자기희생"
+  },
+  "central_conflict_axis": "효율 vs 생명 윤리·군인 vs 의사",
+  "episode_function": "트롤리 딜레마 + 전우 희생: 인간적 선택의 비극",
+  "core_dist": {
+    "ROMANCE": 3,
+    "CONFLICT": 5,
+    "PERIL": 9,
+    "RESCUE": 4,
+    "LOSS": 9,
+    "RELIEF": 7,
+    "REVERSAL": 1,
+    "DESIRE": 1,
+    "BOND": 4,
+    "ESTABLISH": 2,
+    "REVELATION": 1
+  },
+  "by": "sonnet_reading"
+}

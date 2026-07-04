@@ -1,0 +1,60 @@
+{
+  "work_id": "싸인_08",
+  "episode_no": 8,
+  "scene_count": 49,
+  "sequence_count": 8,
+  "dramatic_question": "일본 현지 수사에서 지훈과 우진은 결정적 증거를 확보하고 관계를 회복할 수 있는가?",
+  "entry_state": "일본 쇼바라대학 법의학부에서 지훈과 우진이 함께 수사를 진행 중이다.",
+  "exit_state": "핵심 단서를 찾았으나 새 위험이 닥치며 귀국 결정을 내려야 하는 상황이 된다.",
+  "turning_point": {
+    "seq_index": 6,
+    "description": "일본 일루미네이션 공원에서 우진과 지훈이 감정적으로 충돌하는 전환점"
+  },
+  "central_conflict_axis": "지훈-우진의 공동 수사 협력 대 일본 현지의 방해와 두 사람 사이의 감정 갈등",
+  "episode_function": "8화는 일본 현지 수사의 위험과 지훈-우진의 감정적 재대면을 교차하며 로맨스와 스릴러를 동시에 심화시킨다.",
+  "core_dist": {
+    "ESTABLISH": 24.5,
+    "CONFLICT": 12.2,
+    "PERIL": 12.2,
+    "REVELATION": 10.2,
+    "ORACLE": 8.2,
+    "LOSS": 8.2,
+    "BOND": 6.1,
+    "HOOK": 4.1
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "function": "인물·상황·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "function": "갈등 심화와 단서 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        5,
+        6
+      ],
+      "function": "위기 폭발과 결정적 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        7,
+        8
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

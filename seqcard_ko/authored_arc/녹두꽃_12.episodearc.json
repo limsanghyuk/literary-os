@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_12",
+  "episode_no": 12,
+  "scene_count": 65,
+  "sequence_count": 7,
+  "dramatic_question": "전주화약 이후 집강소 시대가 열릴 수 있는가, 그리고 일본군 개입은 혁명을 끝장낼 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "이현 탈주·화약 완성·백가 복수 예고"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "대장소 해체·이강-자인 고백·집강 취임"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        5
+      ],
+      "beat": "최경선 귀환·일본군 진입 소식"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "이강 한양행·외세 개입 확정"
+    }
+  ],
+  "entry_state": "이현이 저격을 망설이고 전주화약이 성사됐지만 백가의 복수 예고와 분열이 시작된다.",
+  "exit_state": "집강소 시대가 개막하지만 일본군의 경복궁 진입으로 혁명의 새로운 위기가 확정된다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "일본군의 경복궁 진입 소식과 이강의 한양행이 혁명의 2막을 여는 역사적 전환점이 된다"
+  },
+  "central_conflict_axis": "집강소 자치(전봉준·이현) 대 외세 개입(일본군), 이강-자인의 감정 고백 vs 이별",
+  "episode_function": "전주화약 이후 집강소 시대를 구현하고 일본군 개입으로 2차 봉기의 도화선을 점화한다.",
+  "core_dist": {
+    "CONFLICT": 10,
+    "PERIL": 8,
+    "REVELATION": 12,
+    "LOSS": 10,
+    "BOND": 7,
+    "REVERSAL": 7,
+    "RELIEF": 5,
+    "HOOK": 6,
+    "RESCUE": 3,
+    "REUNION": 5,
+    "ESTABLISH": 4,
+    "DESIRE": 3,
+    "PUNISH": 2,
+    "ROMANCE": 5,
+    "ORACLE": 0,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

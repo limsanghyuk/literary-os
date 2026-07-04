@@ -1,0 +1,66 @@
+{
+  "work_id": "배가본드_16",
+  "episode_no": 16,
+  "scene_count": 57,
+  "sequence_count": 9,
+  "dramatic_question": "달건이 에드워드를 제거하고 복수를 넘어 인간으로 귀환할 수 있는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "label": "설정",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": 2,
+      "label": "전개",
+      "seq_span": [
+        3,
+        4
+      ]
+    },
+    {
+      "act": 3,
+      "label": "심화",
+      "seq_span": [
+        5,
+        7
+      ]
+    },
+    {
+      "act": 4,
+      "label": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ]
+    }
+  ],
+  "entry_state": "달건 생환, 릴리 배신 결심",
+  "exit_state": "달건, 방아쇠 거두다—피날레",
+  "turning_point": {
+    "seq_index": 5,
+    "seq_id": "배가본드_16_S05",
+    "description": "해리, 에드워드 체포 작전 지휘"
+  },
+  "central_conflict_axis": "복수 완성 vs 인간 회복",
+  "episode_function": "결말—에드워드 타도와 달건 인간 회복",
+  "core_dist": {
+    "PERIL": 0.174,
+    "REVELATION": 0.152,
+    "HOOK": 0.141,
+    "CONFLICT": 0.13,
+    "PUNISH": 0.076,
+    "ESTABLISH": 0.065,
+    "LOSS": 0.065,
+    "DESIRE": 0.065,
+    "BOND": 0.054,
+    "REUNION": 0.033,
+    "RESCUE": 0.022,
+    "REVERSAL": 0.011,
+    "RELIEF": 0.011
+  },
+  "by": "sonnet_reading"
+}

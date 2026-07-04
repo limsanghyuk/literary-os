@@ -1,0 +1,67 @@
+{
+  "work_id": "미안하다사랑한다_02",
+  "episode_no": 2,
+  "scene_count": 75,
+  "sequence_count": 16,
+  "dramatic_question": "무혁은 오들희를 비롯한 주변을 협박·조종하며 복수를 이어가지만, 오은채를 향한 감정이 싹트면서 그 냉혹한 계획은 과연 유지될 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "무혁의 협박이 시작되고, 오은채의 일상과 교차하며 두 사람의 연결이 심화된다"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        10
+      ],
+      "beat": "무혁이 오들희와 오은채 사이에서 복잡한 조종을 펼치며 갈등이 고조된다"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        11,
+        14
+      ],
+      "beat": "무혁의 진짜 아픔이 드러나기 시작하고, 오은채가 무혁에 끌리는 감정을 느낀다"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        15,
+        16
+      ],
+      "beat": "무혁의 비밀(뇌종양)이 암시되며 비극의 필연성이 예고된다"
+    }
+  ],
+  "entry_state": "무혁은 오들희와 주변을 협박하며 자신의 계획을 실행 중이다.",
+  "exit_state": "무혁의 뇌종양이 서서히 드러나며, 오은채는 무혁에 대한 감정이 복잡해진다.",
+  "turning_point": {
+    "seq_index": 15,
+    "desc": "무혁의 뇌종양 존재가 암시되어 복수극이 비극으로 전환되기 시작한다"
+  },
+  "central_conflict_axis": "무혁의 복수 의지 대 오은채를 향한 사랑의 감정",
+  "episode_function": "2화는 무혁의 협박·조종 패턴을 확립하고 오은채와의 접촉이 깊어지면서 복수와 사랑 사이의 갈등 축을 설치한다. 뇌종양 암시로 비극의 구조가 예고된다.",
+  "core_dist": {
+    "ESTABLISH": 10,
+    "DESIRE": 4,
+    "BOND": 10,
+    "PERIL": 6,
+    "ORACLE": 7,
+    "REVERSAL": 1,
+    "LOSS": 6,
+    "INTRO": 1,
+    "CONFLICT": 13,
+    "RESCUE": 3,
+    "REVELATION": 5,
+    "PUNISH": 1,
+    "RELIEF": 1,
+    "ROMANCE": 2,
+    "HOOK": 5
+  },
+  "by": "sonnet_reading"
+}

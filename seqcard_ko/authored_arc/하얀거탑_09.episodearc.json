@@ -1,0 +1,64 @@
+{
+  "work_id": "하얀거탑",
+  "episode_no": 9,
+  "scene_count": 81,
+  "sequence_count": 12,
+  "dramatic_question": "제주 원정 수술로 글로벌 명성을 쟁취하는 순간 준혁은 국내 환자 수닐의 죽음에 책임이 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "label": "세계와 갈등 도입",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "전개",
+      "label": "갈등 심화와 대결 구도 확립",
+      "seq_span": [
+        3,
+        7
+      ]
+    },
+    {
+      "act": "심화",
+      "label": "위기 절정과 전환점",
+      "seq_span": [
+        8,
+        11
+      ]
+    },
+    {
+      "act": "회말전환",
+      "label": "회말 반전과 다음 회 훅",
+      "seq_span": [
+        12,
+        12
+      ]
+    }
+  ],
+  "entry_state": "준혁 팀이 제주로 출발하고 수닐이 병원에 홀로 남겨진 상황",
+  "exit_state": "맥켈런 수술 성공 직후 수닐 사망 통보—준혁의 책임 회피와 도영의 직면 충돌",
+  "turning_point": {
+    "seq_index": 9,
+    "description": "맥켈런 수술 성공 직후 수닐 사망"
+  },
+  "central_conflict_axis": "글로벌 명성 추구의 윤리적 공백 vs 도영의 진실 직면 의지",
+  "episode_function": "드라마 핵심 비극 완성—수닐 사망과 소송 개시의 결정적 전환",
+  "core_dist": {
+    "CONFLICT": 22,
+    "DESIRE": 19,
+    "ESTABLISH": 15,
+    "BOND": 11,
+    "PERIL": 11,
+    "ORACLE": 8,
+    "RELIEF": 6,
+    "PUNISH": 4,
+    "LOSS": 2,
+    "REVELATION": 2,
+    "ROMANCE": 1,
+    "HOOK": 1
+  },
+  "by": "claude-sonnet-4-6"
+}

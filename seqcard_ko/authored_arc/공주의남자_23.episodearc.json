@@ -1,0 +1,51 @@
+{
+  "work_id": "공주의남자_23",
+  "episode_no": 23,
+  "scene_count": 62,
+  "sequence_count": 9,
+  "dramatic_question": "국경 앞에서 수양이 딸을 보내줄 것인가, 아니면 마지막까지 붙잡을 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "국경 달려감·재회"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "추격 저지·세령 부상·포위·수양 등장"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "볼모 명령·아이 탈출·세령 고립"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        9
+      ],
+      "beat": "수양 결단 직전"
+    }
+  ],
+  "entry_state": "세령 국경 근처 단독 대기, 승유 추적 중",
+  "exit_state": "재회, 추격 위기, 아이 탈출, 세령-수양 단둘 대치",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "세령 아이 탈출·고립 — 세령 자신을 희생패로 내놓는 역전"
+  },
+  "central_conflict_axis": "수양의 부정 vs 정치 논리, 세령의 희생",
+  "episode_function": "국경 최후 대치·세령 희생적 선택·수양 결단 직전 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

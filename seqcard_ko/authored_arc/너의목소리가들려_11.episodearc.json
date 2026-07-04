@@ -1,0 +1,58 @@
+{
+  "work_id": "너의목소리가들려_11",
+  "episode_no": 11,
+  "scene_count": 57,
+  "sequence_count": 7,
+  "dramatic_question": "진실 폭로와 능력 위기 속에서 두 사람의 관계는 어떻게 재확인되는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "여파와 유대 재확인",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "B",
+      "label": "진실 위기와 감정 절정",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": "C",
+      "label": "상실 위기와 회복",
+      "seq_span": [
+        6,
+        7
+      ]
+    }
+  ],
+  "entry_state": "전회 여파와 재기",
+  "exit_state": "로맨스 회복과 다음 예고",
+  "turning_point": {
+    "seq_index": 4,
+    "description": "진실 위기와 감정 절정"
+  },
+  "central_conflict_axis": "능력의 비밀 vs 감정의 투명함—진실과 위기의 교차",
+  "episode_function": "진실 폭로와 능력 위기, 관계 재확인",
+  "core_dist": {
+    "REVELATION": 0.16,
+    "CONFLICT": 0.16,
+    "BOND": 0.12,
+    "HOOK": 0.1,
+    "RELIEF": 0.02,
+    "DESIRE": 0.07,
+    "LOSS": 0.07,
+    "PERIL": 0.07,
+    "ESTABLISH": 0.05,
+    "REVERSAL": 0.03,
+    "REUNION": 0.02,
+    "PUNISH": 0.02,
+    "ROMANCE": 0.03,
+    "RESCUE": 0.01
+  },
+  "by": "cowork_opus_reading"
+}

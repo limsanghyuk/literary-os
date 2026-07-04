@@ -1,0 +1,66 @@
+{
+  "work_id": "스토브리그_07",
+  "episode_no": 7,
+  "scene_count": 59,
+  "sequence_count": 9,
+  "dramatic_question": "제로베이스 연봉 협상이라는 냉정한 원칙 아래 장진우와 서영주는 각자의 존엄을 지킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "30% 삭감·방출 10명—연봉 전쟁 개전과 영수-경민 첫 만남"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "제로베이스 원칙 선언·각 선수 협상 시작·장진우 조롱 현실화"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "서영주 결렬·장진우 은퇴 선언·이중 위기 동시 폭발"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        9
+      ],
+      "beat": "고세혁-경민 접선·술잔 테러로 다음 회 폭발 예고"
+    }
+  ],
+  "entry_state": "연봉 협상 시즌, 제로베이스 원칙으로 전 선수가 압박을 받는 상황.",
+  "exit_state": "서영주 결렬·장진우 은퇴 선언이 동시에 터지고 고세혁-경민 연합이 모습을 드러낸다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "장진우 은퇴 선언—냉정한 시스템이 인간의 존엄과 충돌"
+  },
+  "central_conflict_axis": "냉정한 가치 기반 협상(승수) 대 감정·정치적 저항(고세혁·경민)",
+  "episode_function": "7화는 연봉 협상을 통해 스포츠 비즈니스의 냉혹함과 선수들의 인간적 존엄이 충돌하는 드라마를 그린다.",
+  "core_dist": {
+    "CONFLICT": 19,
+    "ESTABLISH": 17,
+    "ORACLE": 12,
+    "BOND": 12,
+    "RELIEF": 10,
+    "HOOK": 9,
+    "REVERSAL": 7,
+    "LOSS": 7,
+    "INTRO": 6,
+    "REVELATION": 5,
+    "DESIRE": 5,
+    "PUNISH": 4,
+    "PERIL": 4,
+    "RESCUE": 1
+  },
+  "by": "sonnet_reading"
+}

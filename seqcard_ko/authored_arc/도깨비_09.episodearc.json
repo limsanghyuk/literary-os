@@ -1,0 +1,64 @@
+{
+ "episode_no": 9,
+ "scene_count": 63,
+ "sequence_count": 8,
+ "dramatic_question": "소멸의 진실을 안 은탁이 도피했다가 돌아올 수 있는가, 그리고 하늘정원에서 두 사람이 서로 사랑을 고백할 수 있는가?",
+ "act_structure": [
+  {
+   "act": "설정",
+   "seq_span": [
+    1,
+    2
+   ],
+   "beat": "소멸 진실 폭로·은탁 가출로 위기 최고조"
+  },
+  {
+   "act": "전개",
+   "seq_span": [
+    3,
+    5
+   ],
+   "beat": "도깨비의 은탁 추적·명부 소각 보호·신의 신호로 스키장 발견"
+  },
+  {
+   "act": "심화",
+   "seq_span": [
+    6,
+    6
+   ],
+   "beat": "창고 동사 위기·구조·곤돌라-하늘정원 상호 고백"
+  },
+  {
+   "act": "회말전환",
+   "seq_span": [
+    7,
+    8
+   ],
+   "beat": "써니-저승 재연결·치킨집 복귀·네 사람 합석과 써니 전생 각성"
+  }
+ ],
+ "entry_state": "소멸 진실을 안 은탁이 짐을 싸서 도피한다.",
+ "exit_state": "하늘정원 상호 고백 후 치킨집에서 네 사람이 합석하고 써니가 저승의 손에서 전생을 각성한다.",
+ "turning_point": {
+  "seq_index": 8,
+  "desc": "써니의 전생 각성—현재와 과거 운명이 완전히 포개짐"
+ },
+ "central_conflict_axis": "도망가고 싶은 은탁(죄책감) 대 어떻게든 곁에 있으려는 도깨비",
+ "episode_function": "9화는 소멸 진실 도피에서 시작해 스키장 구조와 하늘정원 고백으로 감정을 정점까지 끌어올리고, 써니의 전생 각성으로 과거 서사를 현재에 완전히 연결한다.",
+ "core_dist": {
+  "LOSS": 7,
+  "DESIRE": 7,
+  "RESCUE": 6,
+  "REUNION": 6,
+  "BOND": 5,
+  "REVELATION": 5,
+  "ROMANCE": 5,
+  "ORACLE": 4,
+  "PERIL": 4,
+  "RELIEF": 5,
+  "CONFLICT": 3,
+  "REVERSAL": 2
+ },
+ "work_id": "도깨비_09",
+ "by": "sonnet_reading"
+}

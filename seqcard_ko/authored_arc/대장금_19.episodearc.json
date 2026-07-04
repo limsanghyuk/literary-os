@@ -1,0 +1,65 @@
+{
+  "work_id": "대장금_19",
+  "episode_no": 19,
+  "scene_count": 55,
+  "sequence_count": 8,
+  "dramatic_question": "제주에 도착한 장금은 낯선 환경에서 어떻게 새 길을 찾는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "장금과 한상궁이 제주에 도착하여 새로운 환경과 마주한다.",
+  "exit_state": "제주의 자연과 사람들 속에서 장금이 의학적 소명의 씨앗을 발견한다.",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "장금이 제주 자연에서 음식·의학의 연결 고리를 처음 인식한다"
+  },
+  "central_conflict_axis": "유배지 생존과 새 가능성 발견(장금) vs 수랏간 복귀 욕망",
+  "episode_function": "19화는 제주 도착과 적응으로 장금의 의학 여정의 서막을 연다.",
+  "core_dist": {
+    "REVERSAL": 8,
+    "REVELATION": 11,
+    "REUNION": 2,
+    "BOND": 17,
+    "CONFLICT": 14,
+    "ESTABLISH": 7,
+    "PUNISH": 2,
+    "LOSS": 2,
+    "DESIRE": 17,
+    "RELIEF": 6,
+    "PERIL": 10,
+    "HOOK": 3,
+    "ORACLE": 1
+  },
+  "by": "sonnet_reading"
+}

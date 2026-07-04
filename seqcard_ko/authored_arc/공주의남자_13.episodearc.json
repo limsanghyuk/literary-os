@@ -1,0 +1,51 @@
+{
+  "work_id": "공주의남자_13",
+  "episode_no": 13,
+  "scene_count": 82,
+  "sequence_count": 12,
+  "dramatic_question": "임신한 세령과 함께 복수를 계속할 수 있는가, 아니면 사랑을 위해 복수를 멈춰야 하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "집단 재조직·임신 발견·공유"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "임신 균열·조정 공작 개시·역이용"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "공작 실패·아이 위협·세령 결단"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        12
+      ],
+      "beat": "승유 우선 전환·세령 거부 선언"
+    }
+  ],
+  "entry_state": "총공세 이후 재조직 중, 세령 임신 미발견",
+  "exit_state": "임신 공개, 승유 가족 우선 전환, 세령의 동행 선언",
+  "turning_point": {
+    "seq_index": 11,
+    "desc": "승유의 복수→가족 보호 우선 전환 — 드라마 방향성 전환"
+  },
+  "central_conflict_axis": "복수 의지 vs 임신한 세령·아이의 안전",
+  "episode_function": "임신 발각·가치 충돌·방향 전환 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

@@ -1,0 +1,65 @@
+{
+  "work_id": "W_12",
+  "episode_no": 12,
+  "sequence_count": 16,
+  "scene_count": 105,
+  "turning_point": {
+    "seq_index": 4,
+    "description": "결정적 위기 또는 반전"
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "설정 단계"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        9
+      ],
+      "beat": "전개 단계"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        10,
+        14
+      ],
+      "beat": "심화 단계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        15,
+        16
+      ],
+      "beat": "회말전환 단계"
+    }
+  ],
+  "by": "cowork_opus_reading",
+  "entry_state": "결전 이후 새로운 균형이 모색되지만 해결되지 않은 핵심 문제가 남아있다.",
+  "exit_state": "마지막 해결책이 제시되고 결말로 향하는 길이 열린다.",
+  "central_conflict_axis": "완전한 해결을 위한 최후의 희생 대 생존 본능",
+  "episode_function": "결론부의 도입으로서 남은 문제를 정리하고 감정적·서사적 마무리를 준비한다.",
+  "dramatic_question": "W 12화의 핵심 드라마틱 질문: 강철과 오연주는 웹툰과 현실의 경계를 넘어 생존할 수 있는가?",
+  "core_dist": {
+    "PERIL": 28,
+    "REVELATION": 26,
+    "HOOK": 6,
+    "RESCUE": 10,
+    "ESTABLISH": 3,
+    "CONFLICT": 4,
+    "PUNISH": 1,
+    "REVERSAL": 3,
+    "RELIEF": 5,
+    "REUNION": 3,
+    "BOND": 6,
+    "LOSS": 8,
+    "ROMANCE": 2
+  }
+}

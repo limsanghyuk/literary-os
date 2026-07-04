@@ -1,0 +1,67 @@
+{
+  "work_id": "대장금_02",
+  "episode_no": 2,
+  "scene_count": 88,
+  "sequence_count": 13,
+  "dramatic_question": "갑자사화로 쫓기는 박나인은 어린 장금을 지키며 어떻게 최후를 맞는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        10
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        13
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "8년 후 백정마을에서 가족이 숨어 살지만 갑자사화의 칼날이 다가온다.",
+  "exit_state": "박나인이 화살에 부상당하고 동굴에서 유언을 남기며 죽어가고, 장금이 홀로 길을 나선다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "탕춘대 납치와 박나인의 화살 부상—절망적 전환(씬70~80)"
+  },
+  "central_conflict_axis": "최씨가의 제거 음모 vs 한상궁의 구출 시도",
+  "episode_function": "2화는 갑자사화의 폭정 속 도피와 박나인의 죽음으로 장금에게 복수·성장의 동기를 심어준다.",
+  "core_dist": {
+    "ESTABLISH": 9,
+    "INTRO": 2,
+    "BOND": 25,
+    "CONFLICT": 9,
+    "PERIL": 36,
+    "HOOK": 3,
+    "DESIRE": 12,
+    "ORACLE": 6,
+    "REVELATION": 7,
+    "PUNISH": 2,
+    "LOSS": 14,
+    "RELIEF": 3,
+    "RESCUE": 5,
+    "REUNION": 2,
+    "REVERSAL": 4
+  },
+  "by": "sonnet_reading"
+}

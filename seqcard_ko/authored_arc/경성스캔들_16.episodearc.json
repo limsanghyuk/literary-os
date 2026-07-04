@@ -1,0 +1,19 @@
+{
+  "work_id": "경성스캔들_16",
+  "episode_no": 16,
+  "scene_count": 76,
+  "sequence_count": 7,
+  "dramatic_question": "송주를 잃은 수현과 조직이 총독 암살 거사를 실행할 수 있을까, 그리고 강구의 최종 배신을 넘어 완과 여경은 살아서 재회할 수 있을까?",
+  "act_structure": [
+    {"act": 1, "seq_span": [1, 2], "label": "송주 희생 애도와 강구 배신 실체 폭로"},
+    {"act": 2, "seq_span": [3, 5], "label": "완의 고백과 칠필살 거사 실행 — 총독 불참 위기"},
+    {"act": 3, "seq_span": [6, 7], "label": "강구 응징과 경성역 재회 — 에필로그"}
+  ],
+  "entry_state": "15화 송주 희생 클리프행어 직후",
+  "exit_state": "여경이 강구를 응징하고 완과 수현이 살아서 탈출해 경성역에서 완과 여경이 재회하며 수현이 송주의 환영과 미소로 마무리된다",
+  "turning_point": {"seq_index": 5, "label": "칠필살 거사 실행 — 총독 불참 위기와 돌파", "description": "애물단이 사치코 파라다이스 파티에 잠입해 칠필살 마지막 거사를 실행하지만 총독이 불참해 위기를 맞고 조직이 이를 극복하는 최종 클라이맥스"},
+  "central_conflict_axis": "송주 희생 후 수현의 절망과 자살테러 결심, 칠필살 거사 실행과 총독 불참, 강구의 최종 배신 응징",
+  "episode_function": "칠필살 서사 완결과 거사 클라이맥스, 완-수현 배신 서사 최종 종결, 완-여경 경성역 재회 에필로그",
+  "core_dist": {"LOSS": 1, "REVELATION": 1, "ROMANCE": 1, "BOND": 1, "PUNISH": 2, "REUNION": 1},
+  "by": "cowork_opus_reading"
+}

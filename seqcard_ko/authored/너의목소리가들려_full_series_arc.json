@@ -1,0 +1,94 @@
+{
+  "series": "너의목소리가들려",
+  "episodes_total": 18,
+  "scenes_total": 1080,
+  "sequences_total": 122,
+  "logline": "타인의 마음을 읽는 능력을 가진 차관우와 현실주의 국선변호인 박수하가 연쇄 사건을 함께 해결하며, 능력이라는 비밀이 두 사람의 관계에 어떤 의미인지 발견해가는 판타지 법정 로맨스.",
+  "central_dramatic_question": "타인의 마음을 읽을 수 있는 능력은 관계를 더 깊게 만드는가, 아니면 더 고립시키는가?",
+  "theme_statement": "진정한 연결은 능력이 아닌 선택에서 온다—마음을 읽지 않아도 마음을 열 수 있다.",
+  "protagonist": "박수하 — 현실주의 국선변호인으로 관우의 능력과 마음을 점차 받아들이며 성장한다",
+  "antagonist": "연쇄 살인마 민준국—관우와 수하의 연결을 위협하는 외부 악인이자 능력이 가진 위험의 상징",
+  "season_structure": [
+    {
+      "act": "제1막",
+      "label": "만남과 연결—능력과 법정의 교차",
+      "episode_span": [
+        1,
+        6
+      ],
+      "description": "두 주인공 도입, 관계 형성, 로맨스 씨앗"
+    },
+    {
+      "act": "제2막",
+      "label": "로맨스와 위기—반전과 검증",
+      "episode_span": [
+        7,
+        12
+      ],
+      "description": "관계 심화, 반전, 상실, 중반부 핵심 폭로"
+    },
+    {
+      "act": "제3막",
+      "label": "최후 국면—능력 노출과 최후 대결",
+      "episode_span": [
+        13,
+        17
+      ],
+      "description": "후반부 최후 위기, 능력 완전 노출, 진실 최종 폭로"
+    },
+    {
+      "act": "제4막",
+      "label": "피날레—마음의 소리",
+      "episode_span": [
+        18,
+        18
+      ],
+      "description": "최후 대결, 정의 실현, 완전한 마무리"
+    }
+  ],
+  "macro_turning_points": [
+    {
+      "episode": 2,
+      "description": "관우의 능력 수하에게 부분 노출—협력 관계 시작"
+    },
+    {
+      "episode": 5,
+      "description": "대반전—로맨스 절정에서 관계 위기"
+    },
+    {
+      "episode": 9,
+      "description": "중반부 핵심 진실 폭로—전체 구도 재편"
+    },
+    {
+      "episode": 13,
+      "description": "후반부 최후 위기—능력 핵심 사용"
+    },
+    {
+      "episode": 16,
+      "description": "능력 비밀 완전 노출—수용과 로맨스 절정"
+    }
+  ],
+  "resolution": "모든 진실이 폭로되고 정의가 실현된 뒤, 수하와 관우는 능력을 넘어선 진정한 연결을 완성한다",
+  "open_ending": false,
+  "tone": "따뜻한 판타지 로맨스—법정 현실 속의 초자연적 연결",
+  "conflict_persist": 0.58,
+  "series_core_dist": {
+    "REVELATION": 0.15,
+    "CONFLICT": 0.12,
+    "PERIL": 0.11,
+    "HOOK": 0.09,
+    "ESTABLISH": 0.1,
+    "BOND": 0.08,
+    "LOSS": 0.07,
+    "DESIRE": 0.05,
+    "ROMANCE": 0.05,
+    "RESCUE": 0.04,
+    "REVERSAL": 0.04,
+    "RELIEF": 0.04,
+    "REUNION": 0.02,
+    "ORACLE": 0.02,
+    "PUNISH": 0.01,
+    "INTRO": 0.01
+  },
+  "by": "cowork_opus_reading"
+}

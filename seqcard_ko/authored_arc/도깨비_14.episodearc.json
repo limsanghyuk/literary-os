@@ -1,0 +1,66 @@
+{
+ "episode_no": 14,
+ "scene_count": 69,
+ "sequence_count": 7,
+ "dramatic_question": "도깨비가 소멸한 지 9년이 지난 뒤 기억을 잃은 은탁이 다시 도깨비를 만나고 진실을 회복할 수 있는가?",
+ "act_structure": [
+  {
+   "act": "설정",
+   "seq_span": [
+    1,
+    2
+   ],
+   "beat": "소멸·9년 시간 점프·PD 은탁의 망각과 잔흔"
+  },
+  {
+   "act": "전개",
+   "seq_span": [
+    3,
+    4
+   ],
+   "beat": "도깨비 귀환·연쇄 재회·덕화 기억 보존 폭로"
+  },
+  {
+   "act": "심화",
+   "seq_span": [
+    5,
+    6
+   ],
+   "beat": "도깨비-은탁 조심스러운 재접촉·김신 이름 발견·캐나다 편지"
+  },
+  {
+   "act": "회말전환",
+   "seq_span": [
+    7,
+    7
+   ],
+   "beat": "캐나다 여행·편지 확인·빨간 문 앞 도깨비와 재회"
+  }
+ ],
+ "entry_state": "도깨비가 소멸하고 9년이 흘러 기억을 잃은 은탁이 PD가 되어 살아간다.",
+ "exit_state": "캐나다 빨간 문 앞에서 은탁이 도깨비와 재회한다.",
+ "turning_point": {
+  "seq_index": 4,
+  "desc": "도깨비 귀환과 연쇄 재회—9년 공백의 서사 복원 시작"
+ },
+ "central_conflict_axis": "망각한 은탁 대 9년을 기다린 도깨비",
+ "episode_function": "14화는 9년 시간 점프로 상실의 무게를 체감하게 하고, 도깨비의 귀환과 연쇄 재회를 통해 세계를 복원하며, 캐나다 빨간 문 재회로 기억 회복의 여정을 시작한다.",
+ "core_dist": {
+  "REUNION": 9,
+  "LOSS": 8,
+  "REVELATION": 8,
+  "ROMANCE": 7,
+  "DESIRE": 7,
+  "ESTABLISH": 7,
+  "ORACLE": 5,
+  "BOND": 5,
+  "RESCUE": 4,
+  "RELIEF": 4,
+  "CONFLICT": 3,
+  "HOOK": 3,
+  "PERIL": 2,
+  "REVERSAL": 2
+ },
+ "work_id": "도깨비_14",
+ "by": "sonnet_reading"
+}

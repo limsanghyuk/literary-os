@@ -1,0 +1,60 @@
+{
+  "work_id": "싸인_12",
+  "episode_no": 12,
+  "scene_count": 62,
+  "sequence_count": 11,
+  "dramatic_question": "정병도가 표적이 된 가운데 지훈은 그를 지키고 배후 세력의 다음 수를 예측할 수 있는가?",
+  "entry_state": "정병도가 생명의 위협을 받으며 지훈이 보호에 나섰다.",
+  "exit_state": "검찰시민위원회에서 반격이 시도되나 배후의 반격도 만만치 않음을 알게 된다.",
+  "turning_point": {
+    "seq_index": 8,
+    "description": "검찰시민위원회에서 반전이 일어나며 권력 균형이 일시적으로 흔들리는 순간"
+  },
+  "central_conflict_axis": "지훈·정병도의 공동 방어 대 배후 세력의 증거 말살과 정병도 제거 공작",
+  "episode_function": "12화는 정병도를 중심으로 사건의 전쟁이 격화되고 검찰시민위원회를 통해 제도적 반격이 시도되는 국면을 그린다.",
+  "core_dist": {
+    "REVELATION": 19.4,
+    "ESTABLISH": 16.1,
+    "LOSS": 11.3,
+    "ORACLE": 9.7,
+    "PERIL": 9.7,
+    "CONFLICT": 9.7,
+    "DESIRE": 9.7,
+    "REVERSAL": 6.5
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "function": "인물·상황·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "function": "갈등 심화와 단서 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        7,
+        9
+      ],
+      "function": "위기 폭발과 결정적 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        10,
+        11
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

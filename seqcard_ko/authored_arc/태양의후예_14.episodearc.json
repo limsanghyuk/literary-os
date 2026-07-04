@@ -1,0 +1,63 @@
+{
+  "work_id": "태양의후예_14",
+  "episode_no": 14,
+  "scene_count": 57,
+  "sequence_count": 9,
+  "dramatic_question": "떠남과 귀환을 반복해도 사랑은 지속될 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "이별 인사·파병 도착"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "모연 독자 성장·임무 절정"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        6
+      ],
+      "beat": "대영·명주 대결"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "귀국·재회·새 임무 훅"
+    }
+  ],
+  "entry_state": "파병 이별",
+  "exit_state": "새 임무 예고",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "시진 귀국·모연 재회"
+  },
+  "central_conflict_axis": "반복 이별의 지속가능성",
+  "episode_function": "재회+이별 사이클: 사랑의 지속가능성 시험",
+  "core_dist": {
+    "HOOK": 3,
+    "PERIL": 6,
+    "REVERSAL": 4,
+    "RELIEF": 9,
+    "CONFLICT": 10,
+    "ESTABLISH": 6,
+    "REVELATION": 9,
+    "BOND": 3,
+    "ROMANCE": 4,
+    "PUNISH": 2,
+    "LOSS": 1
+  },
+  "by": "sonnet_reading"
+}

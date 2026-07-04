@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_11",
+  "episode_no": 11,
+  "scene_count": 60,
+  "sequence_count": 7,
+  "dramatic_question": "전주화약은 성립될 수 있는가, 이강-자인의 관계는 어디까지 가까워질 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "내부 균열·홍계훈-김학진 충돌"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "폐정개혁 낭독·화약 성립·이현 도주"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "형제 대결·전봉준 화약 결단"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "화약 불꽃·이강-자인 시선·홍계훈 저격 지시"
+    }
+  ],
+  "entry_state": "이강과 자인이 총격 속에서 갈등하는 가운데 홍계훈-김학진의 권력 충돌이 화약 협상의 변수가 된다.",
+  "exit_state": "전주화약이 성립하고 화약 신호 불꽃이 타오르지만, 홍계훈의 저격 지시로 새로운 위협이 시작된다.",
+  "turning_point": {
+    "seq_index": 3,
+    "desc": "폐정개혁 12개조 낭독과 화약 성립이 동학 혁명의 첫 번째 제도적 성과를 구현한다"
+  },
+  "central_conflict_axis": "화약 협상(전봉준 vs 홍계훈) 대 외세 개입(청군·일본군), 이강-자인 감정 성장",
+  "episode_function": "전주화약 성립을 통해 동학 혁명의 제도적 성과를 구현하고, 홍계훈의 저격 지시로 이후의 갈등을 예고한다.",
+  "core_dist": {
+    "CONFLICT": 14,
+    "PERIL": 7,
+    "REVELATION": 9,
+    "LOSS": 7,
+    "BOND": 8,
+    "REVERSAL": 7,
+    "RELIEF": 5,
+    "HOOK": 5,
+    "RESCUE": 2,
+    "REUNION": 1,
+    "ESTABLISH": 3,
+    "DESIRE": 3,
+    "PUNISH": 4,
+    "ROMANCE": 2,
+    "ORACLE": 0,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

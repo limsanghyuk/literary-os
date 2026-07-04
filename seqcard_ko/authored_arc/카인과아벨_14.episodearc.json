@@ -1,0 +1,60 @@
+{
+  "work_id": "카인과아벨_14",
+  "episode_no": 14,
+  "scene_count": 50,
+  "sequence_count": 8,
+  "dramatic_question": "선우의 마지막 반격과 도주 시도를 막고 법적 심판을 실현할 수 있는가?",
+  "entry_state": "선우가 도주를 준비하고 초인이 이를 막으려 한다.",
+  "exit_state": "선우가 일시적으로 도주에 성공하지만 초인이 그 뒤를 바짝 좇는다.",
+  "turning_point": {
+    "seq_index": 6,
+    "description": "선우가 마지막 인질 또는 협박 카드를 꺼내는 극한 상황"
+  },
+  "central_conflict_axis": "초인·수사기관의 선우 검거 대 선우의 최후 도주와 봉쇄 공작",
+  "episode_function": "14화는 선우의 도주 시도와 초인의 추격이 교차하며 최종 결말 직전 긴장을 최고조로 끌어올린다.",
+  "core_dist": {
+    "CONFLICT": 26.0,
+    "PERIL": 20.0,
+    "REVELATION": 14.0,
+    "HOOK": 10.0,
+    "REVERSAL": 8.0,
+    "BOND": 6.0,
+    "RELIEF": 4.0,
+    "ESTABLISH": 4.0
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "function": "인물·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "function": "갈등 심화와 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        5,
+        6
+      ],
+      "function": "위기 폭발과 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        7,
+        8
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

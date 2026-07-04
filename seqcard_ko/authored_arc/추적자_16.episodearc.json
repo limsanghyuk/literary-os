@@ -1,0 +1,50 @@
+{
+  "work_id": "추적자_16",
+  "episode_no": 16,
+  "scene_count": 27,
+  "sequence_count": 3,
+  "dramatic_question": "홍석이 1년 후 새 삶을 온전히 시작하며 딸의 기억과 화해할 수 있는가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        1
+      ],
+      "label": "1년 후 새로운 일상"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        2,
+        2
+      ],
+      "label": "팀 전체 삶 재건"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        3,
+        3
+      ],
+      "label": "딸과의 화해와 재출발"
+    }
+  ],
+  "entry_state": "사건 이후 1년이 흘러 홍석과 팀이 각자의 일상을 회복하고 있다",
+  "exit_state": "홍석이 묘소에서 딸에게 약속을 고하고 봄날 거리를 걷는다",
+  "turning_point": {
+    "seq_index": 2,
+    "label": "팀 재건 완성",
+    "description": "황반장 회복, 조형사-지원 관계 시작 등 팀 전체의 삶이 재건된다"
+  },
+  "central_conflict_axis": "상실의 무게 vs 새로운 삶의 가능성",
+  "episode_function": "최종 피날레: 모든 인물의 재건과 홍석의 딸에 대한 영원한 기억",
+  "core_dist": {
+    "LOSS": 2,
+    "BOND": 2,
+    "ESTABLISH": 2,
+    "RELIEF": 2,
+    "REVELATION": 1
+  },
+  "by": "cowork_opus_reading"
+}

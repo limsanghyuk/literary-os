@@ -1,0 +1,51 @@
+{
+  "work_id": "밀회",
+  "episode_no": 3,
+  "scene_count": 90,
+  "sequence_count": 12,
+  "dramatic_question": "선재와 혜원의 감정은 시험·입학·어머니 죽음이라는 현실 장벽을 넘어 이어질 수 있는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        7
+      ],
+      "label": "익명 쪽지·레슨·CCTV로 감정선이 위험 수위에 도달"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        8,
+        10
+      ],
+      "label": "명화 사망과 시험 결시로 세계가 무너짐"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        11,
+        12
+      ],
+      "label": "공익근무·혜원 책·선재 키스로 인연의 끈이 이어짐"
+    }
+  ],
+  "entry_state": "선재와 혜원이 익명 쪽지로 감정을 확인한 직후, 두 사람 모두 한계를 알면서도 끌리는 상태",
+  "exit_state": "명화 사망 후 선재가 공익요원으로 떠나지만 혜원의 책을 간직하며, 혜원 집 앞에서 선재의 키스로 관계가 새 국면으로 전환된다",
+  "turning_point": {
+    "seq_index": 8,
+    "label": "명화 사망과 시험 결시",
+    "description": "명화가 교통사고로 사망하며 선재가 시험을 결시하고 음악도 잃어버리는 전면적 붕괴"
+  },
+  "central_conflict_axis": "음악과 사랑으로 연결된 두 사람 vs 계층·결혼·불의의 상실이 강요하는 단절",
+  "episode_function": "CRISIS — 명화 죽음이라는 비극으로 선재의 세계를 붕괴시키고 감정의 밀도를 최고조로 끌어올린다",
+  "core_dist": {
+    "ESTABLISH": 0.194,
+    "PERIL": 0.16,
+    "DESIRE": 0.126,
+    "CONFLICT": 0.114,
+    "RELIEF": 0.091,
+    "REVELATION": 0.08
+  },
+  "by": "cowork_opus_reading"
+}

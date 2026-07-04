@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_17",
+  "episode_no": 17,
+  "scene_count": 62,
+  "sequence_count": 7,
+  "dramatic_question": "이강은 파문 이후에도 혁명을 계속할 수 있는가, 2차 봉기는 이뤄질 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "이강 파문·갑오개혁·이현 냉혹"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "이현 정체 결별·이강 거절"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "이강 복직·노비문서 진실"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "2차 봉기 준비 본격화"
+    }
+  ],
+  "entry_state": "이강이 동생 정체 폭로로 파문을 받고 전주에서 추방된다.",
+  "exit_state": "자인의 군량미 헌납 제안으로 2차 봉기 준비가 본격화되고, 이강이 복직해 새 소임을 찾는다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "자인의 군량미 헌납 제안이 2차 봉기의 물질적 기반을 마련하는 전환점이 된다"
+  },
+  "central_conflict_axis": "파문 이강의 고립 vs 2차 봉기의 집결, 이현의 배신 진실 vs 이강-어머니의 슬픔",
+  "episode_function": "이강의 파문과 복직을 통해 혁명 참여자의 고독을 구현하고, 자인의 헌납으로 2차 봉기 준비를 본격화한다.",
+  "core_dist": {
+    "CONFLICT": 14,
+    "PERIL": 5,
+    "REVELATION": 13,
+    "LOSS": 12,
+    "BOND": 7,
+    "REVERSAL": 6,
+    "RELIEF": 3,
+    "HOOK": 5,
+    "RESCUE": 3,
+    "REUNION": 4,
+    "ESTABLISH": 5,
+    "DESIRE": 5,
+    "PUNISH": 3,
+    "ROMANCE": 2,
+    "ORACLE": 1,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

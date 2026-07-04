@@ -1,0 +1,48 @@
+{
+  "work_id": "개와늑대의시간_16",
+  "episode_no": 16,
+  "scene_count": 53,
+  "sequence_count": 9,
+  "dramatic_question": "수현과 지우는 모든 위험을 이겨내고 진정한 새 출발을 할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "안도·강진 작별·자기 화해",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "B",
+      "label": "영길 화해·회상·고백",
+      "seq_span": [
+        4,
+        6
+      ]
+    },
+    {
+      "act": "C",
+      "label": "새 도시·강진의 결말·열린 엔딩",
+      "seq_span": [
+        7,
+        9
+      ]
+    }
+  ],
+  "entry_state": "잔당 소탕 후 진정한 평화",
+  "exit_state": "개와 늑대의 시간 황혼, 수현·지우 열린 해피엔딩",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "수현의 동거 고백—사랑의 최종 완결"
+  },
+  "central_conflict_axis": "수현(사랑·평화)↔과거(트라우마)·강진(이별)",
+  "episode_function": "자기 화해·아버지 화해·고백·열린 결말",
+  "core_dist": {
+    "ROMANCE": 3,
+    "BOND": 2,
+    "RELIEF": 2,
+    "LOSS": 2
+  },
+  "by": "sonnet_reading"
+}

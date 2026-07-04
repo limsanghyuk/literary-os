@@ -1,0 +1,53 @@
+{
+  "work_id": "추적자_14",
+  "episode_no": 14,
+  "scene_count": 50,
+  "sequence_count": 6,
+  "dramatic_question": "황반장의 희생으로 결정적 증거가 법원에 전달될 수 있는가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        1
+      ],
+      "label": "비리 구조 파악·공조 체계 가동"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        2,
+        2
+      ],
+      "label": "피해자 연대·도덕적 재무장"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        3,
+        6
+      ],
+      "label": "황반장 희생과 증거 전달"
+    }
+  ],
+  "entry_state": "새 사건의 비리 구조가 드러나고 홍석-정우 공조 체계가 가동된다",
+  "exit_state": "황반장의 희생으로 결정적 증거가 법원에 전달된다",
+  "turning_point": {
+    "seq_index": 5,
+    "label": "황반장 희생",
+    "description": "황반장이 마지막 방해 공작을 돌파하며 증거를 전달하는 희생을 치른다"
+  },
+  "central_conflict_axis": "증거 전달 vs 조직의 마지막 방해",
+  "episode_function": "피해자 연대·황반장 희생으로 드라마 감정 정점",
+  "core_dist": {
+    "BOND": 3,
+    "CONFLICT": 3,
+    "REVELATION": 2,
+    "HOOK": 2,
+    "RESCUE": 2,
+    "PERIL": 2,
+    "LOSS": 2,
+    "DESIRE": 1
+  },
+  "by": "cowork_opus_reading"
+}

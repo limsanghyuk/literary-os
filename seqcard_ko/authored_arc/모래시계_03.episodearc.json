@@ -1,0 +1,55 @@
+{
+  "work_id": "모래시계_03",
+  "episode_no": 3,
+  "scene_count": 55,
+  "sequence_count": 10,
+  "dramatic_question": "폭력의 에스컬레이션 속에서 태수는 인간성을 얼마나 더 지킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "세력 재편",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "전면 충돌",
+      "seq_span": [
+        5,
+        8
+      ]
+    },
+    {
+      "act": "C",
+      "label": "미래 수렴",
+      "seq_span": [
+        9,
+        10
+      ]
+    }
+  ],
+  "entry_state": "혼돈 속 재정립 시도",
+  "exit_state": "결정적 충돌을 향한 인물들의 수렴",
+  "turning_point": {
+    "seq_index": 5,
+    "description": "전면 충돌"
+  },
+  "central_conflict_axis": "조직 폭력 vs 법치—같은 부패의 두 얼굴",
+  "episode_function": "갈등 에스컬레이션과 우석-태수의 구조적 대립 예고",
+  "core_dist": {
+    "PERIL": 0.18,
+    "CONFLICT": 0.18,
+    "HOOK": 0.09,
+    "PUNISH": 0.07,
+    "LOSS": 0.07,
+    "BOND": 0.09,
+    "REVEAL": 0.05,
+    "ESTABLISH": 0.09,
+    "DESIRE": 0.07,
+    "RESCUE": 0.05,
+    "RELIEF": 0.06
+  },
+  "by": "cowork_opus_reading"
+}

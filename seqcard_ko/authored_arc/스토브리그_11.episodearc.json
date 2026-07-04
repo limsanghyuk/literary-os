@@ -1,0 +1,64 @@
+{
+  "work_id": "스토브리그_11",
+  "episode_no": 11,
+  "scene_count": 48,
+  "sequence_count": 8,
+  "dramatic_question": "전지훈련이 취소되는 위기 속에서 유민호의 입스를 극복하고 팀이 재결집할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "경민의 내면 균열·전지훈련 취소 통보 충격"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "유민호 입스 발견과 인재 영입(허진욱·이준모) 시도"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "허진욱 설득·유민호 위로·전지훈련 출발과 인재 집결"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "임동규 등장으로 다음 회 갈등 예고"
+    }
+  ],
+  "entry_state": "전지훈련 취소 통보와 유민호 입스 발견이 겹치며 팀이 위기에 처한 상황.",
+  "exit_state": "허진욱·이준모·기범이 합류하며 강화된 체제로 전지훈련을 떠나지만 임동규가 나타난다.",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "허진욱 설득—승수의 팀 철학이 인재를 움직임"
+  },
+  "central_conflict_axis": "유민호 회복(승수·팀) 대 입스·전지훈련 취소·경민 압박",
+  "episode_function": "11화는 전지훈련 취소와 유민호 입스라는 이중 위기를 극복하는 과정에서 팀의 결속력을 보여준다.",
+  "core_dist": {
+    "CONFLICT": 14,
+    "RELIEF": 14,
+    "BOND": 14,
+    "ESTABLISH": 12,
+    "HOOK": 10,
+    "PERIL": 8,
+    "REVELATION": 7,
+    "LOSS": 5,
+    "ORACLE": 5,
+    "REUNION": 3,
+    "PUNISH": 2,
+    "DESIRE": 2
+  },
+  "by": "sonnet_reading"
+}

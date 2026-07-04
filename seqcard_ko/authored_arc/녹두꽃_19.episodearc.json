@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_19",
+  "episode_no": 19,
+  "scene_count": 68,
+  "sequence_count": 7,
+  "dramatic_question": "2차 봉기는 성공할 수 있는가, 봉길의 배신이 혁명을 어떻게 흔들 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "형제 재회·전봉준-이현 대면"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "작별·이현 탈출"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "2차 봉기 개시·석주 출정·이현 연락 두절"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "봉길 배신 결심"
+    }
+  ],
+  "entry_state": "이강이 이현을 형제로 알아보고 재회하며 2차 봉기 준비가 구체화된다.",
+  "exit_state": "봉길이 배신을 결심하는 가운데 2차 봉기가 개시되고 이강-자인이 약속을 나눈다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "봉길이 배신을 결심하는 장면이 2차 봉기의 내부 균열과 동시에 이강-자인 관계의 취약성을 예고한다"
+  },
+  "central_conflict_axis": "2차 봉기(전봉준·이강) 대 진압 세력·봉길 배신, 이강-이현 형제 균열 vs 화해",
+  "episode_function": "형제 재회와 작별을 통해 갈등의 인간적 층위를 구현하고, 봉길 배신 결심으로 2차 봉기의 내부 위협을 예고한다.",
+  "core_dist": {
+    "CONFLICT": 15,
+    "PERIL": 9,
+    "REVELATION": 13,
+    "LOSS": 7,
+    "BOND": 6,
+    "REVERSAL": 7,
+    "RELIEF": 4,
+    "HOOK": 6,
+    "RESCUE": 1,
+    "REUNION": 5,
+    "ESTABLISH": 6,
+    "DESIRE": 5,
+    "PUNISH": 3,
+    "ROMANCE": 3,
+    "ORACLE": 0,
+    "INTRO": 1
+  },
+  "by": "sonnet_reading"
+}

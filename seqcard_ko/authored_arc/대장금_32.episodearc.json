@@ -1,0 +1,67 @@
+{
+  "work_id": "대장금_32",
+  "episode_no": 32,
+  "scene_count": 68,
+  "sequence_count": 10,
+  "dramatic_question": "중전의 건강 문제—장금의 처방이 맞는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "중전의 건강에 문제가 생기고 장금이 처방을 맡는다.",
+  "exit_state": "처방을 둘러싼 논쟁에서 장금이 의학적 논리로 관철시킨다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "장금의 처방이 기존 의관 처방과 충돌한다"
+  },
+  "central_conflict_axis": "장금의 새로운 처방(증거 기반) vs 기존 의관의 전통 처방",
+  "episode_function": "32화는 처방 논쟁을 통해 장금의 의학 철학(경험·관찰)과 기존 권위의 충돌을 심화한다.",
+  "core_dist": {
+    "PERIL": 7,
+    "HOOK": 4,
+    "BOND": 11,
+    "ESTABLISH": 13,
+    "CONFLICT": 17,
+    "DESIRE": 16,
+    "REVERSAL": 5,
+    "RESCUE": 3,
+    "ORACLE": 6,
+    "PUNISH": 1,
+    "RELIEF": 6,
+    "REUNION": 1,
+    "ROMANCE": 3,
+    "LOSS": 7,
+    "REVELATION": 4
+  },
+  "by": "sonnet_reading"
+}

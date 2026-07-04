@@ -1,0 +1,54 @@
+{
+  "work_id": "추적자_13",
+  "episode_no": 13,
+  "scene_count": 55,
+  "sequence_count": 6,
+  "dramatic_question": "동윤과 연계된 잔존 비리 네트워크가 출현할 때 홍석이 다시 추적에 나설 수 있는가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        2
+      ],
+      "label": "새 비리 네트워크 출현·홍석 재참여"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        3,
+        3
+      ],
+      "label": "주모자 추적과 함정"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        4,
+        6
+      ],
+      "label": "탈출과 증거 확보"
+    }
+  ],
+  "entry_state": "동윤과 연계된 잔존 비리 조직이 새로운 피해자를 만든다",
+  "exit_state": "홍석 팀이 함정에서 탈출하고 새 사건의 증거를 확보한다",
+  "turning_point": {
+    "seq_index": 4,
+    "label": "함정 위기",
+    "description": "잔존 조직의 주모자를 추적하던 홍석 팀이 함정에 빠진다"
+  },
+  "central_conflict_axis": "새 비리 조직 추적 vs 함정과 역추격",
+  "episode_function": "새 사건 도입·홍석 재참여·함정 탈출로 2막 전환",
+  "core_dist": {
+    "CONFLICT": 4,
+    "PERIL": 3,
+    "ESTABLISH": 2,
+    "REVELATION": 2,
+    "HOOK": 2,
+    "BOND": 2,
+    "DESIRE": 1,
+    "REVERSAL": 1,
+    "RESCUE": 1
+  },
+  "by": "cowork_opus_reading"
+}

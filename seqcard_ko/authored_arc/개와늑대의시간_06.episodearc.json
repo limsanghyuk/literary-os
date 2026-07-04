@@ -1,0 +1,50 @@
+{
+  "work_id": "개와늑대의시간_06",
+  "episode_no": 6,
+  "scene_count": 55,
+  "sequence_count": 9,
+  "dramatic_question": "수현은 마오의 지우 관계 청산 명령에 복종하는가, 저항하는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "탈출 위기와 역할 부여",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "B",
+      "label": "도덕 기로·협약·영길 의심",
+      "seq_span": [
+        4,
+        7
+      ]
+    },
+    {
+      "act": "C",
+      "label": "고백과 명령",
+      "seq_span": [
+        8,
+        9
+      ]
+    }
+  ],
+  "entry_state": "탈출 계획 위기, 마오 역할 수락 전",
+  "exit_state": "수현·지우 고백, 마오의 관계 청산 명령",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "수현·지우 고백—임무 최대 위협"
+  },
+  "central_conflict_axis": "수현(사랑)↔마오(통제)·강진(협약)",
+  "episode_function": "도덕 기로·협약·고백·마오 명령",
+  "core_dist": {
+    "PERIL": 2,
+    "CONFLICT": 3,
+    "ROMANCE": 1,
+    "DESIRE": 1,
+    "ESTABLISH": 1,
+    "ORACLE": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,65 @@
+{
+  "work_id": "배가본드_11",
+  "episode_no": 11,
+  "scene_count": 74,
+  "sequence_count": 12,
+  "dramatic_question": "강주철 생존 정보와 군 배신자 증거로 에드워드를 포위할 수 있는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "label": "설정",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": 2,
+      "label": "전개",
+      "seq_span": [
+        4,
+        6
+      ]
+    },
+    {
+      "act": 3,
+      "label": "심화",
+      "seq_span": [
+        7,
+        9
+      ]
+    },
+    {
+      "act": 4,
+      "label": "회말전환",
+      "seq_span": [
+        10,
+        12
+      ]
+    }
+  ],
+  "entry_state": "유가족 사찰, 재식 생존설 제기",
+  "exit_state": "재식 습격, 총격전 발발",
+  "turning_point": {
+    "seq_index": 7,
+    "seq_id": "배가본드_11_S07",
+    "description": "달건, 강주철 은신처 접근—생존 확인 직전"
+  },
+  "central_conflict_axis": "달건·재식 진실 추구 vs 에드워드 증거 파기",
+  "episode_function": "절정—결정적 반전과 위기 극한",
+  "core_dist": {
+    "PERIL": 0.255,
+    "REVELATION": 0.155,
+    "HOOK": 0.145,
+    "CONFLICT": 0.127,
+    "DESIRE": 0.082,
+    "ESTABLISH": 0.064,
+    "PUNISH": 0.055,
+    "REVERSAL": 0.036,
+    "ROMANCE": 0.036,
+    "BOND": 0.027,
+    "RESCUE": 0.009,
+    "INTRO": 0.009
+  },
+  "by": "sonnet_reading"
+}

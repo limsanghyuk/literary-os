@@ -1,0 +1,66 @@
+{
+  "work_id": "하얀거탑",
+  "episode_no": 16,
+  "scene_count": 77,
+  "sequence_count": 12,
+  "dramatic_question": "항소심에서 진실이 최종 승리하고 준혁이 법적 심판의 현실을 수용할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "label": "세계와 갈등 도입",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "전개",
+      "label": "갈등 심화와 대결 구도 확립",
+      "seq_span": [
+        3,
+        7
+      ]
+    },
+    {
+      "act": "심화",
+      "label": "위기 절정과 전환점",
+      "seq_span": [
+        8,
+        11
+      ]
+    },
+    {
+      "act": "회말전환",
+      "label": "회말 반전과 다음 회 훅",
+      "seq_span": [
+        12,
+        12
+      ]
+    }
+  ],
+  "entry_state": "항소심이 개시되고 동일·미라의 재증언이 준비된 상황",
+  "exit_state": "항소심 최종 패소와 함께 준혁의 건강 이상이 처음 드러남",
+  "turning_point": {
+    "seq_index": 11,
+    "description": "준혁의 담관암 진단 확정 직면"
+  },
+  "central_conflict_axis": "법적 진실 승리 vs 준혁의 마지막 저항",
+  "episode_function": "법정 드라마 완성과 담관암 전조 도입—비극 3막 교차",
+  "core_dist": {
+    "CONFLICT": 24,
+    "PERIL": 24,
+    "LOSS": 19,
+    "DESIRE": 17,
+    "ORACLE": 15,
+    "PUNISH": 11,
+    "BOND": 11,
+    "REVELATION": 10,
+    "RESCUE": 6,
+    "ESTABLISH": 5,
+    "RELIEF": 3,
+    "REVERSAL": 3,
+    "REUNION": 1,
+    "HOOK": 1
+  },
+  "by": "claude-sonnet-4-6"
+}

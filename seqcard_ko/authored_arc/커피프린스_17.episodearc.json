@@ -1,0 +1,62 @@
+{
+  "work_id": "커피프린스_17",
+  "episode_no": 17,
+  "scene_count": 67,
+  "sequence_count": 10,
+  "dramatic_question": "이별 후 2년을 기다린 한결과 은찬은 어떻게 재회하고 커피프린스 공동체는 어디로 나아가는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "첫 밤 마무리·이후 일상"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "밤 통화 절정·이별 인사·직접 고백"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "이별 완성·2년 후·서브플롯 마무리"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "은찬 귀국 재회·공동체 엔딩"
+    }
+  ],
+  "entry_state": "첫 밤이 이루어진 후 이별 카운트다운 중인 상태",
+  "exit_state": "은찬이 귀국해 불쑥 면접 등장으로 재회하고 핸드드립 엔딩으로 커피프린스의 영속을 선언한다",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "은찬 귀국 재회: 2년 기다림의 감동적 완성"
+  },
+  "central_conflict_axis": "이별 슬픔(2년 유학) vs 재회 기쁨(은찬 귀국)",
+  "episode_function": "17회는 첫 밤 마무리, 이별 고백, 2년 시간 도약, 은찬 귀국 재회를 거쳐 커피프린스 공동체 모두의 현재를 핸드드립 엔딩으로 영원히 봉인하는 최종회다",
+  "core_dist": {
+    "ROMANCE": 15,
+    "BOND": 12,
+    "LOSS": 8,
+    "DESIRE": 7,
+    "REUNION": 6,
+    "ESTABLISH": 6,
+    "RELIEF": 5,
+    "CONFLICT": 5,
+    "PERIL": 3,
+    "HOOK": 2
+  },
+  "by": "sonnet_reading"
+}

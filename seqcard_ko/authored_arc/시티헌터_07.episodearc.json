@@ -1,0 +1,65 @@
+{
+  "work_id": "시티헌터_07",
+  "episode_no": 7,
+  "scene_count": 65,
+  "sequence_count": 10,
+  "dramatic_question": "나나가 쏜 총알은 윤성에게 어떤 결과를 가져올 것이며, 서용학은 처단될 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "오해 갈등·진표 특정"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "함정 설계·압수수색"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "납치 작전 가동"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        10
+      ],
+      "beat": "나나 발사·훅"
+    }
+  ],
+  "entry_state": "나나의 오해 갈등 지속, 진표가 용의자로 특정되는 위기 상황.",
+  "exit_state": "서용학 납치 성공, 그러나 나나가 윤성을 향해 발사—충격의 훅.",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "서용학 납치 성공: 두 번째 표적 처단 직전"
+  },
+  "central_conflict_axis": "서용학 처단(윤성/진표) vs 영주의 추격과 나나의 오인 사격",
+  "episode_function": "7화: 서용학 비리 수사 완성과 납치 성공, 그러나 나나의 오인 사격으로 회말 충격이 배가된다.",
+  "core_dist": {
+    "CONFLICT": 17,
+    "REVELATION": 11,
+    "HOOK": 15,
+    "PERIL": 18,
+    "ORACLE": 1,
+    "BOND": 9,
+    "ROMANCE": 8,
+    "RELIEF": 3,
+    "DESIRE": 12,
+    "RESCUE": 4,
+    "ESTABLISH": 3,
+    "PUNISH": 3,
+    "REVERSAL": 4
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,60 @@
+{
+  "work_id": "싸인_09",
+  "episode_no": 9,
+  "scene_count": 57,
+  "sequence_count": 10,
+  "dramatic_question": "다경에 대한 내부 조작과 압박 속에서 지훈은 동료를 지키고 수사를 이어갈 수 있는가?",
+  "entry_state": "귀국 직후 다경이 직위 해제 위협과 압박에 처해 있다.",
+  "exit_state": "다경이 직위 해제 위기를 맞고 지훈이 단독 수사를 결의한다.",
+  "turning_point": {
+    "seq_index": 7,
+    "description": "다경이 공식 처분을 받으며 지훈이 혼자 싸울 것을 다짐하는 전환점"
+  },
+  "central_conflict_axis": "지훈의 동료 보호 의지 대 이명한 측의 다경 표적화와 직위 해제 공작",
+  "episode_function": "9화는 수사망이 다경에게 닿으면서 지훈의 보호 본능과 수사 의지를 동시에 시험하고 내부 배신의 심화를 보여준다.",
+  "core_dist": {
+    "CONFLICT": 19.3,
+    "PERIL": 17.5,
+    "BOND": 12.3,
+    "ESTABLISH": 10.5,
+    "DESIRE": 8.8,
+    "REVELATION": 5.3,
+    "HOOK": 5.3,
+    "REVERSAL": 3.5
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "function": "인물·상황·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "function": "갈등 심화와 단서 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        7,
+        8
+      ],
+      "function": "위기 폭발과 결정적 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        9,
+        10
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

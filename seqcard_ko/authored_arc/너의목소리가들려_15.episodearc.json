@@ -1,0 +1,60 @@
+{
+  "work_id": "너의목소리가들려_15",
+  "episode_no": 15,
+  "scene_count": 57,
+  "sequence_count": 6,
+  "dramatic_question": "최후 국면에서 진실의 최종 폭로는 수하와 관우의 관계를 어떻게 완성하는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "최후 국면과 능력 위기",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "B",
+      "label": "역전과 진실 최종 확인",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": "C",
+      "label": "결말 수렴",
+      "seq_span": [
+        6,
+        6
+      ]
+    }
+  ],
+  "entry_state": "최후 국면 진입",
+  "exit_state": "결말 수렴 완성",
+  "turning_point": {
+    "seq_index": 3,
+    "description": "역전과 진실 최종 확인"
+  },
+  "central_conflict_axis": "진실 최종 폭로 vs 능력 노출 직전—모든 것이 끝나가는 순간",
+  "episode_function": "최후 국면 진입 에피소드—진실 최종 폭로와 결말 수렴",
+  "core_dist": {
+    "ESTABLISH": 0.21,
+    "REVELATION": 0.16,
+    "CONFLICT": 0.09,
+    "PERIL": 0.09,
+    "LOSS": 0.04,
+    "HOOK": 0.07,
+    "BOND": 0.07,
+    "REVERSAL": 0.04,
+    "DESIRE": 0.02,
+    "RELIEF": 0.02,
+    "RESCUE": 0.02,
+    "ROMANCE": 0.02,
+    "REUNION": 0.02,
+    "INTRO": 0.01,
+    "ORACLE": 0.01,
+    "PUNISH": 0.01
+  },
+  "by": "cowork_opus_reading"
+}

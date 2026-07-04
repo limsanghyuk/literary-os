@@ -1,0 +1,60 @@
+{
+  "work_id": "카인과아벨_01",
+  "episode_no": 1,
+  "scene_count": 87,
+  "sequence_count": 15,
+  "dramatic_question": "기억상실 신경외과 의사 이초인은 자신이 살인자의 형제라는 진실을 마주하고도 의사로서의 신념을 지킬 수 있는가?",
+  "entry_state": "중국 사막에서 이초인이 총에 맞아 쓰러지는 극단적 오프닝 직후 회상으로 두 형제의 과거가 열린다.",
+  "exit_state": "초인이 중국행 비행기를 타며 형제 갈등의 최초 임박을 예고한다.",
+  "turning_point": {
+    "seq_index": 10,
+    "description": "이선우가 자신의 정체를 드러내며 초인과 직접 충돌하는 최초 대면"
+  },
+  "central_conflict_axis": "이초인의 의사 정체성과 형제 이선우의 범죄 사이의 내면 갈등 대 병원 권력의 음모",
+  "episode_function": "1화는 이초인·이선우 두 형제의 세계를 도입하고 중국 사막 오프닝으로 시리즈의 극단적 갈등 축을 설치한다.",
+  "core_dist": {
+    "CONFLICT": 17.2,
+    "ESTABLISH": 16.1,
+    "PERIL": 14.9,
+    "BOND": 9.2,
+    "REVELATION": 9.2,
+    "HOOK": 6.9,
+    "DESIRE": 5.7,
+    "ROMANCE": 5.7
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "function": "인물·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        8
+      ],
+      "function": "갈등 심화와 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        9,
+        12
+      ],
+      "function": "위기 폭발과 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        13,
+        15
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

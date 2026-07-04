@@ -1,0 +1,51 @@
+{
+  "work_id": "공주의남자_15",
+  "episode_no": 15,
+  "scene_count": 78,
+  "sequence_count": 12,
+  "dramatic_question": "말살 작전을 뚫고 탈출하면서도 복수의 마지막 패를 찾을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "회복 중 재가동 고민·수양 부정 균열·한명회 말살 계획"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "세령 동반자화·여론 점화·포위 위기·탈출"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "전사·정보 유출·계획 재검토"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        12
+      ],
+      "beat": "아이 의지·단종 증거 추적 개시"
+    }
+  ],
+  "entry_state": "세령 회복 중, 복수 재가동 시점 결정 대기",
+  "exit_state": "말살 작전 탈출, 동료 전사, 단종 증거 추적 개시",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "말살 작전 포위 — 복수 능동에서 생존 탈출로 전환"
+  },
+  "central_conflict_axis": "한명회의 말살 작전 vs 승유 집단의 탈출·복수 재가동",
+  "episode_function": "말살 작전 탈출·결정적 증거 추적 개시 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

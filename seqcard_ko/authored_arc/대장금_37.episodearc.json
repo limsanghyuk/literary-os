@@ -1,0 +1,66 @@
+{
+  "work_id": "대장금_37",
+  "episode_no": 37,
+  "scene_count": 53,
+  "sequence_count": 8,
+  "dramatic_question": "최판술과 박부겸의 비리—민정호와 장금은 어떻게 대응하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "최판술과 박부겸의 납품 비리가 드러나고 수사가 시작된다.",
+  "exit_state": "민정호가 비리 수사를 주도하며 최씨가와 정면 충돌한다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "최판술 비리 수사가 공식화된다"
+  },
+  "central_conflict_axis": "최씨가 비리 은폐 vs 민정호의 수사",
+  "episode_function": "37화는 납품 비리 수사로 최씨가의 경제적 토대가 흔들리기 시작한다.",
+  "core_dist": {
+    "CONFLICT": 21,
+    "HOOK": 10,
+    "ESTABLISH": 9,
+    "ORACLE": 4,
+    "PERIL": 7,
+    "BOND": 10,
+    "PUNISH": 2,
+    "REVERSAL": 5,
+    "LOSS": 5,
+    "REVELATION": 3,
+    "DESIRE": 10,
+    "RELIEF": 6,
+    "REUNION": 1,
+    "ROMANCE": 1
+  },
+  "by": "sonnet_reading"
+}

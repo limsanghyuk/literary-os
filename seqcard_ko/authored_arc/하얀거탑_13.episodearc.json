@@ -1,0 +1,64 @@
+{
+  "work_id": "하얀거탑",
+  "episode_no": 13,
+  "scene_count": 64,
+  "sequence_count": 10,
+  "dramatic_question": "담관암 진단을 받은 준혁이 죽음을 앞두고 진정한 자아 심판과 화해에 도달할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "label": "세계와 갈등 도입",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "전개",
+      "label": "갈등 심화와 대결 구도 확립",
+      "seq_span": [
+        3,
+        6
+      ]
+    },
+    {
+      "act": "심화",
+      "label": "위기 절정과 전환점",
+      "seq_span": [
+        7,
+        9
+      ]
+    },
+    {
+      "act": "회말전환",
+      "label": "회말 반전과 다음 회 훅",
+      "seq_span": [
+        10,
+        10
+      ]
+    }
+  ],
+  "entry_state": "담관암 진단 확정 후 준혁이 충격과 비밀 유지 결정",
+  "exit_state": "오경환 교수에게 편지를 쓰는 결정으로 죽음을 의미로 전환하는 선택",
+  "turning_point": {
+    "seq_index": 8,
+    "description": "도영과의 침묵 속 화해"
+  },
+  "central_conflict_axis": "죽음 앞 자아 심판 vs 의미 있는 유산 창조",
+  "episode_function": "준혁의 내면 심판—도덕적 전환의 시작",
+  "core_dist": {
+    "CONFLICT": 25,
+    "DESIRE": 22,
+    "PERIL": 21,
+    "BOND": 11,
+    "ORACLE": 10,
+    "LOSS": 8,
+    "REVERSAL": 6,
+    "PUNISH": 5,
+    "RESCUE": 4,
+    "REVELATION": 2,
+    "RELIEF": 1,
+    "HOOK": 1
+  },
+  "by": "claude-sonnet-4-6"
+}

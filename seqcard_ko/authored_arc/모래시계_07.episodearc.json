@@ -1,0 +1,55 @@
+{
+  "work_id": "모래시계_07",
+  "episode_no": 7,
+  "scene_count": 69,
+  "sequence_count": 11,
+  "dramatic_question": "권력의 도구가 된 태수는 결전에서 의리와 생존 중 무엇을 선택하는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "투입과 경고",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "결전과 역전",
+      "seq_span": [
+        5,
+        8
+      ]
+    },
+    {
+      "act": "C",
+      "label": "상실과 새 압박",
+      "seq_span": [
+        9,
+        11
+      ]
+    }
+  ],
+  "entry_state": "정치 공작에 완전 투입된 태수",
+  "exit_state": "상실과 새 압박 속에서 다음 국면 진입",
+  "turning_point": {
+    "seq_index": 6,
+    "description": "결전과 역전"
+  },
+  "central_conflict_axis": "정치 권력 vs 개인 의지—태수의 완전한 도구화",
+  "episode_function": "결전 에피소드—역전과 폭로, 의리 확인과 동반 상실",
+  "core_dist": {
+    "PERIL": 0.22,
+    "CONFLICT": 0.17,
+    "REVELATION": 0.1,
+    "ORACLE": 0.09,
+    "LOSS": 0.09,
+    "RESCUE": 0.06,
+    "BOND": 0.06,
+    "ROMANCE": 0.05,
+    "RELIEF": 0.05,
+    "REVERSAL": 0.04,
+    "ESTABLISH": 0.07
+  },
+  "by": "cowork_opus_reading"
+}

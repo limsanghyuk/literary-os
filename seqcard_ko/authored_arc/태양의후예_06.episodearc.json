@@ -1,0 +1,63 @@
+{
+  "work_id": "태양의후예_06",
+  "episode_no": 6,
+  "scene_count": 58,
+  "sequence_count": 9,
+  "dramatic_question": "재난은 사람과 사람을 갈라놓는가, 이어주는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "귀국·이별 후 한국 일상"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "우르크 지진 발발·현장 대응"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "시진 복귀 명령·모연 야전 의료"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "대영·명주 생사 갈림·시진 우르크 도착 훅"
+    }
+  ],
+  "entry_state": "한국 이별 후",
+  "exit_state": "시진 우르크 재도착",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "지진으로 우르크 현장 참혹 노출"
+  },
+  "central_conflict_axis": "재난 속 각자의 사명",
+  "episode_function": "지진 재난: 장르 군사→재난 피벗",
+  "core_dist": {
+    "LOSS": 8,
+    "ESTABLISH": 5,
+    "BOND": 5,
+    "REUNION": 3,
+    "CONFLICT": 4,
+    "PERIL": 15,
+    "ROMANCE": 7,
+    "HOOK": 5,
+    "REVERSAL": 1,
+    "DESIRE": 2,
+    "RELIEF": 3
+  },
+  "by": "sonnet_reading"
+}

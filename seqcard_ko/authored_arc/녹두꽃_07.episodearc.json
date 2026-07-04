@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_07",
+  "episode_no": 7,
+  "scene_count": 63,
+  "sequence_count": 7,
+  "dramatic_question": "이강과 이현의 형제 관계는 혁명과 반혁명 사이에서 어디까지 버틸 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "이현 생환·혼례 연기·이강-자인 밀당"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "이강 구출·덕기 운반·이강-억쇠 재회"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "파혼 선언·이현 파문·형제 의지"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "이현의 형제 배신·파국"
+    }
+  ],
+  "entry_state": "황토현 승리 여운 속에서 이현이 생환하고 이강-자인의 감정이 쌓이기 시작한다.",
+  "exit_state": "이현이 이강을 배신하며 형제 파국이 확정된다—도채비로의 이현 탄생이 완성된다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "이현이 이강을 배신하는 장면이 형제 관계의 파국과 이현의 도채비 전환을 확정한다"
+  },
+  "central_conflict_axis": "동학 혁명(이강) 대 현실주의(이현·석주), 형제 연대 vs 이현의 배신",
+  "episode_function": "황토현 승리 이후 형제 파국을 통해 이현의 도채비 전환을 완성하고 갈등의 두 축을 확립한다.",
+  "core_dist": {
+    "CONFLICT": 12,
+    "PERIL": 5,
+    "REVELATION": 9,
+    "LOSS": 10,
+    "BOND": 10,
+    "REVERSAL": 6,
+    "RELIEF": 5,
+    "HOOK": 6,
+    "RESCUE": 4,
+    "REUNION": 6,
+    "ESTABLISH": 3,
+    "DESIRE": 3,
+    "PUNISH": 2,
+    "ROMANCE": 5,
+    "ORACLE": 0,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

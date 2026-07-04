@@ -1,0 +1,66 @@
+{
+  "work_id": "대장금_51",
+  "episode_no": 51,
+  "scene_count": 67,
+  "sequence_count": 10,
+  "dramatic_question": "대비와 중전의 견제 속에서 장금의 위치는 어떻게 확보되는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "대비와 중전의 견제로 장금의 위치가 위협받는다.",
+  "exit_state": "장금이 의학적 성과로 견제를 극복하고 위치를 확보한다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "장금이 견제를 극복하고 주치의 위치를 확보한다"
+  },
+  "central_conflict_axis": "대비·중전의 견제 vs 장금의 의학적 성과",
+  "episode_function": "51화는 내부 견제를 극복하는 과정으로 장금의 위치가 제도적으로 굳어진다.",
+  "core_dist": {
+    "REVERSAL": 8,
+    "PERIL": 15,
+    "ORACLE": 11,
+    "REVELATION": 6,
+    "BOND": 10,
+    "PUNISH": 5,
+    "ESTABLISH": 17,
+    "CONFLICT": 16,
+    "DESIRE": 8,
+    "HOOK": 3,
+    "RESCUE": 12,
+    "LOSS": 4,
+    "RELIEF": 7,
+    "REUNION": 1
+  },
+  "by": "sonnet_reading"
+}

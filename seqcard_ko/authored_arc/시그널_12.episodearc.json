@@ -1,0 +1,55 @@
+{
+  "scene_count": 60,
+  "dramatic_question": "치수를 살해한 진범은 누구인가, 그리고 박선우에게 씌워진 누명의 전모는 무엇인가?",
+  "core_dist": {
+    "CONFLICT": 2,
+    "REVELATION": 3,
+    "BOND": 1
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "설정 단계"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "전개 단계"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "심화 단계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "회말전환 단계"
+    }
+  ],
+  "work_id": "시그널",
+  "by": "sonnet_reading",
+  "sequence_count": 10,
+  "turning_point": {
+    "seq_index": 6,
+    "event": "회말 위기 전환"
+  },
+  "episode_no": 12,
+  "entry_state": "위기 이후 수습 국면에서 해영과 수현이 최후 단계의 단서를 확보한다.",
+  "exit_state": "최종 진실 규명을 위한 결정적 계획이 수립된다.",
+  "central_conflict_axis": "배후 세력의 최후 방어선 대 두 형사의 총력 추적",
+  "episode_function": "결론부로의 전환 화로서 전반 수사의 전모를 종합하고 최종 대결의 전제 조건을 완성한다."
+}

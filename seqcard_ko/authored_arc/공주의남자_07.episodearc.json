@@ -1,0 +1,64 @@
+{
+  "work_id": "공주의남자_07",
+  "episode_no": 7,
+  "scene_count": 75,
+  "sequence_count": 8,
+  "dramatic_question": "정체가 드러난 승유와 아버지를 거슬러 그를 보호한 세령은 어떻게 함께 살아남을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "정체 확인과 세령의 선택—아버지 거슬러 사랑 선택"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "보호 들킬 위기·자객 침투·함께 탈출 시도"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "직접 고백·세령 붙잡힘"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "승유 단독 탈출, 세령 감금—구출 계획 예고"
+    }
+  ],
+  "entry_state": "세령이 변장한 승유의 정체를 직감한 직후 확인과 선택의 기로에 서 있다.",
+  "exit_state": "승유는 탈출에 성공하지만 세령이 감금되며 다음 구출 작전의 필요성이 확인된다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "승유의 직접 고백—사랑이 공식화되고 두 사람의 운명이 완전히 얽힌다"
+  },
+  "central_conflict_axis": "수양의 승유 체포·세령 감금(권력 통제) 대 승유·세령의 탈출과 사랑",
+  "episode_function": "7화는 정체 발각과 선택을 통해 세령을 능동적 주인공으로 전환하고 직접 고백으로 사랑을 공식화한다.",
+  "core_dist": {
+    "DESIRE": 10,
+    "CONFLICT": 21,
+    "HOOK": 11,
+    "ROMANCE": 12,
+    "RELIEF": 3,
+    "BOND": 9,
+    "REVELATION": 13,
+    "ESTABLISH": 13,
+    "PUNISH": 9,
+    "REUNION": 1,
+    "PERIL": 13,
+    "LOSS": 2
+  },
+  "by": "sonnet_reading"
+}

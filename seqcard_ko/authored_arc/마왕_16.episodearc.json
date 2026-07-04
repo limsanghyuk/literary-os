@@ -1,0 +1,53 @@
+{
+  "work_id": "마왕_16",
+  "episode_no": 16,
+  "scene_count": 97,
+  "sequence_count": 15,
+  "dramatic_question": "복수가 완성되는 순간 승하는 무엇을 잃는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "인식 공식화·팀 비상",
+      "seq_span": [
+        1,
+        5
+      ]
+    },
+    {
+      "act": "B",
+      "label": "정직·비공식 수사·해인 인식",
+      "seq_span": [
+        6,
+        10
+      ]
+    },
+    {
+      "act": "C",
+      "label": "복수 최후 실행·순기 사망",
+      "seq_span": [
+        11,
+        15
+      ]
+    }
+  ],
+  "entry_state": "오수가 승하=정태성=배후를 인식하고 팀이 비상 체제로 전환한 상태",
+  "exit_state": "복수가 완성되고 승하가 슬픈 눈빛으로 창고를 떠나는 상태",
+  "turning_point": {
+    "seq_index": 11,
+    "desc": "준표 사망·오수 정직—수사 최전선 배제와 복수 실행 충돌"
+  },
+  "central_conflict_axis": "오수(정직·추적)↔승하(복수 완성)",
+  "episode_function": "준표 사망·오수 정직·순기 사망·복수 완성",
+  "core_dist": {
+    "DESIRE": 4,
+    "LOSS": 3,
+    "CONFLICT": 2,
+    "REVELATION": 1,
+    "PUNISH": 1,
+    "BOND": 1,
+    "ORACLE": 1,
+    "RESCUE": 1,
+    "ESTABLISH": 1
+  },
+  "by": "sonnet_reading"
+}

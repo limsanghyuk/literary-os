@@ -1,0 +1,63 @@
+{
+  "work_id": "배가본드_09",
+  "episode_no": 9,
+  "scene_count": 61,
+  "sequence_count": 10,
+  "dramatic_question": "달건이 우기와 공동 전선을 구성하고 포위망을 탈출할 수 있는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "label": "설정",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": 2,
+      "label": "전개",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": 3,
+      "label": "심화",
+      "seq_span": [
+        6,
+        8
+      ]
+    },
+    {
+      "act": 4,
+      "label": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ]
+    }
+  ],
+  "entry_state": "청와대 국면 전환 압박, 우기 사경",
+  "exit_state": "포위망 속 절체절명",
+  "turning_point": {
+    "seq_index": 6,
+    "seq_id": "배가본드_09_S06",
+    "description": "에드워드, 우기 통해 대통령 조종—완전 장악 시도"
+  },
+  "central_conflict_axis": "달건 공조 작전 vs 에드워드 완전 장악 시도",
+  "episode_function": "심화—포위 극한, 공조 한계",
+  "core_dist": {
+    "PERIL": 0.225,
+    "CONFLICT": 0.191,
+    "REVELATION": 0.146,
+    "ESTABLISH": 0.135,
+    "HOOK": 0.135,
+    "DESIRE": 0.056,
+    "BOND": 0.034,
+    "RELIEF": 0.034,
+    "LOSS": 0.034,
+    "INTRO": 0.011
+  },
+  "by": "sonnet_reading"
+}

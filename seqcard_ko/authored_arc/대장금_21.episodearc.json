@@ -1,0 +1,67 @@
+{
+  "work_id": "대장금_21",
+  "episode_no": 21,
+  "scene_count": 74,
+  "sequence_count": 11,
+  "dramatic_question": "한상궁이 건강을 잃어가는 상황에서 장금은 어떻게 버티는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        11
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "한상궁의 건강이 악화되고 장금이 의학적으로 돕기 시작한다.",
+  "exit_state": "한상궁이 임종을 앞두고 장금에게 마지막 유언을 남긴다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "한상궁의 건강이 급격히 악화된다"
+  },
+  "central_conflict_axis": "한상궁 병세와 장금의 의학적 분투 vs 치료 한계",
+  "episode_function": "21화는 한상궁의 임박한 죽음을 통해 장금의 의학 소명과 상실의 교차를 심화한다.",
+  "core_dist": {
+    "CONFLICT": 24,
+    "PERIL": 10,
+    "RELIEF": 13,
+    "DESIRE": 13,
+    "ESTABLISH": 6,
+    "LOSS": 14,
+    "RESCUE": 4,
+    "REVERSAL": 9,
+    "BOND": 20,
+    "REUNION": 1,
+    "ROMANCE": 2,
+    "REVELATION": 5,
+    "ORACLE": 6,
+    "PUNISH": 3,
+    "HOOK": 1
+  },
+  "by": "sonnet_reading"
+}

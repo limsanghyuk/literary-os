@@ -1,0 +1,65 @@
+{
+  "work_id": "대장금_23",
+  "episode_no": 23,
+  "scene_count": 73,
+  "sequence_count": 11,
+  "dramatic_question": "혼자 남은 장금은 제주에서 어떻게 살아남고 민정호와 재회하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        11
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "한상궁 없이 혼자가 된 장금이 제주에서 새 삶을 모색한다.",
+  "exit_state": "민정호가 제주로 오고 장금과 재회하여 새로운 동반 관계가 시작된다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "민정호가 제주에서 장금과 재회한다"
+  },
+  "central_conflict_axis": "고립된 장금의 생존 vs 민정호와의 재연결",
+  "episode_function": "23화는 장금의 제주 독립 생활과 민정호와의 재회로 사랑 서사가 재점화된다.",
+  "core_dist": {
+    "DESIRE": 18,
+    "REVERSAL": 6,
+    "RELIEF": 11,
+    "BOND": 23,
+    "ORACLE": 5,
+    "ESTABLISH": 17,
+    "HOOK": 11,
+    "CONFLICT": 23,
+    "PERIL": 14,
+    "REVELATION": 7,
+    "LOSS": 5,
+    "PUNISH": 4,
+    "REUNION": 1
+  },
+  "by": "sonnet_reading"
+}

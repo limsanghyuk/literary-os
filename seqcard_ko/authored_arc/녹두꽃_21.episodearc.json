@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_21",
+  "episode_no": 21,
+  "scene_count": 68,
+  "sequence_count": 7,
+  "dramatic_question": "우금티 패배 이후 동학 혁명은 어디로 향하는가, 자인은 상실 속에서 무엇을 선택할 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "결전 개시·우금티 공방"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "패퇴·전략 고민"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "덕기 죽음·자인 절규"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "자인 생존·복수 다짐"
+    }
+  ],
+  "entry_state": "우금티 결전이 시작되고 전봉준이 출정 연설을 한다.",
+  "exit_state": "우금티 패배로 동학군이 흩어지고 덕기가 죽으며 자인이 생존과 복수를 다짐한다.",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "이강의 야습에서 덕기가 죽는 장면이 동학 혁명의 인간적 비용과 패배의 실체를 구현한다"
+  },
+  "central_conflict_axis": "동학군(전봉준·이강) 대 조일연합군 회선포, 자인의 상실 vs 생존 의지",
+  "episode_function": "우금티 패배를 역사적 비극으로 구현하고 덕기의 죽음과 자인의 변화로 혁명의 인간적 비용을 증언한다.",
+  "core_dist": {
+    "CONFLICT": 10,
+    "PERIL": 15,
+    "REVELATION": 7,
+    "LOSS": 18,
+    "BOND": 8,
+    "REVERSAL": 6,
+    "RELIEF": 2,
+    "HOOK": 3,
+    "RESCUE": 1,
+    "REUNION": 3,
+    "ESTABLISH": 6,
+    "DESIRE": 2,
+    "PUNISH": 7,
+    "ROMANCE": 2,
+    "ORACLE": 3,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

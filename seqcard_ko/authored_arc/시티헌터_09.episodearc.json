@@ -1,0 +1,67 @@
+{
+  "work_id": "시티헌터_09",
+  "episode_no": 9,
+  "scene_count": 64,
+  "sequence_count": 10,
+  "dramatic_question": "이경완 피살과 진표의 살인—윤성은 아버지의 폭주를 막을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "처단 완료·부자 균열"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "감정 복잡화·혈연 구도"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "수사 전환·나나 정체 확신"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        10
+      ],
+      "beat": "이경완 피살·훅"
+    }
+  ],
+  "entry_state": "서용학 검찰 인도 성공, 진표가 식중을 인질로 협박하며 균열 시작.",
+  "exit_state": "이경완 피살, 윤성이 진표를 목격—아버지의 폭주가 시작됐다.",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "이경완 피살: 진표의 자력 살인 첫 실행, 시티헌터 방식과 완전 결별"
+  },
+  "central_conflict_axis": "시티헌터 합법 처단(윤성) vs 진표의 직접 살인",
+  "episode_function": "9화: 서용학 처단 완료 이후 진표의 폭주가 시작되고 나나의 정체 확신·이경완 피살로 새 위기가 열린다.",
+  "core_dist": {
+    "RESCUE": 2,
+    "ORACLE": 6,
+    "PERIL": 15,
+    "CONFLICT": 23,
+    "REVERSAL": 1,
+    "REVELATION": 15,
+    "HOOK": 3,
+    "DESIRE": 8,
+    "BOND": 8,
+    "ROMANCE": 5,
+    "LOSS": 7,
+    "REUNION": 1,
+    "ESTABLISH": 2,
+    "PUNISH": 2,
+    "RELIEF": 3
+  },
+  "by": "sonnet_reading"
+}

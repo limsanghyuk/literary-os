@@ -1,0 +1,52 @@
+{
+  "work_id": "경성스캔들_05",
+  "episode_no": 5,
+  "scene_count": 70,
+  "sequence_count": 9,
+  "dramatic_question": "완과 수현이 임무와 감정 사이에서 갈등하는 가운데, 폐가의 하룻밤은 두 사람의 관계를 어떻게 돌이킬 수 없이 바꿀 것인가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        3
+      ],
+      "label": "4회 여파와 창고 재회 — 진실 접근과 정보 수집"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        4,
+        7
+      ],
+      "label": "운동장 감정 교류와 명빈관·총독부 위기 연속 구출"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        8,
+        9
+      ],
+      "label": "폐가 감정 절정과 5부 클리프행어"
+    }
+  ],
+  "entry_state": "4회 완의 형 잠꼬대 여파로 완과 수현이 진실에 더 가까워진 상태",
+  "exit_state": "완과 수현이 폐가에서 감정 절정을 맞이하고 명빈관 앞 새벽 위기와 폭로가 다음 국면을 예고한다",
+  "turning_point": {
+    "seq_index": 8,
+    "label": "VIP룸·폐가 감정 절정",
+    "description": "야간 VIP룸 작전과 낡은 폐가에서 완과 수현의 감정이 절정에 달하며 임무와 감정의 경계가 완전히 허물어진다"
+  },
+  "central_conflict_axis": "완의 임무 위장 vs 수현을 향한 진심, 조직 작전과 총독부 압박, 감정과 이념의 충돌",
+  "episode_function": "완-수현 로맨스의 물리적 첫 전환점, 애물단 작전 구체화, 명빈관·총독부를 무대로 한 연속 위기 후 감정 임계점 도달",
+  "core_dist": {
+    "CONFLICT": 1,
+    "BOND": 1,
+    "REVELATION": 1,
+    "ROMANCE": 2,
+    "RESCUE": 2,
+    "DESIRE": 1,
+    "HOOK": 1
+  },
+  "by": "cowork_opus_reading"
+}

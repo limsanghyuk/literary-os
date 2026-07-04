@@ -1,0 +1,66 @@
+{
+  "work_id": "스토브리그_05",
+  "episode_no": 5,
+  "scene_count": 49,
+  "sequence_count": 8,
+  "dramatic_question": "예산·이면계약의 벽 속에서 승수는 낡은 그릇처럼 상처 난 길창주를 드림즈의 무기로 데려올 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "마일스 쟁탈전 시작—오사훈 개입·백만 달러 좌절로 한계 설정"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "그리핀 탐색 실패와 길창주 초점 이동—이 빠진 그릇의 진심"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "길창주 정체 발각·징계 해제·파격 50만 달러 제안"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "내기 승자로 팀 화합—길창주 계약 성사와 귀국"
+    }
+  ],
+  "entry_state": "마일스 쟁탈전과 함께 오사훈이라는 새 라이벌이 등장한 상황.",
+  "exit_state": "길창주 계약이 성사되고 팀이 화합하며 귀국한다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "길창주의 숨겨진 실력 발각—이 빠진 그릇의 진심이 드러남"
+  },
+  "central_conflict_axis": "인재 발굴(승수) 대 예산 한계·이면계약(오사훈/협회)",
+  "episode_function": "5화는 화려한 스타 대신 상처 난 원석 길창주를 선택하는 승수의 안목과 인간적 철학을 보여준다.",
+  "core_dist": {
+    "RELIEF": 15,
+    "BOND": 14,
+    "ORACLE": 13,
+    "HOOK": 10,
+    "ESTABLISH": 9,
+    "DESIRE": 9,
+    "CONFLICT": 7,
+    "LOSS": 7,
+    "PERIL": 4,
+    "REVELATION": 4,
+    "INTRO": 2,
+    "REVERSAL": 2,
+    "PUNISH": 1,
+    "RESCUE": 1
+  },
+  "by": "sonnet_reading"
+}

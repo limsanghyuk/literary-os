@@ -1,0 +1,51 @@
+{
+  "work_id": "그들이사는세상_15",
+  "episode_no": 15,
+  "scene_count": 54,
+  "sequence_count": 8,
+  "dramatic_question": "준호 복귀 후 관계 공개가 팀과 직업 모두에서 받아들여지는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "완전 복귀·국장 권한 축소"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "기획안 완성·관계 공개·팀원 불편"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "화합 회복·국장 새 압박"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "공동 결의"
+    }
+  ],
+  "entry_state": "준호 완전 복귀 직후",
+  "exit_state": "관계 공개, 팀 화합 회복, 국장 새 압박, 공동 결의",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "관계 공개 — 사적 감정에서 팀 내 공개 현실로"
+  },
+  "central_conflict_axis": "국장 압박 vs 두 사람 공동 대응, 관계 공개 수용",
+  "episode_function": "관계 공개·공동 결의 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

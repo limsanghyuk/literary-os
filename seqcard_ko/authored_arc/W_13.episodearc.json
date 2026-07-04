@@ -1,0 +1,67 @@
+{
+  "work_id": "W_13",
+  "episode_no": 13,
+  "sequence_count": 16,
+  "scene_count": 94,
+  "turning_point": {
+    "seq_index": 4,
+    "description": "결정적 위기 또는 반전"
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "설정 단계"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        9
+      ],
+      "beat": "전개 단계"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        10,
+        14
+      ],
+      "beat": "심화 단계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        15,
+        16
+      ],
+      "beat": "회말전환 단계"
+    }
+  ],
+  "by": "cowork_opus_reading",
+  "entry_state": "강철과 오연주가 최종 해결책을 실행하려 하지만 마지막 장애물이 나타난다.",
+  "exit_state": "장애물을 극복하며 결말이 가시화되고 두 인물의 운명이 결정된다.",
+  "central_conflict_axis": "두 세계의 공존 실현 대 그것을 방해하는 마지막 힘",
+  "episode_function": "최종 결말을 향한 마지막 장애물을 설치하고 그것을 극복하는 과정에서 주인공의 성장을 완성한다.",
+  "dramatic_question": "W 13화의 핵심 드라마틱 질문: 강철과 오연주는 웹툰과 현실의 경계를 넘어 생존할 수 있는가?",
+  "core_dist": {
+    "REVERSAL": 3,
+    "HOOK": 5,
+    "REVELATION": 20,
+    "ESTABLISH": 6,
+    "RELIEF": 12,
+    "REUNION": 1,
+    "BOND": 6,
+    "CONFLICT": 16,
+    "ORACLE": 6,
+    "PERIL": 4,
+    "LOSS": 5,
+    "ROMANCE": 3,
+    "DESIRE": 4,
+    "RESCUE": 2,
+    "PUNISH": 1
+  }
+}

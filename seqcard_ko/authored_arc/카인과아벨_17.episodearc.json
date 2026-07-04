@@ -1,0 +1,60 @@
+{
+  "work_id": "카인과아벨_17",
+  "episode_no": 17,
+  "scene_count": 42,
+  "sequence_count": 7,
+  "dramatic_question": "16화 결말 이후 초인은 의사로서 새로운 출발을 할 수 있는가?",
+  "entry_state": "16화 사건 이후 초인이 병원으로 돌아와 일상을 재건하려 한다.",
+  "exit_state": "새로운 위협이 가시화되며 초인의 재출발이 순탄치 않음을 예고한다.",
+  "turning_point": {
+    "seq_index": 5,
+    "description": "16화 결말 이후 잔여 위협이 초인을 다시 찾아오는 예기치 않은 순간"
+  },
+  "central_conflict_axis": "초인의 내면 회복 대 잔여 배후 세력의 위협",
+  "episode_function": "17화는 결말 이후의 여파를 그리며 초인의 심리적 재건과 병원 내 새 위협을 도입한다.",
+  "core_dist": {
+    "REVELATION": 23.8,
+    "PERIL": 21.4,
+    "LOSS": 16.7,
+    "BOND": 14.3,
+    "PUNISH": 4.8,
+    "HOOK": 4.8,
+    "CONFLICT": 4.8,
+    "RELIEF": 2.4
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "function": "인물·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "function": "갈등 심화와 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        5,
+        6
+      ],
+      "function": "위기 폭발과 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        7,
+        7
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

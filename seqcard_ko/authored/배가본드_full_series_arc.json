@@ -1,0 +1,111 @@
+{
+  "series": "배가본드",
+  "episodes_total": 16,
+  "scenes_total": 993,
+  "sequences_total": 158,
+  "logline": "테러로 조카를 잃은 스턴트맨 차달건이 국정원 요원 고해리와 손잡고 B357 항공기 테러 배후 조직에 맞서 싸우며 복수와 진실, 인간 회복의 기로에 선다",
+  "central_dramatic_question": "달건은 국가 권력과 다국적 기업의 거대 음모를 밝히고 조카의 죽음에 복수할 수 있는가, 그리고 복수 너머에 인간으로 귀환할 수 있는가",
+  "theme_statement": "국가 권력의 부패 앞에서 개인의 복수는 어디까지 정당한가, 그리고 복수를 완성한 자는 다시 인간이 될 수 있는가",
+  "protagonist": {
+    "name": "차달건",
+    "arc": "조카 잃은 복수자→진실 폭로자→복수를 내려놓고 인간으로 귀환",
+    "want": "테러 배후 응징",
+    "need": "인간으로 돌아오기"
+  },
+  "antagonist": {
+    "name": "에드워드 박",
+    "arc": "배후 조종자→외교·법적 방패 활용→달건-제롬 연합에 패배",
+    "method": "다국적 기업 로비와 국내 정치 조종",
+    "downfall": "릴리 배신 + 달건-제롬 공동 결전"
+  },
+  "season_structure": [
+    {
+      "movement": 1,
+      "label": "모로코—테러와 복수의 시동",
+      "episode_span": [
+        1,
+        4
+      ],
+      "description": "B357 테러 발생, 달건 모로코서 제롬 추격, 해리와 첫 공조, 존엔마크 배후 윤곽"
+    },
+    {
+      "movement": 2,
+      "label": "서울—음모 해부와 동맹 구축",
+      "episode_span": [
+        5,
+        8
+      ],
+      "description": "언론전·여론전, 조부영 생존 반전, 달건 독자 행동, 재식 이중 스파이, 인질극 해결"
+    },
+    {
+      "movement": 3,
+      "label": "법정과 음모—진실 공방 절정",
+      "episode_span": [
+        9,
+        12
+      ],
+      "description": "우기 증인 확보, B357 소송 공판, 강주철 생존 반전, 릴리 이탈 조짐"
+    },
+    {
+      "movement": 4,
+      "label": "결전—에드워드 타도와 인간 회복",
+      "episode_span": [
+        13,
+        16
+      ],
+      "description": "우기 납치·구출, 릴리 배신·협력, 달건-제롬 공동 결전, 에드워드 제거, 달건 인간 회복"
+    }
+  ],
+  "macro_turning_points": [
+    {
+      "episode": 1,
+      "seq_index": 3,
+      "description": "B357 테러 발생—달건 복수 여정 시작"
+    },
+    {
+      "episode": 3,
+      "seq_index": 8,
+      "description": "릴리 살수 팀 포위—달건 생사 위기"
+    },
+    {
+      "episode": 6,
+      "seq_index": 10,
+      "description": "조부영 생존 반전—음모 지도 재설정"
+    },
+    {
+      "episode": 10,
+      "seq_index": 6,
+      "description": "대사관 인질극 해결—달건 영웅화와 역이용"
+    },
+    {
+      "episode": 12,
+      "seq_index": 9,
+      "description": "우기 법정 증인 등장—진실 공방 절정"
+    },
+    {
+      "episode": 14,
+      "seq_index": 10,
+      "description": "릴리 배신·증거 전달—에드워드 포위망 완성"
+    },
+    {
+      "episode": 16,
+      "seq_index": 9,
+      "description": "달건, 방아쇠 거두다—복수자에서 인간으로"
+    }
+  ],
+  "resolution": "에드워드 제거, B357 진실 공식화, 달건 복수 완성 후 해리를 알아보고 방아쇠를 거둠",
+  "open_ending": true,
+  "tone": "첩보액션·정치스릴러·복수극 혼합, 중반 이후 감정 드라마 강화",
+  "conflict_persist": 0.38,
+  "series_core_dist": {
+    "PERIL": 0.2,
+    "REVELATION": 0.155,
+    "CONFLICT": 0.148,
+    "HOOK": 0.111,
+    "ESTABLISH": 0.098,
+    "PUNISH": 0.05,
+    "DESIRE": 0.049,
+    "LOSS": 0.045
+  },
+  "by": "sonnet_reading"
+}

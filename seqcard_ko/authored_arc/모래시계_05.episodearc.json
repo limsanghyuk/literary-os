@@ -1,0 +1,54 @@
+{
+  "work_id": "모래시계_05",
+  "episode_no": 5,
+  "scene_count": 42,
+  "sequence_count": 7,
+  "dramatic_question": "폭력의 대가를 치른 태수는 그 상실에서 무엇을 배우는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "회복과 재위협",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "B",
+      "label": "역전과 감정 폭발",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": "C",
+      "label": "재각오와 로맨스 봄",
+      "seq_span": [
+        6,
+        7
+      ]
+    }
+  ],
+  "entry_state": "폭력 이후의 소강 상태",
+  "exit_state": "새 각오와 일시적 봄",
+  "turning_point": {
+    "seq_index": 4,
+    "description": "역전과 감정 폭발"
+  },
+  "central_conflict_axis": "개인 욕망 vs 조직 논리—감정과 폭력의 교차 리듬",
+  "episode_function": "중간 정점 후 감정 재정비 및 태수-혜린 관계 일시 봄",
+  "core_dist": {
+    "CONFLICT": 0.17,
+    "PERIL": 0.14,
+    "DESIRE": 0.14,
+    "ESTABLISH": 0.14,
+    "BOND": 0.1,
+    "RESCUE": 0.07,
+    "REVERSAL": 0.07,
+    "REVELATION": 0.07,
+    "ROMANCE": 0.05,
+    "RELIEF": 0.05
+  },
+  "by": "cowork_opus_reading"
+}

@@ -1,0 +1,44 @@
+{
+  "work_id": "카인과아벨_16",
+  "episode_no": 16,
+  "scene_count": 12,
+  "sequence_count": 2,
+  "dramatic_question": "형제 대결의 최후 순간, 초인은 선우를 법에 넘기고 의사로서 살아남을 수 있는가?",
+  "entry_state": "최후 대결이 벌어지는 현장에서 초인과 선우가 마주하고 있다.",
+  "exit_state": "형제 갈등이 결말을 맞고 초인이 의사로서의 길로 돌아간다.",
+  "turning_point": {
+    "seq_index": 1,
+    "description": "선우의 최후와 초인의 선택이 동시에 이루어지는 결말"
+  },
+  "central_conflict_axis": "초인의 최후 선택(법 vs 혈연) 대 선우의 존재 자체가 던지는 윤리적 딜레마",
+  "episode_function": "16화는 최소 씬으로 구성된 최후 결전을 통해 두 형제 이야기의 핵심 주제를 압축적으로 결산한다.",
+  "core_dist": {
+    "HOOK": 25.0,
+    "REVELATION": 16.7,
+    "ROMANCE": 16.7,
+    "CONFLICT": 8.3,
+    "ESTABLISH": 8.3,
+    "BOND": 8.3,
+    "REVERSAL": 8.3,
+    "RELIEF": 8.3
+  },
+  "act_structure": [
+    {
+      "act": "전개",
+      "seq_span": [
+        1,
+        1
+      ],
+      "function": "상황 전개"
+    },
+    {
+      "act": "전환",
+      "seq_span": [
+        2,
+        2
+      ],
+      "function": "반전·클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

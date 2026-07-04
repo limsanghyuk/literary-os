@@ -1,0 +1,50 @@
+{
+  "work_id": "개와늑대의시간_01",
+  "episode_no": 1,
+  "scene_count": 65,
+  "sequence_count": 10,
+  "dramatic_question": "수현은 지우와의 이별을 감수하고 마오 수사 임무를 완수할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "첫 만남과 임무 시작",
+      "seq_span": [
+        1,
+        5
+      ]
+    },
+    {
+      "act": "B",
+      "label": "감정 성장과 이별",
+      "seq_span": [
+        6,
+        8
+      ]
+    },
+    {
+      "act": "C",
+      "label": "도주와 배신 의심",
+      "seq_span": [
+        9,
+        10
+      ]
+    }
+  ],
+  "entry_state": "방콕 첩보 임무 시작 전 낯선 관계의 두 인물",
+  "exit_state": "지우가 떠나고 내부 배신 의심이 시작된 상태",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "지우의 이별 수용—임무와 감정 사이 첫 선택"
+  },
+  "central_conflict_axis": "수현(임무)↔감정(지우 이별)",
+  "episode_function": "지우 이별·내부 배신 의심 시작",
+  "core_dist": {
+    "PERIL": 2,
+    "ROMANCE": 2,
+    "LOSS": 2,
+    "INTRO": 2,
+    "DESIRE": 1,
+    "BOND": 1
+  },
+  "by": "sonnet_reading"
+}

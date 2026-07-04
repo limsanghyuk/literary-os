@@ -1,0 +1,51 @@
+{
+  "work_id": "그들이사는세상_13",
+  "episode_no": 13,
+  "scene_count": 53,
+  "sequence_count": 8,
+  "dramatic_question": "원거리 관계가 두 사람의 신뢰를 유지시킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "준호 외부 합류·지오 단독 도전"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "지오 자력 성장·원거리 연결·소문 동요"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "지오 혼자 감당·준호 선제 연락"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "한계 직면"
+    }
+  ],
+  "entry_state": "준호 외부 팀 합류, 지오 단독",
+  "exit_state": "지오 성장, 소문 동요, 원거리 한계 직면",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "소문 전달 — 원거리의 신뢰 취약성 노출"
+  },
+  "central_conflict_axis": "원거리 유지 vs 신뢰 위협",
+  "episode_function": "지오 독립 성장·원거리 한계 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

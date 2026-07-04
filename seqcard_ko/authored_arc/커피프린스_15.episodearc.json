@@ -1,0 +1,61 @@
+{
+  "work_id": "커피프린스_15",
+  "episode_no": 15,
+  "scene_count": 41,
+  "sequence_count": 6,
+  "dramatic_question": "한결의 청혼이 이루어지는 가운데 할머니 건강 위기가 행복에 그림자를 드리우는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "공동체 축복·선기 서브플롯·빚 갈등"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "청혼·사업 발표·결혼 준비"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        5
+      ],
+      "beat": "바리스타 심사·즉흥 청혼"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        6,
+        6
+      ],
+      "beat": "결혼식 중 할머니 위기"
+    }
+  ],
+  "entry_state": "청혼이 이루어진 후 안정된 상태",
+  "exit_state": "한성-유주 결혼식 중 할머니가 쓰러지며 행복 절정에서 위기가 폭발한다",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "결혼식 중 할머니 쓰러짐: 행복의 절정에서 위기 삽입"
+  },
+  "central_conflict_axis": "청혼 확정·결혼 준비 vs 할머니 건강 위기",
+  "episode_function": "15회는 청혼이 현실화되고 한성-유주 결혼식이 열리는 행복의 절정에서 할머니 건강 위기가 폭발하며, 2부 이별 갈등의 서막을 여는 회차다",
+  "core_dist": {
+    "BOND": 10,
+    "ROMANCE": 9,
+    "DESIRE": 8,
+    "ORACLE": 5,
+    "CONFLICT": 4,
+    "PERIL": 4,
+    "RELIEF": 4,
+    "ESTABLISH": 4,
+    "LOSS": 2
+  },
+  "by": "sonnet_reading"
+}

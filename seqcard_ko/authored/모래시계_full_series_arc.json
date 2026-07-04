@@ -1,0 +1,94 @@
+{
+  "series": "모래시계",
+  "episodes_total": 24,
+  "scenes_total": 1365,
+  "sequences_total": 217,
+  "logline": "1980년대 광주에서 1990년대 초까지, 세 친구 태수·우석·혜린이 건달·검사·여인으로 갈라지며 권력과 폭력, 사랑과 상실을 가로질러 각자의 운명을 완성해가는 한국 현대사의 거대한 초상.",
+  "central_dramatic_question": "사회 구조가 개인의 운명을 결정할 때, 인간의 의지와 유대는 얼마나 그것에 저항할 수 있는가?",
+  "theme_statement": "계층과 폭력이 공모하는 세계에서도 인간적 유대와 의리는 존재한다—그것이 결국 비극적 결말로 이어질지라도.",
+  "protagonist": "박태수 — 건달로 성장하며 권력과 조직의 논리에 종속되어가지만 의리와 사랑을 포기하지 않는다",
+  "antagonist": "장도식(정치 세력) — 태수를 도구로 활용하는 권력 구조와, 폭력으로 유지되는 조직 세계 그 자체",
+  "season_structure": [
+    {
+      "act": "제1막",
+      "label": "청춘의 원형—유대와 분기",
+      "episode_span": [
+        1,
+        6
+      ],
+      "description": "세 친구의 유년 우정과 계층 충격, 조직 세계 입문"
+    },
+    {
+      "act": "제2막",
+      "label": "조직과 권력의 미로",
+      "episode_span": [
+        7,
+        14
+      ],
+      "description": "태수의 조직 심층 투입, 정치-조직 유착 구조, 연속 상실"
+    },
+    {
+      "act": "제3막",
+      "label": "클라이맥스—최후 선택",
+      "episode_span": [
+        15,
+        21
+      ],
+      "description": "역전·진실 폭로·최대 상실과 결단"
+    },
+    {
+      "act": "제4막",
+      "label": "결말—모래시계의 마지막 모래알",
+      "episode_span": [
+        22,
+        24
+      ],
+      "description": "최후 결전, 정의 실현, 불가피한 완결"
+    }
+  ],
+  "macro_turning_points": [
+    {
+      "episode": 1,
+      "description": "모친 사고사—청춘의 종언과 조직 세계 입문 결정"
+    },
+    {
+      "episode": 6,
+      "description": "정치-조직 유착 전면 부각—태수의 완전한 도구화"
+    },
+    {
+      "episode": 12,
+      "description": "중반부 상실 정점—재기의 씨앗 발아"
+    },
+    {
+      "episode": 16,
+      "description": "최대 상실과 마지막 결단—모든 것이 끝나가는 것처럼 보이는 순간"
+    },
+    {
+      "episode": 22,
+      "description": "최후 결전—마지막 로맨스와 상실 정점"
+    }
+  ],
+  "resolution": "태수는 자신이 선택한 결말을 완성하며, 세 친구의 이야기는 1990년대 한국 현대사의 단면으로 귀결된다",
+  "open_ending": false,
+  "tone": "비극적 리얼리즘—폭력과 사랑이 공존하는 시대의 초상",
+  "conflict_persist": 0.72,
+  "series_core_dist": {
+    "PERIL": 0.14,
+    "CONFLICT": 0.13,
+    "ESTABLISH": 0.12,
+    "ORACLE": 0.11,
+    "REVELATION": 0.1,
+    "LOSS": 0.09,
+    "BOND": 0.07,
+    "DESIRE": 0.06,
+    "RESCUE": 0.04,
+    "PUNISH": 0.04,
+    "RELIEF": 0.04,
+    "REVERSAL": 0.02,
+    "ROMANCE": 0.02,
+    "HOOK": 0.01,
+    "INTRO": 0.01,
+    "REUNION": 0.01
+  },
+  "by": "cowork_opus_reading"
+}

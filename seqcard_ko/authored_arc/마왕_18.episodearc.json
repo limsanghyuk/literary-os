@@ -1,0 +1,50 @@
+{
+  "work_id": "마왕_18",
+  "episode_no": 18,
+  "scene_count": 67,
+  "sequence_count": 10,
+  "dramatic_question": "희수 체포와 석진 배신의 무게를 오수가 버텨낼 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "최후 충돌·추궁",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "비공식 소통·감정 정리",
+      "seq_span": [
+        5,
+        7
+      ]
+    },
+    {
+      "act": "C",
+      "label": "희수 체포·오수 내면 붕괴",
+      "seq_span": [
+        8,
+        10
+      ]
+    }
+  ],
+  "entry_state": "석진 연루 증거에 근접하고 해인이 소년 승하 사진을 확보한 상태",
+  "exit_state": "희수가 체포되고 오수가 경찰서 밖에서 내면적으로 무너지려는 상태",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "희수 체포 완성—사건이 법적 마무리로 접어들며 오수는 내면적 위기"
+  },
+  "central_conflict_axis": "오수(버팀)↔배신의 무게",
+  "episode_function": "희수 체포·석진 배신 충격·오수 버팀",
+  "core_dist": {
+    "CONFLICT": 3,
+    "LOSS": 2,
+    "BOND": 2,
+    "ESTABLISH": 1,
+    "ORACLE": 1,
+    "PUNISH": 1
+  },
+  "by": "sonnet_reading"
+}

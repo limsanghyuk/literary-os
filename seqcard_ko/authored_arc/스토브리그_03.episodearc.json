@@ -1,0 +1,66 @@
+{
+  "work_id": "스토브리그_03",
+  "episode_no": 3,
+  "scene_count": 51,
+  "sequence_count": 8,
+  "dramatic_question": "승수는 구단 내부의 스카웃 비리를 적발하면서도 고세혁을 아군으로 만들 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "강두기 합류와 승수의 첫 선전포고—개혁 방향 선언"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "스카웃 비리 탐문 출장—신원 발각·자백·세영 동참"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "비리 자백 확보, 고세혁과의 술자리 화해"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "세영의 봉투 재확인으로 비리 전말 완전 노출"
+    }
+  ],
+  "entry_state": "강두기가 팀에 합류하고 승수가 개혁 방향을 공개 선언한 직후.",
+  "exit_state": "스카웃 비리가 적발되고 고세혁과 협력 기반이 형성된다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "양원섭 자백 확보—스카웃 비리 실체가 드러남"
+  },
+  "central_conflict_axis": "구단 개혁(승수) 대 내부 비리·관행 공모(스카웃팀)",
+  "episode_function": "3화는 드래프트 스카웃 비리를 조사하는 과정에서 승수의 집요한 탐문 방식과 고세혁과의 신뢰 형성을 보여준다.",
+  "core_dist": {
+    "CONFLICT": 18,
+    "REVELATION": 17,
+    "HOOK": 12,
+    "ESTABLISH": 11,
+    "BOND": 10,
+    "RELIEF": 7,
+    "DESIRE": 7,
+    "PERIL": 7,
+    "ORACLE": 3,
+    "REVERSAL": 3,
+    "INTRO": 2,
+    "PUNISH": 2,
+    "LOSS": 2,
+    "RESCUE": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,52 @@
+{
+  "work_id": "마왕_05",
+  "episode_no": 5,
+  "scene_count": 76,
+  "sequence_count": 12,
+  "dramatic_question": "대식 사망 후 자책에 빠진 오수가 범인의 개인 타깃임을 깨달을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "대식 죽음과 자책",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "감정 회복과 수사 재가동",
+      "seq_span": [
+        5,
+        8
+      ]
+    },
+    {
+      "act": "C",
+      "label": "과거 연루·개인 타깃 발각",
+      "seq_span": [
+        9,
+        12
+      ]
+    }
+  ],
+  "entry_state": "대식이 사망하고 오수가 자책과 분노로 혼란에 빠진 상태",
+  "exit_state": "범인이 오수를 12년간 추적했음을 알리는 사진 봉투가 도착한 상태",
+  "turning_point": {
+    "seq_index": 11,
+    "desc": "준표 관련 정보 예고—범인이 오수를 12년간 추적했음이 드러나기 시작한다"
+  },
+  "central_conflict_axis": "오수(자책+수사)↔범인(개인 타깃 선언)",
+  "episode_function": "대식 사망·오수 개인 타깃화",
+  "core_dist": {
+    "LOSS": 2,
+    "CONFLICT": 2,
+    "HOOK": 2,
+    "REVELATION": 2,
+    "BOND": 1,
+    "ROMANCE": 1,
+    "ORACLE": 1,
+    "PERIL": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,64 @@
+{
+  "work_id": "커피프린스_01",
+  "episode_no": 1,
+  "scene_count": 66,
+  "sequence_count": 10,
+  "dramatic_question": "생활력 넘치는 여자 은찬은 재벌가 자손 한결에게 '애인 대행'을 제안받게 되는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "은찬·한결 각자의 캐릭터와 세계 병렬 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "경제 위기 심화·삼각 구도(한결·한성·유주) 설치·한성-은찬 첫 교감"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "날치기 조우·예랑 사태·사례금 언쟁 절정"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        10
+      ],
+      "beat": "한결의 애인 대행 제안—전략적 계약 플롯 개막"
+    }
+  ],
+  "entry_state": "은찬은 생계 위기 속에서 배달과 아르바이트로 하루를 버티고, 한결은 귀국하여 유주를 향한 짝사랑을 안고 일상을 연다.",
+  "exit_state": "한결이 은찬에게 남장 애인 대행을 제안하며, 낯선 두 사람 사이에 기묘한 계약의 문이 열린다.",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "한결의 '내 애인 할래?' 제안—코믹 로맨스 플롯 전체의 기점"
+  },
+  "central_conflict_axis": "자존심 강한 은찬(경제적 약자) vs 귀공자 한결(감정 미숙)의 첫 충돌",
+  "episode_function": "1화는 은찬과 한결의 세계를 병렬로 도입하고, 날치기 사건을 통한 첫 만남과 맞선 깽판 소동을 거쳐 애인 대행 계약이라는 핵심 설정 플롯을 설치한다.",
+  "core_dist": {
+    "INTRO": 4,
+    "ESTABLISH": 15,
+    "DESIRE": 9,
+    "CONFLICT": 8,
+    "LOSS": 8,
+    "RELIEF": 5,
+    "ROMANCE": 4,
+    "BOND": 5,
+    "PUNISH": 2,
+    "HOOK": 2,
+    "ORACLE": 1,
+    "REVERSAL": 3
+  },
+  "by": "sonnet_reading"
+}

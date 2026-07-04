@@ -1,0 +1,61 @@
+{
+  "scene_count": 83,
+  "dramatic_question": "공소시효 만료 직전, 재한은 과거에서 경기남부 연쇄살인범을 잡을 수 있는가?",
+  "core_dist": {
+    "ESTABLISH": 1,
+    "ORACLE": 1,
+    "CONFLICT": 4,
+    "REVELATION": 1,
+    "BOND": 1,
+    "LOSS": 1,
+    "RESCUE": 1,
+    "HOOK": 1,
+    "INTRO": 1
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "설정 단계"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        8
+      ],
+      "beat": "전개 단계"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        9,
+        12
+      ],
+      "beat": "심화 단계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        13,
+        14
+      ],
+      "beat": "회말전환 단계"
+    }
+  ],
+  "work_id": "시그널",
+  "by": "sonnet_reading",
+  "sequence_count": 14,
+  "turning_point": {
+    "seq_index": 8,
+    "event": "회말 위기 전환"
+  },
+  "episode_no": 2,
+  "entry_state": "해영 팀이 경기남부 연쇄살인 미제사건을 새 수사 목표로 설정하고, 공소시효 D-1 상황에서 수사를 시작한다.",
+  "exit_state": "과거 재한이 용의자 김성범을 체포하고 현재 팀은 DNA 일치로 진범을 확정하며 공소시효 안에 기소에 성공한다.",
+  "central_conflict_axis": "공소시효 만료 D-1의 시간 압박 대 증거 확보의 필사적 경쟁",
+  "episode_function": "무전기 교신의 실질적 효력을 처음으로 증명하고, 과거-현재 협력으로 미제사건을 해결하는 공식을 확립한다."
+}

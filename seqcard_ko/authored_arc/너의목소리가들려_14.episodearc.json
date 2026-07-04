@@ -1,0 +1,58 @@
+{
+  "work_id": "너의목소리가들려_14",
+  "episode_no": 14,
+  "scene_count": 58,
+  "sequence_count": 6,
+  "dramatic_question": "사건 핵심 돌파 이후 반전의 연속에서 수하와 관우의 관계는 어디로 향하는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "위기 지속과 협력 강화",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "B",
+      "label": "돌파와 재회",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": "C",
+      "label": "반전과 예고",
+      "seq_span": [
+        6,
+        6
+      ]
+    }
+  ],
+  "entry_state": "최후 위기 지속",
+  "exit_state": "반전의 연속과 강력 예고",
+  "turning_point": {
+    "seq_index": 3,
+    "description": "돌파와 재회"
+  },
+  "central_conflict_axis": "사건 돌파 vs 반전의 연속—로맨스 심화와 갈등의 공존",
+  "episode_function": "사건 핵심 돌파와 로맨스 심화, 반전 예고",
+  "core_dist": {
+    "REVELATION": 0.14,
+    "CONFLICT": 0.14,
+    "PERIL": 0.12,
+    "ESTABLISH": 0.1,
+    "BOND": 0.07,
+    "HOOK": 0.07,
+    "RELIEF": 0.05,
+    "ROMANCE": 0.05,
+    "LOSS": 0.01,
+    "ORACLE": 0.05,
+    "DESIRE": 0.01,
+    "REVERSAL": 0.03,
+    "REUNION": 0.04,
+    "INTRO": 0.02
+  },
+  "by": "cowork_opus_reading"
+}

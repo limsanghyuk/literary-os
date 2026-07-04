@@ -1,0 +1,60 @@
+{
+  "work_id": "너의목소리가들려_04",
+  "episode_no": 4,
+  "scene_count": 59,
+  "sequence_count": 8,
+  "dramatic_question": "능력 노출 위기와 로맨스 심화—두 사람의 관계는 어떻게 더 깊어지는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "구출과 로맨스 본격화",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "B",
+      "label": "능력 위기와 진실 재편",
+      "seq_span": [
+        4,
+        6
+      ]
+    },
+    {
+      "act": "C",
+      "label": "위험과 관계 확인",
+      "seq_span": [
+        7,
+        8
+      ]
+    }
+  ],
+  "entry_state": "구출 직후",
+  "exit_state": "사건 해결과 관계 확인, 다음 예고",
+  "turning_point": {
+    "seq_index": 5,
+    "description": "능력 위기와 진실 재편"
+  },
+  "central_conflict_axis": "능력의 비밀 vs 로맨스의 투명함—감추기와 드러내기의 역설",
+  "episode_function": "로맨스 본격화와 능력 노출 위기—관계 심화의 핵심 에피소드",
+  "core_dist": {
+    "REVELATION": 0.15,
+    "PERIL": 0.12,
+    "CONFLICT": 0.12,
+    "ESTABLISH": 0.12,
+    "BOND": 0.1,
+    "ROMANCE": 0.07,
+    "RESCUE": 0.07,
+    "HOOK": 0.05,
+    "REVERSAL": 0.05,
+    "DESIRE": 0.03,
+    "LOSS": 0.02,
+    "REUNION": 0.02,
+    "ORACLE": 0.01,
+    "INTRO": 0.01,
+    "RELIEF": 0.01,
+    "PUNISH": 0.01
+  },
+  "by": "cowork_opus_reading"
+}

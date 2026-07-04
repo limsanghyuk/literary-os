@@ -1,0 +1,67 @@
+{
+  "work_id": "시티헌터_06",
+  "episode_no": 6,
+  "scene_count": 65,
+  "sequence_count": 10,
+  "dramatic_question": "서용학 처단을 위한 결정적 증거를 확보했지만, 나나의 오해가 두 인물을 갈라놓을 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "갈등 지속·동거 합의"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "병역비리 포착·동거 일상"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "비리 확보·감청 성공"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        10
+      ],
+      "beat": "나나 오해·훅"
+    }
+  ],
+  "entry_state": "동거 시작·고기준 체포·허드슨 잠복 착수.",
+  "exit_state": "결함 무기 비리 증거 확보, 그러나 나나가 세희-윤성 오해로 훅에 걸린다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "결함 무기 강매 비리 도청 확보: 서용학 처단 결의"
+  },
+  "central_conflict_axis": "서용학 병역비리 수사(영주/윤성) vs 나나의 오해와 관계 위기",
+  "episode_function": "6화: 동거 생활과 서용학 비리 수사가 교차하며 감정선이 복잡해지는 전환 회차.",
+  "core_dist": {
+    "CONFLICT": 16,
+    "REVERSAL": 4,
+    "HOOK": 9,
+    "LOSS": 4,
+    "REVELATION": 8,
+    "ORACLE": 15,
+    "RESCUE": 5,
+    "DESIRE": 9,
+    "PERIL": 5,
+    "BOND": 6,
+    "ROMANCE": 11,
+    "ESTABLISH": 1,
+    "PUNISH": 5,
+    "INTRO": 2,
+    "RELIEF": 1
+  },
+  "by": "sonnet_reading"
+}

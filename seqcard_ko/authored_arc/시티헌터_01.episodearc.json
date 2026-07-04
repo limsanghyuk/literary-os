@@ -1,0 +1,68 @@
+{
+  "work_id": "시티헌터_01",
+  "episode_no": 1,
+  "scene_count": 83,
+  "sequence_count": 13,
+  "dramatic_question": "이진표의 복수 계획은 5인의 처단에 성공할 것인가, 아니면 또 다른 비극을 낳을 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "1983 비극과 인물 탄생·확립"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "배신·전멸·복수 결의·10년 도약"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        11
+      ],
+      "beat": "성장·갈등·희생"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        12,
+        13
+      ],
+      "beat": "귀국·표적·첫 만남과 정체 복선"
+    }
+  ],
+  "entry_state": "1983년 아웅산 폭발로 탄생한 복수극—진표는 살아남았고 윤성은 세상에 왔다.",
+  "exit_state": "귀국한 윤성이 첫 표적 이경완을 지목하고, 나나와 운명적으로 얽혔다.",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "대원 전멸과 진표의 배신—개인 복수극의 도화선"
+  },
+  "central_conflict_axis": "5인 공모의 사법적 응징(윤성) vs 자력 처단(진표)",
+  "episode_function": "프롤로그 1화: 1983년 배신과 탄생, 10년 방황, 귀국까지 복수극의 씨앗 전부를 심는다.",
+  "core_dist": {
+    "ESTABLISH": 15,
+    "INTRO": 6,
+    "PERIL": 18,
+    "REVERSAL": 4,
+    "LOSS": 11,
+    "CONFLICT": 13,
+    "DESIRE": 18,
+    "BOND": 11,
+    "ORACLE": 12,
+    "RESCUE": 7,
+    "PUNISH": 5,
+    "REVELATION": 8,
+    "RELIEF": 5,
+    "ROMANCE": 3,
+    "HOOK": 3,
+    "REUNION": 1
+  },
+  "by": "sonnet_reading"
+}

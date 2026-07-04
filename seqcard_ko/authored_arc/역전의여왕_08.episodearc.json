@@ -1,0 +1,62 @@
+{
+  "work_id": "역전의여왕_08",
+  "episode_no": 8,
+  "scene_count": 60,
+  "sequence_count": 9,
+  "dramatic_question": "8화: 인물들의 선택과 갈등이 이야기를 어디로 이끌 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "회차의 출발점—용식의 일방적 해고 통보에서 상황과 긴장을 확립한다"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 구체화되고 인물들의 선택이 이야기를 추동한다"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "긴장이 정점을 향해 치닫고 위기가 가시화된다"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "병풍이 무너지고 준수 발각로 마무리되며 다음 회를 향한 전환점을 남긴다"
+    }
+  ],
+  "entry_state": "직전 회의 여운을 안고 용식의 일방적 해고 통보에서 새 회차가 열린다.",
+  "exit_state": "병풍이 무너지고 준수 발각로 회차가 닫히며 다음 국면의 씨앗이 뿌려진다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "핵심 갈등이 폭발하거나 예상치 못한 선택이 이야기의 방향을 바꾼다"
+  },
+  "central_conflict_axis": "주인공의 욕망 대 현실의 장벽, 관계 내부의 갈등",
+  "episode_function": "8화는 다음 단계의 위기를 예고하는 복선을 촘촘히 심는다.",
+  "core_dist": {
+    "CONFLICT": 15,
+    "HOOK": 17,
+    "PUNISH": 4,
+    "LOSS": 9,
+    "REVELATION": 14,
+    "DESIRE": 8,
+    "RELIEF": 5,
+    "BOND": 6,
+    "REVERSAL": 1,
+    "PERIL": 8
+  },
+  "by": "sonnet_reading"
+}

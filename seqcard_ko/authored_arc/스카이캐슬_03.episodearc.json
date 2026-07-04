@@ -1,0 +1,67 @@
+{
+  "work_id": "스카이캐슬_03",
+  "episode_no": 3,
+  "scene_count": 71,
+  "sequence_count": 12,
+  "dramatic_question": "코디 시스템에 종속된 예서는 자아를 지킬 수 있는가, 영재의 복수는 어디를 향하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "영재 복수 행동·예서 훈련 개시"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        8
+      ],
+      "beat": "박수창 위협·이수임 의심·차민혁 가정 균열·강은혜 배제"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        9,
+        11
+      ],
+      "beat": "영재 정보 수집·김주영 실체 단서·한서진 고립"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        12,
+        12
+      ],
+      "beat": "김주영 위협·예서 임계점—이중 후크"
+    }
+  ],
+  "entry_state": "영재의 복수 행동이 개시되고 예서의 코디 훈련이 시작된다.",
+  "exit_state": "김주영의 위협과 예서의 자아 억압이 고조되며 복수와 붕괴의 이중 위기가 닫힌다.",
+  "turning_point": {
+    "seq_index": 12,
+    "desc": "김주영의 위협과 예서의 임계점—위기의 이중 점화"
+  },
+  "central_conflict_axis": "욕망(한서진·코디 시스템) 대 자녀의 자아와 반격(예서 억압·영재 복수)",
+  "episode_function": "3화는 영재의 복수 구체화, 예서의 자아 억압, 이수임의 탐정 행동을 병렬로 전개하며 욕망 시스템의 균열을 심화시킨다.",
+  "core_dist": {
+    "REVELATION": 5,
+    "CONFLICT": 22,
+    "PERIL": 1,
+    "REVERSAL": 4,
+    "BOND": 5,
+    "ESTABLISH": 5,
+    "ORACLE": 4,
+    "PUNISH": 5,
+    "LOSS": 6,
+    "HOOK": 5,
+    "RELIEF": 3,
+    "DESIRE": 2,
+    "INTRO": 2,
+    "ROMANCE": 1,
+    "REUNION": 1
+  },
+  "by": "sonnet_reading"
+}

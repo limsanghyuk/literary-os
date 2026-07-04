@@ -1,0 +1,53 @@
+{
+  "work_id": "경성스캔들_02",
+  "episode_no": 2,
+  "scene_count": 75,
+  "sequence_count": 9,
+  "dramatic_question": "10년 전 수현의 배신으로 형을 잃은 완은 수현의 복귀를 어떻게 감당하고, 여경과의 강제 동행은 어디로 이어질 것인가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        2
+      ],
+      "label": "명빈관 숨기와 10년 전 배신 전말 회상"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        3,
+        7
+      ],
+      "label": "코믹 탈출과 조마자 내기 재점화, 총독부 수사 구도"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        8,
+        9
+      ],
+      "label": "내기 세 번째 시도와 강구-수현 정면 대립 예고"
+    }
+  ],
+  "entry_state": "여경이 완의 방에 총을 겨눈 채 숨은 긴장 상황",
+  "exit_state": "강구와 수현의 갈등이 격화되고 완과 여경의 관계는 코믹 동행에서 진솔한 첫 대화 단계로 이행된다",
+  "turning_point": {
+    "seq_index": 2,
+    "label": "수현의 배신 전말 회상 공개",
+    "description": "10년 전 형 민의 독립운동과 수현의 밀고 사실이 회상으로 공개되어 완-수현 서사의 뿌리가 드러난다"
+  },
+  "central_conflict_axis": "완과 수현의 배신·증오 관계 재점화, 완과 여경의 강제 동행에서 싹트는 감정, 강구 수사망과 총독부 권력 갈등",
+  "episode_function": "완·수현 10년 배신 서사 전말 공개, 조마자 내기를 통한 완-여경 로맨스 발동, 강구·코우지 수사 삼각구도 구축",
+  "core_dist": {
+    "REVELATION": 1,
+    "DESIRE": 2,
+    "BOND": 1,
+    "PERIL": 1,
+    "LOSS": 1,
+    "CONFLICT": 1,
+    "ORACLE": 1,
+    "HOOK": 1
+  },
+  "by": "cowork_opus_reading"
+}

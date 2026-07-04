@@ -1,0 +1,94 @@
+{
+  "series": "개와늑대의시간",
+  "episodes_total": 16,
+  "scenes_total": 880,
+  "sequences_total": 143,
+  "logline": "NIS 언더커버 요원 이수현이 방콕 마약 조직 청방에 침투해 마오를 추적하는 동안 조직 보스의 딸 지우와 사랑에 빠지며 임무와 감정 사이에서 자신이 개인지 늑대인지 알 수 없는 황혼 속을 헤쳐나간다.",
+  "central_dramatic_question": "수현은 임무(늑대)와 사랑(개)이라는 두 본성 사이에서 어느 쪽을 선택하는가, 아니면 둘 다 지킬 수 있는가?",
+  "theme_statement": "개와 늑대의 시간—황혼처럼 본성이 뒤섞이는 순간에도 진짜 자신을 잃지 않는 사람이 승리한다.",
+  "protagonist": "이수현 — NIS 언더커버 요원, 임무와 사랑 사이의 이중 정체성",
+  "antagonist": "마오 — 방콕 마약 카르텔 수장, 잔인하고 지략적인 권력자",
+  "season_structure": [
+    {
+      "act": "A",
+      "label": "침투와 첫 감정",
+      "desc": "수현이 방콕 청방에 침투하고 지우와 만나며 임무와 감정의 충돌 시작",
+      "episode_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "심층 침투와 위기",
+      "desc": "수현·강진 공동 전선, 마오 압박 심화, 지우 구출·강진 정체 공개",
+      "episode_span": [
+        5,
+        8
+      ]
+    },
+    {
+      "act": "C",
+      "label": "최후 대결과 완결",
+      "desc": "마오 추격·함정·최후 대결, 영길 희생·증거 전달",
+      "episode_span": [
+        9,
+        12
+      ]
+    },
+    {
+      "act": "D",
+      "label": "완결과 새 출발",
+      "desc": "마오 체포·임무 완수·재회·잔당 소탕·열린 해피엔딩",
+      "episode_span": [
+        13,
+        16
+      ]
+    }
+  ],
+  "macro_turning_points": [
+    {
+      "ep": 4,
+      "desc": "강진이 언더커버 신분을 암시하며 구도 전복 시작"
+    },
+    {
+      "ep": 6,
+      "desc": "수현·지우 감정 고백, 마오의 관계 청산 명령"
+    },
+    {
+      "ep": 8,
+      "desc": "강진 정체 완전 공개, 수현·강진·지우 공동 전선 수립"
+    },
+    {
+      "ep": 10,
+      "desc": "영길의 마오 기습—최대 반전, 증거 전달 성공"
+    },
+    {
+      "ep": 13,
+      "desc": "마오 체포·임무 완수, 영길 사망, 이별 예감"
+    }
+  ],
+  "resolution": "마오 체포·임무 완수, 영길 사망, 수현·지우 재회 후 새 출발, 잔당 소탕으로 진정한 평화 획득",
+  "open_ending": true,
+  "tone": "스파이 스릴러·로맨스, 이중 정체성 멜로",
+  "conflict_persist": 0.313,
+  "series_core_dist": {
+    "PERIL": 42,
+    "CONFLICT": 38,
+    "ESTABLISH": 28,
+    "BOND": 18,
+    "ROMANCE": 15,
+    "LOSS": 14,
+    "DESIRE": 12,
+    "ORACLE": 12,
+    "RESCUE": 8,
+    "REVERSAL": 6,
+    "REVELATION": 5,
+    "RELIEF": 5,
+    "HOOK": 5,
+    "PUNISH": 4,
+    "INTRO": 2,
+    "REUNION": 1
+  },
+  "by": "sonnet_reading"
+}

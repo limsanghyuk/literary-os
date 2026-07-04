@@ -1,0 +1,62 @@
+{
+  "work_id": "하얀거탑",
+  "episode_no": 17,
+  "scene_count": 55,
+  "sequence_count": 8,
+  "dramatic_question": "담관암 진단을 받은 준혁이 죽음의 공포를 넘어 삶의 의미를 창조할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "label": "세계와 갈등 도입",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "전개",
+      "label": "갈등 심화와 대결 구도 확립",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": "심화",
+      "label": "위기 절정과 전환점",
+      "seq_span": [
+        6,
+        7
+      ]
+    },
+    {
+      "act": "회말전환",
+      "label": "회말 반전과 다음 회 훅",
+      "seq_span": [
+        8,
+        8
+      ]
+    }
+  ],
+  "entry_state": "담관암 진단 이후 준혁이 비밀을 유지하며 혼자 감당하는 상황",
+  "exit_state": "신체 기증 결정으로 죽음을 의미 있는 행위로 전환하는 결심 완성",
+  "turning_point": {
+    "seq_index": 7,
+    "description": "오경환 교수에게 편지 쓰는 준혁"
+  },
+  "central_conflict_axis": "죽음에 대한 공포와 부정 vs 존엄한 죽음 선택",
+  "episode_function": "준혁의 내면 전환 완성—비극에서 화해로",
+  "core_dist": {
+    "CONFLICT": 32,
+    "DESIRE": 20,
+    "LOSS": 12,
+    "PERIL": 11,
+    "BOND": 11,
+    "REVELATION": 7,
+    "ORACLE": 7,
+    "ESTABLISH": 6,
+    "HOOK": 3,
+    "RELIEF": 1
+  },
+  "by": "claude-sonnet-4-6"
+}

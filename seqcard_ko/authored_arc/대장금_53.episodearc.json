@@ -1,0 +1,66 @@
+{
+  "work_id": "대장금_53",
+  "episode_no": 53,
+  "scene_count": 71,
+  "sequence_count": 11,
+  "dramatic_question": "대장금 칭호와 민정호 유배—두 사람의 이별은 피할 수 없는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        11
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "중종이 장금에게 대장금 칭호를 내리고 민정호는 유배를 당한다.",
+  "exit_state": "장금이 민정호를 향한 마음을 고백하고 삼작노리개를 건네며 이별을 받아들인다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "대장금 칭호와 민정호 유배—영광과 이별의 교차(씬36~50)"
+  },
+  "central_conflict_axis": "대장금 칭호의 영광(장금) vs 민정호 유배로 인한 이별의 고통",
+  "episode_function": "53화는 대장금 칭호와 민정호 유배의 교차로 장금 인생의 최고 영광과 최대 상실이 동시에 확인된다.",
+  "core_dist": {
+    "REVELATION": 3,
+    "ROMANCE": 7,
+    "PERIL": 20,
+    "DESIRE": 16,
+    "BOND": 14,
+    "CONFLICT": 13,
+    "PUNISH": 6,
+    "ESTABLISH": 7,
+    "REVERSAL": 5,
+    "LOSS": 14,
+    "ORACLE": 10,
+    "RELIEF": 2,
+    "HOOK": 2,
+    "RESCUE": 2
+  },
+  "by": "sonnet_reading"
+}

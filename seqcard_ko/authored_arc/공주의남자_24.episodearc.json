@@ -1,0 +1,51 @@
+{
+  "work_id": "공주의남자_24",
+  "episode_no": 24,
+  "scene_count": 75,
+  "sequence_count": 11,
+  "dramatic_question": "수양의 마지막 선택이 딸에게 자유를 줄 수 있는가, 그리고 복수는 무엇을 완성했는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "수양 무기 내림·보내줌 선언"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "측근 방해·처벌·가족 재결합"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "상실 화해·수양 고독·새 삶"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        11
+      ],
+      "beat": "사랑 재확인·역사 판단·에필로그"
+    }
+  ],
+  "entry_state": "수양 결단 직전, 세령 홀로 대치",
+  "exit_state": "수양의 자유 선언, 가족 재결합, 에필로그",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "가족 재결합·국경 통과 — 복수와 사랑의 비극적 해소"
+  },
+  "central_conflict_axis": "수양의 부정(딸 자유)이 정치 논리를 극복하는가",
+  "episode_function": "최종화: 비극적 해소·화해·에필로그",
+  "core_dist": {},
+  "by": "opus_reading"
+}

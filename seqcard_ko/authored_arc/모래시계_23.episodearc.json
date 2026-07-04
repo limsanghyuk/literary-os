@@ -1,0 +1,59 @@
+{
+  "work_id": "모래시계_23",
+  "episode_no": 23,
+  "scene_count": 62,
+  "sequence_count": 8,
+  "dramatic_question": "마지막 진실이 드러난 후 권력 구도는 어떻게 해체되고 결말은 어떻게 수렴하는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "마지막 평온과 위협",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "B",
+      "label": "진실 확인과 역전",
+      "seq_span": [
+        4,
+        6
+      ]
+    },
+    {
+      "act": "C",
+      "label": "최후 폭로와 결말 수렴",
+      "seq_span": [
+        7,
+        8
+      ]
+    }
+  ],
+  "entry_state": "결말 전 마지막 평온",
+  "exit_state": "결말 수렴 완성—모든 것이 끝을 향함",
+  "turning_point": {
+    "seq_index": 5,
+    "description": "진실 확인과 역전"
+  },
+  "central_conflict_axis": "최후 진실 vs 권력 해체—결말 수렴의 과정",
+  "episode_function": "결말 전야 에피소드—진실 최종 확인, 역전, 결말 수렴",
+  "core_dist": {
+    "ORACLE": 0.05,
+    "PERIL": 0.15,
+    "REVELATION": 0.16,
+    "CONFLICT": 0.1,
+    "LOSS": 0.05,
+    "BOND": 0.03,
+    "RELIEF": 0.01,
+    "PUNISH": 0.05,
+    "RESCUE": 0.02,
+    "REUNION": 0.02,
+    "ESTABLISH": 0.07,
+    "DESIRE": 0.03,
+    "REVERSAL": 0.02,
+    "ROMANCE": 0.02,
+    "INTRO": 0.02
+  },
+  "by": "cowork_opus_reading"
+}

@@ -1,0 +1,55 @@
+{
+  "work_id": "마왕_20",
+  "episode_no": 20,
+  "scene_count": 80,
+  "sequence_count": 12,
+  "dramatic_question": "12년 원죄 위에 쌓인 복수와 수사 끝에 두 사람은 용서에 도달할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "영철 구출·사건 전모 완성",
+      "seq_span": [
+        1,
+        5
+      ]
+    },
+    {
+      "act": "B",
+      "label": "최후 대면·희수 체포",
+      "seq_span": [
+        6,
+        9
+      ]
+    },
+    {
+      "act": "C",
+      "label": "화해·피날레",
+      "seq_span": [
+        10,
+        12
+      ]
+    }
+  ],
+  "entry_state": "영철이 부상으로 쓰러진 최후 위기 상태",
+  "exit_state": "오수와 승하가 폐차에 기대며 용서에 도달한 피날레 상태",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "오수-승하 최후 대면—12년 원죄와 복수의 교차점에서 용서 가능성"
+  },
+  "central_conflict_axis": "오수(용서)↔승하(화해)",
+  "episode_function": "영철 구출·희수 체포·오수-승하 화해 피날레",
+  "core_dist": {
+    "REVELATION": 2,
+    "ESTABLISH": 2,
+    "RELIEF": 1,
+    "ROMANCE": 1,
+    "REUNION": 1,
+    "DESIRE": 1,
+    "CONFLICT": 1,
+    "BOND": 1,
+    "RESCUE": 1,
+    "ORACLE": 1,
+    "PUNISH": 1
+  },
+  "by": "sonnet_reading"
+}

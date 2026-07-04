@@ -1,0 +1,66 @@
+{
+  "work_id": "배가본드_03",
+  "episode_no": 3,
+  "scene_count": 58,
+  "sequence_count": 9,
+  "dramatic_question": "달건은 제롬 조직 포위망을 뚫고 생존할 수 있는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "label": "설정",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": 2,
+      "label": "전개",
+      "seq_span": [
+        3,
+        4
+      ]
+    },
+    {
+      "act": 3,
+      "label": "심화",
+      "seq_span": [
+        5,
+        7
+      ]
+    },
+    {
+      "act": 4,
+      "label": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ]
+    }
+  ],
+  "entry_state": "달건-호식 분리, 증거 인멸 시도",
+  "exit_state": "릴리 살수 팀 포위—절체절명",
+  "turning_point": {
+    "seq_index": 5,
+    "seq_id": "배가본드_03_S05",
+    "description": "에드워드, 사건 수습 위한 외교 채널 가동"
+  },
+  "central_conflict_axis": "달건 생존 본능 vs 릴리 암살 명령",
+  "episode_function": "전개—추격과 탈출, 포위 위기",
+  "core_dist": {
+    "PERIL": 0.165,
+    "REVELATION": 0.165,
+    "CONFLICT": 0.132,
+    "HOOK": 0.121,
+    "ESTABLISH": 0.088,
+    "DESIRE": 0.066,
+    "LOSS": 0.055,
+    "BOND": 0.055,
+    "INTRO": 0.044,
+    "REVERSAL": 0.033,
+    "RELIEF": 0.033,
+    "PUNISH": 0.033,
+    "RESCUE": 0.011
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,55 @@
+{
+  "work_id": "추적자_04",
+  "episode_no": 4,
+  "scene_count": 67,
+  "sequence_count": 7,
+  "dramatic_question": "미연의 투신과 PK준의 오발 사망 후 홍석은 구금을 탈출해 배후를 노릴 수 있는가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        3
+      ],
+      "label": "구치소 대기·동윤 사면·미연 투신"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        4,
+        5
+      ],
+      "label": "미연 사망·PK준 오발 사망"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        6,
+        7
+      ],
+      "label": "증거 발견과 대검찰청 탈출"
+    }
+  ],
+  "entry_state": "홍석이 구치소에 갇힌 채 미연의 재판 승리를 기다린다",
+  "exit_state": "홍석이 대검찰청을 탈주해 자유를 되찾고 배후 추적을 재개한다",
+  "turning_point": {
+    "seq_index": 3,
+    "label": "미연 투신",
+    "description": "항소포기각서 압박 속에 미연이 투신하며 홍석에게 두 번째 거대한 상실이 덮친다"
+  },
+  "central_conflict_axis": "가족 상실의 절망 vs 배후 응징의 의지",
+  "episode_function": "2중 상실(미연+PK준)·탈주로 새 국면 전환",
+  "core_dist": {
+    "PERIL": 4,
+    "LOSS": 4,
+    "CONFLICT": 3,
+    "REVELATION": 3,
+    "DESIRE": 3,
+    "ORACLE": 2,
+    "RESCUE": 2,
+    "REVERSAL": 1,
+    "PUNISH": 1,
+    "BOND": 1
+  },
+  "by": "cowork_opus_reading"
+}

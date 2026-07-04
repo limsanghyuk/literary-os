@@ -1,0 +1,66 @@
+{
+  "work_id": "배가본드_08",
+  "episode_no": 8,
+  "scene_count": 49,
+  "sequence_count": 8,
+  "dramatic_question": "달건이 부상을 이겨내고 제시카 심문을 돌파할 수 있는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "label": "설정",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": 2,
+      "label": "전개",
+      "seq_span": [
+        3,
+        4
+      ]
+    },
+    {
+      "act": 3,
+      "label": "심화",
+      "seq_span": [
+        5,
+        6
+      ]
+    },
+    {
+      "act": 4,
+      "label": "회말전환",
+      "seq_span": [
+        7,
+        8
+      ]
+    }
+  ],
+  "entry_state": "제시카 심문 개시, TF 재정비",
+  "exit_state": "태웅 응급수술—생사 기로",
+  "turning_point": {
+    "seq_index": 5,
+    "seq_id": "배가본드_08_S05",
+    "description": "해리, 달건 부상 응급 처치—감정 심화"
+  },
+  "central_conflict_axis": "수사 압박 vs 내부 배신",
+  "episode_function": "심화—제도적 한계와 내부 균열 노출",
+  "core_dist": {
+    "PERIL": 0.291,
+    "CONFLICT": 0.165,
+    "REVELATION": 0.152,
+    "PUNISH": 0.089,
+    "ESTABLISH": 0.051,
+    "RELIEF": 0.051,
+    "HOOK": 0.051,
+    "RESCUE": 0.051,
+    "DESIRE": 0.038,
+    "LOSS": 0.025,
+    "BOND": 0.013,
+    "REVERSAL": 0.013,
+    "INTRO": 0.013
+  },
+  "by": "sonnet_reading"
+}

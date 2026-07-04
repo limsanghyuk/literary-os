@@ -1,0 +1,59 @@
+{
+  "work_id": "너의목소리가들려_13",
+  "episode_no": 13,
+  "scene_count": 63,
+  "sequence_count": 6,
+  "dramatic_question": "후반부 최후 위기에서 관우의 능력과 두 사람의 관계는 어떻게 검증되는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "후반부 개막과 사건 심화",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "B",
+      "label": "로맨스 강화와 구출",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": "C",
+      "label": "최후 위기와 마무리",
+      "seq_span": [
+        6,
+        6
+      ]
+    }
+  ],
+  "entry_state": "후반부 개막과 로맨스·위협 공존",
+  "exit_state": "최후 위기와 에피소드 마무리",
+  "turning_point": {
+    "seq_index": 4,
+    "description": "로맨스 강화와 구출"
+  },
+  "central_conflict_axis": "능력의 핵심 활용 vs 최후 위기—로맨스와 위기의 공존",
+  "episode_function": "후반부 개막 에피소드—능력 핵심 활용, 로맨스 강화, 최후 위기",
+  "core_dist": {
+    "REVELATION": 0.19,
+    "PERIL": 0.13,
+    "CONFLICT": 0.11,
+    "BOND": 0.1,
+    "ROMANCE": 0.06,
+    "DESIRE": 0.06,
+    "RESCUE": 0.05,
+    "ESTABLISH": 0.07,
+    "HOOK": 0.05,
+    "REVERSAL": 0.04,
+    "RELIEF": 0.03,
+    "REUNION": 0.02,
+    "LOSS": 0.02,
+    "INTRO": 0.01,
+    "ORACLE": 0.01
+  },
+  "by": "cowork_opus_reading"
+}

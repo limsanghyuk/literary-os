@@ -1,0 +1,67 @@
+{
+  "work_id": "대장금_48",
+  "episode_no": 48,
+  "scene_count": 63,
+  "sequence_count": 10,
+  "dramatic_question": "최씨가의 완전한 몰락과 금영의 퇴장—어떻게 마무리되는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "최상궁이 자수하고 금영이 궁을 떠난다.",
+  "exit_state": "최상궁이 죽고 금영이 퇴장하며 장금이 최고상궁으로 추대된다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "최상궁의 죽음과 금영의 퇴장으로 갈등 구조가 완전히 해소된다(씬28~42)"
+  },
+  "central_conflict_axis": "최씨가 완전 청산 vs 장금의 새 역할 부여",
+  "episode_function": "48화는 최상궁의 비극적 최후와 금영의 퇴장으로 대장금 서사의 핵심 갈등이 완전히 닫힌다.",
+  "core_dist": {
+    "REVELATION": 5,
+    "CONFLICT": 4,
+    "PERIL": 10,
+    "ESTABLISH": 8,
+    "PUNISH": 6,
+    "LOSS": 14,
+    "REVERSAL": 5,
+    "RESCUE": 1,
+    "HOOK": 2,
+    "DESIRE": 3,
+    "RELIEF": 5,
+    "ORACLE": 4,
+    "BOND": 12,
+    "REUNION": 2,
+    "ROMANCE": 1
+  },
+  "by": "sonnet_reading"
+}

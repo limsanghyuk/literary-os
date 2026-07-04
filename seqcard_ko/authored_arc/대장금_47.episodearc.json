@@ -1,0 +1,64 @@
+{
+  "work_id": "대장금_47",
+  "episode_no": 47,
+  "scene_count": 66,
+  "sequence_count": 10,
+  "dramatic_question": "최씨가 잔당의 최후—장금과 연생은 어떻게 마무리를 짓는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "최씨가 잔당이 마지막 저항을 시도한다.",
+  "exit_state": "최씨가 잔당이 완전히 제거되고 연생도 자기 자리를 찾는다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "최씨가 잔당 청산이 완료된다"
+  },
+  "central_conflict_axis": "최씨가 잔당의 마지막 음모 vs 장금·연생의 대응",
+  "episode_function": "47화는 최씨가 청산의 완성과 연생의 성장을 통해 갈등 해소를 심화한다.",
+  "core_dist": {
+    "DESIRE": 19,
+    "PERIL": 16,
+    "ESTABLISH": 6,
+    "CONFLICT": 24,
+    "ORACLE": 10,
+    "HOOK": 17,
+    "RELIEF": 3,
+    "REVELATION": 13,
+    "BOND": 4,
+    "REVERSAL": 6,
+    "LOSS": 3,
+    "PUNISH": 5
+  },
+  "by": "sonnet_reading"
+}

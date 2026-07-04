@@ -1,0 +1,65 @@
+{
+  "work_id": "스토브리그_14",
+  "episode_no": 14,
+  "scene_count": 55,
+  "sequence_count": 9,
+  "dramatic_question": "강두기 트레이드와 성복의 내면 갈등을 배경으로 승수는 드림즈를 가을 야구로 이끌 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "임동규 재영입 트레이드 협상과 강두기의 담담한 이별"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "삼자 경매 협상·임동규 합류·경민 승인 보류 버티기"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "성복 결백 확인·임미선 실적 반전·팀 유대 최고조"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "성복의 내면 갈등과 강두기 트레이드 폭탄 예고"
+    }
+  ],
+  "entry_state": "임동규 재영입을 위한 트레이드 협상이 시작되는 상황.",
+  "exit_state": "팀이 화합의 정점을 경험하지만 경민이 강두기 트레이드라는 새 폭탄을 투하한다.",
+  "turning_point": {
+    "seq_index": 7,
+    "beat": "팀 회식과 세영의 선물—화합의 정점을 경험"
+  },
+  "central_conflict_axis": "가을 야구 진출(승수·팀) 대 경민의 지속적 방해",
+  "episode_function": "14화는 임동규 재영입 완성과 팀 화합의 정점을 그리면서 강두기 트레이드 폭탄으로 새 위기를 예고한다.",
+  "core_dist": {
+    "CONFLICT": 22,
+    "BOND": 22,
+    "REVELATION": 19,
+    "HOOK": 12,
+    "ESTABLISH": 10,
+    "ORACLE": 6,
+    "RELIEF": 5,
+    "PERIL": 5,
+    "REVERSAL": 3,
+    "LOSS": 3,
+    "INTRO": 1,
+    "PUNISH": 1,
+    "ROMANCE": 1
+  },
+  "by": "sonnet_reading"
+}

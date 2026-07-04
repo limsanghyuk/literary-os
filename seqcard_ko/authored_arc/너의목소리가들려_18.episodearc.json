@@ -1,0 +1,60 @@
+{
+  "work_id": "너의목소리가들려_18",
+  "episode_no": 18,
+  "scene_count": 68,
+  "sequence_count": 7,
+  "dramatic_question": "타인의 마음을 읽는 능력이 사라진다 해도 두 사람의 연결은 지속될 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "피날레 개막과 최후 대결",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "B",
+      "label": "화해와 정의 실현",
+      "seq_span": [
+        4,
+        5
+      ]
+    },
+    {
+      "act": "C",
+      "label": "안도와 완결",
+      "seq_span": [
+        6,
+        7
+      ]
+    }
+  ],
+  "entry_state": "피날레 개막",
+  "exit_state": "완전하고 아름다운 마무리—두 마음의 연결",
+  "turning_point": {
+    "seq_index": 4,
+    "description": "화해와 정의 실현"
+  },
+  "central_conflict_axis": "마지막 갈등 vs 정의 실현—완전한 연결과 아름다운 마무리",
+  "episode_function": "피날레—최후 대결, 정의 실현, 완전한 마무리",
+  "core_dist": {
+    "RELIEF": 0.12,
+    "REVELATION": 0.15,
+    "ESTABLISH": 0.12,
+    "CONFLICT": 0.1,
+    "BOND": 0.09,
+    "LOSS": 0.09,
+    "PERIL": 0.07,
+    "ROMANCE": 0.06,
+    "REUNION": 0.06,
+    "PUNISH": 0.04,
+    "REVERSAL": 0.03,
+    "HOOK": 0.03,
+    "DESIRE": 0.02,
+    "RESCUE": 0.02,
+    "ORACLE": 0.01,
+    "INTRO": 0.01
+  },
+  "by": "cowork_opus_reading"
+}

@@ -1,0 +1,65 @@
+{
+  "work_id": "태양의후예_11",
+  "episode_no": 11,
+  "scene_count": 48,
+  "sequence_count": 7,
+  "dramatic_question": "죽음의 위기를 넘기면 사랑은 더 절실해지는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "작전 위기·생환·회복"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "서브 갈등·시진 로맨스"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        5
+      ],
+      "beat": "새 임무 수락 결단"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "서브 화해·출발 훅"
+    }
+  ],
+  "entry_state": "작전 위기",
+  "exit_state": "모연에게 이별 선물 후 출발",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "시진이 새 고위험 임무를 수락"
+  },
+  "central_conflict_axis": "생존 욕구 vs 임무 의무",
+  "episode_function": "생환 후 재이별: 감정 성숙과 비극 반복",
+  "core_dist": {
+    "PERIL": 10,
+    "ORACLE": 1,
+    "ESTABLISH": 3,
+    "RELIEF": 8,
+    "BOND": 1,
+    "ROMANCE": 4,
+    "RESCUE": 2,
+    "CONFLICT": 4,
+    "HOOK": 3,
+    "DESIRE": 6,
+    "REVELATION": 3,
+    "REVERSAL": 2,
+    "PUNISH": 1
+  },
+  "by": "sonnet_reading"
+}

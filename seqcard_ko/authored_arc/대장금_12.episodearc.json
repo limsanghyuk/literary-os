@@ -1,0 +1,65 @@
+{
+  "work_id": "대장금_12",
+  "episode_no": 12,
+  "scene_count": 68,
+  "sequence_count": 10,
+  "dramatic_question": "장금은 어머니의 서찰을 찾고 진짜 정체를 지킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "의금부 사건 이후 장금이 어머니의 비밀 서찰을 찾기 시작한다.",
+  "exit_state": "최씨가가 장금의 정체(박명이 딸)를 의심하며 새 위협이 시작된다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "최씨가가 장금의 정체를 의심한다"
+  },
+  "central_conflict_axis": "장금의 정체 은닉 vs 최씨가의 의심과 추적",
+  "episode_function": "12화는 어머니 서찰 탐색과 정체 위기로 장금의 내밀한 동기를 심화한다.",
+  "core_dist": {
+    "HOOK": 2,
+    "ESTABLISH": 16,
+    "REVELATION": 4,
+    "RELIEF": 5,
+    "REUNION": 1,
+    "BOND": 8,
+    "CONFLICT": 22,
+    "DESIRE": 30,
+    "PERIL": 11,
+    "PUNISH": 2,
+    "LOSS": 19,
+    "REVERSAL": 2,
+    "ORACLE": 1
+  },
+  "by": "sonnet_reading"
+}

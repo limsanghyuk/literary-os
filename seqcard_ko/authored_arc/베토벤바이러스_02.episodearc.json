@@ -1,0 +1,65 @@
+{
+  "work_id": "베토벤바이러스_02",
+  "episode_no": 2,
+  "scene_count": 55,
+  "sequence_count": 8,
+  "dramatic_question": "강마에의 냉혹한 훈련을 견딘 단원들이 처음으로 하나가 될 수 있을 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "회차의 출발점—강마에의 독설 등장에서 상황과 긴장을 확립한다"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 구체화되고 인물들의 선택이 이야기를 추동한다"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "긴장이 정점을 향해 치닫고 위기가 가시화된다"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "명환 때문임을 밝힘로 마무리되며 다음 회를 향한 전환점을 남긴다"
+    }
+  ],
+  "entry_state": "강마에의 첫 연습 이후 단원들의 좌절과 갈등이 고조된다.",
+  "exit_state": "음악을 통한 첫 연대의 가능성이 조심스럽게 싹튼다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "개인적 위기 속에서 음악이 임시 접착제 역할을 한다"
+  },
+  "central_conflict_axis": "포기와 지속 사이에서 흔들리는 단원들 vs 타협 없는 강마에",
+  "episode_function": "2화는 강마에와 단원들의 긴장이 구체적 충돌로 이어지며, 두림을 중심으로 음악적 성장의 첫 발판이 놓이는 회차다.",
+  "core_dist": {
+    "INTRO": 6,
+    "CONFLICT": 31,
+    "ESTABLISH": 5,
+    "DESIRE": 2,
+    "REVELATION": 12,
+    "BOND": 3,
+    "RELIEF": 2,
+    "LOSS": 6,
+    "HOOK": 2,
+    "PERIL": 6,
+    "RESCUE": 1,
+    "REVERSAL": 2,
+    "REUNION": 1
+  },
+  "by": "sonnet_reading"
+}

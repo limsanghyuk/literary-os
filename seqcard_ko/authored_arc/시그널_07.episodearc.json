@@ -1,0 +1,56 @@
+{
+  "scene_count": 58,
+  "dramatic_question": "신다혜는 정말 살아있는가, 그리고 안치수와 이재한 실종의 연결고리는 무엇인가?",
+  "core_dist": {
+    "CONFLICT": 2,
+    "REVELATION": 2,
+    "BOND": 1,
+    "ORACLE": 1
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "설정 단계"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "전개 단계"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "심화 단계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        9
+      ],
+      "beat": "회말전환 단계"
+    }
+  ],
+  "work_id": "시그널",
+  "by": "sonnet_reading",
+  "sequence_count": 9,
+  "turning_point": {
+    "seq_index": 6,
+    "event": "회말 위기 전환"
+  },
+  "episode_no": 7,
+  "entry_state": "재한이 과거에서 극한의 위기에 처하고, 해영은 현재에서 재한을 구할 방법을 찾는다.",
+  "exit_state": "위기가 일단 봉합되지만 새로운 위협이 등장하며 다음 국면으로 전환된다.",
+  "central_conflict_axis": "과거 재한의 생존 위협 대 현재 해영의 정보 제공 역할의 한계",
+  "episode_function": "과거-현재 교신의 정보 비대칭성으로 인한 비극적 결과를 전면에 내세우며 시리즈의 감정적 무게를 높인다."
+}

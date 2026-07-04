@@ -1,0 +1,66 @@
+{
+  "work_id": "스카이캐슬_05",
+  "episode_no": 5,
+  "scene_count": 79,
+  "sequence_count": 12,
+  "dramatic_question": "코디 시스템의 희생자는 예서 혼자인가, 그 실체를 이수임은 어디까지 파헤칠 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "한서진·영재 봉합·예서 훈련 최고조"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "이수임 외부 조사·강은혜 우회·노승혜 첫 저항·박수창 위협 폭발"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        11
+      ],
+      "beat": "김주영 통제 강화·이수임 연대·협약 균열·예서 붕괴 조짐"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        12,
+        12
+      ],
+      "beat": "이수임 결정적 정보—탐정 행동 정점"
+    }
+  ],
+  "entry_state": "영재와 한서진의 불안한 협약이 지속되고 예서 훈련이 심화된다.",
+  "exit_state": "이수임이 결정적 정보를 획득하고 예서의 붕괴가 가시화되며 이중 위기가 닫힌다.",
+  "turning_point": {
+    "seq_index": 12,
+    "desc": "이수임 결정적 정보 획득—코디 실체 폭로 직전"
+  },
+  "central_conflict_axis": "욕망 시스템(한서진·코디) 대 자녀의 자아 파괴와 진실 추적(예서·이수임)",
+  "episode_function": "5화는 노승혜의 첫 공개 저항, 예서의 심리 붕괴 조짐, 이수임의 결정적 정보 획득을 병렬로 진행하며 욕망 시스템의 균열이 임박했음을 보인다.",
+  "core_dist": {
+    "RELIEF": 3,
+    "BOND": 6,
+    "HOOK": 12,
+    "PERIL": 4,
+    "ESTABLISH": 4,
+    "ORACLE": 4,
+    "REVELATION": 14,
+    "CONFLICT": 16,
+    "RESCUE": 1,
+    "PUNISH": 6,
+    "REVERSAL": 3,
+    "DESIRE": 2,
+    "LOSS": 2,
+    "ROMANCE": 2
+  },
+  "by": "sonnet_reading"
+}

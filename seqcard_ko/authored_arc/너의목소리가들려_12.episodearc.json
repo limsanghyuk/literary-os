@@ -1,0 +1,59 @@
+{
+  "work_id": "너의목소리가들려_12",
+  "episode_no": 12,
+  "scene_count": 54,
+  "sequence_count": 6,
+  "dramatic_question": "상실의 연속과 진실 재폭로 속에서 두 사람의 관계는 어떻게 버티는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "로맨스 절정과 능력 위기",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "B",
+      "label": "상실 연속과 재폭로",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": "C",
+      "label": "핵심 폭로와 재편",
+      "seq_span": [
+        6,
+        6
+      ]
+    }
+  ],
+  "entry_state": "로맨스 절정과 새 사건 등장",
+  "exit_state": "핵심 진실 최종 폭로와 관계 재편",
+  "turning_point": {
+    "seq_index": 4,
+    "description": "상실 연속과 재폭로"
+  },
+  "central_conflict_axis": "연속 상실 vs 관계의 지속—진실 폭로가 관계를 시험하는 방식",
+  "episode_function": "상실 연속과 핵심 진실 폭로—중반부 전환점",
+  "core_dist": {
+    "REVELATION": 0.19,
+    "LOSS": 0.13,
+    "CONFLICT": 0.11,
+    "ORACLE": 0.11,
+    "DESIRE": 0.07,
+    "PERIL": 0.07,
+    "ESTABLISH": 0.07,
+    "BOND": 0.05,
+    "HOOK": 0.05,
+    "ROMANCE": 0.04,
+    "RELIEF": 0.04,
+    "REVERSAL": 0.02,
+    "REUNION": 0.02,
+    "RESCUE": 0.01,
+    "INTRO": 0.01
+  },
+  "by": "cowork_opus_reading"
+}

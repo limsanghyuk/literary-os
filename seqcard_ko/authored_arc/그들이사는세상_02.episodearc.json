@@ -1,0 +1,51 @@
+{
+  "work_id": "그들이사는세상_02",
+  "episode_no": 2,
+  "scene_count": 42,
+  "sequence_count": 7,
+  "dramatic_question": "첫 촬영 위기에서 준호가 팀을 이끌고, 지오는 어떻게 성장하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "첫 촬영·배우 대립"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "지오 신뢰 획득·준호 인지·표절 갈등"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        6
+      ],
+      "beat": "신인 채택 결단"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "지오 감정 심화"
+    }
+  ],
+  "entry_state": "드라마 첫 촬영일",
+  "exit_state": "배우 대립 해결, 신인 작가 채택, 지오 감정 심화",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "준호의 신인 채택 결단 — 타협 없는 연출 방식 실증"
+  },
+  "central_conflict_axis": "배우·소속사 압력 vs 준호의 연출 원칙, 지오 감정 심화",
+  "episode_function": "첫 위기 해결·준호 인물 확립·지오 감정 성장 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

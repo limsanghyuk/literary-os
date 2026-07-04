@@ -1,0 +1,66 @@
+{
+  "work_id": "대장금_17",
+  "episode_no": 17,
+  "scene_count": 62,
+  "sequence_count": 9,
+  "dramatic_question": "사철 생선회 경합에서 한상궁은 발효 기술로 최씨가를 이길 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "사철 생선회 경합이 시작되고 한상궁의 발효 생선 전략이 준비된다.",
+  "exit_state": "정상궁이 돌림병 핑계로 쫓겨나고 경합 당일 아무도 오지 않는다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "최씨가가 괴질을 이용해 정상궁을 강제 출궁시킨다(씬56~62)"
+  },
+  "central_conflict_axis": "발효 기술의 정당한 경합 vs 최씨가의 괴질 공작",
+  "episode_function": "17화는 발효 음식의 과학적 가치를 탐구하면서 최씨가의 비열한 음모를 부각한다.",
+  "core_dist": {
+    "ROMANCE": 6,
+    "REVELATION": 5,
+    "LOSS": 11,
+    "CONFLICT": 26,
+    "DESIRE": 9,
+    "REVERSAL": 4,
+    "BOND": 13,
+    "ESTABLISH": 7,
+    "HOOK": 13,
+    "RELIEF": 8,
+    "PERIL": 15,
+    "REUNION": 1,
+    "ORACLE": 1,
+    "PUNISH": 2
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_16",
+  "episode_no": 16,
+  "scene_count": 66,
+  "sequence_count": 7,
+  "dramatic_question": "전봉준은 이현이 도채비임을 확인하고 어떻게 대처할 것인가, 2차 봉기의 전선이 어디에 그어질 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "버들 구출·함정 발동"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "탈출·이강-자인 이별·이현 절연"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "도채비 폭로·이현 상투 자름"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "도채비=이현 확정"
+    }
+  ],
+  "entry_state": "청일전쟁 발발 후 이강이 버들을 구출하고 이강-자인이 마지막 이별을 나눈다.",
+  "exit_state": "전봉준이 이현이 도채비임을 확정하며 2차 봉기와 형제 결전의 전선이 그어진다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "전봉준이 도채비=이현임을 확정하는 장면이 2차 봉기의 내부 전선과 형제 갈등의 최종 대결을 선언한다"
+  },
+  "central_conflict_axis": "도채비 이현의 배신(전봉준·이강) 대 일본군 외압, 이강-자인의 이별 vs 재봉기",
+  "episode_function": "버들 구출과 이강-자인 이별을 통해 혁명 2막의 개인적 비극을 구현하고, 도채비=이현 확정으로 결전의 전선을 선언한다.",
+  "core_dist": {
+    "CONFLICT": 13,
+    "PERIL": 9,
+    "REVELATION": 16,
+    "LOSS": 10,
+    "BOND": 5,
+    "REVERSAL": 7,
+    "RELIEF": 3,
+    "HOOK": 5,
+    "RESCUE": 4,
+    "REUNION": 3,
+    "ESTABLISH": 8,
+    "DESIRE": 2,
+    "PUNISH": 3,
+    "ROMANCE": 2,
+    "ORACLE": 3,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

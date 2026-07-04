@@ -1,0 +1,67 @@
+{
+  "work_id": "대장금_34",
+  "episode_no": 34,
+  "scene_count": 65,
+  "sequence_count": 10,
+  "dramatic_question": "중종의 건강 이상을 장금이 처음으로 진단하는 위기—어떻게 해결하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "중종에게 처음으로 건강 이상 징후가 나타난다.",
+  "exit_state": "장금의 진단이 맞고 중종의 신뢰를 얻는 첫 단추가 꿰어진다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "장금의 진단이 적중하여 중종의 신뢰를 얻는다"
+  },
+  "central_conflict_axis": "중종 건강 진단(장금의 의학) vs 기존 의관의 오진",
+  "episode_function": "34화는 중종 건강 진단 성공으로 장금과 중종의 신뢰 관계가 시작된다.",
+  "core_dist": {
+    "REVERSAL": 5,
+    "ORACLE": 4,
+    "BOND": 7,
+    "DESIRE": 17,
+    "RELIEF": 9,
+    "ESTABLISH": 5,
+    "CONFLICT": 13,
+    "PERIL": 6,
+    "RESCUE": 3,
+    "HOOK": 5,
+    "REUNION": 2,
+    "LOSS": 8,
+    "REVELATION": 2,
+    "PUNISH": 3,
+    "ROMANCE": 3
+  },
+  "by": "sonnet_reading"
+}

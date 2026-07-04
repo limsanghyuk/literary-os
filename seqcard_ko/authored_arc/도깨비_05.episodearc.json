@@ -1,0 +1,63 @@
+{
+ "episode_no": 5,
+ "scene_count": 55,
+ "sequence_count": 8,
+ "dramatic_question": "은탁이 도깨비 집에 입주하며 네 사람의 공동체가 완성될 수 있는가?",
+ "act_structure": [
+  {
+   "act": "설정",
+   "seq_span": [
+    1,
+    2
+   ],
+   "beat": "이별 결심·귀신 배웅·저승-써니 재연결—관계 재편 시작"
+  },
+  {
+   "act": "전개",
+   "seq_span": [
+    3,
+    5
+   ],
+   "beat": "은탁 공식 입주·도깨비 유언장 발견·화상통화 일상·번호 교환"
+  },
+  {
+   "act": "심화",
+   "seq_span": [
+    6,
+    7
+   ],
+   "beat": "은탁 방 감동·덕화 이름 공개·남친 실언으로 감정 폭발"
+  },
+  {
+   "act": "회말전환",
+   "seq_span": [
+    8,
+    8
+   ],
+   "beat": "캐나다 레스토랑 29세 은탁 비전—운명의 무게 예고"
+  }
+ ],
+ "entry_state": "도깨비가 이별을 결심한 상태에서 은탁의 입주로 공동체가 출발한다.",
+ "exit_state": "남친 실언과 29세 비전으로 두 사람의 감정이 공개되고 운명의 무게가 예고된다.",
+ "turning_point": {
+  "seq_index": 7,
+  "desc": "'남친 실언'—도깨비-은탁의 상호 감정이 처음으로 명시적으로 폭발"
+ },
+ "central_conflict_axis": "일상 공동체의 따뜻함 대 소멸 운명의 무거움",
+ "episode_function": "5화는 4인 공동체(도깨비·저승·은탁·덕화)의 정착과 함께 두 쌍의 로맨스가 나란히 전진하며, '남친 실언'으로 도깨비-은탁의 감정이 처음으로 공개적으로 폭발한다.",
+ "core_dist": {
+  "ROMANCE": 8,
+  "BOND": 7,
+  "ESTABLISH": 7,
+  "DESIRE": 6,
+  "CONFLICT": 5,
+  "REVELATION": 4,
+  "ORACLE": 3,
+  "LOSS": 3,
+  "PERIL": 2,
+  "RELIEF": 2,
+  "REUNION": 2
+ },
+ "work_id": "도깨비_05",
+ "by": "sonnet_reading"
+}

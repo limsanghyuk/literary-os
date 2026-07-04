@@ -1,0 +1,63 @@
+{
+  "work_id": "스카이캐슬_17",
+  "episode_no": 17,
+  "scene_count": 56,
+  "sequence_count": 9,
+  "dramatic_question": "진실이 전면 공개된 이후 각 인물은 어떤 책임과 재건을 선택하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "혜나 공식 폭로·한서진 분노·예빈 예서 갈등"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "beat": "이수임 반격·한서진 각성·차민혁 붕괴"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "강준상 자백·예서 고백 완결"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        9
+      ],
+      "beat": "한서진 자백 예고—재건 카운트다운"
+    }
+  ],
+  "entry_state": "혜나의 친자 관계가 공식 폭로되며 모든 진실이 공개된다.",
+  "exit_state": "강준상과 예서의 자백이 완성되고 한서진이 재건을 선언하며 화를 닫는다.",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "한서진 자백 선언—욕망에서 재건으로의 전환 카운트다운"
+  },
+  "central_conflict_axis": "욕망과 위선(한서진) 대 책임과 재건(강준상·예서·이수임)",
+  "episode_function": "17화는 진실 전면 공개, 강준상과 예서의 자백 완성, 한서진의 각성 심화를 통해 욕망 시스템에서 재건으로의 전환을 실행한다.",
+  "core_dist": {
+    "REVELATION": 9,
+    "CONFLICT": 13,
+    "BOND": 4,
+    "LOSS": 5,
+    "HOOK": 11,
+    "DESIRE": 2,
+    "PERIL": 7,
+    "RELIEF": 1,
+    "REVERSAL": 2,
+    "PUNISH": 1,
+    "ESTABLISH": 1
+  },
+  "by": "sonnet_reading"
+}

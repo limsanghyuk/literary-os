@@ -1,0 +1,49 @@
+{
+  "work_id": "마왕_14",
+  "episode_no": 14,
+  "scene_count": 71,
+  "sequence_count": 11,
+  "dramatic_question": "영수증 단서가 배후 조종자를 특정하는 마지막 열쇠가 될 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "감정선·영수증 단서",
+      "seq_span": [
+        1,
+        5
+      ]
+    },
+    {
+      "act": "B",
+      "label": "감시·잔상 보강·가속",
+      "seq_span": [
+        6,
+        9
+      ]
+    },
+    {
+      "act": "C",
+      "label": "배후 조종자 특정",
+      "seq_span": [
+        10,
+        11
+      ]
+    }
+  ],
+  "entry_state": "영철이 협력 결심 후 수사가 배후 구조 완성에 근접한 상태",
+  "exit_state": "오수가 준표 집 서랍에서 편지 봉투 다발을 발견하며 배후 조종자를 특정한 상태",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "영철 추가 정보 수령—배후 조종자 특정 완성 직전"
+  },
+  "central_conflict_axis": "오수(배후 특정)↔배후 조종자(은폐)",
+  "episode_function": "영수증 단서·배후 조종자 특정",
+  "core_dist": {
+    "REVELATION": 4,
+    "DESIRE": 3,
+    "ESTABLISH": 2,
+    "BOND": 1,
+    "CONFLICT": 1
+  },
+  "by": "sonnet_reading"
+}

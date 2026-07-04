@@ -1,0 +1,60 @@
+{
+  "work_id": "싸인_19",
+  "episode_no": 19,
+  "scene_count": 67,
+  "sequence_count": 11,
+  "dramatic_question": "지훈이 국과수에서 최후의 진실을 발표하고 배후 권력을 법의 심판대에 세울 수 있는가?",
+  "entry_state": "지훈이 최종 증거를 들고 공식 발표를 준비하는 상황이다.",
+  "exit_state": "지훈이 배후 세력에 대한 공식 발표를 마치고 마지막 대결의 결과를 기다린다.",
+  "turning_point": {
+    "seq_index": 8,
+    "description": "지훈이 배후 세력의 전말을 공식 폭로하는 클라이맥스 선언"
+  },
+  "central_conflict_axis": "지훈·다경의 최종 공식 폭로 대 배후 권력의 마지막 무력화 시도",
+  "episode_function": "19화는 오랜 수사의 결실로 배후 세력이 법적 위기에 처하는 국면을 그리며 최종회를 향한 기대감을 최고조로 끌어올린다.",
+  "core_dist": {
+    "ESTABLISH": 16.4,
+    "ORACLE": 9.0,
+    "REVELATION": 9.0,
+    "PERIL": 9.0,
+    "ROMANCE": 9.0,
+    "BOND": 7.5,
+    "CONFLICT": 7.5,
+    "LOSS": 6.0
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "function": "인물·상황·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "function": "갈등 심화와 단서 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        7,
+        9
+      ],
+      "function": "위기 폭발과 결정적 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        10,
+        11
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

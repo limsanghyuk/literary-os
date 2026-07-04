@@ -1,0 +1,63 @@
+{
+  "work_id": "커피프린스_09",
+  "episode_no": 9,
+  "scene_count": 54,
+  "sequence_count": 8,
+  "dramatic_question": "의형제 관계를 맺은 한결과 은찬이 가장 가까워지는 순간 한결은 왜 해고 통보를 내리는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "의형제 아침·유주 균열·서브플롯 배치"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "외부 감지·연주회 준비·친부 귀국"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "위로 구하기·야구장-바닷가 데이트"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "키스·해고 통보 반전"
+    }
+  ],
+  "entry_state": "의형제 선언 후 한결과 은찬이 함께 아침을 맞는 상태",
+  "exit_state": "한결이 잠든 은찬에게 충동적으로 키스한 뒤 관계를 끊으려 해고 통보를 내렸지만 은찬이 장난으로 받아들인다",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "키스 후 해고 통보: 감당 불가의 감정이 관계 절단으로 폭발"
+  },
+  "central_conflict_axis": "한결 감정 초과(키스·해고 통보) vs 은찬 감정 지속(오해·장난)",
+  "episode_function": "9회는 의형제 관계 속 야구장-바닷가 데이트로 감정이 극에 달하다 한결이 키스 후 해고 통보를 내리는 반전으로 두 사람 관계가 새 위기로 진입하는 회차다",
+  "core_dist": {
+    "BOND": 9,
+    "ROMANCE": 8,
+    "CONFLICT": 7,
+    "LOSS": 7,
+    "DESIRE": 4,
+    "REVELATION": 6,
+    "RELIEF": 5,
+    "HOOK": 3,
+    "REVERSAL": 2,
+    "PERIL": 2,
+    "INTRO": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,63 @@
+{
+  "work_id": "커피프린스_08",
+  "episode_no": 8,
+  "scene_count": 53,
+  "sequence_count": 8,
+  "dramatic_question": "은찬의 고백과 한성의 기습 키스 사이에서 한결은 자신의 감정을 어떻게 처리할 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "뽀뽀 여진·할머니 병문안 공동체"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "질투 다툼·은찬 직접 고백·한성 키스"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "부캐 갈등·가족 서사"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "비밀 고백·의형제 결성"
+    }
+  ],
+  "entry_state": "할머니 위기 이후 한결이 은찬과 함께 병실을 나온 상태",
+  "exit_state": "한결이 은찬에게 출생 비밀을 처음으로 고백하며 의형제를 제안하고 관계가 한 단계 깊어진다",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "한성 기습 키스·유주 목격: 삼각관계 최고조"
+  },
+  "central_conflict_axis": "한결 감정 혼란(직접 고백 수신) vs 한성 감정 갈등(은찬 설레기 시작)",
+  "episode_function": "8회는 은찬의 직접 고백과 한성의 기습 키스로 삼각관계가 폭발하고, 한결이 의형제 제안으로 도피하면서 관계가 새로운 국면으로 전환되는 회차다",
+  "core_dist": {
+    "BOND": 10,
+    "DESIRE": 9,
+    "ROMANCE": 8,
+    "CONFLICT": 7,
+    "RELIEF": 7,
+    "REVELATION": 7,
+    "LOSS": 5,
+    "PERIL": 2,
+    "HOOK": 2,
+    "PUNISH": 1,
+    "REVERSAL": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,51 @@
+{
+  "work_id": "마왕_06",
+  "episode_no": 6,
+  "scene_count": 83,
+  "sequence_count": 13,
+  "dramatic_question": "오수가 태훈 사건과 현재 수사의 연결 고리를 받아들일 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "여제 카드·과거 추적",
+      "seq_span": [
+        1,
+        5
+      ]
+    },
+    {
+      "act": "B",
+      "label": "영철 위협·팀 재정렬",
+      "seq_span": [
+        6,
+        9
+      ]
+    },
+    {
+      "act": "C",
+      "label": "과거-현재 충돌",
+      "seq_span": [
+        10,
+        13
+      ]
+    }
+  ],
+  "entry_state": "범인이 오수를 개인 타깃화했음을 오수가 인식한 상태",
+  "exit_state": "해인의 태훈 발견 고백으로 오수가 과거와 현재 연결에 공포에 빠진 상태",
+  "turning_point": {
+    "seq_index": 12,
+    "desc": "해인의 태훈 발견 고백—오수가 과거와 현재를 연결해 공포에 빠진다"
+  },
+  "central_conflict_axis": "오수(과거 회피)↔범인(과거 폭로)",
+  "episode_function": "해인 태훈 발견 고백·영철 소라 접근",
+  "core_dist": {
+    "REVELATION": 3,
+    "PERIL": 3,
+    "ORACLE": 2,
+    "HOOK": 2,
+    "BOND": 1,
+    "LOSS": 1,
+    "ESTABLISH": 1
+  },
+  "by": "sonnet_reading"
+}

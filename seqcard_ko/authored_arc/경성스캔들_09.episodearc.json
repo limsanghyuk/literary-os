@@ -1,0 +1,19 @@
+{
+  "work_id": "경성스캔들_09",
+  "episode_no": 9,
+  "scene_count": 73,
+  "sequence_count": 10,
+  "dramatic_question": "완이 여경 포기를 선언하는 사이 송주가 세 번째 암살을 직접 실행하고 인호가 체포되며, 완은 애물단의 실체를 발각할 것인가?",
+  "act_structure": [
+    {"act": 1, "seq_span": [1, 3], "label": "착각 고백 확인과 완의 절규 방황 — 감정 낙하"},
+    {"act": 2, "seq_span": [4, 7], "label": "송주 세 번째 암살과 인호 체포 — 두 위기 교차"},
+    {"act": 3, "seq_span": [8, 10], "label": "인호 취조와 완의 아지트 잠입 발각 — 클리프행어"}
+  ],
+  "entry_state": "8화 여경이 혼절하며 수현을 부른 상황",
+  "exit_state": "완이 애물단 아지트에 잠입해 정체가 발각되고 조직의 비밀과 마주한다",
+  "turning_point": {"seq_index": 5, "label": "송주 세 번째 암살 자원·실행 — 조직 서사 전환", "description": "송주가 세 번째 암살을 직접 자원해 실행하며 애물단 조직이 행동 단계로 전환되고 수현의 수사 압박이 결정적으로 고조된다"},
+  "central_conflict_axis": "완의 여경 포기 선언과 내면 갈등, 송주의 암살 결행과 수현의 수사 압박, 인호 체포로 애물단 위기",
+  "episode_function": "완의 감정 낙하와 여경 재회 회복, 송주 세 번째 암살로 조직 서사 전환, 완의 애물단 아지트 발각으로 모든 서사 교차",
+  "core_dist": {"LOSS": 2, "ROMANCE": 2, "REVELATION": 1, "PERIL": 2, "RESCUE": 1, "CONFLICT": 1, "HOOK": 1},
+  "by": "cowork_opus_reading"
+}

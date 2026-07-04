@@ -1,0 +1,51 @@
+{
+  "work_id": "마왕_19",
+  "episode_no": 19,
+  "scene_count": 73,
+  "sequence_count": 11,
+  "dramatic_question": "손수건 잔상으로 최후 물증을 확보한 오수가 영철을 지킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "혼란·복귀·석진 고집",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "잔상 단서·감정 정점",
+      "seq_span": [
+        5,
+        8
+      ]
+    },
+    {
+      "act": "C",
+      "label": "최후 물증·영철 도주",
+      "seq_span": [
+        9,
+        11
+      ]
+    }
+  ],
+  "entry_state": "희수 체포 후 오수가 내면적으로 무너지려는 상태",
+  "exit_state": "영철이 계단에서 쓰러지고 오수가 맥박을 확인하는 상태",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "손수건 최후 물증 확보—최후 증거로 사건의 법적 마무리 가능"
+  },
+  "central_conflict_axis": "오수(진실 vs 우정)↔영철(도주)",
+  "episode_function": "손수건 잔상 물증·영철 도주 부상",
+  "core_dist": {
+    "LOSS": 3,
+    "REVELATION": 2,
+    "DESIRE": 2,
+    "CONFLICT": 1,
+    "RESCUE": 1,
+    "ORACLE": 1,
+    "ROMANCE": 1
+  },
+  "by": "sonnet_reading"
+}

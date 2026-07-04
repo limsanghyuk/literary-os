@@ -1,0 +1,64 @@
+{
+  "work_id": "커피프린스_16",
+  "episode_no": 16,
+  "scene_count": 54,
+  "sequence_count": 8,
+  "dramatic_question": "이별을 앞둔 한결과 은찬이 유학 갈등을 해소하고 첫 밤에 이를 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "결혼식·결혼 갈등 폭발"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "서브플롯 상실·할머니 유학 제안 반전"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "유학 권유 전환·이별 준비"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "충동적 방문·첫 밤"
+    }
+  ],
+  "entry_state": "할머니 결혼 반대와 이별 카운트다운이 교차하는 상태",
+  "exit_state": "은찬이 충동적으로 달려와 첫 밤을 맞으며 이별 전 가장 가까운 순간을 만든다",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "할머니 유학 제안 반전: 결혼 반대가 꿈 지원으로 전환"
+  },
+  "central_conflict_axis": "결혼 갈등(시기·자립) vs 유학 권유(꿈 지원·이별)",
+  "episode_function": "16회는 결혼 갈등에서 할머니의 유학 제안 반전을 거쳐 한결이 유학을 권유하고 이별 준비 끝에 첫 밤이 이루어지는 감정의 최고점이자 이별의 전야를 그리는 회차다",
+  "core_dist": {
+    "ROMANCE": 12,
+    "CONFLICT": 10,
+    "DESIRE": 9,
+    "BOND": 7,
+    "ORACLE": 3,
+    "LOSS": 4,
+    "PERIL": 3,
+    "RELIEF": 4,
+    "ESTABLISH": 3,
+    "HOOK": 2,
+    "REVERSAL": 2,
+    "REUNION": 1
+  },
+  "by": "sonnet_reading"
+}

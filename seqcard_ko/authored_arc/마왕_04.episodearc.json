@@ -1,0 +1,52 @@
+{
+  "work_id": "마왕_04",
+  "episode_no": 4,
+  "scene_count": 86,
+  "sequence_count": 13,
+  "dramatic_question": "오수의 방어선이 무너지기 시작할 때 대식을 지킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "합류 이후 팀 재편",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "언론·정치 압박 고조",
+      "seq_span": [
+        5,
+        9
+      ]
+    },
+    {
+      "act": "C",
+      "label": "대식 위기와 팀 붕괴",
+      "seq_span": [
+        10,
+        13
+      ]
+    }
+  ],
+  "entry_state": "승하 합류와 순기 석방으로 팀 내 균열이 시작된 상태",
+  "exit_state": "대식이 심장 발작으로 쓰러지며 인물망 첫 피해가 발생한 상태",
+  "turning_point": {
+    "seq_index": 12,
+    "desc": "준표 기사 발행—오수 직위 위협이 현실화된다"
+  },
+  "central_conflict_axis": "오수(방어)↔범인의 예고 살인 실행",
+  "episode_function": "대식 쓰러짐·준표 기사·팀 붕괴 위기",
+  "core_dist": {
+    "CONFLICT": 4,
+    "PERIL": 3,
+    "REVERSAL": 1,
+    "DESIRE": 1,
+    "LOSS": 1,
+    "ORACLE": 1,
+    "INTRO": 1,
+    "HOOK": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,50 @@
+{
+  "work_id": "마왕_15",
+  "episode_no": 15,
+  "scene_count": 71,
+  "sequence_count": 11,
+  "dramatic_question": "오수가 승하=정태성이자 배후임을 인식하면 복수를 막을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "피격 후 수사 복귀",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "배후 특정·팀 작전 수립",
+      "seq_span": [
+        5,
+        8
+      ]
+    },
+    {
+      "act": "C",
+      "label": "승하 실행·오수 최후 인식",
+      "seq_span": [
+        9,
+        11
+      ]
+    }
+  ],
+  "entry_state": "오수가 편지 봉투 다발로 배후 조종자 특정에 근접한 상태",
+  "exit_state": "오수가 USB 연결고리에서 '오승하…정태성'에서 굳어지며 승하=배후를 인식한 상태",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "승하 복수 실행 돌입—오수 인식과 승하 실행이 동시 전개"
+  },
+  "central_conflict_axis": "오수(최후 인식)↔승하(복수 실행)",
+  "episode_function": "오수 배후 인식 완성·승하 복수 실행 돌입",
+  "core_dist": {
+    "DESIRE": 3,
+    "REVELATION": 3,
+    "PERIL": 2,
+    "ESTABLISH": 1,
+    "BOND": 1,
+    "RESCUE": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,64 @@
+{
+  "work_id": "스토브리그_08",
+  "episode_no": 8,
+  "scene_count": 77,
+  "sequence_count": 12,
+  "dramatic_question": "고세혁·경민의 이중 공격 속에서 승수는 연봉 협상을 마무리하고 부정 취업 의혹을 막아낼 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "협상 결렬 후유증·고세혁 선수단 침투 시작"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "beat": "승수-세영-재희 역할 분담으로 고세혁 방해 돌파"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "서영주·장진우 결전·기자 미담 기사화·장진우 복귀 결심"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        12
+      ],
+      "beat": "편집 조작 악플 사태→부정 취업 기사→경민 해임 통보"
+    }
+  ],
+  "entry_state": "연봉 협상 최대 위기, 고세혁-경민 연합의 내부 침투가 본격화된다.",
+  "exit_state": "협상은 마무리되지만 경민이 부정 취업 의혹을 무기로 승수를 해고한다.",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "장진우 복귀 결심—인간적 감동이 협상 국면을 마무리"
+  },
+  "central_conflict_axis": "협상 완수(승수·세영·재희) 대 고세혁·경민 이중 방해",
+  "episode_function": "8화는 연봉 협상의 대단원과 동시에 경민의 해고 통보라는 최대 위기를 통해 전반부를 마무리한다.",
+  "core_dist": {
+    "CONFLICT": 42,
+    "HOOK": 18,
+    "ESTABLISH": 14,
+    "DESIRE": 14,
+    "RELIEF": 13,
+    "ORACLE": 11,
+    "REVELATION": 9,
+    "PERIL": 9,
+    "BOND": 6,
+    "PUNISH": 6,
+    "LOSS": 6,
+    "REVERSAL": 6
+  },
+  "by": "sonnet_reading"
+}

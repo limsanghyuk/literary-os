@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_04",
+  "episode_no": 4,
+  "scene_count": 79,
+  "sequence_count": 8,
+  "dramatic_question": "이강은 동학군으로서의 선택을 완성할 수 있는가, 이현은 도채비로서의 냉혹한 길을 걸을 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "결별 선언·홍가 이방·유월 위기"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "이강 도주·동학군 구출·사상 대결"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "재회·이강 탈주·무장 결심"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "이현의 총 조준·도채비 탄생 예고"
+    }
+  ],
+  "entry_state": "백가-이강 결별·이현 귀가·자인의 무장행으로 인물들이 각자의 길을 향해 재배치된다.",
+  "exit_state": "이강이 동학군 합류를 위해 홀연히 떠나고, 이현이 총을 준비하며 도채비로서의 운명을 예고한다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "석주의 이현 징집과 이현의 총 준비가 형제의 서로 다른 선택을 극적으로 대비한다"
+  },
+  "central_conflict_axis": "동학 혁명(이강·전봉준) 대 신분 질서 수호(백가·석주), 이강의 각성 vs 이현의 냉혹한 현실주의",
+  "episode_function": "이강의 동학군 합류 결단과 이현의 도채비 탄생을 예고함으로써 형제 갈등의 두 축을 확립한다.",
+  "core_dist": {
+    "CONFLICT": 14,
+    "PERIL": 15,
+    "REVELATION": 9,
+    "LOSS": 10,
+    "BOND": 8,
+    "REVERSAL": 7,
+    "RELIEF": 4,
+    "HOOK": 7,
+    "RESCUE": 3,
+    "REUNION": 5,
+    "ESTABLISH": 2,
+    "DESIRE": 3,
+    "PUNISH": 3,
+    "ROMANCE": 0,
+    "ORACLE": 0,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

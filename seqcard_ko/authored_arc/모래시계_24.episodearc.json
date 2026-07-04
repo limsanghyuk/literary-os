@@ -1,0 +1,60 @@
+{
+  "work_id": "모래시계_24",
+  "episode_no": 24,
+  "scene_count": 61,
+  "sequence_count": 7,
+  "dramatic_question": "모래시계의 마지막 모래알이 떨어질 때 태수의 이야기는 어떻게 완성되는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "최종 대결과 결단",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "B",
+      "label": "화해·정의·처벌",
+      "seq_span": [
+        4,
+        6
+      ]
+    },
+    {
+      "act": "C",
+      "label": "결말—완결",
+      "seq_span": [
+        7,
+        7
+      ]
+    }
+  ],
+  "entry_state": "최종 대결 개막",
+  "exit_state": "불가피하고 완전한 마무리",
+  "turning_point": {
+    "seq_index": 4,
+    "description": "화해·정의·처벌"
+  },
+  "central_conflict_axis": "최종 정의 vs 불가역적 결말—모든 것이 끝나는 순간",
+  "episode_function": "피날레—최종 대결, 정의 실현, 완전한 마무리",
+  "core_dist": {
+    "REVELATION": 0.16,
+    "LOSS": 0.13,
+    "PERIL": 0.1,
+    "ORACLE": 0.1,
+    "CONFLICT": 0.08,
+    "PUNISH": 0.08,
+    "ESTABLISH": 0.08,
+    "RELIEF": 0.07,
+    "BOND": 0.05,
+    "REVERSAL": 0.05,
+    "DESIRE": 0.03,
+    "REUNION": 0.02,
+    "RESCUE": 0.02,
+    "HOOK": 0.01,
+    "ROMANCE": 0.01,
+    "INTRO": 0.01
+  },
+  "by": "cowork_opus_reading"
+}

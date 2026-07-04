@@ -1,0 +1,60 @@
+{
+  "work_id": "카인과아벨_06",
+  "episode_no": 6,
+  "scene_count": 48,
+  "sequence_count": 8,
+  "dramatic_question": "선우의 병원 장악 시도 속에서 초인은 의료인으로서의 권위를 지킬 수 있는가?",
+  "entry_state": "선우가 병원 이사회 등을 통해 초인을 압박하기 시작한다.",
+  "exit_state": "초인이 병원 내 아군을 확보하며 선우에 맞설 연대를 형성한다.",
+  "turning_point": {
+    "seq_index": 6,
+    "description": "병원 권력 구조에서 선우와 초인의 세력이 처음 정면 충돌하는 장면"
+  },
+  "central_conflict_axis": "초인의 병원 내 의료 권위 유지 대 선우의 조직적 병원 장악 공작",
+  "episode_function": "6화는 선우의 병원 내 영향력 확장을 통해 두 형제의 갈등이 의료 권력 쟁탈로 전환되는 국면을 그린다.",
+  "core_dist": {
+    "LOSS": 20.8,
+    "ESTABLISH": 14.6,
+    "REVELATION": 12.5,
+    "PUNISH": 10.4,
+    "BOND": 8.3,
+    "DESIRE": 8.3,
+    "CONFLICT": 6.2,
+    "PERIL": 6.2
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "function": "인물·갈등 도입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "function": "갈등 심화와 추적"
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        5,
+        6
+      ],
+      "function": "위기 폭발과 반전"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        7,
+        8
+      ],
+      "function": "수습 또는 클리프행어"
+    }
+  ],
+  "by": "sonnet_reading"
+}

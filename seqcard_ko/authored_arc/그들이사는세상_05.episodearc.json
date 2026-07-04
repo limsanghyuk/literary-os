@@ -1,0 +1,43 @@
+{
+  "work_id": "그들이사는세상_05",
+  "episode_no": 5,
+  "scene_count": 30,
+  "sequence_count": 5,
+  "dramatic_question": "시청률 위기에서 준호가 연출 신념을 지키고 지오와의 감정이 깊어지는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "첫 방송 시청률 실망·국장 개입"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "지오 위로·준호 신념 회복·감정 인식"
+    },
+    {
+      "act": "결말",
+      "seq_span": [
+        5,
+        5
+      ],
+      "beat": "지오 능동 기여·공동 위기 극복 시도"
+    }
+  ],
+  "entry_state": "드라마 첫 방영, 시청률 대기",
+  "exit_state": "시청률 위기, 지오 위로로 준호 회복, 지오 능동 기여 시도",
+  "turning_point": {
+    "seq_index": 3,
+    "desc": "지오의 위로가 준호에게 특별하게 작용 — 감정 심화 전환점"
+  },
+  "central_conflict_axis": "시청률 위기 vs 연출 신념, 두 사람 감정 심화",
+  "episode_function": "시청률 위기·감정 심화 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

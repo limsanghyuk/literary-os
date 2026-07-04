@@ -1,0 +1,64 @@
+{
+ "episode_no": 10,
+ "scene_count": 49,
+ "sequence_count": 7,
+ "dramatic_question": "저승이 왕여였다는 복선과 전생 비극이 현재 인물들의 관계에 어떤 파장을 일으키는가?",
+ "act_structure": [
+  {
+   "act": "설정",
+   "seq_span": [
+    1,
+    2
+   ],
+   "beat": "전생 충격 내면화·4인 공식 그룹씬·과거 회상 전면 공개"
+  },
+  {
+   "act": "전개",
+   "seq_span": [
+    3,
+    4
+   ],
+   "beat": "과거 비극 완결·은탁 과거 매듭·새해 두 쌍 로맨스 절정"
+  },
+  {
+   "act": "심화",
+   "seq_span": [
+    5,
+    6
+   ],
+   "beat": "저승-써니 이별 선언과 재회 복잡성"
+  },
+  {
+   "act": "회말전환",
+   "seq_span": [
+    7,
+    7
+   ],
+   "beat": "유회장 죽음 예고—또 다른 상실 예비"
+  }
+ ],
+ "entry_state": "써니의 전생 각성 충격이 채 가시지 않은 상태에서 4인이 공식 그룹씬을 맞이한다.",
+ "exit_state": "저승-써니 이별과 유회장 죽음 예고로 이중 상실이 예비된다.",
+ "turning_point": {
+  "seq_index": 6,
+  "desc": "저승-써니 이별 선언—행복의 정점에서 첫 상실 신호"
+ },
+ "central_conflict_axis": "현재의 달콤함 대 과거 비극이 드리우는 이별의 그림자",
+ "episode_function": "10화는 과거 회상을 통해 왕여-김선-박중헌 비극을 완전히 드러내고, 새해 두 쌍의 로맨스 절정 직후 저승-써니 이별로 반전하며 유회장 죽음으로 다음 위기를 예고한다.",
+ "core_dist": {
+  "ROMANCE": 8,
+  "REVELATION": 7,
+  "LOSS": 7,
+  "DESIRE": 6,
+  "ORACLE": 5,
+  "BOND": 5,
+  "ESTABLISH": 5,
+  "CONFLICT": 4,
+  "RELIEF": 4,
+  "HOOK": 2,
+  "REVERSAL": 2,
+  "REUNION": 2
+ },
+ "work_id": "도깨비_10",
+ "by": "sonnet_reading"
+}

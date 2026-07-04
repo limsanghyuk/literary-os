@@ -1,0 +1,51 @@
+{
+  "work_id": "그들이사는세상_01",
+  "episode_no": 1,
+  "scene_count": 50,
+  "sequence_count": 8,
+  "dramatic_question": "드라마에 모든 것을 건 PD와 그를 동경하는 스태프가 어떻게 만나는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "팀 소개·지오 첫 출근·국장 충돌"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "beat": "야근 대화·과거 발견·작가 갈등"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "우회 구조 설계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "지오 감정 혼재"
+    }
+  ],
+  "entry_state": "새 시즌 드라마 준비, 지오 첫 출근 전날",
+  "exit_state": "팀 구성, 지오 감정 시작, 준호 국장 마찰",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "지오가 준호와의 과거 연결을 발견 — 단순 직장 관계에서 감정 개입"
+  },
+  "central_conflict_axis": "드라마 완성도 vs 국장의 시청률 간섭, 준호·지오 감정 시작",
+  "episode_function": "세계관·인물 소개·감정선 점화 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

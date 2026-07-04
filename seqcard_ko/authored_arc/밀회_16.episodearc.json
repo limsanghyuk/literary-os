@@ -1,0 +1,51 @@
+{
+  "work_id": "밀회",
+  "episode_no": 16,
+  "scene_count": 63,
+  "sequence_count": 6,
+  "dramatic_question": "모든 것을 잃고 난 뒤 혜원과 선재가 서로를 향해 다시 걸어갈 수 있는가, 그리고 그것이 충분한가",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        2
+      ],
+      "label": "서한 권력 청산과 선재의 홀로 버팀"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        3,
+        5
+      ],
+      "label": "혜원 사면과 법정 종결, 서한 부패 공식 마무리"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        6,
+        6
+      ],
+      "label": "면회실 재회와 열린 결말"
+    }
+  ],
+  "entry_state": "혜원이 자수 후 구금, 선재가 독일 유학 준비를 마친 상태, 서한 권력이 붕괴 수순에 있다",
+  "exit_state": "혜원이 사면·석방되고 선재가 연주회를 마친 뒤 면회실에서 두 사람이 조심스럽게 재회한다. 결말은 열려 있다",
+  "turning_point": {
+    "seq_index": 4,
+    "label": "혜원 사면과 재회 준비",
+    "description": "혜원이 사면을 받으며 법적 굴레에서 벗어나고 선재의 연주회가 성공하며 두 사람 모두 새로운 출발점에 선다"
+  },
+  "central_conflict_axis": "모든 대가를 치르고 나서야 가능해지는 혜원과 선재의 재회 vs 상처와 시간이 남긴 거리",
+  "episode_function": "RESOLUTION — 서한 권력 청산과 두 사람의 열린 재회로 시리즈를 마무리하는 피날레",
+  "core_dist": {
+    "BOND": 0.22,
+    "RELIEF": 0.2,
+    "LOSS": 0.14,
+    "REVELATION": 0.13,
+    "CONFLICT": 0.13,
+    "ROMANCE": 0.1
+  },
+  "by": "cowork_opus_reading"
+}

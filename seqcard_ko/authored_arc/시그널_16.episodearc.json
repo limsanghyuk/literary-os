@@ -1,0 +1,60 @@
+{
+  "scene_count": 87,
+  "dramatic_question": "역사가 바뀌어 재한은 살아남았는가?",
+  "core_dist": {
+    "RISE": 1,
+    "FALL": 1,
+    "REVELATION": 2,
+    "RELIEF": 2,
+    "CONFLICT": 1,
+    "BOND": 1,
+    "ORACLE": 1,
+    "HOOK": 1
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "설정 단계"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        8
+      ],
+      "beat": "전개 단계"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        9,
+        13
+      ],
+      "beat": "심화 단계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        14,
+        15
+      ],
+      "beat": "회말전환 단계"
+    }
+  ],
+  "work_id": "시그널",
+  "by": "sonnet_reading",
+  "sequence_count": 15,
+  "turning_point": {
+    "seq_index": 4,
+    "event": "회말 위기 전환"
+  },
+  "episode_no": 16,
+  "entry_state": "모든 사건이 해결의 실마리를 잡고 해영과 수현이 최후 정산을 앞둔다.",
+  "exit_state": "과거와 현재가 함께 정의를 완성하고, 무전기 교신의 운명적 의미가 결말로 수렴된다.",
+  "central_conflict_axis": "두 시대를 넘어선 정의의 완성 대 역사 변경의 역설적 대가",
+  "episode_function": "최종화로서 16화에 걸친 모든 미제사건이 해결되고, 무전기 교신이라는 장치의 운명적 의미가 완결되며 두 형사의 이야기가 마무리된다."
+}

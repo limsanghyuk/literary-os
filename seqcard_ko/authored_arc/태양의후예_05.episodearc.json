@@ -1,0 +1,64 @@
+{
+  "work_id": "태양의후예_05",
+  "episode_no": 5,
+  "scene_count": 54,
+  "sequence_count": 6,
+  "dramatic_question": "이별은 두 사람을 더 가깝게 만드는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        1
+      ],
+      "beat": "키스 다음 날 — 관계 확인"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        2,
+        4
+      ],
+      "beat": "절벽 사고 구조·로맨스 심화"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        5
+      ],
+      "beat": "서브 커플 진전"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        6,
+        6
+      ],
+      "beat": "시진 귀국 명령·이별 클라이맥스"
+    }
+  ],
+  "entry_state": "첫 키스 후",
+  "exit_state": "강제 이별",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "절벽 사고 — 두 사람의 협력 첫 실증"
+  },
+  "central_conflict_axis": "임무 vs 사랑",
+  "episode_function": "절벽 구조+이별: 장르 하이브리드 절정",
+  "core_dist": {
+    "ROMANCE": 8,
+    "ESTABLISH": 5,
+    "REUNION": 1,
+    "CONFLICT": 5,
+    "HOOK": 5,
+    "BOND": 6,
+    "LOSS": 4,
+    "PERIL": 6,
+    "INTRO": 2,
+    "REVELATION": 6,
+    "RESCUE": 3,
+    "RELIEF": 3
+  },
+  "by": "sonnet_reading"
+}

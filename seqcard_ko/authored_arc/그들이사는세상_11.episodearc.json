@@ -1,0 +1,51 @@
+{
+  "work_id": "그들이사는세상_11",
+  "episode_no": 11,
+  "scene_count": 67,
+  "sequence_count": 10,
+  "dramatic_question": "외부 제안과 현 팀 사이에서 준호가 어떤 선택을 내리는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "지오 역할 확대·반발"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "실력 증명·외부 제안·딜레마·지오 의견"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "유보 결정·국장 압박·의존 심화"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        10
+      ],
+      "beat": "외부 제안 최후 통보"
+    }
+  ],
+  "entry_state": "새 드라마 킥오프, 지오 역할 확대",
+  "exit_state": "지오 실력 증명, 외부 제안 유보, 최후 통보 압박",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "외부 제안 입수 — 커리어 vs 현실 딜레마 본격화"
+  },
+  "central_conflict_axis": "외부 제안 vs 현 팀 유지, 준호 커리어 선택",
+  "episode_function": "지오 성장·준호 딜레마·외부 제안 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

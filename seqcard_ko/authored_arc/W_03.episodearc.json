@@ -1,0 +1,65 @@
+{
+  "work_id": "W_03",
+  "episode_no": 3,
+  "sequence_count": 12,
+  "scene_count": 70,
+  "turning_point": {
+    "seq_index": 4,
+    "description": "결정적 위기 또는 반전"
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "설정 단계"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "전개 단계"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "심화 단계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        12
+      ],
+      "beat": "회말전환 단계"
+    }
+  ],
+  "by": "cowork_opus_reading",
+  "entry_state": "오연주가 현실에서 생존을 위해 강철에게 의존하고, 웹툰 내 플롯이 그녀의 목숨을 위협한다.",
+  "exit_state": "강철이 웹툰 스토리를 수정해 오연주를 구하는 방법을 모색하지만 예상치 못한 부작용이 발생한다.",
+  "central_conflict_axis": "스토리 수정의 의도 대 그 수정이 만들어내는 새로운 위험",
+  "episode_function": "웹툰 수정의 복잡한 연쇄 효과를 도입하고 두 캐릭터 간의 감정 유대를 심화한다.",
+  "dramatic_question": "W 3화의 핵심 드라마틱 질문: 강철과 오연주는 웹툰과 현실의 경계를 넘어 생존할 수 있는가?",
+  "core_dist": {
+    "ORACLE": 7,
+    "REVELATION": 11,
+    "RELIEF": 8,
+    "CONFLICT": 13,
+    "BOND": 5,
+    "HOOK": 2,
+    "LOSS": 4,
+    "ESTABLISH": 2,
+    "DESIRE": 2,
+    "PERIL": 10,
+    "REVERSAL": 3,
+    "RESCUE": 2,
+    "ROMANCE": 1
+  }
+}

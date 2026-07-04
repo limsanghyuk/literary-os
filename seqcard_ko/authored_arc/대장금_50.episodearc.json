@@ -1,0 +1,66 @@
+{
+  "work_id": "대장금_50",
+  "episode_no": 50,
+  "scene_count": 71,
+  "sequence_count": 11,
+  "dramatic_question": "장금이 최씨가 잔당의 비리를 정리하며 권력 구조를 새롭게 정비한다",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        11
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "최씨가 이후의 새 권력 구조가 정비되는 과정에서 갈등이 잔존한다.",
+  "exit_state": "장금이 새 질서를 공고히 하면서 민정호와의 관계도 정리된다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "새 권력 구조가 장금 중심으로 정비된다"
+  },
+  "central_conflict_axis": "새 질서 정립 vs 잔존 갈등 세력",
+  "episode_function": "50화는 최씨가 이후의 새 질서 정립으로 장금의 역할이 제도적으로 공인된다.",
+  "core_dist": {
+    "ESTABLISH": 7,
+    "CONFLICT": 27,
+    "REVERSAL": 6,
+    "DESIRE": 13,
+    "LOSS": 6,
+    "BOND": 10,
+    "ROMANCE": 4,
+    "PERIL": 19,
+    "HOOK": 6,
+    "ORACLE": 3,
+    "PUNISH": 8,
+    "RELIEF": 5,
+    "REVELATION": 5,
+    "RESCUE": 3
+  },
+  "by": "sonnet_reading"
+}

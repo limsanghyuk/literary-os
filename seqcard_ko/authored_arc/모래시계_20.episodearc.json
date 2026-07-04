@@ -1,0 +1,60 @@
+{
+  "work_id": "모래시계_20",
+  "episode_no": 20,
+  "scene_count": 56,
+  "sequence_count": 8,
+  "dramatic_question": "마지막 게임에서 태수는 역전에 성공하는가, 아니면 패배하는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "최종 배치와 정보전",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "B",
+      "label": "포위와 역전 시도",
+      "seq_span": [
+        4,
+        6
+      ]
+    },
+    {
+      "act": "C",
+      "label": "최후 결전과 결말 임박",
+      "seq_span": [
+        7,
+        8
+      ]
+    }
+  ],
+  "entry_state": "마지막 게임 배치 완료",
+  "exit_state": "최후 결전과 결말 임박 예고",
+  "turning_point": {
+    "seq_index": 5,
+    "description": "포위와 역전 시도"
+  },
+  "central_conflict_axis": "마지막 역전 vs 불가역적 결말—승리와 상실의 동시성",
+  "episode_function": "최후 결전 에피소드—역전, 대가, 마지막 예고",
+  "core_dist": {
+    "ORACLE": 0.18,
+    "CONFLICT": 0.16,
+    "REVELATION": 0.11,
+    "LOSS": 0.09,
+    "ESTABLISH": 0.09,
+    "REVERSAL": 0.07,
+    "PERIL": 0.07,
+    "DESIRE": 0.05,
+    "RELIEF": 0.05,
+    "PUNISH": 0.04,
+    "RESCUE": 0.02,
+    "HOOK": 0.02,
+    "REUNION": 0.02,
+    "BOND": 0.01,
+    "INTRO": 0.01,
+    "ROMANCE": 0.01
+  },
+  "by": "cowork_opus_reading"
+}

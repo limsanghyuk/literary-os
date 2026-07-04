@@ -1,0 +1,67 @@
+{
+  "work_id": "대장금_08",
+  "episode_no": 8,
+  "scene_count": 60,
+  "sequence_count": 9,
+  "dramatic_question": "한상궁이 모함으로 쫓겨날 위기에서 장금은 어떻게 반응하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "최씨가의 공작으로 한상궁이 모함에 빠진다.",
+  "exit_state": "한상궁이 굴욕적 퇴장을 맞고 장금은 복수와 진실 추구를 결심한다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "한상궁이 모함으로 추방당한다"
+  },
+  "central_conflict_axis": "한상궁 추방(최씨가의 음모 완수) vs 장금의 항거",
+  "episode_function": "8화는 한상궁의 퇴장으로 장금에게 진실 추구의 절박한 동기를 부여한다.",
+  "core_dist": {
+    "REVERSAL": 5,
+    "HOOK": 8,
+    "BOND": 17,
+    "ESTABLISH": 16,
+    "RELIEF": 5,
+    "INTRO": 2,
+    "ORACLE": 4,
+    "PERIL": 10,
+    "DESIRE": 13,
+    "CONFLICT": 18,
+    "LOSS": 3,
+    "REVELATION": 3,
+    "PUNISH": 2,
+    "REUNION": 1,
+    "ROMANCE": 1
+  },
+  "by": "sonnet_reading"
+}

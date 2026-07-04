@@ -1,0 +1,65 @@
+{
+  "work_id": "하얀거탑",
+  "episode_no": 20,
+  "scene_count": 63,
+  "sequence_count": 10,
+  "dramatic_question": "준혁의 죽음 이후 그의 삶이 의료계와 사람들에게 어떤 의미로 기억되는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "label": "세계와 갈등 도입",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": "전개",
+      "label": "갈등 심화와 대결 구도 확립",
+      "seq_span": [
+        3,
+        6
+      ]
+    },
+    {
+      "act": "심화",
+      "label": "위기 절정과 전환점",
+      "seq_span": [
+        7,
+        9
+      ]
+    },
+    {
+      "act": "회말전환",
+      "label": "회말 반전과 다음 회 훅",
+      "seq_span": [
+        10,
+        10
+      ]
+    }
+  ],
+  "entry_state": "준혁이 임종하고 각 인물이 사망 소식을 접하는 상황",
+  "exit_state": "도영의 마지막 회진과 나레이션 에필로그—의료 원칙의 영속성 선언",
+  "turning_point": {
+    "seq_index": 5,
+    "description": "오경환 교수의 편지 공개·준혁의 유산 선언"
+  },
+  "central_conflict_axis": "개인 비극 vs 사회적 유산의 의미",
+  "episode_function": "드라마 완성—준혁의 죽음이 남긴 의료 윤리 유산 선언",
+  "core_dist": {
+    "LOSS": 27,
+    "BOND": 26,
+    "CONFLICT": 17,
+    "PERIL": 14,
+    "ORACLE": 13,
+    "DESIRE": 9,
+    "ESTABLISH": 5,
+    "REVELATION": 5,
+    "REVERSAL": 2,
+    "REUNION": 2,
+    "RELIEF": 1,
+    "ROMANCE": 1,
+    "RESCUE": 1
+  },
+  "by": "claude-sonnet-4-6"
+}

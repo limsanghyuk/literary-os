@@ -1,0 +1,61 @@
+{
+  "work_id": "시그널",
+  "scene_count": 77,
+  "by": "sonnet_reading",
+  "dramatic_question": "박해영은 과거의 이재한 형사와 무전으로 연결해 김윤정 유괴사건을 해결할 수 있는가?",
+  "core_dist": {
+    "ESTABLISH": 1,
+    "ORACLE": 3,
+    "CONFLICT": 2,
+    "REVELATION": 3,
+    "BOND": 1,
+    "PERIL": 1,
+    "LOSS": 0,
+    "RESCUE": 1,
+    "HOOK": 1
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "설정 단계"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        8
+      ],
+      "beat": "전개 단계"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        9,
+        13
+      ],
+      "beat": "심화 단계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        14,
+        15
+      ],
+      "beat": "회말전환 단계"
+    }
+  ],
+  "sequence_count": 15,
+  "turning_point": {
+    "seq_index": 12,
+    "event": "회말 위기 전환"
+  },
+  "episode_no": 1,
+  "entry_state": "박해영 경위가 진양서 강력계에 배속되어 차수현 팀장과 첫 충돌하고, 창고에서 낡은 무전기를 발견한다.",
+  "exit_state": "1989년 이재한과 교신을 통해 김윤정 유괴사건 진범을 특정하고 구출하며, 재한의 수첩에서 네 사건 메모가 예고된다.",
+  "central_conflict_axis": "현재(해영)의 프로파일링 추적 대 1989년 시간제약 속 재한의 현장 구출",
+  "episode_function": "시리즈 핵심 장치(무전기 교신)를 도입하고, 과거와 현재의 협력 구조를 확립하며 16화 전체를 관통할 네 미제사건 퀘스트를 선언한다."
+}

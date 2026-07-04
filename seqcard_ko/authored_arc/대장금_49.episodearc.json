@@ -1,0 +1,67 @@
+{
+  "work_id": "대장금_49",
+  "episode_no": 49,
+  "scene_count": 86,
+  "sequence_count": 13,
+  "dramatic_question": "최고상궁 장금은 왕의 주치의로서 어떻게 새 역할을 시작하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        10
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        13
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "장금이 최고상궁 겸 왕의 주치의 역할을 부여받는다.",
+  "exit_state": "새 역할의 성취감과 함께 민정호와의 관계가 더욱 깊어진다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "왕이 장금을 공식 주치의로 명명한다"
+  },
+  "central_conflict_axis": "최고상궁·주치의로서 새 책임(장금) vs 신분 제도의 한계",
+  "episode_function": "49화는 대장금의 새 역할을 확립하며 최종 결말을 향한 로맨스 서사를 심화한다.",
+  "core_dist": {
+    "REUNION": 2,
+    "BOND": 15,
+    "ESTABLISH": 7,
+    "DESIRE": 23,
+    "LOSS": 5,
+    "RELIEF": 2,
+    "INTRO": 1,
+    "ROMANCE": 10,
+    "RESCUE": 1,
+    "CONFLICT": 12,
+    "PERIL": 20,
+    "REVERSAL": 4,
+    "ORACLE": 2,
+    "HOOK": 6,
+    "REVELATION": 5
+  },
+  "by": "sonnet_reading"
+}

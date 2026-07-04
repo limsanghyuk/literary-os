@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_06",
+  "episode_no": 6,
+  "scene_count": 69,
+  "sequence_count": 7,
+  "dramatic_question": "황토현 승리 후 동학군은 과연 나라를 바꿀 수 있는가, 이강과 자인은 서로의 마음을 인정할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "양측 진영 병렬·자인 이중 역할"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "이강 임무 합류·황토현 승리"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "이현 절망·비격진천뢰·자인 탈출"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "전주여각 재회·감정 고조"
+    }
+  ],
+  "entry_state": "창의군 훈련과 감영군 진영에서 자인이 이중적 역할을 수행하며 황토현 전투가 임박한다.",
+  "exit_state": "비격진천뢰로 황토현 전투를 승리로 이끌고, 전주여각에서 이강-자인이 재회하며 혁명과 감정이 동시에 고조된다.",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "황토현 매복 기습으로 동학군이 감영군을 격파하는 장면이 역사적 전환점과 동시에 이강의 능력을 입증한다"
+  },
+  "central_conflict_axis": "동학 혁명(이강·전봉준) 대 진압(감영군·이현), 이강-자인의 감정 성장 vs 이현의 고립",
+  "episode_function": "황토현 승리를 통해 동학 혁명의 정점을 구현하고, 전주여각 재회로 이강-자인의 감정선을 본격화한다.",
+  "core_dist": {
+    "CONFLICT": 14,
+    "PERIL": 12,
+    "REVELATION": 8,
+    "LOSS": 7,
+    "BOND": 8,
+    "REVERSAL": 7,
+    "RELIEF": 4,
+    "HOOK": 5,
+    "RESCUE": 4,
+    "REUNION": 3,
+    "ESTABLISH": 7,
+    "DESIRE": 3,
+    "PUNISH": 3,
+    "ROMANCE": 5,
+    "ORACLE": 0,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,51 @@
+{
+  "work_id": "공주의남자_09",
+  "episode_no": 9,
+  "scene_count": 78,
+  "sequence_count": 11,
+  "dramatic_question": "세령이 어머니를 볼모로 잡힌 상황에서도 승유와 함께 살아남을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "은신 생활·수양 분노"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "복수 실행·동료 방어·추격 좁힘"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "처형·상실·어머니 압박"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        11
+      ],
+      "beat": "자수 고민·이동 결행"
+    }
+  ],
+  "entry_state": "재결합 후 은신, 복수 실행 단계 진입",
+  "exit_state": "어머니 압박으로 세령 갈등 극대화, 긴급 이동 결행",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "세령의 자수 고민 — 복수 vs 어머니 선택 기로"
+  },
+  "central_conflict_axis": "복수 진행 vs 가족 압박을 통한 세령 회수 시도",
+  "episode_function": "복수 본격화·내부 균열(세령 갈등) 심화 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

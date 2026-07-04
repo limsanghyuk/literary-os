@@ -1,0 +1,64 @@
+{
+  "work_id": "태양의후예_04",
+  "episode_no": 4,
+  "scene_count": 65,
+  "sequence_count": 7,
+  "dramatic_question": "규칙을 어기면서도 지켜야 할 사람이 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "징계·법정 — 시진 처벌 수용"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "모연 구명·데이트·병원 인질극"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        6
+      ],
+      "beat": "인질극 해제·첫 키스"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "항명·징계 확정·이별 훅"
+    }
+  ],
+  "entry_state": "징계 직후",
+  "exit_state": "강제 귀국 예고",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "인질극 해제 직후 첫 키스"
+  },
+  "central_conflict_axis": "군법 vs 신념 vs 사랑",
+  "episode_function": "첫 키스: 로맨스 공식화·항명 이중 클라이맥스",
+  "core_dist": {
+    "CONFLICT": 11,
+    "ESTABLISH": 5,
+    "HOOK": 3,
+    "RELIEF": 10,
+    "PUNISH": 5,
+    "REVELATION": 3,
+    "LOSS": 6,
+    "BOND": 7,
+    "ROMANCE": 10,
+    "REUNION": 2,
+    "PERIL": 2,
+    "DESIRE": 1
+  },
+  "by": "sonnet_reading"
+}

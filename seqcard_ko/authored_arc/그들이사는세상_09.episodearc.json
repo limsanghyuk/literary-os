@@ -1,0 +1,51 @@
+{
+  "work_id": "그들이사는세상_09",
+  "episode_no": 9,
+  "scene_count": 48,
+  "sequence_count": 7,
+  "dramatic_question": "방송국 내 압박이 두 사람의 관계를 흔드는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "소문 확산·국장 공식 압박"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "신뢰 확인·이동 계획 발각·기획안 반격"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        6
+      ],
+      "beat": "기획안 승인"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "지오 죄책감 시작"
+    }
+  ],
+  "entry_state": "새 관계 시작 이후, 방송국 소문 확산",
+  "exit_state": "국장 압박 극복, 지오 죄책감 균열 시작",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "이동 계획 발각 — 외부 압박이 두 사람 관계 내부로 침투"
+  },
+  "central_conflict_axis": "방송국 권력 압박 vs 두 사람의 관계 유지",
+  "episode_function": "관계 공개 이후 압박·죄책감 균열 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

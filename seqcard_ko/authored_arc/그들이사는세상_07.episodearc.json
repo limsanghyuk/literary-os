@@ -1,0 +1,51 @@
+{
+  "work_id": "그들이사는세상_07",
+  "episode_no": 7,
+  "scene_count": 51,
+  "sequence_count": 7,
+  "dramatic_question": "거리를 두려는 의지가 점점 강해지는 감정을 이길 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "거리 두기 시도·밀착 작업 불가피"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "단둘 시간·완전 인정·공개 압박"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        6,
+        6
+      ],
+      "beat": "재합의·내심 흔들림"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "비언어 감정 표현"
+    }
+  ],
+  "entry_state": "감정 확인 후 거리 두기 시도",
+  "exit_state": "재합의에도 흔들림, 준호의 비언어 감정 표현",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "준호의 완전 인정 — 억제 국면에서 표현 기로로"
+  },
+  "central_conflict_axis": "직업적 거리 유지 vs 감정 표현 충동",
+  "episode_function": "감정 억제 한계·비언어 표현 시작 회차",
+  "core_dist": {},
+  "by": "opus_reading"
+}

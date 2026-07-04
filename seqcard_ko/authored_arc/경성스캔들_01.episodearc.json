@@ -1,0 +1,53 @@
+{
+  "work_id": "경성스캔들_01",
+  "episode_no": 1,
+  "scene_count": 84,
+  "sequence_count": 13,
+  "dramatic_question": "바람둥이 완과 독립투사 여경은 경성역 가방 소동과 칠필살 살인사건으로 얽히며 어떤 운명을 맞을 것인가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        4
+      ],
+      "label": "두 세계의 충돌 — 경성역 가방 소동과 칠필살 예고"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        5,
+        10
+      ],
+      "label": "수현 복귀와 내기 성립 — 세 축이 교차 설정"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        11,
+        13
+      ],
+      "label": "인호 보호 추격전과 완의 방 총구 대치 클리프행어"
+    }
+  ],
+  "entry_state": "경성 1930년대, 독립운동가 딸 여경과 재력가 아들 완이 각자 별개의 세계에서 살아간다",
+  "exit_state": "여경이 인호를 보호하다 추격당해 완의 방에 뛰어들어 총을 겨누며 두 사람의 운명이 강제로 얽힌다",
+  "turning_point": {
+    "seq_index": 12,
+    "label": "칠필살 살인 발생 + 내기 성립",
+    "description": "칠필살 예고 살인이 실제로 발생하고 완이 조마자 내기를 수락함으로써 세 개의 서사 축이 동시에 점화된다"
+  },
+  "central_conflict_axis": "계급·신념이 다른 완과 여경의 충돌, 10년 배신의 완↔수현 재회, 칠필살 연쇄살인 미스터리",
+  "episode_function": "경성 1930년대 세계관 확립, 완·여경·수현·송주 네 주인공 동시 도입, 로맨스·독립운동·정치스릴러 세 축 동시 점화",
+  "core_dist": {
+    "REVERSAL": 2,
+    "CONFLICT": 2,
+    "PERIL": 2,
+    "BOND": 2,
+    "HOOK": 2,
+    "DESIRE": 1,
+    "ESTABLISH": 1,
+    "ROMANCE": 1
+  },
+  "by": "cowork_opus_reading"
+}

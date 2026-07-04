@@ -1,0 +1,63 @@
+{
+  "work_id": "커피프린스_14",
+  "episode_no": 14,
+  "scene_count": 42,
+  "sequence_count": 6,
+  "dramatic_question": "미국행 이별을 앞둔 한결이 잔류를 선택하고 청혼에 이를 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "가족 유대 복원·임신 반전·은새 이별"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "가족 소개·할머니 반대·미국 포기 결심"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        5
+      ],
+      "beat": "할머니 면담·잔류 선언"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        6,
+        6
+      ],
+      "beat": "사랑 고백·청혼"
+    }
+  ],
+  "entry_state": "이별 카운트다운 속에서 이탈리아 유학 유혹까지 더해진 상태",
+  "exit_state": "한결이 미국 포기를 선언하고 너 사랑하는 나 때문이라는 고백과 청혼으로 이별 위기를 해소한다",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "사랑 고백과 청혼: 이별 위기를 사랑으로 역전"
+  },
+  "central_conflict_axis": "미국행(이별) vs 잔류 선택(사랑)",
+  "episode_function": "14회는 유주 임신 반전과 은새-민엽 이별 코미디, 한결 가족 소개와 할머니 반대를 거쳐 한결의 미국 포기와 청혼으로 이별 위기가 해소되는 회차다",
+  "core_dist": {
+    "BOND": 9,
+    "ROMANCE": 8,
+    "DESIRE": 8,
+    "REVERSAL": 6,
+    "CONFLICT": 6,
+    "ORACLE": 5,
+    "REVELATION": 3,
+    "PERIL": 4,
+    "LOSS": 3,
+    "ESTABLISH": 3,
+    "RELIEF": 3
+  },
+  "by": "sonnet_reading"
+}

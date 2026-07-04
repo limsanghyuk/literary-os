@@ -1,0 +1,67 @@
+{
+  "work_id": "대장금_31",
+  "episode_no": 31,
+  "scene_count": 61,
+  "sequence_count": 9,
+  "dramatic_question": "내의원에서 장금은 첫 시료 과제를 어떻게 통과하는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "내의원의 첫 시료 과제가 장금에게 주어진다.",
+  "exit_state": "장금이 시료를 통해 의학적 재능을 입증하지만 여전히 의심과 견제를 받는다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "첫 시료 성공으로 장금의 의학 재능이 증명된다"
+  },
+  "central_conflict_axis": "장금의 의학적 역량 입증 vs 내의원 기득권의 불신",
+  "episode_function": "31화는 첫 시료 성공으로 장금이 내의원에서 자리를 굳히기 시작하는 성장 단계를 보여준다.",
+  "core_dist": {
+    "HOOK": 4,
+    "DESIRE": 14,
+    "ESTABLISH": 10,
+    "BOND": 15,
+    "RELIEF": 7,
+    "CONFLICT": 17,
+    "PUNISH": 2,
+    "REVELATION": 6,
+    "PERIL": 24,
+    "RESCUE": 8,
+    "LOSS": 4,
+    "ORACLE": 2,
+    "REVERSAL": 5,
+    "REUNION": 1,
+    "ROMANCE": 1
+  },
+  "by": "sonnet_reading"
+}

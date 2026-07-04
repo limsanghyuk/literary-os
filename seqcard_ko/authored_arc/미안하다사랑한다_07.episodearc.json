@@ -1,0 +1,63 @@
+{
+  "work_id": "미안하다사랑한다_07",
+  "episode_no": 7,
+  "scene_count": 72,
+  "sequence_count": 11,
+  "dramatic_question": "무혁의 비밀(뇌종양·출생의 진실)이 드러나기 시작하면서, 오은채와 오들희는 그를 어떻게 받아들이게 되는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "무혁의 신체 이상이 오은채에게 감지되기 시작하며 긴장이 고조된다"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "무혁과 오들희의 진실이 조금씩 드러나고, 오은채의 감정이 혼란스러워진다"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "오은채가 무혁의 진짜 상태를 의심하기 시작한다"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        11
+      ],
+      "beat": "결정적 진실이 오은채 앞에 드러날 조짐이 보인다"
+    }
+  ],
+  "entry_state": "무혁과 오은채의 관계는 깊지만, 무혁은 뇌종양을 숨기고 있다.",
+  "exit_state": "오은채가 무혁의 상태를 본격적으로 의심하기 시작하며, 진실 폭로가 임박한다.",
+  "turning_point": {
+    "seq_index": 11,
+    "desc": "오은채의 의심이 확신에 가까워지며 진실 폭로가 예고된다"
+  },
+  "central_conflict_axis": "무혁의 비밀 유지 욕망 대 오은채의 진실 추구",
+  "episode_function": "7화는 무혁의 비밀이 서서히 표면화되는 과정을 통해, 비극의 구조를 구체적으로 드러내기 시작하는 전환점 화차다.",
+  "core_dist": {
+    "ESTABLISH": 16,
+    "CONFLICT": 7,
+    "REVELATION": 12,
+    "DESIRE": 11,
+    "REUNION": 3,
+    "RELIEF": 1,
+    "HOOK": 3,
+    "BOND": 7,
+    "LOSS": 7,
+    "PERIL": 3,
+    "ROMANCE": 2
+  },
+  "by": "sonnet_reading"
+}

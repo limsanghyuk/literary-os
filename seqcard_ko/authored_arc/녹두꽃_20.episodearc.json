@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_20",
+  "episode_no": 20,
+  "scene_count": 76,
+  "sequence_count": 8,
+  "dramatic_question": "우금티 결전에서 동학군은 이길 수 있는가, 봉길의 배신은 혁명을 끝장낼 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "봉길 결심·전봉준 출정·조일연합군"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "전봉준 반격·억쇠 참전·가족 이별"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "봉길 배신·자인 실종·이강 절망"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "남북접 합류·우금티 총공격 명령"
+    }
+  ],
+  "entry_state": "봉길이 기지로 위기를 모면시키고 전봉준이 출정하며 2차 봉기가 개시된다.",
+  "exit_state": "남북접이 합류하고 우금티 총공격 명령이 내려진다—결전의 순간이 왔다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "남북접 합류와 우금티 총공격 명령이 2차 봉기의 역사적 절정을 선언한다"
+  },
+  "central_conflict_axis": "2차 봉기(전봉준·이강) 대 조일연합군, 봉길 배신 vs 자인·이강의 연대",
+  "episode_function": "봉길 배신과 자인 실종이라는 내부 위기 속에서 남북접 합류와 우금티 결전으로 혁명의 역사적 절정을 구현한다.",
+  "core_dist": {
+    "CONFLICT": 13,
+    "PERIL": 10,
+    "REVELATION": 10,
+    "LOSS": 12,
+    "BOND": 10,
+    "REVERSAL": 8,
+    "RELIEF": 2,
+    "HOOK": 3,
+    "RESCUE": 1,
+    "REUNION": 4,
+    "ESTABLISH": 12,
+    "DESIRE": 5,
+    "PUNISH": 3,
+    "ROMANCE": 2,
+    "ORACLE": 0,
+    "INTRO": 0
+  },
+  "by": "sonnet_reading"
+}

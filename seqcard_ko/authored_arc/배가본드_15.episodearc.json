@@ -1,0 +1,65 @@
+{
+  "work_id": "배가본드_15",
+  "episode_no": 15,
+  "scene_count": 67,
+  "sequence_count": 10,
+  "dramatic_question": "달건이 납치된 우기를 구출하고 에드워드 최후 협박을 막을 수 있는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "label": "설정",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": 2,
+      "label": "전개",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": 3,
+      "label": "심화",
+      "seq_span": [
+        6,
+        8
+      ]
+    },
+    {
+      "act": 4,
+      "label": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ]
+    }
+  ],
+  "entry_state": "폐쇄병동 소동, 우기 납치",
+  "exit_state": "창고 폭발—달건 생사 불명",
+  "turning_point": {
+    "seq_index": 6,
+    "seq_id": "배가본드_15_S06",
+    "description": "달건-제롬, 조건부 휴전—우기 위치 교환"
+  },
+  "central_conflict_axis": "달건 구출 작전 vs 에드워드 최후 카드",
+  "episode_function": "위기—구출 작전과 최고 위기",
+  "core_dist": {
+    "REVELATION": 0.216,
+    "PERIL": 0.196,
+    "HOOK": 0.144,
+    "ESTABLISH": 0.134,
+    "CONFLICT": 0.124,
+    "BOND": 0.041,
+    "DESIRE": 0.031,
+    "PUNISH": 0.031,
+    "LOSS": 0.021,
+    "ROMANCE": 0.021,
+    "RELIEF": 0.021,
+    "REVERSAL": 0.021
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,62 @@
+{
+  "work_id": "태양의후예_03",
+  "episode_no": 3,
+  "scene_count": 44,
+  "sequence_count": 6,
+  "dramatic_question": "의사와 군인은 극한 상황에서 서로의 가치를 인정할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "다이로스 대치·데이트 — 긴장과 로맨스 교차"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "VIP 부상·수술 결단"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        5
+      ],
+      "beat": "수술 후 신뢰 깊어짐"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        6,
+        6
+      ],
+      "beat": "다이로스 체포·시진 위기 훅"
+    }
+  ],
+  "entry_state": "무기상 압박",
+  "exit_state": "시진 위기 예고",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "모연이 VIP 수술을 독단 집도, 시진이 외부 사수"
+  },
+  "central_conflict_axis": "외교 vs 의료 vs 군사 논리",
+  "episode_function": "VIP 수술 위기: 두 전문가의 협력 첫 실증",
+  "core_dist": {
+    "ESTABLISH": 7,
+    "REUNION": 2,
+    "BOND": 4,
+    "HOOK": 4,
+    "ROMANCE": 10,
+    "CONFLICT": 3,
+    "PERIL": 6,
+    "INTRO": 1,
+    "REVELATION": 5,
+    "LOSS": 2
+  },
+  "by": "sonnet_reading"
+}

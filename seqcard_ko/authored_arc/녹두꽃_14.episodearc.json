@@ -1,0 +1,68 @@
+{
+  "work_id": "녹두꽃_14",
+  "episode_no": 14,
+  "scene_count": 68,
+  "sequence_count": 7,
+  "dramatic_question": "일본군의 경복궁 공격을 막을 수 있는가, 이강과 자인은 외세의 폭풍 속에서 서로를 지킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "대원군 계산·이강-이현 조우·이현 트라우마"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "일본 최후통첩·이강-자인 재회"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        5
+      ],
+      "beat": "명심 늑혼 위기·고종 최후통첩 거부"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "일본군 경복궁 진격"
+    }
+  ],
+  "entry_state": "대원군이 전봉준 서찰을 낭독하고 이강이 이현을 목격하며 한양에서 형제가 조우한다.",
+  "exit_state": "일본군이 경복궁을 공격하며 조선이 무너진다—혁명의 2막이 열린다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "일본군의 경복궁 진격이 시작되는 장면이 조선의 국권 침탈과 혁명의 새로운 전선을 개막한다"
+  },
+  "central_conflict_axis": "일본군 침략(다케다) 대 조선 왕실·동학 저항, 이강-자인의 생존 vs 외세 폭력",
+  "episode_function": "대원군 연결과 일본군의 경복궁 점령으로 혁명 2막의 역사적 배경을 구축한다.",
+  "core_dist": {
+    "CONFLICT": 12,
+    "PERIL": 16,
+    "REVELATION": 13,
+    "LOSS": 5,
+    "BOND": 5,
+    "REVERSAL": 7,
+    "RELIEF": 2,
+    "HOOK": 7,
+    "RESCUE": 2,
+    "REUNION": 3,
+    "ESTABLISH": 4,
+    "DESIRE": 3,
+    "PUNISH": 3,
+    "ROMANCE": 4,
+    "ORACLE": 0,
+    "INTRO": 1
+  },
+  "by": "sonnet_reading"
+}

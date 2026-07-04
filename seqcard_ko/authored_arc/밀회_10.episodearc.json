@@ -1,0 +1,51 @@
+{
+  "work_id": "밀회",
+  "episode_no": 10,
+  "scene_count": 64,
+  "sequence_count": 8,
+  "dramatic_question": "발각의 순간이 도래했을 때 혜원과 선재가 각자 어떻게 반응하고 어떤 선택을 하는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        3
+      ],
+      "label": "관계의 마지막 자유로운 시간과 발각 직전의 낭만"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        4,
+        6
+      ],
+      "label": "발각 순간과 직후의 충격, 각자의 즉각 반응"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        7,
+        8
+      ],
+      "label": "발각 후 조직의 움직임과 두 사람의 고립 심화"
+    }
+  ],
+  "entry_state": "서한 조직의 포위가 완성된 상태에서 두 사람이 마지막 자유로운 시간을 보내고 있다",
+  "exit_state": "발각이 공식화되고 서한 조직과 준형이 각자의 방식으로 혜원을 압박하기 시작하며 11부 본격 위기가 예고된다",
+  "turning_point": {
+    "seq_index": 5,
+    "label": "발각 공식화",
+    "description": "혜원과 선재의 관계가 서한 조직에 공식 발각되며 이야기가 전면 전환된다"
+  },
+  "central_conflict_axis": "발각이 촉발하는 조직적 응징과 사회적 단죄 vs 두 사람이 그래도 서로를 포기하지 않으려는 의지",
+  "episode_function": "REVELATION — 발각의 공식화로 이야기가 전면 전환되는 드라마의 핵심 분기점",
+  "core_dist": {
+    "CONFLICT": 0.297,
+    "HOOK": 0.247,
+    "PERIL": 0.128,
+    "DESIRE": 0.089,
+    "ROMANCE": 0.089,
+    "BOND": 0.069
+  },
+  "by": "cowork_opus_reading"
+}

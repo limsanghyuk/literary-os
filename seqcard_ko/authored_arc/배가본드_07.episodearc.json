@@ -1,0 +1,66 @@
+{
+  "work_id": "배가본드_07",
+  "episode_no": 7,
+  "scene_count": 64,
+  "sequence_count": 10,
+  "dramatic_question": "달건이 조부영-김우기 연결고리를 파악하고 정면 대결할 수 있는가",
+  "act_structure": [
+    {
+      "act": 1,
+      "label": "설정",
+      "seq_span": [
+        1,
+        2
+      ]
+    },
+    {
+      "act": 2,
+      "label": "전개",
+      "seq_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "act": 3,
+      "label": "심화",
+      "seq_span": [
+        6,
+        8
+      ]
+    },
+    {
+      "act": 4,
+      "label": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ]
+    }
+  ],
+  "entry_state": "F-X 이권 갈등, 달건 조부영 단서 추적",
+  "exit_state": "달건, 김우기와 정면 대치",
+  "turning_point": {
+    "seq_index": 6,
+    "seq_id": "배가본드_07_S06",
+    "description": "재식, 조부영 생존 정보 달건에 전달"
+  },
+  "central_conflict_axis": "달건 진실 추구 vs 조부영-김우기 은폐",
+  "episode_function": "심화—음모 지도 확장, 정면 대결 예고",
+  "core_dist": {
+    "CONFLICT": 0.229,
+    "ESTABLISH": 0.188,
+    "PERIL": 0.146,
+    "BOND": 0.115,
+    "REVELATION": 0.094,
+    "LOSS": 0.052,
+    "DESIRE": 0.052,
+    "HOOK": 0.031,
+    "ROMANCE": 0.021,
+    "REVERSAL": 0.021,
+    "INTRO": 0.021,
+    "PUNISH": 0.021,
+    "RELIEF": 0.01
+  },
+  "by": "sonnet_reading"
+}

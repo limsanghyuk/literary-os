@@ -1,0 +1,64 @@
+{
+  "work_id": "대장금_44",
+  "episode_no": 44,
+  "scene_count": 71,
+  "sequence_count": 11,
+  "dramatic_question": "왕의 병—장금이 처방을 관철할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        10,
+        11
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "왕의 병이 악화되고 장금의 처방 관철이 최후의 과제가 된다.",
+  "exit_state": "장금이 처방을 일부 관철하지만 여전히 위기는 진행 중이다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "장금의 처방이 부분적으로 수용된다"
+  },
+  "central_conflict_axis": "왕 치료(장금 처방) vs 최씨가·기존 의관의 저항",
+  "episode_function": "44화는 왕 치료 처방의 부분 관철로 장금의 최후 승리가 임박함을 예고한다.",
+  "core_dist": {
+    "ORACLE": 7,
+    "PERIL": 13,
+    "ESTABLISH": 7,
+    "BOND": 7,
+    "REVELATION": 11,
+    "DESIRE": 8,
+    "CONFLICT": 26,
+    "HOOK": 13,
+    "PUNISH": 5,
+    "RELIEF": 5,
+    "LOSS": 2,
+    "REVERSAL": 1
+  },
+  "by": "sonnet_reading"
+}

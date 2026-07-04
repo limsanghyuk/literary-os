@@ -1,0 +1,51 @@
+{
+  "work_id": "워킹맘_03",
+  "episode_no": 3,
+  "scene_count": 80,
+  "sequence_count": 12,
+  "dramatic_question": "이혼 소송은 어떤 방향으로 전개될 것인가?",
+  "act_structure": [
+    {
+      "act": "소송준비",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "충돌확대",
+      "seq_span": [
+        5,
+        8
+      ]
+    },
+    {
+      "act": "역전",
+      "seq_span": [
+        9,
+        12
+      ]
+    }
+  ],
+  "entry_state": "이혼 소송 착수, 재성 법적 저항",
+  "exit_state": "재성 역소(위자료 역청구) 충격, 소송 2라운드 예고",
+  "turning_point": {
+    "seq_index": 12
+  },
+  "central_conflict_axis": "가영 vs 재성(법정 역공) + 가영 vs 직장 편견",
+  "episode_function": "CONFLICT",
+  "core_dist": {
+    "CONFLICT": 0.263,
+    "DESIRE": 0.15,
+    "BOND": 0.138,
+    "LOSS": 0.125,
+    "PERIL": 0.087,
+    "REVELATION": 0.062,
+    "HOOK": 0.05,
+    "ROMANCE": 0.037,
+    "ORACLE": 0.037,
+    "REVERSAL": 0.037,
+    "PUNISH": 0.013
+  },
+  "by": "sonnet_reading"
+}

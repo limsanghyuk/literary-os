@@ -1,0 +1,66 @@
+{
+  "work_id": "대장금_45",
+  "episode_no": 45,
+  "scene_count": 82,
+  "sequence_count": 13,
+  "dramatic_question": "왕이 눈을 잃어가는 위기—장금의 홍삼 처방이 기적을 일으킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "인물·상황·갈등 축을 확립하는 도입부"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        4,
+        6
+      ],
+      "beat": "갈등이 심화되고 욕망과 장애가 충돌하는 전개"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        10
+      ],
+      "beat": "갈등의 최고조·반전이 일어나는 위기"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        11,
+        13
+      ],
+      "beat": "회말 훅이 다음 회차로 이어지는 전환"
+    }
+  ],
+  "entry_state": "왕이 시력을 잃어가며 최위기가 도래한다.",
+  "exit_state": "홍삼 처방으로 왕의 시력이 회복되고 장금의 의학이 완전히 공인된다.",
+  "turning_point": {
+    "seq_index": 12,
+    "desc": "홍삼·방기 처방으로 왕의 눈이 뜨인다(씬80~82)"
+  },
+  "central_conflict_axis": "왕의 실명 위기(극한) vs 장금의 홍삼 처방(과학적 도전)",
+  "episode_function": "45화는 왕의 실명 위기와 홍삼 처방 성공으로 장금의 의학 서사가 절정에 달한다.",
+  "core_dist": {
+    "REVERSAL": 6,
+    "PERIL": 23,
+    "ESTABLISH": 8,
+    "ORACLE": 24,
+    "DESIRE": 27,
+    "REVELATION": 8,
+    "HOOK": 15,
+    "CONFLICT": 15,
+    "PUNISH": 6,
+    "LOSS": 6,
+    "RELIEF": 4,
+    "BOND": 9,
+    "REUNION": 1,
+    "RESCUE": 3
+  },
+  "by": "sonnet_reading"
+}

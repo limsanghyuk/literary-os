@@ -1,0 +1,55 @@
+{
+  "scene_count": 82,
+  "dramatic_question": "이재한의 죽음을 어떻게 받아들이며, 강혜승의 증언으로 진범 장태진을 확정할 수 있는가?",
+  "core_dist": {
+    "LOSS": 2,
+    "REVELATION": 2,
+    "DESIRE": 1
+  },
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "설정 단계"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        5,
+        8
+      ],
+      "beat": "전개 단계"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        9,
+        12
+      ],
+      "beat": "심화 단계"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        13,
+        14
+      ],
+      "beat": "회말전환 단계"
+    }
+  ],
+  "work_id": "시그널",
+  "by": "sonnet_reading",
+  "sequence_count": 14,
+  "turning_point": {
+    "seq_index": 2,
+    "event": "회말 위기 전환"
+  },
+  "episode_no": 13,
+  "entry_state": "결정적 증거가 손에 잡힐 듯 가까워지고 배후 세력도 최후 수단을 준비한다.",
+  "exit_state": "결정적 대결이 임박했음을 알리는 사건이 발생하며 극적 긴장이 폭발한다.",
+  "central_conflict_axis": "진범 확정과 기소 대 증거 인멸과 협박",
+  "episode_function": "클라이맥스 직전 화로서 모든 실마리가 하나로 수렴되고 최후 대결의 방아쇠가 당겨진다."
+}
