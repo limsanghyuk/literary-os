@@ -1,0 +1,21 @@
+{
+ "work_id": "궁_04",
+ "scene_count": 42,
+ "core_dist": {
+  "ORACLE": 1,
+  "ESTABLISH": 9,
+  "DESIRE": 6,
+  "REVERSAL": 2,
+  "ROMANCE": 1,
+  "CONFLICT": 5,
+  "REVELATION": 2,
+  "BOND": 7,
+  "REUNION": 1,
+  "RELIEF": 2,
+  "LOSS": 3,
+  "INTRO": 1,
+  "PERIL": 2
+ },
+ "episode_function": "정략혼 초기 신-채경의 냉랭한 동거를 확립하고 율·효린 등 삼각 축을 배치하며 궁중 적응의 마찰을 본격화한다.",
+ "by": "sonnet_reading"
+}

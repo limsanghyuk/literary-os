@@ -1,0 +1,18 @@
+{
+ "work_id": "궁_07",
+ "scene_count": 49,
+ "core_dist": {
+  "ESTABLISH": 6,
+  "CONFLICT": 3,
+  "RELIEF": 6,
+  "LOSS": 3,
+  "ORACLE": 4,
+  "DESIRE": 4,
+  "ROMANCE": 7,
+  "REVERSAL": 1,
+  "BOND": 14,
+  "REUNION": 1
+ },
+ "episode_function": "부부 관계의 미묘한 진전과 궁중 정치·외교 압박을 교차시켜 신-채경의 감정과 황실 권력 다툼을 동시에 심화한다.",
+ "by": "sonnet_reading"
+}

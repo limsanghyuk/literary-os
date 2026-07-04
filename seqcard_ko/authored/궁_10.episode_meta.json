@@ -1,0 +1,22 @@
+{
+ "work_id": "궁_10",
+ "scene_count": 57,
+ "core_dist": {
+  "ESTABLISH": 12,
+  "ORACLE": 4,
+  "CONFLICT": 8,
+  "PERIL": 6,
+  "RESCUE": 1,
+  "BOND": 8,
+  "REVERSAL": 2,
+  "RELIEF": 4,
+  "PUNISH": 1,
+  "DESIRE": 4,
+  "LOSS": 3,
+  "REVELATION": 1,
+  "ROMANCE": 2,
+  "REUNION": 1
+ },
+ "episode_function": "삼각관계와 황실 계승 갈등이 표면화되며 신의 내적 균열과 채경의 성장 압력이 맞물려 중반 위기를 조성한다.",
+ "by": "sonnet_reading"
+}

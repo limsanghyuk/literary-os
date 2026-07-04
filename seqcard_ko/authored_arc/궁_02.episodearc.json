@@ -1,0 +1,68 @@
+{
+  "work_id": "궁_02",
+  "episode_no": 2,
+  "scene_count": 44,
+  "sequence_count": 7,
+  "dramatic_question": "결혼을 수락한 채경과 신은 서로 다른 세계의 간극을 넘어 진짜 파트너가 될 수 있는가—그리고 귀환한 율은 이 관계에 어떤 균열을 낼 것인가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "황실 편입 공식화·탈출 시도 실패로 결혼의 불가역성 확정"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "미디어 공세 위기·가족 유대 확인과 두 세계 소속 불안 심화"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "신-효린 감정 정리·율 궁 귀환과 왕위 권력 긴장 전면화"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "강제 입궁으로 황실 권력의 일상 장악 선언, 다음 대결 구도 설치"
+    }
+  ],
+  "entry_state": "채경이 황실 결혼을 공식 수락했으나 심리적으로 미완성이며, 효린과 율의 존재는 아직 서사 바깥에 있다.",
+  "exit_state": "채경은 자발적 이별 선언 후 황실 수행원에게 강제 입궁 당했고, 율이 궁에 복귀해 삼각 갈등의 무대가 완성되었다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "율의 궁 공식 귀환과 황후의 경계—왕위계승 갈등이 표면에 드러남"
+  },
+  "central_conflict_axis": "서민 채경의 황실 편입 거부감 대 황실 권력의 불가역적 장악, 여기에 율의 귀환으로 부가된 계승 긴장",
+  "episode_function": "2화는 채경을 황실 내부로 끌어들이고 율을 공식 복귀시켜 이후 삼각 로맨스·왕위계승 갈등의 이중 축을 설치하는 서사 기반 회차다.",
+  "core_dist": {
+    "ESTABLISH": 11,
+    "ORACLE": 5,
+    "INTRO": 3,
+    "BOND": 6,
+    "CONFLICT": 11,
+    "REVERSAL": 2,
+    "LOSS": 7,
+    "PUNISH": 1,
+    "REVELATION": 2,
+    "REUNION": 3,
+    "RELIEF": 6,
+    "ROMANCE": 1,
+    "PERIL": 5,
+    "RESCUE": 2,
+    "DESIRE": 7,
+    "HOOK": 4
+  },
+  "by": "sonnet_reading"
+}

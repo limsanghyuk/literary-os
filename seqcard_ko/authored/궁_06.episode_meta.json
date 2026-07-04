@@ -1,0 +1,23 @@
+{
+  "work_id": "궁_06",
+  "scene_count": 45,
+  "core_dist": {
+    "ESTABLISH": 5,
+    "CONFLICT": 7,
+    "BOND": 5,
+    "DESIRE": 5,
+    "ROMANCE": 7,
+    "REVERSAL": 3,
+    "RELIEF": 4,
+    "PERIL": 8,
+    "ORACLE": 4,
+    "PUNISH": 1,
+    "REVELATION": 1,
+    "LOSS": 1,
+    "INTRO": 2,
+    "REUNION": 1,
+    "HOOK": 1
+  },
+  "episode_function": "채경-신의 감정이 처음으로 몸짓(포옹·구두 신기기)으로 표출되는 로맨스 전환점이자, 화영(혜정궁)의 공식 귀환과 효린 포섭으로 궁중 권력 음모의 두 번째 축이 완전히 수면 위로 부상하는 회차.",
+  "by": "sonnet_reading"
+}

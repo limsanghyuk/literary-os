@@ -1,0 +1,17 @@
+{
+ "work_id": "궁_01",
+ "scene_count": 23,
+ "core_dist": {
+  "PERIL": 2,
+  "ORACLE": 4,
+  "INTRO": 2,
+  "CONFLICT": 6,
+  "ESTABLISH": 2,
+  "REVELATION": 3,
+  "REVERSAL": 2,
+  "DESIRE": 1,
+  "BOND": 1
+ },
+ "episode_function": "신데렐라풍 궁중 로맨스의 세계·인물·황실 약혼 제도를 도입하고, 평민 채경과 황태자 신을 정략혼 앞에 세워 시리즈 갈등의 출발점을 놓는다.",
+ "by": "sonnet_reading"
+}

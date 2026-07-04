@@ -1,0 +1,24 @@
+{
+  "work_id": "궁_12",
+  "scene_count": 46,
+  "core_dist": {
+    "ESTABLISH": 6,
+    "ORACLE": 8,
+    "INTRO": 0,
+    "BOND": 7,
+    "CONFLICT": 9,
+    "REVERSAL": 5,
+    "LOSS": 3,
+    "PUNISH": 1,
+    "REVELATION": 2,
+    "REUNION": 1,
+    "RELIEF": 4,
+    "ROMANCE": 4,
+    "PERIL": 2,
+    "RESCUE": 0,
+    "DESIRE": 6,
+    "HOOK": 2
+  },
+  "episode_function": "추존이 국회를 통과하고 황제가 쓰러지면서 권력 공백이 열리는 정치 급변 속에서, 신이 효린에게 결별 선언하고 제주도까지 채경을 찾아가는 행동으로 감정의 방향이 채경 쪽으로 결정적으로 기울기 시작한다.",
+  "by": "sonnet_reading"
+}

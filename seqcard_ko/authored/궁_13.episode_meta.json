@@ -1,0 +1,21 @@
+{
+ "work_id": "궁_13",
+ "scene_count": 55,
+ "core_dist": {
+  "ESTABLISH": 7,
+  "BOND": 4,
+  "RELIEF": 8,
+  "ROMANCE": 11,
+  "REVELATION": 2,
+  "INTRO": 1,
+  "CONFLICT": 10,
+  "ORACLE": 5,
+  "RESCUE": 1,
+  "LOSS": 2,
+  "PERIL": 1,
+  "DESIRE": 2,
+  "HOOK": 1
+ },
+ "episode_function": "관계·정치 갈등이 정점을 향해 상승하고 반전의 씨앗(오해·폭로)을 심어 후반부 파국을 예비한다.",
+ "by": "sonnet_reading"
+}

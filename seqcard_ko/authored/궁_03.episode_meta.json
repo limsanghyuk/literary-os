@@ -1,0 +1,24 @@
+{
+  "work_id": "궁_03",
+  "scene_count": 32,
+  "core_dist": {
+    "ESTABLISH": 6,
+    "ORACLE": 4,
+    "INTRO": 0,
+    "BOND": 4,
+    "CONFLICT": 4,
+    "REVERSAL": 1,
+    "LOSS": 3,
+    "PUNISH": 1,
+    "REVELATION": 2,
+    "REUNION": 0,
+    "RELIEF": 5,
+    "ROMANCE": 5,
+    "PERIL": 2,
+    "RESCUE": 0,
+    "DESIRE": 3,
+    "HOOK": 0
+  },
+  "episode_function": "채경의 운현궁 훈육 시작부터 친영례 완수까지, 정략 결혼이 공식 의례로 봉인되는 동시에 신과 채경 사이에 인간적 유대의 씨앗이 처음 싹트고, 율·효린 복선이 심화되는 전환 회차.",
+  "by": "sonnet_reading"
+}

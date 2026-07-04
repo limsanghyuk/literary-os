@@ -1,0 +1,19 @@
+{
+  "work_id": "궁_18",
+  "scene_count": 31,
+  "core_dist": {
+    "ESTABLISH": 2,
+    "LOSS": 2,
+    "CONFLICT": 5,
+    "PERIL": 3,
+    "ROMANCE": 9,
+    "DESIRE": 4,
+    "BOND": 3,
+    "RELIEF": 5,
+    "REVERSAL": 3,
+    "ORACLE": 2,
+    "REVELATION": 1
+  },
+  "episode_function": "율의 채경을 향한 감정이 공개 고백 수준으로 정점에 달하고, 신이 질투 충동으로 강제 키스를 감행하며 삼각 갈등이 폭발하는 동시에 황위 교체 여론과 황제의 흔들림이 함께 고조되는 감정·정치 이중 위기 회차.",
+  "by": "sonnet_reading"
+}

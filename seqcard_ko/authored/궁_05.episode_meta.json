@@ -1,0 +1,22 @@
+{
+  "work_id": "궁_05",
+  "scene_count": 45,
+  "core_dist": {
+    "CONFLICT": 7,
+    "DESIRE": 9,
+    "RELIEF": 7,
+    "ROMANCE": 6,
+    "ESTABLISH": 4,
+    "PERIL": 5,
+    "LOSS": 2,
+    "BOND": 4,
+    "PUNISH": 2,
+    "ORACLE": 2,
+    "REVERSAL": 1,
+    "INTRO": 1,
+    "REUNION": 1,
+    "HOOK": 2
+  },
+  "episode_function": "채경과 신의 상처 입은 출발점을 심화하면서 제주도 생일 파티를 통해 효린-신-채경 삼각 긴장을 본격화하고, 화영·최국장의 여론 조작 음모와 파파라치 침투를 복선으로 심어 궁중 정치 갈등의 씨앗을 뿌리는 회차.",
+  "by": "sonnet_reading"
+}

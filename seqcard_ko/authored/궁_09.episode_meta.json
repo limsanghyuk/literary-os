@@ -1,0 +1,22 @@
+{
+  "work_id": "궁_09",
+  "scene_count": 58,
+  "core_dist": {
+    "LOSS": 8,
+    "DESIRE": 9,
+    "PERIL": 9,
+    "ROMANCE": 8,
+    "BOND": 8,
+    "CONFLICT": 6,
+    "REVELATION": 4,
+    "ESTABLISH": 4,
+    "RELIEF": 3,
+    "ORACLE": 3,
+    "HOOK": 1,
+    "PUNISH": 1,
+    "RESCUE": 1,
+    "REVERSAL": 1
+  },
+  "episode_function": "신의 태국 단독 출장 기간 동안 채경은 궁 안팎에서 고독·험담·임무 부여를 겪으며 성장하고, 신은 효린과의 태국 재회를 통해 과거 감정을 정면으로 마주하고 이별을 완성하는 동시에, 율이 채경을 향한 감정을 공개 고백하며 삼각관계가 본격 교차하는 회차다",
+  "by": "sonnet_reading"
+}

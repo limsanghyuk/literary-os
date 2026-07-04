@@ -1,0 +1,21 @@
+{
+  "work_id": "궁_19",
+  "scene_count": 49,
+  "core_dist": {
+    "ESTABLISH": 3,
+    "LOSS": 9,
+    "CONFLICT": 12,
+    "PERIL": 6,
+    "ROMANCE": 4,
+    "DESIRE": 9,
+    "BOND": 7,
+    "RELIEF": 2,
+    "REVERSAL": 2,
+    "ORACLE": 2,
+    "REVELATION": 2,
+    "REUNION": 1,
+    "PUNISH": 2
+  },
+  "episode_function": "18화 강제 키스 이후 신과 채경의 소통 결핍이 본격화되고, 채경이 친정 방문·떡볶이·강 드라이브로 궁 탈출을 반복하는 동시에 율의 채경 이탈 권유·황실 과거 연서 발견·황제의 율 편향이 삼중으로 신의 위기를 심화시키는 감정 누적·갈등 폭발 회차.",
+  "by": "sonnet_reading"
+}

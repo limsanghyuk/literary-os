@@ -1,0 +1,24 @@
+{
+  "work_id": "궁_11",
+  "scene_count": 45,
+  "core_dist": {
+    "ESTABLISH": 10,
+    "ORACLE": 6,
+    "INTRO": 1,
+    "BOND": 7,
+    "CONFLICT": 9,
+    "REVERSAL": 1,
+    "LOSS": 2,
+    "PUNISH": 0,
+    "REVELATION": 4,
+    "REUNION": 1,
+    "RELIEF": 3,
+    "ROMANCE": 5,
+    "PERIL": 3,
+    "RESCUE": 1,
+    "DESIRE": 6,
+    "HOOK": 1
+  },
+  "episode_function": "혜명 귀환·효린 태국 사진 파문을 통해 삼각관계 갈등이 표면화되고, 신이 채경을 안아 구하는 행동과 '황태자 포기' 선언으로 감정·정치 노선 모두의 전환점을 예고한다.",
+  "by": "sonnet_reading"
+}

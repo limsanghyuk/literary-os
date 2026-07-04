@@ -1,0 +1,19 @@
+{
+  "work_id": "궁_17",
+  "scene_count": 47,
+  "core_dist": {
+    "ESTABLISH": 5,
+    "LOSS": 2,
+    "CONFLICT": 9,
+    "PERIL": 3,
+    "ROMANCE": 8,
+    "DESIRE": 7,
+    "BOND": 7,
+    "RELIEF": 6,
+    "REVERSAL": 3,
+    "ORACLE": 5,
+    "PUNISH": 2
+  },
+  "episode_function": "효린과의 감정 정리·경찰 조사 위기·율의 세력 구축이 동시에 전개되며, 채경과 신의 친밀감이 성장하는 동시에 율의 채경을 향한 감정과 황위 야망이 본격화하는 다중 갈등 팽창 회차.",
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,24 @@
+{
+  "work_id": "궁_02",
+  "scene_count": 44,
+  "core_dist": {
+    "ESTABLISH": 8,
+    "ORACLE": 5,
+    "INTRO": 2,
+    "BOND": 3,
+    "CONFLICT": 6,
+    "REVERSAL": 2,
+    "LOSS": 5,
+    "PUNISH": 1,
+    "REVELATION": 2,
+    "REUNION": 3,
+    "RELIEF": 3,
+    "ROMANCE": 0,
+    "PERIL": 4,
+    "RESCUE": 2,
+    "DESIRE": 4,
+    "HOOK": 3
+  },
+  "episode_function": "채경의 결혼 수락 선언부터 황실 입성 직전까지, 두 세계(황실/서민)의 충돌과 율·효린이라는 복선 인물을 도입하며 정략 결혼 서사의 모든 갈등 축을 설치하는 발단 완결 회차.",
+  "by": "sonnet_reading"
+}

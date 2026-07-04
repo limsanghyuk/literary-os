@@ -1,0 +1,24 @@
+{
+  "work_id": "궁_24",
+  "scene_count": 57,
+  "core_dist": {
+    "REUNION": 9,
+    "ESTABLISH": 10,
+    "BOND": 8,
+    "ROMANCE": 6,
+    "RELIEF": 6,
+    "LOSS": 6,
+    "REVELATION": 4,
+    "REVERSAL": 3,
+    "PERIL": 0,
+    "CONFLICT": 1,
+    "PUNISH": 1,
+    "RESCUE": 1,
+    "DESIRE": 1,
+    "ORACLE": 1,
+    "HOOK": 0,
+    "INTRO": 0
+  },
+  "episode_function": "율의 방화 자백 기자회견과 황제 하야로 신의 누명이 벗겨지고, 마카오에서 채경의 자유로운 새 삶과 신과의 재회·청혼·결혼식으로 대단원을 맺는 최종회",
+  "by": "sonnet_reading"
+}
