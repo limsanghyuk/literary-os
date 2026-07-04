@@ -1,0 +1,62 @@
+{
+  "work_id": "비밀의숲_04",
+  "episode_no": 4,
+  "scene_count": 59,
+  "sequence_count": 9,
+  "dramatic_question": "치밀하게 설계된 공모의 청사진을, 새 희생자가 나오기 전에 해독할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "추적",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "무성 목격자 검거, 시목·여진 정보 밀약"
+    },
+    {
+      "act": "공모 가설",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "범인 프로파일·공모 가설 수립, 동재 미행"
+    },
+    {
+      "act": "민아 상실",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "민아 접근 실패·납치"
+    },
+    {
+      "act": "청사진·비극",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "교복 단서와 공모 청사진 포착, 민아 피살로 새 국면"
+    }
+  ],
+  "entry_state": "목격자 단서를 좇아 시목과 여진이 정보 동맹을 굳힌다.",
+  "exit_state": "공모 청사진이 수면 위로 떠오르지만 민아가 살해되며 사건이 연쇄살인으로 진입한다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "민아 납치—수사가 한발 늦으며 비극이 시작"
+  },
+  "central_conflict_axis": "공모 해독(시목·여진) 대 증거 인멸·목격자 제거(동재측)",
+  "episode_function": "범인의 치밀한 공모 설계를 해독하는 수사 심화 회차로, 박무성 마지막 목격자 확보·범인 키 특정·민아 단서 추적·교복 단서 포착이 연쇄적으로 전개되고, 민아 납치·피살로 사건이 새 국면에 진입하며 창준의 공모 청사진이 수면 위로 떠오른다.",
+  "core_dist": {
+    "ORACLE": 14,
+    "ESTABLISH": 3,
+    "PERIL": 9,
+    "BOND": 6,
+    "CONFLICT": 5,
+    "REVELATION": 8,
+    "RELIEF": 1,
+    "PUNISH": 3,
+    "HOOK": 7,
+    "LOSS": 3
+  },
+  "by": "cowork_opus_reading"
+}

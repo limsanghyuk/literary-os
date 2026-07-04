@@ -1,0 +1,64 @@
+{
+  "work_id": "비밀의숲_16",
+  "episode_no": 16,
+  "scene_count": 75,
+  "sequence_count": 8,
+  "dramatic_question": "괴물이 된 권력의 진실이 폭로된 뒤, 정의는 무엇을 응징하고 무엇을 다음으로 넘기는가?",
+  "act_structure": [
+    {
+      "act": "역전·분기",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "협상 주도권 탈취, 빈 금고=자산 이전 완료"
+    },
+    {
+      "act": "고백·자결",
+      "seq_span": [
+        3,
+        3
+      ],
+      "beat": "창준의 고백과 추락(자결)"
+    },
+    {
+      "act": "공개·응보",
+      "seq_span": [
+        4,
+        5
+      ],
+      "beat": "비리 파일 공개·배상욱 폭로, 윤범 체포"
+    },
+    {
+      "act": "선언·작별·열림",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "괴물 테마 선언, 작별의 매듭과 새 특검 지명(열린 결말)"
+    }
+  ],
+  "entry_state": "공범 관계를 역전시키며 시목이 최종 국면의 주도권을 쥔다.",
+  "exit_state": "이창준의 자결과 유언으로 한조 게이트가 폭로되고 부패 청산 뒤 시목이 새 싸움으로 나아간다.",
+  "turning_point": {
+    "seq_index": 3,
+    "desc": "창준의 자결—공범의 고백이 게이트 폭로의 문을 엶"
+  },
+  "central_conflict_axis": "진실 폭로·응보(시목) 대 자산 도피·괴물의 자기변명(창준)",
+  "episode_function": "공범 이창준의 자결과 자필 유언으로 한조 게이트 전모가 폭로되고 윤범 구속·부패 청산으로 이어지는 응보와 해소의 피날레로서, 검찰과 경찰 모두가 법 앞의 제자리를 찾으며 시목이 새로운 싸움을 향해 열린 결말로 나아간다.",
+  "core_dist": {
+    "BOND": 10,
+    "ESTABLISH": 9,
+    "REVELATION": 8,
+    "CONFLICT": 8,
+    "LOSS": 8,
+    "HOOK": 7,
+    "PUNISH": 7,
+    "PERIL": 6,
+    "RELIEF": 6,
+    "ORACLE": 3,
+    "RESCUE": 2,
+    "REVERSAL": 1
+  },
+  "by": "cowork_opus_reading"
+}

@@ -1,0 +1,63 @@
+{
+  "work_id": "비밀의숲_13",
+  "episode_no": 13,
+  "scene_count": 70,
+  "sequence_count": 8,
+  "dramatic_question": "해산의 허탈 속에서 침입 경고와 제보자 추적을 좇던 수사는, 어떤 대가를 치르고 계속될 것인가?",
+  "act_structure": [
+    {
+      "act": "경고·압축",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "수상한 남자 목격, 제보자 3후보·문신 단서"
+    },
+    {
+      "act": "해산·추적",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "공식 해산의 씁쓸함, 택시·편의점 단서로 침입자 추적"
+    },
+    {
+      "act": "신원·권한",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "우실장 신원 확인 착수, 부장 임명으로 열흘 확보"
+    },
+    {
+      "act": "회말파괴",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "가영 실종을 좇다 은수의 죽음 발견(최대 반전)"
+    }
+  ],
+  "entry_state": "화합의 순간에 수상한 남자 목격이 다음 위협을 예고한다.",
+  "exit_state": "수사 권한을 되찾은 직후, 영은수의 살해가 발견되며 수사가 정면으로 파괴된다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "은수의 죽음—수사팀 내부로 향한 살인의 칼끝"
+  },
+  "central_conflict_axis": "제보자·침입자 추적(시목팀) 대 내부 위협·증거 제거(범인)",
+  "episode_function": "특임팀 해산의 허탈감 속에서 침입 경고·제보자 추적·인사 격변이 교차하다가 영은수의 살해 발견으로 수사를 정면 파괴하는 최대 반전 회차.",
+  "core_dist": {
+    "CONFLICT": 12,
+    "RELIEF": 1,
+    "HOOK": 10,
+    "ESTABLISH": 7,
+    "PERIL": 13,
+    "BOND": 5,
+    "REVELATION": 3,
+    "ORACLE": 7,
+    "LOSS": 9,
+    "PUNISH": 2,
+    "REVERSAL": 1
+  },
+  "by": "cowork_opus_reading"
+}

@@ -108,7 +108,8 @@ sequence_intent   = str      # goal-obstacle-turn 한 문장
 goal              = str      # 이 시퀀스가 추구하는 것
 obstacle          = str      # 장애
 value_shift       = {from, to}  # 진입가치→퇴장가치 (전환)
-turn_type         = enum{RISE, FALL, REVEAL, STALL}
+turn_type         = str   # 세밀 라벨(RISE/FALL/REVEAL/STALL/REVERSAL/CONFLICT/HOOK/ORACLE/LOSS/PUNISH/BOND …)
+turn_class        = enum{RISE, FALL, REVEAL, STALL}  # 파생: 축B 집계용 4버킷 정규화(turn_type→turn_class MAP)
 # --- 구조 필드(결정론 집계) ---
 core_mix          = {CORE: count}     # 멤버 씬 core 집계
 pov_char          = str               # 지배 POV(집계)
@@ -210,3 +211,29 @@ member_episode_nos= [int]            # 정본
 ## 부록. 출처
 - 로컬 실측: `/db/seqcard_ko/_ALL_series_arc.json` (30작/593회/38,046씬), `{work}_series_arc.json`·`episode_meta.json`·`seqcard.jsonl`.
 - 기존 메모리: SeqCard v1 데이터화 아키텍처, 시퀀스 4계층 분할 측정(장소시퀀스36.5), SceneBlueprint 수직슬라이스(ablation-2 renderer_prompt_constraints VALIDATED 1.13×), 세션 핸드오프 5계층 매핑.
+
+
+---
+
+## [정정 v1.1 — 2026-07-04 앵커 저작 실측 반영]
+
+**앵커작(비밀의숲, 16화/1037씬) 3층 실저작으로 설계 상수 2건 정정.**
+
+### 정정1: 시퀀스 밀도 0.6× → 실측 0.153×
+- 파라미터표 `est_seq = 씬×0.6`은 **장소시퀀스(≈씬급, 36.5/회) 그레인**을 쓴 값이었음.
+- 본 설계의 시퀀스 = **goal-obstacle-turn(가치전환) 단위**는 훨씬 거침: 앵커 실측 **159 시퀀스 / 1037씬 = 0.153×** (회당 8~10개).
+- 결과: 시퀀스층 저작 부하가 **≈4배 과대추정**이었음(비밀의숲 표값 622 vs 실제 159). 30작 est. 22,827 → **실측 기반 재추정 ≈5,800**.
+- 조치: 파라미터표 `est_seq` 컬럼을 0.153×로 재계산(구값은 `est_seq_old`로 보존).
+
+### 정정2: turn_type = 4-enum → 세밀 라벨 + turn_class 4버킷 파생
+- 실저작 시 방향 4종만으로는 REVERSAL/CONFLICT/HOOK/ORACLE/LOSS/PUNISH/BOND 등 극적 뉘앙스 손실.
+- 채택: `turn_type`(세밀 라벨, 11종 실사용) 보존 + `turn_class`(RISE/FALL/REVEAL/STALL 4버킷) 파생.
+- MAP: RISE←{RISE,BOND,PUNISH} / FALL←{FALL,LOSS} / REVEAL←{REVEAL,ORACLE,REVERSAL} / STALL←{STALL,HOOK,CONFLICT}.
+- 앵커 turn_class 분포: REVEAL 65 · FALL 35 · STALL 30 · RISE 29 (n=159).
+
+### 앵커 3층 산출물 경로(정본)
+- SequenceBlueprint: `db/seqcard_ko/authored_seq/비밀의숲_NN.seqblueprint.jsonl` (16파일, 159 rec)
+- EpisodeArc: `db/seqcard_ko/authored_arc/비밀의숲_NN.episodearc.json` (16파일)
+- FullSeriesArc: `db/seqcard_ko/authored/비밀의숲_full_series_arc.json` (1파일, 4악장)
+- 축B(집계정합) 불변식 전수 PASS: I-COVER/I-PARTITION/I-COUNT(씬)·I-ACT-COVER(시퀀스)·I-SEASON-COVER(회차)·FK. ERRORS 0.
+- 미수행: 축A(원본충실 char-offset)·축C(sequence_intent ablation Δ≥0.5, G1 게이트).

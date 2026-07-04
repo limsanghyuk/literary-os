@@ -1,0 +1,65 @@
+{
+  "work_id": "비밀의숲_08",
+  "episode_no": 8,
+  "scene_count": 73,
+  "sequence_count": 12,
+  "dramatic_question": "비리의 공론화가 절정에 이르렀을 때, 진실과 권력 중 무엇이 시목의 다음 자리를 결정하는가?",
+  "act_structure": [
+    {
+      "act": "역이용·대결",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "동재 신병 활용과 심리 대결"
+    },
+    {
+      "act": "구명·합류",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "가혹행위 폭로 준비, 경완 방어와 정본 합류"
+    },
+    {
+      "act": "가설 흔들림",
+      "seq_span": [
+        5,
+        8
+      ],
+      "beat": "검사장 암시, 함정 격투와 진범 가설 재검토·알리바이 확증"
+    },
+    {
+      "act": "공론화·지명",
+      "seq_span": [
+        9,
+        12
+      ],
+      "beat": "비리 공론화 폭발과 창준의 특임 지명(반전)"
+    }
+  ],
+  "entry_state": "현행범 동재의 신병을 지렛대 삼아 시목이 판을 흔들기 시작한다.",
+  "exit_state": "비리가 공론화되는 절정에서 창준이 시목을 특임검사로 지명하는 충격 반전으로 닫힌다.",
+  "turning_point": {
+    "seq_index": 12,
+    "desc": "특임 지명—권력이 진실 추적자를 제도 안으로 끌어들이는 승부수"
+  },
+  "central_conflict_axis": "진실 공론화(시목) 대 권력의 포섭·통제(창준)",
+  "episode_function": "동재의 증거조작 발각에서 시작해 조직적 은폐와 인권 유린, 비리 폭로의 공론화를 거쳐 창준이 시목을 특임검사로 지명하는 충격적 반전으로 마무리되며, 진실과 권력 사이의 긴장을 최고조로 끌어올리는 에피소드다.",
+  "core_dist": {
+    "ESTABLISH": 17,
+    "CONFLICT": 13,
+    "PERIL": 6,
+    "PUNISH": 2,
+    "LOSS": 5,
+    "REVELATION": 6,
+    "BOND": 6,
+    "INTRO": 1,
+    "ORACLE": 7,
+    "REVERSAL": 3,
+    "HOOK": 5,
+    "RELIEF": 1,
+    "REUNION": 1
+  },
+  "by": "cowork_opus_reading"
+}

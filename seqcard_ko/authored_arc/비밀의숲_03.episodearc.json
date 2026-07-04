@@ -1,0 +1,63 @@
+{
+  "work_id": "비밀의숲_03",
+  "episode_no": 3,
+  "scene_count": 67,
+  "sequence_count": 10,
+  "dramatic_question": "공개 선전포고를 던진 시목은 권력의 반격과 과거 폭로를 견디며 핵심 목격자에 도달할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "떠보기",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "은수를 떠보고 진범을 공개 압박(선전포고)"
+    },
+    {
+      "act": "진술·동맹",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "무성 동선 핵심 진술 확보, 여진이 시목 편에 섬"
+    },
+    {
+      "act": "반격",
+      "seq_span": [
+        5,
+        7
+      ],
+      "beat": "권력의 응징·고립·수사 차단"
+    },
+    {
+      "act": "시험·단서",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "신뢰 시험(충격)과 도청·목격자 단서 확보"
+    }
+  ],
+  "entry_state": "은폐 세력과 대치하는 불안한 국면에서 시목이 방송으로 수사 주도권을 선언한다.",
+  "exit_state": "권력의 반격으로 고립되지만 도청·목격자라는 반격의 실마리를 쥔다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "신뢰의 시험—동맹 내부에 균열과 충격"
+  },
+  "central_conflict_axis": "공개 수사 주도권(시목) 대 권력의 과거 폭로·수사 차단",
+  "episode_function": "시목이 방송으로 수사 주도권을 공개 선언한 뒤 내부 권력의 반격과 과거 폭로에 맞서며, 동시에 무성의 마지막 행적을 현장에서 직접 재연·추적해 핵심 목격자에게 도달하는 반격·추적 병행 회차이다.",
+  "core_dist": {
+    "CONFLICT": 6,
+    "ESTABLISH": 11,
+    "HOOK": 6,
+    "RELIEF": 1,
+    "REVELATION": 8,
+    "REVERSAL": 4,
+    "BOND": 7,
+    "ORACLE": 9,
+    "LOSS": 4,
+    "PUNISH": 6,
+    "PERIL": 5
+  },
+  "by": "cowork_opus_reading"
+}

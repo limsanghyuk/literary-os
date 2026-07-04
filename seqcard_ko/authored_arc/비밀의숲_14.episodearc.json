@@ -1,0 +1,62 @@
+{
+  "work_id": "비밀의숲_14",
+  "episode_no": 14,
+  "scene_count": 73,
+  "sequence_count": 7,
+  "dramatic_question": "동료의 죽음 앞에서 감정을 견디며, 시목은 역추론으로 범인을 특정하고 붙잡을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "정황·의혹",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "혈흔 지도와 윤과장 의혹, 시목의 감정 붕괴와 회복"
+    },
+    {
+      "act": "애도·대면",
+      "seq_span": [
+        3,
+        3
+      ],
+      "beat": "분향소에서 진실 대면과 동재의 결의"
+    },
+    {
+      "act": "추적·동기",
+      "seq_span": [
+        4,
+        5
+      ],
+      "beat": "흉기 추적 확대·창준 동향, 증거 도난=살해 동기 규명"
+    },
+    {
+      "act": "해독·체포",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "UDT 문신·옥탑방 결론, 공항에서 윤과장 체포(반전)"
+    }
+  ],
+  "entry_state": "은수의 죽음이 확인되며 수사팀이 상실과 추론 사이에서 흔들린다.",
+  "exit_state": "시목의 역추론이 윤과장을 범인으로 특정하고 공항에서 체포하며 비극적 진실이 확정된다.",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "증거 도난=동기 규명—죽음의 이유가 밝혀지는 전환"
+  },
+  "central_conflict_axis": "역추론·범인 체포(시목) 대 도주·은폐(윤과장)",
+  "episode_function": "은수의 죽음이라는 상실을 축으로 수사팀의 감정 붕괴와 추론이 동시에 전개되며, 시목의 역추론이 윤과장을 범인으로 특정해 공항에서 체포함으로써 비극적 반전과 진실 확정을 이룬다.",
+  "core_dist": {
+    "ESTABLISH": 16,
+    "LOSS": 8,
+    "ORACLE": 12,
+    "HOOK": 9,
+    "PERIL": 10,
+    "REVELATION": 8,
+    "BOND": 3,
+    "DESIRE": 1,
+    "CONFLICT": 5,
+    "REVERSAL": 1
+  },
+  "by": "cowork_opus_reading"
+}

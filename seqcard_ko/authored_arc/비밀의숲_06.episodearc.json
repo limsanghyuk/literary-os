@@ -1,0 +1,64 @@
+{
+  "work_id": "비밀의숲_06",
+  "episode_no": 6,
+  "scene_count": 56,
+  "sequence_count": 11,
+  "dramatic_question": "시목과 여진은 동재를 용의자로 확정하고, 창준의 내사망이 조여오기 전에 물증을 손에 넣을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "해명·단서",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "은수 해명(여진 개입)과 13분 알리바이 공백 추적"
+    },
+    {
+      "act": "동재 특정",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "우연을 단서로 동재 지목·공모 폭로"
+    },
+    {
+      "act": "재정렬·상처",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "수사 재정렬과 은수의 사적 붕괴"
+    },
+    {
+      "act": "작전·충돌",
+      "seq_span": [
+        7,
+        11
+      ],
+      "beat": "관계 실토, 동재 방 수색 작전과 권력 개입·물리적 충돌"
+    }
+  ],
+  "entry_state": "은수의 자백 파문 속에서 알리바이 공백이 새 추적을 연다.",
+  "exit_state": "동재·서장을 용의자로 확정하지만 창준의 내사망이 시목을 죄어오며 대치가 격화한다.",
+  "turning_point": {
+    "seq_index": 3,
+    "desc": "동재 특정—막연한 의심이 지목으로 확정"
+  },
+  "central_conflict_axis": "용의자 확정·수색(시목·여진) 대 내사망 압박(창준)",
+  "episode_function": "동재·서장을 용의자로 확정하고 시목-여진 연대를 구축하면서, 창준의 내사망이 시목을 죄어오는 위기와 동재 방 수색 작전을 병치해 긴장을 압축한다.",
+  "core_dist": {
+    "BOND": 8,
+    "CONFLICT": 7,
+    "ESTABLISH": 6,
+    "HOOK": 10,
+    "LOSS": 3,
+    "ORACLE": 6,
+    "PERIL": 5,
+    "RELIEF": 1,
+    "RESCUE": 1,
+    "REUNION": 1,
+    "REVELATION": 5,
+    "REVERSAL": 3
+  },
+  "by": "cowork_opus_reading"
+}

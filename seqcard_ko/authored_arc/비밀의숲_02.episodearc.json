@@ -1,0 +1,65 @@
+{
+  "work_id": "비밀의숲_02",
+  "episode_no": 2,
+  "scene_count": 54,
+  "sequence_count": 13,
+  "dramatic_question": "조직 전체가 은폐로 뭉친 상황에서 시목은 진범의 실체를 증거로 붙잡을 수 있는가, 그리고 홀로 싸울 것인가?",
+  "act_structure": [
+    {
+      "act": "여파",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "진섭 사망의 도덕적 부채를 짊어짐"
+    },
+    {
+      "act": "규명",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "영상 합성·통화기록·진범 DNA로 조작을 입증"
+    },
+    {
+      "act": "공개·추적",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "법정 폭발과 택시 증언으로 진범 동선·수법 확보, 여진과 동맹"
+    },
+    {
+      "act": "역풍",
+      "seq_span": [
+        10,
+        13
+      ],
+      "beat": "여론 역풍·은수 붕괴·내부감사 위협으로 포위됨"
+    }
+  ],
+  "entry_state": "진섭 구명 실패의 충격 속에서 시목이 물증의 진위를 의심하기 시작한다.",
+  "exit_state": "진범 수법을 규명하고 여진과 손잡지만, 내부감사라는 조직적 역풍이 시목을 겨눈다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "법정에서 진실 공개—수세에서 공세로 전환"
+  },
+  "central_conflict_axis": "진실 규명 동맹(시목·여진) 대 조직적 은폐·내부감사",
+  "episode_function": "검찰과 경찰의 조직적 은폐 구조를 해부하며, 황시목과 한여진이 진실 추적 동맹을 결성하고 내부감사라는 조직적 역풍에 직면하는 과정을 보여준다.",
+  "core_dist": {
+    "HOOK": 7,
+    "ESTABLISH": 9,
+    "PERIL": 6,
+    "LOSS": 3,
+    "CONFLICT": 5,
+    "ORACLE": 8,
+    "REVELATION": 6,
+    "INTRO": 1,
+    "BOND": 3,
+    "DESIRE": 1,
+    "RELIEF": 1,
+    "REVERSAL": 1,
+    "PUNISH": 3
+  },
+  "by": "cowork_opus_reading"
+}

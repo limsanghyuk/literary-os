@@ -1,0 +1,63 @@
+{
+  "work_id": "비밀의숲_11",
+  "episode_no": 11,
+  "scene_count": 58,
+  "sequence_count": 8,
+  "dramatic_question": "서장을 체포해 1차 수사를 닫으면서, 시목팀은 그 뒤에 도사린 방산 카르텔의 윤곽을 열 수 있는가?",
+  "act_structure": [
+    {
+      "act": "적의 노출",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "정면 적의·출국금지, 공모 도청 확보, 권력 연합"
+    },
+    {
+      "act": "체포·배신",
+      "seq_span": [
+        4,
+        5
+      ],
+      "beat": "옥상에서 가영 방어와 서장 체포, 방산 카르텔 노출"
+    },
+    {
+      "act": "해독·녹음",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "'공칠' 지하 추론과 방산 밀담 녹음 확보"
+    },
+    {
+      "act": "회말단서",
+      "seq_span": [
+        8,
+        8
+      ],
+      "beat": "가영 기억 속 지하실 실재 확인(열린 결말)"
+    }
+  ],
+  "entry_state": "암묵적 대립이 정면 적의로 터지고 출국금지 통보가 전선을 그린다.",
+  "exit_state": "서장 체포로 1차 분기를 닫는 동시에 방산 비리 카르텔과 지하실 단서로 다음 국면을 연다.",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "서장 체포—1차 수사 완결과 공모 사다리 절단"
+  },
+  "central_conflict_axis": "공모 입증·목격자 보호(시목팀) 대 권력 연합·카르텔 은폐",
+  "episode_function": "서장 체포로 1차 수사 분기가 완결되는 동시에 방산 비리 카르텔의 윤곽이 폭로되고 가영의 파편 기억과 지하실 단서로 다음 국면을 열어젖히는 전환·연결 에피소드다.",
+  "core_dist": {
+    "BOND": 1,
+    "CONFLICT": 14,
+    "DESIRE": 3,
+    "ESTABLISH": 4,
+    "HOOK": 11,
+    "LOSS": 2,
+    "ORACLE": 3,
+    "PERIL": 10,
+    "PUNISH": 2,
+    "RESCUE": 2,
+    "REVELATION": 6
+  },
+  "by": "cowork_opus_reading"
+}

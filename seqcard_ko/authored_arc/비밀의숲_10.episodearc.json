@@ -1,0 +1,72 @@
+{
+  "work_id": "비밀의숲_10",
+  "episode_no": 10,
+  "scene_count": 61,
+  "sequence_count": 10,
+  "dramatic_question": "살아난 증인을 지키며, 시목팀은 서장 위로 뻗은 은폐 구조를 재벌 배후까지 파헤칠 수 있는가?",
+  "act_structure": [
+    {
+      "act": "증인·탈출",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "핵심 증인 2인 확보와 가영 탈출·창준妻 단서"
+    },
+    {
+      "act": "충돌·명분",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "증거 선점 상실·내부 충돌, 재수사 명분 확보"
+    },
+    {
+      "act": "서장 특정·공론",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "서장 범인 확정과 공개 폭로·소환"
+    },
+    {
+      "act": "종료지시·자백·구조",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "수사 종료 지시 대 서장 자백, 재벌 배후 규명"
+    },
+    {
+      "act": "회말선언",
+      "seq_span": [
+        10,
+        10
+      ],
+      "beat": "최후 대결 구도의 시각적 선언(HOOK)"
+    }
+  ],
+  "entry_state": "피해자 생존을 지렛대 삼아 증거 확보 경쟁이 격화한다.",
+  "exit_state": "서장 소환과 창준의 청와대 등극이 맞물리며 수사 대 권력의 전선이 확정된다.",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "서장 범인 확정·알리바이 붕괴—은폐 사슬의 첫 고리 절단"
+  },
+  "central_conflict_axis": "증거 확보·재수사(시목팀) 대 권력 은폐·수사 종료(창준)",
+  "episode_function": "피해자 생존으로 시작된 증거 확보 경쟁이 서장 소환과 창준의 청와대 등극으로 절정에 달하며, 수사 대 권력 은폐의 대결 구도를 폭로와 역전의 연속으로 확장하는 에피소드다.",
+  "core_dist": {
+    "REUNION": 1,
+    "HOOK": 5,
+    "PERIL": 7,
+    "ESTABLISH": 8,
+    "RESCUE": 2,
+    "CONFLICT": 17,
+    "REVELATION": 9,
+    "REVERSAL": 3,
+    "ORACLE": 5,
+    "PUNISH": 2,
+    "DESIRE": 1,
+    "BOND": 1
+  },
+  "by": "cowork_opus_reading"
+}

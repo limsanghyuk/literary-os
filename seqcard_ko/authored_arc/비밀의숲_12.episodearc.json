@@ -1,0 +1,64 @@
+{
+  "work_id": "비밀의숲_12",
+  "episode_no": 12,
+  "scene_count": 55,
+  "sequence_count": 8,
+  "dramatic_question": "해체 위기의 특임팀은 군수 음모의 전체 구조를 꿰뚫고 살아남을 수 있는가—그리고 배신자는 누구인가?",
+  "act_structure": [
+    {
+      "act": "재구성·규모",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "가방 추리로 납치 경위 재구성, 7조 금융조작 규모 노출"
+    },
+    {
+      "act": "구조·여론",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "마츠야마 음모 직관, 특종과 제보자 압박"
+    },
+    {
+      "act": "존속·재대결",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "해체 철회로 20일 확보, 법정 대면과 재대결 선언"
+    },
+    {
+      "act": "화합·배신폭로",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "팀 유대 회복과 윤과장=범인 자각(관객)"
+    }
+  ],
+  "entry_state": "납치 현장 재수사와 군수비리 폭로가 교차하며 판이 커진다.",
+  "exit_state": "집단 연대로 해체를 돌파하지만, 윤과장의 UDT 문신이 내부 배신자의 정체를 폭로한다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "윤과장 문신—신뢰의 심장부에 배신자가 있었다는 반전"
+  },
+  "central_conflict_axis": "음모 해독·팀 존속(시목팀) 대 자산 탈취·내부 배신(권력·윤과장)",
+  "episode_function": "납치 현장 재수사와 군수비리 폭로가 교차하는 가운데 특임팀 해체 위기를 집단 연대로 돌파하고, 마지막 순간 윤과장의 UDT 문신이 드러나며 내부 배신자 정체를 폭발적으로 반전시키는 에피소드.",
+  "core_dist": {
+    "ESTABLISH": 6,
+    "REVELATION": 7,
+    "CONFLICT": 9,
+    "PUNISH": 1,
+    "LOSS": 3,
+    "ORACLE": 6,
+    "PERIL": 7,
+    "BOND": 7,
+    "REVERSAL": 4,
+    "HOOK": 2,
+    "RELIEF": 2,
+    "ROMANCE": 1
+  },
+  "by": "cowork_opus_reading"
+}

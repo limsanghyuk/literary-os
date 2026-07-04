@@ -1,0 +1,60 @@
+{
+  "work_id": "비밀의숲_15",
+  "episode_no": 15,
+  "scene_count": 59,
+  "sequence_count": 7,
+  "dramatic_question": "연쇄살인범의 자백이 끝난 자리에서, 진짜 배후 설계자는 누구로 수렴하는가?",
+  "act_structure": [
+    {
+      "act": "귀환·자백",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "공개 귀환의 충격, 복수 동기 자백과 배상욱 공범 폭로"
+    },
+    {
+      "act": "은닉·균열",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "재산 이전·아내 출국, 단독범행 균열과 연수원 파일 단서"
+    },
+    {
+      "act": "자산·진범",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "스위스 계좌 확인·윤범 배신 감지, 우병준 특정"
+    },
+    {
+      "act": "회말지목",
+      "seq_span": [
+        7,
+        7
+      ],
+      "beat": "창준을 최종 용의자로 확정(HOOK)"
+    }
+  ],
+  "entry_state": "체포된 범인이 조직 앞에 서며 자백의 국면이 열린다.",
+  "exit_state": "범행 동기의 전모가 드러나고 창준-우병준 배후 공모가 논리적으로 수렴한다.",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "단독범행 균열—사건이 종결에서 배후 규명으로 재점화"
+  },
+  "central_conflict_axis": "배후 규명(시목팀) 대 자산 은닉·배후 은폐(창준)",
+  "episode_function": "연쇄살인범의 체포와 자백을 통해 범행 동기의 비극적 전모를 드러내는 동시에, 창준-우병준 배후 공모의 실체가 논리적으로 수렴되어 사건이 새 국면으로 전환되는 폭로·전환 회차이다.",
+  "core_dist": {
+    "BOND": 2,
+    "CONFLICT": 14,
+    "ESTABLISH": 6,
+    "HOOK": 9,
+    "LOSS": 6,
+    "PERIL": 2,
+    "REVELATION": 17,
+    "REVERSAL": 3
+  },
+  "by": "cowork_opus_reading"
+}
