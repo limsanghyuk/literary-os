@@ -1,0 +1,20 @@
+{
+  "work_id": "더킹투하츠_07",
+  "scene_count": 44,
+  "core_dist": {
+    "PERIL": 11,
+    "CONFLICT": 11,
+    "ESTABLISH": 6,
+    "BOND": 5,
+    "REVELATION": 2,
+    "LOSS": 2,
+    "RESCUE": 2,
+    "ORACLE": 1,
+    "DESIRE": 1,
+    "ROMANCE": 1,
+    "RELIEF": 1,
+    "REVERSAL": 1
+  },
+  "episode_function": "약혼 공식화와 함께 항아가 왕실에 입궐해 영선·재하와 문화 충돌을 겪는 동안, 봉봉 일당이 안면도 펜션에서 재강 부부를 독가스로 암살하고 재신을 포획하는 사건이 동시에 진행된다. 에피소드 말미에 재강의 서거가 발표되어 재하가 예기치 않게 대한민국 국왕이 되는 결정적 반전으로 막을 내린다.",
+  "by": "sonnet_reading"
+}

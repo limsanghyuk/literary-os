@@ -1,0 +1,21 @@
+{
+  "work_id": "더킹투하츠_20",
+  "scene_count": 52,
+  "core_dist": {
+    "PERIL": 13,
+    "CONFLICT": 7,
+    "REVERSAL": 6,
+    "ESTABLISH": 6,
+    "BOND": 5,
+    "REVELATION": 3,
+    "RELIEF": 3,
+    "DESIRE": 2,
+    "REUNION": 2,
+    "ROMANCE": 2,
+    "LOSS": 1,
+    "ORACLE": 1,
+    "PUNISH": 1
+  },
+  "episode_function": "전쟁 직전 극한 위기를 재하와 항아의 남북 공동 결혼이라는 역발상으로 돌파하며 봉구를 법정에 세워 악의 응보를 완결한다. 이후 4년 후 에필로그에서 남북 교류와 가족의 평화로운 일상을 보여주며 시리즈 전체의 희망적 결말을 구현한다.",
+  "by": "sonnet_reading"
+}

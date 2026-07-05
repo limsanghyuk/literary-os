@@ -1,0 +1,21 @@
+{
+  "work_id": "더킹투하츠_03",
+  "scene_count": 43,
+  "core_dist": {
+    "CONFLICT": 9,
+    "PERIL": 8,
+    "ROMANCE": 7,
+    "ESTABLISH": 3,
+    "PUNISH": 3,
+    "ORACLE": 2,
+    "RESCUE": 2,
+    "BOND": 2,
+    "REVELATION": 2,
+    "DESIRE": 2,
+    "REVERSAL": 1,
+    "LOSS": 1,
+    "RELIEF": 1
+  },
+  "episode_function": "3회는 재하와 항아가 런닝머신 폭탄 위기에서 극한 협력을 통해 신뢰의 싹을 틔우는 동시에, 봉구가 평화 무드를 방해하는 악의를 드러내며 갈등 축을 세운다. 미중 UN 대표의 굴욕적 검사와 재하의 당당한 항의로 왕실의 자존감을 보여주고, 재강·남일의 중매 시도를 통해 재하와 항아의 로맨스 플롯이 본격적으로 점화된다.",
+  "by": "sonnet_reading"
+}

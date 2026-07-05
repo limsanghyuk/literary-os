@@ -1,0 +1,19 @@
+{
+  "work_id": "더킹투하츠_19",
+  "scene_count": 53,
+  "core_dist": {
+    "PERIL": 14,
+    "CONFLICT": 12,
+    "LOSS": 6,
+    "REVELATION": 5,
+    "ORACLE": 5,
+    "ESTABLISH": 3,
+    "ROMANCE": 3,
+    "REVERSAL": 2,
+    "RESCUE": 1,
+    "BOND": 1,
+    "HOOK": 1
+  },
+  "episode_function": "시경의 희생과 봉구 체포로 1차 대결이 마무리되지만 보석·ICC 압박·경제 제재로 2라운드 정치전이 시작된다. 재하와 항아의 외교 순방과 재신의 시경 유언 영상 장면이 감정적 저점을 형성하는 가운데, 봉구의 공작으로 타임스퀘어 테러가 터지고 데프콘 3 발령과 함께 전쟁 위기가 고조된다. 최후에 재하와 항아가 강제로 분리되며 20부의 전면전 클라이맥스를 예고한다.",
+  "by": "sonnet_reading"
+}

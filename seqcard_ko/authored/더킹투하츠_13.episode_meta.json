@@ -1,0 +1,21 @@
+{
+  "work_id": "더킹투하츠_13",
+  "scene_count": 48,
+  "core_dist": {
+    "PERIL": 8,
+    "ESTABLISH": 7,
+    "CONFLICT": 5,
+    "ORACLE": 5,
+    "REVELATION": 4,
+    "REVERSAL": 4,
+    "DESIRE": 3,
+    "BOND": 3,
+    "HOOK": 3,
+    "REUNION": 2,
+    "ROMANCE": 2,
+    "PUNISH": 1,
+    "LOSS": 1
+  },
+  "episode_function": "재하가 추도사를 대신해 WOC 출전과 항아와의 약혼 의지를 공식 선언하며 봉구와의 대결 구도를 전면으로 가져온다. 재신이 트라우마를 딛고 섭정을 수락하고, 규태의 배신 의혹이 가시화되며 내부 첩자 갈등이 심화된다. 남북단일팀이 WOC 1차전 상대로 미국을 뽑는 충격적 결말로 다음 회를 향한 강력한 훅이 형성된다.",
+  "by": "sonnet_reading"
+}

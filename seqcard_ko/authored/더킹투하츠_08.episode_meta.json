@@ -1,0 +1,22 @@
+{
+  "work_id": "더킹투하츠_08",
+  "scene_count": 55,
+  "core_dist": {
+    "LOSS": 11,
+    "PERIL": 7,
+    "ESTABLISH": 6,
+    "ROMANCE": 6,
+    "BOND": 5,
+    "CONFLICT": 5,
+    "DESIRE": 3,
+    "REVELATION": 3,
+    "HOOK": 2,
+    "RESCUE": 2,
+    "INTRO": 2,
+    "REVERSAL": 1,
+    "RELIEF": 1,
+    "PUNISH": 1
+  },
+  "episode_function": "8회는 재강의 갑작스러운 서거로 재하가 졸지에 국왕이 되는 급격한 반전 회차이다. 전반부는 왕위 승계의 충격·선왕 서거 타살 의혹·규태의 자백·봉구의 협박이 중첩되어 위기를 고조시키고, 항아가 재신을 구하며 영선과 화해의 실마리를 얻는 감정 축이 교차한다. 후반부는 재하와 항아가 하룻밤 감정적 교감을 나누다 새벽에 발각되며, 봉구가 신궁에 등장해 9회의 대결 구도를 예고하는 HOOK으로 끝맺는다.",
+  "by": "sonnet_reading"
+}

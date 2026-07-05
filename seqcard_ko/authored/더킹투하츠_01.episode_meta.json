@@ -1,0 +1,20 @@
+{
+  "work_id": "더킹투하츠_01",
+  "scene_count": 44,
+  "core_dist": {
+    "ESTABLISH": 10,
+    "CONFLICT": 10,
+    "INTRO": 5,
+    "BOND": 4,
+    "DESIRE": 3,
+    "REVERSAL": 3,
+    "ORACLE": 2,
+    "PERIL": 2,
+    "RELIEF": 2,
+    "REVELATION": 1,
+    "ROMANCE": 1,
+    "PUNISH": 1
+  },
+  "episode_function": "1화는 남한 왕실 형제(재강·재하)와 북한 여성 장교 항아를 각각 소개하며 세계장교대회(WOC) 남북 단일팀 훈련이라는 전례 없는 설정을 확립한다. 재강의 통일 지향 리더십과 재하의 저항, 항아의 현실적 욕망을 대비시키며 세 주인공이 한 공간에 모이는 갈등 구조를 완성한다. 1화 마지막 항아의 재하 제압 장면으로 로맨스·코미디·정치적 긴장이 교차하는 드라마의 방향성을 선명하게 제시한다.",
+  "by": "sonnet_reading"
+}

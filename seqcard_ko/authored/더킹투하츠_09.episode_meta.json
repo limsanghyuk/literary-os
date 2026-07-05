@@ -1,0 +1,21 @@
+{
+  "work_id": "더킹투하츠_09",
+  "scene_count": 53,
+  "core_dist": {
+    "CONFLICT": 17,
+    "PERIL": 6,
+    "REVELATION": 6,
+    "ORACLE": 4,
+    "DESIRE": 4,
+    "ESTABLISH": 3,
+    "ROMANCE": 3,
+    "REVERSAL": 3,
+    "LOSS": 2,
+    "RELIEF": 2,
+    "HOOK": 1,
+    "BOND": 1,
+    "PUNISH": 1
+  },
+  "episode_function": "봉구의 위장 기부로 추모공원에서 북한 물증이 발견되어 선왕 서거의 진범 추적이 시작된다. 항아는 정치적 희생양으로 공개청문회에 서며 재하와의 신뢰가 균열을 일으키고, 재신에게는 사건 당일의 단편 기억이 되살아나기 시작한다.",
+  "by": "sonnet_reading"
+}
