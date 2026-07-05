@@ -1,0 +1,21 @@
+{
+  "work_id": "미생_01",
+  "scene_count": 111,
+  "core_dist": {
+    "CONFLICT": 33,
+    "DESIRE": 25,
+    "LOSS": 23,
+    "BOND": 22,
+    "ESTABLISH": 17,
+    "PERIL": 15,
+    "INTRO": 14,
+    "ORACLE": 10,
+    "REVELATION": 10,
+    "RELIEF": 5,
+    "REVERSAL": 3,
+    "HOOK": 2,
+    "ROMANCE": 2
+  },
+  "episode_function": "바둑 프로입단에 실패해 세상으로 밀려난 장그래가 낙하산 고졸 인턴으로 원인터에 들어와, 무능과 소외 속에서도 '노력'과 근성으로 버티는 첫날을 그린다. 오상식·안영이·장백기 등 핵심 인물을 도입하고 직장 성장드라마의 세계관과 주인공의 결핍·동력을 세워 시리즈의 출발점을 놓는다.",
+  "by": "sonnet_reading"
+}

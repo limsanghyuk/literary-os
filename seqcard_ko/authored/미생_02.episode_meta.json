@@ -1,0 +1,22 @@
+{
+  "work_id": "미생_02",
+  "scene_count": 71,
+  "core_dist": {
+    "CONFLICT": 22,
+    "ESTABLISH": 17,
+    "BOND": 11,
+    "ROMANCE": 10,
+    "DESIRE": 8,
+    "REVELATION": 8,
+    "HOOK": 5,
+    "ORACLE": 4,
+    "LOSS": 4,
+    "INTRO": 4,
+    "RELIEF": 2,
+    "PERIL": 2,
+    "PUNISH": 2,
+    "REUNION": 1
+  },
+  "episode_function": "PT 파트너 구하기를 축으로 장그래가 회사는 혼자 하는 일이 아님을 배우는 회차. 낙하산 정체 폭로와 운송장 유출 오해로 해고 위기까지 몰리지만, 상식이 진범(석호)을 알고도 그래를 감싸며 재입사를 붙잡아 관계가 회복되고, 그래가 능동적으로 파트너를 선택하며 성장한다. 한석율 첫 등장.",
+  "by": "sonnet_reading"
+}
