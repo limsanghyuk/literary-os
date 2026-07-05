@@ -1,0 +1,56 @@
+{"work_id":"구르미그린달빛_10","scene_no":1,"heading":"자현당. 밤","title":"여인 옷 앞의 라온 회상","intent_gist":"라온이 어머니와의 기억을 떠올리며 여인으로 돌아갈 결심을 다진다.","core":"ORACLE","skin":"자현당/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":2,"heading":"화원. 밤","title":"여인 라온과 영의 이름 짓기","intent_gist":"여인의 모습으로 나타난 라온에게 영이 처음으로 그 이름을 다정히 불러준다.","core":"ROMANCE","core2":"BOND","skin":"화원/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":3,"heading":"궐 전경. 낮","title":"궐 전경","intent_gist":"장면 전환을 위한 궐의 전경을 보여준다.","core":"ESTABLISH","skin":"궐/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":4,"heading":"동궁전 영의 처소. 낮","title":"라온 기다리는 설렘의 영","intent_gist":"영이 라온이 오기만을 설레며 기다린다.","core":"ROMANCE","skin":"동궁전 처소/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":5,"heading":"동궁전 복도. 낮","title":"처소로 달려가는 라온","intent_gist":"라온이 상기된 얼굴로 영의 처소로 서둘러 향한다.","core":"ROMANCE","skin":"동궁전 복도/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":6,"heading":"동궁전 영의 처소. 낮","title":"라온아 부르는 영의 애정","intent_gist":"영이 옷을 입혀주는 라온을 다정히 이름 부르며 애정을 드러낸다.","core":"ROMANCE","skin":"동궁전 처소/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":7,"heading":"운종가. 낮","title":"백운회 흉서 살포","intent_gist":"백운회가 왕을 규탄하는 흉서를 뿌려 민심을 선동한다.","core":"PERIL","core2":"HOOK","skin":"운종가/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":8,"heading":"왕의 집무실(소편전). 낮","title":"흉서에 분노하는 왕","intent_gist":"왕이 흉서 사건에 두려움과 분노로 궐 수색을 명한다.","core":"CONFLICT","core2":"PERIL","skin":"소편전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":9,"heading":"편전 복도. 낮","title":"영과 김헌의 대립","intent_gist":"영과 병연이 홍경래를 논하고, 김헌이 영을 대리청정에서 흔들려 압박한다.","core":"CONFLICT","skin":"편전 복도/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":10,"heading":"내반원. 낮","title":"수색에 긴장하는 내관들","intent_gist":"궐 전체 수색 속에서 라온과 내관들이 역모의 위협에 긴장한다.","core":"PERIL","skin":"내반원/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":11,"heading":"동궁전 전경. 밤","title":"동궁전 전경","intent_gist":"밤의 동궁전 전경으로 장면을 전환한다.","core":"ESTABLISH","skin":"동궁전/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":12,"heading":"동궁전. 밤","title":"무릎 베고 인어 이야기","intent_gist":"라온이 영의 무릎을 베게 하고 인어공주 이야기로 재우며 애틋함을 나눈다.","core":"ROMANCE","core2":"BOND","skin":"동궁전/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":13,"heading":"동궁전 복도. 밤","title":"엿듣는 병연","intent_gist":"병연이 문밖에서 두 사람의 대화를 들으며 괴로워한다.","core":"CONFLICT","skin":"동궁전 복도/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":14,"heading":"동궁전. 밤","title":"인어 이야기의 여운","intent_gist":"라온이 잠든 영에게 인어의 사연을 이어가며 자신의 처지를 투영한다.","core":"ROMANCE","skin":"동궁전/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":15,"heading":"동궁전 복도. 밤","title":"발길 돌리는 병연","intent_gist":"병연이 이야기를 듣다 무거운 얼굴로 돌아선다.","core":"CONFLICT","skin":"동궁전 복도/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":16,"heading":"왕의 침전. 밤","title":"왕의 국혼 결심","intent_gist":"왕이 민심 수습을 위해 세자 국혼을 서두르며 예판을 부른다.","core":"DESIRE","core2":"CONFLICT","skin":"왕 침전/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":17,"heading":"동궁전 전경. 낮","title":"동궁전 전경","intent_gist":"낮의 동궁전 전경으로 장면을 전환한다.","core":"ESTABLISH","skin":"동궁전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":18,"heading":"동궁전. 낮","title":"덕호 등용과 재회","intent_gist":"장원급제한 덕호가 등용되고, 라온과 정도령이 놀라 재회한다.","core":"REUNION","skin":"동궁전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":19,"heading":"궐 내 일각.(1회 엔딩 대나무 숲). 낮","title":"라온·덕호·명은 재회","intent_gist":"라온과 덕호가 비밀을 나누고, 변한 명은 공주와 마주친다.","core":"REUNION","skin":"대나무 숲/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":20,"heading":"소편전. 낮","title":"왕이 조만형을 부르다","intent_gist":"왕이 조만형에게 세자를 위해 힘이 되어달라 은밀히 청한다.","core":"DESIRE","skin":"소편전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":21,"heading":"김헌의 집무실. 낮","title":"국혼 저지 모의","intent_gist":"김헌 일파가 세자 국혼을 막을 방도를 모의한다.","core":"CONFLICT","core2":"DESIRE","skin":"김헌 집무실/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":22,"heading":"조만형의 방. 낮","title":"조만형의 고뇌","intent_gist":"조만형이 왕과 김헌 사이에서 딸의 국혼을 두고 갈등한다.","core":"CONFLICT","skin":"조만형 방/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":23,"heading":"김헌의 집무실. 낮","title":"중전 향한 김헌의 모멸","intent_gist":"김헌이 국혼을 우려하는 중전에게 천출 출신을 들먹이며 모멸한다.","core":"CONFLICT","skin":"김헌 집무실/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":24,"heading":"조만형의 방. 낮","title":"하연의 결단","intent_gist":"하연이 아버지에게 세자를 위해 국혼을 받아들이겠다 결심을 밝힌다.","core":"ORACLE","skin":"조만형 방/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":25,"heading":"생과방 앞. 밤","title":"영과 풍등 아이 재회","intent_gist":"영이 풍등 팔던 아이를 알아보고 다과를 챙겨주며 온정을 베푼다.","core":"BOND","skin":"생과방 앞/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":26,"heading":"중궁전 복도. 밤","title":"중전의 은밀한 발걸음","intent_gist":"중전이 김상궁과 밀실로 향하며 음모를 진행한다.","core":"DESIRE","skin":"중궁전 복도/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":27,"heading":"중궁전 밀실. 밤","title":"금복과 대군 음모","intent_gist":"중전이 임신한 궁녀 금복을 숨겨두고 가짜 대군 계획을 드러낸다.","core":"REVELATION","core2":"DESIRE","skin":"중궁전 밀실/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":28,"heading":"궐내 일각 (후원). 낮","title":"딱밤 대신 볼 뽀뽀","intent_gist":"영이 다친 라온을 나무라다 벌이라며 볼에 입맞추어 설렘을 준다.","core":"ROMANCE","skin":"후원/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":29,"heading":"궐내 일각 (후원). 낮","title":"발목 살피는 영","intent_gist":"영이 라온의 다친 발목을 살피며 기다리라 명한다.","core":"ROMANCE","core2":"BOND","skin":"후원/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":30,"heading":"상선의 집무실. 낮","title":"엄공의 실언","intent_gist":"엄공이 삼놈이의 시술을 언급하자 한상익이 라온의 정체를 의심하기 시작한다.","core":"REVELATION","skin":"상선 집무실/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":31,"heading":"소편전. 낮","title":"영의 국혼 거부","intent_gist":"영이 왕에게 정략혼을 거부하며 자신의 방식으로 사람을 모으겠다 맞선다.","core":"CONFLICT","skin":"소편전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":32,"heading":"훈련장. 낮(석양)","title":"영·병연의 대련","intent_gist":"국혼 압박과 라온 생각으로 복잡한 영이 병연과 격렬히 대련한다.","core":"CONFLICT","skin":"훈련장/석양","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":33,"heading":"궐 내 일각(후원). 밤","title":"라온 업어주는 영","intent_gist":"영이 다친 라온을 등에 업고 달빛 아래 걸으며 애틋함을 나눈다.","core":"ROMANCE","core2":"BOND","skin":"후원/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":34,"heading":"내반원 전경. 낮","title":"내반원 전경","intent_gist":"낮의 내반원 전경으로 장면을 전환한다.","core":"ESTABLISH","skin":"내반원/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":35,"heading":"내반원. 낮","title":"국혼 소식에 철렁","intent_gist":"라온이 세자 국혼 준비 소식을 듣고 가슴이 내려앉는다.","core":"REVELATION","core2":"LOSS","skin":"내반원/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":36,"heading":"궐 내 일각(후원 #34와 동장소). 낮","title":"슬픔 삼키는 라온","intent_gist":"라온이 인어 이야기의 결말을 곱씹으며 슬퍼하고 윤성이 위로를 건넨다.","core":"LOSS","skin":"후원/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":37,"heading":"호젓한 정자. 낮","title":"영과 정약용의 약조","intent_gist":"영이 정약용에게 성실한 일꾼과 한 여인을 지킬 도움을 청한다.","core":"DESIRE","core2":"BOND","skin":"정자/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":38,"heading":"한상익의 집무실. 낮","title":"해오라비난초 손수건","intent_gist":"한상익이 라온모의 손수건 이야기로 라온이 옛 벗의 딸임을 확신해간다.","core":"REVELATION","skin":"한상익 집무실/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":39,"heading":"궐 내 일각. 밤","title":"세작으로 몰린 아이","intent_gist":"풍등 아이가 흉서 세작으로 몰려 압송되고 병연이 먹먹히 바라본다.","core":"PERIL","skin":"궐 일각/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":40,"heading":"언덕 위. 낮","title":"언덕 위 병연의 상념","intent_gist":"병연이 과거의 아픔을 떠올리며 언덕에 앉아 생각에 잠긴다.","core":"BOND","skin":"언덕 위/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":41,"heading":"저택 마당. 병연의 회상. 밤","title":"병연 조부의 죽음","intent_gist":"어린 병연이 곳간을 연 조부가 역적으로 참수당하는 참극을 목격한다.","core":"LOSS","core2":"REVELATION","skin":"저택 마당/밤(회상)","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":42,"heading":"언덕 위 (석양). 낮","title":"라온과 병연의 대화","intent_gist":"병연이 국혼 소식을 애써 담담히 넘기는 라온을 안타깝게 바라본다.","core":"LOSS","skin":"언덕 위/석양","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":43,"heading":"상선의 집무실. 밤","title":"짙어지는 한상익의 의심","intent_gist":"한상익이 라온의 사연과 엄공의 말을 종합하며 정체 의심을 굳힌다.","core":"REVELATION","skin":"상선 집무실/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":44,"heading":"왕 침전. 밤","title":"아이 선처 청하는 영","intent_gist":"영이 어린아이를 살려달라 간청하나 왕은 엄중문책을 명한다.","core":"CONFLICT","skin":"왕 침전/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":45,"heading":"동궁전 전경. 밤","title":"동궁전 전경","intent_gist":"밤의 동궁전 전경으로 장면을 전환한다.","core":"ESTABLISH","skin":"동궁전/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":46,"heading":"동궁전 복도. 밤","title":"윤성의 결심 회상","intent_gist":"윤성이 라온을 향한 마음을 다지며 영에게 면담을 청한다.","core":"DESIRE","skin":"동궁전 복도/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":47,"heading":"동궁전. 밤","title":"윤성의 선전포고","intent_gist":"윤성이 영에게 라온을 연모한다며 도전장을 던진다.","core":"CONFLICT","core2":"DESIRE","skin":"동궁전/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":48,"heading":"동궁전 복도. 밤","title":"돌아서는 윤성","intent_gist":"윤성이 영의 방을 의식하며 무거운 얼굴로 복도를 지난다.","core":"DESIRE","skin":"동궁전 복도/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":49,"heading":"동궁전 영의 방. 밤","title":"복잡한 영","intent_gist":"영이 윤성의 도전에 복잡한 심경으로 한숨짓는다.","core":"CONFLICT","skin":"동궁전 방/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":50,"heading":"백운회 본진. 밤","title":"장기백의 병연 문책","intent_gist":"장기백이 라온의 정체를 숨긴 병연을 세작으로 위험시하며 칼을 겨눈다.","core":"PERIL","core2":"CONFLICT","skin":"백운회 본진/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":51,"heading":"동궁전. 밤","title":"정약용의 서신","intent_gist":"영이 정약용의 방법을 찾았다는 서신을 받고 환하게 미소짓는다.","core":"RELIEF","skin":"동궁전/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":52,"heading":"백운회 본진. 밤","title":"한상익=백운회 수장","intent_gist":"백운회의 수장이 상선 한상익임이 드러나 병연이 충격에 휩싸인다.","core":"REVELATION","core2":"HOOK","skin":"백운회 본진/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":53,"heading":"궐 내 일각. 밤","title":"이야기 결말 바꾸겠다는 영","intent_gist":"영이 라온을 여인으로 곁에 둘 방법을 찾았다며 해피엔딩을 약속한다.","core":"ROMANCE","core2":"RELIEF","skin":"궐 일각/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":54,"heading":"궐 내 일각(대나무 숲). 낮","title":"막아서는 누군가","intent_gist":"라온이 영을 기다리다 앞을 막아서는 누군가를 보고 놀란다.","core":"HOOK","skin":"대나무 숲/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":55,"heading":"궐 내 일각. 낮","title":"가벼운 발걸음의 영","intent_gist":"영이 라온을 만나러 가벼운 걸음으로 향한다.","core":"ROMANCE","skin":"궐 일각/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_10","scene_no":56,"heading":"궐 내 일각 (대나무 숲). 낮","title":"한상익·라온·영 대치","intent_gist":"한상익이 라온의 이름을 부르고 영이 이를 목격해 일촉즉발 긴장이 흐른다.","core":"REVELATION","core2":"HOOK","skin":"대나무 숲/낮","by":"sonnet_reading"}

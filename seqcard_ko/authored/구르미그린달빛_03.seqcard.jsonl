@@ -1,0 +1,54 @@
+{"work_id":"구르미그린달빛_03","scene_no":1,"heading":"동궁전 영의 방. 낮","title":"백지를 낸 그 놈을 궁금해하는 영","intent_gist":"영이 라온에게 마음이 쏠렸음을 드러내 구출의 동기를 심는다.","core":"DESIRE","skin":"동궁전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":2,"heading":"지하감옥. 낮","title":"명은에게 목숨을 위협받는 라온","intent_gist":"공주의 칼 앞에 라온을 세워 극의 위기를 절정으로 끌어올린다.","core":"PERIL","skin":"지하감옥/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":3,"heading":"궐 내 일각. 낮","title":"곤룡포 휘날리며 달려가는 영","intent_gist":"영의 급박한 발걸음으로 구출 서사의 긴박감을 조성한다.","core":"RESCUE","skin":"궐일각/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":4,"heading":"지하감옥. 낮","title":"칼을 치켜든 명은, 열리는 쇠문","intent_gist":"처형 직전 영의 등장으로 극적 반전과 구출을 성사시킨다.","core":"RESCUE","core2":"REVERSAL","skin":"지하감옥/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":5,"heading":"궐 내 일각. 낮","title":"라온을 데리고 나오는 영","intent_gist":"위기를 벗어난 두 사람을 그려 안도와 유대를 확인시킨다.","core":"RELIEF","core2":"BOND","skin":"궐일각/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":6,"heading":"내반원. 낮","title":"통과 여부를 기다리는 라온","intent_gist":"소환 결과를 앞둔 긴장으로 라온의 궐 잔류 여부를 걸어둔다.","core":"ESTABLISH","skin":"내반원/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":7,"heading":"동궁전 영의 방. 낮","title":"백지 답을 통으로 매기는 영","intent_gist":"영이 라온을 합격시키며 은밀한 애정과 공조를 드러낸다.","core":"BOND","core2":"ROMANCE","skin":"동궁전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":8,"heading":"자현당. 밤(2부 44씬 회상). 밤","title":"닭다리라는 해답의 추억","intent_gist":"과거 한 컷을 회상해 두 사람의 정을 로맨틱하게 되새긴다.","core":"ROMANCE","skin":"자현당/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":9,"heading":"내반원. 낮","title":"라온, 마침내 통과하다","intent_gist":"라온의 합격 확정으로 궐 생활의 새 장을 연다.","core":"RELIEF","skin":"내반원/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":10,"heading":"궁술 훈련장. 낮","title":"활을 쏘는 병연","intent_gist":"병연의 무예를 부각해 자객 서브플롯의 긴장을 이어간다.","core":"ESTABLISH","core2":"PERIL","skin":"훈련장/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":11,"heading":"자현당. 낮","title":"집복헌으로 옮겨가는 라온","intent_gist":"라온의 배정 변경으로 숙의박씨 서사와 라온을 연결한다.","core":"HOOK","skin":"자현당/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":12,"heading":"후원 일각. 낮","title":"라온을 향한 영의 시선","intent_gist":"영의 애정 어린 시선으로 로맨스의 온도를 유지한다.","core":"ROMANCE","skin":"후원/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":13,"heading":"궐 전경. 밤(왕의 꿈)","title":"홍경래의 난이 어른대는 왕의 악몽","intent_gist":"왕의 악몽을 통해 봉기와 트라우마라는 정치 서사의 뿌리를 드러낸다.","core":"ORACLE","skin":"궐전경/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":14,"heading":"침전. 밤","title":"악몽에 깨어난 왕","intent_gist":"왕의 공포와 죄의식을 부각해 부자 갈등의 심연을 심는다.","core":"ORACLE","skin":"침전/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":15,"heading":"침전 복도. 밤","title":"뒤척이는 궐의 밤","intent_gist":"불안한 밤의 궐을 그려 긴장과 불길함을 지속시킨다.","core":"ESTABLISH","skin":"침전/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":16,"heading":"침전. 밤","title":"과거에 짓눌린 왕의 고독","intent_gist":"왕의 내면 고통을 심화해 향후 숙의박씨 서사를 예비한다.","core":"ORACLE","skin":"침전/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":17,"heading":"집복헌 숙의박씨의 방. 오전","title":"쓸쓸히 지내는 숙의박씨","intent_gist":"버림받은 후궁의 처지를 소개해 왕과의 이별 서사를 연다.","core":"INTRO","core2":"LOSS","skin":"집복헌/오전","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":18,"heading":"중전 처소. 오전","title":"회임한 중전의 위세","intent_gist":"중전의 존재감을 부각해 궐 내 권력 구도를 환기한다.","core":"ESTABLISH","skin":"중전처소/오전","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":19,"heading":"편전. 오전","title":"도적떼 처결을 논하는 조정","intent_gist":"민란과 도적 문제를 정치 무대에 올려 왕권의 위기를 드러낸다.","core":"CONFLICT","skin":"편전/오전","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":20,"heading":"집복헌 뒷마당. 낮","title":"집복헌에 자리 잡는 라온","intent_gist":"라온을 숙의박씨 곁에 배치해 두 인물의 인연을 시작한다.","core":"BOND","skin":"집복헌/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":21,"heading":"집복헌 숙의박씨의 방. 낮","title":"숙의박씨와 마음을 나누는 라온","intent_gist":"라온과 숙의의 교감을 통해 따뜻한 정서와 서사를 쌓는다.","core":"BOND","skin":"집복헌/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":22,"heading":"중궁전 마루. 영의 회상. 낮","title":"어린 시절 어미를 그리는 영","intent_gist":"영의 회상으로 그의 결핍과 숙의박씨 서사를 정서적으로 연결한다.","core":"ORACLE","core2":"LOSS","skin":"중궁전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":23,"heading":"집복헌 숙의박씨의 방. 낮","title":"숙의를 위로하는 라온","intent_gist":"라온의 따뜻함을 부각해 숙의박씨와의 유대를 깊게 한다.","core":"BOND","skin":"집복헌/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":24,"heading":"집복헌 뒷마당. 낮","title":"집복헌의 소소한 일상","intent_gist":"소박한 일상으로 극에 온기와 리듬을 부여한다.","core":"ESTABLISH","skin":"집복헌/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":25,"heading":"궐 내 일각. 낮","title":"라온을 찾아온 영","intent_gist":"영이 라온에게 다가서며 로맨스의 흐름을 이어간다.","core":"ROMANCE","skin":"궐일각/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":26,"heading":"명은의 처소. 낮","title":"라온을 여전히 벼르는 명은","intent_gist":"공주의 앙심을 남겨둬 라온을 향한 잠재적 위협을 유지한다.","core":"PERIL","skin":"명은처소/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":27,"heading":"동궁전 앞. 낮","title":"세자를 견제하는 발걸음들","intent_gist":"세자를 둘러싼 정치 압박을 환기해 갈등 축을 유지한다.","core":"CONFLICT","skin":"동궁전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":28,"heading":"편전. 낮","title":"대리청정을 둘러싼 신경전","intent_gist":"대리청정 쟁점을 던져 영과 김헌의 권력 대결을 본격화한다.","core":"CONFLICT","skin":"편전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":29,"heading":"집복헌 숙의박씨의 방. 낮","title":"백지 서신을 발견하는 라온","intent_gist":"수상한 백지 서신을 심어 밀지 미스터리의 도화선을 놓는다.","core":"HOOK","skin":"집복헌/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":30,"heading":"집복헌 복도. 낮","title":"서신의 정체를 궁금해하는 라온","intent_gist":"라온의 호기심을 통해 밀지 추적 서사를 추동한다.","core":"HOOK","skin":"집복헌/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":31,"heading":"대전. 낮","title":"청의 윤허를 기다리는 조정","intent_gist":"청의 개입이라는 외교 변수를 던져 정치 갈등을 확대한다.","core":"CONFLICT","skin":"대전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":32,"heading":"궐 내 일각. 낮","title":"라온과 마주친 영","intent_gist":"우연한 대면으로 두 사람의 로맨틱 긴장을 되살린다.","core":"ROMANCE","skin":"궐일각/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":33,"heading":"궐 내 일각. 낮","title":"서신을 두고 고민하는 라온","intent_gist":"라온의 갈등을 통해 밀지가 불러올 위험을 예고한다.","core":"HOOK","skin":"궐일각/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":34,"heading":"궐 내 일각. 낮","title":"병연에게 서신을 보이는 라온","intent_gist":"라온이 병연에게 의지하며 밀지 해독의 단서를 연결한다.","core":"BOND","skin":"궐일각/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":35,"heading":"대전(강녕전) 근처. 낮","title":"왕을 노리는 은밀한 손길","intent_gist":"왕을 겨냥한 음모를 암시해 정치 서사의 위협을 심화한다.","core":"PERIL","skin":"강녕전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":36,"heading":"침전. 밤","title":"고뇌에 잠긴 왕의 밤","intent_gist":"왕의 번민을 통해 숙의박씨와의 재회를 앞둔 감정을 쌓는다.","core":"ORACLE","skin":"침전/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":37,"heading":"궐 전경. 낮","title":"평온 속 감춰진 긴장","intent_gist":"고요한 궐 전경으로 잠복한 위기를 대비시켜 긴장을 유지한다.","core":"ESTABLISH","skin":"궐전경/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":38,"heading":"궐 내 일각. 낮","title":"밀지의 비밀에 다가서는 라온","intent_gist":"라온이 밀지 해독에 근접하며 서사의 긴장을 끌어올린다.","core":"HOOK","skin":"궐일각/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":39,"heading":"집복헌 숙의박씨의 방. 낮","title":"숙의를 향한 왕의 마음이 움트다","intent_gist":"왕의 옛정을 드러내 7년 이별 서사의 화해를 예비한다.","core":"ROMANCE","core2":"BOND","skin":"집복헌/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":40,"heading":"자현당 마당. 낮","title":"병연을 살피는 라온","intent_gist":"병연을 향한 라온의 관심으로 서브플롯의 접점을 잇는다.","core":"BOND","skin":"자현당/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":41,"heading":"왕의 침전. 낮","title":"숙의박씨와의 7년 세월을 곱씹는 왕","intent_gist":"왕과 숙의의 7년 이별 서사를 열어 애틋한 재회를 준비한다.","core":"ORACLE","core2":"LOSS","skin":"침전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":42,"heading":"자현당. 낮","title":"라온의 서신을 살피는 병연","intent_gist":"병연이 밀지에 개입하며 해독의 실마리를 쥐게 한다.","core":"HOOK","skin":"자현당/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":43,"heading":"집복헌 숙의박씨의 방. 낮","title":"재회를 앞둔 숙의의 설렘","intent_gist":"숙의박씨의 기다림을 그려 재회의 정서적 무게를 쌓는다.","core":"ROMANCE","skin":"집복헌/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":44,"heading":"자현당. 밤","title":"불에 쬐어 밀지를 밝히는 병연","intent_gist":"능금식초 밀지의 해독으로 왕을 둘러싼 음모의 실체를 드러낸다.","core":"REVELATION","core2":"HOOK","skin":"자현당/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":45,"heading":"자현당 앞. 밤","title":"밀지의 진실에 전율하는 라온","intent_gist":"라온이 위험한 진실을 알게 되어 극의 긴장을 고조시킨다.","core":"REVELATION","skin":"자현당/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":46,"heading":"집복헌 숙의박씨 방. 밤","title":"재회를 준비하는 숙의","intent_gist":"숙의의 단장을 그려 왕과의 재회를 클라이맥스로 몰아간다.","core":"ROMANCE","skin":"집복헌/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":47,"heading":"궐 몽타주. 밤","title":"애련정으로 향하는 발걸음들","intent_gist":"교차 몽타주로 재회와 밀지 서사의 긴장을 동시에 끌어올린다.","core":"HOOK","skin":"궐/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":48,"heading":"대전 앞. 밤","title":"왕, 애련정으로 향하다","intent_gist":"왕의 발걸음을 통해 7년 만의 재회 순간을 향해 나아간다.","core":"ROMANCE","skin":"대전/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":49,"heading":"편전 전경. 낮","title":"대리청정 정국의 팽팽함","intent_gist":"정치 대결 구도를 재확인해 영과 김헌의 갈등을 지속시킨다.","core":"CONFLICT","skin":"편전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":50,"heading":"편전. 낮","title":"윤허를 미루는 김헌의 지연 전술","intent_gist":"김헌의 지연책으로 대리청정을 둘러싼 권력 공방을 심화한다.","core":"CONFLICT","skin":"편전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":51,"heading":"편전. 낮","title":"청의 윤허를 끌어내려는 영","intent_gist":"영의 정치적 승부수를 통해 세자의 결단과 성장을 부각한다.","core":"REVERSAL","skin":"편전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":52,"heading":"애련정. 밤","title":"7년 만에 재회하는 왕과 숙의","intent_gist":"왕과 숙의박씨의 애틋한 재회로 이별 서사를 감동적으로 매듭짓는다.","core":"REUNION","core2":"ROMANCE","skin":"애련정/밤","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":53,"heading":"동궁전. 낮","title":"세자로서의 무게를 짊어지는 영","intent_gist":"영의 성장과 결의를 그려 정체를 밝힐 결단으로 이끈다.","core":"ESTABLISH","skin":"동궁전/낮","by":"sonnet_reading"}
+{"work_id":"구르미그린달빛_03","scene_no":54,"heading":"서고. 밤","title":"이 영이다, 내 이름","intent_gist":"영이 곤룡포 차림으로 세자 정체를 밝혀 3부의 훅을 완성한다.","core":"REVELATION","core2":"HOOK","skin":"서고/밤","by":"sonnet_reading"}
