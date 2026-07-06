@@ -1,0 +1,24 @@
+{
+  "work_id": "뉴하트_05",
+  "scene_count": 54,
+  "core_dist": {
+    "BOND": 9,
+    "CONFLICT": 13,
+    "DESIRE": 4,
+    "ESTABLISH": 6,
+    "HOOK": 3,
+    "INTRO": 1,
+    "LOSS": 3,
+    "ORACLE": 3,
+    "PERIL": 9,
+    "PUNISH": 1,
+    "RELIEF": 6,
+    "RESCUE": 3,
+    "REUNION": 1,
+    "REVELATION": 7,
+    "REVERSAL": 2,
+    "ROMANCE": 10
+  },
+  "episode_function": "동권의 기습 키스 여진 속 혜석의 감정 혼란이 깊어지는 한편, 민영규의 지명 수술이 OPCAP 위기로 뒤집히고 한수진의 말판 심장병 발견으로 입국식마저 긴박하게 끝나며 병원 내 권력 음모와 신인 레지던트들의 성장이 동시에 교차하는 회차.",
+  "by": "sonnet_reading"
+}

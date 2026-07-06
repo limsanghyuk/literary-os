@@ -1,0 +1,66 @@
+{
+  "work_id": "뉴하트_07",
+  "episode_no": 7,
+  "scene_count": 70,
+  "sequence_count": 10,
+  "dramatic_question": "최강국의 원칙적 월권 구명은 정당한가, 그리고 혜석은 환자의 삶을 마음으로 보는 의사로 성장할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "설정",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "VIP 권력 충돌과 담당 박탈로 갈등을 세팅한다"
+    },
+    {
+      "act": "전개",
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "혈관 파열과 강행 이송, 고난도 봉합으로 위기가 고조된다"
+    },
+    {
+      "act": "심화",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "뇌사 소식과 상벌위원회 징계로 갈등이 심화된다"
+    },
+    {
+      "act": "회말전환",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "여수 전원과 발의 반응으로 혜석의 감정적 전환을 맞는다"
+    }
+  ],
+  "entry_state": "최강국이 원칙대로 응급환자를 우선하지만 VIP 권력과 병원 정치에 부딪히며 담당을 빼앗긴다.",
+  "exit_state": "월권 징계를 감수한 최강국의 철학이 혜석에게 스며들고, 여수 전원 끝에 산모의 회복 조짐과 온기 어린 엔딩이 남는다.",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "은성이 파열된 송호재를 발견하고 폭로를 결심하면서 최강국의 강행 구명 수술로 사건이 전환된다."
+  },
+  "central_conflict_axis": "환자 중심 의료 원칙 대 VIP 권력·병원 정치의 은폐",
+  "episode_function": "VIP 환자 혈관 파열 사고를 계기로 최강국이 월권 구명 수술을 감행하고 상벌 위원회 징계를 받는 동시에, 혜석이 여수 전원 과정에서 산모 발의 꼼지락거림을 목도하며 의사로서의 감정적 성장 전환점을 맞는 회차.",
+  "core_dist": {
+    "CONFLICT": 26,
+    "PERIL": 12,
+    "BOND": 14,
+    "RESCUE": 10,
+    "DESIRE": 11,
+    "REVELATION": 8,
+    "LOSS": 7,
+    "RELIEF": 7,
+    "ROMANCE": 4,
+    "ORACLE": 3,
+    "REVERSAL": 2,
+    "PUNISH": 2,
+    "ESTABLISH": 2,
+    "HOOK": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,23 @@
+{
+  "work_id": "뉴하트_04",
+  "scene_count": 49,
+  "core_dist": {
+    "BOND": 12,
+    "CONFLICT": 10,
+    "DESIRE": 5,
+    "ESTABLISH": 5,
+    "HOOK": 3,
+    "LOSS": 4,
+    "ORACLE": 1,
+    "PERIL": 8,
+    "PUNISH": 1,
+    "RELIEF": 4,
+    "RESCUE": 2,
+    "REUNION": 1,
+    "REVELATION": 7,
+    "REVERSAL": 1,
+    "ROMANCE": 6
+  },
+  "episode_function": "CT 강행으로 위기에 처한 은성이 대동맥장관루 진단 적중으로 생존권을 획득하고, 배우 이동권 입원을 계기로 혜석의 감춰진 상처와 팀 유대가 싹트며, 수민의 병원비 위기가 자선농구경기로 이어지는 실마리를 만든다.",
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,21 @@
+{
+  "work_id": "뉴하트_11",
+  "scene_count": 55,
+  "core_dist": {
+    "CONFLICT": 12,
+    "PERIL": 10,
+    "RESCUE": 5,
+    "DESIRE": 9,
+    "BOND": 8,
+    "ROMANCE": 3,
+    "REVELATION": 1,
+    "LOSS": 3,
+    "RELIEF": 5,
+    "PUNISH": 3,
+    "ESTABLISH": 5,
+    "REVERSAL": 3,
+    "HOOK": 1
+  },
+  "episode_function": "최강국의 의료법 위반 고소와 라이브 수술 위기가 동시에 폭발하고, 혜석의 에이즈 음성 판정과 은성의 냉정한 거절로 로맨스 갈등이 정점에 도달한다.",
+  "by": "sonnet_reading"
+}

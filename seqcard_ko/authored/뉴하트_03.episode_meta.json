@@ -1,0 +1,22 @@
+{
+  "work_id": "뉴하트_03",
+  "scene_count": 53,
+  "core_dist": {
+    "BOND": 8,
+    "CONFLICT": 9,
+    "DESIRE": 10,
+    "ESTABLISH": 7,
+    "HOOK": 1,
+    "LOSS": 3,
+    "ORACLE": 2,
+    "PERIL": 13,
+    "PUNISH": 1,
+    "RELIEF": 2,
+    "RESCUE": 4,
+    "REVELATION": 5,
+    "REVERSAL": 2,
+    "ROMANCE": 1
+  },
+  "episode_function": "흉부외과에 입성한 혜석·은성이 첫날부터 응급·조폭·자살 시도 환자를 연달아 겪으며 의사로서의 신념과 방식을 두고 충돌하고, 대동맥박리 의심 CT 강행이라는 위기로 회차를 마감한다.",
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,58 @@
+{
+  "work_id": "뉴하트_02",
+  "episode_no": 2,
+  "scene_count": 52,
+  "sequence_count": 8,
+  "dramatic_question": "탈락한 은성과 혜석은 순혈주의 장벽과 내과의 유혹을 넘어 흉부외과 의사로 인정받을 수 있는가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "면접 탈락과 레지던트 집단 도주로 흉부외과가 마비되는 발단"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        3,
+        6
+      ],
+      "beat": "위기 대응과 압박 속에서 탈락자들이 응급수술에 뛰어들어 자질을 시험받는 상승"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "팀 복귀와 리도케인 발견을 거쳐 최후의 선택 앞에 서는 절정과 훅"
+    }
+  ],
+  "entry_state": "두 지원자가 면접에서 탈락하고 레지던트 인력이 붕괴 직전인 상태",
+  "exit_state": "은성·혜석이 자질을 증명하고 혜석이 흉부외과와 내과 사이 결단의 기로에 선 상태",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "은성과 혜석이 응급 개흉수술 어시스트로 실력을 입증하며 최강국의 재평가를 이끌어내는 전환"
+  },
+  "central_conflict_axis": "순혈주의 배제 대 실력 증명, 흉부외과의 소명 대 내과의 안정",
+  "episode_function": "레지던트 채용 파국과 집단 파업 속에서 은성·혜석이 응급수술 현장에 뛰어들어 자질을 증명하고, 혜석이 내과 MD앤더슨 제안과 흉부외과 사이의 기로에 서며 2회를 마감한다.",
+  "core_dist": {
+    "CONFLICT": 23,
+    "INTRO": 1,
+    "REVELATION": 5,
+    "LOSS": 3,
+    "BOND": 10,
+    "DESIRE": 12,
+    "ESTABLISH": 5,
+    "PERIL": 11,
+    "ORACLE": 3,
+    "ROMANCE": 3,
+    "RESCUE": 3,
+    "REVERSAL": 2,
+    "RELIEF": 1,
+    "HOOK": 1
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,22 @@
+{
+  "work_id": "뉴하트_01",
+  "scene_count": 84,
+  "core_dist": {
+    "ESTABLISH": 20,
+    "ORACLE": 7,
+    "INTRO": 4,
+    "LOSS": 6,
+    "DESIRE": 14,
+    "CONFLICT": 15,
+    "RELIEF": 4,
+    "RESCUE": 3,
+    "PERIL": 11,
+    "BOND": 7,
+    "REVELATION": 3,
+    "REVERSAL": 6,
+    "PUNISH": 1,
+    "HOOK": 1
+  },
+  "episode_function": "흉부외과 천재 최강국의 좌천 현실, 인턴 이은성의 결기, 수석 인턴 남혜석의 갈등을 동시에 도입하며 세 주인공이 광희대 흉부외과 면접장에서 처음 교차하는 충격적 만남으로 1화를 마무리해 시리즈 전체의 갈등 축을 놓는다.",
+  "by": "sonnet_reading"
+}

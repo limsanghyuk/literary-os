@@ -1,0 +1,22 @@
+{
+  "work_id": "뉴하트_02",
+  "scene_count": 52,
+  "core_dist": {
+    "CONFLICT": 23,
+    "INTRO": 1,
+    "REVELATION": 5,
+    "LOSS": 3,
+    "BOND": 10,
+    "DESIRE": 12,
+    "ESTABLISH": 5,
+    "PERIL": 11,
+    "ORACLE": 3,
+    "ROMANCE": 3,
+    "RESCUE": 3,
+    "REVERSAL": 2,
+    "RELIEF": 1,
+    "HOOK": 1
+  },
+  "episode_function": "레지던트 채용 파국과 집단 파업 속에서 은성·혜석이 응급수술 현장에 뛰어들어 자질을 증명하고, 혜석이 내과 MD앤더슨 제안과 흉부외과 사이의 기로에 서며 2회를 마감한다.",
+  "by": "sonnet_reading"
+}

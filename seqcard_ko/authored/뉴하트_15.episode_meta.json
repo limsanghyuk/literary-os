@@ -1,0 +1,22 @@
+{
+  "work_id": "뉴하트_15",
+  "scene_count": 49,
+  "core_dist": {
+    "BOND": 8,
+    "CONFLICT": 11,
+    "DESIRE": 9,
+    "ESTABLISH": 1,
+    "LOSS": 3,
+    "ORACLE": 1,
+    "PERIL": 9,
+    "PUNISH": 3,
+    "RELIEF": 4,
+    "RESCUE": 3,
+    "REUNION": 5,
+    "REVELATION": 4,
+    "REVERSAL": 7,
+    "ROMANCE": 3
+  },
+  "episode_function": "최강국과 이은성이 각자의 도피에서 복귀하고, 해밀턴 심정지 위기를 계기로 최강국이 극적으로 수술에 복귀하며 팀 전체가 재결합하는 전환점 회차.",
+  "by": "sonnet_reading"
+}

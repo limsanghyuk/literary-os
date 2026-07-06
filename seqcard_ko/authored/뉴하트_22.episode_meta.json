@@ -1,0 +1,22 @@
+{
+  "work_id": "뉴하트_22",
+  "scene_count": 65,
+  "core_dist": {
+    "BOND": 9,
+    "CONFLICT": 22,
+    "DESIRE": 17,
+    "ESTABLISH": 8,
+    "HOOK": 1,
+    "LOSS": 7,
+    "PERIL": 21,
+    "PUNISH": 1,
+    "RELIEF": 5,
+    "RESCUE": 2,
+    "REUNION": 1,
+    "REVELATION": 6,
+    "REVERSAL": 4,
+    "ROMANCE": 6
+  },
+  "episode_function": "병원장의 심장이식을 위해 최강국을 비행기에서 돌려세우고 부산 도너 심장 적출부터 수술 완료까지 전 과정을 질주하며 의사의 직업적 소명과 가족 사이의 갈등을 절정으로 밀어붙인다.",
+  "by": "sonnet_reading"
+}

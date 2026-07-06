@@ -1,0 +1,58 @@
+{
+  "work_id": "뉴하트_03",
+  "episode_no": 3,
+  "scene_count": 53,
+  "sequence_count": 10,
+  "dramatic_question": "혜석과 은성은 서로 다른 의사의 신념 속에서 조폭 환자의 목숨을 건 CT 강행 대치를 어떻게 감당할 것인가?",
+  "act_structure": [
+    {
+      "act": "Act 1 도입",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "혜석의 흉부외과 복귀와 신입 신고식, 첫 응급 실전과 은성의 의국 정착"
+    },
+    {
+      "act": "Act 2 상승",
+      "seq_span": [
+        5,
+        8
+      ],
+      "beat": "김태준 부부의 균열, 김필주 자살 시도 충격, 연구 동맹 형성과 첫 오진의 좌절"
+    },
+    {
+      "act": "Act 3 절정",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "두 사람의 성장과 조폭 환자 대동맥박리 직감, CT 강행 엔딩 대치"
+    }
+  ],
+  "entry_state": "혜석이 최강국에게 버림받고 순환기내과 유혹 앞에 흔들리는 상태",
+  "exit_state": "은성이 조폭 환자를 살리려 혜석의 저지를 뚫고 CT를 강행하며 긴장이 극에 달한 상태",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "김필주의 자살 시도로 은성이 의사의 한계를 자각하고, 환자를 향한 신념이 시험대에 오르는 전환점"
+  },
+  "central_conflict_axis": "모든 환자를 돌봐야 한다는 은성의 신념 vs 살려는 환자만 돕겠다는 혜석의 현실주의",
+  "episode_function": "흉부외과에 입성한 혜석·은성이 첫날부터 응급·조폭·자살 시도 환자를 연달아 겪으며 의사로서의 신념과 방식을 두고 충돌하고, 대동맥박리 의심 CT 강행이라는 위기로 회차를 마감한다.",
+  "core_dist": {
+    "BOND": 8,
+    "CONFLICT": 9,
+    "DESIRE": 10,
+    "ESTABLISH": 7,
+    "HOOK": 1,
+    "LOSS": 3,
+    "ORACLE": 2,
+    "PERIL": 13,
+    "PUNISH": 1,
+    "RELIEF": 2,
+    "RESCUE": 4,
+    "REVELATION": 5,
+    "REVERSAL": 2,
+    "ROMANCE": 1
+  },
+  "by": "sonnet_reading"
+}

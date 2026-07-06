@@ -1,0 +1,21 @@
+{
+  "work_id": "뉴하트_14",
+  "scene_count": 53,
+  "core_dist": {
+    "LOSS": 6,
+    "CONFLICT": 20,
+    "REVELATION": 8,
+    "DESIRE": 12,
+    "PERIL": 9,
+    "BOND": 5,
+    "ESTABLISH": 6,
+    "RELIEF": 6,
+    "ROMANCE": 2,
+    "HOOK": 1,
+    "RESCUE": 5,
+    "REUNION": 2,
+    "REVERSAL": 1
+  },
+  "episode_function": "최강국의 공백 속에 김태준의 야심과 병원 파벌 갈등이 폭발하고, 병원을 떠난 은성이 골프장에서 해밀턴 전 총리를 구조해 극적으로 복귀의 기회를 마주하나 스스로를 숨기며 회차가 마무리된다.",
+  "by": "sonnet_reading"
+}
