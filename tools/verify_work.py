@@ -19,7 +19,7 @@ FULL_KEYS={"series","episodes_total","scenes_total","sequences_total","logline",
  "macro_turning_points","resolution","open_ending","tone","conflict_persist","series_core_dist","by"}
 DENSITY_FLOOR=0.11
 work=sys.argv[1]
-def jl(f): return [json.loads(l) for l in open(f,encoding="utf-8")]
+def jl(f): return [json.loads(l) for l in open(f,encoding="utf-8") if l.strip()]
 eps=sorted(int(re.search(rf"{re.escape(work)}_(\d+)\.seqcard",p).group(1))
            for p in glob.glob(f"{SC}/{work}_*.seqcard.jsonl"))
 errors=[]; tot_scene=tot_seq=0
