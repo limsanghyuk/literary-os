@@ -1,0 +1,22 @@
+{
+  "work_id": "내이름은김삼순_13",
+  "scene_count": 43,
+  "core_dist": {
+    "HOOK": 3,
+    "ESTABLISH": 5,
+    "RELIEF": 7,
+    "BOND": 9,
+    "ROMANCE": 6,
+    "CONFLICT": 15,
+    "INTRO": 5,
+    "DESIRE": 6,
+    "PERIL": 4,
+    "REVELATION": 9,
+    "ORACLE": 6,
+    "PUNISH": 5,
+    "LOSS": 3,
+    "REVERSAL": 3
+  },
+  "episode_function": "제주도 등반 회상의 여운 속에서 진헌·삼순의 계약연애가 스킨십과 생일 이벤트로 정서적 밀착 단계에 접어들지만(BOND/ROMANCE), 개명허가서 훼손 사건으로 정면충돌(CONFLICT)한다. 동시에 나사장의 맞선 강요·봉숙과의 기싸움으로 두 집안 갈등이 표면화되고(CONFLICT/REVERSAL), 헨리를 매개로 진헌이 옛 기억(뺨의 점)을 되짚으며 희진에 대한 감정 변화를 자각한다(ORACLE/REVELATION). 희진의 덤핑증후군 첫 징후로 위기가 예고되고, 종막에서 진헌이 희진에게 '그만하자'며 이별을 통보해(LOSS) 14화의 정면 파국으로 이어지는 전환점 역할을 한다.",
+  "by": "sonnet_reading"
+}

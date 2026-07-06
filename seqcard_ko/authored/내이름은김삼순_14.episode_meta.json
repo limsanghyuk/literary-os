@@ -1,0 +1,23 @@
+{
+  "work_id": "내이름은김삼순_14",
+  "scene_count": 73,
+  "core_dist": {
+    "HOOK": 20,
+    "ESTABLISH": 7,
+    "LOSS": 10,
+    "CONFLICT": 14,
+    "ORACLE": 8,
+    "BOND": 16,
+    "PERIL": 22,
+    "REUNION": 1,
+    "PUNISH": 7,
+    "REVELATION": 9,
+    "DESIRE": 4,
+    "RELIEF": 12,
+    "ROMANCE": 11,
+    "INTRO": 1,
+    "REVERSAL": 4
+  },
+  "episode_function": "13화 엔딩의 이별통보 후폭풍으로 열어(LOSS/ORACLE 회상 몰아치기) 진헌이 나사장에게 뺨을 맞으며 계약연애의 대가를 치르고, 삼순은 자초지종을 모른 채 오해와 걱정 사이에서 진헌을 쫓는다(HOOK/PERIL). 중반은 버킷리스트 '탑 세븐'을 하나씩 실행하며 커플링·공개고백까지 관계를 급속히 다지고(ROMANCE/BOND), 삼순 부모에게 정식 인사하는 소동(진돗개 선물·빗자루 응징·술자리 신문)으로 코미디의 정점을 찍어 봉숙의 마음을 얻는다(REVERSAL/RELIEF). 그러나 후반부는 희진의 거식 증상 악화(PERIL 집중 배치)로 무게중심이 급격히 이동하며, 진헌이 삼순의 전화를 피해가며 희진을 챙기다 결국 엘리베이터 앞에서 삼순과 마주치는 3자 대면 절벽 엔딩(REVERSAL)으로 끝나 다음 화 갈등을 예고한다.",
+  "by": "sonnet_reading"
+}

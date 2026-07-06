@@ -1,0 +1,20 @@
+{
+  "work_id": "내이름은김삼순_01",
+  "scene_count": 57,
+  "core_dist": {
+    "ESTABLISH": 13,
+    "HOOK": 6,
+    "CONFLICT": 14,
+    "PUNISH": 5,
+    "LOSS": 5,
+    "REVERSAL": 3,
+    "INTRO": 4,
+    "REVELATION": 12,
+    "ORACLE": 1,
+    "DESIRE": 2,
+    "RELIEF": 3,
+    "BOND": 7
+  },
+  "episode_function": "3년 사귄 애인 현우에게 크리스마스 이브에 배신당하고 공개적으로 이별당한 삼순이 실직 상태에서 레스토랑 사장 현진헌과 화장실 소동으로 악연을 맺은 뒤, 그의 레스토랑 파티쉐 자리에 '김희진'이라는 가명으로 채용되기까지의 과정을 그리며, 두 주인공의 적대적 첫 만남과 계약관계 성립, 그리고 삼순이 이름을 숨기려는 이유라는 핵심 미스터리를 던지는 시리즈 도입화이다.",
+  "by": "sonnet_reading"
+}
