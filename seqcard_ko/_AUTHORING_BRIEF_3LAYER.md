@@ -139,3 +139,51 @@ conflict_persist, series_core_dist, by
 python3 /sessions/upbeat-focused-bohr/mnt/outputs/verify_work.py <work>
 ```
 `ERRORS 0 — 엄격게이트 ALL PASS` 나올 때까지 수정 반복. 자기보고로 "통과"라 쓰지 말 것 — 실제 스크립트 출력이 ERRORS 0 이어야만 통과.
+
+---
+
+## ★ EdgeLayer / CharacterArc / RelationshipArc 신규 계층 (2026-07-06 비밀의숲 파일럿 검증 완료)
+
+배경: GPT로 다른 작품을 분석시켰다가 원문 미독해·통계만 맞춘 가짜 산출물(미치환 템플릿 변수, 900개 씬 중 623개 동일 상투문구, 전 씬 동일 판정근거문)을 만든 사고 발견. 그중 CausalSpine/Plant-Payoff/HookChain은 이미 설계했으나 미실행이던 SeqCard v2.1 엣지레이어와 동일 개념이라 이번에 최초 실행, CharacterArc/RelationshipArc는 신규 채택. 비밀의숲(16화) 파일럿에서 강한게이트 ERRORS 0 확인(`tools/verify_new_layers.py`).
+
+### 경로
+- LocalEdge(화내·인접화 causal): `authored_edges/<work>_<NN>.local_edges.jsonl`
+- CrossEpisodeEdge(장거리 callback/plant_payoff/subplot_counterpoint): `authored_edges/<work>_cross_episode_edges.jsonl` (작품 1개)
+- PayoffCandidate(장거리 연결 후보 메모, 최종 엣지 아님): `authored_edges/<work>_<NN>.payoff_candidates.jsonl`
+- CharacterArc: `authored_chararc/<work>_<NN>.chararc.jsonl`
+- RelationshipArc: `authored_relarc/<work>_<NN>.relarc.jsonl`
+
+### ★ edge_id/candidate_id 네임스페이스 규칙 (우회불가 — 비밀의숲에서 병렬저작 충돌 사고 발생, 재발 방지)
+병렬 에이전트가 각자 "화 경계 넘어 전체에서 고유"라는 자연어 지시만으로 ID를 매기면 서로 다른 화를 맡은 에이전트끼리 번호가 겹친다(실제 사고: 02화·03화 에이전트가 둘 다 e030~e043 사용). 반드시 **고정 포맷을 기계적으로 지시**할 것:
+- LocalEdge: `edge_id = f"{work}_e{episode_no:02d}{seq:03d}"` (seq=그 화 파일 내 순번, 1부터)
+- PayoffCandidate: `candidate_id = f"{work}_p{episode_no:02d}{seq:03d}"`
+- CrossEpisodeEdge: `edge_id = f"{work}_x{seq:03d}"` (전역 순번)
+이 포맷을 각 에이전트 프롬프트에 문자열 그대로 박아 넣을 것 — "전체에서 고유하게 해라"라고만 지시하지 말 것.
+
+### LocalEdge 레코드 = 정확히 이 12키
+`edge_id, work_id, edge_type, src_episode_no, src_scene_no, tgt_episode_no, tgt_scene_no, gap_episodes, label, confidence, note, by`
+- 1차 저작 단계에서는 edge_type="causal"만, gap_episodes 0 또는 1로 제한(같은/인접 화 내부 인과만)
+- 장거리(callback/plant_payoff/subplot_counterpoint, gap_episodes≥1 특히 2 이상)는 전 화를 다 읽은 fan-in 단계에서만 CrossEpisodeEdge로 확정 — 화 하나만 보는 병렬 에이전트가 장거리 페이오프를 단정하면 근거 없는 추측이 된다.
+
+### CharacterArc 레코드 = 정확히 이 8키
+`work_id, character, episode_no, state_label, state_delta, trigger_scene_no, by, evidence`
+- 인물명 표기는 반드시 그 작품의 대표 표기 하나로 통일(예: "영은수" vs "이은수" 혼용 금지 — 비밀의숲에서 발생했던 실수)
+
+### RelationshipArc 레코드 = 정확히 이 9키
+`work_id, char_a, char_b, episode_no, relation_state, relation_delta, trigger_scene_no, evidence, by`
+
+### PayoffCandidate 레코드 = 정확히 이 7키
+`candidate_id, work_id, episode_no, scene_no, edge_type_guess, description, by`
+- edge_type_guess ∈ {plant_payoff, callback, subplot_counterpoint, resolved_here}(마지막 화에서 이미 회수된 경우만 resolved_here)
+
+### 반게이밍 규칙 (강한게이트가 자동 검사)
+1. note/evidence/description은 실제 씬 내용(intent_gist/title)에 근거해 레코드마다 달라야 한다 — 동일 문구가 전체의 15% 이상 반복되면 FAIL.
+2. `{char}`, `{topic}` 등 미치환 템플릿 변수 발견 시 즉시 FAIL.
+3. src/tgt/trigger_scene_no는 반드시 그 작품·회차에 실재하는 scene_no만 참조(참조무결성).
+4. edge_id·candidate_id는 작품 전체에서 100% 고유해야 한다(위 네임스페이스 규칙 준수 시 자동 보장).
+
+### 검증
+```
+python3 tools/verify_new_layers.py <work_id>
+```
+`ERRORS 0` 나올 때까지 수정. `verify_work.py`(4계층 구조 게이트)와는 별개로 반드시 추가 실행할 것.
