@@ -293,3 +293,12 @@ python3 tools/verify_new_layers.py <work_id>
 ---
 
 *본 문서는 literary-os(github.com/limsanghyuk/literary-os) `seqcard_ko/_AUTHORING_BRIEF_3LAYER.md`를 원본으로, 이 프로젝트에서 실제로 겪은 두 건의 GPT 산출물 게이밍 사고(도깨비/구미호 v6, 결혼못하는남자 Stage01~04)의 포렌식 결과를 반영해 GPT 등 외부 provider를 위한 완전 설명서 형태로 재구성한 것이다.*
+
+---
+
+## 부록: 이 문서의 다중 허브 반영 현황
+
+- **literary-os** (Claude 자신의 코퍼스 저작 허브, github.com/limsanghyuk/literary-os): `seqcard_ko/claude_drama_analysis_method_manual_stage01_04_v1.md` — 본 파일. 새 세션이 집/회사/한도초과로 끊겨도 즉시 읽고 이어갈 수 있는 자립형 레퍼런스 목적.
+- **v1700-literary-os** (GPT 문학 창작 생성 모델 허브, github.com/limsanghyuk/v1700-literary-os): `docs/external/claude_drama_analysis_method_manual_stage01_04_v1.md` — GPT가 동일 방법론을 그대로 따라할 수 있도록 인계한 버전(PR #63, 2026-07-10 병합).
+
+두 문서는 동일 내용이며, 원본은 `seqcard_ko/_AUTHORING_BRIEF_3LAYER.md`(계속 갱신되는 내부 브리프)이다. 브리프가 갱신되면 이 두 문서도 함께 갱신할 것.
