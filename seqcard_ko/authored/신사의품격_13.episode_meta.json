@@ -1,0 +1,21 @@
+{
+  "work_id": "신사의품격_13",
+  "episode_no": 13,
+  "scene_count": 46,
+  "core_dist": {
+    "BOND": 8,
+    "CONFLICT": 13,
+    "DESIRE": 5,
+    "ESTABLISH": 4,
+    "HOOK": 12,
+    "INTRO": 2,
+    "LOSS": 6,
+    "PERIL": 6,
+    "PUNISH": 2,
+    "RELIEF": 9,
+    "RESCUE": 1,
+    "REVELATION": 4,
+    "REVERSAL": 1,
+    "ROMANCE": 6
+  }
+}

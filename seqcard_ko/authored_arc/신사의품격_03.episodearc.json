@@ -1,0 +1,56 @@
+{
+  "work_id": "신사의품격_03",
+  "episode_no": 3,
+  "scene_count": 50,
+  "sequence_count": 12,
+  "dramatic_question": "도진은 태산의 경고와 스스로의 망설임을 넘어 이수에게 마음을 인정할 것인가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "밸런타인 이후 서로를 살피는 신경전",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "B",
+      "label": "통영 원정 여행 중 벌어지는 소동",
+      "seq_span": [
+        5,
+        8
+      ]
+    },
+    {
+      "act": "C",
+      "label": "오징어 복수극에서 짝사랑 선언까지",
+      "seq_span": [
+        9,
+        12
+      ]
+    }
+  ],
+  "entry_state": "이수의 공개 고백 이후 도진이 태산의 경고 속에 거리를 재는 상태",
+  "exit_state": "도진이 스스로 짝사랑을 선언하며 관계의 주도권이 뒤바뀐 상태",
+  "turning_point": {
+    "seq_index": 12,
+    "desc": "도진이 이수의 소개팅 자리에 나타나 그녀를 짝사랑하기로 했다고 선언"
+  },
+  "central_conflict_axis": "도진의 흔들리는 마음↔태산의 경고와 스스로의 망설임",
+  "episode_function": "통영 원정 여행에서 벌어진 소동들을 거치며 도진의 마음이 확인되고, 3부 엔딩에서 스스로 짝사랑을 선언한다",
+  "core_dist": {
+    "HOOK": 11,
+    "RELIEF": 21,
+    "PUNISH": 5,
+    "DESIRE": 11,
+    "REVELATION": 4,
+    "ROMANCE": 9,
+    "CONFLICT": 13,
+    "BOND": 9,
+    "LOSS": 3,
+    "ESTABLISH": 4,
+    "REVERSAL": 1,
+    "PERIL": 1
+  },
+  "by": "sonnet_reading"
+}

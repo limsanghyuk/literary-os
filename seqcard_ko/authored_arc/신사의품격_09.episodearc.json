@@ -1,0 +1,58 @@
+{
+  "work_id": "신사의품격_09",
+  "episode_no": 9,
+  "scene_count": 39,
+  "sequence_count": 13,
+  "dramatic_question": "이수는 도진과 태산 사이에서 흔들리던 마음들을 정리하고 진짜 사랑을 지킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "태산의 결단과 도진의 직접 고백, 각자의 마음이 정리되는 아침",
+      "seq_span": [
+        1,
+        5
+      ]
+    },
+    {
+      "act": "B",
+      "label": "콜린의 발견과 세라의 위기, 친구들의 구출과 화해",
+      "seq_span": [
+        6,
+        9
+      ]
+    },
+    {
+      "act": "C",
+      "label": "이수의 거짓 고백이 부른 파국과 도진의 냉담한 거리두기",
+      "seq_span": [
+        10,
+        13
+      ]
+    }
+  ],
+  "entry_state": "태산이 세라를 선택했다고 공표하며 도진과 이수 사이의 로맨스가 급물살을 타기 시작한 상태",
+  "exit_state": "이수의 선의의 거짓 고백이 도진에게는 배신으로 다가와 신뢰가 무너지고, 거듭된 사과도 통하지 않은 채 얼어붙은 상태",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "이수가 모두를 지키려 던진 거짓 고백이 도진에게는 진심을 이용당한 배신으로 다가와 신뢰가 무너지는 파국적 전환"
+  },
+  "central_conflict_axis": "이수(모두를 지키려는 선의)↔도진(이용당했다는 배신감) / 태산-세라의 화해와 대비되는 도진-이수의 파국",
+  "episode_function": "태산의 세라 공표로 도진-이수 로맨스가 급진전하지만, 뒤풀이 자리에서 이수가 모두를 위해 던진 거짓 고백이 도진의 신뢰를 무너뜨려 두 사람 관계가 파국으로 치닫는다",
+  "core_dist": {
+    "RELIEF": 9,
+    "REVELATION": 4,
+    "ROMANCE": 2,
+    "HOOK": 7,
+    "LOSS": 10,
+    "BOND": 8,
+    "ESTABLISH": 1,
+    "CONFLICT": 12,
+    "PERIL": 1,
+    "RESCUE": 1,
+    "REUNION": 1,
+    "REVERSAL": 1,
+    "PUNISH": 2,
+    "DESIRE": 3
+  },
+  "by": "sonnet_reading"
+}

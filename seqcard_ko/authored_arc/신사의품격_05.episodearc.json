@@ -1,0 +1,35 @@
+{
+  "work_id": "신사의품격_05",
+  "episode_no": 5,
+  "scene_count": 42,
+  "sequence_count": 8,
+  "dramatic_question": "도진의 공개 고백과 태산-세라의 균열이 이어지는 가운데, 클럽에서 벌어진 소동 끝에 도진의 질투는 어떤 파국을 부를 것인가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [1, 3],
+      "label": "도진의 폭탄고백과 그 여파"
+    },
+    {
+      "act": 2,
+      "seq_span": [4, 6],
+      "label": "숨겨진 진실들과 커플들의 균열"
+    },
+    {
+      "act": 3,
+      "seq_span": [7, 8],
+      "label": "클럽의 밤과 질투가 부른 파국"
+    }
+  ],
+  "entry_state": "야구장에서 도진과 세라가 함께 자리한 채 이수의 비밀을 향한 시선이 좁혀지는 상황",
+  "exit_state": "낯선 남자와 대화하는 이수를 본 도진이 순간적인 질투에 휩싸여 차를 들이받으며 파국으로 5화를 닫는다",
+  "turning_point": {
+    "seq_index": 8,
+    "label": "도진, 질투에 못 이겨 차를 들이받다",
+    "description": "핸드폰이 방전돼 발이 묶인 이수가 낯선 남자와 이야기하는 것을 본 도진이 순간적인 질투에 사로잡혀 그대로 차를 들이받는다"
+  },
+  "central_conflict_axis": "이수의 오랜 비밀이 공개되며 시작된 도진-이수 관계 vs 태산-세라 균열과 도진의 질투가 만드는 위기",
+  "episode_function": "도진의 공개 고백으로 삼각관계 표면화, 태산-세라 관계 균열 심화, 메아리-콜린 재회 서브플롯 개시, 도진의 질투 폭발로 6화 갈등 예고",
+  "core_dist": {"ESTABLISH": 3, "BOND": 9, "HOOK": 11, "CONFLICT": 12, "LOSS": 5, "REVELATION": 9, "REUNION": 1, "RELIEF": 11, "ROMANCE": 1, "PERIL": 2, "RESCUE": 2, "DESIRE": 11, "INTRO": 1, "ORACLE": 1},
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,16 @@
+{
+  "work_id": "신사의품격_20",
+  "episode_no": 20,
+  "scene_count": 11,
+  "core_dist": {
+    "BOND": 3,
+    "CONFLICT": 4,
+    "DESIRE": 2,
+    "HOOK": 1,
+    "RELIEF": 6,
+    "REUNION": 1,
+    "REVELATION": 1,
+    "REVERSAL": 1,
+    "ROMANCE": 3
+  }
+}

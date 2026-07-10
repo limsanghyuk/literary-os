@@ -1,0 +1,35 @@
+{
+  "work_id": "신사의품격_06",
+  "episode_no": 6,
+  "scene_count": 40,
+  "sequence_count": 7,
+  "dramatic_question": "질투와 오해로 얽힌 네 커플의 밤이 지나간 뒤, 뒤바뀐 포옹과 벚꽃 키스는 이수·도진·태산·세라의 관계를 돌이킬 수 없이 바꿔놓을 것인가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [1, 2],
+      "label": "차 사고의 뒷수습과 의심의 씨앗"
+    },
+    {
+      "act": 2,
+      "seq_span": [3, 5],
+      "label": "각자의 위기와 태산의 구출"
+    },
+    {
+      "act": 3,
+      "seq_span": [6, 7],
+      "label": "얽히는 진실과 돌이킬 수 없는 밤"
+    }
+  ],
+  "entry_state": "당구 승부로 소년 같은 우정을 확인한 직후, 도진이 질투에 못 이겨 윤의 차를 들이받으며 하루가 시작된다",
+  "exit_state": "벚꽃길 입맞춤과 세라의 추궁, 죄책감 어린 술자리를 지나 이수가 욕조 속에서 자신의 낯선 감정을 자각한다",
+  "turning_point": {
+    "seq_index": 7,
+    "label": "뒤바뀐 포옹과 벚꽃 키스가 부른 파장",
+    "description": "태산이 세라 옷을 입은 이수를 세라로 착각해 뒤에서 껴안은 사고에 이어, 도진이 벚꽃길에서 이수에게 입 맞추고 세라는 증거를 펼쳐놓고 태산을 정면으로 추궁한다"
+  },
+  "central_conflict_axis": "도진-이수 관계의 은밀한 진전 vs 태산-세라 위기 수습과 뒤바뀐 포옹이 촉발한 4인 관계의 균열",
+  "episode_function": "도진-이수 스킨십(키스) 첫 발생, 태산-세라 위기 봉합과 재확인, 뒤바뀐 포옹으로 세라의 의심이 정면 추궁으로 격화, 콜린의 형제 정체 탐색 서브플롯 심화",
+  "core_dist": {"ESTABLISH": 2, "BOND": 4, "HOOK": 10, "CONFLICT": 16, "LOSS": 6, "PUNISH": 2, "REVELATION": 4, "RELIEF": 11, "ROMANCE": 2, "PERIL": 3, "RESCUE": 3, "DESIRE": 8, "ORACLE": 3},
+  "by": "sonnet_reading"
+}

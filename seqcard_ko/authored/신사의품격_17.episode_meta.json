@@ -1,0 +1,18 @@
+{
+  "work_id": "신사의품격_17",
+  "episode_no": 17,
+  "scene_count": 28,
+  "core_dist": {
+    "ESTABLISH": 4,
+    "BOND": 5,
+    "ROMANCE": 7,
+    "DESIRE": 6,
+    "HOOK": 5,
+    "PUNISH": 1,
+    "CONFLICT": 4,
+    "RELIEF": 5,
+    "LOSS": 4,
+    "PERIL": 1,
+    "REVELATION": 2
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "work_id": "신사의품격_04",
+  "episode_no": 4,
+  "scene_count": 40,
+  "sequence_count": 7,
+  "dramatic_question": "도진의 고백과 감시가 이수의 마음을 흔드는 사이, 세라는 흩어진 단서들을 통해 이수의 오랜 짝사랑 상대가 태산임을 알아챌 것인가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [1, 3],
+      "label": "우정의 원형과 도진의 고백 — 감정의 시작"
+    },
+    {
+      "act": 2,
+      "seq_span": [4, 5],
+      "label": "일상 유머 속에 던져진 단서와 감정 자각"
+    },
+    {
+      "act": 3,
+      "seq_span": [6, 7],
+      "label": "친구들의 소동과 세라의 결정적 발견"
+    }
+  ],
+  "entry_state": "네 친구의 오랜 우정을 확인하는 프롤로그 직후, 태산이 메아리를 추궁하며 하루가 시작된다",
+  "exit_state": "세라가 장갑·명함·졸업사진의 단서를 맞춰보며 이수의 오랜 짝사랑 상대가 태산이었음을 깨닫고 충격에 빠진다",
+  "turning_point": {
+    "seq_index": 7,
+    "label": "세라, 짝사랑 상대가 태산임을 확신",
+    "description": "야구장에서 세라가 장갑·명함·졸업사진의 단서를 모두 맞춰보며 이수의 오랜 짝사랑 상대가 태산이었음을 확신하고 충격에 빠진다"
+  },
+  "central_conflict_axis": "도진의 짝사랑 고백과 이수의 부인 vs 세라가 좁혀오는 이수-태산 관계의 진실",
+  "episode_function": "도진-이수 관계의 본격 점화, 윤의 이혼 후유증 서브플롯 전개, 세라의 결정적 단서 확보로 다음 화 정면 대립 예고",
+  "core_dist": {"ESTABLISH": 2, "BOND": 16, "HOOK": 7, "CONFLICT": 12, "LOSS": 4, "PUNISH": 1, "REVELATION": 10, "RELIEF": 12, "ROMANCE": 4, "RESCUE": 1, "DESIRE": 6, "ORACLE": 1},
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,55 @@
+{
+  "work_id": "신사의품격_01",
+  "episode_no": 1,
+  "scene_count": 45,
+  "sequence_count": 10,
+  "dramatic_question": "이수는 짝사랑하던 태산 대신 우연히 얽힌 도진과 어떤 관계로 발전할 것인가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "인물 소개와 우연한 만남의 씨앗",
+      "seq_span": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": "B",
+      "label": "짝사랑의 좌절과 사건의 소용돌이",
+      "seq_span": [
+        4,
+        7
+      ]
+    },
+    {
+      "act": "C",
+      "label": "정체를 확인하고 짝사랑의 진실이 드러남",
+      "seq_span": [
+        8,
+        10
+      ]
+    }
+  ],
+  "entry_state": "네 남자와 이수가 각자의 일상 속에서 서로를 모른 채 스쳐 지나가는 상태",
+  "exit_state": "도진이 이수의 짝사랑 상대가 태산이었음을 정확히 짚어내며 세 사람의 관계가 얽히기 시작한 상태",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "도진이 예전에 놓친 두 여자가 모두 이수였음을 깨닫는 동시에 태산의 지인임을 알게 되는 이중 반전"
+  },
+  "central_conflict_axis": "서이수의 짝사랑(태산)↔도진과의 반복된 우연한 얽힘",
+  "episode_function": "네 남자와 이수의 캐릭터를 소개하고, 도진-이수의 반복된 우연한 인연과 이수의 짝사랑 정체를 1부 엔딩에서 폭로한다",
+  "core_dist": {
+    "INTRO": 8,
+    "ESTABLISH": 14,
+    "CONFLICT": 11,
+    "DESIRE": 2,
+    "ROMANCE": 8,
+    "HOOK": 9,
+    "LOSS": 4,
+    "BOND": 7,
+    "RELIEF": 5,
+    "PUNISH": 2,
+    "REVELATION": 5
+  },
+  "by": "sonnet_reading"
+}

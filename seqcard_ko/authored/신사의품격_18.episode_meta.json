@@ -1,0 +1,19 @@
+{
+  "work_id": "신사의품격_18",
+  "episode_no": 18,
+  "scene_count": 28,
+  "core_dist": {
+    "HOOK": 4,
+    "ESTABLISH": 3,
+    "CONFLICT": 6,
+    "PERIL": 1,
+    "RESCUE": 1,
+    "ROMANCE": 5,
+    "PUNISH": 1,
+    "LOSS": 3,
+    "BOND": 10,
+    "RELIEF": 6,
+    "REVELATION": 4,
+    "DESIRE": 3
+  }
+}
