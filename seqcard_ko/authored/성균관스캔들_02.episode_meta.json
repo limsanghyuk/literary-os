@@ -1,0 +1,22 @@
+{
+  "work_id": "성균관스캔들_02",
+  "scene_count": 75,
+  "core_dist": {
+    "PERIL": 10,
+    "ESTABLISH": 10,
+    "ROMANCE": 2,
+    "CONFLICT": 17,
+    "DESIRE": 6,
+    "ORACLE": 3,
+    "RELIEF": 5,
+    "REVERSAL": 6,
+    "HOOK": 4,
+    "BOND": 6,
+    "REVELATION": 2,
+    "REUNION": 1,
+    "LOSS": 1,
+    "INTRO": 2
+  },
+  "episode_function": "2화는 친림시라는 극적 장치를 통해 윤희가 '김윤식'이라는 남성 정체로 과거를 치르고 성균관 거관수학 어명을 받게 되는 핵심 반전 회차다. 선준이 거벽을 자처해 조선의 공정성을 시험하는 장면과 정조의 직접 개입으로 두 인물이 성균관에 결속되며, 하인수 일당의 신방례 밀지가 윤희 정체 노출의 첫 번째 위기로 에피소드를 클리프행어로 마무리한다.",
+  "by": "sonnet_reading"
+}

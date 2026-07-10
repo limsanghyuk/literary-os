@@ -1,0 +1,60 @@
+{
+  "work_id": "쩐의전쟁_05",
+  "episode_no": 5,
+  "scene_count": 72,
+  "sequence_count": 15,
+  "dramatic_question": "나라가 주희를 담보로 잡으면서도 진심으로 빚에서 해방시키려 하는 사이, 갈매기파 넘버3와의 대결은 어떻게 마무리되고 두 사람의 관계는 어디로 향할 것인가?",
+  "act_structure": [
+    {
+      "act": 1,
+      "seq_span": [
+        1,
+        5
+      ],
+      "label": "담보 계약 성사와 우성·차연 진영의 재편"
+    },
+    {
+      "act": 2,
+      "seq_span": [
+        6,
+        11
+      ],
+      "label": "갈매기파 넘버3 압박과 대포통장 조철수의 등장"
+    },
+    {
+      "act": 3,
+      "seq_span": [
+        12,
+        15
+      ],
+      "label": "넘버3 완전 압박과 나라의 납치·주희의 구조"
+    }
+  ],
+  "entry_state": "파국의 결혼식 이후 나라가 주희에게 자신을 담보로 내세우며 새로운 관계의 틀을 제안한다",
+  "exit_state": "만신창이의 나라가 주희와 함께 경찰을 피해 달아나며 위기 속 연대감이 한층 깊어진 채 화가 맺힌다",
+  "turning_point": {
+    "seq_index": 11,
+    "label": "스티로폼 갑옷 역공과 주희의 빚 전액 약속",
+    "description": "나라가 폭행을 미리 대비한 스티로폼 갑옷으로 넘버3를 역공하고 마동포 사진으로 고소를 협박해 완전히 제압한 뒤 주희의 빚까지 모두 자신이 해결하겠다 약속하며 관계의 무게가 바뀐다"
+  },
+  "central_conflict_axis": "나라의 갈매기파 수금 작전과 우성의 주희 압박 사이에서 담보물 주희를 보호하려는 나라의 이중 전선",
+  "episode_function": "담보 관계를 정식화하고 갈매기파 수금 작전을 종결하며 조철수라는 새 조력자를 도입해 이후 블루엔젤 인수 자금 서사의 토대를 마련한다",
+  "core_dist": {
+    "CONFLICT": 12,
+    "BOND": 9,
+    "ESTABLISH": 4,
+    "REUNION": 1,
+    "LOSS": 5,
+    "PERIL": 9,
+    "HOOK": 7,
+    "PUNISH": 6,
+    "REVELATION": 3,
+    "ORACLE": 4,
+    "REVERSAL": 1,
+    "RELIEF": 3,
+    "INTRO": 1,
+    "DESIRE": 5,
+    "RESCUE": 2
+  },
+  "by": "sonnet_reading"
+}

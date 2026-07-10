@@ -1,0 +1,22 @@
+{
+  "work_id": "성균관스캔들_19",
+  "scene_count": 70,
+  "core_dist": {
+    "LOSS": 2,
+    "PERIL": 6,
+    "ROMANCE": 2,
+    "RESCUE": 2,
+    "CONFLICT": 19,
+    "BOND": 10,
+    "REVERSAL": 8,
+    "REVELATION": 3,
+    "DESIRE": 8,
+    "ORACLE": 3,
+    "PUNISH": 1,
+    "REUNION": 2,
+    "RELIEF": 2,
+    "HOOK": 2
+  },
+  "episode_function": "종묘에서 금등지사를 찾는 데 실패한 뒤 관군의 성균관 침입과 선준의 홍벽서 자수로 위기가 절정에 달한다. 용하는 신분을 스스로 밝히며 권당을 윤희에게 위임하고, 재신·윤희·용하가 협력해 홍벽서 재살포로 선준의 무죄를 입증하며 광화문 권당으로 국왕에 맞선다. 에피소드 말미 윤희는 마침내 금등지사를 발견하고, 하인수는 윤희의 여성 신분을 알아채는 이중 클리프행어로 마무리된다.",
+  "by": "sonnet_reading"
+}

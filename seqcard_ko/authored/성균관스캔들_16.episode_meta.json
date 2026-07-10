@@ -1,0 +1,22 @@
+{
+  "work_id": "성균관스캔들_16",
+  "scene_count": 66,
+  "core_dist": {
+    "ROMANCE": 9,
+    "RESCUE": 1,
+    "REVELATION": 1,
+    "PUNISH": 1,
+    "CONFLICT": 10,
+    "PERIL": 13,
+    "RELIEF": 5,
+    "DESIRE": 4,
+    "LOSS": 4,
+    "REVERSAL": 4,
+    "ORACLE": 5,
+    "BOND": 2,
+    "ESTABLISH": 3,
+    "HOOK": 4
+  },
+  "episode_function": "윤희의 여인 정체가 선준에게 발각되고 두 사람이 서원에서 하룻밤을 보내며 감정이 폭발한다. 황감제 대결로 윤희의 성균관 잔류가 확정되고 존경각에서 첫 입맞춤이 이루어지나, 곧바로 잘금 4인방 전원이 미복의 정조에게 납치·소집되어 새 조선 건설의 밀명을 받는 전환점이다. 하인수가 재신의 팔찌를 탈취해 홍벽서 정체를 파악함으로써 위기가 고조된다.",
+  "by": "sonnet_reading"
+}

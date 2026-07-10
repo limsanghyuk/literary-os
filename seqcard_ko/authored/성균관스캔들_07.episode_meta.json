@@ -1,0 +1,22 @@
+{
+  "work_id": "성균관스캔들_07",
+  "scene_count": 99,
+  "core_dist": {
+    "CONFLICT": 9,
+    "ORACLE": 6,
+    "PERIL": 17,
+    "LOSS": 5,
+    "RESCUE": 2,
+    "REVERSAL": 8,
+    "PUNISH": 4,
+    "RELIEF": 15,
+    "BOND": 4,
+    "ESTABLISH": 12,
+    "ROMANCE": 7,
+    "DESIRE": 5,
+    "REVELATION": 4,
+    "HOOK": 1
+  },
+  "episode_function": "7화는 대사례 경기를 중심축으로 탕평접의 단결과 역전 장원을 완성하면서 인물 간 감정선(선준↔윤희 로맨스 맹아, 초선의 공개 선택, 하인수의 열패감)을 동시에 심화한다. 병판이 김승헌 아들로서의 윤희 정체를 파악하고 정조가 금등지사 수색을 탕평접에 맡기겠다는 결단을 내리며 정치 스릴러 서사가 급격히 전진한다. 엔딩에서 재신이 목욕 중인 윤희의 여성 정체를 목격함으로써 다음 화의 핵심 갈등 도화선을 점화한다.",
+  "by": "sonnet_reading"
+}

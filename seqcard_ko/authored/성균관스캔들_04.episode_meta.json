@@ -1,0 +1,22 @@
+{
+  "work_id": "성균관스캔들_04",
+  "scene_count": 77,
+  "core_dist": {
+    "CONFLICT": 8,
+    "DESIRE": 4,
+    "REVELATION": 4,
+    "ORACLE": 5,
+    "HOOK": 2,
+    "PERIL": 10,
+    "RELIEF": 14,
+    "ESTABLISH": 6,
+    "BOND": 5,
+    "ROMANCE": 7,
+    "LOSS": 5,
+    "REVERSAL": 1,
+    "PUNISH": 2,
+    "RESCUE": 4
+  },
+  "episode_function": "4화는 정약용의 군자불기 강의를 통해 잘금4인방이 처음으로 공동의 학문적 자극을 받아 유대가 싹트는 BOND 에피소드다. 동시에 통금 위기와 하인수의 활 협박이라는 이중 PERIL로 긴장을 높이며, 정약용이 윤희의 부친이 박사 김승헌임을 발견하고 '계집이냐'는 의혹을 던지는 HOOK으로 신분 위기가 본격화된다.",
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,22 @@
+{
+  "work_id": "성균관스캔들_03",
+  "scene_count": 81,
+  "core_dist": {
+    "ESTABLISH": 7,
+    "PERIL": 11,
+    "CONFLICT": 13,
+    "RESCUE": 4,
+    "REVERSAL": 5,
+    "INTRO": 4,
+    "ORACLE": 8,
+    "REVELATION": 2,
+    "DESIRE": 3,
+    "ROMANCE": 3,
+    "RELIEF": 13,
+    "BOND": 6,
+    "PUNISH": 1,
+    "HOOK": 1
+  },
+  "episode_function": "신방례 하룻밤을 통해 잘금4인방이 한 방에 모이고 성균관 공동체로 편입되는 과정을 그린다. 홍벽서 등장으로 금등지사 서사가 본격화되고, 병판·이정무·정조 삼각 정치 축이 설정된다. 윤희는 초선과 정서적 유대를, 선준은 효은과 로맨틱 첫 조우를, 재신은 당색 없는 카리스마를 각인시키며 4인방의 개성과 관계가 한꺼번에 착지한다.",
+  "by": "sonnet_reading"
+}

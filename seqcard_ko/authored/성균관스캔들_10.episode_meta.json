@@ -1,0 +1,22 @@
+{
+  "work_id": "성균관스캔들_10",
+  "scene_count": 72,
+  "core_dist": {
+    "ESTABLISH": 2,
+    "PERIL": 7,
+    "CONFLICT": 17,
+    "RESCUE": 5,
+    "RELIEF": 6,
+    "REVELATION": 6,
+    "ORACLE": 4,
+    "ROMANCE": 5,
+    "REUNION": 1,
+    "PUNISH": 2,
+    "BOND": 7,
+    "REVERSAL": 3,
+    "DESIRE": 6,
+    "HOOK": 1
+  },
+  "episode_function": "10화는 수장고 잠입·탈출 액션으로 시작해 선준과 윤희가 처음으로 솔직한 감정을 나누는 로맨스 정점에 도달하고, 비단장부라는 핵심 증거가 등장해 누명 해소와 노론 부패 폭로의 두 갈래 갈등이 충돌한다. 윤희가 진범 복수의 빈곤한 처지에 공감해 출재를 자청하려 하지만 선준이 장부를 들고 순두전강에 뛰어드는 반전으로 다음 화의 클라이맥스를 예비한다.",
+  "by": "sonnet_reading"
+}

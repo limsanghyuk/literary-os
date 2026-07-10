@@ -1,0 +1,22 @@
+{
+  "work_id": "성균관스캔들_08",
+  "scene_count": 70,
+  "core_dist": {
+    "ESTABLISH": 5,
+    "PERIL": 14,
+    "DESIRE": 4,
+    "RELIEF": 6,
+    "ROMANCE": 10,
+    "REVELATION": 3,
+    "CONFLICT": 9,
+    "RESCUE": 3,
+    "ORACLE": 8,
+    "PUNISH": 1,
+    "REVERSAL": 2,
+    "BOND": 1,
+    "LOSS": 3,
+    "HOOK": 1
+  },
+  "episode_function": "8강은 윤희의 성별 비밀이 재신에게 발각되는 위기로 문을 열고, 향관청 서가 위 숨기, 용하와의 두뇌 싸움 등 숨막히는 위기 탈출 과정을 거친다. 귀가일 장면들을 통해 각 인물의 가정과 욕망을 입체적으로 드러내며, 특히 재신의 은밀한 보호 감정과 선준의 50냥 배신이라는 이중 감정선이 교차해 로맨스 갈등의 씨앗을 심는다.",
+  "by": "sonnet_reading"
+}

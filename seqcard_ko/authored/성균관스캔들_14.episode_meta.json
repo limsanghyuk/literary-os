@@ -1,0 +1,22 @@
+{
+  "work_id": "성균관스캔들_14",
+  "scene_count": 62,
+  "core_dist": {
+    "PERIL": 9,
+    "CONFLICT": 14,
+    "REVELATION": 4,
+    "ORACLE": 4,
+    "DESIRE": 4,
+    "BOND": 4,
+    "REVERSAL": 4,
+    "RELIEF": 2,
+    "RESCUE": 4,
+    "LOSS": 5,
+    "ESTABLISH": 1,
+    "ROMANCE": 3,
+    "PUNISH": 2,
+    "HOOK": 2
+  },
+  "episode_function": "14화는 홍벽서 재신의 성균관 은신과 하인수의 집요한 추적을 교차하며 위기를 고조시킨 뒤, 남색 소문이 폭발하여 재회(齋會)라는 제도적 심판 무대로 전환되는 분기점 회차다. 선준의 감정 억압과 정혼·자퇴 결심이 부각되어 로맨스 긴장이 최고조에 달하고, 마지막 장면에서 선준이 '남색은 접니다'라고 자폭 선언하는 클리프행어로 15화의 재회 본론을 예비한다.",
+  "by": "sonnet_reading"
+}

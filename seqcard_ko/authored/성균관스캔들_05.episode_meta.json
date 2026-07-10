@@ -1,0 +1,22 @@
+{
+  "work_id": "성균관스캔들_05",
+  "scene_count": 65,
+  "core_dist": {
+    "PERIL": 2,
+    "HOOK": 3,
+    "REVELATION": 4,
+    "CONFLICT": 10,
+    "ORACLE": 7,
+    "PUNISH": 3,
+    "LOSS": 6,
+    "BOND": 10,
+    "DESIRE": 7,
+    "RELIEF": 4,
+    "REVERSAL": 3,
+    "ROMANCE": 3,
+    "ESTABLISH": 2,
+    "RESCUE": 1
+  },
+  "episode_function": "윤희의 신분 발각 위기(정약용 심문과 처결 선고)를 중심으로 절망에서 결기로의 반전을 그린다. 대사례 참가와 선준의 왼팔 도전·재신의 깍지 선물이 잘금4인방 유대를 구체화하고, 탕평을 둘러싼 정조-노론 대립이 편전·이정무-병판 밀담으로 첨예화된다. 마지막 윤희의 약방 항변과 기회 청원으로 다음 단계 갈등의 씨앗을 심는다.",
+  "by": "sonnet_reading"
+}
