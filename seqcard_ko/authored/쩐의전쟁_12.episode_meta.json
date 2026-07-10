@@ -1,0 +1,20 @@
+{
+  "work_id": "쩐의전쟁_12",
+  "episode_no": 12,
+  "scene_count": 74,
+  "core_dist": {
+    "HOOK": 20,
+    "CONFLICT": 17,
+    "PERIL": 16,
+    "REVELATION": 15,
+    "LOSS": 10,
+    "DESIRE": 9,
+    "ROMANCE": 9,
+    "PUNISH": 6,
+    "BOND": 4,
+    "ESTABLISH": 3,
+    "RELIEF": 2,
+    "REVERSAL": 1,
+    "ORACLE": 1
+  }
+}

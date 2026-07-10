@@ -1,0 +1,23 @@
+{
+  "work_id": "쩐의전쟁_07",
+  "episode_no": 7,
+  "scene_count": 72,
+  "core_dist": {
+    "CONFLICT": 24,
+    "HOOK": 16,
+    "DESIRE": 6,
+    "REVELATION": 20,
+    "LOSS": 2,
+    "ESTABLISH": 8,
+    "ORACLE": 2,
+    "BOND": 11,
+    "ROMANCE": 7,
+    "REVERSAL": 2,
+    "RELIEF": 3,
+    "RESCUE": 1,
+    "REUNION": 1,
+    "PUNISH": 3,
+    "INTRO": 1,
+    "PERIL": 4
+  }
+}

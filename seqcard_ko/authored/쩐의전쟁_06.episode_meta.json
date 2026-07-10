@@ -1,0 +1,22 @@
+{
+  "work_id": "쩐의전쟁_06",
+  "episode_no": 6,
+  "scene_count": 65,
+  "core_dist": {
+    "BOND": 20,
+    "CONFLICT": 7,
+    "DESIRE": 11,
+    "ESTABLISH": 2,
+    "HOOK": 10,
+    "LOSS": 10,
+    "ORACLE": 1,
+    "PERIL": 10,
+    "PUNISH": 5,
+    "RELIEF": 19,
+    "RESCUE": 1,
+    "REUNION": 1,
+    "REVELATION": 10,
+    "REVERSAL": 3,
+    "ROMANCE": 6
+  }
+}

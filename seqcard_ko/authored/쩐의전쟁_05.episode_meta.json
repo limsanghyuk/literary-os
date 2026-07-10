@@ -1,0 +1,22 @@
+{
+  "work_id": "쩐의전쟁_05",
+  "episode_no": 5,
+  "scene_count": 72,
+  "core_dist": {
+    "BOND": 12,
+    "CONFLICT": 14,
+    "DESIRE": 12,
+    "ESTABLISH": 6,
+    "HOOK": 15,
+    "INTRO": 3,
+    "LOSS": 9,
+    "ORACLE": 4,
+    "PERIL": 13,
+    "PUNISH": 9,
+    "RELIEF": 9,
+    "RESCUE": 3,
+    "REUNION": 1,
+    "REVELATION": 6,
+    "REVERSAL": 5
+  }
+}

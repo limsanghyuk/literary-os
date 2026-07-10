@@ -1,0 +1,55 @@
+{
+  "work_id": "쩐의전쟁_01",
+  "episode_no": 1,
+  "scene_count": 76,
+  "sequence_count": 16,
+  "dramatic_question": "나라는 사채빚으로 무너지는 가족을 지켜낼 수 있을 것인가, 아니면 돈에 잠식당한 채 다른 사람이 될 것인가?",
+  "act_structure": [
+    {
+      "act": "A",
+      "label": "결혼식 파탄과 빚의 발각",
+      "seq_span": [1, 3]
+    },
+    {
+      "act": "B",
+      "label": "일상 붕괴와 사채업자들의 습격",
+      "seq_span": [4, 9]
+    },
+    {
+      "act": "C",
+      "label": "벼랑 끝에서 돈을 구하는 사투",
+      "seq_span": [10, 13]
+    },
+    {
+      "act": "D",
+      "label": "이중의 상실과 반전",
+      "seq_span": [14, 16]
+    }
+  ],
+  "entry_state": "은지의 결혼식을 앞두고 평온해 보이던 나라 가족이 사채빚의 그늘 아래 놓여있는 상태",
+  "exit_state": "부모를 모두 잃은 나라가 슬픔을 광기로 전환해 돈에 대한 집착으로 완전히 돌아선 상태",
+  "turning_point": {
+    "seq_index": 16,
+    "desc": "카드로 스스로 목숨을 끊은 아버지의 시신을 확인하고 뒤이어 어머니마저 심정지를 맞으며, 나라가 슬픔 대신 돈에 대한 광기로 완전히 돌아서는 극의 전환점"
+  },
+  "central_conflict_axis": "나라 가족을 파산으로 몰아넣는 사채(마동포·봉여사) ↔ 무너지지 않으려는 가족애와 자존심",
+  "episode_function": "쩐의전쟁의 도입부로 나라 일가가 결혼식 파탄부터 부모의 동반 죽음까지 몰락하는 과정을 통해 극 전체를 관통할 '돈에 대한 강박'의 기원을 완성한다",
+  "core_dist": {
+    "ESTABLISH": 10,
+    "BOND": 5,
+    "INTRO": 7,
+    "CONFLICT": 25,
+    "LOSS": 19,
+    "PERIL": 9,
+    "RESCUE": 1,
+    "RELIEF": 3,
+    "REVELATION": 6,
+    "PUNISH": 5,
+    "REUNION": 1,
+    "DESIRE": 11,
+    "ORACLE": 4,
+    "HOOK": 3,
+    "REVERSAL": 1
+  },
+  "by": "sonnet_reading"
+}

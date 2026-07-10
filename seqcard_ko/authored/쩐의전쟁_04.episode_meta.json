@@ -1,0 +1,20 @@
+{
+  "work_id": "쩐의전쟁_04",
+  "episode_no": 4,
+  "scene_count": 57,
+  "core_dist": {
+    "REVERSAL": 3,
+    "CONFLICT": 19,
+    "RELIEF": 6,
+    "LOSS": 8,
+    "PUNISH": 4,
+    "ORACLE": 4,
+    "PERIL": 7,
+    "REVELATION": 9,
+    "HOOK": 10,
+    "REUNION": 2,
+    "BOND": 2,
+    "ESTABLISH": 2,
+    "DESIRE": 8
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "work_id": "쩐의전쟁_14",
+  "episode_no": 14,
+  "scene_count": 64,
+  "core_dist": {
+    "PERIL": 8,
+    "LOSS": 12,
+    "CONFLICT": 25,
+    "REVELATION": 9,
+    "HOOK": 12,
+    "BOND": 12,
+    "ROMANCE": 5,
+    "RELIEF": 3,
+    "DESIRE": 8,
+    "ESTABLISH": 4,
+    "RESCUE": 1,
+    "REUNION": 1,
+    "REVERSAL": 3,
+    "PUNISH": 2
+  }
+}

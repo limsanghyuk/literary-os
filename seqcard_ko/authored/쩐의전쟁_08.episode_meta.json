@@ -1,0 +1,22 @@
+{
+  "work_id": "쩐의전쟁_08",
+  "episode_no": 8,
+  "scene_count": 76,
+  "core_dist": {
+    "PERIL": 11,
+    "CONFLICT": 24,
+    "BOND": 7,
+    "RELIEF": 1,
+    "LOSS": 7,
+    "ESTABLISH": 2,
+    "REVELATION": 6,
+    "DESIRE": 10,
+    "HOOK": 17,
+    "REVERSAL": 2,
+    "ROMANCE": 1,
+    "REUNION": 2,
+    "ORACLE": 9,
+    "INTRO": 1,
+    "PUNISH": 2
+  }
+}

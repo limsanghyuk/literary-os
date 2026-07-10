@@ -1,0 +1,23 @@
+{
+  "work_id": "쩐의전쟁_03",
+  "episode_no": 3,
+  "scene_count": 75,
+  "core_dist": {
+    "PERIL": 7,
+    "BOND": 11,
+    "ORACLE": 3,
+    "ESTABLISH": 11,
+    "HOOK": 10,
+    "CONFLICT": 21,
+    "REVELATION": 10,
+    "LOSS": 11,
+    "REVERSAL": 5,
+    "PUNISH": 2,
+    "DESIRE": 14,
+    "INTRO": 1,
+    "RELIEF": 5,
+    "RESCUE": 1,
+    "ROMANCE": 4,
+    "REUNION": 1
+  }
+}
