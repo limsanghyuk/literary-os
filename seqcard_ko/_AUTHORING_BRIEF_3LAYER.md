@@ -171,4 +171,20 @@ python3 /sessions/upbeat-focused-bohr/mnt/outputs/verify_work.py <work>
 - 인물명 표기는 반드시 그 작품의 대표 표기 하나로 통일(예: "영은수" vs "이은수" 혼용 금지 — 비밀의숲에서 발생했던 실수)
 
 ### RelationshipArc 레코드 = 정확히 이 9키
-`work_id, char_a, char_b, episode_no, relation_state, relation_delta,
+`work_id, char_a, char_b, episode_no, relation_state, relation_delta, trigger_scene_no, evidence, by`
+
+### PayoffCandidate 레코드 = 정확히 이 7키
+`candidate_id, work_id, episode_no, scene_no, edge_type_guess, description, by`
+- edge_type_guess ∈ {plant_payoff, callback, subplot_counterpoint, resolved_here}(마지막 화에서 이미 회수된 경우만 resolved_here)
+
+### 반게이밍 규칙 (강한게이트가 자동 검사)
+1. note/evidence/description은 실제 씬 내용(intent_gist/title)에 근거해 레코드마다 달라야 한다 — 동일 문구가 전체의 15% 이상 반복되면 FAIL.
+2. `{char}`, `{topic}` 등 미치환 템플릿 변수 발견 시 즉시 FAIL.
+3. src/tgt/trigger_scene_no는 반드시 그 작품·회차에 실재하는 scene_no만 참조(참조무결성).
+4. edge_id·candidate_id는 작품 전체에서 100% 고유해야 한다(위 네임스페이스 규칙 준수 시 자동 보장).
+
+### 검증
+```
+python3 tools/verify_new_layers.py <work_id>
+```
+`ERRORS 0` 나올 때까지 수정. `verify_work.py`(4계층 구조 게이트)와는 별개로 반드시 추가 실행할 것.
