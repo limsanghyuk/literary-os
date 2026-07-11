@@ -1,0 +1,68 @@
+{
+  "work_id": "공주가돌아왔다_10",
+  "episode_no": 10,
+  "scene_count": 73,
+  "sequence_count": 10,
+  "dramatic_question": "도경은 집과 직장, 아이의 위기를 동시에 견딜 수 있으며 공심은 찬우의 연민이 사랑으로 되돌아가는 것을 막을 수 있는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "불안한 일상과 퇴출 설계"
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        4,
+        5
+      ],
+      "beat": "도시락 친밀감과 빌린 병간호"
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        6,
+        8
+      ],
+      "beat": "경매 폭로와 가족 위기"
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        9,
+        10
+      ],
+      "beat": "사직·입원과 병실 엔딩"
+    }
+  ],
+  "entry_state": "찬우와 도경은 과거를 확인했지만 직장에서는 누나 동생의 선을 유지하려 한다.",
+  "exit_state": "도경은 직장을 잃고 선웅 병실에 찬우와 함께 있으며 공심이 그 가족 같은 장면을 목격한다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "선웅의 발병과 공심의 업무 강요가 충돌해 도경이 즉석 사직서를 던지고 찬우가 가족 역할로 들어온다."
+  },
+  "central_conflict_axis": "공심의 연애 독점과 직장 권력 대 도경의 모성·생계·첫사랑을 둘러싼 생존 선택",
+  "episode_function": "중반 위기 심화 회차로, 경제·직장·건강 위기를 결합해 도경과 찬우를 가족 단위로 밀착시키고 공심의 불안을 현실로 만든다.",
+  "core_dist": {
+    "BOND": 16,
+    "CONFLICT": 15,
+    "DESIRE": 10,
+    "ESTABLISH": 6,
+    "HOOK": 18,
+    "INTRO": 2,
+    "LOSS": 21,
+    "ORACLE": 9,
+    "PERIL": 7,
+    "PUNISH": 9,
+    "RELIEF": 6,
+    "RESCUE": 4,
+    "REUNION": 1,
+    "REVELATION": 8,
+    "REVERSAL": 2,
+    "ROMANCE": 12
+  },
+  "by": "gpt-5.6-direct-reading"
+}

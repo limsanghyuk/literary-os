@@ -1,0 +1,22 @@
+{
+  "work_id": "결혼못하는남자_02",
+  "scene_count": 81,
+  "core_dist": {
+    "BOND": 22,
+    "CONFLICT": 31,
+    "DESIRE": 11,
+    "ESTABLISH": 9,
+    "HOOK": 1,
+    "INTRO": 2,
+    "LOSS": 11,
+    "ORACLE": 7,
+    "PERIL": 11,
+    "RELIEF": 25,
+    "REUNION": 2,
+    "REVELATION": 14,
+    "REVERSAL": 1,
+    "ROMANCE": 6
+  },
+  "episode_function": "병원 재진과 빈 장례 상상 공동 식탁의 붕괴와 클럽 후크",
+  "by": "gpt-direct-reading-claude-schema-projection"
+}

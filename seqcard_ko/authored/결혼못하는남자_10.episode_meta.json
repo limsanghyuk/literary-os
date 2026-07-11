@@ -1,0 +1,17 @@
+{
+  "work_id": "결혼못하는남자_10",
+  "scene_count": 52,
+  "core_dist": {
+    "BOND": 11,
+    "CONFLICT": 30,
+    "DESIRE": 6,
+    "ESTABLISH": 5,
+    "HOOK": 1,
+    "PERIL": 12,
+    "RELIEF": 3,
+    "REVELATION": 3,
+    "ROMANCE": 33
+  },
+  "episode_function": "여행 초대와 양쪽 준비는 동행을 고백과 통제의 이중 시험으로 세운다. 사무실과 혜자 병실은 여행을 업무 책임과 수술 동의의 결과로 회수한다.",
+  "by": "gpt-direct-reading-claude-schema-projection"
+}

@@ -1,1 +1,23 @@
-{"work_id": "시티헌터_19", "scene_count": 65, "core_dist": {"REVELATION": 15, "PERIL": 11, "CONFLICT": 12, "REVERSAL": 1, "RELIEF": 1, "BOND": 4, "ESTABLISH": 1, "ROMANCE": 2, "ORACLE": 6, "LOSS": 5, "DESIRE": 4, "REUNION": 1, "RESCUE": 2}, "episode_function": "18화 클리프행어(정체 발각)를 이어받아 영주가 윤성을 놓아주며 두 사람이 적대에서 신뢰로 전환되는 동시에, 윤성의 출생의 비밀(친아버지=최응찬 대통령, 진표의 은폐)이 완전히 폭로되어 부자 갈등이 파국으로 치닫는다. 천재만이 파놓은 함정에서 영주가 윤성 대신 목숨을 걸고 기밀문서 확보 시간을 벌어주다 총에 맞아 숨을 거두며, 시리즈의 정서적 중심축을 뒤흔드는 강력한 클리프행어로 마무리된다.", "by": "sonnet_reading"}
+{
+  "work_id": "시티헌터_19",
+  "scene_count": 65,
+  "core_dist": {
+    "BOND": 7,
+    "CONFLICT": 12,
+    "DESIRE": 12,
+    "ESTABLISH": 1,
+    "HOOK": 20,
+    "LOSS": 13,
+    "ORACLE": 10,
+    "PERIL": 12,
+    "PUNISH": 9,
+    "RELIEF": 3,
+    "RESCUE": 5,
+    "REUNION": 1,
+    "REVELATION": 17,
+    "REVERSAL": 4,
+    "ROMANCE": 4
+  },
+  "episode_function": "응찬 친부 진실과 진표 조작을 폭로하고, 기밀문서 회수 대가로 영주를 희생시켜 결말의 윤리 기준을 세운다.",
+  "by": "gpt-5.6-direct-reading"
+}

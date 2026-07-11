@@ -1,0 +1,58 @@
+{
+  "work_id": "101번째프로포즈_06",
+  "episode_no": 6,
+  "scene_count": 69,
+  "sequence_count": 11,
+  "dramatic_question": "달재의 사랑 고백과 가족의 개입은 수정이 찬혁을 놓고 현재로 움직일 첫 틈을 만들 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A1",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "달재는 사랑을 자각하고 고백하지만 수정에게 가능성 0퍼센트라는 거절을 받는다"
+    },
+    {
+      "act": "A2",
+      "seq_span": [
+        4,
+        8
+      ],
+      "beat": "현준도 남자로 나서고 금정의 폭발과 수정부의 방문이 가족 갈등을 확대한다"
+    },
+    {
+      "act": "A3",
+      "seq_span": [
+        9,
+        11
+      ],
+      "beat": "수정부가 딸을 인정하고 수정은 찬혁을 조금씩 놓기로 하며 달재는 폭풍 속에서 그녀에게 달려간다"
+    }
+  ],
+  "entry_state": "찬혁을 되살려 달라는 수정의 절규와 아무것도 해줄 수 없는 달재",
+  "exit_state": "찬혁을 조금씩 잊기로 결심한 수정과 그 결심을 모른 채 목숨 걸고 달려가는 달재",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "수정부가 방송 속 딸의 진심을 인정하고 고향행 요구를 철회해 수정이 현재 삶을 지속할 지지를 얻는다"
+  },
+  "central_conflict_axis": "현재의 사랑을 요구하는 두 남자와 과거 사랑을 놓지 못한 수정, 보호와 통제 사이의 가족",
+  "episode_function": "달재의 사랑을 명시하고 수정의 첫 애도 전환을 성립시키며 다음 회차의 폭풍 속 대면을 준비한다.",
+  "core_dist": {
+    "BOND": 9,
+    "CONFLICT": 15,
+    "DESIRE": 15,
+    "ESTABLISH": 4,
+    "HOOK": 11,
+    "LOSS": 14,
+    "ORACLE": 9,
+    "PERIL": 11,
+    "PUNISH": 7,
+    "RELIEF": 13,
+    "REUNION": 3,
+    "REVELATION": 12,
+    "REVERSAL": 3,
+    "ROMANCE": 12
+  },
+  "by": "gpt-5.6-direct-reading"
+}

@@ -1,0 +1,23 @@
+{
+  "work_id": "공주가돌아왔다_07",
+  "scene_count": 67,
+  "core_dist": {
+    "BOND": 8,
+    "CONFLICT": 22,
+    "DESIRE": 11,
+    "ESTABLISH": 7,
+    "HOOK": 17,
+    "LOSS": 10,
+    "ORACLE": 7,
+    "PERIL": 6,
+    "PUNISH": 8,
+    "RELIEF": 11,
+    "RESCUE": 1,
+    "REUNION": 3,
+    "REVELATION": 8,
+    "REVERSAL": 4,
+    "ROMANCE": 11
+  },
+  "episode_function": "도경의 공항행 진실을 찬우에게 전달해 배신 서사를 뒤집고, 이혼한 봉희가 이를 불륜으로 오해해 새 대립을 연다.",
+  "by": "gpt-5.6-direct-reading-repair-v2"
+}

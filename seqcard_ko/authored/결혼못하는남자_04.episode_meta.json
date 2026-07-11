@@ -1,0 +1,20 @@
+{
+  "work_id": "결혼못하는남자_04",
+  "scene_count": 72,
+  "core_dist": {
+    "BOND": 26,
+    "CONFLICT": 24,
+    "DESIRE": 8,
+    "ESTABLISH": 19,
+    "HOOK": 4,
+    "LOSS": 10,
+    "ORACLE": 5,
+    "PERIL": 8,
+    "RELIEF": 13,
+    "REVELATION": 11,
+    "REVERSAL": 2,
+    "ROMANCE": 14
+  },
+  "episode_function": "돈봉투 이후 세 사람의 선의가 엇갈리고, 4화는 혼자 보내는 휴일을 주제로 선언한다. 재희의 완벽한 옥상 관람식과 문정의 도착이 혼자 보내는 휴일을 관계의 장면으로 뒤집는다.",
+  "by": "gpt-direct-reading-claude-schema-projection"
+}

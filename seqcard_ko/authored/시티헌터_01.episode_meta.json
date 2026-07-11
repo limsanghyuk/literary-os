@@ -1,22 +1,24 @@
 {
   "work_id": "시티헌터_01",
-  "scene_count": 83,
+  "scene_count": 79,
   "core_dist": {
-    "PERIL": 16,
-    "ESTABLISH": 15,
-    "CONFLICT": 9,
-    "DESIRE": 9,
-    "BOND": 7,
-    "LOSS": 7,
-    "RESCUE": 4,
-    "REVELATION": 4,
-    "ORACLE": 3,
-    "HOOK": 3,
-    "RELIEF": 2,
-    "INTRO": 2,
-    "PUNISH": 1,
-    "ROMANCE": 1
+    "BOND": 13,
+    "CONFLICT": 11,
+    "DESIRE": 15,
+    "ESTABLISH": 8,
+    "HOOK": 17,
+    "INTRO": 14,
+    "LOSS": 14,
+    "ORACLE": 7,
+    "PERIL": 21,
+    "PUNISH": 10,
+    "RELIEF": 3,
+    "RESCUE": 6,
+    "REUNION": 1,
+    "REVELATION": 9,
+    "REVERSAL": 4,
+    "ROMANCE": 5
   },
-  "episode_function": "1983년 아웅산 테러의 배신으로 아버지와 전우들을 잃은 이진표가 친구의 아들 윤성을 복수의 도구로 키워내는 17년의 과거사를 압축 제시하고, 성인이 된 윤성이 위장 신분으로 서울에 잠입해 복수를 개시하는 동시에 훗날의 연인이자 조력자가 될 나나와 운명적으로 얽히기 시작하는 지점까지 이르는 시리즈 전체의 기원 서사이자 첫 회 훅을 완성한다.",
-  "by": "sonnet_reading"
+  "episode_function": "시티헌터의 출생 원인인 국가 배신을 제시하고, 윤성이 복수 실행자와 나나의 잠재적 보호자로 동시에 서울·청와대에 진입하도록 만든 기원 회차.",
+  "by": "gpt-5.6-direct-reading"
 }

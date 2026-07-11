@@ -1,0 +1,68 @@
+{
+  "work_id": "공주가돌아왔다_06",
+  "episode_no": 6,
+  "scene_count": 67,
+  "sequence_count": 11,
+  "dramatic_question": "공심은 오지공연의 공공적 가치를 증명하면서 찬우의 마음도 얻을 수 있는가, 그리고 도경은 옛사랑을 양보한 대가를 견딜 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A1",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "별장 목격의 오해가 공심의 자기확신과 예나 미행 공모로 확장된다."
+    },
+    {
+      "act": "A2",
+      "seq_span": [
+        4,
+        6
+      ],
+      "beat": "봉선·세뇨르의 생계 가능성과 발레단 공연 위기가 도경의 밤샘 수선으로 연결된다."
+    },
+    {
+      "act": "A3",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "옥탑방 관계 변화와 찬우의 상처가 오지공연 출발의 공개적 선택으로 전환된다."
+    },
+    {
+      "act": "A4",
+      "seq_span": [
+        10,
+        11
+      ],
+      "beat": "빗속 공연 성공 뒤 찬우가 공심을 태우고 떠나 도경의 상실을 확정한다."
+    }
+  ],
+  "entry_state": "공심이 찬우와 도경의 숨겨진 친밀성을 목격한 직후",
+  "exit_state": "공심이 찬우의 차에 타고 떠나고 도경만 현장에 남아 질투와 상실을 체감하는 상태",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "한 아이가 되살린 단원들: 보라가 비에도 남아 공심과 단원들의 열정을 일깨우고 삼인방이 공연을 선택한다."
+  },
+  "central_conflict_axis": "발레의 공공성 실천과 세 사람의 사적 연애 경쟁이 같은 오지공연에서 서로를 증폭한다.",
+  "episode_function": "공심을 허영적 경쟁자에서 관객을 위해 위험을 감수하는 단장으로 확장하고, 찬우의 공심 접근을 도경을 향한 감정적 복수로 전환한다.",
+  "core_dist": {
+    "BOND": 12,
+    "CONFLICT": 29,
+    "DESIRE": 12,
+    "ESTABLISH": 11,
+    "HOOK": 14,
+    "INTRO": 1,
+    "LOSS": 3,
+    "ORACLE": 5,
+    "PERIL": 2,
+    "PUNISH": 10,
+    "RELIEF": 10,
+    "RESCUE": 1,
+    "REUNION": 2,
+    "REVELATION": 11,
+    "REVERSAL": 3,
+    "ROMANCE": 8
+  },
+  "by": "gpt-5.6-direct-reading-repair-v2"
+}

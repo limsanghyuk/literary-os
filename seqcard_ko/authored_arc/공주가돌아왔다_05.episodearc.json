@@ -1,0 +1,67 @@
+{
+  "work_id": "공주가돌아왔다_05",
+  "episode_no": 5,
+  "scene_count": 67,
+  "sequence_count": 11,
+  "dramatic_question": "도경은 찬우와의 재회 감정을 숨긴 채 공심의 연애를 도울 수 있으며, 찬우는 과거 약속의 진실을 확인할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A1",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "도경과 찬우의 비밀 재회가 해고 취소와 공심의 수영장 구애 실패로 이어진다."
+    },
+    {
+      "act": "A2",
+      "seq_span": [
+        4,
+        6
+      ],
+      "beat": "봉희의 옥탑방 은신과 찬우의 도경 접근, 출장길 계급 굴욕이 병행된다."
+    },
+    {
+      "act": "A3",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "상기 도주와 별장 초대가 삼각관계를 모으고 봉희는 결혼의 불편한 기원을 고백한다."
+    },
+    {
+      "act": "A4",
+      "seq_span": [
+        10,
+        11
+      ],
+      "beat": "취중 중매와 과거 약속 추궁이 공심의 포옹 목격으로 폭발한다."
+    }
+  ],
+  "entry_state": "도경이 호텔에서 첫사랑 찬우를 보고 공심의 차로 그를 데려가 버린 상태",
+  "exit_state": "찬우가 도경을 붙잡은 순간 공심이 두 사람의 포옹처럼 보이는 장면을 목격한 상태",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "별장으로 방향을 튼 전화: 찬우의 저녁 초대가 서울 귀환을 홍천 별장 방문으로 바꿔 삼각관계를 밀폐 공간에 모은다."
+  },
+  "central_conflict_axis": "도경의 비밀 이혼과 옛사랑, 공심의 찬우 구애, 찬우의 미해결 원망이 한 직장과 별장 안에서 충돌한다.",
+  "episode_function": "도경-찬우의 과거 사랑을 현재 삼각관계의 중심으로 복귀시키고 봉희의 투자 구명선을 완전히 붕괴시킨다.",
+  "core_dist": {
+    "BOND": 4,
+    "CONFLICT": 28,
+    "DESIRE": 6,
+    "ESTABLISH": 8,
+    "HOOK": 18,
+    "INTRO": 1,
+    "LOSS": 6,
+    "ORACLE": 6,
+    "PERIL": 7,
+    "PUNISH": 10,
+    "RELIEF": 11,
+    "REUNION": 4,
+    "REVELATION": 16,
+    "REVERSAL": 1,
+    "ROMANCE": 8
+  },
+  "by": "gpt-5.6-direct-reading-repair-v2"
+}

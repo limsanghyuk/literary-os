@@ -1,0 +1,24 @@
+{
+  "work_id": "공주가돌아왔다_06",
+  "scene_count": 67,
+  "core_dist": {
+    "BOND": 12,
+    "CONFLICT": 29,
+    "DESIRE": 12,
+    "ESTABLISH": 11,
+    "HOOK": 14,
+    "INTRO": 1,
+    "LOSS": 3,
+    "ORACLE": 5,
+    "PERIL": 2,
+    "PUNISH": 10,
+    "RELIEF": 10,
+    "RESCUE": 1,
+    "REUNION": 2,
+    "REVELATION": 11,
+    "REVERSAL": 3,
+    "ROMANCE": 8
+  },
+  "episode_function": "공심을 허영적 경쟁자에서 관객을 위해 위험을 감수하는 단장으로 확장하고, 찬우의 공심 접근을 도경을 향한 감정적 복수로 전환한다.",
+  "by": "gpt-5.6-direct-reading-repair-v2"
+}

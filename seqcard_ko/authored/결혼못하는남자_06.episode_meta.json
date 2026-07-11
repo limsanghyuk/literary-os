@@ -1,0 +1,23 @@
+{
+  "work_id": "결혼못하는남자_06",
+  "scene_count": 69,
+  "core_dist": {
+    "BOND": 18,
+    "CONFLICT": 17,
+    "DESIRE": 11,
+    "ESTABLISH": 9,
+    "HOOK": 14,
+    "LOSS": 13,
+    "ORACLE": 6,
+    "PERIL": 7,
+    "PUNISH": 1,
+    "RELIEF": 13,
+    "RESCUE": 5,
+    "REUNION": 2,
+    "REVELATION": 12,
+    "REVERSAL": 3,
+    "ROMANCE": 7
+  },
+  "episode_function": "물벼락 사고가 문정 가족의 오해와 봉수의 조사를 부른다. 문정의 문자와 DVD 추적이 새 로맨스 훅, 혜빈과의 만남으로 이어진다.",
+  "by": "gpt-direct-reading-claude-schema-projection"
+}

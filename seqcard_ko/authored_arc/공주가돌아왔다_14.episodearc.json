@@ -1,0 +1,68 @@
+{
+  "work_id": "공주가돌아왔다_14",
+  "episode_no": 14,
+  "scene_count": 73,
+  "sequence_count": 9,
+  "dramatic_question": "도경이 사랑을 포기하면 가족은 보존되는가, 봉희의 성공은 빼앗긴 아버지 자리를 실제로 회복할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "카페 폭발과 이혼 무효 요구"
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "공심의 제도 보복과 찬우의 철수"
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "작별·강회장 연합과 가족 붕괴"
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "봉희의 성공과 도경의 자녀 상실"
+    }
+  ],
+  "entry_state": "봉희가 도경과 찬우의 마지막 포옹을 목격해 두 관계를 공개적으로 파괴한다.",
+  "exit_state": "봉희가 세 아이를 데려가 도경이 완전히 무너지고, 찬우가 곁을 지킨 뒤 세 달 후 청혼을 준비한다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "봉희가 라디오에서 세 아이의 아버지임을 공개해 실패할 것 같던 고백을 국민적 성공과 가족 귀환의 자격으로 바꾸는 순간이다."
+  },
+  "central_conflict_axis": "도경의 여성으로서의 삶 대 아이들의 가족 충성, 찬우의 놓아주는 사랑 대 봉희의 아버지 귀환",
+  "episode_function": "가족 재배치 회차로, 공심의 복수가 아이들을 흔든 뒤 봉희의 공개 고백이 경제적 성공과 양육권 이동을 촉발한다.",
+  "core_dist": {
+    "BOND": 14,
+    "CONFLICT": 13,
+    "DESIRE": 12,
+    "ESTABLISH": 2,
+    "HOOK": 17,
+    "INTRO": 1,
+    "LOSS": 24,
+    "ORACLE": 14,
+    "PERIL": 6,
+    "PUNISH": 10,
+    "RELIEF": 7,
+    "RESCUE": 5,
+    "REUNION": 2,
+    "REVELATION": 8,
+    "REVERSAL": 9,
+    "ROMANCE": 2
+  },
+  "by": "gpt-5.6-direct-reading"
+}

@@ -1,0 +1,24 @@
+{
+  "work_id": "공주가돌아왔다_13",
+  "scene_count": 69,
+  "core_dist": {
+    "BOND": 13,
+    "CONFLICT": 14,
+    "DESIRE": 12,
+    "ESTABLISH": 5,
+    "HOOK": 16,
+    "INTRO": 4,
+    "LOSS": 20,
+    "ORACLE": 11,
+    "PERIL": 5,
+    "PUNISH": 12,
+    "RELIEF": 3,
+    "RESCUE": 2,
+    "REUNION": 1,
+    "REVELATION": 6,
+    "REVERSAL": 6,
+    "ROMANCE": 8
+  },
+  "episode_function": "후반부 희생 이별 회차로, 사랑을 완전히 확인한 두 사람이 아이와 가족을 위해 헤어지고 공심이 대리 충돌을 설계한다.",
+  "by": "gpt-5.6-direct-reading"
+}

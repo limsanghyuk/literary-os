@@ -1,0 +1,59 @@
+{
+  "work_id": "101번째프로포즈_01",
+  "episode_no": 1,
+  "scene_count": 57,
+  "sequence_count": 12,
+  "dramatic_question": "반복해서 거절당하고 해고된 달재는 자신을 가치 있게 보는 사람과 실제 인연을 시작할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A1",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "맞선 실패와 해고가 달재를 절망으로 몰아간다"
+    },
+    {
+      "act": "A2",
+      "seq_span": [
+        5,
+        8
+      ],
+      "beat": "수정의 라디오 위로와 잘못된 맞선이 두 세계를 연결한다"
+    },
+    {
+      "act": "A3",
+      "seq_span": [
+        9,
+        12
+      ],
+      "beat": "서로를 지킨 첫 만남이 청혼과 애프터로 이어진다"
+    }
+  ],
+  "entry_state": "결혼과 직업 모두에서 자신을 실패자로 여기는 달재",
+  "exit_state": "수정과 두 번째 만남을 약속하고 처음으로 가능성을 믿는 달재",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "수정이 원래 맞선남의 모욕에서 달재를 공개적으로 선택해 보호한다"
+  },
+  "central_conflict_axis": "낮은 자기 가치감과 타인의 조건부 평가 대 존재를 인정하는 시선",
+  "episode_function": "주인공과 핵심 상대를 우연한 맞선으로 연결하고 달재의 결핍·직업 능력·가족 체계를 동시에 설정한다.",
+  "core_dist": {
+    "BOND": 10,
+    "CONFLICT": 16,
+    "DESIRE": 13,
+    "ESTABLISH": 5,
+    "HOOK": 8,
+    "INTRO": 6,
+    "LOSS": 11,
+    "ORACLE": 4,
+    "PERIL": 5,
+    "PUNISH": 2,
+    "RELIEF": 13,
+    "RESCUE": 4,
+    "REUNION": 1,
+    "REVERSAL": 8,
+    "ROMANCE": 4
+  },
+  "by": "gpt-5.6-direct-reading"
+}

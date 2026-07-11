@@ -2,65 +2,67 @@
   "work_id": "시티헌터_03",
   "episode_no": 3,
   "scene_count": 70,
-  "sequence_count": 11,
-  "dramatic_question": "이경완 처단 이후 다음 표적 서용학을 어떻게 무너뜨릴 것이며, 경희는 안전한가?",
+  "sequence_count": 9,
+  "dramatic_question": "윤성은 사람을 죽이지 않고도 권력자 이경완을 완전히 파멸시키고 자신의 가족 진실에 접근할 수 있는가?",
   "act_structure": [
     {
-      "act": "설정",
+      "act": "ACT1",
       "seq_span": [
         1,
-        3
+        2
       ],
-      "beat": "이경완 방탄 확인·공동체 유대"
+      "function": "부결 후폭풍과 가족·일상 관계를 출판기념회 작전으로 모은다."
     },
     {
-      "act": "전개",
+      "act": "ACT2",
       "seq_span": [
-        4,
+        3,
+        5
+      ],
+      "function": "아이들을 미끼로 한 행사에서 포획을 뒤집어 공개 자백을 송출한다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        6,
         7
       ],
-      "beat": "함정 설치·작전 준비"
+      "function": "표적을 검찰에 배달하고 복수 방식의 성과와 부자 충돌을 확인한다."
     },
     {
-      "act": "심화",
+      "act": "ACT4",
       "seq_span": [
         8,
         9
       ],
-      "beat": "처단 성공·여진"
-    },
-    {
-      "act": "회말전환",
-      "seq_span": [
-        10,
-        11
-      ],
-      "beat": "경희 위기·훅"
+      "function": "군번줄·친모 탐색이 과거 비밀과 다음 표적 수사로 연결된다."
     }
   ],
-  "entry_state": "이경완이 자백 영상으로 무너지기 직전—함정이 가동된다.",
-  "exit_state": "이경완 처단 성공, 그러나 경희가 청와대 경호관들에게 끌려가 위기에 처한다.",
+  "entry_state": "이경완은 국회 면책을 승리로 여기고 시티헌터의 정체를 추적한다.",
+  "exit_state": "이경완은 검찰에 구속되고 윤성은 친모 경희와 최응찬의 만남을 본 뒤 진표와 맞선다.",
   "turning_point": {
-    "seq_index": 7,
-    "desc": "이경완 자백 영상 생중계·검찰 인도: 첫 표적 완전 처단"
+    "seq_index": 5,
+    "desc": "윤성이 이경완의 권력 자백을 전국에 송출해 정치적 면책을 현행범 공개로 뒤집는다."
   },
-  "central_conflict_axis": "비리 정치인 이경완 처단 vs 진표의 자력 응징 고집",
-  "episode_function": "3화: 시티헌터식 처단의 첫 완성—생중계 폭로와 검찰 인도라는 방식을 확립하고, 경희 위기로 다음 갈등을 점화한다.",
+  "central_conflict_axis": "살해가 아닌 공개 파멸을 택하는 윤성 대 비밀을 통제하고 죽음으로 복수하려는 진표·권력 동맹",
+  "episode_function": "시티헌터가 이경완을 국민 앞에서 자백시켜 검찰에 배달하고, 군번줄·친모 경희를 통해 복수의 과거 비밀이 현재로 돌아오는 회차.",
   "core_dist": {
-    "PUNISH": 8,
-    "CONFLICT": 25,
-    "REVELATION": 14,
-    "HOOK": 11,
     "BOND": 16,
-    "RESCUE": 6,
-    "RELIEF": 15,
-    "PERIL": 13,
-    "LOSS": 5,
-    "REVERSAL": 3,
-    "DESIRE": 1,
+    "CONFLICT": 15,
+    "DESIRE": 7,
+    "ESTABLISH": 1,
+    "HOOK": 18,
+    "INTRO": 4,
+    "LOSS": 11,
+    "ORACLE": 9,
+    "PERIL": 11,
+    "PUNISH": 8,
+    "RELIEF": 7,
+    "RESCUE": 4,
     "REUNION": 1,
-    "ESTABLISH": 2,
-    "ORACLE": 2
+    "REVELATION": 16,
+    "REVERSAL": 3,
+    "ROMANCE": 9
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-direct-reading-source-reauthorized"
 }

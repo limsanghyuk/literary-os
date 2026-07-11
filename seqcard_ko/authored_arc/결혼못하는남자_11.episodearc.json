@@ -1,0 +1,59 @@
+{
+  "work_id": "결혼못하는남자_11",
+  "episode_no": 11,
+  "scene_count": 71,
+  "sequence_count": 12,
+  "dramatic_question": "재희는 필요한 사람을 붙잡으면서 기다리는 문정의 마음도 지킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "vacancy",
+      "seq_span": [
+        1,
+        4
+      ],
+      "function": "기란 이직 징후와 문정 불안"
+    },
+    {
+      "act": "collapse",
+      "seq_span": [
+        5,
+        8
+      ],
+      "function": "사무소 위기와 계약 직전"
+    },
+    {
+      "act": "priority_cost",
+      "seq_span": [
+        9,
+        12
+      ],
+      "function": "기란 구출과 문정 고백"
+    }
+  ],
+  "entry_state": "여행 후 설렘이 남아 있지만 기란의 이직과 사무소 위기가 재희의 주의를 빼앗는다.",
+  "exit_state": "기란을 붙잡고 늦게 온 재희 앞에서 문정이 기다림의 상처와 좋아한다는 고백을 동시에 터뜨린다.",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "S060의 문정 조언으로 재희가 기란에게 달려가고 S070~S071에서 문정의 희생 비용이 고백으로 폭발한다."
+  },
+  "central_conflict_axis": "직업적 의존과 로맨틱 우선순위의 충돌",
+  "episode_function": "기란·재희의 업무 유대를 정리하면서 문정의 명시적 고백을 끌어낸다.",
+  "core_dist": {
+    "BOND": 16,
+    "CONFLICT": 15,
+    "DESIRE": 10,
+    "ESTABLISH": 9,
+    "HOOK": 3,
+    "INTRO": 2,
+    "LOSS": 14,
+    "ORACLE": 8,
+    "PERIL": 16,
+    "PUNISH": 4,
+    "RELIEF": 12,
+    "RESCUE": 2,
+    "REVELATION": 11,
+    "REVERSAL": 4,
+    "ROMANCE": 16
+  },
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-04"
+}

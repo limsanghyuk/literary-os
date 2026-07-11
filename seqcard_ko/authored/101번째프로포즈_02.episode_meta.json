@@ -1,0 +1,24 @@
+{
+  "work_id": "101번째프로포즈_02",
+  "episode_no": 2,
+  "scene_count": 51,
+  "core_dist": {
+    "BOND": 4,
+    "CONFLICT": 12,
+    "DESIRE": 14,
+    "ESTABLISH": 4,
+    "HOOK": 10,
+    "INTRO": 3,
+    "LOSS": 11,
+    "ORACLE": 5,
+    "PERIL": 5,
+    "PUNISH": 2,
+    "RELIEF": 10,
+    "RESCUE": 2,
+    "REVELATION": 7,
+    "REVERSAL": 5,
+    "ROMANCE": 4
+  },
+  "source_lock": "source_lock/101번째프로포즈_02.source_lock.json",
+  "by": "gpt-5.6-direct-reading"
+}

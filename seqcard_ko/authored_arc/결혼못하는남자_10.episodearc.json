@@ -1,0 +1,53 @@
+{
+  "work_id": "결혼못하는남자_10",
+  "episode_no": 10,
+  "scene_count": 52,
+  "sequence_count": 12,
+  "dramatic_question": "강제로 시작된 여행은 두 사람이 서로의 외로움과 질투를 솔직히 볼 기회가 되는가?",
+  "act_structure": [
+    {
+      "act": "departure",
+      "seq_span": [
+        1,
+        3
+      ],
+      "function": "여행 준비와 업무 공백"
+    },
+    {
+      "act": "forced_companionship",
+      "seq_span": [
+        4,
+        8
+      ],
+      "function": "동행 마찰과 외부 개입"
+    },
+    {
+      "act": "intimacy_return",
+      "seq_span": [
+        9,
+        12
+      ],
+      "function": "밤바다 근접과 귀환 후 질투"
+    }
+  ],
+  "entry_state": "재희와 문정은 여행을 프로젝트와 의무처럼 준비하며 감정을 숨긴다.",
+  "exit_state": "밤바다와 펜션 대화 뒤 질투와 사과를 나누지만 돌아온 뒤에도 관계는 확정되지 않는다.",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "밤바다 시퀀스에서 장난과 사과가 겹치며 강제 동행이 친밀한 기억으로 변한다."
+  },
+  "central_conflict_axis": "계획된 동선과 통제할 수 없는 친밀감",
+  "episode_function": "중심 커플을 일상 공간 밖에 격리해 감정적 근접을 크게 진전시킨다.",
+  "core_dist": {
+    "BOND": 11,
+    "CONFLICT": 30,
+    "DESIRE": 6,
+    "ESTABLISH": 5,
+    "HOOK": 1,
+    "PERIL": 12,
+    "RELIEF": 3,
+    "REVELATION": 3,
+    "ROMANCE": 33
+  },
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-04"
+}

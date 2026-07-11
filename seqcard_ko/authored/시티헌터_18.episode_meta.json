@@ -1,1 +1,23 @@
-{"work_id": "시티헌터_18", "scene_count": 70, "core_dist": {"CONFLICT": 10, "PUNISH": 11, "REVELATION": 9, "PERIL": 8, "DESIRE": 8, "BOND": 6, "ESTABLISH": 4, "RELIEF": 4, "ORACLE": 4, "REVERSAL": 3, "RESCUE": 1, "LOSS": 1, "ROMANCE": 1}, "episode_function": "석두식의 나나 납치 및 정체 확인 위기를 통해 로맨스와 정체 서스펜스를 최고조로 끌어올린 뒤, 부자가 합심해 천재만을 재정적으로 완전히 파산시키고 종업원주주제 회생이라는 정의로운 대안까지 실현하는 처단 서사를 완결한다. 회차 말미에는 아기를 구하려다 영주에게 마스크를 벗겨지는 초강력 클리프행어로 시즌 전체의 정체 발각 위기를 다음 화로 넘긴다.", "by": "sonnet_reading"}
+{
+  "work_id": "시티헌터_18",
+  "scene_count": 69,
+  "core_dist": {
+    "BOND": 7,
+    "CONFLICT": 15,
+    "DESIRE": 13,
+    "ESTABLISH": 1,
+    "HOOK": 19,
+    "INTRO": 1,
+    "LOSS": 13,
+    "ORACLE": 7,
+    "PERIL": 16,
+    "PUNISH": 13,
+    "RELIEF": 5,
+    "RESCUE": 6,
+    "REVELATION": 10,
+    "REVERSAL": 7,
+    "ROMANCE": 5
+  },
+  "episode_function": "나나 구조, 해원 노동자 환원, 천재만 생포를 완수하고 영주의 정체 확인으로 최종 추적전을 연다.",
+  "by": "gpt-5.6-direct-reading"
+}

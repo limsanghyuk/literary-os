@@ -1,0 +1,56 @@
+{
+  "work_id": "결혼못하는남자_03",
+  "episode_no": 3,
+  "scene_count": 77,
+  "sequence_count": 12,
+  "dramatic_question": "타인의 곤란에 개입하는 순간 재희의 독신 원칙은 어떻게 변하는가?",
+  "act_structure": [
+    {
+      "act": "pressure",
+      "seq_span": [
+        1,
+        5
+      ],
+      "function": "몸·돈·가족 압력"
+    },
+    {
+      "act": "debt",
+      "seq_span": [
+        6,
+        9
+      ],
+      "function": "사고와 수리비 책임"
+    },
+    {
+      "act": "intervention",
+      "seq_span": [
+        10,
+        12
+      ],
+      "function": "목격에서 도움 행동으로"
+    }
+  ],
+  "entry_state": "재희는 알레르기 사고 뒤에도 타인의 사정과 감정을 비용·사실의 문제로만 해석한다.",
+  "exit_state": "유진의 과로와 수리비 압박을 본 뒤 돈 봉투를 들고 문 앞에 서며 서툰 개입을 선택한다.",
+  "turning_point": {
+    "seq_index": 11,
+    "desc": "S064에서 유진의 새벽 노동을 목격한 재희가 S077에서 직접 도움을 들고 찾아간다."
+  },
+  "central_conflict_axis": "사실 중심 판단과 공감적 개입의 충돌",
+  "episode_function": "재희의 도움 욕구를 처음 행동으로 만들고 문정·유진과의 관계 부채를 심화한다.",
+  "core_dist": {
+    "BOND": 22,
+    "CONFLICT": 29,
+    "DESIRE": 8,
+    "ESTABLISH": 19,
+    "HOOK": 3,
+    "LOSS": 11,
+    "ORACLE": 8,
+    "PERIL": 15,
+    "RELIEF": 20,
+    "REVELATION": 17,
+    "REVERSAL": 1,
+    "ROMANCE": 1
+  },
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-04"
+}

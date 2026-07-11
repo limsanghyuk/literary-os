@@ -1,0 +1,120 @@
+{
+  "series": "결혼못하는남자",
+  "episodes_total": 16,
+  "scenes_total": 1250,
+  "sequences_total": 189,
+  "logline": "혼자 사는 질서를 완벽히 설계한 건축가 조재희가 의사 장문정과 이웃·가족·동료의 돌봄에 연결되며, 결혼 여부보다 타인과 지속적으로 공존하는 법을 배운다.",
+  "central_dramatic_question": "자기완결적 독신을 믿는 두 사람이 서로의 독립성을 훼손하지 않고 함께 사는 관계를 선택할 수 있는가?",
+  "theme_statement": "사랑은 혼자임을 포기하는 제도가 아니라, 서로의 경계와 생활 규칙을 계속 조정하며 타인의 삶을 책임 있게 받아들이는 행위다.",
+  "protagonist": {
+    "name": "조재희",
+    "want": "타인의 간섭 없이 완벽한 생활과 설계 원칙을 지키는 것",
+    "need": "취약함을 인정하고 돌봄을 주고받으며 타인에게 기대는 능력",
+    "arc": "자기완결적 통제자에서 관계망을 통해 문정을 찾아가는 공존 선택자로 이동",
+    "arc_curve": [
+      "EP01 고립의 만족",
+      "EP05 집 문턱 붕괴",
+      "EP07 돌봄 행동",
+      "EP11 우선순위 실패",
+      "EP15 자발적 초대",
+      "EP16 수색과 재회"
+    ]
+  },
+  "antagonist": {
+    "name": "자기완결 신념과 사회적 결혼 각본",
+    "function": "재희의 통제 습관과 가족·사회의 결혼 압력이 각각 다른 방향에서 두 사람의 자발적 관계 선택을 방해한다."
+  },
+  "season_structure": [
+    {
+      "movement": "collision_and_proximity",
+      "episode_span": [
+        1,
+        4
+      ],
+      "beat": "이웃·병원·철길·휴일을 통해 독신 생활권이 충돌하고 연결된다.",
+      "hinge": "문정이 재희의 옥상 고독에 들어온다."
+    },
+    {
+      "movement": "threshold_care_jealousy",
+      "episode_span": [
+        5,
+        8
+      ],
+      "beat": "집 문턱, 가족 비밀, 상구 돌봄, 대체 데이트가 친밀함과 질투를 키운다.",
+      "hinge": "재희가 문정의 맞선 뒤 집 근처에서 기다린다."
+    },
+    {
+      "movement": "forced_intimacy_confession_rescue",
+      "episode_span": [
+        9,
+        12
+      ],
+      "beat": "부모 여행 작전과 기란 이직 위기, 문정 고백, 스토커 구조가 감정 행동을 시험한다.",
+      "hinge": "재희의 구조 뒤 유진의 감정이 시작된다."
+    },
+    {
+      "movement": "triangle_choice_cohabitation",
+      "episode_span": [
+        13,
+        16
+      ],
+      "beat": "삼각 감정과 첫 키스, 우정 균열, 자발적 초대, 공존 실험과 이탈을 거쳐 재회한다.",
+      "hinge": "재희가 주변 관계망에 기대 문정을 찾아간다."
+    }
+  ],
+  "macro_turning_points": [
+    {
+      "episode": 1,
+      "event": "유진 구조와 문정 진료로 재희의 고립이 관계망에 편입된다.",
+      "role": "inciting_collision"
+    },
+    {
+      "episode": 5,
+      "event": "문정이 재희 집 안에 들어간다.",
+      "role": "threshold_breach"
+    },
+    {
+      "episode": 8,
+      "event": "재희가 문정 집 근처에서 기다린다.",
+      "role": "desire_recognition"
+    },
+    {
+      "episode": 11,
+      "event": "문정이 좋아한다고 직접 고백한다.",
+      "role": "midpoint_confession"
+    },
+    {
+      "episode": 14,
+      "event": "첫 키스와 유진 포옹이 관계 삼각형을 공개 위기로 만든다.",
+      "role": "late_reversal"
+    },
+    {
+      "episode": 16,
+      "event": "문정의 이탈을 추적한 재희가 시골 병원에서 재회한다.",
+      "role": "resolution"
+    }
+  ],
+  "resolution": "재희와 문정은 완벽한 결혼 제도 답을 내리지 않지만, 서로의 독립성과 불편함을 인정한 채 손잡고 관계를 계속하기로 한다.",
+  "open_ending": true,
+  "tone": "생활 코미디, 중년 로맨스, 공간과 음식의 세밀한 관찰, 돌봄을 통한 감정 성장",
+  "conflict_persist": "함께 사는 규칙과 결혼에 대한 관점 차이는 완전히 사라지지 않으며, 결말은 지속적 조정이 필요함을 남긴다.",
+  "series_core_dist": {
+    "BOND": 294,
+    "CONFLICT": 411,
+    "DESIRE": 211,
+    "ESTABLISH": 144,
+    "HOOK": 100,
+    "INTRO": 8,
+    "LOSS": 141,
+    "ORACLE": 74,
+    "PERIL": 266,
+    "RELIEF": 215,
+    "RESCUE": 59,
+    "REUNION": 37,
+    "REVELATION": 181,
+    "REVERSAL": 79,
+    "ROMANCE": 228,
+    "PUNISH": 20
+  },
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-04"
+}

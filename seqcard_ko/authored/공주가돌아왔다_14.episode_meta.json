@@ -1,0 +1,24 @@
+{
+  "work_id": "공주가돌아왔다_14",
+  "scene_count": 73,
+  "core_dist": {
+    "BOND": 14,
+    "CONFLICT": 13,
+    "DESIRE": 12,
+    "ESTABLISH": 2,
+    "HOOK": 17,
+    "INTRO": 1,
+    "LOSS": 24,
+    "ORACLE": 14,
+    "PERIL": 6,
+    "PUNISH": 10,
+    "RELIEF": 7,
+    "RESCUE": 5,
+    "REUNION": 2,
+    "REVELATION": 8,
+    "REVERSAL": 9,
+    "ROMANCE": 2
+  },
+  "episode_function": "가족 재배치 회차로, 공심의 복수가 아이들을 흔든 뒤 봉희의 공개 고백이 경제적 성공과 양육권 이동을 촉발한다.",
+  "by": "gpt-5.6-direct-reading"
+}

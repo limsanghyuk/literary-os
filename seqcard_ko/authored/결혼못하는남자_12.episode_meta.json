@@ -1,0 +1,24 @@
+{
+  "work_id": "결혼못하는남자_12",
+  "scene_count": 94,
+  "core_dist": {
+    "BOND": 18,
+    "CONFLICT": 16,
+    "DESIRE": 13,
+    "ESTABLISH": 13,
+    "HOOK": 2,
+    "INTRO": 1,
+    "LOSS": 9,
+    "ORACLE": 12,
+    "PERIL": 28,
+    "PUNISH": 4,
+    "RELIEF": 15,
+    "RESCUE": 8,
+    "REUNION": 3,
+    "REVELATION": 21,
+    "REVERSAL": 2,
+    "ROMANCE": 23
+  },
+  "episode_function": "문정의 고백 이후 재희가 말 대신 집 설계로 답하려는 감정 후폭풍을 연다. 구출 이후 유진의 감정 변화가 다음 회차의 삼각 긴장을 여는 훅이 된다.",
+  "by": "gpt-direct-reading-claude-schema-projection"
+}

@@ -1,0 +1,23 @@
+{
+  "work_id": "결혼못하는남자_11",
+  "scene_count": 71,
+  "core_dist": {
+    "BOND": 16,
+    "CONFLICT": 15,
+    "DESIRE": 10,
+    "ESTABLISH": 9,
+    "HOOK": 3,
+    "INTRO": 2,
+    "LOSS": 14,
+    "ORACLE": 8,
+    "PERIL": 16,
+    "PUNISH": 4,
+    "RELIEF": 12,
+    "RESCUE": 2,
+    "REVELATION": 11,
+    "REVERSAL": 4,
+    "ROMANCE": 16
+  },
+  "episode_function": "수술 동의 성공 뒤 재희와 문정의 설렘이 생기고 문정의 환송회 동행 문제가 열린다. 늦게 온 재희 앞에서 문정이 기다림의 상처를 폭발시키고 좋아한다고 고백한다.",
+  "by": "gpt-direct-reading-claude-schema-projection"
+}

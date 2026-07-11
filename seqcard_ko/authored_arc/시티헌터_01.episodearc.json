@@ -1,68 +1,68 @@
 {
   "work_id": "시티헌터_01",
   "episode_no": 1,
-  "scene_count": 83,
-  "sequence_count": 13,
-  "dramatic_question": "이진표의 복수 계획은 5인의 처단에 성공할 것인가, 아니면 또 다른 비극을 낳을 것인가?",
+  "scene_count": 79,
+  "sequence_count": 12,
+  "dramatic_question": "국가에 배신당해 탄생부터 빼앗긴 윤성은 진표가 만든 복수 도구로만 살 것인가, 타인을 구하는 자신의 윤리를 지킬 것인가?",
   "act_structure": [
     {
-      "act": "설정",
+      "act": "ACT1",
       "seq_span": [
         1,
         3
       ],
-      "beat": "1983 비극과 인물 탄생·확립"
+      "function": "아웅산 테러, 비밀 보복, 북파 실행으로 윤성의 출생과 국가 폭력을 결속한다."
     },
     {
-      "act": "전개",
+      "act": "ACT2",
       "seq_span": [
         4,
-        7
+        5
       ],
-      "beat": "배신·전멸·복수 결의·10년 도약"
+      "function": "국가 배신과 학살, 무열의 죽음, 진표의 생존·유괴로 복수 서사를 확정한다."
     },
     {
-      "act": "심화",
+      "act": "ACT3",
       "seq_span": [
-        8,
-        11
+        6,
+        9
       ],
-      "beat": "성장·갈등·희생"
+      "function": "트라이앵글에서 윤성을 훈련시키고 상실·습격·진실 공개를 거쳐 시티헌터를 완성한다."
     },
     {
-      "act": "회말전환",
+      "act": "ACT4",
       "seq_span": [
-        12,
-        13
+        10,
+        12
       ],
-      "beat": "귀국·표적·첫 만남과 정체 복선"
+      "function": "서울에서 첫 표적과 나나를 만나게 하고 청와대 재회로 본편의 복수·로맨스 무대를 연다."
     }
   ],
-  "entry_state": "1983년 아웅산 폭발로 탄생한 복수극—진표는 살아남았고 윤성은 세상에 왔다.",
-  "exit_state": "귀국한 윤성이 첫 표적 이경완을 지목하고, 나나와 운명적으로 얽혔다.",
+  "entry_state": "경희의 아이는 태어나고 무열과 진표는 국가 경호관으로 서로를 신뢰한다.",
+  "exit_state": "윤성은 첫 표적 이경완을 추적하는 청와대 박사로, 나나는 신입 경호관으로 같은 공간에 진입한다.",
   "turning_point": {
-    "seq_index": 4,
-    "desc": "대원 전멸과 진표의 배신—개인 복수극의 도화선"
+    "seq_index": 8,
+    "desc": "진표가 무열의 심장을 관통한 총알을 윤성에게 건네며 친부의 죽음과 다섯 원수를 공개한다."
   },
-  "central_conflict_axis": "5인 공모의 사법적 응징(윤성) vs 자력 처단(진표)",
-  "episode_function": "프롤로그 1화: 1983년 배신과 탄생, 10년 방황, 귀국까지 복수극의 씨앗 전부를 심는다.",
+  "central_conflict_axis": "국가와 양부가 강요한 복수 규율 대 윤성이 반복해서 선택하는 보호·연민·사랑의 충동",
+  "episode_function": "시티헌터의 출생 원인인 국가 배신을 제시하고, 윤성이 복수 실행자와 나나의 잠재적 보호자로 동시에 서울·청와대에 진입하도록 만든 기원 회차.",
   "core_dist": {
-    "ESTABLISH": 15,
-    "INTRO": 6,
-    "PERIL": 18,
+    "BOND": 13,
+    "CONFLICT": 11,
+    "DESIRE": 15,
+    "ESTABLISH": 8,
+    "HOOK": 17,
+    "INTRO": 14,
+    "LOSS": 14,
+    "ORACLE": 7,
+    "PERIL": 21,
+    "PUNISH": 10,
+    "RELIEF": 3,
+    "RESCUE": 6,
+    "REUNION": 1,
+    "REVELATION": 9,
     "REVERSAL": 4,
-    "LOSS": 11,
-    "CONFLICT": 13,
-    "DESIRE": 18,
-    "BOND": 11,
-    "ORACLE": 12,
-    "RESCUE": 7,
-    "PUNISH": 5,
-    "REVELATION": 8,
-    "RELIEF": 5,
-    "ROMANCE": 3,
-    "HOOK": 3,
-    "REUNION": 1
+    "ROMANCE": 5
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-direct-reading"
 }

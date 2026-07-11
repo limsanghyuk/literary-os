@@ -1,0 +1,59 @@
+{
+  "work_id": "101번째프로포즈_05",
+  "episode_no": 5,
+  "scene_count": 68,
+  "sequence_count": 12,
+  "dramatic_question": "달재는 현준과 경쟁하는 구애자가 아니라 수정의 멈춘 애도를 이해하는 동행자가 될 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A1",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "달재가 성당 현장에서 수정 가족의 진실과 찬혁의 죽음을 알아간다"
+    },
+    {
+      "act": "A2",
+      "seq_span": [
+        5,
+        8
+      ],
+      "beat": "벤치와 사고 기억, 말벌 소동 속에서 경쟁심이 연민과 친밀함으로 바뀐다"
+    },
+    {
+      "act": "A3",
+      "seq_span": [
+        9,
+        12
+      ],
+      "beat": "수정은 주변을 힘들게 했다고 자책하고 달재의 위로에 죽은 찬혁을 데려오라고 절규한다"
+    }
+  ],
+  "entry_state": "현준을 이기고 수정의 가족에게 잘 보이려는 경쟁적 달재",
+  "exit_state": "수정의 고통을 자기 아픔처럼 느끼지만 해결할 수 없는 소원을 떠안은 달재",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "달재는 현준의 짝사랑 소식보다 수정의 상처 때문에 자기 마음이 아프다는 사실을 깨닫는다"
+  },
+  "central_conflict_axis": "새 사랑의 가능성 대 죽은 배우자와 멈춘 시간에 대한 충성",
+  "episode_function": "수정의 결혼과 사고를 명시하고 달재의 감정을 욕망에서 공감으로 심화해 본격적인 애도·구원 갈등을 만든다.",
+  "core_dist": {
+    "BOND": 11,
+    "CONFLICT": 13,
+    "DESIRE": 13,
+    "ESTABLISH": 9,
+    "HOOK": 7,
+    "LOSS": 17,
+    "ORACLE": 8,
+    "PERIL": 8,
+    "PUNISH": 4,
+    "RELIEF": 17,
+    "RESCUE": 6,
+    "REUNION": 2,
+    "REVELATION": 7,
+    "REVERSAL": 2,
+    "ROMANCE": 10
+  },
+  "by": "gpt-5.6-direct-reading"
+}

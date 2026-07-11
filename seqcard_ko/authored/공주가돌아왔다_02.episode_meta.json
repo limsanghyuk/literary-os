@@ -1,0 +1,24 @@
+{
+  "work_id": "공주가돌아왔다_02",
+  "scene_count": 76,
+  "core_dist": {
+    "BOND": 10,
+    "CONFLICT": 30,
+    "DESIRE": 16,
+    "ESTABLISH": 4,
+    "HOOK": 8,
+    "INTRO": 1,
+    "LOSS": 7,
+    "ORACLE": 1,
+    "PERIL": 16,
+    "PUNISH": 16,
+    "RELIEF": 12,
+    "RESCUE": 5,
+    "REUNION": 4,
+    "REVELATION": 6,
+    "REVERSAL": 4,
+    "ROMANCE": 12
+  },
+  "episode_function": "현우를 새 로맨스와 제도 지원자로 투입하고, 같은 제부도에 간 봉희와 공심의 동선을 엮어 두 여성의 원한을 말이 아닌 육체적 전쟁으로 상승시킨다.",
+  "by": "gpt-5.6-direct-reading-repair-v2"
+}

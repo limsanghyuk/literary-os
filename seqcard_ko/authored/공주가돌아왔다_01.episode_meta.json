@@ -1,0 +1,24 @@
+{
+  "work_id": "공주가돌아왔다_01",
+  "scene_count": 65,
+  "core_dist": {
+    "BOND": 4,
+    "CONFLICT": 25,
+    "DESIRE": 21,
+    "ESTABLISH": 15,
+    "HOOK": 8,
+    "INTRO": 5,
+    "LOSS": 6,
+    "ORACLE": 4,
+    "PERIL": 3,
+    "PUNISH": 7,
+    "RELIEF": 4,
+    "RESCUE": 1,
+    "REUNION": 4,
+    "REVELATION": 4,
+    "REVERSAL": 9,
+    "ROMANCE": 10
+  },
+  "episode_function": "공심·도경·봉희의 과거 원한을 현재로 연결하고 선남의 아카데미를 통해 성인 경쟁을 다음 세대의 미래와 결박한다.",
+  "by": "gpt-5.6-direct-reading-repair-v2"
+}

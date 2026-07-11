@@ -3,64 +3,66 @@
   "episode_no": 17,
   "scene_count": 54,
   "sequence_count": 8,
-  "dramatic_question": "석두식의 조폭 습격에서 살아남고, 천재만의 의료민영화 음모를 막을 수 있는가?",
+  "dramatic_question": "윤성은 응찬에게 끌리는 감정을 인정하면서 진표의 대통령 공격과 천재만의 로비를 막을 수 있는가?",
   "act_structure": [
     {
-      "act": "설정",
+      "act": "ACT1",
       "seq_span": [
         1,
-        3
+        2
       ],
-      "beat": "오찬 습격·과거 비극"
+      "function": "핵심 위기와 목표를 설정한다."
     },
     {
-      "act": "전개",
+      "act": "ACT2",
       "seq_span": [
-        4,
+        3,
+        4
+      ],
+      "function": "관계·정보 압력을 확대한다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        5,
         6
       ],
-      "beat": "결전 가열·감정 화해"
+      "function": "작전과 반격을 실행한다."
     },
     {
-      "act": "심화",
+      "act": "ACT4",
       "seq_span": [
         7,
-        7
-      ],
-      "beat": "전선 복잡화"
-    },
-    {
-      "act": "회말전환",
-      "seq_span": [
-        8,
         8
       ],
-      "beat": "뇌물 시도·조폭 습격 훅"
+      "function": "회차 전환과 다음 위기를 봉인한다."
     }
   ],
-  "entry_state": "응찬 앨범 발견과 결전 초읽기, 오찬 경호 착수.",
-  "exit_state": "상국의 뇌물 제보 실패, 석두식 조폭의 진표 습격으로 훅.",
+  "entry_state": "윤성과 응찬이 사진첩과 도서관 대화로 가까워진다.",
+  "exit_state": "윤성은 진표를 다시 구하지만 응찬·경희·무열을 잇는 출생 비밀과 마지막 표적 위협이 커진다.",
   "turning_point": {
     "seq_index": 3,
-    "desc": "천재만의 경희 낙태 강요 과거 드러남: 1983년 비극의 핵심 확인"
+    "desc": "과거 무열이 천재만의 낙태 강요에서 경희와 태아를 구하고 가족을 선택한 진실이 드러난다."
   },
-  "central_conflict_axis": "천재만 의료민영화 음모 차단(영주/윤성) vs 석두식·조폭의 역공",
-  "episode_function": "17화: 1983년 비극의 핵심과 결전 가열—감정 화해와 전선 복잡화 속에서 조폭 습격으로 훅.",
+  "central_conflict_axis": "친부에게 향하는 애착 대 양부의 살해 복수, 공적 수사 대 재벌 로비",
+  "episode_function": "대통령과 윤성의 부자 감정을 키우고 출생 과거를 공개하며 해원 로비와 진표의 청와대 공격을 결합한다.",
   "core_dist": {
-    "BOND": 11,
-    "ESTABLISH": 5,
-    "ORACLE": 7,
-    "CONFLICT": 20,
-    "REVELATION": 16,
-    "PERIL": 10,
-    "RELIEF": 6,
-    "DESIRE": 4,
-    "RESCUE": 1,
-    "LOSS": 3,
-    "ROMANCE": 6,
-    "PUNISH": 3,
-    "REVERSAL": 3,
-    "HOOK": 2
+    "BOND": 12,
+    "CONFLICT": 12,
+    "DESIRE": 6,
+    "ESTABLISH": 3,
+    "HOOK": 11,
+    "INTRO": 1,
+    "LOSS": 10,
+    "ORACLE": 9,
+    "PERIL": 9,
+    "PUNISH": 6,
+    "RELIEF": 4,
+    "RESCUE": 4,
+    "REUNION": 2,
+    "REVELATION": 10,
+    "REVERSAL": 2,
+    "ROMANCE": 7
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-direct-reading"
 }

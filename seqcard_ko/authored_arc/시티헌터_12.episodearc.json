@@ -2,66 +2,67 @@
   "work_id": "시티헌터_12",
   "episode_no": 12,
   "scene_count": 76,
-  "sequence_count": 12,
-  "dramatic_question": "진표의 기습 총격에서 살아남은 윤성과 나나는 김종식 비자금 처단을 완성할 수 있는가?",
+  "sequence_count": 9,
+  "dramatic_question": "윤성은 진표와의 전쟁 속에서도 2천억을 원래 학생에게 돌려주고 나나와 평범한 사랑을 지킬 수 있는가?",
   "act_structure": [
     {
-      "act": "설정",
+      "act": "ACT1",
       "seq_span": [
         1,
+        2
+      ],
+      "function": "정체·관계 위기를 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        3,
         4
       ],
-      "beat": "나나 구조·부자 단절"
+      "function": "가족 진실과 인질 협박으로 갈등을 확대한다."
     },
     {
-      "act": "전개",
+      "act": "ACT3",
       "seq_span": [
         5,
-        8
+        7
       ],
-      "beat": "팀 재결집·작전 설계·감정 심화"
+      "function": "김종식 비리와 작전 기반을 구축한다."
     },
     {
-      "act": "심화",
+      "act": "ACT4",
       "seq_span": [
-        9,
-        11
+        8,
+        9
       ],
-      "beat": "비리 확인·탈취 성공"
-    },
-    {
-      "act": "회말전환",
-      "seq_span": [
-        12,
-        12
-      ],
-      "beat": "자축·진표 총격 훅"
+      "function": "침투·탈취·희생으로 회차의 핵심 전환을 실행한다."
     }
   ],
-  "entry_state": "나나 총상 구조·부자 단절·팀 재결집.",
-  "exit_state": "2천억 탈취·등록금 환급 성공, 그러나 진표의 기습 총격으로 훅.",
+  "entry_state": "나나는 윤성을 대신해 총을 맞고 생명이 위태롭다.",
+  "exit_state": "2천억은 학생들에게 돌아가지만 진표가 나나를 직접 저격해 윤성과의 전쟁을 폭발시킨다.",
   "turning_point": {
-    "seq_index": 6,
-    "desc": "부자 관계 단절: 진표의 나나 제거 지시·사망 거짓말 폭로"
+    "seq_index": 2,
+    "desc": "윤성이 유괴 진실을 알고 진표에게 독립 복수와 마지막 경고를 선언한다."
   },
-  "central_conflict_axis": "김종식 비자금 처단(윤성) vs 진표의 자력 복수와 방해",
-  "episode_function": "12화: 부자 단절 이후 팀 재결집과 2천억 처단 성공—시티헌터 방식이 사회적 정의로 확장된다.",
+  "central_conflict_axis": "진표의 파괴적 복수와 윤성의 원상회복 복수, 사랑을 약점으로 볼지 삶으로 볼지의 대립",
+  "episode_function": "나나의 생환과 윤성의 독립 선언을 바탕으로 종식의 2천억을 학생에게 반환하지만, 진표가 나나를 직접 겨누며 부자 전쟁을 돌이킬 수 없게 만든다.",
   "core_dist": {
+    "BOND": 15,
+    "CONFLICT": 9,
+    "DESIRE": 12,
+    "ESTABLISH": 2,
+    "HOOK": 16,
+    "INTRO": 3,
+    "LOSS": 10,
+    "ORACLE": 4,
     "PERIL": 12,
-    "BOND": 9,
-    "RESCUE": 3,
-    "ORACLE": 10,
-    "ESTABLISH": 4,
-    "ROMANCE": 7,
-    "REVELATION": 13,
-    "HOOK": 9,
-    "CONFLICT": 15,
-    "LOSS": 6,
-    "RELIEF": 12,
-    "DESIRE": 9,
-    "REVERSAL": 3,
-    "INTRO": 1,
-    "PUNISH": 2
+    "PUNISH": 12,
+    "RELIEF": 15,
+    "RESCUE": 10,
+    "REUNION": 2,
+    "REVELATION": 16,
+    "REVERSAL": 5,
+    "ROMANCE": 9
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-direct-reading"
 }

@@ -1,0 +1,24 @@
+{
+  "work_id": "공주가돌아왔다_15",
+  "scene_count": 72,
+  "core_dist": {
+    "BOND": 10,
+    "CONFLICT": 15,
+    "DESIRE": 8,
+    "ESTABLISH": 6,
+    "HOOK": 16,
+    "INTRO": 6,
+    "LOSS": 27,
+    "ORACLE": 16,
+    "PERIL": 3,
+    "PUNISH": 6,
+    "RELIEF": 1,
+    "RESCUE": 1,
+    "REUNION": 5,
+    "REVELATION": 13,
+    "REVERSAL": 9,
+    "ROMANCE": 2
+  },
+  "episode_function": "종결 직전 정산 회차로, 잘못된 결혼의 기원과 양육권 갈등을 드러내고 찬우·공심이 집착을 내려놓아 도경·봉희 재결합의 조건을 만든다.",
+  "by": "gpt-5.6-direct-reading"
+}

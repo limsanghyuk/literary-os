@@ -1,0 +1,23 @@
+{
+  "work_id": "공주가돌아왔다_09",
+  "scene_count": 71,
+  "core_dist": {
+    "BOND": 17,
+    "CONFLICT": 20,
+    "DESIRE": 15,
+    "ESTABLISH": 5,
+    "HOOK": 14,
+    "LOSS": 15,
+    "ORACLE": 3,
+    "PERIL": 4,
+    "PUNISH": 16,
+    "RELIEF": 7,
+    "RESCUE": 2,
+    "REUNION": 3,
+    "REVELATION": 12,
+    "REVERSAL": 3,
+    "ROMANCE": 6
+  },
+  "episode_function": "시즌 중반의 비밀 공개 회차로, 공심의 오해를 잠시 봉합하면서 찬우가 도경의 희생을 처음 인식하게 한다.",
+  "by": "gpt-5.6-direct-reading"
+}

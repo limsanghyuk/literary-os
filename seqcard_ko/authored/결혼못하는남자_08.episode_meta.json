@@ -1,0 +1,23 @@
+{
+  "work_id": "결혼못하는남자_08",
+  "scene_count": 102,
+  "core_dist": {
+    "BOND": 15,
+    "CONFLICT": 45,
+    "DESIRE": 18,
+    "ESTABLISH": 7,
+    "HOOK": 21,
+    "LOSS": 8,
+    "ORACLE": 5,
+    "PERIL": 27,
+    "PUNISH": 1,
+    "RELIEF": 17,
+    "RESCUE": 2,
+    "REUNION": 1,
+    "REVELATION": 10,
+    "REVERSAL": 13,
+    "ROMANCE": 14
+  },
+  "episode_function": "독신과 결혼 압박의 회차 질문을 어항과 새벽 침입으로 세운다. 맞선 실패와 배터리로 끊긴 전화 끝에 재희가 문정 집 근처에서 기다리는 엔딩으로 수렴한다.",
+  "by": "gpt-direct-reading-claude-schema-projection"
+}

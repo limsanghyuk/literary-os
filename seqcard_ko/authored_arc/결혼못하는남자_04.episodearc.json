@@ -1,0 +1,56 @@
+{
+  "work_id": "결혼못하는남자_04",
+  "episode_no": 4,
+  "scene_count": 72,
+  "sequence_count": 12,
+  "dramatic_question": "혼자 보내는 휴일은 타인이 들어오는 순간 더 나빠지는가, 더 완전해지는가?",
+  "act_structure": [
+    {
+      "act": "holiday_open",
+      "seq_span": [
+        1,
+        4
+      ],
+      "function": "휴일 결핍과 우연한 접촉"
+    },
+    {
+      "act": "parallel_routes",
+      "seq_span": [
+        5,
+        8
+      ],
+      "function": "관광·데이트·여성 연대"
+    },
+    {
+      "act": "firework_convergence",
+      "seq_span": [
+        9,
+        12
+      ],
+      "function": "가족 호감과 옥상 만남"
+    }
+  ],
+  "entry_state": "세 인물은 돈봉투 사건의 민망함을 각자의 휴일 계획과 농담으로 덮으려 한다.",
+  "exit_state": "재희의 완벽한 옥상 관람식에 문정이 도착해 혼자만의 의식이 둘의 친밀한 장면으로 바뀐다.",
+  "turning_point": {
+    "seq_index": 12,
+    "desc": "S067~S072에서 재희가 준비한 개인 관람석에 문정이 들어오며 고독의 완성이 관계의 시작으로 반전된다."
+  },
+  "central_conflict_axis": "자발적 고독과 목격된 친밀함",
+  "episode_function": "재희·문정의 감정을 생활 동선과 휴일 공간으로 구체화한다.",
+  "core_dist": {
+    "BOND": 26,
+    "CONFLICT": 24,
+    "DESIRE": 8,
+    "ESTABLISH": 19,
+    "HOOK": 4,
+    "LOSS": 10,
+    "ORACLE": 5,
+    "PERIL": 8,
+    "RELIEF": 13,
+    "REVELATION": 11,
+    "REVERSAL": 2,
+    "ROMANCE": 14
+  },
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-04"
+}

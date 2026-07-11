@@ -2,66 +2,66 @@
   "work_id": "시티헌터_16",
   "episode_no": 16,
   "scene_count": 63,
-  "sequence_count": 10,
-  "dramatic_question": "1983년의 다섯 번째 공모자와 천재만의 실체를 규명하며 복수를 완성할 수 있는가?",
+  "sequence_count": 8,
+  "dramatic_question": "정체가 노출된 윤성은 사랑을 끊고도 2030 기밀문서를 둘러싼 진표·영주와의 전쟁을 통제할 수 있는가?",
   "act_structure": [
     {
-      "act": "설정",
+      "act": "ACT1",
       "seq_span": [
         1,
-        3
+        2
       ],
-      "beat": "이별 선언·새 위협"
+      "function": "핵심 위기와 목표를 설정한다."
     },
     {
-      "act": "전개",
+      "act": "ACT2",
       "seq_span": [
-        4,
-        7
+        3,
+        4
       ],
-      "beat": "정의 실천·비리 포착"
+      "function": "관계·정보 압력을 확대한다."
     },
     {
-      "act": "심화",
+      "act": "ACT3",
       "seq_span": [
-        8,
-        9
+        5,
+        6
       ],
-      "beat": "진실 임박·비밀 공유"
+      "function": "작전과 반격을 실행한다."
     },
     {
-      "act": "회말전환",
+      "act": "ACT4",
       "seq_span": [
-        10,
-        10
+        7,
+        8
       ],
-      "beat": "응찬 앨범·결전 초읽기"
+      "function": "회차 전환과 다음 위기를 봉인한다."
     }
   ],
-  "entry_state": "영주의 푸차이 언급으로 정체 위기, 윤성의 이별 준비.",
-  "exit_state": "기밀문서 밀고와 영주의 정면 지목, 응찬 앨범으로 결전 초읽기.",
+  "entry_state": "영주가 윤성을 푸차이로 부르고 윤성은 나나와 식중에게 이별을 준비한다.",
+  "exit_state": "기밀문서는 진표가 독점하고 응찬이 건넨 사진첩이 윤성의 친부와 1983년 진실을 새로 묶는다.",
   "turning_point": {
-    "seq_index": 9,
-    "desc": "영주의 정면 정체 지목: 시티헌터 비밀이 공유되는 전환점"
+    "seq_index": 8,
+    "desc": "응찬이 도서관에서 윤성에게 1983년 사진첩을 건네며 다섯 원수와 가족사의 연결을 연다."
   },
-  "central_conflict_axis": "천재만·응찬 처단(윤성/진표) vs 영주의 수사와 비밀 공유",
-  "episode_function": "16화: 이별 선언과 정의 실천, 1983년 진실 임박—영주와의 비밀 공유로 결전 구도가 완성된다.",
+  "central_conflict_axis": "정체 은폐와 관계 단절 대 진실 추적과 사랑의 잔여",
+  "episode_function": "영주의 신원 확정, 천재만의 의료민영화, 2030 문서 쟁탈전을 통해 마지막 표적과 출생 진실로 진입한다.",
   "core_dist": {
+    "BOND": 9,
+    "CONFLICT": 12,
+    "DESIRE": 10,
+    "ESTABLISH": 2,
+    "HOOK": 17,
+    "INTRO": 2,
+    "LOSS": 15,
+    "ORACLE": 10,
+    "PERIL": 6,
+    "PUNISH": 11,
+    "RELIEF": 2,
+    "RESCUE": 7,
     "REVELATION": 12,
-    "CONFLICT": 28,
-    "PERIL": 10,
-    "ESTABLISH": 3,
-    "BOND": 8,
-    "ROMANCE": 4,
-    "LOSS": 10,
-    "REVERSAL": 3,
-    "ORACLE": 9,
-    "RELIEF": 5,
-    "DESIRE": 8,
-    "PUNISH": 6,
-    "RESCUE": 3,
-    "REUNION": 1,
-    "HOOK": 1
+    "REVERSAL": 2,
+    "ROMANCE": 9
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-direct-reading"
 }

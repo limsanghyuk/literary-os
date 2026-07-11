@@ -1,0 +1,26 @@
+{
+  "work_id": "101번째프로포즈_07",
+  "episode_no": 7,
+  "scene_count": 79,
+  "core_dist": {
+    "BOND": 19,
+    "CONFLICT": 16,
+    "DESIRE": 12,
+    "ESTABLISH": 7,
+    "HOOK": 12,
+    "INTRO": 4,
+    "LOSS": 10,
+    "ORACLE": 4,
+    "PERIL": 8,
+    "PUNISH": 4,
+    "RELIEF": 22,
+    "RESCUE": 7,
+    "REVELATION": 8,
+    "REVERSAL": 7,
+    "ROMANCE": 16
+  },
+  "source_sha256": "17289f8272b3cfb577bf375941fc613df94c61316db726741ab15bb1245a51ce",
+  "raw_script_exported": false,
+  "direct_reading_required": true,
+  "by": "gpt-5.6-thinking-manual-close-reading-new-guide-v1"
+}

@@ -1,0 +1,60 @@
+{
+  "work_id": "공주가돌아왔다_02",
+  "episode_no": 2,
+  "scene_count": 76,
+  "sequence_count": 11,
+  "dramatic_question": "공심과 도경은 선남의 심사와 봉희를 둘러싼 오해를 공적 원칙으로 풀 수 있는가, 아니면 과거의 강탈 기억을 현재의 복수로 반복할 것인가?",
+  "act_structure": [
+    {
+      "act": "A1",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "도경의 계급 굴욕과 봉희의 허세 사고가 두 가정의 경제 압박을 키운다."
+    },
+    {
+      "act": "A2",
+      "seq_span": [
+        5,
+        8
+      ],
+      "beat": "현우·아카데미·자서전·배달 사고가 공심과 도경의 공사 경계를 무너뜨린다."
+    },
+    {
+      "act": "A3",
+      "seq_span": [
+        9,
+        11
+      ],
+      "beat": "제부도의 겹친 동선이 외도 오해와 데이트 파탄을 거쳐 갯벌 결투로 폭발한다."
+    }
+  ],
+  "entry_state": "도경은 공심의 저택에서 신분이 들킬까 숨어 있고 공심은 도경의 처지를 복수 우위로 즐긴다.",
+  "exit_state": "현우는 공심을 오해해 떠나고 공심과 도경은 서로가 자기 사랑과 인생을 빼앗았다고 선언하며 육탄전을 벌인다.",
+  "turning_point": {
+    "seq_index": 11,
+    "desc": "도경이 횟집에서 공심을 봉희와 함께 온 여자로 오해해 현우 앞에서 머리채를 잡는다."
+  },
+  "central_conflict_axis": "공적 심사와 생계 현실 대 첫사랑·주역·계급 강탈의 사적 원한",
+  "episode_function": "현우를 새 로맨스와 제도 지원자로 투입하고, 같은 제부도에 간 봉희와 공심의 동선을 엮어 두 여성의 원한을 말이 아닌 육체적 전쟁으로 상승시킨다.",
+  "core_dist": {
+    "BOND": 10,
+    "CONFLICT": 30,
+    "DESIRE": 16,
+    "ESTABLISH": 4,
+    "HOOK": 8,
+    "INTRO": 1,
+    "LOSS": 7,
+    "ORACLE": 1,
+    "PERIL": 16,
+    "PUNISH": 16,
+    "RELIEF": 12,
+    "RESCUE": 5,
+    "REUNION": 4,
+    "REVELATION": 6,
+    "REVERSAL": 4,
+    "ROMANCE": 12
+  },
+  "by": "gpt-5.6-direct-reading"
+}

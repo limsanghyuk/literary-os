@@ -1,0 +1,22 @@
+{
+  "work_id": "결혼못하는남자_01",
+  "scene_count": 96,
+  "core_dist": {
+    "BOND": 15,
+    "CONFLICT": 38,
+    "DESIRE": 10,
+    "ESTABLISH": 17,
+    "HOOK": 9,
+    "INTRO": 3,
+    "LOSS": 7,
+    "ORACLE": 6,
+    "PERIL": 18,
+    "RELIEF": 27,
+    "RESCUE": 2,
+    "REUNION": 3,
+    "REVELATION": 7,
+    "REVERSAL": 7
+  },
+  "episode_function": "독신 식사 의식이 파티 호출에 방해받으며 재희의 혼자 살기 원칙이 첫 외부 압력을 만난다. 문정의 진료실과 철길 전화가 재희·유진·문정을 연결하고 첫 회를 미완의 의료·이웃 갈등으로 닫는다.",
+  "by": "gpt-direct-reading-claude-schema-projection"
+}

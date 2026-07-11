@@ -1,1 +1,23 @@
-{"work_id": "시티헌터_13", "scene_count": 69, "core_dist": {"PERIL": 16, "CONFLICT": 12, "REVELATION": 6, "DESIRE": 8, "BOND": 2, "INTRO": 1, "RELIEF": 6, "ESTABLISH": 4, "HOOK": 4, "RESCUE": 2, "ORACLE": 6, "LOSS": 1, "REVERSAL": 1}, "episode_function": "김종식의 1983년 뺑소니 은폐와 위선을 폭로하는 두 번째 처단 작전이 완결되면서, 영주가 자신이 김종식의 아들임이 나나와 공개적으로 드러나 키다리아저씨 관계가 파탄나고, 영주는 윤성의 정체에 근접하며 함정을 파는 등 시티헌터 추적을 본격화한다. 진표가 윤성을 다시 악마로 만들려는 계략과 식중의 교통사고로 윤성의 복수심이 위험 수위로 치닫고, 마지막 육교 장면에서 구원과 복수 사이의 선택이 비극적 실패로 끝나며 다음 화 파국을 예고한다.", "by": "sonnet_reading"}
+{
+  "work_id": "시티헌터_13",
+  "scene_count": 69,
+  "core_dist": {
+    "BOND": 13,
+    "CONFLICT": 17,
+    "DESIRE": 10,
+    "ESTABLISH": 2,
+    "HOOK": 14,
+    "INTRO": 5,
+    "LOSS": 15,
+    "ORACLE": 7,
+    "PERIL": 13,
+    "PUNISH": 9,
+    "RELIEF": 2,
+    "RESCUE": 8,
+    "REVELATION": 12,
+    "REVERSAL": 9,
+    "ROMANCE": 2
+  },
+  "episode_function": "김종식의 비리를 공개하고 영주와의 가족 갈등을 폭발시키며 식중 피격과 종식 추락으로 진표·윤성 전쟁을 확장한다.",
+  "by": "gpt-5.6-direct-reading"
+}

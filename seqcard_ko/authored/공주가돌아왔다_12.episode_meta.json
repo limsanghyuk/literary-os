@@ -1,0 +1,24 @@
+{
+  "work_id": "공주가돌아왔다_12",
+  "scene_count": 73,
+  "core_dist": {
+    "BOND": 10,
+    "CONFLICT": 17,
+    "DESIRE": 21,
+    "ESTABLISH": 10,
+    "HOOK": 17,
+    "INTRO": 5,
+    "LOSS": 1,
+    "ORACLE": 16,
+    "PERIL": 1,
+    "PUNISH": 9,
+    "RELIEF": 10,
+    "RESCUE": 1,
+    "REUNION": 4,
+    "REVELATION": 11,
+    "REVERSAL": 5,
+    "ROMANCE": 8
+  },
+  "episode_function": "비밀 연애를 공개 검증 단계로 올리는 회차로, 경제·교육 지원의 진실을 드러내고 강달수 상견례에서 가족 조건을 폭발시킨다.",
+  "by": "gpt-5.6-direct-reading"
+}

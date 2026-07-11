@@ -1,0 +1,59 @@
+{
+  "work_id": "101번째프로포즈_03",
+  "episode_no": 3,
+  "scene_count": 72,
+  "sequence_count": 11,
+  "dramatic_question": "찬혁의 비밀 문장을 둘러싼 오해로 무너진 신뢰를 달재와 수정은 다시 세울 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A1",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "달재의 입사와 패션쇼 초대가 현재 인연을 확장한다"
+    },
+    {
+      "act": "A2",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "비밀 통화의 오해와 공개 모욕이 달재를 고립시킨다"
+    },
+    {
+      "act": "A3",
+      "seq_span": [
+        8,
+        11
+      ],
+      "beat": "직장 보복과 진실 폭로 뒤 달재가 자신을 바꾸기 위해 경매에 모든 것을 건다"
+    }
+  ],
+  "entry_state": "수정의 초대와 방송국 입사로 삶이 열렸다고 믿는 달재",
+  "exit_state": "사과는 받았지만 사랑 가능성은 부정당해 극단적 행동으로 자신을 바꾸려는 달재",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "금정이 달재는 찬혁의 말을 전혀 몰랐다고 밝혀 수정의 모욕이 잘못된 오해였음이 드러난다"
+  },
+  "central_conflict_axis": "과거 사랑의 성역을 지키려는 수정 대 그 의미를 모른 채 진심을 말한 달재",
+  "episode_function": "호감의 상승을 오해와 공개 굴욕로 뒤집고, 달재의 직장 위계 갈등과 과잉 자기증명 욕망을 시작한다.",
+  "core_dist": {
+    "BOND": 11,
+    "CONFLICT": 20,
+    "DESIRE": 12,
+    "ESTABLISH": 8,
+    "HOOK": 12,
+    "INTRO": 4,
+    "LOSS": 14,
+    "ORACLE": 4,
+    "PERIL": 6,
+    "PUNISH": 8,
+    "RELIEF": 11,
+    "REUNION": 2,
+    "REVELATION": 9,
+    "REVERSAL": 4,
+    "ROMANCE": 8
+  },
+  "by": "gpt-5.6-direct-reading"
+}

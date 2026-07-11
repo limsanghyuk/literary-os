@@ -1,0 +1,22 @@
+{
+  "work_id": "결혼못하는남자_14",
+  "scene_count": 88,
+  "core_dist": {
+    "BOND": 12,
+    "CONFLICT": 30,
+    "DESIRE": 14,
+    "ESTABLISH": 7,
+    "HOOK": 8,
+    "LOSS": 19,
+    "ORACLE": 3,
+    "PERIL": 19,
+    "PUNISH": 5,
+    "RELIEF": 17,
+    "RESCUE": 7,
+    "REUNION": 4,
+    "REVELATION": 17,
+    "ROMANCE": 14
+  },
+  "episode_function": "응급 병세가 문정과 재희의 첫 취약한 밀착으로 바뀐다 유진의 돌진이 관계 삼각형을 다음 회차로 폭발시킨다",
+  "by": "gpt-direct-reading-claude-schema-projection"
+}

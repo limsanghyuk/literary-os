@@ -1,0 +1,19 @@
+{
+  "work_id": "결혼못하는남자_15",
+  "scene_count": 82,
+  "core_dist": {
+    "BOND": 20,
+    "CONFLICT": 29,
+    "DESIRE": 19,
+    "HOOK": 3,
+    "LOSS": 4,
+    "PERIL": 19,
+    "RELIEF": 7,
+    "REUNION": 6,
+    "REVELATION": 9,
+    "REVERSAL": 14,
+    "ROMANCE": 34
+  },
+  "episode_function": "유진의 고백과 문정의 방문이 한 공간에 겹친다 철길에서 재희가 문정을 자기 공간으로 부르며 회차를 닫는다",
+  "by": "gpt-direct-reading-claude-schema-projection"
+}

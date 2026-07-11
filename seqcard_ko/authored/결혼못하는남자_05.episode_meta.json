@@ -1,0 +1,22 @@
+{
+  "work_id": "결혼못하는남자_05",
+  "scene_count": 78,
+  "core_dist": {
+    "BOND": 16,
+    "CONFLICT": 28,
+    "DESIRE": 18,
+    "ESTABLISH": 9,
+    "HOOK": 14,
+    "LOSS": 8,
+    "ORACLE": 2,
+    "PERIL": 20,
+    "RELIEF": 13,
+    "RESCUE": 3,
+    "REUNION": 1,
+    "REVELATION": 4,
+    "REVERSAL": 11,
+    "ROMANCE": 9
+  },
+  "episode_function": "불꽃놀이와 진료실 말싸움으로 집 출입 금지의 감정 명제를 세운다. 문정은 마침내 재희 집 안에서 진찰하고, 옆집 키스 소동이 청진 장면을 로맨스 긴장으로 밀어 올린다.",
+  "by": "gpt-direct-reading-claude-schema-projection"
+}

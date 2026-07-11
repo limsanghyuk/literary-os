@@ -2,65 +2,66 @@
   "work_id": "시티헌터_13",
   "episode_no": 13,
   "scene_count": 69,
-  "sequence_count": 11,
-  "dramatic_question": "윤성이 김종식과 진표를 동시에 파멸시키는 선언을 어떻게 실행할 것인가?",
+  "sequence_count": 8,
+  "dramatic_question": "김종식의 비리를 공개하고도 그의 생명을 살리려는 윤성의 복수는 영주와 진표의 방식 사이에서 유지될 수 있는가?",
   "act_structure": [
     {
-      "act": "설정",
+      "act": "ACT1",
       "seq_span": [
         1,
-        3
+        2
       ],
-      "beat": "작전 구체화·잠입"
+      "function": "핵심 위기와 목표를 설정한다."
     },
     {
-      "act": "전개",
+      "act": "ACT2",
       "seq_span": [
-        4,
-        7
+        3,
+        4
       ],
-      "beat": "부자 관계 폭로·상호 탐지"
+      "function": "관계·정보 압력을 확대한다."
     },
     {
-      "act": "심화",
+      "act": "ACT3",
       "seq_span": [
-        8,
-        10
+        5,
+        6
       ],
-      "beat": "식중 위기·결전 결심"
+      "function": "작전과 반격을 실행한다."
     },
     {
-      "act": "회말전환",
+      "act": "ACT4",
       "seq_span": [
-        11,
-        11
+        7,
+        8
       ],
-      "beat": "폭로·납치·파멸 선언"
+      "function": "회차 전환과 다음 위기를 봉인한다."
     }
   ],
-  "entry_state": "진표의 악마화 계획과 김종식의 뻔뻔한 기자회견으로 처단 압박이 최고조.",
-  "exit_state": "강당 비리 폭로와 납치, 부자 파멸 선언—복수극 결전이 선포됐다.",
+  "entry_state": "나나가 진표의 위협을 확인하고 윤성·나나가 김종식 증거 작전을 시작한다.",
+  "exit_state": "김종식은 육교에서 추락하고 식중은 중태이며 진표와 윤성의 복수 방식은 완전히 갈라진다.",
   "turning_point": {
-    "seq_index": 11,
-    "desc": "김종식 비리 생중계 폭로·납치: 3번째 표적 결전 선포"
+    "seq_index": 7,
+    "desc": "윤성이 추락한 김종식의 손을 잡지만 결국 놓치는 순간, 세 번째 처단이 통제 밖 사고로 변한다."
   },
-  "central_conflict_axis": "김종식 처단(윤성) vs 영주의 추격, 진표의 방해",
-  "episode_function": "13화: 김종식 처단의 결전이 선포되고 부자 파멸 계획이 드러나는 전환회차.",
+  "central_conflict_axis": "공개·법적 처단 대 살인과 인질을 이용하는 복수",
+  "episode_function": "김종식의 비리를 공개하고 영주와의 가족 갈등을 폭발시키며 식중 피격과 종식 추락으로 진표·윤성 전쟁을 확장한다.",
   "core_dist": {
-    "PERIL": 19,
-    "CONFLICT": 16,
-    "BOND": 3,
-    "REVELATION": 9,
-    "DESIRE": 11,
-    "ORACLE": 10,
-    "RELIEF": 8,
-    "INTRO": 1,
-    "ESTABLISH": 5,
-    "HOOK": 6,
-    "LOSS": 3,
-    "RESCUE": 4,
-    "PUNISH": 1,
-    "REVERSAL": 1
+    "BOND": 13,
+    "CONFLICT": 17,
+    "DESIRE": 10,
+    "ESTABLISH": 2,
+    "HOOK": 14,
+    "INTRO": 5,
+    "LOSS": 15,
+    "ORACLE": 7,
+    "PERIL": 13,
+    "PUNISH": 9,
+    "RELIEF": 2,
+    "RESCUE": 8,
+    "REVELATION": 12,
+    "REVERSAL": 9,
+    "ROMANCE": 2
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-direct-reading"
 }

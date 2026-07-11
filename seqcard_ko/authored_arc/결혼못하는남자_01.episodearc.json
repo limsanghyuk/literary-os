@@ -1,0 +1,58 @@
+{
+  "work_id": "결혼못하는남자_01",
+  "episode_no": 1,
+  "scene_count": 96,
+  "sequence_count": 12,
+  "dramatic_question": "자기완결적 독신 생활은 타인의 위기와 돌봄 요구 앞에서도 유지될 수 있는가?",
+  "act_structure": [
+    {
+      "act": "premise",
+      "seq_span": [
+        1,
+        3
+      ],
+      "function": "독신 명제와 두 주인공 병렬"
+    },
+    {
+      "act": "collision",
+      "seq_span": [
+        4,
+        7
+      ],
+      "function": "이웃·병원 관계망 형성"
+    },
+    {
+      "act": "choice",
+      "seq_span": [
+        8,
+        12
+      ],
+      "function": "유진 구조와 돌봄 선택"
+    }
+  ],
+  "entry_state": "재희는 집·음식·일을 완벽히 통제하면 관계 없이도 충분하다고 믿는다.",
+  "exit_state": "유진을 구조하고 문정에게 진료받으면서 재희의 독신 성역은 이웃·병원·직장 인물망에 연결된다.",
+  "turning_point": {
+    "seq_index": 11,
+    "desc": "S085의 혼자 생일이 S087~S092의 유진 구조로 뒤집히며 고립이 보호 책임으로 전환된다."
+  },
+  "central_conflict_axis": "개인 통제와 타인 돌봄의 충돌",
+  "episode_function": "주요 인물과 생활권을 도입하고 재희의 독신 명제를 첫 구조·진료 사건으로 반박한다.",
+  "core_dist": {
+    "BOND": 15,
+    "CONFLICT": 38,
+    "DESIRE": 10,
+    "ESTABLISH": 17,
+    "HOOK": 9,
+    "INTRO": 3,
+    "LOSS": 7,
+    "ORACLE": 6,
+    "PERIL": 18,
+    "RELIEF": 27,
+    "RESCUE": 2,
+    "REUNION": 3,
+    "REVELATION": 7,
+    "REVERSAL": 7
+  },
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-04"
+}

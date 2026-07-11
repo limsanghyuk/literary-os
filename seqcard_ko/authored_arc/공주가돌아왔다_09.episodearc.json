@@ -1,0 +1,67 @@
+{
+  "work_id": "공주가돌아왔다_09",
+  "episode_no": 9,
+  "scene_count": 71,
+  "sequence_count": 8,
+  "dramatic_question": "공심은 도경과 찬우의 과거를 알고도 현재 연애를 지킬 수 있으며, 도경과 봉희는 무너진 자존심과 가족 책임을 다시 세울 수 있는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "사진의 진실과 직장 응징"
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "부녀의 오디션과 현재 연애 확인"
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "새 직장과 부성 회복"
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "가족 화해와 찬우의 재질문"
+    }
+  ],
+  "entry_state": "공심은 옛 연인 사진으로 속임을 깨닫고 봉희는 이혼 뒤 자존심까지 상한 상태다.",
+  "exit_state": "찬우가 도경의 희생과 이혼을 알고 그녀의 손을 다시 붙잡는다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "술자리 폭로가 찬우에게 도경의 결혼과 이혼의 원인을 알려 과거가 현재 행동으로 전환된다."
+  },
+  "central_conflict_axis": "공심의 현재 연애 방어 대 도경·찬우의 지워지지 않는 첫사랑과 봉희의 가족 책임",
+  "episode_function": "시즌 중반의 비밀 공개 회차로, 공심의 오해를 잠시 봉합하면서 찬우가 도경의 희생을 처음 인식하게 한다.",
+  "core_dist": {
+    "BOND": 17,
+    "CONFLICT": 20,
+    "DESIRE": 15,
+    "ESTABLISH": 5,
+    "HOOK": 14,
+    "LOSS": 15,
+    "ORACLE": 3,
+    "PERIL": 4,
+    "PUNISH": 16,
+    "RELIEF": 7,
+    "RESCUE": 2,
+    "REUNION": 3,
+    "REVELATION": 12,
+    "REVERSAL": 3,
+    "ROMANCE": 6
+  },
+  "by": "gpt-5.6-direct-reading"
+}

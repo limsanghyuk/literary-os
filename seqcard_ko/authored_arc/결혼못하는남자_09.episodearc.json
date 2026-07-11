@@ -1,0 +1,54 @@
+{
+  "work_id": "결혼못하는남자_09",
+  "episode_no": 9,
+  "scene_count": 59,
+  "sequence_count": 12,
+  "dramatic_question": "부모의 결혼 작전은 재희와 문정을 멀어지게 할까 같은 편으로 만들까?",
+  "act_structure": [
+    {
+      "act": "cold_war",
+      "seq_span": [
+        1,
+        4
+      ],
+      "function": "맞선 후 냉전과 가족 위기"
+    },
+    {
+      "act": "parent_plot",
+      "seq_span": [
+        5,
+        8
+      ],
+      "function": "돌봄과 부모 공모"
+    },
+    {
+      "act": "forced_trip",
+      "seq_span": [
+        9,
+        12
+      ],
+      "function": "조작 폭로와 자발적 초대"
+    }
+  ],
+  "entry_state": "맞선 후 냉전 상태에서 재희는 문정 곁에 있었음을 부정하고 문정은 상처를 분노로 정리한다.",
+  "exit_state": "부모들의 여행 함정이 드러나지만 재희는 실제 여행 계획서를 들고 문정 앞에 선다.",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "S044~S053의 조작된 제비뽑기가 두 사람을 공동 피해자로 묶고 S058의 자발적 초대로 바뀐다."
+  },
+  "central_conflict_axis": "외부가 강제한 결혼 각본과 당사자의 자발적 동행",
+  "episode_function": "부모 세대 압력을 로맨스 촉진 장치로 전환하고 여행 에피소드를 준비한다.",
+  "core_dist": {
+    "BOND": 11,
+    "CONFLICT": 30,
+    "DESIRE": 14,
+    "HOOK": 6,
+    "PERIL": 20,
+    "PUNISH": 3,
+    "RELIEF": 6,
+    "RESCUE": 6,
+    "REVELATION": 14,
+    "ROMANCE": 8
+  },
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-04"
+}

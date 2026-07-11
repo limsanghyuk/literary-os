@@ -1,0 +1,24 @@
+{
+  "work_id": "공주가돌아왔다_03",
+  "scene_count": 70,
+  "core_dist": {
+    "BOND": 7,
+    "CONFLICT": 21,
+    "DESIRE": 11,
+    "ESTABLISH": 7,
+    "HOOK": 6,
+    "INTRO": 2,
+    "LOSS": 18,
+    "ORACLE": 5,
+    "PERIL": 10,
+    "PUNISH": 17,
+    "RELIEF": 7,
+    "RESCUE": 2,
+    "REUNION": 2,
+    "REVELATION": 7,
+    "REVERSAL": 9,
+    "ROMANCE": 9
+  },
+  "episode_function": "도경을 공심의 비서로 들어가게 만드는 계약을 형성하고 봉희 부부의 이혼 시한을 시작한다.",
+  "by": "gpt-5.6-direct-reading-repair-v2"
+}

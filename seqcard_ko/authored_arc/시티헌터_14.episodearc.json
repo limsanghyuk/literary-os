@@ -1,67 +1,68 @@
 {
   "work_id": "시티헌터_14",
   "episode_no": 14,
-  "scene_count": 66,
-  "sequence_count": 10,
-  "dramatic_question": "천재만의 배후 실체를 밝히고 1983년의 진실을 규명할 수 있는가?",
+  "scene_count": 65,
+  "sequence_count": 8,
+  "dramatic_question": "윤성은 진표의 살인 규율을 거부하면서도 천재만의 기밀문서를 확보하고 영주를 살릴 수 있는가?",
   "act_structure": [
     {
-      "act": "설정",
+      "act": "ACT1",
       "seq_span": [
         1,
-        3
+        2
       ],
-      "beat": "처단 여파·다음 표적"
+      "function": "핵심 위기와 목표를 설정한다."
     },
     {
-      "act": "전개",
+      "act": "ACT2",
       "seq_span": [
-        4,
-        7
+        3,
+        4
       ],
-      "beat": "모자 재회·새 대결 구도"
+      "function": "관계·정보 압력을 확대한다."
     },
     {
-      "act": "심화",
+      "act": "ACT3",
       "seq_span": [
-        8,
-        9
+        5,
+        6
       ],
-      "beat": "이중 수사·진실 접근"
+      "function": "작전과 반격을 실행한다."
     },
     {
-      "act": "회말전환",
+      "act": "ACT4",
       "seq_span": [
-        10,
-        10
+        7,
+        8
       ],
-      "beat": "영주 살해 지시 도청·구출"
+      "function": "회차 전환과 다음 위기를 봉인한다."
     }
   ],
-  "entry_state": "김종식 처단 직후 여파와 영주의 정체 추궁.",
-  "exit_state": "영주 구출 성공, 그러나 천재만은 여전히 자유롭고 1983년 진실이 더 가까워졌다.",
+  "entry_state": "종식 추락과 식중 피격의 배후가 진표임을 윤성이 확인한다.",
+  "exit_state": "윤성은 문서를 포기해 영주를 구하고, 기밀문서 원본은 진표가 가진 채 네 번째 표적 전쟁이 열린다.",
   "turning_point": {
-    "seq_index": 5,
-    "desc": "28년 만의 모자 재회: 복수극이 혈육의 회복으로 전환"
+    "seq_index": 8,
+    "desc": "천재만의 가스 차량에서 영주를 살리기 위해 윤성이 기밀문서 확보를 포기한다."
   },
-  "central_conflict_axis": "천재만 수사(영주/윤성) vs 진표의 자력 접근",
-  "episode_function": "14화: 모자 28년 재회와 천재만 수사 본격화—복수극이 가족 회복의 감정으로 전환된다.",
+  "central_conflict_axis": "증거 확보와 생명 보호, 진표의 소유적 복수와 윤성의 독립 윤리",
+  "episode_function": "진표와 공개 결별한 윤성이 천재만 문서 작전에서 영주의 생명을 택해 자신의 복수 원칙을 증명한다.",
   "core_dist": {
-    "PERIL": 14,
-    "REVELATION": 15,
-    "CONFLICT": 14,
-    "HOOK": 10,
-    "ORACLE": 9,
-    "BOND": 7,
-    "LOSS": 3,
-    "ESTABLISH": 1,
+    "BOND": 6,
+    "CONFLICT": 9,
     "DESIRE": 14,
-    "ROMANCE": 7,
-    "RELIEF": 7,
-    "PUNISH": 2,
-    "REUNION": 2,
-    "INTRO": 1,
-    "RESCUE": 1
+    "ESTABLISH": 1,
+    "HOOK": 15,
+    "INTRO": 4,
+    "LOSS": 13,
+    "ORACLE": 9,
+    "PERIL": 14,
+    "PUNISH": 11,
+    "RELIEF": 1,
+    "RESCUE": 8,
+    "REUNION": 1,
+    "REVELATION": 14,
+    "REVERSAL": 6,
+    "ROMANCE": 4
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-direct-reading"
 }

@@ -1,0 +1,24 @@
+{
+  "work_id": "공주가돌아왔다_16",
+  "scene_count": 71,
+  "core_dist": {
+    "BOND": 16,
+    "CONFLICT": 1,
+    "DESIRE": 8,
+    "ESTABLISH": 11,
+    "HOOK": 10,
+    "INTRO": 9,
+    "LOSS": 16,
+    "ORACLE": 11,
+    "PERIL": 2,
+    "PUNISH": 3,
+    "RELIEF": 16,
+    "RESCUE": 2,
+    "REUNION": 8,
+    "REVELATION": 10,
+    "REVERSAL": 11,
+    "ROMANCE": 8
+  },
+  "episode_function": "시리즈 종결 회차로, 공심·찬우의 출국과 도경의 강사 복귀, 봉희의 실패와 제작자 전환을 거쳐 동등한 부부 재결합과 가족 성취를 확정한다.",
+  "by": "gpt-5.6-direct-reading"
+}

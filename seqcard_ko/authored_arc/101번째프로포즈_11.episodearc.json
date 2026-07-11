@@ -1,0 +1,68 @@
+{
+  "work_id": "101번째프로포즈_11",
+  "episode_no": 11,
+  "scene_count": 91,
+  "sequence_count": 13,
+  "dramatic_question": "달재의 미래 도전과 수정의 우석 회피는 서로에게 솔직해지기 전에 각각 어떤 시험을 통과해야 하는가?",
+  "act_structure": [
+    {
+      "act": "A1",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "수정은 우석을 찾고 부정하며, 달재는 정사원 시험을 새 미래 목표로 정한다"
+    },
+    {
+      "act": "A2",
+      "seq_span": [
+        4,
+        6
+      ],
+      "beat": "서로 다른 비밀과 우석의 방송국 진입, 성철·선자의 보복이 관계와 직업을 흔든다"
+    },
+    {
+      "act": "A3",
+      "seq_span": [
+        7,
+        9
+      ],
+      "beat": "수정은 우석 가족과 가까워지고 달재는 성철에게 맞서 존엄과 도전 의지를 회복한다"
+    },
+    {
+      "act": "A4",
+      "seq_span": [
+        10,
+        13
+      ],
+      "beat": "수정은 우석을 거절하고 달재는 시험에 들어가지만 하영 사고로 약속이 엇갈린다"
+    }
+  ],
+  "entry_state": "달재와 수정은 막 연인이 됐지만 그는 불안정한 미래를, 그녀는 찬혁과 닮은 우석에게 흔들리는 마음을 숨긴다.",
+  "exit_state": "달재는 정사원 실기까지 완주하고 수정은 우석에게 선을 긋지만, 하영 사고로 수정이 시험장을 떠나며 새 오해가 생긴다.",
+  "turning_point": {
+    "seq_index": 13,
+    "event": "수정이 다친 하영에게 달려가고 시험을 마친 달재는 약속한 자리에서 그녀를 찾지 못한다"
+  },
+  "central_conflict_axis": "현재 사랑을 지키려는 두 사람의 비밀과 직업·과거 사랑이 만드는 이중 시험",
+  "episode_function": "달재의 직업 성장과 우석의 사적·직업적 진입을 결합해 후반 삼각관계의 구조를 완성한다.",
+  "core_dist": {
+    "BOND": 21,
+    "CONFLICT": 31,
+    "DESIRE": 22,
+    "ESTABLISH": 6,
+    "HOOK": 13,
+    "INTRO": 11,
+    "LOSS": 15,
+    "ORACLE": 5,
+    "PERIL": 9,
+    "PUNISH": 5,
+    "RELIEF": 14,
+    "RESCUE": 8,
+    "REUNION": 1,
+    "REVELATION": 7,
+    "REVERSAL": 7,
+    "ROMANCE": 7
+  },
+  "by": "gpt-5.6-direct-reading"
+}

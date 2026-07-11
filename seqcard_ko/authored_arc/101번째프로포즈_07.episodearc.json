@@ -1,0 +1,67 @@
+{
+  "work_id": "101번째프로포즈_07",
+  "episode_no": 7,
+  "scene_count": 79,
+  "sequence_count": 12,
+  "dramatic_question": "달재가 얻은 3퍼센트의 가능성은 공개적 행동과 책임을 견디는 관계로 발전할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "opening",
+      "seq_span": [
+        1,
+        3
+      ],
+      "function": "밤샘 방문과 3퍼센트 인정으로 관계 가능성을 연다."
+    },
+    {
+      "act": "courtship",
+      "seq_span": [
+        4,
+        6
+      ],
+      "function": "성근을 포함한 첫 데이트에서 달재의 노동 능력과 수정의 지지가 결합한다."
+    },
+    {
+      "act": "counterpoint",
+      "seq_span": [
+        7,
+        8
+      ],
+      "function": "금정의 거절과 동네 환영을 병치해 사랑의 비대칭과 공동체 수용을 보여준다."
+    },
+    {
+      "act": "crisis",
+      "seq_span": [
+        9,
+        12
+      ],
+      "function": "성근 실종과 결혼 폭로가 사적 친밀감을 공적 책임과 스캔들로 뒤집는다."
+    }
+  ],
+  "entry_state": "수정은 달재에게 약간의 호감을 인정했지만 관계는 아직 사적인 실험과 농담의 수준에 머문다.",
+  "exit_state": "달재는 수정을 지키겠다고 공개적으로 행동하지만, 결혼 폭로와 조직의 장벽 때문에 그녀에게 닿지 못한다.",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "S062~S064에서 달재가 자신을 낮춰 수정을 보호한 뒤 현준에게 맞서고 행동파가 되겠다고 선언한다."
+  },
+  "central_conflict_axis": "서툰 진심의 행동과 공적 이미지·기존 관계의 통제 충돌",
+  "episode_function": "달재와 수정의 첫 실질적 데이트를 성사시킨 뒤, 관계 진전을 결혼 스캔들로 급반전시켜 다음 회차의 공적 추락을 연다.",
+  "core_dist": {
+    "BOND": 19,
+    "CONFLICT": 16,
+    "DESIRE": 12,
+    "ESTABLISH": 7,
+    "HOOK": 12,
+    "INTRO": 4,
+    "LOSS": 10,
+    "ORACLE": 4,
+    "PERIL": 8,
+    "PUNISH": 4,
+    "RELIEF": 22,
+    "RESCUE": 7,
+    "REVELATION": 8,
+    "REVERSAL": 7,
+    "ROMANCE": 16
+  },
+  "by": "gpt-5.6-thinking-manual-close-reading-new-guide-v1"
+}

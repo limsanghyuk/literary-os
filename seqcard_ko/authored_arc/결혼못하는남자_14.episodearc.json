@@ -1,0 +1,58 @@
+{
+  "work_id": "결혼못하는남자_14",
+  "episode_no": 14,
+  "scene_count": 88,
+  "sequence_count": 12,
+  "dramatic_question": "첫 키스 이후 시작된 관계는 유진의 고백과 우정의 균열을 견딜 수 있는가?",
+  "act_structure": [
+    {
+      "act": "secret_romance",
+      "seq_span": [
+        1,
+        3
+      ],
+      "function": "응급 돌봄·키스·오해"
+    },
+    {
+      "act": "friendship_break",
+      "seq_span": [
+        4,
+        6
+      ],
+      "function": "유진 고백과 문정 충돌"
+    },
+    {
+      "act": "public_cost",
+      "seq_span": [
+        7,
+        12
+      ],
+      "function": "업무·현규·이사·포옹"
+    }
+  ],
+  "entry_state": "문정의 응급 돌봄과 첫 키스로 재희·문정 관계가 비밀스럽게 시작된다.",
+  "exit_state": "유진의 고백 오해와 이사 전 돌발 포옹이 문정에게 목격되며 관계 삼각형이 공개 위기로 변한다.",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "S043~S046에서 유진의 고백이 상구 이야기로 오인된 사실이 드러나고 S088의 포옹이 갈등을 다음 화로 넘긴다."
+  },
+  "central_conflict_axis": "새 연애의 비밀과 친구의 진심 사이의 윤리적 충돌",
+  "episode_function": "중심 로맨스를 성립시키는 동시에 유진·문정 우정을 가장 큰 시험에 올린다.",
+  "core_dist": {
+    "BOND": 12,
+    "CONFLICT": 30,
+    "DESIRE": 14,
+    "ESTABLISH": 7,
+    "HOOK": 8,
+    "LOSS": 19,
+    "ORACLE": 3,
+    "PERIL": 19,
+    "PUNISH": 5,
+    "RELIEF": 17,
+    "RESCUE": 7,
+    "REUNION": 4,
+    "REVELATION": 17,
+    "ROMANCE": 14
+  },
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-04"
+}

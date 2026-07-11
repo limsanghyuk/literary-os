@@ -1,0 +1,59 @@
+{
+  "work_id": "결혼못하는남자_13",
+  "episode_no": 13,
+  "scene_count": 81,
+  "sequence_count": 12,
+  "dramatic_question": "문정과 멀어진 재희의 붕괴를 유진의 돌봄이 새로운 사랑으로 바꿀 수 있는가?",
+  "act_structure": [
+    {
+      "act": "jealous_open",
+      "seq_span": [
+        1,
+        4
+      ],
+      "function": "유진 고백과 데이트 실패"
+    },
+    {
+      "act": "separation",
+      "seq_span": [
+        5,
+        8
+      ],
+      "function": "가족·직업으로 분산"
+    },
+    {
+      "act": "collapse_rescue",
+      "seq_span": [
+        9,
+        12
+      ],
+      "function": "재희 붕괴와 유진 구조"
+    }
+  ],
+  "entry_state": "문정은 유진의 감정을 알고 질투하며, 재희와의 첫 데이트는 계속 어긋난다.",
+  "exit_state": "고열로 쓰러진 재희를 유진이 구조하지만 재희의 의식은 문정을 향하고 있어 삼각 긴장이 고조된다.",
+  "turning_point": {
+    "seq_index": 11,
+    "desc": "S068~S081에서 유진이 벽을 넘어 재희를 구조하나 그의 환상 속 대상이 문정임을 목격한다."
+  },
+  "central_conflict_axis": "돌봄의 실제 제공자와 마음이 향한 대상의 불일치",
+  "episode_function": "유진의 감정을 본격화하고 문정·재희 냉전의 대가를 신체 붕괴로 드러낸다.",
+  "core_dist": {
+    "BOND": 20,
+    "CONFLICT": 20,
+    "DESIRE": 17,
+    "ESTABLISH": 12,
+    "HOOK": 4,
+    "LOSS": 13,
+    "ORACLE": 5,
+    "PERIL": 20,
+    "PUNISH": 2,
+    "RELIEF": 8,
+    "RESCUE": 6,
+    "REUNION": 1,
+    "REVELATION": 11,
+    "REVERSAL": 4,
+    "ROMANCE": 19
+  },
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-04"
+}

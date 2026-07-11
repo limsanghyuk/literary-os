@@ -1,0 +1,59 @@
+{
+  "work_id": "결혼못하는남자_06",
+  "episode_no": 6,
+  "scene_count": 69,
+  "sequence_count": 12,
+  "dramatic_question": "가족의 비밀과 상실을 함께 견디는 일이 두 사람을 같은 편으로 만들 수 있는가?",
+  "act_structure": [
+    {
+      "act": "family_pressure",
+      "seq_span": [
+        1,
+        4
+      ],
+      "function": "오해와 제사 갈등"
+    },
+    {
+      "act": "secret_alliance",
+      "seq_span": [
+        5,
+        8
+      ],
+      "function": "봉수 비밀과 재희 연대"
+    },
+    {
+      "act": "disclosure",
+      "seq_span": [
+        9,
+        12
+      ],
+      "function": "폐업 통보와 부녀 화해"
+    }
+  ],
+  "entry_state": "물벼락 사건과 가족 오해 속에서 재희와 문정은 서로의 경계를 다시 확인한다.",
+  "exit_state": "재희가 봉수의 폐업 비밀을 전달하고 부녀 화해를 돕자 문정은 문자로 고마움을 표현한다.",
+  "turning_point": {
+    "seq_index": 9,
+    "desc": "S054의 폐업 통보가 S060~S063의 위로와 부녀 화해로 이어진다."
+  },
+  "central_conflict_axis": "비밀을 지키는 충성심과 진실을 알려야 하는 돌봄",
+  "episode_function": "재희를 문정 가족의 문제 안으로 편입시키고 위로를 행동과 문자로 연결한다.",
+  "core_dist": {
+    "BOND": 18,
+    "CONFLICT": 17,
+    "DESIRE": 11,
+    "ESTABLISH": 9,
+    "HOOK": 14,
+    "LOSS": 13,
+    "ORACLE": 6,
+    "PERIL": 7,
+    "PUNISH": 1,
+    "RELIEF": 13,
+    "RESCUE": 5,
+    "REUNION": 2,
+    "REVELATION": 12,
+    "REVERSAL": 3,
+    "ROMANCE": 7
+  },
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-04"
+}

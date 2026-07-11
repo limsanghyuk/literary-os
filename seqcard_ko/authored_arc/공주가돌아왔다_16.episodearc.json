@@ -1,0 +1,68 @@
+{
+  "work_id": "공주가돌아왔다_16",
+  "episode_no": 16,
+  "scene_count": 71,
+  "sequence_count": 8,
+  "dramatic_question": "각 인물은 사랑의 소유 경쟁을 끝내고 자신의 일과 책임을 선택할 수 있는가, 도경과 봉희는 동등한 두 번째 결혼을 만들 수 있는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "화해와 새 직업 기회의 개방"
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "가족 법적 진실과 도경의 전문직 복귀"
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "봉희의 실패·가족 귀환과 새 음악 모델"
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "찬우와의 작별 및 일 년 뒤 재결합"
+    }
+  ],
+  "entry_state": "공심의 주먹을 맞은 봉희가 오히려 후련함을 느끼고 세 사람의 죄책감과 경쟁이 풀리기 시작한다.",
+  "exit_state": "도경과 봉희가 서로에게 짝이 있는 커플링을 건네고 가족 앞에서 두 번째 결혼을 올린다.",
+  "turning_point": {
+    "seq_index": 3,
+    "desc": "봉희가 도경이 이혼 신고를 철회했음을 확인해 자신을 버린 여자가 아니라 가정을 지키려 했던 배우자였음을 깨닫는 장면이다."
+  },
+  "central_conflict_axis": "소유하는 사랑 대 놓아주는 사랑, 생계 의존 대 전문적 자립, 실패한 가족 대 재선택한 가족",
+  "episode_function": "시리즈 종결 회차로, 공심·찬우의 출국과 도경의 강사 복귀, 봉희의 실패와 제작자 전환을 거쳐 동등한 부부 재결합과 가족 성취를 확정한다.",
+  "core_dist": {
+    "BOND": 16,
+    "CONFLICT": 1,
+    "DESIRE": 8,
+    "ESTABLISH": 11,
+    "HOOK": 10,
+    "INTRO": 9,
+    "LOSS": 16,
+    "ORACLE": 11,
+    "PERIL": 2,
+    "PUNISH": 3,
+    "RELIEF": 16,
+    "RESCUE": 2,
+    "REUNION": 8,
+    "REVELATION": 10,
+    "REVERSAL": 11,
+    "ROMANCE": 8
+  },
+  "by": "gpt-5.6-direct-reading"
+}

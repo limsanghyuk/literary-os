@@ -1,0 +1,67 @@
+{
+  "work_id": "공주가돌아왔다_11",
+  "episode_no": 11,
+  "scene_count": 67,
+  "sequence_count": 9,
+  "dramatic_question": "공심과 찬우의 결별 뒤 도경은 생계와 아이들을 지키면서도 다시 돌아온 첫사랑을 받아들일 수 있는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "결별과 도경의 건강 위기"
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        3,
+        5
+      ],
+      "beat": "가족 생계 붕괴와 커피숍 기회"
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        6,
+        7
+      ],
+      "beat": "두 경쟁자의 결심과 취중 고백"
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        8,
+        9
+      ],
+      "beat": "찬우의 아버지 역할과 사랑 확인"
+    }
+  ],
+  "entry_state": "공심은 찬우의 도경에 대한 마음을 사랑으로 규정해 관계를 거절하고 도경은 식당 노동으로 버틴다.",
+  "exit_state": "도경이 현실을 이유로 사랑을 부정하지만 찬우가 연민이 아닌 사랑이라고 선언하며 입맞춘다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "공심의 모욕에 도경이 물러서지 않겠다고 맞선 순간, 억눌렀던 첫사랑이 수동적 기억에서 현재의 선택으로 바뀐다."
+  },
+  "central_conflict_axis": "공심의 소유적 사랑과 봉희의 가족 회복 욕망 대 도경·찬우의 되살아난 사랑과 도경 가족의 생존",
+  "episode_function": "후반부 로맨스 전환 회차로, 도경의 생계가 최저점에 도달하는 동안 찬우가 보호자·아버지 역할을 맡고 두 사람이 사랑을 명시한다.",
+  "core_dist": {
+    "BOND": 8,
+    "CONFLICT": 15,
+    "DESIRE": 16,
+    "ESTABLISH": 4,
+    "HOOK": 12,
+    "LOSS": 18,
+    "ORACLE": 14,
+    "PERIL": 7,
+    "PUNISH": 8,
+    "RELIEF": 3,
+    "RESCUE": 5,
+    "REUNION": 1,
+    "REVELATION": 7,
+    "REVERSAL": 6,
+    "ROMANCE": 10
+  },
+  "by": "gpt-5.6-direct-reading"
+}

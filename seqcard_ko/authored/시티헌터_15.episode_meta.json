@@ -1,1 +1,24 @@
-{"work_id": "시티헌터_15", "scene_count": 63, "core_dist": {"RESCUE": 1, "CONFLICT": 10, "REVELATION": 10, "ORACLE": 7, "RELIEF": 6, "INTRO": 1, "BOND": 7, "ROMANCE": 3, "DESIRE": 3, "ESTABLISH": 2, "PERIL": 8, "LOSS": 3, "REVERSAL": 1, "HOOK": 1}, "episode_function": "정체 추적(영주가 존 리의 신원 조작과 태국 커넥션을 확인해 결정적 증거에 도달)과 사회고발 서브플롯(천재만의 해원케미칼 산재 은폐를 윤성이 목숨을 걸고 파헤침)을 나란히 전진시키며, 나나와의 로맨스는 반지·고백 모티프로 미묘하게 고조시키되 윤성이 끝내 거리를 유지하게 하고, 회차 말미 영주가 윤성의 옛 이름 '푸차이'를 직접 언급함으로써 정체 발각이 임박했다는 강력한 클리프행어로 다음 화에 대한 긴장을 최고조로 끌어올린다.", "by": "sonnet_reading"}
+{
+  "work_id": "시티헌터_15",
+  "scene_count": 63,
+  "core_dist": {
+    "BOND": 13,
+    "CONFLICT": 13,
+    "DESIRE": 12,
+    "ESTABLISH": 1,
+    "HOOK": 16,
+    "INTRO": 3,
+    "LOSS": 9,
+    "ORACLE": 9,
+    "PERIL": 11,
+    "PUNISH": 3,
+    "RELIEF": 4,
+    "RESCUE": 8,
+    "REUNION": 2,
+    "REVELATION": 12,
+    "REVERSAL": 3,
+    "ROMANCE": 7
+  },
+  "episode_function": "경희 골수이식과 해원 산재 수사를 결합하고, 공장 잠입 뒤 영주가 윤성의 진짜 신원을 확정하도록 만든다.",
+  "by": "gpt-5.6-direct-reading"
+}

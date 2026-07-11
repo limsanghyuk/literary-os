@@ -2,66 +2,66 @@
   "work_id": "시티헌터_06",
   "episode_no": 6,
   "scene_count": 65,
-  "sequence_count": 10,
-  "dramatic_question": "서용학 처단을 위한 결정적 증거를 확보했지만, 나나의 오해가 두 인물을 갈라놓을 것인가?",
+  "sequence_count": 8,
+  "dramatic_question": "윤성은 나나를 지키면서 기준 형제의 진실과 서용학의 결함 전투기 거래를 증거로 만들 수 있는가?",
   "act_structure": [
     {
-      "act": "설정",
+      "act": "ACT1",
       "seq_span": [
         1,
-        3
+        2
       ],
-      "beat": "갈등 지속·동거 합의"
+      "function": "집 매입 갈등과 미행 위험으로 나나를 떠나게 했다가 윤성의 보호를 확인한다."
     },
     {
-      "act": "전개",
+      "act": "ACT2",
       "seq_span": [
-        4,
+        3,
+        5
+      ],
+      "function": "기준 체포·병역 조작과 계약 동거를 병행해 사건과 로맨스를 결합한다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        6,
         7
       ],
-      "beat": "병역비리 포착·동거 일상"
+      "function": "기준 형제 진실과 허드슨 거래를 추적해 서용학 부패 증거를 확보한다."
     },
     {
-      "act": "심화",
+      "act": "ACT4",
       "seq_span": [
         8,
-        9
+        8
       ],
-      "beat": "비리 확보·감청 성공"
-    },
-    {
-      "act": "회말전환",
-      "seq_span": [
-        10,
-        10
-      ],
-      "beat": "나나 오해·훅"
+      "function": "호텔 동선이 네 인물의 오해로 충돌하며 엔딩을 만든다."
     }
   ],
-  "entry_state": "동거 시작·고기준 체포·허드슨 잠복 착수.",
-  "exit_state": "결함 무기 비리 증거 확보, 그러나 나나가 세희-윤성 오해로 훅에 걸린다.",
+  "entry_state": "나나는 집을 산 윤성에게 분노해 떠나고 서용학 군납 비리는 아직 의혹 단계다.",
+  "exit_state": "두 사람은 동거를 시작하고 서용학의 20퍼센트 커미션 영상이 확보되지만 호텔 객실 오해가 관계를 흔든다.",
   "turning_point": {
-    "seq_index": 8,
-    "desc": "결함 무기 강매 비리 도청 확보: 서용학 처단 결의"
+    "seq_index": 7,
+    "desc": "컵 카메라가 서용학과 허드슨의 결함 전투기·20퍼센트 커미션 합의를 포착한다."
   },
-  "central_conflict_axis": "서용학 병역비리 수사(영주/윤성) vs 나나의 오해와 관계 위기",
-  "episode_function": "6화: 동거 생활과 서용학 비리 수사가 교차하며 감정선이 복잡해지는 전환 회차.",
+  "central_conflict_axis": "나나를 보호하려는 윤성의 비밀 동거와 서용학을 법·증거로 무너뜨리려는 작전, 그리고 오해가 만드는 감정 충돌",
+  "episode_function": "나나와 윤성이 계약 동거를 시작하고, 고기준 형제의 불량 군화 피해와 서용학의 마르스 커미션을 연결해 물증을 확보하는 회차.",
   "core_dist": {
-    "CONFLICT": 16,
-    "REVERSAL": 4,
-    "HOOK": 9,
-    "LOSS": 4,
-    "REVELATION": 8,
-    "ORACLE": 15,
-    "RESCUE": 5,
-    "DESIRE": 9,
-    "PERIL": 5,
-    "BOND": 6,
-    "ROMANCE": 11,
+    "BOND": 9,
+    "CONFLICT": 19,
+    "DESIRE": 5,
     "ESTABLISH": 1,
-    "PUNISH": 5,
-    "INTRO": 2,
-    "RELIEF": 1
+    "HOOK": 17,
+    "INTRO": 3,
+    "LOSS": 13,
+    "ORACLE": 10,
+    "PERIL": 9,
+    "PUNISH": 3,
+    "RELIEF": 7,
+    "RESCUE": 6,
+    "REVELATION": 12,
+    "REVERSAL": 2,
+    "ROMANCE": 14
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-direct-reading"
 }

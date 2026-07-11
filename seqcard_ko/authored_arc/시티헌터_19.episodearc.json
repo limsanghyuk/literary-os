@@ -2,66 +2,66 @@
   "work_id": "시티헌터_19",
   "episode_no": 19,
   "scene_count": 65,
-  "sequence_count": 10,
-  "dramatic_question": "영주의 죽음과 친부 최응찬의 배신—윤성은 마지막 복수를 완성할 수 있는가?",
+  "sequence_count": 8,
+  "dramatic_question": "친부와 조작된 삶의 진실을 안 윤성은 기밀문서를 살리고 영주를 진표의 함정에서 구할 수 있는가?",
   "act_structure": [
     {
-      "act": "설정",
+      "act": "ACT1",
       "seq_span": [
         1,
-        3
+        2
       ],
-      "beat": "천재만 탈주·협력 심화"
+      "function": "핵심 위기와 목표를 설정한다."
     },
     {
-      "act": "전개",
+      "act": "ACT2",
       "seq_span": [
-        4,
+        3,
+        4
+      ],
+      "function": "관계·정보 압력을 확대한다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        5,
         6
       ],
-      "beat": "출생 비밀·분노 수용"
+      "function": "작전과 반격을 실행한다."
     },
     {
-      "act": "심화",
+      "act": "ACT4",
       "seq_span": [
         7,
-        9
+        8
       ],
-      "beat": "진실 조각·결전 무대"
-    },
-    {
-      "act": "회말전환",
-      "seq_span": [
-        10,
-        10
-      ],
-      "beat": "세희 습격·영주 절명"
+      "function": "회차 전환과 다음 위기를 봉인한다."
     }
   ],
-  "entry_state": "천재만 탈주·수배, 정체 노출 이후 수습.",
-  "exit_state": "기밀문서 확보, 그러나 영주가 총에 맞고 절명—비극적 희생.",
+  "entry_state": "영주가 윤성의 정체를 확인하고 놓아주지만 천재만은 검찰에서 탈출한다.",
+  "exit_state": "윤성은 문서를 구하지만 영주는 총에 맞아 죽으며 법적 심판을 이어달라는 부탁을 남긴다.",
   "turning_point": {
-    "seq_index": 5,
-    "desc": "친부 최응찬 확인: 복수극이 가족 정체성의 위기로 전환"
+    "seq_index": 8,
+    "desc": "영주가 폐차장 문을 지키다 총을 맞고 윤성의 손을 잡아 문서를 찾아달라고 부탁한다."
   },
-  "central_conflict_axis": "천재만·응찬 처단(윤성) vs 영주 보호, 친부 정체 혼란",
-  "episode_function": "19화: 출생 비밀 확인과 기밀문서 사투, 영주의 죽음으로 복수극이 최종 비극으로 전환된다.",
+  "central_conflict_axis": "혈연·양육의 진실과 자아 독립 대 진표의 최종 살해 복수",
+  "episode_function": "응찬 친부 진실과 진표 조작을 폭로하고, 기밀문서 회수 대가로 영주를 희생시켜 결말의 윤리 기준을 세운다.",
   "core_dist": {
-    "REVELATION": 18,
-    "CONFLICT": 18,
-    "PERIL": 15,
-    "REVERSAL": 1,
-    "HOOK": 3,
-    "RELIEF": 3,
-    "BOND": 8,
+    "BOND": 7,
+    "CONFLICT": 12,
+    "DESIRE": 12,
     "ESTABLISH": 1,
-    "ROMANCE": 5,
-    "LOSS": 8,
-    "ORACLE": 21,
-    "DESIRE": 5,
-    "PUNISH": 2,
+    "HOOK": 20,
+    "LOSS": 13,
+    "ORACLE": 10,
+    "PERIL": 12,
+    "PUNISH": 9,
+    "RELIEF": 3,
+    "RESCUE": 5,
     "REUNION": 1,
-    "RESCUE": 2
+    "REVELATION": 17,
+    "REVERSAL": 4,
+    "ROMANCE": 4
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-direct-reading"
 }

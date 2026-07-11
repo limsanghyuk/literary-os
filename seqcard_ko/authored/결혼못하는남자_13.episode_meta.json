@@ -1,0 +1,23 @@
+{
+  "work_id": "결혼못하는남자_13",
+  "scene_count": 81,
+  "core_dist": {
+    "BOND": 20,
+    "CONFLICT": 20,
+    "DESIRE": 17,
+    "ESTABLISH": 12,
+    "HOOK": 4,
+    "LOSS": 13,
+    "ORACLE": 5,
+    "PERIL": 20,
+    "PUNISH": 2,
+    "RELIEF": 8,
+    "RESCUE": 6,
+    "REUNION": 1,
+    "REVELATION": 11,
+    "REVERSAL": 4,
+    "ROMANCE": 19
+  },
+  "episode_function": "유진의 고백이 문정의 질투와 회차 주제를 연다 유진은 재희를 발견하지만 재희의 마음은 환상 속 문정에게 향한다",
+  "by": "gpt-direct-reading-claude-schema-projection"
+}

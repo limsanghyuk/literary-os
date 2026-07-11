@@ -1,0 +1,23 @@
+{
+  "work_id": "공주가돌아왔다_11",
+  "scene_count": 67,
+  "core_dist": {
+    "BOND": 8,
+    "CONFLICT": 15,
+    "DESIRE": 16,
+    "ESTABLISH": 4,
+    "HOOK": 12,
+    "LOSS": 18,
+    "ORACLE": 14,
+    "PERIL": 7,
+    "PUNISH": 8,
+    "RELIEF": 3,
+    "RESCUE": 5,
+    "REUNION": 1,
+    "REVELATION": 7,
+    "REVERSAL": 6,
+    "ROMANCE": 10
+  },
+  "episode_function": "후반부 로맨스 전환 회차로, 도경의 생계가 최저점에 도달하는 동안 찬우가 보호자·아버지 역할을 맡고 두 사람이 사랑을 명시한다.",
+  "by": "gpt-5.6-direct-reading"
+}

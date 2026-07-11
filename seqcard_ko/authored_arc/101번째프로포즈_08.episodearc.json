@@ -1,0 +1,68 @@
+{
+  "work_id": "101번째프로포즈_08",
+  "episode_no": 8,
+  "scene_count": 87,
+  "sequence_count": 13,
+  "dramatic_question": "모든 공적 자리를 잃은 수정은 누구의 방식으로 보호받을 때 다시 스스로 움직일 수 있는가?",
+  "act_structure": [
+    {
+      "act": "public_collapse",
+      "seq_span": [
+        1,
+        4
+      ],
+      "function": "조직과 현준의 해명 압박이 수정의 침묵과 선택권을 침해한다."
+    },
+    {
+      "act": "withdrawal",
+      "seq_span": [
+        5,
+        7
+      ],
+      "function": "찬혁의 기억에도 불구하고 수정이 사직하고 갈 곳 없는 상태로 내려간다."
+    },
+    {
+      "act": "refuge",
+      "seq_span": [
+        8,
+        10
+      ],
+      "function": "달재의 플래카드와 인터넷 없는 집이 질문 없는 피난처를 만든다."
+    },
+    {
+      "act": "trust",
+      "seq_span": [
+        11,
+        13
+      ],
+      "function": "가족의 돌봄과 밤 산책을 통해 수정이 달재에게 몸과 기억을 맡길 정도의 신뢰에 도달한다."
+    }
+  ],
+  "entry_state": "수정은 결혼 폭로 뒤 직업과 찬혁의 기억을 동시에 지키려 하지만 모든 조직적 대응에서 선택권을 잃는다.",
+  "exit_state": "수정은 달재의 집과 가족 안에서 안정을 되찾고 그의 어깨에 기대 잠들지만, 현준이 바로 집 앞까지 도착한다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "S041~S049에서 수정이 달재의 플래카드를 보고 이동을 멈춘 뒤 그의 집을 스스로 피난처로 선택한다."
+  },
+  "central_conflict_axis": "통제하는 보호와 묻지 않고 기다리는 돌봄의 대립",
+  "episode_function": "수정의 공적 삶을 붕괴시키고 달재의 생활 세계를 새로운 안전지대로 전환해 삼각관계의 힘의 균형을 바꾼다.",
+  "core_dist": {
+    "BOND": 29,
+    "CONFLICT": 15,
+    "DESIRE": 9,
+    "ESTABLISH": 6,
+    "HOOK": 8,
+    "INTRO": 1,
+    "LOSS": 19,
+    "ORACLE": 4,
+    "PERIL": 12,
+    "PUNISH": 7,
+    "RELIEF": 18,
+    "RESCUE": 13,
+    "REUNION": 3,
+    "REVELATION": 10,
+    "REVERSAL": 7,
+    "ROMANCE": 7
+  },
+  "by": "gpt-5.6-thinking-manual-close-reading-new-guide-v1"
+}

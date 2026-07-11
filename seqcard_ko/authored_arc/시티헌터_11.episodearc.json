@@ -2,66 +2,67 @@
   "work_id": "시티헌터_11",
   "episode_no": 11,
   "scene_count": 69,
-  "sequence_count": 11,
-  "dramatic_question": "납치된 윤성과 위험에 처한 나나를 구할 수 있으며, 김종식 비자금의 실체는 무엇인가?",
+  "sequence_count": 9,
+  "dramatic_question": "윤성은 경희와 나나를 인질로 삼은 진표의 살인 명령을 따를 것인가, 자신의 보호 윤리를 지킬 것인가?",
   "act_structure": [
     {
-      "act": "설정",
+      "act": "ACT1",
       "seq_span": [
         1,
-        3
+        2
       ],
-      "beat": "절연·이중 압박"
+      "function": "정체·관계 위기를 설정한다."
     },
     {
-      "act": "전개",
+      "act": "ACT2",
       "seq_span": [
-        4,
+        3,
+        4
+      ],
+      "function": "가족 진실과 인질 협박으로 갈등을 확대한다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        5,
         7
       ],
-      "beat": "경희 실종·김종식 등장·도청기"
+      "function": "김종식 비리와 작전 기반을 구축한다."
     },
     {
-      "act": "심화",
+      "act": "ACT4",
       "seq_span": [
         8,
-        10
+        9
       ],
-      "beat": "납치 위기·비자금 발견"
-    },
-    {
-      "act": "회말전환",
-      "seq_span": [
-        11,
-        11
-      ],
-      "beat": "윤성 피랍·나나 피격"
+      "function": "침투·탈취·희생으로 회차의 핵심 전환을 실행한다."
     }
   ],
-  "entry_state": "나나 절연 선언, 경희 실종, 김종식 귀국으로 위기가 중층화.",
-  "exit_state": "비자금 발견, 윤성 피랍, 나나가 총을 맞고 쓰러지는 최고조 위기.",
+  "entry_state": "나나는 윤성의 정체를 알고 영주는 DNA 증거를 추적한다.",
+  "exit_state": "나나는 윤성을 대신해 총을 맞고, 김종식의 2천억과 진표의 인질 통제가 다음 전쟁의 중심이 된다.",
   "turning_point": {
-    "seq_index": 7,
-    "desc": "김종식 도청기 삽입 성공: 3번째 표적 처단 작전 개시"
+    "seq_index": 4,
+    "desc": "진표가 경희와 나나의 생명을 김종식 살인과 교환하라고 윤성에게 요구한다."
   },
-  "central_conflict_axis": "김종식 비자금 수사(윤성) vs 진표의 경희 조종과 도청 차단",
-  "episode_function": "11화: 경희 실종과 김종식 도청기 삽입, 납치 위기가 겹쳐 시리즈 전반부의 긴장을 최고조로 끌어올린다.",
+  "central_conflict_axis": "진표의 목적을 위한 살인·인질 통제 대 윤성의 보호·사회적 처단 방식",
+  "episode_function": "윤성의 정체를 아는 나나를 밀어내는 보호가 총알을 대신 맞는 사랑으로 역전되고, 세 번째 표적 김종식의 비리·국가 은폐·가족 인질이 하나의 전쟁으로 결합된다.",
   "core_dist": {
-    "HOOK": 6,
-    "PERIL": 23,
-    "REVELATION": 18,
-    "RELIEF": 2,
-    "CONFLICT": 20,
-    "ORACLE": 10,
-    "ROMANCE": 2,
-    "DESIRE": 7,
-    "LOSS": 8,
-    "BOND": 4,
-    "REVERSAL": 4,
+    "BOND": 9,
+    "CONFLICT": 11,
+    "DESIRE": 13,
     "ESTABLISH": 3,
-    "INTRO": 1,
-    "RESCUE": 5,
-    "REUNION": 1
+    "HOOK": 17,
+    "INTRO": 5,
+    "LOSS": 16,
+    "ORACLE": 3,
+    "PERIL": 22,
+    "PUNISH": 6,
+    "RELIEF": 2,
+    "RESCUE": 9,
+    "REUNION": 2,
+    "REVELATION": 14,
+    "REVERSAL": 2,
+    "ROMANCE": 4
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-direct-reading"
 }

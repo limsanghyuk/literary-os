@@ -2,64 +2,67 @@
   "work_id": "시티헌터_07",
   "episode_no": 7,
   "scene_count": 65,
-  "sequence_count": 10,
-  "dramatic_question": "나나가 쏜 총알은 윤성에게 어떤 결과를 가져올 것이며, 서용학은 처단될 것인가?",
+  "sequence_count": 8,
+  "dramatic_question": "윤성은 진표·검찰보다 먼저 서용학을 공개 응징하면서 나나에게 정체를 들키지 않고 탈출할 수 있는가?",
   "act_structure": [
     {
-      "act": "설정",
+      "act": "ACT1",
       "seq_span": [
         1,
-        3
+        2
       ],
-      "beat": "오해 갈등·진표 특정"
+      "function": "호텔 오해·진표 수사와 경희 구조로 사랑·가족 비밀을 압박한다."
     },
     {
-      "act": "전개",
+      "act": "ACT2",
       "seq_span": [
-        4,
+        3,
+        5
+      ],
+      "function": "과외와 병역 조작 함정으로 청와대 일상과 복수를 결합하고 역풍을 만든다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        6,
         7
       ],
-      "beat": "함정 설계·압수수색"
+      "function": "검찰 압수수색과 경선장 납치가 동시에 서용학을 포위한다."
     },
     {
-      "act": "심화",
+      "act": "ACT4",
       "seq_span": [
         8,
-        9
+        8
       ],
-      "beat": "납치 작전 가동"
-    },
-    {
-      "act": "회말전환",
-      "seq_span": [
-        10,
-        10
-      ],
-      "beat": "나나 발사·훅"
+      "function": "나나의 단독 추적이 윤성 피격으로 끝나 관계를 적대로 뒤집는다."
     }
   ],
-  "entry_state": "나나의 오해 갈등 지속, 진표가 용의자로 특정되는 위기 상황.",
-  "exit_state": "서용학 납치 성공, 그러나 나나가 윤성을 향해 발사—충격의 훅.",
+  "entry_state": "호텔 오해가 네 사람의 관계를 흔들고 서용학 커미션 증거가 확보됐다.",
+  "exit_state": "서용학은 납치되지만 나나가 가면 쓴 윤성을 추적해 총으로 맞힌다.",
   "turning_point": {
-    "seq_index": 9,
-    "desc": "서용학 납치 성공: 두 번째 표적 처단 직전"
+    "seq_index": 6,
+    "desc": "세 아들 입대의 역풍 뒤 검찰 압수수색과 윤성의 경선장 납치가 동시에 시작된다."
   },
-  "central_conflict_axis": "서용학 처단(윤성/진표) vs 영주의 추격과 나나의 오인 사격",
-  "episode_function": "7화: 서용학 비리 수사 완성과 납치 성공, 그러나 나나의 오인 사격으로 회말 충격이 배가된다.",
+  "central_conflict_axis": "비살해 공개 응징과 법적 수사, 진표의 살해 개입이 한 표적을 두고 경쟁하며 나나의 경호 의무가 윤성과 정면 충돌한다.",
+  "episode_function": "서용학의 병역·무기 비리를 법과 시티헌터 작전으로 동시에 압박하는 동안 윤성과 나나의 동거 감정이 경선장 총격으로 뒤집히는 회차.",
   "core_dist": {
-    "CONFLICT": 17,
-    "REVELATION": 11,
-    "HOOK": 15,
-    "PERIL": 18,
-    "ORACLE": 1,
-    "BOND": 9,
-    "ROMANCE": 8,
-    "RELIEF": 3,
-    "DESIRE": 12,
+    "BOND": 8,
+    "CONFLICT": 14,
+    "DESIRE": 2,
+    "ESTABLISH": 1,
+    "HOOK": 22,
+    "INTRO": 2,
+    "LOSS": 7,
+    "ORACLE": 7,
+    "PERIL": 14,
+    "PUNISH": 12,
+    "RELIEF": 4,
     "RESCUE": 4,
-    "ESTABLISH": 3,
-    "PUNISH": 3,
-    "REVERSAL": 4
+    "REUNION": 2,
+    "REVELATION": 11,
+    "REVERSAL": 5,
+    "ROMANCE": 15
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-direct-reading"
 }

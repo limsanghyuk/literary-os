@@ -1,0 +1,60 @@
+{
+  "work_id": "공주가돌아왔다_01",
+  "episode_no": 1,
+  "scene_count": 65,
+  "sequence_count": 11,
+  "dramatic_question": "성공한 공심과 몰락한 도경이 다시 만났을 때, 과거의 자리와 사랑을 둘러싼 경쟁은 다음 세대의 꿈까지 삼킬 것인가?",
+  "act_structure": [
+    {
+      "act": "A1",
+      "seq_span": [
+        1,
+        4
+      ],
+      "beat": "두 소녀의 계급 관계와 1993년 배신을 복원하고 현재 권력 역전을 세운다."
+    },
+    {
+      "act": "A2",
+      "seq_span": [
+        5,
+        8
+      ],
+      "beat": "공심과 도경이 재회를 준비해 봉희를 사이에 둔 공개 대결을 벌인다."
+    },
+    {
+      "act": "A3",
+      "seq_span": [
+        9,
+        11
+      ],
+      "beat": "선남의 아카데미 문제로 도경이 공심의 권력에 종속되고 저택에서 재충돌한다."
+    }
+  ],
+  "entry_state": "도경은 공심을 시중드는 콩심으로 기억하고 공심은 성공했어도 도경과 봉희에게서 받은 상처를 품고 있다.",
+  "exit_state": "공심은 복수를 결심하고 도경은 아들의 꿈과 생계를 위해 공심의 저택에 도우미로 들어온다.",
+  "turning_point": {
+    "seq_index": 10,
+    "desc": "도경이 오성 아카데미의 마샤 장이 공심임을 알아보고 피한다."
+  },
+  "central_conflict_axis": "과거의 신분 위계와 빼앗긴 사랑 대 현재의 제도 권력과 가족 생존",
+  "episode_function": "공심·도경·봉희의 과거 원한을 현재로 연결하고 선남의 아카데미를 통해 성인 경쟁을 다음 세대의 미래와 결박한다.",
+  "core_dist": {
+    "BOND": 4,
+    "CONFLICT": 25,
+    "DESIRE": 21,
+    "ESTABLISH": 15,
+    "HOOK": 8,
+    "INTRO": 5,
+    "LOSS": 6,
+    "ORACLE": 4,
+    "PERIL": 3,
+    "PUNISH": 7,
+    "RELIEF": 4,
+    "RESCUE": 1,
+    "REUNION": 4,
+    "REVELATION": 4,
+    "REVERSAL": 9,
+    "ROMANCE": 10
+  },
+  "by": "gpt-5.6-direct-reading"
+}

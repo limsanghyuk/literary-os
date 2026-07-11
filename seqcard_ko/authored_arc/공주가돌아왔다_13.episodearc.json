@@ -1,0 +1,68 @@
+{
+  "work_id": "공주가돌아왔다_13",
+  "episode_no": 13,
+  "scene_count": 69,
+  "sequence_count": 8,
+  "dramatic_question": "도경은 아이들의 신뢰와 찬우의 사랑을 동시에 지킬 수 있는가, 공심은 두 관계를 깨기 위해 누구까지 이용할 것인가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        2
+      ],
+      "beat": "가족 폭로와 아이들의 신뢰"
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        3,
+        4
+      ],
+      "beat": "강회장·공심 연합과 학예회 위기"
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        5,
+        6
+      ],
+      "beat": "마지막 데이트와 숨겨진 이별"
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        7,
+        8
+      ],
+      "beat": "봉희를 이용한 공개 함정"
+    }
+  ],
+  "entry_state": "도경과 찬우가 강회장에게 결혼 승인을 얻으려는 순간 선남이 엄마라고 불러 가족 조건이 폭로된다.",
+  "exit_state": "공심의 유인으로 한자리에 모인 도경·찬우·봉희가 무대 위 복면 해제와 함께 공개적으로 충돌한다.",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "도경이 찬우와 하루 동안 진짜 연인으로 살고 먼저 손을 잡은 뒤 같은 밤 관계를 끝내는 장면이다."
+  },
+  "central_conflict_axis": "도경·찬우의 사랑 대 아이들의 안정, 강회장의 계급 규범, 공심·봉희의 소유 욕망",
+  "episode_function": "후반부 희생 이별 회차로, 사랑을 완전히 확인한 두 사람이 아이와 가족을 위해 헤어지고 공심이 대리 충돌을 설계한다.",
+  "core_dist": {
+    "BOND": 13,
+    "CONFLICT": 14,
+    "DESIRE": 12,
+    "ESTABLISH": 5,
+    "HOOK": 16,
+    "INTRO": 4,
+    "LOSS": 20,
+    "ORACLE": 11,
+    "PERIL": 5,
+    "PUNISH": 12,
+    "RELIEF": 3,
+    "RESCUE": 2,
+    "REUNION": 1,
+    "REVELATION": 6,
+    "REVERSAL": 6,
+    "ROMANCE": 8
+  },
+  "by": "gpt-5.6-direct-reading"
+}

@@ -2,66 +2,66 @@
   "work_id": "시티헌터_09",
   "episode_no": 9,
   "scene_count": 64,
-  "sequence_count": 10,
-  "dramatic_question": "이경완 피살과 진표의 살인—윤성은 아버지의 폭주를 막을 수 있는가?",
+  "sequence_count": 8,
+  "dramatic_question": "윤성은 살해 복수를 막으면서 진표와 나나, 식중을 모두 지킬 수 있는가, 그리고 나나·영주의 정체 의심을 피할 수 있는가?",
   "act_structure": [
     {
-      "act": "설정",
+      "act": "ACT1",
       "seq_span": [
         1,
-        3
+        2
       ],
-      "beat": "처단 완료·부자 균열"
+      "function": "나나 구조·서용학 배달 뒤 진표가 식중을 폭행하고 부자 전쟁이 선포된다."
     },
     {
-      "act": "전개",
+      "act": "ACT2",
       "seq_span": [
-        4,
-        7
+        3,
+        4
       ],
-      "beat": "감정 복잡화·혈연 구도"
+      "function": "치료와 새벽 키스가 사랑을 확정하지만 보호 명분의 이별로 뒤집힌다."
     },
     {
-      "act": "심화",
+      "act": "ACT3",
       "seq_span": [
-        8,
-        9
+        5,
+        6
       ],
-      "beat": "수사 전환·나나 정체 확신"
+      "function": "김종식·영주 부자 관계와 진표의 나나 위협이 다음 표적·이사 결정을 만든다."
     },
     {
-      "act": "회말전환",
+      "act": "ACT4",
       "seq_span": [
-        10,
-        10
+        7,
+        8
       ],
-      "beat": "이경완 피살·훅"
+      "function": "영주와 나나가 윤성 정체를 좁히고 진표의 병원 살해가 다음 충돌을 연다."
     }
   ],
-  "entry_state": "서용학 검찰 인도 성공, 진표가 식중을 인질로 협박하며 균열 시작.",
-  "exit_state": "이경완 피살, 윤성이 진표를 목격—아버지의 폭주가 시작됐다.",
+  "entry_state": "윤성은 나나를 구하고 서용학을 검찰에 넘겼지만 진표는 식중을 폭행하며 복수권을 되찾으려 한다.",
+  "exit_state": "진표가 이경완과 경찰을 살해하고 윤성·영주가 병원에서 그 흔적을 쫓으며 부자 전쟁과 정체 수사가 돌이킬 수 없게 된다.",
   "turning_point": {
-    "seq_index": 10,
-    "desc": "이경완 피살: 진표의 자력 살인 첫 실행, 시티헌터 방식과 완전 결별"
+    "seq_index": 8,
+    "desc": "윤성이 병원 살해 현장에서 청소원으로 사라지는 진표를 직접 발견한다."
   },
-  "central_conflict_axis": "시티헌터 합법 처단(윤성) vs 진표의 직접 살인",
-  "episode_function": "9화: 서용학 처단 완료 이후 진표의 폭주가 시작되고 나나의 정체 확신·이경완 피살로 새 위기가 열린다.",
+  "central_conflict_axis": "진표의 살해 복수 대 윤성의 공개·보호 복수, 그리고 나나·영주의 정체 추적이 서로를 압박한다.",
+  "episode_function": "서용학을 검찰에 넘긴 윤성이 진표와 공개 전쟁을 시작하고, 나나를 지키려 사랑을 끊는 동안 김종식·영주 부자 관계와 정체 수사, 진표의 이경완 살해가 한꺼번에 폭발하는 회차.",
   "core_dist": {
-    "RESCUE": 2,
-    "ORACLE": 6,
-    "PERIL": 15,
-    "CONFLICT": 23,
-    "REVERSAL": 1,
-    "REVELATION": 15,
-    "HOOK": 3,
+    "BOND": 3,
+    "CONFLICT": 14,
     "DESIRE": 8,
-    "BOND": 8,
-    "ROMANCE": 5,
-    "LOSS": 7,
-    "REUNION": 1,
     "ESTABLISH": 2,
-    "PUNISH": 2,
-    "RELIEF": 3
+    "HOOK": 17,
+    "INTRO": 2,
+    "LOSS": 16,
+    "ORACLE": 5,
+    "PERIL": 18,
+    "PUNISH": 6,
+    "RELIEF": 3,
+    "RESCUE": 5,
+    "REVELATION": 20,
+    "REVERSAL": 1,
+    "ROMANCE": 8
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-direct-reading"
 }

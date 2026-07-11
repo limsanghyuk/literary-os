@@ -1,0 +1,21 @@
+{
+  "work_id": "결혼못하는남자_16",
+  "scene_count": 84,
+  "core_dist": {
+    "BOND": 23,
+    "CONFLICT": 14,
+    "DESIRE": 21,
+    "HOOK": 5,
+    "LOSS": 9,
+    "ORACLE": 3,
+    "PERIL": 11,
+    "RELIEF": 7,
+    "RESCUE": 16,
+    "REUNION": 12,
+    "REVELATION": 16,
+    "REVERSAL": 13,
+    "ROMANCE": 18
+  },
+  "episode_function": "재희 집 초대가 친밀함과 통제 습관을 동시에 시험한다 재희가 시골 병원에서 문정을 다시 만나 관계의 지속으로 결말을 닫는다",
+  "by": "gpt-direct-reading-claude-schema-projection"
+}

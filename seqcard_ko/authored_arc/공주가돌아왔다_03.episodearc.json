@@ -1,0 +1,68 @@
+{
+  "work_id": "공주가돌아왔다_03",
+  "episode_no": 3,
+  "scene_count": 70,
+  "sequence_count": 12,
+  "dramatic_question": "도경은 봉희의 반복된 금융 사고와 공심·현우의 재결합 압박 속에서 아들과 결혼을 동시에 지킬 수 있는가?",
+  "act_structure": [
+    {
+      "act": "A1",
+      "seq_span": [
+        1,
+        3
+      ],
+      "beat": "제부도 고립과 택시 대화로 두 여성의 외피를 벗기고 첫사랑 경쟁을 재점화한다."
+    },
+    {
+      "act": "A2",
+      "seq_span": [
+        4,
+        7
+      ],
+      "beat": "결혼기념일 파괴와 주택담보대출이 부부 위기를 합의이혼으로 밀어 넣는다."
+    },
+    {
+      "act": "A3",
+      "seq_span": [
+        8,
+        10
+      ],
+      "beat": "공심은 선남 선발과 현우 해명을 교환하며 도경과 임시 동맹을 만든다."
+    },
+    {
+      "act": "A4",
+      "seq_span": [
+        11,
+        12
+      ],
+      "beat": "현우의 정체가 과거 사랑을 깨우고 도경은 선남을 위해 다시 공심에게 복종한다."
+    }
+  ],
+  "entry_state": "공심과 도경이 갯벌에서 서로의 인생을 빼앗았다고 싸우는 상태",
+  "exit_state": "도경이 선남을 위해 공심의 모든 지시에 복종하기로 압박받는 상태",
+  "turning_point": {
+    "seq_index": 11,
+    "desc": "공심의 남자가 현우라는 폭로: 호텔에서 현우를 본 도경이 공심의 새 연인이 자기 첫사랑임을 깨닫고 도망친다."
+  },
+  "central_conflict_axis": "도경의 가족 책임·과거 첫사랑·공심의 제도 권력이 한 직장과 선남 선발에서 충돌한다.",
+  "episode_function": "도경을 공심의 비서로 들어가게 만드는 계약을 형성하고 봉희 부부의 이혼 시한을 시작한다.",
+  "core_dist": {
+    "BOND": 7,
+    "CONFLICT": 21,
+    "DESIRE": 11,
+    "ESTABLISH": 7,
+    "HOOK": 6,
+    "INTRO": 2,
+    "LOSS": 18,
+    "ORACLE": 5,
+    "PERIL": 10,
+    "PUNISH": 17,
+    "RELIEF": 7,
+    "RESCUE": 2,
+    "REUNION": 2,
+    "REVELATION": 7,
+    "REVERSAL": 9,
+    "ROMANCE": 9
+  },
+  "by": "gpt-5.6-direct-reading-repair-v2"
+}

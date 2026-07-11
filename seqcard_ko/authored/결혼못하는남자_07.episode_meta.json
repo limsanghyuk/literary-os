@@ -1,0 +1,22 @@
+{
+  "work_id": "결혼못하는남자_07",
+  "scene_count": 64,
+  "core_dist": {
+    "BOND": 29,
+    "CONFLICT": 15,
+    "DESIRE": 13,
+    "ESTABLISH": 9,
+    "HOOK": 2,
+    "LOSS": 5,
+    "ORACLE": 4,
+    "PERIL": 15,
+    "RELIEF": 12,
+    "RESCUE": 2,
+    "REUNION": 2,
+    "REVELATION": 4,
+    "REVERSAL": 4,
+    "ROMANCE": 12
+  },
+  "episode_function": "꿈의 욕망을 현실의 응급 책임으로 뒤집어 상구 돌봄의 발단을 만든다. 상구 사건 이후 재희가 자발적 돌봄과 문정과의 공유를 새 취미로 확장한다.",
+  "by": "gpt-direct-reading-claude-schema-projection"
+}

@@ -1,0 +1,18 @@
+{
+  "work_id": "결혼못하는남자_09",
+  "scene_count": 59,
+  "core_dist": {
+    "BOND": 11,
+    "CONFLICT": 30,
+    "DESIRE": 14,
+    "HOOK": 6,
+    "PERIL": 20,
+    "PUNISH": 3,
+    "RELIEF": 6,
+    "RESCUE": 6,
+    "REVELATION": 14,
+    "ROMANCE": 8
+  },
+  "episode_function": "맞선 이후 재희의 감정 문맹과 봉수의 감시가 같은 밤 재희를 관계의 한가운데 세운다. 재희는 가짜 스케줄을 지나치게 정교한 진짜 초대로 바꾸고 문정은 그 안의 진심을 읽기 시작한다.",
+  "by": "gpt-direct-reading-claude-schema-projection"
+}

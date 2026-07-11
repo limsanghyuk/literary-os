@@ -1,0 +1,23 @@
+{
+  "work_id": "101번째프로포즈_06",
+  "episode_no": 6,
+  "scene_count": 69,
+  "core_dist": {
+    "BOND": 9,
+    "CONFLICT": 15,
+    "DESIRE": 15,
+    "ESTABLISH": 4,
+    "HOOK": 11,
+    "LOSS": 14,
+    "ORACLE": 9,
+    "PERIL": 11,
+    "PUNISH": 7,
+    "RELIEF": 13,
+    "REUNION": 3,
+    "REVELATION": 12,
+    "REVERSAL": 3,
+    "ROMANCE": 12
+  },
+  "source_lock": "source_lock/101번째프로포즈_06.source_lock.json",
+  "by": "gpt-5.6-direct-reading"
+}

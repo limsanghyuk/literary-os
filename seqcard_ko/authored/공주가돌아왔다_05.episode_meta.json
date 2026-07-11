@@ -1,0 +1,23 @@
+{
+  "work_id": "공주가돌아왔다_05",
+  "scene_count": 67,
+  "core_dist": {
+    "BOND": 4,
+    "CONFLICT": 28,
+    "DESIRE": 6,
+    "ESTABLISH": 8,
+    "HOOK": 18,
+    "INTRO": 1,
+    "LOSS": 6,
+    "ORACLE": 6,
+    "PERIL": 7,
+    "PUNISH": 10,
+    "RELIEF": 11,
+    "REUNION": 4,
+    "REVELATION": 16,
+    "REVERSAL": 1,
+    "ROMANCE": 8
+  },
+  "episode_function": "도경-찬우의 과거 사랑을 현재 삼각관계의 중심으로 복귀시키고 봉희의 투자 구명선을 완전히 붕괴시킨다.",
+  "by": "gpt-5.6-direct-reading-repair-v2"
+}

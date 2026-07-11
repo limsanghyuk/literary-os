@@ -2,67 +2,67 @@
   "work_id": "시티헌터_08",
   "episode_no": 8,
   "scene_count": 65,
-  "sequence_count": 10,
-  "dramatic_question": "서용학을 두 번째로 시도하는 처단 작전은 영주의 추격 속에서 성공할 것인가?",
+  "sequence_count": 8,
+  "dramatic_question": "윤성은 총상과 수사망을 숨긴 채 서용학 비리를 공개하고, 진표의 살해 명령과 나나의 경호 임무 사이에서 사람을 지킬 수 있는가?",
   "act_structure": [
     {
-      "act": "설정",
+      "act": "ACT1",
       "seq_span": [
         1,
-        3
+        2
       ],
-      "beat": "탈출 성공·처단 실패 여파"
+      "function": "경선장 실패·총상·은폐 치료로 복수와 사랑의 생존 비용을 만든다."
     },
     {
-      "act": "전개",
+      "act": "ACT2",
       "seq_span": [
-        4,
-        7
+        3,
+        4
       ],
-      "beat": "치료·감정 회복·재작전"
+      "function": "청와대 수사와 나나 배제 실패가 관계·작전 위험을 확대한다."
     },
     {
-      "act": "심화",
+      "act": "ACT3",
       "seq_span": [
-        8,
-        9
+        5,
+        6
       ],
-      "beat": "감정 절정·작전 개시"
+      "function": "위로와 저택 친밀감 뒤 나나가 경호에 복귀해 방송국 충돌을 준비한다."
     },
     {
-      "act": "회말전환",
+      "act": "ACT4",
       "seq_span": [
-        10,
-        10
+        7,
+        8
       ],
-      "beat": "폭로 성공·나나 구출"
+      "function": "생방송 폭로를 성공시키지만 서용학이 나나를 인질로 던져 구조 선택을 강요한다."
     }
   ],
-  "entry_state": "나나 발사 후 탈출 성공, 처단 실패의 여파와 진표의 분노.",
-  "exit_state": "서용학 생방송 폭로로 두 번째 처단 성공, 나나가 구출되며 훅.",
+  "entry_state": "나나의 총탄으로 윤성이 부상하고 서용학은 납치 피해를 이용해 후보로 선출된다.",
+  "exit_state": "마르스 비리가 전국에 폭로되지만 서용학이 나나를 인질로 던져 윤성에게 즉각 구조 선택을 요구한다.",
   "turning_point": {
-    "seq_index": 10,
-    "desc": "서용학 생방송 비리 폭로: 두 번째 표적 처단 완성"
+    "seq_index": 8,
+    "desc": "서용학이 나나를 난간 밖으로 던져 표적 응징보다 사랑하는 사람의 생명을 먼저 구해야 하는 순간을 만든다."
   },
-  "central_conflict_axis": "서용학 처단(윤성) vs 영주의 법적 추격",
-  "episode_function": "8화: 처단 실패 회복과 두 번째 성공—서용학 처단으로 진표 방식이 아닌 시티헌터 방식을 재입증한다.",
+  "central_conflict_axis": "살해를 요구하는 진표식 복수와 사람을 살리려는 윤성의 윤리가 나나의 경호 의무·영주의 법적 수사와 충돌한다.",
+  "episode_function": "서용학 납치 실패의 총상과 정치적 역풍을 사랑·수사 위기로 전환하고, 생방송 비리 폭로 성공 직후 나나의 추락으로 윤성의 우선순위를 시험하는 회차.",
   "core_dist": {
-    "CONFLICT": 17,
-    "PERIL": 16,
-    "RESCUE": 2,
-    "LOSS": 6,
+    "BOND": 9,
+    "CONFLICT": 18,
+    "DESIRE": 3,
+    "ESTABLISH": 2,
+    "HOOK": 23,
     "INTRO": 2,
-    "DESIRE": 9,
-    "ORACLE": 3,
-    "ESTABLISH": 3,
-    "HOOK": 8,
-    "BOND": 7,
-    "REVELATION": 8,
-    "ROMANCE": 8,
-    "REUNION": 1,
-    "RELIEF": 6,
-    "REVERSAL": 1,
-    "PUNISH": 2
+    "LOSS": 11,
+    "ORACLE": 2,
+    "PERIL": 16,
+    "PUNISH": 10,
+    "RELIEF": 5,
+    "RESCUE": 9,
+    "REUNION": 2,
+    "REVELATION": 7,
+    "REVERSAL": 5,
+    "ROMANCE": 6
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-direct-reading"
 }

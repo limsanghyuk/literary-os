@@ -1,1 +1,24 @@
-{"work_id": "시티헌터_14", "scene_count": 66, "core_dist": {"PERIL": 10, "CONFLICT": 10, "REVELATION": 10, "DESIRE": 11, "HOOK": 3, "BOND": 4, "ROMANCE": 5, "RELIEF": 5, "ORACLE": 2, "REUNION": 2, "ESTABLISH": 1, "INTRO": 1, "PUNISH": 1, "RESCUE": 1}, "episode_function": "부자(진표-윤성) 복수관의 균열을 정면 대결로 확정짓고, 윤성-경희 모자 상봉과 나나-영주의 진실 대면을 통해 인물관계를 재편하는 동시에, 천재만을 네 번째 표적으로 공식화하며 진표의 위장 잠입과 영주 암살 시도라는 강한 클리프행어로 다음 화의 구출극을 예고한다.", "by": "sonnet_reading"}
+{
+  "work_id": "시티헌터_14",
+  "scene_count": 65,
+  "core_dist": {
+    "BOND": 6,
+    "CONFLICT": 9,
+    "DESIRE": 14,
+    "ESTABLISH": 1,
+    "HOOK": 15,
+    "INTRO": 4,
+    "LOSS": 13,
+    "ORACLE": 9,
+    "PERIL": 14,
+    "PUNISH": 11,
+    "RELIEF": 1,
+    "RESCUE": 8,
+    "REUNION": 1,
+    "REVELATION": 14,
+    "REVERSAL": 6,
+    "ROMANCE": 4
+  },
+  "episode_function": "진표와 공개 결별한 윤성이 천재만 문서 작전에서 영주의 생명을 택해 자신의 복수 원칙을 증명한다.",
+  "by": "gpt-5.6-direct-reading"
+}

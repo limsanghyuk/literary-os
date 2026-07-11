@@ -1,0 +1,20 @@
+{
+  "work_id": "결혼못하는남자_03",
+  "scene_count": 77,
+  "core_dist": {
+    "BOND": 22,
+    "CONFLICT": 29,
+    "DESIRE": 8,
+    "ESTABLISH": 19,
+    "HOOK": 3,
+    "LOSS": 11,
+    "ORACLE": 8,
+    "PERIL": 15,
+    "RELIEF": 20,
+    "REVELATION": 17,
+    "REVERSAL": 1,
+    "ROMANCE": 1
+  },
+  "episode_function": "클럽 알레르기 사고와 진료실 후폭풍 도움의 문 앞에 선 재희",
+  "by": "gpt-direct-reading-claude-schema-projection"
+}

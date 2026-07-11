@@ -1,0 +1,57 @@
+{
+  "work_id": "결혼못하는남자_16",
+  "episode_no": 16,
+  "scene_count": 84,
+  "sequence_count": 12,
+  "dramatic_question": "함께 산다는 제안이 두 사람의 독립성을 보존하면서 지속 가능한 관계가 될 수 있는가?",
+  "act_structure": [
+    {
+      "act": "intimacy_test",
+      "seq_span": [
+        1,
+        4
+      ],
+      "function": "집 안 친밀함과 보조관계 봉합"
+    },
+    {
+      "act": "cohabitation_question",
+      "seq_span": [
+        5,
+        7
+      ],
+      "function": "공존 규칙과 미래 집 제안"
+    },
+    {
+      "act": "separation_reunion",
+      "seq_span": [
+        8,
+        12
+      ],
+      "function": "문정 이탈·재희 수색·재회"
+    }
+  ],
+  "entry_state": "재희는 문정을 집 안으로 들이고 두 사람은 친밀함과 생활 충돌을 동시에 경험한다.",
+  "exit_state": "문정의 지방행을 뒤늦게 추적한 재희가 시골 병원에서 재회하고 결혼 여부보다 관계 지속을 선택한다.",
+  "turning_point": {
+    "seq_index": 8,
+    "desc": "S055~S070의 문정 이탈이 재희를 수색 행동으로 바꾸고 S080~S084의 재회로 결말을 완성한다."
+  },
+  "central_conflict_axis": "공존 욕망과 자기 삶을 잃지 않으려는 두려움",
+  "episode_function": "독신 대 결혼의 이분법을 넘어 조정과 지속의 열린 결말을 제시한다.",
+  "core_dist": {
+    "BOND": 23,
+    "CONFLICT": 14,
+    "DESIRE": 21,
+    "HOOK": 5,
+    "LOSS": 9,
+    "ORACLE": 3,
+    "PERIL": 11,
+    "RELIEF": 7,
+    "RESCUE": 16,
+    "REUNION": 12,
+    "REVELATION": 16,
+    "REVERSAL": 13,
+    "ROMANCE": 18
+  },
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-04"
+}

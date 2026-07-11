@@ -1,68 +1,68 @@
 {
   "work_id": "시티헌터_02",
   "episode_no": 2,
-  "scene_count": 70,
-  "sequence_count": 11,
-  "dramatic_question": "방탄 국회의 방패 뒤에 숨은 이경완을 어떻게 무너뜨릴 것인가?",
+  "scene_count": 67,
+  "sequence_count": 8,
+  "dramatic_question": "윤성은 이경완의 부패를 국민이 납득할 증거로 드러내 제도 안에서 파멸시킬 수 있는가?",
   "act_structure": [
     {
-      "act": "설정",
+      "act": "ACT1",
       "seq_span": [
         1,
-        3
+        2
       ],
-      "beat": "청와대 정착·복수 계획 착수"
+      "function": "청와대 잠입과 반복 접촉 계약으로 복수·로맨스의 장기 조건을 만든다."
     },
     {
-      "act": "전개",
+      "act": "ACT2",
       "seq_span": [
-        4,
-        7
+        3,
+        4
       ],
-      "beat": "잠입·증거 수집·심재동 특정"
+      "function": "이경완 수사와 다혜 경호 실패가 법·사적 갈등을 확대한다."
     },
     {
-      "act": "심화",
+      "act": "ACT3",
       "seq_span": [
-        8,
-        10
+        5,
+        6
       ],
-      "beat": "감정 유대·결정적 증거 확보"
+      "function": "굶는 아이들의 현실을 통해 부패가 생명 문제임을 체감한다."
     },
     {
-      "act": "회말전환",
+      "act": "ACT4",
       "seq_span": [
-        11,
-        11
+        7,
+        8
       ],
-      "beat": "부결 좌절·처단 결의"
+      "function": "횡령 증거를 완성하지만 국회 부결로 제도적 해결이 좌절된다."
     }
   ],
-  "entry_state": "귀국한 윤성이 청와대에 안착하고 이경완 표적 수사를 개시한다.",
-  "exit_state": "증거 택배 성공이나 체포동의안 부결—이경완은 여전히 자유롭고 윤성은 분노를 쌓는다.",
+  "entry_state": "윤성과 나나는 청와대에서 재회하고 이경완 부패는 의혹 단계다.",
+  "exit_state": "횡령 증거는 완성됐지만 국회가 체포를 막아 윤성과 진표가 직접 응징을 준비한다.",
   "turning_point": {
-    "seq_index": 10,
-    "desc": "체포동의안 부결: 합법적 방법의 한계·직접 응징 결의"
+    "seq_index": 8,
+    "desc": "국회가 이경완 체포동의안을 압도적으로 부결해 윤성의 법적 파멸 전략을 좌절시킨다."
   },
-  "central_conflict_axis": "비리 정치인 이경완의 증거 확보 vs 방탄 국회의 면죄부",
-  "episode_function": "2화: 표적 1호 이경완 수사 전과정과 방탄 국회의 좌절을 그리며 시티헌터식 처단 방식을 예고한다.",
+  "central_conflict_axis": "법과 제도로 부패를 처벌하려는 윤성·영주 대 정치 권력이 만든 집단적 면책",
+  "episode_function": "첫 표적 이경완의 결식아동 보조금 횡령을 윤성과 영주가 각자 추적하고, 제도적 체포가 국회에 막히면서 시티헌터식 공개 응징이 필요해지는 회차.",
   "core_dist": {
-    "REUNION": 2,
-    "CONFLICT": 20,
-    "ESTABLISH": 14,
-    "INTRO": 2,
-    "BOND": 8,
-    "DESIRE": 5,
-    "REVELATION": 13,
-    "LOSS": 8,
-    "RELIEF": 7,
+    "BOND": 11,
+    "CONFLICT": 17,
+    "DESIRE": 9,
+    "ESTABLISH": 4,
+    "HOOK": 12,
+    "INTRO": 3,
+    "LOSS": 10,
     "ORACLE": 7,
-    "PERIL": 9,
+    "PERIL": 12,
+    "PUNISH": 11,
+    "RELIEF": 3,
     "RESCUE": 9,
-    "ROMANCE": 3,
-    "PUNISH": 3,
-    "REVERSAL": 2,
-    "HOOK": 1
+    "REUNION": 2,
+    "REVELATION": 14,
+    "REVERSAL": 3,
+    "ROMANCE": 7
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-direct-reading-source-reauthorized"
 }

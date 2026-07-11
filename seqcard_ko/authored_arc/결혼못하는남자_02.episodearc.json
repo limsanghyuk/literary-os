@@ -1,0 +1,58 @@
+{
+  "work_id": "결혼못하는남자_02",
+  "episode_no": 2,
+  "scene_count": 81,
+  "sequence_count": 12,
+  "dramatic_question": "독신의 자유는 몸의 취약함과 함께 먹는 욕망을 견딜 수 있는가?",
+  "act_structure": [
+    {
+      "act": "body",
+      "seq_span": [
+        1,
+        4
+      ],
+      "function": "몸·가족·데이트 압력"
+    },
+    {
+      "act": "table",
+      "seq_span": [
+        5,
+        8
+      ],
+      "function": "혼밥과 사생활 충돌"
+    },
+    {
+      "act": "rupture",
+      "seq_span": [
+        9,
+        12
+      ],
+      "function": "검사 불안·공동 식탁·말실수"
+    }
+  ],
+  "entry_state": "재희와 문정은 서로를 불편한 환자와 의사로 규정하며 각자의 혼자 사는 방식을 옹호한다.",
+  "exit_state": "공동 식탁이 잠시 열렸다가 재희의 말실수로 깨지고, 두 사람은 클럽에서 다시 피할 수 없이 마주친다.",
+  "turning_point": {
+    "seq_index": 12,
+    "desc": "S073의 유진 전화가 재희를 옆집 식탁으로 끌어들이고 S078의 독신 논리가 문정의 상처를 건드린다."
+  },
+  "central_conflict_axis": "혼자 해결하려는 자존심과 공동 식탁의 돌봄",
+  "episode_function": "몸·식사·사생활을 통해 독신의 장점과 한계를 동시에 시험한다.",
+  "core_dist": {
+    "BOND": 22,
+    "CONFLICT": 31,
+    "DESIRE": 11,
+    "ESTABLISH": 9,
+    "HOOK": 1,
+    "INTRO": 2,
+    "LOSS": 11,
+    "ORACLE": 7,
+    "PERIL": 11,
+    "RELIEF": 25,
+    "REUNION": 2,
+    "REVELATION": 14,
+    "REVERSAL": 1,
+    "ROMANCE": 6
+  },
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-04"
+}
