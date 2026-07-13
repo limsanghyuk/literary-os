@@ -1,0 +1,22 @@
+{
+  "work_id": "좋은사람_11",
+  "scene_count": 70,
+  "core_dist": {
+    "BOND": 18,
+    "CONFLICT": 14,
+    "DESIRE": 9,
+    "ESTABLISH": 6,
+    "HOOK": 9,
+    "LOSS": 27,
+    "ORACLE": 8,
+    "PERIL": 9,
+    "PUNISH": 3,
+    "RELIEF": 7,
+    "RESCUE": 2,
+    "REVELATION": 8,
+    "REVERSAL": 1,
+    "ROMANCE": 19
+  },
+  "episode_function": "약혼 파탄과 태평·지우의 돌봄을 병치하고, 상진이 준필의 사적 관계를 직접 인질화하는 단계로 위협을 올린다.",
+  "by": "gpt-5.6-direct-reading"
+}

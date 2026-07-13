@@ -1,0 +1,24 @@
+{
+  "work_id": "내여자친구는구미호_16",
+  "scene_count": 62,
+  "core_dist": {
+    "BOND": 9,
+    "CONFLICT": 5,
+    "DESIRE": 8,
+    "ESTABLISH": 2,
+    "HOOK": 10,
+    "INTRO": 2,
+    "LOSS": 23,
+    "ORACLE": 12,
+    "PERIL": 6,
+    "PUNISH": 1,
+    "RELIEF": 9,
+    "RESCUE": 1,
+    "REUNION": 6,
+    "REVELATION": 9,
+    "REVERSAL": 4,
+    "ROMANCE": 17
+  },
+  "episode_function": "대웅의 즉각적 희생 의지와 마지막 하루를 통해 사랑의 진위를 완성하고, 삼신의 예외로 한 꼬리 미호가 귀환하는 종결 회차.",
+  "by": "gpt-5.6-direct-reading"
+}

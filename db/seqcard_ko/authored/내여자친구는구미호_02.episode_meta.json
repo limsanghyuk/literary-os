@@ -1,0 +1,22 @@
+{
+  "work_id": "내여자친구는구미호_02",
+  "scene_count": 40,
+  "core_dist": {
+    "BOND": 8,
+    "CONFLICT": 16,
+    "DESIRE": 6,
+    "ESTABLISH": 1,
+    "HOOK": 5,
+    "INTRO": 2,
+    "LOSS": 7,
+    "ORACLE": 3,
+    "PERIL": 6,
+    "PUNISH": 5,
+    "RELIEF": 9,
+    "REVELATION": 6,
+    "REVERSAL": 1,
+    "ROMANCE": 5
+  },
+  "episode_function": "서로를 괴물과 배신자로 의심하는 동거에서 이름과 호이호이 의식을 공유한 친구이자 삼각관계의 오해 대상로 이동시키는 회차.",
+  "by": "gpt-5.6-direct-reading"
+}

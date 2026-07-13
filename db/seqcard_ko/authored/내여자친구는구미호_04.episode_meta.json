@@ -1,0 +1,24 @@
+{
+  "work_id": "내여자친구는구미호_04",
+  "scene_count": 53,
+  "core_dist": {
+    "BOND": 11,
+    "CONFLICT": 16,
+    "DESIRE": 14,
+    "ESTABLISH": 1,
+    "HOOK": 9,
+    "INTRO": 2,
+    "LOSS": 10,
+    "ORACLE": 7,
+    "PERIL": 7,
+    "PUNISH": 2,
+    "RELIEF": 11,
+    "RESCUE": 2,
+    "REUNION": 1,
+    "REVELATION": 1,
+    "REVERSAL": 3,
+    "ROMANCE": 9
+  },
+  "episode_function": "미호가 사라진 빈 숙직실에서 미호를 구해 재동거하지만 다시 취중 이별을 현실로 만든 상태로 이동시키는 회차.",
+  "by": "gpt-5.6-direct-reading"
+}

@@ -1,0 +1,68 @@
+{
+  "work_id": "내여자친구는구미호_15",
+  "episode_no": 15,
+  "scene_count": 59,
+  "sequence_count": 7,
+  "dramatic_question": "가짜 결혼과 완벽한 새 삶의 연기가 마지막 꼬리와 남은 사랑을 끝까지 숨길 수 있는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        1
+      ],
+      "function": "회차의 관계 상태와 위기 조건을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        2,
+        3
+      ],
+      "function": "위협과 선택을 확대해 중간 전환을 만든다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        4,
+        5
+      ],
+      "function": "숨은 정보와 감정 선택을 충돌시킨다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        6,
+        7
+      ],
+      "function": "결정적 전환과 다음 회차 훅을 완성한다."
+    }
+  ],
+  "entry_state": "대웅은 미호가 동주와 멀리 떠났다고 믿는다.",
+  "exit_state": "창고에서 재회한 미호가 한 개 남은 꼬리와 죽음을 공개한다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "미호가 창고의 모든 추억을 버리지 못하고 대웅에게 한 꼬리만 남았음을 들킨다."
+  },
+  "central_conflict_axis": "상대를 살리려는 사랑 대 한 사람의 죽음을 전제로 한 인간화 규칙",
+  "episode_function": "가짜 결혼과 새 삶의 연기로 대웅을 떼어내려던 미호가 창고의 추억을 버리지 못하고 마지막 한 꼬리를 들키는 회차.",
+  "core_dist": {
+    "BOND": 10,
+    "CONFLICT": 15,
+    "DESIRE": 6,
+    "ESTABLISH": 1,
+    "HOOK": 17,
+    "INTRO": 2,
+    "LOSS": 17,
+    "ORACLE": 10,
+    "PERIL": 5,
+    "PUNISH": 2,
+    "RELIEF": 8,
+    "RESCUE": 1,
+    "REUNION": 5,
+    "REVELATION": 8,
+    "REVERSAL": 2,
+    "ROMANCE": 9
+  },
+  "by": "gpt-5.6-direct-reading"
+}

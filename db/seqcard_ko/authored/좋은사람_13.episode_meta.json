@@ -1,0 +1,23 @@
+{
+  "work_id": "좋은사람_13",
+  "scene_count": 57,
+  "core_dist": {
+    "BOND": 13,
+    "CONFLICT": 11,
+    "DESIRE": 10,
+    "ESTABLISH": 1,
+    "HOOK": 8,
+    "INTRO": 1,
+    "LOSS": 18,
+    "ORACLE": 8,
+    "PERIL": 17,
+    "PUNISH": 5,
+    "RELIEF": 3,
+    "RESCUE": 3,
+    "REUNION": 1,
+    "REVELATION": 9,
+    "ROMANCE": 6
+  },
+  "episode_function": "준필의 잠입을 실제 증거 수집으로 진전시키는 동시에 순정 자살 시도와 태평 누명을 결합해 작전의 인적 대가를 폭발시킨다.",
+  "by": "gpt-5.6-direct-reading"
+}

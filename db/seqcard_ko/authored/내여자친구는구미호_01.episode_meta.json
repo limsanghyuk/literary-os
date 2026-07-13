@@ -1,0 +1,24 @@
+{
+  "work_id": "내여자친구는구미호_01",
+  "scene_count": 39,
+  "core_dist": {
+    "BOND": 4,
+    "CONFLICT": 9,
+    "DESIRE": 9,
+    "ESTABLISH": 4,
+    "HOOK": 8,
+    "INTRO": 6,
+    "LOSS": 2,
+    "ORACLE": 5,
+    "PERIL": 7,
+    "PUNISH": 2,
+    "RELIEF": 7,
+    "RESCUE": 2,
+    "REUNION": 1,
+    "REVELATION": 6,
+    "REVERSAL": 2,
+    "ROMANCE": 4
+  },
+  "episode_function": "무책임한 배우 지망생에서 미호의 구슬에 생명을 의존하며 서울 동거를 시작한 인간로 이동시키는 회차.",
+  "by": "gpt-5.6-direct-reading"
+}

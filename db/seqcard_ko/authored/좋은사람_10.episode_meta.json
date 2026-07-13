@@ -1,0 +1,22 @@
+{
+  "work_id": "좋은사람_10",
+  "scene_count": 62,
+  "core_dist": {
+    "BOND": 15,
+    "CONFLICT": 18,
+    "DESIRE": 5,
+    "ESTABLISH": 3,
+    "HOOK": 11,
+    "LOSS": 40,
+    "ORACLE": 6,
+    "PERIL": 9,
+    "PUNISH": 4,
+    "RESCUE": 2,
+    "REUNION": 1,
+    "REVELATION": 6,
+    "REVERSAL": 1,
+    "ROMANCE": 3
+  },
+  "episode_function": "동철의 죽음을 준필의 침묵·이별·동료 불신으로 확장하고 상진을 경찰 내부의 직접 적수로 진입시킨다.",
+  "by": "gpt-5.6-direct-reading"
+}

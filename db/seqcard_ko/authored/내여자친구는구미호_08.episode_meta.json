@@ -1,0 +1,22 @@
+{
+  "work_id": "내여자친구는구미호_08",
+  "scene_count": 46,
+  "core_dist": {
+    "BOND": 11,
+    "CONFLICT": 14,
+    "DESIRE": 10,
+    "HOOK": 2,
+    "INTRO": 4,
+    "LOSS": 6,
+    "ORACLE": 7,
+    "PERIL": 3,
+    "PUNISH": 3,
+    "RELIEF": 8,
+    "RESCUE": 1,
+    "REUNION": 1,
+    "REVELATION": 3,
+    "ROMANCE": 19
+  },
+  "episode_function": "비극을 감춘 첫 데이트에서 가족에게 관계 종료를 명령받아 실제 선택을 피할 수 없는 상태로 이동시키는 회차.",
+  "by": "gpt-5.6-direct-reading"
+}

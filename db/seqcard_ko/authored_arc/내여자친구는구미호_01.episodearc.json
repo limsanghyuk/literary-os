@@ -1,0 +1,68 @@
+{
+  "work_id": "내여자친구는구미호_01",
+  "episode_no": 1,
+  "scene_count": 39,
+  "sequence_count": 6,
+  "dramatic_question": "도망친 대웅은 자신을 살린 구미호와 생명 계약을 어떻게 감당할 것인가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        1
+      ],
+      "function": "상황과 욕망을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        2,
+        3
+      ],
+      "function": "압력과 관계 갈등을 확대한다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        4,
+        4
+      ],
+      "function": "결정적 정보·선택으로 상태를 뒤집는다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        5,
+        6
+      ],
+      "function": "회차의 새 상태와 다음 질문을 봉인한다."
+    }
+  ],
+  "entry_state": "무책임한 배우 지망생",
+  "exit_state": "미호의 구슬에 생명을 의존하며 서울 동거를 시작한 인간",
+  "turning_point": {
+    "seq_index": 3,
+    "desc": "미호가 추락한 대웅에게 여우구슬을 넣어 살리고 정체를 공개한다."
+  },
+  "central_conflict_axis": "인간의 공포와 비인간 존재의 보호가 뒤섞인 강제 동행",
+  "episode_function": "무책임한 배우 지망생에서 미호의 구슬에 생명을 의존하며 서울 동거를 시작한 인간로 이동시키는 회차.",
+  "core_dist": {
+    "BOND": 4,
+    "CONFLICT": 9,
+    "DESIRE": 9,
+    "ESTABLISH": 4,
+    "HOOK": 8,
+    "INTRO": 6,
+    "LOSS": 2,
+    "ORACLE": 5,
+    "PERIL": 7,
+    "PUNISH": 2,
+    "RELIEF": 7,
+    "RESCUE": 2,
+    "REUNION": 1,
+    "REVELATION": 6,
+    "REVERSAL": 2,
+    "ROMANCE": 4
+  },
+  "by": "gpt-5.6-direct-reading"
+}

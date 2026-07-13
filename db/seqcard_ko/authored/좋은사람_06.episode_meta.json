@@ -1,0 +1,24 @@
+{
+  "work_id": "좋은사람_06",
+  "scene_count": 60,
+  "core_dist": {
+    "BOND": 15,
+    "CONFLICT": 12,
+    "DESIRE": 8,
+    "ESTABLISH": 8,
+    "HOOK": 12,
+    "INTRO": 8,
+    "LOSS": 9,
+    "ORACLE": 7,
+    "PERIL": 3,
+    "PUNISH": 5,
+    "RELIEF": 10,
+    "RESCUE": 2,
+    "REUNION": 2,
+    "REVELATION": 10,
+    "REVERSAL": 3,
+    "ROMANCE": 6
+  },
+  "episode_function": "지우 사건을 해결하고 태평·지우를 강력반의 정식 구성원으로 편입한다.",
+  "by": "gpt-5.6-direct-reading"
+}

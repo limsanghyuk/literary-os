@@ -1,0 +1,68 @@
+{
+  "work_id": "좋은사람_04",
+  "episode_no": 4,
+  "scene_count": 59,
+  "sequence_count": 7,
+  "dramatic_question": "연적이자 경찰인 준필과 태평은 경쟁을 넘어 생명을 지키는 공조를 할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        1
+      ],
+      "function": "기원 상태와 회차의 핵심 욕망을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        2,
+        3
+      ],
+      "function": "관계·사건 압력을 확대해 기존 행동 방식을 흔든다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        4,
+        5
+      ],
+      "function": "결정적 정보 또는 선택으로 가치 상태를 뒤집는다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        6,
+        7
+      ],
+      "function": "새 관계·수사 상태를 봉인하고 다음 회차 질문을 연다."
+    }
+  ],
+  "entry_state": "준필은 최연소 강력반장, 태평은 첫 출근 순경으로 재회한다.",
+  "exit_state": "태평이 포위되고 유코가 인질이 된 현장에서 준필이 체포와 구조 사이 선택을 강요받는다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "태평의 기습 진입으로 작전이 붕괴되고 준필 앞에 용의자 체포와 유코 구조가 동시에 놓인다."
+  },
+  "central_conflict_axis": "실적과 지휘권 경쟁 대 현장 생명 보호를 위한 협업",
+  "episode_function": "두 경찰의 방식 차이와 삼각관계를 본격화하고 첫 공동 위기를 연다.",
+  "core_dist": {
+    "BOND": 10,
+    "CONFLICT": 18,
+    "DESIRE": 5,
+    "ESTABLISH": 3,
+    "HOOK": 12,
+    "INTRO": 5,
+    "LOSS": 10,
+    "ORACLE": 8,
+    "PERIL": 11,
+    "PUNISH": 2,
+    "RELIEF": 10,
+    "RESCUE": 2,
+    "REUNION": 2,
+    "REVELATION": 2,
+    "REVERSAL": 4,
+    "ROMANCE": 14
+  },
+  "by": "gpt-5.6-direct-reading"
+}

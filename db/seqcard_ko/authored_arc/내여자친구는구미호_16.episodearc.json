@@ -1,0 +1,68 @@
+{
+  "work_id": "내여자친구는구미호_16",
+  "episode_no": 16,
+  "scene_count": 62,
+  "sequence_count": 7,
+  "dramatic_question": "어떤 희생도 미호를 살릴 수 없을 때 두 사람의 사랑은 소멸을 넘어 예외를 만들 수 있는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        1
+      ],
+      "function": "회차의 관계 상태와 위기 조건을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        2,
+        3
+      ],
+      "function": "위협과 선택을 확대해 중간 전환을 만든다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        4,
+        5
+      ],
+      "function": "숨은 정보와 감정 선택을 충돌시킨다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        6,
+        7
+      ],
+      "function": "결정적 전환과 다음 회차 훅을 완성한다."
+    }
+  ],
+  "entry_state": "대웅이 미호의 마지막 한 꼬리와 계속되는 죽음을 직접 본다.",
+  "exit_state": "미호가 한 꼬리로 돌아오고 대웅이 그 차이를 그대로 받아들인다.",
+  "turning_point": {
+    "seq_index": 5,
+    "desc": "처음 꼬리를 본 장소에서 둘이 관계의 시작을 되짚고 미호가 사라진 뒤 동주가 하늘의 예외를 묻는다."
+  },
+  "central_conflict_axis": "상대를 살리려는 사랑 대 한 사람의 죽음을 전제로 한 인간화 규칙",
+  "episode_function": "대웅의 즉각적 희생 의지와 마지막 하루를 통해 사랑의 진위를 완성하고, 삼신의 예외로 한 꼬리 미호가 귀환하는 종결 회차.",
+  "core_dist": {
+    "BOND": 9,
+    "CONFLICT": 5,
+    "DESIRE": 8,
+    "ESTABLISH": 2,
+    "HOOK": 10,
+    "INTRO": 2,
+    "LOSS": 23,
+    "ORACLE": 12,
+    "PERIL": 6,
+    "PUNISH": 1,
+    "RELIEF": 9,
+    "RESCUE": 1,
+    "REUNION": 6,
+    "REVELATION": 9,
+    "REVERSAL": 4,
+    "ROMANCE": 17
+  },
+  "by": "gpt-5.6-direct-reading"
+}

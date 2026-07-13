@@ -1,0 +1,68 @@
+{
+  "work_id": "내여자친구는구미호_04",
+  "episode_no": 4,
+  "scene_count": 53,
+  "sequence_count": 7,
+  "dramatic_question": "대웅은 자신이 밀어낸 미호를 괴물 모습까지 받아들이며 구할 것인가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        1
+      ],
+      "function": "상황과 욕망을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        2,
+        3
+      ],
+      "function": "압력과 관계 갈등을 확대한다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        4,
+        5
+      ],
+      "function": "결정적 정보·선택으로 상태를 뒤집는다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        6,
+        7
+      ],
+      "function": "회차의 새 상태와 다음 질문을 봉인한다."
+    }
+  ],
+  "entry_state": "미호가 사라진 빈 숙직실",
+  "exit_state": "미호를 구해 재동거하지만 다시 취중 이별을 현실로 만든 상태",
+  "turning_point": {
+    "seq_index": 1,
+    "desc": "대웅이 물 위에서 약해진 미호를 찾아 감싸 안고 구한다."
+  },
+  "central_conflict_axis": "보호 본능 대 차이를 두려워하는 관계 방어",
+  "episode_function": "미호가 사라진 빈 숙직실에서 미호를 구해 재동거하지만 다시 취중 이별을 현실로 만든 상태로 이동시키는 회차.",
+  "core_dist": {
+    "BOND": 11,
+    "CONFLICT": 16,
+    "DESIRE": 14,
+    "ESTABLISH": 1,
+    "HOOK": 9,
+    "INTRO": 2,
+    "LOSS": 10,
+    "ORACLE": 7,
+    "PERIL": 7,
+    "PUNISH": 2,
+    "RELIEF": 11,
+    "RESCUE": 2,
+    "REUNION": 1,
+    "REVELATION": 1,
+    "REVERSAL": 3,
+    "ROMANCE": 9
+  },
+  "by": "gpt-5.6-direct-reading"
+}

@@ -1,0 +1,24 @@
+{
+  "work_id": "좋은사람_03",
+  "scene_count": 64,
+  "core_dist": {
+    "BOND": 12,
+    "CONFLICT": 11,
+    "DESIRE": 10,
+    "ESTABLISH": 9,
+    "HOOK": 9,
+    "INTRO": 9,
+    "LOSS": 8,
+    "ORACLE": 13,
+    "PERIL": 3,
+    "PUNISH": 4,
+    "RELIEF": 9,
+    "RESCUE": 2,
+    "REUNION": 4,
+    "REVELATION": 4,
+    "REVERSAL": 5,
+    "ROMANCE": 16
+  },
+  "episode_function": "태평의 폭력 통제와 두 경찰의 2년 후 재진입을 준비한다.",
+  "by": "gpt-5.6-direct-reading"
+}

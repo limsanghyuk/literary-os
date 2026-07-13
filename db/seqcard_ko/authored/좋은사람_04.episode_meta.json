@@ -1,0 +1,24 @@
+{
+  "work_id": "좋은사람_04",
+  "scene_count": 59,
+  "core_dist": {
+    "BOND": 10,
+    "CONFLICT": 18,
+    "DESIRE": 5,
+    "ESTABLISH": 3,
+    "HOOK": 12,
+    "INTRO": 5,
+    "LOSS": 10,
+    "ORACLE": 8,
+    "PERIL": 11,
+    "PUNISH": 2,
+    "RELIEF": 10,
+    "RESCUE": 2,
+    "REUNION": 2,
+    "REVELATION": 2,
+    "REVERSAL": 4,
+    "ROMANCE": 14
+  },
+  "episode_function": "두 경찰의 방식 차이와 삼각관계를 본격화하고 첫 공동 위기를 연다.",
+  "by": "gpt-5.6-direct-reading"
+}

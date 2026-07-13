@@ -1,0 +1,22 @@
+{
+  "work_id": "내여자친구는구미호_13",
+  "scene_count": 55,
+  "core_dist": {
+    "BOND": 11,
+    "CONFLICT": 17,
+    "DESIRE": 11,
+    "HOOK": 6,
+    "INTRO": 2,
+    "LOSS": 17,
+    "ORACLE": 12,
+    "PERIL": 1,
+    "PUNISH": 4,
+    "RELIEF": 8,
+    "RESCUE": 1,
+    "REVELATION": 6,
+    "REVERSAL": 2,
+    "ROMANCE": 12
+  },
+  "episode_function": "죽음 규칙을 안 두 사람이 남은 시간을 추억으로 채운 뒤 공항에서 한 사람만 사는 양자택일을 거부할 결정을 준비하는 회차.",
+  "by": "gpt-5.6-direct-reading"
+}

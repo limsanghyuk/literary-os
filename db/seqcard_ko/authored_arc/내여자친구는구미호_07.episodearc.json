@@ -1,0 +1,66 @@
+{
+  "work_id": "내여자친구는구미호_07",
+  "episode_no": 7,
+  "scene_count": 41,
+  "sequence_count": 6,
+  "dramatic_question": "미호가 인간의 이름·직업·선물을 얻을수록 비극적 결말은 더 가까워지는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        1
+      ],
+      "function": "상황과 욕망을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        2,
+        3
+      ],
+      "function": "압력과 관계 갈등을 확대한다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        4,
+        4
+      ],
+      "function": "결정적 정보·선택으로 상태를 뒤집는다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        5,
+        6
+      ],
+      "function": "회차의 새 상태와 다음 질문을 봉인한다."
+    }
+  ],
+  "entry_state": "혜인 앞에서 공개된 여자친구 계약",
+  "exit_state": "사람 같은 일상을 누리지만 인어공주 결말과 데이트 약속이 비극을 예고하는 상태",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "동주의 인어공주 결말 은폐와 대웅의 미호 찾기가 실제 데이트로 연결된다."
+  },
+  "central_conflict_axis": "인간 생활의 성취 대 사랑하는 비인간 존재의 소멸 규칙",
+  "episode_function": "혜인 앞에서 공개된 여자친구 계약에서 사람 같은 일상을 누리지만 인어공주 결말과 데이트 약속이 비극을 예고하는 상태로 이동시키는 회차.",
+  "core_dist": {
+    "BOND": 11,
+    "CONFLICT": 8,
+    "DESIRE": 10,
+    "HOOK": 5,
+    "INTRO": 6,
+    "LOSS": 4,
+    "ORACLE": 5,
+    "PERIL": 4,
+    "PUNISH": 3,
+    "RELIEF": 6,
+    "REUNION": 1,
+    "REVELATION": 2,
+    "REVERSAL": 1,
+    "ROMANCE": 16
+  },
+  "by": "gpt-5.6-direct-reading"
+}

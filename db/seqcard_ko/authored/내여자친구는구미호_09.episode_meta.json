@@ -1,0 +1,22 @@
+{
+  "work_id": "내여자친구는구미호_09",
+  "scene_count": 50,
+  "core_dist": {
+    "BOND": 6,
+    "CONFLICT": 18,
+    "DESIRE": 6,
+    "ESTABLISH": 4,
+    "HOOK": 11,
+    "INTRO": 1,
+    "LOSS": 4,
+    "ORACLE": 7,
+    "PERIL": 12,
+    "PUNISH": 4,
+    "RELIEF": 7,
+    "REUNION": 1,
+    "REVELATION": 12,
+    "ROMANCE": 7
+  },
+  "episode_function": "첫 꼬리 소멸로 인간화의 죽음성을 증명하고, 혜인의 병원 함정 때문에 미호가 대웅을 보호하려 먼저 사라지게 만드는 회차.",
+  "by": "gpt-5.6-direct-reading"
+}

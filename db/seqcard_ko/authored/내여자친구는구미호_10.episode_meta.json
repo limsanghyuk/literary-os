@@ -1,0 +1,24 @@
+{
+  "work_id": "내여자친구는구미호_10",
+  "scene_count": 53,
+  "core_dist": {
+    "BOND": 8,
+    "CONFLICT": 13,
+    "DESIRE": 9,
+    "ESTABLISH": 1,
+    "HOOK": 6,
+    "INTRO": 6,
+    "LOSS": 9,
+    "ORACLE": 5,
+    "PERIL": 7,
+    "PUNISH": 4,
+    "RELIEF": 10,
+    "RESCUE": 2,
+    "REUNION": 2,
+    "REVELATION": 6,
+    "REVERSAL": 4,
+    "ROMANCE": 14
+  },
+  "episode_function": "대웅이 괴물 규정을 거부해 미호를 붙잡고 박선주 신분·영화 대역·혜인의 반지 조작을 통해 인간화와 정체 위협을 함께 확대하는 회차.",
+  "by": "gpt-5.6-direct-reading"
+}

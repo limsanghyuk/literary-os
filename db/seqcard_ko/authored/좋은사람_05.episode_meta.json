@@ -1,0 +1,24 @@
+{
+  "work_id": "좋은사람_05",
+  "scene_count": 60,
+  "core_dist": {
+    "BOND": 13,
+    "CONFLICT": 6,
+    "DESIRE": 5,
+    "ESTABLISH": 5,
+    "HOOK": 13,
+    "INTRO": 4,
+    "LOSS": 12,
+    "ORACLE": 9,
+    "PERIL": 8,
+    "PUNISH": 3,
+    "RELIEF": 11,
+    "RESCUE": 4,
+    "REUNION": 2,
+    "REVELATION": 6,
+    "REVERSAL": 4,
+    "ROMANCE": 15
+  },
+  "episode_function": "지우의 트라우마를 주 사건으로 전환하고 연애 감정을 공동 위험에 결박한다.",
+  "by": "gpt-5.6-direct-reading"
+}

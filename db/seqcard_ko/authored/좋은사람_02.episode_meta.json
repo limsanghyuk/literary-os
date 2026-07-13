@@ -1,0 +1,24 @@
+{
+  "work_id": "좋은사람_02",
+  "scene_count": 58,
+  "core_dist": {
+    "BOND": 10,
+    "CONFLICT": 14,
+    "DESIRE": 9,
+    "ESTABLISH": 4,
+    "HOOK": 9,
+    "INTRO": 6,
+    "LOSS": 12,
+    "ORACLE": 11,
+    "PERIL": 5,
+    "PUNISH": 3,
+    "RELIEF": 14,
+    "RESCUE": 1,
+    "REUNION": 2,
+    "REVELATION": 4,
+    "REVERSAL": 3,
+    "ROMANCE": 9
+  },
+  "episode_function": "현재 인물망을 결합하고 봉두 살인으로 수사·경찰 성장축을 발화한다.",
+  "by": "gpt-5.6-direct-reading"
+}

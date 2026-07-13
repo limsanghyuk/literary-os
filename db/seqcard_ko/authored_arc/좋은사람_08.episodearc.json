@@ -1,0 +1,67 @@
+{
+  "work_id": "좋은사람_08",
+  "episode_no": 8,
+  "scene_count": 62,
+  "sequence_count": 7,
+  "dramatic_question": "준필과 순정의 결혼 약속은 동철이 발견한 뒤바뀐 혈연 진실을 견딜 수 있는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        1
+      ],
+      "function": "기원 상태와 회차의 핵심 욕망을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        2,
+        3
+      ],
+      "function": "관계·사건 압력을 확대해 기존 행동 방식을 흔든다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        4,
+        5
+      ],
+      "function": "결정적 정보 또는 선택으로 가치 상태를 뒤집는다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        6,
+        7
+      ],
+      "function": "새 관계·수사 상태를 봉인하고 다음 회차 질문을 연다."
+    }
+  ],
+  "entry_state": "준필과 순정은 첫키스 직후 결혼을 약속하고 태평은 실연한다.",
+  "exit_state": "동철이 회중시계와 상진의 폭로를 통해 준필과 태평의 정체가 뒤바뀌었음을 깨닫고 쓰러진다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "상진이 준필의 친부를 폭로하고 동철이 태평의 회중시계를 대조해 정체 교환을 확신한다."
+  },
+  "central_conflict_axis": "현재 가족과 결혼의 행복 대 과거 범죄가 만든 가짜 혈연과 신분",
+  "episode_function": "전반부 멜로 관계를 정리하고 후반부를 이끌 출생 비밀을 동철에게 완전 공개한다.",
+  "core_dist": {
+    "BOND": 16,
+    "CONFLICT": 10,
+    "DESIRE": 3,
+    "ESTABLISH": 7,
+    "HOOK": 8,
+    "INTRO": 3,
+    "LOSS": 14,
+    "ORACLE": 19,
+    "PERIL": 5,
+    "RELIEF": 13,
+    "RESCUE": 2,
+    "REUNION": 3,
+    "REVELATION": 12,
+    "REVERSAL": 2,
+    "ROMANCE": 7
+  },
+  "by": "gpt-5.6-direct-reading"
+}

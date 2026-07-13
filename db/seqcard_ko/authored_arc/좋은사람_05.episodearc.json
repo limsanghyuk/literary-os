@@ -1,0 +1,68 @@
+{
+  "work_id": "좋은사람_05",
+  "episode_no": 5,
+  "scene_count": 60,
+  "sequence_count": 7,
+  "dramatic_question": "연애 경쟁과 지우의 과거 범죄 사건은 네 사람의 감정을 어떻게 실제 위험으로 바꾸는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        1
+      ],
+      "function": "기원 상태와 회차의 핵심 욕망을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        2,
+        3
+      ],
+      "function": "관계·사건 압력을 확대해 기존 행동 방식을 흔든다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        4,
+        5
+      ],
+      "function": "결정적 정보 또는 선택으로 가치 상태를 뒤집는다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        6,
+        7
+      ],
+      "function": "새 관계·수사 상태를 봉인하고 다음 회차 질문을 연다."
+    }
+  ],
+  "entry_state": "오락실 사건에서 태평과 준필은 각기 제압과 구조에 성공한다.",
+  "exit_state": "지우가 과거 가해자와 총을 두고 싸우고 공사현장에 총성이 울린다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "지우가 과거 가해자와 직접 대면하고 태평의 개입 속에서 총성이 발생한다."
+  },
+  "central_conflict_axis": "숨은 상처와 말하지 못한 사랑 대 사건 현장에서 요구되는 공개 선택",
+  "episode_function": "지우의 트라우마를 주 사건으로 전환하고 연애 감정을 공동 위험에 결박한다.",
+  "core_dist": {
+    "BOND": 13,
+    "CONFLICT": 6,
+    "DESIRE": 5,
+    "ESTABLISH": 5,
+    "HOOK": 13,
+    "INTRO": 4,
+    "LOSS": 12,
+    "ORACLE": 9,
+    "PERIL": 8,
+    "PUNISH": 3,
+    "RELIEF": 11,
+    "RESCUE": 4,
+    "REUNION": 2,
+    "REVELATION": 6,
+    "REVERSAL": 4,
+    "ROMANCE": 15
+  },
+  "by": "gpt-5.6-direct-reading"
+}

@@ -1,0 +1,24 @@
+{
+  "work_id": "내여자친구는구미호_15",
+  "scene_count": 59,
+  "core_dist": {
+    "BOND": 10,
+    "CONFLICT": 15,
+    "DESIRE": 6,
+    "ESTABLISH": 1,
+    "HOOK": 17,
+    "INTRO": 2,
+    "LOSS": 17,
+    "ORACLE": 10,
+    "PERIL": 5,
+    "PUNISH": 2,
+    "RELIEF": 8,
+    "RESCUE": 1,
+    "REUNION": 5,
+    "REVELATION": 8,
+    "REVERSAL": 2,
+    "ROMANCE": 9
+  },
+  "episode_function": "가짜 결혼과 새 삶의 연기로 대웅을 떼어내려던 미호가 창고의 추억을 버리지 못하고 마지막 한 꼬리를 들키는 회차.",
+  "by": "gpt-5.6-direct-reading"
+}

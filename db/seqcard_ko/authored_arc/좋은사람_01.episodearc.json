@@ -1,0 +1,68 @@
+{
+  "work_id": "좋은사람_01",
+  "episode_no": 1,
+  "scene_count": 64,
+  "sequence_count": 8,
+  "dramatic_question": "두 아이의 정체가 뒤바뀐 비극은 성장한 준필과 태평의 첫 대립에 어떻게 되돌아오는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        2
+      ],
+      "function": "기원 상태와 회차의 핵심 욕망을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        3,
+        4
+      ],
+      "function": "관계·사건 압력을 확대해 기존 행동 방식을 흔든다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        5,
+        6
+      ],
+      "function": "결정적 정보 또는 선택으로 가치 상태를 뒤집는다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        7,
+        8
+      ],
+      "function": "새 관계·수사 상태를 봉인하고 다음 회차 질문을 연다."
+    }
+  ],
+  "entry_state": "한태만의 어린 아들 한기영과 박일우의 가족이 각자의 삶을 살고 있다.",
+  "exit_state": "기영은 박준필이라는 엘리트 경찰 후보로, 태평은 버려진 구조자로 성장해 순정 앞에서 처음 충돌한다.",
+  "turning_point": {
+    "seq_index": 3,
+    "desc": "구상진이 죽은 박일우의 아들과 한기영의 정체를 바꾸고 오동철이 잘못된 아이를 데려간다."
+  },
+  "central_conflict_axis": "뒤바뀐 혈연과 양육으로 만들어진 신분 대 개인이 선택한 좋은 사람의 삶",
+  "episode_function": "시즌의 정체 교환 원죄와 두 남자의 현재 경쟁을 동시에 세운 기원 회차.",
+  "core_dist": {
+    "BOND": 12,
+    "CONFLICT": 9,
+    "DESIRE": 7,
+    "ESTABLISH": 9,
+    "HOOK": 14,
+    "INTRO": 10,
+    "LOSS": 15,
+    "ORACLE": 13,
+    "PERIL": 12,
+    "PUNISH": 4,
+    "RELIEF": 3,
+    "RESCUE": 4,
+    "REUNION": 2,
+    "REVELATION": 2,
+    "REVERSAL": 6,
+    "ROMANCE": 6
+  },
+  "by": "gpt-5.6-direct-reading"
+}

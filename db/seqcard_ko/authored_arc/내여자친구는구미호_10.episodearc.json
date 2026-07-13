@@ -1,0 +1,68 @@
+{
+  "work_id": "내여자친구는구미호_10",
+  "episode_no": 10,
+  "scene_count": 53,
+  "sequence_count": 7,
+  "dramatic_question": "대웅이 정체와 상관없이 미호를 붙잡아도 혜인의 인간적 공격과 동주의 새 신분 계획을 견딜 수 있는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        1
+      ],
+      "function": "회차의 관계 상태와 위기 조건을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        2,
+        3
+      ],
+      "function": "위협과 선택을 확대해 중간 전환을 만든다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        4,
+        5
+      ],
+      "function": "숨은 정보와 감정 선택을 충돌시킨다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        6,
+        7
+      ],
+      "function": "결정적 전환과 다음 회차 훅을 완성한다."
+    }
+  ],
+  "entry_state": "미호가 혜인의 위협 때문에 사라지겠다고 전화하고 대웅이 찾아 나선다.",
+  "exit_state": "반지를 잃은 미호가 첫 스턴트에서 추락할 위험에 놓인다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "혜인이 반지를 빼 구슬을 흔들고 첫 스턴트 촬영에서 미호를 추락 위험에 빠뜨린다."
+  },
+  "central_conflict_axis": "상대를 살리려는 사랑 대 한 사람의 죽음을 전제로 한 인간화 규칙",
+  "episode_function": "대웅이 괴물 규정을 거부해 미호를 붙잡고 박선주 신분·영화 대역·혜인의 반지 조작을 통해 인간화와 정체 위협을 함께 확대하는 회차.",
+  "core_dist": {
+    "BOND": 8,
+    "CONFLICT": 13,
+    "DESIRE": 9,
+    "ESTABLISH": 1,
+    "HOOK": 6,
+    "INTRO": 6,
+    "LOSS": 9,
+    "ORACLE": 5,
+    "PERIL": 7,
+    "PUNISH": 4,
+    "RELIEF": 10,
+    "RESCUE": 2,
+    "REUNION": 2,
+    "REVELATION": 6,
+    "REVERSAL": 4,
+    "ROMANCE": 14
+  },
+  "by": "gpt-5.6-direct-reading"
+}

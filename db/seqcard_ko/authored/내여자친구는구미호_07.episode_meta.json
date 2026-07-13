@@ -1,0 +1,22 @@
+{
+  "work_id": "내여자친구는구미호_07",
+  "scene_count": 41,
+  "core_dist": {
+    "BOND": 11,
+    "CONFLICT": 8,
+    "DESIRE": 10,
+    "HOOK": 5,
+    "INTRO": 6,
+    "LOSS": 4,
+    "ORACLE": 5,
+    "PERIL": 4,
+    "PUNISH": 3,
+    "RELIEF": 6,
+    "REUNION": 1,
+    "REVELATION": 2,
+    "REVERSAL": 1,
+    "ROMANCE": 16
+  },
+  "episode_function": "혜인 앞에서 공개된 여자친구 계약에서 사람 같은 일상을 누리지만 인어공주 결말과 데이트 약속이 비극을 예고하는 상태로 이동시키는 회차.",
+  "by": "gpt-5.6-direct-reading"
+}

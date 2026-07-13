@@ -1,0 +1,23 @@
+{
+  "work_id": "좋은사람_07",
+  "scene_count": 58,
+  "core_dist": {
+    "BOND": 9,
+    "CONFLICT": 13,
+    "DESIRE": 7,
+    "ESTABLISH": 5,
+    "HOOK": 9,
+    "INTRO": 3,
+    "LOSS": 10,
+    "ORACLE": 12,
+    "PERIL": 6,
+    "PUNISH": 2,
+    "RELIEF": 7,
+    "RESCUE": 1,
+    "REUNION": 2,
+    "REVELATION": 12,
+    "ROMANCE": 18
+  },
+  "episode_function": "두 남자를 경찰 동료로 가까워지게 하면서 멜로에서는 준필의 승리를 확정한다.",
+  "by": "gpt-5.6-direct-reading"
+}

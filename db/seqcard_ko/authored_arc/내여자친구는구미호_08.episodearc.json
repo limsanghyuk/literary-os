@@ -1,0 +1,66 @@
+{
+  "work_id": "내여자친구는구미호_08",
+  "episode_no": 8,
+  "scene_count": 46,
+  "sequence_count": 6,
+  "dramatic_question": "대웅은 미호를 사람처럼 사랑하면서도 다르다는 이유로 끝까지 부정할 것인가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        1
+      ],
+      "function": "상황과 욕망을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        2,
+        3
+      ],
+      "function": "압력과 관계 갈등을 확대한다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        4,
+        4
+      ],
+      "function": "결정적 정보·선택으로 상태를 뒤집는다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        5,
+        6
+      ],
+      "function": "회차의 새 상태와 다음 질문을 봉인한다."
+    }
+  ],
+  "entry_state": "비극을 감춘 첫 데이트",
+  "exit_state": "가족에게 관계 종료를 명령받아 실제 선택을 피할 수 없는 상태",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "할아버지가 미호의 무배경을 문제 삼아 대웅에게 헤어지라고 명령한다."
+  },
+  "central_conflict_axis": "감정으로 축적된 연애 대 인간 사회가 요구하는 배경·정상성",
+  "episode_function": "비극을 감춘 첫 데이트에서 가족에게 관계 종료를 명령받아 실제 선택을 피할 수 없는 상태로 이동시키는 회차.",
+  "core_dist": {
+    "BOND": 11,
+    "CONFLICT": 14,
+    "DESIRE": 10,
+    "HOOK": 2,
+    "INTRO": 4,
+    "LOSS": 6,
+    "ORACLE": 7,
+    "PERIL": 3,
+    "PUNISH": 3,
+    "RELIEF": 8,
+    "RESCUE": 1,
+    "REUNION": 1,
+    "REVELATION": 3,
+    "ROMANCE": 19
+  },
+  "by": "gpt-5.6-direct-reading"
+}

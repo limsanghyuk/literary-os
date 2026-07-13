@@ -1,0 +1,24 @@
+{
+  "work_id": "내여자친구는구미호_11",
+  "scene_count": 50,
+  "core_dist": {
+    "BOND": 9,
+    "CONFLICT": 13,
+    "DESIRE": 15,
+    "ESTABLISH": 2,
+    "HOOK": 7,
+    "INTRO": 3,
+    "LOSS": 6,
+    "ORACLE": 8,
+    "PERIL": 9,
+    "PUNISH": 3,
+    "RELIEF": 3,
+    "RESCUE": 3,
+    "REUNION": 2,
+    "REVELATION": 5,
+    "REVERSAL": 4,
+    "ROMANCE": 8
+  },
+  "episode_function": "첫 스턴트 추락과 두 번째 꼬리 소멸을 거쳐 미호가 독립 생활을 준비하지만 대웅의 조건 없는 고백으로 연인 관계를 확정하는 회차.",
+  "by": "gpt-5.6-direct-reading"
+}

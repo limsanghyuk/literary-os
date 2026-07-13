@@ -1,0 +1,68 @@
+{
+  "work_id": "내여자친구는구미호_11",
+  "episode_no": 11,
+  "scene_count": 50,
+  "sequence_count": 7,
+  "dramatic_question": "미호는 대웅 없는 인간 삶을 준비할 것인가, 대웅의 조건 없는 사랑을 믿고 함께할 것인가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        1
+      ],
+      "function": "회차의 관계 상태와 위기 조건을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        2,
+        3
+      ],
+      "function": "위협과 선택을 확대해 중간 전환을 만든다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        4,
+        5
+      ],
+      "function": "숨은 정보와 감정 선택을 충돌시킨다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        6,
+        7
+      ],
+      "function": "결정적 전환과 다음 회차 훅을 완성한다."
+    }
+  ],
+  "entry_state": "혜인의 반지 조작 속에서 미호가 첫 스턴트 점프를 시작한다.",
+  "exit_state": "대웅이 미호를 사랑한다고 고백하고 그녀의 인간화 계획을 공유한다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "대웅이 박선주를 찾아가 질투를 드러내고 조건 없는 사랑을 고백해 인간화 비밀까지 공유한다."
+  },
+  "central_conflict_axis": "상대를 살리려는 사랑 대 한 사람의 죽음을 전제로 한 인간화 규칙",
+  "episode_function": "첫 스턴트 추락과 두 번째 꼬리 소멸을 거쳐 미호가 독립 생활을 준비하지만 대웅의 조건 없는 고백으로 연인 관계를 확정하는 회차.",
+  "core_dist": {
+    "BOND": 9,
+    "CONFLICT": 13,
+    "DESIRE": 15,
+    "ESTABLISH": 2,
+    "HOOK": 7,
+    "INTRO": 3,
+    "LOSS": 6,
+    "ORACLE": 8,
+    "PERIL": 9,
+    "PUNISH": 3,
+    "RELIEF": 3,
+    "RESCUE": 3,
+    "REUNION": 2,
+    "REVELATION": 5,
+    "REVERSAL": 4,
+    "ROMANCE": 8
+  },
+  "by": "gpt-5.6-direct-reading"
+}

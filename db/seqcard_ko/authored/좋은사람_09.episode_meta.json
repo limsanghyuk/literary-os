@@ -1,0 +1,21 @@
+{
+  "work_id": "좋은사람_09",
+  "scene_count": 62,
+  "core_dist": {
+    "BOND": 13,
+    "CONFLICT": 11,
+    "ESTABLISH": 3,
+    "HOOK": 12,
+    "LOSS": 20,
+    "ORACLE": 14,
+    "PERIL": 16,
+    "PUNISH": 3,
+    "RELIEF": 6,
+    "REUNION": 1,
+    "REVELATION": 10,
+    "REVERSAL": 1,
+    "ROMANCE": 14
+  },
+  "episode_function": "정체 교환을 오동철의 확신으로 승격하고, 진실 고백 직전 그를 제거해 살인 수사와 가족 비밀을 결합한다.",
+  "by": "gpt-5.6-direct-reading"
+}

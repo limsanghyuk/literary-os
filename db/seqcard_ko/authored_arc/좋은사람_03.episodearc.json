@@ -1,0 +1,68 @@
+{
+  "work_id": "좋은사람_03",
+  "episode_no": 3,
+  "scene_count": 64,
+  "sequence_count": 8,
+  "dramatic_question": "태평은 복수를 위해 폭력을 쓰는 사람에서 법 안에서 좋은 경찰이 될 사람으로 변할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        2
+      ],
+      "function": "기원 상태와 회차의 핵심 욕망을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        3,
+        4
+      ],
+      "function": "관계·사건 압력을 확대해 기존 행동 방식을 흔든다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        5,
+        6
+      ],
+      "function": "결정적 정보 또는 선택으로 가치 상태를 뒤집는다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        7,
+        8
+      ],
+      "function": "새 관계·수사 상태를 봉인하고 다음 회차 질문을 연다."
+    }
+  ],
+  "entry_state": "태평은 봉두를 죽인 자를 주먹으로 처벌하려 하고 준필은 실습을 마무리한다.",
+  "exit_state": "2년 뒤 준필은 강력반장, 태평은 순경으로 같은 경찰 세계에 들어온다.",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "태평이 전과자가 되지 않기 위해 나종팔에게 고개 숙여 사과하며 분노를 통제한다."
+  },
+  "central_conflict_axis": "즉각적 폭력 응징 대 목적을 위해 자제하고 제도 안으로 들어가는 선택",
+  "episode_function": "태평의 폭력 통제와 두 경찰의 2년 후 재진입을 준비한다.",
+  "core_dist": {
+    "BOND": 12,
+    "CONFLICT": 11,
+    "DESIRE": 10,
+    "ESTABLISH": 9,
+    "HOOK": 9,
+    "INTRO": 9,
+    "LOSS": 8,
+    "ORACLE": 13,
+    "PERIL": 3,
+    "PUNISH": 4,
+    "RELIEF": 9,
+    "RESCUE": 2,
+    "REUNION": 4,
+    "REVELATION": 4,
+    "REVERSAL": 5,
+    "ROMANCE": 16
+  },
+  "by": "gpt-5.6-direct-reading"
+}

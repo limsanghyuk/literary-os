@@ -1,0 +1,23 @@
+{
+  "work_id": "내여자친구는구미호_06",
+  "scene_count": 43,
+  "core_dist": {
+    "BOND": 13,
+    "CONFLICT": 14,
+    "DESIRE": 8,
+    "ESTABLISH": 1,
+    "HOOK": 4,
+    "INTRO": 3,
+    "LOSS": 4,
+    "ORACLE": 6,
+    "PERIL": 7,
+    "PUNISH": 1,
+    "RELIEF": 3,
+    "RESCUE": 1,
+    "REVELATION": 1,
+    "REVERSAL": 1,
+    "ROMANCE": 19
+  },
+  "episode_function": "100일을 버티기 위한 비연애 계약에서 미호의 인간화 통증과 대웅의 질투가 관계의 진심을 드러낸 상태로 이동시키는 회차.",
+  "by": "gpt-5.6-direct-reading"
+}

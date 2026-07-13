@@ -1,0 +1,66 @@
+{
+  "work_id": "내여자친구는구미호_02",
+  "episode_no": 2,
+  "scene_count": 40,
+  "sequence_count": 6,
+  "dramatic_question": "대웅과 미호는 공포와 먹이 거래를 넘어 친구가 될 수 있는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        1
+      ],
+      "function": "상황과 욕망을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        2,
+        3
+      ],
+      "function": "압력과 관계 갈등을 확대한다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        4,
+        4
+      ],
+      "function": "결정적 정보·선택으로 상태를 뒤집는다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        5,
+        6
+      ],
+      "function": "회차의 새 상태와 다음 질문을 봉인한다."
+    }
+  ],
+  "entry_state": "서로를 괴물과 배신자로 의심하는 동거",
+  "exit_state": "이름과 호이호이 의식을 공유한 친구이자 삼각관계의 오해 대상",
+  "turning_point": {
+    "seq_index": 4,
+    "desc": "대웅이 구미호에게 미호라는 이름을 주고 자신의 친구로 소개한다."
+  },
+  "central_conflict_axis": "인간 편견·사회 제도 대 미호의 솔직한 보호",
+  "episode_function": "서로를 괴물과 배신자로 의심하는 동거에서 이름과 호이호이 의식을 공유한 친구이자 삼각관계의 오해 대상로 이동시키는 회차.",
+  "core_dist": {
+    "BOND": 8,
+    "CONFLICT": 16,
+    "DESIRE": 6,
+    "ESTABLISH": 1,
+    "HOOK": 5,
+    "INTRO": 2,
+    "LOSS": 7,
+    "ORACLE": 3,
+    "PERIL": 6,
+    "PUNISH": 5,
+    "RELIEF": 9,
+    "REVELATION": 6,
+    "REVERSAL": 1,
+    "ROMANCE": 5
+  },
+  "by": "gpt-5.6-direct-reading"
+}

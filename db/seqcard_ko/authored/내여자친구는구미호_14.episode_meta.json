@@ -1,0 +1,23 @@
+{
+  "work_id": "내여자친구는구미호_14",
+  "scene_count": 49,
+  "core_dist": {
+    "BOND": 15,
+    "CONFLICT": 10,
+    "DESIRE": 5,
+    "ESTABLISH": 1,
+    "HOOK": 7,
+    "LOSS": 15,
+    "ORACLE": 8,
+    "PERIL": 8,
+    "PUNISH": 2,
+    "RELIEF": 7,
+    "RESCUE": 2,
+    "REUNION": 3,
+    "REVELATION": 4,
+    "REVERSAL": 4,
+    "ROMANCE": 7
+  },
+  "episode_function": "생명을 반씩 나눈 실험이 반인반요 실패로 끝나고, 대웅이 미호를 살리기 위해 사랑을 숨긴 채 강제 이별을 실행하는 회차.",
+  "by": "gpt-5.6-direct-reading"
+}

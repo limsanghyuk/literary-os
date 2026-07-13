@@ -1,0 +1,23 @@
+{
+  "work_id": "좋은사람_12",
+  "scene_count": 55,
+  "core_dist": {
+    "BOND": 14,
+    "CONFLICT": 11,
+    "DESIRE": 8,
+    "ESTABLISH": 5,
+    "HOOK": 7,
+    "LOSS": 21,
+    "ORACLE": 7,
+    "PERIL": 11,
+    "PUNISH": 5,
+    "RELIEF": 2,
+    "RESCUE": 3,
+    "REUNION": 1,
+    "REVELATION": 4,
+    "REVERSAL": 3,
+    "ROMANCE": 8
+  },
+  "episode_function": "준필의 사직·이별·조직 잠입을 하나의 강제 굴복으로 만들고 후반부 위장수사의 출발점을 연다.",
+  "by": "gpt-5.6-direct-reading"
+}

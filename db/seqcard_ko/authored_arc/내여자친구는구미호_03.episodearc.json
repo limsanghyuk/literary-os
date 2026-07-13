@@ -1,0 +1,67 @@
+{
+  "work_id": "내여자친구는구미호_03",
+  "episode_no": 3,
+  "scene_count": 42,
+  "sequence_count": 6,
+  "dramatic_question": "대웅은 배우 꿈과 혜인에 대한 욕망 때문에 미호와의 약속을 버릴 것인가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        1
+      ],
+      "function": "상황과 욕망을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        2,
+        3
+      ],
+      "function": "압력과 관계 갈등을 확대한다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        4,
+        4
+      ],
+      "function": "결정적 정보·선택으로 상태를 뒤집는다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        5,
+        6
+      ],
+      "function": "회차의 새 상태와 다음 질문을 봉인한다."
+    }
+  ],
+  "entry_state": "혜인에게 미호와의 동행을 해명해야 하는 상태",
+  "exit_state": "미호를 물 위에 버리고 도망치다 여우비로 그녀의 슬픔을 깨달아 돌아설 문턱에 선 상태",
+  "turning_point": {
+    "seq_index": 6,
+    "desc": "대웅이 미호를 버리고 도망친 뒤 맑은 날 내리는 여우비를 보고 그녀가 울고 있음을 깨닫는다."
+  },
+  "central_conflict_axis": "인간 성공·짝사랑 욕망 대 생명을 나눈 미호와의 약속",
+  "episode_function": "혜인에게 미호와의 동행을 해명해야 하는 상태에서 미호를 물 위에 버리고 도망치다 여우비로 그녀의 슬픔을 깨달아 돌아설 문턱에 선 상태로 이동시키는 회차.",
+  "core_dist": {
+    "BOND": 9,
+    "CONFLICT": 12,
+    "DESIRE": 10,
+    "ESTABLISH": 3,
+    "HOOK": 5,
+    "INTRO": 2,
+    "LOSS": 6,
+    "ORACLE": 4,
+    "PERIL": 5,
+    "PUNISH": 3,
+    "RELIEF": 6,
+    "RESCUE": 3,
+    "REVELATION": 4,
+    "REVERSAL": 2,
+    "ROMANCE": 10
+  },
+  "by": "gpt-5.6-direct-reading"
+}

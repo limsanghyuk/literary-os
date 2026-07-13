@@ -1,0 +1,21 @@
+{
+  "work_id": "좋은사람_14",
+  "scene_count": 49,
+  "core_dist": {
+    "BOND": 19,
+    "CONFLICT": 15,
+    "DESIRE": 6,
+    "ESTABLISH": 2,
+    "HOOK": 7,
+    "LOSS": 20,
+    "ORACLE": 5,
+    "PERIL": 7,
+    "PUNISH": 4,
+    "RELIEF": 2,
+    "RESCUE": 1,
+    "REVELATION": 8,
+    "ROMANCE": 2
+  },
+  "episode_function": "태평을 유치장에 가두고 팀 신뢰를 붕괴시킨 뒤, 두 시계를 통해 가족 비밀의 객관적 증거를 제공한다.",
+  "by": "gpt-5.6-direct-reading"
+}

@@ -1,0 +1,66 @@
+{
+  "work_id": "내여자친구는구미호_09",
+  "episode_no": 9,
+  "scene_count": 50,
+  "sequence_count": 7,
+  "dramatic_question": "첫 죽음과 인간의 공포 앞에서 미호는 대웅에게 남을 수 있는가, 아니면 그를 지키기 위해 사라져야 하는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        1
+      ],
+      "function": "회차의 관계 상태와 위기 조건을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        2,
+        3
+      ],
+      "function": "위협과 선택을 확대해 중간 전환을 만든다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        4,
+        5
+      ],
+      "function": "숨은 정보와 감정 선택을 충돌시킨다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        6,
+        7
+      ],
+      "function": "결정적 전환과 다음 회차 훅을 완성한다."
+    }
+  ],
+  "entry_state": "대웅과 미호가 서로의 차이를 놓고 가족에게 강제로 분리된다.",
+  "exit_state": "미호가 대웅을 지키기 위해 사라지겠다고 통보한다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "혜인이 미호를 괴물로 규정하고 미호는 대웅을 보호하기 위해 먼저 사라지기로 한다."
+  },
+  "central_conflict_axis": "상대를 살리려는 사랑 대 한 사람의 죽음을 전제로 한 인간화 규칙",
+  "episode_function": "첫 꼬리 소멸로 인간화의 죽음성을 증명하고, 혜인의 병원 함정 때문에 미호가 대웅을 보호하려 먼저 사라지게 만드는 회차.",
+  "core_dist": {
+    "BOND": 6,
+    "CONFLICT": 18,
+    "DESIRE": 6,
+    "ESTABLISH": 4,
+    "HOOK": 11,
+    "INTRO": 1,
+    "LOSS": 4,
+    "ORACLE": 7,
+    "PERIL": 12,
+    "PUNISH": 4,
+    "RELIEF": 7,
+    "REUNION": 1,
+    "REVELATION": 12,
+    "ROMANCE": 7
+  },
+  "by": "gpt-5.6-direct-reading"
+}

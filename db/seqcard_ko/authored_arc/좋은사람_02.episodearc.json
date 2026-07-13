@@ -1,0 +1,68 @@
+{
+  "work_id": "좋은사람_02",
+  "episode_no": 2,
+  "scene_count": 58,
+  "sequence_count": 7,
+  "dramatic_question": "봉두의 죽음은 경찰이 되려는 두 남자를 어떤 방식으로 같은 사건에 묶는가?",
+  "act_structure": [
+    {
+      "act": "ACT1",
+      "seq_span": [
+        1,
+        1
+      ],
+      "function": "기원 상태와 회차의 핵심 욕망을 설정한다."
+    },
+    {
+      "act": "ACT2",
+      "seq_span": [
+        2,
+        3
+      ],
+      "function": "관계·사건 압력을 확대해 기존 행동 방식을 흔든다."
+    },
+    {
+      "act": "ACT3",
+      "seq_span": [
+        4,
+        5
+      ],
+      "function": "결정적 정보 또는 선택으로 가치 상태를 뒤집는다."
+    },
+    {
+      "act": "ACT4",
+      "seq_span": [
+        6,
+        7
+      ],
+      "function": "새 관계·수사 상태를 봉인하고 다음 회차 질문을 연다."
+    }
+  ],
+  "entry_state": "준필은 경찰대 현장실습생이고 태평은 순정의 관심을 얻으려는 무직 청년이다.",
+  "exit_state": "봉두의 시신 앞에서 태평과 준필이 감정과 절차를 대표하는 적대자로 맞선다.",
+  "turning_point": {
+    "seq_index": 7,
+    "desc": "봉두의 추락사가 살인 의혹으로 바뀌고 태평이 현장선에서 준필과 충돌한다."
+  },
+  "central_conflict_axis": "친구를 향한 감정적 정의 대 제도와 증거를 중시하는 경찰 정의",
+  "episode_function": "현재 인물망을 결합하고 봉두 살인으로 수사·경찰 성장축을 발화한다.",
+  "core_dist": {
+    "BOND": 10,
+    "CONFLICT": 14,
+    "DESIRE": 9,
+    "ESTABLISH": 4,
+    "HOOK": 9,
+    "INTRO": 6,
+    "LOSS": 12,
+    "ORACLE": 11,
+    "PERIL": 5,
+    "PUNISH": 3,
+    "RELIEF": 14,
+    "RESCUE": 1,
+    "REUNION": 2,
+    "REVELATION": 4,
+    "REVERSAL": 3,
+    "ROMANCE": 9
+  },
+  "by": "gpt-5.6-direct-reading"
+}

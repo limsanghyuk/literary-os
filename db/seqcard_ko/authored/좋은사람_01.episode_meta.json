@@ -1,0 +1,24 @@
+{
+  "work_id": "좋은사람_01",
+  "scene_count": 64,
+  "core_dist": {
+    "BOND": 12,
+    "CONFLICT": 9,
+    "DESIRE": 7,
+    "ESTABLISH": 9,
+    "HOOK": 14,
+    "INTRO": 10,
+    "LOSS": 15,
+    "ORACLE": 13,
+    "PERIL": 12,
+    "PUNISH": 4,
+    "RELIEF": 3,
+    "RESCUE": 4,
+    "REUNION": 2,
+    "REVELATION": 2,
+    "REVERSAL": 6,
+    "ROMANCE": 6
+  },
+  "episode_function": "시즌의 정체 교환 원죄와 두 남자의 현재 경쟁을 동시에 세운 기원 회차.",
+  "by": "gpt-5.6-direct-reading"
+}
