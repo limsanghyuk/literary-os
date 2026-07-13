@@ -1,0 +1,20 @@
+{
+  "work_id": "워킹맘_02",
+  "scene_count": 80,
+  "core_dist": {
+    "PUNISH": 16,
+    "PERIL": 13,
+    "CONFLICT": 12,
+    "DESIRE": 11,
+    "REVELATION": 7,
+    "LOSS": 5,
+    "BOND": 5,
+    "RELIEF": 4,
+    "HOOK": 3,
+    "ESTABLISH": 2,
+    "REVERSAL": 1,
+    "RESCUE": 1
+  },
+  "episode_function": "",
+  "by": "sonnet_reading"
+}

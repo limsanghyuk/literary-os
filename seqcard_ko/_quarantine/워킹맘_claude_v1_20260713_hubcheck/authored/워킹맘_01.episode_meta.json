@@ -1,0 +1,23 @@
+{
+  "work_id": "워킹맘_01",
+  "scene_count": 85,
+  "core_dist": {
+    "DESIRE": 15,
+    "CONFLICT": 14,
+    "PUNISH": 9,
+    "ESTABLISH": 7,
+    "REVELATION": 7,
+    "LOSS": 6,
+    "REVERSAL": 5,
+    "PERIL": 5,
+    "BOND": 4,
+    "HOOK": 4,
+    "RELIEF": 3,
+    "INTRO": 2,
+    "ORACLE": 2,
+    "ROMANCE": 1,
+    "REUNION": 1
+  },
+  "episode_function": "",
+  "by": "sonnet_reading"
+}

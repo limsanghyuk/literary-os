@@ -1,1 +1,22 @@
-{"work_id": "워킹맘_13", "scene_count": 74, "core_dist": {"DESIRE": 15, "PUNISH": 2, "CONFLICT": 17, "RELIEF": 13, "BOND": 4, "LOSS": 5, "ORACLE": 5, "ESTABLISH": 3, "PERIL": 3, "REVELATION": 3, "ROMANCE": 2, "REUNION": 1, "HOOK": 1}, "episode_function": "재성이 복실과 은밀한 계약(착수금)을 맺고 은지 결혼과 종만 가출 해결을 대가로 재결합을 노리는 이중 플롯이 본격화되며, 화보출장에서 정원과 가영의 로맨스가 짙어지는 동시에 재성의 훼방과 몰락이 반복돼 다음 회 '가영 임신설' 폭로로 이어지는 클리프행어를 심는다.", "by": "sonnet_reading"}
+{
+  "work_id": "워킹맘_13",
+  "scene_count": 74,
+  "core_dist": {
+    "RELIEF": 22,
+    "CONFLICT": 21,
+    "DESIRE": 19,
+    "ORACLE": 11,
+    "LOSS": 8,
+    "REVELATION": 7,
+    "BOND": 5,
+    "ROMANCE": 5,
+    "ESTABLISH": 3,
+    "PERIL": 3,
+    "HOOK": 3,
+    "PUNISH": 2,
+    "REUNION": 1,
+    "REVERSAL": 1
+  },
+  "episode_function": "",
+  "by": "gpt-5.6-ingest-regenerated-meta"
+}

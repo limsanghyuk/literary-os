@@ -2,50 +2,51 @@
   "work_id": "워킹맘_03",
   "episode_no": 3,
   "scene_count": 80,
-  "sequence_count": 12,
-  "dramatic_question": "이혼 소송은 어떤 방향으로 전개될 것인가?",
+  "sequence_count": 9,
+  "dramatic_question": "가영의 복직과 종만·복실의 결혼 선택은 가족의 방해를 넘어설 수 있는가?",
   "act_structure": [
     {
-      "act": "소송준비",
+      "act": "setup",
       "seq_span": [
         1,
-        4
+        3
       ]
     },
     {
-      "act": "충돌확대",
+      "act": "escalation",
       "seq_span": [
-        5,
-        8
+        4,
+        6
       ]
     },
     {
-      "act": "역전",
+      "act": "turn",
       "seq_span": [
-        9,
-        12
+        7,
+        9
       ]
     }
   ],
-  "entry_state": "이혼 소송 착수, 재성 법적 저항",
-  "exit_state": "재성 역소(위자료 역청구) 충격, 소송 2라운드 예고",
+  "entry_state": "가영은 보육 공백 속에서 계약직 업무를 시작하고 두 노년은 자녀들의 감시를 받는다.",
+  "exit_state": "복실은 공개적으로 결혼을 승낙하지만 은지는 재성을 별장으로 데려가 관계를 파괴하려 한다.",
   "turning_point": {
-    "seq_index": 12
+    "seq_index": 9,
+    "desc": "은지의 유혹과 가족의 급습이 재성의 경계를 시험하다"
   },
-  "central_conflict_axis": "가영 vs 재성(법정 역공) + 가영 vs 직장 편견",
-  "episode_function": "CONFLICT",
+  "central_conflict_axis": "여성의 경제적 독립·노년의 재혼 대 자녀들의 이해관계와 돌봄 회피",
+  "episode_function": "두 세대의 독립 욕망을 하나의 가족 재편 갈등으로 결합한다.",
   "core_dist": {
-    "CONFLICT": 0.263,
-    "DESIRE": 0.15,
-    "BOND": 0.138,
-    "LOSS": 0.125,
-    "PERIL": 0.087,
-    "REVELATION": 0.062,
-    "HOOK": 0.05,
-    "ROMANCE": 0.037,
-    "ORACLE": 0.037,
-    "REVERSAL": 0.037,
-    "PUNISH": 0.013
+    "BOND": 11,
+    "CONFLICT": 21,
+    "DESIRE": 12,
+    "HOOK": 4,
+    "LOSS": 10,
+    "ORACLE": 3,
+    "PERIL": 7,
+    "PUNISH": 1,
+    "REVELATION": 5,
+    "REVERSAL": 3,
+    "ROMANCE": 3
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-front-half"
 }

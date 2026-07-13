@@ -2,51 +2,52 @@
   "work_id": "워킹맘_02",
   "episode_no": 2,
   "scene_count": 80,
-  "sequence_count": 12,
-  "dramatic_question": "가영은 현실적 장벽을 넘어 이혼 절차를 시작할 수 있는가?",
+  "sequence_count": 10,
+  "dramatic_question": "배신을 임시 봉합한 가영은 복직과 아버지의 새 관계를 동시에 받아들일 수 있는가?",
   "act_structure": [
     {
-      "act": "갈등",
+      "act": "setup",
       "seq_span": [
         1,
-        4
+        3
       ]
     },
     {
-      "act": "법적대결",
+      "act": "escalation",
       "seq_span": [
-        5,
-        8
+        4,
+        6
       ]
     },
     {
-      "act": "연대",
+      "act": "turn",
       "seq_span": [
-        9,
-        12
+        7,
+        10
       ]
     }
   ],
-  "entry_state": "이혼 결심 후 현실 장벽 직면",
-  "exit_state": "가영 법적 대응 선언, 전쟁 시작",
+  "entry_state": "가영은 재성과 화해했지만 신뢰는 회복되지 않았고 직장 복귀 욕망을 다시 확인한다.",
+  "exit_state": "가영은 돌봄 각서를 제출해 복직을 시작하며, 흥분의 목격으로 종만·복실 관계가 다시 공개 위기에 놓인다.",
   "turning_point": {
-    "seq_index": 12
+    "seq_index": 8,
+    "desc": "종만의 육아 한계가 복실을 실제 돌봄자로 끌어들이다"
   },
-  "central_conflict_axis": "가영 vs 재성(법적 저항) + 가영 vs 시부모(외압)",
-  "episode_function": "CONFLICT",
+  "central_conflict_axis": "가영의 복직·육아 책임과 종만·복실의 사적 선택을 통제하려는 양가의 충돌",
+  "episode_function": "복직과 노년 로맨스를 시즌의 두 병렬축으로 고정한다.",
   "core_dist": {
-    "PUNISH": 0.2,
-    "PERIL": 0.163,
-    "CONFLICT": 0.15,
-    "DESIRE": 0.138,
-    "REVELATION": 0.087,
-    "LOSS": 0.062,
-    "BOND": 0.062,
-    "RELIEF": 0.05,
-    "HOOK": 0.037,
-    "ESTABLISH": 0.025,
-    "REVERSAL": 0.013,
-    "RESCUE": 0.013
+    "BOND": 5,
+    "CONFLICT": 12,
+    "DESIRE": 11,
+    "ESTABLISH": 2,
+    "HOOK": 3,
+    "LOSS": 5,
+    "PERIL": 13,
+    "PUNISH": 16,
+    "RELIEF": 4,
+    "RESCUE": 1,
+    "REVELATION": 7,
+    "REVERSAL": 1
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-front-half"
 }

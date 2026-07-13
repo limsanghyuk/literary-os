@@ -1,0 +1,52 @@
+{
+  "work_id": "워킹맘_14",
+  "episode_no": 14,
+  "scene_count": 70,
+  "sequence_count": 11,
+  "dramatic_question": "집단 소송 결정적 증거를 확보하고 준혁과의 관계도 공식화되는가?",
+  "act_structure": [
+    {
+      "act": "결집",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "법정",
+      "seq_span": [
+        5,
+        8
+      ]
+    },
+    {
+      "act": "역전",
+      "seq_span": [
+        9,
+        11
+      ]
+    }
+  ],
+  "entry_state": "집단 소송 결성, 법정 공방 시작",
+  "exit_state": "결정적 증거 확보 + 준혁 공개 고백 수락",
+  "turning_point": {
+    "seq_index": 11
+  },
+  "central_conflict_axis": "가영 vs 회사(소송) + 가영·준혁 공식 커플",
+  "episode_function": "CONFLICT",
+  "core_dist": {
+    "CONFLICT": 0.257,
+    "PERIL": 0.171,
+    "DESIRE": 0.171,
+    "RELIEF": 0.086,
+    "REVELATION": 0.086,
+    "ORACLE": 0.057,
+    "LOSS": 0.057,
+    "HOOK": 0.029,
+    "BOND": 0.029,
+    "REVERSAL": 0.029,
+    "ROMANCE": 0.014,
+    "PUNISH": 0.014
+  },
+  "by": "sonnet_reading"
+}

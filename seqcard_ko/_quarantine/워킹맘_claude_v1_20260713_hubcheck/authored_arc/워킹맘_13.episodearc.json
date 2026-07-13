@@ -1,0 +1,53 @@
+{
+  "work_id": "워킹맘_13",
+  "episode_no": 13,
+  "scene_count": 74,
+  "sequence_count": 11,
+  "dramatic_question": "가영은 파트장으로 성장하며 대외 소송 전쟁도 이끌 수 있는가?",
+  "act_structure": [
+    {
+      "act": "성장",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "연대",
+      "seq_span": [
+        5,
+        8
+      ]
+    },
+    {
+      "act": "위기",
+      "seq_span": [
+        9,
+        11
+      ]
+    }
+  ],
+  "entry_state": "파트장 역할 본격화",
+  "exit_state": "집단 소송 연루, 대외 전쟁 예고",
+  "turning_point": {
+    "seq_index": 11
+  },
+  "central_conflict_axis": "가영 vs 직장 차별 시스템 + 가영·준혁 관계 진전",
+  "episode_function": "CONFLICT",
+  "core_dist": {
+    "CONFLICT": 0.23,
+    "DESIRE": 0.203,
+    "RELIEF": 0.176,
+    "LOSS": 0.068,
+    "ORACLE": 0.068,
+    "BOND": 0.054,
+    "ESTABLISH": 0.041,
+    "PERIL": 0.041,
+    "REVELATION": 0.041,
+    "PUNISH": 0.027,
+    "ROMANCE": 0.027,
+    "REUNION": 0.014,
+    "HOOK": 0.014
+  },
+  "by": "sonnet_reading"
+}

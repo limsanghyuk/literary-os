@@ -1,0 +1,52 @@
+{
+  "work_id": "워킹맘_02",
+  "episode_no": 2,
+  "scene_count": 80,
+  "sequence_count": 12,
+  "dramatic_question": "가영은 현실적 장벽을 넘어 이혼 절차를 시작할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "갈등",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "법적대결",
+      "seq_span": [
+        5,
+        8
+      ]
+    },
+    {
+      "act": "연대",
+      "seq_span": [
+        9,
+        12
+      ]
+    }
+  ],
+  "entry_state": "이혼 결심 후 현실 장벽 직면",
+  "exit_state": "가영 법적 대응 선언, 전쟁 시작",
+  "turning_point": {
+    "seq_index": 12
+  },
+  "central_conflict_axis": "가영 vs 재성(법적 저항) + 가영 vs 시부모(외압)",
+  "episode_function": "CONFLICT",
+  "core_dist": {
+    "PUNISH": 0.2,
+    "PERIL": 0.163,
+    "CONFLICT": 0.15,
+    "DESIRE": 0.138,
+    "REVELATION": 0.087,
+    "LOSS": 0.062,
+    "BOND": 0.062,
+    "RELIEF": 0.05,
+    "HOOK": 0.037,
+    "ESTABLISH": 0.025,
+    "REVERSAL": 0.013,
+    "RESCUE": 0.013
+  },
+  "by": "sonnet_reading"
+}

@@ -1,0 +1,55 @@
+{
+  "work_id": "워킹맘_05",
+  "episode_no": 5,
+  "scene_count": 72,
+  "sequence_count": 11,
+  "dramatic_question": "법정 공방에서 가영은 유리한 증거를 확보할 수 있는가?",
+  "act_structure": [
+    {
+      "act": "위기",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "반격",
+      "seq_span": [
+        5,
+        7
+      ]
+    },
+    {
+      "act": "전환",
+      "seq_span": [
+        8,
+        11
+      ]
+    }
+  ],
+  "entry_state": "법정 치열 공방, 복실 유산 위기 겹침",
+  "exit_state": "가영 유리한 증거 제출, 법정 전환점",
+  "turning_point": {
+    "seq_index": 11
+  },
+  "central_conflict_axis": "가영 vs 재성(증거 전쟁) + 복실 유산 위기",
+  "episode_function": "CONFLICT",
+  "core_dist": {
+    "CONFLICT": 0.347,
+    "DESIRE": 0.139,
+    "PERIL": 0.125,
+    "RELIEF": 0.111,
+    "HOOK": 0.042,
+    "LOSS": 0.042,
+    "REVERSAL": 0.042,
+    "ORACLE": 0.042,
+    "BOND": 0.028,
+    "INTRO": 0.014,
+    "ESTABLISH": 0.014,
+    "PUNISH": 0.014,
+    "REVELATION": 0.014,
+    "RESCUE": 0.014,
+    "REUNION": 0.014
+  },
+  "by": "sonnet_reading"
+}

@@ -1,1 +1,22 @@
-{"work_id": "워킹맘_06", "scene_count": 71, "core_dist": {"PERIL": 8, "PUNISH": 8, "DESIRE": 7, "ORACLE": 3, "RELIEF": 9, "CONFLICT": 12, "REVELATION": 9, "INTRO": 1, "LOSS": 3, "HOOK": 4, "ROMANCE": 3, "RESCUE": 4}, "episode_function": "재성이 장모의 씨암탉 계략에 속아 사표를 내고 낙동강 오리알 신세로 전락해 이혼서류와 애보기 강요라는 벼랑 끝에 몰리는 한편, 흥분은 콜라텍에서 진태를 만나 재혼 가능성에 눈뜨는 새로운 로맨스 축을 열고, 가영은 워크샵 방해 공작을 임기응변으로 돌파하지만 아이들 방치 사고로 재성에게 최종 이혼 통보를 내리며 부부 갈등을 절정으로 끌어올린다.", "by": "sonnet_reading"}
+{
+  "work_id": "워킹맘_06",
+  "scene_count": 71,
+  "core_dist": {
+    "RELIEF": 22,
+    "CONFLICT": 20,
+    "HOOK": 11,
+    "DESIRE": 11,
+    "REVELATION": 11,
+    "PUNISH": 10,
+    "PERIL": 8,
+    "LOSS": 4,
+    "RESCUE": 4,
+    "ORACLE": 3,
+    "REVERSAL": 3,
+    "ROMANCE": 3,
+    "INTRO": 2,
+    "BOND": 2
+  },
+  "episode_function": "",
+  "by": "gpt-5.6-ingest-regenerated-meta"
+}

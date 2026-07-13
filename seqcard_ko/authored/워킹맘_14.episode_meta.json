@@ -1,1 +1,20 @@
-{"work_id": "워킹맘_14", "scene_count": 70, "core_dist": {"HOOK": 2, "ORACLE": 4, "PERIL": 12, "CONFLICT": 18, "ROMANCE": 1, "RELIEF": 6, "DESIRE": 12, "LOSS": 4, "BOND": 2, "REVELATION": 6, "REVERSAL": 2, "PUNISH": 1}, "episode_function": "재성의 오해 소동 끝에 아이가 재성의 친자임이 밝혀지며 재결합 공방이 재점화되지만, 정원의 진심과 복실의 심경 변화로 가영·정원 커플링이 급부상하고 은지의 짝사랑은 좌절된다. 동시에 종만·복실 부부는 재결합 문제로 완전히 갈라서고 종만이 쓰러지며 다음 회를 향한 강력한 위기의 클리프행어로 마무리된다.", "by": "sonnet_reading"}
+{
+  "work_id": "워킹맘_14",
+  "scene_count": 70,
+  "core_dist": {
+    "CONFLICT": 27,
+    "DESIRE": 16,
+    "RELIEF": 15,
+    "PERIL": 15,
+    "ORACLE": 9,
+    "ROMANCE": 7,
+    "REVELATION": 7,
+    "LOSS": 6,
+    "HOOK": 4,
+    "REVERSAL": 4,
+    "PUNISH": 3,
+    "BOND": 2
+  },
+  "episode_function": "",
+  "by": "gpt-5.6-ingest-regenerated-meta"
+}

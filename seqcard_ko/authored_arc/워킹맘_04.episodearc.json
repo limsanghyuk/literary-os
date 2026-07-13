@@ -2,50 +2,51 @@
   "work_id": "워킹맘_04",
   "episode_no": 4,
   "scene_count": 84,
-  "sequence_count": 13,
-  "dramatic_question": "재성 외도 상대 임신이라는 이중 충격을 가영은 어떻게 돌파하는가?",
+  "sequence_count": 10,
+  "dramatic_question": "종만과 복실은 과거의 죄책감과 자녀들의 반대를 넘어 실제 부부가 될 수 있는가?",
   "act_structure": [
     {
-      "act": "충격",
+      "act": "setup",
       "seq_span": [
         1,
-        4
+        3
       ]
     },
     {
-      "act": "대응",
+      "act": "escalation",
       "seq_span": [
-        5,
-        9
+        4,
+        6
       ]
     },
     {
-      "act": "역공",
+      "act": "turn",
       "seq_span": [
-        10,
-        13
+        7,
+        10
       ]
     }
   ],
-  "entry_state": "역소 충격 처리 중",
-  "exit_state": "재성 외도 상대 임신 폭탄, 이혼 의지 재폭발",
+  "entry_state": "별장 급습 뒤 가영·재성의 이혼 계산과 종만·복실의 위장연애가 모두 흔들린다.",
+  "exit_state": "종만과 복실은 결혼하지만 복실이 손주 돌봄을 거부해 가영의 복직 기반은 다시 무너진다.",
   "turning_point": {
-    "seq_index": 13
+    "seq_index": 10,
+    "desc": "재성의 화해 실패 뒤 복실이 돌봄 약속을 거부하다"
   },
-  "central_conflict_axis": "가영 vs 재성(외도 상대 임신) + 가영 vs 재정 현실",
-  "episode_function": "CONFLICT",
+  "central_conflict_axis": "노년의 사랑과 중년 여성의 돌봄 필요가 동일한 재혼에 서로 다른 기대를 거는 충돌",
+  "episode_function": "재혼을 성사시키면서 그것이 자동 돌봄 해결책이 아님을 폭로한다.",
   "core_dist": {
-    "CONFLICT": 0.19,
-    "BOND": 0.19,
-    "DESIRE": 0.119,
-    "REVELATION": 0.107,
-    "HOOK": 0.071,
-    "LOSS": 0.071,
-    "REVERSAL": 0.071,
-    "PUNISH": 0.06,
-    "PERIL": 0.048,
-    "ORACLE": 0.036,
-    "ROMANCE": 0.036
+    "BOND": 16,
+    "CONFLICT": 16,
+    "DESIRE": 10,
+    "HOOK": 6,
+    "LOSS": 6,
+    "ORACLE": 3,
+    "PERIL": 4,
+    "PUNISH": 5,
+    "REVELATION": 9,
+    "REVERSAL": 6,
+    "ROMANCE": 3
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-front-half"
 }

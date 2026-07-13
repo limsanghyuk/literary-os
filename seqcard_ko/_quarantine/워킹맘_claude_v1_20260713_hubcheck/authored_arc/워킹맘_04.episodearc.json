@@ -1,0 +1,51 @@
+{
+  "work_id": "워킹맘_04",
+  "episode_no": 4,
+  "scene_count": 84,
+  "sequence_count": 13,
+  "dramatic_question": "재성 외도 상대 임신이라는 이중 충격을 가영은 어떻게 돌파하는가?",
+  "act_structure": [
+    {
+      "act": "충격",
+      "seq_span": [
+        1,
+        4
+      ]
+    },
+    {
+      "act": "대응",
+      "seq_span": [
+        5,
+        9
+      ]
+    },
+    {
+      "act": "역공",
+      "seq_span": [
+        10,
+        13
+      ]
+    }
+  ],
+  "entry_state": "역소 충격 처리 중",
+  "exit_state": "재성 외도 상대 임신 폭탄, 이혼 의지 재폭발",
+  "turning_point": {
+    "seq_index": 13
+  },
+  "central_conflict_axis": "가영 vs 재성(외도 상대 임신) + 가영 vs 재정 현실",
+  "episode_function": "CONFLICT",
+  "core_dist": {
+    "CONFLICT": 0.19,
+    "BOND": 0.19,
+    "DESIRE": 0.119,
+    "REVELATION": 0.107,
+    "HOOK": 0.071,
+    "LOSS": 0.071,
+    "REVERSAL": 0.071,
+    "PUNISH": 0.06,
+    "PERIL": 0.048,
+    "ORACLE": 0.036,
+    "ROMANCE": 0.036
+  },
+  "by": "sonnet_reading"
+}

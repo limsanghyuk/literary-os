@@ -2,52 +2,53 @@
   "work_id": "워킹맘_16",
   "episode_no": 16,
   "scene_count": 68,
-  "sequence_count": 10,
-  "dramatic_question": "가영의 투쟁은 완전한 승리로 끝나고 새 삶이 완성되는가?",
+  "sequence_count": 8,
+  "dramatic_question": "가영은 미국행과 가족 중 하나를 포기하지 않고 자신의 조건으로 일과 공동양육을 다시 설계할 수 있는가?",
   "act_structure": [
     {
-      "act": "승리",
+      "act": "setup",
       "seq_span": [
         1,
         3
       ]
     },
     {
-      "act": "재편",
+      "act": "escalation",
       "seq_span": [
         4,
-        7
+        5
       ]
     },
     {
-      "act": "완성",
+      "act": "resolution_or_hook",
       "seq_span": [
-        8,
-        10
+        6,
+        8
       ]
     }
   ],
-  "entry_state": "최후 법정 결전 직전",
-  "exit_state": "전면 승소·직장 개혁·세 여성 연대 완성·가영 새 삶",
+  "entry_state": "정원이 미국행을 제안하고 재성은 가영을 놓아주려 한다.",
+  "exit_state": "가영은 패션쇼 성공 뒤 사표를 협상 카드로 사용하고 가족과 함께할 조건을 선택한다.",
   "turning_point": {
-    "seq_index": 1
+    "seq_index": 8,
+    "desc": "재성의 성숙한 육아와 패션쇼 성공 뒤 가영은 사표로 근무조건을 협상하고 가족은 화합한다"
   },
-  "central_conflict_axis": "가영 vs 직장 시스템(최종 해소) + 가영 새 가족·커플 완성",
-  "episode_function": "RESOLUTION",
+  "central_conflict_axis": "남성·회사가 대신 정하는 선택 대 가영의 경력·가족 자기설계",
+  "episode_function": "재성의 돌봄 성장, 가영의 협상, 두 집안의 화합으로 전체 서사를 닫는다.",
   "core_dist": {
-    "RELIEF": 0.221,
-    "BOND": 0.191,
-    "DESIRE": 0.132,
-    "CONFLICT": 0.103,
-    "REVELATION": 0.088,
-    "ORACLE": 0.074,
-    "PERIL": 0.044,
-    "ESTABLISH": 0.044,
-    "PUNISH": 0.029,
-    "ROMANCE": 0.029,
-    "LOSS": 0.015,
-    "REVERSAL": 0.015,
-    "REUNION": 0.015
+    "DESIRE": 9,
+    "BOND": 13,
+    "RELIEF": 15,
+    "PERIL": 3,
+    "ORACLE": 5,
+    "REVELATION": 6,
+    "CONFLICT": 7,
+    "LOSS": 1,
+    "PUNISH": 2,
+    "ROMANCE": 2,
+    "ESTABLISH": 3,
+    "REVERSAL": 1,
+    "REUNION": 1
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-second-half"
 }

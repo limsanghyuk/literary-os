@@ -1,1 +1,20 @@
-{"work_id": "워킹맘_08", "scene_count": 69, "core_dist": {"CONFLICT": 11, "DESIRE": 8, "RELIEF": 8, "REVELATION": 7, "PERIL": 7, "ORACLE": 5, "HOOK": 5, "BOND": 5, "PUNISH": 5, "LOSS": 3, "REVERSAL": 4, "ROMANCE": 1}, "episode_function": "재성의 완전한 이혼 확정 이후 두 집 가족이 각자의 비밀(가영의 원치않은 임신, 현주의 임신, 흥분-진태의 로맨스 기류)을 안고 얽히며, 재성이 육아 도우미로 재취업해 이혼한 채 한 집에서 동거하는 기이한 새 균형을 만들어내는 회차다", "by": "sonnet_reading"}
+{
+  "work_id": "워킹맘_08",
+  "scene_count": 73,
+  "core_dist": {
+    "CONFLICT": 18,
+    "RELIEF": 17,
+    "PERIL": 13,
+    "REVELATION": 12,
+    "BOND": 12,
+    "DESIRE": 10,
+    "PUNISH": 8,
+    "ORACLE": 6,
+    "HOOK": 5,
+    "LOSS": 5,
+    "REVERSAL": 4,
+    "ROMANCE": 1
+  },
+  "episode_function": "",
+  "by": "gpt-5.6-ingest-regenerated-meta"
+}

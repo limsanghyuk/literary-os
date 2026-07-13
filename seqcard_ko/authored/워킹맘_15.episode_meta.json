@@ -1,1 +1,22 @@
-{"work_id": "워킹맘_15", "scene_count": 69, "core_dist": {"PERIL": 15, "CONFLICT": 13, "RELIEF": 10, "BOND": 6, "REVERSAL": 4, "DESIRE": 5, "ORACLE": 2, "HOOK": 2, "REVELATION": 6, "REUNION": 1, "PUNISH": 3, "RESCUE": 1, "ROMANCE": 1}, "episode_function": "종만의 심장병 발병과 병원 탈출 소동을 통해 복실·종만 부부가 혼인신고로 재결합하며 진짜 가족애를 완성하는 한편, 가영이 임신 차별 인사발령에 맞서 1인 시위와 재성·정원·은지의 합세로 승리하지만, 정원의 미국행 제안과 재성의 자기희생적 양보 결심으로 가영-재성-정원 삼각관계가 새로운 국면을 맞으며 다음 회차로의 긴장을 예고한다.", "by": "sonnet_reading"}
+{
+  "work_id": "워킹맘_15",
+  "scene_count": 69,
+  "core_dist": {
+    "PERIL": 21,
+    "RELIEF": 18,
+    "CONFLICT": 16,
+    "BOND": 9,
+    "ORACLE": 7,
+    "DESIRE": 7,
+    "REVELATION": 7,
+    "REVERSAL": 6,
+    "LOSS": 4,
+    "PUNISH": 4,
+    "HOOK": 3,
+    "ROMANCE": 3,
+    "REUNION": 2,
+    "RESCUE": 1
+  },
+  "episode_function": "",
+  "by": "gpt-5.6-ingest-regenerated-meta"
+}

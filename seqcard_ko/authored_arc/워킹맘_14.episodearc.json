@@ -2,51 +2,52 @@
   "work_id": "워킹맘_14",
   "episode_no": 14,
   "scene_count": 70,
-  "sequence_count": 11,
-  "dramatic_question": "집단 소송 결정적 증거를 확보하고 준혁과의 관계도 공식화되는가?",
+  "sequence_count": 8,
+  "dramatic_question": "재성의 친자 확인이 가영의 재결합을 정당화하는가, 아니면 임신과 직장 모두에서 자기결정권을 더 위협하는가?",
   "act_structure": [
     {
-      "act": "결집",
+      "act": "setup",
       "seq_span": [
         1,
-        4
+        3
       ]
     },
     {
-      "act": "법정",
+      "act": "escalation",
       "seq_span": [
-        5,
+        4,
+        5
+      ]
+    },
+    {
+      "act": "resolution_or_hook",
+      "seq_span": [
+        6,
         8
-      ]
-    },
-    {
-      "act": "역전",
-      "seq_span": [
-        9,
-        11
       ]
     }
   ],
-  "entry_state": "집단 소송 결성, 법정 공방 시작",
-  "exit_state": "결정적 증거 확보 + 준혁 공개 고백 수락",
+  "entry_state": "재성은 정원의 아이로 오해해 간통 증거를 찾고 가영은 임신을 숨긴다.",
+  "exit_state": "재성의 임신 누설로 가영은 패션쇼에서 배제되고 가족 언쟁 끝에 종만이 쓰러진다.",
   "turning_point": {
-    "seq_index": 11
+    "seq_index": 2,
+    "desc": "산모수첩과 복실의 설명이 태아의 친부를 재성으로 확정하고 은지의 짝사랑도 공개된다"
   },
-  "central_conflict_axis": "가영 vs 회사(소송) + 가영·준혁 공식 커플",
-  "episode_function": "CONFLICT",
+  "central_conflict_axis": "임신을 소유권으로 보는 가족 대 가영의 관계·직업 자기결정권",
+  "episode_function": "친자 반전을 재결합 압박·직장 차별·부모 세대 파국으로 연쇄시킨다.",
   "core_dist": {
-    "CONFLICT": 0.257,
-    "PERIL": 0.171,
-    "DESIRE": 0.171,
-    "RELIEF": 0.086,
-    "REVELATION": 0.086,
-    "ORACLE": 0.057,
-    "LOSS": 0.057,
-    "HOOK": 0.029,
-    "BOND": 0.029,
-    "REVERSAL": 0.029,
-    "ROMANCE": 0.014,
-    "PUNISH": 0.014
+    "HOOK": 2,
+    "ORACLE": 4,
+    "PERIL": 12,
+    "CONFLICT": 18,
+    "ROMANCE": 1,
+    "RELIEF": 6,
+    "DESIRE": 12,
+    "LOSS": 4,
+    "BOND": 2,
+    "REVELATION": 6,
+    "REVERSAL": 2,
+    "PUNISH": 1
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-second-half"
 }

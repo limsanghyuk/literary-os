@@ -2,52 +2,53 @@
   "work_id": "워킹맘_13",
   "episode_no": 13,
   "scene_count": 74,
-  "sequence_count": 11,
-  "dramatic_question": "가영은 파트장으로 성장하며 대외 소송 전쟁도 이끌 수 있는가?",
+  "sequence_count": 9,
+  "dramatic_question": "복실의 비밀 계약을 받은 재성은 종만과 은지를 복귀시키면서 가영까지 되찾을 수 있는가?",
   "act_structure": [
     {
-      "act": "성장",
+      "act": "setup",
       "seq_span": [
         1,
-        4
+        3
       ]
     },
     {
-      "act": "연대",
+      "act": "escalation",
       "seq_span": [
-        5,
-        8
+        4,
+        6
       ]
     },
     {
-      "act": "위기",
+      "act": "resolution_or_hook",
       "seq_span": [
-        9,
-        11
+        7,
+        9
       ]
     }
   ],
-  "entry_state": "파트장 역할 본격화",
-  "exit_state": "집단 소송 연루, 대외 전쟁 예고",
+  "entry_state": "재성과 은지는 노숙하고 종만은 옥탑방에 숨으며 가족이 흩어져 있다.",
+  "exit_state": "재성이 산부인과로 향하는 가영과 정원을 미행해 임신을 오해한다.",
   "turning_point": {
-    "seq_index": 11
+    "seq_index": 9,
+    "desc": "재성이 가영·정원을 추격해 산부인과 앞에서 임신 가능성을 목격한다"
   },
-  "central_conflict_axis": "가영 vs 직장 차별 시스템 + 가영·준혁 관계 진전",
-  "episode_function": "CONFLICT",
+  "central_conflict_axis": "가족 복구 거래 대 가영·정원의 독립적 관계 진전",
+  "episode_function": "궁핍 코미디를 화보촬영 삼각관계와 임신 오해의 클리프행어로 결합한다.",
   "core_dist": {
-    "CONFLICT": 0.23,
-    "DESIRE": 0.203,
-    "RELIEF": 0.176,
-    "LOSS": 0.068,
-    "ORACLE": 0.068,
-    "BOND": 0.054,
-    "ESTABLISH": 0.041,
-    "PERIL": 0.041,
-    "REVELATION": 0.041,
-    "PUNISH": 0.027,
-    "ROMANCE": 0.027,
-    "REUNION": 0.014,
-    "HOOK": 0.014
+    "DESIRE": 15,
+    "PUNISH": 2,
+    "CONFLICT": 17,
+    "RELIEF": 13,
+    "BOND": 4,
+    "LOSS": 5,
+    "ORACLE": 5,
+    "ESTABLISH": 3,
+    "PERIL": 3,
+    "REVELATION": 3,
+    "ROMANCE": 2,
+    "REUNION": 1,
+    "HOOK": 1
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-second-half"
 }

@@ -2,51 +2,52 @@
   "work_id": "워킹맘_10",
   "episode_no": 10,
   "scene_count": 72,
-  "sequence_count": 11,
-  "dramatic_question": "임신 공개 후 가영은 직장을 지키며 아이를 무사히 낳을 수 있는가?",
+  "sequence_count": 9,
+  "dramatic_question": "이중 추방된 재성과 은지의 결혼기념일 작전은 가영·정원의 관계를 막을 수 있는가?",
   "act_structure": [
     {
-      "act": "공개",
+      "act": "setup",
       "seq_span": [
         1,
         3
       ]
     },
     {
-      "act": "위기",
+      "act": "escalation",
       "seq_span": [
         4,
-        7
+        6
       ]
     },
     {
-      "act": "위기심화",
+      "act": "resolution_or_hook",
       "seq_span": [
-        8,
-        11
+        7,
+        9
       ]
     }
   ],
-  "entry_state": "임신 공개 후 직장 분위기 냉랭",
-  "exit_state": "조기 출산 징후, 입원 위기",
+  "entry_state": "은지의 쇼크로 재성과 은지는 양가에서 모두 쫓겨나 노숙 동맹이 된다.",
+  "exit_state": "흥분이 자바라를 열어 재성의 비밀 돌봄이 양가 앞에 폭로된다.",
   "turning_point": {
-    "seq_index": 11
+    "seq_index": 4,
+    "desc": "호텔 방 착오와 정원의 고백 직후 이벤트가 난입해 네 사람의 관계가 폭발한다"
   },
-  "central_conflict_axis": "가영 vs 직장 임신 차별 + 가영 vs 건강 위기",
-  "episode_function": "PERIL",
+  "central_conflict_axis": "재성·은지의 방해 동맹 대 가영·정원의 신뢰 형성",
+  "episode_function": "노숙·호텔·미행을 거쳐 재성의 은신 생활을 공개 갈등으로 전환한다.",
   "core_dist": {
-    "RELIEF": 0.208,
-    "PERIL": 0.125,
-    "PUNISH": 0.125,
-    "DESIRE": 0.111,
-    "ORACLE": 0.111,
-    "REVELATION": 0.083,
-    "BOND": 0.069,
-    "ROMANCE": 0.042,
-    "REVERSAL": 0.042,
-    "CONFLICT": 0.028,
-    "LOSS": 0.028,
-    "HOOK": 0.028
+    "PERIL": 9,
+    "BOND": 5,
+    "PUNISH": 9,
+    "RELIEF": 15,
+    "CONFLICT": 2,
+    "DESIRE": 8,
+    "LOSS": 2,
+    "ROMANCE": 3,
+    "ORACLE": 8,
+    "HOOK": 2,
+    "REVERSAL": 3,
+    "REVELATION": 6
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-second-half"
 }

@@ -2,54 +2,59 @@
   "work_id": "워킹맘_01",
   "episode_no": 1,
   "scene_count": 85,
-  "sequence_count": 13,
-  "dramatic_question": "가영은 남편의 외도를 발견하고 이혼을 선택할 것인가?",
+  "sequence_count": 11,
+  "dramatic_question": "직장 능력을 지키며 가족을 책임져 온 가영은 남편 재성의 기만을 확인한 뒤 관계의 경계를 다시 세울 수 있는가?",
   "act_structure": [
     {
-      "act": "설정",
+      "act": "origin",
       "seq_span": [
         1,
-        4
-      ]
+        3
+      ],
+      "function": "월드컵의 충동이 임신·결혼·복직과 돌봄망 붕괴로 이어진 기원을 제시한다."
     },
     {
-      "act": "위기",
+      "act": "pressure",
       "seq_span": [
-        5,
-        9
-      ]
+        4,
+        7
+      ],
+      "function": "양가 의례와 돌봄 불균형 위에서 재성의 비밀 데이트가 실행된다."
     },
     {
-      "act": "파국",
+      "act": "exposure",
       "seq_span": [
-        10,
-        13
-      ]
+        8,
+        11
+      ],
+      "function": "워터파크 위기와 뉴스 증거가 기만을 폭로하고 갈등을 양가 전면전으로 확장한다."
     }
   ],
-  "entry_state": "피로한 워킹맘, 의심은 있으나 일상 유지",
-  "exit_state": "외도 확인 후 이혼 결심, 복실과 연대 결성",
+  "entry_state": "가영은 육아와 양가 의무에 지쳤지만 재성과의 결혼을 유지하며 일상을 통제하려 한다.",
+  "exit_state": "가영은 재성·은지의 기만을 확인했고, 개인적 배신이 종만과 복실의 집안 싸움으로 번져 부부 관계가 공개 위기에 놓인다.",
   "turning_point": {
-    "seq_index": 11
+    "seq_index": 10,
+    "desc": "뉴스 화면과 수영복·문자가 결합되며 가영의 의심이 검증된 배신으로 바뀐다."
   },
-  "central_conflict_axis": "가영 vs 재성(외도·불성실) + 가영 vs 워킹맘 편견",
-  "episode_function": "ESTABLISH",
+  "central_conflict_axis": "가영의 일·돌봄 책임과 재성의 책임 회피·외도성 기만의 충돌",
+  "episode_function": "주인공 부부의 탄생과 현재 돌봄 구조를 제시한 뒤, 남편의 비밀 데이트를 폭로해 시즌의 가족 재편 갈등을 개시한다.",
   "core_dist": {
-    "DESIRE": 0.176,
-    "CONFLICT": 0.165,
-    "PUNISH": 0.106,
-    "ESTABLISH": 0.082,
-    "REVELATION": 0.082,
-    "LOSS": 0.071,
-    "REVERSAL": 0.059,
-    "PERIL": 0.059,
-    "BOND": 0.047,
-    "HOOK": 0.047,
-    "RELIEF": 0.035,
-    "INTRO": 0.024,
-    "ORACLE": 0.024,
-    "ROMANCE": 0.012,
-    "REUNION": 0.012
+    "BOND": 6,
+    "CONFLICT": 15,
+    "DESIRE": 15,
+    "ESTABLISH": 7,
+    "HOOK": 9,
+    "INTRO": 2,
+    "LOSS": 6,
+    "ORACLE": 2,
+    "PERIL": 6,
+    "PUNISH": 12,
+    "RELIEF": 4,
+    "RESCUE": 1,
+    "REUNION": 1,
+    "REVELATION": 8,
+    "REVERSAL": 7,
+    "ROMANCE": 1
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03"
 }

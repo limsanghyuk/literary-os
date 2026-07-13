@@ -1,1 +1,20 @@
-{"work_id": "워킹맘_12", "scene_count": 67, "core_dist": {"CONFLICT": 14, "ORACLE": 6, "PERIL": 3, "PUNISH": 4, "ROMANCE": 3, "RELIEF": 11, "DESIRE": 8, "REVERSAL": 2, "REVELATION": 5, "LOSS": 7, "BOND": 3, "HOOK": 1}, "episode_function": "재성-가영-정원의 삼각구도가 정원의 공개 고백으로 본격화되고, 은지가 밑바닥 신세를 거치며 정원과 가까워지는 동안 종만·복실 부부가 재성의 임신 소식 폭로로 파경 직전까지 치달아 별거에 돌입한다. 회차 말미에 재성이 은지와 정원을 엮어 가영을 되찾으려는 이간계를 착상하고 복실에게 거부 못할 제안을 예고하며 다음 화의 반전을 예고한다.", "by": "sonnet_reading"}
+{
+  "work_id": "워킹맘_12",
+  "scene_count": 67,
+  "core_dist": {
+    "RELIEF": 22,
+    "CONFLICT": 17,
+    "DESIRE": 14,
+    "ROMANCE": 11,
+    "ORACLE": 9,
+    "LOSS": 8,
+    "BOND": 6,
+    "PUNISH": 5,
+    "REVELATION": 5,
+    "HOOK": 5,
+    "PERIL": 4,
+    "REVERSAL": 2
+  },
+  "episode_function": "",
+  "by": "gpt-5.6-ingest-regenerated-meta"
+}

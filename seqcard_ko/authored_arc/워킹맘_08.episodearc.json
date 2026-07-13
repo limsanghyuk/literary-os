@@ -1,52 +1,53 @@
 {
   "work_id": "워킹맘_08",
   "episode_no": 8,
-  "scene_count": 69,
-  "sequence_count": 11,
-  "dramatic_question": "이혼 후 싱글맘 가영에게 임신이라는 예상치 못한 변수가 닥친다",
+  "scene_count": 73,
+  "sequence_count": 9,
+  "dramatic_question": "이혼한 가영은 임신과 돌봄 공백 속에서 경력을 유지할 새로운 가족 규칙을 만들 수 있는가?",
   "act_structure": [
     {
-      "act": "재건",
+      "act": "setup",
       "seq_span": [
         1,
-        4
+        3
       ]
     },
     {
-      "act": "임신발각",
+      "act": "escalation",
       "seq_span": [
-        5,
-        8
+        4,
+        6
       ]
     },
     {
-      "act": "결정기로",
+      "act": "turn",
       "seq_span": [
-        9,
-        11
+        7,
+        9
       ]
     }
   ],
-  "entry_state": "이혼 후 새 일상 재건 시작",
-  "exit_state": "임신 확인, 유지·낙태 결정 기로",
+  "entry_state": "재성은 집과 친족에게서 밀려나고 가영은 이혼 직후 임신을 확인한다.",
+  "exit_state": "복실이 재성을 유급 육아도우미로 고용해 이혼 부부가 한집에서 조건부 공동양육을 시작한다.",
   "turning_point": {
-    "seq_index": 7
+    "seq_index": 8,
+    "desc": "복실이 재성을 유급 육아도우미로 끌어들이고 임신을 비밀로 하다"
   },
-  "central_conflict_axis": "가영 vs 임신 현실 + 가영 vs 직장·육아 현실",
-  "episode_function": "CONFLICT",
+  "central_conflict_axis": "가영의 임신·경력 선택과 재성의 생계·아버지 역할 재진입의 충돌",
+  "episode_function": "전반부를 법적 분리와 생활 공동체의 역설적 재결합 상태로 닫는다.",
   "core_dist": {
-    "CONFLICT": 0.159,
-    "DESIRE": 0.116,
-    "RELIEF": 0.116,
-    "REVELATION": 0.101,
-    "PERIL": 0.101,
-    "ORACLE": 0.072,
-    "HOOK": 0.072,
-    "BOND": 0.072,
-    "PUNISH": 0.072,
-    "REVERSAL": 0.058,
-    "LOSS": 0.043,
-    "ROMANCE": 0.014
+    "BOND": 6,
+    "CONFLICT": 12,
+    "DESIRE": 8,
+    "HOOK": 4,
+    "LOSS": 3,
+    "ORACLE": 5,
+    "PERIL": 9,
+    "PUNISH": 5,
+    "RELIEF": 7,
+    "REVELATION": 9,
+    "REVERSAL": 4,
+    "ROMANCE": 1
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-front-half"
 }

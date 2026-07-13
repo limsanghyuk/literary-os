@@ -2,54 +2,55 @@
   "work_id": "워킹맘_05",
   "episode_no": 5,
   "scene_count": 72,
-  "sequence_count": 11,
-  "dramatic_question": "법정 공방에서 가영은 유리한 증거를 확보할 수 있는가?",
+  "sequence_count": 9,
+  "dramatic_question": "가영은 가족 돌봄의 배신 속에서도 정규직 기회와 아이들의 안전을 함께 지킬 수 있는가?",
   "act_structure": [
     {
-      "act": "위기",
+      "act": "setup",
       "seq_span": [
         1,
-        4
+        3
       ]
     },
     {
-      "act": "반격",
+      "act": "escalation",
       "seq_span": [
-        5,
-        7
+        4,
+        6
       ]
     },
     {
-      "act": "전환",
+      "act": "turn",
       "seq_span": [
-        8,
-        11
+        7,
+        9
       ]
     }
   ],
-  "entry_state": "법정 치열 공방, 복실 유산 위기 겹침",
-  "exit_state": "가영 유리한 증거 제출, 법정 전환점",
+  "entry_state": "복실의 돌봄 거부와 재성의 처가 재산 욕망으로 새 가족 질서가 혼란에 빠진다.",
+  "exit_state": "아이 실종을 수습한 뒤 복실은 재성에게 돌봄 노동을 맡기는 역전안을 제시한다.",
   "turning_point": {
-    "seq_index": 11
+    "seq_index": 7,
+    "desc": "아이들이 스스로 구조 요청하고 가족이 재회하다"
   },
-  "central_conflict_axis": "가영 vs 재성(증거 전쟁) + 복실 유산 위기",
-  "episode_function": "CONFLICT",
+  "central_conflict_axis": "가영의 경력 지속 대 가족 전체의 여성에게 돌봄 전가",
+  "episode_function": "한정원과 직장 경쟁을 도입하고 남편의 돌봄 노동 전환을 준비한다.",
   "core_dist": {
-    "CONFLICT": 0.347,
-    "DESIRE": 0.139,
-    "PERIL": 0.125,
-    "RELIEF": 0.111,
-    "HOOK": 0.042,
-    "LOSS": 0.042,
-    "REVERSAL": 0.042,
-    "ORACLE": 0.042,
-    "BOND": 0.028,
-    "INTRO": 0.014,
-    "ESTABLISH": 0.014,
-    "PUNISH": 0.014,
-    "REVELATION": 0.014,
-    "RESCUE": 0.014,
-    "REUNION": 0.014
+    "BOND": 2,
+    "CONFLICT": 25,
+    "DESIRE": 10,
+    "ESTABLISH": 1,
+    "HOOK": 3,
+    "INTRO": 1,
+    "LOSS": 3,
+    "ORACLE": 3,
+    "PERIL": 9,
+    "PUNISH": 1,
+    "RELIEF": 8,
+    "RESCUE": 1,
+    "REUNION": 1,
+    "REVELATION": 1,
+    "REVERSAL": 3
   },
-  "by": "sonnet_reading"
+  "by": "gpt-5.6-thinking-manual-close-reading-stage03-front-half"
 }
