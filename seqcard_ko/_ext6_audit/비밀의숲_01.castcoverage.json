@@ -1,5 +1,6 @@
 {
- "work_id": "비밀의숲_01",
+ "work_id": "비밀의숲",
+ "episode_no": 1,
  "episode_scene_count": 72,
  "annotated_scene_nos": [
   1,
@@ -78,5 +79,6 @@
   71
  ],
  "unresolved_scene_nos": [],
+ "union_count": 72,
  "by": "opus_fanin"
 }
