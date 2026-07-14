@@ -1,0 +1,73 @@
+{"work_id":"돌아온일지매_17","scene_no":1,"heading":"권대감의 집/마당/밤","title":"은밀한 기척","intent_gist":"권대감의 집 마당을 살피던 일지매가 안에서 들려오는 목소리에 걸음을 멈추고 몸을 숨긴다.","core":"HOOK","core2":null,"skin":"잠입 긴장","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":2,"heading":"권대감의 집/마당/밤","title":"밀서의 단서","intent_gist":"권대감이 집사에게 청국행에 장호를 딸려보내며 밀서 얘기를 절대 발설하지 말라 명하고, 이를 엿들은 월희(책녀)가 모가지·청국·밀서의 연결고리를 확신한다.","core":"REVELATION","core2":null,"skin":"정보 습득","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":3,"heading":"권대감의 집/마당/밤","title":"들킬 위기","intent_gist":"엿듣던 일지매가 안쪽 기척에 반응하며 긴장한다.","core":"PERIL","core2":null,"skin":"긴장","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":4,"heading":"골목/밤","title":"숙영과의 조우","intent_gist":"담을 넘어 나온 일지매가 술취한 장호를 피해 숨는 사이, 지나가던 숙영에게 장호의 시선이 꽂힌다.","core":"INTRO","core2":"DESIRE","skin":"우연한 만남","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":5,"heading":"골목/밤","title":"장호의 수작","intent_gist":"장호가 숙영에게 수작을 걸며 쫓아가고 놀란 숙영이 집으로 달아난다.","core":"CONFLICT","core2":"DESIRE","skin":"희극 추격","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":6,"heading":"숙영의 집/밤","title":"대문을 부수다","intent_gist":"청지기가 장호를 막아서지만 장호가 완력으로 대문을 부수고 난입해 하인들과 몸싸움을 벌인다.","core":"CONFLICT","core2":null,"skin":"난동","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":7,"heading":"권대감의 집/밤","title":"장가들고 싶소","intent_gist":"난동의 이유를 캐묻는 권대감에게 장호가 눈물로 김호의 딸과 혼인시켜달라 조른다.","core":"BOND","core2":"DESIRE","skin":"부자 대화","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":8,"heading":"권대감의 집/시간 경과/밤","title":"이미 정혼한 낭자","intent_gist":"집사가 숙영이 그날 이미 길영과 정혼했다는 사실을 권대감에게 알린다.","core":"CONFLICT","core2":null,"skin":"장애물","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":9,"heading":"길영의 집/방안/낮","title":"패물을 물리치다","intent_gist":"권대감이 보낸 패물을 길영과 그 아비가 단호히 거절하며 집사를 돌려보낸다.","core":"CONFLICT","core2":null,"skin":"거절","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":10,"heading":"골목/낮","title":"가짜 친필 편지","intent_gist":"일지매가 길영의 친필을 사칭한 편지를 집사에게 건네 권대감을 협박할 계략을 편다.","core":"HOOK","core2":null,"skin":"계략","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":11,"heading":"권대감의 집/안방/낮","title":"혼사를 막아라","intent_gist":"협박 편지에 격분한 권대감이 만용에게 길영을 잡아오고 두 사람을 처치하라 명하는 사이, 장호는 청국행을 대가로 혼사를 약속받는다.","core":"CONFLICT","core2":"PERIL","skin":"음모","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":12,"heading":"저자거리/낮","title":"박도 살인 단서","intent_gist":"정태가 살인 무기가 박도임을 알아오자 구자명이 대장장이 추적과 우포도청 행불자 명단 확보를 지시한다.","core":"REVELATION","core2":null,"skin":"수사","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":13,"heading":"길영의 집/낮","title":"숙영의 방문","intent_gist":"숙영이 책을 읽던 길영에게 선물을 건네며 두 사람의 오랜 인연이 드러난다.","core":"BOND","core2":"ROMANCE","skin":"연모","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":14,"heading":"저자 거리/낮","title":"청국행 채비","intent_gist":"숙영을 얻을 생각에 들뜬 장호가 집사와 함께 청국으로 떠난다.","core":"HOOK","core2":"DESIRE","skin":"출발","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":15,"heading":"달래의 집/낮","title":"빚쟁이들의 행패","intent_gist":"왕횡보와 성게가 빚 독촉을 하며 달래의 아버지를 밀쳐 기절시키고 달래와 각수는 도망친다.","core":"CONFLICT","core2":null,"skin":"행패","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":16,"heading":"달래의 집/부엌/낮","title":"닭백숙 잔치","intent_gist":"왕횡보와 성게가 남의 집 닭으로 백숙을 해먹으며 일지매 탓을 한다.","core":"RELIEF","core2":null,"skin":"희극","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":17,"heading":"도박장/내실/낮","title":"싸움닭을 먹다","intent_gist":"빈손으로 돌아온 두 사람이 자신들이 잡아먹은 닭이 오백냥짜리 싸움닭이었음을 알고 사색이 된다.","core":"REVERSAL","core2":null,"skin":"희극 반전","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":18,"heading":"주막/밤","title":"양포의 감시","intent_gist":"양포가 몰래 지켜보는 것도 모른 채 일지매가 주막 방문을 소리없이 딴다.","core":"HOOK","core2":null,"skin":"미행","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":19,"heading":"주막/방안/밤","title":"장호를 지나치다","intent_gist":"방에 들어간 일지매가 잠든 장호를 확인하고 조용히 나간다.","core":"HOOK","core2":null,"skin":"탐색","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":20,"heading":"주막/다른 방 앞/밤","title":"마비 가루","intent_gist":"일지매가 다른 방에 마비 가루를 불어넣고 잠시 기다린다.","core":"HOOK","core2":null,"skin":"잠입 기술","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":21,"heading":"주막/다른 방 안/밤","title":"문서를 훔치다","intent_gist":"혼절한 사내들의 짐을 뒤진 일지매가 주화와 문서를 챙겨 품에 감춘다.","core":"DESIRE","core2":null,"skin":"절도","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":22,"heading":"주막/밤","title":"도둑이야","intent_gist":"뒷간 가던 주막 주인이 일지매를 목격하고 도둑이라 외친다.","core":"CONFLICT","core2":null,"skin":"발각","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":23,"heading":"주막/다른 방/밤","title":"잠든 사내들","intent_gist":"수면가루에 취한 사내들이 소란 속에서도 미동조차 하지 않는다.","core":"RELIEF","core2":null,"skin":"희극","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":24,"heading":"주막/방 안/밤","title":"장호 깨어나다","intent_gist":"도둑이란 외침에 장호가 벌떡 일어나 뛰쳐나간다.","core":"CONFLICT","core2":null,"skin":"소동","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":25,"heading":"주막/밤","title":"양포에게 나가떨어지다","intent_gist":"울타리를 부수고 뛰쳐나온 장호가 자신을 막아선 양포에게 완패한다.","core":"CONFLICT","core2":null,"skin":"액션","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":26,"heading":"개울가/밤","title":"밀서를 태우다","intent_gist":"일지매가 훔친 문서가 청국과 결탁해 나라를 팔아넘기려는 음모임을 밝히며 태워버리고, 양포에게 권대감을 처단하겠다 선언한다.","core":"REVELATION","core2":"CONFLICT","skin":"대립","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":27,"heading":"길영의 집/밤","title":"등잔불이 꺼지다","intent_gist":"글을 읽던 길영이 침입자의 기척에 놀라는 순간 등잔불이 꺼진다.","core":"PERIL","core2":null,"skin":"습격","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":28,"heading":"길영의 집/마당/낮","title":"길영이 사라졌다","intent_gist":"길영모가 아들을 찾으며 다급히 뛰어다닌다.","core":"LOSS","core2":null,"skin":"실종","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":29,"heading":"길영의 집/낮","title":"권대감 짓입니다","intent_gist":"길영모가 아들의 실종이 권대감의 소행임을 확신하며 분노한다.","core":"REVELATION","core2":null,"skin":"확신","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":30,"heading":"길영의 방 안/낮","title":"어지러진 방","intent_gist":"어지러진 빈 방이 길영의 납치를 보여준다.","core":"LOSS","core2":null,"skin":"흔적","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":31,"heading":"숙영의 집/낮","title":"숙영을 피신시키다","intent_gist":"김호와 길영부가 권대감의 사주를 짐작하며 숙영을 화입기 전에 피신시키기로 한다.","core":"CONFLICT","core2":"PERIL","skin":"결단","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":32,"heading":"숙영의 집앞 골목/낮","title":"눈물의 이별","intent_gist":"숙영이 눈물을 흘리며 집을 떠난다.","core":"LOSS","core2":null,"skin":"이별","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":33,"heading":"정자 밖/낮","title":"어죽을 끓이다","intent_gist":"걸치가 월희를 위해 정성껏 어죽을 끓인다.","core":"BOND","core2":null,"skin":"보살핌","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":34,"heading":"정자 방 안/시간 경과/낮","title":"숟가락을 내려놓다","intent_gist":"걸치의 정성에도 월희가 마음의 상처로 죽을 몇술 뜨다 조용히 숟가락을 내려놓는다.","core":"LOSS","core2":"BOND","skin":"상심","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":35,"heading":"정자 방 앞/낮","title":"닷새만의 목소리","intent_gist":"닷새간 입을 닫았던 월희가 처음으로 걸치를 부른다.","core":"RELIEF","core2":"HOOK","skin":"반전","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":36,"heading":"정자 안/낮","title":"한양으로 돌아가요","intent_gist":"월희가 더는 일지매를 찾을 이유가 없다며 내일 한양으로 떠나자고 말해 걸치를 당황시킨다.","core":"REVERSAL","core2":"LOSS","skin":"체념","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":37,"heading":"권대감의 집/방안/낮(공간 및 대사 수정)","title":"치워라","intent_gist":"만용이 베어온 목을 확인한 권대감이 숙영의 처리를 지시하며 살인을 대수롭지 않게 여긴다.","core":"CONFLICT","core2":"PUNISH","skin":"냉혹","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":38,"heading":"주막/낮(추가씬)","title":"실종된 아들","intent_gist":"손님들이 길영의 실종과 권대감의 만행을 수군거리는 것을 일지매가 차가운 얼굴로 듣는다.","core":"REVELATION","core2":null,"skin":"소문","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":39,"heading":"백매의 집/낮","title":"일지매 소식을 캐다","intent_gist":"백매가 방물장수에게 일지매의 소식을 물어보고 좋은 소식에 기뻐하며 다음에도 알아봐달라 부탁한다.","core":"BOND","core2":null,"skin":"모정","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":40,"heading":"권대감집/광/낮(추가씬)","title":"공연히 모가지 얘기를","intent_gist":"광에서 두 개의 목을 확인한 일지매가 경고가 오히려 숙영을 위험에 빠뜨렸음을 깨닫고 괴로워한다.","core":"LOSS","core2":"REVELATION","skin":"자책","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":41,"heading":"산속/낮","title":"산속을 내달리다","intent_gist":"숙영을 구하러 일지매가 산속을 필사적으로 달린다.","core":"PERIL","core2":null,"skin":"질주","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":42,"heading":"산속/다른 곳/낮","title":"만용의 등장","intent_gist":"길을 서두르던 숙영 일행 앞에 만용이 나타난다.","core":"PERIL","core2":null,"skin":"습격","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":43,"heading":"산속/낮","title":"안돼","intent_gist":"숙영의 비명을 들은 일지매가 더욱 속도를 낸다.","core":"PERIL","core2":null,"skin":"질주","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":44,"heading":"산속/다른 곳/낮(수정)","title":"단장의 고통","intent_gist":"일지매가 만용을 베어 죽이며 그가 남에게 준 고통을 되갚아주고, 겁에 질린 숙영을 뿌리치고 매섭게 돌려보낸다.","core":"RESCUE","core2":"PUNISH","skin":"복수","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":45,"heading":"구자명의 사저/마당/밤(추가씬)","title":"물 한모금","intent_gist":"구자명의 집에 나타난 일지매가 경거망동 말라는 충고를 뿌리치고 권대감의 집 광에 두 개의 목이 있음을 알려준다.","core":"REVELATION","core2":"BOND","skin":"밀고","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":46,"heading":"권대감의 집 앞/골목/밤","title":"권대감집 앞","intent_gist":"복면을 한 일지매가 권대감의 집 앞 어둠 속에 서서 각오를 다진다.","core":"HOOK","core2":null,"skin":"결의","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":47,"heading":"권대감의 방/내실/밤","title":"가거라 살인마","intent_gist":"일지매가 기생을 기절시킨 뒤 잠든 권대감에게 칼을 내리꽂아 처단한다.","core":"PUNISH","core2":null,"skin":"처단","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":48,"heading":"백매의 집/마루/밤","title":"사나운 꿈자리","intent_gist":"백매가 불길한 꿈자리에 근심하며 일지매의 안위를 걱정한다.","core":"ORACLE","core2":null,"skin":"불안","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":49,"heading":"백매의 집/뒷마당/밤","title":"매화나무의 기원","intent_gist":"백매가 매화나무 앞에서 일지매를 되찾게 해달라 기원하며 부처님의 무고를 함께 빈다.","core":"ORACLE","core2":"BOND","skin":"기원","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":50,"heading":"권대감의 집/밤(수정)","title":"주검 위의 매화가지","intent_gist":"권대감의 죽음이 발각되어 구자명이 침통해하고, 정태가 광에서 목이 두 개 발견됐다고 보고한다.","core":"LOSS","core2":"REVELATION","skin":"현장","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":51,"heading":"김자점의 집/밤","title":"일이 헝클어졌다","intent_gist":"김자점이 권대감의 죽음에 격분하며 자신의 이름이 밀서에 없는지 초조해한다.","core":"CONFLICT","core2":"PERIL","skin":"초조","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":52,"heading":"저자 거리/낮","title":"일지매 수배 전단","intent_gist":"권대감 살인범으로 일지매의 현상수배 전단이 나붙고, 이를 본 열공이 살생을 저지른 일지매를 개탄한다.","core":"HOOK","core2":"LOSS","skin":"수배","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":53,"heading":"김자점의 집/안방/밤","title":"김자점의 악몽","intent_gist":"잠든 김자점이 일지매에게 칼을 맞는 악몽에 놀라 깨어난다.","core":"PERIL","core2":null,"skin":"악몽","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":54,"heading":"김자점의 집/사랑채/낮","title":"총이라는 묘안","intent_gist":"악몽에 시달리는 김자점에게 박비수가 조총을 쓰는 사냥꾼 우두머리 박수동을 추천한다.","core":"CONFLICT","core2":"DESIRE","skin":"대책","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":55,"heading":"김자점의 집/밤","title":"가마들이 들어서다","intent_gist":"윤방, 심찬규, 손석주 등 양반들이 은밀히 김자점의 집으로 모여든다.","core":"ESTABLISH","core2":null,"skin":"밀회","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":56,"heading":"김자점의 집/밤","title":"재물이 좀 더 들어야","intent_gist":"김자점이 일지매 토벌을 명분으로 모인 양반들에게 자금을 더 걷어 사냥꾼들을 부르자고 다그친다.","core":"CONFLICT","core2":"DESIRE","skin":"협박","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":57,"heading":"김자점의 집/광/낮","title":"박수동에게 보낼 재물","intent_gist":"김자점이 광의 재물 일부를 선수금으로 박수동에게 보내라 지시한다.","core":"DESIRE","core2":"CONFLICT","skin":"거래","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":58,"heading":"저자 거리/낮","title":"한양에 당도한 월희","intent_gist":"채 회복되지 않은 몸으로 월희가 걸치와 함께 한양에 도착해 뒤쳐져 걷는다.","core":"LOSS","core2":"BOND","skin":"여독","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":59,"heading":"주막/낮","title":"권대감이 왜 죽었나","intent_gist":"주모와 손님들의 대화로 일지매가 권대감과 수하를 죽였다는 소문을 배선달과 차돌이 듣고 걱정한다.","core":"HOOK","core2":"CONFLICT","skin":"소문","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":60,"heading":"주막 밖/낮","title":"월희 아씨잖아","intent_gist":"차돌이 걸치와 장옷 쓴 월희를 발견하고 반갑게 달려간다.","core":"REUNION","core2":null,"skin":"재회","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":61,"heading":"배선달의 집/서재/낮","title":"짐작가는 거라도","intent_gist":"모두 모여 일지매가 살인을 저지른 연유를 궁금해하고, 걸치가 월희를 버려두고 떠난 일지매를 원망한다.","core":"CONFLICT","core2":"BOND","skin":"추측","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":62,"heading":"백매의 집/낮","title":"우리 애란다","intent_gist":"백매가 고양이에게 밥을 주며 일지매가 자신의 아들임을 고백하듯 되뇐다.","core":"REVELATION","core2":"BOND","skin":"모정","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":63,"heading":"도선사/낮","title":"다가가지 못하는","intent_gist":"일지매가 자신을 위해 불공을 드리는 열공을 멀리서 지켜보다 다가가지 못하고 자리를 뜬다.","core":"LOSS","core2":null,"skin":"자괴","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":64,"heading":"배선달의 집/서재/낮","title":"월희가 죽은 줄","intent_gist":"배선달이 일지매가 아직 월희의 죽음을 진짜로 믿고 있어 스스로를 용서 못하는 것이라 추리한다.","core":"REVELATION","core2":null,"skin":"추리","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":65,"heading":"우이동 초가집/낮","title":"빈 초가집","intent_gist":"텅빈 옛집에 선 일지매를 숲속에 숨은 사냥꾼 덕보와 우돌이 은밀히 노린다.","core":"PERIL","core2":"HOOK","skin":"매복","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":66,"heading":"우이동 초가집/낮","title":"총에 맞다","intent_gist":"일지매가 어깨에 총을 맞고 쓰러지지만 우돌의 총을 걷어차 오발로 덕보를 죽게 하고 겨우 몸을 피한다.","core":"PERIL","core2":"REVERSAL","skin":"총격","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":67,"heading":"거리/낮","title":"일지매의 애인","intent_gist":"포졸들이 월희를 일지매의 애인으로 의심해 희롱하자 걸치가 몸을 던져 월희를 도망시킨다.","core":"CONFLICT","core2":"RELIEF","skin":"희롱","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":68,"heading":"주막/방안/낮","title":"부끄러운 물건","intent_gist":"최준석이 박수동에게 재물을 건네며 일지매 토벌을 부탁하고, 박수동은 재물이 아닌 충심으로 응했다 답한다.","core":"CONFLICT","core2":"DESIRE","skin":"청탁","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":69,"heading":"주막 밖/낮","title":"덕보가 죽었다","intent_gist":"우돌이 덕보의 죽음과 일지매의 생김새를 보고하자 박수동이 분노하며 추격을 명한다.","core":"LOSS","core2":"CONFLICT","skin":"보고","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":70,"heading":"김자점의 집/방안/낮","title":"박수동 소식은","intent_gist":"소식을 기다리던 김자점이 답답해하던 중 기선녀가 찾아왔다는 전갈을 반긴다.","core":"HOOK","core2":null,"skin":"기다림","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":71,"heading":"김자점의 집/마당/낮","title":"기선녀가 오다","intent_gist":"가마에서 기선녀의 버선발이 내려선다.","core":"ESTABLISH","core2":null,"skin":"등장","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":72,"heading":"김자점의 집/방안/낮","title":"매화꽃도 피흘리네","intent_gist":"김자점이 기선녀를 소개받고, 기선녀가 범잡이 하나가 죽고 매화꽃(일지매)도 피를 흘리고 있으리라 예언한다.","core":"ORACLE","core2":null,"skin":"예언","by":"opus_reading"}
+{"work_id":"돌아온일지매_17","scene_no":73,"heading":"계곡/낮","title":"계곡에 쓰러지다","intent_gist":"총상을 입은 일지매가 계곡 한켠에 쓰러진 채 서서히 의식을 잃어간다.","core":"PERIL","core2":"LOSS","skin":"위기","by":"opus_reading"}

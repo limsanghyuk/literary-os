@@ -1,0 +1,59 @@
+{"work_id":"돌아온일지매_18","scene_no":1,"heading":"계곡/낮","title":"혼미한 의식","intent_gist":"총상 입은 일지매가 의식이 흐려지는 가운데 지나가던 달래와 각수가 몰래 상처를 싸매준다.","core":"PERIL","core2":"RESCUE","skin":"위기","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":2,"heading":"주막/방안/낮(추가씬)","title":"우리 살람 어쩌다","intent_gist":"빈털터리가 된 왕횡보와 성게가 살길을 고민하다 가짜 약장사를 떠올린다.","core":"RELIEF","core2":"DESIRE","skin":"희극","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":3,"heading":"주막/방안/시간경과/낮(추가씬)","title":"흙으로 만든 약","intent_gist":"왕횡보와 성게가 흙과 온갖 잡것을 섞어 가짜 약을 빚는다.","core":"DESIRE","core2":null,"skin":"사기 준비","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":4,"heading":"도선사/마당/낮","title":"부상당한 귀환","intent_gist":"상처 입고 비틀거리며 돌아온 일지매를 상좌승이 발견해 방으로 부축한다.","core":"PERIL","core2":"RESCUE","skin":"구조","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":5,"heading":"거리/밤","title":"기다리는 월희","intent_gist":"일지매를 기다리던 월희가 낯선 노인의 호의를 받아들여 하룻밤 신세를 지기로 한다.","core":"HOOK","core2":"PERIL","skin":"불안한 호의","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":6,"heading":"사내의 집/마당/밤","title":"낯선 이의 집","intent_gist":"월희가 노인을 따라 그의 집으로 들어간다.","core":"HOOK","core2":null,"skin":"경계","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":7,"heading":"사내의 집/부엌/밤","title":"제가 할게요","intent_gist":"노인이 손수 밥을 지으려 하자 월희가 나서서 돕겠다 한다.","core":"BOND","core2":null,"skin":"일상","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":8,"heading":"사내의 집/안방/밤","title":"속셈이 드러나다","intent_gist":"처자식이 석달째 집을 비웠다는 사실이 드러나며 노인이 월희에게 흑심을 품고 있음이 밝혀진다.","core":"PERIL","core2":"REVELATION","skin":"위협","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":9,"heading":"사내의 집/시간 경과/밤","title":"목침을 내리치다","intent_gist":"노인이 덮쳐오자 월희가 목침으로 내리쳐 저항하고, 마침 열공스님이 들이닥쳐 위기를 막는다.","core":"RESCUE","core2":"PERIL","skin":"위기 탈출","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":10,"heading":"사내의 집/전경/밤","title":"소란 이후","intent_gist":"소란이 지나간 사내의 집 전경이 비춰진다.","core":"ESTABLISH","core2":null,"skin":"정경","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":11,"heading":"사내의 집/밤","title":"접근 금지 이후","intent_gist":"열공의 감시 속에 하룻밤을 보내며 딴 생각을 품었던 사내가 마음을 접는다.","core":"RELIEF","core2":null,"skin":"안도","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":12,"heading":"거리/낮","title":"찾는 사람을 만나야","intent_gist":"열공과 함께 걷던 월희가 그가 찾던 사람이 일지매임을 알고 걸음을 멈춘다.","core":"HOOK","core2":"REVELATION","skin":"긴장","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":13,"heading":"도선사/마당/낮","title":"어디에요 일지매가","intent_gist":"월희가 다급히 상좌승에게 일지매의 방을 묻고 달려간다.","core":"HOOK","core2":null,"skin":"다급","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":14,"heading":"도선사/방안/낮","title":"사경을 헤매는 일지매","intent_gist":"총상으로 사경을 헤매는 일지매를 발견한 월희가 손을 잡고 애타게 부른다.","core":"PERIL","core2":"REUNION","skin":"재회 직전","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":15,"heading":"도선사/부엌/낮","title":"독보다 독한 사랑","intent_gist":"월희가 약을 달이며 납총의 독을 이겨내길 기원한다.","core":"BOND","core2":null,"skin":"간호","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":16,"heading":"도선사/방안/낮","title":"약을 흘려넣다","intent_gist":"월희가 정성으로 일지매의 입에 약을 흘려넣는다.","core":"BOND","core2":null,"skin":"간호","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":17,"heading":"도선사/방안/낮","title":"땀을 닦아주다","intent_gist":"물수건을 갈아주며 밤낮으로 일지매를 돌보는 월희.","core":"BOND","core2":null,"skin":"간호","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":18,"heading":"도선사/방안/시간 경과/밤","title":"가지마 월희","intent_gist":"혼수 상태의 일지매가 잠꼬대로 월희의 이름을 부르며 매달린다.","core":"LOSS","core2":"BOND","skin":"애틋","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":19,"heading":"도선사/방안/시간 경과/밤","title":"어머니를 찾다","intent_gist":"일지매가 헛소리로 죽은 어머니를 애타게 부른다.","core":"LOSS","core2":null,"skin":"상처","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":20,"heading":"도선사/방안/밤","title":"달아 라는 잠꼬대","intent_gist":"일지매가 잠결에 다른 여인 달의 이름을 불러 월희가 걸음을 멈춘다.","core":"CONFLICT","core2":null,"skin":"질투","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":21,"heading":"도선사/방안/밤","title":"정표시를 세다","intent_gist":"월희가 자신과 달의 이름을 적어 잠꼬대 횟수를 표시하며 질투 섞인 장난을 친다.","core":"RELIEF","core2":null,"skin":"희극 질투","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":22,"heading":"주인 집/낮(추가씬)","title":"삼을 따라가겠다","intent_gist":"백매가 보부상 무리에 끼어 한양에 다녀오겠다며 집사에게 청한다.","core":"HOOK","core2":null,"skin":"동행 청탁","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":23,"heading":"김자점의 집/방안/낮","title":"붉은 기둥 돌집","intent_gist":"기선녀가 알듯 모를듯한 점괘로 일지매가 산속 절에 숨어있음을 알려준다.","core":"ORACLE","core2":null,"skin":"예언","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":24,"heading":"도선사/마당/낮","title":"휘 비린내","intent_gist":"독보가 도선사에 나타나 일지매의 방쪽으로 다가간다.","core":"PERIL","core2":"HOOK","skin":"침입자","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":25,"heading":"도선사/방안/낮","title":"훔쳐보는 독보","intent_gist":"월희가 일지매에게 입맞추는 모습을 독보가 문틈으로 훔쳐본다.","core":"ROMANCE","core2":"PERIL","skin":"노출 위기","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":26,"heading":"도선사/대웅전","title":"비린내가 나더군요","intent_gist":"독보가 열공에게 별당에서 나는 비린내를 언급하며 은근히 압박한다.","core":"CONFLICT","core2":null,"skin":"탐색","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":27,"heading":"도선사/방안/낮","title":"월희가 살아있었다구","intent_gist":"정신을 차린 일지매가 월희가 살아있음을 확인하고 다시는 떠나지 않겠다 맹세하며 입맞춘다.","core":"REUNION","core2":"ROMANCE","skin":"재회","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":28,"heading":"도선사/대웅전/낮","title":"살생을 벌하다","intent_gist":"열공이 일지매의 살생을 꾸짖으며 매질하고, 월희가 대신 맞겠다 나서며 다시는 죽이지 않겠다는 다짐을 받아낸다.","core":"PUNISH","core2":"BOND","skin":"훈계","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":29,"heading":"저자 거리/낮(추가씬)","title":"가짜약이 들통나다","intent_gist":"왕횡보가 가짜 약을 팔다 양포에게 정체를 들켜 사람들 앞에서 망신을 당한다.","core":"REVERSAL","core2":null,"skin":"희극 폭로","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":30,"heading":"포도청/낮","title":"탈옥 소동","intent_gist":"똥지게를 팽개치고 담을 넘으려던 걸치가 포졸들에게 붙잡히고 마침 구자명 일행과 마주친다.","core":"CONFLICT","core2":"REUNION","skin":"소동","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":31,"heading":"포도청/집무실/낮","title":"우이동 얘기","intent_gist":"일지매의 행방을 추궁받던 걸치가 무심코 우이동을 언급해버린다.","core":"REVELATION","core2":"CONFLICT","skin":"실언","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":32,"heading":"포도청/집무실/시간 경과/낮","title":"화살을 준비하라","intent_gist":"구자명이 우이동을 급습할 궁수부대를 준비시킨다.","core":"CONFLICT","core2":null,"skin":"출동 준비","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":33,"heading":"도선사/마당/낮","title":"곧 돌아올게","intent_gist":"아저씨를 구하러 떠나는 일지매와 월희가 애틋하게 작별인사를 나눈다.","core":"BOND","core2":"ROMANCE","skin":"작별","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":34,"heading":"김자점의 집/낮","title":"짐승 비린내","intent_gist":"독보가 김자점에게 은근한 거래를 제안하며 일지매의 은신처를 넘길 뜻을 비친다.","core":"CONFLICT","core2":"DESIRE","skin":"흥정","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":35,"heading":"우이동 초가집/낮","title":"포졸들의 급습","intent_gist":"구자명과 포졸들이 우이동 초가를 급습하지만 일지매는 걸치의 방에 숨어 위기를 피한다.","core":"PERIL","core2":null,"skin":"수색","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":36,"heading":"우이동 초가집/낮","title":"온기 없는 방","intent_gist":"인기척 없는 집을 확인한 구자명이 포졸 둘을 매복시켜두고 돌아간다.","core":"CONFLICT","core2":null,"skin":"매복","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":37,"heading":"우이동 초가집/방안/낮","title":"천정에서 엿듣다","intent_gist":"천정에 숨은 일지매가 밖의 동태를 살핀다.","core":"PERIL","core2":null,"skin":"은신","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":38,"heading":"도선사/마당/낮","title":"잡을까요","intent_gist":"박수동과 사냥꾼들이 도선사에 나타나 쌀을 씻는 월희를 노린다.","core":"PERIL","core2":"HOOK","skin":"포위","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":39,"heading":"도선사/부엌/낮","title":"월희를 결박하다","intent_gist":"사냥꾼들이 아무것도 모르는 월희를 총으로 위협해 묶는다.","core":"PERIL","core2":null,"skin":"납치","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":40,"heading":"도선사/방안/낮","title":"일지매는 포청에","intent_gist":"열공이 나서 항의하지만 김자점의 명임을 안 월희가 일지매의 행방을 스스로 밝힌다.","core":"CONFLICT","core2":"PERIL","skin":"대치","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":41,"heading":"포도청 밖/낮","title":"바깥 공기가 좋다","intent_gist":"풀려난 걸치가 홀가분해하며 포청을 나서고, 그를 지켜보는 삿갓 쓴 일지매가 나타난다.","core":"RELIEF","core2":"HOOK","skin":"석방","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":42,"heading":"저자 거리/도방/낮(추가씬)","title":"머무는 기간","intent_gist":"백매가 보부상 행수에게 한양 체류 기간을 묻는다.","core":"HOOK","core2":null,"skin":"탐문","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":43,"heading":"저자 거리/낮","title":"일지매도 잃어뿌릿따","intent_gist":"월희를 찾지 못해 낙심하던 걸치 앞에 삿갓 쓴 일지매가 나타난다.","core":"REUNION","core2":null,"skin":"재회","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":44,"heading":"저자 거리/낮","title":"니 어무이를 닮았다","intent_gist":"걸치가 스쳐간 여인이 일지매의 어머니를 닮았다고 말해주지만 여인은 이미 사라진 뒤다.","core":"HOOK","core2":"LOSS","skin":"실마리","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":45,"heading":"포도청 앞/낮(추가씬)","title":"백매가 기다리다","intent_gist":"포도청 앞에서 기다리던 백매를 수련이 발견하고 놀란다.","core":"HOOK","core2":null,"skin":"우연","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":46,"heading":"포도청 일각/낮(추가씬)","title":"일지매가 살인을","intent_gist":"수련이 일지매의 살인 소식을 조심스레 전하자 백매가 충격을 받는다.","core":"REVELATION","core2":"LOSS","skin":"충격","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":47,"heading":"포도청 마당/낮","title":"수련을 찾는 구자명","intent_gist":"구자명이 자신을 찾아온 이가 있다는 말에 수련을 찾아 마당을 두리번거린다.","core":"BOND","core2":null,"skin":"탐색","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":48,"heading":"포도청 일각/낮","title":"믿음이 흔들리다","intent_gist":"백매가 그분의 말씀을 믿지 못하고 쫓아온 자신을 자책하고, 수련도 같은 두려움을 고백한다.","core":"LOSS","core2":"BOND","skin":"고백","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":49,"heading":"포도청 앞/낮(추가씬)","title":"눈물을 흘리며","intent_gist":"백매가 눈물을 흘리며 포도청을 나선다.","core":"LOSS","core2":null,"skin":"슬픔","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":50,"heading":"포도청 일각/낮(추가씬)","title":"아니라고 말씀드렸잖아요","intent_gist":"혼자 상심한 수련이 구자명의 물음에 짜증을 내며 자리를 피한다.","core":"CONFLICT","core2":null,"skin":"회피","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":51,"heading":"도선사/방안/낮","title":"권대감 뒤엔 김자점","intent_gist":"열공이 월희를 잡아간 사냥꾼들의 요구와 밀서 얘기를 전하며 김자점이 배후임을 알려준다.","core":"REVELATION","core2":"PERIL","skin":"배후 폭로","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":52,"heading":"배선달의 집/마당/낮","title":"일지매가 왔다","intent_gist":"걸치가 찾아와 일지매가 함께 왔다고 알리지만 모습이 보이지 않다가 어느새 대문 안에 나타난다.","core":"REUNION","core2":"HOOK","skin":"등장","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":53,"heading":"배선달의 집/서재/낮","title":"집의 내부를 알고 싶다","intent_gist":"월희가 김자점의 광에 갇혔음을 알게 된 일지매가 배선달에게 김자점 저택의 구조를 캐묻는다.","core":"CONFLICT","core2":null,"skin":"작전 논의","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":54,"heading":"김자점의 집/광/낮","title":"가장 값나가는 노략품","intent_gist":"묶인 채 갇힌 월희가 일지매를 믿으며 버티는데 김자점이 직접 찾아와 미끼로 삼겠다 선언한다.","core":"PERIL","core2":"CONFLICT","skin":"감금","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":55,"heading":"김자점의 집/창고 앞/낮","title":"덫은 다 놓았다","intent_gist":"김자점과 박비수가 창고를 잠그고, 숨어있던 박수동이 나타나 매복이 완성됐음을 확인시킨다.","core":"CONFLICT","core2":"PERIL","skin":"매복 완성","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":56,"heading":"김자점의 집/방안/낮","title":"열흘 뒤에 물으라","intent_gist":"기선녀가 일지매가 열흘간은 오지 않을 것이라 점쳐 김자점을 안심시킨다.","core":"ORACLE","core2":null,"skin":"예언","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":57,"heading":"김자점의 집/마당/낮","title":"한잔 하려나","intent_gist":"김자점이 경계를 늦추도록 박수동에게 술자리를 권한다.","core":"CONFLICT","core2":"DESIRE","skin":"회유","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":58,"heading":"기생집/밤","title":"고양이 상 추보듯","intent_gist":"격식을 싫어하는 박수동이 술자리에서 어색해하다 자리를 뜬다.","core":"CONFLICT","core2":null,"skin":"어색함","by":"opus_reading"}
+{"work_id":"돌아온일지매_18","scene_no":59,"heading":"기생집 밖/밤","title":"개 같은 인생이로구만","intent_gist":"바람을 쐬러 나온 박수동 앞에 양반 복장의 일지매가 정체를 숨긴 채 의미심장한 말을 건넨다.","core":"HOOK","core2":"CONFLICT","skin":"도발","by":"opus_reading"}
