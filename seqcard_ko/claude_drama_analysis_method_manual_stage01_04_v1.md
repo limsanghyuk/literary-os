@@ -1,5 +1,7 @@
 # 드라마 4-Stage 분석 방법론 완전 설명서 (Claude → GPT 인계용, v1)
 
+> ⚠️ **후속판 있음**: 이 문서는 `claude_drama_analysis_method_manual_stage01_04_v2.md`로 확장되었다. v2는 이 문서를 상위집합으로 포함하고, 두 진영(GPT 커버리지 + Claude 깊이)의 강점만 흡수한 **이중 슬롯(state_headline/relation_headline) + 이중 floor(깊이·커버리지) + 전용 arc-state enum**을 추가한다. **신규 작품 분석은 v2를 기준으로 하고, 이 v1은 기존 정본(~35작) 기준·배경 참조용으로 유지된다.**
+
 Document ID: CLAUDE-DRAMA-METHOD-STAGE01-04-V1
 작성: Claude (Cowork/Sonnet), literary-os `seqcard_ko` 코퍼스 저작 프로젝트 기준
 대상: GPT 등 외부 provider로 동일 방법론을 재현하려는 모든 에이전트
