@@ -1,0 +1,2 @@
+{"timestamp":"<ISO8601>","run_id":"<run_id>","event":"RUN_START","work_id":"<work>","episode_no":null,"stage":"SOURCE","artifact_sha256":null,"next_action":"SOURCE_INVENTORY"}
+{"timestamp":"<ISO8601>","run_id":"<run_id>","event":"CHECKPOINT_LOCKED","work_id":"<work>","episode_no":1,"stage":"STAGE03","artifact_sha256":"<sha256>","next_action":"INDEPENDENT_AUDIT_OR_NEXT_EPISODE"}
