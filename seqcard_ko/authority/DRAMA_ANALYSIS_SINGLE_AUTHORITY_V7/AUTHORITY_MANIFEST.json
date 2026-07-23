@@ -1,0 +1,30 @@
+{
+  "authority_id": "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V7",
+  "authority_version": "7.0.0",
+  "status": "ACTIVE_SOLE_EXECUTION_AUTHORITY",
+  "effective_date": "2026-07-23",
+  "supersedes": [
+    "DRAMA_ANALYSIS_PROTOCOL_MANIFEST_V1-V6",
+    "DRAMA_NEW_CONVERSATION_EXECUTION_GUIDE_V1-V4",
+    "SCHEMA_CONTRACTS_V1-V3",
+    "standalone supplements where conflicting"
+  ],
+  "block_policy": {
+    "max_episodes_per_block": 8,
+    "ordering": "ascending_contiguous",
+    "final_block": "remaining_episodes"
+  },
+  "required_documents": [
+    "README.md",
+    "01_EXECUTION_PROTOCOL.md",
+    "02_SCHEMA_CONTRACTS.md",
+    "03_VALIDATION_AND_RELEASE.md",
+    "04_NEW_SESSION_BOOTSTRAP.md"
+  ],
+  "final_pass_axes": [
+    "STRUCTURAL_CONTRACT_PASS",
+    "SEMANTIC_MECHANICAL_PASS",
+    "SOURCE_GROUNDED_MANUAL_PASS",
+    "PACKAGE_FRESH_EXTRACTION_PASS"
+  ]
+}
