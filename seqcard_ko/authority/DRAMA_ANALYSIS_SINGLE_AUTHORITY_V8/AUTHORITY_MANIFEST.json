@@ -1,0 +1,16 @@
+{
+  "authority_id": "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V8",
+  "version": "8.0.0",
+  "effective_date": "2026-07-23",
+  "status": "ACTIVE_SINGLE_AUTHORITY",
+  "entrypoint": "README.md",
+  "canonical_manual": "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V8.md",
+  "supersedes": ["DRAMA_ANALYSIS_SINGLE_AUTHORITY_V7", "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V7_1", "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V7_1_2"],
+  "canonical_scene_card_keys": 9,
+  "planning_block_max_episodes": 8,
+  "semantic_authoring_unit": "EPISODE_Q1_Q2_Q3_Q4",
+  "python_semantic_generation": false,
+  "same_work_legacy_semantics_before_author_lock": false,
+  "stage04_requires_all_stage01_03_locked": true,
+  "full_release_package_sha256": "e24735e61095d9ddaaa7c88e1948b8ddee543fb531ba856570d0caf7d458097f"
+}
