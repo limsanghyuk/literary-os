@@ -1,0 +1,11 @@
+{
+  "schema": "DRAMA_EPISODE_CHECKPOINT_V9",
+  "work_id": "<work>",
+  "episode_no": 1,
+  "run_id": "<run_id>",
+  "source_lock_sha256": "<sha256>",
+  "artifacts": {},
+  "validation": "PENDING",
+  "status": "EPISODE_FILES_PRESENT_VALIDATION_PENDING",
+  "next_action": "VALIDATE_AND_LOCK"
+}
