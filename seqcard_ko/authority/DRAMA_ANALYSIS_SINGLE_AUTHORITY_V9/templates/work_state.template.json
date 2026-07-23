@@ -1,0 +1,12 @@
+{
+  "schema": "DRAMA_WORK_STATE_V9",
+  "work_id": "<work>",
+  "scope": "<scope>",
+  "authority": "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V9",
+  "status": "DRAFT",
+  "author_run_id": null,
+  "audit_run_id": null,
+  "last_safe_checkpoint": null,
+  "last_checkpoint_at": null,
+  "next_action": "SOURCE_FORMAT_AUDIT"
+}

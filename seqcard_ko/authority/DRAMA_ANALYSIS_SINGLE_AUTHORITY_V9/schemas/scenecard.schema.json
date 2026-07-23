@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SceneCardV9",
+  "type": "object",
+  "properties": {
+    "work_id": {"type": "string", "minLength": 1},
+    "scene_no": {"type": "integer", "minimum": 1},
+    "heading": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "intent_gist": {"type": "string", "minLength": 1},
+    "core": {"enum": ["ESTABLISH","ORACLE","INTRO","BOND","CONFLICT","REVERSAL","LOSS","PUNISH","REVELATION","REUNION","RELIEF","ROMANCE","PERIL","RESCUE","DESIRE","HOOK"]},
+    "core2": {"anyOf": [{"enum": ["ESTABLISH","ORACLE","INTRO","BOND","CONFLICT","REVERSAL","LOSS","PUNISH","REVELATION","REUNION","RELIEF","ROMANCE","PERIL","RESCUE","DESIRE","HOOK"]},{"type": "null"}]},
+    "skin": {"type": "string", "minLength": 1},
+    "by": {"type": "string", "minLength": 1}
+  },
+  "required": ["work_id","scene_no","heading","title","intent_gist","core","core2","skin","by"],
+  "additionalProperties": false
+}

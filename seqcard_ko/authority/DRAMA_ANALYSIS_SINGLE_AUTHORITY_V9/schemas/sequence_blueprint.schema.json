@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SequenceBlueprintV9",
+  "type": "object",
+  "properties": {
+    "seq_id": {"type": "string", "minLength": 1},
+    "work_id": {"type": "string", "minLength": 1},
+    "episode_no": {"type": "integer", "minimum": 1},
+    "seq_index": {"type": "integer", "minimum": 1},
+    "member_scene_nos": {"type": "array", "minItems": 1, "items": {"type": "integer", "minimum": 1}},
+    "scene_span": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "integer", "minimum": 1}},
+    "scene_budget": {"type": "integer", "minimum": 1},
+    "sequence_intent": {"type": "string", "minLength": 1},
+    "goal": {"type": "string", "minLength": 1},
+    "obstacle": {"type": "string", "minLength": 1},
+    "value_shift": {"type": "object", "properties": {"from": {"type": "string", "minLength": 1}, "to": {"type": "string", "minLength": 1}}, "required": ["from","to"], "additionalProperties": false},
+    "turn_type": {"enum": ["RISE","BOND","PUNISH","FALL","LOSS","REVEAL","ORACLE","REVERSAL","STALL","HOOK","CONFLICT"]},
+    "turn_class": {"enum": ["RISE","FALL","REVEAL","STALL"]},
+    "core_mix": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["ESTABLISH","ORACLE","INTRO","BOND","CONFLICT","REVERSAL","LOSS","PUNISH","REVELATION","REUNION","RELIEF","ROMANCE","PERIL","RESCUE","DESIRE","HOOK"]}},
+    "pov_char": {"type": "string", "minLength": 1},
+    "place_cluster": {"type": "string", "minLength": 1},
+    "runtime_share": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+    "by": {"type": "string", "minLength": 1}
+  },
+  "required": ["seq_id","work_id","episode_no","seq_index","member_scene_nos","scene_span","scene_budget","sequence_intent","goal","obstacle","value_shift","turn_type","turn_class","core_mix","pov_char","place_cluster","runtime_share","by"],
+  "additionalProperties": false
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FullSeriesArcV9",
+  "type": "object",
+  "properties": {
+    "series": {"type": "string", "minLength": 1},
+    "episodes_total": {"type": "integer", "minimum": 1},
+    "scenes_total": {"type": "integer", "minimum": 1},
+    "sequences_total": {"type": "integer", "minimum": 1},
+    "logline": {"type": "string", "minLength": 1},
+    "central_dramatic_question": {"type": "string", "minLength": 1},
+    "theme_statement": {"type": "string", "minLength": 1},
+    "protagonist": {"type": "object", "minProperties": 1},
+    "antagonist": {"type": "object", "minProperties": 1},
+    "season_structure": {"type": "array", "minItems": 1, "items": {"type": "object", "minProperties": 1}},
+    "macro_turning_points": {"type": "array", "items": {"type": "object", "minProperties": 1}},
+    "resolution": {"type": "string", "minLength": 1},
+    "open_ending": {"type": "boolean"},
+    "tone": {"type": "string", "minLength": 1},
+    "conflict_persist": {"type": "number", "minimum": 0, "maximum": 1},
+    "series_core_dist": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "by": {"type": "string", "minLength": 1}
+  },
+  "required": ["series","episodes_total","scenes_total","sequences_total","logline","central_dramatic_question","theme_statement","protagonist","antagonist","season_structure","macro_turning_points","resolution","open_ending","tone","conflict_persist","series_core_dist","by"],
+  "additionalProperties": false
+}

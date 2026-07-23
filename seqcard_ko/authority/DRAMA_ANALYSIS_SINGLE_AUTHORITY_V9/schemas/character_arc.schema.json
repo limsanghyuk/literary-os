@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CharacterArcV9",
+  "type": "object",
+  "properties": {
+    "work_id": {"type": "string", "minLength": 1},
+    "character": {"type": "string", "minLength": 1},
+    "episode_no": {"type": "integer", "minimum": 1},
+    "state_label": {"type": "string", "minLength": 1},
+    "state_delta": {"type": "string", "minLength": 1},
+    "trigger_scene_no": {"type": "integer", "minimum": 1},
+    "by": {"type": "string", "minLength": 1},
+    "evidence": {"type": "string", "minLength": 1}
+  },
+  "required": ["work_id","character","episode_no","state_label","state_delta","trigger_scene_no","by","evidence"],
+  "additionalProperties": false
+}

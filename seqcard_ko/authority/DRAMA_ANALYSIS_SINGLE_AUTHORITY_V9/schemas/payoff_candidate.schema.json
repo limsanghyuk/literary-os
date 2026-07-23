@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PayoffCandidateV9",
+  "type": "object",
+  "properties": {
+    "candidate_id": {"type": "string", "minLength": 1},
+    "work_id": {"type": "string", "minLength": 1},
+    "episode_no": {"type": "integer", "minimum": 1},
+    "scene_no": {"type": "integer", "minimum": 1},
+    "edge_type_guess": {"enum": ["plant_payoff","callback","subplot_counterpoint","resolved_here"]},
+    "description": {"type": "string", "minLength": 1},
+    "by": {"type": "string", "minLength": 1}
+  },
+  "required": ["candidate_id","work_id","episode_no","scene_no","edge_type_guess","description","by"],
+  "additionalProperties": false
+}

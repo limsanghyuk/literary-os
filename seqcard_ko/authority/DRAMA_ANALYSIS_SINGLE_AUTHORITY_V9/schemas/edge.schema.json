@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EdgeV9",
+  "type": "object",
+  "properties": {
+    "edge_id": {"type": "string", "minLength": 1},
+    "work_id": {"type": "string", "minLength": 1},
+    "edge_type": {"type": "string", "minLength": 1},
+    "src_episode_no": {"type": "integer", "minimum": 1},
+    "src_scene_no": {"type": "integer", "minimum": 1},
+    "tgt_episode_no": {"type": "integer", "minimum": 1},
+    "tgt_scene_no": {"type": "integer", "minimum": 1},
+    "gap_episodes": {"type": "integer", "minimum": 0},
+    "label": {"enum": ["ESTABLISH","ORACLE","INTRO","BOND","CONFLICT","REVERSAL","LOSS","PUNISH","REVELATION","REUNION","RELIEF","ROMANCE","PERIL","RESCUE","DESIRE","HOOK"]},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "note": {"type": "string", "minLength": 1},
+    "by": {"type": "string", "minLength": 1}
+  },
+  "required": ["edge_id","work_id","edge_type","src_episode_no","src_scene_no","tgt_episode_no","tgt_scene_no","gap_episodes","label","confidence","note","by"],
+  "additionalProperties": false
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "DRAMA_MANUAL_AUDIT_V9",
+  "work_id": "<work>",
+  "episode_no": 1,
+  "author_run_id": "<author>",
+  "audit_run_id": "<audit>",
+  "source_reopened": true,
+  "scene_coverage": {"reviewed": 0,"total": 0},
+  "high_risk_reviews": [],
+  "sequence_review": {},
+  "stage03_review": {},
+  "failures": [],
+  "corrections": [],
+  "verdict": "PENDING"
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EpisodeMetaV9",
+  "type": "object",
+  "properties": {
+    "work_id": {"type": "string", "minLength": 1},
+    "scene_count": {"type": "integer", "minimum": 1},
+    "core_dist": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "episode_function": {"type": "string", "minLength": 1},
+    "by": {"type": "string", "minLength": 1}
+  },
+  "required": ["work_id","scene_count","core_dist","episode_function","by"],
+  "additionalProperties": false
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RelationshipArcV9",
+  "type": "object",
+  "properties": {
+    "work_id": {"type": "string", "minLength": 1},
+    "char_a": {"type": "string", "minLength": 1},
+    "char_b": {"type": "string", "minLength": 1},
+    "episode_no": {"type": "integer", "minimum": 1},
+    "relation_state": {"type": "string", "minLength": 1},
+    "relation_delta": {"type": "string", "minLength": 1},
+    "trigger_scene_no": {"type": "integer", "minimum": 1},
+    "evidence": {"type": "string", "minLength": 1},
+    "by": {"type": "string", "minLength": 1}
+  },
+  "required": ["work_id","char_a","char_b","episode_no","relation_state","relation_delta","trigger_scene_no","evidence","by"],
+  "additionalProperties": false
+}

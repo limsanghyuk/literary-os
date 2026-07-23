@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CandidateDispositionV9",
+  "type": "object",
+  "properties": {
+    "candidate_id": {"type": "string", "minLength": 1},
+    "disposition": {"enum": ["PROMOTED_CROSS_EDGE","RECLASSIFIED_LOCAL_OR_ADJACENT_CAUSAL","RESOLVED_WITHIN_EPISODE","REJECTED_DUPLICATE","REJECTED_INSUFFICIENT_EVIDENCE","REJECTED_SOURCE_MISMATCH"]},
+    "evidence_ref": {"type": "string", "minLength": 1},
+    "reason": {"type": "string", "minLength": 1},
+    "resulting_edge_id": {"anyOf": [{"type": "string", "minLength": 1},{"type": "null"}]},
+    "reviewed_by": {"type": "string", "minLength": 1}
+  },
+  "required": ["candidate_id","disposition","evidence_ref","reason","resulting_edge_id","reviewed_by"],
+  "additionalProperties": false
+}

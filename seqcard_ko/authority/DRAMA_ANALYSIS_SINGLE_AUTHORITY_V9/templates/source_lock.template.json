@@ -1,0 +1,13 @@
+{
+  "schema": "DRAMA_SOURCE_LOCK_V9",
+  "work_id": "<work>",
+  "source_completeness_status": "SOURCE_COMPLETENESS_UNVERIFIED",
+  "analysis_scope": "<scope>",
+  "direct_reading_required": true,
+  "python_semantic_generation": false,
+  "raw_script_exported": false,
+  "source_anomalies": [],
+  "episodes": [],
+  "current_completed_episodes": [],
+  "next": "SOURCE_FORMAT_AUDIT"
+}

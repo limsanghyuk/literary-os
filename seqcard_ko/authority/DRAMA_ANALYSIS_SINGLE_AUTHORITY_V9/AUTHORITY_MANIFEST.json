@@ -1,0 +1,37 @@
+{
+  "authority_id": "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V9",
+  "version": "9.0.0",
+  "effective_date": "2026-07-23",
+  "status": "ACTIVE_SINGLE_AUTHORITY",
+  "normative_document": "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V9.md",
+  "supersedes": ["DRAMA_ANALYSIS_SINGLE_AUTHORITY_V8"],
+  "semantic_authoring_unit": "FULL_EPISODE_SEQUENTIAL",
+  "optional_reading_quarters": true,
+  "checkpoint_prepare_minutes": 20,
+  "checkpoint_required_minutes": 25,
+  "hard_stop_without_checkpoint_minutes": 30,
+  "canonical_scene_card_keys": 9,
+  "python_semantic_generation": false,
+  "author_audit_run_separation": true,
+  "acceptance_pilot": "pilots/EYES_DAZZLING_EP01_ACCEPTANCE_20260723.md",
+  "local_release_artifacts": {
+    "authority_zip": {
+      "filename": "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V9.zip",
+      "sha256": "30649081862204edc0dd6911b3d0232a77551bec52ab5ab6e3c6fed6f0ba5dcc"
+    },
+    "authority_docx": {
+      "filename": "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V9.docx",
+      "sha256": "d4b13e1ed847bf1443bcc588a74255d0b42482cc0f8f4dd43033fa4052d3869f"
+    },
+    "acceptance_pilot_zip": {
+      "filename": "EYES_DAZZLING_V9_EP01_STAGE01_03_ACCEPTANCE_PILOT_20260723.zip",
+      "sha256": "e05d492d5d175d61d990700d61e89de3d924660d80efec0f61f60d9869b60c30"
+    }
+  },
+  "hub_boundary": "No raw scripts or raw authored JSONL",
+  "validator_entrypoints": [
+    "tools/validate_authority_package.py",
+    "tools/validate_work_package.py",
+    "tools/validate_runtime_checkpoint.py"
+  ]
+}
