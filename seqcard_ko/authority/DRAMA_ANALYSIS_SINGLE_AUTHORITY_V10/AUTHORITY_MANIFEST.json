@@ -1,0 +1,45 @@
+{
+  "authority_id": "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V10",
+  "version": "10.0.0",
+  "effective_date": "2026-07-24",
+  "status": "ACTIVE_SINGLE_AUTHORITY",
+  "distribution": "HUB_CORE",
+  "normative_document": "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V10.md",
+  "supersedes": ["DRAMA_ANALYSIS_SINGLE_AUTHORITY_V9"],
+  "semantic_authoring_unit": "FULL_EPISODE_SEQUENTIAL",
+  "checkpoint_minutes": {"prepare": 20, "required": 25, "hard_stop": 30},
+  "canonical_scene_card_keys": 9,
+  "python_semantic_generation": false,
+  "author_audit_run_separation": true,
+  "source_label_canonical_ordinal_separation": true,
+  "composite_relationship_entities_forbidden": true,
+  "stage04_conservative_promotion": true,
+  "zip_portability_gate": true,
+  "developer_entrypoints": [
+    "README.md",
+    "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V10.md",
+    "NEW_SESSION_BOOTSTRAP.md",
+    "OPERATIONS_RUNBOOK.md",
+    "DEVELOPER_HANDOFF.md"
+  ],
+  "acceptance_suite": [
+    "수호천사: 기존판 오염·미래 정보 혼입·작품 단위 교체",
+    "눈이 부시게 EP01: 번호 없는 장면 누락·부분 원본 fail-closed",
+    "질투의 화신: 신규 24부작 Stage01–04·DB79·ZIP 호환"
+  ],
+  "local_release_artifacts": {
+    "authority_zip": {
+      "filename": "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V10.zip",
+      "sha256": "aea657147e58592e3cd9406f80bf11a353533f5f8d42c2accf964bbb20b82db4"
+    },
+    "authority_docx": {
+      "filename": "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V10.docx",
+      "sha256": "359612489569f96e3d44d3214e298bfc3b83fd87ac9b9d83ba19a2d571d7b244"
+    },
+    "database_79works": {
+      "filename": "SEQCARD_KO_DATABASE_79WORKS_JEALOUSY_INCARNATE_V9_20260724.zip",
+      "sha256": "7ec6e6ad7ef819f0106a24174006d8bda53c68ca48a9bf2bd549f49d38d18715"
+    }
+  },
+  "hub_boundary": "No raw scripts, source scripts, or full authored JSONL"
+}
