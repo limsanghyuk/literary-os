@@ -1,0 +1,16 @@
+{
+  "authority_id": "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V10",
+  "version": "10.0.0",
+  "stage_schemas_unchanged_from_v9": true,
+  "records": {
+    "SceneCard": ["work_id","scene_no","heading","title","intent_gist","core","core2","skin","by"],
+    "EpisodeMeta": ["work_id","scene_count","core_dist","episode_function","by"],
+    "SequenceBlueprint": ["seq_id","work_id","episode_no","seq_index","member_scene_nos","scene_span","scene_budget","sequence_intent","goal","obstacle","value_shift","turn_type","turn_class","core_mix","pov_char","place_cluster","runtime_share","by"],
+    "EpisodeArc": ["work_id","episode_no","scene_count","sequence_count","dramatic_question","act_structure","entry_state","exit_state","turning_point","central_conflict_axis","episode_function","core_dist","by"],
+    "CharacterArc": ["work_id","character","episode_no","state_label","state_delta","trigger_scene_no","by","evidence"],
+    "RelationshipArc": ["work_id","char_a","char_b","episode_no","relation_state","relation_delta","trigger_scene_no","evidence","by"],
+    "LocalEdge": ["edge_id","work_id","edge_type","src_episode_no","src_scene_no","tgt_episode_no","tgt_scene_no","gap_episodes","label","confidence","note","by"],
+    "PayoffCandidate": ["candidate_id","work_id","episode_no","scene_no","edge_type_guess","description","by"],
+    "FullSeriesArc": ["series","episodes_total","scenes_total","sequences_total","logline","central_dramatic_question","theme_statement","protagonist","antagonist","season_structure","macro_turning_points","resolution","open_ending","tone","conflict_persist","series_core_dist","by"]
+  }
+}
