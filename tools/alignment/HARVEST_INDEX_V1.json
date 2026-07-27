@@ -1,0 +1,229 @@
+{
+ "schema": "HARVEST_PAIRS_INDEX_V1",
+ "pair_type": "brief2prose",
+ "version": "v1",
+ "generated": "2026-07-27",
+ "method": "hybrid heading alignment (E1b, headsim>=0.5), deterministic LLM-free",
+ "total_pairs": 18418,
+ "episode_files": 302,
+ "aggregate_sha256": "c671db943e291bda7fdd5a1dc83297b52cb9b1d2180125c82c0695d45bbeeb4b",
+ "storage": "LOCAL ONLY — db/harvest_pairs/brief2prose_v1/ (verbatim completion 포함, 허브 비커밋)",
+ "per_work": {
+  "베토벤바이러스": {
+   "eps": 17,
+   "cards": 748,
+   "aligned": 743
+  },
+  "불한당": {
+   "eps": 16,
+   "cards": 1040,
+   "aligned": 0
+  },
+  "비밀의숲": {
+   "eps": 16,
+   "cards": 1037,
+   "aligned": 0
+  },
+  "성균관스캔들": {
+   "eps": 20,
+   "cards": 1315,
+   "aligned": 0
+  },
+  "스카이캐슬": {
+   "eps": 20,
+   "cards": 1353,
+   "aligned": 0
+  },
+  "스토브리그": {
+   "eps": 16,
+   "cards": 1003,
+   "aligned": 0
+  },
+  "시그널": {
+   "eps": 16,
+   "cards": 1287,
+   "aligned": 1248
+  },
+  "시크릿가든": {
+   "eps": 20,
+   "cards": 888,
+   "aligned": 463
+  },
+  "시티헌터": {
+   "eps": 20,
+   "cards": 1356,
+   "aligned": 1321
+  },
+  "싸인": {
+   "eps": 20,
+   "cards": 1358,
+   "aligned": 1159
+  },
+  "여우각시별": {
+   "eps": 15,
+   "cards": 994,
+   "aligned": 0
+  },
+  "연애시대": {
+   "eps": 12,
+   "cards": 797,
+   "aligned": 0
+  },
+  "오나의귀신님": {
+   "eps": 16,
+   "cards": 1100,
+   "aligned": 0
+  },
+  "질투의화신": {
+   "eps": 24,
+   "cards": 1577,
+   "aligned": 0
+  },
+  "쩐의전쟁": {
+   "eps": 16,
+   "cards": 1142,
+   "aligned": 1111
+  },
+  "추적자": {
+   "eps": 16,
+   "cards": 884,
+   "aligned": 196
+  },
+  "킬미힐미": {
+   "eps": 20,
+   "cards": 1285,
+   "aligned": 0
+  },
+  "파리의연인": {
+   "eps": 20,
+   "cards": 930,
+   "aligned": 245
+  },
+  "파스타": {
+   "eps": 20,
+   "cards": 1271,
+   "aligned": 3
+  },
+  "하얀거탑": {
+   "eps": 20,
+   "cards": 1304,
+   "aligned": 0
+  },
+  "힐러": {
+   "eps": 20,
+   "cards": 1374,
+   "aligned": 0
+  },
+  "W": {
+   "eps": 16,
+   "cards": 1220,
+   "aligned": 352
+  },
+  "결혼못하는남자": {
+   "eps": 15,
+   "cards": 1169,
+   "aligned": 740
+  },
+  "경성스캔들": {
+   "eps": 16,
+   "cards": 1187,
+   "aligned": 1145
+  },
+  "공주의남자": {
+   "eps": 24,
+   "cards": 1784,
+   "aligned": 1714
+  },
+  "구르미그린달빛": {
+   "eps": 18,
+   "cards": 973,
+   "aligned": 0
+  },
+  "굿캐스팅": {
+   "eps": 16,
+   "cards": 1020,
+   "aligned": 8
+  },
+  "그대웃어요": {
+   "eps": 4,
+   "cards": 203,
+   "aligned": 0
+  },
+  "그들이사는세상": {
+   "eps": 16,
+   "cards": 801,
+   "aligned": 259
+  },
+  "내여자친구는구미호": {
+   "eps": 16,
+   "cards": 793,
+   "aligned": 0
+  },
+  "내이름은김삼순": {
+   "eps": 8,
+   "cards": 483,
+   "aligned": 112
+  },
+  "너의목소리가들려": {
+   "eps": 18,
+   "cards": 1080,
+   "aligned": 0
+  },
+  "녹두꽃": {
+   "eps": 24,
+   "cards": 1636,
+   "aligned": 0
+  },
+  "뉴하트": {
+   "eps": 23,
+   "cards": 1238,
+   "aligned": 0
+  },
+  "대장금": {
+   "eps": 54,
+   "cards": 3630,
+   "aligned": 2960
+  },
+  "더킹투하츠": {
+   "eps": 20,
+   "cards": 1110,
+   "aligned": 86
+  },
+  "도깨비": {
+   "eps": 16,
+   "cards": 900,
+   "aligned": 829
+  },
+  "마왕": {
+   "eps": 19,
+   "cards": 1505,
+   "aligned": 1499
+  },
+  "모래시계": {
+   "eps": 24,
+   "cards": 1365,
+   "aligned": 1272
+  },
+  "미안하다사랑한다": {
+   "eps": 16,
+   "cards": 1299,
+   "aligned": 4
+  },
+  "밀회": {
+   "eps": 16,
+   "cards": 1144,
+   "aligned": 0
+  },
+  "배가본드": {
+   "eps": 16,
+   "cards": 993,
+   "aligned": 949
+  }
+ },
+ "provenance": "seqcard_ko authored SceneCard (title/intent_gist/core/skin) x corpus_ko/txt spans",
+ "next": [
+  "zero-work 19작 = 무번호 헤딩 → 의미 폴백 파일럿(AM-6 안전마진)",
+  "대장금 07+ 부분미정렬 진단",
+  "split(train/val) 작품단위 분할은 소비 시점에"
+ ]
+}
