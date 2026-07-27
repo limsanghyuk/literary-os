@@ -1,0 +1,341 @@
+{
+ "schema": "HARVEST_PAIRS_INDEX_V2",
+ "pair_type": "brief2prose",
+ "version": "v2",
+ "generated": "2026-07-27",
+ "total_pairs": 23657,
+ "episode_files": 385,
+ "aggregate_sha256": "b161bc55a0331ec808b53193532bb4747617f40f911b11742b18373ece1177d8",
+ "modes": {
+  "heading_hybrid": 18418,
+  "order_mode": 5239
+ },
+ "method": "mode1: heading number+headsim>=0.5 (E1b 100%) | mode2(order): count-equal+monotonic+discriminative>=60% gate, verify_win row tag",
+ "storage": "LOCAL ONLY — db/harvest_pairs/brief2prose_v1/",
+ "per_work_heading": {
+  "베토벤바이러스": {
+   "eps": 17,
+   "cards": 748,
+   "aligned": 743
+  },
+  "불한당": {
+   "eps": 16,
+   "cards": 1040,
+   "aligned": 0
+  },
+  "비밀의숲": {
+   "eps": 16,
+   "cards": 1037,
+   "aligned": 0
+  },
+  "성균관스캔들": {
+   "eps": 20,
+   "cards": 1315,
+   "aligned": 0
+  },
+  "스카이캐슬": {
+   "eps": 20,
+   "cards": 1353,
+   "aligned": 0
+  },
+  "스토브리그": {
+   "eps": 16,
+   "cards": 1003,
+   "aligned": 0
+  },
+  "시그널": {
+   "eps": 16,
+   "cards": 1287,
+   "aligned": 1248
+  },
+  "시크릿가든": {
+   "eps": 20,
+   "cards": 888,
+   "aligned": 463
+  },
+  "시티헌터": {
+   "eps": 20,
+   "cards": 1356,
+   "aligned": 1321
+  },
+  "싸인": {
+   "eps": 20,
+   "cards": 1358,
+   "aligned": 1159
+  },
+  "여우각시별": {
+   "eps": 15,
+   "cards": 994,
+   "aligned": 0
+  },
+  "연애시대": {
+   "eps": 12,
+   "cards": 797,
+   "aligned": 0
+  },
+  "오나의귀신님": {
+   "eps": 16,
+   "cards": 1100,
+   "aligned": 0
+  },
+  "질투의화신": {
+   "eps": 24,
+   "cards": 1577,
+   "aligned": 0
+  },
+  "쩐의전쟁": {
+   "eps": 16,
+   "cards": 1142,
+   "aligned": 1111
+  },
+  "추적자": {
+   "eps": 16,
+   "cards": 884,
+   "aligned": 196
+  },
+  "킬미힐미": {
+   "eps": 20,
+   "cards": 1285,
+   "aligned": 0
+  },
+  "파리의연인": {
+   "eps": 20,
+   "cards": 930,
+   "aligned": 245
+  },
+  "파스타": {
+   "eps": 20,
+   "cards": 1271,
+   "aligned": 3
+  },
+  "하얀거탑": {
+   "eps": 20,
+   "cards": 1304,
+   "aligned": 0
+  },
+  "힐러": {
+   "eps": 20,
+   "cards": 1374,
+   "aligned": 0
+  },
+  "W": {
+   "eps": 16,
+   "cards": 1220,
+   "aligned": 352
+  },
+  "결혼못하는남자": {
+   "eps": 15,
+   "cards": 1169,
+   "aligned": 740
+  },
+  "경성스캔들": {
+   "eps": 16,
+   "cards": 1187,
+   "aligned": 1145
+  },
+  "공주의남자": {
+   "eps": 24,
+   "cards": 1784,
+   "aligned": 1714
+  },
+  "구르미그린달빛": {
+   "eps": 18,
+   "cards": 973,
+   "aligned": 0
+  },
+  "굿캐스팅": {
+   "eps": 16,
+   "cards": 1020,
+   "aligned": 8
+  },
+  "그대웃어요": {
+   "eps": 4,
+   "cards": 203,
+   "aligned": 0
+  },
+  "그들이사는세상": {
+   "eps": 16,
+   "cards": 801,
+   "aligned": 259
+  },
+  "내여자친구는구미호": {
+   "eps": 16,
+   "cards": 793,
+   "aligned": 0
+  },
+  "내이름은김삼순": {
+   "eps": 8,
+   "cards": 483,
+   "aligned": 112
+  },
+  "너의목소리가들려": {
+   "eps": 18,
+   "cards": 1080,
+   "aligned": 0
+  },
+  "녹두꽃": {
+   "eps": 24,
+   "cards": 1636,
+   "aligned": 0
+  },
+  "뉴하트": {
+   "eps": 23,
+   "cards": 1238,
+   "aligned": 0
+  },
+  "대장금": {
+   "eps": 54,
+   "cards": 3630,
+   "aligned": 2960
+  },
+  "더킹투하츠": {
+   "eps": 20,
+   "cards": 1110,
+   "aligned": 86
+  },
+  "도깨비": {
+   "eps": 16,
+   "cards": 900,
+   "aligned": 829
+  },
+  "마왕": {
+   "eps": 19,
+   "cards": 1505,
+   "aligned": 1499
+  },
+  "모래시계": {
+   "eps": 24,
+   "cards": 1365,
+   "aligned": 1272
+  },
+  "미안하다사랑한다": {
+   "eps": 16,
+   "cards": 1299,
+   "aligned": 4
+  },
+  "밀회": {
+   "eps": 16,
+   "cards": 1144,
+   "aligned": 0
+  },
+  "배가본드": {
+   "eps": 16,
+   "cards": 993,
+   "aligned": 949
+  }
+ },
+ "per_work_order": {
+  "구르미그린달빛": {
+   "eps": 18,
+   "ok_eps": 0,
+   "pairs": 0
+  },
+  "그대웃어요": {
+   "eps": 45,
+   "ok_eps": 0,
+   "pairs": 0
+  },
+  "내여자친구는구미호": {
+   "eps": 16,
+   "ok_eps": 0,
+   "pairs": 0
+  },
+  "너의목소리가들려": {
+   "eps": 18,
+   "ok_eps": 0,
+   "pairs": 0
+  },
+  "녹두꽃": {
+   "eps": 24,
+   "ok_eps": 0,
+   "pairs": 0
+  },
+  "뉴하트": {
+   "eps": 23,
+   "ok_eps": 13,
+   "pairs": 702
+  },
+  "밀회": {
+   "eps": 16,
+   "ok_eps": 0,
+   "pairs": 0
+  },
+  "불한당": {
+   "eps": 16,
+   "ok_eps": 14,
+   "pairs": 901
+  },
+  "비밀의숲": {
+   "eps": 16,
+   "ok_eps": 0,
+   "pairs": 0
+  },
+  "성균관스캔들": {
+   "eps": 20,
+   "ok_eps": 0,
+   "pairs": 0
+  },
+  "스카이캐슬": {
+   "eps": 20,
+   "ok_eps": 0,
+   "pairs": 0
+  },
+  "스토브리그": {
+   "eps": 16,
+   "ok_eps": 0,
+   "pairs": 0
+  },
+  "여우각시별": {
+   "eps": 16,
+   "ok_eps": 0,
+   "pairs": 0
+  },
+  "연애시대": {
+   "eps": 16,
+   "ok_eps": 0,
+   "pairs": 0
+  },
+  "오나의귀신님": {
+   "eps": 16,
+   "ok_eps": 14,
+   "pairs": 952
+  },
+  "질투의화신": {
+   "eps": 24,
+   "ok_eps": 22,
+   "pairs": 1427
+  },
+  "킬미힐미": {
+   "eps": 20,
+   "ok_eps": 20,
+   "pairs": 1257
+  },
+  "하얀거탑": {
+   "eps": 20,
+   "ok_eps": 0,
+   "pairs": 0
+  },
+  "힐러": {
+   "eps": 20,
+   "ok_eps": 0,
+   "pairs": 0
+  }
+ },
+ "remaining_zero_works": [
+  "구르미그린달빛",
+  "그대웃어요",
+  "내여자친구는구미호",
+  "너의목소리가들려",
+  "녹두꽃",
+  "밀회",
+  "비밀의숲",
+  "성균관스캔들",
+  "스카이캐슬",
+  "스토브리그",
+  "여우각시별",
+  "연애시대",
+  "하얀거탑",
+  "힐러"
+ ],
+ "note": "잔여 14작 = txt 씬마커 부재/형식 상이 — 작품별 파서 진단 트랙"
+}
