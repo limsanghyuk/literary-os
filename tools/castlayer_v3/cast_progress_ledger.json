@@ -1,0 +1,844 @@
+{
+ "doc_id": "LOS-LEDGER-CASTLAYER-AUTHORED-87W",
+ "generated": "2026-07-29",
+ "grain": "work × episode",
+ "order": "가나다 (python sorted)",
+ "works": [
+  {
+   "seq": 1,
+   "work_id": "101번째프로포즈",
+   "episodes": 15,
+   "scenes": 1125,
+   "cast_done_eps": [
+    1
+   ],
+   "status": "PARTIAL",
+   "delivered": false,
+   "note": "01회 = 기준편(표준 v1의 벤치마크). 238행."
+  },
+  {
+   "seq": 2,
+   "work_id": "W",
+   "episodes": 16,
+   "scenes": 1220,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 3,
+   "work_id": "강남엄마따라잡기",
+   "episodes": 18,
+   "scenes": 1246,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 4,
+   "work_id": "개와늑대의시간",
+   "episodes": 16,
+   "scenes": 880,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 5,
+   "work_id": "개인의취향",
+   "episodes": 15,
+   "scenes": 934,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 6,
+   "work_id": "결혼못하는남자",
+   "episodes": 16,
+   "scenes": 1250,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 7,
+   "work_id": "경성스캔들",
+   "episodes": 16,
+   "scenes": 1187,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 8,
+   "work_id": "공주가돌아왔다",
+   "episodes": 16,
+   "scenes": 1117,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 9,
+   "work_id": "공주의남자",
+   "episodes": 24,
+   "scenes": 1784,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 10,
+   "work_id": "구르미그린달빛",
+   "episodes": 18,
+   "scenes": 973,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 11,
+   "work_id": "구해줘",
+   "episodes": 16,
+   "scenes": 903,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 12,
+   "work_id": "국희",
+   "episodes": 20,
+   "scenes": 1287,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 13,
+   "work_id": "굿캐스팅",
+   "episodes": 16,
+   "scenes": 1020,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 14,
+   "work_id": "궁",
+   "episodes": 24,
+   "scenes": 1089,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 15,
+   "work_id": "그대웃어요",
+   "episodes": 45,
+   "scenes": 2213,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 16,
+   "work_id": "그들이사는세상",
+   "episodes": 16,
+   "scenes": 801,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 17,
+   "work_id": "그저바라보다가",
+   "episodes": 16,
+   "scenes": 1168,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 18,
+   "work_id": "내여자친구는구미호",
+   "episodes": 16,
+   "scenes": 793,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 19,
+   "work_id": "내이름은김삼순",
+   "episodes": 16,
+   "scenes": 948,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 20,
+   "work_id": "너의목소리가들려",
+   "episodes": 18,
+   "scenes": 1080,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 21,
+   "work_id": "녹두꽃",
+   "episodes": 24,
+   "scenes": 1636,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 22,
+   "work_id": "뉴하트",
+   "episodes": 23,
+   "scenes": 1238,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 23,
+   "work_id": "대물",
+   "episodes": 24,
+   "scenes": 1495,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 24,
+   "work_id": "대장금",
+   "episodes": 54,
+   "scenes": 3630,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 25,
+   "work_id": "더킹투하츠",
+   "episodes": 20,
+   "scenes": 1110,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 26,
+   "work_id": "도깨비",
+   "episodes": 16,
+   "scenes": 900,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 27,
+   "work_id": "돌아온일지매",
+   "episodes": 24,
+   "scenes": 1382,
+   "cast_done_eps": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+   ],
+   "status": "DONE",
+   "delivered": true,
+   "note": "blind 이중저작 파일럿(gpt판 로컬 4,622행 / opus판 허브 3,608행). 정본 1판 미확정."
+  },
+  {
+   "seq": 28,
+   "work_id": "드림",
+   "episodes": 20,
+   "scenes": 1180,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 29,
+   "work_id": "라이벌",
+   "episodes": 20,
+   "scenes": 1234,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 30,
+   "work_id": "로망스",
+   "episodes": 16,
+   "scenes": 1143,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 31,
+   "work_id": "마왕",
+   "episodes": 20,
+   "scenes": 1585,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 32,
+   "work_id": "마지막전쟁",
+   "episodes": 18,
+   "scenes": 951,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 33,
+   "work_id": "모래시계",
+   "episodes": 24,
+   "scenes": 1365,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 34,
+   "work_id": "미생",
+   "episodes": 11,
+   "scenes": 923,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 35,
+   "work_id": "미안하다사랑한다",
+   "episodes": 16,
+   "scenes": 1299,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 36,
+   "work_id": "밀회",
+   "episodes": 16,
+   "scenes": 1144,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 37,
+   "work_id": "반달곰내사랑",
+   "episodes": 16,
+   "scenes": 991,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 38,
+   "work_id": "배가본드",
+   "episodes": 16,
+   "scenes": 993,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 39,
+   "work_id": "베토벤바이러스",
+   "episodes": 17,
+   "scenes": 748,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 40,
+   "work_id": "불량주부",
+   "episodes": 18,
+   "scenes": 1040,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 41,
+   "work_id": "불한당",
+   "episodes": 16,
+   "scenes": 1040,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 42,
+   "work_id": "비밀",
+   "episodes": 18,
+   "scenes": 1182,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 43,
+   "work_id": "비밀의숲",
+   "episodes": 16,
+   "scenes": 1037,
+   "cast_done_eps": [
+    1
+   ],
+   "status": "PARTIAL",
+   "delivered": false
+  },
+  {
+   "seq": 44,
+   "work_id": "성균관스캔들",
+   "episodes": 20,
+   "scenes": 1315,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 45,
+   "work_id": "수호천사",
+   "episodes": 16,
+   "scenes": 1060,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 46,
+   "work_id": "스위치",
+   "episodes": 16,
+   "scenes": 1348,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 47,
+   "work_id": "스카이캐슬",
+   "episodes": 20,
+   "scenes": 1353,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 48,
+   "work_id": "스타일",
+   "episodes": 16,
+   "scenes": 875,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 49,
+   "work_id": "스토브리그",
+   "episodes": 16,
+   "scenes": 1003,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 50,
+   "work_id": "시그널",
+   "episodes": 16,
+   "scenes": 1287,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 51,
+   "work_id": "시크릿가든",
+   "episodes": 20,
+   "scenes": 888,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 52,
+   "work_id": "시티헌터",
+   "episodes": 20,
+   "scenes": 1356,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 53,
+   "work_id": "식객",
+   "episodes": 24,
+   "scenes": 1183,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 54,
+   "work_id": "신사의품격",
+   "episodes": 20,
+   "scenes": 713,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 55,
+   "work_id": "신화",
+   "episodes": 16,
+   "scenes": 1122,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 56,
+   "work_id": "싸인",
+   "episodes": 20,
+   "scenes": 1358,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 57,
+   "work_id": "여우각시별",
+   "episodes": 16,
+   "scenes": 1060,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 58,
+   "work_id": "여우야뭐하니",
+   "episodes": 16,
+   "scenes": 1122,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 59,
+   "work_id": "역전의여왕",
+   "episodes": 31,
+   "scenes": 1875,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 60,
+   "work_id": "연애시대",
+   "episodes": 16,
+   "scenes": 1055,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 61,
+   "work_id": "열혈장사꾼",
+   "episodes": 20,
+   "scenes": 1333,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 62,
+   "work_id": "오나의귀신님",
+   "episodes": 16,
+   "scenes": 1100,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 63,
+   "work_id": "오마이레이디",
+   "episodes": 16,
+   "scenes": 1023,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 64,
+   "work_id": "온에어",
+   "episodes": 21,
+   "scenes": 962,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 65,
+   "work_id": "우리집",
+   "episodes": 20,
+   "scenes": 951,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 66,
+   "work_id": "우아한가",
+   "episodes": 16,
+   "scenes": 1008,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 67,
+   "work_id": "워킹맘",
+   "episodes": 16,
+   "scenes": 1165,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 68,
+   "work_id": "좋은사람",
+   "episodes": 16,
+   "scenes": 938,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 69,
+   "work_id": "질투의화신",
+   "episodes": 24,
+   "scenes": 1577,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 70,
+   "work_id": "쩐의전쟁",
+   "episodes": 16,
+   "scenes": 1142,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 71,
+   "work_id": "최강칠우",
+   "episodes": 20,
+   "scenes": 1398,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 72,
+   "work_id": "추적자",
+   "episodes": 16,
+   "scenes": 884,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 73,
+   "work_id": "카인과아벨",
+   "episodes": 20,
+   "scenes": 1080,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 74,
+   "work_id": "칼잡이오수정",
+   "episodes": 16,
+   "scenes": 1137,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 75,
+   "work_id": "커피프린스",
+   "episodes": 17,
+   "scenes": 949,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 76,
+   "work_id": "킬미힐미",
+   "episodes": 20,
+   "scenes": 1285,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 77,
+   "work_id": "태양을삼켜라",
+   "episodes": 25,
+   "scenes": 1625,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 78,
+   "work_id": "태양의후예",
+   "episodes": 16,
+   "scenes": 852,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 79,
+   "work_id": "토마토",
+   "episodes": 16,
+   "scenes": 1018,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 80,
+   "work_id": "파라다이스목장",
+   "episodes": 16,
+   "scenes": 939,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 81,
+   "work_id": "파리의연인",
+   "episodes": 20,
+   "scenes": 930,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 82,
+   "work_id": "파스타",
+   "episodes": 20,
+   "scenes": 1271,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 83,
+   "work_id": "포도밭그사나이",
+   "episodes": 16,
+   "scenes": 931,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 84,
+   "work_id": "풍문으로들었소",
+   "episodes": 10,
+   "scenes": 750,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 85,
+   "work_id": "피아노",
+   "episodes": 16,
+   "scenes": 1254,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 86,
+   "work_id": "하얀거탑",
+   "episodes": 20,
+   "scenes": 1304,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  },
+  {
+   "seq": 87,
+   "work_id": "힐러",
+   "episodes": 20,
+   "scenes": 1374,
+   "cast_done_eps": [],
+   "status": "TODO",
+   "delivered": false
+  }
+ ],
+ "totals": {
+  "works": 87,
+  "episodes": 1640,
+  "scenes": 102417,
+  "episodes_cast_done": 26,
+  "episodes_remaining": 1614
+ },
+ "delivery_protocol": {
+  "trigger": "작품 전 회차 게이트 ERRORS 0",
+  "tool": "tools/castlayer_v3/make_work_delivery.py",
+  "bundle": "<work>_cast_v1.zip (회차 jsonl + MANIFEST.json + gate 리포트)",
+  "steps": [
+   "게이트 전작 재실행",
+   "번들 생성",
+   "사용자 작업폴더로 복사 후 링크 제시(개발자 인계)",
+   "허브에 cast jsonl + 진행대장 푸시"
+  ],
+  "partial_rule": "회차 1편 끝날 때마다 cast_done_eps 갱신 후 허브 푸시(중간상태 유실 금지)"
+ },
+ "standard_doc_id": "LOS-STD-CAST-AUTHORING-V1",
+ "handoff_doc_id": "LOS-HANDOFF-CASTLAYER-87W",
+ "updated_at": "2026-07-29"
+}
