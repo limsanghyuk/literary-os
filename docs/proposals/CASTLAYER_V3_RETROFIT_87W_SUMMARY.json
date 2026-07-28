@@ -1,0 +1,719 @@
+{
+  "doc_id": "LOS-EXEC-CASTLAYER-V3-RETROFIT-87W-2026-07-28",
+  "date": "2026-07-28",
+  "authority": "DRAMA_ANALYSIS_SINGLE_AUTHORITY_V10",
+  "scope": "Tier 1 (advisory_bridge) + Tier 3 (pov_char v3) 전 87작 전수",
+  "llm_used": false,
+  "deterministic": true,
+  "ledger_mutation": {
+    "SceneCard_9keys": "unchanged",
+    "SequenceBlueprint_18keys": "unchanged",
+    "note": "사이드카 전용 산출. 원장 파일 무수정, SourceLock text_sha256 불변"
+  },
+  "tier1_bridge": {
+    "works": 87,
+    "records": 1227,
+    "raw_names": 1393,
+    "merged_groups": 142,
+    "conflicts": 142,
+    "conflict_rate": 0.1157,
+    "aliases_added_from_text_evidence": 748,
+    "aliases_rejected_absent": 36,
+    "aliases_rejected_ambiguous": 0,
+    "chars_per_work": {
+      "median": 13,
+      "p25": 10,
+      "min": 3,
+      "max": 37
+    }
+  },
+  "tier3_pov": {
+    "sequences": 14751,
+    "legacy_str_type": 14751,
+    "tokens": 23594,
+    "resolved_tokens": 22115,
+    "unresolved_tokens": 1479,
+    "match_rate": 0.9373,
+    "blank_POV0": 420,
+    "ensemble": 78,
+    "multi_pov_sequences": 5778,
+    "over3_warn": 492,
+    "pov_count_distribution": {
+      "0": 848,
+      "1": 8574,
+      "2": 3133,
+      "3": 1704,
+      "4": 405,
+      "5": 82,
+      "6": 5
+    },
+    "unreliable_works": [
+      "그들이사는세상",
+      "베토벤바이러스"
+    ],
+    "unreliable_n": 2
+  },
+  "improvement_vs_v2": {
+    "pov_match_rate": {
+      "v2": 0.7696,
+      "v3": 0.9373
+    },
+    "unreliable_works": {
+      "v2": 28,
+      "v3": 2
+    },
+    "cause": "명부 aliases에 원문 출현증거로 검증된 접미 표면형 편입 + 부분포함 역조회"
+  },
+  "gate_result": {
+    "BRIDGE_1_errors": 0,
+    "POV_1_errors": 0,
+    "POV_2_unresolved_fk": 0,
+    "warnings": {
+      "BRIDGE_CONFLICT": 142,
+      "POV_3_over3": 492
+    }
+  },
+  "scene_placement_benchmark": {
+    "note": "명부 품질이 씬 배치에 미치는 효과. 골드 cast 보유 2작 한정",
+    "비밀의숲_01": {
+      "gold_registry_exactname": {
+        "P": 0.812,
+        "R": 0.147,
+        "F1": 0.249
+      },
+      "bootstrap_v3": {
+        "P": 0.818,
+        "R": 0.61,
+        "F1": 0.699
+      }
+    },
+    "돌아온일지매_24ep": {
+      "gold_registry_exactname": {
+        "P": 0.55,
+        "R": 0.634,
+        "F1": 0.589
+      },
+      "bootstrap_v3": {
+        "P": 0.741,
+        "R": 0.542,
+        "F1": 0.626
+      }
+    }
+  },
+  "known_limits": [
+    "골드 cast 표본 2작. 밴드별 재현율 일반화 불가",
+    "미해결 1,479 토큰 대부분은 CharacterArc 미수록 조연 — 명부 결함이 아니라 원천 커버리지 한계",
+    "advisory_ 등급. authored_ 승격은 LLM 검증 패스 이후"
+  ],
+  "per_work": {
+    "101번째프로포즈": {
+      "chars": 15,
+      "conflicts": 0,
+      "aliases": 13,
+      "seqs": 184,
+      "pov_resolved_seq": 184
+    },
+    "W": {
+      "chars": 8,
+      "conflicts": 0,
+      "aliases": 6,
+      "seqs": 203,
+      "pov_resolved_seq": 0
+    },
+    "강남엄마따라잡기": {
+      "chars": 13,
+      "conflicts": 0,
+      "aliases": 9,
+      "seqs": 154,
+      "pov_resolved_seq": 151
+    },
+    "개와늑대의시간": {
+      "chars": 10,
+      "conflicts": 5,
+      "aliases": 7,
+      "seqs": 143,
+      "pov_resolved_seq": 105
+    },
+    "개인의취향": {
+      "chars": 9,
+      "conflicts": 0,
+      "aliases": 9,
+      "seqs": 161,
+      "pov_resolved_seq": 157
+    },
+    "결혼못하는남자": {
+      "chars": 6,
+      "conflicts": 0,
+      "aliases": 6,
+      "seqs": 189,
+      "pov_resolved_seq": 176
+    },
+    "경성스캔들": {
+      "chars": 5,
+      "conflicts": 0,
+      "aliases": 5,
+      "seqs": 150,
+      "pov_resolved_seq": 122
+    },
+    "공주가돌아왔다": {
+      "chars": 14,
+      "conflicts": 0,
+      "aliases": 14,
+      "seqs": 160,
+      "pov_resolved_seq": 127
+    },
+    "공주의남자": {
+      "chars": 25,
+      "conflicts": 1,
+      "aliases": 18,
+      "seqs": 214,
+      "pov_resolved_seq": 209
+    },
+    "구르미그린달빛": {
+      "chars": 29,
+      "conflicts": 3,
+      "aliases": 23,
+      "seqs": 161,
+      "pov_resolved_seq": 151
+    },
+    "구해줘": {
+      "chars": 19,
+      "conflicts": 5,
+      "aliases": 19,
+      "seqs": 162,
+      "pov_resolved_seq": 148
+    },
+    "국희": {
+      "chars": 9,
+      "conflicts": 0,
+      "aliases": 2,
+      "seqs": 183,
+      "pov_resolved_seq": 183
+    },
+    "굿캐스팅": {
+      "chars": 18,
+      "conflicts": 0,
+      "aliases": 17,
+      "seqs": 117,
+      "pov_resolved_seq": 117
+    },
+    "궁": {
+      "chars": 9,
+      "conflicts": 0,
+      "aliases": 3,
+      "seqs": 174,
+      "pov_resolved_seq": 85
+    },
+    "그대웃어요": {
+      "chars": 12,
+      "conflicts": 1,
+      "aliases": 11,
+      "seqs": 317,
+      "pov_resolved_seq": 316
+    },
+    "그들이사는세상": {
+      "chars": 16,
+      "conflicts": 0,
+      "aliases": 1,
+      "seqs": 123,
+      "pov_resolved_seq": 32
+    },
+    "그저바라보다가": {
+      "chars": 9,
+      "conflicts": 0,
+      "aliases": 2,
+      "seqs": 137,
+      "pov_resolved_seq": 132
+    },
+    "내여자친구는구미호": {
+      "chars": 10,
+      "conflicts": 0,
+      "aliases": 9,
+      "seqs": 105,
+      "pov_resolved_seq": 104
+    },
+    "내이름은김삼순": {
+      "chars": 11,
+      "conflicts": 0,
+      "aliases": 6,
+      "seqs": 165,
+      "pov_resolved_seq": 162
+    },
+    "너의목소리가들려": {
+      "chars": 13,
+      "conflicts": 10,
+      "aliases": 19,
+      "seqs": 122,
+      "pov_resolved_seq": 114
+    },
+    "녹두꽃": {
+      "chars": 23,
+      "conflicts": 0,
+      "aliases": 8,
+      "seqs": 194,
+      "pov_resolved_seq": 129
+    },
+    "뉴하트": {
+      "chars": 8,
+      "conflicts": 0,
+      "aliases": 8,
+      "seqs": 196,
+      "pov_resolved_seq": 172
+    },
+    "대물": {
+      "chars": 11,
+      "conflicts": 0,
+      "aliases": 7,
+      "seqs": 189,
+      "pov_resolved_seq": 53
+    },
+    "대장금": {
+      "chars": 24,
+      "conflicts": 2,
+      "aliases": 14,
+      "seqs": 534,
+      "pov_resolved_seq": 493
+    },
+    "더킹투하츠": {
+      "chars": 10,
+      "conflicts": 0,
+      "aliases": 10,
+      "seqs": 167,
+      "pov_resolved_seq": 160
+    },
+    "도깨비": {
+      "chars": 12,
+      "conflicts": 2,
+      "aliases": 7,
+      "seqs": 111,
+      "pov_resolved_seq": 99
+    },
+    "돌아온일지매": {
+      "chars": 37,
+      "conflicts": 5,
+      "aliases": 24,
+      "seqs": 186,
+      "pov_resolved_seq": 168
+    },
+    "드림": {
+      "chars": 14,
+      "conflicts": 1,
+      "aliases": 14,
+      "seqs": 145,
+      "pov_resolved_seq": 128
+    },
+    "라이벌": {
+      "chars": 9,
+      "conflicts": 0,
+      "aliases": 9,
+      "seqs": 145,
+      "pov_resolved_seq": 145
+    },
+    "로망스": {
+      "chars": 12,
+      "conflicts": 0,
+      "aliases": 3,
+      "seqs": 135,
+      "pov_resolved_seq": 135
+    },
+    "마왕": {
+      "chars": 14,
+      "conflicts": 0,
+      "aliases": 13,
+      "seqs": 244,
+      "pov_resolved_seq": 197
+    },
+    "마지막전쟁": {
+      "chars": 9,
+      "conflicts": 0,
+      "aliases": 4,
+      "seqs": 114,
+      "pov_resolved_seq": 80
+    },
+    "모래시계": {
+      "chars": 22,
+      "conflicts": 0,
+      "aliases": 19,
+      "seqs": 217,
+      "pov_resolved_seq": 189
+    },
+    "미생": {
+      "chars": 20,
+      "conflicts": 10,
+      "aliases": 22,
+      "seqs": 144,
+      "pov_resolved_seq": 137
+    },
+    "미안하다사랑한다": {
+      "chars": 8,
+      "conflicts": 0,
+      "aliases": 5,
+      "seqs": 192,
+      "pov_resolved_seq": 191
+    },
+    "밀회": {
+      "chars": 6,
+      "conflicts": 0,
+      "aliases": 6,
+      "seqs": 147,
+      "pov_resolved_seq": 147
+    },
+    "반달곰내사랑": {
+      "chars": 8,
+      "conflicts": 8,
+      "aliases": 9,
+      "seqs": 126,
+      "pov_resolved_seq": 126
+    },
+    "배가본드": {
+      "chars": 27,
+      "conflicts": 12,
+      "aliases": 25,
+      "seqs": 158,
+      "pov_resolved_seq": 150
+    },
+    "베토벤바이러스": {
+      "chars": 7,
+      "conflicts": 5,
+      "aliases": 7,
+      "seqs": 115,
+      "pov_resolved_seq": 13
+    },
+    "불량주부": {
+      "chars": 12,
+      "conflicts": 0,
+      "aliases": 1,
+      "seqs": 130,
+      "pov_resolved_seq": 130
+    },
+    "불한당": {
+      "chars": 12,
+      "conflicts": 7,
+      "aliases": 9,
+      "seqs": 136,
+      "pov_resolved_seq": 136
+    },
+    "비밀": {
+      "chars": 7,
+      "conflicts": 0,
+      "aliases": 0,
+      "seqs": 143,
+      "pov_resolved_seq": 143
+    },
+    "비밀의숲": {
+      "chars": 17,
+      "conflicts": 0,
+      "aliases": 16,
+      "seqs": 159,
+      "pov_resolved_seq": 148
+    },
+    "성균관스캔들": {
+      "chars": 11,
+      "conflicts": 0,
+      "aliases": 9,
+      "seqs": 248,
+      "pov_resolved_seq": 232
+    },
+    "수호천사": {
+      "chars": 11,
+      "conflicts": 3,
+      "aliases": 7,
+      "seqs": 127,
+      "pov_resolved_seq": 126
+    },
+    "스위치": {
+      "chars": 27,
+      "conflicts": 1,
+      "aliases": 26,
+      "seqs": 155,
+      "pov_resolved_seq": 155
+    },
+    "스카이캐슬": {
+      "chars": 12,
+      "conflicts": 2,
+      "aliases": 11,
+      "seqs": 210,
+      "pov_resolved_seq": 164
+    },
+    "스타일": {
+      "chars": 22,
+      "conflicts": 3,
+      "aliases": 19,
+      "seqs": 123,
+      "pov_resolved_seq": 123
+    },
+    "스토브리그": {
+      "chars": 24,
+      "conflicts": 1,
+      "aliases": 23,
+      "seqs": 155,
+      "pov_resolved_seq": 139
+    },
+    "시그널": {
+      "chars": 17,
+      "conflicts": 2,
+      "aliases": 19,
+      "seqs": 226,
+      "pov_resolved_seq": 9
+    },
+    "시크릿가든": {
+      "chars": 13,
+      "conflicts": 4,
+      "aliases": 9,
+      "seqs": 160,
+      "pov_resolved_seq": 160
+    },
+    "시티헌터": {
+      "chars": 22,
+      "conflicts": 0,
+      "aliases": 22,
+      "seqs": 171,
+      "pov_resolved_seq": 166
+    },
+    "식객": {
+      "chars": 10,
+      "conflicts": 0,
+      "aliases": 1,
+      "seqs": 118,
+      "pov_resolved_seq": 118
+    },
+    "신사의품격": {
+      "chars": 17,
+      "conflicts": 4,
+      "aliases": 6,
+      "seqs": 178,
+      "pov_resolved_seq": 139
+    },
+    "신화": {
+      "chars": 8,
+      "conflicts": 0,
+      "aliases": 8,
+      "seqs": 131,
+      "pov_resolved_seq": 131
+    },
+    "싸인": {
+      "chars": 16,
+      "conflicts": 0,
+      "aliases": 17,
+      "seqs": 235,
+      "pov_resolved_seq": 231
+    },
+    "여우각시별": {
+      "chars": 14,
+      "conflicts": 0,
+      "aliases": 15,
+      "seqs": 114,
+      "pov_resolved_seq": 113
+    },
+    "여우야뭐하니": {
+      "chars": 7,
+      "conflicts": 0,
+      "aliases": 7,
+      "seqs": 133,
+      "pov_resolved_seq": 133
+    },
+    "역전의여왕": {
+      "chars": 14,
+      "conflicts": 5,
+      "aliases": 13,
+      "seqs": 223,
+      "pov_resolved_seq": 223
+    },
+    "연애시대": {
+      "chars": 12,
+      "conflicts": 0,
+      "aliases": 1,
+      "seqs": 201,
+      "pov_resolved_seq": 200
+    },
+    "열혈장사꾼": {
+      "chars": 24,
+      "conflicts": 7,
+      "aliases": 21,
+      "seqs": 186,
+      "pov_resolved_seq": 174
+    },
+    "오나의귀신님": {
+      "chars": 12,
+      "conflicts": 0,
+      "aliases": 3,
+      "seqs": 183,
+      "pov_resolved_seq": 182
+    },
+    "오마이레이디": {
+      "chars": 12,
+      "conflicts": 0,
+      "aliases": 12,
+      "seqs": 122,
+      "pov_resolved_seq": 121
+    },
+    "온에어": {
+      "chars": 19,
+      "conflicts": 0,
+      "aliases": 2,
+      "seqs": 149,
+      "pov_resolved_seq": 149
+    },
+    "우리집": {
+      "chars": 17,
+      "conflicts": 0,
+      "aliases": 2,
+      "seqs": 141,
+      "pov_resolved_seq": 138
+    },
+    "우아한가": {
+      "chars": 14,
+      "conflicts": 0,
+      "aliases": 2,
+      "seqs": 137,
+      "pov_resolved_seq": 103
+    },
+    "워킹맘": {
+      "chars": 10,
+      "conflicts": 3,
+      "aliases": 8,
+      "seqs": 142,
+      "pov_resolved_seq": 140
+    },
+    "좋은사람": {
+      "chars": 13,
+      "conflicts": 0,
+      "aliases": 11,
+      "seqs": 114,
+      "pov_resolved_seq": 112
+    },
+    "질투의화신": {
+      "chars": 12,
+      "conflicts": 0,
+      "aliases": 10,
+      "seqs": 201,
+      "pov_resolved_seq": 201
+    },
+    "쩐의전쟁": {
+      "chars": 13,
+      "conflicts": 3,
+      "aliases": 10,
+      "seqs": 255,
+      "pov_resolved_seq": 206
+    },
+    "최강칠우": {
+      "chars": 27,
+      "conflicts": 2,
+      "aliases": 17,
+      "seqs": 208,
+      "pov_resolved_seq": 193
+    },
+    "추적자": {
+      "chars": 15,
+      "conflicts": 4,
+      "aliases": 17,
+      "seqs": 98,
+      "pov_resolved_seq": 98
+    },
+    "카인과아벨": {
+      "chars": 8,
+      "conflicts": 0,
+      "aliases": 7,
+      "seqs": 182,
+      "pov_resolved_seq": 181
+    },
+    "칼잡이오수정": {
+      "chars": 14,
+      "conflicts": 0,
+      "aliases": 17,
+      "seqs": 139,
+      "pov_resolved_seq": 135
+    },
+    "커피프린스": {
+      "chars": 19,
+      "conflicts": 5,
+      "aliases": 15,
+      "seqs": 144,
+      "pov_resolved_seq": 117
+    },
+    "킬미힐미": {
+      "chars": 13,
+      "conflicts": 0,
+      "aliases": 12,
+      "seqs": 193,
+      "pov_resolved_seq": 165
+    },
+    "태양을삼켜라": {
+      "chars": 18,
+      "conflicts": 1,
+      "aliases": 8,
+      "seqs": 209,
+      "pov_resolved_seq": 205
+    },
+    "태양의후예": {
+      "chars": 14,
+      "conflicts": 0,
+      "aliases": 11,
+      "seqs": 123,
+      "pov_resolved_seq": 122
+    },
+    "토마토": {
+      "chars": 7,
+      "conflicts": 0,
+      "aliases": 2,
+      "seqs": 145,
+      "pov_resolved_seq": 115
+    },
+    "파라다이스목장": {
+      "chars": 12,
+      "conflicts": 0,
+      "aliases": 13,
+      "seqs": 122,
+      "pov_resolved_seq": 113
+    },
+    "파리의연인": {
+      "chars": 3,
+      "conflicts": 0,
+      "aliases": 3,
+      "seqs": 143,
+      "pov_resolved_seq": 137
+    },
+    "파스타": {
+      "chars": 14,
+      "conflicts": 1,
+      "aliases": 12,
+      "seqs": 247,
+      "pov_resolved_seq": 240
+    },
+    "포도밭그사나이": {
+      "chars": 14,
+      "conflicts": 0,
+      "aliases": 4,
+      "seqs": 128,
+      "pov_resolved_seq": 128
+    },
+    "풍문으로들었소": {
+      "chars": 19,
+      "conflicts": 8,
+      "aliases": 13,
+      "seqs": 180,
+      "pov_resolved_seq": 138
+    },
+    "피아노": {
+      "chars": 9,
+      "conflicts": 0,
+      "aliases": 0,
+      "seqs": 161,
+      "pov_resolved_seq": 99
+    },
+    "하얀거탑": {
+      "chars": 15,
+      "conflicts": 1,
+      "aliases": 16,
+      "seqs": 168,
+      "pov_resolved_seq": 164
+    },
+    "힐러": {
+      "chars": 14,
+      "conflicts": 5,
+      "aliases": 14,
+      "seqs": 272,
+      "pov_resolved_seq": 267
+    }
+  }
+}
