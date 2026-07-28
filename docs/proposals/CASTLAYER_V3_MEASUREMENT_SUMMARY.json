@@ -1,0 +1,102 @@
+{
+ "doc_id": "LOS-SPEC-CASTLAYER-V3.0-2026-07-28",
+ "generated": "2026-07-28",
+ "corpus": {
+  "source": "local canonical DB 2026-07-27",
+  "works": 87,
+  "episodes": 1640,
+  "scene_cards": 102417,
+  "sequences": 14751
+ },
+ "ext6_current_coverage": {
+  "authored_bridge_works": 2,
+  "authored_cast_episodes": 24,
+  "of_episodes": 1640,
+  "rate": 0.0146
+ },
+ "tier1_bootstrap": {
+  "works": 87,
+  "raw_names": 1402,
+  "records": 1228,
+  "merged": 174,
+  "aliased": 162,
+  "conflicts": 142,
+  "conflict_rate": 0.1156
+ },
+ "tier3_pov_diagnosis": {
+  "sequences": 14751,
+  "legacy_str_type": 14751,
+  "blank_or_null": 420,
+  "multi_pov": 5778,
+  "multi_pov_rate": 0.3917,
+  "over3_warn": 606,
+  "bridge_join": {
+   "matched": 18159,
+   "unmatched": 5435,
+   "match_rate": 0.7696
+  },
+  "unreliable_works": {
+   "count": 28,
+   "of": 87,
+   "works": [
+    "W",
+    "국희",
+    "굿캐스팅",
+    "그대웃어요",
+    "그저바라보다가",
+    "라이벌",
+    "로망스",
+    "밀회",
+    "불한당",
+    "스위치",
+    "스타일",
+    "시크릿가든",
+    "식객",
+    "신화",
+    "싸인",
+    "여우각시별",
+    "여우야뭐하니",
+    "역전의여왕",
+    "온에어",
+    "질투의화신",
+    "최강칠우",
+    "추적자",
+    "카인과아벨",
+    "태양을삼켜라",
+    "태양의후예",
+    "파스타",
+    "포도밭그사나이",
+    "하얀거탑"
+   ]
+  }
+ },
+ "band_recall_pilot": {
+  "note": "결정론 명부가 EXT6 정식 저작 인물을 포착한 비율 (파일럿 24회 753 레코드)",
+  "DOMINANT": [
+   4,
+   4
+  ],
+  "MAJOR": [
+   48,
+   48
+  ],
+  "MINOR": [
+   137,
+   185
+  ],
+  "CAMEO": [
+   126,
+   516
+  ],
+  "ALL": [
+   315,
+   753
+  ]
+ },
+ "kappa_bimil_ep01": {
+  "presence_mode": 0.942,
+  "speaking_status": 0.941,
+  "focality": 0.663
+ },
+ "hub_boundary_note": "통계·도구·규범만 반영. 원문·advisory 생성물·authored_cast 전량은 로컬 보관."
+}
