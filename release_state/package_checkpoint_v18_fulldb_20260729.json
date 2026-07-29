@@ -1,0 +1,33 @@
+{
+ "schema": "SEQCARD_V18_FULL_DB_PACKAGE_STATE",
+ "state": "FULL_DB_ZIP_BUILT",
+ "as_of": "2026-07-29",
+ "provider": {
+  "한성별곡": "GPT_CODEX V10.1 FULL_STAGE01_04",
+  "경성스캔들_EXT6": "GPT EXT6 v1.4 APPEND_ONLY",
+  "하얀거탑_EXT6": "CLAUDE 역순트랙 자체저작"
+ },
+ "works_total": 90,
+ "episodes_total": 1676,
+ "scene_cards_total": 104578,
+ "cast_layer": {
+  "works": 11,
+  "episodes": 192,
+  "rows": 41303,
+  "episodes_remaining": 1484
+ },
+ "gates": {
+  "validate_work_한성별곡": "PASS errors 0 warnings 0",
+  "validate_semantic_quality_v2_한성별곡": "PASS warn CROSS_TARGET_CONCENTRATION_REVIEW:4",
+  "validate_work_경성스캔들": "PASS errors 0 (warn LEGACY_STAGE04_DISPOSITION_LEDGER_NOT_RECORDED)",
+  "gate_cast_authored_all": "192 files / 41,303 rows ERRORS 0 / WARNS 1 (CAST-W2 힐러_01, Stage01 결함 유래)",
+  "evidence_line_match_경성스캔들": "4,077행 대조 100.00%"
+ },
+ "additive_only": true,
+ "baseline_overwrite": 0,
+ "baseline_delete": 0,
+ "sha256_ledger": "SHA256SUMS.txt",
+ "sha256sums_lines": 18557,
+ "archive_root": "seqcard_ko",
+ "created_at": "2026-07-29T14:16:48+09:00"
+}

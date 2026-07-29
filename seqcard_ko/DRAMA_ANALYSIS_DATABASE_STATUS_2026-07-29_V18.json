@@ -1,0 +1,625 @@
+{
+ "schema": "DRAMA_ANALYSIS_DATABASE_STATUS_V18",
+ "generated_at": "2026-07-29T14:16:22+09:00",
+ "as_of": "2026-07-29",
+ "authority": "LOCAL_CANONICAL seqcard_ko (C:\\claude\\db\\seqcard_ko)",
+ "works_total": 90,
+ "episodes_total": 1676,
+ "scene_cards_total": 104578,
+ "layer_counts": {
+  "sequence_blueprints": 15034,
+  "episode_arcs": 0,
+  "character_arcs": 10731,
+  "relationship_arcs": 9078,
+  "local_edges": 20635,
+  "payoff_candidates": 8593,
+  "cast_presence_records": 41303,
+  "character_load": 6019,
+  "entity_bridge": 1362
+ },
+ "cast_layer": {
+  "works": 11,
+  "episodes": 192,
+  "rows": 41303,
+  "episodes_remaining": 1484,
+  "per_work": {
+   "101번째프로포즈": {
+    "episodes": 15,
+    "rows": 3493
+   },
+   "W": {
+    "episodes": 16,
+    "rows": 3063
+   },
+   "강남엄마따라잡기": {
+    "episodes": 18,
+    "rows": 5117
+   },
+   "개와늑대의시간": {
+    "episodes": 16,
+    "rows": 3087
+   },
+   "개인의취향": {
+    "episodes": 15,
+    "rows": 2867
+   },
+   "결혼못하는남자": {
+    "episodes": 16,
+    "rows": 3519
+   },
+   "경성스캔들": {
+    "episodes": 16,
+    "rows": 4320
+   },
+   "돌아온일지매": {
+    "episodes": 24,
+    "rows": 4622
+   },
+   "비밀의숲": {
+    "episodes": 16,
+    "rows": 3763
+   },
+   "하얀거탑": {
+    "episodes": 20,
+    "rows": 4429
+   },
+   "힐러": {
+    "episodes": 20,
+    "rows": 3023
+   }
+  }
+ },
+ "delta_this_release": {
+  "date": "2026-07-29",
+  "new_works": [
+   "한성별곡"
+  ],
+  "new_cast_works": [
+   "하얀거탑",
+   "경성스캔들"
+  ],
+  "notes": "하얀거탑 인물등장층 자체저작 4,429행; 경성스캔들 EXT6 v1.4 편입 4,320행; 한성별곡 Stage01~04 신규 8회"
+ },
+ "works_index": {
+  "101번째프로포즈": {
+   "episodes": 15,
+   "scenes": 1125,
+   "cast_episodes": 15,
+   "cast_rows": 3493
+  },
+  "W": {
+   "episodes": 16,
+   "scenes": 1220,
+   "cast_episodes": 16,
+   "cast_rows": 3063
+  },
+  "강남엄마따라잡기": {
+   "episodes": 18,
+   "scenes": 1246,
+   "cast_episodes": 18,
+   "cast_rows": 5117
+  },
+  "개와늑대의시간": {
+   "episodes": 16,
+   "scenes": 880,
+   "cast_episodes": 16,
+   "cast_rows": 3087
+  },
+  "개인의취향": {
+   "episodes": 15,
+   "scenes": 934,
+   "cast_episodes": 15,
+   "cast_rows": 2867
+  },
+  "결혼못하는남자": {
+   "episodes": 16,
+   "scenes": 1250,
+   "cast_episodes": 16,
+   "cast_rows": 3519
+  },
+  "경성스캔들": {
+   "episodes": 16,
+   "scenes": 1187,
+   "cast_episodes": 16,
+   "cast_rows": 4320
+  },
+  "공주가돌아왔다": {
+   "episodes": 16,
+   "scenes": 1117,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "공주의남자": {
+   "episodes": 24,
+   "scenes": 1784,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "구르미그린달빛": {
+   "episodes": 18,
+   "scenes": 973,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "구해줘": {
+   "episodes": 16,
+   "scenes": 903,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "국희": {
+   "episodes": 20,
+   "scenes": 1287,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "굿캐스팅": {
+   "episodes": 16,
+   "scenes": 1020,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "궁": {
+   "episodes": 24,
+   "scenes": 1089,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "그대웃어요": {
+   "episodes": 45,
+   "scenes": 2213,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "그들이사는세상": {
+   "episodes": 16,
+   "scenes": 801,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "그저바라보다가": {
+   "episodes": 16,
+   "scenes": 1168,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "내여자친구는구미호": {
+   "episodes": 16,
+   "scenes": 793,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "내이름은김삼순": {
+   "episodes": 16,
+   "scenes": 948,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "너의목소리가들려": {
+   "episodes": 18,
+   "scenes": 1080,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "녹두꽃": {
+   "episodes": 24,
+   "scenes": 1636,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "뉴하트": {
+   "episodes": 23,
+   "scenes": 1238,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "대물": {
+   "episodes": 24,
+   "scenes": 1495,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "대장금": {
+   "episodes": 54,
+   "scenes": 3630,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "더킹투하츠": {
+   "episodes": 20,
+   "scenes": 1110,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "도깨비": {
+   "episodes": 16,
+   "scenes": 900,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "돌아온일지매": {
+   "episodes": 24,
+   "scenes": 1382,
+   "cast_episodes": 24,
+   "cast_rows": 4622
+  },
+  "드림": {
+   "episodes": 20,
+   "scenes": 1180,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "라이벌": {
+   "episodes": 20,
+   "scenes": 1234,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "로망스": {
+   "episodes": 16,
+   "scenes": 1143,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "마왕": {
+   "episodes": 20,
+   "scenes": 1585,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "마지막전쟁": {
+   "episodes": 18,
+   "scenes": 951,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "모래시계": {
+   "episodes": 24,
+   "scenes": 1365,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "미생": {
+   "episodes": 11,
+   "scenes": 923,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "미안하다사랑한다": {
+   "episodes": 16,
+   "scenes": 1299,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "밀회": {
+   "episodes": 16,
+   "scenes": 1144,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "반달곰내사랑": {
+   "episodes": 16,
+   "scenes": 991,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "배가본드": {
+   "episodes": 16,
+   "scenes": 993,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "베토벤바이러스": {
+   "episodes": 17,
+   "scenes": 748,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "불량주부": {
+   "episodes": 18,
+   "scenes": 1040,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "불한당": {
+   "episodes": 16,
+   "scenes": 1040,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "비밀": {
+   "episodes": 18,
+   "scenes": 1182,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "비밀의숲": {
+   "episodes": 16,
+   "scenes": 1037,
+   "cast_episodes": 16,
+   "cast_rows": 3763
+  },
+  "성균관스캔들": {
+   "episodes": 20,
+   "scenes": 1315,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "수호천사": {
+   "episodes": 16,
+   "scenes": 1060,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "스위치": {
+   "episodes": 16,
+   "scenes": 1348,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "스카이캐슬": {
+   "episodes": 20,
+   "scenes": 1353,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "스타일": {
+   "episodes": 16,
+   "scenes": 875,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "스토브리그": {
+   "episodes": 16,
+   "scenes": 1003,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "시그널": {
+   "episodes": 16,
+   "scenes": 1287,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "시크릿가든": {
+   "episodes": 20,
+   "scenes": 888,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "시티헌터": {
+   "episodes": 20,
+   "scenes": 1356,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "식객": {
+   "episodes": 24,
+   "scenes": 1183,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "신사의품격": {
+   "episodes": 20,
+   "scenes": 713,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "신의퀴즈1": {
+   "episodes": 10,
+   "scenes": 648,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "신화": {
+   "episodes": 16,
+   "scenes": 1122,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "싸인": {
+   "episodes": 20,
+   "scenes": 1358,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "여우각시별": {
+   "episodes": 16,
+   "scenes": 1060,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "여우야뭐하니": {
+   "episodes": 16,
+   "scenes": 1122,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "역전의여왕": {
+   "episodes": 31,
+   "scenes": 1875,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "연애시대": {
+   "episodes": 16,
+   "scenes": 1055,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "열혈장사꾼": {
+   "episodes": 20,
+   "scenes": 1333,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "오나의귀신님": {
+   "episodes": 16,
+   "scenes": 1100,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "오마이레이디": {
+   "episodes": 16,
+   "scenes": 1023,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "온에어": {
+   "episodes": 21,
+   "scenes": 962,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "외과의사봉달희": {
+   "episodes": 18,
+   "scenes": 1021,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "우리집": {
+   "episodes": 20,
+   "scenes": 951,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "우아한가": {
+   "episodes": 16,
+   "scenes": 1008,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "워킹맘": {
+   "episodes": 16,
+   "scenes": 1165,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "좋은사람": {
+   "episodes": 16,
+   "scenes": 938,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "질투의화신": {
+   "episodes": 24,
+   "scenes": 1577,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "쩐의전쟁": {
+   "episodes": 16,
+   "scenes": 1142,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "최강칠우": {
+   "episodes": 20,
+   "scenes": 1398,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "추적자": {
+   "episodes": 16,
+   "scenes": 884,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "카인과아벨": {
+   "episodes": 20,
+   "scenes": 1080,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "칼잡이오수정": {
+   "episodes": 16,
+   "scenes": 1137,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "커피프린스": {
+   "episodes": 17,
+   "scenes": 949,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "킬미힐미": {
+   "episodes": 20,
+   "scenes": 1285,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "태양을삼켜라": {
+   "episodes": 25,
+   "scenes": 1625,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "태양의후예": {
+   "episodes": 16,
+   "scenes": 852,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "토마토": {
+   "episodes": 16,
+   "scenes": 1018,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "파라다이스목장": {
+   "episodes": 16,
+   "scenes": 939,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "파리의연인": {
+   "episodes": 20,
+   "scenes": 930,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "파스타": {
+   "episodes": 20,
+   "scenes": 1271,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "포도밭그사나이": {
+   "episodes": 16,
+   "scenes": 931,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "풍문으로들었소": {
+   "episodes": 10,
+   "scenes": 750,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "피아노": {
+   "episodes": 16,
+   "scenes": 1254,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "하얀거탑": {
+   "episodes": 20,
+   "scenes": 1304,
+   "cast_episodes": 20,
+   "cast_rows": 4429
+  },
+  "한성별곡": {
+   "episodes": 8,
+   "scenes": 492,
+   "cast_episodes": 0,
+   "cast_rows": 0
+  },
+  "힐러": {
+   "episodes": 20,
+   "scenes": 1374,
+   "cast_episodes": 20,
+   "cast_rows": 3023
+  }
+ }
+}
