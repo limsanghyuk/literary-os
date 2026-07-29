@@ -1,0 +1,15 @@
+{
+ "schema": "HARVEST_PAIRS_INDEX_V4",
+ "version": "v4",
+ "generated": "2026-07-29",
+ "total_pairs": 25500,
+ "episode_files": 416,
+ "aggregate_sha256": "86ab5191d77f8440c694e29e3278aef80e60bbe36e2e033b7029e31163fc34d7",
+ "modes": {
+  "heading_hybrid": 18418,
+  "order_mode": 5239,
+  "ext6_alignment": 1843
+ },
+ "delta_v4": "101번째프로포즈 15ep 948쌍 (EXT6 v1.2 개별 패키지 경유, 기존 0쌍 작품 해소 2호)",
+ "storage": "LOCAL ONLY"
+}
