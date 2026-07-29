@@ -1,0 +1,16 @@
+{
+ "schema": "HARVEST_PAIRS_INDEX_V3",
+ "version": "v3",
+ "generated": "2026-07-29",
+ "total_pairs": 24552,
+ "episode_files": 401,
+ "aggregate_sha256": "4a3e8f8ac1703033cf5acbf57f1757eb3d1ad20723c6952d16c266735272be65",
+ "modes": {
+  "heading_hybrid": 18418,
+  "order_mode": 5239,
+  "ext6_alignment": 895
+ },
+ "delta_v3": "비밀의숲 16ep 895쌍 — EXT6 v1.1 source_scene_alignment(문자 오프셋+sha 검증) 경유. 무번호 작품 해소의 첫 선례",
+ "note": "잔여 무번호 13작 — EXT6 확산분 도착 시 동일 파이프로 편입",
+ "storage": "LOCAL ONLY"
+}
