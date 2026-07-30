@@ -1,0 +1,122 @@
+{
+  "schema": "SEED_LAYER_EXACT_SCHEMA_REGISTRY_V0_1",
+  "status": "DRAFT_PROPOSAL_NOT_AUTHORIZED",
+  "contract_ref": "docs/design/2026-07-31_ext6_phase2_seed_layer/EXT6-PHASE2-SEED-LAYER-DESIGN-v1.md",
+  "parent_contract": "SEQCARD-EXT6-PHASE1-FROZEN-CONTRACT-v1 (FROZEN, unchanged)",
+  "core_stage01_04_schema_changed": false,
+  "authoring_authorized": false,
+  "note": "사용자 승인 전 저작 금지. 본 파일은 키셋 동결 초안이며 정본 권위 없음.",
+  "prereg": {
+    "registered_at": "2026-07-31",
+    "immutable_until": "SEED-D 판정 완료",
+    "compatibility_thresholds": {
+      "TOO_SPECIFIC_max": 1,
+      "ADMISSIBLE_range": [2, 10],
+      "REVIEW_range": [11, 30],
+      "TOO_VAGUE_min": 31
+    },
+    "prediction_indicators_max": 5,
+    "alpha": 0.01,
+    "correction": "Bonferroni",
+    "kappa_threshold_interpretive_layer": 0.3,
+    "abandon_line": {
+      "PROMOTE": ">=3 of 5 indicators exceed corpus_prior significantly",
+      "REVISE": "1-2 indicators exceed",
+      "REJECT": "0 indicators exceed",
+      "FULL_READ_excluded_if": "median leakage_estimate > 0.30"
+    }
+  },
+  "records": {
+    "DesignSeed": {
+      "path": "seqcard_ko/advisory_seed/<work>.<derivation_mode>.seed.json",
+      "grain": "(work_id, derivation_mode) = 1 record",
+      "key_count": 14,
+      "keys": [
+        "work_id", "derivation_mode", "read_span",
+        "evidenced_initial_configuration", "evidenced_world_constraints", "evidenced_opening_disturbance",
+        "judged_logline", "judged_central_lack", "judged_governing_question",
+        "judged_central_opposition_axis", "judged_ending_direction", "judged_cost_structure",
+        "contract_version", "by"
+      ],
+      "evidenced_block": [
+        "evidenced_initial_configuration", "evidenced_world_constraints", "evidenced_opening_disturbance"
+      ],
+      "judged_block": [
+        "judged_logline", "judged_central_lack", "judged_governing_question",
+        "judged_central_opposition_axis", "judged_ending_direction", "judged_cost_structure"
+      ],
+      "evidence_policy": {
+        "evidenced_block": "evidence_ref REQUIRED, format 'EPnn-Snn Lnn <quote>', line-verified against original_extracted (SEED-B3)",
+        "judged_block": "evidence_ref FORBIDDEN — presence is an ERROR (SEED-B6)"
+      },
+      "derivation_mode": ["PLAN_DOCUMENT", "EP01_02_BLIND", "FULL_READ"],
+      "ending_direction": ["ACHIEVE", "ACHIEVE_WITH_COST", "FAIL", "FAIL_BUT_TRANSFORM", "REFUSE", "AMBIGUOUS"],
+      "fk": {
+        "character_key": "authored_bridge (EntityBridge)",
+        "scene_no": "authored/*.seqcard.jsonl (SceneCard)"
+      }
+    },
+    "SeedAdmissibility": {
+      "path": "seqcard_ko/advisory_seed_admissibility/<work>.<mode>.adm.json",
+      "grain": "(work_id, derivation_mode) = 1 record",
+      "key_count": 7,
+      "keys": [
+        "work_id", "derivation_mode", "compatible_work_ids", "compatibility_count",
+        "alternative_structures", "specificity_violations", "verdict"
+      ],
+      "verdict": ["ADMISSIBLE", "TOO_SPECIFIC", "TOO_VAGUE", "REVIEW"],
+      "min_alternative_structures": 3
+    },
+    "SeedStructurePrediction": {
+      "path": "seqcard_ko/derived_seed_prediction/<work>.pred.jsonl",
+      "grain": "(work_id, derivation_mode, indicator)",
+      "key_count": 9,
+      "llm_used": false,
+      "keys": [
+        "work_id", "derivation_mode", "indicator", "predicted_value", "observed_value",
+        "observation_source", "match", "corpus_prior", "by"
+      ],
+      "indicator": [
+        "center_count", "opposition_persistence", "conflict_persist",
+        "ending_direction", "cost_realized"
+      ],
+      "observation_source_map": {
+        "center_count": "derived_character_load (scene_share_band in {DOMINANT,MAJOR})",
+        "opposition_persistence": "authored_relarc",
+        "conflict_persist": "_ALL_series_arc.json",
+        "ending_direction": "authored_chararc terminal state_label + stage04 FullSeriesArc",
+        "cost_realized": "PayoffCandidate disposition (LOSS class ratio)"
+      }
+    },
+    "SeedContamination": {
+      "path": "seqcard_ko/derived_seed_contamination/<work>.contam.json",
+      "grain": "work_id",
+      "key_count": 8,
+      "llm_used": false,
+      "keys": [
+        "work_id", "mode_b_ref", "mode_c_ref", "field_level_diff", "diverged_fields",
+        "mode_b_prediction_accuracy", "mode_c_prediction_accuracy", "leakage_estimate"
+      ],
+      "formula": "leakage_estimate = mode_c_prediction_accuracy - mode_b_prediction_accuracy"
+    }
+  },
+  "gates": {
+    "SEED-A": {"type": "hard", "errors_allowed": 0, "checks": ["exact keyset", "enum", "type", "grain uniqueness", "FK", "mode<->read_span consistency", "compatible_work_ids exist"]},
+    "SEED-B": {"type": "hard", "errors_allowed": 0, "scope": "EVIDENCED block only", "checks": ["evidence_ref non-empty", "format EPnn-Snn Lnn", "source line match (verify2.py)", "cited episode within read_span", "no placeholder", "judged block has NO evidence_ref"]},
+    "SEED-C": {"type": "hard", "errors_allowed": 0, "checks": ["specificity_violations empty", "alternative_structures>=3", "verdict==ADMISSIBLE", "downstream layers not read (intra-track ban)", "mode ordering B before C", "cross-provider outputs not read"]},
+    "SEED-D": {"type": "advisory", "decision": ["PROMOTE", "REVISE", "REJECT"], "note": "prereg abandon line — see prereg.abandon_line"}
+  },
+  "pilot": {
+    "n_works": 10,
+    "works": ["비밀의숲", "커피프린스", "배가본드", "하얀거탑", "공주의남자", "힐러", "구르미그린달빛", "강남엄마따라잡기", "굿캐스팅", "결혼못하는남자"],
+    "difficulty_split": {"easy": 3, "medium": 4, "hard": 3},
+    "mode_order": "EP01_02_BLIND all 10 -> seal -> FULL_READ all 10",
+    "rollout_gate": "no 90-work rollout before SEED-D PROMOTE + user approval"
+  },
+  "empirical_findings_2026_07_31": {
+    "plan_document_availability": "0 of 87 EP01 files contain a 기획의도 body (4 string hits are broadcaster webpage navigation residue)",
+    "character_intro_availability": "3 of 87 EP01 files contain a 등장인물 section",
+    "implication": "PLAN_DOCUMENT mode defined but unusable on current corpus; pilot runs EP01_02_BLIND only"
+  },
+  "by": "Claude (Opus)"
+}
