@@ -1,0 +1,23 @@
+{
+  "schema": "EXT6_PHASE_AUTHORITY_POINTER_V1",
+  "core_authority": {
+    "version": "EXT6_V1_2",
+    "status": "FROZEN_UNCHANGED",
+    "contract_ref": "docs/design/2026-07-13_seqcard_ext6_phase1_contract/SEQCARD-EXT6-PHASE1-FROZEN-CONTRACT-v1.md"
+  },
+  "phase02_authority": {
+    "name": "DesignSeed",
+    "version": "V1_0",
+    "status": "AUTHORIZED_PILOT_ONLY",
+    "authority_ref": "docs/standards/EXT6_V1_2_PHASE02_DESIGNSEED_SINGLE_AUTHORITY_V1_0.md",
+    "schema_ref": "seqcard_ko/ext6_schema/EXT6_PHASE02_DESIGNSEED_EXACT_SCHEMA_REGISTRY_V1_0.json",
+    "gate_tool_ref": "seqcard_ko/_ext6_tools/ext6_seed_gate.py",
+    "gate_matrix_ref": "docs/standards/EXT6_LAYER_GATE_EXECUTION_MATRIX_V1_0.md"
+  },
+  "stage01_04_changed": false,
+  "existing_ext6_v1_2_changed": false,
+  "rollout_authorized": false,
+  "canonical_promotion_authorized": false,
+  "updated_at": "2026-07-31T21:22:00+09:00",
+  "by": "GPT-5.6 Thinking"
+}
