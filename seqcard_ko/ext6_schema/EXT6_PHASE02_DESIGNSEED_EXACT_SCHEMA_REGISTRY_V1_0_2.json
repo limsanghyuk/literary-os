@@ -1,0 +1,146 @@
+{
+  "schema": "EXT6_PHASE02_DESIGNSEED_EXACT_SCHEMA_REGISTRY_V1_0_2",
+  "status": "AUTHORIZED_PILOT_ONLY_CORRECTED_V1_0_2",
+  "authority_ref": "docs/standards/EXT6_V1_2_PHASE02_DESIGNSEED_SINGLE_AUTHORITY_V1_0_2.md",
+  "parent_contract": "SEQCARD-EXT6-PHASE1-CONTRACT-v1",
+  "core_stage01_04_schema_changed": false,
+  "existing_ext6_v1_2_changed": false,
+  "authoring_authorized": true,
+  "rollout_authorized": false,
+  "canonical_promotion_authorized": false,
+  "authorization_scope": "preregistered_10_work_pilot_only",
+  "preregistration": {
+    "compatibility_thresholds": {
+      "self_inclusion_allowed": false,
+      "TOO_SPECIFIC_max": 0,
+      "ADMISSIBLE_min": 1,
+      "ADMISSIBLE_max": 9,
+      "REVIEW_min": 10,
+      "REVIEW_max": 29,
+      "TOO_VAGUE_min": 30
+    },
+    "prediction_indicators": [
+      "center_count",
+      "opposition_persistence",
+      "conflict_persist",
+      "ending_direction",
+      "cost_realized"
+    ],
+    "alpha": 0.01,
+    "multiple_test_correction": "Bonferroni",
+    "promotion_rule": "at_least_3_of_5_indicators_exceed_corpus_prior_significantly",
+    "revise_rule": "1_or_2_indicators_exceed_once_only",
+    "reject_rule": "0_indicators_exceed",
+    "full_read_training_exclusion": "median_leakage_estimate_gt_0.30",
+    "center_count_observation_rule": {
+      "denominator": "all distinct authored SceneCard (episode_no,scene_no) for the work",
+      "numerator": "per character, distinct authored_cast (episode_no,scene_no) whose presence_mode is ONSCREEN, VOICE_ONLY, PHONE_OR_REMOTE, or ARCHIVAL_OR_MEMORY",
+      "threshold": "season_scene_share >= 0.20",
+      "REFERENCED_ONLY_counted": false,
+      "focality_used": false
+    },
+    "interpretation_limit": "Five indicators imply accuracy resolution 0.20; two-work results cannot decide SEED-D; cohort status remains PENDING_AUTHORIZED_COHORT.",
+    "proper_name_leakage_rule": {
+      "generic_role_labels_excluded": true,
+      "generic_role_vocabulary_ref": "seqcard_ko/_ext6_tools/ext6_seed_gate_v1_0_2.py::GENERIC_ROLE_NAMES",
+      "work_specific_entity_names_blocked": true
+    },
+    "opposition_persistence_rule": {
+      "character_resolution": "EntityBridge canonical_name + aliases normalized to character_key",
+      "raw_string_equality_prohibited": true,
+      "HIGH": "resolved center-pair episode coverage >=0.75 and first relation_state differs from last"
+    }
+  },
+  "enums": {
+    "derivation_mode": ["PLAN_DOCUMENT", "EP01_02_BLIND", "FULL_READ"],
+    "ending_direction": ["ACHIEVE", "ACHIEVE_WITH_COST", "FAIL", "FAIL_BUT_TRANSFORM", "REFUSE", "AMBIGUOUS"],
+    "world_constraint_scope": ["SOCIAL", "INSTITUTIONAL", "PHYSICAL", "SUPERNATURAL", "ECONOMIC", "RELATIONAL", "PROFESSIONAL", "LEGAL", "CULTURAL", "OTHER"],
+    "cost_type": ["IDENTITY", "RELATIONSHIP", "STATUS", "SAFETY", "MORAL", "MATERIAL", "TIME", "LIFE", "MIXED", "NONE", "AMBIGUOUS"],
+    "cost_bearer": ["PROTAGONIST", "ALLY", "RELATIONSHIP", "COMMUNITY", "ANTAGONISTIC_FORCE", "MULTIPLE", "NONE", "AMBIGUOUS"],
+    "admissibility_verdict": ["ADMISSIBLE", "TOO_SPECIFIC", "TOO_VAGUE", "REVIEW"],
+    "specificity_violation_type": ["PROPER_NAME", "EPISODE_NUMBER", "SCENE_NUMBER", "EXACT_EVENT", "TERMINAL_EVENT", "DOWNSTREAM_LEAKAGE", "OTHER"],
+    "prediction_indicator": ["center_count", "opposition_persistence", "conflict_persist", "ending_direction", "cost_realized"]
+  },
+  "records": {
+    "DesignSeedRecord": {
+      "path": "seqcard_ko/advisory_seed/<work>.<derivation_mode>.seed.json",
+      "grain": ["work_id", "derivation_mode"],
+      "key_count": 14,
+      "keys": ["work_id", "derivation_mode", "read_span", "evidenced_initial_configuration", "evidenced_world_constraints", "evidenced_opening_disturbance", "judged_logline", "judged_central_lack", "judged_governing_question", "judged_central_opposition_axis", "judged_ending_direction", "judged_cost_structure", "contract_version", "by"],
+      "nested_exact_keys": {
+        "evidenced_initial_configuration_item": ["character_key", "initial_position", "initial_relation_axis", "evidence_ref"],
+        "evidenced_world_constraints_item": ["rule", "scope", "evidence_ref"],
+        "evidenced_opening_disturbance": ["summary", "scene_no", "evidence_ref"],
+        "judged_cost_structure": ["cost_type", "cost_bearer", "cost_summary"]
+      },
+      "evidence_policy": {
+        "evidenced_block": "required_and_source_verified",
+        "judged_block": "evidence_ref_forbidden"
+      }
+    },
+    "SeedAdmissibilityRecord": {
+      "path": "seqcard_ko/advisory_seed_admissibility/<work>.<derivation_mode>.adm.json",
+      "grain": ["work_id", "derivation_mode"],
+      "key_count": 7,
+      "keys": ["work_id", "derivation_mode", "compatible_work_ids", "compatibility_count", "alternative_structures", "specificity_violations", "verdict"],
+      "nested_exact_keys": {
+        "alternative_structures_item": ["sketch", "divergence_point"],
+        "specificity_violations_item": ["field", "token", "violation_type"]
+      },
+      "minimum_alternative_structures": 3
+    },
+    "SeedStructurePredictionRecord": {
+      "path": "seqcard_ko/derived_seed_prediction/<work>.pred.jsonl",
+      "grain": ["work_id", "derivation_mode", "indicator"],
+      "key_count": 9,
+      "keys": ["work_id", "derivation_mode", "indicator", "predicted_value", "observed_value", "observation_source", "match", "corpus_prior", "by"],
+      "llm_semantic_generation_allowed": false,
+      "required_indicator_count_per_mode": 5
+    },
+    "SeedContaminationRecord": {
+      "path": "seqcard_ko/derived_seed_contamination/<work>.contam.json",
+      "grain": ["work_id"],
+      "key_count": 8,
+      "keys": ["work_id", "mode_b_ref", "mode_c_ref", "field_level_diff", "diverged_fields", "mode_b_prediction_accuracy", "mode_c_prediction_accuracy", "leakage_estimate"],
+      "formula": "leakage_estimate = mode_c_prediction_accuracy - mode_b_prediction_accuracy",
+      "llm_semantic_generation_allowed": false
+    },
+    "SeedAuthoringBoundaryManifest": {
+      "path": "seqcard_ko/advisory_seed_runs/<work>.<derivation_mode>.run.json",
+      "grain": ["work_id", "derivation_mode", "run_id"],
+      "key_count": 15,
+      "keys": ["work_id", "derivation_mode", "read_span", "run_id", "provider", "model_id", "source_file_refs", "source_sha256s", "downstream_layers_blocked", "downstream_blocklist", "cross_provider_outputs_blocked", "prior_mode_ref", "sealed_at", "content_sha256", "by"]
+    }
+  },
+  "gates": {
+    "SEED-A": {
+      "type": "hard",
+      "errors_allowed": 0,
+      "checks": ["exact_keysets", "nested_exact_keysets", "enum", "types", "grain", "foreign_keys", "mode_read_span", "prediction_indicator_completeness", "content_sha256"]
+    },
+    "SEED-B": {
+      "type": "hard",
+      "errors_allowed": 0,
+      "checks": ["evidence_required", "evidence_format", "source_line_match_plus_minus_3", "episode_inside_read_span", "source_sha256", "placeholder_forbidden", "judged_evidence_forbidden"]
+    },
+    "SEED-C": {
+      "type": "hard",
+      "errors_allowed": 0,
+      "checks": ["specificity_violations_empty", "alternative_structures_min_3", "verdict_admissible", "blind_boundary_attested", "cross_provider_boundary_attested", "blind_before_full_read"]
+    },
+    "SEED-D": {
+      "type": "advisory",
+      "decision": ["PROMOTE", "REVISE", "REJECT"],
+      "canonical_promotion_effect": false,
+      "checks": ["recompute_center_count_from_authored_cast_and_scenecards", "recompute_opposition_persistence", "recompute_conflict_persist", "verify_terminal_indicator_evidence_hashes", "compare_observed_value", "compare_prediction_match", "recompute_accuracy_and_leakage", "reject_compatible_self_inclusion", "require_corpus_index"]
+    }
+  },
+  "pilot": {
+    "works": ["비밀의숲", "커피프린스", "배가본드", "하얀거탑", "공주의남자", "힐러", "구르미그린달빛", "강남엄마따라잡기", "굿캐스팅", "결혼못하는남자"],
+    "mode_order": ["EP01_02_BLIND", "FULL_READ"],
+    "all_blind_records_must_be_sealed_before_any_full_read": true,
+    "rollout_requires": ["SEED-D_PROMOTE", "separate_user_approval"]
+  },
+  "by": "GPT-5.6 Thinking",
+  "supersedes": "EXT6_PHASE02_DESIGNSEED_EXACT_SCHEMA_REGISTRY_V1_0_1"
+}
