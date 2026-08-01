@@ -7,17 +7,25 @@
   },
   "phase02_authority": {
     "name": "DesignSeed",
-    "version": "V1_0",
-    "status": "AUTHORIZED_PILOT_ONLY",
-    "authority_ref": "docs/standards/EXT6_V1_2_PHASE02_DESIGNSEED_SINGLE_AUTHORITY_V1_0.md",
-    "schema_ref": "seqcard_ko/ext6_schema/EXT6_PHASE02_DESIGNSEED_EXACT_SCHEMA_REGISTRY_V1_0.json",
-    "gate_tool_ref": "seqcard_ko/_ext6_tools/ext6_seed_gate.py",
-    "gate_matrix_ref": "docs/standards/EXT6_LAYER_GATE_EXECUTION_MATRIX_V1_0.md"
+    "version": "V1_0_1",
+    "status": "AUTHORIZED_PILOT_ONLY_CORRECTED_WITH_SINGLE_WORK_USER_EXCEPTIONS",
+    "authority_ref": "docs/standards/EXT6_V1_2_PHASE02_DESIGNSEED_SINGLE_AUTHORITY_V1_0_1.md",
+    "schema_ref": "seqcard_ko/ext6_schema/EXT6_PHASE02_DESIGNSEED_EXACT_SCHEMA_REGISTRY_V1_0_1.json",
+    "gate_tool_ref": "seqcard_ko/_ext6_tools/ext6_seed_gate_v1_0_1.py",
+    "gate_matrix_ref": "docs/standards/EXT6_LAYER_GATE_EXECUTION_MATRIX_V1_0_1.md",
+    "derivation_rules_ref": "seqcard_ko/ext6_schema/PHASE02_INDICATOR_DERIVATION_RULES_V1_0_1.json",
+    "phase01_gate_tool_ref": "seqcard_ko/_ext6_tools/ext6_phase01_derived_gate.py",
+    "single_work_exceptions": [
+      "내이름은김삼순",
+      "내여자친구는구미호"
+    ],
+    "single_work_exception_count": 2,
+    "cohort_seed_d_status": "PENDING_AUTHORIZED_COHORT"
   },
   "stage01_04_changed": false,
   "existing_ext6_v1_2_changed": false,
   "rollout_authorized": false,
   "canonical_promotion_authorized": false,
-  "updated_at": "2026-07-31T21:22:00+09:00",
+  "updated_at": "2026-08-01T15:17:00+09:00",
   "by": "GPT-5.6 Thinking"
 }
