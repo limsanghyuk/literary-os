@@ -18,15 +18,16 @@
     "single_work_exceptions": [
       "내이름은김삼순",
       "내여자친구는구미호",
-      "너의목소리가들려"
+      "너의목소리가들려",
+      "녹두꽃"
     ],
-    "single_work_exception_count": 3,
-    "cohort_seed_d_status": "PENDING_AUTHORIZED_COHORT; 너의목소리가들려 EXCLUDED_CONTEXT_DISCLOSED"
+    "single_work_exception_count": 4,
+    "cohort_seed_d_status": "PENDING_AUTHORIZED_COHORT; 너의목소리가들려, 녹두꽃 EXCLUDED_CONTEXT_DISCLOSED"
   },
   "stage01_04_changed": false,
   "existing_ext6_v1_2_changed": false,
   "rollout_authorized": false,
   "canonical_promotion_authorized": false,
-  "updated_at": "2026-08-01T16:55:00+09:00",
+  "updated_at": "2026-08-01T22:58:00+09:00",
   "by": "GPT-5.6 Thinking"
 }
