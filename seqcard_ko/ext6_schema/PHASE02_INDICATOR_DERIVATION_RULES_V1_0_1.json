@@ -1,0 +1,46 @@
+{
+  "schema": "PHASE02_INDICATOR_DERIVATION_RULES_V1_0_1",
+  "status": "ACTIVE_CORRECTION",
+  "date": "2026-08-01",
+  "center_count": {
+    "denominator": "all distinct authored SceneCard (episode_no,scene_no) for the work",
+    "numerator": "per character, distinct authored_cast (episode_no,scene_no) whose presence_mode is ONSCREEN, VOICE_ONLY, PHONE_OR_REMOTE, or ARCHIVAL_OR_MEMORY",
+    "threshold": "season_scene_share >= 0.20",
+    "REFERENCED_ONLY_counted": false,
+    "focality_used": false
+  },
+  "opposition_persistence": {
+    "HIGH": "For the exact unordered pair of the two highest season_scene_share centers, authored_relarc has >=1 row in >=75% of episodes and first relation_state differs from last relation_state",
+    "LOW": "otherwise"
+  },
+  "conflict_persist": {
+    "SEASON_LONG": "FullSeriesArc season_structure begins by max(2,ceil(episodes_total*0.25)) and its final movement ends at episodes_total",
+    "LIMITED": "otherwise"
+  },
+  "ending_direction": {
+    "procedure": "Use validation/phase02_indicator_evidence/<work>.indicator_evidence.json. Verify all listed file hashes and support phrases. Apply the registered decision rule.",
+    "enums": [
+      "ACHIEVE",
+      "ACHIEVE_WITH_COST",
+      "FAIL",
+      "FAIL_BUT_TRANSFORM",
+      "REFUSE",
+      "AMBIGUOUS"
+    ]
+  },
+  "cost_realized": {
+    "procedure": "Use the same terminal evidence audit. A work-specific cost label is accepted only when FullSeriesArc terminal evidence and at least one final CharacterArc or PayoffCandidate support it."
+  },
+  "compatibility": {
+    "exclude_self": true,
+    "bands": {
+      "0": "TOO_SPECIFIC",
+      "1-9": "ADMISSIBLE",
+      "10-29": "REVIEW",
+      "30+": "TOO_VAGUE"
+    },
+    "mode_independence": "BLIND and FULL_READ compatible sets and alternatives are independently authored."
+  },
+  "interpretation_limit": "Accuracy resolution is 0.20. A leakage estimate of -0.20 means one indicator changed, not a precise effect size. SEED-D remains PENDING_AUTHORIZED_COHORT.",
+  "by": "GPT-5.6 Thinking"
+}
