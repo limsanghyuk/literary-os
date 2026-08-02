@@ -2,8 +2,11 @@
   "schema": "EXT6_PHASE_AUTHORITY_POINTER_V1",
   "core_authority": {
     "version": "EXT6_V1_2",
-    "status": "FROZEN_UNCHANGED",
-    "contract_ref": "docs/design/2026-07-13_seqcard_ext6_phase1_contract/SEQCARD-EXT6-PHASE1-FROZEN-CONTRACT-v1.md"
+    "status": "FROZEN_CORE_WITH_ACTIVE_QUALITY_PATCH",
+    "contract_ref": "docs/design/2026-07-13_seqcard_ext6_phase1_contract/SEQCARD-EXT6-PHASE1-FROZEN-CONTRACT-v1.md",
+    "quality_patch_version": "V1_2_1",
+    "quality_patch_ref": "docs/standards/EXT6_PHASE01_QUALITY_PATCH_V1_2_1.md",
+    "quality_rules_ref": "seqcard_ko/ext6_schema/EXT6_PHASE01_QUALITY_RULES_V1_2_1.json"
   },
   "phase02_authority": {
     "name": "DesignSeed",
@@ -14,7 +17,7 @@
     "gate_tool_ref": "seqcard_ko/_ext6_tools/ext6_seed_gate_v1_0_2.py",
     "gate_matrix_ref": "docs/standards/EXT6_LAYER_GATE_EXECUTION_MATRIX_V1_0_2.md",
     "derivation_rules_ref": "seqcard_ko/ext6_schema/PHASE02_INDICATOR_DERIVATION_RULES_V1_0_1.json",
-    "phase01_gate_tool_ref": "seqcard_ko/_ext6_tools/ext6_phase01_derived_gate.py",
+    "phase01_gate_tool_ref": "seqcard_ko/_ext6_tools/ext6_phase01_derived_gate_v1_2_1.py",
     "single_work_exceptions": [
       "내이름은김삼순",
       "내여자친구는구미호",
@@ -27,7 +30,8 @@
     "cohort_seed_d_status": "PENDING_AUTHORIZED_COHORT; 너의목소리가들려, 녹두꽃, 뉴하트, 돌아온일지매 EXCLUDED_CONTEXT_DISCLOSED"
   },
   "stage01_04_changed": false,
-  "existing_ext6_v1_2_changed": false,
+  "existing_ext6_v1_2_changed": true,
+  "existing_ext6_v1_2_change_scope": "DERIVED_SIDECAR_QUALITY_CORRECTION_ONLY",
   "rollout_authorized": false,
   "canonical_promotion_authorized": false,
   "updated_at": "2026-08-02T21:40:00+09:00",
