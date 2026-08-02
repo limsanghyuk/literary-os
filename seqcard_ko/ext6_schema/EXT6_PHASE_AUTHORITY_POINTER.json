@@ -25,16 +25,17 @@
       "녹두꽃",
       "뉴하트",
       "돌아온일지매",
-      "대물"
+      "대물",
+      "대장금"
     ],
-    "single_work_exception_count": 7,
-    "cohort_seed_d_status": "PENDING_AUTHORIZED_COHORT; 너의목소리가들려, 녹두꽃, 뉴하트, 돌아온일지매, 대물 EXCLUDED_CONTEXT_DISCLOSED"
+    "single_work_exception_count": 8,
+    "cohort_seed_d_status": "PENDING_AUTHORIZED_COHORT; 너의목소리가들려, 녹두꽃, 뉴하트, 돌아온일지매, 대물, 대장금 EXCLUDED_CONTEXT_DISCLOSED"
   },
   "stage01_04_changed": false,
   "existing_ext6_v1_2_changed": true,
   "existing_ext6_v1_2_change_scope": "DERIVED_SIDECAR_QUALITY_CORRECTION_ONLY",
   "rollout_authorized": false,
   "canonical_promotion_authorized": false,
-  "updated_at": "2026-08-02T22:10:00+09:00",
+  "updated_at": "2026-08-02T23:54:00+09:00",
   "by": "GPT-5.6 Thinking"
 }
