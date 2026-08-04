@@ -1,0 +1,284 @@
+{
+ "rows": [
+  {
+   "seq": "건빵선생과별사탕_01_S01",
+   "H": {
+    "speakers": 8,
+    "top_share": 0.2
+   },
+   "A": {
+    "speakers": 8,
+    "top_share": 0.2708333333333333
+   },
+   "B": {
+    "speakers": 10,
+    "top_share": 0.32432432432432434
+   },
+   "N": {
+    "speakers": 8,
+    "top_share": 0.2549019607843137
+   }
+  },
+  {
+   "seq": "건빵선생과별사탕_01_S03",
+   "H": {
+    "speakers": 7,
+    "top_share": 0.4146341463414634
+   },
+   "A": {
+    "speakers": 7,
+    "top_share": 0.41509433962264153
+   },
+   "B": {
+    "speakers": 6,
+    "top_share": 0.4025974025974026
+   },
+   "N": {
+    "speakers": 6,
+    "top_share": 0.375
+   }
+  },
+  {
+   "seq": "건빵선생과별사탕_01_S05",
+   "H": {
+    "speakers": 11,
+    "top_share": 0.2676056338028169
+   },
+   "A": {
+    "speakers": 7,
+    "top_share": 0.40476190476190477
+   },
+   "B": {
+    "speakers": 9,
+    "top_share": 0.40441176470588236
+   },
+   "N": {
+    "speakers": 8,
+    "top_share": 0.4578313253012048
+   }
+  },
+  {
+   "seq": "건빵선생과별사탕_01_S07",
+   "H": {
+    "speakers": 8,
+    "top_share": 0.3684210526315789
+   },
+   "A": {
+    "speakers": 9,
+    "top_share": 0.27631578947368424
+   },
+   "B": {
+    "speakers": 8,
+    "top_share": 0.3283582089552239
+   },
+   "N": {
+    "speakers": 8,
+    "top_share": 0.3333333333333333
+   }
+  },
+  {
+   "seq": "건빵선생과별사탕_01_S09",
+   "H": {
+    "speakers": 5,
+    "top_share": 0.3142857142857143
+   },
+   "A": {
+    "speakers": 9,
+    "top_share": 0.2857142857142857
+   },
+   "B": {
+    "speakers": 8,
+    "top_share": 0.379746835443038
+   },
+   "N": {
+    "speakers": 9,
+    "top_share": 0.3076923076923077
+   }
+  },
+  {
+   "seq": "건빵선생과별사탕_01_S11",
+   "H": {
+    "speakers": 8,
+    "top_share": 0.3548387096774194
+   },
+   "A": {
+    "speakers": 6,
+    "top_share": 0.5636363636363636
+   },
+   "B": {
+    "speakers": 8,
+    "top_share": 0.527027027027027
+   },
+   "N": {
+    "speakers": 4,
+    "top_share": 0.5
+   }
+  },
+  {
+   "seq": "한성별곡_01_S01",
+   "H": {
+    "speakers": 12,
+    "top_share": 0.23529411764705882
+   },
+   "A": {
+    "speakers": 20,
+    "top_share": 0.29338842975206614
+   },
+   "B": {
+    "speakers": 17,
+    "top_share": 0.2967741935483871
+   },
+   "N": {
+    "speakers": 22,
+    "top_share": 0.273542600896861
+   }
+  },
+  {
+   "seq": "한성별곡_01_S02",
+   "H": {
+    "speakers": 17,
+    "top_share": 0.1574074074074074
+   },
+   "A": {
+    "speakers": 23,
+    "top_share": 0.23843416370106763
+   },
+   "B": {
+    "speakers": 20,
+    "top_share": 0.26126126126126126
+   },
+   "N": {
+    "speakers": 30,
+    "top_share": 0.19172932330827067
+   }
+  },
+  {
+   "seq": "한성별곡_01_S03",
+   "H": {
+    "speakers": 18,
+    "top_share": 0.20833333333333334
+   },
+   "A": {
+    "speakers": 18,
+    "top_share": 0.23129251700680273
+   },
+   "B": {
+    "speakers": 22,
+    "top_share": 0.2413793103448276
+   },
+   "N": {
+    "speakers": 16,
+    "top_share": 0.25
+   }
+  },
+  {
+   "seq": "한성별곡_01_S05",
+   "H": {
+    "speakers": 12,
+    "top_share": 0.2413793103448276
+   },
+   "A": {
+    "speakers": 20,
+    "top_share": 0.23170731707317074
+   },
+   "B": {
+    "speakers": 27,
+    "top_share": 0.2066420664206642
+   },
+   "N": {
+    "speakers": 16,
+    "top_share": 0.1991869918699187
+   }
+  },
+  {
+   "seq": "한성별곡_01_S06",
+   "H": {
+    "speakers": 12,
+    "top_share": 0.23684210526315788
+   },
+   "A": {
+    "speakers": 10,
+    "top_share": 0.3020833333333333
+   },
+   "B": {
+    "speakers": 12,
+    "top_share": 0.336734693877551
+   },
+   "N": {
+    "speakers": 9,
+    "top_share": 0.4
+   }
+  },
+  {
+   "seq": "한성별곡_01_S07",
+   "H": {
+    "speakers": 7,
+    "top_share": 0.35
+   },
+   "A": {
+    "speakers": 9,
+    "top_share": 0.22807017543859648
+   },
+   "B": {
+    "speakers": 7,
+    "top_share": 0.26
+   },
+   "N": {
+    "speakers": 9,
+    "top_share": 0.2786885245901639
+   }
+  }
+ ],
+ "summary": {
+  "H": {
+   "n_seq": 12,
+   "speakers_mean": 10.42,
+   "top_share_mean": 0.2791
+  },
+  "A": {
+   "n_seq": 12,
+   "speakers_mean": 12.17,
+   "top_share_mean": 0.3118,
+   "delta_share_vs_H": 0.0327,
+   "delta_ci": [
+    -0.017,
+    0.0835
+   ],
+   "sign": {
+    "pos": 8,
+    "neg": 4,
+    "tie": 0
+   }
+  },
+  "B": {
+   "n_seq": 12,
+   "speakers_mean": 12.83,
+   "top_share_mean": 0.3308,
+   "delta_share_vs_H": 0.0517,
+   "delta_ci": [
+    0.0072,
+    0.095
+   ],
+   "sign": {
+    "pos": 8,
+    "neg": 4,
+    "tie": 0
+   }
+  },
+  "N": {
+   "n_seq": 12,
+   "speakers_mean": 12.08,
+   "top_share_mean": 0.3185,
+   "delta_share_vs_H": 0.0394,
+   "delta_ci": [
+    -0.0047,
+    0.088
+   ],
+   "sign": {
+    "pos": 7,
+    "neg": 5,
+    "tie": 0
+   }
+  }
+ }
+}
