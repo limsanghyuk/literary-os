@@ -1,0 +1,263 @@
+{
+  "doc_id": "CT06_KEY_VERIFICATION_R1_TALLY",
+  "derived_from": "CT06_KEY_VERIFICATION.json",
+  "source_sha256": "f0401722f4d4e16e9b2e8298e08d700f579d2665af12ed8c95ea6e32b1ff712b",
+  "rule": "note 필드 제거(원문 인용 포함). 판정 + 5축 + 씬·범주 키만 보존.",
+  "n": 50,
+  "tally": {
+    "hold": 47,
+    "weak": 3
+  },
+  "verdicts": [
+    {
+      "scene": "건빵선생과별사탕_01_s1",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s1",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s1",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s1",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s1",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s7",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s7",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s7",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s7",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s7",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s10",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s10",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s10",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s10",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s10",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s15",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s15",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s15",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s15",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s15",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s19",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s19",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s19",
+      "category": null,
+      "verdict": "weak"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s19",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s19",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s1",
+      "category": null,
+      "verdict": "weak"
+    },
+    {
+      "scene": "한성별곡_01_s1",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s1",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s1",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s1",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s14",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s14",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s14",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s14",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s14",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s27",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s27",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s27",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s27",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s27",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s42",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s42",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s42",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s42",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s42",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s57",
+      "category": null,
+      "verdict": "weak"
+    },
+    {
+      "scene": "한성별곡_01_s57",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s57",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s57",
+      "category": null,
+      "verdict": "hold"
+    },
+    {
+      "scene": "한성별곡_01_s57",
+      "category": null,
+      "verdict": "hold"
+    }
+  ]
+}

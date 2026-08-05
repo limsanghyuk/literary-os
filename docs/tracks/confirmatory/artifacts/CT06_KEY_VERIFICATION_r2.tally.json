@@ -1,0 +1,464 @@
+{
+  "doc_id": "CT06_KEY_VERIFICATION_R2_TALLY",
+  "derived_from": "CT06_KEY_VERIFICATION_v1.1.json",
+  "source_sha256": "bf9529e98c1cb0031151e44ada864e8f6a98bf71a5a5edbc9a647c9d6ce2f284",
+  "rule": "note 필드 제거(원문 인용 포함). 판정 + 5축 + 씬·범주 키만 보존.",
+  "n": 50,
+  "tally": {
+    "weak": 12,
+    "hold": 37,
+    "fail": 1
+  },
+  "verdicts": [
+    {
+      "scene": "건빵선생과별사탕_01_s1",
+      "category": null,
+      "verdict": "weak",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "dup:character",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s1",
+      "category": null,
+      "verdict": "weak",
+      "scene_placement": "ok",
+      "function_scale": "contaminated",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s1",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s1",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s1",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s7",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s7",
+      "category": null,
+      "verdict": "weak",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s7",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s7",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s7",
+      "category": null,
+      "verdict": "fail",
+      "scene_placement": "ok",
+      "function_scale": "contaminated",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s10",
+      "category": null,
+      "verdict": "weak",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "dup:info",
+      "evidence_lines": "off"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s10",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s10",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s10",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s10",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s15",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s15",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s15",
+      "category": null,
+      "verdict": "weak",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "dup:goal",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s15",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s15",
+      "category": null,
+      "verdict": "weak",
+      "scene_placement": "ok",
+      "function_scale": "contaminated",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s19",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s19",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s19",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s19",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "건빵선생과별사탕_01_s19",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s1",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s1",
+      "category": null,
+      "verdict": "weak",
+      "scene_placement": "ok",
+      "function_scale": "contaminated",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s1",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s1",
+      "category": null,
+      "verdict": "weak",
+      "scene_placement": "ok",
+      "function_scale": "contaminated",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s1",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s14",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s14",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s14",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s14",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s14",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s27",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s27",
+      "category": null,
+      "verdict": "weak",
+      "scene_placement": "ok",
+      "function_scale": "contaminated",
+      "independence": "dup:goal",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s27",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s27",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s27",
+      "category": null,
+      "verdict": "weak",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "dup:conflict",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s42",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s42",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s42",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s42",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s42",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s57",
+      "category": null,
+      "verdict": "weak",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "dup:character",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s57",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s57",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s57",
+      "category": null,
+      "verdict": "hold",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "ok",
+      "evidence_lines": "ok"
+    },
+    {
+      "scene": "한성별곡_01_s57",
+      "category": null,
+      "verdict": "weak",
+      "scene_placement": "ok",
+      "function_scale": "ok",
+      "independence": "dup:info",
+      "evidence_lines": "ok"
+    }
+  ]
+}
