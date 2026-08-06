@@ -1,5 +1,8 @@
 # 플래너 학습 커리큘럼 (Planner Learning Curriculum, PLC) — 설계 초안 v1 (DRAFT)
 
+> ⚠️ **[2026-08-06 순서 정정]** 본 초안의 A(모방)→C(잔차)→B(선호) 순서는 **판별자 부재 상태에서의 모방 선행**을 뜻한다. CT-03 실측(작법 +0.108인데 판별 BA 0.979, 유일 패배축=상투성 부재)에 비추어 모방 선행은 과잉 정돈을 학습·증폭할 위험이 있다. **판별자(구조 축 판정) 선행**으로 순서를 재검토할 것. → `DESIGN-MACRO-PLANNING-REANCHOR-v1.md`
+
+
 - 작성: 2026-06-26 (계획·설계 모드, 무GPU) · 누적 스레드
 - 성격: **초안(DRAFT).** 졸업 계약이 아니라 다음 대화에서 v2로 갱신될 살아있는 설계.
 - 선행 실측/설계: `docs/measurement/SUBPLOT-RATIO-MEASUREMENT-v1.md`(48% 잣대), `docs/design/DESIGN-AFFILIATION-ENSEMBLE-v1.md`(AEG 아키텍처), `WIRING-ORCHESTRATOR-POC-RESULTS-v1`(배관), `WIRING-WATER-FrontierPort-RESULTS-v1`(실생성 좌석), 2026-06-23 LLM2~3 준비물 지도.
