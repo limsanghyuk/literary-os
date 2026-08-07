@@ -1,0 +1,93 @@
+{
+  "schema": "CT07R_RENDER_PAYLOAD_CONTRACT_V1_0_2",
+  "version": "1.0.2",
+  "status": "ACTIVE_PRE_RENDER_PRE_SCORE",
+  "supersedes": "CT07R_RENDER_PAYLOAD_CONTRACT_V1_0_1",
+  "parent_prereg": "docs/tracks/confirmatory/CT-07R_2026-08-07_db98_reinforcement_replication_prereg.md",
+  "amendments": [
+    "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_v1_1.md",
+    "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_v1_1_1.md",
+    "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_02_neutral_context_and_equalized_control.md"
+  ],
+  "purpose": "make T and TN differ in semantic fit rather than donor identity, truth-status labeling, provenance, target-slot coverage, or payload density",
+  "neutral_context_notice": "이 설계 맥락은 검증되지 않았을 수 있다.",
+  "neutral_notice_policy": {
+    "applies_to": ["T", "TN"],
+    "must_be_byte_identical": true,
+    "additional_correctness_or_mismatch_label_forbidden": true
+  },
+  "renderer_payload_keys": [
+    "schema",
+    "neutral_context_notice",
+    "target_slot_id",
+    "cast",
+    "event",
+    "info_shift",
+    "plant_payoff",
+    "scene_notes"
+  ],
+  "schema_value": "CT07R_SANITIZED_THICK_RENDER_PAYLOAD_V1_0_2",
+  "forbidden_renderer_keys": [
+    "work_id",
+    "episode_no",
+    "seq_id",
+    "seq_index",
+    "member_scene_nos",
+    "evidence_refs",
+    "source_hashes",
+    "by",
+    "existing_refs",
+    "thread_id",
+    "arm_label",
+    "donor_id",
+    "negative_type"
+  ],
+  "forbidden_renderer_phrases_except_neutral_notice": [
+    "foreign",
+    "mismatched",
+    "negative control",
+    "wrong design",
+    "donor episode",
+    "other episode",
+    "정답 설계",
+    "오답 설계",
+    "불일치 설계",
+    "다른 회차 설계"
+  ],
+  "T_materialization": {
+    "semantic_source": "sealed correct target thick packet",
+    "identity_policy": "strip drama/episode/sequence/provenance identity",
+    "scene_slot_policy": "replace source scene numbers with target-relative slot_1..slot_N",
+    "scene_note_coverage": "exactly N nonempty slots",
+    "neutral_notice": "identical literal required"
+  },
+  "TN_materialization": {
+    "semantic_source": "frozen within-work cyclic +1 donor from prereg v1.0",
+    "identity_policy": "strip donor drama/episode/sequence/provenance identity",
+    "semantic_rewrite_allowed": false,
+    "scene_note_policy": "for every target slot j choose nearest normalized donor scene-note index; duplicate when donor shorter, sample when donor longer; preserve proposition text verbatim",
+    "donor_to_target_reference_policy": "map donor-local scene references to nearest normalized target slot and deduplicate",
+    "scene_note_coverage": "exactly N nonempty slots",
+    "neutral_notice": "identical literal required"
+  },
+  "text_sanitization": {
+    "remove_provenance_ids": true,
+    "remove_existing_refs": true,
+    "future_episode_label_policy": "renderer-facing plant/payoff statements must not expose explicit future episode identifiers; deterministically replace literal EP-number labels with [LATER] without otherwise rewriting semantic text"
+  },
+  "density_invariants": [
+    "T.scene_notes count == target scene slot count",
+    "TN.scene_notes count == target scene slot count",
+    "all T/TN scene_notes functional_propositions are nonempty",
+    "T and TN use identical target_slot_id and target slot numbering envelope for a given anchor",
+    "T.neutral_context_notice == TN.neutral_context_notice == exact registered literal"
+  ],
+  "blindness": {
+    "renderer_must_not_know_arm_meaning": true,
+    "renderer_must_not_see_target_function_key": true,
+    "judge_must_not_know_arm": true,
+    "judge_must_not_see_archival_provenance": true,
+    "private_orchestration_map_retains_true_arm_and_donor_identity": true
+  },
+  "validity_rule": "result is invalid if T/TN truth-status notices differ, donor identity/mismatch label is exposed, or T/TN target-slot coverage differs"
+}
