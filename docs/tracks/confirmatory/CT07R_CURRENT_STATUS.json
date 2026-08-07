@@ -1,20 +1,25 @@
 {
   "schema": "CT07R_CURRENT_STATUS_V1",
-  "updated_at": "2026-08-07T19:45:00+09:00",
-  "status": "PRE_SCORE_CONTROL_FIXED_MATERIALIZER_READY_WAITING_INDEPENDENT_KEY_AND_PAYLOAD_RUN",
+  "updated_at": "2026-08-07T22:30:00+09:00",
+  "status": "AMENDMENT_02_SEALED_WAITING_LOCAL_KEY_INGEST_AND_MATERIALIZER_RUN",
   "global_rollout_state": "FULL_THICK_ROLLOUT_BLOCKED_PENDING_CT07_REPLICATION",
   "prereg_v1": "docs/tracks/confirmatory/CT-07R_2026-08-07_db98_reinforcement_replication_prereg.md",
   "prereg_amendments": [
     "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_v1_1.md",
-    "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_v1_1_1.md"
+    "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_v1_1_1.md",
+    "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_02_neutral_context_and_equalized_control.md"
   ],
-  "active_render_payload_contract": "docs/tracks/confirmatory/CT07R_RENDER_PAYLOAD_CONTRACT_V1_0_1.json",
-  "historical_render_payload_contract": "docs/tracks/confirmatory/CT07R_RENDER_PAYLOAD_CONTRACT_V1.json",
+  "active_render_payload_contract": "docs/tracks/confirmatory/CT07R_RENDER_PAYLOAD_CONTRACT_V1_0_2.json",
+  "historical_render_payload_contracts": [
+    "docs/tracks/confirmatory/CT07R_RENDER_PAYLOAD_CONTRACT_V1.json",
+    "docs/tracks/confirmatory/CT07R_RENDER_PAYLOAD_CONTRACT_V1_0_1.json"
+  ],
+  "neutral_context_notice": "이 설계 맥락은 검증되지 않았을 수 있다.",
   "materializer": {
     "path": "tools/experiments/build_ct07r_sanitized_payloads.py",
-    "commit": "0af41defea243c305aeab65d3b46ff0f4576c0c1",
-    "status": "READY_NOT_RUN_IN_CURRENT_TOOL_ENVIRONMENT",
-    "reason": "current execution container cannot resolve github.com; run where repository files are locally available, then seal output SHA before render"
+    "commit": "7ffd42e7403ac48d48e52aa941b3127c3c8a5100",
+    "status": "READY_NOT_RUN_AFTER_AMENDMENT_02",
+    "required_contract": "CT07R_RENDER_PAYLOAD_CONTRACT_V1_0_2"
   },
   "packet_audit_ledger": "docs/tracks/confirmatory/ct07r_packets/CT07R_PACKET_AUDIT_AND_CORRECTION_LEDGER_20260807.json",
   "sealed_correct_packet": {
@@ -24,33 +29,69 @@
     "records": 10,
     "semantic_rewrite_after_seal": false
   },
+  "independent_key_state": {
+    "developer_reported_local_status": "LOCAL_REPORTED_COMPLETE",
+    "reported_local_directory": "C:\\claude\\CT07R_run_20260807\\keys\\",
+    "reported_sha256_prefixes": ["f456a957", "16719be5"],
+    "hub_status": "HUB_UNSEALED",
+    "rule": "do not recreate or paraphrase local key files; ingest exact bytes and record full SHA256"
+  },
+  "short_anchor_sensitivity_state": {
+    "developer_reported_local_file": "C:\\claude\\CT07R_run_20260807\\CT-07R_amendment_01_short_anchor_sensitivity.md",
+    "hub_status": "HUB_UNSEALED",
+    "anchor_reselection": "FORBIDDEN",
+    "reported_required_sensitivities": [
+      "6-line-or-longer subset",
+      "leave-one-out minimum/maximum",
+      "within-scene versus placement/neighbor-relation element decomposition",
+      "primary result retains all ten anchors"
+    ]
+  },
+  "ct07_metric_interpretation": {
+    "A_absolute": 0.0,
+    "B_human_scenecard_absolute": 1.425,
+    "B_r": 1.0,
+    "L2G_absolute": 1.15,
+    "L2G_r": 0.807,
+    "L2D_absolute": 2.325,
+    "L2D_r": 1.63,
+    "L3_absolute": 4.9,
+    "L3_r": 3.44,
+    "absolute_L2D_to_L2G_loss": 1.175,
+    "normalized_r_L2D_to_L2G_loss_approx": 0.823
+  },
   "measurement_state": {
-    "target_function_key": "MISSING_INDEPENDENT_SEAL",
-    "sanitized_render_payloads": "MATERIALIZER_READY_NOT_YET_SEALED",
+    "target_function_key": "LOCAL_REPORTED_COMPLETE_HUB_UNSEALED",
+    "sanitized_render_payloads": "MATERIALIZER_V1_0_2_READY_NOT_YET_SEALED",
     "renders": 0,
     "scores": 0,
     "decision": "NOT_MEASURED"
   },
   "resolved_findings": [
-    "TN visible donor metadata/foreign-label confound removed by prereg amendment v1.1",
-    "TN scene-note density confound removed by amendment v1.1.1 + render contract v1.0.1",
-    "authority active-schema drift resolved by AUTHORITY_CORRECTION_V1_0_1 and root pointer sync",
-    "known 101번째프로포즈_11 evidence-ref typo preserved in sealed packet and ledgered for deterministic derived correction"
+    "one-sided foreign/mismatched TN label conflict resolved by prereg amendment 02: identical neutral notice on T and TN",
+    "T/TN target scene-note density confound controlled by v1.1.1 plus render contract v1.0.2",
+    "authority active-schema drift resolved; active schema remains reinforcement V1.0.1",
+    "CT-07 absolute scores and normalized r values explicitly disambiguated in Authority Correction V1.0.2",
+    "known 101번째프로포즈_11 evidence-ref typo remains ledgered without semantic packet rewrite"
   ],
   "still_required": [
-    "run materializer against sealed packet and seal T/TN payload SHA",
-    "independent target-function key author blind to thick packets seals key SHA",
+    "ingest exact local independent key files and record full SHA256",
+    "ingest exact local short-anchor sensitivity amendment and record SHA256",
+    "run materializer v1.0.2 against sealed thick packet and seal T/TN payload SHA256",
+    "prepare A/B/T/TN 40-render blind batch",
     "independent blind render",
-    "independent blind scoring",
+    "shuffle and independent three-judge blind scoring",
     "unblind and apply unchanged preregistered thresholds",
+    "report all preregistered sensitivity analyses",
     "developer accepts PASS/FAIL"
   ],
-  "next_authoritative_action": "RUN_SANITIZED_MATERIALIZER_AND_INDEPENDENT_KEY_IN_PARALLEL_THEN_BLIND_RENDER_SCORE",
+  "next_authoritative_action": "INGEST_LOCAL_KEYS_AND_SHORT_ANCHOR_AMENDMENT_THEN_RUN_MATERIALIZER_V1_0_2_AND_40_RENDER_BATCH",
   "invalid_shortcuts": [
     "renderer sees archival evidence/source hashes",
-    "TN explicitly labeled foreign/mismatched/negative",
+    "T and TN receive different truth-status labels",
+    "TN explicitly labeled foreign/mismatched/negative to renderer",
     "T/TN have unequal target scene-note coverage",
-    "DB reinforcement author writes target-function key after seeing thick packets",
+    "DB reinforcement author recreates local independent key from chat or memory",
     "PASS inferred from packet/schema validation",
     "bulk 98-work thick authoring before valid replication PASS and developer acceptance"
   ]
