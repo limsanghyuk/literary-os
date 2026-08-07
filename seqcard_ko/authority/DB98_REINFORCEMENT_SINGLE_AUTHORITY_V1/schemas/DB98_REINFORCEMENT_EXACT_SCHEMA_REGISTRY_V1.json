@@ -1,0 +1,250 @@
+{
+  "schema": "DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1",
+  "version": "1.0.0",
+  "status": "SEALED_METHOD_SCHEMA_WITH_ROLLOUT_GATE",
+  "effective_date": "2026-08-07",
+  "authority_id": "DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1",
+  "core_schema_policy": "DO_NOT_MODIFY_STAGE01_04_CORE_SCHEMAS_UNDER_THIS_AUTHORITY",
+  "canonical_auto_promotion": false,
+  "record_types": {
+    "thick_sequence_extension": {
+      "grain": "one record per existing seq_id",
+      "storage_mode": "append_only_sidecar_until_explicit_promotion",
+      "required_keys": [
+        "schema",
+        "work_id",
+        "episode_no",
+        "seq_id",
+        "seq_index",
+        "member_scene_nos",
+        "cast",
+        "event",
+        "info_shift",
+        "plant_payoff",
+        "scene_notes",
+        "evidence_refs",
+        "source_hashes",
+        "by"
+      ],
+      "additional_keys_allowed": false,
+      "types": {
+        "schema": "string constant DB98_THICK_SEQUENCE_EXTENSION_V1",
+        "work_id": "string nonempty",
+        "episode_no": "integer >= 1",
+        "seq_id": "string nonempty FK to authored_seq",
+        "seq_index": "integer >= 1",
+        "member_scene_nos": "array[integer >= 1] nonempty, exact match to existing authored_seq membership",
+        "cast": "array[cast_item] nonempty unless source-supported empty sequence is explicitly held",
+        "event": "string nonempty",
+        "info_shift": "array[info_shift_item]",
+        "plant_payoff": "array[plant_payoff_item]",
+        "scene_notes": "array[scene_note_item] exact member_scene coverage",
+        "evidence_refs": "array[evidence_ref] nonempty",
+        "source_hashes": "object[source_hashes]",
+        "by": "string nonempty"
+      },
+      "cast_item": {
+        "required_keys": ["character", "desire_or_function", "participation", "evidence_refs"],
+        "additional_keys_allowed": false,
+        "types": {
+          "character": "string nonempty canonical/bridged identity",
+          "desire_or_function": "string nonempty semantic authored",
+          "participation": "enum PRIMARY|SECONDARY|OPPOSITION|SUPPORT|WITNESS|OFFSCREEN_CAUSAL",
+          "evidence_refs": "array[evidence_ref] nonempty"
+        }
+      },
+      "info_shift_item": {
+        "required_keys": ["subject", "before", "after", "mode", "scene_nos", "evidence_refs"],
+        "additional_keys_allowed": false,
+        "types": {
+          "subject": "string nonempty character/group/public/system",
+          "before": "string nonempty",
+          "after": "string nonempty",
+          "mode": "enum LEARN|REVEAL|CONCEAL|MISLEAD|CONFIRM|DISCONFIRM|LOSE_ACCESS|PUBLICIZE|NO_CHANGE_EXPLICIT",
+          "scene_nos": "array[integer >= 1] subset of member_scene_nos",
+          "evidence_refs": "array[evidence_ref] nonempty"
+        }
+      },
+      "plant_payoff_item": {
+        "required_keys": ["kind", "thread_id", "statement", "scene_nos", "existing_refs", "evidence_refs"],
+        "additional_keys_allowed": false,
+        "types": {
+          "kind": "enum PLANT|PAYOFF|CALLBACK|REVEAL|ESCALATION|LINK",
+          "thread_id": "string nonempty stable within work",
+          "statement": "string nonempty",
+          "scene_nos": "array[integer >= 1] subset of member_scene_nos",
+          "existing_refs": "array[string] may reference PayoffCandidate/CrossEpisodeEdge/CandidateDisposition; empty allowed",
+          "evidence_refs": "array[evidence_ref] nonempty"
+        }
+      },
+      "scene_note_item": {
+        "required_keys": ["scene_no", "functional_propositions", "evidence_refs"],
+        "additional_keys_allowed": false,
+        "types": {
+          "scene_no": "integer >= 1 unique, exact member_scene_nos coverage",
+          "functional_propositions": "array[string nonempty] 1..8",
+          "evidence_refs": "array[evidence_ref] nonempty"
+        },
+        "semantic_rule": "functional propositions, not prose recap; must specify what the scene must accomplish"
+      }
+    },
+    "planner_input_record": {
+      "grain": "one record per episode N; only information available before/at planning boundary N",
+      "required_keys": [
+        "schema",
+        "work_id",
+        "episode_no",
+        "previous_exit_state",
+        "character_states",
+        "relationship_states",
+        "unresolved_payoffs",
+        "active_causal_threads",
+        "remaining_episode_count",
+        "subplot_debt",
+        "character_debt",
+        "world_constraints",
+        "target_refs",
+        "source_hashes"
+      ],
+      "additional_keys_allowed": false,
+      "types": {
+        "schema": "string constant DB98_PLANNER_INPUT_RECORD_V1",
+        "work_id": "string nonempty",
+        "episode_no": "integer >= 1",
+        "previous_exit_state": "object or null for episode 1",
+        "character_states": "array[object]",
+        "relationship_states": "array[object]",
+        "unresolved_payoffs": "array[object]",
+        "active_causal_threads": "array[object]",
+        "remaining_episode_count": "integer >= 0",
+        "subplot_debt": "array[object]",
+        "character_debt": "array[object]",
+        "world_constraints": "array[string]",
+        "target_refs": "object containing human EpisodeArc and Thick Sequence output references",
+        "source_hashes": "object[source_hashes]"
+      },
+      "leakage_rule": "must not include facts first introduced after the planning boundary unless explicitly tagged as target output"
+    },
+    "subplot_allocation_gt": {
+      "grain": "one record per episode",
+      "required_keys": ["schema", "work_id", "episode_no", "active_supporting", "target_sub_share", "cross_main", "group_focus", "evidence_refs", "by"],
+      "additional_keys_allowed": false,
+      "types": {
+        "schema": "string constant DB98_SUBPLOT_ALLOCATION_GT_V1",
+        "work_id": "string nonempty",
+        "episode_no": "integer >= 1",
+        "active_supporting": "array[string]",
+        "target_sub_share": "number 0..1",
+        "cross_main": "boolean",
+        "group_focus": "array[string]",
+        "evidence_refs": "array[evidence_ref] nonempty",
+        "by": "string nonempty"
+      }
+    },
+    "boundary_contrast_record": {
+      "grain": "one positive human sequence boundary plus deterministic negative variant",
+      "required_keys": ["schema", "work_id", "episode_no", "positive_seq_id", "positive_member_scene_nos", "negative_type", "negative_member_scene_nos", "transform", "seed", "validity_checks"],
+      "additional_keys_allowed": false,
+      "types": {
+        "schema": "string constant DB98_BOUNDARY_CONTRAST_RECORD_V1",
+        "work_id": "string nonempty",
+        "episode_no": "integer >= 1",
+        "positive_seq_id": "string nonempty",
+        "positive_member_scene_nos": "array[integer] nonempty",
+        "negative_type": "enum EARLY|LATE|MERGE|SPLIT|SHIFT_BEFORE|SHIFT_AFTER",
+        "negative_member_scene_nos": "array[integer] nonempty",
+        "transform": "object deterministic transform provenance",
+        "seed": "integer",
+        "validity_checks": "object"
+      },
+      "semantic_rule": "negative is synthetic training/control data and must never overwrite human positive GT"
+    },
+    "runtime_scene_projection": {
+      "grain": "one projected scene for runtime experiment; not canonical SceneCard",
+      "required_keys": ["schema", "work_id", "episode_no", "scene_no", "seq_id", "characters", "primary_pov", "secondary_pov", "character_states", "relationship_states", "event_context", "info_context", "plant_payoff_context", "functional_propositions", "source_refs"],
+      "additional_keys_allowed": false,
+      "types": {
+        "schema": "string constant DB98_RUNTIME_SCENE_PROJECTION_V1",
+        "work_id": "string nonempty",
+        "episode_no": "integer >= 1",
+        "scene_no": "integer >= 1",
+        "seq_id": "string nonempty",
+        "characters": "array[string]",
+        "primary_pov": "string or null",
+        "secondary_pov": "array[string]",
+        "character_states": "array[object]",
+        "relationship_states": "array[object]",
+        "event_context": "string nonempty",
+        "info_context": "array[object]",
+        "plant_payoff_context": "array[object]",
+        "functional_propositions": "array[string] nonempty",
+        "source_refs": "array[string] nonempty"
+      },
+      "canonical_policy": "experimental projection only; does not alter 9-key SceneCard"
+    },
+    "hygiene_ledger_record": {
+      "grain": "one changed field or one audited non-change",
+      "required_keys": ["schema", "work_id", "artifact_path", "record_id", "field", "old_value_hash", "new_value_hash", "change_class", "reason", "source_verified", "operator", "timestamp"],
+      "additional_keys_allowed": false,
+      "types": {
+        "schema": "string constant DB98_HYGIENE_LEDGER_RECORD_V1",
+        "work_id": "string nonempty",
+        "artifact_path": "string nonempty",
+        "record_id": "string nonempty",
+        "field": "string nonempty",
+        "old_value_hash": "sha256 string or null",
+        "new_value_hash": "sha256 string or null",
+        "change_class": "enum DETERMINISTIC_NORMALIZATION|SEMANTIC_REAUTHOR|NO_CHANGE_AUDITED|QUARANTINE",
+        "reason": "string nonempty",
+        "source_verified": "boolean",
+        "operator": "string nonempty",
+        "timestamp": "RFC3339 string"
+      }
+    },
+    "work_checkpoint": {
+      "grain": "one latest checkpoint per work plus append-only history",
+      "required_keys": ["schema", "work_id", "baseline_package_sha256", "baseline_index_sha256", "authority_id", "global_rollout_state", "work_state", "last_completed_step", "artifact_hashes", "validation", "non_target_immutability", "next_action", "timestamp"],
+      "additional_keys_allowed": false,
+      "types": {
+        "schema": "string constant DB98_REINFORCEMENT_WORK_CHECKPOINT_V1",
+        "work_id": "string nonempty",
+        "baseline_package_sha256": "sha256 string",
+        "baseline_index_sha256": "sha256 string",
+        "authority_id": "string constant DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1",
+        "global_rollout_state": "enum METHOD_SEALED|FULL_THICK_ROLLOUT_AUTHORIZED|FULL_THICK_ROLLOUT_BLOCKED_REDESIGN_REQUIRED",
+        "work_state": "enum WAITING_GLOBAL_ROLLOUT_GATE|READY|IN_PROGRESS|AUTHORED|VALIDATED|INTEGRATED|FRESH_EXTRACT_PASS|HOLD_SOURCE|HOLD_AUTHORITY_DRIFT|HOLD_SEMANTIC_FAILURE",
+        "last_completed_step": "string nonempty",
+        "artifact_hashes": "object",
+        "validation": "object",
+        "non_target_immutability": "object",
+        "next_action": "string nonempty",
+        "timestamp": "RFC3339 string"
+      }
+    },
+    "evidence_ref": {
+      "required_keys": ["kind", "ref"],
+      "additional_keys_allowed": false,
+      "types": {
+        "kind": "enum SOURCE|SCENECARD|SEQUENCE|EPISODE_ARC|CHARACTER_ARC|RELATIONSHIP_ARC|CAST|PAYOFF|CROSS_EDGE|SOURCELOCK",
+        "ref": "string nonempty"
+      }
+    },
+    "source_hashes": {
+      "required_keys": ["baseline_artifact_sha256"],
+      "additional_keys_allowed": true,
+      "types": {
+        "baseline_artifact_sha256": "sha256 string"
+      }
+    }
+  },
+  "global_invariants": [
+    "existing authored_seq member_scene_nos must remain unchanged unless separate core correction is authorized",
+    "thick scene_notes must cover exactly the existing member_scene_nos with no duplicate scene_no",
+    "reinforcement must not alter canonical 9-key SceneCard under V1",
+    "synthetic negatives are never canonical human GT",
+    "plant/payoff references must not create a second contradictory payoff truth system",
+    "semantic fields are model-authored/source-verified; Python may only structure, derive deterministic state, validate, hash, and package",
+    "no automatic canonical promotion",
+    "full thick rollout is blocked until CT-07 replication gate is explicitly passed and work index updated"
+  ]
+}
