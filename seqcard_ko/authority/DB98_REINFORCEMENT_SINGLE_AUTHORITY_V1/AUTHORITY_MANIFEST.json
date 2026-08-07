@@ -23,13 +23,15 @@
     {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_AUTHORING_AUTHORITY_V1.md","creation_commit":"f0612be0739e0dada8e8f0c983f428eb72c7146b","status":"ACTIVE"},
     {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_AUTHORING_EXECUTION_V1.md","creation_commit":"26d47a3fb9eb9313e49b4965b84478a660a46e4b","status":"ACTIVE"},
     {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_AUTHORING_CHECKLIST_V1.json","creation_commit":"15842ffc1653c41adf13c71217bdd1b9d250b6cc","status":"ACTIVE"},
+    {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_STORAGE_LAYOUT_V1.md","creation_commit":"d8c0be95b20027e4df6460d740ab6f5678694d56","status":"ACTIVE"},
     {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_NEW_SESSION_BOOTSTRAP_V1.md","creation_commit":"1ce415d3607f340eadeb9f33729eb024d9c74470","status":"ACTIVE"},
     {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_ROLLOUT_ACCEPTANCE_20260807.md","creation_commit":"3e21e6baa8026ded894303dd2745e6c4dd6382be","status":"ACTIVE_DECISION"},
+    {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_WORK_INDEX_POST_CT07R_OVERLAY_V1.json","creation_commit":"200a80f0a5b436704c5ad778720d7cd764d6dd5a","status":"ACTIVE_GLOBAL_STATE_OVERLAY"},
     {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/schemas/DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1.json","creation_commit":"f77ac93f511e85cf963884bc978944c1f5124c94","status":"HISTORICAL_SUPERSEDED_BY_1_0_1"},
     {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/schemas/DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1_0_1.json","creation_commit":"595062c4351a724cbb664c4f0e1399864acf8f37","status":"ACTIVE"},
     {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/SCHEMA_CHANGELOG.md","creation_commit":"3c4f87db0502eda78ab7ccb8867d2824afb3884f"},
     {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_EXECUTION_AND_VALIDATION_V1.md","creation_commit":"198acbff025eb19f80f2c1849fad35a40b054693","status":"HISTORICAL_PARENT_EXECUTION_CONTRACT_READ_WITH_ACTIVE_THICK_EXECUTION"},
-    {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_WORK_INDEX_V1.json","creation_commit":"965653d381e3946833f51bc8e84bc7d700afd691"},
+    {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_WORK_INDEX_V1.json","creation_commit":"965653d381e3946833f51bc8e84bc7d700afd691","status":"SEALED_BASELINE_ORDER_AND_PROGRESS_PARENT"},
     {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/NEW_SESSION_BOOTSTRAP.md","creation_commit":"e0e525ae78d07d83d655b54ca2e26e17caa37b6b","latest_sync_commit":"465a0d91965187db29f4316ec149c710ec796c20","status":"ACTIVE"}
   ],
   "research_lineage": {
@@ -82,6 +84,8 @@
   "rollout": {
     "state": "FULL_THICK_ROLLOUT_AUTHORIZED",
     "developer_acceptance": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_ROLLOUT_ACCEPTANCE_20260807.md",
+    "work_index_overlay": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_WORK_INDEX_POST_CT07R_OVERLAY_V1.json",
+    "storage_layout": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_STORAGE_LAYOUT_V1.md",
     "current_gate_status": "docs/tracks/confirmatory/CT07R_CURRENT_STATUS.json",
     "allowed_now": [
       "source_grounded_98_work_thick_sequence_sidecar_authoring",
@@ -105,10 +109,11 @@
       "source_first_semantic_authorship",
       "information_and_placement_link_emphasis_without_verbose_recap_padding",
       "bundle_R5_and_R8_wiring",
-      "five_category_decomposition_must_not_be_read_as_field_ablation"
+      "five_category_decomposition_must_not_be_read_as_field_ablation",
+      "write_new_artifacts_under_seqcard_ko_reinforcement_v1_only"
     ],
     "next_action": "SELECT_FIRST_ELIGIBLE_AUTHORITY_ORDER_WORK_AND_BEGIN_THICK_SEQUENCE_AUTHORING_PER_ACTIVE_AUTHORITY"
   },
-  "state_precedence": "ROOT_POINTER_AND_CURRENT_GATE_STATUS_OVERRIDE_STALE_GLOBAL_GATE_FIELDS_IN_WORK_INDEX; PER_WORK_PROGRESS_REMAINS_WORK_INDEX_AND_CHECKPOINT_GOVERNED",
+  "state_precedence": "ROOT_POINTER_THEN_WORK_INDEX_ROLLOUT_OVERLAY_AND_CURRENT_GATE_STATUS_OVERRIDE_STALE_GLOBAL_GATE_FIELDS_IN_BASE_WORK_INDEX; PER_WORK_PROGRESS_REMAINS_BASE_WORK_INDEX_AND_LATEST_CHECKPOINT_GOVERNED",
   "supersession_rule": "new authority version must explicitly name predecessor, changed rules/schemas, migration effect, and checkpoint migration; silent in-place semantic rule changes forbidden"
 }
