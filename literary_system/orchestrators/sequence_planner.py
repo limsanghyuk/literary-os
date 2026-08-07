@@ -9,17 +9,33 @@ MacroArc → 에피소드 시퀀스·씬 동적 연산.
     3. 사인커브 분배 → 감정호(SequenceType) 기반 씬 밀도 결정
 
   동적 연산 원리:
-    시퀀스 수 = runtime_min ÷ 시퀀스평균지속시간(11min)
+    시퀀스 수 = runtime_min ÷ 시퀀스평균지속시간(7.26min)
                × 막계수 × 압력계수 × 플롯밀도계수
-               → clamp [3, 8]
+               → clamp [5, 18]
 
     씬    수 = seq_duration_min ÷ 씬평균지속시간(seq_type, tension)
-               → clamp [2, 8]
+               → clamp [2, 14]
 
-  실측 한국 드라마 기준:
-    - 1화 60~70분
-    - 1화 18~35씬 (평균 씬 길이 2~4분)
-    - 1화 3~8시퀀스 (시퀀스당 3~7씬)
+  ★ 상수 재정합 (2026-08-08). 아래 표가 유일한 근거이며, 이전 주석에 있던
+    "실측 한국 드라마 기준: 1화 18~35씬 / 3~8시퀀스 (시퀀스당 3~7씬)"은
+    **철회한다** — 출처 불명이며 우리 정본 실측과 3배 어긋났다.
+    정본 실측 (seqcard_ko authored/ + authored_seq/, 1,814회차 / 16,233시퀀스,
+    씬 단위 = 슬러그라인, 기준일 2026-08-08):
+
+      회차당 씬    평균 63.05 · 중앙 62 · IQR 54–71 · p1–p99 30–105 · 최대 182
+      회차당 시퀀스 평균  8.95 · 중앙  8 · IQR  7–10 · p1–p99  5–18  · 최대  24
+      시퀀스당 씬   평균  7.05 · 중앙  7 · IQR  6–8  · p1–p99  2–14  · 최대  35
+
+    정정 전 코드의 도달 가능 범위(240조합 전수)는 회차당 씬 17~30이었다.
+    정본 IQR 54~71과 겹치는 구간이 없었다. clamp 상한 8은 실측 중앙값과
+    같아, 회차의 47.4%(859/1,814)는 생성 자체가 불가능했다.
+
+  ★ 이 수정은 개수 정합(위생)일 뿐 경계 정합이 아니다.
+    "왜 여기서 끊는가"는 개수로 환원되지 않는다 — 정본 `sequence_intent`는
+    16,060개 중 16,059개가 서로 다른 문장이고 `value_shift` 쌍도 15,491개가
+    고유하다. 또한 시퀀스 수 분산의 66.7%가 작품 간(between-work) 성분이므로
+    전역 상수 하나로 맞추는 방식은 원리적으로 틀렸다. 여기서 맞춘 것은
+    분포의 중심뿐이며, 이 모듈이 회차→시퀀스 설계를 수행한다는 뜻이 아니다.
 
   LLM 0회 — 완전 로컬
 """
@@ -42,7 +58,7 @@ EPISODE_RUNTIME: dict[str, int] = {
 }
 DEFAULT_RUNTIME = 65    # 분
 
-AVG_SEQUENCE_DURATION_MIN = 11.0   # 시퀀스 평균 지속시간(분) — 실측 근거
+AVG_SEQUENCE_DURATION_MIN = 7.26   # 65분 ÷ 회차당 시퀀스 평균 8.95 (정본 1,814회차, 2026-08-08)
 
 
 # ────────────────────────────────────────────────────────────────
@@ -61,17 +77,23 @@ class SequenceType(str, Enum):
 
 # 시퀀스 타입별 씬 평균 지속시간 (분)
 # 긴장도 높을수록 씬이 짧아지는 기준값
+# 2026-08-08 재보정: 정본 평균 씬 길이 = 65분 ÷ 63.05씬 = 1.03분.
+# 구값(평균 3.0분)은 씬을 3배 길게 잡아 회차당 씬을 17~30으로 눌렀다.
+# 타입 간 상대비는 보존하고 전체를 ×0.3437 스케일.
 SEQ_TYPE_BASE_SCENE_DUR: dict[SequenceType, float] = {
-    SequenceType.SETUP_HOOK:     3.5,
-    SequenceType.PLOT_ADVANCE:   3.0,
-    SequenceType.CONFLICT_PEAK:  2.5,
-    SequenceType.EMOTIONAL_BEAT: 4.0,
-    SequenceType.TURNING_POINT:  2.0,
-    SequenceType.CLIFFHANGER:    2.5,
-    SequenceType.RESOLUTION:     3.5,
+    SequenceType.SETUP_HOOK:     1.20,   # 구 3.5
+    SequenceType.PLOT_ADVANCE:   1.03,   # 구 3.0
+    SequenceType.CONFLICT_PEAK:  0.86,   # 구 2.5
+    SequenceType.EMOTIONAL_BEAT: 1.37,   # 구 4.0
+    SequenceType.TURNING_POINT:  0.69,   # 구 2.0
+    SequenceType.CLIFFHANGER:    0.86,   # 구 2.5
+    SequenceType.RESOLUTION:     1.20,   # 구 3.5
 }
 
 # 시퀀스 타입별 지속시간 범위 (min, max 분)
+# 주의: _allocate_durations() 가 runtime 합계로 정규화하므로 이 값들은
+# 절대 분량이 아니라 타입 간 상대 비율로만 작동한다. 전체를 상수배 해도
+# 출력은 바뀌지 않는다. 따라서 2026-08-08 재보정 대상이 아니다.
 SEQ_TYPE_DURATION_RANGE: dict[SequenceType, tuple[float, float]] = {
     SequenceType.SETUP_HOOK:     (8.0,  12.0),
     SequenceType.PLOT_ADVANCE:   (10.0, 15.0),
@@ -203,7 +225,7 @@ class SequencePlanner:
             episode_no=3,
             active_plot_lines=3,
         )
-        # → 시퀀스 4~6개, 화당 씬 합계 20~30개 (현실적 범위)
+        # → 시퀀스 7~10개, 화당 씬 합계 54~71개 (정본 IQR, 2026-08-08)
     """
 
     def __init__(
@@ -310,15 +332,17 @@ class SequencePlanner:
     ) -> int:
         """
         시퀀스 수 = (runtime / avg_seq_dur) × 막계수 × 압력계수 × 플롯계수
-        결과 범위: [3, 8]
+        결과 범위: [5, 18]  ← 정본 1,814회차 p1~p99 (2026-08-08)
+        구 범위 [3, 8]은 실측 중앙값 8이 곧 상한이어서 회차의 47.4%가
+        생성 불가였다. 상한을 실측 분포로 교체.
         """
-        base       = runtime / AVG_SEQUENCE_DURATION_MIN            # ~6 (65min)
+        base       = runtime / AVG_SEQUENCE_DURATION_MIN            # ~9 (65min)
         act_mod    = ACT_SEQ_MODIFIERS.get(act_idx, 1.0)
         press_mod  = 0.85 + 0.30 * pressure                         # [0.85, 1.15]
         plot_mod   = 0.90 + 0.15 * min(max(plot_lines - 1, 0), 3)   # [0.90, 1.35]
 
         count = base * act_mod * press_mod * plot_mod
-        return max(3, min(8, round(count)))
+        return max(5, min(18, round(count)))
 
     # ── 시퀀스 타입 배정 ─────────────────────────────────────────
 
@@ -377,13 +401,16 @@ class SequencePlanner:
         """
         씬 수 = 시퀀스지속시간 ÷ 씬평균지속시간(타입 × 긴장도)
         긴장도 높을수록 씬이 짧아져 씬 수 증가.
-        결과 범위: [2, 8]
+        결과 범위: [2, 14]  ← 정본 16,233시퀀스 p1~p99 (2026-08-08)
+        구 범위 [2, 8]에서는 실측 시퀀스의 23.5%(3,821/16,233)가 상한 초과.
         """
         base_dur = SEQ_TYPE_BASE_SCENE_DUR[seq_type]
         # tension 보정: 0→120%, 0.5→100%, 1→80% (긴장=빠른 컷)
         tension_adj = base_dur * (1.20 - 0.40 * tension)
-        count = dur_min / max(tension_adj, 0.5)
-        return max(2, min(8, round(count)))
+        # 하한 0.25분 — 재보정된 base_dur(0.69~1.37)에서 구 하한 0.5는
+        # TURNING_POINT(0.69×0.8=0.55)에 근접해 조용히 물릴 위험이 있었다.
+        count = dur_min / max(tension_adj, 0.25)
+        return max(2, min(14, round(count)))
 
     # ── 긴장도 산출 ──────────────────────────────────────────────
 

@@ -12,7 +12,8 @@ V325 Phase 3 테스트 — SequencePlanner + SceneFocusInjector + SceneGeneratio
 
 【Rev.2 변경사항 반영】
   - GENRE_SEQ_COUNT / ACT_TENSION_RANGES 삭제 (동적 연산으로 대체)
-  - SequencePlanner.seq_count 속성 삭제 → plan() 반환 길이 [3, 8] 범위 검증
+  - SequencePlanner.seq_count 속성 삭제 → plan() 반환 길이 [5, 18] 범위 검증
+    (2026-08-08 재정합: 구 [3, 8]은 정본 실측 p1~p99 [5, 18]과 어긋났다)
   - genre는 참고용(연산 미개입) → format_type 기반 동적 연산
   - ACT_SEQ_PATTERNS 기반 단일 act_index → 에피소드 내 모든 seq가 동일 막
 """
@@ -138,8 +139,13 @@ class TestSequencePlan:
 
 class TestSequencePlanner:
     """
-    Rev.2: seq_count는 runtime × 막계수 × 압력 기반 동적 산출 [3, 8].
+    Rev.2: seq_count는 runtime × 막계수 × 압력 기반 동적 산출 [5, 18].
     genre 파라미터는 참고용 레이블이며 연산에 직접 개입하지 않는다.
+
+    2026-08-08 재정합. 구 범위 [3, 8]과 "1화 18~35씬"은 출처 불명이며
+    정본 실측(seqcard_ko 1,814회차 / 16,233시퀀스)과 어긋났다:
+      회차당 시퀀스 p1~p99 = 5~18 (중앙 8)
+      회차당 씬     p1~p99 = 30~105 (중앙 62, IQR 54~71)
     """
 
     def test_plan_returns_list(self):
@@ -150,36 +156,36 @@ class TestSequencePlanner:
         assert all(isinstance(p, SequencePlan) for p in plans)
 
     def test_seq_count_within_drama_range(self):
-        """시퀀스 수가 실측 한국 드라마 범위 [3, 8] 안에 있다."""
+        """시퀀스 수가 정본 실측 p1~p99 [5, 18] 안에 있다."""
         pl    = SequencePlanner(format_type="standard")
         plans = pl.plan(MOCK_MACRO_ARC, episode_no=1)
-        assert 3 <= len(plans) <= 8
+        assert 5 <= len(plans) <= 18
 
     def test_standard_format_seq_count_range(self):
-        """standard(65분) 포맷에서 3~8 시퀀스."""
+        """standard(65분) 포맷에서 5~18 시퀀스."""
         pl    = SequencePlanner(format_type="standard")
         plans = pl.plan(MOCK_MACRO_ARC, episode_no=1)
-        assert 3 <= len(plans) <= 8
+        assert 5 <= len(plans) <= 18
 
     def test_miniseries_format_produces_plans(self):
         """miniseries(70분) 포맷에서도 유효한 plan 목록."""
         pl    = SequencePlanner(format_type="miniseries")
         plans = pl.plan(MOCK_MACRO_ARC, episode_no=1)
-        assert 3 <= len(plans) <= 8
+        assert 5 <= len(plans) <= 18
 
     def test_legacy_genre_param_accepted(self):
         """구 버전 genre 파라미터가 예외 없이 수용된다."""
         for g in ("historical_drama", "medical_drama", "romance_drama"):
             pl    = SequencePlanner(genre=g)
             plans = pl.plan(MOCK_MACRO_ARC, episode_no=1)
-            assert isinstance(plans, list) and len(plans) >= 3
+            assert isinstance(plans, list) and len(plans) >= 5
 
     def test_legacy_seq_count_param_accepted(self):
         """구 버전 seq_count 파라미터가 예외 없이 수용된다 (무시됨)."""
         pl    = SequencePlanner(genre="historical_drama", seq_count=7)
         plans = pl.plan(MOCK_MACRO_ARC, episode_no=1)
-        # 구 seq_count는 무시되고 동적 연산 결과 [3, 8] 반환
-        assert 3 <= len(plans) <= 8
+        # 구 seq_count는 무시되고 동적 연산 결과 [5, 18] 반환
+        assert 5 <= len(plans) <= 18
 
     def test_plan_seq_ids_unique(self):
         """모든 seq_id가 고유."""
@@ -210,9 +216,12 @@ class TestSequencePlanner:
         pl    = SequencePlanner(format_type="standard")
         plans = pl.plan(MOCK_MACRO_ARC, episode_no=1)
         total = pl.total_scene_count(plans)
-        # 한국 드라마 1화 18~35씬 — 동적 연산 결과를 넓게 검증
+        # 정본 실측 1화 씬 수: 중앙 62 · IQR 54~71 · p1~p99 30~105 (1,814회차)
+        # 구 상한 64(=8시퀀스×8씬)는 정본 중앙값 근처에서 이미 천장이었다.
         assert total > 0
-        assert total <= 64   # 8시퀀스 × 8씬 = 64가 이론적 최대
+        assert total <= 252  # 18시퀀스 × 14씬 = 252가 이론적 최대
+        # 중심이 정본 IQR 안에 드는지 — 회귀 감지용
+        assert 40 <= total <= 90, f"총 씬 {total} 이 정본 분포에서 벗어남"
 
 
 # ════════════════════════════════════════════════════════════════
