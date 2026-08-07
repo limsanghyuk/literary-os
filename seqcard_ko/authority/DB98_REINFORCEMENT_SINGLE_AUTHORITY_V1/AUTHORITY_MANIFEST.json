@@ -2,6 +2,7 @@
   "schema": "DB98_REINFORCEMENT_AUTHORITY_MANIFEST_V1",
   "authority_id": "DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1",
   "version": "1.0.0",
+  "active_schema_version": "1.0.1",
   "status": "SEALED_METHOD_AUTHORITY_WITH_ROLLOUT_GATE",
   "effective_date": "2026-08-07",
   "scope": {
@@ -13,30 +14,14 @@
     "canonical_auto_promotion": false
   },
   "files": [
-    {
-      "path": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/README.md",
-      "creation_commit": "30cb0b7ef81d26eff373ae24b3a9a7787db6d528"
-    },
-    {
-      "path": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_MASTER_AUTHORITY_V1.md",
-      "creation_commit": "2bd127e8e74c21c05afbc4cf6c4353367cbc5a51"
-    },
-    {
-      "path": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/schemas/DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1.json",
-      "creation_commit": "f77ac93f511e85cf963884bc978944c1f5124c94"
-    },
-    {
-      "path": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_EXECUTION_AND_VALIDATION_V1.md",
-      "creation_commit": "198acbff025eb19f80f2c1849fad35a40b054693"
-    },
-    {
-      "path": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_WORK_INDEX_V1.json",
-      "creation_commit": "965653d381e3946833f51bc8e84bc7d700afd691"
-    },
-    {
-      "path": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/NEW_SESSION_BOOTSTRAP.md",
-      "creation_commit": "e0e525ae78d07d83d655b54ca2e26e17caa37b6b"
-    }
+    {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/README.md","creation_commit":"30cb0b7ef81d26eff373ae24b3a9a7787db6d528"},
+    {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_MASTER_AUTHORITY_V1.md","creation_commit":"2bd127e8e74c21c05afbc4cf6c4353367cbc5a51"},
+    {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/schemas/DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1.json","creation_commit":"f77ac93f511e85cf963884bc978944c1f5124c94","status":"HISTORICAL_SUPERSEDED_BY_1_0_1"},
+    {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/schemas/DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1_0_1.json","creation_commit":"595062c4351a724cbb664c4f0e1399864acf8f37","status":"ACTIVE"},
+    {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/SCHEMA_CHANGELOG.md","creation_commit":"3c4f87db0502eda78ab7ccb8867d2824afb3884f"},
+    {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_EXECUTION_AND_VALIDATION_V1.md","creation_commit":"198acbff025eb19f80f2c1849fad35a40b054693"},
+    {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_WORK_INDEX_V1.json","creation_commit":"965653d381e3946833f51bc8e84bc7d700afd691"},
+    {"path":"seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/NEW_SESSION_BOOTSTRAP.md","creation_commit":"e0e525ae78d07d83d655b54ca2e26e17caa37b6b"}
   ],
   "research_lineage": {
     "ct06h_result_commit": "56bd9023746317576dc33752b268b9e2da9a3c4f",
@@ -58,18 +43,8 @@
   },
   "rollout": {
     "state": "FULL_THICK_ROLLOUT_BLOCKED_PENDING_CT07_REPLICATION",
-    "allowed_now": [
-      "baseline_and_authority_synchronization",
-      "data_hygiene_and_leakage_audit",
-      "deterministic_reassembly_prototypes",
-      "CT07_replication_preregistration_and_execution",
-      "validator_and_tooling_work"
-    ],
-    "blocked_now": [
-      "bulk_98_work_thick_semantic_authoring",
-      "automatic_phase02_rollout",
-      "canonical_promotion"
-    ],
+    "allowed_now": ["baseline_and_authority_synchronization","data_hygiene_and_leakage_audit","deterministic_reassembly_prototypes","CT07_replication_preregistration_and_execution","validator_and_tooling_work"],
+    "blocked_now": ["bulk_98_work_thick_semantic_authoring","automatic_phase02_rollout","canonical_promotion"],
     "next_action": "CT07_REPLICATION_WITH_THICK_NEGATIVE_CONTROL"
   },
   "supersession_rule": "new authority version must explicitly name predecessor, changed rules/schemas, migration effect, and checkpoint migration; silent in-place semantic rule changes forbidden"
