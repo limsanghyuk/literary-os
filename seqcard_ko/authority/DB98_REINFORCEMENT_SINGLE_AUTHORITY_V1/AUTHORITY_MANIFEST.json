@@ -1,0 +1,76 @@
+{
+  "schema": "DB98_REINFORCEMENT_AUTHORITY_MANIFEST_V1",
+  "authority_id": "DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1",
+  "version": "1.0.0",
+  "status": "SEALED_METHOD_AUTHORITY_WITH_ROLLOUT_GATE",
+  "effective_date": "2026-08-07",
+  "scope": {
+    "works": 98,
+    "episodes": 1814,
+    "scene_cards": 114371,
+    "new_work_expansion": false,
+    "core_stage01_04_superseded": false,
+    "canonical_auto_promotion": false
+  },
+  "files": [
+    {
+      "path": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/README.md",
+      "creation_commit": "30cb0b7ef81d26eff373ae24b3a9a7787db6d528"
+    },
+    {
+      "path": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_MASTER_AUTHORITY_V1.md",
+      "creation_commit": "2bd127e8e74c21c05afbc4cf6c4353367cbc5a51"
+    },
+    {
+      "path": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/schemas/DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1.json",
+      "creation_commit": "f77ac93f511e85cf963884bc978944c1f5124c94"
+    },
+    {
+      "path": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_EXECUTION_AND_VALIDATION_V1.md",
+      "creation_commit": "198acbff025eb19f80f2c1849fad35a40b054693"
+    },
+    {
+      "path": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_WORK_INDEX_V1.json",
+      "creation_commit": "965653d381e3946833f51bc8e84bc7d700afd691"
+    },
+    {
+      "path": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/NEW_SESSION_BOOTSTRAP.md",
+      "creation_commit": "e0e525ae78d07d83d655b54ca2e26e17caa37b6b"
+    }
+  ],
+  "research_lineage": {
+    "ct06h_result_commit": "56bd9023746317576dc33752b268b9e2da9a3c4f",
+    "ct06h_result": "r=0.211; thin top-down not established",
+    "ct07_result_commit": "a5f37c78250830f40608f1bf1c57e1323a98612c",
+    "ct07_result": "r_L2G=0.807; thick top-down established in two-work pilot",
+    "ct07_direct": "r=1.63 vs human SceneCard anchor 1.00",
+    "ct07_l3": "4.90/5",
+    "session_summary_commit": "7ca467adba8f9b4c518ff6849c1d7edaca0def47"
+  },
+  "baseline_candidate": {
+    "package": "DB98_STAGE04_98WORKS_EXT6_35_PHASE02_35_GPT_ONEPERCENT_20260807.zip",
+    "sha256": "99875cfb914cf96b0ee6eab91e6bbe3bb6b13006bbff8e3920c426e5a90274f1",
+    "work_index": "AUTHORED_WORK_INDEX_V24.json",
+    "work_index_sha256": "f929025b91690340952cd5709f4d3a965cb547f98bf6f429808c8f0fb3893d09",
+    "legacy_ext6_complete": 35,
+    "legacy_phase02_complete": 35,
+    "future_session_must_verify_actual_package": true
+  },
+  "rollout": {
+    "state": "FULL_THICK_ROLLOUT_BLOCKED_PENDING_CT07_REPLICATION",
+    "allowed_now": [
+      "baseline_and_authority_synchronization",
+      "data_hygiene_and_leakage_audit",
+      "deterministic_reassembly_prototypes",
+      "CT07_replication_preregistration_and_execution",
+      "validator_and_tooling_work"
+    ],
+    "blocked_now": [
+      "bulk_98_work_thick_semantic_authoring",
+      "automatic_phase02_rollout",
+      "canonical_promotion"
+    ],
+    "next_action": "CT07_REPLICATION_WITH_THICK_NEGATIVE_CONTROL"
+  },
+  "supersession_rule": "new authority version must explicitly name predecessor, changed rules/schemas, migration effect, and checkpoint migration; silent in-place semantic rule changes forbidden"
+}
