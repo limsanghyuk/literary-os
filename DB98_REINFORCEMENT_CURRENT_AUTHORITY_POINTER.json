@@ -8,6 +8,11 @@
   "master_authority": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_MASTER_AUTHORITY_V1.md",
   "authority_correction": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/AUTHORITY_CORRECTION_V1_0_2.md",
   "historical_authority_correction": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/AUTHORITY_CORRECTION_V1_0_1.md",
+  "thick_sequence_authority": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_AUTHORING_AUTHORITY_V1.md",
+  "thick_sequence_execution": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_AUTHORING_EXECUTION_V1.md",
+  "thick_sequence_checklist": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_AUTHORING_CHECKLIST_V1.json",
+  "thick_sequence_new_session_bootstrap": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_NEW_SESSION_BOOTSTRAP_V1.md",
+  "thick_sequence_rollout_acceptance": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_ROLLOUT_ACCEPTANCE_20260807.md",
   "schema_registry": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/schemas/DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1_0_1.json",
   "schema_changelog": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/SCHEMA_CHANGELOG.md",
   "execution_validation": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_EXECUTION_AND_VALIDATION_V1.md",
@@ -30,12 +35,14 @@
     "sha256": "99875cfb914cf96b0ee6eab91e6bbe3bb6b13006bbff8e3920c426e5a90274f1",
     "must_reverify_before_write": true
   },
-  "rollout_state": "FULL_THICK_ROLLOUT_UNBLOCKED_WITH_THREE_CONDITIONS",
+  "rollout_state": "FULL_THICK_ROLLOUT_AUTHORIZED",
   "rollout_scope": "98_WORK_THICK_SEQUENCE_SIDECAR_AUTHORING_ONLY; NOT_SCENECARD_REPLACEMENT; NOT_MINIMUM_FIELD_SPEC; NOT_EPISODE_TO_SEQUENCE_AUTHORIZATION",
   "rollout_conditions": [
     "keep cast/event/info_shift/plant_payoff/scene_notes separable for later ablation",
-    "emphasize placement/neighbor-relation function rather than thickening scene-internal prose",
-    "bundle authoring with R5 PlannerInputRecord and R8 RuntimeSceneProjection wiring"
+    "emphasize information movement and placement/neighbor-relation function rather than thickening scene-internal prose",
+    "bundle authoring with R5 PlannerInputRecord and R8 RuntimeSceneProjection wiring",
+    "directly read original source before semantic authorship",
+    "do not interpret five-category score decomposition as field-level ablation"
   ],
   "ct07r_interpretation": {
     "decision": "PASS_NOT_STRONG_REPLICATION",
@@ -43,22 +50,31 @@
     "overall_D_N": 2.533,
     "within_scene_r_T": 0.567,
     "placement_relation_r_T": 1.386,
+    "posthoc_category_r_T": {
+      "character": 0.542,
+      "goal": 0.625,
+      "conflict": 0.5,
+      "info": 1.429,
+      "link": 1.462
+    },
+    "posthoc_category_is_field_ablation": false,
     "effect_size_not_replicated": true,
     "required_summary_phrase": "상향 편향된 조건에서도 음성대조와 분리된 성립."
   },
-  "next_authoritative_action": "DEVELOPER_ACCEPTANCE_THEN_98_WORK_THICK_AUTHORING_WITH_SEPARABLE_FIELDS_AND_PLACEMENT_RELATION_EMPHASIS",
+  "developer_acceptance": "RECORDED_IN_THICK_SEQUENCE_ROLLOUT_ACCEPTANCE_20260807",
+  "next_authoritative_action": "SELECT_FIRST_ELIGIBLE_AUTHORITY_ORDER_WORK_AND_BEGIN_THICK_SEQUENCE_AUTHORING_PER_ACTIVE_AUTHORITY",
   "new_session_minimum_load": [
     "DB98_REINFORCEMENT_CURRENT_AUTHORITY_POINTER.json",
     "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_MASTER_AUTHORITY_V1.md",
     "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/AUTHORITY_CORRECTION_V1_0_2.md",
+    "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_AUTHORING_AUTHORITY_V1.md",
     "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/schemas/DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1_0_1.json",
-    "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/SCHEMA_CHANGELOG.md",
-    "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_EXECUTION_AND_VALIDATION_V1.md",
+    "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_AUTHORING_EXECUTION_V1.md",
+    "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_AUTHORING_CHECKLIST_V1.json",
     "docs/tracks/confirmatory/CT07R_CURRENT_STATUS.json",
     "docs/tracks/confirmatory/CT-07R_2026-08-07_result.md",
-    "docs/handoff/2026-08-07_HANDOFF_CT07R_thick_replication.md",
     "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_WORK_INDEX_V1.json",
-    "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/NEW_SESSION_BOOTSTRAP.md"
+    "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/THICK_SEQUENCE_NEW_SESSION_BOOTSTRAP_V1.md"
   ],
   "research_lineage_if_audit_needed": [
     "docs/tracks/confirmatory/CT-06H_2026-08-07_result.md",
@@ -74,7 +90,6 @@
     "docs/design/DESIGN-MACRO-PLANNING-SUPPLEMENT-v1.1.md",
     "docs/handoff/2026-08-07_HANDOFF_CT07R_thick_replication.md"
   ],
-  "state_precedence": "CURRENT_GATE_STATUS_OVERRIDES_STALE_GATE_FIELDS_IN_WORK_INDEX; PER_WORK_PROGRESS STILL COMES FROM_WORK_INDEX_AND_CHECKPOINTS",
-  "conflict_policy": "SOURCE_AND_ACTIVE_CORE_STAGE_AUTHORITY_GOVERN_STAGE01_04; MASTER_PLUS_ACTIVE_AUTHORITY_CORRECTION_GOVERN_DB98_REINFORCEMENT; CT07R_CURRENT_STATUS_PLUS_RESULT_GOVERN_POST_REPLICATION_GATE_STATE; UNEXPLAINED_DRIFT_STOPS_EXECUTION",
-  "updated_at": "2026-08-08T00:02:00+09:00"
+  "state_precedence": "ROOT_POINTER_AND_CURRENT_GATE_STATUS_OVERRIDE_STALE_GLOBAL_GATE_FIELDS_IN_WORK_INDEX; PER_WORK_PROGRESS_STILL_COMES_FROM_WORK_INDEX_AND_CHECKPOINTS",
+  "conflict_policy": "SOURCE_AND_ACTIVE_CORE_STAGE_AUTHORITY_GOVERN_STAGE01_04; MASTER_PLUS_ACTIVE_AUTHORITY_CORRECTION_GOVERN_DB98_REINFORCEMENT; THICK_SEQUENCE_AUTHORING_AUTHORITY_GOVERNS_POST_CT07R_SEQUENCE_ROLLOUT; UNEXPLAINED_DRIFT_STOPS_EXECUTION"
 }
