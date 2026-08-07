@@ -1,0 +1,302 @@
+[
+ {
+  "scene": "101번째프로포즈_02_s28",
+  "idx": 0,
+  "cat": "goal",
+  "label": "씬내부"
+ },
+ {
+  "scene": "101번째프로포즈_02_s28",
+  "idx": 1,
+  "cat": "character",
+  "label": "씬내부"
+ },
+ {
+  "scene": "101번째프로포즈_02_s28",
+  "idx": 2,
+  "cat": "conflict",
+  "label": "씬내부"
+ },
+ {
+  "scene": "101번째프로포즈_02_s28",
+  "idx": 3,
+  "cat": "info",
+  "label": "씬내부"
+ },
+ {
+  "scene": "101번째프로포즈_02_s28",
+  "idx": 4,
+  "cat": "link",
+  "label": "배치관계"
+ },
+ {
+  "scene": "101번째프로포즈_05_s34",
+  "idx": 0,
+  "cat": "goal",
+  "label": "씬내부"
+ },
+ {
+  "scene": "101번째프로포즈_05_s34",
+  "idx": 1,
+  "cat": "character",
+  "label": "씬내부"
+ },
+ {
+  "scene": "101번째프로포즈_05_s34",
+  "idx": 2,
+  "cat": "conflict",
+  "label": "배치관계"
+ },
+ {
+  "scene": "101번째프로포즈_05_s34",
+  "idx": 3,
+  "cat": "info",
+  "label": "씬내부"
+ },
+ {
+  "scene": "101번째프로포즈_05_s34",
+  "idx": 4,
+  "cat": "link",
+  "label": "배치관계"
+ },
+ {
+  "scene": "101번째프로포즈_08_s39",
+  "idx": 0,
+  "cat": "goal",
+  "label": "씬내부"
+ },
+ {
+  "scene": "101번째프로포즈_08_s39",
+  "idx": 1,
+  "cat": "character",
+  "label": "배치관계"
+ },
+ {
+  "scene": "101번째프로포즈_08_s39",
+  "idx": 2,
+  "cat": "conflict",
+  "label": "배치관계"
+ },
+ {
+  "scene": "101번째프로포즈_08_s39",
+  "idx": 3,
+  "cat": "info",
+  "label": "배치관계"
+ },
+ {
+  "scene": "101번째프로포즈_08_s39",
+  "idx": 4,
+  "cat": "link",
+  "label": "배치관계"
+ },
+ {
+  "scene": "101번째프로포즈_11_s51",
+  "idx": 0,
+  "cat": "goal",
+  "label": "씬내부"
+ },
+ {
+  "scene": "101번째프로포즈_11_s51",
+  "idx": 1,
+  "cat": "character",
+  "label": "씬내부"
+ },
+ {
+  "scene": "101번째프로포즈_11_s51",
+  "idx": 2,
+  "cat": "conflict",
+  "label": "씬내부"
+ },
+ {
+  "scene": "101번째프로포즈_11_s51",
+  "idx": 3,
+  "cat": "info",
+  "label": "씬내부"
+ },
+ {
+  "scene": "101번째프로포즈_11_s51",
+  "idx": 4,
+  "cat": "link",
+  "label": "배치관계"
+ },
+ {
+  "scene": "101번째프로포즈_14_s42",
+  "idx": 0,
+  "cat": "goal",
+  "label": "씬내부"
+ },
+ {
+  "scene": "101번째프로포즈_14_s42",
+  "idx": 1,
+  "cat": "character",
+  "label": "씬내부"
+ },
+ {
+  "scene": "101번째프로포즈_14_s42",
+  "idx": 2,
+  "cat": "conflict",
+  "label": "씬내부"
+ },
+ {
+  "scene": "101번째프로포즈_14_s42",
+  "idx": 3,
+  "cat": "info",
+  "label": "씬내부"
+ },
+ {
+  "scene": "101번째프로포즈_14_s42",
+  "idx": 4,
+  "cat": "link",
+  "label": "배치관계"
+ },
+ {
+  "scene": "38사기동대_02_s39",
+  "idx": 0,
+  "cat": "goal",
+  "label": "씬내부"
+ },
+ {
+  "scene": "38사기동대_02_s39",
+  "idx": 1,
+  "cat": "character",
+  "label": "씬내부"
+ },
+ {
+  "scene": "38사기동대_02_s39",
+  "idx": 2,
+  "cat": "conflict",
+  "label": "씬내부"
+ },
+ {
+  "scene": "38사기동대_02_s39",
+  "idx": 3,
+  "cat": "info",
+  "label": "씬내부"
+ },
+ {
+  "scene": "38사기동대_02_s39",
+  "idx": 4,
+  "cat": "link",
+  "label": "배치관계"
+ },
+ {
+  "scene": "38사기동대_05_s67",
+  "idx": 0,
+  "cat": "goal",
+  "label": "배치관계"
+ },
+ {
+  "scene": "38사기동대_05_s67",
+  "idx": 1,
+  "cat": "character",
+  "label": "배치관계"
+ },
+ {
+  "scene": "38사기동대_05_s67",
+  "idx": 2,
+  "cat": "conflict",
+  "label": "씬내부"
+ },
+ {
+  "scene": "38사기동대_05_s67",
+  "idx": 3,
+  "cat": "info",
+  "label": "씬내부"
+ },
+ {
+  "scene": "38사기동대_05_s67",
+  "idx": 4,
+  "cat": "link",
+  "label": "배치관계"
+ },
+ {
+  "scene": "38사기동대_08_s88",
+  "idx": 0,
+  "cat": "goal",
+  "label": "씬내부"
+ },
+ {
+  "scene": "38사기동대_08_s88",
+  "idx": 1,
+  "cat": "character",
+  "label": "씬내부"
+ },
+ {
+  "scene": "38사기동대_08_s88",
+  "idx": 2,
+  "cat": "conflict",
+  "label": "씬내부"
+ },
+ {
+  "scene": "38사기동대_08_s88",
+  "idx": 3,
+  "cat": "info",
+  "label": "배치관계"
+ },
+ {
+  "scene": "38사기동대_08_s88",
+  "idx": 4,
+  "cat": "link",
+  "label": "배치관계"
+ },
+ {
+  "scene": "38사기동대_12_s61",
+  "idx": 0,
+  "cat": "goal",
+  "label": "씬내부"
+ },
+ {
+  "scene": "38사기동대_12_s61",
+  "idx": 1,
+  "cat": "character",
+  "label": "씬내부"
+ },
+ {
+  "scene": "38사기동대_12_s61",
+  "idx": 2,
+  "cat": "conflict",
+  "label": "씬내부"
+ },
+ {
+  "scene": "38사기동대_12_s61",
+  "idx": 3,
+  "cat": "info",
+  "label": "씬내부"
+ },
+ {
+  "scene": "38사기동대_12_s61",
+  "idx": 4,
+  "cat": "link",
+  "label": "배치관계"
+ },
+ {
+  "scene": "38사기동대_15_s56",
+  "idx": 0,
+  "cat": "goal",
+  "label": "씬내부"
+ },
+ {
+  "scene": "38사기동대_15_s56",
+  "idx": 1,
+  "cat": "character",
+  "label": "배치관계"
+ },
+ {
+  "scene": "38사기동대_15_s56",
+  "idx": 2,
+  "cat": "conflict",
+  "label": "씬내부"
+ },
+ {
+  "scene": "38사기동대_15_s56",
+  "idx": 3,
+  "cat": "info",
+  "label": "씬내부"
+ },
+ {
+  "scene": "38사기동대_15_s56",
+  "idx": 4,
+  "cat": "link",
+  "label": "배치관계"
+ }
+]

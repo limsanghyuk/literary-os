@@ -1,0 +1,262 @@
+{
+  "dictionary_lines": 30579,
+  "exempt_headings": [
+    "냉동 창고 (D / 과거)",
+    "달리는 양정도 차 안 (D)",
+    "방송국 근처(N)",
+    "벤치가 내려다보이는 고아원 건물 내부(D)",
+    "세무사 대표실 (D)",
+    "수정쪽(D)",
+    "시장실 (D / 과거)",
+    "양정도 오피스텔 (D)",
+    "우석집 거실(D)",
+    "집 근처 공원(저녁 즈음)"
+  ],
+  "targets": {
+    "renders": {
+      "files": 40,
+      "matches": 30,
+      "max_len_non_exempt": 15,
+      "blocking_matches_ge16": 0,
+      "detail": [
+        {
+          "file": "R24.out.md",
+          "len": 27,
+          "exempt": true,
+          "text": "34. 벤치가 내려다보이는 고아원 건물 내부(D)"
+        },
+        {
+          "file": "R09.out.md",
+          "len": 18,
+          "exempt": true,
+          "text": "39. 집 근처 공원(저녁 즈음)"
+        },
+        {
+          "file": "R03.out.md",
+          "len": 15,
+          "exempt": false,
+          "text": "제가 알아서 처리하겠습니다."
+        },
+        {
+          "file": "R08.out.md",
+          "len": 13,
+          "exempt": true,
+          "text": "51. 우석집 거실(D)"
+        },
+        {
+          "file": "R01.out.md",
+          "len": 12,
+          "exempt": true,
+          "text": "양정도 오피스텔 (D)"
+        },
+        {
+          "file": "R07.out.md",
+          "len": 12,
+          "exempt": true,
+          "text": "양정도 오피스텔 (D)"
+        },
+        {
+          "file": "R10.out.md",
+          "len": 12,
+          "exempt": true,
+          "text": "양정도 오피스텔 (D)"
+        },
+        {
+          "file": "R18.out.md",
+          "len": 12,
+          "exempt": true,
+          "text": "양정도 오피스텔 (D)"
+        },
+        {
+          "file": "R25.out.md",
+          "len": 10,
+          "exempt": true,
+          "text": "42. 수정쪽(D)"
+        },
+        {
+          "file": "R14.out.md",
+          "len": 9,
+          "exempt": false,
+          "text": "예. 알겠습니다."
+        },
+        {
+          "file": "R11.out.md",
+          "len": 7,
+          "exempt": false,
+          "text": "우석을 본다."
+        },
+        {
+          "file": "R13.out.md",
+          "len": 7,
+          "exempt": false,
+          "text": "우석을 본다."
+        },
+        {
+          "file": "R16.out.md",
+          "len": 7,
+          "exempt": false,
+          "text": "우석을 본다."
+        },
+        {
+          "file": "R19.out.md",
+          "len": 7,
+          "exempt": false,
+          "text": "아무도 없다."
+        },
+        {
+          "file": "R25.out.md",
+          "len": 7,
+          "exempt": false,
+          "text": "아무도 없다."
+        },
+        {
+          "file": "R31.out.md",
+          "len": 7,
+          "exempt": false,
+          "text": "우석을 본다."
+        },
+        {
+          "file": "R32.out.md",
+          "len": 7,
+          "exempt": false,
+          "text": "아무도 없다."
+        },
+        {
+          "file": "R03.out.md",
+          "len": 6,
+          "exempt": false,
+          "text": "하겠습니다."
+        },
+        {
+          "file": "R16.out.md",
+          "len": 6,
+          "exempt": false,
+          "text": "죄송합니다."
+        },
+        {
+          "file": "R19.out.md",
+          "len": 6,
+          "exempt": false,
+          "text": "아무도 없다"
+        },
+        {
+          "file": "R21.out.md",
+          "len": 6,
+          "exempt": false,
+          "text": "하셨습니다."
+        },
+        {
+          "file": "R21.out.md",
+          "len": 6,
+          "exempt": false,
+          "text": "......"
+        },
+        {
+          "file": "R22.out.md",
+          "len": 6,
+          "exempt": false,
+          "text": "죄송합니다."
+        },
+        {
+          "file": "R22.out.md",
+          "len": 6,
+          "exempt": false,
+          "text": "......"
+        },
+        {
+          "file": "R23.out.md",
+          "len": 6,
+          "exempt": false,
+          "text": "......"
+        },
+        {
+          "file": "R25.out.md",
+          "len": 6,
+          "exempt": false,
+          "text": "아무도 없다"
+        },
+        {
+          "file": "R26.out.md",
+          "len": 6,
+          "exempt": false,
+          "text": "죄송합니다."
+        },
+        {
+          "file": "R29.out.md",
+          "len": 6,
+          "exempt": false,
+          "text": "죄송합니다."
+        },
+        {
+          "file": "R32.out.md",
+          "len": 6,
+          "exempt": false,
+          "text": "아무도 없다"
+        },
+        {
+          "file": "R33.out.md",
+          "len": 6,
+          "exempt": false,
+          "text": "하겠습니다."
+        }
+      ]
+    },
+    "render_inputs": {
+      "files": 40,
+      "matches": 4,
+      "max_len_non_exempt": 0,
+      "blocking_matches_ge16": 0,
+      "detail": [
+        {
+          "file": "R01.prompt.md",
+          "len": 12,
+          "exempt": true,
+          "text": "양정도 오피스텔 (D)"
+        },
+        {
+          "file": "R07.prompt.md",
+          "len": 12,
+          "exempt": true,
+          "text": "양정도 오피스텔 (D)"
+        },
+        {
+          "file": "R10.prompt.md",
+          "len": 12,
+          "exempt": true,
+          "text": "양정도 오피스텔 (D)"
+        },
+        {
+          "file": "R18.prompt.md",
+          "len": 12,
+          "exempt": true,
+          "text": "양정도 오피스텔 (D)"
+        }
+      ]
+    },
+    "keys_hubsafe": {
+      "files": 1,
+      "matches": 0,
+      "max_len_non_exempt": 0,
+      "blocking_matches_ge16": 0,
+      "detail": []
+    },
+    "scoring_packets": {
+      "files": 40,
+      "matches": 2,
+      "max_nonexempt_len": 15,
+      "blocked": 0,
+      "nonexempt_matches": [
+        {
+          "file": "R03.score.md",
+          "len": 15
+        },
+        {
+          "file": "R25.score.md",
+          "len": 7
+        }
+      ],
+      "note": "게이트 스크립트 본체에는 없던 대상. 동일 사전·동일 면제 규칙으로 별도 실행(2026-08-07)."
+    }
+  },
+  "verdict": "PASS"
+}

@@ -1,8 +1,8 @@
 {
   "schema": "CT07R_CURRENT_STATUS_V1",
-  "updated_at": "2026-08-07T22:30:00+09:00",
-  "status": "AMENDMENT_02_SEALED_WAITING_LOCAL_KEY_INGEST_AND_MATERIALIZER_RUN",
-  "global_rollout_state": "FULL_THICK_ROLLOUT_BLOCKED_PENDING_CT07_REPLICATION",
+  "updated_at": "2026-08-07T23:55:00+09:00",
+  "status": "EXECUTED_AND_ADJUDICATED_PASS_NOT_STRONG_REPLICATION",
+  "global_rollout_state": "FULL_THICK_ROLLOUT_UNBLOCKED_WITH_THREE_CONDITIONS",
   "prereg_v1": "docs/tracks/confirmatory/CT-07R_2026-08-07_db98_reinforcement_replication_prereg.md",
   "prereg_amendments": [
     "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_v1_1.md",
@@ -32,7 +32,10 @@
   "independent_key_state": {
     "developer_reported_local_status": "LOCAL_REPORTED_COMPLETE",
     "reported_local_directory": "C:\\claude\\CT07R_run_20260807\\keys\\",
-    "reported_sha256_prefixes": ["f456a957", "16719be5"],
+    "reported_sha256_prefixes": [
+      "f456a957",
+      "16719be5"
+    ],
     "hub_status": "HUB_UNSEALED",
     "rule": "do not recreate or paraphrase local key files; ingest exact bytes and record full SHA256"
   },
@@ -61,31 +64,37 @@
     "normalized_r_L2D_to_L2G_loss_approx": 0.823
   },
   "measurement_state": {
-    "target_function_key": "LOCAL_REPORTED_COMPLETE_HUB_UNSEALED",
-    "sanitized_render_payloads": "MATERIALIZER_V1_0_2_READY_NOT_YET_SEALED",
-    "renders": 0,
-    "scores": 0,
-    "decision": "NOT_MEASURED"
+    "target_function_key": "LOCAL_SEALED_HUB_REDACTED_ONLY",
+    "target_function_key_sha256": {
+      "101번째프로포즈": "f456a957bb187a6dad5a0740f9dccba59bc6998bacf7763437f9941507bcdde5",
+      "38사기동대": "16719be50a52fccf8ddc1f7a1f4f5f4668241a49c66a245b2096724300d7400c"
+    },
+    "sanitized_render_payloads": "SEALED",
+    "render_inputs": 40,
+    "renders": 40,
+    "scoring_packets": 40,
+    "scorers": 3,
+    "scores": 600,
+    "decision": "PASS_NOT_STRONG_REPLICATION"
   },
   "resolved_findings": [
     "one-sided foreign/mismatched TN label conflict resolved by prereg amendment 02: identical neutral notice on T and TN",
     "T/TN target scene-note density confound controlled by v1.1.1 plus render contract v1.0.2",
     "authority active-schema drift resolved; active schema remains reinforcement V1.0.1",
     "CT-07 absolute scores and normalized r values explicitly disambiguated in Authority Correction V1.0.2",
-    "known 101번째프로포즈_11 evidence-ref typo remains ledgered without semantic packet rewrite"
+    "known 101번째프로포즈_11 evidence-ref typo remains ledgered without semantic packet rewrite",
+    "CT-07R executed and adjudicated PASS on 2026-08-07; all four preregistered thresholds unchanged",
+    "volume confound rejected: TN < T holds overall, per work, and in both element categories",
+    "negative-control framing confirmed working by content not by label (R02/R36/R38 independent renderer reports; R36 = TN of 101_ep02)",
+    "AMD-01 §3.4 category decomposition executed: headline r_T is a blend of within-scene 0.567 and placement-relation 1.386"
   ],
   "still_required": [
-    "ingest exact local independent key files and record full SHA256",
-    "ingest exact local short-anchor sensitivity amendment and record SHA256",
-    "run materializer v1.0.2 against sealed thick packet and seal T/TN payload SHA256",
-    "prepare A/B/T/TN 40-render blind batch",
-    "independent blind render",
-    "shuffle and independent three-judge blind scoring",
-    "unblind and apply unchanged preregistered thresholds",
-    "report all preregistered sensitivity analyses",
-    "developer accepts PASS/FAIL"
+    "field ablation experiment to derive the minimum thick-field spec (98-work authoring must keep fields separable, not fused)",
+    "episode->sequence rung diagnostic (never measured at any point)",
+    "robustness re-run under GPT PREREG-AMENDMENT-02 padding rule (requires a fresh render set)",
+    "wiring bundled with authoring: R5 PlannerInputRecord, R8 RuntimeSceneProjection"
   ],
-  "next_authoritative_action": "INGEST_LOCAL_KEYS_AND_SHORT_ANCHOR_AMENDMENT_THEN_RUN_MATERIALIZER_V1_0_2_AND_40_RENDER_BATCH",
+  "next_authoritative_action": "DEVELOPER_ACCEPTANCE_THEN_98_WORK_THICK_AUTHORING_WITH_SEPARABLE_FIELDS_AND_PLACEMENT_RELATION_EMPHASIS",
   "invalid_shortcuts": [
     "renderer sees archival evidence/source hashes",
     "T and TN receive different truth-status labels",
@@ -93,6 +102,82 @@
     "T/TN have unequal target scene-note coverage",
     "DB reinforcement author recreates local independent key from chat or memory",
     "PASS inferred from packet/schema validation",
-    "bulk 98-work thick authoring before valid replication PASS and developer acceptance"
-  ]
+    "bulk 98-work thick authoring before valid replication PASS and developer acceptance",
+    "treating r_T 0.817 as evidence that thick design REPLACES the human SceneCard (within-scene r_T is 0.567, below threshold)",
+    "quoting CT-07 1.63 as the replicated effect size (CT-07R gives 0.817; magnitude did not replicate)",
+    "fusing the five thick fields during 98-work authoring, which forecloses ablation"
+  ],
+  "as_executed_amendment": {
+    "path": "docs/tracks/confirmatory/CT-07R_2026-08-07_amendment_02_as_executed_normalization.md",
+    "document_id": "LOS-CT07R-AMD-02",
+    "note": "이 규칙이 렌더 40본에 실제 적용됐다. 허브 선행 PREREG-AMENDMENT-02(GPT)와 정보량 균등화 방향이 반대다(채워 올림 vs 절단). 상세 §0.5.",
+    "divergence_unresolved": true
+  },
+  "result": {
+    "report": "docs/tracks/confirmatory/CT-07R_2026-08-07_result.md",
+    "method": "docs/tracks/confirmatory/CT-07R_2026-08-07_execution_method.md",
+    "artifacts": "docs/tracks/confirmatory/artifacts/ct07r/",
+    "recompute": "python docs/tracks/confirmatory/artifacts/ct07r/CT07R_analyze.py --run docs/tracks/confirmatory/artifacts/ct07r",
+    "overall": {
+      "A": 0.167,
+      "B": 3.267,
+      "T": 2.7,
+      "TN": 0.167,
+      "B_minus_A": 3.1,
+      "r_T": 0.817,
+      "D_N": 2.533
+    },
+    "per_work": {
+      "101번째프로포즈": {
+        "r_T": 0.755,
+        "D_N": 2.333
+      },
+      "38사기동대": {
+        "r_T": 0.886,
+        "D_N": 2.733
+      }
+    },
+    "category_decomposition": {
+      "씬내부": {
+        "n": 32,
+        "B": 3.639,
+        "T": 2.153,
+        "r_T": 0.567,
+        "D_N": 1.944
+      },
+      "배치관계": {
+        "n": 18,
+        "B": 2.375,
+        "T": 3.292,
+        "r_T": 1.386,
+        "D_N": 3.292
+      }
+    },
+    "sensitivity_S2_leave_one_out": {
+      "r_T_min": 0.727,
+      "r_T_max": 0.905,
+      "fragile_flag_required": false
+    },
+    "sensitivity_S1_long_anchors_only": {
+      "n": 2,
+      "r_T": 0.481,
+      "use": "instability_indicator_only_not_adjudication"
+    },
+    "scorer_agreement": 0.953,
+    "effect_size_not_replicated": {
+      "CT07_L2D_r": 1.63,
+      "CT07R_r_T": 0.817
+    }
+  },
+  "seals": {
+    "keys_101": "f456a957bb187a6dad5a0740f9dccba59bc6998bacf7763437f9941507bcdde5",
+    "keys_38": "16719be50a52fccf8ddc1f7a1f4f5f4668241a49c66a245b2096724300d7400c",
+    "render_inputs_concat": "557fc46ddc86034df3fc2f9d144b6b43c7af89a3569c26cf72c2011d15504be8",
+    "renders_concat": "be98287a18d601b513ff9d2aec31d88495f635ca94f88da4854dd87e09df1218",
+    "scoring_packets_concat": "58e0612bdfd69a3b83245228def2b78901ed77618009ac2183e589ebb2bc764b",
+    "scores_concat": "fd7e53d664cf15ef17c8580107c710e01de21a67e3aa8edc1c79c6c731119c2f",
+    "keys_concat": "200489ff54bfe2d88c3a099facbd35f4d6a37fee3494639da5610e9542fe2c91",
+    "blind_map": "8fcaa089bf6bd00911b746a1e76eef5ffaffc908b6b551c21694c2664e4a2cf0",
+    "manifest": "docs/tracks/confirmatory/artifacts/ct07r/CT07R_SHA256_MANIFEST.json"
+  }
 }
