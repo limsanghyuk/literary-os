@@ -1,0 +1,44 @@
+{
+  "schema": "DB98_REINFORCEMENT_CURRENT_AUTHORITY_POINTER_V1",
+  "status": "ACTIVE_REINFORCEMENT_POINTER",
+  "authority_id": "DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1",
+  "authority_version": "1.0.0",
+  "authority_root": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1",
+  "master_authority": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_MASTER_AUTHORITY_V1.md",
+  "schema_registry": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/schemas/DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1.json",
+  "execution_validation": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_EXECUTION_AND_VALIDATION_V1.md",
+  "work_index": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_WORK_INDEX_V1.json",
+  "new_session_bootstrap": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/NEW_SESSION_BOOTSTRAP.md",
+  "authority_manifest": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/AUTHORITY_MANIFEST.json",
+  "authority_payload_seal_commit": "9a543e0a32024656fdf25e1ad1b39899c329b194",
+  "scope": {
+    "works": 98,
+    "episodes": 1814,
+    "scene_cards": 114371,
+    "core_stage01_04_superseded": false,
+    "new_work_expansion": false
+  },
+  "baseline_candidate": {
+    "package": "DB98_STAGE04_98WORKS_EXT6_35_PHASE02_35_GPT_ONEPERCENT_20260807.zip",
+    "sha256": "99875cfb914cf96b0ee6eab91e6bbe3bb6b13006bbff8e3920c426e5a90274f1",
+    "must_reverify_before_write": true
+  },
+  "rollout_state": "FULL_THICK_ROLLOUT_BLOCKED_PENDING_CT07_REPLICATION",
+  "next_authoritative_action": "CT07_REPLICATION_WITH_THICK_NEGATIVE_CONTROL",
+  "new_session_minimum_load": [
+    "DB98_REINFORCEMENT_CURRENT_AUTHORITY_POINTER.json",
+    "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_MASTER_AUTHORITY_V1.md",
+    "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/schemas/DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1.json",
+    "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_EXECUTION_AND_VALIDATION_V1.md",
+    "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_WORK_INDEX_V1.json",
+    "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/NEW_SESSION_BOOTSTRAP.md"
+  ],
+  "research_lineage_if_audit_needed": [
+    "docs/tracks/confirmatory/CT-06H_2026-08-07_result.md",
+    "docs/tracks/confirmatory/CT-07_2026-08-07_result.md",
+    "docs/design/DESIGN-MACRO-PLANNING-SUPPLEMENT-v1.1.md",
+    "docs/sessions/2026-08-07_session_summary_home.md"
+  ],
+  "conflict_policy": "SOURCE_AND_ACTIVE_CORE_STAGE_AUTHORITY_GOVERN_STAGE01_04; THIS_AUTHORITY_GOVERNS_DB98_REINFORCEMENT; UNEXPLAINED_DRIFT_STOPS_EXECUTION",
+  "updated_at": "2026-08-07T19:10:00+09:00"
+}
