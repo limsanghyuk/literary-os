@@ -6,7 +6,8 @@
   "schema_version": "1.0.1",
   "authority_root": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1",
   "master_authority": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_MASTER_AUTHORITY_V1.md",
-  "authority_correction": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/AUTHORITY_CORRECTION_V1_0_1.md",
+  "authority_correction": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/AUTHORITY_CORRECTION_V1_0_2.md",
+  "historical_authority_correction": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/AUTHORITY_CORRECTION_V1_0_1.md",
   "schema_registry": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/schemas/DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1_0_1.json",
   "schema_changelog": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/SCHEMA_CHANGELOG.md",
   "execution_validation": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_EXECUTION_AND_VALIDATION_V1.md",
@@ -28,11 +29,11 @@
     "must_reverify_before_write": true
   },
   "rollout_state": "FULL_THICK_ROLLOUT_BLOCKED_PENDING_CT07_REPLICATION",
-  "next_authoritative_action": "RUN_SANITIZED_MATERIALIZER_AND_INDEPENDENT_KEY_IN_PARALLEL_THEN_BLIND_RENDER_SCORE",
+  "next_authoritative_action": "INGEST_LOCAL_KEYS_AND_SHORT_ANCHOR_AMENDMENT_THEN_RUN_MATERIALIZER_V1_0_2_AND_40_RENDER_BATCH",
   "new_session_minimum_load": [
     "DB98_REINFORCEMENT_CURRENT_AUTHORITY_POINTER.json",
     "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_MASTER_AUTHORITY_V1.md",
-    "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/AUTHORITY_CORRECTION_V1_0_1.md",
+    "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/AUTHORITY_CORRECTION_V1_0_2.md",
     "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/schemas/DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1_0_1.json",
     "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/SCHEMA_CHANGELOG.md",
     "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_EXECUTION_AND_VALIDATION_V1.md",
@@ -46,11 +47,12 @@
     "docs/tracks/confirmatory/CT-07R_2026-08-07_db98_reinforcement_replication_prereg.md",
     "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_v1_1.md",
     "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_v1_1_1.md",
-    "docs/tracks/confirmatory/CT07R_RENDER_PAYLOAD_CONTRACT_V1_0_1.json",
+    "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_02_neutral_context_and_equalized_control.md",
+    "docs/tracks/confirmatory/CT07R_RENDER_PAYLOAD_CONTRACT_V1_0_2.json",
     "docs/design/DESIGN-MACRO-PLANNING-SUPPLEMENT-v1.1.md",
     "docs/sessions/2026-08-07_session_summary_home.md"
   ],
-  "state_precedence": "CURRENT_GATE_STATUS_OVERRIDES_STALE_GATE_FIELDS_IN_WORK_INDEX; PER_WORK_PROGRESS_STILL_COMES_FROM_WORK_INDEX_AND_CHECKPOINTS",
+  "state_precedence": "CURRENT_GATE_STATUS_OVERRIDES_STALE_GATE_FIELDS_IN_WORK_INDEX; PER_WORK_PROGRESS STILL COMES FROM WORK_INDEX_AND_CHECKPOINTS",
   "conflict_policy": "SOURCE_AND_ACTIVE_CORE_STAGE_AUTHORITY_GOVERN_STAGE01_04; MASTER_PLUS_ACTIVE_AUTHORITY_CORRECTION_GOVERN_DB98_REINFORCEMENT; UNEXPLAINED_DRIFT_STOPS_EXECUTION",
-  "updated_at": "2026-08-07T19:45:00+09:00"
+  "updated_at": "2026-08-07T22:30:00+09:00"
 }
