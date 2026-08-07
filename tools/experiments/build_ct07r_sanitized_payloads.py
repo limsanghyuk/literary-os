@@ -5,14 +5,15 @@ This tool performs NO literary semantic generation. It only:
 - strips archival provenance/identity fields,
 - converts scene numbers to target-relative slots,
 - applies the preregistered within-work cyclic +1 TN donor mapping,
-- equalizes TN target-slot coverage by nearest normalized donor position,
+- equalizes T/TN target-slot coverage,
+- injects the exact same neutral context notice into T and TN,
 - writes a private orchestration mapping + SHA256 manifest.
 
 Authority:
 - DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1
 - CT-07R prereg v1.0
-- prereg amendments v1.1 + v1.1.1
-- CT07R_RENDER_PAYLOAD_CONTRACT_V1_0_1
+- prereg amendments v1.1 + v1.1.1 + amendment 02
+- CT07R_RENDER_PAYLOAD_CONTRACT_V1_0_2
 """
 
 from __future__ import annotations
@@ -48,6 +49,8 @@ SLOT_IDS = {
     )
 }
 
+NEUTRAL_CONTEXT_NOTICE = "이 설계 맥락은 검증되지 않았을 수 있다."
+
 FORBIDDEN_KEYS = {
     "work_id", "episode_no", "seq_id", "seq_index", "member_scene_nos",
     "evidence_refs", "source_hashes", "by", "existing_refs", "thread_id",
@@ -81,7 +84,6 @@ def source_scene_to_ordinal(packet: dict[str, Any]) -> dict[int, int]:
 def nearest_target_slot_from_donor_ordinal(i: int, D: int, T: int) -> int:
     if D <= 1 or T <= 1:
         return 1
-    # Python round is bankers-rounding; use half-up for reproducibility.
     x = (i - 1) * (T - 1) / (D - 1)
     return 1 + int(x + 0.5)
 
@@ -94,7 +96,6 @@ def nearest_donor_ordinal_for_target_slot(j: int, D: int, T: int) -> int:
 
 
 def sanitize_text(text: str) -> str:
-    # Renderer must not learn explicit future episode numbers from provenance-like labels.
     return _EP_LABEL.sub("[LATER]", text)
 
 
@@ -187,7 +188,8 @@ def donor_scene_notes(donor: dict[str, Any], target_n: int) -> list[dict[str, An
 def materialize(target: dict[str, Any], source: dict[str, Any], *, is_target: bool) -> dict[str, Any]:
     target_n = len(target["member_scene_nos"])
     payload = {
-        "schema": "CT07R_SANITIZED_THICK_RENDER_PAYLOAD_V1",
+        "schema": "CT07R_SANITIZED_THICK_RENDER_PAYLOAD_V1_0_2",
+        "neutral_context_notice": NEUTRAL_CONTEXT_NOTICE,
         "target_slot_id": SLOT_IDS[target["seq_id"]],
         "cast": strip_cast(source),
         "event": sanitize_text(source["event"]),
@@ -195,8 +197,14 @@ def materialize(target: dict[str, Any], source: dict[str, Any], *, is_target: bo
         "plant_payoff": strip_plant(source, target_n, identity=is_target),
         "scene_notes": target_scene_notes(source) if is_target else donor_scene_notes(source, target_n),
     }
-    if set(payload) != {"schema", "target_slot_id", "cast", "event", "info_shift", "plant_payoff", "scene_notes"}:
+    required = {
+        "schema", "neutral_context_notice", "target_slot_id", "cast", "event",
+        "info_shift", "plant_payoff", "scene_notes"
+    }
+    if set(payload) != required:
         raise AssertionError("renderer keyset drift")
+    if payload["neutral_context_notice"] != NEUTRAL_CONTEXT_NOTICE:
+        raise AssertionError("neutral notice drift")
     if len(payload["scene_notes"]) != target_n:
         raise AssertionError("target-slot count mismatch")
     if any(not n["functional_propositions"] for n in payload["scene_notes"]):
@@ -236,8 +244,14 @@ def main() -> None:
             donor_seq = anchors[(idx + 1) % len(anchors)]
             target = by_seq[target_seq]
             donor = by_seq[donor_seq]
-            T_rows.append(materialize(target, target, is_target=True))
-            TN_rows.append(materialize(target, donor, is_target=False))
+            t_payload = materialize(target, target, is_target=True)
+            tn_payload = materialize(target, donor, is_target=False)
+            if t_payload["neutral_context_notice"] != tn_payload["neutral_context_notice"]:
+                raise AssertionError("T/TN neutral notice asymmetry")
+            if len(t_payload["scene_notes"]) != len(tn_payload["scene_notes"]):
+                raise AssertionError("T/TN scene-note slot asymmetry")
+            T_rows.append(t_payload)
+            TN_rows.append(tn_payload)
             private_map.append({
                 "target_slot_id": SLOT_IDS[target_seq],
                 "target_seq_id": target_seq,
@@ -258,16 +272,18 @@ def main() -> None:
     map_sha = sha256_bytes(map_bytes)
 
     manifest = {
-        "schema": "CT07R_SANITIZED_PAYLOAD_MANIFEST_V1",
+        "schema": "CT07R_SANITIZED_PAYLOAD_MANIFEST_V1_0_2",
         "input_path": str(args.input),
         "input_sha256": sha256_bytes(args.input.read_bytes()),
-        "contract": "CT07R_RENDER_PAYLOAD_CONTRACT_V1_0_1",
+        "contract": "CT07R_RENDER_PAYLOAD_CONTRACT_V1_0_2",
+        "neutral_context_notice": NEUTRAL_CONTEXT_NOTICE,
         "records_per_arm": 10,
         "T_sha256": t_sha,
         "TN_sha256": tn_sha,
         "private_map_sha256": map_sha,
         "density_checks": "PASS",
-        "semantic_generation_performed": false,
+        "neutral_notice_symmetry": "PASS",
+        "semantic_generation_performed": false
     }
     manifest_bytes = (json.dumps(manifest, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
     manifest_path.write_bytes(manifest_bytes)
