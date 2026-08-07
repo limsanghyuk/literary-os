@@ -20,6 +20,12 @@ Target semantic fields per existing human sequence:
 
 The model must directly read the original drama source before authoring these fields.
 
+All new reinforcement artifacts are stored under:
+
+`seqcard_ko/reinforcement_v1/`
+
+according to `THICK_SEQUENCE_STORAGE_LAYOUT_V1.md`.
+
 ---
 
 ## 2. Read these files first, in order
@@ -31,10 +37,12 @@ The model must directly read the original drama source before authoring these fi
 5. `DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1_0_1.json`
 6. `THICK_SEQUENCE_AUTHORING_EXECUTION_V1.md`
 7. `THICK_SEQUENCE_AUTHORING_CHECKLIST_V1.json`
-8. `CT07R_CURRENT_STATUS.json`
-9. `CT-07R_2026-08-07_result.md`
-10. `DB98_REINFORCEMENT_WORK_INDEX_V1.json`
-11. this file
+8. `THICK_SEQUENCE_STORAGE_LAYOUT_V1.md`
+9. `DB98_REINFORCEMENT_WORK_INDEX_POST_CT07R_OVERLAY_V1.json`
+10. `CT07R_CURRENT_STATUS.json`
+11. `CT-07R_2026-08-07_result.md`
+12. `DB98_REINFORCEMENT_WORK_INDEX_V1.json`
+13. this file
 
 Then read the active Stage01–04 authority/pointer inside the actual supplied DB.
 
@@ -42,7 +50,27 @@ Do not reconstruct rules from old chats.
 
 ---
 
-## 3. Current experimental truth
+## 3. Current authority state
+
+Developer acceptance is recorded in:
+
+`THICK_SEQUENCE_ROLLOUT_ACCEPTANCE_20260807.md`
+
+Current execution state:
+
+`FULL_THICK_ROLLOUT_AUTHORIZED`
+
+The base Work Index may still contain historical pre-replication global gate fields. Do not rewrite that sealed baseline merely to change global state. Apply:
+
+`root pointer → post-CT07R Work Index overlay → CT07R_CURRENT_STATUS`
+
+for global state, while per-work progress still comes from:
+
+`base Work Index + latest valid work checkpoint`.
+
+---
+
+## 4. Current experimental truth
 
 CT-07R result: `PASS_NOT_STRONG_REPLICATION`.
 
@@ -78,7 +106,7 @@ Never say CT-07 `r=1.63` replicated. It did not.
 
 ---
 
-## 4. First action in a new session
+## 5. First action in a new session
 
 1. Resolve the actual DB package/root.
 2. Verify baseline package/index/authority/source hashes.
@@ -86,27 +114,29 @@ Never say CT-07 `r=1.63` replicated. It did not.
 4. If resuming, follow checkpoint `next_action`.
 5. If starting new, choose the first eligible work in `authority_order`.
 6. Create baseline lock/checkpoint before semantic writing.
+7. Create/use only the `seqcard_ko/reinforcement_v1/` subtree for new artifacts.
 
 If any baseline/authority/source/sequence drift is unexplained, stop with a hold.
 
 ---
 
-## 5. How to analyze one episode
+## 6. How to analyze one episode
 
 1. Read existing EpisodeArc/Sequence/SceneCard and sidecars only for orientation.
 2. Read the entire original episode source in order, using four consecutive quarters for attention management.
 3. Understand all human sequences and their boundaries.
 4. Re-read each target sequence's member scenes plus immediate boundary context.
 5. Author Thick Sequence records in `seq_index` order.
-6. After all sequences, perform the episode light audit.
-7. Materialize/validate R5 PlannerInput and R8 RuntimeSceneProjection.
-8. Save progress.
+6. Save them to `reinforcement_v1/thick_sequence/<work_id>/` using the storage contract.
+7. After all sequences, perform the episode light audit.
+8. Materialize/validate R5 PlannerInput and R8 RuntimeSceneProjection.
+9. Save progress/checkpoint.
 
 Do not author a sequence from SceneCards alone.
 
 ---
 
-## 6. How to think about one sequence
+## 7. How to think about one sequence
 
 Use this mental model:
 
@@ -126,7 +156,7 @@ Then serialize only the exact allowed schema fields.
 
 ---
 
-## 7. Quality priorities
+## 8. Quality priorities
 
 Highest priority:
 
@@ -143,7 +173,7 @@ Do not confuse “more text” with “better Thick design.”
 
 ---
 
-## 8. Mandatory block cadence
+## 9. Mandatory block cadence
 
 - process up to 8 episodes per block;
 - read every episode fully before its sequence authoring;
@@ -153,7 +183,7 @@ Do not confuse “more text” with “better Thick design.”
 
 ---
 
-## 9. Mandatory companion layers
+## 10. Mandatory companion layers
 
 Do not create a dead sidecar.
 
@@ -166,11 +196,12 @@ These may be deterministically assembled where the meaning is already authored.
 
 ---
 
-## 10. Never do these
+## 11. Never do these
 
 - modify canonical 9-key SceneCard;
 - change existing human `member_scene_nos`;
 - delete thin `authored_seq`;
+- write Thick data into existing core directories instead of `reinforcement_v1/`;
 - fuse the five Thick fields;
 - invent a payoff/information shift to fill an empty field;
 - copy long source dialogue/action;
@@ -181,8 +212,8 @@ These may be deterministically assembled where the meaning is already authored.
 
 ---
 
-## 11. Resume truth
+## 12. Resume truth
 
-The authoritative resume location is the latest valid work checkpoint plus root/current status, not chat history.
+The authoritative resume location is the latest valid work checkpoint plus root/overlay/current status, not chat history.
 
 If the checkpoint says a block or episode is incomplete, re-verify hashes and resume that exact unit. Do not silently skip forward.
