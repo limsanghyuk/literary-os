@@ -1,0 +1,48 @@
+{
+  "schema": "CT07R_RENDER_PAYLOAD_CONTRACT_V1_0_1",
+  "version": "1.0.1",
+  "status": "ACTIVE_PRE_SCORE",
+  "supersedes": "CT07R_RENDER_PAYLOAD_CONTRACT_V1",
+  "parent_prereg": "docs/tracks/confirmatory/CT-07R_2026-08-07_db98_reinforcement_replication_prereg.md",
+  "amendments": [
+    "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_v1_1.md",
+    "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_v1_1_1.md"
+  ],
+  "purpose": "ensure T and TN differ in planning semantics rather than donor metadata, provenance, or payload density",
+  "renderer_payload_keys": ["schema","target_slot_id","cast","event","info_shift","plant_payoff","scene_notes"],
+  "schema_value": "CT07R_SANITIZED_THICK_RENDER_PAYLOAD_V1",
+  "forbidden_renderer_keys": ["work_id","episode_no","seq_id","seq_index","member_scene_nos","evidence_refs","source_hashes","by","existing_refs","thread_id","arm_label","donor_id","negative_type"],
+  "forbidden_renderer_phrases": ["foreign","mismatched","negative control","wrong design","donor episode","other episode"],
+  "T_materialization": {
+    "semantic_source": "sealed correct target thick packet",
+    "identity_policy": "strip drama/episode/sequence/provenance identity",
+    "scene_slot_policy": "replace source scene numbers with target-relative slot_1..slot_N",
+    "scene_note_coverage": "exactly N nonempty slots"
+  },
+  "TN_materialization": {
+    "semantic_source": "frozen within-work cyclic +1 donor from prereg v1.0",
+    "identity_policy": "strip donor drama/episode/sequence/provenance identity",
+    "semantic_rewrite_allowed": false,
+    "scene_note_policy": "for every target slot j choose nearest normalized donor scene-note index; duplicate when donor shorter, sample when donor longer; preserve proposition text verbatim",
+    "donor_to_target_reference_policy": "map donor-local scene references to nearest normalized target slot and deduplicate",
+    "scene_note_coverage": "exactly N nonempty slots"
+  },
+  "text_sanitization": {
+    "remove_provenance_ids": true,
+    "remove_existing_refs": true,
+    "future_episode_label_policy": "renderer-facing plant/payoff statements must not expose explicit future episode identifiers; deterministically replace literal EP-number labels with [LATER] without otherwise rewriting semantic text"
+  },
+  "density_invariants": [
+    "T.scene_notes count == target scene slot count",
+    "TN.scene_notes count == target scene slot count",
+    "all T/TN scene_notes functional_propositions are nonempty",
+    "T and TN use identical target_slot_id and target slot numbering envelope for a given anchor"
+  ],
+  "blindness": {
+    "renderer_must_not_know_arm_meaning": true,
+    "renderer_must_not_see_target_function_key": true,
+    "judge_must_not_know_arm": true,
+    "judge_must_not_see_archival_provenance": true
+  },
+  "validity_rule": "result is invalid if donor identity/mismatch label is exposed or if T/TN target-slot coverage differs"
+}
