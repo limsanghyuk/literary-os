@@ -1,0 +1,31 @@
+{
+  "schema": "CT07R_CURRENT_STATUS_V1",
+  "updated_at": "2026-08-07T19:45:00+09:00",
+  "status": "PACKETS_SEALED_PRE_SCORE_CORRECTION_ACTIVE_WAITING_INDEPENDENT_KEY",
+  "global_rollout_state": "FULL_THICK_ROLLOUT_BLOCKED_PENDING_CT07_REPLICATION",
+  "prereg_v1": "docs/tracks/confirmatory/CT-07R_2026-08-07_db98_reinforcement_replication_prereg.md",
+  "prereg_amendment_v1_1": "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_v1_1.md",
+  "render_payload_contract": "docs/tracks/confirmatory/CT07R_RENDER_PAYLOAD_CONTRACT_V1.json",
+  "packet_audit_ledger": "docs/tracks/confirmatory/ct07r_packets/CT07R_PACKET_AUDIT_AND_CORRECTION_LEDGER_20260807.json",
+  "sealed_correct_packet": {
+    "path": "docs/tracks/confirmatory/ct07r_packets/CT07R_thick_correct_packets.jsonl",
+    "commit": "a287bac4754f5a93e55082432ef1e30d1ecca043",
+    "records": 10,
+    "semantic_rewrite_after_seal": false
+  },
+  "measurement_state": {
+    "target_function_key": "MISSING_INDEPENDENT_SEAL",
+    "sanitized_render_payloads": "NOT_YET_SEALED",
+    "renders": 0,
+    "scores": 0,
+    "decision": "NOT_MEASURED"
+  },
+  "next_authoritative_action": "CT07R_INDEPENDENT_KEY_SEAL_THEN_SANITIZED_BLIND_RENDER_AND_SCORE",
+  "invalid_shortcuts": [
+    "renderer sees archival evidence/source hashes",
+    "TN explicitly labeled foreign/mismatched/negative",
+    "DB reinforcement author writes target-function key after seeing thick packets",
+    "PASS inferred from packet schema validation",
+    "bulk 98-work thick authoring before valid replication PASS and developer acceptance"
+  ]
+}
