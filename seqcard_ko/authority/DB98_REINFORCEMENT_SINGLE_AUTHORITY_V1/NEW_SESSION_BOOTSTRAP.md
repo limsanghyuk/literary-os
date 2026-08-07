@@ -1,69 +1,123 @@
 # DB98 Reinforcement — New Session Bootstrap
 
 Authority: `DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1`  
-Method version: `1.0.0`  
-Active schema version: `1.0.1`  
-Active correction: `AUTHORITY_CORRECTION_V1_0_2`  
-Status: `READ_FIRST_AFTER_ROOT_POINTER`
-
-## 1. Mandatory read order
-
-A new session continuing DB98 reinforcement must read exactly in this order:
-
-1. repository root `DB98_REINFORCEMENT_CURRENT_AUTHORITY_POINTER.json`
-2. `seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_MASTER_AUTHORITY_V1.md`
-3. `seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/AUTHORITY_CORRECTION_V1_0_2.md`
-4. `seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/schemas/DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1_0_1.json`
-5. `seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/SCHEMA_CHANGELOG.md`
-6. `seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_EXECUTION_AND_VALIDATION_V1.md`
-7. `docs/tracks/confirmatory/CT07R_CURRENT_STATUS.json`
-8. `docs/tracks/confirmatory/CT-07R_2026-08-07_result.md`
-9. `docs/handoff/2026-08-07_HANDOFF_CT07R_thick_replication.md`
-10. `seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_WORK_INDEX_V1.json`
-11. this file
-
-Then read the active Stage01–04 core authority/pointer declared by the actual working DB package.
-
-Do **not** reconstruct the method from old chats, V1–V10 history, provider manuals, or old EXT6/PHASE02 queues.
-
-The old schema `DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1.json` is historical after hotfix 1.0.1. `AUTHORITY_CORRECTION_V1_0_1.md` is also historical after V1.0.2; current interpretation comes from root pointer + Master + `AUTHORITY_CORRECTION_V1_0_2.md` + current CT-07R status/result.
+Active Thick authority: `DB98_THICK_SEQUENCE_AUTHORING_AUTHORITY_V1`  
+Active schema: `DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1_0_1`  
+Status: `POST_CT07R_FULL_THICK_ROLLOUT_AUTHORIZED`
 
 ---
 
-## 2. Research lineage only when needed
+## 1. Mandatory read order
 
-- `docs/tracks/confirmatory/CT-06H_2026-08-07_result.md`
-- `docs/tracks/confirmatory/CT-07_2026-08-07_result.md`
-- `docs/tracks/confirmatory/CT-07R_2026-08-07_db98_reinforcement_replication_prereg.md`
-- `docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_v1_1.md`
-- `docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_v1_1_1.md`
-- `docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_02_neutral_context_and_equalized_control.md`
-- `docs/tracks/confirmatory/CT-07R_2026-08-07_amendment_02_as_executed_normalization.md`
-- `docs/tracks/confirmatory/CT-07R_2026-08-07_execution_method.md`
-- `docs/tracks/confirmatory/CT-07R_2026-08-07_result.md`
-- `docs/tracks/confirmatory/CT07R_RENDER_PAYLOAD_CONTRACT_V1_0_2.json`
-- `docs/design/DESIGN-MACRO-PLANNING-SUPPLEMENT-v1.1.md`
-- `docs/handoff/2026-08-07_HANDOFF_CT07R_thick_replication.md`
+A new session continuing DB98 reinforcement must read in this order:
 
-Frozen CT-07 evidence must be read with absolute score and normalized `r` separated:
+1. repository root `DB98_REINFORCEMENT_CURRENT_AUTHORITY_POINTER.json`
+2. `DB98_REINFORCEMENT_MASTER_AUTHORITY_V1.md`
+3. active `AUTHORITY_CORRECTION_*` named by the root pointer
+4. `THICK_SEQUENCE_AUTHORING_AUTHORITY_V1.md`
+5. `schemas/DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1_0_1.json`
+6. `THICK_SEQUENCE_AUTHORING_EXECUTION_V1.md`
+7. `THICK_SEQUENCE_AUTHORING_CHECKLIST_V1.json`
+8. `docs/tracks/confirmatory/CT07R_CURRENT_STATUS.json`
+9. `docs/tracks/confirmatory/CT-07R_2026-08-07_result.md`
+10. `DB98_REINFORCEMENT_WORK_INDEX_V1.json`
+11. `THICK_SEQUENCE_NEW_SESSION_BOOTSTRAP_V1.md`
+12. this file if broader reinforcement context is needed
 
-- CT-06H thin top-down `r=0.211` — not established.
-- CT-07 human SceneCard `B=1.425`, `r=1.00`.
-- CT-07 thick → generated SceneCard → render `L2-G=1.150`, `r=0.807`.
-- CT-07 thick direct render `L2-D=2.325`, `r=1.63`.
-- CT-07 L3 `4.900`, `r=3.44`.
+Then read the active Stage01–04 core authority/pointer declared by the **actual supplied DB package**.
 
-CT-07R replication result:
+Do not reconstruct the method from old chats, old EXT6/PHASE02 queues, or provider history.
 
-- decision: `PASS_NOT_STRONG_REPLICATION`;
-- overall `A=0.167`, `B=3.267`, `T=2.700`, `TN=0.167`;
-- `B-A=3.100`, `r_T=0.817`, `D_N=+2.533`;
-- work-level `r_T=0.755 / 0.886`;
-- leave-one-out `r_T=0.727..0.905`;
-- scorer agreement `95.3%`;
-- category decomposition: within-scene `r_T=0.567`, placement/neighbor-relation `r_T=1.386`.
+---
 
-Required interpretation: **effect existence/sign replicated, effect magnitude did not** (`CT-07 1.63` must not be quoted as the replicated effect size). Headline `0.817` is a blend; the strongest measured contribution is placement/neighbor relation, not thicker scene-internal prose.
+## 2. Current global state
+
+CT-07R is complete and adjudicated:
+
+`PASS_NOT_STRONG_REPLICATION`
+
+Developer acceptance is recorded in:
+
+`THICK_SEQUENCE_ROLLOUT_ACCEPTANCE_20260807.md`
+
+Current rollout state for the authorized scope:
+
+`FULL_THICK_ROLLOUT_AUTHORIZED`
+
+The next authoritative action is:
+
+`SELECT_FIRST_ELIGIBLE_AUTHORITY_ORDER_WORK_AND_BEGIN_THICK_SEQUENCE_AUTHORING_PER_ACTIVE_AUTHORITY`
+
+If `DB98_REINFORCEMENT_WORK_INDEX_V1.json` still contains historical global gate fields from sealing time, the root pointer/current status/rollout acceptance override those **global** fields. Per-work progress still comes from Work Index + checkpoints.
+
+---
+
+## 3. What is authorized
+
+For the existing DB98, author an append-only Thick Sequence extension for each eligible existing human `seq_id` with five **separate** semantic fields:
+
+- `cast[]`
+- `event`
+- `info_shift[]`
+- `plant_payoff[]`
+- `scene_notes[]`
+
+Bundle the new layer with:
+
+- R5 `PlannerInputRecord`
+- R8 `RuntimeSceneProjection`
+
+The model must directly read and understand original source before authoring semantic additions.
+
+---
+
+## 4. What remains protected
+
+Do not:
+
+- modify or replace canonical 9-key SceneCard;
+- change human `authored_seq.member_scene_nos`;
+- delete thin `authored_seq`;
+- rewrite Stage01–04 merely to fit reinforcement;
+- fuse the five Thick fields;
+- automatically promote reinforcement to canonical core;
+- finalize `ThickEpisodeExtension` before Episode→Sequence diagnostic.
+
+---
+
+## 5. Current empirical interpretation
+
+CT-07R headline:
+
+- `A=0.167`
+- `B=3.267`
+- `T=2.700`
+- `TN=0.167`
+- `r_T=0.817`
+- `D_N=+2.533`
+- work-level `r_T=0.755 / 0.886`
+- judge agreement `95.3%`
+
+Prespecified relation split:
+
+- within-scene `r_T=0.567`
+- placement/neighbor-relation `r_T=1.386`
+
+Post-hoc original five score categories:
+
+- character `0.542`
+- goal `0.625`
+- conflict `0.500`
+- info `1.429`
+- link `1.462`
+
+Required reading:
+
+- the strongest measured Thick advantage is information movement and linkage/placement;
+- SceneCard remains stronger for within-scene information in this experiment;
+- the five-category split is **not** a field-level ablation because all five Thick fields were supplied together;
+- all five fields remain required and separable until ablation measures field contribution;
+- CT-07 `r=1.63` did not replicate and must not be used as the DB98 rollout effect estimate.
 
 Approval-ground summary phrase:
 
@@ -71,131 +125,73 @@ Approval-ground summary phrase:
 
 ---
 
-## 3. First state check
+## 6. First work start procedure
 
-`CT07R_CURRENT_STATUS.json` is the current **global gate-state override**. Its gate fields supersede stale global gate fields in `DB98_REINFORCEMENT_WORK_INDEX_V1.json`; per-work progress still comes from Work Index/checkpoints.
+1. resolve the actual DB package/root;
+2. verify baseline package/index SHA and active core authority;
+3. verify target source/SourceLock and Stage01–04 hashes;
+4. load latest target checkpoint if present;
+5. if new, choose first eligible work from exact `authority_order`;
+6. record baseline lock/checkpoint;
+7. follow `THICK_SEQUENCE_AUTHORING_EXECUTION_V1.md`.
 
-Current global state:
-
-`FULL_THICK_ROLLOUT_UNBLOCKED_WITH_THREE_CONDITIONS`
-
-Current next action:
-
-`DEVELOPER_ACCEPTANCE_THEN_98_WORK_THICK_AUTHORING_WITH_SEPARABLE_FIELDS_AND_PLACEMENT_RELATION_EMPHASIS`
-
-### What is authorized after developer acceptance
-
-- 98-work Thick Sequence **sidecar** authoring under active schema V1.0.1;
-- fields must remain separable: `cast[]`, `event`, `info_shift[]`, `plant_payoff[]`, `scene_notes[]`;
-- authoring emphasis must be sequence/scene **placement and neighbor-relation function**, not verbose scene-internal recap;
-- R5 `PlannerInputRecord` and R8 `RuntimeSceneProjection` wiring must be bundled with authoring.
-
-### What is NOT authorized by CT-07R
-
-- replacing or deleting human SceneCard;
-- claiming a minimum thick-field spec before ablation;
-- claiming episode→sequence design is validated (it has never been measured);
-- quoting CT-07 `r=1.63` as the replicated effect size;
-- fusing the five thick fields into one prose blob;
-- deleting historical thin `authored_seq` as a consequence of this result.
-
-### Remaining research items that do not block the approved sidecar rollout
-
-- field ablation to derive minimum field specification;
-- episode→sequence rung diagnostic;
-- robustness rerun under the GPT padding-style amendment-02 rule (fresh render set required);
-- CT-03 style/re-irregularity experiment.
+Unexplained baseline/authority/source/sequence drift → `HOLD_AUTHORITY_DRIFT` or `HOLD_SOURCE` before semantic writing.
 
 ---
 
-## 4. Per-work operating summary after acceptance
+## 7. Episode/work cadence
 
-```text
-baseline lock/reverify
-→ hygiene scan/ledger
-→ source-grounded Thick Sequence extension
-   cast[] / event / info_shift[] / plant_payoff[] / scene_notes[]
-   with placement/neighbor-relation emphasis
-→ character/info/payoff connection audit
-→ R5 PlannerInputRecord wiring/reassembly
-→ R8 RuntimeSceneProjection wiring
-→ subplot GT if supported
-→ deterministic boundary negatives
-→ structural gates
-→ semantic/source gates
-→ non-target immutability
-→ checkpoint
-→ integration
-→ whole-DB validation
-→ fresh extraction validation
-```
+- process consecutive blocks of up to 8 episodes;
+- before sequence authoring, read each entire episode source in four consecutive quarters;
+- author sequences in existing `seq_index` order;
+- light audit after every episode;
+- strong audit after every block;
+- checkpoint every block and before session change;
+- whole-work integration + fresh-extract validation before `FRESH_EXTRACT_PASS`.
 
-Stage01–04 are protected. Reinforcement is append-only except explicitly ledgered hygiene/core-authority corrections.
+Existing analysis files are indexes/evidence candidates, not substitutes for direct source reading.
 
 ---
 
-## 5. Meaning/tool boundary
+## 8. Mandatory semantic emphasis
 
-Model/source authoring required:
-- character desire/function,
-- concrete sequence event,
-- information movement meaning,
-- plant/payoff planning use,
-- scene functional propositions,
-- subplot narrative identity/crossing.
+For every sequence reason through:
 
-Deterministic tools allowed:
-- hashes/inventory,
-- ID/FK/member coverage,
-- validated cast-presence proposals,
-- counts/shares/spans,
-- planner-input reassembly,
-- synthetic boundary transforms,
-- schema/parse/encoding/hash validation,
-- packaging/fresh extraction.
+`INBOUND → SEQUENCE TRANSFORMATION → OUTBOUND`
 
-Python/tooling must not invent literary meaning.
+Ask what enters from the previous scene/sequence, what concrete event and information change occurs, what link/plant/payoff remains active, and what is handed to the next scene/sequence.
+
+Do not turn Thick authoring into longer recap prose.
 
 ---
 
-## 6. Experiment reproducibility
+## 9. Separate research still open
 
-The hub contains the CT-07R hub-safe artifacts and recomputation script. Recompute the adjudicated result with:
+The authorized rollout does not answer:
 
-```bash
-python docs/tracks/confirmatory/artifacts/ct07r/CT07R_analyze.py --run docs/tracks/confirmatory/artifacts/ct07r
-```
+1. minimum field set — requires field ablation;
+2. Episode→Sequence generation quality — never measured, requires separate diagnostic;
+3. robustness under the alternate GPT padding-style CT-07R amendment — requires new renders;
+4. CT-03 style/irregularity follow-up.
 
-Expected headline output: PASS, `r_T=0.817`, `D_N=+2.533`, S2 `0.727..0.905`, category decomposition `0.567 / 1.386`, agreement `95.3%`.
-
-Canonical key files containing source evidence are not in the public hub; only SHA seals and hub-safe derivatives are present. Do not reconstruct canonical keys from chat/memory.
+These do not block the current five-field separable Thick Sequence rollout.
 
 ---
 
-## 7. Holds and urgent release hygiene
+## 10. Holds and release hygiene
 
-Known retained source hold:
+Known retained source hold remains:
+
 - `최강칠우` — `RETAINED_AUTHORIZED_SOURCE_HOLD`.
 
-Urgent repository hygiene inherited from handoff:
-- `docs/sessions/**/original_extracted/` reportedly contains 130 original-script files (8.6MB / 197,776 lines) in public history from commit `362c6f7`;
-- recommended immediate containment: make repository private before any further public distribution;
-- history rewrite/removal is a separate destructive repository operation and requires explicit developer decision;
-- analysis-only `skin` hygiene remains an independent R1 task.
+Repository release hygiene remains separate and urgent: original-script files reportedly exist in public history under `docs/sessions/**/original_extracted/`. Containment/removal decisions do not change Thick semantic authority, but public distribution should not proceed without leakage review.
 
 ---
 
-## 8. Completion truth
+## 11. Completion truth
 
-A work is reinforced-complete only when its checkpoint/work state reaches `FRESH_EXTRACT_PASS` with supporting hashes. Experiment PASS, extension JSON existence, schema-only PASS, or old EXT6/PHASE02 completion are not per-work reinforcement completion.
+A work is reinforced-complete only when checkpoint/work state reaches `FRESH_EXTRACT_PASS` with supporting hashes after:
 
----
+`SOURCE READ → THICK AUTHORING → EPISODE/BLOCK AUDIT → R5/R8 WIRING → SEMANTIC/SOURCE VALIDATION → IMMUTABILITY → INTEGRATION → FRESH EXTRACTION REVALIDATION`.
 
-## 9. Session-limit handoff
-
-Before changing sessions:
-1. save artifacts;
-2. update checkpoint;
-3. update current gate status/work index when state changes;
-4. record SHA256 and exact next action;
-5. do not rely on prose chat handoff alone.
+Chat claims, experiment PASS, schema-only PASS, or legacy EXT6/PHASE02 completion are not per-work reinforcement completion.
