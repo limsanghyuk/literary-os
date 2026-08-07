@@ -1,31 +1,57 @@
 {
   "schema": "CT07R_CURRENT_STATUS_V1",
   "updated_at": "2026-08-07T19:45:00+09:00",
-  "status": "PACKETS_SEALED_PRE_SCORE_CORRECTION_ACTIVE_WAITING_INDEPENDENT_KEY",
+  "status": "PRE_SCORE_CONTROL_FIXED_MATERIALIZER_READY_WAITING_INDEPENDENT_KEY_AND_PAYLOAD_RUN",
   "global_rollout_state": "FULL_THICK_ROLLOUT_BLOCKED_PENDING_CT07_REPLICATION",
   "prereg_v1": "docs/tracks/confirmatory/CT-07R_2026-08-07_db98_reinforcement_replication_prereg.md",
-  "prereg_amendment_v1_1": "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_v1_1.md",
-  "render_payload_contract": "docs/tracks/confirmatory/CT07R_RENDER_PAYLOAD_CONTRACT_V1.json",
+  "prereg_amendments": [
+    "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_v1_1.md",
+    "docs/tracks/confirmatory/CT-07R_2026-08-07_prereg_amendment_v1_1_1.md"
+  ],
+  "active_render_payload_contract": "docs/tracks/confirmatory/CT07R_RENDER_PAYLOAD_CONTRACT_V1_0_1.json",
+  "historical_render_payload_contract": "docs/tracks/confirmatory/CT07R_RENDER_PAYLOAD_CONTRACT_V1.json",
+  "materializer": {
+    "path": "tools/experiments/build_ct07r_sanitized_payloads.py",
+    "commit": "0af41defea243c305aeab65d3b46ff0f4576c0c1",
+    "status": "READY_NOT_RUN_IN_CURRENT_TOOL_ENVIRONMENT",
+    "reason": "current execution container cannot resolve github.com; run where repository files are locally available, then seal output SHA before render"
+  },
   "packet_audit_ledger": "docs/tracks/confirmatory/ct07r_packets/CT07R_PACKET_AUDIT_AND_CORRECTION_LEDGER_20260807.json",
   "sealed_correct_packet": {
     "path": "docs/tracks/confirmatory/ct07r_packets/CT07R_thick_correct_packets.jsonl",
     "commit": "a287bac4754f5a93e55082432ef1e30d1ecca043",
+    "blob_sha": "89fff9f46f6c37c51d0f7e05b359c2332063e976",
     "records": 10,
     "semantic_rewrite_after_seal": false
   },
   "measurement_state": {
     "target_function_key": "MISSING_INDEPENDENT_SEAL",
-    "sanitized_render_payloads": "NOT_YET_SEALED",
+    "sanitized_render_payloads": "MATERIALIZER_READY_NOT_YET_SEALED",
     "renders": 0,
     "scores": 0,
     "decision": "NOT_MEASURED"
   },
-  "next_authoritative_action": "CT07R_INDEPENDENT_KEY_SEAL_THEN_SANITIZED_BLIND_RENDER_AND_SCORE",
+  "resolved_findings": [
+    "TN visible donor metadata/foreign-label confound removed by prereg amendment v1.1",
+    "TN scene-note density confound removed by amendment v1.1.1 + render contract v1.0.1",
+    "authority active-schema drift resolved by AUTHORITY_CORRECTION_V1_0_1 and root pointer sync",
+    "known 101번째프로포즈_11 evidence-ref typo preserved in sealed packet and ledgered for deterministic derived correction"
+  ],
+  "still_required": [
+    "run materializer against sealed packet and seal T/TN payload SHA",
+    "independent target-function key author blind to thick packets seals key SHA",
+    "independent blind render",
+    "independent blind scoring",
+    "unblind and apply unchanged preregistered thresholds",
+    "developer accepts PASS/FAIL"
+  ],
+  "next_authoritative_action": "RUN_SANITIZED_MATERIALIZER_AND_INDEPENDENT_KEY_IN_PARALLEL_THEN_BLIND_RENDER_SCORE",
   "invalid_shortcuts": [
     "renderer sees archival evidence/source hashes",
     "TN explicitly labeled foreign/mismatched/negative",
+    "T/TN have unequal target scene-note coverage",
     "DB reinforcement author writes target-function key after seeing thick packets",
-    "PASS inferred from packet schema validation",
+    "PASS inferred from packet/schema validation",
     "bulk 98-work thick authoring before valid replication PASS and developer acceptance"
   ]
 }
