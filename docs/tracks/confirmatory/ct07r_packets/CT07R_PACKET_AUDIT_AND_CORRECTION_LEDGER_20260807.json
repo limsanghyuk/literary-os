@@ -1,0 +1,49 @@
+{
+  "schema": "CT07R_PACKET_AUDIT_AND_CORRECTION_LEDGER_V1",
+  "date": "2026-08-07",
+  "status": "SEALED_PACKET_RETAINED_DERIVED_CORRECTIONS_ONLY",
+  "sealed_packet_commit": "a287bac4754f5a93e55082432ef1e30d1ecca043",
+  "sealed_packet_path": "docs/tracks/confirmatory/ct07r_packets/CT07R_thick_correct_packets.jsonl",
+  "semantic_packet_mutated": false,
+  "known_findings": [
+    {
+      "id": "CT07R-PKT-001",
+      "severity": "ERROR_PROVENANCE_FK",
+      "work_id": "101번째프로포즈",
+      "seq_id": "101번째프로포즈_11_S07",
+      "location": "info_shift[0].evidence_refs",
+      "observed": "101번째프로포포즈_11:SceneCard[47]",
+      "expected": "101번째프로포즈_11:SceneCard[47]",
+      "class": "DETERMINISTIC_TYPO",
+      "semantic_change": false,
+      "action": "do not rewrite sealed packet; apply correction to derived validated copy and evidence/FK audit; renderer payload strips evidence refs",
+      "rollout_effect": "does not invalidate thick semantic content; blocks claiming packet provenance-integrity PASS until correction is applied in derived copy"
+    },
+    {
+      "id": "CT07R-PKT-002",
+      "severity": "EXPERIMENT_VALIDITY",
+      "location": "renderer materialization",
+      "observed": "archival packets contain donor identity, provenance and source/evidence references",
+      "expected": "renderer consumes sanitized neutral target-shaped payload",
+      "class": "PRESENTATION_CONFOUND",
+      "semantic_change": false,
+      "action": "use CT07R_RENDER_PAYLOAD_CONTRACT_V1.json; archival packet remains unchanged"
+    },
+    {
+      "id": "CT07R-PKT-003",
+      "severity": "EXPERIMENT_VALIDITY",
+      "location": "target-function key",
+      "observed": "no independently authored and sealed CT07R target-function key found at audit time",
+      "expected": "independent key author blind to thick packets seals target-function key before rendering",
+      "class": "MISSING_PREREQUISITE",
+      "semantic_change": false,
+      "action": "block rendering/scoring gate decision until independent key exists"
+    }
+  ],
+  "audit_rules": [
+    "sealed source-grounded semantic packet is historical evidence and is never silently edited",
+    "deterministic metadata/provenance correction is recorded here and applied only to derived validated copies",
+    "renderer payload never contains archival provenance",
+    "no PASS/FAIL may be produced before independent key + sanitized blind render + blind scoring"
+  ]
+}
