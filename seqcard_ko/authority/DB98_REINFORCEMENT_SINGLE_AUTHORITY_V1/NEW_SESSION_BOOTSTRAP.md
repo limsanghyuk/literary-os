@@ -1,6 +1,8 @@
 # DB98 Reinforcement — New Session Bootstrap
 
 Authority: `DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1`  
+Method version: `1.0.0`  
+Active schema version: `1.0.1`  
 Status: `READ_FIRST_AFTER_ROOT_POINTER`
 
 ## 1. Mandatory read order
@@ -9,14 +11,17 @@ A new session continuing DB98 reinforcement must read exactly in this order:
 
 1. repository root `DB98_REINFORCEMENT_CURRENT_AUTHORITY_POINTER.json`
 2. `seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_MASTER_AUTHORITY_V1.md`
-3. `seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/schemas/DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1.json`
-4. `seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_EXECUTION_AND_VALIDATION_V1.md`
-5. `seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_WORK_INDEX_V1.json`
-6. this file
+3. `seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/schemas/DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1_0_1.json`
+4. `seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/SCHEMA_CHANGELOG.md`
+5. `seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_EXECUTION_AND_VALIDATION_V1.md`
+6. `seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_WORK_INDEX_V1.json`
+7. this file
 
 Then read the active Stage01–04 core authority/pointer declared by the actual working DB package.
 
 Do **not** start by reconstructing the method from old chats, V1–V10 history, provider manuals, or old EXT6/PHASE02 queues.
+
+The old schema file `DB98_REINFORCEMENT_EXACT_SCHEMA_REGISTRY_V1.json` is historical after schema hotfix 1.0.1 and must not be used for new authoring.
 
 ---
 
@@ -49,15 +54,17 @@ Read `DB98_REINFORCEMENT_WORK_INDEX_V1.json` and answer internally:
 - What is the baseline candidate package/SHA?
 - Does the actual supplied DB match it?
 - What active core authority does the supplied DB declare?
-- Is there a newer explicitly authorized reinforcement authority?
+- Is there a newer explicitly authorized reinforcement authority/schema?
 
 If the global state is still:
 
 `FULL_THICK_ROLLOUT_BLOCKED_PENDING_CT07_REPLICATION`
 
-then **do not begin bulk work reinforcement**.
+then **do not begin bulk thick semantic authoring**.
 
-The next work is the CT-07 replication + mismatched-thick negative control, not legacy `38사기동대 EXT6 → PHASE02` continuation.
+Allowed before the gate: baseline synchronization, hygiene/leakage audit, deterministic planner-input reassembly, deterministic boundary-negative tooling, validator work, and CT-07 replication preparation/execution.
+
+The next semantic-gate work is CT-07 replication + mismatched-thick negative control, not legacy `38사기동대 EXT6 → PHASE02` continuation.
 
 ---
 
@@ -70,7 +77,7 @@ Only after:
 3. developer acceptance,
 4. work index and root pointer updated to `FULL_THICK_ROLLOUT_AUTHORIZED`,
 
-may the session select the first `READY` work from `authority_order`.
+may the session select the first `READY` work from `authority_order` for full thick authoring.
 
 Then load only that target's:
 
