@@ -67,6 +67,7 @@ python docs/tracks/confirmatory/artifacts/audit_recompute.py --root C:\claude
 
 ```
 python docs/tracks/confirmatory/artifacts/ct07r/CT07R_analyze.py --run docs/tracks/confirmatory/artifacts/ct07r
+python docs/tracks/confirmatory/artifacts/ct07r/CT07R_posthoc_cat5.py --run docs/tracks/confirmatory/artifacts/ct07r
 ```
 채점 결과(`scores/scorer*.json`) + `BLIND_MAP.json` + `element_labels.json` 셋만 읽어
 보고서 §2~§6의 모든 수치를 다시 계산한다. **정답표 원문·렌더 원문 없이 닫힌다** — 채점이 이미

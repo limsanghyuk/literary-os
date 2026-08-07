@@ -1,0 +1,592 @@
+{
+ "prespecified": false,
+ "by_cat5": {
+  "character": {
+   "n": 10,
+   "A": 0.5,
+   "B": 4.5,
+   "T": 2.6666666666666665,
+   "TN": 0.3333333333333333,
+   "r_T": 0.5416666666666666,
+   "D_N": 2.333333333333333
+  },
+  "goal": {
+   "n": 10,
+   "A": 0.0,
+   "B": 4.0,
+   "T": 2.5,
+   "TN": 0.0,
+   "r_T": 0.625,
+   "D_N": 2.5
+  },
+  "conflict": {
+   "n": 10,
+   "A": 0.0,
+   "B": 3.0,
+   "T": 1.5,
+   "TN": 0.5,
+   "r_T": 0.5,
+   "D_N": 1.0
+  },
+  "info": {
+   "n": 10,
+   "A": 0.3333333333333333,
+   "B": 2.6666666666666665,
+   "T": 3.6666666666666665,
+   "TN": 0.0,
+   "r_T": 1.4285714285714286,
+   "D_N": 3.6666666666666665
+  },
+  "link": {
+   "n": 10,
+   "A": 0.0,
+   "B": 2.1666666666666665,
+   "T": 3.1666666666666665,
+   "TN": 0.0,
+   "r_T": 1.4615384615384617,
+   "D_N": 3.1666666666666665
+  }
+ },
+ "by_label2": {
+  "씬내부": {
+   "n": 10,
+   "A": 0.20833333333333334,
+   "B": 3.638888888888889,
+   "T": 2.1527777777777777,
+   "TN": 0.20833333333333334,
+   "r_T": 0.5668016194331984,
+   "D_N": 1.9444444444444444
+  },
+  "배치관계": {
+   "n": 10,
+   "A": 0.0,
+   "B": 2.375,
+   "T": 3.2916666666666665,
+   "TN": 0.0,
+   "r_T": 1.3859649122807016,
+   "D_N": 3.2916666666666665
+  }
+ },
+ "renders": [
+  {
+   "render_id": "R01",
+   "work": "38사기동대",
+   "episode": 12,
+   "scene_no": 61,
+   "arm": "T",
+   "scores": [
+    4,
+    4,
+    4
+   ],
+   "mean": 4
+  },
+  {
+   "render_id": "R02",
+   "work": "38사기동대",
+   "episode": 8,
+   "scene_no": 88,
+   "arm": "TN",
+   "scores": [
+    0,
+    0,
+    0
+   ],
+   "mean": 0
+  },
+  {
+   "render_id": "R03",
+   "work": "38사기동대",
+   "episode": 8,
+   "scene_no": 88,
+   "arm": "B",
+   "scores": [
+    2,
+    2,
+    3
+   ],
+   "mean": 2.3333333333333335
+  },
+  {
+   "render_id": "R04",
+   "work": "38사기동대",
+   "episode": 5,
+   "scene_no": 67,
+   "arm": "B",
+   "scores": [
+    2,
+    2,
+    2
+   ],
+   "mean": 2
+  },
+  {
+   "render_id": "R05",
+   "work": "101번째프로포즈",
+   "episode": 5,
+   "scene_no": 34,
+   "arm": "B",
+   "scores": [
+    1,
+    2,
+    2
+   ],
+   "mean": 1.6666666666666667
+  },
+  {
+   "render_id": "R06",
+   "work": "38사기동대",
+   "episode": 15,
+   "scene_no": 56,
+   "arm": "B",
+   "scores": [
+    3,
+    3,
+    4
+   ],
+   "mean": 3.3333333333333335
+  },
+  {
+   "render_id": "R07",
+   "work": "38사기동대",
+   "episode": 12,
+   "scene_no": 61,
+   "arm": "TN",
+   "scores": [
+    0,
+    0,
+    0
+   ],
+   "mean": 0
+  },
+  {
+   "render_id": "R08",
+   "work": "101번째프로포즈",
+   "episode": 11,
+   "scene_no": 51,
+   "arm": "A",
+   "scores": [
+    0,
+    0,
+    0
+   ],
+   "mean": 0
+  },
+  {
+   "render_id": "R09",
+   "work": "101번째프로포즈",
+   "episode": 8,
+   "scene_no": 39,
+   "arm": "T",
+   "scores": [
+    3,
+    3,
+    3
+   ],
+   "mean": 3
+  },
+  {
+   "render_id": "R10",
+   "work": "38사기동대",
+   "episode": 12,
+   "scene_no": 61,
+   "arm": "A",
+   "scores": [
+    0,
+    0,
+    0
+   ],
+   "mean": 0
+  },
+  {
+   "render_id": "R11",
+   "work": "101번째프로포즈",
+   "episode": 8,
+   "scene_no": 39,
+   "arm": "B",
+   "scores": [
+    3,
+    3,
+    2
+   ],
+   "mean": 2.6666666666666665
+  },
+  {
+   "render_id": "R12",
+   "work": "101번째프로포즈",
+   "episode": 5,
+   "scene_no": 34,
+   "arm": "T",
+   "scores": [
+    4,
+    4,
+    4
+   ],
+   "mean": 4
+  },
+  {
+   "render_id": "R13",
+   "work": "101번째프로포즈",
+   "episode": 2,
+   "scene_no": 28,
+   "arm": "A",
+   "scores": [
+    0,
+    0,
+    0
+   ],
+   "mean": 0
+  },
+  {
+   "render_id": "R14",
+   "work": "101번째프로포즈",
+   "episode": 8,
+   "scene_no": 39,
+   "arm": "A",
+   "scores": [
+    0,
+    0,
+    0
+   ],
+   "mean": 0
+  },
+  {
+   "render_id": "R15",
+   "work": "101번째프로포즈",
+   "episode": 11,
+   "scene_no": 51,
+   "arm": "T",
+   "scores": [
+    3,
+    2,
+    2
+   ],
+   "mean": 2.3333333333333335
+  },
+  {
+   "render_id": "R16",
+   "work": "101번째프로포즈",
+   "episode": 11,
+   "scene_no": 51,
+   "arm": "B",
+   "scores": [
+    4,
+    4,
+    4
+   ],
+   "mean": 4
+  },
+  {
+   "render_id": "R17",
+   "work": "101번째프로포즈",
+   "episode": 14,
+   "scene_no": 42,
+   "arm": "A",
+   "scores": [
+    0,
+    0,
+    1
+   ],
+   "mean": 0.3333333333333333
+  },
+  {
+   "render_id": "R18",
+   "work": "38사기동대",
+   "episode": 12,
+   "scene_no": 61,
+   "arm": "B",
+   "scores": [
+    4,
+    4,
+    4
+   ],
+   "mean": 4
+  },
+  {
+   "render_id": "R19",
+   "work": "101번째프로포즈",
+   "episode": 5,
+   "scene_no": 34,
+   "arm": "A",
+   "scores": [
+    0,
+    0,
+    0
+   ],
+   "mean": 0
+  },
+  {
+   "render_id": "R20",
+   "work": "38사기동대",
+   "episode": 5,
+   "scene_no": 67,
+   "arm": "T",
+   "scores": [
+    3,
+    3,
+    4
+   ],
+   "mean": 3.3333333333333335
+  },
+  {
+   "render_id": "R21",
+   "work": "38사기동대",
+   "episode": 5,
+   "scene_no": 67,
+   "arm": "A",
+   "scores": [
+    0,
+    0,
+    0
+   ],
+   "mean": 0
+  },
+  {
+   "render_id": "R22",
+   "work": "38사기동대",
+   "episode": 2,
+   "scene_no": 39,
+   "arm": "T",
+   "scores": [
+    1,
+    1,
+    2
+   ],
+   "mean": 1.3333333333333333
+  },
+  {
+   "render_id": "R23",
+   "work": "38사기동대",
+   "episode": 15,
+   "scene_no": 56,
+   "arm": "T",
+   "scores": [
+    3,
+    3,
+    3
+   ],
+   "mean": 3
+  },
+  {
+   "render_id": "R24",
+   "work": "101번째프로포즈",
+   "episode": 5,
+   "scene_no": 34,
+   "arm": "TN",
+   "scores": [
+    0,
+    0,
+    0
+   ],
+   "mean": 0
+  },
+  {
+   "render_id": "R25",
+   "work": "101번째프로포즈",
+   "episode": 14,
+   "scene_no": 42,
+   "arm": "B",
+   "scores": [
+    3,
+    3,
+    4
+   ],
+   "mean": 3.3333333333333335
+  },
+  {
+   "render_id": "R26",
+   "work": "101번째프로포즈",
+   "episode": 2,
+   "scene_no": 28,
+   "arm": "B",
+   "scores": [
+    5,
+    5,
+    5
+   ],
+   "mean": 5
+  },
+  {
+   "render_id": "R27",
+   "work": "101번째프로포즈",
+   "episode": 14,
+   "scene_no": 42,
+   "arm": "TN",
+   "scores": [
+    0,
+    0,
+    0
+   ],
+   "mean": 0
+  },
+  {
+   "render_id": "R28",
+   "work": "38사기동대",
+   "episode": 15,
+   "scene_no": 56,
+   "arm": "A",
+   "scores": [
+    0,
+    0,
+    0
+   ],
+   "mean": 0
+  },
+  {
+   "render_id": "R29",
+   "work": "38사기동대",
+   "episode": 15,
+   "scene_no": 56,
+   "arm": "TN",
+   "scores": [
+    0,
+    0,
+    0
+   ],
+   "mean": 0
+  },
+  {
+   "render_id": "R30",
+   "work": "101번째프로포즈",
+   "episode": 8,
+   "scene_no": 39,
+   "arm": "TN",
+   "scores": [
+    0,
+    0,
+    0
+   ],
+   "mean": 0
+  },
+  {
+   "render_id": "R31",
+   "work": "101번째프로포즈",
+   "episode": 11,
+   "scene_no": 51,
+   "arm": "TN",
+   "scores": [
+    1,
+    1,
+    1
+   ],
+   "mean": 1
+  },
+  {
+   "render_id": "R32",
+   "work": "101번째프로포즈",
+   "episode": 14,
+   "scene_no": 42,
+   "arm": "T",
+   "scores": [
+    1,
+    1,
+    2
+   ],
+   "mean": 1.3333333333333333
+  },
+  {
+   "render_id": "R33",
+   "work": "38사기동대",
+   "episode": 8,
+   "scene_no": 88,
+   "arm": "T",
+   "scores": [
+    3,
+    3,
+    2
+   ],
+   "mean": 2.6666666666666665
+  },
+  {
+   "render_id": "R34",
+   "work": "38사기동대",
+   "episode": 5,
+   "scene_no": 67,
+   "arm": "TN",
+   "scores": [
+    0,
+    0,
+    0
+   ],
+   "mean": 0
+  },
+  {
+   "render_id": "R35",
+   "work": "38사기동대",
+   "episode": 2,
+   "scene_no": 39,
+   "arm": "A",
+   "scores": [
+    1,
+    1,
+    2
+   ],
+   "mean": 1.3333333333333333
+  },
+  {
+   "render_id": "R36",
+   "work": "101번째프로포즈",
+   "episode": 2,
+   "scene_no": 28,
+   "arm": "TN",
+   "scores": [
+    0,
+    0,
+    0
+   ],
+   "mean": 0
+  },
+  {
+   "render_id": "R37",
+   "work": "38사기동대",
+   "episode": 8,
+   "scene_no": 88,
+   "arm": "A",
+   "scores": [
+    0,
+    0,
+    0
+   ],
+   "mean": 0
+  },
+  {
+   "render_id": "R38",
+   "work": "38사기동대",
+   "episode": 2,
+   "scene_no": 39,
+   "arm": "TN",
+   "scores": [
+    0,
+    1,
+    1
+   ],
+   "mean": 0.6666666666666666
+  },
+  {
+   "render_id": "R39",
+   "work": "38사기동대",
+   "episode": 2,
+   "scene_no": 39,
+   "arm": "B",
+   "scores": [
+    5,
+    4,
+    4
+   ],
+   "mean": 4.333333333333333
+  },
+  {
+   "render_id": "R40",
+   "work": "101번째프로포즈",
+   "episode": 2,
+   "scene_no": 28,
+   "arm": "T",
+   "scores": [
+    2,
+    2,
+    2
+   ],
+   "mean": 2
+  }
+ ]
+}
