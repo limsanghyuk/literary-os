@@ -1,0 +1,27 @@
+{
+  "schema": "DB98_REINFORCEMENT_WORK_INDEX_POST_CT07R_OVERLAY_V1",
+  "version": "1.0.0",
+  "status": "ACTIVE_GLOBAL_STATE_OVERLAY",
+  "parent_work_index": "seqcard_ko/authority/DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1/DB98_REINFORCEMENT_WORK_INDEX_V1.json",
+  "parent_work_index_blob_sha": "ffc1c99087096f8ffcab27c8e921477f0c8fa3dd",
+  "reason": "preserve sealed pre-replication baseline/work order while overriding only stale global gate fields after CT-07R PASS and developer acceptance",
+  "global_overrides": {
+    "global_rollout_state": "FULL_THICK_ROLLOUT_AUTHORIZED",
+    "next_authoritative_action": "SELECT_FIRST_ELIGIBLE_AUTHORITY_ORDER_WORK_AND_BEGIN_THICK_SEQUENCE_AUTHORING_PER_ACTIVE_AUTHORITY",
+    "replication_status": "CT07R_PASS_NOT_STRONG_REPLICATION",
+    "developer_acceptance": "DB98_THICK_SEQUENCE_ROLLOUT_ACCEPTANCE_20260807",
+    "active_thick_authority": "DB98_THICK_SEQUENCE_AUTHORING_AUTHORITY_V1"
+  },
+  "per_work_rule": "DO_NOT_OVERRIDE_PER_WORK_PROGRESS_HERE; use parent work index plus latest valid work checkpoint",
+  "eligibility_rule": "in authority_order choose first work not FRESH_EXTRACT_PASS and not held, after baseline re-verification; existing pre-gate preparation may be preserved if hashes validate",
+  "holds_preserved": true,
+  "stage01_04_protection_preserved": true,
+  "canonical_auto_promotion": false,
+  "state_precedence": [
+    "root pointer",
+    "this global overlay for global rollout state",
+    "CT07R_CURRENT_STATUS for experiment result",
+    "parent work index for authority_order and baseline inventory",
+    "latest work checkpoint for per-work progress"
+  ]
+}
