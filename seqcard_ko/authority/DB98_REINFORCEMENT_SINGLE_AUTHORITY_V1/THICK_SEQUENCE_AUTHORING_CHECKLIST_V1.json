@@ -1,0 +1,168 @@
+{
+  "schema": "DB98_THICK_SEQUENCE_AUTHORING_CHECKLIST_V1",
+  "version": "1.0.0",
+  "status": "ACTIVE",
+  "authority": "DB98_THICK_SEQUENCE_AUTHORING_AUTHORITY_V1",
+  "scope": "DB98_THICK_SEQUENCE_ROLLOUT",
+  "preflight": [
+    "read_root_authority_pointer",
+    "read_master_and_active_correction",
+    "read_thick_sequence_authoring_authority",
+    "read_active_exact_schema",
+    "read_thick_sequence_execution_contract",
+    "read_ct07r_current_status_and_result",
+    "resolve_actual_db_package",
+    "verify_baseline_package_sha256",
+    "verify_active_work_index_sha256",
+    "verify_work_episode_scenecard_totals",
+    "verify_active_stage01_04_authority",
+    "verify_target_source_and_sourcelock_hashes",
+    "verify_target_authored_seq_membership",
+    "load_latest_target_checkpoint_if_present"
+  ],
+  "work_selection": {
+    "rule": "authority_order_first_eligible_unfinished_work_unless_developer_overrides",
+    "new_work_requires_checkpoint_before_semantic_write": true,
+    "resume_uses_checkpoint_next_action": true
+  },
+  "block_cadence": {
+    "episodes_per_block_max": 8,
+    "episode_reading_quarters": 4,
+    "light_audit_after_each_episode": true,
+    "strong_audit_after_each_block": true,
+    "checkpoint_after_each_block": true
+  },
+  "episode_read_order": [
+    "existing_episode_arc_and_indexes_for_orientation_only",
+    "original_source_quarter_1",
+    "original_source_quarter_2",
+    "original_source_quarter_3",
+    "original_source_quarter_4",
+    "boundary_context_review",
+    "sequence_member_scene_reread",
+    "source_verification_for_cross_episode_links"
+  ],
+  "sequence_authoring": {
+    "mental_model": "INBOUND_TO_TRANSFORMATION_TO_OUTBOUND",
+    "required_fields_separable": [
+      "cast",
+      "event",
+      "info_shift",
+      "plant_payoff",
+      "scene_notes"
+    ],
+    "exact_schema": "DB98_THICK_SEQUENCE_EXTENSION_V1",
+    "do_not_add_extra_keys": true,
+    "preserve_existing_member_scene_nos": true,
+    "scene_notes_exact_member_scene_coverage": true,
+    "source_first_authorship": true,
+    "existing_analysis_is_index_not_source_substitute": true
+  },
+  "semantic_questions": {
+    "inbound": [
+      "what_state_enters_from_previous_scene_or_sequence",
+      "what_objective_pressure_secret_misbelief_clue_or_unresolved_action_is_active"
+    ],
+    "cast": [
+      "who_functionally_participates",
+      "what_each_participant_wants_does_resists_enables_witnesses_or_causes"
+    ],
+    "event": [
+      "what_concrete_dramatic_event_or_interaction_actually_happens"
+    ],
+    "info_shift": [
+      "who_knows_or_believes_what_before",
+      "what_changes_after",
+      "what_mode_correctly_describes_the_change"
+    ],
+    "plant_payoff": [
+      "what_plant_payoff_callback_reveal_escalation_or_link_is_source_supported",
+      "whether_existing_payoff_or_cross_edge_truth_should_be_reused"
+    ],
+    "scene_notes": [
+      "what_each_scene_must_accomplish",
+      "what_it_receives_when_relevant",
+      "what_it_changes",
+      "what_it_passes_forward_when_relevant",
+      "why_its_position_matters_when_relevant"
+    ],
+    "outbound": [
+      "what_is_different_after_the_sequence",
+      "what_must_next_scene_or_sequence_inherit"
+    ]
+  },
+  "episode_light_audit": [
+    "schema_parse_and_exact_keyset_pass",
+    "seq_fk_and_membership_pass",
+    "scene_note_coverage_pass",
+    "cast_function_source_fidelity",
+    "event_specificity",
+    "info_state_continuity",
+    "plant_payoff_truth_consistency",
+    "adjacent_sequence_handoff_visibility",
+    "repetition_scan"
+  ],
+  "block_strong_audit": [
+    "block_schema_fk_coverage_pass",
+    "stage01_04_immutability_hash_pass",
+    "cross_episode_info_continuity_review",
+    "cross_episode_plant_payoff_link_review",
+    "character_function_continuity_review",
+    "cross_sequence_cross_work_repetition_scan",
+    "source_like_recitation_leakage_scan",
+    "planner_input_future_leakage_pass",
+    "runtime_projection_coverage_pass",
+    "checkpoint_hashes_and_next_action_written"
+  ],
+  "mandatory_companion_wiring": {
+    "R5_PlannerInputRecord": {
+      "required": true,
+      "future_leakage_forbidden": true,
+      "human_episode_arc_and_thick_sequence_are_targets_not_inputs": true
+    },
+    "R8_RuntimeSceneProjection": {
+      "required": true,
+      "canonical_scenecard_modified": false,
+      "consumer_path_must_exist": true
+    }
+  },
+  "quality_emphasis_from_ct07r": {
+    "placement_neighbor_relation": "highest_measured_comparative_strength_r_1_386",
+    "information_category": "posthoc_r_1_429",
+    "link_category": "posthoc_r_1_462",
+    "within_scene": "human_scenecard_still_stronger_r_0_567",
+    "five_category_table_is_field_ablation": false,
+    "all_five_fields_remain_required_until_ablation": true
+  },
+  "forbidden": [
+    "replace_or_expand_canonical_9_key_scenecard",
+    "change_human_authored_seq_member_scene_nos",
+    "delete_thin_authored_seq",
+    "fuse_five_thick_fields",
+    "invent_semantics_to_fill_density",
+    "copy_long_source_dialogue_or_action",
+    "use_python_to_invent_literary_meaning",
+    "drop_fields_based_on_category_score_decomposition",
+    "claim_ct07_r_1_63_replicated",
+    "freeze_thick_episode_schema_before_episode_to_sequence_diagnostic",
+    "claim_work_complete_without_fresh_extract_validation"
+  ],
+  "holds": {
+    "source_problem": "HOLD_SOURCE",
+    "authority_or_baseline_drift": "HOLD_AUTHORITY_DRIFT",
+    "semantic_quality_failure": "HOLD_SEMANTIC_FAILURE"
+  },
+  "work_completion_requires": [
+    "all_eligible_sequences_authored",
+    "all_episode_light_audits_pass",
+    "all_block_strong_audits_pass",
+    "R5_wiring_validated",
+    "R8_wiring_validated",
+    "semantic_source_audit_pass",
+    "stage01_04_immutability_pass",
+    "non_target_immutability_pass",
+    "checkpoint_and_work_index_updated",
+    "integrated_db_validation_pass",
+    "fresh_extract_revalidation_pass"
+  ]
+}
