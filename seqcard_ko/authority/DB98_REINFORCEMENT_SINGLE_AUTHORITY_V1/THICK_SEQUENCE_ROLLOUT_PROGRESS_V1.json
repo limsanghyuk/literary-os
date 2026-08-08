@@ -1,0 +1,49 @@
+{
+  "schema": "DB98_THICK_SEQUENCE_ROLLOUT_PROGRESS_V1",
+  "status": "ACTIVE_PROGRESS_LEDGER",
+  "authority_id": "DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1",
+  "thick_authority_id": "DB98_THICK_SEQUENCE_AUTHORING_AUTHORITY_V1",
+  "updated_at": "2026-08-08T14:42:00+09:00",
+  "completed_works_count": 2,
+  "completed_works": [
+    {
+      "work_id": "가을동화",
+      "episodes": 16,
+      "human_sequences": 114,
+      "thick_records": 114,
+      "canonical_scenes": 914,
+      "scene_notes": 914,
+      "planner_inputs": 16,
+      "runtime_scene_projections": 914,
+      "work_state": "FRESH_EXTRACT_PASS",
+      "integrated_package": "DB98_STAGE04_98WORKS_THICK_GAEULDONGHWA_20260808.zip",
+      "integrated_package_sha256": "4dc54ebf748ae9e5454dd2bd686bde2a05878f341861842d5f0f4677b60fff65"
+    },
+    {
+      "work_id": "강남엄마따라잡기",
+      "episodes": 18,
+      "human_sequences": 154,
+      "thick_records": 154,
+      "canonical_scenes": 1246,
+      "scene_notes": 1246,
+      "planner_inputs": 18,
+      "runtime_scene_projections": 1246,
+      "blocks": ["EP01-08 PASS", "EP09-16 PASS", "EP17-18 PASS"],
+      "schema_enum_fk_errors": 0,
+      "semantic_exact_duplicate_classes": 0,
+      "source_verbatim_16char_hits": 0,
+      "parent_files_verified": 32788,
+      "parent_files_changed": 0,
+      "work_state": "FRESH_EXTRACT_PASS",
+      "integrated_package": "DB98_STAGE04_98WORKS_THICK_GAEULDONGHWA_GANGNAMMOM_20260808.zip",
+      "integrated_package_sha256": "f4483a4eb45125b2761bb22bf95ea8492f2b5c56cdeaa2b3bf941f3fd7065bb2",
+      "patch_package": "GANGNAMMOM_THICK_SEQUENCE_COMPLETE_20260808.zip",
+      "patch_sha256": "b413cee7da580b2eb633bfc2b90c32ed532414f2dca6f93f5d3f8e03435dd57e"
+    }
+  ],
+  "current_integrated_package": "DB98_STAGE04_98WORKS_THICK_GAEULDONGHWA_GANGNAMMOM_20260808.zip",
+  "current_integrated_package_sha256": "f4483a4eb45125b2761bb22bf95ea8492f2b5c56cdeaa2b3bf941f3fd7065bb2",
+  "next_ganada_target": "개와늑대의시간",
+  "next_action": "VERIFY_CURRENT_INTEGRATED_PACKAGE_THEN_BEGIN_개와늑대의시간_BLOCK_01_PER_ACTIVE_THICK_AUTHORITY",
+  "resume_rule": "use this progress ledger for completed-work rollout state, then load the target work checkpoint if present; never infer completion from chat history"
+}
