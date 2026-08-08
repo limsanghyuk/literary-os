@@ -1,11 +1,12 @@
 {
   "schema": "DB98_THICK_SEQUENCE_ROLLOUT_PROGRESS_V1",
-  "status": "ACTIVE_PROGRESS_LEDGER",
+  "status": "ACTIVE_PROGRESS_LEDGER_WITH_GRAIN_GATE",
   "authority_id": "DB98_REINFORCEMENT_SINGLE_AUTHORITY_V1",
   "thick_authority_id": "DB98_THICK_SEQUENCE_AUTHORING_AUTHORITY_V1",
-  "updated_at": "2026-08-08T14:42:00+09:00",
-  "completed_works_count": 2,
-  "completed_works": [
+  "active_grain_correction": "DB98_THICK_SEQUENCE_GRAIN_QUALITY_CORRECTION_V1_0_1",
+  "updated_at": "2026-08-08T14:49:00+09:00",
+  "post_grain_gate_completed_works_count": 0,
+  "works": [
     {
       "work_id": "가을동화",
       "episodes": 16,
@@ -15,9 +16,24 @@
       "scene_notes": 914,
       "planner_inputs": 16,
       "runtime_scene_projections": 914,
-      "work_state": "FRESH_EXTRACT_PASS",
-      "integrated_package": "DB98_STAGE04_98WORKS_THICK_GAEULDONGHWA_20260808.zip",
-      "integrated_package_sha256": "4dc54ebf748ae9e5454dd2bd686bde2a05878f341861842d5f0f4677b60fff65"
+      "state": "GRAIN_REPAIR_FRESH_EXTRACT_PASS_AWAITING_5_FIELD_ABLATION",
+      "counted_complete": false,
+      "grain_reference_episode": 1,
+      "grain_repair": {
+        "source_line_range_coverage": "100_PERCENT_ALL_EPISODES",
+        "six_key_hash_coverage": "100_PERCENT_ALL_THICK_RECORDS",
+        "multi_episode_semantic_threads": 36,
+        "birth_swap_thread_span": [1, 16],
+        "semantic_exact_duplicate_sentences": 0,
+        "source_verbatim_15char_hits": 0,
+        "distribution_bad_runs": 0,
+        "r8_accounting": "DERIVED_NOT_INDEPENDENT_AUTHORSHIP"
+      },
+      "current_integrated_package": "DB98_STAGE04_98WORKS_THICK_GAEULDONGHWA_GRAIN_REPAIRED_GANGNAMMOM_20260808.zip",
+      "current_integrated_package_sha256": "e9754ea64424d2dd25a1f5128c2ad921a31be932fc6a7298bb0b210d2cc71232",
+      "repair_patch": "GAEULDONGHWA_THICK_SEQUENCE_GRAIN_REPAIRED_20260808.zip",
+      "repair_patch_sha256": "43d19bbf97d21fc9057c9904c72f80e6dd0f1f42feb688d336f2a624133df3f8",
+      "next_gate": "ONE_5_FIELD_ABLATION"
     },
     {
       "work_id": "강남엄마따라잡기",
@@ -28,22 +44,15 @@
       "scene_notes": 1246,
       "planner_inputs": 18,
       "runtime_scene_projections": 1246,
-      "blocks": ["EP01-08 PASS", "EP09-16 PASS", "EP17-18 PASS"],
-      "schema_enum_fk_errors": 0,
-      "semantic_exact_duplicate_classes": 0,
-      "source_verbatim_16char_hits": 0,
-      "parent_files_verified": 32788,
-      "parent_files_changed": 0,
-      "work_state": "FRESH_EXTRACT_PASS",
-      "integrated_package": "DB98_STAGE04_98WORKS_THICK_GAEULDONGHWA_GANGNAMMOM_20260808.zip",
-      "integrated_package_sha256": "f4483a4eb45125b2761bb22bf95ea8492f2b5c56cdeaa2b3bf941f3fd7065bb2",
-      "patch_package": "GANGNAMMOM_THICK_SEQUENCE_COMPLETE_20260808.zip",
-      "patch_sha256": "b413cee7da580b2eb633bfc2b90c32ed532414f2dca6f93f5d3f8e03435dd57e"
+      "state": "PRE_GRAIN_CORRECTION_PROVISIONAL_FRESH_EXTRACT_PASS",
+      "counted_complete": false,
+      "reason": "authored before D-47/D-48 grain correction; preserved byte-for-byte in current accumulated package but not yet independently re-adjudicated under EP01-reference grain gate"
     }
   ],
-  "current_integrated_package": "DB98_STAGE04_98WORKS_THICK_GAEULDONGHWA_GANGNAMMOM_20260808.zip",
-  "current_integrated_package_sha256": "f4483a4eb45125b2761bb22bf95ea8492f2b5c56cdeaa2b3bf941f3fd7065bb2",
-  "next_ganada_target": "개와늑대의시간",
-  "next_action": "VERIFY_CURRENT_INTEGRATED_PACKAGE_THEN_BEGIN_개와늑대의시간_BLOCK_01_PER_ACTIVE_THICK_AUTHORITY",
-  "resume_rule": "use this progress ledger for completed-work rollout state, then load the target work checkpoint if present; never infer completion from chat history"
+  "current_integrated_package": "DB98_STAGE04_98WORKS_THICK_GAEULDONGHWA_GRAIN_REPAIRED_GANGNAMMOM_20260808.zip",
+  "current_integrated_package_sha256": "e9754ea64424d2dd25a1f5128c2ad921a31be932fc6a7298bb0b210d2cc71232",
+  "execution_pause": "NO_NEXT_WORK_BEFORE_GAEULDONGHWA_5_FIELD_ABLATION_ADJUDICATION",
+  "next_ganada_target": null,
+  "next_action": "RUN_ONE_5_FIELD_ABLATION_ON_REPAIRED_GAEULDONGHWA; AFTER_ADJUDICATION_REEVALUATE_PRE_GRAIN_WORKS_AND_NEXT_TARGET",
+  "resume_rule": "use this progress ledger plus active grain correction and latest valid work checkpoint; never infer completion from old structural/fresh-extract PASS or chat history"
 }
