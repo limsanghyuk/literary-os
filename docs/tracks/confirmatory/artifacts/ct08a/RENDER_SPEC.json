@@ -1,0 +1,609 @@
+{
+ "doc_id": "LOS-CT08A-RENDERSPEC-V1.0",
+ "authored": "2026-08-08",
+ "note": "블라인드 ID별 씬 개수 고시. 씬 수는 앵커의 구조 파라미터이며 같은 앵커의 5팔이 공유한다. 팔 정보는 포함하지 않는다. 렌더 에이전트에게 공개해도 무방하다.",
+ "rule": "총 행수 = 씬수 × 22~32행",
+ "n": 120,
+ "spec": {
+  "R001": {
+   "n_scene": 10,
+   "min_lines": 220,
+   "max_lines": 320
+  },
+  "R002": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R003": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R004": {
+   "n_scene": 7,
+   "min_lines": 154,
+   "max_lines": 224
+  },
+  "R005": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R006": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R007": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R008": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R009": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R010": {
+   "n_scene": 10,
+   "min_lines": 220,
+   "max_lines": 320
+  },
+  "R011": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R012": {
+   "n_scene": 7,
+   "min_lines": 154,
+   "max_lines": 224
+  },
+  "R013": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R014": {
+   "n_scene": 7,
+   "min_lines": 154,
+   "max_lines": 224
+  },
+  "R015": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R016": {
+   "n_scene": 6,
+   "min_lines": 132,
+   "max_lines": 192
+  },
+  "R017": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R018": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R019": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R020": {
+   "n_scene": 7,
+   "min_lines": 154,
+   "max_lines": 224
+  },
+  "R021": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R022": {
+   "n_scene": 10,
+   "min_lines": 220,
+   "max_lines": 320
+  },
+  "R023": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R024": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R025": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R026": {
+   "n_scene": 6,
+   "min_lines": 132,
+   "max_lines": 192
+  },
+  "R027": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R028": {
+   "n_scene": 7,
+   "min_lines": 154,
+   "max_lines": 224
+  },
+  "R029": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R030": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R031": {
+   "n_scene": 7,
+   "min_lines": 154,
+   "max_lines": 224
+  },
+  "R032": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R033": {
+   "n_scene": 6,
+   "min_lines": 132,
+   "max_lines": 192
+  },
+  "R034": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R035": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R036": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R037": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R038": {
+   "n_scene": 7,
+   "min_lines": 154,
+   "max_lines": 224
+  },
+  "R039": {
+   "n_scene": 7,
+   "min_lines": 154,
+   "max_lines": 224
+  },
+  "R040": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R041": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R042": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R043": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R044": {
+   "n_scene": 10,
+   "min_lines": 220,
+   "max_lines": 320
+  },
+  "R045": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R046": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R047": {
+   "n_scene": 10,
+   "min_lines": 220,
+   "max_lines": 320
+  },
+  "R048": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R049": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R050": {
+   "n_scene": 6,
+   "min_lines": 132,
+   "max_lines": 192
+  },
+  "R051": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R052": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R053": {
+   "n_scene": 10,
+   "min_lines": 220,
+   "max_lines": 320
+  },
+  "R054": {
+   "n_scene": 10,
+   "min_lines": 220,
+   "max_lines": 320
+  },
+  "R055": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R056": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R057": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R058": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R059": {
+   "n_scene": 10,
+   "min_lines": 220,
+   "max_lines": 320
+  },
+  "R060": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R061": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R062": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R063": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R064": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R065": {
+   "n_scene": 7,
+   "min_lines": 154,
+   "max_lines": 224
+  },
+  "R066": {
+   "n_scene": 10,
+   "min_lines": 220,
+   "max_lines": 320
+  },
+  "R067": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R068": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R069": {
+   "n_scene": 6,
+   "min_lines": 132,
+   "max_lines": 192
+  },
+  "R070": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R071": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R072": {
+   "n_scene": 7,
+   "min_lines": 154,
+   "max_lines": 224
+  },
+  "R073": {
+   "n_scene": 6,
+   "min_lines": 132,
+   "max_lines": 192
+  },
+  "R074": {
+   "n_scene": 6,
+   "min_lines": 132,
+   "max_lines": 192
+  },
+  "R075": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R076": {
+   "n_scene": 6,
+   "min_lines": 132,
+   "max_lines": 192
+  },
+  "R077": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R078": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R079": {
+   "n_scene": 7,
+   "min_lines": 154,
+   "max_lines": 224
+  },
+  "R080": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R081": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R082": {
+   "n_scene": 10,
+   "min_lines": 220,
+   "max_lines": 320
+  },
+  "R083": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R084": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R085": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R086": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R087": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R088": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R089": {
+   "n_scene": 7,
+   "min_lines": 154,
+   "max_lines": 224
+  },
+  "R090": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R091": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R092": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R093": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R094": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R095": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R096": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R097": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R098": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R099": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R100": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R101": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R102": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R103": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R104": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R105": {
+   "n_scene": 7,
+   "min_lines": 154,
+   "max_lines": 224
+  },
+  "R106": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R107": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R108": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R109": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R110": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R111": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R112": {
+   "n_scene": 6,
+   "min_lines": 132,
+   "max_lines": 192
+  },
+  "R113": {
+   "n_scene": 6,
+   "min_lines": 132,
+   "max_lines": 192
+  },
+  "R114": {
+   "n_scene": 7,
+   "min_lines": 154,
+   "max_lines": 224
+  },
+  "R115": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R116": {
+   "n_scene": 5,
+   "min_lines": 110,
+   "max_lines": 160
+  },
+  "R117": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  },
+  "R118": {
+   "n_scene": 7,
+   "min_lines": 154,
+   "max_lines": 224
+  },
+  "R119": {
+   "n_scene": 8,
+   "min_lines": 176,
+   "max_lines": 256
+  },
+  "R120": {
+   "n_scene": 9,
+   "min_lines": 198,
+   "max_lines": 288
+  }
+ }
+}

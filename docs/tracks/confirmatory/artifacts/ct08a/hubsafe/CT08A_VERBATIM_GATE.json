@@ -1,0 +1,993 @@
+{
+ "doc_id": "LOS-CT08A-VERBATIM-GATE-V1.0",
+ "threshold_chars": 16,
+ "rule": "원문 한 행 안에서 연속 16자 이상 일치 시 차단. 프롬프트 공급 문자열 유래는 면제.",
+ "note_doc_scope": "문서 범위 수치는 공백 제거 후 전 문서를 잇대어 만든 상한 참고값이다. 서술 끝 + 씬 표제 + 인물명이 붙어 원문 행 경계를 넘는 오탐이 섞이므로 차단 판정에 쓰지 않는다.",
+ "source_files": [
+  "가을동화_01.txt",
+  "가을동화_02.txt",
+  "가을동화_03.txt",
+  "가을동화_04.txt",
+  "가을동화_05.txt",
+  "가을동화_06.txt",
+  "가을동화_07.txt",
+  "가을동화_08.txt",
+  "가을동화_09.txt",
+  "가을동화_10.txt",
+  "가을동화_11.txt",
+  "가을동화_12.txt",
+  "가을동화_13.txt",
+  "가을동화_14.txt",
+  "가을동화_15.txt",
+  "가을동화_16.txt"
+ ],
+ "source_lines_ge_threshold": 5754,
+ "source_chars_normalized": 184012,
+ "renders_checked": 120,
+ "renders_blocked": 0,
+ "max_line_scope_overall": 0,
+ "max_line_scope_nonexempt_overall": 0,
+ "max_doc_scope_overall": 17,
+ "rows": [
+  {
+   "render": "R001.out.md",
+   "chars": 2026,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R002.out.md",
+   "chars": 1071,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R003.out.md",
+   "chars": 1674,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R004.out.md",
+   "chars": 1707,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R005.out.md",
+   "chars": 1448,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R006.out.md",
+   "chars": 2190,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R007.out.md",
+   "chars": 1908,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R008.out.md",
+   "chars": 1908,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R009.out.md",
+   "chars": 1837,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R010.out.md",
+   "chars": 1509,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R011.out.md",
+   "chars": 2138,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R012.out.md",
+   "chars": 1478,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R013.out.md",
+   "chars": 1502,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R014.out.md",
+   "chars": 1486,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R015.out.md",
+   "chars": 1045,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R016.out.md",
+   "chars": 1251,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R017.out.md",
+   "chars": 1697,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 16,
+   "line_hits": []
+  },
+  {
+   "render": "R018.out.md",
+   "chars": 1516,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R019.out.md",
+   "chars": 1453,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R020.out.md",
+   "chars": 1183,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R021.out.md",
+   "chars": 1264,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R022.out.md",
+   "chars": 2620,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R023.out.md",
+   "chars": 1788,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R024.out.md",
+   "chars": 1345,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R025.out.md",
+   "chars": 1454,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R026.out.md",
+   "chars": 943,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R027.out.md",
+   "chars": 1411,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R028.out.md",
+   "chars": 1146,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R029.out.md",
+   "chars": 1505,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R030.out.md",
+   "chars": 1174,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R031.out.md",
+   "chars": 1547,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R032.out.md",
+   "chars": 1401,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R033.out.md",
+   "chars": 1202,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R034.out.md",
+   "chars": 1198,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R035.out.md",
+   "chars": 1088,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R036.out.md",
+   "chars": 1187,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R037.out.md",
+   "chars": 1287,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R038.out.md",
+   "chars": 1117,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R039.out.md",
+   "chars": 974,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R040.out.md",
+   "chars": 856,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R041.out.md",
+   "chars": 2013,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R042.out.md",
+   "chars": 1820,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R043.out.md",
+   "chars": 1622,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R044.out.md",
+   "chars": 1818,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R045.out.md",
+   "chars": 1625,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R046.out.md",
+   "chars": 1357,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R047.out.md",
+   "chars": 1707,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R048.out.md",
+   "chars": 1266,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R049.out.md",
+   "chars": 1336,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R050.out.md",
+   "chars": 992,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R051.out.md",
+   "chars": 1867,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R052.out.md",
+   "chars": 1979,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R053.out.md",
+   "chars": 2262,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R054.out.md",
+   "chars": 1887,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R055.out.md",
+   "chars": 1166,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R056.out.md",
+   "chars": 1401,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R057.out.md",
+   "chars": 887,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R058.out.md",
+   "chars": 1564,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R059.out.md",
+   "chars": 1725,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R060.out.md",
+   "chars": 1530,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R061.out.md",
+   "chars": 956,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R062.out.md",
+   "chars": 831,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R063.out.md",
+   "chars": 1509,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R064.out.md",
+   "chars": 764,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R065.out.md",
+   "chars": 879,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R066.out.md",
+   "chars": 1451,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R067.out.md",
+   "chars": 1029,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R068.out.md",
+   "chars": 844,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R069.out.md",
+   "chars": 890,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R070.out.md",
+   "chars": 1169,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R071.out.md",
+   "chars": 1653,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R072.out.md",
+   "chars": 1218,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R073.out.md",
+   "chars": 1177,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R074.out.md",
+   "chars": 977,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R075.out.md",
+   "chars": 1565,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R076.out.md",
+   "chars": 1225,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R077.out.md",
+   "chars": 1160,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R078.out.md",
+   "chars": 1540,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R079.out.md",
+   "chars": 1219,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R080.out.md",
+   "chars": 1457,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R081.out.md",
+   "chars": 1719,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R082.out.md",
+   "chars": 1877,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R083.out.md",
+   "chars": 2196,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R084.out.md",
+   "chars": 1721,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R085.out.md",
+   "chars": 1882,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R086.out.md",
+   "chars": 1070,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R087.out.md",
+   "chars": 1494,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R088.out.md",
+   "chars": 1018,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R089.out.md",
+   "chars": 1124,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R090.out.md",
+   "chars": 1283,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R091.out.md",
+   "chars": 1729,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R092.out.md",
+   "chars": 1742,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R093.out.md",
+   "chars": 1208,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R094.out.md",
+   "chars": 1332,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R095.out.md",
+   "chars": 1351,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 17,
+   "line_hits": []
+  },
+  {
+   "render": "R096.out.md",
+   "chars": 1000,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R097.out.md",
+   "chars": 1450,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R098.out.md",
+   "chars": 1416,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R099.out.md",
+   "chars": 1190,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R100.out.md",
+   "chars": 1241,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R101.out.md",
+   "chars": 1631,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R102.out.md",
+   "chars": 1182,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R103.out.md",
+   "chars": 1264,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R104.out.md",
+   "chars": 1249,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R105.out.md",
+   "chars": 1931,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R106.out.md",
+   "chars": 721,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R107.out.md",
+   "chars": 1393,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R108.out.md",
+   "chars": 1246,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R109.out.md",
+   "chars": 1327,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R110.out.md",
+   "chars": 796,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R111.out.md",
+   "chars": 1996,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R112.out.md",
+   "chars": 1496,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R113.out.md",
+   "chars": 1230,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R114.out.md",
+   "chars": 1481,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R115.out.md",
+   "chars": 1517,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R116.out.md",
+   "chars": 1369,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R117.out.md",
+   "chars": 1525,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R118.out.md",
+   "chars": 1314,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R119.out.md",
+   "chars": 1506,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  },
+  {
+   "render": "R120.out.md",
+   "chars": 1777,
+   "max_line_scope": 0,
+   "max_line_scope_nonexempt": 0,
+   "max_doc_scope": 0,
+   "line_hits": []
+  }
+ ]
+}
