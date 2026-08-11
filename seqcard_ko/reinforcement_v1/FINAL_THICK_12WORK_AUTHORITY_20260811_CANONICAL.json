@@ -5,76 +5,33 @@
   "date": "2026-08-11",
   "scope": "reinforcement_v1 Thick Sequence for 12 works",
   "supersedes": "DB98_THICK_11WORK_CANONICAL_AUTHORITY_20260811",
-  "works": [
-    "경성스캔들",
-    "결혼못하는남자",
-    "공주가돌아왔다",
-    "내이름은김삼순",
-    "내여자친구는구미호",
-    "난폭한로맨스",
-    "강남엄마따라잡기",
-    "너의목소리가들려",
-    "개와늑대의시간",
-    "101번째프로포즈",
-    "가을동화",
-    "궁"
-  ],
+  "works": ["경성스캔들","결혼못하는남자","공주가돌아왔다","내이름은김삼순","내여자친구는구미호","난폭한로맨스","강남엄마따라잡기","너의목소리가들려","개와늑대의시간","101번째프로포즈","가을동화","궁"],
   "quality": {
     "main_pass": "12/12",
     "operational_threshold": 0.748,
     "canonical_11_mean_before_gung": 0.7826,
     "gung_main_diversity": 0.783,
-    "remaining_auxiliary_nonblocking": {
-      "내이름은김삼순": ["info다양도"],
-      "내여자친구는구미호": ["info다양도"],
-      "가을동화": ["info다양도"],
-      "궁": ["info다양도"]
-    }
+    "remaining_auxiliary_nonblocking": {"내이름은김삼순":["info다양도"],"내여자친구는구미호":["info다양도"],"가을동화":["info다양도"],"궁":["info다양도"]}
   },
-  "exact_schema": {
-    "status": "PASS",
-    "records": "1795/1795",
-    "errors": 0,
-    "additional_keys_allowed": false
-  },
-  "provenance": {
-    "status": "PASS",
-    "source_refs": 27197,
-    "source_refs_with_exact_line_range": 27197,
-    "hash_checks_actual_file_roles": 8975,
-    "errors": 0,
-    "six_hash_roles": "1795/1795"
-  },
+  "exact_schema": {"status":"PASS","records":"1795/1795","errors":0,"additional_keys_allowed":false},
+  "provenance": {"status":"PASS","source_refs":27197,"source_refs_with_exact_line_range":27197,"hash_checks_actual_file_roles":8975,"errors":0,"six_hash_roles":"1795/1795"},
   "semantic_quality": {
     "gung_direct_read_sample_audit": "24/24 PASS",
-    "gung_field_independence": {
-      "event_exact_stage02_pct": 0.0,
-      "cast_overlap_scene_notes_pct": 0.0,
-      "info_overlap_scene_notes_pct": 0.0
-    },
+    "gung_field_independence": {"event_exact_stage02_pct":0.0,"cast_overlap_scene_notes_pct":0.0,"info_overlap_scene_notes_pct":0.0},
     "gung_initial_candidate_superseded": true
   },
   "downstream_closure": {
+    "status": "PASS",
+    "planner_runtime_authority_id": "DB98_PLANNER_RUNTIME_12WORK_CANONICAL_PROFILE_V1_1_AUTHORITY_20260811",
+    "planner_coverage": "12/12 works / 203 episodes",
+    "runtime_coverage": "12/12 works / 203 episodes / 12979 scenes",
     "stale_runtime_active_files": 0,
-    "gung_runtime_scene_projection": "NOT_PRESENT_NOT_REQUIRED",
-    "gung_planner_input": "NOT_PRESENT_NOT_REQUIRED",
-    "existing_11work_runtime_state_preserved": true
+    "planner_runtime_errors": 0,
+    "planner_runtime_warnings": 0
   },
-  "work_manifests": {
-    "경성스캔들": "manifests/경성스캔들/reinforcement_manifest.json",
-    "결혼못하는남자": "manifests/결혼못하는남자/reinforcement_manifest.json",
-    "공주가돌아왔다": "manifests/공주가돌아왔다/reinforcement_manifest.json",
-    "내이름은김삼순": "manifests/내이름은김삼순/reinforcement_manifest.json",
-    "내여자친구는구미호": "manifests/내여자친구는구미호/reinforcement_manifest.json",
-    "난폭한로맨스": "manifests/난폭한로맨스/reinforcement_manifest.json",
-    "강남엄마따라잡기": "manifests/강남엄마따라잡기/reinforcement_manifest.json",
-    "너의목소리가들려": "manifests/너의목소리가들려/reinforcement_manifest.json",
-    "개와늑대의시간": "manifests/개와늑대의시간/reinforcement_manifest.json",
-    "101번째프로포즈": "manifests/101번째프로포즈/reinforcement_manifest.json",
-    "가을동화": "manifests/가을동화/reinforcement_manifest.json",
-    "궁": "manifests/궁/reinforcement_manifest.json"
-  },
-  "validation_root": "validation/final_canonical_20260811_12work",
+  "work_manifest_location": "The per-work reinforcement_manifest.json and work_state.json live inside the supplied integrated DB package under seqcard_ko/reinforcement_v1/manifests/{work}/ and work-state paths. They are read only after target selection; they are not required to be duplicated in the GitHub authority-doc repository.",
+  "validation_root": "validation/final_canonical_20260811_12work (inside the released integrated DB/developer delivery)",
+  "canonical_thick_baseline_artifact_sha256": "45d049d659a5ebe9079642c1bc093078677b3857d0036c5c8a58d9b4e29500ac",
   "broad_drama_authority_unchanged": true,
-  "updated_at": "2026-08-11T18:33:00+09:00"
+  "updated_at": "2026-08-11T20:21:00+09:00"
 }
