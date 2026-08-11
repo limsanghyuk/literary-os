@@ -1,0 +1,18 @@
+{
+  "schema": "DB98_PLANNER_RUNTIME_AUTHORITY_POINTER_V3",
+  "status": "ACTIVE_DERIVED_EXECUTION_AUTHORITY",
+  "current_authority_id": "DB98_PLANNER_RUNTIME_12WORK_CANONICAL_PROFILE_V1_1_AUTHORITY_20260811",
+  "manifest": "FINAL_PLANNER_RUNTIME_12WORK_AUTHORITY_20260811_CANONICAL.json",
+  "depends_on_thick_authority_id": "DB98_THICK_12WORK_CANONICAL_AUTHORITY_20260811",
+  "works_coverage": "12/12",
+  "planner_profile": "PLANNER_INPUT_CANONICAL_PROFILE_V1_1",
+  "runtime_schema": "DB98_RUNTIME_SCENE_PROJECTION_V1",
+  "guide": "authority/planner_runtime/PLANNER_RUNTIME_EXECUTION_AUTHORITY_V1_20260811.md",
+  "bootstrap": "authority/planner_runtime/NEW_SESSION_PLANNER_RUNTIME_BOOTSTRAP_V1.md",
+  "schema_registry": "authority/planner_runtime/PLANNER_RUNTIME_SCHEMA_REGISTRY_V1.json",
+  "validator": "authority/planner_runtime/tools/validate_planner_runtime.py",
+  "updated_at": "2026-08-11T20:21:00+09:00",
+  "canonical_thick_baseline_artifact_sha256": "45d049d659a5ebe9079642c1bc093078677b3857d0036c5c8a58d9b4e29500ac",
+  "reference_builder": "authority/planner_runtime/tools/build_planner_runtime_reference.py",
+  "developer_handoff": "authority/planner_runtime/DEVELOPER_HANDOFF_PLANNER_RUNTIME_NEW_WORK_V1_20260811.md"
+}
