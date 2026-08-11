@@ -1,0 +1,24 @@
+{
+  "schema": "DB98_PLANNER_RUNTIME_SCHEMA_REGISTRY_V1",
+  "status": "ACTIVE_EXECUTION_SCHEMA_REGISTRY",
+  "authority_scope": "reinforcement_v1 derived execution layers only; broad Stage01-04 EXACT_SCHEMA_REGISTRY remains unchanged",
+  "schemas": {
+    "PlannerInputRecord": {
+      "wire_schema_id": "DB98_PLANNER_INPUT_RECORD_V1",
+      "authoring_profile": "PLANNER_INPUT_CANONICAL_PROFILE_V1_1",
+      "schema_file": "schemas/PLANNER_INPUT_CANONICAL_PROFILE_V1_1.schema.json",
+      "top_level_keys_exact": 14,
+      "authority_class": "DERIVED_PLANNING_EXECUTION_CONTRACT",
+      "legacy_note": "Historical DB98_PLANNER_INPUT_RECORD_V1 files can have nested-object variants. New/reinforced works must use V1.1 profile."
+    },
+    "RuntimeSceneProjection": {
+      "wire_schema_id": "DB98_RUNTIME_SCENE_PROJECTION_V1",
+      "schema_file": "schemas/RUNTIME_SCENE_PROJECTION_V1.schema.json",
+      "top_level_keys_exact": 15,
+      "authority_class": "DETERMINISTIC_DERIVED_SCENE_VIEW",
+      "independent_semantic_authorship": false
+    }
+  },
+  "invalidation_inputs": ["EpisodeArc", "CharacterArc", "RelationshipArc", "CANONICAL_THICK", "SceneCard membership"],
+  "updated_at": "2026-08-11T19:21:00+09:00"
+}
