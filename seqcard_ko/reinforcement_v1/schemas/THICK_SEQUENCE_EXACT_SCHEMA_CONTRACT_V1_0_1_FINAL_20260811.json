@@ -1,0 +1,24 @@
+{
+  "schema": "DB98_THICK_SEQUENCE_EXACT_SCHEMA_CONTRACT_V1_0_1_FINAL_20260811",
+  "record_schema": "DB98_THICK_SEQUENCE_EXTENSION_V1",
+  "additional_keys_allowed": false,
+  "record_required_keys": ["schema", "work_id", "episode_no", "seq_id", "seq_index", "member_scene_nos", "cast", "event", "info_shift", "plant_payoff", "scene_notes", "evidence_refs", "source_hashes", "by"],
+  "cast_required_keys": ["character", "desire_or_function", "participation", "evidence_refs"],
+  "scene_note_required_keys": ["scene_no", "functional_propositions", "evidence_refs"],
+  "info_shift_required_keys": ["subject", "before", "after", "mode", "scene_nos", "evidence_refs"],
+  "plant_payoff_required_keys": ["kind", "thread_id", "statement", "scene_nos", "existing_refs", "evidence_refs"],
+  "evidence_ref_required_keys": ["kind", "ref"],
+  "source_hash_required_keys": ["baseline_artifact_sha256", "source_text_sha256", "scene_card_file_sha256", "sequence_blueprint_file_sha256", "episode_arc_file_sha256", "source_lock_sha256"],
+  "participation_enum": ["PRIMARY", "SECONDARY", "OPPOSITION", "SUPPORT", "WITNESS", "OFFSCREEN_CAUSAL"],
+  "info_mode_enum": ["ACCESS", "ACCESS_CHANGE", "BEHAVIORAL_CHANGE", "BEHAVIORAL_CONFIRMATION", "BELIEF_CHANGE", "BELIEF_PRESSURE", "CONCEAL", "CONCEALMENT", "CONFIRM", "CONFIRMATION", "DISCONFIRM", "DISCOVER", "DRAMATIC_IRONY", "INFER", "INFERENCE", "LEARN", "LINK", "LOSE_ACCESS", "MISINTERPRET", "MISINTERPRETATION", "MISLEAD", "NO_CHANGE_EXPLICIT", "PARTIAL_REVEAL", "PUBLICIZE", "PUBLIC_KNOWLEDGE", "RECALL", "REVEAL", "REVERSAL", "SELF_RECOGNITION", "STATE_CHANGE", "UNRESOLVED", "UPDATE"],
+  "plant_payoff_kind_enum": ["CALLBACK", "CLIFFHANGER", "CONTINUE", "ESCALATION", "HOOK", "LINK", "PAYOFF", "PLANT", "REACTIVATION", "REVEAL", "REVERSAL"],
+  "evidence_kind_enum": ["CHARACTER_ARC", "CHARARC", "CROSS_EDGE", "CROSS_EPISODE_EDGE", "LOCAL_EDGE", "PAYOFF", "RELARC", "SCENECARD", "SCENECARD_RANGE", "SEQUENCE", "SEQUENCE_BLUEPRINT", "SOURCE", "SOURCELOCK"],
+  "invariants": [
+    "seq_id unique within work",
+    "scene_notes cover member scenes without extra scene_no",
+    "info_shift.scene_nos subset member_scene_nos",
+    "plant_payoff.scene_nos subset member_scene_nos",
+    "all six provenance hashes are lowercase sha256",
+    "SOURCE evidence resolves to existing source and line range when present"
+  ]
+}
