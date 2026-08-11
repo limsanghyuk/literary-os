@@ -1,0 +1,10 @@
+{
+  "schema": "DB98_PLANNER_RUNTIME_GUIDE_POINTER_V1",
+  "status": "ACTIVE_GUIDE_POINTER",
+  "canonical_pointer": "../../CURRENT_PLANNER_RUNTIME_AUTHORITY_POINTER.json",
+  "current_authority_id": "DB98_PLANNER_RUNTIME_12WORK_CANONICAL_PROFILE_V1_1_AUTHORITY_20260811",
+  "planner_profile": "PLANNER_INPUT_CANONICAL_PROFILE_V1_1",
+  "runtime_schema": "DB98_RUNTIME_SCENE_PROJECTION_V1",
+  "canonical_thick_baseline_artifact_sha256": "45d049d659a5ebe9079642c1bc093078677b3857d0036c5c8a58d9b4e29500ac",
+  "note": "If this guide pointer and ../../CURRENT_PLANNER_RUNTIME_AUTHORITY_POINTER.json differ, the canonical pointer wins."
+}
