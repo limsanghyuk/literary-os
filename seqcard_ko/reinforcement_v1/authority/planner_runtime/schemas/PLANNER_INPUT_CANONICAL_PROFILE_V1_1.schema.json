@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DB98 PlannerInput Canonical Authoring Profile V1.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "work_id", "episode_no", "previous_exit_state", "character_states", "relationship_states", "unresolved_payoffs", "active_causal_threads", "remaining_episode_count", "subplot_debt", "character_debt", "world_constraints", "target_refs", "source_hashes"],
+  "properties": {
+    "schema": {"const": "DB98_PLANNER_INPUT_RECORD_V1"},
+    "work_id": {"type": "string", "minLength": 1},
+    "episode_no": {"type": "integer", "minimum": 1},
+    "previous_exit_state": {"anyOf": [{"type": "null"}, {"type": "object", "additionalProperties": false, "required": ["episode_no", "exit_state", "central_conflict_axis", "episode_function"], "properties": {"episode_no": {"type": "integer", "minimum": 1}, "exit_state": {"type": "string"}, "central_conflict_axis": {"type": "string"}, "episode_function": {"type": "string"}}}]},
+    "character_states": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["character", "state_label", "state_delta", "source_episode"], "properties": {"character": {"type": "string"}, "state_label": {"type": "string"}, "state_delta": {"type": "string"}, "source_episode": {"type": "integer", "minimum": 1}}}},
+    "relationship_states": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["char_a", "char_b", "relation_state", "relation_delta", "source_episode"], "properties": {"char_a": {"type": "string"}, "char_b": {"type": "string"}, "relation_state": {"type": "string"}, "relation_delta": {"type": "string"}, "source_episode": {"type": "integer", "minimum": 1}}}},
+    "unresolved_payoffs": {"type": "array", "maxItems": 24, "items": {"type": "object", "additionalProperties": false, "required": ["thread_id", "status", "through_episode"], "properties": {"thread_id": {"type": "string"}, "status": {"const": "OPEN_AT_PLANNING_BOUNDARY"}, "through_episode": {"type": "integer", "minimum": 1}}}},
+    "active_causal_threads": {"type": "array", "maxItems": 24, "items": {"type": "object", "additionalProperties": false, "required": ["thread_id", "available_through_episode"], "properties": {"thread_id": {"type": "string"}, "available_through_episode": {"type": "integer", "minimum": 1}}}},
+    "remaining_episode_count": {"type": "integer", "minimum": 0},
+    "subplot_debt": {"type": "array", "maxItems": 8, "items": {"type": "object", "additionalProperties": false, "required": ["thread", "debt"], "properties": {"thread": {"type": "string"}, "debt": {"type": "string"}}}},
+    "character_debt": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["character", "debt"], "properties": {"character": {"type": "string"}, "debt": {"type": "string"}}}},
+    "world_constraints": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "target_refs": {"type": "object", "additionalProperties": false, "required": ["human_episode_arc", "thick_sequence", "character_pressure"], "properties": {"human_episode_arc": {"type": "string"}, "thick_sequence": {"type": "string"}, "character_pressure": {"type": ["string", "null"]}}},
+    "source_hashes": {"type": "object", "additionalProperties": false, "required": ["baseline_artifact_sha256"], "properties": {"baseline_artifact_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "previous_episode_arc_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}}
+  }
+}
