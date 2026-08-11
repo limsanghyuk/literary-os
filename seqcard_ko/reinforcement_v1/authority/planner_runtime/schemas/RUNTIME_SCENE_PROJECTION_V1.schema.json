@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DB98 RuntimeSceneProjection V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "work_id", "episode_no", "scene_no", "seq_id", "characters", "primary_pov", "secondary_pov", "character_states", "relationship_states", "event_context", "info_context", "plant_payoff_context", "functional_propositions", "source_refs"],
+  "properties": {
+    "schema": {"const": "DB98_RUNTIME_SCENE_PROJECTION_V1"},
+    "work_id": {"type": "string"},
+    "episode_no": {"type": "integer", "minimum": 1},
+    "scene_no": {"type": "integer", "minimum": 1},
+    "seq_id": {"type": "string"},
+    "characters": {"type": "array", "items": {"type": "string"}},
+    "primary_pov": {"type": ["string", "null"]},
+    "secondary_pov": {"type": "array", "items": {"type": "string"}},
+    "character_states": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["character", "sequence_function", "participation", "planning_boundary_state"], "properties": {"character": {"type": "string"}, "sequence_function": {"type": "string"}, "participation": {"enum": ["PRIMARY", "SECONDARY", "SUPPORT", "OPPOSITION", "WITNESS", "OFFSCREEN_CAUSAL"]}, "planning_boundary_state": {"anyOf": [{"type": "null"}, {"type": "object", "additionalProperties": false, "required": ["character", "state_label", "state_delta", "source_episode"], "properties": {"character": {"type": "string"}, "state_label": {"type": "string"}, "state_delta": {"type": "string"}, "source_episode": {"type": "integer", "minimum": 1}}}]}}}},
+    "relationship_states": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["char_a", "char_b", "relation_state", "relation_delta", "source_episode"], "properties": {"char_a": {"type": "string"}, "char_b": {"type": "string"}, "relation_state": {"type": "string"}, "relation_delta": {"type": "string"}, "source_episode": {"type": "integer", "minimum": 1}}}},
+    "event_context": {"type": "string"},
+    "info_context": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["subject", "before", "after", "mode", "scene_nos", "evidence_refs"], "properties": {"subject": {"type": "string"}, "before": {"type": "string"}, "after": {"type": "string"}, "mode": {"type": "string"}, "scene_nos": {"type": "array", "items": {"type": "integer", "minimum": 1}}, "evidence_refs": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["kind", "ref"], "properties": {"kind": {"type": "string"}, "ref": {"type": "string"}}}}}}},
+    "plant_payoff_context": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["kind", "thread_id", "statement", "scene_nos", "evidence_refs"], "properties": {"kind": {"type": "string"}, "thread_id": {"type": "string"}, "statement": {"type": "string"}, "scene_nos": {"type": "array", "items": {"type": "integer", "minimum": 1}}, "existing_refs": {"type": "array"}, "evidence_refs": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["kind", "ref"], "properties": {"kind": {"type": "string"}, "ref": {"type": "string"}}}}}}},
+    "functional_propositions": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "source_refs": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+  }
+}
