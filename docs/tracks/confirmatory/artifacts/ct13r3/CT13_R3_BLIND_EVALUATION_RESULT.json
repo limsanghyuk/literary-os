@@ -1,0 +1,100 @@
+{
+  "schema": "CT13_R3_BLIND_EVALUATION_RESULT_V1",
+  "verdict": "FAIL",
+  "p4_consensus_violations": 1,
+  "contrasts": {
+    "C_vs_B": {
+      "p1": {
+        "positive_wins": 9,
+        "negative_wins": 0,
+        "ties": 3,
+        "p_two_sided": 0.00390625,
+        "positive_significant": true
+      },
+      "p2": {
+        "positive_wins": 11,
+        "negative_wins": 0,
+        "ties": 1,
+        "p_two_sided": 0.0009765625,
+        "positive_significant": true
+      },
+      "p3": {
+        "positive_wins": 12,
+        "negative_wins": 0,
+        "ties": 0,
+        "p_two_sided": 0.00048828125,
+        "positive_significant": true
+      }
+    },
+    "C_vs_N": {
+      "p1": {
+        "positive_wins": 10,
+        "negative_wins": 0,
+        "ties": 2,
+        "p_two_sided": 0.001953125,
+        "positive_significant": true
+      },
+      "p2": {
+        "positive_wins": 10,
+        "negative_wins": 0,
+        "ties": 2,
+        "p_two_sided": 0.001953125,
+        "positive_significant": true
+      },
+      "p3": {
+        "positive_wins": 12,
+        "negative_wins": 0,
+        "ties": 0,
+        "p_two_sided": 0.00048828125,
+        "positive_significant": true
+      }
+    },
+    "B_vs_A": {
+      "p1": {
+        "positive_wins": 1,
+        "negative_wins": 1,
+        "ties": 10,
+        "p_two_sided": 1.0,
+        "positive_significant": false
+      },
+      "p2": {
+        "positive_wins": 0,
+        "negative_wins": 1,
+        "ties": 11,
+        "p_two_sided": 1.0,
+        "positive_significant": false
+      },
+      "p3": {
+        "positive_wins": 1,
+        "negative_wins": 0,
+        "ties": 11,
+        "p_two_sided": 1.0,
+        "positive_significant": false
+      }
+    }
+  },
+  "agreement": {
+    "C_vs_B": {
+      "exact_three_scorer_direction_agreement": 0.8333333333333334,
+      "mean_pairwise_direction_agreement": 0.8888888888888888,
+      "cells": 36
+    },
+    "C_vs_N": {
+      "exact_three_scorer_direction_agreement": 0.9444444444444444,
+      "mean_pairwise_direction_agreement": 0.9629629629629629,
+      "cells": 36
+    },
+    "B_vs_A": {
+      "exact_three_scorer_direction_agreement": 0.7222222222222222,
+      "mean_pairwise_direction_agreement": 0.7962962962962963,
+      "cells": 36
+    }
+  },
+  "pass_conditions": {
+    "p4_zero": false,
+    "c_gt_b_two_metrics": true,
+    "c_gt_n_p1_or_p2": true,
+    "agreement_cb": true,
+    "agreement_cn": true
+  }
+}

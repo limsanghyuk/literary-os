@@ -1,0 +1,625 @@
+{
+  "schema": "CT13_R3_EVALUATOR_ANSWER_KEY_V1",
+  "created_after_renderer_freeze": true,
+  "renderer_output_manifest_sha256": "b9a7c420dde4c58d2c7469272aa230fb220f0cc4784e1859a83b272b804774e0",
+  "anchors": {
+    "R3A01": {
+      "protected_deferred": [
+        {
+          "thread_id": "RIV_dain_golf_survival",
+          "axis": "다인의 골프 생존축은 학교·가족 조작과 병행해 유지하되 이번 회차의 중심 결제까지 가져오면 학교 누명과 친자 조작의 압력이 분산된다.",
+          "residue_allowed": "훈련 욕구·골프 관심의 잔향은 허용하지만 독립 경기 성취나 진로 결제는 금지한다."
+        }
+      ],
+      "due_now_axes": [
+        {
+          "axis_id": "AX1",
+          "statement": "사실로 버티는 다인과 증거·서사를 조작하는 채연의 경쟁을 학교 누명에서 가족 진실 조작까지 연쇄 상승시킨다."
+        },
+        {
+          "axis_id": "AX2",
+          "statement": "다인이 은새·우혁·태훈과 만든 제한적 신뢰를 실제 보호행동으로 시험해 혼자 버티는 인물에서 관계를 통해 버티는 인물로 이동시킨다."
+        }
+      ],
+      "paid_debts": [
+        "RIV_dain_eunsae_alliance",
+        "RIV_dain_chaeyeon_rivalry"
+      ],
+      "allowed_existing_debts": [
+        "RIV_chaeyeon_perfect_image_control",
+        "RIV_dain_birth_secret",
+        "RIV_dain_chaeyeon_rivalry",
+        "RIV_dain_debt_pressure",
+        "RIV_dain_taehoon_golf_bond",
+        "RIV_dain_golf_survival",
+        "RIV_dain_eunsae_alliance",
+        "RIV_chaeyeon_adoption_secret",
+        "RIV_dain_coach_daeman",
+        "RIV_taehoon_chaeyeon_possession",
+        "RIV_dain_school_frameup"
+      ],
+      "exit_state_target": "채연은 소라의 검체로 DNA 결과를 바꾸고 구조자 역할까지 차지해 다인을 거짓말쟁이로 만든다.",
+      "future_unavailable_fact_signatures": [
+        "다인의 독립 골프 경기 성취 또는 진로 결정(훈련 욕구·관심의 잔향을 넘어서는 결과)"
+      ],
+      "evaluable_surface": {
+        "p1": true,
+        "p2": true,
+        "p3": true
+      }
+    },
+    "R3A02": {
+      "protected_deferred": [
+        {
+          "thread_id": "국희_이름_국화",
+          "axis": "국희의 이름이 국화에서 국희로 바뀐 정체 의미는 장기 혈연·자기정체 축이므로 이번 회차의 탈출과 친부 귀환 압력 속에서 해설하거나 확정하지 않는다.",
+          "residue_allowed": "국희의 혈연과 출생에 미해결 감각이 남는 정도만 허용하고 이름의 의미를 직접 해명하지 않는다."
+        }
+      ],
+      "due_now_axes": [
+        {
+          "axis_id": "AX1",
+          "statement": "버림받은 국희와 통제받는 신영이 서로 다른 이유로 경성 탈출을 행동화하지만, 사기와 급류 사고를 거쳐 다시 집으로 돌아오며 두 아이의 자립 욕망과 양육 차별을 더 선명하게 만든다."
+        },
+        {
+          "axis_id": "AX2",
+          "statement": "영재·민권의 독립운동 귀환선과 주태의 보관 의무를 현재로 끌어와, 국희의 친부 귀환과 재산 문제 때문에 주태 부부가 갑작스러운 가짜 보호를 연출하게 만든다."
+        }
+      ],
+      "paid_debts": [
+        "민권_국희_오인",
+        "독립군_군자금_주태보관"
+      ],
+      "allowed_existing_debts": [
+        "국희_주태_위탁양육",
+        "국희_신영_차별구조",
+        "국희_이름_국화",
+        "국희_부모부재_사회적약점",
+        "국희_상훈_행동연대",
+        "독립군_군자금_주태보관",
+        "민권_국희_오인",
+        "민권_주태_첫접점",
+        "영재_국희_귀환약속",
+        "영재_독립군_의료소명",
+        "이여사_국희_위탁정체_인지",
+        "이장군_페니실린_해주잠입"
+      ],
+      "exit_state_target": "영재의 귀환 요구 때문에 신영모가 태도를 돌변해 국희를 신영의 방으로 옮기고 딸처럼 안아주자, 국희는 계산된 돌봄을 진짜 가족 사랑처럼 받아들인 상태다.",
+      "future_unavailable_fact_signatures": [
+        "'국화'라는 이름의 유래·의미에 대한 직접적 해명"
+      ],
+      "evaluable_surface": {
+        "p1": true,
+        "p2": true,
+        "p3": true
+      }
+    },
+    "R3A03": {
+      "protected_deferred": [
+        {
+          "thread_id": "DJG_myeongyi_letter_han",
+          "axis": "명이의 편지와 한상궁의 과거 연결은 장기 진실축이므로 장금이 궁에 들어오자마자 전부 해명하면 어머니 유산을 추적할 서사적 거리가 사라진다.",
+          "residue_allowed": "퇴선간과 한상궁에 대한 감각적 연결은 허용하지만 편지의 전달·과거 진실의 완전한 해명은 금지한다."
+        }
+      ],
+      "due_now_axes": [
+        {
+          "axis_id": "AX1",
+          "statement": "고아가 된 장금이 생존·덕구네 정착·반정의 우연한 역할을 거쳐 스스로 궁녀가 되는 길을 획득하게 한다."
+        },
+        {
+          "axis_id": "AX2",
+          "statement": "궁 입성 직후 신분 편견과 규율 위기를 주어 장금의 장기 목표를 어머니 흔적·음식 전문성 탐색으로 구체화한다."
+        }
+      ],
+      "paid_debts": [
+        "DJG_deokgu_connection",
+        "DJG_yoon_curse",
+        "DJG_myeongyi_legacy",
+        "DJG_janggeum_origin"
+      ],
+      "allowed_existing_debts": [
+        "DJG_choi_poison_cartel",
+        "DJG_yoon_curse",
+        "DJG_cheonsu_myeongyi_bond",
+        "DJG_hansanggung_janggeum_bond",
+        "DJG_janggeum_guilt",
+        "DJG_janggeum_origin",
+        "DJG_janggeum_survival",
+        "DJG_deokgu_connection",
+        "DJG_janggeum_learning",
+        "DJG_myeongyi_legacy",
+        "DJG_myeongyi_letter_han"
+      ],
+      "exit_state_target": "장금은 생각시로 궁에 들어가 연생과 친구가 되지만 퇴선간 침입으로 한상궁에게 발각될 위기에 처한다.",
+      "future_unavailable_fact_signatures": [
+        "명이의 편지 전달 또는 그녀 과거 진실의 완전한 해명"
+      ],
+      "evaluable_surface": {
+        "p1": true,
+        "p2": true,
+        "p3": true
+      }
+    },
+    "R3A04": {
+      "protected_deferred": [
+        {
+          "thread_id": "ROM_bluejin_takeover_wrongdoing",
+          "axis": "블루진 인수 과정의 전체 불법성과 책임 소재는 기업 장기축이므로 이번 회차에서 전면 폭로하면 가족 생존과 사제 금기의 현재 갈등을 압도한다.",
+          "residue_allowed": "공장장 보상과 은석의 수상한 인사 같은 잔향은 허용하지만 인수 비리의 전체 증명과 처벌은 금지한다."
+        }
+      ],
+      "due_now_axes": [
+        {
+          "axis_id": "AX1",
+          "statement": "관우와 채원의 숨겨진 신분을 교문에서 폭로해 사랑을 교사-제자 금기로 바꾸고, 관우가 가족 부양과 학교생활을 동시에 감당하게 한다."
+        },
+        {
+          "axis_id": "AX2",
+          "statement": "블루진 몰락의 비용을 윤희·영숙에게 현실화하고 은석의 기업 승계·침묵 거래를 병렬로 전개해 사랑 바깥의 권력축을 유지한다."
+        }
+      ],
+      "paid_debts": [
+        "ROM_gwanu_chaewon_identity_concealment"
+      ],
+      "allowed_existing_debts": [
+        "ROM_bluejin_family_collapse",
+        "ROM_gwanu_chaewon_romance",
+        "ROM_bluejin_takeover_wrongdoing",
+        "ROM_eunseok_chaewon_courtship",
+        "ROM_gwanu_chaewon_identity_concealment",
+        "ROM_chaewon_teacher_identity",
+        "ROM_gongmyeong_family_integration",
+        "ROM_gwanu_self_directed_life",
+        "ROM_yunhee_eunseok_power_bond",
+        "ROM_yunhee_survival_descent"
+      ],
+      "exit_state_target": "관우는 제일고 학생·생계부양자·공명 보호자가 되고, 채원 앞에서 나이는 숫자일 뿐이라 공개적으로 사랑을 암시한다.",
+      "future_unavailable_fact_signatures": [
+        "블루진 인수 비리의 전체 증명 또는 처벌 확정"
+      ],
+      "evaluable_surface": {
+        "p1": true,
+        "p2": true,
+        "p3": true
+      }
+    },
+    "R3A05": {
+      "protected_deferred": [
+        {
+          "thread_id": "KSS_heejin_cancer_secret",
+          "axis": "희진의 암 진실은 진헌의 선택을 뒤집을 수 있는 강한 정보이므로 이번 회차에서 진헌에게 공개하면 삼순과의 자발적 친밀감이 동정 판단에 덮인다.",
+          "residue_allowed": "헨리가 공개를 권하고 희진이 거부하는 장면까지 허용하지만 진헌에게 암 사실을 전달하는 것은 금지한다."
+        }
+      ],
+      "due_now_axes": [
+        {
+          "axis_id": "AX1",
+          "statement": "키스 후 부정하던 삼순과 진헌을 제주 가족행사와 질투 싸움에 밀어 넣고, 진헌의 사고 죄책감 고백으로 관계를 신체 끌림에서 정서적 신뢰로 이동시킨다."
+        },
+        {
+          "axis_id": "AX2",
+          "statement": "희진과 헨리를 제주로 이동시켜 진헌의 과거 사랑이 현재 관계와 같은 공간에 도착하도록 하고 삼각 갈등을 종단에 현실화한다."
+        }
+      ],
+      "paid_debts": [
+        "KSS_jinheon_accident_guilt"
+      ],
+      "allowed_existing_debts": [
+        "KSS_fake_dating_contract",
+        "KSS_jinheon_heejin_past",
+        "KSS_na_marriage_pressure",
+        "KSS_name_identity_samsoon_heejin",
+        "KSS_pastry_identity_career",
+        "KSS_heejin_henry",
+        "KSS_mijoo_silence",
+        "KSS_marriage_market_pressure",
+        "KSS_iyeong_divorce",
+        "KSS_jinheon_accident_guilt",
+        "KSS_samsoon_jinheon_crisis_trust",
+        "KSS_jinheon_henry_misread",
+        "KSS_samsoon_jinheon_work_conflict",
+        "KSS_people_heal_people",
+        "KSS_heejin_cancer_secret",
+        "KSS_fake_dating_seed",
+        "KSS_chocolate_box_life"
+      ],
+      "exit_state_target": "진헌의 상처를 함께 나누며 가까워진 삼순이 헨리와 함께 나타난 희진 앞에서 자신의 자리를 지키려 선언하는 팽팽한 삼각 대치.",
+      "future_unavailable_fact_signatures": [
+        "진헌이 희진의 암 사실을 전달받아 인지하게 되는 것"
+      ],
+      "evaluable_surface": {
+        "p1": true,
+        "p2": true,
+        "p3": true
+      }
+    },
+    "R3A06": {
+      "protected_deferred": [
+        {
+          "thread_id": "SEC_birth_secret_identity_usurpation",
+          "axis": "출생 비밀은 이번 회차에서 폭로 압력을 최대화하되 약혼식 전에 완전히 공개하면 종만·찬식·희정의 독립 증언선이 한꺼번에 소진된다.",
+          "residue_allowed": "희정의 의심 확정·찬식 재등장·종만 재회까지 허용하지만 명애 앞의 완전한 친딸 진실 공개는 금지한다."
+        }
+      ],
+      "due_now_axes": [
+        {
+          "axis_id": "AX1",
+          "statement": "종만·명애·희정·찬식의 재회를 통해 지은이 독점해온 출생 비밀의 통제권을 여러 증언자에게 분산시킨다."
+        },
+        {
+          "axis_id": "AX2",
+          "statement": "영민-지은 약혼과 희정-영민 감정을 같은 생활권에 겹쳐 사랑의 선택과 가족 희생을 공개 사회적 약속 직전까지 밀어붙인다."
+        }
+      ],
+      "paid_debts": [
+        "SEC_jongman_hidden_truth"
+      ],
+      "allowed_existing_debts": [
+        "SEC_birth_secret_identity_usurpation",
+        "SEC_heejung_family_sacrifice",
+        "SEC_heejung_jieun_sister_rivalry",
+        "SEC_heejung_junho_attachment",
+        "SEC_heejung_youngmin_relation",
+        "SEC_jieun_myeongae_false_daughter",
+        "SEC_jongman_hidden_truth",
+        "SEC_jieun_youngmin_pursuit",
+        "SEC_junclub_survival",
+        "SEC_jieun_status_ambition",
+        "SEC_myeongae_heejung_maternal_bond",
+        "SEC_myeongae_illness_bone_marrow",
+        "SEC_jieun_frameup_fabric_theft",
+        "SEC_jieun_true_mother_denial",
+        "SEC_junho_pride_failure",
+        "SEC_chansik_truth_witness",
+        "SEC_youngmin_youngran_guilt",
+        "SEC_heejung_birth_clues"
+      ],
+      "exit_state_target": "신랑 부재의 전조",
+      "future_unavailable_fact_signatures": [
+        "명애 앞에서 지은/희정의 친딸 진실이 완전히 공개되는 것"
+      ],
+      "evaluable_surface": {
+        "p1": true,
+        "p2": true,
+        "p3": true
+      }
+    },
+    "R3A07": {
+      "protected_deferred": [
+        {
+          "thread_id": "MIL_sunjae_hyewon_secrecy_boundary",
+          "axis": "이번 회차는 관계를 실제 사랑으로 결제하되 완전 발각까지 지급하면 이후 비밀·감시·제도 포획의 단계적 압박이 사라진다.",
+          "residue_allowed": "질투·CCTV 탐색·주변 조사와 같은 노출 징후는 허용하지만 공개 폭로와 공식 처벌은 금지한다."
+        }
+      ],
+      "due_now_axes": [
+        {
+          "axis_id": "AX1",
+          "statement": "혜원과 선재가 계급·비밀의 현실을 정면으로 말한 뒤 음악과 생활공간을 공유하며 실제 연인 관계로 넘어가게 한다."
+        },
+        {
+          "axis_id": "AX2",
+          "statement": "준형·서한·다미의 감시와 이해관계를 동시에 좁혀 친밀함의 성취가 즉시 노출 위험과 맞닿게 한다."
+        }
+      ],
+      "paid_debts": [
+        "MIL_hyewon_seohan_servitude",
+        "MIL_sunjae_hyewon_music_intimacy"
+      ],
+      "allowed_existing_debts": [
+        "MIL_class_mobility_artworld",
+        "MIL_hyewon_seohan_servitude",
+        "MIL_sunjae_hyewon_music_intimacy",
+        "MIL_sunjae_hyewon_secrecy_boundary",
+        "MIL_sunjae_hyewon_class_exchange",
+        "MIL_sunjae_institution_capture",
+        "MIL_hyewon_status_autonomy",
+        "MIL_joonhyung_suspicion_marriage",
+        "MIL_sunjae_dami_family_bond",
+        "MIL_joonhyung_possessive_mentorship",
+        "MIL_hyewon_marriage_void",
+        "MIL_makgui_nacheonjae_channel",
+        "MIL_music_as_counterworld",
+        "MIL_seohan_admissions_corruption",
+        "MIL_sunjae_mother_loss",
+        "MIL_dami_suspicion",
+        "MIL_hyewon_illicit_finance",
+        "MIL_joonhyung_inseo_rivalry",
+        "MIL_seongsook_youngwoo_power_war",
+        "MIL_youngwoo_dependency_loneliness"
+      ],
+      "exit_state_target": "두 사람이 함께한 시간이 최절정에 이르면서 동시에 서한 측의 감시망이 완전히 좁혀온다",
+      "future_unavailable_fact_signatures": [
+        "혜원-선재 관계의 공개 폭로 또는 공식 처벌"
+      ],
+      "evaluable_surface": {
+        "p1": true,
+        "p2": true,
+        "p3": true
+      }
+    },
+    "R3A08": {
+      "protected_deferred": [
+        {
+          "thread_id": "LW_taekyung_business_debt_secret",
+          "axis": "태경의 회사 자금위기는 부부 오해를 만드는 정보비대칭으로 작동해야 하므로 이번 회차에서 지수에게 전부 공개하면 외도 의심과 경제 비밀의 충돌이 사라진다.",
+          "residue_allowed": "어음 압박·거짓말·피로 흔적은 허용하지만 지수에게 부도 위험의 전모를 고백하는 것은 금지한다."
+        }
+      ],
+      "due_now_axes": [
+        {
+          "axis_id": "AX1",
+          "statement": "지수가 태희 립스틱 사건의 사실 확인 뒤에도 폭력적 가족질서에 흡수되지 않도록 화해와 경계 설정을 동시에 시도하게 한다."
+        },
+        {
+          "axis_id": "AX2",
+          "statement": "지은의 윤석 관계와 태경의 사업 압박을 가족 승인·불륜 오해로 비틀어 두 자매의 결혼 문제가 서로 다른 방식의 자기상실 위험으로 수렴하게 한다."
+        }
+      ],
+      "paid_debts": [
+        "LW_jisu_taehui_boundary_conflict"
+      ],
+      "allowed_existing_debts": [
+        "LW_taekyung_jisu_marriage_power",
+        "LW_inlaw_cohabitation",
+        "LW_jieun_yoonseok_romance",
+        "LW_jisu_eldest_daughterinlaw_duty",
+        "LW_yoonseok_restructuring_pressure",
+        "LW_taekyung_mother_health_crisis",
+        "LW_inlaw_class_gap",
+        "LW_taekyung_family_support_burden",
+        "LW_taekyung_natal_family_dysfunction",
+        "LW_divorce_agreement",
+        "LW_jieun_seokchan_breakup",
+        "LW_jisu_taekyung_violence_boundary",
+        "LW_jisu_taehui_boundary_conflict",
+        "LW_jieun_whitewolf_online",
+        "LW_taekyung_matchmaking_business",
+        "LW_jisu_career_autonomy",
+        "LW_taekyung_yoonseok_support",
+        "LW_taekyung_workplace_humiliation",
+        "LW_jieun_material_mate_selection",
+        "LW_jisu_parents_marriage_void"
+      ],
+      "exit_state_target": "치약 싸움이 대리인 전쟁으로 변하고 지은이 가족반대의 눈물로 합류한다.",
+      "future_unavailable_fact_signatures": [
+        "태경이 지수에게 부도 위험의 전모를 고백하는 것"
+      ],
+      "evaluable_surface": {
+        "p1": true,
+        "p2": true,
+        "p3": true
+      }
+    },
+    "R3A09": {
+      "protected_deferred": [
+        {
+          "thread_id": "GUNG_HYORIN_FIRST_LOVE",
+          "axis": "효린과 신의 첫사랑 축은 이미 현재 위기의 중심에서 벗어나 있으므로 이번 회차에 재활성화하면 채경의 자율 선택과 율 고백의 결제를 분산시킨다.",
+          "residue_allowed": "과거 관계의 잔향 언급은 허용하지만 효린을 현재 삼각 갈등의 행동주체로 재투입하는 것은 금지한다."
+        }
+      ],
+      "due_now_axes": [
+        {
+          "axis_id": "AX1",
+          "statement": "율의 공개 고백을 황실 심문·혼인·출궁 처분으로 현실화하고, 채경이 남성 간 경쟁의 대상이 아니라 스스로 궁을 떠나는 선택주체가 되게 한다."
+        },
+        {
+          "axis_id": "AX2",
+          "statement": "화영·종친의 정치 공세와 화재 위기를 결합해 개인적 분리 선택을 황실 존립·누명 문제로 확대한다."
+        }
+      ],
+      "paid_debts": [
+        "GUNG_CROSS_궁_x040",
+        "GUNG_CROSS_궁_x037"
+      ],
+      "allowed_existing_debts": [
+        "GUNG_CHAR_신채경",
+        "GUNG_CHAR_이율",
+        "GUNG_REL_신채경_이신",
+        "GUNG_SHIN_CHAE_RELATION",
+        "GUNG_CHAE_AUTONOMY",
+        "GUNG_CHAR_이신",
+        "GUNG_YUL_SUCCESSION",
+        "GUNG_YUL_CHAE_LOVE",
+        "GUNG_SHIN_DUTY_IDENTITY",
+        "GUNG_CROSS_궁_x040",
+        "GUNG_HYORIN_FIRST_LOVE",
+        "GUNG_CROSS_궁_x039",
+        "GUNG_CROSS_궁_x037",
+        "GUNG_REL_신채경_이율",
+        "GUNG_CROSS_궁_x030",
+        "GUNG_CHAR_화영",
+        "GUNG_PUBLIC_IMAGE",
+        "GUNG_REL_이신_민효린",
+        "GUNG_CHAR_민효린",
+        "GUNG_HWAYOUNG_REVENGE",
+        "GUNG_ROYAL_FAMILY_BOND",
+        "GUNG_SUCCESSION_CYCLE"
+      ],
+      "exit_state_target": "채경이 폐비를 자청하고 율과 이별했으며, 불길 속에서 신이 채경을 찾아 달려가는 클리프행어로 다음 회 위기가 열린다.",
+      "future_unavailable_fact_signatures": [
+        "효린이 현재 삼각 갈등에 행동주체로 재투입되는 것"
+      ],
+      "evaluable_surface": {
+        "p1": true,
+        "p2": true,
+        "p3": true
+      }
+    },
+    "R3A10": {
+      "protected_deferred": [
+        {
+          "thread_id": "마상태_공식수사",
+          "axis": "이번 회차는 증거와 증언을 충분히 쌓되 마상태를 공식 피의자·기소 단계까지 밀면 혜리의 가족 충돌과 추가 증거 검증 과정이 압축된다.",
+          "residue_allowed": "직접 추궁·증거은폐 시도·알리바이 증언은 허용하지만 공식 기소나 최종 유죄 확정은 금지한다."
+        }
+      ],
+      "due_now_axes": [
+        {
+          "axis_id": "AX1",
+          "statement": "인우가 혜리를 이용했다는 사실과 혜리를 진심으로 사랑했다는 사실을 분리해 검증하게 하여 배신감이 단순 파국이나 즉시 용서로 끝나지 않게 한다."
+        },
+        {
+          "axis_id": "AX2",
+          "statement": "1995년 사건의 알리바이·서동근 누명·마상태 개입을 직접 증언과 가족사로 구체화해 혜리가 아버지 수사를 감정과 분리해 계속할 근거를 만든다."
+        }
+      ],
+      "paid_debts": [
+        "인우_복수정체",
+        "인우_아버지복수약속"
+      ],
+      "allowed_existing_debts": [
+        "인우_복수와사랑충돌",
+        "인우_복수정체",
+        "인우_의도적거리두기",
+        "혜리_아버지수사충돌",
+        "혜리_인우감정재평가",
+        "진정선_윤세준양보",
+        "진정선_윤세준연정",
+        "혜리_인우질투자각",
+        "이경숙_15년전불륜사진",
+        "혜리_인우관계저항",
+        "서동근_미국간외아들",
+        "인우_증인사전접근",
+        "혜리_1995진실독해",
+        "마상태_고만철_1995토지",
+        "혜리_인우부재",
+        "마상태_공식수사",
+        "인우_아버지복수약속",
+        "천지동_1995살인사건",
+        "영진건설_실소유자",
+        "윤세준_인우경쟁",
+        "인우제니_고만철작전",
+        "15년전_땅자금",
+        "나무아파트_고만철_마상태",
+        "마상태_혜리정략결혼"
+      ],
+      "exit_state_target": "하정란의 알리바이 조작 증언과 인우의 과거를 모두 들은 혜리가 돌봄의 진심을 확인하고 인우와 눈물의 키스를 나눈다.",
+      "future_unavailable_fact_signatures": [
+        "마상태의 공식 기소 또는 최종 유죄 확정"
+      ],
+      "evaluable_surface": {
+        "p1": true,
+        "p2": true,
+        "p3": true
+      }
+    },
+    "R3A11": {
+      "protected_deferred": [
+        {
+          "thread_id": "GS_kanggu_aemuldan_inference",
+          "axis": "강구의 애물단 추론은 조직 생존을 위협하는 장기 수사축이므로 이번 회차에서 완전 발각시키면 완의 신참 진입과 무기 준비를 실행할 여지가 사라진다.",
+          "residue_allowed": "의심·추적 압력은 허용하지만 애물단 전체 명단과 아지트의 공식 발각은 금지한다."
+        }
+      ],
+      "due_now_axes": [
+        {
+          "axis_id": "AX1",
+          "statement": "민의 죽음과 수현의 위장 전말을 완에게 전부 공개해 10년 배신 서사를 화해와 실전 동맹으로 전환하고 완을 실제 혁명 행동에 진입시킨다."
+        },
+        {
+          "axis_id": "AX2",
+          "statement": "여경과의 오해를 위장연애 진실로 해소하고 애물단의 인력·무기 준비를 늘려 사랑의 회복이 최종 거사 준비와 함께 진행되게 한다."
+        }
+      ],
+      "paid_debts": [
+        "GS_wan_soohyun_truth"
+      ],
+      "allowed_existing_debts": [
+        "GS_inho_double_agent",
+        "GS_soohyun_songju_crossline",
+        "GS_wan_soohyun_truth",
+        "GS_miyuki_wan_relation",
+        "GS_wan_soohyun_betrayal",
+        "GS_ganggu_aemuldan_inference",
+        "GS_chilpilsal_investigation",
+        "GS_wan_yeokyeong_soohyun_triangle",
+        "GS_wan_yeokyeong_revolution_conflict",
+        "GS_wan_yeokyeong_bet_truth",
+        "GS_yeokyeong_soohyun_fake_romance",
+        "GS_kanggu_kouji_alliance",
+        "GS_wan_revolution_avoidance",
+        "GS_wan_yeokyeong_misunderstanding",
+        "GS_weapon_supply",
+        "GS_wan_yeokyeong_first_kiss",
+        "GS_yeokyeong_aemuldan_recruitment",
+        "GS_wan_min_trauma",
+        "GS_inho_human_ties",
+        "GS_kanggu_soohyun_conflict",
+        "GS_kanggu_yeokyeong_persecution",
+        "GS_songju_unsanctioned_killing",
+        "GS_soohyun_inho_control",
+        "GS_wan_yeokyeong_separation"
+      ],
+      "exit_state_target": "지라시팀이 결속 회식을 열고 완이 여경에게 사격 상처를 숨기며 여경이 완의 상처에서 진심을 확인한다",
+      "future_unavailable_fact_signatures": [
+        "애물단 전체 명단 또는 아지트의 공식 발각"
+      ],
+      "evaluable_surface": {
+        "p1": true,
+        "p2": true,
+        "p3": true
+      }
+    },
+    "R3A12": {
+      "protected_deferred": [
+        {
+          "thread_id": "michael_kill_chain",
+          "axis": "이번 회차는 마이클 정체와 상위조직 단서를 좁히되 살해망 전체를 결제하면 명계철·옥소장·국제조직을 단계적으로 추적할 후반부 수사 공간이 사라진다.",
+          "residue_allowed": "문신·음성·상위조직 암시와 제거명령까지 허용하지만 마이클 본인 체포와 조직 전체 해체는 금지한다."
+        }
+      ],
+      "due_now_axes": [
+        {
+          "axis_id": "AX1",
+          "statement": "마이클·명계철 수사를 문신·해외송금·일식집 접선·서국장 생존 미끼까지 연결해 다음 체포작전이 가능한 증거 구조로 만든다."
+        },
+        {
+          "axis_id": "AX2",
+          "statement": "우원의 기억회복과 석호-국정원 공조를 통해 민간 인물들이 수사의 수동 피해자에서 증언·구조·공조 자원으로 전환되게 한다."
+        }
+      ],
+      "paid_debts": [
+        "woowon_memory_recovery",
+        "seogukhan_audio_lifeinsurance"
+      ],
+      "allowed_existing_debts": [
+        "yeeun_family_coercion",
+        "woowon_yeeun_emotional_dependence",
+        "minseok_death_anomaly",
+        "hwaran_political_money",
+        "woowon_memory_recovery",
+        "hwaran_myeong_takeover_alliance",
+        "nis_internal_leak",
+        "michael_kill_chain",
+        "team_discipline_fracture",
+        "michael_next_target_chain",
+        "seogukhan_audio_lifeinsurance",
+        "seokho_abandonment_fear",
+        "myeong_secret_ledger",
+        "seogukhan_defense_escape",
+        "second_tech_delivery_chain",
+        "seokho_father_shooting_memory",
+        "seokho_research_authority_loss",
+        "oksojang_successor_rivalry",
+        "myeong_seoguk_cleanup_contract",
+        "taksanggi_michael_video_trade",
+        "wangkai_reverse_trade",
+        "chip_self_delete_security",
+        "yeeun_hidden_family_identity",
+        "chanmi_revenge_override_risk"
+      ],
+      "exit_state_target": "팀은 석호·변비서를 냉동트럭에서 구하고 서국장 생존과 음성파일을 미끼로 명전무 측 인력을 안전가옥으로 유인한다.",
+      "future_unavailable_fact_signatures": [
+        "마이클 본인의 체포 또는 조직 전체 해체"
+      ],
+      "evaluable_surface": {
+        "p1": true,
+        "p2": true,
+        "p3": true
+      }
+    }
+  }
+}
