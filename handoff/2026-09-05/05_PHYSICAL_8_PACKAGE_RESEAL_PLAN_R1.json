@@ -1,0 +1,39 @@
+{
+  "schema": "LITERARY_OS_PHYSICAL_8_PACKAGE_RESEAL_PLAN_R1",
+  "date": "2026-09-05",
+  "trigger": "BACKEND_RECOVERY_AND_LAST_PHYSICAL_SET_VERIFIED",
+  "required_inputs": [
+    "last physically sealed 8-package set available in /mnt/data or restored from trusted storage",
+    "this handoff branch delta documents",
+    "current P07 development overlay if physically available",
+    "latest P07 preformal evidence/results available in trusted storage"
+  ],
+  "read_order_after_reseal": [
+    "CONTROL R28",
+    "PART-A R27",
+    "PART-B1 R10",
+    "PART-B2 R28",
+    "PART-C1 R10",
+    "PART-C2 R27",
+    "PART-D1 R10",
+    "PART-D2 R10"
+  ],
+  "operations": [
+    "Recompute and record source ZIP SHA256/CRC before any mutation.",
+    "Do not rewrite B1/C1/D1/D2 if content is unchanged; preserve byte-for-byte.",
+    "Append or integrate session delta into CONTROL/A/B2/C2 with provenance and supersession notes.",
+    "C2 must contain actual development-overlay source snapshot matching documented R-B target state; do not ship documents without code when code exists.",
+    "Add CURRENT_AUTHORITY_POINTER and NEW_SESSION_START_HERE pointing to R-B as next phase.",
+    "Add Backend Incident record and make clear physical reseal occurred after recovery, not during failed session.",
+    "Add Fresh Extraction/Handoff Validation checking all 8 ZIP CRC/SHA, formal count 137, R140 0/0/0, ENG:R47 unchanged, DB59 unchanged.",
+    "Create SHA256SUMS, delivery manifest and trust-root bundle.",
+    "Only after fresh handoff validation PASS may R-B execution resume."
+  ],
+  "forbidden": [
+    "Do not claim this plan itself is a physical reseal.",
+    "Do not change ENG:R47 Production bytes.",
+    "Do not change DB59 frozen R140 bytes.",
+    "Do not promote DB successor candidates into R140 authority without separate verification.",
+    "Do not start revised formal R140 before R-B/R-C/R-D/R-E/R-F preformal closure and fresh G0."
+  ]
+}
