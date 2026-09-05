@@ -75,7 +75,7 @@ The official Current Pointer MUST remain R10 until all R11 checks below pass. Do
 4. Audit 8/8 outer ZIP CRC, JSON, Python syntax, unsafe/duplicate paths.
 5. Audit all nested ZIP CRCs.
 6. Reassemble B1+B2 Research Master and require authority SHA256 `392840526d8b7017eda6607aea37597c5e6c7df93fc1bcb951deed2de58d31b0`.
-7. Reassemble C1+C2 Narrative Engine Master and require authority SHA256 `5ee441168e7f3af25857f696495cda1bd649` only if this checkpoint is corrected with the full historical authority hash from R10 before execution; do not guess or truncate a hash during audit.
+7. Reassemble C1+C2 Narrative Engine Master and require authority SHA256 `5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649`.
 8. Reassemble D1+D2 DB59 and require frozen SHA256 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
 9. Create final Delivery Manifest / Handoff Audit / Scientific Claim Boundaries / Evolution Timeline / Engine Evolution Map / Fresh Extraction Validation / Trust Root.
 10. Only then create R11 START_HERE and advance `CURRENT_HANDOFF_POINTER.md` to R11.
