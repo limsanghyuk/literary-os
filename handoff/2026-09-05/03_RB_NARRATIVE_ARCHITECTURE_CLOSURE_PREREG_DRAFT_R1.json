@@ -1,0 +1,106 @@
+{
+  "schema": "P07_RB_NARRATIVE_ARCHITECTURE_CLOSURE_PREREG_DRAFT_R1",
+  "date": "2026-09-05",
+  "status": "DRAFT_LOCK_FOR_NEXT_SESSION__NO_OUTPUTS__NONFORMAL",
+  "formal_count_delta": 0,
+  "purpose": "Restore and prove active runtime consumption of historically validated narrative-architecture components before any live craft parity or revised formal R140.",
+  "hypotheses": [
+    "H1: Explicit Social Ecology Graph and Group Membership/Relations reduce protagonist-centric collapse by distributing independent causal obligations across characters/groups.",
+    "H2: Explicit Event/Plot-Axis Ownership survives Episode Allocation -> Detailed Episode Synopsis -> THICK Sequence -> Scene lowering without owner substitution or protagonist hijack.",
+    "H3: Detailed Episode Synopsis and THICK Sequence/Boundary provide richer downstream scene contracts than generic episode/sequence summaries while preserving source-state safety.",
+    "H4: Consumer-fidelity gates detect and block dormant-field failures where architecture data exists but downstream runtime does not consume it.",
+    "H5: One-cycle bidirectional refinement can localize natural architecture defects to the minimum responsible ancestor including Event Ownership/Social Ecology layers without collateral drift."
+  ],
+  "frozen_development_scope": {
+    "sample": "Existing P07 development set only; no fresh formal sample",
+    "source_cutoff": "EP01-EP05 only; actual EP06 forbidden",
+    "db_authority": "DB59 frozen reference snapshot",
+    "production": "ENG:R47 unchanged",
+    "claim_boundary": "NONFORMAL engineering/narrative-architecture closure only"
+  },
+  "required_llm_stages": [
+    "SERIES_WHOLE_STORY_LONG_ARC",
+    "EPISODE_ALLOCATION",
+    "SOCIAL_ECOLOGY_GRAPH",
+    "EVENT_OWNERSHIP_PLAN",
+    "DETAILED_EPISODE_SYNOPSIS",
+    "THICK_SEQUENCE_BOUNDARY_PLAN",
+    "SCENE_PLAN_CONTRACT",
+    "FINAL_LLM_SURFACE"
+  ],
+  "required_social_ecology_fields": [
+    "character_ids",
+    "group_ids",
+    "membership_roles",
+    "inter_group_relations",
+    "obligations",
+    "pressures",
+    "resources_or_information",
+    "independent_plot_axes",
+    "thread_ownership"
+  ],
+  "required_event_ownership_fields": [
+    "event_id",
+    "owner_character_or_group",
+    "initiator",
+    "opposition",
+    "information_owner",
+    "affected_axes",
+    "relationship_effect",
+    "thread_effect",
+    "due_or_defer",
+    "ownership_handoff_rule"
+  ],
+  "required_detailed_episode_synopsis_fields": [
+    "episode_function",
+    "causal_progression",
+    "ensemble_distribution",
+    "event_ownership_schedule",
+    "relationship_movements",
+    "thread_obligations",
+    "mid_episode_turns",
+    "terminal_pressure",
+    "next_episode_pressure",
+    "temporal_constraints"
+  ],
+  "required_thick_sequence_fields": [
+    "goal",
+    "obstacle",
+    "value_shift",
+    "turn_type",
+    "pov_char",
+    "cast_functions",
+    "event_movement",
+    "information_shift",
+    "relationship_movement",
+    "thread_movement",
+    "entry_state",
+    "exit_state",
+    "runtime_share",
+    "boundary_entry_condition",
+    "boundary_exit_condition"
+  ],
+  "consumer_fidelity_gates": {
+    "G1": "Every required stage must be actually invoked; dormant schema/module presence does not count.",
+    "G2": "Every Event Ownership record must produce at least one downstream episode/sequence/scene semantic consequence or explicit defer receipt.",
+    "G3": "No owner substitution: downstream event owner must equal upstream owner unless a preregistered ownership-handoff contract is emitted and accepted.",
+    "G4": "No protagonist hijack: independent plot axes cannot all collapse to protagonist action unless source/state evidence requires it.",
+    "G5": "Detailed Episode Synopsis anchors must be consumed by THICK Sequence; critical anchor preservation >=95%, critical losses=0.",
+    "G6": "THICK Sequence fields must be consumed by Scene Plan/Contract; field-existence-only pass is forbidden.",
+    "G7": "Future-source/entity-critical violations=0.",
+    "G8": "Python literary prose generation bytes=0.",
+    "G9": "Bidirectional repair chooses minimum responsible ancestor and protected sibling stability >=90%.",
+    "G10": "All attempts, failures, repair criteria and attempt indices preserved."
+  },
+  "mutations": [
+    "remove one social group",
+    "swap event owner to protagonist",
+    "drop one independent plot axis",
+    "remove thread movement from one THICK sequence",
+    "break Episode Synopsis -> Sequence anchor",
+    "break Sequence -> Scene anchor",
+    "inject temporal/source-state invalid event"
+  ],
+  "pass_condition": "All consumer-fidelity and safety gates pass on development set, all deliberate critical mutations are detected/blocked, and natural no-injection run shows distinct non-protagonist ownership propagation without unsupported invention.",
+  "after_pass": "Proceed to R-C Decision Architecture Closure; do not start Live Craft Parity yet."
+}
