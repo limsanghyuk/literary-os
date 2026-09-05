@@ -1,0 +1,44 @@
+{
+  "handoff_id": "LITERARY_OS_P07_SESSION_END_HANDOFF_R21_20260905",
+  "repository": "limsanghyuk/literary-os",
+  "branch": "handoff/p07-preformal-rb-20260905",
+  "base_main_sha": "8c9e9124db173af4e52431d3b3c565f989245787",
+  "read_order": [
+    "00_START_HERE_NEW_SESSION_R21.md",
+    "01_CURRENT_AUTHORITY_AND_SESSION_STATE_R21.json",
+    "02_SESSION_RESEARCH_EXPERIMENT_HANDOFF_R21.md",
+    "03_EIGHT_PACKAGE_UPDATE_MATRIX_R21.md",
+    "04_RB_NARRATIVE_ARCHITECTURE_CLOSURE_PREREG_R1.md",
+    "05_OPEN_ISSUES_AND_NEXT_ORDER_R21.md",
+    "06_BACKEND_INCIDENT_AND_RECOVERY_RULE_R1.md",
+    "07_REPACK_AND_AUTHORITY_APPLY_INSTRUCTIONS_R1.md",
+    "08_AUTHORITY_INDEX_AND_HANDOFF_MANIFEST_R21.json"
+  ],
+  "package_authority": {
+    "CONTROL": {"latest_physical_lineage": "R27", "action": "REVISE_AFTER_BACKEND_RECOVERY"},
+    "PART_A": {"latest_physical_lineage": "R26", "action": "REVISE_AFTER_BACKEND_RECOVERY"},
+    "PART_B1": {"latest_physical_lineage": "R10", "action": "BYTE_UNCHANGED"},
+    "PART_B2": {"latest_physical_lineage": "R27", "action": "REVISE_AFTER_BACKEND_RECOVERY"},
+    "PART_C1": {"latest_physical_lineage": "R10_ENG_R47", "action": "BYTE_UNCHANGED"},
+    "PART_C2": {"latest_physical_lineage": "R26_CANDIDATE", "action": "REVISE_AFTER_BACKEND_RECOVERY"},
+    "PART_D1": {"latest_physical_lineage": "R10_DB59_VOL1", "action": "BYTE_UNCHANGED"},
+    "PART_D2": {"latest_physical_lineage": "R10_DB59_VOL2", "action": "BYTE_UNCHANGED"}
+  },
+  "scientific_state": {
+    "P06": "COMPLETED_PHYSICALLY_CLOSED",
+    "P07": "ACTIVE_PREFORMAL_INTEGRATION_CLOSURE",
+    "formal_scored_count": 137,
+    "R140_formal_attempts": 0,
+    "R140_formal_outputs": 0,
+    "R140_formal_scores": 0,
+    "next_phase": "R-B_NARRATIVE_ARCHITECTURE_CLOSURE",
+    "R-B_execution": "NOT_STARTED_LOCAL_BACKEND_CLIENTERROR",
+    "live_craft_parity": "DEFER_UNTIL_R-B_TO_R-E_CLOSED"
+  },
+  "immutable_authorities": {
+    "ENG_R47": "UNCHANGED",
+    "DB59_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9"
+  },
+  "handoff_rule": "Until local ZIP repack and fresh validation complete, this branch is the authoritative session-end overlay and provenance source. It does not supersede immutable ENG:R47 or DB59 bytes.",
+  "formal_count_delta": 0
+}
