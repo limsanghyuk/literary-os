@@ -1,0 +1,63 @@
+{
+  "schema": "LITERARY_OS_LAST_REPORTED_PHYSICAL_8_PACKAGE_SET_R1",
+  "date": "2026-09-05",
+  "status": "LAST_REPORTED_IN_SESSION__MUST_BE_FRESHLY_REVERIFIED_AFTER_BACKEND_RECOVERY",
+  "read_order": [
+    "CONTROL R27",
+    "PART-A R26",
+    "PART-B1 R10",
+    "PART-B2 R27",
+    "PART-C1 R10",
+    "PART-C2 R26",
+    "PART-D1 R10",
+    "PART-D2 R10"
+  ],
+  "packages": [
+    {
+      "part": "CONTROL",
+      "filename": "LITERARY_OS_MANDATORY_CONTINUATION_SET_CONTROL_R27_P07_PRE09_LIVE_PARITY_CP0_AUTHORITY_20260905_SEALED.zip",
+      "sha256": "0f4087469ed0233ac176bfae495fae8b44e34585c8abe0756b4488d1e1cd2a30"
+    },
+    {
+      "part": "PART-A",
+      "filename": "LITERARY_OS_MANDATORY_CONTINUATION_PART-A_CONTROL_AND_EXPERIMENT_R26_P07_PRE09_LIVE_PARITY_CP0_20260905_SEALED.zip",
+      "sha256": "b61bd5061a49261bb441e1f8dadc4b8c5fef6a29af9ab73fd41d3bfb327c68ba"
+    },
+    {
+      "part": "PART-B1",
+      "filename": "LITERARY_OS_MANDATORY_CONTINUATION_PART-B1_RESEARCH_HISTORY_RECOVERY_VOL1_R10_NEW_SESSION_FINAL_REPAIRED_AUTHORITY_20260903_SEALED.zip",
+      "sha256": "00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98",
+      "byte_unchanged": true
+    },
+    {
+      "part": "PART-B2",
+      "filename": "LITERARY_OS_MANDATORY_CONTINUATION_PART-B2_RESEARCH_CURRENT_RECOVERY_VOL2_R27_P07_PRE09_LIVE_PARITY_CP0_20260905_SEALED.zip",
+      "sha256": "3f5f98055eec8daea669d17f4a29cc3599f253203eb90c7c37d7dac56ea50cdc"
+    },
+    {
+      "part": "PART-C1",
+      "filename": "LITERARY_OS_MANDATORY_CONTINUATION_PART-C1_ENGINE_MASTER_VOL1_RUNTIME_CORE_R10_NEW_SESSION_FINAL_REPAIRED_AUTHORITY_20260903_SEALED.zip",
+      "sha256": "dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518",
+      "byte_unchanged": true,
+      "authority": "ENG:R47 Production unchanged"
+    },
+    {
+      "part": "PART-C2",
+      "filename": "LITERARY_OS_MANDATORY_CONTINUATION_PART-C2_ENGINE_MASTER_VOL2_CANDIDATE_R26_P07_PRE09_LIVE_PARITY_CP0_20260905_SEALED.zip",
+      "sha256": "580d6e72b62c1aa28aefe27a0771d8fc777c8a6265c03acc8510e73f84bae0e5"
+    },
+    {
+      "part": "PART-D1",
+      "filename": "LITERARY_OS_MANDATORY_CONTINUATION_PART-D1_DB59_VOL1_DRAMA_BUNDLE_R10_METADATA_OVERLAY_20260903_SEALED.zip",
+      "sha256": "a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504",
+      "byte_unchanged": true
+    },
+    {
+      "part": "PART-D2",
+      "filename": "LITERARY_OS_MANDATORY_CONTINUATION_PART-D2_DB59_VOL2_DRAMA_LEARNING_R10_NEW_SESSION_FINAL_REPAIRED_AUTHORITY_20260903_SEALED.zip",
+      "sha256": "c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4",
+      "byte_unchanged": true
+    }
+  ],
+  "verification_rule": "After backend recovery, locate each exact file and recompute SHA256 + ZIP CRC. If any file is absent or hash differs, do not silently reconstruct authority; record recovery provenance and compare manifests before reseal."
+}
