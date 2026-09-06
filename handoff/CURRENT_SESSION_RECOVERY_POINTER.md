@@ -11,7 +11,7 @@ Commit: `3c45263d38a469d7bac216d24fce0d2c1649380e`
 
 Developer Hub authority:
 `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`
-Current alignment commit: `8eb3e2319b9dda1b01e8480bee3706fad92dbc1d`
+Current alignment commit: `304a9fa423f8c4c3f5abca8ccd57a0224120dbfb`
 
 Developer authority snapshot:
 `handoff/20260906/DEVELOPER_HUB_AUTHORITY_SNAPSHOT_R1.md`
@@ -25,12 +25,16 @@ Current RFV3 preregistration:
 `handoff/20260906/P07_RFV3_ABCD_CAUSAL_REPRETEST_PREREG_R1.md`
 Commit: `07c256a84718c0b8f4017c383c174c4bcf3a8d95`
 
-Current atomic task checkpoint:
+Current latest atomic checkpoint:
+`handoff/20260906/AUTHORITY_ALIGNMENT_AND_CONTAINER_HOLD_CHECKPOINT_R1.md`
+Commit: `d8cf30d509508fd2502a0f26b2378e9e6eefb678`
+
+Historical predecessor checkpoint:
 `handoff/20260906/RFV3_TASK01_PREREG_AND_9PACKAGE_ATOMIC_CHECKPOINT_R1.md`
 Commit: `a1e6ca0e2f84eedef3ae4ce188cecf5dc3857079`
 
 ## Current status
-`RFV3_TASK01_PREREGISTERED__LOCAL_ARTIFACT_BACKEND_HOLD__9_PACKAGE_RESEAL_PENDING_INFRASTRUCTURE`
+`AUTHORITY_DOCS_ALIGNED__DEVELOPER_HUB_ALIGNED__CONTAINER_CLIENTERROR_HOLD__9_PACKAGE_RESEAL_PENDING__CLAUDE_DEFECTS_PARTIALLY_REPAIRED_NOT_FULLY_CLOSED`
 
 Formal scored count: 137
 R140: 0 attempts / 0 outputs / 0 scores
@@ -39,10 +43,11 @@ DB59 frozen SHA256: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bcc
 RFV3 generation outputs: 0
 Claude/CT defects: PARTIALLY REPAIRED / NOT FULLY CLOSED
 CP1 current-authority restoration: OPEN
+Current repaired 9-package reseal: NOT COMPLETED
 R140: HARD BLOCK
 
 ## Mandatory resume rule
-Do not begin the next scientific task until any pending completed-task changes have been propagated into the canonical 5-Part / 9-Package structure and physically audited, unless the artifact backend remains unavailable. If unavailable, update an atomic external checkpoint and keep `9_PACKAGE_RESEAL_PENDING_INFRASTRUCTURE` explicit.
+The FIRST action after container recovery is physical 5-Part / 9-Package reconstruction and audit from the exact repaired authority bytes. Do not begin RFV3 generation or R-F Live before this pending package closure is resolved.
 
 Canonical package accounting:
 CONTROL / A / B1 / B2 / C1 / C2-A / C2-B / D1 / D2 = 9 packages.
@@ -56,4 +61,4 @@ If available, provide:
 - `A E.zip` for CT live/API evidence review
 - latest physically sealed 5-Part / 9-Package files in the user's possession
 
-The START_HERE R2 and Developer Hub snapshot contain the exact scientific correction, RFV2 repair observations, CP1 status, RFV3 A/B/C/D protocol, package rule, previous physical baseline hashes, and exact resume order.
+The START_HERE R2, Developer Hub snapshot, defect matrix, and latest atomic checkpoint contain the exact scientific correction, RFV2 repair observations, CP1 status, RFV3 A/B/C/D protocol, previous physical baseline hashes, and resume order.
