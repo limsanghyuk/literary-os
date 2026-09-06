@@ -4,18 +4,22 @@ Last updated: 2026-09-06
 Always read this file first when resuming Literary OS work in a new ChatGPT session.
 Then read `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`. The two pointers must agree.
 
+## MASTER NEW-SESSION HANDOFF — READ FIRST
+`handoff/20260906/NEW_SESSION_MASTER_HANDOFF_P06_TO_P07_RECOVERY_R1.md`
+Commit: `147dc8f7e476b7d5a1f565343b7fe7e685d2e81c`
+
+This document reconstructs the full continuity from P06 physical closure through the interrupted P07 preformal program, including:
+- package-propagation debt and why recovery is required;
+- P07 preformal lineage and explicit future gate structure;
+- CT/CT-17 position;
+- Claude defects, RFV2 working-state repairs and remaining open items;
+- exact 9-package previous physical baseline and C2 reconstruction;
+- controlled recovery when exact repaired source bytes are missing;
+- RFV3, CP1, R-F, R-G and R140 next-step order.
+
 ## Full developer recovery + research dossier
 `handoff/20260906/DEVELOPER_HUB_FULL_RECOVERY_RESEARCH_DOSSIER_R2.md`
 Commit: `889037274af31ec287bd846d9afaa769dae4f172`
-
-This is the detailed recovery document for:
-- Claude/CT defects, repairs and remaining defects;
-- exact developer-held previous 5-Part / 9-Package hashes;
-- C2 reconstruction;
-- controlled recovery if exact repaired source bytes do not survive;
-- RFV2 and RFV3 research purpose/content/method;
-- CP1 restoration requirements;
-- package rebuild/audit order.
 
 ## Current recovery authority
 START HERE:
@@ -24,7 +28,7 @@ Commit: `3c45263d38a469d7bac216d24fce0d2c1649380e`
 
 Developer Hub authority:
 `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`
-Current alignment commit: `aae87de332b5e6588d78108b20ac5032c226d99f`
+Current alignment commit: `d019ec16fa4489bdb67bc0f6680fd79b635e4b91`
 
 Developer authority snapshot:
 `handoff/20260906/DEVELOPER_HUB_AUTHORITY_SNAPSHOT_R1.md`
@@ -47,11 +51,13 @@ Historical predecessor checkpoint:
 Commit: `a1e6ca0e2f84eedef3ae4ce188cecf5dc3857079`
 
 ## Current status
-`AUTHORITY_DOCS_ALIGNED__DEVELOPER_HUB_ALIGNED__CONTAINER_CLIENTERROR_HOLD__9_PACKAGE_RESEAL_PENDING__CLAUDE_DEFECTS_PARTIALLY_REPAIRED_NOT_FULLY_CLOSED`
+`P06_COMPLETED_PHYSICALLY_CLOSED__P07_ACTIVE_PREFORMAL__AUTHORITY_DOCS_ALIGNED__CONTAINER_CLIENTERROR_HOLD__CURRENT_REPAIRED_9PACKAGE_MISSING__CLAUDE_DEFECTS_PARTIALLY_REPAIRED__CP1_OPEN__R140_HARD_BLOCK`
 
 Formal scored count: 137
 R140: 0 attempts / 0 outputs / 0 scores
 Production: ENG:R47 immutable
+P06: COMPLETED / PHYSICALLY CLOSED
+P07: ACTIVE PREFORMAL / NOT COMPLETE
 DB59 frozen SHA256: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
 RFV3 generation outputs: 0
 Claude/CT defects: PARTIALLY REPAIRED / NOT FULLY CLOSED
@@ -87,4 +93,4 @@ If available, provide:
 - `A E.zip` for CT live/API evidence review;
 - any RFV2 repair source/evidence artifacts that survived outside the failed container.
 
-If exact repaired source bytes are unavailable, follow the controlled reconstruction procedure in `DEVELOPER_HUB_FULL_RECOVERY_RESEARCH_DOSSIER_R2.md`; do not claim byte-identical recovery.
+If exact repaired source bytes are unavailable, follow the controlled reconstruction procedure in the Master Handoff and Full Recovery Dossier; do not claim byte-identical recovery.
