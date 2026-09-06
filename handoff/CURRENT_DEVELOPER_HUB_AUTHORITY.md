@@ -20,7 +20,11 @@ Commit: `62b64b37196ee2c40b8c89d945a43030a2df86f2`
 `handoff/20260906/P07_RFV3_ABCD_CAUSAL_REPRETEST_PREREG_R1.md`
 Commit: `07c256a84718c0b8f4017c383c174c4bcf3a8d95`
 
-## Current atomic checkpoint
+## Current latest atomic checkpoint
+`handoff/20260906/AUTHORITY_ALIGNMENT_AND_CONTAINER_HOLD_CHECKPOINT_R1.md`
+Commit: `d8cf30d509508fd2502a0f26b2378e9e6eefb678`
+
+Earlier RFV3 Task01 checkpoint remains historical predecessor:
 `handoff/20260906/RFV3_TASK01_PREREG_AND_9PACKAGE_ATOMIC_CHECKPOINT_R1.md`
 Commit: `a1e6ca0e2f84eedef3ae4ce188cecf5dc3857079`
 
