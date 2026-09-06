@@ -4,6 +4,10 @@ Last updated: 2026-09-06
 Read this file together with `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`.
 Both pointers must describe the same scientific and package state.
 
+## Current recovery START HERE
+`handoff/20260906/SESSION_RECOVERY_START_HERE_R2.md`
+Commit: `3c45263d38a469d7bac216d24fce0d2c1649380e`
+
 ## Current developer authority snapshot
 `handoff/20260906/DEVELOPER_HUB_AUTHORITY_SNAPSHOT_R1.md`
 Commit: `934e10d4dd2deeed5ffcd34f5c543e4e93307e99`
@@ -29,6 +33,7 @@ Commit: `a1e6ca0e2f84eedef3ae4ce188cecf5dc3857079`
 - Container/artifact backend: ClientError / Infrastructure HOLD
 - Canonical package structure: CONTROL / A / B1 / B2 / C1 / C2-A / C2-B / D1 / D2
 - Current repaired 9-package physical reseal: NOT COMPLETED
+- Claude/CT defects: PARTIALLY REPAIRED / NOT FULLY CLOSED
 - CP1 current-authority restoration: OPEN
 - R140: HARD BLOCK
 
