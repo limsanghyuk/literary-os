@@ -4,190 +4,97 @@ Last updated: 2026-09-07
 Read this file together with `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`. Both must describe the same state.
 
 ## CURRENT LATEST RECOVERY CHECKPOINT — READ FIRST
-`handoff/20260907/P07A_9OF9_BASELINE_AND_FULL_CONTEXT_RECOVERY_R1.md`
-Commit: `52d7b9ecfa709deee18dbc29925d40d1fccad395`
+`handoff/20260907/P07A_RFV2_CURRENT_PHYSICAL_AUTHORITY_CLOSURE_R1.md`
+Commit: `c9b9cb65944cc956e3a7c6698d86aa9f1466cd07`
 
 Current Session Recovery Pointer alignment commit:
-`7d01be85f014329974b9e01560eceb192827827b`
-
-Previous checkpoints:
-- `handoff/20260907/P07A_FRESH_SESSION_BASELINE_REVERIFY_B1_B2_C1_C2_R1.md` — `f5e9c97b0e32cee9de2b00773f740fbe9df7e7be`
-- `handoff/20260907/P07A_CONTAINER_FAILOVER_NEW_SESSION_START_R1.md` — `89a9e1ffb140a52b90a0ef9f229e3309d52992b8`
+`7049302630bb62ef80d51ab12fb896d6bf0410d5`
 
 ## CURRENT SCIENTIFIC AUTHORITY
 - Formal scored count: 137
 - Latest formal scored authority: R138
-- R140: 0 attempts / 0 outputs / 0 scores
+- R140: 0 attempts / 0 outputs / 0 scores — HARD BLOCK
 - ENG:R47 Production: immutable
 - P06: COMPLETED / PHYSICALLY CLOSED
 - P07: ACTIVE PREFORMAL / NOT COMPLETE
-- Current priority: P07-A — Authority / Package Recovery
+- Current recovered physical authority: `CURRENT_PHYSICAL_AUTHORITY__P07A_RFV2_CONTROLLED_RECOVERY_R1`
 - DB59 frozen SHA256: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
 - DB64: separate Living DB; MUST NOT silently replace DB59
 - RFV3 outputs: 0
-- Claude/CT defects: PARTIALLY REPAIRED / NOT FULLY CLOSED
 - CP1 current-authority restoration: OPEN
-- current repaired 9-package physical authority: MISSING
-- R140: HARD BLOCK
 
-## CANONICAL 5-PART / 9-PACKAGE STRUCTURE
+## CANONICAL 5-PART / 9-PACKAGE CURRENT PHYSICAL AUTHORITY
 `CONTROL / A / B1 / B2 / C1 / C2-A / C2-B / D1 / D2`
 
 Logical authority:
 - CONTROL = current control / handoff / top-level authority
 - A = experiment / preregistration / evaluation / governance control
-- B = research authority: B1 history + B2 current recovery/research
-- C = engine authority: C1 runtime core + physical C2-A/C2-B candidate engine
-- D = DB59/data-learning authority: D1 operational drama bundle + D2 drama-learning master
+- B = B1 research history + B2 current research/recovery
+- C = C1 runtime core + C2 candidate engine; physical C2 is C2-A || C2-B
+- D = D1 DB59 drama bundle + D2 DB59 drama-learning authority
 
-## PREVIOUS PHYSICAL BASELINE — FRESH VERIFIED 9/9
-All nine developer-supplied baseline package files have now been freshly audited in the healthy failover session:
-- CONTROL R39 `47fe62c8acf3401c69174c77c420be0d106703888def2ea2b073a9491b14eeeb`
-- A R38 `9443d103de0eafd6fb063d1ba860a90e7be32d40227980d867f79808526696b1`
-- B1 R10 `00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98`
-- B2 R39 `f396d7fe583f6267c3b17735e690be5e50c35d48f2253ae7ea12a71779ecc920`
-- C1 `dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518`
-- C2-A `6208a1513550525234b85b63103fb64a8c3bca8405a91c019df243a28b8ff975`
-- C2-B `eac1bb5b424c92c6ae97924d09864412b222e581d34b062e0818e4105ee89f5f`
-- D1 R10 `a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504`
-- D2 R10 `c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4`
+Current package bytes:
+1. CONTROL `LITERARY_OS_CURRENT_CONTROL_P07A_RFV2_RECOVERY_R1.zip`
+   SHA256 `e361dfc3421001b1942d9689bd6f9021db8b1821a074301496dd521098ab2c16`
+2. A `LITERARY_OS_CURRENT_PART_A_P07A_RFV2_RECOVERY_R1.zip`
+   SHA256 `368c5a26e2d00204e01ec0a049374aacfbb85eca5e0d7b86f7640132fd70830e`
+3. B1 `LITERARY_OS_CURRENT_PART_B1_UNCHANGED_R1.zip`
+   SHA256 `00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98`
+4. B2 `LITERARY_OS_CURRENT_PART_B2_P07A_RFV2_RECOVERY_R1.zip`
+   SHA256 `9bc8dd1a12dc951b96f3a0f8a6ab5b6eaa44689b40f57b82b62c0b97f299bb76`
+5. C1 `LITERARY_OS_CURRENT_C1_RUNTIME_CORE_UNCHANGED_R1.zip`
+   SHA256 `dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518`
+6. C2-A `LITERARY_OS_CURRENT_C2_BINARY_A_P07A_RFV2_RECOVERY_R1.bin`
+   SHA256 `36474a094fc5a0813e914f7cca5dd5af1419fe7952d7665066ebf95c5f83dde8`
+7. C2-B `LITERARY_OS_CURRENT_C2_BINARY_B_P07A_RFV2_RECOVERY_R1.bin`
+   SHA256 `f219504fd003233b1ad7a394fe652cc441fda486356a0bdd5ae5fd9945a6d424`
+8. D1 `LITERARY_OS_CURRENT_PART_D1_DB59_UNCHANGED_R1.zip`
+   SHA256 `a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504`
+9. D2 `LITERARY_OS_CURRENT_PART_D2_DB59_UNCHANGED_R1.zip`
+   SHA256 `c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4`
 
-Accounting:
-`9/9_COLLECTED__9/9_FRESH_VERIFIED__PREVIOUS_PHYSICAL_BASELINE_BYTE_CLOSURE_COMPLETE`
+Changed from previous baseline: CONTROL / A / B2 / C2-A / C2-B.
+Byte-identical to previous baseline: B1 / C1 / D1 / D2.
 
-All nine are still `PREVIOUS_PHYSICAL_BASELINE`, not the current repaired authority.
+## MANIFEST / TRUST ROOT
+- Package Set SHA256 `29ac62ea4877858693193bdc3b3f8e950e875c839ae5c54330ceba3e871ff928`
+- Manifest SHA256 `aaa463bd465f9586dd00b948a33dabc432bc1fcf0f7013193f776122e103d814`
+- Trust Root SHA256 `e1b731f371f8efd8289d30894c0cfc548e62aac553c836110e2d9214490fb046`
+- Current reconstructed C2 SHA256 `1a9355169650d66af0a3f44fb867bad1c00e5dc643e8f28443d1b2f6c6cde62d`
 
-## CROSS-PACKAGE INTEGRITY / REASSEMBLY — FRESH PASS
-- B1+B2 Research Experiment Learning Recovery Master:
-  - 77,347,512 bytes
-  - SHA256 `392840526d8b7017eda6607aea37597c5e6c7df93fc1bcb951deed2de58d31b0`
-  - CRC PASS; duplicate=0; unsafe=0; nested 83/83 PASS
-- C2-A || C2-B previous C2 R39:
-  - 311,653,716 bytes
-  - SHA256 `d292690dd89ce88e9642bc38c3416d33aa4dc64dea6d0469c3a9ce0a62c10f3b`
-  - 3,610 entries; CRC PASS; duplicate=0; unsafe=0; nested 155/155 PASS
-  - current R11 active overlay 520 files; `.pyc=0`; `.pytest_cache=0`
-- C1+C2 Narrative Engine Master:
-  - 204,167,926 bytes
-  - SHA256 `5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649`
-  - CRC PASS; nested 313/313 PASS
-- D1+D2 frozen DB59:
-  - 259,756,521 bytes
-  - SHA256 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
-  - 38,852 entries; CRC PASS; duplicate=0; unsafe=0; nested 6/6 PASS
+## RFV2 CONTROLLED RECOVERY — CLOSED AT CURRENT PHYSICAL AUTHORITY LEVEL
+Exact interrupted-session repaired bytes were not found. The pre-result frozen `CONTROLLED_RECOVERY_REIMPLEMENTATION` contract was reimplemented without tuning to previous observations and physically propagated.
 
-## FRESH-SESSION INFRASTRUCTURE RESULT
-The failover session remained healthy throughout B1 -> B2 -> C1 -> C2 -> D1 -> D2 auditing. Minimal OS, Python, and `/mnt/data` health probes remained successful after D1 and after D2.
+Sealed current results:
+- DB59 1,097 eligible members / 10,784 records
+- 6/6 development cases `USE_RETRIEVAL`
+- Direct DB59 vs Frozen Index equivalence 6/6 PASS
+- selected donor positive dependency PASS
+- irrelevant unselected donor invariance PASS
+- CASE-01 selected donor payload reaches actual `SEQUENCE_PLAN` provider input PASS
+- Frozen Index outer tamper HOLD as required
+- Frozen Index inner binding tamper HOLD as required
+- source cutoff violations 0
+- Python literary prose generation false
+- exact packaged C2 nonhistorical regression 185/185 PASS
+- result-informed tuning false
+- secret pattern hits 0
+- formal count delta 0
+- R140 attempts delta 0
 
-The prior-session global `ClientError` did not reproduce. Fresh evidence does not support B1/B2/C1/C2/D1/D2 corruption as the cause. The exact infrastructure root cause remains unproven.
+## CROSS-PACKAGE CONTRACTS — PASS
+- B1+B2 Research Master SHA256 `392840526d8b7017eda6607aea37597c5e6c7df93fc1bcb951deed2de58d31b0`
+- C2-A||C2-B current C2 SHA256 `1a9355169650d66af0a3f44fb867bad1c00e5dc643e8f28443d1b2f6c6cde62d`
+- C1+C2 Narrative Engine Master split contract SHA256 `5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649`
+- D1+D2 frozen DB59 SHA256 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
 
-## CURRENT RECOVERY / RFV2 BOUNDARY
-The known interrupted-session RFV2 repaired-state evidence hashes were searched across the currently supplied baseline package text/code surfaces and were not located:
-- `d9b50787676aa0750ba0b519b2537dedafa71807c72edef78c659ddfb6ddf419`
-- `81ca599ead072c7da9291450573b5a2c782d14d2b3b5514e5a7b3265b155fd23`
-- `ab60a39cc9ce8fe30835b7b3589566f7a2281af6c49957048eb2268531d95f4f`
+## CLAIM BOUNDARY
+This seal restores the missing physical persistence for the recovered P07-A RFV2 engineering state. It does not retrospectively convert working-state observations into a byte-identical restoration; the correct recovery label remains `CONTROLLED_RECOVERY_REIMPLEMENTATION`.
 
-Historical PRE09 paired-live code and current R11 CP0/HOLD code survive, but the exact interrupted-session RFV2 repaired implementation does not have byte-verifiable survival support from the supplied baseline packages.
+This seal does not complete P07, RFV3, CP1 Live, official R-F Live, R-G, or Formal R140. R140 remains hard-blocked until its downstream prerequisites are satisfied.
 
-Current C2 is PRE-RFV2 previous baseline and MUST NOT be relabeled as the repaired engine.
-
-Current RFV2 recovery mode:
-`CONTROLLED_RECOVERY_REIMPLEMENTATION`
-unless an exact repaired artifact is later independently hash/checkpoint verified.
-
-Frozen recovery authorities:
-- `handoff/20260907/P07A_INFRASTRUCTURE_DIAG_AND_RFV2_SOURCE_SURVIVAL_AUDIT_R1.md` — `9513b92ba171bd4cdc0371c1688f751f3fc09aa9`
-- `handoff/20260907/P07A_RFV2_CONTROLLED_RECOVERY_REIMPLEMENTATION_SPEC_R1.md` — `c2c38fc55508ee874777e5752ed984f938fe60bb`
-
-Frozen essentials:
-- R37/R38-compatible work-level TF-IDF/cosine
-- analyzer `char_wb`; ngram 2-5; top-k 4
-- HIGH >= 0.13; MEDIUM >= 0.10 and < 0.13; LOW < 0.10 -> fallback
-- top1-top2 margin diagnostic only
-- bounded THICK-derived functional profiles
-- diagnostic confidence/margin separated from literary semantic payload
-- verified archive actual path consumes repaired retrieval route
-- selected-donor positive dependency
-- irrelevant-unselected invariance
-- Direct DB59 vs Frozen Index equivalence/tamper validation
-- source-cutoff enforcement
-- Python literary prose generation = 0
-- no result-informed tuning
-
-Historical 6/6 and 185/185 are observations to reverify, not targets.
-
-## RECOVERED RESEARCH / EXPERIMENT INTERPRETATION
-Prior-session conversation records, Research Master / Experiment Registry material, historical-validation packages, Full Recovery Dossier, Claude/CT defect matrix, and RFV3 preregistration have been aligned under temporal supersession.
-
-Current high-level evolution:
-`Scene/Sequence -> Retrieval/Boundary -> Episode Planning -> Selector/Controller/Thread -> Hierarchy/Blueprint/Multi-Episode -> DB Semantic Consumption -> Entity/Relationship -> Ensemble/Social Ecology -> Series/Episode/Sequence/Scene -> Broadcast Scale -> Surface/Renderer/Voice -> External Generalization/Clean Replication/Metrology`.
-
-Key current claim boundaries:
-- R41/P01: Ensemble effect replicated; tonal increment not supported.
-- R42/P02: Blueprint depth + mismatch harm replicated; Thread Binding incremental primary gate failed due treatment implementation limits.
-- R103/P03: iterated clean engineering revalidation PASS; failed attempts preserved.
-- R121/P04: broadcast-scale iterated clean revalidation PASS; failed attempts preserved.
-- R129-R132: strong internal signals only; do not generalize directly.
-- R133: external blind cross-work generalization FAIL.
-- R134: R129 clean replay failed; R129 lineage = `CONFLICTED_NOT_REPLICATED`.
-- R135: linked external relative renderer effect supported only; not newly formal-scored; voice bottleneck remains.
-- R136-R138: remaining surface/oral/voice bottleneck progressively localized; R138 latest formal scored.
-- R139: external evaluation/metrology protocol failure; CLOSED_NOT_SCORED; no content-effect inference.
-
-P-phase interpretation:
-- P0 = pre-R140 inspector/self-description/reproducibility engineering repair; count delta 0.
-- P01 = R41 clean historical validation.
-- P02 = R42 clean historical validation.
-- P03 = R103 clean historical validation.
-- P04 = R121 clean historical validation.
-- P05 = R135 linked external closure; count delta 0.
-- P06 = Frozen Reference + Living DB governance; physically closed; DB59 remains this lineage's frozen authority.
-- P07 = active preformal qualification/recovery; not complete.
-
-Mandatory adoption doctrine:
-`Value changes -> Consumer receives -> selected donor/semantic payload changes -> LLM provider input changes -> downstream behavior changes -> Receipt/Trace proves propagation`.
-
-Therefore:
-- File exists != Implemented
-- Field exists != Consumed
-- Function called != Adopted
-- Validator PASS != Literary/Semantic Quality PASS
-- Python literary prose bytes = 0
-
-## RFV3 PREREGISTRATION — STILL ZERO OUTPUTS
-Authority: `handoff/20260906/P07_RFV3_ABCD_CAUSAL_REPRETEST_PREREG_R1.md` commit `07c256a84718c0b8f4017c383c174c4bcf3a8d95`.
-
-Frozen arms:
-- A = SUMMARY ONLY
-- B = PRE-REPAIR ENGINE / NO_RETRIEVAL
-- C = RFV2 REPAIRED ENGINE / DB59 USE_RETRIEVAL
-- D = C + BIDIRECTIONAL REFINEMENT
-
-Causal questions:
-- A vs B = runtime information preservation/loss
-- B vs C = incremental DB59 retrieval craft value
-- C vs D = incremental bidirectional refinement value
-
-RFV3 generation remains blocked until recovery prerequisites are satisfied.
-
-## CONTINUITY AUTHORITIES
-- Master P06->P07 Handoff: `handoff/20260906/NEW_SESSION_MASTER_HANDOFF_P06_TO_P07_RECOVERY_R1.md` — `147dc8f7e476b7d5a1f565343b7fe7e685d2e81c`
-- Full Recovery Research Dossier: `handoff/20260906/DEVELOPER_HUB_FULL_RECOVERY_RESEARCH_DOSSIER_R2.md` — `889037274af31ec287bd846d9afaa769dae4f172`
-- Claude/CT Defect Matrix: `handoff/20260906/CLAUDE_CT_DEFECT_CLOSURE_MATRIX_R1.md` — `62b64b37196ee2c40b8c89d945a43030a2df86f2`
-- RFV3 Preregistration: `handoff/20260906/P07_RFV3_ABCD_CAUSAL_REPRETEST_PREREG_R1.md` — `07c256a84718c0b8f4017c383c174c4bcf3a8d95`
-
-## MANDATORY NEXT EXECUTION ORDER
-1. Previous physical baseline verification is COMPLETE 9/9.
-2. Recover/reimplement RFV2 strictly under the frozen preresult controlled-recovery contract.
-3. Freshly validate DB59 authority/membership, six development cases, CASE-01 propagation, selected/unselected donor causality, Direct DB59 vs Frozen Index equivalence, outer/inner tamper HOLD, source leak=0, Python prose=0, and full nonhistorical regression.
-4. Preserve FAIL/HOLD without result-informed tuning.
-5. Propagate verified recovered state into all 9 packages; changed -> new SHA, unchanged -> byte-identical proof.
-6. Rebuild Manifest + Trust Root; audit SHA/CRC/duplicate/unsafe/nested/C2/DB59/secret=0.
-7. Physically deliver all nine current packages.
-8. Only then declare `CURRENT_PHYSICAL_AUTHORITY`.
-9. Then continue retrieval/propagation mechanical closure, RFV3 causal re-pretest, CP1 current-authority integration, official R-F paired Live, R-G freeze/formal readiness, and Formal R140 according to the latest sealed sequence.
-
-Until prerequisite closure, RFV3 generation, CP1 Live, official R-F, R-G, and Formal R140 remain blocked.
+## NEXT ORDER
+Use this exact 9-package physical authority as the sole starting package set for further P07 work. Any subsequent code/research state change must be propagated back into the canonical 5 Parts / 9 Packages with changed->new SHA or unchanged->byte-identical proof before moving to the next scientific task unit.
 
 ## CURRENT STATUS TOKEN
-`P07A_9_OF_9_PREVIOUS_BASELINE_FRESH_VERIFIED__D1_D2_DB59_REASSEMBLY_EXACT__PRIOR_CLIENTERROR_NOT_REPRODUCED__FULL_CONTEXT_RECOVERY_ALIGNED__RFV2_EXACT_REPAIRED_SOURCE_NOT_LOCATED__CONTROLLED_RECOVERY_REIMPLEMENTATION_REQUIRED__CURRENT_PHYSICAL_AUTHORITY_MISSING__R140_HARD_BLOCK`
+`CURRENT_PHYSICAL_AUTHORITY_P07A_RFV2_R1__5_PARTS_9_PACKAGES_PHYSICALLY_SEALED__MANIFEST_TRUST_ROOT_SEALED__RFV2_MECHANICAL_RECOVERY_PASS__P07_ACTIVE_PREFORMAL__R140_HARD_BLOCK`
