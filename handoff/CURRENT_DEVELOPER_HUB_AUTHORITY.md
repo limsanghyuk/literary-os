@@ -4,6 +4,25 @@ Last updated: 2026-09-06
 Read this file together with `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`.
 Both pointers must describe the same scientific and package state.
 
+## MASTER NEW-SESSION HANDOFF — READ FIRST FOR P06→P07 CONTINUITY
+`handoff/20260906/NEW_SESSION_MASTER_HANDOFF_P06_TO_P07_RECOVERY_R1.md`
+Commit: `147dc8f7e476b7d5a1f565343b7fe7e685d2e81c`
+
+This is the primary continuity document for:
+- why physical package propagation debt occurred;
+- P06 completed/physically closed state;
+- P07 preformal lineage and where the pretest structure became insufficiently explicit;
+- CT/CT-17 position and claim boundary;
+- Claude/CT defects;
+- RFV2 working-state repairs and observed evidence;
+- remaining open defects;
+- exact developer-held previous 5-Part / 9-Package baseline;
+- controlled recovery if repaired source bytes do not survive;
+- RFV3 A/B/C/D preregistered purpose/method;
+- CP1/R-F/R-G/R140 order;
+- the new explicit P07 recovery gate structure;
+- mandatory per-task physical packaging rule.
+
 ## Full developer recovery + research dossier
 `handoff/20260906/DEVELOPER_HUB_FULL_RECOVERY_RESEARCH_DOSSIER_R2.md`
 Commit: `889037274af31ec287bd846d9afaa769dae4f172`
@@ -49,6 +68,8 @@ Commit: `a1e6ca0e2f84eedef3ae4ce188cecf5dc3857079`
 - Formal scored count: 137
 - R140: 0 attempts / 0 outputs / 0 scores
 - ENG:R47 immutable
+- P06: COMPLETED / PHYSICALLY CLOSED
+- P07: ACTIVE PREFORMAL / NOT COMPLETE
 - DB59 SHA256: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
 - RFV3 outputs: 0
 - Container/artifact backend: ClientError / Infrastructure HOLD
