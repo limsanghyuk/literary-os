@@ -4,24 +4,20 @@ Last updated: 2026-09-07
 Read this file together with `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`. Both must describe the same state.
 
 ## CURRENT LATEST RECOVERY CHECKPOINT — READ FIRST
+`handoff/20260907/P07A_FRESH_SESSION_BASELINE_REVERIFY_B1_B2_C1_C2_R1.md`
+Commit: `f5e9c97b0e32cee9de2b00773f740fbe9df7e7be`
+
+Current Session Recovery Pointer alignment commit:
+`6b8269cfa232daffca1f9fb00f8257928eb1681c`
+
+Previous failover checkpoint:
 `handoff/20260907/P07A_CONTAINER_FAILOVER_NEW_SESSION_START_R1.md`
 Commit: `89a9e1ffb140a52b90a0ef9f229e3309d52992b8`
 
-Current Session Recovery Pointer alignment commit:
-`06f47cda27c6ee35ed60f335cab496c77ec607ce`
+### Fresh-session infrastructure result
+The failover session remained healthy through sequential B1 -> B2 -> C1 -> C2 processing. Minimal OS `/bin/true`, Python, and `/mnt/data` probes remained successful after package processing. The prior-session global `ClientError` did not reproduce after these packages.
 
-### Container diagnosis
-The interrupted session is not usable for physical package generation:
-- minimal OS/container command fails with `ClientError` before file I/O;
-- private Python fails;
-- user-visible Python fails.
-
-Therefore Part-D corruption is NOT established. The first recurrent failure was already observed when B1/B2 verification began, before D1/D2 fresh-byte processing. Part-D may correlate with a high-load attachment/mount phase, but any cumulative-resource/mount-pressure explanation remains a hypothesis until isolated in a healthy fresh session.
-
-Current required operational action:
-`FRESH_SESSION_CONTAINER_FAILOVER`
-
-The new session must health-check the sandbox before any large upload, then mount/audit B1 -> B2 -> D1 -> D2 sequentially.
+Therefore B1/B2/C1/C2 package corruption is not supported by the fresh audits. D1/D2 and cumulative mount/resource-pressure causality remain to be isolated.
 
 ## CURRENT SCIENTIFIC AUTHORITY
 - Formal scored count: 137
@@ -49,29 +45,53 @@ Logical Parts:
 - C = C1 runtime core + C2 candidate engine; physical C2 is split into C2-A/C2-B
 - D = D1 DB59 drama bundle + D2 DB59 drama learning layer
 
-C2 reconstruction:
-`C2-A || C2-B`
-
-Previous C2 R39 expected SHA256:
-`d292690dd89ce88e9642bc38c3416d33aa4dc64dea6d0469c3a9ce0a62c10f3b`
-
-## PREVIOUS PHYSICAL BASELINE
-All nine baseline files were supplied in the interrupted conversation.
-Fresh verified before sandbox failure:
+## PREVIOUS PHYSICAL BASELINE — FRESH VERIFIED 7/9
+Fresh verified / reverified:
 - CONTROL R39 `47fe62c8acf3401c69174c77c420be0d106703888def2ea2b073a9491b14eeeb`
 - A R38 `9443d103de0eafd6fb063d1ba860a90e7be32d40227980d867f79808526696b1`
+- B1 R10 `00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98`
+- B2 R39 `f396d7fe583f6267c3b17735e690be5e50c35d48f2253ae7ea12a71779ecc920`
 - C1 `dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518`
 - C2-A `6208a1513550525234b85b63103fb64a8c3bca8405a91c019df243a28b8ff975`
 - C2-B `eac1bb5b424c92c6ae97924d09864412b222e581d34b062e0818e4105ee89f5f`
-- C2-A || C2-B reconstruction matched expected previous C2 R39 SHA.
 
-Fresh verification still required in a healthy sandbox:
-- B1 R10 `00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98`
-- B2 R39 `f396d7fe583f6267c3b17735e690be5e50c35d48f2253ae7ea12a71779ecc920`
+C2 reconstruction:
+`C2-A || C2-B`
+- bytes 311,653,716
+- SHA256 `d292690dd89ce88e9642bc38c3416d33aa4dc64dea6d0469c3a9ce0a62c10f3b`
+- 3,610 entries / CRC PASS / duplicate 0 / unsafe 0 / direct nested ZIP 155/155 PASS
+
+C1/C2 Narrative Engine Master split reassembly:
+- bytes 204,167,926
+- SHA256 `5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649`
+- 4,683 entries / CRC PASS / duplicate 0 / unsafe 0 / direct nested ZIP 313/313 PASS
+
+Fresh verification still required:
 - D1 R10 `a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504`
 - D2 R10 `c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4`
 
+Accounting:
+`9/9 baseline collected`
+`7/9 fresh verified`
+`D1/D2 fresh verification pending`
+
 All nine remain `PREVIOUS_PHYSICAL_BASELINE` only and are not current repaired authority.
+
+## C1/C2 RECOVERY ANALYSIS
+The current candidate subtree inside C2:
+`CURRENT_R11_RFV_ACTIVE_DEVELOPMENT_OVERLAY/`
+contains exactly 520 files with `.pyc=0` and `.pytest_cache=0`. Cache artifacts exist only in historical P07-PRE09 snapshots elsewhere in the archive and must not be conflated with current-overlay contamination.
+
+The fresh code inspection confirms this R11 package is PRE-RFV2-repair baseline:
+- current retrieval gate defaults are confidence 0.60 / margin 0.03, with the margin still acting as a hard `NO_RETRIEVAL` gate;
+- verified archive normalization flattens payload text and retains broad payload/thick-core material;
+- the actual verified archive route consumes that old retrieval gate;
+- current `rf_live_parity_runner.py` intentionally stops at CP0 and HOLDs CP1;
+- a historical P07 PRE09 paired Reference/Engine live-runner implementation survives as a recovery design source.
+
+The known interrupted-session RFV2 repaired-state evidence hashes were not located in B1/B2/C1/C2. Therefore these packages do not support byte-identical RFV2 restoration.
+
+Embedded R11 package text that described its then-current 8-package R-FV physical seal is historical baseline evidence and is superseded by the later Claude/CT defect findings and the current 5-Part / 9-Package recovery authority.
 
 ## RFV2 RECOVERY AUTHORITY
 Durable-source audit:
@@ -108,24 +128,19 @@ Historical 6/6 and 185/185 are observations to reverify, not targets.
 - Claude/CT Defect Matrix: `handoff/20260906/CLAUDE_CT_DEFECT_CLOSURE_MATRIX_R1.md` commit `62b64b37196ee2c40b8c89d945a43030a2df86f2`
 - RFV3 Preregistration: `handoff/20260906/P07_RFV3_ABCD_CAUSAL_REPRETEST_PREREG_R1.md` commit `07c256a84718c0b8f4017c383c174c4bcf3a8d95`
 
-## MANDATORY FRESH-SESSION EXECUTION ORDER
-1. Start fresh session and read both current pointers plus the failover checkpoint.
-2. Before any package upload: minimal OS probe, Python probe, `/mnt/data` probe.
-3. If unhealthy, abandon that session before upload.
-4. If healthy: B1 only -> SHA/CRC/duplicate/unsafe/nested audit -> health probe.
-5. B2 -> audit -> health probe.
-6. D1 only -> audit -> health probe.
-7. D2 -> audit -> health probe.
-8. If the container fails immediately after a specific mount, record the boundary but do not call that package corrupt until independently audited in another healthy session.
-9. Reconfirm C2 reconstruction if C2-A/C2-B are remounted.
-10. Complete 9/9 baseline audit.
-11. Execute frozen RFV2 controlled recovery and fresh DB59 mechanical validation.
-12. Propagate verified state into all 9 packages; changed -> new SHA, unchanged -> byte-identical proof.
-13. Rebuild Manifest + Trust Root and audit SHA/CRC/duplicate/unsafe/nested/C2/DB59/secret=0.
-14. Physically deliver all current 9 packages to the developer.
-15. Only then declare `CURRENT_PHYSICAL_AUTHORITY`.
+## MANDATORY NEXT EXECUTION ORDER
+1. D1 only -> SHA/CRC/duplicate/unsafe/nested audit -> health probe.
+2. D2 -> same audit -> health probe.
+3. Complete 9/9 previous-baseline byte verification.
+4. Inspect D1/D2 for any exact surviving RFV2 repaired artifact; independently verify before changing recovery mode.
+5. If no exact artifact is verified, execute the frozen RFV2 controlled recovery / reimplementation contract.
+6. Fresh DB59 retrieval/propagation/equivalence/tamper/regression validation.
+7. Propagate verified repaired state into all 9 packages; changed -> new SHA, unchanged -> byte-identical proof.
+8. Rebuild Manifest + Trust Root and audit SHA/CRC/duplicate/unsafe/nested/C2/DB59/secret=0.
+9. Physically deliver all current 9 packages to the developer.
+10. Only then declare `CURRENT_PHYSICAL_AUTHORITY`.
 
 Until physical closure, RFV3 generation, CP1 Live, official R-F, R-G freeze, and Formal R140 remain blocked.
 
 ## CURRENT STATUS TOKEN
-`CURRENT_SESSION_CONTAINER_UNUSABLE__PART_D_NOT_PROVEN_CAUSAL__FRESH_SESSION_FAILOVER_REQUIRED_FOR_PHYSICAL_PACKAGE_RECOVERY__9_BASELINE_COLLECTED__5_FRESH_VERIFIED__4_FRESH_VERIFY_PENDING__CONTROLLED_RECOVERY_SPEC_FROZEN__CURRENT_PHYSICAL_AUTHORITY_MISSING__R140_HARD_BLOCK`
+`P07A_FRESH_FAILOVER_CONTAINER_HEALTHY__9_BASELINE_COLLECTED__7_FRESH_VERIFIED__D1_D2_PENDING__B1_B2_C1_C2_PACKAGE_CORRUPTION_NOT_SUPPORTED__C2_AND_NARRATIVE_ENGINE_MASTER_REASSEMBLY_PASS__RFV2_EXACT_REPAIRED_ARTIFACT_NOT_FOUND_IN_B1_B2_C1_C2__CONTROLLED_RECOVERY_REIMPLEMENTATION_REMAINS__CURRENT_PHYSICAL_AUTHORITY_MISSING__R140_HARD_BLOCK`
