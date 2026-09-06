@@ -2,11 +2,24 @@
 Last updated: 2026-09-06
 
 Always read this file first when resuming Literary OS work in a new ChatGPT session.
+Then read `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`. The two pointers must agree.
 
 ## Current recovery authority
 START HERE:
-`handoff/20260906/SESSION_RECOVERY_START_HERE_R1.md`
-Commit: `c255240bf577547bb931bc3ecf1aa8c75dd76007`
+`handoff/20260906/SESSION_RECOVERY_START_HERE_R2.md`
+Commit: `3c45263d38a469d7bac216d24fce0d2c1649380e`
+
+Developer Hub authority:
+`handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`
+Current alignment commit: `8eb3e2319b9dda1b01e8480bee3706fad92dbc1d`
+
+Developer authority snapshot:
+`handoff/20260906/DEVELOPER_HUB_AUTHORITY_SNAPSHOT_R1.md`
+Commit: `934e10d4dd2deeed5ffcd34f5c543e4e93307e99`
+
+Claude/CT defect matrix:
+`handoff/20260906/CLAUDE_CT_DEFECT_CLOSURE_MATRIX_R1.md`
+Commit: `62b64b37196ee2c40b8c89d945a43030a2df86f2`
 
 Current RFV3 preregistration:
 `handoff/20260906/P07_RFV3_ABCD_CAUSAL_REPRETEST_PREREG_R1.md`
@@ -23,12 +36,18 @@ Formal scored count: 137
 R140: 0 attempts / 0 outputs / 0 scores
 Production: ENG:R47 immutable
 DB59 frozen SHA256: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
+RFV3 generation outputs: 0
+Claude/CT defects: PARTIALLY REPAIRED / NOT FULLY CLOSED
+CP1 current-authority restoration: OPEN
+R140: HARD BLOCK
 
 ## Mandatory resume rule
-Do not begin the next scientific task until any pending completed-task changes have been propagated into the canonical 5-Part / 9-Package structure and physically audited, unless the artifact backend remains unavailable. If unavailable, create/update an atomic external checkpoint and keep `9_PACKAGE_RESEAL_PENDING_INFRASTRUCTURE` explicit.
+Do not begin the next scientific task until any pending completed-task changes have been propagated into the canonical 5-Part / 9-Package structure and physically audited, unless the artifact backend remains unavailable. If unavailable, update an atomic external checkpoint and keep `9_PACKAGE_RESEAL_PENDING_INFRASTRUCTURE` explicit.
 
 Canonical package accounting:
 CONTROL / A / B1 / B2 / C1 / C2-A / C2-B / D1 / D2 = 9 packages.
+
+The previous physical package hashes in `DEVELOPER_HUB_AUTHORITY_SNAPSHOT_R1.md` are PREVIOUS_PHYSICAL_BASELINE only and must not be called the current repaired authority.
 
 ## Important supporting uploads for a new session
 If available, provide:
@@ -37,4 +56,4 @@ If available, provide:
 - `A E.zip` for CT live/API evidence review
 - latest physically sealed 5-Part / 9-Package files in the user's possession
 
-The START_HERE file contains the exact scientific correction, RFV2 repair observations, CP1 status, RFV3 A/B/C/D protocol, packaging rule, and new-session resume order.
+The START_HERE R2 and Developer Hub snapshot contain the exact scientific correction, RFV2 repair observations, CP1 status, RFV3 A/B/C/D protocol, package rule, previous physical baseline hashes, and exact resume order.
