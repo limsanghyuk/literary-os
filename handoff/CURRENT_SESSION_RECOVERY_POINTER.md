@@ -1,36 +1,36 @@
 # CURRENT SESSION RECOVERY POINTER
-Last updated: 2026-09-06
+Last updated: 2026-09-07
 
 Always read this file first when resuming Literary OS work in a new ChatGPT session.
 Then read `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`. The two pointers must agree.
 
-## MASTER NEW-SESSION HANDOFF — READ FIRST
+## CURRENT LATEST RECOVERY CHECKPOINT — READ FIRST
+`handoff/20260907/P07A_LATEST_STATE_RECOVERY_RESUME_CHECKPOINT_R1.md`
+Commit: `dcf5749a5042fae6bea35f6f93a335f33f7e0ad2`
+
+Current Developer Hub authority:
+`handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`
+Alignment commit: `020705356b2fb4ace700ffa387725867ed1858f7`
+
+Current recovery accounting:
+`9/9 PREVIOUS_BASELINE_FILES_COLLECTED__5/9 PREVIOUSLY_FRESH_VERIFIED__4/9 FRESH_VERIFY_PENDING_CLIENTERROR`
+
+Current priority:
+`P07-A — Authority / Package Recovery`
+
+## MASTER NEW-SESSION HANDOFF — P06→P07 CONTINUITY
 `handoff/20260906/NEW_SESSION_MASTER_HANDOFF_P06_TO_P07_RECOVERY_R1.md`
 Commit: `147dc8f7e476b7d5a1f565343b7fe7e685d2e81c`
-
-This document reconstructs the full continuity from P06 physical closure through the interrupted P07 preformal program, including:
-- package-propagation debt and why recovery is required;
-- P07 preformal lineage and explicit future gate structure;
-- CT/CT-17 position;
-- Claude defects, RFV2 working-state repairs and remaining open items;
-- exact 9-package previous physical baseline and C2 reconstruction;
-- controlled recovery when exact repaired source bytes are missing;
-- RFV3, CP1, R-F, R-G and R140 next-step order.
 
 ## Full developer recovery + research dossier
 `handoff/20260906/DEVELOPER_HUB_FULL_RECOVERY_RESEARCH_DOSSIER_R2.md`
 Commit: `889037274af31ec287bd846d9afaa769dae4f172`
 
-## Current recovery authority
-START HERE:
+## Recovery predecessor
 `handoff/20260906/SESSION_RECOVERY_START_HERE_R2.md`
 Commit: `3c45263d38a469d7bac216d24fce0d2c1649380e`
 
-Developer Hub authority:
-`handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`
-Current alignment commit: `d019ec16fa4489bdb67bc0f6680fd79b635e4b91`
-
-Developer authority snapshot:
+Developer authority snapshot predecessor:
 `handoff/20260906/DEVELOPER_HUB_AUTHORITY_SNAPSHOT_R1.md`
 Commit: `934e10d4dd2deeed5ffcd34f5c543e4e93307e99`
 
@@ -41,31 +41,44 @@ Commit: `62b64b37196ee2c40b8c89d945a43030a2df86f2`
 Current RFV3 preregistration:
 `handoff/20260906/P07_RFV3_ABCD_CAUSAL_REPRETEST_PREREG_R1.md`
 Commit: `07c256a84718c0b8f4017c383c174c4bcf3a8d95`
+RFV3 generation outputs remain 0.
 
-Current latest atomic checkpoint:
+Historical atomic checkpoint predecessor:
 `handoff/20260906/AUTHORITY_ALIGNMENT_AND_CONTAINER_HOLD_CHECKPOINT_R1.md`
 Commit: `d8cf30d509508fd2502a0f26b2378e9e6eefb678`
 
-Historical predecessor checkpoint:
-`handoff/20260906/RFV3_TASK01_PREREG_AND_9PACKAGE_ATOMIC_CHECKPOINT_R1.md`
-Commit: `a1e6ca0e2f84eedef3ae4ce188cecf5dc3857079`
+## Current scientific/package state
+- Formal scored count: 137
+- Latest formal scored authority: R138
+- R140: 0 attempts / 0 outputs / 0 scores
+- ENG:R47 Production: immutable
+- P06: COMPLETED / PHYSICALLY CLOSED
+- P07: ACTIVE PREFORMAL / NOT COMPLETE
+- DB59 frozen SHA256: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
+- DB64: separate Living DB; not a silent substitute for DB59
+- RFV2 repaired state: observed before interruption; exact repaired source bytes NOT YET CONFIRMED DURABLE; fresh byte reverification required
+- RFV3 generation outputs: 0
+- Claude/CT defects: PARTIALLY REPAIRED / NOT FULLY CLOSED
+- CP1 current-authority restoration: OPEN
+- Container/artifact execution: recurrent `ClientError` / Infrastructure HOLD
+- Current repaired 9-package physical authority: MISSING
+- R140: HARD BLOCK
 
-## Current status
-`P06_COMPLETED_PHYSICALLY_CLOSED__P07_ACTIVE_PREFORMAL__AUTHORITY_DOCS_ALIGNED__CONTAINER_CLIENTERROR_HOLD__CURRENT_REPAIRED_9PACKAGE_MISSING__CLAUDE_DEFECTS_PARTIALLY_REPAIRED__CP1_OPEN__R140_HARD_BLOCK`
+## Canonical 5-Part / 9-Package accounting
+`CONTROL / A / B1 / B2 / C1 / C2-A / C2-B / D1 / D2 = 9 packages`
 
-Formal scored count: 137
-R140: 0 attempts / 0 outputs / 0 scores
-Production: ENG:R47 immutable
-P06: COMPLETED / PHYSICALLY CLOSED
-P07: ACTIVE PREFORMAL / NOT COMPLETE
-DB59 frozen SHA256: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
-RFV3 generation outputs: 0
-Claude/CT defects: PARTIALLY REPAIRED / NOT FULLY CLOSED
-CP1 current-authority restoration: OPEN
-Current repaired 9-package reseal: NOT COMPLETED
-R140: HARD BLOCK
+PART-C:
+`C1 + C2-A + C2-B`
+
+C2 reconstruction:
+`C2-A || C2-B`
+
+Expected previous C2 R39 SHA256:
+`d292690dd89ce88e9642bc38c3416d33aa4dc64dea6d0469c3a9ce0a62c10f3b`
 
 ## Developer-held previous physical baseline
+All nine have now been supplied in the resumed conversation.
+Expected previous baseline hashes:
 - CONTROL R39 `47fe62c8acf3401c69174c77c420be0d106703888def2ea2b073a9491b14eeeb`
 - PART-A R38 `9443d103de0eafd6fb063d1ba860a90e7be32d40227980d867f79808526696b1`
 - B1 R10 `00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98`
@@ -75,22 +88,36 @@ R140: HARD BLOCK
 - C2-B `eac1bb5b424c92c6ae97924d09864412b222e581d34b062e0818e4105ee89f5f`
 - D1 R10 `a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504`
 - D2 R10 `c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4`
-- C2-A || C2-B previous reconstructed C2 R39 `d292690dd89ce88e9642bc38c3416d33aa4dc64dea6d0469c3a9ce0a62c10f3b`
 
-These are PREVIOUS_PHYSICAL_BASELINE only and do not include all current pending RFV2/RFV3 repairs.
+Fresh verification completed before infrastructure recurrence:
+- CONTROL
+- A
+- C1
+- C2-A
+- C2-B
+- reconstructed C2 SHA matched the expected previous C2 R39 SHA
+
+Fresh verification pending infrastructure:
+- B1
+- B2
+- D1
+- D2
+
+All nine remain `PREVIOUS_PHYSICAL_BASELINE`; they are not current repaired authority.
 
 ## Mandatory resume rule
-The FIRST action after container recovery is physical 5-Part / 9-Package reconstruction and audit from the exact recovered/reconstructed repaired authority bytes. Do not begin RFV3 generation or R-F Live before this pending package closure is resolved.
+Do NOT begin RFV3 generation, CP1 Live, official R-F, R-G, or Formal R140 before P07-A physical recovery is closed.
 
-Canonical package accounting:
-CONTROL / A / B1 / B2 / C1 / C2-A / C2-B / D1 / D2 = 9 packages.
+Next actions:
+1. recover a healthy binary/container execution path;
+2. fresh-verify B1/B2/D1/D2 SHA/CRC/duplicate/unsafe/nested ZIP;
+3. reconfirm C2 reassembly;
+4. inspect packages for surviving exact RFV2 repaired source/evidence bytes;
+5. if unavailable, use controlled recovery/reimplementation under the frozen repair contract without result-informed tuning;
+6. fresh-run DB59 retrieval/propagation/equivalence/tamper/regression validation;
+7. propagate repaired state into all 9 packages with changed/new SHA or proved byte identity;
+8. rebuild Manifest + Trust Root and align them with both current pointers;
+9. only then declare `CURRENT_PHYSICAL_AUTHORITY`.
 
-## Important supporting uploads for a new session
-If available, provide:
-- all nine previous physical baseline package files listed above;
-- `CT_TO_GPT_ADDENDUM7_C2R39_VERIFICATION_AND_DEFECT_RECOMMENDATION_20260906.zip`;
-- `CT_TO_GPT_회신_부록7_C2R39검증_결함권고_20260906.md`;
-- `A E.zip` for CT live/API evidence review;
-- any RFV2 repair source/evidence artifacts that survived outside the failed container.
-
-If exact repaired source bytes are unavailable, follow the controlled reconstruction procedure in the Master Handoff and Full Recovery Dossier; do not claim byte-identical recovery.
+## Current final status token
+`P07A_RECOVERY_RESUMED__9_BASELINE_FILES_COLLECTED__5_PREVIOUSLY_FRESH_VERIFIED__4_FRESH_VERIFY_PENDING_CLIENTERROR__RFV2_EXACT_REPAIRED_SOURCE_NOT_YET_CONFIRMED_DURABLE__CURRENT_REPAIRED_9PACKAGE_MISSING__R140_HARD_BLOCK`
