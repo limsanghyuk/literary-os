@@ -4,9 +4,13 @@ Last updated: 2026-09-08
 Read together with `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`.
 
 ## CURRENT PHYSICAL AUTHORITY — READ FIRST
-`handoff/20260908/P07_I4B_CURRENT_PHYSICAL_AUTHORITY_CLOSURE_R1.md`
-Closure commit: `8b75c92028e2bc873c9490aa2b42297803551cc9`
-Authority: `CURRENT_PHYSICAL_AUTHORITY__P07_I4B_LITERARY_SURFACE_CONTRACT_R1`
+`handoff/20260908/P07_I4D_CURRENT_PHYSICAL_AUTHORITY_CLOSURE_R1.md`
+Closure commit: `dce9f0bc51bfc8e86dfe799e16b662bfbeecdf86`
+Authority: `CURRENT_PHYSICAL_AUTHORITY__P07_I4D_SURFACE_REALIZATION_MODES_R1`
+
+Current Session Recovery Pointer alignment commit: `fa1250da4200cda551edbe7dd04326160d11815a`
+Preregistration commit: `58c902a9b09fc0643f7c0933af6f9deeb0c052b4`
+Result commit: `d1fef19e8f4c07a0266f17f2307e734fd50ea587`
 
 Formal scored count: 137
 Latest formal scored authority: R138
@@ -15,48 +19,63 @@ P07: ACTIVE PREFORMAL / NOT COMPLETE
 Real OpenAI Live evidence eligibility: FALSE
 DB59 SHA256: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
 
-## ACTIVE ENGINE / PACKAGE STATUS
-`LiterarySurfaceContractR1` remains the current adopted Scene Plan -> Surface Realization interface from P07-I4B.
-I4B exact packaged C2 regression: 209/209 PASS, exit code 0.
-Current C2 SHA256: `fd5e3d78b3e127a6c2a252d5a825b8355e88438a18cc386239e6ce006e91ebaa`.
-Package Set SHA256: `3103c0448649a9d89294abc3e5ba3fde2bf9ac415ea5e8d69d530562e4fdcb2b`.
+## ACTIVE ENGINE
+`LiterarySurfaceContractR1` remains active and unchanged between `SCENE_PLAN` and `SURFACE_REALIZATION`.
+P07-I4D physically adds optional `SurfaceRealizationModeR1` scene-function-specific craft execution payloads.
 
-Canonical 9 package SHA256 values:
-- CONTROL `358207e26e4a7ae60c04cfa6c4037f9219038eeeb2bbb4f81506919f4a8b2fa4`
-- A `43cc2adff0343cc2257bc9d25b963e5f048561b93d6668e557608db5eefdcf6e`
-- B1 `00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98`
-- B2 `ed84d88619a1e29d3aa9e36e4e030675f21c89ba44280be91164282401cdb490`
-- C1 `dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518`
-- C2-A `211988d224a5b258e2535a5b9768de54ad82b8606500b7f9c3dac5986913f0ca`
-- C2-B `882b3d1da8c53672af94a3253616619c359623cc443bef3b1b1b00ae52e016ea`
-- D1 `a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504`
-- D2 `c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4`
+Scientific evidence:
+- mode causal adoption 9/9 PASS;
+- Stage A: Treatment 9 / Control 0 / Tie 0;
+- fresh-human Stage B: Human 4 / Candidate 3 / Tie 2 — targeted human-competitive development signal PASS;
+- remaining loss modes: emotional withholding, deadline kinetics, status dominance, exit escalation;
+- exact packaged C2 nonhistorical regression: 213/213 PASS, exit code 0;
+- regression log SHA256 `2261328dc484c19d75a67a9cfd4d62de8ddbccdf4e55d4e962fee558edde8a9b`.
 
-## LATEST DEVELOPMENT ATTEMPTS — NOT PROMOTED
-### P07-I4C R1
-Preregistration: `3a7fe485aa9a64eb54dec9d9f215ff9f0b2fd542`
-HOLD result: `7acf0d35fa931f8927cc8402907cc82fe4502af8`
-Verdict: `HOLD_REDESIGN_REQUIRED` after one consumed-contract completeness failure at S14 (`박정숙` missing play/voice state) with the maximum two repair cycles already used. No blind, State Commit, or physical promotion.
+## CURRENT CANONICAL 5 PARTS / 9 PACKAGES
+1. CONTROL `LITERARY_OS_CURRENT_CONTROL_P07_I4D_SURFACE_MODES_R1.zip`
+   SHA256 `641ed8301da19b2770bb3ad33b54122d456c54116e85c258bf91a443ee4695d1`
+2. A `LITERARY_OS_CURRENT_PART_A_P07_I4D_SURFACE_MODES_R1.zip`
+   SHA256 `aeedbda0d958b9a182c7e895c85f17607128f58409a775bcf01282e20d5c1b96`
+3. B1 `LITERARY_OS_CURRENT_PART_B1_UNCHANGED_R1.zip`
+   SHA256 `00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98`
+4. B2 `LITERARY_OS_CURRENT_PART_B2_P07_I4D_SURFACE_MODES_R1.zip`
+   SHA256 `815bef5234c18fd206b73cb0393f6bec739edb1866c0c8a12782a242009654ed`
+5. C1 `LITERARY_OS_CURRENT_C1_RUNTIME_CORE_UNCHANGED_R1.zip`
+   SHA256 `dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518`
+6. C2-A `LITERARY_OS_CURRENT_C2_BINARY_A_P07_I4D_SURFACE_MODES_R1.bin`
+   SHA256 `d7c8b42d0cbe2ccaddf0c49991eff4a02b0b5a5b931f90b0d477857835d88e62`
+7. C2-B `LITERARY_OS_CURRENT_C2_BINARY_B_P07_I4D_SURFACE_MODES_R1.bin`
+   SHA256 `52c0f58b4ce007ad61fefee2036ac29d25cd6901ef92f94c00930d77b98531b4`
+8. D1 `LITERARY_OS_CURRENT_PART_D1_DB59_UNCHANGED_R1.zip`
+   SHA256 `a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504`
+9. D2 `LITERARY_OS_CURRENT_PART_D2_DB59_UNCHANGED_R1.zip`
+   SHA256 `c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4`
 
-### P07-I4C R2 surgical recovery
-Preregistration: `b7d122af8f7ad9556df7b02e7448f344d1e54d54`
-HOLD result: `9604e46e8d7bddce4d6ae9b500d68e026537f491`
+Changed from P07-I4B: CONTROL / A / B2 / C2-A / C2-B.
+Whole-file byte-identical: B1 / C1 / D1 / D2.
 
-Research runtime added a fail-closed speaking-principal completeness guard; 4/4 focused tests PASS. Corrected contract set passes 50/50; only S14 was re-rendered and 49 scenes remained byte-identical.
-Final R2 surface: 50 scenes / 35,785 chars; SHA256 `5a4943106d9013777620299beb1ded5e233bf825d7a3fbdf7b2fce59c1206639`.
-Mechanical/continuity/ensemble gates PASS.
-Stage A vs exact P07-I3: Treatment 12 / Control 0 / Tie 0 — PASS.
-Stage B vs fresh DB59 human anchors: Human 9 / Candidate 3 / Tie 0. Candidate wins >=3 PASS; Candidate wins+ties >=6 FAIL at 3/12.
-Final R2 verdict: `HOLD__WHOLE_EPISODE_SURFACE_NOT_HUMAN_COMPETITIVE__NO_LIVE_PROMOTION`.
-State Commit BLOCKED. No exact packaged promotion regression and no 5 Parts / 9 Packages reseal were run because the promotion gate was not reached.
+## MANIFEST / TRUST ROOT
+- Package Set SHA256 `5d385069962b0f40d63ee8256729f4e66aae9a7cf57099dd9d786bc01bc74dae`
+- Manifest SHA256 `d71fa274a296e250c9374eb064c0bdbfa6fa04db46dfd306de283da1762fdd05`
+- Trust Root file SHA256 `8f66adc56bd35380951d02d0d53c1f7de6973aeb33759b9566431229cb85d526`
+- Trust Root material SHA256 `f5651afa94bec97560cc6af77e0435e1ca567ec5cbceaebaa7a263fce35f53a0`
+- Current reconstructed C2 SHA256 `1022a4144e582069a3d6ed9d234f100d0b8a3a4323b73039d1454e57f89d75e1`
 
-## CURRENT CLAIM BOUNDARY
-The current physically adopted I4B interface has an internal eight-scene human-competitive development signal, but I4C whole-episode R2 does not demonstrate sufficiently broad human-competitive generalization. It strongly beats the old P07-I3 surface but loses 9/12 against fresh human anchors. This is internal single-judge development evidence, not external human consensus or human-writer equivalence.
+## PHYSICAL AUDIT — PASS
+- changed CONTROL/A/B2/C2 preserve all parent entries;
+- unchanged B1/C1/D1/D2 whole-file byte-identical;
+- CRC PASS / duplicate 0 / unsafe 0;
+- nested ZIP counts CONTROL 54 / A 60 / B2 46 / C2 155;
+- secret hits 0;
+- C2 split reconstruction PASS;
+- Research Master / Narrative Engine Master / DB59 reconstruction PASS;
+- post-sidecar nine-package SHA audit PASS.
+
+## CLAIM BOUNDARY
+P07-I4D is targeted internal single-judge development evidence. It is not whole-episode human competitiveness, external human consensus, human-writer equivalence, real OpenAI Live parity, Production promotion, RFV3, CP1 Live, official R-F/R-G, or Formal R140.
 
 ## NEXT RESEARCH ORDER
-Start only from exact P07-I4B authority. Separately preregister the next surface-realization unit focused on the R2 loss strata: investigative/interpersonal, quiet emotional, workplace procedural, time-pressure, investigative reveal, power conflict, urgent procedural, ensemble team execution, and episode-exit pressure. Preserve the successful family/relationship, community ensemble, and procedural/social behavior. Do not lower thresholds and do not silently promote R2 recovery code or prose.
-
-Do not start real OpenAI Live promotion, RFV3, CP1, official R-F/R-G, Production promotion, or Formal R140 before the whole-episode surface gate is legitimately closed.
+Use exact P07-I4D packages as the sole starting authority. Next unit must be separately preregistered whole-episode rerender using `LiterarySurfaceContractR1` plus eligible `SurfaceRealizationModeR1` selection. Preserve the successful I4C family/community/procedural-social strata and re-evaluate whole-episode Human Stage-B without lowering its thresholds. Do not start Live/RFV3/CP1/R-F/R-G/R140 before legitimate whole-episode closure.
 
 ## CURRENT STATUS TOKEN
-`CURRENT_PHYSICAL_AUTHORITY_P07_I4B_R1__I4C_R1_HOLD__I4C_R2_STAGE_A_12_OF_12_PASS__STAGE_B_HUMAN_9_CANDIDATE_3_TIE_0_HOLD__NO_STATE_COMMIT__NO_PROMOTION__P07_ACTIVE_PREFORMAL__R140_HARD_BLOCK`
+`CURRENT_PHYSICAL_AUTHORITY_P07_I4D_R1__5_PARTS_9_PACKAGES_SEALED__SURFACE_REALIZATION_MODES_CAUSAL_ADOPTION_PASS__STAGE_A_9_OF_9__STAGE_B_HUMAN_4_CANDIDATE_3_TIE_2__213_OF_213__NONLIVE__P07_ACTIVE_PREFORMAL__R140_HARD_BLOCK`
