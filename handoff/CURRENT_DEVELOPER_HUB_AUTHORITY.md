@@ -8,9 +8,9 @@ Read together with `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`.
 Closure commit: `dce9f0bc51bfc8e86dfe799e16b662bfbeecdf86`
 Authority: `CURRENT_PHYSICAL_AUTHORITY__P07_I4D_SURFACE_REALIZATION_MODES_R1`
 
-Current Session Recovery Pointer alignment commit: `fa1250da4200cda551edbe7dd04326160d11815a`
-Preregistration commit: `58c902a9b09fc0643f7c0933af6f9deeb0c052b4`
-Result commit: `d1fef19e8f4c07a0266f17f2307e734fd50ea587`
+Current Session Recovery Pointer commit: `70466f136427a28e29a81aea7084d735a69b13d7`
+P07-I4D preregistration commit: `58c902a9b09fc0643f7c0933af6f9deeb0c052b4`
+P07-I4D result commit: `d1fef19e8f4c07a0266f17f2307e734fd50ea587`
 
 Formal scored count: 137
 Latest formal scored authority: R138
@@ -21,14 +21,13 @@ DB59 SHA256: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
 
 ## ACTIVE ENGINE
 `LiterarySurfaceContractR1` remains active and unchanged between `SCENE_PLAN` and `SURFACE_REALIZATION`.
-P07-I4D physically adds optional `SurfaceRealizationModeR1` scene-function-specific craft execution payloads.
+P07-I4D physically adopts optional `SurfaceRealizationModeR1` scene-function-specific craft execution payloads.
 
-Scientific evidence:
+I4D evidence:
 - mode causal adoption 9/9 PASS;
-- Stage A: Treatment 9 / Control 0 / Tie 0;
-- fresh-human Stage B: Human 4 / Candidate 3 / Tie 2 — targeted human-competitive development signal PASS;
-- remaining loss modes: emotional withholding, deadline kinetics, status dominance, exit escalation;
-- exact packaged C2 nonhistorical regression: 213/213 PASS, exit code 0;
+- targeted Stage A: Treatment 9 / Control 0 / Tie 0;
+- fresh-human targeted Stage B: Human 4 / Candidate 3 / Tie 2 — PASS targeted development signal;
+- exact packaged C2 nonhistorical regression 213/213 PASS, exit code 0;
 - regression log SHA256 `2261328dc484c19d75a67a9cfd4d62de8ddbccdf4e55d4e962fee558edde8a9b`.
 
 ## CURRENT CANONICAL 5 PARTS / 9 PACKAGES
@@ -51,9 +50,6 @@ Scientific evidence:
 9. D2 `LITERARY_OS_CURRENT_PART_D2_DB59_UNCHANGED_R1.zip`
    SHA256 `c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4`
 
-Changed from P07-I4B: CONTROL / A / B2 / C2-A / C2-B.
-Whole-file byte-identical: B1 / C1 / D1 / D2.
-
 ## MANIFEST / TRUST ROOT
 - Package Set SHA256 `5d385069962b0f40d63ee8256729f4e66aae9a7cf57099dd9d786bc01bc74dae`
 - Manifest SHA256 `d71fa274a296e250c9374eb064c0bdbfa6fa04db46dfd306de283da1762fdd05`
@@ -61,21 +57,38 @@ Whole-file byte-identical: B1 / C1 / D1 / D2.
 - Trust Root material SHA256 `f5651afa94bec97560cc6af77e0435e1ca567ec5cbceaebaa7a263fce35f53a0`
 - Current reconstructed C2 SHA256 `1022a4144e582069a3d6ed9d234f100d0b8a3a4323b73039d1454e57f89d75e1`
 
-## PHYSICAL AUDIT — PASS
-- changed CONTROL/A/B2/C2 preserve all parent entries;
-- unchanged B1/C1/D1/D2 whole-file byte-identical;
-- CRC PASS / duplicate 0 / unsafe 0;
-- nested ZIP counts CONTROL 54 / A 60 / B2 46 / C2 155;
-- secret hits 0;
-- C2 split reconstruction PASS;
-- Research Master / Narrative Engine Master / DB59 reconstruction PASS;
-- post-sidecar nine-package SHA audit PASS.
+## LATEST NON-PROMOTED WHOLE-EPISODE WORK
+### P07-I4E R1
+Preregistration commit `3569bca4d0a9874b6a28fb4ba3685ce71c47bae1`.
+HOLD result commit `0ac611af274cd57029454c98cfffc384eb957406`.
+
+R1 reached 50 scenes / 35,018 chars after two allowed repair cycles, but final audit found principal-speaker authorization violations in S37/S46/S47/S48/S49 and a repair-assembler byte-stability tooling defect. No Blind/State Commit/promotion.
+
+### P07-I4E R2
+Recovery preregistration commit `a246ac8ad67d9ec4d3186ccc94fb26207761f020`.
+Stage A HOLD result commit `b581d802eead91c1c420e8262002dc5a87637c54`.
+
+R2 added fail-closed principal-speaker authorization plus exact-scene surgical assembly.
+- focused guard/assembler tests 6/6 PASS;
+- failed R1 surface rejected exactly S37/S46/S47/S48/S49;
+- only those five scenes regenerated;
+- protected 45 scenes exact-byte identity PASS;
+- final treatment 50 scenes / 35,138 chars;
+- final surface SHA256 `008686ce8a960469ae6273cdfc297758c9dec2d4188a52f8b2fc48f89a0f6b59`;
+- mechanical/continuity/ensemble gates PASS;
+- Stage A blind: Treatment 6 / Control 6 / Tie 0;
+- required Treatment >=9/12 FAIL;
+- Fresh-human Stage B NOT RUN;
+- State Commit BLOCKED; no new carry;
+- no packaged promotion regression and no I4E 5 Parts / 9 Packages reseal.
+
+## SCIENTIFIC DIAGNOSIS
+The I4D local probe showed that Craft Operators can help targeted weak strata. I4E demonstrates that broad whole-episode mode assignment can damage scenes that were already strong. The next bottleneck is therefore **Mode Selector precision, abstention (`NONE`), and operator intensity**, not the existence of more modes.
+
+Next research should explicitly test when a scene should remain under plain `LiterarySurfaceContractR1` versus receive a mode, and how strongly the mode should constrain realization. Protected-scene invariance must be part of the preregistered gate. Thresholds must not be lowered.
 
 ## CLAIM BOUNDARY
-P07-I4D is targeted internal single-judge development evidence. It is not whole-episode human competitiveness, external human consensus, human-writer equivalence, real OpenAI Live parity, Production promotion, RFV3, CP1 Live, official R-F/R-G, or Formal R140.
-
-## NEXT RESEARCH ORDER
-Use exact P07-I4D packages as the sole starting authority. Next unit must be separately preregistered whole-episode rerender using `LiterarySurfaceContractR1` plus eligible `SurfaceRealizationModeR1` selection. Preserve the successful I4C family/community/procedural-social strata and re-evaluate whole-episode Human Stage-B without lowering its thresholds. Do not start Live/RFV3/CP1/R-F/R-G/R140 before legitimate whole-episode closure.
+Current physical authority remains P07-I4D. I4E R1/R2 are non-promoted research evidence. No whole-episode human competitiveness, real OpenAI Live parity, external human consensus, human-writer equivalence, RFV3, CP1 Live, official R-F/R-G, Production promotion, or Formal R140 is established.
 
 ## CURRENT STATUS TOKEN
-`CURRENT_PHYSICAL_AUTHORITY_P07_I4D_R1__5_PARTS_9_PACKAGES_SEALED__SURFACE_REALIZATION_MODES_CAUSAL_ADOPTION_PASS__STAGE_A_9_OF_9__STAGE_B_HUMAN_4_CANDIDATE_3_TIE_2__213_OF_213__NONLIVE__P07_ACTIVE_PREFORMAL__R140_HARD_BLOCK`
+`CURRENT_PHYSICAL_AUTHORITY_P07_I4D_R1__I4E_R1_HOLD__I4E_R2_MECHANICAL_PASS__STAGE_A_TREATMENT_6_CONTROL_6_TIE_0_FAIL__NO_STAGE_B__NO_STATE_COMMIT__NO_PROMOTION__P07_ACTIVE_PREFORMAL__R140_HARD_BLOCK`
