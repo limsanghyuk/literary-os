@@ -4,15 +4,21 @@ Last updated: 2026-09-07
 Always read this file first when resuming Literary OS work in a new ChatGPT session, then read `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`.
 
 ## CURRENT LATEST PHYSICAL AUTHORITY CHECKPOINT — READ FIRST
-`handoff/20260907/P07_I3_CURRENT_PHYSICAL_AUTHORITY_CLOSURE_R1.md`
-Commit: `1725b27ae2370d06ffe7b7edac52dba759b30b77`
+`handoff/20260907/P07_I4A_CURRENT_PHYSICAL_AUTHORITY_CLOSURE_R1.md`
+Commit: `173fe629201fb7eda5ba9a5a498ab1b8a8b25eda`
 
-P07-I3 preregistration commit: `c7b6a519d307105981d5bb293567f4644af5d914`
-P07-I3 frozen metrics addendum commit: `b930f8c628cd4cb3db6bca4fdb491661ccc88dea`
+Provider emulation/internal blind preregistration commit:
+`f4b2cc2b1be99a7f7cf96b9250f2063e2a3a864e`
+
+Surface repair preregistration commit:
+`b64c6cbca95aa6b267db5c9a45231ce89855da95`
+
+P07-I4A result commit:
+`80d8027e918254ec774bcc2e9b0b6bb8d1abf8bf`
 
 Previous physical authority checkpoint:
-`handoff/20260907/P07_I2_CURRENT_PHYSICAL_AUTHORITY_CLOSURE_R1.md`
-Commit: `a9c0c4fcea97e21d616e50d7a937709f551a8577`
+`handoff/20260907/P07_I3_CURRENT_PHYSICAL_AUTHORITY_CLOSURE_R1.md`
+Commit: `1725b27ae2370d06ffe7b7edac52dba759b30b77`
 
 ## CURRENT SCIENTIFIC / PACKAGE STATE
 - Formal scored count: 137
@@ -21,72 +27,68 @@ Commit: `a9c0c4fcea97e21d616e50d7a937709f551a8577`
 - ENG:R47 Production: immutable
 - P06: COMPLETED / PHYSICALLY CLOSED
 - P07: ACTIVE PREFORMAL / NOT COMPLETE
-- Current physical authority: `CURRENT_PHYSICAL_AUTHORITY__P07_I3_BROADCAST_BIDIRECTIONAL_LOOP_R1`
+- Current physical authority: `CURRENT_PHYSICAL_AUTHORITY__P07_I4A_PROVIDER_SHADOW_PASS_SURFACE_REPAIR_HOLD_R1`
 - DB59 frozen SHA256: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
 - DB64 remains separate Living DB and MUST NOT silently replace DB59
 - RFV3 outputs: 0
 - CP1 current-authority restoration: OPEN
-- Live provider evidence eligibility: FALSE for P07-I3
+- Real OpenAI Live evidence eligibility: FALSE for I4A shadow-provider work
 
-## P07-I3 RESULT
-Development-only broadcast-scale closed loop PASS:
-`P07-I2 architecture -> 50-scene first surface -> ENSEMBLE_DISTRIBUTION_COLLAPSE -> responsible ancestor ENSEMBLE_ECOLOGY_PLAN -> affected-sequence replan/re-lowering -> repaired surface -> canonical state commit/carry`.
+## P07-I4A SPLIT RESULT
+### Provider operating track
+`PASS__SHADOW_LIVE_PROVIDER_RESILIENCE_AND_FAIL_CLOSE`
+- canonical live semantic provider construction uses `build_live_semantic_provider()`;
+- bounded fail-closed retry, default max attempts 2;
+- transient 429/500/503, incomplete, timeout/network and provider JSON failures may retry;
+- HTTP 400/non-transient failures do not retry;
+- `X-Client-Request-Id` and per-attempt trace preserved;
+- permanent 429 -> two attempts then ERROR/BLOCK;
+- model mismatch -> trusted provider claim BLOCK;
+- missing response-id -> fail close;
+- planning failure -> no State Commit;
+- exact final materialized packaged C2 nonhistorical regression 205/205 PASS, pytest exit code 0.
 
-Fresh controlled re-execution evidence:
-- first pass: 50 scenes / 11,737 Unicode characters;
-- first protagonist scene share 0.76;
-- first protagonist-group sequence ownership 0.80;
-- collapse diagnostic fired and routed to `ENSEMBLE_ECOLOGY_PLAN`;
-- affected SQ03/SQ05/SQ07/SQ08/SQ10 changed;
-- protected SQ01/SQ02/SQ04/SQ06/SQ09 remained plan-level stable;
-- final: 50 scenes / 35,442 Unicode characters;
-- repaired protagonist scene share 0.64;
-- repaired protagonist-group ownership 0.50;
-- non-protagonist-owned sequences 5 / non-protagonist owner groups 2;
-- long exact dialogue duplicate ratio 0.0;
-- long narrative duplicate ratio 0.0;
-- unauthorized speaker 0;
-- source/future leakage 0;
-- bidirectional repair receipt SHA256 `5036c5d8cbe6f859965adb58497989eab1fafd0f3b9cc8e4b2657d24630cb9d1`;
-- state carry committed, SHA256 `5a5a0511b726ce880d96bbd093faa73f95949e7afae49aea6cd0ca0308c24a7c`;
-- exact packaged C2 fresh-extraction nonhistorical regression **193/193 PASS, pytest exit code 0**;
-- secret hits 0;
-- formal count delta 0 / R140 delta 0.
+### Literary surface track
+`HOLD__SURFACE_REPAIR_NOT_HUMAN_COMPETITIVE_ENOUGH`
+- calibrated blind baseline: Human 12 / Candidate 0 / Tie 0;
+- six-scene compression/voice repair: Human 5 / Candidate 1 / Tie 0;
+- preregistered Candidate wins+ties >=3/6 gate FAILED at 1/6;
+- therefore `SURFACE_REPAIR_INSUFFICIENT__HOLD_FULL_EPISODE_RERENDER`;
+- failed six-scene surface intervention is research evidence only and is NOT active engine policy.
 
 ## CURRENT 5 PARTS / 9 PACKAGES
 `CONTROL / A / B1 / B2 / C1 / C2-A / C2-B / D1 / D2`
 
 SHA256:
-- CONTROL `b0e4968931c2d298e169a5de042615c547c687e6e423d8180e70e4fd17b41a0b`
-- A `2f568dbf46c1a686fd6606306f16a8a21276d48fac4f06e32f1f41b6a9748bd0`
+- CONTROL `3b44518b65dbd2aa5898973fbe05d4f9630b638a766813439eed0fa5284db3fe`
+- A `e03b0d47c984bec1d2a915f3178091619cfb63c3f3340a5a797fbfdfb4130189`
 - B1 `00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98`
-- B2 `bfce949807a0dc82550bf4c15639231948ef86eb77e74b95a6eb5431b4a3579c`
+- B2 `f599aca3f7008ff05a63e405f91147bca5e60e6e398cf413ea317d99487385cc`
 - C1 `dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518`
-- C2-A `66ca6ab0243f820fa6561ebc974e9ce6bc03c85c4f070df23f37857a9877fd4c`
-- C2-B `86bc5f23818e8018e6f0a137883f4a2ada35ff8ef68523e49977382f84375328`
+- C2-A `df67f68786e9c4197b9c6524557e00da37cffa29cef52824a5b203ed415dbfc9`
+- C2-B `f9daabb01f25fa325add80d5a261a006ea76fd15e73ae4b0212e67f51d3bbe2d`
 - D1 `a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504`
 - D2 `c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4`
 
-Changed from P07-I2: CONTROL / A / B2 / C2-A / C2-B.
-Byte-identical to P07-I2: B1 / C1 / D1 / D2.
+Changed from P07-I3: CONTROL / A / B2 / C2-A / C2-B.
+Whole-file byte-identical to P07-I3: B1 / C1 / D1 / D2.
 
 ## TRUST ROOTS
-- Package Set SHA256 `9e005a8093a24a1d64b6a2584d8b841eb1662d92902cffac94f1fa00b5af4952`
-- Manifest SHA256 `873c30e91c3b632b67b130d8a16b0db4f762b985f07d33addc446111e0933d2d`
-- Trust Root file SHA256 `c4644e5894d7959a2835f8f2624759109d97a1f53179ee382dcda22e74c5a444`
-- Trust Root material SHA256 `6ec76731e0662216e474076755b53f7e5e03161adc6ff610d4c78da43a183936`
-- Current reconstructed C2 SHA256 `6abf3934a2434968a13ac9a83f5b86e97222fc5f1c97019caec7c64a66299e08`
+- Package Set SHA256 `e0bb95184f6ca841e491ef287507d88c07385982af72db9a8df4c61cbdb3563d`
+- Manifest SHA256 `b01483cf2fd3cbe17f92a3dc08d39d98457ecd85e6a6751020916eaf2274c358`
+- Trust Root file SHA256 `6ad698bcf76482d21b93f976aeb68b25a21a1966398a44e1196853722c5b6fcf`
+- Trust Root material SHA256 `f4d639c0f67dac90d904cd34f6f8b31fc0579d0c4d13910285a444a656e116c9`
+- Current reconstructed C2 SHA256 `496d396096630bf36e3c273becc954a8710989df0896586a90ac4cae5ef6c9c7`
 
 ## CROSS-PACKAGE CONTRACTS — PASS
 - Research Master SHA256 `392840526d8b7017eda6607aea37597c5e6c7df93fc1bcb951deed2de58d31b0`
 - Narrative Engine Master SHA256 `5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649`
 - DB59 SHA256 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
 
-## CLAIM BOUNDARY
-P07-I3 is a development-scale broadcast surface/bidirectional-loop closure using `IN_SESSION_LLM_SURROGATE__NONLIVE`. It does not close Live Provider parity, external human craft validation, RFV3, CP1 Live, official R-F/R-G, Production promotion, or Formal R140.
-
 ## NEXT MANDATORY ORDER
-Use these exact 9 packages as the only starting point. Before any downstream RFV3/CP1/R-F/R-G/R140 work, explicitly design/preregister the next P07 integration unit from this authority. Do not silently reuse P07-I2 or any earlier C2.
+Use these exact nine P07-I4A packages as the sole starting authority.
+
+Next surface unit: redesign the `Scene Plan -> Surface Realization` interface itself. Do not relax the failed blind threshold. Priority: character-specific voice state, dialogue-information budgets, relationship-specific behavior, subtext/physicalization, and stronger literary compression. Run a small causal/blind probe before any full 50-scene rerender.
 
 ## CURRENT STATUS TOKEN
-`CURRENT_PHYSICAL_AUTHORITY_P07_I3_R1__5_PARTS_9_PACKAGES_SEALED__50SCENE_35442CHAR_BROADCAST_SURFACE_PASS__BIDIRECTIONAL_ENSEMBLE_REPAIR_PASS__STATE_CARRY_PASS__193_OF_193__NONLIVE__P07_ACTIVE_PREFORMAL__R140_HARD_BLOCK`
+`CURRENT_PHYSICAL_AUTHORITY_P07_I4A_R1__5_PARTS_9_PACKAGES_SEALED__PROVIDER_SHADOW_PASS__SURFACE_REPAIR_HOLD__205_OF_205__NONLIVE__P07_ACTIVE_PREFORMAL__R140_HARD_BLOCK`
