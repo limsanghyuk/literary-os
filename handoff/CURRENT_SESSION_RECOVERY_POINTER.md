@@ -4,16 +4,20 @@ Last updated: 2026-09-07
 Always read this file first when resuming Literary OS work in a new ChatGPT session, then read `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`.
 
 ## CURRENT LATEST PHYSICAL AUTHORITY CHECKPOINT — READ FIRST
-`handoff/20260907/P07_I1_CURRENT_PHYSICAL_AUTHORITY_CLOSURE_R1.md`
-Commit: `b7ca20ec784eaeaf33510773c8b7245a60847602`
+`handoff/20260907/P07_I2_CURRENT_PHYSICAL_AUTHORITY_CLOSURE_R1.md`
+Commit: `a9c0c4fcea97e21d616e50d7a937709f551a8577`
 
 Preregistration:
-`handoff/20260907/P07_I1_CLOSED_NARRATIVE_OPERATING_LOOP_INTEGRATION_PRETEST_PREREG_R1.md`
-Commit: `6cfffdb4b2571e44b03828f785165018afadbe46`
+`handoff/20260907/P07_I2_NARRATIVE_KNOWLEDGE_BUS_ENSEMBLE_ECOLOGY_PRETEST_PREREG_R1.md`
+Commit: `4ced851ba3bbcc00353ed42f1a6e5482e42afe72`
+
+Result:
+`handoff/20260907/P07_I2_NARRATIVE_KNOWLEDGE_BUS_ENSEMBLE_ECOLOGY_RESULT_R1.md`
+Commit: `b921e7524a9a56ba2940c0c42e42dd8b5d5af51e`
 
 Previous physical authority checkpoint:
-`handoff/20260907/P07A_RFV2_CURRENT_PHYSICAL_AUTHORITY_CLOSURE_R1.md`
-Commit: `c9b9cb65944cc956e3a7c6698d86aa9f1466cd07`
+`handoff/20260907/P07_I1_CURRENT_PHYSICAL_AUTHORITY_CLOSURE_R1.md`
+Commit: `b7ca20ec784eaeaf33510773c8b7245a60847602`
 
 ## CURRENT SCIENTIFIC / PACKAGE STATE
 - Formal scored count: 137
@@ -22,56 +26,63 @@ Commit: `c9b9cb65944cc956e3a7c6698d86aa9f1466cd07`
 - ENG:R47 Production: immutable
 - P06: COMPLETED / PHYSICALLY CLOSED
 - P07: ACTIVE PREFORMAL / NOT COMPLETE
-- Current physical authority: `CURRENT_PHYSICAL_AUTHORITY__P07_I1_CLOSED_NARRATIVE_LOOP_INTEGRATION_R1`
+- Current physical authority: `CURRENT_PHYSICAL_AUTHORITY__P07_I2_NARRATIVE_KNOWLEDGE_BUS_ENSEMBLE_ECOLOGY_R1`
 - DB59 frozen SHA256: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
+- DB64 remains separate Living DB and MUST NOT silently replace DB59
 - RFV3 outputs: 0
 - CP1 current-authority restoration: OPEN
 
-## P07-I1 RESULT
-First integrated transaction PASS:
-`HIERARCHICAL_SEMANTIC_PLANNING -> DB59_RETRIEVAL -> SEMANTIC_CONTRACT_VALIDATION -> CANDIDATE_PORTFOLIO -> SAFETY_GATE -> SELECTOR_COMMIT -> DIAGNOSTIC_REPAIR_ROUTING -> CONTINUOUS_STATE_INTEGRITY -> CANONICAL_STATE_COMMIT -> STATE_HASH_CARRY`.
+## P07-I2 RESULT
+Mechanically PASS:
+`DB59 Character/Relationship/Thread evidence -> NarrativeArchitecturePacket -> ENSEMBLE_ECOLOGY_PLAN -> SEQUENCE_PLAN -> SCENE_PLAN -> Selector -> Repair Routing -> State Commit/Carry`.
 
 Fresh evidence:
-- six sealed fixtures through runtime-canonical DB59 retrieval: 6/6 PASS, 6/6 USE_RETRIEVAL;
-- `retrieve_many()` now delegates to runtime-canonical `retrieve()`;
-- integrated planning PASS;
-- semantic contracts ACCEPT;
-- Selector COMMIT;
-- injected scene/sequence mismatch -> `REPLAN_PARENT / SEQUENCE_PLAN`;
-- state integrity PASS; canonical carry committed;
-- exact packaged current C2 nonhistorical regression 187/187 PASS;
-- secret hits 0;
-- Live provider evidence eligible = false.
+- target EP06 planning boundary uses EP05-or-earlier DB59 state only;
+- Functional RFV2 remains USE_RETRIEVAL;
+- 22 selected Character/Relationship/Thread evidence items;
+- selected Character mutation changes NAP and downstream input;
+- selected Relationship mutation changes NAP and downstream input;
+- selected Thread/Payoff mutation changes NAP and downstream input;
+- irrelevant unselected raw CharacterArc mutation leaves literary payload unchanged;
+- insufficient Social Ecology evidence fails closed and does not invent a second group;
+- actual provider/test-double order: SERIES_PLAN -> EPISODE_ALLOCATION -> EPISODE_PLAN -> ENSEMBLE_ECOLOGY_PLAN -> SEQUENCE_PLAN -> SCENE_PLAN;
+- NAP is present in Ensemble, Sequence and Scene provider inputs; Ensemble plan is present in Sequence and Scene inputs;
+- Selector COMMIT; injected scene/sequence mismatch -> REPLAN_PARENT / SEQUENCE_PLAN;
+- State Carry committed PASS;
+- broadcast semantic development probe: 12 sequences / 60 scene contracts PASS;
+- exact packaged current C2 nonhistorical regression 190/190 PASS;
+- secret pattern hits 0;
+- Live provider evidence eligible=false; Python literary prose generated=false.
 
 ## CURRENT 5 PARTS / 9 PACKAGES
 `CONTROL / A / B1 / B2 / C1 / C2-A / C2-B / D1 / D2`
 
 SHA256:
-- CONTROL `a5db3fd48a20fb3bc486c90c15dbde486b8ed8af29f62961b4d654b102c5f85d`
-- A `c377795f50b31299b61318a06a91d0fa4fdaedc13b19aff893c86bfe5f5337dc`
+- CONTROL `8f105b3d5ee44a199b1c909c6f8dd163e8b24b8f7fda63947761257bd663e3a5`
+- A `2e4595dfeb0c06c92ed0ef3482864fe789bcf6bfddd11d1e957418df688cf2ad`
 - B1 `00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98`
-- B2 `0a62794902a981ff6788bd5e889cbbc1bcc8cbd54d9655b9be5a1abfdef048ce`
+- B2 `f98fb494a71746c47abc03279e8ee833fe0e80dafc16bbed63f1ae1fcf9cb972`
 - C1 `dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518`
-- C2-A `b7081ae3cec08ca01e2261e30e119ee982504df9a9883bf9524b5fa35a04d818`
-- C2-B `1cb42a23ce66c49fe2ce833f25b50884f4d03e551903e73417bc546d55aceb46`
+- C2-A `d83210da76d3df3dbb33dcf59452e3ae787db9c7b24a89bdf52769c6c532dd25`
+- C2-B `416debca85d4b0729878708abb365510d3f78469d47a239b49898bc53bc476df`
 - D1 `a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504`
 - D2 `c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4`
 
-Changed from previous current authority: CONTROL / A / B2 / C2-A / C2-B.
+Changed from P07-I1: CONTROL / A / B2 / C2-A / C2-B.
 Byte-identical: B1 / C1 / D1 / D2.
 
 ## TRUST ROOTS
-- Package Set SHA256 `9a372fa93d65f7bffa06513e035f1c81079531772c56e98b4409f4a243b7592b`
-- Manifest SHA256 `34c3b4feb4f09e4cf136c924c2eef3771c3c1c3244b111b57202e4a532cb5ebd`
-- Trust Root file SHA256 `205b5b68d7dfb4593aad5cbda35bb905fe01345fd2b1212493678af32b5b9b92`
-- Current reconstructed C2 SHA256 `84ce28ae1555c322b146bbe4c9a55759c5e4946971da338b838da7a472633a98`
+- Package Set Root SHA256 `8a8e56d4180a1d236d17b71e8bfaf4fa740e66f5f1ed049aa0963a3b871a3355`
+- Manifest SHA256 `d6d3be838fb98895247484b1b30be94205d5423912f28b94cf1d9aba1f71de9f`
+- Trust Root file SHA256 `ff6b23bf3d162507190e56f22452dcdf5d20480a0724c71cafb245d73c7802c3`
+- Current reconstructed C2 SHA256 `283b41a95a2bbd570b8d6c181d4d0f10e6edde06aa2a4f079f7031b8d4e771d7`
 
 ## NEXT MANDATORY ORDER
 Use this exact 9-package authority as the only starting point.
 
-Next unit: P07-I2 — `Narrative Knowledge Bus + Character/Relationship/Thread multi-view DB adoption + SocialEcologyEvidenceView + ENSEMBLE_ECOLOGY_PLAN main-path insertion`, then causal adoption gates and broadcast-scale development probes.
+Next unit: P07-I3 — original synthetic broadcast-surface development probe: 45-60 scenes / 35k-45k Korean characters, craft/continuity/ecology/thread diagnostics, responsible-ancestor bidirectional replan/re-lowering, then physical reseal.
 
-Do not start RFV3, CP1 Live, official R-F, R-G, or Formal R140 before these integration prerequisites close and are physically resealed.
+Do not start RFV3, CP1 Live, official R-F, R-G or Formal R140 before P07-I3 and downstream integration prerequisites are physically closed.
 
 ## CURRENT STATUS TOKEN
-`CURRENT_PHYSICAL_AUTHORITY_P07_I1_R1__5_PARTS_9_PACKAGES_SEALED__INTEGRATED_TRANSACTION_PASS__RUNTIME_RETRIEVAL_CANONICALIZED__187_OF_187__NARRATIVE_KNOWLEDGE_BUS_NEXT__P07_ACTIVE_PREFORMAL__R140_HARD_BLOCK`
+`CURRENT_PHYSICAL_AUTHORITY_P07_I2_R1__5_PARTS_9_PACKAGES_SEALED__NARRATIVE_KNOWLEDGE_BUS_PASS__CHAR_REL_THREAD_CAUSAL_ADOPTION_PASS__ENSEMBLE_ECOLOGY_MAIN_PATH_PASS__12SEQ_60SCENE_SEMANTIC_SCALE_PASS__190_OF_190__P07_ACTIVE_PREFORMAL__R140_HARD_BLOCK`
