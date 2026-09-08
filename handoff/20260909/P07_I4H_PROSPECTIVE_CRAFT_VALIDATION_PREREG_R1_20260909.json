@@ -1,0 +1,232 @@
+{
+  "brief_rule": {
+    "character_aliases": "P1..Pn in first-appearance order; replace names inside retained text fields",
+    "deidentify": true,
+    "freeze_deidentified_brief_sha256": true,
+    "freeze_original_record_sha256": true,
+    "remove": [
+      "work title from generation packet",
+      "source_refs",
+      "evidence_refs",
+      "original_extracted paths",
+      "actual source dialogue/prose"
+    ],
+    "retain": [
+      "character sequence_function",
+      "participation",
+      "primary/secondary POV roles",
+      "event_context",
+      "info_context subject/before/after/mode",
+      "plant/payoff statement without source refs",
+      "functional_propositions"
+    ]
+  },
+  "canonical_prereg_sha256": "94b1c969534400fa4b75719de2e06cd1f8f9c49bf834b61e994441bd73520fcf",
+  "classification": "DEVELOPMENT_PREFORMAL_STRONGER_VIRTUAL_PROSPECTIVE_CRAFT_VALIDATION__NO_FORMAL_DELTA__NO_ACTIVE_PROMOTION_BEFORE_PHYSICAL_SYNC",
+  "combined_c2_sha256": "9878aac8532e9f1eb6b16ef4c84bcfe6be90b58a49ecf0f6afaabe993fad3be7",
+  "control_generation": {
+    "forbidden": [
+      "copying source prose",
+      "audience-facing summary paragraph",
+      "generic moral/lesson ending"
+    ],
+    "input": "deidentified brief only",
+    "order": "sample freeze -> Control generation -> Control SHA seal -> selector profiling",
+    "requirements": [
+      "preserve all provided facts",
+      "use only authorized speakers",
+      "no new principal character",
+      "no future/source invention",
+      "playable/filmable direction",
+      "natural Korean dialogue",
+      "preserve plausible character/social texture rather than maximizing compression"
+    ],
+    "surface": "Action/Direction + Dialogue",
+    "target_length_unicode_chars": [
+      450,
+      950
+    ]
+  },
+  "date": "2026-09-09",
+  "db59_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+  "evaluation": {
+    "critical_noncompensatory": [
+      "semantic_fidelity",
+      "speaker_authorization",
+      "source_future_fidelity"
+    ],
+    "generation_evaluation_separation": true,
+    "pair_masking": "After generation seal, deterministic SHA-based A/B swap per scene; evaluator receives scene brief + masked pair, not policy decision.",
+    "pair_result_rule": "Treatment win if craft mean >= Control mean +0.30 and no critical/protection failure; Control win if Control mean >= Treatment mean +0.30 or Treatment has protection failure; otherwise Tie.",
+    "rubric_1_to_10": [
+      "dialogue_naturalness",
+      "voice_specificity",
+      "subtext_physicalization",
+      "playable_scene_action",
+      "information_control",
+      "pacing_economy",
+      "relationship_status_motion",
+      "scene_turn",
+      "carry_forward_pressure"
+    ],
+    "same_model_limitation": "If no independent judge is available, evaluation is stronger-virtual same-model blind-masked and claim remains virtual/preformal."
+  },
+  "formal_scored_count": 137,
+  "frozen_input_rule": {
+    "candidate_r3": "May protect claim/evidence classification only; cannot be treated as active semantic engine.",
+    "data": "Frozen DB59 only; use canonical runtime_scene_projection records. Do not read original_extracted/source prose for selection, generation, or evaluation.",
+    "engine_contract": "P07-I4D LiterarySurfaceContractR1 + SurfaceRealizationModeR1 as parent baseline; I4H is experimental policy only.",
+    "prior_50_scene_universe": "EXCLUDED_ENTIRELY",
+    "source_hold_exclusion": [
+      "W"
+    ]
+  },
+  "hypothesis": {
+    "h_physicalizable_subtext": "Some relational scenes with latent subtext can improve under LOW physicalization without deleting character-bearing dialogue or social texture.",
+    "null": "Eligible interventions do not produce reliable craft gains, or gains require unacceptable voice/social/fidelity harm.",
+    "primary": "For fresh DB59-derived scene briefs, a conservative I4H policy that chooses ABSTAIN first, applies a reliability gate, and uses LOW/STANDARD only when eligible will improve craft on intervened scenes while keeping harmful-intervention rate low and preserving voice/social texture."
+  },
+  "parent_active_engine": "P07-I4D",
+  "parent_physical_authority": "LITERARY_OS_SYNC_R6_I4H_VIRTUAL_PRETEST_20260908",
+  "pass_hold_fail_criteria": {
+    "abstain_preservation": "100% byte-identical ABSTAIN",
+    "fail": "safety/fidelity breach or harmful-intervention rate above frozen threshold",
+    "hard_safety": "0 critical reliability/fidelity failures; any >0 => FAIL/HOLD_NO_PROMOTION",
+    "harmful_intervention_rate": "Control wins / interventions <= 0.20",
+    "hold": "ambiguous craft, insufficient interventions, or same-model evidence judged insufficient for promotion despite numerical pass",
+    "intervention_nonloss": "(Treatment win + Tie) / interventions >= 0.80",
+    "intervention_win_rate": "Treatment wins / interventions >= 0.50",
+    "overall_pass": "all hard gates + sample power + nonloss + win-rate + harmful-rate + voice/social guard. PASS grants eligibility for I4H development physical synchronization only; no authority changes until new 5-Part/9-Package seal and audit.",
+    "physicalizable_subtext_gate": "if >=3 LOW scenes have physicalizable_subtext>=2, at least 2/3 must be nonloss and none may have >1.0 voice/social drop; otherwise hypothesis remains unresolved",
+    "sample_power": "at least 6 interventions required for a craft PASS; otherwise HOLD_SAMPLE_POWER",
+    "voice_social_guard": "mean change on voice_specificity >= -0.25 and no intervention scene drop >1.0 on voice_specificity attributable to compression; violations => HOLD/FAIL"
+  },
+  "prior_claim_boundary": {
+    "candidate_r3": "RESEARCH_DEVELOPMENT_ONLY__NOT_PROMOTED",
+    "cp1_closed": false,
+    "i4h_sync_r6": "ARCHITECTURE_PASS__CRAFT_PROMOTION_HOLD",
+    "openai_live": false,
+    "post_sync_r6_chat": "NON_AUTHORITY_HYPOTHESIS_ONLY__MUST_REPRODUCE"
+  },
+  "production_engine": "ENG:R47",
+  "purpose": "Qualify or reject I4H craft behavior prospectively. This is not a test of OpenAI Live parity, human-writer equivalence, Production promotion, CP1 closure, whole-episode competitiveness, or Formal R140.",
+  "r140": [
+    0,
+    0,
+    0
+  ],
+  "reliability_hard_gates": [
+    "unauthorized_speaker == 0",
+    "foreign_script_intrusion == 0",
+    "critical_semantic_contradiction == 0",
+    "source_or_future_leak == 0",
+    "new_principal_character == 0",
+    "malformed_korean_critical == 0",
+    "ABSTAIN byte_identity == 100%",
+    "LOW/STANDARD length and dialogue-retention bounds pass unless predeclared mechanical parser false-positive is adjudicated without changing bytes"
+  ],
+  "research_questions": [
+    "Can the selector abstain on already-playable or voice/socially protected Control scenes?",
+    "Among selected interventions, is Treatment non-inferior or better without semantic/speaker/source violations?",
+    "Does LOW physicalization improve latent subtext while retaining character-bearing dialogue and social texture?",
+    "Does STANDARD improve information/action economy only where protection risk is low?",
+    "What is the harmful-intervention rate under a prospective freeze-before-treatment design?"
+  ],
+  "sample_rule": {
+    "cohorts": {
+      "INFO_CHALLENGE": {
+        "description": "remaining works; REVEAL or STATE_CHANGE info context plus opposition or >=2 functional propositions",
+        "n": 4
+      },
+      "NATURAL": {
+        "description": "one scene per work from eligible canonical runtime records, selected by lowest deterministic SHA256 rank",
+        "n": 16
+      },
+      "RELATIONAL_SUBTEXT": {
+        "description": "remaining works; exactly 2 characters, STATE_CHANGE context, no OPPOSITION participation, secondary POV or both characters PRIMARY",
+        "n": 4
+      }
+    },
+    "global_eligibility": [
+      "work belongs to frozen canonical work list from current planner-runtime authority",
+      "work is not source-hold",
+      "2 <= character count <= 5",
+      "event_context nonempty",
+      "info_context nonempty",
+      "functional_propositions nonempty",
+      "record parses as DB98_RUNTIME_SCENE_PROJECTION_V1",
+      "at most one selected scene per work across all cohorts"
+    ],
+    "no_posthoc_replacement": "If a cohort cannot fill its quota under frozen rules, status becomes HOLD_SAMPLE_POWER; do not relax predicates after seeing content.",
+    "rank_formula": "SHA256(seed + \"|\" + work_id + \"|\" + episode_no + \"|\" + scene_no + \"|\" + canonical_record_sha256)",
+    "rank_seed": "P07-I4H-PROSP-CRAFT-R1|DB59=a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "total_n": 24
+  },
+  "schema": "P07I4HProspectiveCraftValidationPreregistrationR1",
+  "selector_profile_after_control_before_treatment": {
+    "decision_rule": [
+      "ABSTAIN if already_playable>=2 and exposition_risk<=1",
+      "ABSTAIN if max(social_texture,voice_specificity)>=3 and exposition_risk<=2 unless physicalizable_subtext==3 and proposed edit is additive LOW",
+      "STANDARD if exposition_risk>=2 and procedural_pressure>=2 and max(social_texture,voice_specificity)<=1 and already_playable<=1",
+      "LOW if physicalizable_subtext>=2 or exposition_risk>=2, provided STANDARD rule is not met",
+      "otherwise ABSTAIN"
+    ],
+    "definitions": {
+      "already_playable": "degree to which scene already works through filmable action, reaction, beat turn, and spatial behavior",
+      "exposition_risk": "degree to which dialogue redundantly explains plot/emotion/relationship that could be carried by action/subtext",
+      "physicalizable_subtext": "degree of latent relational meaning that can be added as playable behavior without deleting character-bearing dialogue",
+      "procedural_pressure": "degree of operational/deadline/decision pressure that benefits from action-linked economy",
+      "social_texture": "degree to which dialogue carries lived relation, humor, status negotiation, intimacy, or ensemble rhythm",
+      "voice_specificity": "degree of character-specific speech behavior that would be harmed by compression"
+    },
+    "dimensions_range_0_3": [
+      "exposition_risk",
+      "procedural_pressure",
+      "social_texture",
+      "voice_specificity",
+      "already_playable",
+      "physicalizable_subtext"
+    ],
+    "freeze_requirement": "profile values, decision, and rationale SHA-sealed before any Treatment prose is generated"
+  },
+  "state_change_policy": {
+    "after_hold_or_fail": "retain P07-I4D authority; log result; redesign only via new preregistration",
+    "after_pass": "first build and audit a new 5-Part/9-Package physical sync; only then may I4H become development authority and only then may I4I start",
+    "during_experiment": "formal_count unchanged; Production unchanged; Active Development Engine remains P07-I4D; R140 stays 0/0/0"
+  },
+  "status_at_prereg": "PREREGISTERED_PROTOCOL__NO_SAMPLE_SELECTED__NO_GENERATION__NO_EVALUATION",
+  "sync_r6_package_set_ledger_sha256": "a3452964728c23763afbeb5ef62a1c748651f7a3c2833abb7400539b3938bcf1",
+  "sync_r6_package_sha256": {
+    "A": "25eb489d07e78a3a3288e1e5029114ce791ada2ab43a8564ae9f9eed738306dd",
+    "B1": "00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98",
+    "B2": "40de0853fd8e1e8318658d64a4e8d26cb8e88711842639aa45b87c0e4d062c02",
+    "C1": "dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518",
+    "C2-A": "b775bf65cba23ad5611b3383678765f88c1a444d25c4b49f7ccfb5a9d2438ec9",
+    "C2-B": "be4af1ac97467e1f090c8cd0854e14df1ffef6699ed23b0a80014f55e197e860",
+    "CONTROL": "c291e9a3866de66fae625ab899139a13f1e98468a3bff0d58a11fd34553f0aa6",
+    "D1": "a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504",
+    "D2": "c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4"
+  },
+  "treatment_generation": {
+    "ABSTAIN": "byte-identical copy of Control",
+    "LOW": [
+      "prefer additive/repositioned physicalization",
+      "do not delete character-bearing dialogue merely to shorten",
+      "dialogue characters should remain >=75% of Control unless exact redundant restatement is removed",
+      "total length <=135% of Control"
+    ],
+    "STANDARD": [
+      "may restructure action/dialogue for information economy",
+      "preserve all character-specific/socially functional speech needed for voice/status/ethics",
+      "dialogue characters should remain >=55% of Control",
+      "total length <=125% of Control"
+    ],
+    "common": [
+      "same facts",
+      "same authorized speaker set",
+      "no new named entity except neutral props already implied",
+      "no source/future leakage",
+      "no literal Treatment promotion"
+    ]
+  }
+}
