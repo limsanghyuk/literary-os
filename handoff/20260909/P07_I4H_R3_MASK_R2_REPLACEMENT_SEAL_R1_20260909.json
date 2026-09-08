@@ -1,0 +1,14 @@
+{
+  "schema":"P07I4HR3MaskR2ReplacementSealR1",
+  "experiment_id":"P07-I4H-PROSP-CRAFT-R3-CLEAN-SYNTHETIC",
+  "reason":"MASK_R1 coordinator mapping was exposed to the same-session evaluator before scoring. No scores were produced. MASK_R1 is invalid for scoring and replaced before evaluation.",
+  "replacement_algorithm":"SHA256(experiment_id+'|'+scene_id+'|MASK_R2_CLEAN'); odd first-byte => Treatment=A, even => Control=A",
+  "masked_eval_packet_outer_sha256":"16a656b8ab4ced31242b201a3e1672fdac719de54d01e4e1677bff9262b0d87b",
+  "masked_eval_packet_canonical_payload_sha256":"56bbe7684cdbf771302942cdb0a891a8879fc20a148e12c04eaf23b103241368",
+  "secret_coordinator_map_outer_sha256":"8eaa2bea7af4d72cdff51295ef8b490a4f1aba5c8ff79350dea9391a357cf2cb",
+  "pair_count":6,
+  "abstain_identity_tie_count":12,
+  "scores_before_replacement":0,
+  "evaluation_before_replacement":0,
+  "status":"MASK_R2_SEALED__COORDINATOR_MAP_NOT_OPENED__NO_SCORES"
+}
