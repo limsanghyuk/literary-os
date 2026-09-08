@@ -1,0 +1,22 @@
+{
+  "schema":"P07I4HR3TreatmentSealLedgerR1",
+  "experiment_id":"P07-I4H-PROSP-CRAFT-R3-CLEAN-SYNTHETIC",
+  "treatment_artifact_outer_sha256":"82e7ab4d56c8477e0a53b22391ced596f005bac92a37839ddcf366dc155f1d71",
+  "treatment_canonical_payload_sha256":"7d3b63fb079f903304fc61e8d1f8b012e20d5fd4c649ea5cb35360926e325467",
+  "selector_canonical_payload_sha256":"0555d3f3aa4176ce10b5f978aa15042ca50da31c10ee885ba28a074fac4db1d6",
+  "counts":{"ABSTAIN":12,"LOW":0,"STANDARD":6},
+  "reliability_report_outer_sha256":"16821db25208008656e9b187721bc7c53d4117ab7f52be68e1d01b6c75150d50",
+  "reliability_report_canonical_payload_sha256":"bea5abf248655583d1b5c8da672c65a11c553e18584c317becfaca0bf9846f35",
+  "critical_failure_count":0,
+  "intervention_metrics":{
+    "R13":{"mode":"STANDARD","sha256":"8abb2448e4a9fd6575b080d225a5f0a34a81c39f8f9d62a679243cc5397f058e","total_ratio":1.0175,"dialogue_retention":0.6608},
+    "R14":{"mode":"STANDARD","sha256":"3c87b1e8449b6d2c631290d0f022ef024228f30338834bc108370c0876d40a63","total_ratio":1.0580,"dialogue_retention":0.7603},
+    "R15":{"mode":"STANDARD","sha256":"a3db4cf390b2389ce16b32c0ab9a64d2372a2fb214bd15a384c01f5a9288aaf4","total_ratio":1.0569,"dialogue_retention":0.7608},
+    "R16":{"mode":"STANDARD","sha256":"f574a5096513971ad6154b08ed5a476436ad3c59de7bb76f9ca6064ba7c185c7","total_ratio":1.0735,"dialogue_retention":0.9009},
+    "R17":{"mode":"STANDARD","sha256":"dbb8d17e099129134d5e73c0f7afac6cdd1470d817e8538f16ca331805f81b89","total_ratio":1.0787,"dialogue_retention":0.8163},
+    "R18":{"mode":"STANDARD","sha256":"e865880089392ff5eb1dbcae08baa6f59b203637768863780a399160891872f5","total_ratio":1.0313,"dialogue_retention":0.6650}
+  },
+  "abstain_identity":"12/12 PASS",
+  "measurement_amendment_commit":"85be6450214ebe91bf6a6e9923c9fe06589cb53c",
+  "status":"TREATMENT_18_OF_18_SHA_SEALED__RELIABILITY_PASS__NO_EVALUATION"
+}
