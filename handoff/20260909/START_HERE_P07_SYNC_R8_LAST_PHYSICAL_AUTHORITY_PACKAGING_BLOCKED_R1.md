@@ -18,6 +18,27 @@ DB59: frozen SHA256 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bcc
 Formal scored count: `137`
 R140: `0/0/0`
 
+## Mandatory recovery manifest
+Before any new research execution, read:
+`handoff/20260909/P07_SYNC_R9_PACKAGING_RECOVERY_MANIFEST_R1_20260909.md`
+
+Recovery-manifest commit:
+`31931895de1bb0504bf19366d655ca64adb36560`
+
+It records:
+- exact Sync R8 nine parent transport filenames and SHA256 values;
+- which Sync R9 transports must change: CONTROL / A / B2;
+- which must remain byte-identical: B1 / C1 / C2-A / C2-B / D1 / D2;
+- every durable post-Sync-R8 I4I preregistration/plan-freeze artifact and commit;
+- safe append-only packaging rules;
+- combined C2 / DB59 invariants;
+- complete final physical-audit procedure and claim boundary.
+
+Recovery distinction:
+- Hub alone is sufficient to recover the **research state**;
+- Hub alone is not a binary backup of the nine large Sync R8 transport files;
+- physical Sync R9 rebuild requires `healthy writable runtime + exact Sync R8 nine-file set + GitHub Hub`.
+
 ## Post-Sync-R8 material exists but is not packaged
 I4I preregistration and complete 11-sequence / 56-scene common plan are durable on GitHub, but they are not yet present in any newer physically audited 5-Part / 9-Package set.
 
@@ -40,10 +61,10 @@ No further I4I Control/Treatment generation or later experiment execution may pr
 
 ## Exact next operation
 1. Restore a healthy writable container/runtime.
-2. Recover/mount exact Sync R8 5-Part / 9-Package files.
+2. Recover/mount exact Sync R8 5-Part / 9-Package files and verify all nine parent hashes listed in the recovery manifest.
 3. Revalidate Sync R8 9/9 outer SHA, ZIP CRC, duplicate-path and unsafe-path status.
-4. Build `Sync R9` carrying the post-Sync-R8 I4I preregistration and complete frozen-plan artifacts.
-5. Keep Active I4H runtime/data byte-identical unless explicitly changed by that packaging integration.
+4. Build `Sync R9` carrying the post-Sync-R8 I4I preregistration and complete frozen-plan artifacts exactly as specified by the recovery manifest.
+5. Modify CONTROL / A / B2 only; keep B1 / C1 / C2-A / C2-B / D1 / D2 byte-identical.
 6. Run full Sync R9 9/9 physical audit, including manifests, combined C2 and DB59 reconstruction.
 7. Deliver all nine Sync R9 transport files to the developer.
 8. Only after Sync R9 physical closure may I4I Control generation resume.
@@ -54,4 +75,4 @@ No further I4I Control/Treatment generation or later experiment execution may pr
 - The last developer-deliverable physical authority is Sync R8.
 
 ## Status token
-`SYNC_R8_LAST_PHYSICAL_AUTHORITY__POST_SYNC_R8_I4I_PLAN_GITHUB_ONLY__PACKAGING_BLOCKED_BY_CLIENTERROR__RESEARCH_EXECUTION_FROZEN__SYNC_R9_REQUIRED_NEXT`
+`SYNC_R8_LAST_PHYSICAL_AUTHORITY__SYNC_R9_RECOVERY_MANIFEST_SEALED__POST_SYNC_R8_I4I_PLAN_GITHUB_ONLY__PACKAGING_BLOCKED_BY_CLIENTERROR__RESEARCH_EXECUTION_FROZEN__SYNC_R9_REQUIRED_NEXT`
