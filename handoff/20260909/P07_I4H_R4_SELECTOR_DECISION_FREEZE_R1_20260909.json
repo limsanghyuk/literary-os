@@ -1,0 +1,11 @@
+{
+  "schema":"P07I4HR4SelectorDecisionFreezeR1",
+  "experiment_id":"P07-I4H-PHYSICAL-REPLICATION-R4",
+  "control_canonical_payload_sha256":"97f58a3208f700c0f73ccef35790f77e428210bb537be82146ef389d64b7e8cc",
+  "counts":{"ABSTAIN":7,"LOW":7,"STANDARD":7},
+  "scene_groups":{"ABSTAIN":["U01","U02","U03","U04","U05","U06","U07"],"LOW":["U08","U09","U10","U11","U12","U13","U14"],"STANDARD":["U15","U16","U17","U18","U19","U20","U21"]},
+  "profile_summary":{"ABSTAIN":"already_playable=2, exposition_risk=1","LOW":"physicalizable_subtext=3, already_playable=1, exposition_risk=2","STANDARD":"exposition_risk=3, procedural_pressure=3, social_texture=1, voice_specificity=1, already_playable=1"},
+  "decision_rule":"exact preregistered I4H R4 selector rule",
+  "canonical_payload_sha256":"b1745835447cc1d11f4442ff64bc0240ddc743793cc97405295b7f7703df9c58",
+  "status":"SELECTOR_PROFILED_AND_DECISIONS_FROZEN__NO_TREATMENT_GENERATED"
+}
