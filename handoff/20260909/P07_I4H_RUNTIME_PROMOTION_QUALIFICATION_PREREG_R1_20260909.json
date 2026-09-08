@@ -1,0 +1,45 @@
+{
+  "schema":"P07I4HRuntimePromotionQualificationPreregR1",
+  "date":"2026-09-09",
+  "experiment_id":"P07-I4H-RUNTIME-PROMOTION-QUAL-R1",
+  "classification":"DEVELOPMENT_PREFORMAL__RUNTIME_IMPLEMENTATION_QUALIFICATION",
+  "parent_physical_research_authority":"SYNC_R7_I4H_R3_R4_RESEARCH_SYNC",
+  "parent_c2_sha256":"9878aac8532e9f1eb6b16ef4c84bcfe6be90b58a49ecf0f6afaabe993fad3be7",
+  "active_parent_engine":"P07-I4D",
+  "research_basis":{"R3":"stronger-virtual PASS","R4":"physical replication PASS / I4H Development Promotion Candidate"},
+  "purpose":"Implement the R4-qualified ABSTAIN/LOW/STANDARD policy as a fail-closed two-pass runtime overlay without changing I4D behavior when ABSTAIN, then qualify implementation before any active-engine promotion.",
+  "architecture":[
+    "Pass 1 always uses the exact existing I4D provider-backed renderer path to create/commit a baseline scene.",
+    "Policy decision is ABSTAIN/LOW/STANDARD from a structured 0-3 profile; Python selects/validates only and authors no literary prose.",
+    "ABSTAIN performs zero revision calls and returns the exact committed I4D baseline result unchanged.",
+    "LOW/STANDARD create a second provider revision candidate from the same semantic payload plus the sealed baseline scene and structured intervention constraints.",
+    "Candidate must pass provider-claim admissibility, existing local scene-contract guard, deterministic delta guards, an external/non-self-certifying reliability judgment, and an external craft judgment.",
+    "Any revision failure/reject/HOLD/BLOCK returns the committed I4D baseline scene; no harmful candidate may replace baseline.",
+    "No R3/R4 literal treatment prose is hardcoded or promoted."
+  ],
+  "new_overlay_files":[
+    "literary_os_runtime/i4h_intervention_policy.py",
+    "literary_os_runtime/i4h_runtime_renderer.py",
+    "literary_os_runtime/i4h_episode_render_wiring.py",
+    "tests/test_p07_i4h_runtime_promotion.py"
+  ],
+  "parent_files_not_modified":[
+    "surface_realization_mode.py",
+    "semantic_render_bridge.py",
+    "provider_backed_renderer.py",
+    "semantic_episode_render_wiring.py",
+    "literary_surface_contract.py"
+  ],
+  "selector_contract":{"dimensions":["exposition_risk","procedural_pressure","social_texture","voice_specificity","already_playable","physicalizable_subtext"],"range":"integer 0..3","rule_order":["ABSTAIN if already_playable>=2 and exposition_risk<=1","ABSTAIN if max(social_texture,voice_specificity)>=3 and exposition_risk<=2 unless physicalizable_subtext==3 and additive LOW is allowed","STANDARD if exposition_risk>=2 and procedural_pressure>=2 and max(social_texture,voice_specificity)<=1 and already_playable<=1","LOW if physicalizable_subtext>=2 or exposition_risk>=2 unless STANDARD","otherwise ABSTAIN"]},
+  "revision_constraints":{"LOW":{"dialogue_retention_min":0.75,"total_char_ratio_max":1.35,"operation":"add/reposition playable physicalization; preserve character-bearing dialogue"},"STANDARD":{"dialogue_retention_min":0.55,"total_char_ratio_max":1.25,"operation":"restructure action/dialogue for information economy while preserving reasoning/voice/status speech"}},
+  "deterministic_reliability_guards":["authorized speakers only","exit-state exact preservation","new foreign-script token set relative to baseline must be empty","LOW/STANDARD dialogue-retention floor","LOW/STANDARD total-character ratio ceiling","valid ordered-beat scene shape"],
+  "external_reliability_judgment_required_fields":["semantic_source_future_fidelity","new_principal_character","korean_morphology_grammar","voice_social_texture","dialogue_overcompression","direction_bloat"],
+  "external_reliability_rule":"all required fields must PASS; missing judgment is rejection/fallback",
+  "craft_judgment_rule":"candidate revision requires external judgment verdict PASS; missing/non-PASS revision judgment falls back to baseline",
+  "provider_strategy":"New I4H provider subclass/wrapper may add revision-specific instructions only when i4h_intervention_policy is present. For ordinary I4D baseline payload, request construction must be byte/canonical equivalent to parent provider behavior.",
+  "qualification_tests":{"minimum_new_tests":20,"required":["profile validation boundaries","selector decision cases for ABSTAIN/LOW/STANDARD","ABSTAIN one provider call and exact baseline scene/result preservation","baseline OpenAI request invariance when no I4H policy","LOW second-call candidate acceptance","STANDARD second-call candidate acceptance","unauthorized speaker rejection/fallback","exit-state mismatch rejection/fallback","new foreign-script token rejection/fallback","LOW dialogue retention rejection/fallback","STANDARD dialogue retention rejection/fallback","LOW total length rejection/fallback","STANDARD total length rejection/fallback","missing external reliability judgment rejection/fallback","voice/social reliability failure rejection/fallback","semantic/source/future failure rejection/fallback","craft HOLD/BLOCK rejection/fallback","provider error on revision rejection/fallback","no literal R3/R4 treatment prose in code","old I4D targeted tests remain PASS"]},
+  "promotion_gates":{"new_tests":"100% PASS","old_i4d_targeted_tests":"100% PASS","abstain_payload_behavior_invariance":"100% PASS","fault_injection_reject_to_baseline":"100% PASS","python_literary_prose_generated":false,"critical_failure_accepts":0,"full_nonhistorical_regression":"must be run before active-engine physical promotion; target parent baseline 213/213 or higher with no new failures"},
+  "claim_boundary":"A qualification PASS supports a runtime promotion candidate only. Active I4H authority requires a newly built/audited 5-Part/9-Package set. No OpenAI Live, human-equivalence, Production, formal-count, R140, or I4I claim follows from this test.",
+  "authority_state_frozen":{"current_physical_research_authority":"Sync R7","active_engine":"P07-I4D","production":"ENG:R47","formal_scored_count":137,"r140":[0,0,0],"i4i_started":false},
+  "status":"PREREGISTERED__NO_CODE_MUTATION__NO_TEST_RESULTS"
+}
