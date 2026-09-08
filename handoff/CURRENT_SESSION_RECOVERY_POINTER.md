@@ -4,9 +4,10 @@ Last updated: 2026-09-09
 ## READ ORDER
 1. Read this file first.
 2. Read `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`.
-3. Read `handoff/20260909/START_HERE_P07_DEVELOPER_HELD_SYNC_R6_CUMULATIVE_RECOVERY_R1.md`.
-4. Read `handoff/20260909/P07_DEVELOPER_DELIVERY_BASELINE_CORRECTION_AND_CUMULATIVE_RECOVERY_R1_20260909.md`.
-5. Read `handoff/20260908/START_HERE_P07_SYNC_R6_PHYSICAL_AUTHORITY_NEW_SESSION_HANDOFF_R1.md`.
+3. Read `handoff/20260909/P07_FILE_LIBRARY_ARCHIVE_MOUNT_RECOVERY_INDEX_R1.md`.
+4. Read `handoff/20260909/START_HERE_P07_DEVELOPER_HELD_SYNC_R6_CUMULATIVE_RECOVERY_R1.md`.
+5. Read `handoff/20260909/P07_DEVELOPER_DELIVERY_BASELINE_CORRECTION_AND_CUMULATIVE_RECOVERY_R1_20260909.md`.
+6. Read `handoff/20260908/START_HERE_P07_SYNC_R6_PHYSICAL_AUTHORITY_NEW_SESSION_HANDOFF_R1.md`.
 
 ## DEVELOPER-HELD PHYSICAL BASELINE
 `LITERARY_OS_SYNC_R6_I4H_VIRTUAL_PRETEST_20260908`
@@ -24,7 +25,17 @@ Combined parent C2:
 DB59 frozen SHA256:
 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
 
-Exact nine filenames/SHA256 values are frozen in the correction/recovery document and the original Sync R6 START_HERE.
+Exact nine filenames/SHA256 values are frozen in the correction/recovery document, the original Sync R6 START_HERE, and the Archive/Mount Recovery Index.
+
+## FILE LIBRARY / ARCHIVE STATUS
+File Library search can recover durable physical metadata/evidence across sessions, including package manifests, audit records, trust roots, filenames, sizes, SHA256 values and reconstruction rules.
+
+Current observation does NOT prove that the original large ZIP/BIN objects were deleted.
+Correct classification:
+`ARCHIVE_METADATA_DISCOVERABLE__LARGE_BINARY_RUNTIME_MOUNT_NOT_EXPOSED_IN_CURRENT_SESSION`.
+
+Do not ask the developer to re-explain already-durable research/package history in a new session.
+Only request binary re-upload if a byte-level mutation task is required and no archive-to-runtime binary access path is available.
 
 ## POST-DELIVERY HUB STATE
 Durable but not yet delivered as a new complete 9-file package:
@@ -53,21 +64,29 @@ The next developer deliverable is planned as Sync R9, built directly from:
 
 Required cumulative changes include CONTROL, A, B2 and rebuilt C2-A/B carrying the qualified I4H runtime overlay. B1/C1/D1/D2 should remain byte-identical unless a packaging-only audit proves otherwise.
 
-## PACKAGING BLOCKER
-Current container and separate Python filesystem tiny-write/tiny-ZIP probes returned `ClientError`.
-Therefore no trustworthy new physical package can currently be created in this session.
+## CURRENT RUNTIME / PACKAGING STATUS
+The previous session recorded `ClientError` on minimal filesystem/ZIP operations.
+In the current session a real writable-runtime probe successfully created a ZIP, reopened/read it, validated ZIP readability/CRC behavior and computed SHA256.
+
+Therefore:
+`RUNTIME_WRITE_ZIP_SHA_CAPABILITY = RECOVERED`.
+
+Remaining blocker is not container writability. It is:
+`SYNC_R6_LARGE_BINARY_BYTES_NOT_MOUNTED_TO_ACTIVE_RUNTIME`.
 
 ## NEXT EXACT ACTION
-1. Recover healthy writable runtime.
-2. Mount developer-held Sync R6 nine files.
-3. Verify 9/9 outer SHA256 / CRC / duplicate=0 / unsafe=0.
-4. Verify combined Sync R6 C2.
-5. Recover cumulative Hub evidence and I4H runtime delta.
-6. Build cumulative Sync R9 directly from Sync R6 + Hub deltas.
-7. Re-run I4H runtime qualification/regression in the rebuilt materialization.
-8. Audit all nine Sync R9 files including rebuilt C2 and unchanged DB59.
-9. Deliver all nine files to the developer.
-10. Only then mark I4H as developer-held physical authority and resume I4I Control generation.
+1. Read the Archive/Mount Recovery Index.
+2. Query File Library for the exact developer-held Sync R6 package objects and related manifests/audits.
+3. If an archive-to-runtime binary mount/export path is exposed, materialize the exact nine files without developer re-upload.
+4. Verify 9/9 outer SHA256 / CRC / duplicate=0 / unsafe=0.
+5. Verify combined Sync R6 C2.
+6. Recover cumulative Hub evidence and I4H runtime delta.
+7. Build cumulative Sync R9 directly from Sync R6 + Hub deltas.
+8. Re-run I4H runtime qualification/regression in the rebuilt materialization.
+9. Audit all nine Sync R9 files including rebuilt C2 and unchanged DB59.
+10. Deliver all nine files to the developer.
+11. Only then mark I4H as developer-held physical authority and resume I4I Control generation.
+12. If no archive-to-runtime binary path exists, binary re-upload is a last-resort transport step only; it must not be treated as a need to re-teach/re-explain the project.
 
 ## FIXED SCIENTIFIC STATE
 - Production ENG:R47
@@ -78,5 +97,10 @@ Therefore no trustworthy new physical package can currently be created in this s
 - Formal R140 0/0/0
 - OpenAI Live qualification not established
 
+## DURABLE ARCHIVE RECOVERY DOCUMENT
+`handoff/20260909/P07_FILE_LIBRARY_ARCHIVE_MOUNT_RECOVERY_INDEX_R1.md`
+Creation commit:
+`a153d0a16b9573a61b05ba147f7dc7084b19cf8d`
+
 ## STATUS TOKEN
-`DEVELOPER_HELD_SYNC_R6_I4D__POST_DELIVERY_I4H_R3_R4_RUNTIME_QUAL_DURABLE_ON_HUB__I4H_NEXT_PHYSICAL_CANDIDATE__I4I_PLAN_11SEQ_56SCENE_FROZEN_CONTROL_0__SYNC_R9_CUMULATIVE_REBUILD_FROM_SYNC_R6_REQUIRED__RESEARCH_FROZEN`
+`DEVELOPER_HELD_SYNC_R6_I4D__ARCHIVE_METADATA_DURABLE__RUNTIME_HEALTHY__LARGE_BINARY_MOUNT_UNRESOLVED__POST_DELIVERY_I4H_R3_R4_RUNTIME_QUAL_DURABLE_ON_HUB__I4H_NEXT_PHYSICAL_CANDIDATE__I4I_PLAN_11SEQ_56SCENE_FROZEN_CONTROL_0__SYNC_R9_CUMULATIVE_REBUILD_FROM_SYNC_R6_REQUIRED__RESEARCH_FROZEN`
