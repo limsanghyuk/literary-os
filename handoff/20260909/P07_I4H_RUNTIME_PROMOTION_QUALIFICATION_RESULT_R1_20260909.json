@@ -1,0 +1,59 @@
+{
+  "active_parent_engine": "P07-I4D",
+  "authority_effect_before_physical_sync": {
+    "active_engine": "P07-I4D",
+    "formal_scored_count": 137,
+    "i4i_started": false,
+    "physical_research_authority": "Sync R7",
+    "production": "ENG:R47",
+    "r140": [0,0,0]
+  },
+  "claim_boundary": "Development/preformal runtime qualification only. Active I4H requires a newly built and physically audited 5-Part/9-Package set. No OpenAI Live, Production, formal-count, R140, human-equivalence, or I4I claim.",
+  "classification": "DEVELOPMENT_PREFORMAL__RUNTIME_IMPLEMENTATION_QUALIFICATION",
+  "date": "2026-09-09",
+  "experiment_id": "P07-I4H-RUNTIME-PROMOTION-QUAL-R1",
+  "implementation_files": {
+    "literary_os_runtime/i4h_episode_render_wiring.py": {"bytes":2138,"sha256":"7f2f1b50ec9239ca5ca364b3863f28418aba2baf248fea31ca9178a7be33b741"},
+    "literary_os_runtime/i4h_intervention_policy.py": {"bytes":3313,"sha256":"cb643e1cee8e47dfafafb87db1f335abc7203d25ac016b774678f2266cd94684"},
+    "literary_os_runtime/i4h_runtime_renderer.py": {"bytes":13286,"sha256":"94f766c23c45a22fc8655a56f89908cf38db384af9c8046042b474a1085a76ed"},
+    "tests/test_p07_i4h_runtime_promotion.py": {"bytes":15130,"sha256":"9b7ef43744dfe094b2b1d1ec850c8712ba38a1f450a11c689ff43215f01fbf7a"}
+  },
+  "parent_c2_sha256": "9878aac8532e9f1eb6b16ef4c84bcfe6be90b58a49ecf0f6afaabe993fad3be7",
+  "parent_files_not_modified": {
+    "literary_surface_contract.py": {"parent_sha256":"79fa25b8aed55cf64eeecc2591c59ab1be199bddc9f6a2209a3ede57857a1ce5","materialized_sha256":"79fa25b8aed55cf64eeecc2591c59ab1be199bddc9f6a2209a3ede57857a1ce5","byte_identical":true},
+    "provider_backed_renderer.py": {"parent_sha256":"e04befcd3b26bb4091d77dc35374e78ea30a84efa2af2fe47d8c565849c6b208","materialized_sha256":"e04befcd3b26bb4091d77dc35374e78ea30a84efa2af2fe47d8c565849c6b208","byte_identical":true},
+    "semantic_episode_render_wiring.py": {"parent_sha256":"f3ff441dc1221ca2a39cd9e1fb1239cdd26186156f5a53d1b599e79ed0188d99","materialized_sha256":"f3ff441dc1221ca2a39cd9e1fb1239cdd26186156f5a53d1b599e79ed0188d99","byte_identical":true},
+    "semantic_render_bridge.py": {"parent_sha256":"342ba94f8503995079b9ddabc55b709ea38c7721112d6a396d643a8aad8985eb","materialized_sha256":"342ba94f8503995079b9ddabc55b709ea38c7721112d6a396d643a8aad8985eb","byte_identical":true},
+    "surface_realization_mode.py": {"parent_sha256":"06244a1a0c4876975067036784761f0620675fdbb347f6b40536bdd41db61cd9","materialized_sha256":"06244a1a0c4876975067036784761f0620675fdbb347f6b40536bdd41db61cd9","byte_identical":true}
+  },
+  "parent_physical_research_authority": "SYNC_R7_I4H_R3_R4_RESEARCH_SYNC",
+  "preregistration_commit": "ac7202ac7743252ac1bb8b0ac50cb84287b7dfcd",
+  "promotion_gates": {
+    "abstain_invariance_100_percent":"PASS",
+    "critical_failure_accepts_zero":"PASS",
+    "fault_injection_reject_100_percent":"PASS",
+    "full_regression_213_or_higher_no_new_failures":"PASS",
+    "new_tests_100_percent":"PASS",
+    "old_i4d_targeted_100_percent":"PASS",
+    "python_authors_no_literary_prose":"PASS"
+  },
+  "qualification": {
+    "abstain_payload_behavior_invariance":"PASS",
+    "critical_failure_accepts":0,
+    "fault_injection_reject_to_baseline":"PASS",
+    "full_nonhistorical_regression":{"passed":255,"failed":0,"parent_baseline":213,"new_tests":42,"status":"PASS"},
+    "literal_r3_r4_treatment_prose_hardcoded":false,
+    "new_i4h_tests":{"passed":42,"failed":0,"status":"PASS"},
+    "old_targeted_tests":{"passed":26,"failed":0,"status":"PASS"},
+    "python_literary_prose_generated":false,
+    "regression_log_sha256":"9cdc0070fafe97cecb502ec408d315a276bbde5b357213450cb323e4d07ef3e8"
+  },
+  "runtime_architecture": {
+    "ABSTAIN":"one provider call; exact baseline result returned",
+    "LOW_STANDARD":"one revision call after baseline; candidate accepted only after provider admissibility + deterministic delta guards + external reliability PASS + external craft PASS",
+    "baseline_pass":"exact existing I4D render_scene_provider_backed",
+    "failure_behavior":"exact I4D baseline fallback"
+  },
+  "schema":"P07I4HRuntimePromotionQualificationResultR1",
+  "scientific_result":"PASS_RUNTIME_PROMOTION_QUALIFICATION__ACTIVE_I4H_PHYSICAL_PROMOTION_CANDIDATE"
+}
