@@ -1,0 +1,19 @@
+{
+  "schema":"P07I4ICompletePlanFreezeManifestR1",
+  "date":"2026-09-09",
+  "experiment_id":"P07-I4I-WHOLE-EPISODE-PAIRED-RERENDER-R1",
+  "preregistration_commit":"e4bb3a9571db87c7553b183c8a39c3bdb498a143",
+  "frozen_inputs":{
+    "series_state_and_episode_synopsis":{"path":"handoff/20260909/P07_I4I_SERIES_STATE_AND_EPISODE_SYNOPSIS_FREEZE_R1_20260909.json","commit":"623a57f04684c3729b2a12e117db9fc8982c0bd2"},
+    "sequence_plan":{"path":"handoff/20260909/P07_I4I_SEQUENCE_PLAN_FREEZE_R1_20260909.json","commit":"234cda5bca761002a6b4d01a988cb0ce345e2426","sequence_count":11,"scene_counts":[5,6,4,5,6,5,4,6,5,5,5]},
+    "scene_plan":{"path":"handoff/20260909/P07_I4I_SCENE_PLAN_SC01_SC56_FREEZE_R1_20260909.json","commit":"72109d52d69ba5aacafde3e5a6e660bd587c45a1","scene_first":"SC01","scene_last":"SC56","scene_count":56}
+  },
+  "scale":{"sequences":11,"scenes":56,"control_min_unicode_chars":35000,"treatment_min_unicode_chars":35000,"fixed_maximum":false},
+  "immutability_rule":"Control and Treatment must consume these exact GitHub-frozen files. No scene replacement, sequence redistribution, participant substitution, turn rewrite, thread reassignment, or exit-state rewrite is allowed after this manifest.",
+  "sha256_status":"PENDING_LOCAL_RUNTIME_RECOVERY__GITHUB_COMMIT_IDENTITIES_ALREADY_IMMUTABLE",
+  "runtime_incident":"At plan-freeze continuation, container and Python filesystem calls returned ClientError before any Control output. No Control/Treatment prose or score was produced under the incident.",
+  "control_outputs":0,
+  "treatment_outputs":0,
+  "scores":0,
+  "status":"COMPLETE_PLAN_GITHUB_FROZEN__CONTROL_NOT_STARTED__SHA256_LEDGER_PENDING_RUNTIME_RECOVERY"
+}
