@@ -1,0 +1,23 @@
+{
+  "schema":"P07I4ISequencePlanFreezeR1",
+  "date":"2026-09-09",
+  "experiment_id":"P07-I4I-WHOLE-EPISODE-PAIRED-RERENDER-R1",
+  "preregistration_commit":"e4bb3a9571db87c7553b183c8a39c3bdb498a143",
+  "series_synopsis_freeze_commit":"623a57f04684c3729b2a12e117db9fc8982c0bd2",
+  "sequence_count":11,
+  "scene_counts_by_sequence":[5,6,4,5,6,5,4,6,5,5,5],
+  "sequences":[
+    {"sequence_id":"SQ01","title":"이상 징후","goal":"축제 준비가 정상처럼 보이는 가운데 전기 이상을 실제 위기로 확인한다.","obstacle":"작은 냄새와 깜박임이 단순 노후인지 판단하기 어렵다.","turn":"정선우가 부하 제한 전제 없이는 축제 강행 불가를 선언한다.","value_shift":"정상 준비→조건부 위기","thread_ids":["T1_POWER","T2_FESTIVAL"],"scene_count":5},
+    {"sequence_id":"SQ02","title":"조건과 압박","goal":"안전조건·위탁표결·예산을 동시에 이해하고 대응팀을 나눈다.","obstacle":"서진은 행사를 살리는 목표와 안전 제한을 동시에 만족시켜야 한다.","turn":"백주호가 오늘 실패기록이 위탁논의에 들어간다고 명시한다.","value_shift":"기술문제→운영능력 시험","thread_ids":["T1_POWER","T2_FESTIVAL","T3_OUTSOURCE"],"scene_count":6},
+    {"sequence_id":"SQ03","title":"첫 분업","goal":"시설·라디오·청소년팀이 각자 손실을 줄이려 움직인다.","obstacle":"각 팀이 자기 기능만 지키려 해 자원이 충돌한다.","turn":"나래의 비상방송 아이디어가 취소공지 대신 참여를 만든다.","value_shift":"각자 방어→임시 공조","thread_ids":["T2_FESTIVAL","T5_YOUTH","T6_RADIO"],"scene_count":4},
+    {"sequence_id":"SQ04","title":"옛 도면","goal":"과거 배전도면을 찾아 부하 분리 가능성을 검증한다.","obstacle":"도면과 현재 배선이 완전히 일치하지 않는다.","turn":"도면의 한 구역 표기가 실제 숨은 분전함 위치를 가리킨다.","value_shift":"기억 의존→검증 가능한 단서","thread_ids":["T1_POWER","T7_OLD_MAP"],"scene_count":5},
+    {"sequence_id":"SQ05","title":"부분 성공과 균열","goal":"최소 부하 시험으로 중앙무대 복구 가능성을 시험한다.","obstacle":"서진은 성공을 확대해 원래 축제를 되찾으려 하고 태오는 범위를 제한한다.","turn":"냉장설비+무대 조명 동시 부하에서 재차단된다.","value_shift":"복구 기대→원형 복구 불가능","thread_ids":["T1_POWER","T2_FESTIVAL","T4_TRANSFER"],"scene_count":6},
+    {"sequence_id":"SQ06","title":"목표 재정의","goal":"한 장소 축제를 포기하고 기능을 분산하는 대안을 만든다.","obstacle":"축소가 위탁 논리에 유리해 보인다는 정치적·감정적 저항이 있다.","turn":"청소년팀이 짧은 한 곡만이라도 하겠다고 스스로 축소안을 제안한다.","value_shift":"축소=패배→선택적 지속","thread_ids":["T2_FESTIVAL","T3_OUTSOURCE","T5_YOUTH"],"scene_count":5},
+    {"sequence_id":"SQ07","title":"시험 분산","goal":"네 구역 분산안을 실제 전력·동선으로 시험한다.","obstacle":"사람과 장비 이동이 예상보다 꼬이고 일부 역할이 비어 있다.","turn":"주민들이 개인 보조배터리·손전등을 가져오며 비전력 자원이 늘어난다.","value_shift":"센터 내부 해결→지역 자원 결합","thread_ids":["T1_POWER","T2_FESTIVAL","T6_RADIO"],"scene_count":4},
+    {"sequence_id":"SQ08","title":"축제 재구성","goal":"공연·방송·음식·전시를 분산 형태로 다시 배치해 개장을 준비한다.","obstacle":"시간이 부족하고 각 팀의 '원래 모습' 집착이 남는다.","turn":"서진이 중앙무대 중심 배치를 공식 폐기한다.","value_shift":"임시방편→새 운영 방식","thread_ids":["T2_FESTIVAL","T3_OUTSOURCE","T5_YOUTH","T6_RADIO"],"scene_count":6},
+    {"sequence_id":"SQ09","title":"작은 불들의 시작","goal":"분산 축제를 실제로 시작하고 사회적 질감·코미디·멜로를 동시에 진행한다.","obstacle":"관객은 혼란스럽고 방송·공연 시간표가 자꾸 어긋난다.","turn":"어수선함 자체가 참여형 분위기로 바뀌며 초기 성공을 만든다.","value_shift":"통제 불안→살아 있는 공조","thread_ids":["T2_FESTIVAL","T4_TRANSFER","T6_RADIO"],"scene_count":5},
+    {"sequence_id":"SQ10","title":"두 번째 부하","goal":"행사 중 재상승하는 부하를 안전하게 처리하며 무엇을 포기할지 선택한다.","obstacle":"생방송과 청소년 무대가 같은 전력여유를 요구한다.","turn":"서진이 라디오 송출을 먼저 끄고 공연 한 곡의 안전한 완주를 택한다.","value_shift":"모두 유지 욕망→우선순위 책임","thread_ids":["T1_POWER","T2_FESTIVAL","T5_YOUTH","T6_RADIO"],"scene_count":5},
+    {"sequence_id":"SQ11","title":"미완의 결산","goal":"축제를 안전하게 닫고 위탁·전근 문제를 과잉종결 없이 다음 회차로 넘긴다.","obstacle":"사람들은 성공/실패를 한 문장으로 결론내리고 싶어 한다.","turn":"위탁표결은 연기되고 서진은 전근 제안 사실만 태오에게 공개한다.","value_shift":"승패 결론→다음 선택의 압력","thread_ids":["T3_OUTSOURCE","T4_TRANSFER","T2_FESTIVAL"],"scene_count":5}
+  ],
+  "status":"FROZEN_BEFORE_CONTROL_GENERATION"
+}
