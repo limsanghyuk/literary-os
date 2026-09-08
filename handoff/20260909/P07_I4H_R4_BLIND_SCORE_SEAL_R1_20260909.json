@@ -1,0 +1,13 @@
+{
+  "schema":"P07I4HR4BlindScoreSealR1",
+  "experiment_id":"P07-I4H-PHYSICAL-REPLICATION-R4",
+  "mask_seal_commit":"8ba3032949d0c25f997f1ad06fe5d4851303f5dd",
+  "evaluator":"GPT-5.6 Sol same-session same-model masked judge",
+  "claim_boundary":"Same-model masked physical replication only; not independent/human evidence.",
+  "coordinator_map_opened_before_scoring":false,
+  "local_score_artifact_outer_sha256":"9335589100dfe980cb065ecf90d7ae5d3a0104e9daadd9c06cd180a1006c2776",
+  "local_score_canonical_payload_sha256":"afaea080d28fd812ceb18ceeca76b5863694542fa30eccdba7f8ff0df9b1770c",
+  "blind_results":{"U08":{"A":7.8222,"B":7.5889,"winner":"Tie"},"U09":{"A":7.6667,"B":7.4222,"winner":"Tie"},"U10":{"A":7.4222,"B":7.6778,"winner":"Tie"},"U11":{"A":7.8111,"B":7.5667,"winner":"Tie"},"U12":{"A":7.7556,"B":7.5111,"winner":"Tie"},"U13":{"A":7.5444,"B":7.7111,"winner":"Tie"},"U14":{"A":7.5222,"B":7.7222,"winner":"Tie"},"U15":{"A":7.6444,"B":7.1667,"winner":"A"},"U16":{"A":7.6222,"B":7.1222,"winner":"A"},"U17":{"A":7.1111,"B":7.6222,"winner":"B"},"U18":{"A":7.2444,"B":7.5778,"winner":"B"},"U19":{"A":7.2111,"B":7.5556,"winner":"B"},"U20":{"A":7.1889,"B":7.6444,"winner":"B"},"U21":{"A":7.5667,"B":7.2,"winner":"A"}},
+  "abstain_identity_ties":"U01-U07 = 7/7 automatic Tie by byte identity",
+  "status":"BLIND_SCORES_FROZEN__NOT_UNBLINDED"
+}
