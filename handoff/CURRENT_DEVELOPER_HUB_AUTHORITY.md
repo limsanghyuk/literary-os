@@ -1,151 +1,109 @@
 # CURRENT DEVELOPER HUB AUTHORITY
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 Read together with:
 - `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`
-- `handoff/20260908/START_HERE_P07_SYNC_R6_PHYSICAL_AUTHORITY_NEW_SESSION_HANDOFF_R1.md`
+- `handoff/20260909/START_HERE_P07_SYNC_R7_I4H_R3_R4_RESEARCH_SYNC_NEW_SESSION_HANDOFF_R1.md`
 
-## CURRENT PHYSICAL PACKAGE AUTHORITY
-The developer-delivered Sync R6 package set is the current physical package authority:
-`CURRENT_PHYSICAL_PACKAGE_AUTHORITY__P07_SYNC_R6_I4H_VIRTUAL_PRETEST`
+## CURRENT PHYSICAL RESEARCH PACKAGE AUTHORITY
+`CURRENT_PHYSICAL_RESEARCH_PACKAGE_AUTHORITY__P07_SYNC_R7_I4H_R3_R4`
 
 Logical structure: **5 Parts / 9 transport files**.
+Package-set material SHA256:
+`1971cae81f03076370f82a19bcdbb1224964c46196982b7971bc1c382f2eb5db`
 
-Recorded combined C2:
-- bytes `318351029`
-- SHA256 `9878aac8532e9f1eb6b16ef4c84bcfe6be90b58a49ecf0f6afaabe993fad3be7`
-- entries `3765`
-- CRC PASS
+Final physical audit:
+`LITERARY_OS_SYNC_R7_I4H_R3_R4_FINAL_PHYSICAL_AUDIT_R1_20260909.json`
+SHA256 `3e42f5f414cde19dc3e498f2cc5724d9827a668b3b3bc489b7667cff603449c9`
+Status PASS.
 
-Recorded Sync R6 final physical audit:
-`LITERARY_OS_SYNC_R6_I4H_FINAL_PHYSICAL_AUDIT_R1_20260908.json`
-SHA256 `94e808f6fa7c760662d0d02d1625046d23a9198afcc28bd3ab18c15453b37360`.
+Changed from Sync R6: CONTROL / A / B2.
+Unchanged whole-file: B1 / C1 / C2-A / C2-B / D1 / D2.
 
-The exact 9 package names and recorded SHA256 values are in the START_HERE handoff.
+C2 remains byte-identical and reconstructs to:
+`9878aac8532e9f1eb6b16ef4c84bcfe6be90b58a49ecf0f6afaabe993fad3be7`
+with 318351029 bytes / 3765 entries / CRC PASS.
+
+DB59 remains frozen:
+`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
 
 ## CURRENT ACTIVE ENGINE AUTHORITY — UNCHANGED
-`handoff/20260908/P07_I4D_CURRENT_PHYSICAL_AUTHORITY_CLOSURE_R1.md`
-Authority:
 `CURRENT_PHYSICAL_AUTHORITY__P07_I4D_SURFACE_REALIZATION_MODES_R1`
 
 Active Development Engine remains **P07-I4D**.
 
-No later Semantic Contract candidate or I4H virtual result is promoted active-engine authority.
+Important boundary: I4H R3/R4 research PASS does not equal runtime promotion. Sync R7 deliberately keeps C2 unchanged because no promoted I4H runtime implementation has yet been qualified.
 
-## RESEARCH STATE CARRIED BY SYNC R6
-Sync R6 is the physical recovery authority for the research state delivered to the developer.
+## I4H RESEARCH LINE NOW PHYSICALLY CARRIED
+### R1
+`HOLD_PREGENERATION_INPUT_CONTAMINATION__NO_CRAFT_CLAIM__NO_PROMOTION`
+Stopped before generation/scoring because DB59-derived generation packets retained source-like material.
 
-It physically carries the development checkpoint through:
-- P07-I4G final HOLD research history;
-- Semantic Contract repair candidate/virtual qualification line through Candidate R3 research evidence;
-- P07-I4H Virtual Pretest research checkpoint.
+### R2
+`HOLD_PRESELECTOR_CONTROL_MULTIPLICITY_AND_DURABLE_SEAL_CORRUPTION`
+Stopped before selector/treatment/evaluation because manual long-prose Git transport created multiple Control realizations.
 
-Claim boundaries:
-- Candidate R3: research/development only, NOT promoted;
-- I4H Virtual Pretest: `VIRTUAL / PREFORMAL / NO PROMOTION`;
-- OpenAI Live qualification: NOT established;
-- CP1: NOT closed;
-- Production ENG:R47: unchanged;
-- DB59: unchanged;
-- Formal count: unchanged.
+### R3
+`PASS_STRONGER_VIRTUAL_CRAFT_SIGNAL__PROMOTION_PENDING_INDEPENDENT_OR_PHYSICAL_REPLICATION__SUBTEXT_HYPOTHESIS_UNTESTED`
+18 source-free scenes: ABSTAIN12 / LOW0 / STANDARD6; intervention Treatment6/Control0/Tie0; mean delta +0.58517; harmful 0; critical failures 0.
 
-### P07-I4G retained result
-`HOLD__PERFORMANCE_DIRECTION_CAUSAL_SIGNAL__STAGE_A_NONLOSS_GATE_FAIL__NO_STAGE_B__NO_PROMOTION`
+### R4
+`PASS_PHYSICAL_REPLICATION__I4H_DEVELOPMENT_PROMOTION_CANDIDATE__PHYSICAL_5_PART_9_PACKAGE_SYNC_REQUIRED_BEFORE_I4I`
+21 fresh source-free scenes: ABSTAIN7 / LOW7 / STANDARD7.
+Overall interventions: Treatment7 / Control0 / Tie7; nonloss 1.0; harmful 0; mean delta +0.32699.
+STANDARD: 7/7 Treatment wins; mean +0.42699.
+LOW relational-subtext: 7/7 nonloss ties with every delta positive; mean +0.227; mean/worst voice loss 0.0.
 
-Treatment 8 / Control 3 / Tie 1.
-Preregistered win+tie gate required >=10/12; actual 9/12.
-State Commit blocked; no active-engine promotion.
+Sync R7 physically synchronizes this research evidence. Therefore I4H is now:
+`DEVELOPMENT_PROMOTION_CANDIDATE__RUNTIME_IMPLEMENTATION_QUALIFICATION_REQUIRED`
 
-### I4H direction retained in physical research
-The next architecture is conservative and ordered:
-`INTERVENE? / ABSTAIN -> OUTPUT RELIABLE? / REJECT -> LOW / STANDARD`
+It is **not Active Development Engine yet**.
 
-Strong abstention prior is required because I4F showed NONE blind-best on 10/12 prospective scenes and earlier selection over-applied interventions.
+## METHOD REPAIRS NOW FIXED
+- No DB59/source free-text in prospective craft benchmark generation.
+- Long prose remains local canonical artifact; GitHub stores preregistration/SHA ledgers rather than reconstructed prose.
+- Uploaded mounts are immutable inputs; mutable work uses a separate writable workspace.
+- Foreign-script intrusion means newly introduced Treatment token relative to sealed Control.
+- Secret A/B coordinator map is not exposed before blind score seal.
+- Reliability constraints are not lowered when a generated Treatment fails; generation is repaired before seal/evaluation or rejected.
 
-Reliability must protect:
-- Korean morphology/grammar;
-- foreign-script intrusion;
-- speaker authorization;
-- semantic/source/future fidelity;
-- character voice;
-- humor;
-- lived/social rhythm;
-- ensemble texture;
-- dialogue over-compression;
-- direction bloat.
+## CLAIM BOUNDARY
+Supported: same-model masked development evidence that conservative ABSTAIN-first intervention can protect already-good scenes, STANDARD can improve procedure-heavy scenes, and LOW additive physicalization has a positive relational-subtext nonloss signal without voice loss.
 
-## CRAFT DOCTRINE
-Scene Surface = `Action/Direction + Dialogue`.
+Not supported: independent-human consensus, human-writer equivalence, OpenAI Live parity, whole-episode competitiveness, active I4H engine promotion, Production promotion, or Formal R140.
 
-The doctrine is NOT:
-- less dialogue = better;
-- more direction = better.
+## NEXT RESEARCH UNIT
+### P07-I4H Runtime Promotion Implementation / Qualification
+Preregister before code mutation.
+Required invariants:
+- ABSTAIN = exact I4D behavior/no-op;
+- eligibility before intensity selection;
+- reliability rejection/fallback before output acceptance;
+- LOW dialogue preservation and bounded additive physicalization;
+- STANDARD reasoning/voice preservation with bounded compression;
+- semantic/source/speaker/future fidelity non-compensatory;
+- malformed Korean/new foreign-script/new-principal-character faults rejected;
+- old I4D regressions must remain green.
 
-Instead:
-- remove audience-facing explanatory dialogue where possible;
-- preserve dialogue that performs character voice, humor, intimacy, conflict, status negotiation and social texture;
-- externalize subtext into playable/filmable action, reaction, gaze, silence, distance, props and beat transitions when that improves dramatic information;
-- do not over-compress dialogue merely because direction can carry a beat.
+Implementation must occur in a new C2 development candidate. Sync R7 authority must not be mutated in place.
 
-## WHOLE-EPISODE SCALE DOCTRINE
-- >=35,000 Unicode characters minimum;
-- no fixed maximum;
-- 9-10 sequences are minimum/reference floors, not fixed targets/maxima;
-- 45-50 scenes are minimum/reference floors, not fixed targets/maxima;
-- redundancy, non-playable exposition, repetition and pacing collapse determine overlength failure, not a hard upper limit.
+If runtime qualification PASSes, build/audit a new 5-Part/9-Package set explicitly promoting I4H Active Development Engine. Only after that may P07-I4I begin.
 
-## SESSION-ONLY POST-SYNC-R6 MATERIAL — QUARANTINED NON-AUTHORITY
-The chat session continued after Sync R6 while the local execution runtime returned repeated `ClientError` failures.
+## FIXED CRAFT / SCALE DOCTRINE
+Scene Surface = Action/Direction + Dialogue.
+Less dialogue is not intrinsically better; more direction is not intrinsically better.
+Preserve character voice, humor, intimacy, conflict, status negotiation, lived rhythm and ensemble/social texture.
 
-Any later chat-only I4H prospective craft exploration, synthetic examples, I4I design discussion, or unverified later-commit claims were not integrated into a newer developer-delivered 5-Part / 9-Package set.
+Whole-episode floor: >=35,000 Unicode characters, >=9 sequences, >=45 scenes; no fixed maximum.
 
-Status:
-`SESSION_ONLY_RESEARCH_NOTES__NON_AUTHORITY__REPREREGISTER_BEFORE_USE`
-
-They may inform future hypotheses only. They must not be treated as completed/scored experiments or promoted engine state.
-
-## NEXT RESEARCH UNIT — NOT YET ACTIVE
-### P07-I4H Prospective Craft Validation
-Start only after the new session physically revalidates Sync R6.
-
-Required safeguards:
-- fresh/unseen prospective material;
-- selector decisions frozen before prose;
-- generation sealed before evaluation;
-- generation/evaluation separation;
-- protected ABSTAIN scenes unchanged;
-- semantic/source/speaker fidelity non-compensatory;
-- harmful-intervention-rate gate;
-- no literal treatment prose promotion.
-
-Research lead to test, not assume:
-`PHYSICALIZABLE_SUBTEXT_WITHOUT_SOCIAL_TEXTURE_LOSS`
-Some quiet relational scenes may benefit from added playable physicalization without deleting character-bearing dialogue.
-
-### P07-I4I
-Only after I4H prospective craft validation passes and is synchronized into a new physical 5-Part / 9-Package set.
-
-Whole-episode paired rerender must use the same Episode Synopsis / Sequence Plan / Scene Plan for Control and Treatment, with >=35,000 chars, >=9 sequences and >=45 scenes, no fixed maximum.
-
-## NEW SESSION EXACT START ORDER
-1. Test local container/runtime availability.
-2. Read current recovery pointer and START_HERE.
-3. Mount Sync R6 5-Part / 9-Package set.
-4. Recompute all 9 outer SHA256 values and ZIP integrity.
-5. Rejoin C2 and verify SHA256 `9878aac8532e9f1eb6b16ef4c84bcfe6be90b58a49ecf0f6afaabe993fad3be7`.
-6. Confirm active I4D pointer unchanged; Candidate R3 not promoted.
-7. Verify Sync R6 final physical audit.
-8. Preregister and execute fresh P07-I4H Prospective Craft Validation.
-9. Synchronize any meaningful PASS/HOLD into a new 5-Part / 9-Package set before I4I.
-
-## FIXED STATE
-- Formal scored count `137`
-- Latest formal authority `R138`
-- R140 `0 attempts / 0 outputs / 0 scores`
+## FIXED SCIENTIFIC STATE
 - Production `ENG:R47`
 - Active Development Engine `P07-I4D`
-- Frozen DB59 SHA256 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
-- OpenAI Live qualification NOT established by current physical package authority
+- Formal scored count `137`
+- Latest formal authority `R138`
+- Formal R140 `0/0/0`
+- OpenAI Live qualification NOT established
+- I4I NOT started
 
 ## STATUS TOKEN
-`DEVELOPER_HUB__SYNC_R6_PHYSICAL_PACKAGE_AUTHORITY__ACTIVE_I4D__CANDIDATE_R3_RESEARCH_ONLY__I4H_VIRTUAL_PRETEST_RESEARCH_ONLY__POST_R6_CHAT_QUARANTINED__FORMAL_137__R140_0_0_0`
+`DEVELOPER_HUB__SYNC_R7_PHYSICAL_RESEARCH_AUTHORITY__R3_PASS__R4_REPLICATION_PASS__I4H_DEVELOPMENT_PROMOTION_CANDIDATE__ACTIVE_I4D__RUNTIME_QUALIFICATION_REQUIRED__PRODUCTION_ENG_R47__FORMAL_137__R140_0_0_0`
