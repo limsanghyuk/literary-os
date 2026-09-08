@@ -1,92 +1,92 @@
 # CURRENT SESSION RECOVERY POINTER
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 ## READ ORDER
 1. Read this file first.
 2. Read `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`.
-3. Read `handoff/20260908/START_HERE_P07_SYNC_R6_PHYSICAL_AUTHORITY_NEW_SESSION_HANDOFF_R1.md`.
+3. Read `handoff/20260909/START_HERE_P07_SYNC_R7_I4H_R3_R4_RESEARCH_SYNC_NEW_SESSION_HANDOFF_R1.md`.
 
-## CURRENT PHYSICAL PACKAGE AUTHORITY
-The developer-delivered **Sync R6 5 Parts / 9 transport files** are the current physical package authority.
+## CURRENT PHYSICAL RESEARCH PACKAGE AUTHORITY
+The current physically sealed research recovery authority is **Sync R7 5 Parts / 9 transport files**:
+`CURRENT_PHYSICAL_RESEARCH_PACKAGE_AUTHORITY__P07_SYNC_R7_I4H_R3_R4`
 
-Authority label:
-`CURRENT_PHYSICAL_PACKAGE_AUTHORITY__P07_SYNC_R6_I4H_VIRTUAL_PRETEST`
+Package-set material SHA256:
+`1971cae81f03076370f82a19bcdbb1224964c46196982b7971bc1c382f2eb5db`
 
-Recorded Sync R6 combined C2:
+Final physical audit:
+`LITERARY_OS_SYNC_R7_I4H_R3_R4_FINAL_PHYSICAL_AUDIT_R1_20260909.json`
+SHA256 `3e42f5f414cde19dc3e498f2cc5724d9827a668b3b3bc489b7667cff603449c9`
+Status: PASS.
+
+Changed from Sync R6: CONTROL / A / B2.
+Byte-identical to Sync R6: B1 / C1 / C2-A / C2-B / D1 / D2.
+
+Reconstructed C2 remains:
 - bytes `318351029`
 - SHA256 `9878aac8532e9f1eb6b16ef4c84bcfe6be90b58a49ecf0f6afaabe993fad3be7`
 - entries `3765`
-- CRC PASS
+- CRC PASS / duplicate 0 / unsafe 0.
 
-Recorded Sync R6 final physical audit:
-`LITERARY_OS_SYNC_R6_I4H_FINAL_PHYSICAL_AUDIT_R1_20260908.json`
-SHA256 `94e808f6fa7c760662d0d02d1625046d23a9198afcc28bd3ab18c15453b37360`.
+DB59 remains frozen:
+- SHA256 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
+- bytes `259756521`
+- members `38852`.
 
-Exact 9 package names and recorded SHA256 values are listed in the START_HERE handoff above.
+Exact 9 package names/SHA256 values are in the START_HERE handoff.
 
-## CURRENT ACTIVE ENGINE AUTHORITY — UNCHANGED
-`handoff/20260908/P07_I4D_CURRENT_PHYSICAL_AUTHORITY_CLOSURE_R1.md`
-Authority:
+## ACTIVE ENGINE AUTHORITY — UNCHANGED
 `CURRENT_PHYSICAL_AUTHORITY__P07_I4D_SURFACE_REALIZATION_MODES_R1`
 
 Active Development Engine remains **P07-I4D**.
-Semantic Contract repair Candidate R3 and I4H Virtual Pretest are NOT promoted active-engine authority.
+Reason: R3/R4 establish I4H research qualification signals, but the unchanged C2 contains no promoted I4H runtime implementation. Research promotion evidence must not be conflated with runtime promotion.
 
-## CURRENT RESEARCH AUTHORITY / CLAIM BOUNDARY
-The physically delivered Sync R6 package set is the recovery authority for current research state.
-It carries development evidence beyond the older GitHub Sync R2 navigation state, including the physically packaged Semantic Contract repair/virtual-qualification line and I4H Virtual Pretest checkpoint.
+## I4H PROSPECTIVE RESEARCH STATE
+- R1: `HOLD_PREGENERATION_INPUT_CONTAMINATION__NO_CRAFT_CLAIM__NO_PROMOTION`
+- R2: `HOLD_PRESELECTOR_CONTROL_MULTIPLICITY_AND_DURABLE_SEAL_CORRUPTION`
+- R3: `PASS_STRONGER_VIRTUAL_CRAFT_SIGNAL__PROMOTION_PENDING_INDEPENDENT_OR_PHYSICAL_REPLICATION__SUBTEXT_HYPOTHESIS_UNTESTED`
+- R4: `PASS_PHYSICAL_REPLICATION__I4H_DEVELOPMENT_PROMOTION_CANDIDATE__PHYSICAL_5_PART_9_PACKAGE_SYNC_REQUIRED_BEFORE_I4I`
 
-However:
-- Candidate R3 is research/development only;
-- I4H Virtual Pretest is `VIRTUAL / PREFORMAL / NO PROMOTION`;
-- no OpenAI Live qualification is established by Sync R6;
-- no Production promotion occurred;
-- no formal-count increment occurred.
+Sync R7 satisfies R4's research-evidence physical synchronization requirement. It does NOT itself promote I4H runtime authority.
 
-P07-I4G historical final result remains HOLD with no promotion:
-Treatment 8 / Control 3 / Tie 1; preregistered win+tie gate 10/12 required, actual 9/12.
+R4 key results:
+- sample 21 = ABSTAIN 7 / LOW 7 / STANDARD 7
+- critical failures 0
+- overall interventions 14: Treatment 7 / Control 0 / Tie 7
+- nonloss 1.0; harmful rate 0.0; mean delta +0.32699
+- STANDARD: 7/7 Treatment wins; mean delta +0.42699
+- LOW relational-subtext: 7/7 nonloss ties, all positive deltas; mean delta +0.227; voice delta 0.0
 
-## SESSION-ONLY POST-SYNC-R6 MATERIAL — NON-AUTHORITY
-After the Sync R6 package delivery, the same chat session continued while local container/Python filesystem access repeatedly returned `ClientError`.
+`PHYSICALIZABLE_SUBTEXT_WITHOUT_SOCIAL_TEXTURE_LOSS` therefore has a positive same-model masked replication signal, but not independent-human evidence.
 
-Any later chat-only I4H craft exploration, synthetic prospective examples, I4I whole-episode design ideas, or unverified claims of later GitHub commits were NOT integrated into a new 5-Part / 9-Package set.
+## NEXT EXACT ACTION
+`P07-I4H Runtime Promotion Implementation / Qualification`
 
-Therefore they are:
-`SESSION_ONLY_RESEARCH_NOTES__NON_AUTHORITY__MUST_REPREREGISTER_AND_REPRODUCE`
+1. Freeze exact Sync R7 and unchanged I4D C2 as parent inputs.
+2. Preregister runtime contract/module boundaries/no-op invariants/LOW-STANDARD constraints/reliability fallback/test gates before code mutation.
+3. Implement I4H only in a new C2 development candidate; do not mutate Sync R7 authority in place.
+4. Run unit/integration/regression/fault-injection qualification.
+5. If PASS, build/audit a later 5-Part / 9-Package active-engine package explicitly promoting I4H.
+6. Only after that physical active-engine synchronization may I4I whole-episode paired rerender start.
 
-Do not count them as completed experiments and do not promote them.
-
-## NEXT EXACT ACTION — NEW SESSION
-1. Test container/local runtime availability.
-2. Mount the developer-delivered Sync R6 5-Part / 9-Package set.
-3. Recompute 9/9 outer SHA256 values; verify ZIP CRC, duplicate-path 0, unsafe-path 0.
-4. Rejoin C2-A + C2-B and verify SHA256 `9878aac8532e9f1eb6b16ef4c84bcfe6be90b58a49ecf0f6afaabe993fad3be7`.
-5. Verify the active I4D pointer is unchanged and Candidate R3 is not promoted.
-6. Verify/inspect the Sync R6 physical audit.
-7. Only after physical integrity PASS, preregister a fresh prospective P07-I4H Craft Validation from Sync R6.
-8. Use fresh/unseen material, freeze decisions before prose, seal generation before evaluation, and separate generation/evaluation.
-9. If that I4H craft validation passes its frozen gates, synchronize the result into a new 5-Part / 9-Package physical set before starting I4I.
-10. Start I4I variable-scale whole-episode rerender only after that package synchronization.
+## FIXED SCIENTIFIC STATE
+- Production `ENG:R47`
+- Active Development Engine `P07-I4D`
+- Formal scored count `137`
+- Latest formal authority `R138`
+- Formal R140 `0 attempts / 0 outputs / 0 scores`
+- OpenAI Live qualification NOT established
+- I4I NOT started
 
 ## FIXED CRAFT / SCALE DOCTRINE
 Scene Surface = Action/Direction + Dialogue.
 Do not equate less dialogue with better craft or more direction with better craft.
 Preserve character voice, humor, intimacy, conflict, status negotiation, lived rhythm and ensemble/social texture.
-Use playable/filmable direction for action, reaction, gaze, silence, distance, props, performance state and beat transitions when dramatically useful.
 
 Whole-episode floors:
 - >=35,000 Unicode characters;
 - no fixed maximum;
-- 9-10 sequences are minimum/reference floors, not fixed targets/maxima;
-- 45-50 scenes are minimum/reference floors, not fixed targets/maxima.
-
-## FIXED SCIENTIFIC STATE
-- Formal scored count: `137`
-- Latest formal authority: `R138`
-- Formal R140: `0 attempts / 0 outputs / 0 scores`
-- Production: `ENG:R47`
-- Frozen DB59 SHA256: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
-- OpenAI Live qualification: NOT established by current physical package authority
+- 9-10 sequences minimum/reference, not fixed maximum;
+- 45-50 scenes minimum/reference, not fixed maximum.
 
 ## STATUS TOKEN
-`SYNC_R6_PHYSICAL_PACKAGE_AUTHORITY__ACTIVE_ENGINE_I4D__CANDIDATE_R3_NOT_PROMOTED__I4H_VIRTUAL_PRETEST_PHYSICAL_RESEARCH_ONLY__POST_R6_CHAT_NONAUTHORITY__FORMAL_137__R140_0_0_0`
+`SYNC_R7_PHYSICAL_RESEARCH_AUTHORITY__R3_PASS__R4_REPLICATION_PASS__I4H_DEVELOPMENT_PROMOTION_CANDIDATE__ACTIVE_I4D_UNCHANGED__RUNTIME_QUALIFICATION_NEXT__FORMAL_137__R140_0_0_0__I4I_BLOCKED`
