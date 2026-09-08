@@ -1,0 +1,14 @@
+{
+  "schema":"P07I4HR3MaskSealManifestR1",
+  "experiment_id":"P07-I4H-PROSP-CRAFT-R3-CLEAN-SYNTHETIC",
+  "algorithm":"h=SHA256(experiment_id+'|'+scene_id+'|MASK_R1'); if first-byte integer is odd, Treatment=A else Control=A",
+  "treatment_seal_commit":"33c5af460c03a48ba32f074001841a51c6a0984f",
+  "masked_eval_packet_outer_sha256":"723a4b27d71fd91c028cf9cd499b346642d29fbfd37b767fb6c2a74dbacf0f41",
+  "masked_eval_packet_canonical_payload_sha256":"99b1bac3ae03962a27eb81709219c80d2f0a968128ccc35e6164c6fd25b64bd2",
+  "coordinator_map_outer_sha256":"fe647a2710b6251a3cb675b0cff44694728f9059fc34c9ae920ac4caa09b213d",
+  "pair_count":6,
+  "abstain_identity_tie_count":12,
+  "evaluation_seen":false,
+  "scores_seen":false,
+  "status":"MASK_AND_PACKET_SHA_SEALED__NO_SCORES"
+}
