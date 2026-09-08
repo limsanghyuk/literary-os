@@ -1,0 +1,67 @@
+{
+  "canonical_payload_sha256": "863479f4234488143fd7fec216ee1e2d46edee3c24d299d2f2f0ee5e525556e6",
+  "classification": "DEVELOPMENT_PREFORMAL__CLEAN_SOURCE_FREE_STRONGER_VIRTUAL",
+  "control": {
+    "freeze": "all 18 controls SHA-sealed before selector profiling",
+    "input": "frozen synthetic brief only",
+    "rules": ["natural Korean","all stated facts preserved","authorized speakers only","no new principal character","playable/filmable direction","preserve social texture","do not intentionally optimize for I4H selector dimensions"],
+    "surface": "Action/Direction + Dialogue",
+    "target_unicode_chars": [500,900]
+  },
+  "date": "2026-09-09",
+  "evaluation": {
+    "blind_to_policy": true,
+    "critical_noncompensatory": ["semantic_fidelity","speaker_authorization"],
+    "masking": "deterministic SHA256 A/B swap after generation seal",
+    "pair_rule": "Treatment win if mean >= Control mean +0.30 and no hard/protection failure; Control win if reverse or Treatment protection failure; else Tie.",
+    "rubric_1_to_10": ["dialogue_naturalness","voice_specificity","subtext_physicalization","playable_scene_action","information_control","pacing_economy","relationship_status_motion","scene_turn","carry_forward_pressure"],
+    "same_model_claim_boundary": "Same-model masked evaluation is stronger-virtual only. Numerical PASS is not independent/human evidence."
+  },
+  "experiment_id": "P07-I4H-PROSP-CRAFT-R2-CLEAN-SYNTHETIC",
+  "hypothesis": {
+    "null": "Intervention is not reliably beneficial, or gains require unacceptable fidelity/voice/social harm.",
+    "primary": "On fresh source-free Korean drama scene briefs, the conservative I4H ABSTAIN-first -> reliability -> LOW/STANDARD policy improves intervened-scene craft without damaging semantic fidelity, speaker authorization, voice, or social texture.",
+    "subtext": "Scenes with latent relational subtext can benefit from additive playable physicalization without deleting character-bearing dialogue."
+  },
+  "parent_authority": "SYNC_R6_5_PART_9_PACKAGE__ACTIVE_I4D",
+  "parent_hold": "P07-I4H-PROSP-CRAFT-R1__HOLD_PREGENERATION_INPUT_CONTAMINATION",
+  "pass_hold_fail": {
+    "abstain_byte_identity": 1.0,
+    "critical_failures": 0,
+    "maximum_harmful_intervention_rate": 0.2,
+    "minimum_intervention_mean_delta": 0.2,
+    "minimum_intervention_nonloss_rate": 0.8,
+    "minimum_interventions": 6,
+    "minimum_treatment_win_rate": 0.5,
+    "same_model_promotion_boundary": "Even if numerical gates PASS, status is at most PASS_STRONGER_VIRTUAL_CRAFT_SIGNAL__PROMOTION_PENDING_INDEPENDENT_OR_PHYSICAL_REPLICATION.",
+    "sample_power_hold": "<6 interventions => HOLD_SAMPLE_POWER",
+    "subtext_gate": "if >=3 LOW interventions with physicalizable_subtext>=2, at least 2/3 nonloss and none >1.0 voice drop",
+    "voice_guard": "mean voice_specificity delta >= -0.25; no intervention voice drop >1.0 attributable to compression"
+  },
+  "purpose": "Obtain a clean stronger-virtual prospective craft signal after R1 input contamination was stopped before generation. This does not establish OpenAI Live parity, human-writer equivalence, whole-episode competitiveness, CP1 closure, Production promotion, or Formal R140.",
+  "reliability_hard_gates": ["critical semantic contradiction=0","unauthorized speaker=0","new principal character=0","critical malformed Korean=0","foreign-script intrusion=0","ABSTAIN byte identity=100%","LOW/STANDARD length/dialogue retention bounds pass"],
+  "sample": {
+    "brief_freeze_before_generation": true,
+    "cohorts": {"INFO_PROCEDURAL":6,"NATURAL_SOCIAL":6,"RELATIONAL_SUBTEXT":6},
+    "construction": "Researcher-authored neutral structural scenarios containing only invented settings, P1..Pn identities, goals, facts, relation/status, required turn, and carry-forward pressure. No scene is assigned an expected intervention mode.",
+    "n": 18,
+    "no_DB59_free_text": true,
+    "no_source_work_provenance": true,
+    "scene_ids": "Q01-Q18",
+    "source_free": true
+  },
+  "schema": "P07I4HProspectiveCraftValidationR2PreregistrationR1",
+  "selector": {
+    "decision_rule": ["ABSTAIN if already_playable>=2 and exposition_risk<=1","ABSTAIN if max(social_texture,voice_specificity)>=3 and exposition_risk<=2 unless physicalizable_subtext==3 and proposed edit is additive LOW","STANDARD if exposition_risk>=2 and procedural_pressure>=2 and max(social_texture,voice_specificity)<=1 and already_playable<=1","LOW if physicalizable_subtext>=2 or exposition_risk>=2, unless STANDARD","otherwise ABSTAIN"],
+    "freeze_before_treatment": true,
+    "profile_dimensions_0_3": ["exposition_risk","procedural_pressure","social_texture","voice_specificity","already_playable","physicalizable_subtext"]
+  },
+  "state_during_experiment": {"active_engine":"P07-I4D","formal_scored_count":137,"physical_authority":"Sync R6","production":"ENG:R47","r140":[0,0,0]},
+  "status": "PREREGISTERED__NO_CONTROL__NO_SELECTOR__NO_TREATMENT__NO_EVALUATION",
+  "treatment": {
+    "ABSTAIN": "byte-identical Control",
+    "LOW": ["add/reposition playable physicalization","do not delete character-bearing dialogue merely to shorten","dialogue chars >=75% Control","total chars <=135% Control"],
+    "STANDARD": ["may restructure action/dialogue for information economy","preserve voice/status/ethical reasoning speech","dialogue chars >=55% Control","total chars <=125% Control"],
+    "common": ["same facts","same authorized speakers","no new principal character","no future/source invention"]
+  }
+}
