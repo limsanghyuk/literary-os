@@ -1,0 +1,13 @@
+{
+  "schema":"P07I4HR3PreEvaluationMeasurementAmendmentR1",
+  "experiment_id":"P07-I4H-PROSP-CRAFT-R3-CLEAN-SYNTHETIC",
+  "date":"2026-09-09",
+  "timing":"AFTER_TREATMENT_GENERATION__BEFORE_ANY_EVALUATION_OR_SCORE",
+  "reason":"The frozen controls legitimately contain workplace abbreviations such as QR/CCTV. Treating mere Latin-token presence as intrusion would make byte-identical ABSTAIN fail by construction.",
+  "operational_definition":{"foreign_script_intrusion":"FAIL only when Treatment introduces an ASCII alphabetic token absent from its paired Control, excluding P1..Pn speaker labels. Preserved Control tokens are not intrusion.","critical_malformed_korean":"FAIL on newly introduced critical grammatical/encoding corruption that makes the Treatment materially malformed; ordinary stylistic disagreement is not this gate."},
+  "frozen_output_effect":"No generated Control or Treatment text is modified by this amendment.",
+  "evaluation_seen":false,
+  "scores_seen":false,
+  "authority_effect":"None; Active I4D/Formal137/R140 0-0-0 unchanged.",
+  "status":"MEASUREMENT_DEFINITION_FROZEN_BEFORE_EVALUATION"
+}
