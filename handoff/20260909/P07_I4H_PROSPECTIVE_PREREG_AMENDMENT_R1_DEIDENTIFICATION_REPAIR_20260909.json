@@ -1,0 +1,48 @@
+{
+  "schema": "P07I4HProspectivePreregAmendmentR1",
+  "date": "2026-09-09",
+  "classification": "PREGENERATION_IMPLEMENTATION_REPAIR__NO_SAMPLE_CHANGE__NO_OUTCOME_SEEN",
+  "parent_prereg_commit": "41468a284758703604af61e9539c5ccf827a2929",
+  "sample_freeze_commit": "f0cad7e3fa6c5692f1080ecae76e46e1fdb8849e",
+  "trigger": "Pre-generation audit found that the initial generation-brief builder replaced only names in the selected scene's characters list. Free-text retained fields could still contain names of context-only characters from the same work. This violates the frozen deidentification intent and increases source-imitation risk.",
+  "timing_boundary": {
+    "sample_selected": true,
+    "control_generated": false,
+    "treatment_generated": false,
+    "evaluation_started": false,
+    "scores_seen": false
+  },
+  "immutable_after_amendment": [
+    "24 selected scene IDs P01-P24",
+    "cohort assignments",
+    "source work/episode/scene provenance",
+    "record SHA256 values",
+    "rank SHA256 values",
+    "sample selection seed",
+    "all hypotheses, selector rules, treatment rules, evaluation rubric, and PASS/HOLD/FAIL gates from parent preregistration"
+  ],
+  "repair_scope_only": "generation-packet deidentification implementation",
+  "repair_rule": {
+    "selected_scene_characters": "Map selected scene characters deterministically to P1..Pn in original characters-list order.",
+    "context_only_character_names": "Build the union of all character names present in runtime_scene_projection records for the selected work. Any known work-character name not in the selected scene speaker list is mapped deterministically to X1..Xm using Unicode lexical order after removing selected speakers.",
+    "replacement": "Replace known character names in all retained free-text fields, longest-name first to prevent partial replacement.",
+    "generation_packet_exclusions_unchanged": [
+      "work title",
+      "source_refs",
+      "evidence_refs",
+      "original_extracted paths",
+      "actual source dialogue/prose"
+    ],
+    "source_record_and_sample": "No source record may be replaced, removed, or added because of deidentification difficulty.",
+    "hard_audit": "Before any Control prose generation, remaining hits of any known work-character name in any generation brief must equal 0. If not, HOLD_DEIDENTIFICATION and do not generate."
+  },
+  "versioning": {
+    "generation_briefs_r1": "REJECTED_PREGENERATION__NEVER_USED_FOR_PROSE_OR_EVALUATION",
+    "generation_briefs_r2": "Must be regenerated from the same frozen 24 source records and SHA-sealed after this amendment."
+  },
+  "authority_effect": "NONE",
+  "formal_count_delta": 0,
+  "r140_delta": [0,0,0],
+  "active_engine_after_amendment": "P07-I4D",
+  "status": "AMENDMENT_PREREGISTERED__AWAITING_R2_BRIEF_REBUILD__NO_GENERATION__NO_EVALUATION"
+}
