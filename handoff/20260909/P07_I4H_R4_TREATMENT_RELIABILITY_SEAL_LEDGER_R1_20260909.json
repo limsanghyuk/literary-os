@@ -1,0 +1,14 @@
+{
+  "schema":"P07I4HR4TreatmentReliabilitySealLedgerR1",
+  "experiment_id":"P07-I4H-PHYSICAL-REPLICATION-R4",
+  "counts":{"ABSTAIN":7,"LOW":7,"STANDARD":7},
+  "treatment_artifact_outer_sha256":"bf18864fecf593d93ad4f2af38bdd868eeef823ecd86e1c975ff76e1cbd60063",
+  "treatment_canonical_payload_sha256":"aebedcf889cd8e63f71752112b83a663e0b6ae99e64b2f6ab8068e26950a326a",
+  "reliability_report_outer_sha256":"84287619d5203d041693e363e9f167ef7617aa1b9dd1f5ad95297792932814f8",
+  "reliability_report_canonical_payload_sha256":"6740921308f88c41a467f158eb3692d96b80d4755c1501b0fc7f54161cc93244",
+  "critical_failure_count":0,
+  "scene_groups":{"ABSTAIN":["U01","U02","U03","U04","U05","U06","U07"],"LOW":["U08","U09","U10","U11","U12","U13","U14"],"STANDARD":["U15","U16","U17","U18","U19","U20","U21"]},
+  "bounds":"ABSTAIN 7/7 byte-identical; LOW 7/7 dialogue>=75% and total<=135%; STANDARD 7/7 dialogue>=55% and total<=125%",
+  "foreign_script_intrusion":"0 newly introduced Latin-script tokens across 21 scenes",
+  "status":"TREATMENT_21_OF_21_SHA_SEALED__RELIABILITY_PASS__NO_EVALUATION"
+}
