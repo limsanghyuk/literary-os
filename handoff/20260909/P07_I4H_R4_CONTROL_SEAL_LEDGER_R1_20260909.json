@@ -1,0 +1,31 @@
+{
+  "schema": "P07I4HR4ControlSealLedgerR1",
+  "experiment_id": "P07-I4H-PHYSICAL-REPLICATION-R4",
+  "total": 21,
+  "control_artifact_outer_sha256": "23dcc9c98d4559bf34710c79249d6c78662a5d8c88161a45f55a265553e293e4",
+  "control_canonical_payload_sha256": "97f58a3208f700c0f73ccef35790f77e428210bb537be82146ef389d64b7e8cc",
+  "scenes": {
+    "U01": {"sha256": "78677972d8e009f37cfb4ed7181f463f5826bceae2db473c67d2a9d9de979d77", "unicode_chars": 624},
+    "U02": {"sha256": "13e780d4c18d12a335d8d8f5b2781ff2f2dea4b9efaf0df42e5ee55b33e76a38", "unicode_chars": 550},
+    "U03": {"sha256": "08cf5b664ddc34edfd1d715f249a8af7151e2bfc1cfbd81adc4af5b967ab378d", "unicode_chars": 531},
+    "U04": {"sha256": "8dd9007323f63c8d3d144dd63f4b9883f31e0f4683d2400154b87fa21b1a8247", "unicode_chars": 512},
+    "U05": {"sha256": "c87990806ed7675e62854685d216a48b3a25aad7d821719852991ea456a240b0", "unicode_chars": 523},
+    "U06": {"sha256": "7e6db7c70af76773ff0085f729623ab5c0829170dd72d666b4c860a5e7e06ead", "unicode_chars": 513},
+    "U07": {"sha256": "76535a517bba81c3ea7c30ec5db6d53036f4ed1c07d886f5b28800eff7feb973", "unicode_chars": 529},
+    "U08": {"sha256": "d6282095edde566c443757ef111278fb42afc661962a95190b5cca3ee744b115", "unicode_chars": 538},
+    "U09": {"sha256": "86ee168f7923e97ee8d91ce0ae36e9ef8d350aac118897f5431ddc2f036beb3b", "unicode_chars": 539},
+    "U10": {"sha256": "1efa524a8e2b83458fb73779b6bf2bcedbc623c49c94eaf76c7ed0a1a4f4f793", "unicode_chars": 526},
+    "U11": {"sha256": "cb6e712dcfa0b140d88ddf299ad5b737233bb705154986a7fc5e364f761f0c15", "unicode_chars": 530},
+    "U12": {"sha256": "5ea5fd326024fe0c9ef1f0e2b76a1c11fc67e3a5ef7f4d2e8e40e1631347b075", "unicode_chars": 525},
+    "U13": {"sha256": "892f0089d13d2ced4fdc18b79f5bdac6f3d22808c4307f716eb60df5cccaa7c9", "unicode_chars": 501},
+    "U14": {"sha256": "ea14dba2812eadbb91c32b1fd862a42ed5035c66b09a5dbeb148593f2b6e0426", "unicode_chars": 512},
+    "U15": {"sha256": "f294155406c306a82fb28b705aa0112b31750d9ac503d5885084ce49407ad259", "unicode_chars": 518},
+    "U16": {"sha256": "75902e5308f0253829f095030f7ab579fccf7f113db48d40bde50d1652b44465", "unicode_chars": 514},
+    "U17": {"sha256": "067ccb776fdae01c21283563533e2d30595573ace91835b0d2ab01a436c35a54", "unicode_chars": 509},
+    "U18": {"sha256": "e14879e22ca8b856bab5f09a5b6536ff406ee8221a124a41134658ee80a325ad", "unicode_chars": 541},
+    "U19": {"sha256": "15e55e0e82c0728484bb46636381818be84b911b69b1efc81206e27904898b47", "unicode_chars": 542},
+    "U20": {"sha256": "18bf5efac76ba2945a13341b8a3a46cb544aee9438767387bbec9d9d5863f8b3", "unicode_chars": 515},
+    "U21": {"sha256": "310284e07dcc676922fa68c1b181b7e71eaabbc421b348d4fbee93eced5110ff", "unicode_chars": 526}
+  },
+  "status": "CONTROL_21_OF_21_SHA_SEALED__SELECTOR_NOT_PROFILED"
+}
