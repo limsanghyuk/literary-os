@@ -1,0 +1,17 @@
+{
+  "schema":"P07I4HR3ProspectiveCraftValidationResultR1",
+  "experiment_id":"P07-I4H-PROSP-CRAFT-R3-CLEAN-SYNTHETIC",
+  "date":"2026-09-09",
+  "classification":"DEVELOPMENT_PREFORMAL__STRONGER_VIRTUAL",
+  "parent_authority":"SYNC_R6_5_PART_9_PACKAGE__ACTIVE_I4D",
+  "lineage":{"prereg":"2f3d8b52fdb60d99e1fd818b50f4140dedcc83e1","brief_freeze":"3123d54f07e004ba70f77e45410c4edd5b5a3fd6","control_seal":"0b042ef00b9d41ba0d6bd348ce104a77b76f2ec4","selector_freeze":"d5c35a4fad79e3d936b3059288003932ecefbdee","measurement_amendment":"85be6450214ebe91bf6a6e9923c9fe06589cb53c","treatment_seal":"33c5af460c03a48ba32f074001841a51c6a0984f","mask_r1_invalid":"b325c280501c003a03391a23bf0b81d4756435b0","mask_r2":"c1cfbea44e9580aaa21d08651cbf165c36545d88","blind_score_seal":"5ba74b76979110774336168fc51004b186db552e"},
+  "sample":{"n":18,"ABSTAIN":12,"LOW":0,"STANDARD":6},
+  "reliability":{"critical_failures":0,"abstain_identity":"12/12","standard_bounds":"6/6","new_foreign_script_intrusion":0},
+  "aggregate":{"interventions":6,"treatment_wins":6,"control_wins":0,"ties":0,"intervention_nonloss_rate":1.0,"treatment_win_rate":1.0,"harmful_intervention_rate":0.0,"intervention_mean_delta":0.5852,"mean_voice_specificity_delta":0.05,"axis_mean_deltas":{"dialogue_naturalness":0.1667,"voice_specificity":0.05,"subtext_physicalization":1.0833,"playable_scene_action":1.6333,"information_control":0.5833,"pacing_economy":0.65,"relationship_status_motion":0.0667,"scene_turn":0.7,"carry_forward_pressure":0.3333}},
+  "gates":{"minimum_interventions":"6/6 PASS","nonloss":"1.0>=0.8 PASS","treatment_win_rate":"1.0>=0.5 PASS","harmful_intervention_rate":"0.0<=0.2 PASS","mean_delta":"0.5852>=0.2 PASS","critical_failures":"0 PASS","abstain_identity":"1.0 PASS","voice_guard":"mean +0.05; worst -0.10; PASS","subtext_gate":"NOT TRIGGERED; LOW=0"},
+  "scientific_interpretation":{"primary":"PASS stronger-virtual craft signal on six procedure-heavy STANDARD interventions while 12 already-good scenes were protected by ABSTAIN.","subtext":"INCONCLUSIVE/UNTESTED because no LOW relational intervention was selected.","claim_boundary":"Same-session same-model masked evaluation only; not independent/human/OpenAI-Live evidence."},
+  "authority_effect":{"active_engine":"P07-I4D unchanged","production":"ENG:R47 unchanged","formal_scored_count":137,"r140":[0,0,0],"i4h_promoted":false,"i4i_started":false},
+  "local_result_outer_sha256":"c1c02bdc66db498589f5e4e524e727c0f38084d3d6821a18b3b2359da8f260ec",
+  "local_result_canonical_payload_sha256":"c66532a92173b61cbe0fa94464e6987e7270c2d655e3f2a35fa04fbaec19e61b",
+  "status":"PASS_STRONGER_VIRTUAL_CRAFT_SIGNAL__PROMOTION_PENDING_INDEPENDENT_OR_PHYSICAL_REPLICATION__SUBTEXT_HYPOTHESIS_UNTESTED"
+}
