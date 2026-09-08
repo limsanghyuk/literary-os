@@ -5,7 +5,8 @@ Last updated: 2026-09-09
 1. Read this file first.
 2. Read `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`.
 3. Read `handoff/20260909/START_HERE_P07_SYNC_R8_LAST_PHYSICAL_AUTHORITY_PACKAGING_BLOCKED_R1.md`.
-4. Read `handoff/20260909/P07_POST_SYNC_R8_PACKAGING_BLOCKER_CHECKPOINT_R1_20260909.md`.
+4. Read `handoff/20260909/P07_SYNC_R9_PACKAGING_RECOVERY_MANIFEST_R1_20260909.md`.
+5. Read `handoff/20260909/P07_POST_SYNC_R8_PACKAGING_BLOCKER_CHECKPOINT_R1_20260909.md`.
 
 ## CURRENT PHYSICAL PACKAGE AUTHORITY
 `LITERARY_OS_SYNC_R8_I4H_RUNTIME_PROMOTION_20260909`
@@ -26,6 +27,19 @@ DB59 frozen SHA256:
 ## ACTIVE ENGINE
 `CURRENT_PHYSICAL_AUTHORITY__P07_I4H_FAIL_CLOSED_RUNTIME_R1`
 Active Development Engine = P07-I4H.
+
+## SYNC R9 PACKAGING RECOVERY MANIFEST
+Path:
+`handoff/20260909/P07_SYNC_R9_PACKAGING_RECOVERY_MANIFEST_R1_20260909.md`
+Commit:
+`31931895de1bb0504bf19366d655ca64adb36560`
+
+Recovery verdict:
+- GitHub Hub alone is sufficient to recover the complete post-Sync-R8 research state and exact packaging instructions.
+- GitHub Hub alone is not a byte backup of the nine large Sync R8 transport files.
+- A physical Sync R9 rebuild requires `healthy writable runtime + exact Sync R8 nine-file set + GitHub Hub`.
+
+The manifest freezes the exact parent nine filenames/SHA256 values, all durable post-Sync-R8 commits, the transport change map, safe rebuild procedure and final audit gates.
 
 ## POST-SYNC-R8 MATERIAL — DURABLE BUT UNPACKAGED
 I4I preregistration and complete 11-sequence / 56-scene plan exist on GitHub, but no newer physically audited 5-Part / 9-Package set contains them.
@@ -50,12 +64,13 @@ Do not execute further I4I Control/Treatment/scoring or later research while pos
 
 ## NEXT EXACT ACTION
 1. Recover a healthy writable runtime.
-2. Mount/recover exact Sync R8 5-Part/9-Package files.
-3. Revalidate Sync R8 9/9 physical integrity.
-4. Build Sync R9 carrying all post-Sync-R8 I4I preregistration/plan-freeze artifacts.
-5. Run complete Sync R9 9/9 physical audit including combined C2 and DB59 reconstruction.
-6. Deliver all nine Sync R9 transport files to the developer.
-7. Only then resume I4I Control generation.
+2. Mount/recover the exact nine Sync R8 parent files listed in the Sync R9 recovery manifest.
+3. Require all nine parent SHA256 values to match before any build.
+4. Revalidate Sync R8 9/9 physical integrity.
+5. Build Sync R9 exactly per the recovery manifest: change CONTROL/A/B2 only; keep B1/C1/C2-A/C2-B/D1/D2 byte-identical.
+6. Run complete Sync R9 9/9 physical audit including combined C2 and DB59 reconstruction.
+7. Deliver all nine Sync R9 transport files to the developer.
+8. Only then resume I4I Control generation.
 
 ## FIXED SCIENTIFIC STATE
 - Production ENG:R47
@@ -67,4 +82,4 @@ Do not execute further I4I Control/Treatment/scoring or later research while pos
 - I4I Control 0 / Treatment 0 / Scores 0
 
 ## STATUS TOKEN
-`SYNC_R8_LAST_PHYSICAL_5PART_9PACKAGE__POST_SYNC_R8_I4I_UNPACKAGED__PACKAGING_CLIENTERROR__RESEARCH_EXECUTION_FROZEN__SYNC_R9_REQUIRED_NEXT`
+`SYNC_R8_LAST_PHYSICAL_5PART_9PACKAGE__SYNC_R9_RECOVERY_MANIFEST_SEALED__HUB_RESEARCH_RECOVERABLE__SYNC_R8_BINARIES_REQUIRED__PACKAGING_CLIENTERROR__RESEARCH_EXECUTION_FROZEN`
