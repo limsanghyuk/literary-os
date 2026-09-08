@@ -1,0 +1,28 @@
+{
+  "schema": "P07I4HR2ControlSealFailureClosureR1",
+  "experiment_id": "P07-I4H-PROSP-CRAFT-R2-CLEAN-SYNTHETIC",
+  "date": "2026-09-09",
+  "status": "HOLD_PRESELECTOR_CONTROL_MULTIPLICITY_AND_DURABLE_SEAL_CORRUPTION__NO_CRAFT_CLAIM__NO_PROMOTION",
+  "parent_authority": "SYNC_R6_5_PART_9_PACKAGE__ACTIVE_I4D",
+  "chronology": {
+    "r2_prereg_commit": "8346df122f349bba96b4ca7f6508abaa8fcdb4ba",
+    "brief_freeze_commit": "117f8a7e14a85832aa95c470363a5d66ed927c20",
+    "local_original_control_outer_sha256": "070f61419f5cd3dac677a3a6492a20560ae141f5fe8ed766fbfb9c5485835941",
+    "local_original_control_canonical_payload_sha256": "5cd28de67e4db4020f8695b265e03fdd3f4c16ce7802bf35f72444e5503c364f",
+    "erroneous_placeholder_commit": "170335355ffa36ad2bd096c9524af5c7091ea0b2",
+    "nonidentical_manual_reconstruction_commit": "c4bf33c10cf3dc1dbc6609af55eb3c6adef884e4"
+  },
+  "failure": {
+    "type": "PRESELECTOR_DURABLE_SEAL_FAILURE",
+    "details": [
+      "GitHub durable write first committed PLACEHOLDER instead of the local sealed control bytes.",
+      "The attempted correction manually reconstructed a different 18-scene control realization rather than the exact local sealed file.",
+      "The manually reconstructed GitHub file contains internally inconsistent length/hash metadata.",
+      "No selector profiling, treatment generation, masked evaluation, scoring, or promotion occurred before detection."
+    ]
+  },
+  "counts": {"briefs":18,"local_controls":18,"selector_profiles":0,"treatments":0,"evaluations":0,"scores":0},
+  "claim_boundary": "Methodology/transport HOLD only. It is not evidence for or against I4H craft efficacy.",
+  "authority_effect": {"active_engine":"P07-I4D unchanged","formal_count_delta":0,"r140_delta":0,"production":"ENG:R47 unchanged"},
+  "canonical_payload_sha256": "7123dc7f9b8da51c701f42b20b56ce15d8ced21c5fa6bcabc9fb1d7e544160e3"
+}
