@@ -1,0 +1,16 @@
+{
+  "schema":"P07I4HR3SelectorDecisionFreezeLedgerR1",
+  "experiment_id":"P07-I4H-PROSP-CRAFT-R3-CLEAN-SYNTHETIC",
+  "control_canonical_payload_sha256":"6d76e8f5e95fdf0c1f11703fb0c11b2044ab4d34be5a842e9b17315d753a3a3d",
+  "local_selector_artifact_outer_sha256":"0c0fa1388d53dddd7e849f4a13376db9be959400b32d45acad19ed9ae7ef26f4",
+  "local_selector_canonical_payload_sha256":"0555d3f3aa4176ce10b5f978aa15042ca50da31c10ee885ba28a074fac4db1d6",
+  "profile_order":["exposition_risk","procedural_pressure","social_texture","voice_specificity","already_playable","physicalizable_subtext"],
+  "decisions":{
+    "R01":{"p":[1,1,3,2,2,1],"mode":"ABSTAIN"},"R02":{"p":[1,2,2,1,2,0],"mode":"ABSTAIN"},"R03":{"p":[0,0,3,3,3,2],"mode":"ABSTAIN"},"R04":{"p":[1,1,3,2,2,0],"mode":"ABSTAIN"},"R05":{"p":[1,1,2,2,2,1],"mode":"ABSTAIN"},"R06":{"p":[1,1,3,2,2,0],"mode":"ABSTAIN"},
+    "R07":{"p":[0,0,2,2,3,3],"mode":"ABSTAIN"},"R08":{"p":[0,0,2,2,2,3],"mode":"ABSTAIN"},"R09":{"p":[0,0,2,3,2,3],"mode":"ABSTAIN"},"R10":{"p":[0,0,2,2,2,3],"mode":"ABSTAIN"},"R11":{"p":[0,0,2,2,2,3],"mode":"ABSTAIN"},"R12":{"p":[0,0,2,2,2,3],"mode":"ABSTAIN"},
+    "R13":{"p":[3,3,0,1,1,0],"mode":"STANDARD"},"R14":{"p":[2,3,0,1,1,0],"mode":"STANDARD"},"R15":{"p":[2,3,0,1,1,0],"mode":"STANDARD"},"R16":{"p":[3,3,0,1,1,0],"mode":"STANDARD"},"R17":{"p":[2,3,1,1,1,0],"mode":"STANDARD"},"R18":{"p":[3,3,0,1,1,0],"mode":"STANDARD"}
+  },
+  "counts":{"ABSTAIN":12,"LOW":0,"STANDARD":6},
+  "measurement_freeze":{"total_chars":"Python len(text) Unicode code points","dialogue_chars":"sum len(body.strip()) for lines matching ^P[0-9]+:\\s*(.*)$; labels/newlines excluded","speaker_authorization":"dialogue labels subset of frozen brief characters"},
+  "status":"SELECTOR_PROFILED_AND_DECISIONS_FROZEN__NO_TREATMENT_GENERATED"
+}
