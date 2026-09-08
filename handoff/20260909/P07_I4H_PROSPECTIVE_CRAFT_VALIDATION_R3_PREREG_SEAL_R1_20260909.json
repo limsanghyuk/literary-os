@@ -1,0 +1,21 @@
+{
+  "schema":"P07I4HProspectiveCraftValidationR3PreregistrationSealR1",
+  "experiment_id":"P07-I4H-PROSP-CRAFT-R3-CLEAN-SYNTHETIC",
+  "date":"2026-09-09",
+  "classification":"DEVELOPMENT_PREFORMAL__CLEAN_SOURCE_FREE_STRONGER_VIRTUAL",
+  "parent_authority":"SYNC_R6_5_PART_9_PACKAGE__ACTIVE_I4D",
+  "parent_holds":["R1 HOLD_PREGENERATION_INPUT_CONTAMINATION","R2 HOLD_PRESELECTOR_CONTROL_MULTIPLICITY_AND_DURABLE_SEAL_CORRUPTION"],
+  "local_full_prereg_outer_sha256":"fe176c2deb7873077a17c776722bfad603b9e39adecc9b788a1f00d13fe86fb1",
+  "local_full_prereg_canonical_payload_sha256":"8eb5252ec65a146d8d4e3754c4e28acf8fd753db3230e7666fde8b2af6912d2f",
+  "hypothesis_primary":"Conservative I4H ABSTAIN-first -> reliability -> LOW/STANDARD improves intervened-scene craft without semantic/speaker/voice/social harm.",
+  "hypothesis_subtext":"Latent relational subtext can benefit from additive playable physicalization without deleting character-bearing dialogue.",
+  "sample":{"n":18,"scene_ids":"R01-R18","cohorts":{"NATURAL_SOCIAL":6,"RELATIONAL_SUBTEXT":6,"INFO_PROCEDURAL":6},"source_free":true,"no_DB59_free_text":true,"no_expected_mode_labels":true},
+  "control":{"target_unicode_chars":[500,900],"freeze_before_selector":true,"surface":"Action/Direction + Dialogue"},
+  "selector":{"dimensions":["exposition_risk","procedural_pressure","social_texture","voice_specificity","already_playable","physicalizable_subtext"],"decision_rule":["ABSTAIN if already_playable>=2 and exposition_risk<=1","ABSTAIN if max(social_texture,voice_specificity)>=3 and exposition_risk<=2 unless physicalizable_subtext==3 and proposed edit is additive LOW","STANDARD if exposition_risk>=2 and procedural_pressure>=2 and max(social_texture,voice_specificity)<=1 and already_playable<=1","LOW if physicalizable_subtext>=2 or exposition_risk>=2 unless STANDARD","otherwise ABSTAIN"],"freeze_before_treatment":true},
+  "treatment":{"ABSTAIN":"byte-identical Control","LOW":"dialogue chars >=75% Control; total chars <=135%; additive/repositioned physicalization; no deletion of character-bearing dialogue merely to shorten","STANDARD":"dialogue chars >=55% Control; total chars <=125%; may restructure for information economy but preserve voice/status/ethical reasoning"},
+  "hard_gates":["critical semantic contradiction=0","unauthorized speaker=0","new principal character=0","critical malformed Korean=0","foreign-script intrusion=0","ABSTAIN byte identity=100%","LOW/STANDARD length/dialogue retention bounds pass"],
+  "evaluation":{"rubric_1_10":["dialogue_naturalness","voice_specificity","subtext_physicalization","playable_scene_action","information_control","pacing_economy","relationship_status_motion","scene_turn","carry_forward_pressure"],"masking":"deterministic SHA256 A/B swap after generation seal","pair_rule":"Treatment win if mean >= Control mean +0.30 and no hard/protection failure; Control win if reverse or Treatment protection failure; else Tie","same_model_claim_boundary":"stronger-virtual only"},
+  "pass_hold_fail":{"minimum_interventions":6,"minimum_intervention_nonloss_rate":0.8,"minimum_treatment_win_rate":0.5,"maximum_harmful_intervention_rate":0.2,"minimum_intervention_mean_delta":0.2,"critical_failures":0,"abstain_byte_identity":1.0,"voice_guard":"mean voice delta >= -0.25; no intervention voice drop >1.0 attributable to compression","subtext_gate":"if >=3 LOW interventions with physicalizable_subtext>=2, at least 2/3 nonloss and none >1.0 voice drop","sample_power_hold":"<6 interventions => HOLD_SAMPLE_POWER"},
+  "authority_effect":"No automatic promotion; max claim PASS_STRONGER_VIRTUAL_CRAFT_SIGNAL__PROMOTION_PENDING_INDEPENDENT_OR_PHYSICAL_REPLICATION; Active I4D/Formal137/R140 0-0-0 unchanged during experiment.",
+  "status":"PREREGISTERED__NO_CONTROL__NO_SELECTOR__NO_TREATMENT__NO_EVALUATION"
+}
