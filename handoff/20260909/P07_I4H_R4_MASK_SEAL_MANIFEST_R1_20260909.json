@@ -1,0 +1,12 @@
+{
+  "schema":"P07I4HR4MaskSealManifestR1",
+  "experiment_id":"P07-I4H-PHYSICAL-REPLICATION-R4",
+  "treatment_seal_commit":"0083a85cba2050ffa63a0c0d0e6dcacb77764574",
+  "secret_coordinator_map_outer_sha256":"4d25938c2eb12d78c87253ac26f8e15037724a9a43c16d18dc576b3cc4c6b8cc",
+  "masked_packet_outer_sha256":"a7bdf8fe93503df69489f00e3c2ecdd863d2534196387029ca07a798e2d04a71",
+  "pair_count":14,
+  "abstain_identity_tie_count":7,
+  "scores_seen":false,
+  "coordinator_map_opened_by_evaluator":false,
+  "status":"SECRET_MASK_HASH_AND_PACKET_SHA_SEALED__NO_SCORES"
+}
