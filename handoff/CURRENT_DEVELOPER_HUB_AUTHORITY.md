@@ -1,122 +1,159 @@
 # CURRENT DEVELOPER HUB AUTHORITY
 Last updated: 2026-09-09
 
-## CURRENT PHYSICAL PACKAGE AUTHORITY
-`LITERARY_OS_SYNC_R8_I4H_RUNTIME_PROMOTION_20260909`
-This remains the latest physically closed developer-deliverable **5 Parts / 9 transport files** authority.
+## DEVELOPER-HELD PHYSICAL PACKAGE AUTHORITY
+`LITERARY_OS_SYNC_R6_I4H_VIRTUAL_PRETEST_20260908`
 
-Package-set material SHA256:
-`4e93e545c670d9672b4c4a8e943df9d4a02702a1de707916cb6274d0a145712d`
+This is the last complete **5 Parts / 9 transport files** package set actually supplied to and held by the developer in this section.
 
-Final physical audit SHA256:
-`2be6d7cc124cf194adee8a5733b06d578c2a4df4339cc3153547aa4601f2b345` — PASS.
+The session-internal Sync R7 and Sync R8 package builds were not handed back to the developer as all nine files. They are therefore not developer-held physical authorities.
 
-Combined C2 SHA256:
-`eb49afacc0ef0377fc619e33c01603fe69ffcdc7d242a041a5a1d2c26c0d3ef0`
+Mandatory correction / cumulative recovery document:
+`handoff/20260909/P07_DEVELOPER_DELIVERY_BASELINE_CORRECTION_AND_CUMULATIVE_RECOVERY_R1_20260909.md`
+Commit `76264d5a35f2dd52845203150df6db8ec45e6552`.
+
+Corrected START_HERE:
+`handoff/20260909/START_HERE_P07_DEVELOPER_HELD_SYNC_R6_CUMULATIVE_RECOVERY_R1.md`
+Commit `ab00d729c18667b64b110053459cd3fbcc33fca2`.
+
+## DEVELOPER-HELD PHYSICAL ENGINE STATE
+Physical active authority inside Sync R6:
+`CURRENT_PHYSICAL_AUTHORITY__P07_I4D_SURFACE_REALIZATION_MODES_R1`
+
+Developer-held combined C2 baseline:
+- SHA256 `9878aac8532e9f1eb6b16ef4c84bcfe6be90b58a49ecf0f6afaabe993fad3be7`
+- bytes `318351029`
+- entries `3765`
+- CRC PASS.
 
 DB59 frozen SHA256:
-`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
+`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
 
-## CURRENT ACTIVE ENGINE AUTHORITY
-`CURRENT_PHYSICAL_AUTHORITY__P07_I4H_FAIL_CLOSED_RUNTIME_R1`
-Active Development Engine = **P07-I4H**.
 Production remains `ENG:R47`.
 Formal scored count remains `137`.
+Latest formal authority remains `R138`.
 Formal R140 remains `0/0/0`.
+OpenAI Live qualification is not established.
 
-## SYNC R9 PACKAGING RECOVERY AUTHORITY
-Mandatory recovery document:
-`handoff/20260909/P07_SYNC_R9_PACKAGING_RECOVERY_MANIFEST_R1_20260909.md`
-Commit `31931895de1bb0504bf19366d655ca64adb36560`.
+## HUB-QUALIFIED POST-DELIVERY RESEARCH STATE
+The following is durable on GitHub and valid as Development/Preformal research evidence, but has not yet been synchronized into a complete physical 9-file package delivered to the developer.
 
-This document is the authoritative reconstruction recipe for the next physical package set.
+### I4H prospective craft research
+- R1: pre-generation contamination HOLD; no craft claim.
+- R2: preselector control multiplicity/transport HOLD; no craft claim.
+- R3: stronger-virtual craft signal PASS; Method Audit Closure `17e33163a519edb68bcc80c4970ebb255d4b0c51`.
+- R4: fresh source-free masked replication PASS; result `16773b5ad9a97ca709f0476d227c4a04fa60909d`.
+  - sample 21 = ABSTAIN7 / LOW7 / STANDARD7;
+  - interventions Treatment7 / Control0 / Tie7;
+  - nonloss 100%, harmful 0%, mean delta +0.32699;
+  - STANDARD 7/7 wins, mean +0.42699;
+  - LOW relational-subtext positive nonloss signal, mean +0.227, voice loss 0.
 
-Recovery sufficiency is explicitly split:
-- **Research-state recovery from Hub alone: YES.** All post-Sync-R8 valid research state is durable on GitHub.
-- **Exact physical 9-file recreation from Hub alone: NO.** The GitHub repository is not a byte backup of the nine large Sync R8 transport binaries.
-- **Physical Sync R9 rebuild: YES**, when a fresh session has all three inputs:
-  1. a healthy writable runtime;
-  2. an exact byte-identical Sync R8 nine-file set whose nine outer hashes match the recovery manifest;
-  3. this GitHub Hub.
+### I4H runtime implementation / qualification
+Preregistration `ac7202ac7743252ac1bb8b0ac50cb84287b7dfcd`.
+Qualification result `8fa611b801118ecf2b703cf1f41288c6a7e84bcc`.
 
-Once those inputs exist, no prior chat-only state is required for the Sync R9 build.
+Recorded qualification:
+- new tests 42/42 PASS;
+- old targeted tests 26/26 PASS;
+- full nonhistorical regression 255/255 PASS = parent 213 + new 42;
+- frozen parent I4D files 5/5 byte-identical;
+- critical failure accepts 0;
+- Python literary prose generation false.
 
-## POST-SYNC-R8 RESEARCH STATUS
-I4I has been preregistered and its complete common plan is durable on GitHub:
-- preregistration `e4bb3a9571db87c7553b183c8a39c3bdb498a143`
-- series/synopsis freeze `623a57f04684c3729b2a12e117db9fc8982c0bd2`
-- sequence-plan freeze `234cda5bca761002a6b4d01a988cb0ce345e2426`
-- SC01-SC56 freeze `72109d52d69ba5aacafde3e5a6e660bd587c45a1`
-- complete plan manifest `ba658c7ede8de40bac6e4aaabdc325115ce8a82e`
-- plan-freeze checkpoint `b4ec59a91a894f05131a19167db49c41776cf3a3`
+Durable runtime source files are under:
+`handoff/20260909/P07_I4H_RUNTIME_PROMOTION_DELTA_R1/`.
 
-This material is **NOT yet physically synchronized** into a newer 5-Part / 9-Package set and must not outrank Sync R8 physical authority.
+Correct authority classification:
+`P07-I4H = HUB-QUALIFIED NEXT-PHYSICAL-AUTHORITY CANDIDATE`.
 
-I4I execution remains:
+It must not be called developer-held Active Physical Authority until a new complete package set is built, audited and delivered.
+
+### I4I research unit
+Preregistration `e4bb3a9571db87c7553b183c8a39c3bdb498a143`.
+Frozen common plan:
+- Series State + Episode Synopsis `623a57f04684c3729b2a12e117db9fc8982c0bd2`
+- Sequence Plan `234cda5bca761002a6b4d01a988cb0ce345e2426`
+- SC01-SC56 Scene Plan `72109d52d69ba5aacafde3e5a6e660bd587c45a1`
+- Complete Plan Freeze `ba658c7ede8de40bac6e4aaabdc325115ce8a82e`
+
+I4I exact execution state:
+- 11 sequences / 56 scenes frozen;
 - Control outputs 0;
 - selector decisions 0;
 - Treatment outputs 0;
-- scores 0;
-- no I4I PASS/HOLD/FAIL result.
+- blind scores 0;
+- no I4I result claim.
 
-## SYNC R9 EXACT TRANSPORT CHANGE MAP
-When rebuilding Sync R9 from exact Sync R8 parent files:
+## RECOVERY SUFFICIENCY
+Hub alone can recover the complete current research state: **YES**.
 
-Must change:
-- CONTROL
-- PART A
-- PART B2
+Hub alone can recreate the nine large physical package bytes: **NO**.
 
-Must remain byte-identical to Sync R8:
-- PART B1
-- PART C1
-- PART C2-A
-- PART C2-B
-- PART D1
-- PART D2
+Cumulative next-package rebuild from the developer's actual holdings: **YES**, with:
+1. healthy writable runtime;
+2. exact developer-held Sync R6 nine files;
+3. this GitHub Hub.
 
-There is no post-Sync-R8 runtime or DB59 code/data change.
-Therefore combined C2 must remain:
-`eb49afacc0ef0377fc619e33c01603fe69ffcdc7d242a041a5a1d2c26c0d3ef0`
+No Sync R7 or Sync R8 physical file set is required as a parent.
+No prior chat transcript is required once the Hub is read.
 
-DB59 must remain:
-`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
+## CUMULATIVE NEXT PHYSICAL BUILD
+The next developer deliverable is planned as `Sync R9`, preserving internal chronology, but its physical parent is Sync R6 plus cumulative Hub deltas.
 
-The complete filenames, parent SHA256 values, append-only evidence list and audit procedure are frozen in the Sync R9 Packaging Recovery Manifest.
+Required rebuild/change set:
+- CONTROL;
+- PART A;
+- PART B2;
+- PART C2-A / C2-B, rebuilt from exact Sync R6 combined C2 with the qualified I4H runtime overlay and associated qualification/pointer evidence, then re-split.
+
+Expected byte-identical parents unless an audit finds a packaging-only dependency:
+- PART B1;
+- PART C1;
+- PART D1;
+- PART D2.
+
+C1/I4D parent runtime files must remain unchanged.
+DB59 must remain byte-identical and reconstruct to the frozen SHA above.
 
 ## PACKAGING BLOCKER
 Current-session diagnostics:
-- minimal container read/write + tiny-ZIP probe -> `ClientError`;
-- separate Python filesystem + tiny-ZIP + SHA256 probe -> `ClientError`.
+- minimal container read/write + tiny ZIP probe -> `ClientError`;
+- separate Python filesystem + tiny ZIP + SHA256 probe -> `ClientError`.
 
-Therefore reliable package creation, CRC checking, SHA closure, C2 rebuild and final 9/9 physical audit are currently unavailable in this session.
-
-Packaging blocker checkpoint:
-`handoff/20260909/P07_POST_SYNC_R8_PACKAGING_BLOCKER_CHECKPOINT_R1_20260909.md`
-Commit `3e9ae77479b163d00dff2aa2084d45d59fdb2b56`.
+Therefore a trustworthy physical Sync R9 cannot currently be built in this session.
 
 ## HARD RESEARCH FREEZE
-No further I4I generation, Treatment, scoring or subsequent research experiment may execute until post-Sync-R8 material has been incorporated into a newly built and fully audited physical package set.
-
-The next package authority must be **Sync R9**.
+Do not continue I4I Control generation, Treatment, scoring or later research until cumulative Sync R9 is built, fully audited and all nine files are delivered to the developer.
 
 ## NEXT EXACT OPERATION
-1. Start only in a healthy writable runtime.
-2. Mount exact Sync R8 9-file physical inputs.
-3. Verify all nine outer SHA256 values against `P07_SYNC_R9_PACKAGING_RECOVERY_MANIFEST_R1_20260909.md`.
-4. Revalidate Sync R8 CRC / duplicate-path / unsafe-path integrity.
-5. Copy B1/C1/C2-A/C2-B/D1/D2 byte-identically.
-6. Build new CONTROL/A/B2 by append-only integration of the exact durable post-Sync-R8 evidence from Hub.
-7. Audit Sync R9: all nine outer hashes, ZIP CRC, duplicate=0, unsafe=0, manifests, unchanged combined C2, unchanged DB59, package-set material hash.
-8. Write the final Sync R9 physical audit.
-9. Deliver all nine Sync R9 files to the developer.
-10. Only after developer-deliverable Sync R9 closure may I4I Control generation resume.
+1. Start in a healthy writable runtime.
+2. Mount the exact developer-held Sync R6 nine files.
+3. Verify all nine Sync R6 outer hashes / CRC / duplicate=0 / unsafe=0.
+4. Verify Sync R6 combined C2.
+5. Pull cumulative Hub evidence/code.
+6. Build Sync R9 directly from Sync R6 + cumulative Hub deltas.
+7. Re-run I4H runtime qualification/regression in the rebuilt materialization.
+8. Audit all nine Sync R9 files, rebuilt C2 and unchanged DB59.
+9. Deliver all nine resulting package files to the developer.
+10. Only then update developer-held physical authority to the new package and resume I4I.
 
 ## CLAIM BOUNDARY
-- Sync R9 does not yet exist.
-- Hub fully preserves the current research and exact rebuild recipe, but does not by itself contain the parent large transport bytes.
-- Latest physically closed authority = Sync R8.
-- No Production, formal-count, R140, OpenAI Live or I4I-result change.
+Supported now:
+- current research state and cumulative rebuild recipe are durable on Hub;
+- developer-held physical baseline is Sync R6 / I4D;
+- I4H is Hub-qualified as the next physical candidate;
+- I4I plan is frozen but unexecuted.
+
+Not supported now:
+- developer-held Sync R7 authority;
+- developer-held Sync R8 authority;
+- developer-held physical I4H authority;
+- I4I result;
+- Production change;
+- formal-count change;
+- R140 start;
+- OpenAI Live qualification.
 
 ## STATUS TOKEN
-`DEVELOPER_HUB__SYNC_R8_LAST_PHYSICAL_AUTHORITY__SYNC_R9_RECOVERY_MANIFEST_COMPLETE__HUB_RESEARCH_STATE_RECOVERABLE__SYNC_R8_9_BINARIES_REQUIRED_FOR_PHYSICAL_REBUILD__RESEARCH_FROZEN__FORMAL_137__R140_0_0_0`
+`DEVELOPER_HUB__DEVELOPER_HELD_SYNC_R6_I4D__POST_DELIVERY_I4H_R3_R4_RUNTIME_QUAL_DURABLE__I4H_NEXT_PHYSICAL_CANDIDATE__I4I_11SEQ_56SCENE_PLAN_FROZEN_CONTROL_0__SYNC_R9_DIRECT_CUMULATIVE_REBUILD_FROM_SYNC_R6_PLUS_HUB_REQUIRED__RESEARCH_FROZEN__FORMAL_137__R140_0_0_0`
