@@ -2,16 +2,15 @@
 Last updated: 2026-09-09
 
 Current new-session handoff:
-`handoff/20260909/START_HERE_P07_I4I_PLAN_FROZEN_RUNTIME_INTERRUPTION_R1.md`
+`handoff/20260909/START_HERE_P07_SYNC_R8_LAST_PHYSICAL_AUTHORITY_PACKAGING_BLOCKED_R1.md`
 
 Authority rule:
-- Sync R8 5-Part / 9-Package set remains current physical package authority;
-- Active Development Engine remains P07-I4H (`CURRENT_PHYSICAL_AUTHORITY__P07_I4H_FAIL_CLOSED_RUNTIME_R1`);
-- I4I preregistration is sealed at commit `e4bb3a9571db87c7553b183c8a39c3bdb498a143`;
-- the common source-free I4I plan is now frozen on GitHub as 11 sequences / 56 scenes;
-- Control outputs = 0, Treatment outputs = 0, scores = 0;
-- local container/Python runtime returned ClientError after plan freeze, before Control generation;
-- next exact action is Plan SHA256 Ledger, then exact I4D Control generation;
+- Sync R8 5-Part / 9-Package set remains the latest physically closed developer-deliverable authority;
+- Active Development Engine remains P07-I4H;
+- post-Sync-R8 I4I preregistration and 11-sequence/56-scene plan are durable on GitHub but NOT yet physically synchronized into a newer 5-Part/9-Package set;
+- both container and Python filesystem packaging probes returned ClientError;
+- no further experiment execution is allowed until a healthy runtime builds and audits Sync R9;
+- Sync R9 does not yet exist;
 - Production = ENG:R47; DB59 frozen; Formal count = 137; R140 = 0/0/0.
 
 Sync R8 final physical audit SHA256:
@@ -21,4 +20,5 @@ Read order:
 1. this pointer;
 2. `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`;
 3. `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`;
-4. `handoff/20260909/START_HERE_P07_I4I_PLAN_FROZEN_RUNTIME_INTERRUPTION_R1.md`.
+4. `handoff/20260909/START_HERE_P07_SYNC_R8_LAST_PHYSICAL_AUTHORITY_PACKAGING_BLOCKED_R1.md`;
+5. `handoff/20260909/P07_POST_SYNC_R8_PACKAGING_BLOCKER_CHECKPOINT_R1_20260909.md`.
