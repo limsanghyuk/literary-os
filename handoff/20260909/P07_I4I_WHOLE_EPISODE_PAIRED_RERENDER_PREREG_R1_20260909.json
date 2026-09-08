@@ -1,0 +1,82 @@
+{
+  "schema":"P07I4IWholeEpisodePairedRerenderPreregR1",
+  "date":"2026-09-09",
+  "experiment_id":"P07-I4I-WHOLE-EPISODE-PAIRED-RERENDER-R1",
+  "classification":"DEVELOPMENT_PREFORMAL__WHOLE_EPISODE_PAIRED_RERENDER",
+  "parent_physical_authority":"LITERARY_OS_SYNC_R8_I4H_RUNTIME_PROMOTION_20260909",
+  "parent_package_set_material_sha256":"4e93e545c670d9672b4c4a8e943df9d4a02702a1de707916cb6274d0a145712d",
+  "active_engine":"P07-I4H",
+  "control_engine_behavior":"Exact I4D baseline scene behavior with I4H revision disabled. Control scenes are generated once, sealed, and become the exact baseline scenes from which Treatment revisions are derived.",
+  "treatment_engine_behavior":"P07-I4H fail-closed ABSTAIN/LOW/STANDARD runtime over the exact sealed Control scene. ABSTAIN copies Control byte-identically; LOW/STANDARD permit one revision candidate; every failed guard falls back to Control.",
+  "hypotheses":{
+    "H1":"At whole-episode scale, I4H improves blinded surface/craft quality over exact I4D baseline without degrading semantic/structural fidelity.",
+    "H2":"ABSTAIN-first routing prevents already-good scenes from being harmed, producing 100% byte identity on ABSTAIN scenes and a whole-episode harmful-intervention rate <=0.20.",
+    "H3":"STANDARD improves procedure/exposition-heavy scenes while preserving reasoning/voice/status speech; LOW additive physicalization improves or preserves relational-subtext scenes without social-texture loss.",
+    "H4":"Surface improvements do not damage ensemble balance, comedy/melodrama coexistence, thread continuity, relationship progression, temporal validity, or long-horizon carry-forward."
+  },
+  "research_questions":[
+    "Does the scene-level I4H signal survive assembly into a full broadcast-scale episode?",
+    "Does abstention remain protective when scene context accumulates across an episode?",
+    "Do LOW/STANDARD revisions improve local craft without creating cross-scene voice, thread, continuity or pacing damage?",
+    "Can whole-episode craft improve while the exact Episode Synopsis / Sequence Plan / Scene Plan remains fixed?"
+  ],
+  "fresh_task_rule":"Use a newly invented source-free synthetic series/episode state. Do not use DB59/source-script free text, actual drama dialogue, prior R1-R4 scene briefs, or an actual hidden episode as answer key.",
+  "plan_freeze_rule":"Before any Control prose, freeze one Episode Synopsis, one Sequence Plan and one Scene Plan. The frozen plan determines variable episode scale based on dramatic need, subject only to floors. Control and Treatment consume the exact same frozen plan byte-for-byte.",
+  "scale_floors":{"unicode_characters_per_episode":35000,"sequences":9,"scenes":45,"fixed_maximum":false},
+  "scale_interpretation":"9 sequences and 45 scenes are floors/reference minima, not targets or maxima. No hard maximum character count. Overlength is judged by redundancy, non-playable exposition, repetition or pacing collapse, not length alone.",
+  "scene_definition":"Scene Surface = ordered Action/Direction + Dialogue. Less dialogue is not intrinsically better and more direction is not intrinsically better.",
+  "generation_order":[
+    "Freeze source-free series state and complete Episode Synopsis / Sequence Plan / Scene Plan.",
+    "Generate full Control episode once from frozen plan using exact I4D baseline behavior; no I4H profiling before a Control scene exists.",
+    "Seal every Control scene SHA256 and the assembled Control episode SHA256 before Treatment decisions.",
+    "Profile each sealed Control scene using the frozen I4H six-dimension profile and freeze ABSTAIN/LOW/STANDARD decisions before Treatment revisions.",
+    "Treatment copies ABSTAIN scenes byte-identically. LOW/STANDARD receive at most one provider revision candidate from the exact Control baseline scene and frozen semantic payload.",
+    "Run deterministic and external reliability gates; any failure falls back to the exact Control scene.",
+    "Seal Treatment scene hashes and assembled Treatment episode before evaluation.",
+    "Create a secret A/B episode-level blind map; seal its hash before scoring; do not reveal map before blind score seal.",
+    "Blind-evaluate whole episodes and scene-stratified diagnostics; seal scores before unblinding."
+  ],
+  "noncompensatory_integrity_gates":[
+    "same frozen Episode Synopsis / Sequence Plan / Scene Plan for Control and Treatment",
+    "semantic/source/future fidelity critical failures = 0",
+    "unauthorized speaker/new principal character critical failures = 0",
+    "ABSTAIN scene byte identity = 100%",
+    "Control and Treatment each >=35000 Unicode characters",
+    "Control and Treatment preserve frozen scene order/count and sequence membership",
+    "I4H deterministic/external reliability rejection always falls back to exact Control scene"
+  ],
+  "whole_episode_blind_axes":[
+    "episode_structure_and_causal_progression",
+    "character_and_relationship_consistency",
+    "thread_management_and_carry_forward",
+    "ensemble_and_social_texture",
+    "temporal_validity",
+    "creativity_and_non_generic_specificity",
+    "long_horizon_sustainability_and_overclosure_control",
+    "comedy_melodrama_tonal_coexistence",
+    "character_voice_differentiation",
+    "subtext_and_physicalization",
+    "pacing_and_line_economy",
+    "scene_turns_and_episode_exit_pressure"
+  ],
+  "scoring":"Each axis 1-10. Episode mean = unweighted mean of 12 axes. Scene-stratified LOW/STANDARD diagnostics are secondary and cannot compensate for critical fidelity failure.",
+  "primary_pass_gates":{
+    "integrity":"all noncompensatory integrity gates PASS",
+    "episode_mean_delta":"Treatment - Control >= +0.30",
+    "episode_axis_nonloss":"Treatment >= Control on at least 9 of 12 axes",
+    "large_axis_regression":"no axis Treatment-Control < -0.75",
+    "voice_social_guard":"character_voice_differentiation and ensemble/social_texture each Treatment-Control >= -0.25",
+    "harmful_intervention_rate":"<=0.20 among LOW/STANDARD scenes",
+    "abstain_identity":"1.00",
+    "critical_failures":0
+  },
+  "secondary_mode_gates":{
+    "STANDARD":"nonloss >=0.80 and mean paired scene-craft delta >=+0.20",
+    "LOW":"nonloss >=0.80; mean voice/social delta >=-0.10; positive physicalization signal required if >=3 LOW scenes",
+    "insufficient_mode_sample":"If fewer than 3 scenes are selected for a mode, that mode-specific hypothesis is HOLD/INCONCLUSIVE rather than imputed PASS."
+  },
+  "evaluation_separation":"Same-model masked evaluation is permitted only as Development/Preformal evidence and must be labeled as such. No independent-human or OpenAI-Live claim follows.",
+  "promotion_rule":"Even an I4I PASS does not change Production ENG:R47 or formal count. Any engine/research-state effect must first be synchronized into a new physically audited 5-Part/9-Package set before later research units.",
+  "authority_state_frozen":{"production":"ENG:R47","active_development_engine":"P07-I4H","formal_scored_count":137,"latest_formal_authority":"R138","r140":[0,0,0],"openai_live_qualification":false},
+  "status":"PREREGISTERED__NO_EPISODE_PLAN__NO_CONTROL_OUTPUT__NO_TREATMENT_OUTPUT__NO_SCORE"
+}
