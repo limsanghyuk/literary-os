@@ -1,0 +1,39 @@
+{
+  "schema": "P07I4HProspectiveR1PregenerationHoldR1",
+  "date": "2026-09-09",
+  "attempt": "P07-I4H-PROSP-CRAFT-R1",
+  "classification": "DEVELOPMENT_PREFORMAL__PREGENERATION_HOLD__NO_CRAFT_RESULT",
+  "parent_prereg_commit": "41468a284758703604af61e9539c5ccf827a2929",
+  "sample_freeze_commit": "f0cad7e3fa6c5692f1080ecae76e46e1fdb8849e",
+  "deidentification_amendment_commit": "690fda27fe4b75b21a67a4a2bc9c1202e15d5619",
+  "finding": "The first brief builder retained context-only character names. An amended R2 builder removed known full character names, but a second hard audit found shorthand character references and source-like quoted dialogue fragments still embedded in runtime free-text fields. Therefore DB59 runtime free-text cannot be treated as clean generation input under the preregistered source-imitation barrier without a materially different abstraction layer.",
+  "boundary": {
+    "sample_selected": true,
+    "control_outputs": 0,
+    "treatment_outputs": 0,
+    "evaluations": 0,
+    "scores": 0,
+    "formal_count_delta": 0,
+    "r140_delta": [0,0,0]
+  },
+  "status": "HOLD_PREGENERATION_INPUT_CONTAMINATION__NO_CRAFT_CLAIM__NO_PROMOTION",
+  "preserved_evidence": [
+    "deterministic sample-selection preregistration",
+    "24-scene sample freeze and provenance hashes",
+    "deidentification defect and repair attempt",
+    "pre-generation hard-audit finding"
+  ],
+  "not_valid_evidence": [
+    "P07_I4H_PROSPECTIVE_GENERATION_BRIEFS_R1_20260909.json",
+    "P07_I4H_PROSPECTIVE_GENERATION_BRIEFS_R2_20260909.json"
+  ],
+  "next": "Start a separately preregistered clean source-free prospective craft benchmark. Do not reuse source-derived free-text or count this R1 HOLD as a scored craft attempt.",
+  "authority_after": {
+    "physical_package_authority": "Sync R6 5-Part/9-Package",
+    "active_development_engine": "P07-I4D",
+    "i4h_sync_r6": "ARCHITECTURE_PASS__CRAFT_PROMOTION_HOLD",
+    "production": "ENG:R47",
+    "formal_scored_count": 137,
+    "r140": [0,0,0]
+  }
+}
