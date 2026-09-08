@@ -1,0 +1,13 @@
+{
+  "schema":"P07I4HR3BlindScoreSealR1",
+  "experiment_id":"P07-I4H-PROSP-CRAFT-R3-CLEAN-SYNTHETIC",
+  "mask_replacement_commit":"c1cfbea44e9580aaa21d08651cbf165c36545d88",
+  "evaluator":"GPT-5.6 Sol same-session same-model masked judge",
+  "claim_boundary":"Same-model stronger-virtual only; not independent/human evidence.",
+  "coordinator_map_opened_before_scoring":false,
+  "local_score_artifact_outer_sha256":"5fcfcae58f07294bf429a13220c87708057edad07b34d05a6103b978bebbda24",
+  "local_score_canonical_payload_sha256":"f240c49a1ef105a495fd3a77fd0c9772d3b950dad3c260f92599aedc1b46f72a",
+  "blind_results":{"R13":{"A_mean":6.9222,"B_mean":7.6333,"winner":"B"},"R14":{"A_mean":7.0778,"B_mean":7.6333,"winner":"B"},"R15":{"A_mean":6.9556,"B_mean":7.6444,"winner":"B"},"R16":{"A_mean":7.5778,"B_mean":7.0222,"winner":"A"},"R17":{"A_mean":7.2889,"B_mean":7.6333,"winner":"B"},"R18":{"A_mean":7.1444,"B_mean":7.8000,"winner":"B"}},
+  "abstain_identity_ties":"R01-R12 = 12/12 automatic Tie by byte identity",
+  "status":"BLIND_SCORES_FROZEN__NOT_UNBLINDED"
+}
