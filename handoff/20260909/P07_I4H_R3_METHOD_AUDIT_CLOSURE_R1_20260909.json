@@ -1,0 +1,52 @@
+{
+  "schema":"P07I4HR3MethodAuditClosureR1",
+  "date":"2026-09-09",
+  "experiment_id":"P07-I4H-PROSP-CRAFT-R3-CLEAN-SYNTHETIC",
+  "status":"CLOSED__PASS_STRONGER_VIRTUAL_CRAFT_SIGNAL__NO_PROMOTION__R4_REPLICATION_REQUIRED",
+  "root_causes_resolved":[
+    {"issue":"R2 durable control seal corruption/multiplicity","root_cause":"manual reconstruction/transport of long prose into GitHub created a second control realization and placeholder history","resolution":"R2 closed preselector; R3 uses local canonical long artifacts plus compact Git SHA ledgers; no R2 result reused"},
+    {"issue":"read-only upload mount","root_cause":"uploaded artifact path became read-only mount","resolution":"all mutable experiment work moved to /mnt/data/i4h_r3_work; uploaded originals treated as immutable inputs"},
+    {"issue":"foreign-script detector false positive","root_cause":"detector tested token presence rather than Treatment-introduced token delta","resolution":"pre-evaluation amendment defines intrusion as newly introduced foreign-script token relative to sealed Control; R05 QR and R15 CCTV were pre-existing Control tokens"},
+    {"issue":"MASK_R1 blind exposure","root_cause":"same-session evaluator had seen coordinator mapping before scoring","resolution":"MASK_R1 invalidated with zero scores/evaluations; MASK_R2_CLEAN created and sealed before scoring; coordinator map remained unopened until blind score seal"}
+  ],
+  "chronology":{
+    "prereg":"2f3d8b52fdb60d99e1fd818b50f4140dedcc83e1",
+    "brief_freeze":"3123d54f07e004ba70f77e45410c4edd5b5a3fd6",
+    "control_seal":"0b042ef00b9d41ba0d6bd348ce104a77b76f2ec4",
+    "selector_freeze":"d5c35a4fad79e3d936b3059288003932ecefbdee",
+    "measurement_amendment":"85be6450214ebe91bf6a6e9923c9fe06589cb53c",
+    "treatment_reliability_seal":"33c5af460c03a48ba32f074001841a51c6a0984f",
+    "mask_r1_invalid":"b325c280501c003a03391a23bf0b81d4756435b0",
+    "mask_r2_replacement":"c1cfbea44e9580aaa21d08651cbf165c36545d88",
+    "blind_score_seal":"5ba74b76979110774336168fc51004b186db552e",
+    "result":"09d5e9b5b31313ee1cd503a077f5fdff7c70dda0"
+  },
+  "independent_recalculation":{
+    "scene_hashes":"18/18 PASS",
+    "abstain_identity":"12/12 PASS",
+    "critical_failures":0,
+    "standard_bounds":"6/6 PASS",
+    "interventions":6,
+    "treatment_wins":6,
+    "control_wins":0,
+    "ties":0,
+    "mean_delta":0.5851666666666668,
+    "harmful_intervention_rate":0.0,
+    "voice_specificity_mean_delta":0.05,
+    "worst_voice_drop":-0.1
+  },
+  "claim_boundary":{
+    "supported":"stronger-virtual prospective craft signal for conservative ABSTAIN-first + STANDARD intervention on procedure-heavy scenes",
+    "unsupported":["independent judge evidence","human-writer equivalence","OpenAI Live qualification","whole-episode competitiveness","I4H active-engine promotion","Production promotion","Formal R140"],
+    "subtext_hypothesis":"UNTESTED because LOW interventions=0"
+  },
+  "authority_effect":{
+    "physical_package_authority":"Sync R6 unchanged",
+    "active_development_engine":"P07-I4D unchanged",
+    "production":"ENG:R47 unchanged",
+    "formal_scored_count":137,
+    "r140":[0,0,0],
+    "i4i_started":false
+  },
+  "next":"Preregister fresh I4H R4 replication with explicit power for LOW relational-subtext while preserving selector neutrality; do not start I4I before replication/physical synchronization."
+}
