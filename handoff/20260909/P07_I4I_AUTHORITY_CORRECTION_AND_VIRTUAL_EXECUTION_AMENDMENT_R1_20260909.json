@@ -1,0 +1,32 @@
+{
+  "schema":"P07I4IAuthorityCorrectionAndVirtualExecutionAmendmentR1",
+  "date":"2026-09-09",
+  "experiment_id":"P07-I4I-WHOLE-EPISODE-PAIRED-RERENDER-R1",
+  "original_preregistration_commit":"e4bb3a9571db87c7553b183c8a39c3bdb498a143",
+  "amendment_timing":"SEALED_AFTER_EXACT_PLAN_RECOVERY_AND_BEFORE_ANY_CONTROL_PROSE",
+  "reason":"The original preregistration named a session-internal Sync R8/I4H Runtime R1 parent. Later cumulative recovery established the developer-delivered active physical authority as I4H Recovery R3 reconstructed from the exact Sync R6 parent. Developer currently has no genuine OpenAI API-capable execution environment, so the executable continuation is limited to a Provider-Analog virtual/development run.",
+  "authority_correction":{
+    "active_parent":"CURRENT_PHYSICAL_AUTHORITY__P07_I4H_FAIL_CLOSED_RUNTIME_RECOVERY_R3",
+    "parent_package_set_sha256":"9327630e8fc8c9b88a8233055b939e08ab5d3726a777b44122bb6682a8c436f8",
+    "parent_combined_c2_sha256":"58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7",
+    "db_authority":"DB59_FROZEN",
+    "db59_sha256":"a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "production":"ENG:R47",
+    "formal_scored_count":137,
+    "latest_formal":"R138",
+    "r140":[0,0,0]
+  },
+  "frozen_plan_sha256":{
+    "series_state_and_episode_synopsis":"090e6aba3190949a4e0d0260c80c9865cb18c13303af1e461e75608df7225173",
+    "sequence_plan":"e7ba335d687ec1f2abc501f09d67564fb8d637fec26ff1199d2f69486045e54b",
+    "scene_plan":"741202169990a1b67e2d06017391a54f38323a0df3410e082d7cd6e61994b8d4",
+    "complete_plan_manifest":"4a22f30f1575e97910ba07eb4c35ea25dd2d86ef1b531c03f79dd0ff8cb54a2b"
+  },
+  "execution_evidence_class":"VIRTUAL_PROVIDER_ANALOG__DEVELOPMENT_PREFORMAL",
+  "control_rule":"Run the exact parent I4D provider-backed rendering path with I4H revision disabled. The local provider is explicitly a test-double/provider-analog and must be admitted only with allow_test_double=true. Control scenes are generated once and sealed before profiling.",
+  "treatment_rule":"Run the recovered I4H fail-closed ABSTAIN/LOW/STANDARD overlay over the exact sealed Control scenes. ABSTAIN must remain byte-identical; LOW/STANDARD may receive at most one virtual revision candidate and every failed guard falls back to Control.",
+  "evaluation_rule":"Preserve all original 12 axes and pass thresholds. Any same-model/masked scoring produced here is Development/Preformal only and cannot satisfy independent-human or genuine OpenAI Live gates.",
+  "unchanged_original_rules":["frozen 11-sequence/56-scene plan","Control and Treatment each >=35000 Unicode characters","same scene order/count/membership","critical failures=0","ABSTAIN byte identity=1.00","episode mean delta >= +0.30","axis nonloss >=9/12","no axis regression < -0.75","voice/social guards","harmful intervention rate <=0.20"],
+  "forbidden_claims":["OpenAI Live qualification","independent-human validation","Production promotion","Formal R140 start","formal-count increment"],
+  "status":"PREREGISTERED_AMENDMENT__CONTROL_OUTPUTS_0__TREATMENT_OUTPUTS_0__SCORES_0"
+}
