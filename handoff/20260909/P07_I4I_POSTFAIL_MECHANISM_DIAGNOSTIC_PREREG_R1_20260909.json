@@ -1,0 +1,55 @@
+{
+  "schema":"P07I4IPostFailMechanismDiagnosticPreregR1",
+  "date":"2026-09-09",
+  "experiment_id":"P07-I4I-POSTFAIL-MECHANISM-DIAGNOSTIC-R1",
+  "classification":"DEVELOPMENT_PREFORMAL__POSTHOC_KNOWLEDGE_ONLY__NO_PROMOTION",
+  "parent_physical_package_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R1__I4I_CLOSED_PRIMARY_FAIL",
+  "parent_package_set_material_sha256":"9eadb1f41feb47fdea210a1d5215e00884fcb03889d31368c27265973514af16",
+  "active_engine":"P07-I4H Recovery R3",
+  "db_authority":"DB59 frozen",
+  "frozen_prior_result":{
+    "experiment":"P07-I4I-WHOLE-EPISODE-PAIRED-RERENDER-R1",
+    "verdict":"CLOSED__PRIMARY_GATE_FAIL__POSITIVE_SCENE_LEVEL_SIGNAL__NO_PROMOTION",
+    "episode_delta":0.2833333333333332,
+    "legacy_primary_gate":0.30,
+    "rule":"The prior result is immutable and cannot be reclassified by this diagnostic."
+  },
+  "purpose":"Determine whether the observed whole-episode effect is arithmetically concentrated on axes that I4H was designed to improve while protected semantic/continuity axes remain nonloss. This is mechanism attribution only, not a new efficacy claim.",
+  "axis_partition_frozen_before_diagnostic":{
+    "improvement_target_axes":[
+      "subtext_and_physicalization",
+      "pacing_and_line_economy",
+      "scene_turns_and_episode_exit_pressure"
+    ],
+    "protection_axes":[
+      "character_and_relationship_consistency",
+      "thread_management_and_carry_forward",
+      "ensemble_and_social_texture",
+      "temporal_validity",
+      "long_horizon_sustainability_and_overclosure_control",
+      "character_voice_differentiation"
+    ],
+    "mixed_context_axes":[
+      "episode_structure_and_causal_progression",
+      "creativity_and_non_generic_specificity",
+      "comedy_melodrama_tonal_coexistence"
+    ],
+    "basis":"Derived from the already-preregistered I4H/I4I mechanism: LOW targets physicalized subtext; STANDARD targets exposition/procedure and pacing; protection rules preserve voice/social/relationship/thread/temporal/long-horizon state. Partition is frozen before computation and may not be changed after seeing the diagnostic output."
+  },
+  "metrics":[
+    "mean delta of improvement_target_axes",
+    "mean and minimum delta of protection_axes",
+    "mean delta of mixed_context_axes",
+    "exact weighted reconstruction of the 12-axis overall delta",
+    "intervention coverage LOW+STANDARD / 56",
+    "mean scene-craft delta among intervened scenes"
+  ],
+  "interpretation_rules":[
+    "If target-axis mean is positive and every protection axis is nonloss, classify MECHANISM_CONSISTENT_WITH_CONSERVATIVE_SURFACE_EFFECT.",
+    "If any protection axis is negative, classify PROTECTION_CONCERN.",
+    "No result from this diagnostic changes the I4I R1 FAIL or any authority/promotion state.",
+    "No threshold may be changed because of this diagnostic."
+  ],
+  "outputs_before_execution":0,
+  "status":"PREREGISTERED__POSTHOC_DIAGNOSTIC_NOT_YET_COMPUTED"
+}
