@@ -16,6 +16,10 @@ Corrected START_HERE:
 `handoff/20260909/START_HERE_P07_DEVELOPER_HELD_SYNC_R6_CUMULATIVE_RECOVERY_R1.md`
 Commit `ab00d729c18667b64b110053459cd3fbcc33fca2`.
 
+Current new-session recovery verification:
+`handoff/20260909/P07_NEW_SESSION_SYNC_R6_I4H_RECOVERY_VERIFICATION_R1_20260909.md`
+Commit `3e71e17c2984ad8905ecac1795a077706664a77a`.
+
 ## DEVELOPER-HELD PHYSICAL ENGINE STATE
 Physical active authority inside Sync R6:
 `CURRENT_PHYSICAL_AUTHORITY__P07_I4D_SURFACE_REALIZATION_MODES_R1`
@@ -85,6 +89,8 @@ I4I exact execution state:
 - blind scores 0;
 - no I4I result claim.
 
+The I4I preregistration was created against the then-session-internal Sync R8 label. Because current corrected physical authority is developer-held Sync R6 and the next actual I4H physical package will be cumulative Sync R9, a **pre-output administrative parent-authority amendment** is required after Sync R9 delivery and before Control output 1. The already frozen Episode Synopsis / Sequence Plan / Scene Plan, hypotheses, thresholds and evaluation rules must remain unchanged.
+
 ## RECOVERY SUFFICIENCY
 Hub alone can recover the complete current research state: **YES**.
 
@@ -117,35 +123,51 @@ C1/I4D parent runtime files must remain unchanged.
 DB59 must remain byte-identical and reconstruct to the frozen SHA above.
 
 ## PACKAGING BLOCKER
-Current-session diagnostics:
-- minimal container read/write + tiny ZIP probe -> `ClientError`;
-- separate Python filesystem + tiny ZIP + SHA256 probe -> `ClientError`.
+The earlier minimal-probe `ClientError` is now historical and superseded by the newer recovery pointer.
 
-Therefore a trustworthy physical Sync R9 cannot currently be built in this session.
+Current recovered runtime status:
+`RUNTIME_WRITE_ZIP_SHA_CAPABILITY = RECOVERED`.
+
+The current new session also successfully performed read-only SHA256 / ZIP CRC / duplicate-path / unsafe-path checks on the directly mounted Sync R6 CONTROL and PART A packages without reproducing the prior `ClientError`.
+
+Current physical blocker:
+`SYNC_R6_LARGE_BINARY_BYTES_NOT_MOUNTED_TO_ACTIVE_RUNTIME`.
+
+Direct current-runtime byte coverage:
+- CONTROL: verified exact Sync R6 SHA/CRC/path safety;
+- PART A: verified exact Sync R6 SHA/CRC/path safety;
+- remaining seven Sync R6 transport package bodies: not byte-addressable in the active runtime;
+- File Library / Hub still expose their physical identities and audit metadata.
+
+Therefore a trustworthy physical Sync R9 cannot yet be built until all nine exact Sync R6 transport bytes are mounted or otherwise byte-preservingly exposed to the runtime.
 
 ## HARD RESEARCH FREEZE
 Do not continue I4I Control generation, Treatment, scoring or later research until cumulative Sync R9 is built, fully audited and all nine files are delivered to the developer.
 
 ## NEXT EXACT OPERATION
-1. Start in a healthy writable runtime.
-2. Mount the exact developer-held Sync R6 nine files.
-3. Verify all nine Sync R6 outer hashes / CRC / duplicate=0 / unsafe=0.
-4. Verify Sync R6 combined C2.
-5. Pull cumulative Hub evidence/code.
-6. Build Sync R9 directly from Sync R6 + cumulative Hub deltas.
-7. Re-run I4H runtime qualification/regression in the rebuilt materialization.
-8. Audit all nine Sync R9 files, rebuilt C2 and unchanged DB59.
-9. Deliver all nine resulting package files to the developer.
-10. Only then update developer-held physical authority to the new package and resume I4I.
+1. Obtain/mount the remaining exact seven Sync R6 transport files so all 9/9 are byte-addressable.
+2. Verify all nine Sync R6 outer hashes / CRC / duplicate=0 / unsafe=0.
+3. Verify Sync R6 combined C2.
+4. Pull cumulative Hub evidence/code.
+5. Build Sync R9 directly from Sync R6 + cumulative Hub deltas.
+6. Re-run I4H runtime qualification/regression in the rebuilt materialization.
+7. Audit all nine Sync R9 files, rebuilt C2 and unchanged DB59.
+8. Deliver all nine resulting package files to the developer.
+9. Only then update developer-held physical authority to the new package / P07-I4H.
+10. Seal the I4I pre-output parent-authority amendment without changing the frozen 11-sequence / 56-scene plan or preregistered hypotheses/gates.
+11. Only then resume I4I Control generation.
 
 ## CLAIM BOUNDARY
 Supported now:
 - current research state and cumulative rebuild recipe are durable on Hub;
 - developer-held physical baseline is Sync R6 / I4D;
+- current runtime directly verifies exact CONTROL and PART A bytes from Sync R6;
 - I4H is Hub-qualified as the next physical candidate;
-- I4I plan is frozen but unexecuted.
+- I4I plan is frozen but unexecuted;
+- prior container `ClientError` is not the current primary blocker.
 
 Not supported now:
+- current-runtime 9/9 Sync R6 byte verification;
 - developer-held Sync R7 authority;
 - developer-held Sync R8 authority;
 - developer-held physical I4H authority;
@@ -156,4 +178,4 @@ Not supported now:
 - OpenAI Live qualification.
 
 ## STATUS TOKEN
-`DEVELOPER_HUB__DEVELOPER_HELD_SYNC_R6_I4D__POST_DELIVERY_I4H_R3_R4_RUNTIME_QUAL_DURABLE__I4H_NEXT_PHYSICAL_CANDIDATE__I4I_11SEQ_56SCENE_PLAN_FROZEN_CONTROL_0__SYNC_R9_DIRECT_CUMULATIVE_REBUILD_FROM_SYNC_R6_PLUS_HUB_REQUIRED__RESEARCH_FROZEN__FORMAL_137__R140_0_0_0`
+`DEVELOPER_HUB__DEVELOPER_HELD_SYNC_R6_I4D__CURRENT_RUNTIME_CONTROL_A_2_OF_9_BYTE_VERIFIED__REMAINING_7_SYNC_R6_BYTES_NOT_RUNTIME_MOUNTED__POST_DELIVERY_I4H_R3_R4_RUNTIME_QUAL_DURABLE__I4H_NEXT_PHYSICAL_CANDIDATE__I4I_11SEQ_56SCENE_PLAN_FROZEN_CONTROL_0__SYNC_R9_DIRECT_CUMULATIVE_REBUILD_REQUIRED__I4I_PARENT_AUTHORITY_AMENDMENT_PREOUTPUT_REQUIRED__RESEARCH_FROZEN__FORMAL_137__R140_0_0_0`
