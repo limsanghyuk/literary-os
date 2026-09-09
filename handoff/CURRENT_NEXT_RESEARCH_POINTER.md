@@ -1,44 +1,92 @@
 # CURRENT NEXT RESEARCH POINTER
-Last updated: 2026-09-09
+Last updated: 2026-09-10
 
 ## CURRENT PHYSICAL BASELINE
-`CURRENT_PHYSICAL_AUTHORITY__P07_I4H_FAIL_CLOSED_RUNTIME_RECOVERY_R3`
+`P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R2__I4I_R2_CLOSED_PRIMARY_FAIL`
 
-Package-set SHA256:
-`9327630e8fc8c9b88a8233055b939e08ab5d3726a777b44122bb6682a8c436f8`
+Full logical 5-Part / 9-transport material SHA256:
+`6e630bf4039953bd7b9969735c87fe7f273e760aa0811ee6c0322c2ea74b3b84`.
+
+Active Development Engine remains:
+`P07-I4H Recovery R3`.
+
+Combined C2 remains:
+`58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7`.
 
 DB59 remains frozen:
-`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
+`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
 
-## ACTIVE PREOUTPUT RESEARCH
-Read first:
-1. `handoff/20260909/P07_POST_I4H_CODEX_LIVE_RESEARCH_MASTER_PLAN_R1_20260909.md`
-2. `handoff/20260909/P07_LIVE_SEMANTIC_CONTRACT_ALIGNMENT_QUALIFICATION_PREREG_R1_20260909.json`
-3. `handoff/20260909/START_HERE_P07_I4H_RECOVERY_R3_PHYSICAL_AUTHORITY_R1.md`
+## CLOSED PREDECESSOR WHOLE-EPISODE RESULTS
+- I4I R1: Primary FAIL, +0.2833333333333332 vs +0.30.
+- I4I R2 Fresh Replication: Primary FAIL, +0.16666666666666607 vs +0.30.
+- both 12/12 axis nonloss and harmful intervention 0%; neither may be rewritten as PASS.
 
-Active experiment:
-`P07_LIVE_SEMANTIC_CONTRACT_ALIGNMENT_QUALIFICATION_R1`
+## I4J KNOWLEDGE-ONLY AUDIT — COMPLETE
+Experiment:
+`P07-I4J-ENDPOINT-COVERAGE-AUDIT-R1`.
+
+Preregistration:
+`handoff/20260910/P07_I4J_ENDPOINT_COVERAGE_AUDIT_PREREG_R1_20260910.json`
+Commit `a5a861fbb0f7d66716cf1d84c8d07cb1ae6612cd`.
+
+Result:
+`handoff/20260910/P07_I4J_ENDPOINT_COVERAGE_AUDIT_RESULT_R1_20260910.json`
+Commit `008b4e0681ff7068faf2cba63352d0512d658d99`.
+
+Verdict:
+`ENDPOINT_MISALIGNMENT_SIGNAL_CONFIRMED__COVERAGE_ALONE_INSUFFICIENT__FRESH_VALIDATION_REQUIRED`.
+
+Interpretation boundary:
+- equal-weight 12-axis averaging assigns half of endpoint weight to six protection axes whose intended job is nonloss;
+- R1/R2 intervention coverage is nearly identical (~42%) while whole-episode deltas differ materially;
+- effect intensity/content responsiveness matters in addition to coverage;
+- the future endpoint candidate cannot be adopted from retrospective evidence and cannot change R1/R2 verdicts.
+
+## ACTIVE PROSPECTIVE RESEARCH
+Experiment:
+`P07-I4J-R1-FRESH-COVERAGE-ENDPOINT-VALIDATION`.
+
+Preregistration:
+`handoff/20260910/P07_I4J_FRESH_COVERAGE_ENDPOINT_VALIDATION_PREREG_R1_20260910.json`
+Commit `364e92c38772e6c78b1585b40eb6dc769eaebec9`.
 
 Status:
-`PREREGISTERED__NO_NEW_TREATMENT_OUTPUTS__NO_NEW_LIVE_CALLS`
+`PREREGISTERED__FRESH_PLAN_0__CONTROL_0__SELECTOR_0__REVISION_POOL_0__ARM_SCORES_0`.
 
-## WHY THIS IS NEXT
-The user-requested Codex Live diagnostic reached real OpenAI generation through SERIES_PLAN / EPISODE_ALLOCATION / EPISODE_PLAN / SEQUENCE_PLAN with 5/5 HTTP 200 calls, then stopped at EPISODE_TO_SEQUENCE semantic fulfillment because the validator required same-group evidence but the live judge instructions did not disclose that constraint. The failure remains immutable HOLD evidence.
+Locked design:
+1. Completely fresh source-free 35,000+ character, 9+ sequence, 45+ scene episode.
+2. Freeze Series/Episode/Sequence/Scene plans before Control.
+3. Generate and seal one Control.
+4. Use unchanged I4H Recovery R3 Selector and revision constraints.
+5. Generate each eligible LOW/STANDARD revision once only.
+6. Assemble deterministic stratified coverage arms ARM_0 / ARM_50 / ARM_100 from the exact same sealed revision pool.
+7. Seal all arm memberships/hashes before evaluation.
+8. Mask arm identity before 12-axis scoring.
+9. Candidate future primary = target-axis mean delta >= +0.30 with separate protection/mixed hard gates.
+10. Legacy 12-axis mean stays secondary in I4J and remains the historical primary for R1/R2 only.
+11. Endpoint adoption is forbidden from one I4J run; a later fresh replication/governance gate is required.
 
-The archived Semantic Contract Candidate R2/R3 sources are present in C2 but are not active in current I4H Recovery R3. Therefore the repair must be a new isolated delta on top of current R3, not a relabeling of archived candidate bytes.
+## CURRENT EXECUTION BLOCK
+Current container/runtime preflight failed twice with `TransportTimeoutError`, including minimal `/bin/true`.
 
-## LOCKED ORDER
-Parent preflight → parent regression → isolated semantic alignment candidate → deterministic/adversarial tests + frozen Codex failure replay → candidate full regression → deterministic CASE-02 pre-output seal → one fresh Live attempt → classify → physically deliver every changed 5-Part/9-Package transport file if content changed.
+This is an external infrastructure block, not a scientific FAIL. Do not generate unsealed fresh literary outputs or simulate missing runtime receipts while the mandatory preflight is failing.
 
-## DB BOUNDARY
-DB64/9-Contract reinforcement is a separate queued qualification track. Do not substitute DB64 for DB59 during the semantic engine experiment. After the engine track closes, DB64 must undergo implementation conformance plus actual A2 causal adoption and DB59-vs-DB64 paired effect testing.
+Next exact operation when runtime becomes healthy:
+1. minimal process + filesystem + cgroup preflight;
+2. verify current R2 research-sync identities needed for execution;
+3. freeze fresh I4J Series/Episode/Sequence/Scene plan;
+4. only then create Control output 1.
 
-## FIXED STATE
-- Production: ENG:R47
-- Formal scored count: 137
-- Latest formal authority: R138
-- R140: 0/0/0
-- I4I: 0/0/0/0, unexecuted
+## SEPARATED OTHER TRACKS
+- Semantic Alignment Virtual R1: genuine OpenAI Live confirmation pending; not active.
+- DB64/9-Contract: HOLD; DB59 remains authority.
+
+## FIXED GLOBAL STATE
+- Production: `ENG:R47`
+- Formal scored count: `137`
+- Latest formal authority: `R138`
+- R140: `0/0/0`
+- actual OpenAI Live qualification: not established
 
 ## STATUS TOKEN
-`NEXT_RESEARCH__SEMANTIC_CONTRACT_LIVE_ALIGNMENT_R1_PREREGISTERED__PARENT_I4H_RECOVERY_R3__DB59_FROZEN__NO_NEW_OUTPUTS__NO_LIVE_CALLS__DB64_QUEUED_SEPARATE__FORMAL_137__R140_0_0_0__I4I_0_0_0_0`
+`NEXT_RESEARCH_I4J_FRESH_COVERAGE_ENDPOINT_VALIDATION__PREREG_COMMIT_364E92C3__I4J_AUDIT_ENDPOINT_MISALIGNMENT_SIGNAL__R1_FAIL_0_2833__R2_FAIL_0_1667__ACTIVE_I4H_RECOVERY_R3__DB59_FROZEN__RUNTIME_TRANSPORT_TIMEOUT_PREOUTPUT_BLOCK__FORMAL_137__R140_0_0_0`
