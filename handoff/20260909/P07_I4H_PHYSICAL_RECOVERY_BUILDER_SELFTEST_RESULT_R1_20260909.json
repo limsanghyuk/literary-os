@@ -1,0 +1,32 @@
+{
+  "schema": "P07I4HPhysicalRecoveryBuilderSelfTestResultR1",
+  "date": "2026-09-09",
+  "builder_path": "handoff/20260909/P07_I4H_PHYSICAL_RECOVERY_BUILDER_R1.py",
+  "builder_commit": "b414af65b9bf0777c7d03800ebc265549ae7f2e7",
+  "workflow_run_id": 34308855331,
+  "job_id": 102331094936,
+  "runner": "GitHub-hosted Ubuntu 24.04 / Python 3.10.21",
+  "checks": {
+    "py_compile": "PASS",
+    "self_test": "PASS",
+    "self_test_marker": "SELF_TEST_PASS"
+  },
+  "builder_contract": [
+    "verify exact Sync R6 9/9 outer size and SHA256",
+    "verify CRC, duplicate=0 and unsafe=0 for all parent ZIP packages",
+    "reassemble C2-A || C2-B and require parent C2 SHA256 9878aac8532e9f1eb6b16ef4c84bcfe6be90b58a49ecf0f6afaabe993fad3be7",
+    "verify three durable Hub I4H runtime source hashes",
+    "materialize exact parent C2 and require five frozen I4D runtime file hashes",
+    "overlay three I4H runtime files plus Recovery R2 45-test suite",
+    "run 45/45 new Recovery R2 tests",
+    "run deterministic parent-targeted regression defined by preexecution amendment and require 100% PASS",
+    "run full nonhistorical regression and require >=213 PASS / 0 failure",
+    "rebuild CONTROL / A / B2 and C2 transport",
+    "copy B1 / C1 / D1 / D2 byte-identically",
+    "reassemble output C2 and perform fresh 9-package Final Physical Audit",
+    "preserve Production ENG:R47, formal count 137, R140 0/0/0 and I4I unexecuted boundary"
+  ],
+  "claim_boundary": "This is builder implementation validation only. No Sync R6 physical parent bytes were available to the GitHub runner, so this does not constitute 9/9 parent verification, actual Recovery Qualification R2, package build, or physical I4H promotion.",
+  "authority_effect": "NONE",
+  "status": "PASS_BUILDER_COMPILE_AND_SELFTEST__ACTUAL_9_PARENT_EXECUTION_PENDING"
+}
