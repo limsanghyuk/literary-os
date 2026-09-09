@@ -7,8 +7,9 @@ Last updated: 2026-09-10
 3. `handoff/20260910/P07_I4I_R2_FRESH_REPLICATION_CLOSURE_AND_PHYSICAL_SYNC_R2_20260910.md`
 4. `handoff/20260910/P07_I4J_ENDPOINT_COVERAGE_AUDIT_RESULT_R1_20260910.json`
 5. `handoff/20260910/P07_I4J_FRESH_COVERAGE_ENDPOINT_VALIDATION_PREREG_R1_20260910.json`
-6. `handoff/CURRENT_NEXT_RESEARCH_POINTER.md`
-7. `handoff/20260909/START_HERE_P07_I4H_RECOVERY_R3_PHYSICAL_AUTHORITY_R1.md`
+6. `handoff/20260910/P07_I4J_RUNTIME_MINIMAL_PREFLIGHT_RECURRENCE_R2_20260910.md`
+7. `handoff/CURRENT_NEXT_RESEARCH_POINTER.md`
+8. `handoff/20260909/START_HERE_P07_I4H_RECOVERY_R3_PHYSICAL_AUTHORITY_R1.md`
 
 ## CURRENT DURABLE AUTHORITY
 Physical research-sync package authority:
@@ -69,13 +70,20 @@ Exact state:
 - Coverage Arms: 0
 - Blind Scores: 0
 
-## CURRENT RUNTIME INCIDENT
-At I4J execution start, the container/tool execution layer returned `TransportTimeoutError` twice consecutively, including for minimal `/bin/true`. A separate Python runtime probe also failed with the same transport error.
+## CURRENT RUNTIME INCIDENT — LATEST RECURRENCE
+Latest receipt:
+`handoff/20260910/P07_I4J_RUNTIME_MINIMAL_PREFLIGHT_RECURRENCE_R2_20260910.md`
+Commit `dcd805f2460c36018740e88b7e0b843c6cef7d5f`.
+
+On the latest user-requested resume attempt, three independent minimal process probes failed before any new output:
+- `/bin/true` -> `TransportTimeoutError`
+- `/bin/echo runtime_probe_2` -> `TransportTimeoutError`
+- `/usr/bin/env` -> `TransportTimeoutError`
 
 Classification:
-`PREOUTPUT_INFRA_BLOCK__NO_SCIENTIFIC_FAIL__NO_FRESH_OUTPUTS`.
+`PREOUTPUT_INFRA_BLOCK__MINIMAL_PROCESS_3_OF_3_TRANSPORT_TIMEOUT__NO_SCIENTIFIC_FAIL__NO_FRESH_OUTPUTS`.
 
-This recurrence does not invalidate the already delivered R2 physical packages, I4I results, I4J audit, or I4J preregistration.
+This recurrence does not invalidate the delivered R2 physical packages, I4I R1/R2 results, I4J audit, or I4J preregistration.
 
 Do not bypass the block by inventing provider/runtime receipts or producing an unsealed fresh Control outside the mandatory execution environment.
 
@@ -106,4 +114,4 @@ When runtime is healthy:
 - DB64 remains HOLD.
 
 ## STATUS TOKEN
-`RECOVERY_SYNC_R2__ACTIVE_I4H_RECOVERY_R3__I4I_R1_FAIL_0_2833__I4I_R2_FAIL_0_1667__I4J_AUDIT_COMPLETE__I4J_FRESH_PREREG_OUTPUTS_0__PREOUTPUT_INFRA_BLOCK_TRANSPORT_TIMEOUT__DB59_FROZEN__PRODUCTION_R47__FORMAL_137__R140_0_0_0`
+`RECOVERY_SYNC_R2__ACTIVE_I4H_RECOVERY_R3__I4I_R1_FAIL_0_2833__I4I_R2_FAIL_0_1667__I4J_AUDIT_COMPLETE__I4J_FRESH_PREREG_OUTPUTS_0__MINIMAL_PROCESS_3_OF_3_TRANSPORT_TIMEOUT_PREOUTPUT_BLOCK__DB59_FROZEN__PRODUCTION_R47__FORMAL_137__R140_0_0_0`
