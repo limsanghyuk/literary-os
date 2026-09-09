@@ -1,0 +1,63 @@
+{
+  "schema": "P07I4HRecoveryQualificationR2ImplementationCheckpointR1",
+  "date": "2026-09-09",
+  "experiment_id": "P07-I4H-RECOVERY-QUAL-R2",
+  "classification": "DEVELOPMENT_PREFORMAL__RECOVERY_QUALIFICATION_IMPLEMENTATION_CHECKPOINT__NO_EXECUTION",
+  "preregistration": {
+    "path": "handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_PREREG_R2_20260909.json",
+    "commit": "cc7561d9ea16ff1c50e3d9971eb027423ddd9433"
+  },
+  "implemented_test_suite": {
+    "path": "handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_R2/tests/test_p07_i4h_recovery_qualification_r2.py",
+    "commit": "edee28bb75443ef3055bc40f5cc27c537b716abd",
+    "declared_test_functions": 45,
+    "historical_test_body_reproduction": false,
+    "historical_42_of_42_claim": false
+  },
+  "coverage_families": [
+    "profile schema / missing-extra / integer range boundaries",
+    "deterministic ABSTAIN / LOW / STANDARD selector behavior",
+    "LOW / STANDARD / ABSTAIN revision constraints",
+    "external reliability missing-field / non-PASS / PASS validation",
+    "external craft missing / non-PASS / PASS validation",
+    "dialogue retention / character-ratio / foreign-script delta helpers",
+    "revision payload policy and exact-baseline carriage",
+    "baseline non-COMMIT no-revision behavior",
+    "ABSTAIN exact-baseline identity and one baseline pass",
+    "revision provider exception/status/claim failure fallback",
+    "explicit test-double admissibility only under allow_test_double",
+    "deterministic delta rejection fallback",
+    "external reliability rejection fallback",
+    "external craft rejection fallback",
+    "candidate commit only after all gates pass",
+    "episode missing-profile rejection",
+    "episode sequence/scene order preservation",
+    "Python literary-prose prohibition declarations",
+    "recovery-suite self-identification as new evidence"
+  ],
+  "separate_promotion_gates_not_executed_by_this_checkpoint": [
+    "direct SHA256/CRC/duplicate/unsafe verification of all nine Sync R6 parents",
+    "Sync R6 C2 reassembly verification",
+    "five frozen parent I4D file byte-identity verification",
+    "old I4D targeted regression 100% PASS",
+    "full nonhistorical regression >=213 PASS / 0 failures",
+    "new recovery suite pytest execution and actual pass count",
+    "new 5-Part/9-Package build",
+    "final nine-file physical audit and developer delivery"
+  ],
+  "execution_blocker": "Current container/private-Python/user-visible-Python execution transport returns TransportTimeoutError before filesystem operations, including minimal echo/stat/getsize probes.",
+  "scientific_boundary": "The implementation commit makes the new recovery test body durable, but no test has been executed in this checkpoint. It does not change the historical qualification result, developer-held physical authority, Production, formal count, R140 or I4I state.",
+  "authority_state": {
+    "developer_held_physical_authority": "Sync R6 / P07-I4D",
+    "hub_qualified_target": "P07-I4H",
+    "production": "ENG:R47",
+    "formal_scored_count": 137,
+    "latest_formal_authority": "R138",
+    "r140": [0, 0, 0],
+    "i4i_control": 0,
+    "i4i_selector": 0,
+    "i4i_treatment": 0,
+    "i4i_scores": 0
+  },
+  "status": "RECOVERY_QUAL_R2_TEST_BODY_IMPLEMENTED_AND_DURABLE__45_TEST_FUNCTIONS__NOT_EXECUTED__NO_RESULT__NO_AUTHORITY_CHANGE"
+}
