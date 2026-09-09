@@ -1,0 +1,64 @@
+{
+  "schema":"P07I4IR2WholeEpisodeFreshReplicationPreregR1",
+  "date":"2026-09-09",
+  "experiment_id":"P07-I4I-R2-WHOLE-EPISODE-FRESH-REPLICATION",
+  "classification":"DEVELOPMENT_PREFORMAL__VIRTUAL_PROVIDER_ANALOG__FRESH_SOURCE_FREE_REPLICATION",
+  "parent_physical_package_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R1__I4I_CLOSED_PRIMARY_FAIL",
+  "parent_package_set_material_sha256":"9eadb1f41feb47fdea210a1d5215e00884fcb03889d31368c27265973514af16",
+  "active_engine":"P07-I4H Recovery R3",
+  "db_authority":"DB59 frozen but no DB59/source-script free text in the fresh task",
+  "prior_result_boundary":{
+    "i4i_r1_verdict":"CLOSED__PRIMARY_GATE_FAIL__POSITIVE_SCENE_LEVEL_SIGNAL__NO_PROMOTION",
+    "i4i_r1_episode_delta":0.2833333333333332,
+    "rule":"R2 is a new prospective replication. R1 remains FAIL and is not pooled into a PASS claim."
+  },
+  "hypotheses":{
+    "H1":"On a fresh source-free whole episode, unchanged I4H conservative rerendering produces Treatment-Control whole-episode mean delta >= +0.30 with no integrity failure.",
+    "H2":"LOW and STANDARD interventions remain nonharmful at whole-episode scale while ABSTAIN remains byte-identical.",
+    "H3":"The surface-targeted mechanism is positive without loss on protected semantic/continuity axes."
+  },
+  "fresh_task_rule":"Create a completely new synthetic series/episode, different setting, characters, central problem, relationship geometry and scene material from I4I R1. Do not reuse Maru Station people, Night Maru festival, electrical-load plot, R1 dialogue, or R1 scene briefs.",
+  "plan_rule":"Before any Control prose, freeze Series State, Episode Synopsis, Sequence Plan and Scene Plan. Control and Treatment consume the exact same frozen plan byte-for-byte.",
+  "scale_floors":{"unicode_characters_per_episode":35000,"sequences":9,"scenes":45,"fixed_maximum":false},
+  "policy_lock":{
+    "selector_dimensions":["exposition_risk","procedural_pressure","social_texture","voice_specificity","already_playable","physicalizable_subtext"],
+    "decision_rule":"Use the existing I4H Recovery R3 selector unchanged; no threshold/routing edits from R1 are permitted.",
+    "ABSTAIN":"byte-identical Control",
+    "LOW":"existing Recovery R3 LOW constraints unchanged",
+    "STANDARD":"existing Recovery R3 STANDARD constraints unchanged",
+    "runtime_code_change_allowed":false
+  },
+  "generation_order":[
+    "Freeze fresh complete plan.",
+    "Generate Control once with I4H revision disabled and seal all scene/episode SHA256 values.",
+    "Only after Control seal, profile six dimensions and freeze selector decisions.",
+    "Generate Treatment using unchanged I4H Recovery R3 policy; every failed guard falls back to Control.",
+    "Seal Treatment and run masked same-agent Development/Preformal evaluation because independent human/OpenAI Live is unavailable in this environment.",
+    "Seal score hash before opening A/B map."
+  ],
+  "legacy_primary_gates_unchanged":{
+    "integrity":"all noncompensatory integrity gates PASS",
+    "episode_mean_delta":"Treatment-Control >= +0.30",
+    "episode_axis_nonloss":"Treatment >= Control on at least 9 of 12 axes",
+    "large_axis_regression":"no axis delta < -0.75",
+    "voice_social_guard":"voice and ensemble/social each >= -0.25",
+    "harmful_intervention_rate":"<=0.20 among LOW/STANDARD",
+    "abstain_identity":1.0,
+    "critical_failures":0
+  },
+  "secondary_mechanism_diagnostics":{
+    "improvement_target_axes":["subtext_and_physicalization","pacing_and_line_economy","scene_turns_and_episode_exit_pressure"],
+    "protection_axes":["character_and_relationship_consistency","thread_management_and_carry_forward","ensemble_and_social_texture","temporal_validity","long_horizon_sustainability_and_overclosure_control","character_voice_differentiation"],
+    "mixed_context_axes":["episode_structure_and_causal_progression","creativity_and_non_generic_specificity","comedy_melodrama_tonal_coexistence"],
+    "rule":"Secondary mechanism results cannot compensate for failure of the unchanged legacy primary gate."
+  },
+  "claim_boundary":{
+    "actual_openai_live":false,
+    "independent_human":false,
+    "formal_count_delta":0,
+    "production_change":false,
+    "active_engine_promotion":"not from R2 alone; requires all subsequent governance gates"
+  },
+  "outputs_before_execution":0,
+  "status":"PREREGISTERED__FRESH_PLAN_NOT_YET_FROZEN__CONTROL_0__TREATMENT_0__SCORES_0"
+}
