@@ -36,12 +36,6 @@ Commit `008b4e0681ff7068faf2cba63352d0512d658d99`.
 Verdict:
 `ENDPOINT_MISALIGNMENT_SIGNAL_CONFIRMED__COVERAGE_ALONE_INSUFFICIENT__FRESH_VALIDATION_REQUIRED`.
 
-Interpretation boundary:
-- equal-weight 12-axis averaging assigns half of endpoint weight to six protection axes whose intended job is nonloss;
-- R1/R2 intervention coverage is nearly identical (~42%) while whole-episode deltas differ materially;
-- effect intensity/content responsiveness matters in addition to coverage;
-- the future endpoint candidate cannot be adopted from retrospective evidence and cannot change R1/R2 verdicts.
-
 ## ACTIVE PROSPECTIVE RESEARCH
 Experiment:
 `P07-I4J-R1-FRESH-COVERAGE-ENDPOINT-VALIDATION`.
@@ -66,16 +60,29 @@ Locked design:
 10. Legacy 12-axis mean stays secondary in I4J and remains the historical primary for R1/R2 only.
 11. Endpoint adoption is forbidden from one I4J run; a later fresh replication/governance gate is required.
 
-## CURRENT EXECUTION BLOCK
-Current container/runtime preflight failed twice with `TransportTimeoutError`, including minimal `/bin/true`.
+## CURRENT EXECUTION BLOCK — RECURRENCE CONFIRMED
+Latest runtime recurrence receipt:
+`handoff/20260910/P07_I4J_RUNTIME_MINIMAL_PREFLIGHT_RECURRENCE_R2_20260910.md`
+Commit `dcd805f2460c36018740e88b7e0b843c6cef7d5f`.
 
-This is an external infrastructure block, not a scientific FAIL. Do not generate unsealed fresh literary outputs or simulate missing runtime receipts while the mandatory preflight is failing.
+On the latest requested resume attempt, three independent minimal process probes all returned `TransportTimeoutError` before any fresh I4J output:
+1. `/bin/true`
+2. `/bin/echo runtime_probe_2`
+3. `/usr/bin/env`
+
+Classification:
+`PREOUTPUT_INFRA_BLOCK__MINIMAL_PROCESS_3_OF_3_TRANSPORT_TIMEOUT__NO_SCIENTIFIC_FAIL__NO_FRESH_OUTPUTS`.
+
+Do not generate unsealed fresh literary outputs or simulate missing runtime receipts while this mandatory preflight is failing.
 
 Next exact operation when runtime becomes healthy:
-1. minimal process + filesystem + cgroup preflight;
-2. verify current R2 research-sync identities needed for execution;
-3. freeze fresh I4J Series/Episode/Sequence/Scene plan;
-4. only then create Control output 1.
+1. minimal process execution probe;
+2. filesystem read/write/stat probe;
+3. cgroup memory/OOM check;
+4. small archive/member read;
+5. verify current R2 research-sync identities needed for execution;
+6. freeze fresh I4J Series/Episode/Sequence/Scene plan;
+7. only then create Control output 1.
 
 ## SEPARATED OTHER TRACKS
 - Semantic Alignment Virtual R1: genuine OpenAI Live confirmation pending; not active.
@@ -89,4 +96,4 @@ Next exact operation when runtime becomes healthy:
 - actual OpenAI Live qualification: not established
 
 ## STATUS TOKEN
-`NEXT_RESEARCH_I4J_FRESH_COVERAGE_ENDPOINT_VALIDATION__PREREG_COMMIT_364E92C3__I4J_AUDIT_ENDPOINT_MISALIGNMENT_SIGNAL__R1_FAIL_0_2833__R2_FAIL_0_1667__ACTIVE_I4H_RECOVERY_R3__DB59_FROZEN__RUNTIME_TRANSPORT_TIMEOUT_PREOUTPUT_BLOCK__FORMAL_137__R140_0_0_0`
+`NEXT_RESEARCH_I4J_FRESH_COVERAGE_ENDPOINT_VALIDATION__PREREG_COMMIT_364E92C3__I4J_AUDIT_COMPLETE__R1_FAIL_0_2833__R2_FAIL_0_1667__ACTIVE_I4H_RECOVERY_R3__DB59_FROZEN__MINIMAL_PROCESS_3_OF_3_TRANSPORT_TIMEOUT_PREOUTPUT_BLOCK__FORMAL_137__R140_0_0_0`
