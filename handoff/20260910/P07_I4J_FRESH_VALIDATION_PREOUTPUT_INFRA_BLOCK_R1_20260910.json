@@ -1,0 +1,21 @@
+{
+  "schema":"P07I4JFreshValidationPreoutputInfraBlockR1",
+  "date":"2026-09-10",
+  "experiment_id":"P07-I4J-R1-FRESH-COVERAGE-ENDPOINT-VALIDATION",
+  "classification":"PREOUTPUT_INFRA_BLOCK__NO_SCIENTIFIC_FAIL__NO_FRESH_OUTPUTS",
+  "preregistration":"handoff/20260910/P07_I4J_FRESH_COVERAGE_ENDPOINT_VALIDATION_PREREG_R1_20260910.json",
+  "prereg_commit":"364e92c38772e6c78b1585b40eb6dc769eaebec9",
+  "parent_package_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R2__I4I_R2_CLOSED_PRIMARY_FAIL",
+  "parent_material_sha256":"6e630bf4039953bd7b9969735c87fe7f273e760aa0811ee6c0322c2ea74b3b84",
+  "observed_runtime_failures":[
+    "container execution request failed with TransportTimeoutError during initial I4J artifact inspection",
+    "minimal /bin/true failed with TransportTimeoutError",
+    "separate Python runtime probe failed with TransportTimeoutError",
+    "later minimal /bin/true retry failed with TransportTimeoutError"
+  ],
+  "fresh_output_counters":{"series_plan":0,"episode_synopsis":0,"sequence_plan":0,"scene_plan":0,"control":0,"selector":0,"revision_pool":0,"coverage_arms":0,"blind_scores":0},
+  "scientific_effect":"NONE; no hypothesis was tested and no I4J prospective outcome exists",
+  "prior_results_unchanged":{"I4I_R1":"PRIMARY_FAIL +0.2833333333333332","I4I_R2":"PRIMARY_FAIL +0.16666666666666607","I4J_audit":"ENDPOINT_MISALIGNMENT_SIGNAL_CONFIRMED__COVERAGE_ALONE_INSUFFICIENT__FRESH_VALIDATION_REQUIRED"},
+  "resume_order":["healthy minimal process probe","filesystem/cgroup preflight","verify current R2 research-sync identities needed for execution","freeze completely fresh Series/Episode/Sequence/Scene plan","Control once and seal","Selector freeze","single revision pool","deterministic ARM_0/ARM_50/ARM_100 assembly","masked scoring and unblind","post-regression","physical package impact and delivery"],
+  "status":"SEALED_PREOUTPUT_INFRA_BLOCK__WAIT_FOR_HEALTHY_RUNTIME"
+}
