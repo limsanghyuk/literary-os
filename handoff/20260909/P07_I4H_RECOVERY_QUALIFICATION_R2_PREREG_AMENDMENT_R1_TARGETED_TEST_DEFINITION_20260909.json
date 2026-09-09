@@ -1,0 +1,41 @@
+{
+  "schema": "P07I4HRecoveryQualificationR2PreregAmendmentR1TargetedTestDefinition",
+  "date": "2026-09-09",
+  "experiment_id": "P07-I4H-RECOVERY-QUAL-R2",
+  "parent_preregistration": "handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_PREREG_R2_20260909.json",
+  "classification": "PREEXECUTION_ADMINISTRATIVE_METHOD_AMENDMENT__NO_RESULT_SEEN__NO_AUTHORITY_CHANGE",
+  "reason": "The historical qualification records 26/26 old targeted tests but the exact historical test-body/list is not recoverable. Recovery R2 is new evidence and must not fabricate or relabel the missing historical 26-test set.",
+  "frozen_parent_i4d_files": {
+    "literary_os_runtime/surface_realization_mode.py": "06244a1a0c4876975067036784761f0620675fdbb347f6b40536bdd41db61cd9",
+    "literary_os_runtime/semantic_render_bridge.py": "342ba94f8503995079b9ddabc55b709ea38c7721112d6a396d643a8aad8985eb",
+    "literary_os_runtime/provider_backed_renderer.py": "e04befcd3b26bb4091d77dc35374e78ea30a84efa2af2fe47d8c565849c6b208",
+    "literary_os_runtime/semantic_episode_render_wiring.py": "f3ff441dc1221ca2a39cd9e1fb1239cdd26186156f5a53d1b599e79ed0188d99",
+    "literary_os_runtime/literary_surface_contract.py": "79fa25b8aed55cf64eeecc2591c59ab1be199bddc9f6a2209a3ede57857a1ce5"
+  },
+  "targeted_test_discovery_rule": {
+    "root": "tests",
+    "include_glob": "test_*.py recursively",
+    "exclude_paths_containing": ["history_p07_pre09", "test_p07_i4h_recovery_qualification_r2.py"],
+    "literal_needles_any": [
+      "surface_realization_mode",
+      "semantic_render_bridge",
+      "provider_backed_renderer",
+      "semantic_episode_render_wiring",
+      "literary_surface_contract",
+      "render_scene_provider_backed",
+      "materialize_renderer_input_from_semantic_scene",
+      "SurfaceRealizationModeR1"
+    ],
+    "selection": "Select a test file iff its UTF-8 source contains at least one literal needle. Sort selected paths lexicographically. The exact selected path list and SHA256 of each selected test file must be recorded before pytest execution.",
+    "minimum_selected_files": 1,
+    "gate": "All tests collected from every selected file must PASS. Any collection error, zero selected files, test failure, or execution error = HOLD/FAIL_CLOSED."
+  },
+  "historical_claim_boundary": {
+    "historical_26_of_26_label_reused": false,
+    "new_result_label": "R2_DETERMINISTIC_PARENT_TARGETED_REGRESSION",
+    "not_supported": "Exact reproduction of historical 26/26 targeted suite"
+  },
+  "full_regression_rule_unchanged": "Run all nonhistorical tests with tests/history_p07_pre09 excluded; require at least parent baseline 213 PASS and zero failures/new failures.",
+  "new_r2_test_rule_unchanged": "Execute all 45 implemented Recovery Qualification R2 tests; require 45/45 PASS.",
+  "status": "FROZEN_PREEXECUTION__TARGETED_DISCOVERY_RULE_DEFINED__NO_TEST_EXECUTION__NO_RESULT"
+}
