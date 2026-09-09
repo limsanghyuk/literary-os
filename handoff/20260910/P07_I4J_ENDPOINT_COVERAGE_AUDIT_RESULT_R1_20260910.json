@@ -1,0 +1,59 @@
+{
+  "schema":"P07I4JEndpointCoverageAuditResultR1",
+  "date":"2026-09-10",
+  "experiment_id":"P07-I4J-ENDPOINT-COVERAGE-AUDIT-R1",
+  "classification":"DEVELOPMENT_PREFORMAL__POSTHOC_KNOWLEDGE_ONLY__NO_RESULT_REWRITE",
+  "prereg_commit":"a5a861fbb0f7d66716cf1d84c8d07cb1ae6612cd",
+  "R1":{
+    "legacy_overall_delta":0.2833333333333332,
+    "target_axis_mean":0.7666666666666666,
+    "protection_axis_mean":0.05000000000000071,
+    "mixed_axis_mean":0.2666666666666666,
+    "weighted_reconstruction":0.28333333333333366,
+    "reconstruction_matches":true,
+    "target_attenuation_ratio":0.3695652173913042,
+    "coverage":0.42857142857142855,
+    "intervened_scene_mean_craft_delta":0.48750000000000004,
+    "coverage_x_scene_craft_proxy":0.20892857142857146,
+    "protection_all_nonloss":true,
+    "candidate_future_endpoint_retrospective_status":"WOULD_MEET_CANDIDATE_ENDPOINT_BUT_R1_REMAINS_FAIL"
+  },
+  "R2":{
+    "legacy_overall_delta":0.16666666666666607,
+    "target_axis_mean":0.5,
+    "protection_axis_mean":0.0167,
+    "mixed_axis_mean":0.1333,
+    "weighted_reconstruction_rounded":0.166675,
+    "reconstruction_consistent_with_reported_rounding":true,
+    "target_attenuation_ratio":0.33333333333333215,
+    "coverage":0.42,
+    "weighted_intervened_scene_mean_craft_delta":0.3976190476190476,
+    "coverage_x_scene_craft_proxy":0.16699999999999998,
+    "protection_all_nonloss":true,
+    "candidate_future_endpoint_retrospective_status":"WOULD_MEET_CANDIDATE_ENDPOINT_BUT_R2_REMAINS_FAIL"
+  },
+  "cross_run_findings":{
+    "coverage_rate_difference_absolute":0.008571428571428563,
+    "legacy_overall_delta_difference_absolute":0.11666666666666714,
+    "finding_1":"Both runs place about 42% of scenes under LOW/STANDARD intervention, so coverage rate alone cannot explain the substantial R1-versus-R2 whole-episode delta difference.",
+    "finding_2":"The weighted intervened-scene craft effect is lower in R2 than R1, consistent with effect intensity/content responsiveness contributing materially in addition to coverage.",
+    "finding_3":"Equal-weight 12-axis aggregation assigns 50% of total endpoint weight to six protection axes whose intended role is nonloss, not positive gain. This mechanically attenuates a conservative surface intervention's directly targeted gains.",
+    "finding_4":"R1 and R2 both show positive improvement-target means, nonloss protection, zero harmful intervention, and failure of the legacy +0.30 all-axis aggregate. This pattern is consistent across two episodes but is not sufficient to adopt a new endpoint because the endpoint candidate was formulated after observing these studies."
+  },
+  "future_endpoint_candidate":{
+    "name":"SURFACE_RESPONSE_WITH_PROTECTION_GATE_R1",
+    "primary_target_axis_mean_threshold":0.30,
+    "protection_axis_mean_floor":-0.10,
+    "individual_protection_floor":-0.50,
+    "voice_floor":-0.25,
+    "ensemble_social_floor":-0.25,
+    "mixed_context_mean_floor":-0.10,
+    "individual_mixed_floor":-0.50,
+    "critical_failures":0,
+    "legacy_12_axis_mean":"secondary_descriptive_only_during_fresh_validation",
+    "adoption_status":"NOT_ADOPTED__FRESH_PROSPECTIVE_VALIDATION_REQUIRED"
+  },
+  "audit_verdict":"ENDPOINT_MISALIGNMENT_SIGNAL_CONFIRMED__COVERAGE_ALONE_INSUFFICIENT__FRESH_VALIDATION_REQUIRED",
+  "prior_verdicts_unchanged":{"R1":"PRIMARY_FAIL","R2":"PRIMARY_FAIL"},
+  "claim_boundary":{"promotion":false,"formal_count_delta":0,"runtime_change":false,"new_generation":false,"statistical_generalization_from_n2":false}
+}
