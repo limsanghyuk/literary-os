@@ -1,0 +1,45 @@
+{
+  "schema": "P07I4IPostFailMechanismDiagnosticResultR1",
+  "experiment_id": "P07-I4I-POSTFAIL-MECHANISM-DIAGNOSTIC-R1",
+  "classification": "DEVELOPMENT_PREFORMAL__POSTHOC_KNOWLEDGE_ONLY__NO_PROMOTION",
+  "source_result_sha256": "6c2ecc6ddd3ebc79ed12b377083af20223e312efbd771a9ce71e5f9c12353b8e",
+  "frozen_prior_verdict": "CLOSED__PRIMARY_GATE_FAIL__POSITIVE_SCENE_LEVEL_SIGNAL__NO_PROMOTION",
+  "prior_episode_delta": 0.2833333333333332,
+  "legacy_primary_gate": 0.3,
+  "partition_metrics": {
+    "improvement_target_axes": {
+      "axes": ["subtext_and_physicalization", "pacing_and_line_economy", "scene_turns_and_episode_exit_pressure"],
+      "deltas": {"subtext_and_physicalization": 0.7999999999999998, "pacing_and_line_economy": 0.8000000000000007, "scene_turns_and_episode_exit_pressure": 0.6999999999999993},
+      "mean_delta": 0.7666666666666666,
+      "minimum_delta": 0.6999999999999993,
+      "maximum_delta": 0.8000000000000007
+    },
+    "protection_axes": {
+      "axes": ["character_and_relationship_consistency", "thread_management_and_carry_forward", "ensemble_and_social_texture", "temporal_validity", "long_horizon_sustainability_and_overclosure_control", "character_voice_differentiation"],
+      "deltas": {"character_and_relationship_consistency": 0.10000000000000142, "thread_management_and_carry_forward": 0.0, "ensemble_and_social_texture": 0.10000000000000142, "temporal_validity": 0.0, "long_horizon_sustainability_and_overclosure_control": 0.10000000000000142, "character_voice_differentiation": 0.0},
+      "mean_delta": 0.05000000000000071,
+      "minimum_delta": 0.0,
+      "maximum_delta": 0.10000000000000142
+    },
+    "mixed_context_axes": {
+      "axes": ["episode_structure_and_causal_progression", "creativity_and_non_generic_specificity", "comedy_melodrama_tonal_coexistence"],
+      "deltas": {"episode_structure_and_causal_progression": 0.3000000000000007, "creativity_and_non_generic_specificity": 0.39999999999999947, "comedy_melodrama_tonal_coexistence": 0.09999999999999964},
+      "mean_delta": 0.2666666666666666,
+      "minimum_delta": 0.09999999999999964,
+      "maximum_delta": 0.39999999999999947
+    }
+  },
+  "weighted_reconstruction_12_axis_delta": 0.28333333333333366,
+  "weighted_reconstruction_matches_prior": true,
+  "intervention_coverage": {"intervened_scenes": 24, "total_scenes": 56, "rate": 0.42857142857142855},
+  "intervened_scene_mean_craft_delta": 0.48750000000000004,
+  "protection_all_nonloss": true,
+  "diagnostic_verdict": "MECHANISM_CONSISTENT_WITH_CONSERVATIVE_SURFACE_EFFECT",
+  "interpretation": {
+    "target_axis_mean_delta": 0.7666666666666666,
+    "protection_axis_mean_delta": 0.05000000000000071,
+    "mixed_axis_mean_delta": 0.2666666666666666,
+    "statement": "The frozen R1 effect is concentrated on predeclared surface-target axes while protected semantic/continuity axes remain nonloss. This explains arithmetic dilution of the 12-axis mean but does not change the R1 FAIL."
+  },
+  "claim_boundary": {"changes_r1_verdict": false, "promotion_claim": false, "causal_new_generation": false, "knowledge_only": true}
+}
