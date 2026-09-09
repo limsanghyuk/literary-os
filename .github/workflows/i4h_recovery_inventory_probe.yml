@@ -1,0 +1,22 @@
+name: I4H Recovery Inventory Probe
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  regenerate-inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install project
+        run: pip install -e ".[dev]" --break-system-packages || pip install -e ".[dev]"
+      - name: Generate official test inventory
+        run: |
+          python tools/generate_test_inventory.py
+          echo '---BEGIN_RECOVERY_TEST_INVENTORY---'
+          cat tools/test_inventory.json
+          echo '---END_RECOVERY_TEST_INVENTORY---'
