@@ -1,0 +1,42 @@
+{
+  "schema": "P07DB64CandidateQualificationPreregR1",
+  "date": "2026-09-09",
+  "classification": "DEVELOPMENT_PREFORMAL_DATABASE_CANDIDATE_QUALIFICATION__NO_FORMAL_COUNT_DELTA",
+  "experiment_id": "P07_DB64_9CONTRACT_CONSUMER_QUALIFICATION_R1",
+  "status_at_seal": "PREREGISTERED__NO_NEW_DB64_QUALIFICATION_OUTPUTS",
+  "active_physical_authority": "CURRENT_PHYSICAL_AUTHORITY__P07_I4H_FAIL_CLOSED_RUNTIME_RECOVERY_R3",
+  "semantic_alignment_candidate_boundary": "P07_SEMANTIC_CONTRACT_ALIGNMENT_VIRTUAL_R1 is separate and not used as Live-qualified authority in this data experiment",
+  "control_database": {"authority":"DB59_FROZEN","sha256":"a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9"},
+  "candidate_inputs": [
+    {"role":"PILOT_INDIVIDUAL_WORK","filename":"SIKGAEK_CLEAN_CONSUMER_READY_CANDIDATE_R1_20260909_FINAL_SEALED.zip","work":"식객"},
+    {"role":"DB64_CANDIDATE","filename":"DB64_POST_CITY_HUNTER_SIKGAEK_CONSUMER_READY_CANDIDATE_R1_20260909_FINAL_SEALED.zip"},
+    {"role":"LEARNING_BUNDLE_9CONTRACT","filename":"DRAMA_ANALYSIS_ONLY_LEARNING_BUNDLE_DB64_SIKGAEK_R51_R131_BRIDGED_CONSUMER_READY_CANDIDATE_9CONTRACT_20260909_FINAL_SEALED.zip"}
+  ],
+  "frozen_guidance_sha256":"d28acb7d01edce1f8fe0302ac0fc177d090fdca522a0e6e3a085c1aea4f8e6bc",
+  "purpose":"Determine whether the reinforced DB64/9-Contract candidate is structurally trustworthy, authority-safe, consumer-routable, and ready for an isolated engine adoption pilot without replacing DB59 prematurely.",
+  "research_questions":[
+    "Are the individual work, cumulative DB64, and Learning Bundle physically intact and exactly paired where they claim shared bytes/authority?",
+    "Are the 9 Contracts implemented as separated Canonical(C1-C5), Consumer(A1-A2), and Governance(G1-G2) layers rather than decorative fields?",
+    "Do known implementation risk areas C3, C5, A1, G1, and G2 satisfy the frozen machine requirements strongly enough for engine consumption?",
+    "Can selected evidence mutation change the routed packet/provider-facing semantic payload while an unrelated unselected mutation remains invariant?",
+    "Does any candidate metadata falsely promote A2 or CONSUMER_READY_A without engine causal evidence?"
+  ],
+  "pilot_work":"식객",
+  "hard_integrity_gates":{"outer_sha256_sealed":true,"zip_crc":"PASS_REQUIRED","duplicate_paths":0,"unsafe_paths":0,"symlinks":0,"encrypted_entries":0,"json_jsonl_parse_errors":0,"cross_package_pairing":"PASS_REQUIRED"},
+  "nine_contract_machine_requirements":{
+    "C1":"decision/transformation meaning must support a writer decision, not only summarize content",
+    "C2":"scope/granularity must be identifiable at the appropriate series/episode/sequence/scene/character/relationship/group layer",
+    "C3":"state representation must preserve more than an undifferentiated before->after when trigger/carry/next-constraint is materially needed",
+    "C4":"DIRECT_SOURCE_AUTHORED vs DERIVED_EVIDENCE vs RUNTIME_PROJECTION must remain distinguishable",
+    "C5":"epistemic status must be distinguishable from owner/cast grounding; SUPPORTED/PARTIAL/UNKNOWN/NO_EVIDENCE semantics must not be faked",
+    "A1":"routing packet must support planning_question,target_consumer,execution_stage,selected_views,selected_record_ids,selection_reason,provenance",
+    "A2":"may not PASS from field existence; requires selected mutation adoption plus irrelevant-unselected invariance through consumer/provider-facing payload trace",
+    "G1":"db_authority_id,schema_version,canonical_or_derived,source_cutoff,episode_cutoff/version binding must be available at execution boundary",
+    "G2":"failure_type,observed_layer,responsible_ancestor,repair_scope,protected_scope,repair_action,post_repair_result must be representable in repair evidence"
+  },
+  "causal_adoption_pilot":{"control":"unaltered frozen SIKGAEK candidate consumer packet","selected_mutation":"one actually selected evidence value is altered without changing identifiers or routing question; packet/provider-facing semantic payload must change","unselected_mutation":"one unrelated unselected evidence value is altered; selected packet/provider-facing semantic payload must remain byte-identical","no_llm_generation_required":true,"python_literary_prose_generation_forbidden":true},
+  "decision_policy":{"QUALIFIED_FOR_ENGINE_PILOT":"all hard integrity/pairing gates pass; C1-C5/A1/G1/G2 are sufficiently machine-consumable; A2 mutation/invariance harness passes; no false promotion claim","HOLD_FOR_DATA_REPAIR":"candidate bytes are intact but a contract implementation gap blocks reliable routing/adoption/governance","REJECT_INTEGRITY":"hash/CRC/path/parse/pairing evidence fails","A2_PENDING":"integrity and static contract quality pass but the causal adoption harness cannot be validly executed from available candidate artifacts"},
+  "forbidden":["modify DB59","promote DB64 to active authority during this qualification","mix Semantic Alignment virtual candidate effects into DB64 causal claims","invent missing 9-Contract fields after seeing failures","treat semantic-quality A as Consumer-Ready A without A2 evidence","use future target episode source as hidden answer key"],
+  "formal_state_frozen":{"production":"ENG:R47","formal_scored_count":137,"latest_formal":"R138","R140":"0/0/0","I4I":"0/0/0/0"},
+  "prereg_file_sha256":"40b1e050e308b5a9195b738592d3dc5d7a78bb54a6a479ee6b313b607509cbaf"
+}
