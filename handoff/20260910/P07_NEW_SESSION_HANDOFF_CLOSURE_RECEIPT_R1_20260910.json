@@ -1,0 +1,27 @@
+{
+  "schema":"P07NewSessionHandoffClosureReceiptR1",
+  "date":"2026-09-10",
+  "status":"CLOSED_FOR_NEW_SESSION_RECOVERY",
+  "documents":{
+    "detailed_master_r1":{"path":"handoff/20260910/START_HERE_P07_NEW_SESSION_MASTER_HANDOFF_R1_20260910.md","commit":"3b115bf6e82557e23ee7994cfd05ba2559c15a53"},
+    "failure_playbook_r1":{"path":"handoff/20260910/P07_FAILURE_INCIDENT_RESPONSE_PLAYBOOK_R1_20260910.md","commit":"6244b7f5e87af4205076e9c9113d2c594c4e9d8a"},
+    "recovery_manifest_r1":{"path":"handoff/20260910/P07_NEW_SESSION_RECOVERY_MANIFEST_R1_20260910.json","commit":"4fa35dc3adb8aa36f18a5a30e579ae11c1506b5e","status":"SUPERSEDED_FOR_RUNTIME_RECEIPT_PATH_METADATA_BY_R2"},
+    "current_master_r2":{"path":"handoff/20260910/START_HERE_P07_NEW_SESSION_MASTER_HANDOFF_R2_20260910.md","commit":"ee9fb5bfdc7e29daafc8a250191f85c327ccbeb9"},
+    "current_recovery_manifest_r2":{"path":"handoff/20260910/P07_NEW_SESSION_RECOVERY_MANIFEST_R2_20260910.json","commit":"baa498f0be368985c53b1ee1ff818feed4f1b52f"},
+    "developer_study_guide_r1":{"path":"handoff/20260910/P07_NEW_SESSION_DEVELOPER_STUDY_GUIDE_R1_20260910.md","commit":"1f32685a0038976eb27adcf5285d7b58b46fb6bc"}
+  },
+  "pointer_updates":{
+    "CURRENT_HANDOFF_POINTER":{"latest_commit":"37ffb2c0fd8ca8ea3498ab7309e085d45f5fbf04","content_sha":"b973badc55a7f5ac21ce630e902da8b73e9d9b46"},
+    "CURRENT_SESSION_RECOVERY_POINTER":{"latest_commit":"e159dc4a5c5b68f8d6173df353bc2cad2ccc19b1","content_sha":"38ab8643876ea2fbec73c5a2ab1de3ad40ee971f"},
+    "CURRENT_NEXT_RESEARCH_POINTER":{"latest_commit":"a3732e15b88eba5bd292540dc5cad628cd9f0e0f","content_sha":"55dfbcbd3b9867d7aae045821d30a3212bc50fa8"}
+  },
+  "runtime_receipt":{"path":"handoff/20260910/P07_I4J_RUNTIME_MINIMAL_PREFLIGHT_RECURRENCE_R2_20260910.md","commit":"dcd805f2460c36018740e88b7e0b843c6cef7d5f"},
+  "current_physical_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R2__I4I_R2_CLOSED_PRIMARY_FAIL",
+  "current_nine_file_material_sha256":"6e630bf4039953bd7b9969735c87fe7f273e760aa0811ee6c0322c2ea74b3b84",
+  "active_engine":"P07-I4H Recovery R3",
+  "db_authority":"DB59",
+  "active_research":"P07-I4J-R1-FRESH-COVERAGE-ENDPOINT-VALIDATION",
+  "active_research_outputs":{"fresh_plan":0,"control":0,"selector":0,"revision_pool":0,"coverage_arms":0,"blind_scores":0},
+  "active_block":"PREOUTPUT_INFRA_BLOCK__MINIMAL_PROCESS_3_OF_3_TRANSPORT_TIMEOUT__NO_SCIENTIFIC_FAIL__NO_FRESH_OUTPUTS",
+  "next_session_instruction":"Open CURRENT_HANDOFF_POINTER.md, then follow Master Handoff R2 and the Developer Study Guide. Do not generate fresh I4J outputs until mandatory runtime preflight passes."
+}
