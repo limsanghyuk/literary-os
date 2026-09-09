@@ -1,0 +1,23 @@
+{
+  "schema":"P07I4IR2ExecutionAdapterAmendmentR1",
+  "date":"2026-09-10",
+  "experiment_id":"P07-I4I-R2-WHOLE-EPISODE-FRESH-REPLICATION",
+  "timing":"AFTER_CONTROL_SEAL__BEFORE_ANY_SELECTOR_PROFILE_OR_TREATMENT",
+  "control_sha256":"d7596872d95375bc613372e07d3b5abafedd85bbba8a32f4fd34ad6fbd22d497",
+  "control_unicode_chars":35738,
+  "selector_outputs_at_amendment":0,
+  "treatment_outputs_at_amendment":0,
+  "scores_at_amendment":0,
+  "finding":"The frozen R2 Scene Plan preserves scene_id, sequence_id, location, time, participants, scene_function, turn, exit_state and thread_ids, but does not contain every REQUIRED_SCENE_FIELDS anchor demanded by the current SemanticSceneToRendererBridge (goal, obstacle, physical_action, information_change, relationship_change, subtext_requirement). Therefore a full semantic-bridge Provider-Analog replay cannot be honestly claimed without post-Control invention of missing semantic anchors.",
+  "execution_boundary":[
+    "Do not modify the frozen plan after Control seal.",
+    "Do not invent missing semantic anchors from the sealed Control.",
+    "Do not claim full SemanticSceneToRendererBridge or full i4h_runtime_renderer execution for R2.",
+    "Use the unchanged I4H Recovery R3 six-dimensional selector function and unchanged ABSTAIN/LOW/STANDARD revision constraints directly on the sealed Control scenes.",
+    "Run deterministic integrity/reliability guards; any failed intervention must fall back byte-identically to its Control scene.",
+    "Primary/secondary thresholds, masking, evaluation rubric and claim boundary remain unchanged.",
+    "This adapter amendment cannot improve, relax or reinterpret the preregistered +0.30 primary threshold."
+  ],
+  "scientific_effect":"NO_THRESHOLD_CHANGE__NO_SELECTOR_CHANGE__NO_TREATMENT_RULE_CHANGE__CLAIM_SCOPE_NARROWED_ONLY",
+  "status":"SEALED_BEFORE_SELECTOR"
+}
