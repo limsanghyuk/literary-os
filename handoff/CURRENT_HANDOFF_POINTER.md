@@ -2,26 +2,29 @@
 Last updated: 2026-09-09
 
 Current new-session handoff:
-`handoff/20260909/START_HERE_P07_DEVELOPER_HELD_SYNC_R6_CUMULATIVE_RECOVERY_R1.md`
+`handoff/20260909/START_HERE_P07_I4H_RECOVERY_R3_PHYSICAL_AUTHORITY_R1.md`
 
-Mandatory authority correction / cumulative recovery document:
-`handoff/20260909/P07_DEVELOPER_DELIVERY_BASELINE_CORRECTION_AND_CUMULATIVE_RECOVERY_R1_20260909.md`
-Commit `76264d5a35f2dd52845203150df6db8ec45e6552`.
+Closure commit:
+`87a75f2129d9c4a3633fb1077953eb51baeee9f9`
 
 Authority rule:
-- the last actual developer-held physical 5-Part / 9-Package set is Sync R6 supplied at the beginning of this section;
-- physical active engine inside that developer-held baseline is P07-I4D;
-- session-internal Sync R7/R8 builds were not delivered as all nine files and therefore are not developer-held physical authorities;
-- post-delivery I4H R3/R4 research, I4H runtime implementation/qualification and I4I preregistration/11-sequence/56-scene plan are durable on GitHub;
-- P07-I4H is a Hub-qualified next-physical-authority candidate, not yet developer-held physical authority;
-- next developer deliverable must be built cumulatively as Sync R9 directly from exact Sync R6 nine files + Hub deltas in a healthy writable runtime;
-- no further research execution until that physical package is built, audited and delivered;
-- Production = ENG:R47; DB59 frozen; Formal count = 137; R140 = 0/0/0.
+- the exact developer-held Sync R6 5-Part / 9-Package baseline was directly reverified 9/9;
+- the recovered developer-delivered active-development physical authority is now `CURRENT_PHYSICAL_AUTHORITY__P07_I4H_FAIL_CLOSED_RUNTIME_RECOVERY_R3`;
+- Recovery R2 exact-parent execution is preserved as HOLD `44/45`, not rewritten as PASS;
+- corrective Recovery R3 passed `45/45` new, `56/56` deterministic parent-targeted and `258/258` full nonhistorical regression;
+- independent second-pass final-C2 rematerialization also passed `258/258`;
+- package-set SHA256 is `9327630e8fc8c9b88a8233055b939e08ab5d3726a777b44122bb6682a8c436f8`;
+- combined recovered C2 SHA256 is `58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7`;
+- DB59 remains frozen at `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`;
+- Production remains `ENG:R47`; formal scored count `137`; latest formal `R138`; R140 `0/0/0`; I4I `0/0/0/0`.
 
 Read order:
 1. this pointer;
-2. `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`;
+2. `handoff/20260909/START_HERE_P07_I4H_RECOVERY_R3_PHYSICAL_AUTHORITY_R1.md`;
 3. `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`;
-4. `handoff/20260909/START_HERE_P07_DEVELOPER_HELD_SYNC_R6_CUMULATIVE_RECOVERY_R1.md`;
-5. `handoff/20260909/P07_DEVELOPER_DELIVERY_BASELINE_CORRECTION_AND_CUMULATIVE_RECOVERY_R1_20260909.md`;
-6. `handoff/20260908/START_HERE_P07_SYNC_R6_PHYSICAL_AUTHORITY_NEW_SESSION_HANDOFF_R1.md`.
+4. `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`;
+5. `handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_PREREG_R2_20260909.json`;
+6. `handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_R2_PREREG_AMENDMENT_R1_TARGETED_TEST_DEFINITION_20260909.json`;
+7. `handoff/20260908/START_HERE_P07_SYNC_R6_PHYSICAL_AUTHORITY_NEW_SESSION_HANDOFF_R1.md`.
+
+Do not use the older Sync R8/Sync R9 packaging narrative as a substitute for this exact Sync R6-based Recovery R3 physical closure. Historical session-internal Sync R8 was not the developer-held parent used for this recovery.
