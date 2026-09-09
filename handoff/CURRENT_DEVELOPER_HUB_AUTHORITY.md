@@ -1,290 +1,210 @@
 # CURRENT DEVELOPER HUB AUTHORITY
 Last updated: 2026-09-09
 
-## CRITICAL HUB STORAGE BOUNDARY
-The developer GitHub hub does **not** store the nine Sync R6 ZIP/BIN transport bytes themselves.
-
-What is durable on Hub is the authority/evidence needed to identify and reconstruct them safely: exact filenames, sizes, SHA256 values, historical CRC/path-safety results, combined-C2 identity, DB59 identity, research lineage, I4H runtime delta, recovery qualification code and recovery checkpoints.
-
-Default-branch recursive Git tree inspection found zero exact Sync R6 physical binary paths. Historical I4D result-tree inspection also did not recover the frozen I4D parent runtime materialization as ordinary GitHub source paths.
-
-Dedicated storage audit:
-`handoff/20260909/P07_SYNC_R6_PHYSICAL_BYTES_HUB_STORAGE_AUDIT_R1_20260909.json`
-Commit `4a36230bcb34979e07a31bda1de2cbd914ee6f69`.
-
-Correct statement:
-`HUB_HAS_AUTHORITY_AND_EVIDENCE__NOT_THE_9_PHYSICAL_PACKAGE_BYTES`.
-
-Do not state that the 9 physical packages were loaded into GitHub unless future direct GitHub asset/file storage verification proves that separately.
-
-## DEVELOPER-HELD PHYSICAL PACKAGE AUTHORITY
+## 1. DEVELOPER-HELD PHYSICAL AUTHORITY
+Current developer-held completed physical package authority remains:
 `LITERARY_OS_SYNC_R6_I4H_VIRTUAL_PRETEST_20260908`
 
-This remains the last complete **5 Parts / 9 transport files** package set actually supplied to and held by the developer as a completed authority set.
-
-The historical session-internal Sync R7 and Sync R8 builds were not handed back to the developer as all nine files and are not developer-held physical authorities. They may be used only as reconstruction references.
-
-Mandatory correction / cumulative recovery document:
-`handoff/20260909/P07_DEVELOPER_DELIVERY_BASELINE_CORRECTION_AND_CUMULATIVE_RECOVERY_R1_20260909.md`
-Commit `76264d5a35f2dd52845203150df6db8ec45e6552`.
-
-Current I4H physical recovery build specification:
-`handoff/20260909/P07_I4H_PHYSICAL_RECOVERY_BUILD_SPEC_R1_20260909.md`
-Commit `abe3801582441e07031261c52c0b39c9dbf2ab65`.
-
-## DEVELOPER-HELD PHYSICAL ENGINE STATE
-Physical active authority inside Sync R6:
-`CURRENT_PHYSICAL_AUTHORITY__P07_I4D_SURFACE_REALIZATION_MODES_R1`
-
-Developer-held combined C2 baseline:
-- SHA256 `9878aac8532e9f1eb6b16ef4c84bcfe6be90b58a49ecf0f6afaabe993fad3be7`
-- bytes `318351029`
-- entries `3765`
-- CRC PASS.
-
-DB59 frozen SHA256:
-`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
+Physical active engine inside that authority remains:
+`CURRENT_PHYSICAL_AUTHORITY__P07_I4D_SURFACE_REALIZATION_MODES_R1`.
 
 Production remains `ENG:R47`.
 Formal scored count remains `137`.
 Latest formal authority remains `R138`.
 Formal R140 remains `0/0/0`.
+I4I remains `Control/Selector/Treatment/Scores = 0/0/0/0`.
 OpenAI Live qualification is not established.
 
-## CURRENT CONVERSATION PARENT-FILE SUPPLY / DIRECT VERIFICATION
-The developer supplied all nine exact Sync R6 parent transport files in this conversation:
-CONTROL / PART A / PART B1 / PART B2 / PART C1 / PART C2-A / PART C2-B / PART D1 / PART D2.
+## 2. HUB STORAGE BOUNDARY
+The GitHub Hub does **not** store the nine Sync R6 ZIP/BIN transport bytes themselves.
 
-Before the execution-transport failure, direct byte verification completed for CONTROL and PART A:
-- exact expected Sync R6 SHA256 matched;
-- CRC PASS;
-- duplicate paths 0;
-- unsafe paths 0.
+It does store the authority/evidence required to identify and rebuild them safely:
+- exact 9-file names / byte lengths / SHA256 identities;
+- historical CRC / duplicate-path / unsafe-path audit results;
+- combined Sync R6 C2 identity;
+- frozen DB59 identity;
+- I4H R1-R4 research lineage;
+- durable I4H runtime source delta;
+- historical runtime qualification result;
+- Recovery Qualification R2 preregistration, new 45-test body and preflight result;
+- deterministic targeted-regression amendment;
+- fail-closed physical Recovery Builder and its self-test result.
 
-The remaining seven supplied files have not yet received trustworthy current-session direct byte verification.
+Dedicated storage audit:
+`handoff/20260909/P07_SYNC_R6_PHYSICAL_BYTES_HUB_STORAGE_AUDIT_R1_20260909.json`.
 
-Current local execution diagnosis:
-- private Python -> `TransportTimeoutError`;
-- user-visible Python -> `TransportTimeoutError`;
-- container shell -> `TransportTimeoutError`;
-- failures occur even for minimal `/bin/true`, `echo`, `stat`, `getsize` before package processing.
+Correct statement:
+`HUB_STORES_AUTHORITY_EVIDENCE_AND_RECOVERY_CODE__NOT_9_PARENT_PACKAGE_BYTES`.
 
-Therefore the current blocker is:
+## 3. FROZEN SYNC R6 PARENT IDENTITIES
+- CONTROL `c291e9a3866de66fae625ab899139a13f1e98468a3bff0d58a11fd34553f0aa6`
+- A `25eb489d07e78a3a3288e1e5029114ce791ada2ab43a8564ae9f9eed738306dd`
+- B1 `00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98`
+- B2 `40de0853fd8e1e8318658d64a4e8d26cb8e88711842639aa45b87c0e4d062c02`
+- C1 `dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518`
+- C2-A `b775bf65cba23ad5611b3383678765f88c1a444d25c4b49f7ccfb5a9d2438ec9`
+- C2-B `be4af1ac97467e1f090c8cd0854e14df1ffef6699ed23b0a80014f55e197e860`
+- D1 `a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504`
+- D2 `c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4`.
+
+Combined parent C2 must be exact `C2-A || C2-B`:
+- bytes `318351029`;
+- entries `3765`;
+- SHA256 `9878aac8532e9f1eb6b16ef4c84bcfe6be90b58a49ecf0f6afaabe993fad3be7`;
+- historical CRC PASS / duplicate 0 / unsafe 0.
+
+DB59 frozen SHA256:
+`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
+
+## 4. CURRENT CONVERSATION PHYSICAL INPUT STATUS
+All nine Sync R6 parents were supplied earlier in this conversation.
+
+Direct current-session verification completed before execution-transport failure:
+- CONTROL: expected SHA / CRC / path-safety PASS;
+- PART A: expected SHA / CRC / path-safety PASS.
+
+Current direct verification remains `2/9`.
+The remaining seven have not been directly reverified because local container/private-Python/user-visible-Python execution currently returns `TransportTimeoutError` even for minimal filesystem-independent probes such as `/bin/true`.
+
+This is not evidence of package corruption.
+
+Current blocker:
 `EXECUTION_TRANSPORT_TIMEOUT__NO_TRUSTWORTHY_BYTE_ADDRESSABLE_LOCAL_RUNTIME`.
 
-This is **not** evidence of package corruption.
+## 5. I4H RESEARCH STATE RECOVERED ON HUB
+- I4H R1: HOLD before generation — input/source contamination; no craft claim.
+- I4H R2: HOLD before selector — durable Control multiplicity/transport defect; no craft claim.
+- I4H R3: PASS — stronger-virtual prospective craft signal.
+- I4H R4: PASS — fresh source-free masked physical replication.
+- Historical I4H Runtime Qualification: recorded PASS 42/42 new, 26/26 targeted, 255/255 full nonhistorical regression, frozen parent I4D files 5/5 byte-identical, critical accepts 0.
 
-Correct physical status:
-`ALL_9_SYNC_R6_PARENTS_WERE_SUPPLIED_IN_CONVERSATION__2_OF_9_DIRECT_BYTE_VERIFIED__7_OF_9_DIRECT_VERIFICATION_PENDING_BYTE_ACCESS`.
-
-## HUB-QUALIFIED POST-DELIVERY I4H RESEARCH STATE
-### I4H prospective craft research
-- R1: pre-generation contamination HOLD; no craft claim.
-- R2: preselector control multiplicity/transport HOLD; no craft claim.
-- R3: stronger-virtual prospective craft signal PASS; Method Audit Closure `17e33163a519edb68bcc80c4970ebb255d4b0c51`.
-- R4: fresh source-free masked replication PASS; result `16773b5ad9a97ca709f0476d227c4a04fa60909d`.
-  - sample 21 = ABSTAIN7 / LOW7 / STANDARD7;
-  - interventions Treatment7 / Control0 / Tie7;
-  - nonloss 100%, harmful 0%, mean delta +0.32699;
-  - STANDARD 7/7 wins, mean +0.42699;
-  - LOW relational-subtext positive nonloss signal, mean +0.227, voice loss 0.
-
-Correct research classification:
+Correct classification:
 `P07-I4H = HUB-QUALIFIED NEXT-PHYSICAL-AUTHORITY CANDIDATE`.
 
 It is not yet developer-held physical authority.
 
-## HISTORICAL I4H RUNTIME QUALIFICATION AND RECOVERY DEFECT
-Historical runtime qualification preregistration:
-`ac7202ac7743252ac1bb8b0ac50cb84287b7dfcd`.
-
-Historical qualification result:
-`8fa611b801118ecf2b703cf1f41288c6a7e84bcc`.
-
-Recorded historical qualification:
-- new tests 42/42 PASS;
-- old targeted tests 26/26 PASS;
-- full nonhistorical regression 255/255 PASS = parent 213 + new 42;
-- frozen parent I4D files 5/5 byte-identical;
-- critical failure accepts 0;
-- Python literary prose generation false.
-
-Durable runtime source modules remain on Hub:
-- `handoff/20260909/P07_I4H_RUNTIME_PROMOTION_DELTA_R1/literary_os_runtime/i4h_intervention_policy.py`
-- `handoff/20260909/P07_I4H_RUNTIME_PROMOTION_DELTA_R1/literary_os_runtime/i4h_runtime_renderer.py`
-- `handoff/20260909/P07_I4H_RUNTIME_PROMOTION_DELTA_R1/literary_os_runtime/i4h_episode_render_wiring.py`.
-
-Historical qualification records identify:
+## 6. HISTORICAL TEST-BODY RECOVERY DEFECT
+Historical qualification identified:
 `tests/test_p07_i4h_runtime_promotion.py`
 - bytes `15130`;
 - SHA256 `9b7ef43744dfe094b2b1d1ec850c8712ba38a1f450a11c689ff43215f01fbf7a`.
 
-The exact historical test-body source is not currently rediscoverable in GitHub tree/history searched, File Library index, or connected Google Drive search.
+Its exact source body is not currently durable/discoverable.
+Therefore exact historical Sync R8 reproduction and exact historical `42/42` rerun must not be claimed.
 
-Correct defect classification:
-`MISSING_EXACT_I4H_QUALIFICATION_TEST_BODY`.
-
-The historical PASS remains durable historical evidence, but exact historical 42-test rerun / exact old Sync R8 C2 byte reproduction must not be claimed from an invented replacement.
-
-## RECOVERY QUALIFICATION R2 — NEW EVIDENCE, NOT HISTORICAL REPRODUCTION
-A new recovery qualification path was preregistered before implementation:
-- path `handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_PREREG_R2_20260909.json`;
-- commit `cc7561d9ea16ff1c50e3d9971eb027423ddd9433`.
+## 7. RECOVERY QUALIFICATION R2 — NEW EVIDENCE PATH
+Preregistration:
+`handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_PREREG_R2_20260909.json`
+Commit `cc7561d9ea16ff1c50e3d9971eb027423ddd9433`.
 
 New test body:
-- path `handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_R2/tests/test_p07_i4h_recovery_qualification_r2.py`;
-- implementation commit `edee28bb75443ef3055bc40f5cc27c537b716abd`;
-- 45 explicit test functions.
+`handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_R2/tests/test_p07_i4h_recovery_qualification_r2.py`
+Commit `edee28bb75443ef3055bc40f5cc27c537b716abd`.
+Contains `45` explicit tests.
 
-Implementation checkpoint:
-- `handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_R2_IMPLEMENTATION_CHECKPOINT_R1_20260909.json`;
-- commit `bef90190b20e0e15d25ea0e3e32ff1c2ee435962`.
-
-Because local execution is unavailable, a GitHub-hosted implementation preflight was executed using the exact three durable I4H source modules with only parent dependencies stubbed for the harness.
-
-Preflight result:
-- workflow run `34307097376`;
-- job `102325943807`;
-- `45 passed / 0 failed / 1 warning`;
-- duration `0.14s`;
-- durable result path `handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_R2_IMPLEMENTATION_PREFLIGHT_RESULT_R1_20260909.json`;
+Stubbed-parent implementation preflight:
+- 45/45 PASS / 0 fail;
 - result commit `77329ceef66a4a293bc0aaf1e61e24019ff6f40b`.
 
-Correct interpretation:
-`R2 IMPLEMENTATION PREFLIGHT = PASS 45/45 UNDER STUBBED PARENT DEPENDENCIES`.
+This is implementation preflight only, not exact-Sync-R6 qualification.
 
-It is **not** exact Sync R6 materialization qualification, historical 42/42 reproduction, old targeted regression, full nonhistorical regression, 5/5 parent-I4D byte-identity proof, nine-package integrity proof, or physical promotion evidence.
+### Deterministic targeted-regression rule
+Because the historical 26-test targeted list is not recoverable, a preexecution amendment was frozen before actual R2 execution:
+`handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_R2_PREREG_AMENDMENT_R1_TARGETED_TEST_DEFINITION_20260909.json`
+Commit `ab36d5b818f1745204467fe5f85632937c2a0c10`.
 
-Inspection of historical I4D result commit `d1fef19e8f4c07a0266f17f2307e734fd50ea587` / tree `57c0caaf4d2277aad5cac3f20010140eba57e996` did not recover the frozen parent runtime source files as ordinary GitHub paths. Non-stubbed R2 execution therefore still requires the physical Sync R6 package materialization.
+The new R2 targeted suite will be discovered deterministically from the exact parent materialization by selecting all nonhistory test files that reference the five frozen I4D modules/core symbols, sealing selected-file SHA256 before execution, and requiring every collected test PASS.
+The historical `26/26` label will not be reused.
 
-Actual Recovery Qualification R2 remains pending exact Sync R6 materialization and the preregistered promotion gates.
+## 8. FAIL-CLOSED PHYSICAL RECOVERY BUILDER — READY
+Builder:
+`handoff/20260909/P07_I4H_PHYSICAL_RECOVERY_BUILDER_R1.py`
+Commit `b414af65b9bf0777c7d03800ebc265549ae7f2e7`.
 
-## REPOSITORY CI MAINTENANCE CLOSURE
-The repository CI had a pre-existing Phase-A Exit EA-6 failure caused by stale `tools/test_inventory.json`, not by the I4H R2 handoff test body.
+Builder implementation validation:
+`handoff/20260909/P07_I4H_PHYSICAL_RECOVERY_BUILDER_SELFTEST_RESULT_R1_20260909.json`
+Commit `fbb2afe65a03ce69ac12b2d54729499e2b660f2a`.
 
-Official generator refresh:
-- test_count `11503`;
-- generated_at `2026-09-09T03:25:54.602045+00:00`;
-- pytest `9.1.1`;
-- source_hash `34d9309c196cf604`.
+GitHub-hosted runner validation:
+- Python `py_compile` PASS;
+- Builder `--self-test` -> `SELF_TEST_PASS`;
+- workflow run `34308855331`, job `102331094936`.
 
-Inventory refresh commit:
-`13c6d617560100c1a552f99517082affcff56346`.
+The temporary self-test workflow was removed after the result was sealed; removal commit `cfed324e865e015c983d36da9129a04e4d0cd628`.
 
-Post-refresh CI 4-Tier run `34307265615` completed `success`.
+### Builder gates
+The Builder refuses output promotion if any of the following fails:
+1. exact 9/9 Sync R6 outer byte-length/SHA verification;
+2. parent ZIP CRC / duplicate=0 / unsafe=0;
+3. parent C2 `C2-A || C2-B` identity;
+4. durable Hub I4H source hashes;
+5. five frozen I4D runtime file hashes;
+6. Recovery R2 `45/45` tests;
+7. deterministic parent-targeted regression 100% PASS;
+8. full nonhistorical regression `>=213 PASS / 0 failure`;
+9. output C2 audit/reassembly;
+10. final 9-package physical audit.
 
-Temporary recovery workflows were removed after their results were sealed:
-- inventory probe removal commit `ebfa2fe6bf178bd7c093a97f0f9b00cef05918f2`;
-- R2 preflight workflow removal commit `87b3f0522a680c303e124caf14a768c15fed79a5`.
+## 9. NEW I4H PHYSICAL RECOVERY TARGET
+Target new active-development authority after fresh audit and developer delivery:
+`CURRENT_PHYSICAL_AUTHORITY__P07_I4H_FAIL_CLOSED_RUNTIME_RECOVERY_R2`.
 
-This CI maintenance has no I4H scientific-authority effect.
+Package topology remains 5 logical Parts / 9 physical transport files.
 
-## I4H-ONLY PHYSICAL RECOVERY TARGET
-The developer's immediate recovery scope remains through I4H.
-
-Must rebuild/change from exact Sync R6:
+Must rebuild/change:
 - CONTROL;
-- PART A;
-- PART B2;
-- PART C2-A / C2-B after exact parent C2 reassembly and authorized I4H runtime/qualification overlay.
+- A;
+- B2;
+- C2-A / C2-B from a newly built combined C2.
 
-Must remain byte-identical:
-- PART B1;
-- PART C1;
-- PART D1;
-- PART D2.
+Must remain byte-identical to exact Sync R6 parent:
+- B1;
+- C1;
+- D1;
+- D2.
 
-Historical session-internal Sync R8 is reconstruction reference only:
-- target behavior `CURRENT_PHYSICAL_AUTHORITY__P07_I4H_FAIL_CLOSED_RUNTIME_R1`;
-- reference combined C2 bytes `318364190`;
-- entries `3771`;
-- SHA256 `eb49afacc0ef0377fc619e33c01603fe69ffcdc7d242a041a5a1d2c26c0d3ef0`;
-- reference physical closure commit `2af29e335789aee7b72461d3bac3323cb79d6805`.
+The recovered build is a **new Recovery R2 physical authority**, not a byte-identical reproduction of historical session-internal Sync R8.
 
-A fresh recovered authority need not reproduce historical Sync R8 outer ZIP hashes. It must prove exact Sync R6 parent identity, authorized member-level I4H delta, successful new recovery qualification, unchanged-parent byte identity, C2/DB59 integrity and complete new nine-file physical audit.
+## 10. EXACT NEXT EXECUTION
+Once the nine exact Sync R6 parents are available in any trustworthy byte-addressable runtime:
 
-## I4I RESEARCH UNIT — LATER / UNEXECUTED
-I4I preregistration `e4bb3a9571db87c7553b183c8a39c3bdb498a143` and the frozen 11-sequence / 56-scene plan remain durable.
+```bash
+python handoff/20260909/P07_I4H_PHYSICAL_RECOVERY_BUILDER_R1.py \
+  --parent-dir /path/to/SYNC_R6_9_PARENTS \
+  --hub-root /path/to/literary-os \
+  --out-dir /path/to/LITERARY_OS_I4H_RECOVERY_R2_OUTPUT
+```
 
-I4I exact execution state:
-- Control outputs 0;
-- selector decisions 0;
-- Treatment outputs 0;
-- blind scores 0;
-- no I4I result claim.
+Only a Builder output whose sidecar
+`LITERARY_OS_I4H_RECOVERY_R2_FINAL_PHYSICAL_AUDIT_R1_20260909.json`
+has `overall_pass=true` may be delivered and promoted as developer-held physical I4H authority.
 
-Do not execute I4I until the I4H physical recovery package is built, audited and delivered.
+## 11. I4I HARD BOUNDARY
+Do not execute I4I before I4H physical recovery is built, audited and delivered.
+I4I remains plan-frozen with 11 sequences / 56 scenes and zero outputs/scores.
 
-## RECOVERY SUFFICIENCY / CURRENT BLOCKERS
-Research-state recovery from Hub: **YES**.
-
-Nine package binary bytes stored on GitHub Hub: **NO**.
-
-All exact Sync R6 parent files were supplied in current conversation earlier: **YES**.
-
-Current trustworthy byte-addressable access to all nine conversation files: **NO — local execution transport failure**.
-
-Current direct physical verification: **2/9**.
-
-R2 new test body durable: **YES**.
-
-R2 stubbed-parent implementation preflight: **45/45 PASS**.
-
-Actual R2 qualification against exact Sync R6: **NOT YET EXECUTED**.
-
-Therefore physical I4H recovery remains blocked by:
-1. trustworthy byte-addressable access to all nine exact Sync R6 parent files;
-2. completion of 9/9 SHA/CRC/path-safety and parent-C2 verification;
-3. actual R2 qualification/regression against exact parent materialization;
-4. final 5-Part/9-Package build and audit.
-
-## HARD RESEARCH FREEZE
-Do not execute I4I Control, Treatment, scoring or later research before I4H physical recovery is completed, audited and delivered.
-
-## NEXT EXACT OPERATION
-1. Obtain a trustworthy byte-addressable copy of all nine exact Sync R6 parents.
-2. Verify 9/9 outer SHA256 / CRC / duplicate=0 / unsafe=0.
-3. Reassemble exact `C2-A || C2-B` and verify 318351029 bytes / SHA256 `9878aac8532e9f1eb6b16ef4c84bcfe6be90b58a49ecf0f6afaabe993fad3be7` / 3765 entries / CRC PASS.
-4. Materialize exact Sync R6/I4D parent runtime.
-5. Overlay exact durable I4H runtime sources + R2 suite.
-6. Execute all 45 R2 tests and require 100% PASS.
-7. Execute old targeted regression and require 100% PASS.
-8. Execute full nonhistorical regression and require >=213 PASS / 0 fail.
-9. Verify frozen parent I4D files 5/5 byte-identical and critical failure accepts 0.
-10. Build CONTROL/A/B2/C2 and preserve B1/C1/D1/D2 byte-identically.
-11. Produce transport C2-A/C2-B according to the frozen transport split rule.
-12. Audit all nine output packages, combined C2 and DB59.
-13. Deliver all nine output files to the developer.
-14. Only then update developer-held physical authority to P07-I4H.
-15. Only afterward address I4I parent binding and resume I4I.
-
-## CLAIM BOUNDARY
+## 12. CURRENT CLAIM BOUNDARY
 Supported now:
-- the Hub does not store the 9 Sync R6 package bytes;
-- it does store their authority/evidence identities and recovery logic;
-- all nine Sync R6 parents were supplied earlier in this conversation;
-- CONTROL/A were directly verified before execution transport failure;
-- I4H R1/R2/R3/R4 and historical runtime qualification lineage are durable;
-- historical qualification test-body reproducibility defect is identified;
-- new R2 recovery qualification was preregistered before implementation;
-- new R2 test body contains 45 tests;
-- R2 stubbed-parent implementation preflight passed 45/45;
-- repository CI inventory defect was repaired and CI 4-Tier returned to success;
-- I4H remains Hub-qualified next physical candidate;
-- I4I remains frozen/unexecuted.
+- research/experiment state through I4H is recovered;
+- I4H runtime delta is durable;
+- Recovery R2 45-test implementation exists and stubbed-parent preflight passed 45/45;
+- deterministic targeted rule is preregistered;
+- fail-closed physical Builder is implemented and self-tested;
+- repository CI inventory defect was repaired and CI returned to success;
+- all nine parent identities are frozen and known;
+- all nine parents were supplied earlier in the current conversation;
+- CONTROL/A current-session direct verification passed before execution failure.
 
-Not supported now:
-- GitHub storage of the 9 physical Sync R6 binaries;
-- current-session 9/9 direct physical verification;
-- actual R2 qualification against exact Sync R6;
-- newly built/audited/delivered I4H 9-file package set;
+Not yet supported:
+- current-session 9/9 direct parent verification;
+- actual Recovery R2 against exact Sync R6 materialization;
+- newly built/audited/delivered I4H 9-package set;
 - developer-held physical I4H authority;
-- exact historical Sync R8 byte reproduction;
-- I4I result;
 - Production change;
 - formal-count change;
 - R140 start;
+- I4I result;
 - OpenAI Live qualification.
 
 ## STATUS TOKEN
-`DEVELOPER_HUB__SYNC_R6_I4D_DEVELOPER_HELD__HUB_AUTHORITY_EVIDENCE_ONLY_NO_9_BINARY_BYTES__ALL_9_WERE_SUPPLIED_IN_CONVERSATION__2_OF_9_DIRECT_BYTE_VERIFIED__LOCAL_EXECUTION_TRANSPORT_TIMEOUT__I4H_R1_HOLD_R2_HOLD_R3_PASS_R4_PASS_HISTORICAL_RUNTIME_QUAL_PASS__HISTORICAL_TEST_BODY_MISSING__RECOVERY_R2_45_TESTS_IMPLEMENTED__STUBBED_PARENT_PREFLIGHT_45_OF_45_PASS__CI_4TIER_GREEN_AFTER_INVENTORY_REPAIR__ACTUAL_SYNC_R6_QUAL_PENDING__I4H_PHYSICAL_9_PACKAGE_BUILD_PENDING__I4I_0_0_0_0__FORMAL_137__R140_0_0_0`
+`SYNC_R6_I4D_DEVELOPER_HELD__HUB_AUTHORITY_EVIDENCE_RECOVERED__9_PARENT_BYTES_NOT_HUB_STORED__2_OF_9_DIRECT_VERIFIED__LOCAL_EXECUTION_TRANSPORT_TIMEOUT__I4H_R3_R4_PASS_HISTORICAL_RUNTIME_QUAL_PASS__RECOVERY_R2_45_TESTS_IMPLEMENTED_PREFLIGHT_PASS__TARGETED_RULE_PREREGISTERED__FAIL_CLOSED_PHYSICAL_BUILDER_READY_SELFTEST_PASS__ACTUAL_9_PARENT_BUILDER_EXECUTION_PENDING__I4H_9_PACKAGE_OUTPUT_PENDING__I4I_0_0_0_0__FORMAL_137__R140_0_0_0`
