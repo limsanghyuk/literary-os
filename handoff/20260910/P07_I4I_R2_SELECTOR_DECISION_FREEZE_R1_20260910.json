@@ -1,0 +1,13 @@
+{
+  "schema":"P07I4IR2SelectorDecisionFreezeHubReceiptR1",
+  "date":"2026-09-10",
+  "experiment_id":"P07-I4I-R2-WHOLE-EPISODE-FRESH-REPLICATION",
+  "control_sha256":"d7596872d95375bc613372e07d3b5abafedd85bbba8a32f4fd34ad6fbd22d497",
+  "selector_ledger_sha256":"5fccb3e0965dc291d9d68462e159e169988c1de219b6a45f668e5b01b5996475",
+  "counts":{"ABSTAIN":29,"LOW":12,"STANDARD":9},
+  "policy":"UNCHANGED_I4H_RECOVERY_R3_SELECT_I4H_INTERVENTION_R1",
+  "treatment_outputs_at_seal":0,
+  "scores_at_seal":0,
+  "status":"FROZEN_BEFORE_TREATMENT",
+  "local_artifact":"P07_I4I_R2_EXECUTION_EVIDENCE_20260909/I4I_R2_SELECTOR_DECISION_FREEZE_R1.json"
+}
