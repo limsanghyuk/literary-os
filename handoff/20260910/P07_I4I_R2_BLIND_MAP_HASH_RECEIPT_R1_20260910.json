@@ -1,0 +1,10 @@
+{
+  "schema":"P07I4IR2BlindMapHashReceiptR1",
+  "date":"2026-09-10",
+  "experiment_id":"P07-I4I-R2-WHOLE-EPISODE-FRESH-REPLICATION",
+  "map_sha256":"063fdebfac967630b5e96d4e63c381557b14d197552ad25db927c9c3428969e1",
+  "mapping_opened":false,
+  "scores_at_receipt":0,
+  "evaluation_boundary":"MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__POLICY_BLINDNESS_NOT_INDEPENDENTLY_PROVABLE",
+  "status":"SEALED_BEFORE_SCORE"
+}
