@@ -1,0 +1,81 @@
+{
+  "schema": "P07SyncR6PhysicalBytesHubStorageAuditR1",
+  "date": "2026-09-09",
+  "purpose": "Distinguish durable authority/evidence records from actual 5-Part/9-Package binary transport bytes in the developer GitHub hub.",
+  "hub_repository": "limsanghyuk/literary-os",
+  "developer_held_package_set": "LITERARY_OS_SYNC_R6_I4H_VIRTUAL_PRETEST_20260908",
+  "logical_structure": [
+    "CONTROL",
+    "PART A",
+    "PART B1",
+    "PART B2",
+    "PART C1",
+    "PART C2-A",
+    "PART C2-B",
+    "PART D1",
+    "PART D2"
+  ],
+  "expected_physical_files": [
+    {"logical_part":"CONTROL","filename":"LITERARY_OS_CURRENT_CONTROL_P07_I4H_VIRTUAL_PRETEST_SYNC_R6_20260908.zip","bytes":108635838,"sha256":"c291e9a3866de66fae625ab899139a13f1e98468a3bff0d58a11fd34553f0aa6"},
+    {"logical_part":"A","filename":"LITERARY_OS_CURRENT_PART_A_P07_I4H_VIRTUAL_PRETEST_SYNC_R6_20260908.zip","bytes":123051563,"sha256":"25eb489d07e78a3a3288e1e5029114ce791ada2ab43a8564ae9f9eed738306dd"},
+    {"logical_part":"B1","filename":"LITERARY_OS_CURRENT_PART_B1_UNCHANGED_R1_20260908.zip","bytes":196427036,"sha256":"00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98"},
+    {"logical_part":"B2","filename":"LITERARY_OS_CURRENT_PART_B2_P07_I4H_VIRTUAL_PRETEST_SYNC_R6_20260908.zip","bytes":255155288,"sha256":"40de0853fd8e1e8318658d64a4e8d26cb8e88711842639aa45b87c0e4d062c02"},
+    {"logical_part":"C1","filename":"LITERARY_OS_CURRENT_C1_RUNTIME_CORE_UNCHANGED_R1_20260908.zip","bytes":140020974,"sha256":"dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518"},
+    {"logical_part":"C2-A","filename":"LITERARY_OS_CURRENT_C2_BINARY_A_P07_PHASE0_R3_I4H_VIRTUAL_SYNC_R6_20260908.bin","bytes":159175515,"sha256":"b775bf65cba23ad5611b3383678765f88c1a444d25c4b49f7ccfb5a9d2438ec9"},
+    {"logical_part":"C2-B","filename":"LITERARY_OS_CURRENT_C2_BINARY_B_P07_PHASE0_R3_I4H_VIRTUAL_SYNC_R6_20260908.bin","bytes":159175514,"sha256":"be4af1ac97467e1f090c8cd0854e14df1ffef6699ed23b0a80014f55e197e860"},
+    {"logical_part":"D1","filename":"LITERARY_OS_CURRENT_PART_D1_DB59_UNCHANGED_R1_20260908.zip","bytes":138011573,"sha256":"a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504"},
+    {"logical_part":"D2","filename":"LITERARY_OS_CURRENT_PART_D2_DB59_UNCHANGED_R1_20260908.zip","bytes":173393886,"sha256":"c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4"}
+  ],
+  "combined_c2": {
+    "assembly_order": "C2-A || C2-B",
+    "bytes": 318351029,
+    "sha256": "9878aac8532e9f1eb6b16ef4c84bcfe6be90b58a49ecf0f6afaabe993fad3be7",
+    "entries": 3765,
+    "crc_pass_historical_audit": true
+  },
+  "db59_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+  "hub_default_branch_tree_audit": {
+    "tree_commit_at_audit": "4cf8a0397934e83b0bb5fdb06fb9beee563dfcb4",
+    "exact_control_binary_path_matches": 0,
+    "sync_r6_virtual_pretest_binary_path_matches": 0,
+    "finding": "The GitHub default-branch tree contains no actual Sync R6 9-package ZIP/BIN transport files. References to these filenames occur only in text/json authority, audit, handoff, and recovery documents."
+  },
+  "historical_i4d_commit_tree_check": {
+    "i4d_result_commit": "d1fef19e8f4c07a0266f17f2307e734fd50ea587",
+    "tree_sha": "57c0caaf4d2277aad5cac3f20010140eba57e996",
+    "frozen_parent_runtime_source_paths_found": false,
+    "finding": "The frozen I4D parent runtime source files required by I4H imports are not durable as ordinary GitHub source paths in the inspected historical tree; they were materialized inside the physical package authority."
+  },
+  "current_conversation_file_search": {
+    "physical_audit_json_found": true,
+    "direct_nine_binary_file_refs_returned_by_file_search": false,
+    "note": "File Search identifies the final physical audit record containing all 9 filenames/hashes, but does not expose the nine binary package bytes as GitHub-stored or container-addressable files."
+  },
+  "current_local_execution": {
+    "container_bin_true": "TransportTimeoutError",
+    "private_python": "TransportTimeoutError",
+    "user_visible_python": "TransportTimeoutError",
+    "classification": "NO_TRUSTWORTHY_BYTE_ADDRESSABLE_LOCAL_RUNTIME"
+  },
+  "what_is_durable_on_hub": [
+    "Sync R6 package topology",
+    "expected outer bytes and SHA256 values",
+    "historical CRC/path-safety audit results",
+    "combined C2 identity",
+    "DB59 identity",
+    "I4H R1-R4 research lineage",
+    "I4H durable runtime source delta (3 files)",
+    "historical runtime qualification result",
+    "new Recovery Qualification R2 preregistration and 45-test implementation",
+    "R2 stubbed-parent implementation preflight 45/45 PASS"
+  ],
+  "what_is_not_durable_on_hub": [
+    "the nine Sync R6 ZIP/BIN transport bytes themselves",
+    "a newly rebuilt I4H 5-Part/9-Package physical set",
+    "exact historical I4H 42-test body",
+    "the frozen I4D parent runtime materialization required for non-stubbed R2 execution"
+  ],
+  "required_recovery_boundary": "No physical I4H promotion may occur until a trustworthy byte-addressable copy of all nine exact Sync R6 parents is available, verified 9/9, combined C2 is reassembled and verified, Recovery Qualification R2 is executed against the exact parent materialization, required regressions pass, and a new full nine-file physical audit is sealed.",
+  "authority_effect": "NONE",
+  "status": "HUB_STORES_AUTHORITY_AND_EVIDENCE_NOT_9_PACKAGE_BYTES__PHYSICAL_RECOVERY_INPUT_BYTES_REQUIRED"
+}
