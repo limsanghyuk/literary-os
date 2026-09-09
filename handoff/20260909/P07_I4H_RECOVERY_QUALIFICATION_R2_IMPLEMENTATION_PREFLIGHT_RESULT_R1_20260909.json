@@ -1,0 +1,60 @@
+{
+  "schema": "P07I4HRecoveryQualificationR2ImplementationPreflightResultR1",
+  "date": "2026-09-09",
+  "experiment_id": "P07-I4H-RECOVERY-QUAL-R2",
+  "classification": "IMPLEMENTATION_PREFLIGHT_ONLY__STUBBED_PARENT_DEPENDENCIES__NEW_RECOVERY_EVIDENCE__NOT_PHYSICAL_QUALIFICATION",
+  "preregistration": {
+    "commit": "cc7561d9ea16ff1c50e3d9971eb027423ddd9433",
+    "path": "handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_PREREG_R2_20260909.json"
+  },
+  "test_implementation": {
+    "commit": "edee28bb75443ef3055bc40f5cc27c537b716abd",
+    "path": "handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_R2/tests/test_p07_i4h_recovery_qualification_r2.py",
+    "declared_test_functions": 45
+  },
+  "remote_execution": {
+    "workflow_file_commit": "f545c36dcfd60180eee652184965a41eab68591f",
+    "workflow_run_id": 34307097376,
+    "job_id": 102325943807,
+    "runner": "GitHub-hosted Ubuntu 24.04 / Python 3.10",
+    "result": "PASS",
+    "pytest": {
+      "passed": 45,
+      "failed": 0,
+      "warnings": 1,
+      "duration_seconds": 0.14
+    }
+  },
+  "exact_i4h_sources_used": [
+    "handoff/20260909/P07_I4H_RUNTIME_PROMOTION_DELTA_R1/literary_os_runtime/i4h_intervention_policy.py",
+    "handoff/20260909/P07_I4H_RUNTIME_PROMOTION_DELTA_R1/literary_os_runtime/i4h_runtime_renderer.py",
+    "handoff/20260909/P07_I4H_RUNTIME_PROMOTION_DELTA_R1/literary_os_runtime/i4h_episode_render_wiring.py"
+  ],
+  "stubbed_parent_dependencies": [
+    "trace.py",
+    "verified_runtime.py",
+    "provider_backed_renderer.py",
+    "semantic_render_bridge.py"
+  ],
+  "what_this_supports": [
+    "the newly preregistered 45-test R2 test body is syntactically executable",
+    "the durable three I4H runtime source modules can be imported and exercised against the declared test contract",
+    "the test harness covers the preregistered internal profile/selector/fail-closed/episode-wiring behaviors under controlled parent stubs"
+  ],
+  "what_this_does_not_support": [
+    "exact Sync R6 materialization qualification",
+    "historical 42/42 reproduction",
+    "old targeted I4D regression",
+    "full nonhistorical regression",
+    "five parent I4D file byte identity",
+    "nine-package byte integrity",
+    "combined C2 reconstruction",
+    "physical I4H promotion",
+    "Production promotion",
+    "formal-count change",
+    "R140 start or result",
+    "I4I execution or result"
+  ],
+  "authority_effect": "NONE",
+  "status": "PASS_45_OF_45_STUBBED_PARENT_IMPLEMENTATION_PREFLIGHT__ACTUAL_RECOVERY_QUALIFICATION_PENDING_EXACT_SYNC_R6_MATERIALIZATION"
+}
