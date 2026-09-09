@@ -1,0 +1,42 @@
+{
+  "schema":"P07I4JEndpointCoverageAuditPreregR1",
+  "date":"2026-09-10",
+  "experiment_id":"P07-I4J-ENDPOINT-COVERAGE-AUDIT-R1",
+  "classification":"DEVELOPMENT_PREFORMAL__POSTHOC_KNOWLEDGE_ONLY__NO_RESULT_REWRITE",
+  "parent_package_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R2__I4I_R2_CLOSED_PRIMARY_FAIL",
+  "parent_package_set_material_sha256":"6e630bf4039953bd7b9969735c87fe7f273e760aa0811ee6c0322c2ea74b3b84",
+  "active_engine":"P07-I4H Recovery R3",
+  "db_authority":"DB59 frozen",
+  "frozen_prior_results":{
+    "R1":{"verdict":"CLOSED__PRIMARY_GATE_FAIL__POSITIVE_SCENE_LEVEL_SIGNAL__NO_PROMOTION","whole_episode_delta":0.2833333333333332,"coverage":0.42857142857142855,"target_axis_mean":0.7666666666666666,"protection_axis_mean":0.05000000000000071,"mixed_axis_mean":0.2666666666666666,"intervened_scene_mean_craft_delta":0.48750000000000004},
+    "R2":{"verdict":"CLOSED__PRIMARY_GATE_FAIL__FRESH_REPLICATION_POSITIVE_NONHARMFUL_SIGNAL__NO_PROMOTION","whole_episode_delta":0.16666666666666607,"coverage":0.42,"target_axis_mean":0.5,"protection_axis_mean":0.0167,"mixed_axis_mean":0.1333,"LOW_n":12,"LOW_mean_scene_craft_delta":0.3008333333333333,"STANDARD_n":9,"STANDARD_mean_scene_craft_delta":0.5266666666666666}
+  },
+  "frozen_axis_partition":{
+    "improvement_target_axes":["subtext_and_physicalization","pacing_and_line_economy","scene_turns_and_episode_exit_pressure"],
+    "protection_axes":["character_and_relationship_consistency","thread_management_and_carry_forward","ensemble_and_social_texture","temporal_validity","long_horizon_sustainability_and_overclosure_control","character_voice_differentiation"],
+    "mixed_context_axes":["episode_structure_and_causal_progression","creativity_and_non_generic_specificity","comedy_melodrama_tonal_coexistence"]
+  },
+  "questions":[
+    "Does equal-weight averaging of all 12 axes attenuate a conservative surface intervention because half of the axes are protection rather than improvement targets?",
+    "Are R1 and R2 consistent with a positive target-axis effect plus nonloss protection pattern despite both failing the legacy +0.30 all-axis mean?",
+    "Is intervention coverage alone sufficient to explain R1-versus-R2 whole-episode effect magnitude?",
+    "What future-only endpoint should be prospectively validated without rewriting R1/R2?"
+  ],
+  "locked_computations":[
+    "For each run, reconstruct legacy overall delta as 0.25*target_mean + 0.50*protection_mean + 0.25*mixed_mean.",
+    "Compute target attenuation ratio = legacy_overall_delta / target_axis_mean.",
+    "Compute intervention coverage and, where available, weighted intervened-scene craft mean.",
+    "Do not infer statistical significance from n=2 whole episodes.",
+    "Do not alter any prior verdict or threshold."
+  ],
+  "future_endpoint_candidate_to_audit":{
+    "name":"SURFACE_RESPONSE_WITH_PROTECTION_GATE_R1",
+    "candidate_primary":"mean delta of the 3 improvement-target axes >= +0.30",
+    "protection_gate":["critical_failures=0","all 6 protection axes >= -0.50","character_voice_differentiation >= -0.25","ensemble_and_social_texture >= -0.25","protection-axis mean >= -0.10"],
+    "context_gate":["mixed-context mean >= -0.10","no mixed-context axis < -0.50"],
+    "legacy_12_axis_mean":"retain as secondary descriptive endpoint during future validation",
+    "status":"CANDIDATE_ONLY__NOT_ADOPTED_UNTIL_FRESH_PROSPECTIVE_VALIDATION"
+  },
+  "claim_boundary":{"changes_R1_verdict":false,"changes_R2_verdict":false,"promotion":false,"formal_count_delta":0,"runtime_code_change":false,"new_literary_generation":false},
+  "status":"PREREGISTERED_BEFORE_I4J_AUDIT_COMPUTATION"
+}
