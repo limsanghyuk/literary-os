@@ -1,0 +1,81 @@
+name: I4H Recovery R2 Implementation Preflight
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/i4h_recovery_r2_preflight.yml'
+      - 'handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_R2/**'
+      - 'handoff/20260909/P07_I4H_RUNTIME_PROMOTION_DELTA_R1/**'
+
+jobs:
+  r2-stubbed-parent-preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install pytest
+        run: pip install pytest
+      - name: Materialize exact durable I4H sources with minimal parent stubs
+        run: |
+          set -euo pipefail
+          ROOT=/tmp/i4h_recovery_preflight
+          PKG=$ROOT/literary_os_runtime
+          mkdir -p "$PKG"
+          touch "$PKG/__init__.py"
+          cp handoff/20260909/P07_I4H_RUNTIME_PROMOTION_DELTA_R1/literary_os_runtime/i4h_intervention_policy.py "$PKG/"
+          cp handoff/20260909/P07_I4H_RUNTIME_PROMOTION_DELTA_R1/literary_os_runtime/i4h_runtime_renderer.py "$PKG/"
+          cp handoff/20260909/P07_I4H_RUNTIME_PROMOTION_DELTA_R1/literary_os_runtime/i4h_episode_render_wiring.py "$PKG/"
+          cat > "$PKG/trace.py" <<'PY'
+          def make_trace(*args, **kwargs):
+              return {"stub_trace": True}
+          PY
+          cat > "$PKG/verified_runtime.py" <<'PY'
+          def validate_provider_claim(*args, **kwargs):
+              return {"decision": "PASS"}
+          PY
+          cat > "$PKG/provider_backed_renderer.py" <<'PY'
+          class OpenAIResponsesProvider:
+              def build_request(self, render_payload, max_output_tokens=None):
+                  return {"instructions": "BASE", "payload": render_payload}
+
+          def build_scene_render_payload(*args, **kwargs):
+              return {"stub_parent_payload": True}
+
+          def evaluate_render_contract_locally(*args, **kwargs):
+              return {"decision": "PASS", "critical": []}
+
+          def render_scene_provider_backed(*args, **kwargs):
+              return {"status": "HOLD", "scene_render": None}, {"stub_parent": True}
+
+          def validate_scene_render_shape(render):
+              if not isinstance(render, dict):
+                  raise ValueError("render must be dict")
+              beats = render.get("beats")
+              if not isinstance(beats, list):
+                  raise ValueError("beats must be list")
+              for b in beats:
+                  if not isinstance(b, dict) or "kind" not in b or "text" not in b:
+                      raise ValueError("invalid beat")
+          PY
+          cat > "$PKG/semantic_render_bridge.py" <<'PY'
+          def materialize_renderer_input_from_semantic_scene(scene, character_voice_by_name=None):
+              return {
+                  "scene_blueprint": scene,
+                  "scene_contract": {},
+                  "character_context": {},
+                  "ensemble_context": {},
+                  "texture_contract": {},
+              }, {"stub_bridge": True}
+          PY
+          echo "PYTHONPATH=$ROOT" >> "$GITHUB_ENV"
+      - name: Run NEW R2 implementation preflight only
+        run: |
+          python -m pytest -q handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_R2/tests/test_p07_i4h_recovery_qualification_r2.py --tb=short
+      - name: Boundary notice
+        if: always()
+        run: |
+          echo 'This workflow is implementation preflight with stubbed parent dependencies.'
+          echo 'It is NOT exact Sync R6 materialization qualification, NOT historical 42/42 reproduction, and NOT physical promotion evidence.'
