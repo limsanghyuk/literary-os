@@ -1,0 +1,107 @@
+{
+  "schema": "P07LiveSemanticContractAlignmentQualificationPreregR1",
+  "date": "2026-09-09",
+  "classification": "DEVELOPMENT_PREFORMAL_LIVE_ENGINEERING_QUALIFICATION__NO_FORMAL_COUNT_DELTA",
+  "experiment_id": "P07_LIVE_SEMANTIC_CONTRACT_ALIGNMENT_QUALIFICATION_R1",
+  "status_at_seal": "PREREGISTERED__NO_NEW_TREATMENT_OUTPUTS__NO_NEW_LIVE_CALLS",
+  "parent_physical_authority": "CURRENT_PHYSICAL_AUTHORITY__P07_I4H_FAIL_CLOSED_RUNTIME_RECOVERY_R3",
+  "parent_package_set_sha256": "9327630e8fc8c9b88a8233055b939e08ab5d3726a777b44122bb6682a8c436f8",
+  "purpose": "Repair and qualify the real Live semantic-fulfillment interface discovered by the Codex diagnostic, while preserving fail-closed semantic safety and integrating only after qualification onto current I4H Recovery R3.",
+  "research_questions": [
+    "Can Judge Prompt/Payload/Validator alignment eliminate contract-invalid cross-group evidence packets without weakening contradiction, omission, unsupported-invention, or missing-evidence rejection?",
+    "Can the exact prior Live failure be preserved as a deterministic regression fixture rather than overwritten or post-hoc repaired?",
+    "Can a fresh Live case traverse EPISODE_TO_SEQUENCE semantic fulfillment with a valid judge packet and, when obligations are actually fulfilled, reach SCENE_PLAN with complete provider/retrieval receipts?",
+    "If a valid judge finds genuine semantic omissions, does the engine distinguish VALID_SEMANTIC_HOLD from JUDGE_INVALID instead of misreporting all obligations as unfulfilled?"
+  ],
+  "hypotheses": {
+    "H1": "Explicit per-obligation allowed_evidence_ids and same-group-only instructions produce zero POSITIVE_JUDGMENT_CROSS_GROUP_EVIDENCE invalid packets in deterministic and fresh Live qualification.",
+    "H2": "Critical contradiction, omission, unsupported invention, unknown evidence IDs, empty-evidence positive judgments, and mixed-group evidence gaming remain fail-closed.",
+    "H3": "The frozen prior Live output remains HOLD under the old interface and is never rewritten as PASS; under treatment it is used only as a no-network regression fixture.",
+    "H4": "Invalid-judge reporting no longer equates packet invalidity with literary failure of every obligation; raw judge counts and validated semantic counts remain separate.",
+    "H5": "Current I4H Recovery R3 remains byte-stable outside the authorized semantic alignment delta.",
+    "H6": "DB59/RFV2 remains frozen and the engine track makes no DB64 adoption claim.",
+    "H7": "A fresh Live case uses real OpenAI receipts; if the valid semantic contract accepts, execution reaches SCENE_PLAN. A valid semantic HOLD remains HOLD."
+  },
+  "control": {
+    "C0": "Frozen current I4H Recovery R3 with no semantic candidate activated.",
+    "C1_regression_fixture": "Exact Codex Live diagnostic output replay under archived Candidate R3 interface; historical expected result remains HOLD/JUDGE_INVALID; no network/output mutation."
+  },
+  "treatment": "Current I4H Recovery R3 plus a new isolated Semantic Contract Alignment Delta. Archived Candidate R2/R3 code is source material, not authority.",
+  "authorized_change_scope": [
+    "judge payload contract adds obligation_group and allowed_evidence_ids",
+    "judge instructions require fulfilled=true evidence_ids to be non-empty subset of allowed_evidence_ids; cross-group references forbidden",
+    "judge schema/preflight changes only as needed to support the frozen payload contract",
+    "reporting separates JUDGE_INVALID from VALID_SEMANTIC_HOLD and does not convert invalid packets into literary unfulfilled_count=all",
+    "integration wiring to layer qualified semantic contract after current I4H Recovery R3 in a new delta"
+  ],
+  "forbidden_change_scope": [
+    "I4H selector/intervention policy/renderer behavior",
+    "five frozen I4D runtime files",
+    "DB59 bytes or RFV2 index",
+    "DB64 candidate adoption or 9-Contract promotion",
+    "Production ENG:R47",
+    "formal count 137/latest formal R138",
+    "R140",
+    "I4I plan/outputs/selector/treatment/scores",
+    "post-hoc editing prior Live evidence IDs",
+    "automatic semantic retry to cherry-pick PASS"
+  ],
+  "deterministic_pre_live_tests": [
+    "faithful same-group paraphrase positive accepted",
+    "mixed same+cross-group positive rejected",
+    "cross-group-only positive rejected",
+    "unknown evidence ID rejected",
+    "positive with empty evidence rejected",
+    "contradiction rejected",
+    "omission/unsupported invention rejected",
+    "valid negative accepted as negative not judge-invalid",
+    "legacy scripted exact-match compatibility where authorized",
+    "invalid judge reporting separates raw and validated counts",
+    "exact frozen Codex failure replay reproducible without network"
+  ],
+  "fresh_live_selection_rule": {
+    "case_label": "CASE-02",
+    "selection": "Deterministic pre-output selection from DB59-eligible target works after 9/9 parent verification; algorithm and resulting work/episode/source-cutoff receipt sealed before first provider generation response.",
+    "target_episode_default": 6,
+    "source_cutoff_default": "EP01-EP05_ONLY",
+    "future_target_source_access": false,
+    "no_reuse_of_codex_case01_as_fresh_score": true
+  },
+  "provider": {
+    "provider": "OpenAI",
+    "api_family": "Responses API",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "low",
+    "max_output_tokens": 20000,
+    "timeout_seconds": 300,
+    "allow_test_double": false
+  },
+  "gates": {
+    "parent_runtime_preflight": "PASS_REQUIRED",
+    "current_parent_full_nonhistorical_regression": "100_PERCENT_PASS_BEFORE_TREATMENT",
+    "new_deterministic_tests": "100_PERCENT_PASS",
+    "candidate_full_nonhistorical_regression": "100_PERCENT_PASS",
+    "critical_false_accepts": 0,
+    "judge_invalid_cross_group_rate": 0,
+    "missing_or_invalid_judge": "FAIL_CLOSED",
+    "receipt_chain": "PASS",
+    "db59_sha256_unchanged": true,
+    "rfv2_index_sha256_unchanged": true,
+    "fresh_live_actual_provider_calls_live_call_true": true,
+    "fresh_live_no_future_target_source": true,
+    "promotion_requires_scene_plan_reached_if_semantic_contract_accepts": true,
+    "valid_semantic_hold_is_not_promotion": true,
+    "python_authored_literary_prose": 0
+  },
+  "decision_policy": {
+    "PASS": "All deterministic/regression/integrity gates pass and fresh Live has contract-valid receipts; new physical promotion additionally requires accepted hierarchy to reach SCENE_PLAN.",
+    "VALID_SEMANTIC_HOLD": "Judge packet valid but obligations genuinely unfulfilled; preserve HOLD, no promotion/retry.",
+    "JUDGE_INVALID_HOLD": "Invalid/unknown/cross-group evidence violation; no promotion.",
+    "INFRA_HOLD": "Transport/runtime failure after first Live response; preserve receipts, no cherry-pick retry.",
+    "PREOUTPUT_BLOCK": "Credential/runtime failure before first generation response; not scored as Live attempt."
+  },
+  "database_track_boundary": "DB64/9-Contract candidate qualification is separate and subsequent. DB59 is frozen during this experiment.",
+  "physical_delivery_rule": "If qualification changes any 5-Part/9-Package content, every changed transport package must be physically rebuilt/audited/delivered in the same closed cycle before new physical authority is declared. Byte-identical unchanged packages need not be regenerated.",
+  "frozen_input_manifest_sha256": "9972a370f055501ec81e3b797dcc4d90664e6ab09d9f6c821a7e3396e2ac032f",
+  "prereg_payload_sha256": "0da9c096f97920f3fdcdaa3ddd405b90bc0a2337d8e6efb9d47cb8315d7ca0d4"
+}
