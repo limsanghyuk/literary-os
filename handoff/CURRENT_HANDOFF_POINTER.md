@@ -19,6 +19,15 @@ Semantic Alignment Virtual R1 candidate closure:
 Candidate closure commit:
 `3ea5ea865aa4581fdc39d5ac8dca05253c31be35`
 
+Current database-research pointer:
+`handoff/CURRENT_DATABASE_RESEARCH_POINTER.md`
+
+DB64 / 9-Contract qualification result:
+`handoff/20260909/P07_DB64_9CONTRACT_CANDIDATE_QUALIFICATION_R1_RESULT_20260909.md`
+
+Database result commit:
+`a17e4e8fcf8fd3510995caa347202d2ab7d8ec57`
+
 Authority rule:
 - the exact developer-held Sync R6 5-Part / 9-Package baseline was directly reverified 9/9;
 - the recovered developer-delivered active-development physical authority remains `CURRENT_PHYSICAL_AUTHORITY__P07_I4H_FAIL_CLOSED_RUNTIME_RECOVERY_R3`;
@@ -39,16 +48,25 @@ Candidate rule:
 - candidate logical nine-set manifest hash is `924ff25023a969ee47b729eee94a2b8a64b9d474da5e45377db701bbbc3199db`;
 - no actual OpenAI API call was made in this cycle, so the original fresh-Live gate remains unsatisfied and Active Physical Authority must not move to this candidate yet.
 
+Database research rule:
+- `P07_DB64_9CONTRACT_CONSUMER_QUALIFICATION_R1` is `HOLD_FOR_DATA_REPAIR__ENGINE_A2_PROVENANCE_INVARIANCE_REPAIR_REQUIRED`;
+- supplied DB64 candidate physical integrity/pairing passed, but current R3 NAP compatibility and A2 strict invariance did not;
+- DB64 must not replace DB59;
+- comparative DB59-vs-DB64 utility was not executed because qualification prerequisites failed;
+- next data version must normalize PlannerInput thread schema and missing knowledge members; engine A2 provenance/semantic separation must be researched separately before requalification.
+
 Read order:
 1. this pointer;
 2. `handoff/20260909/START_HERE_P07_I4H_RECOVERY_R3_PHYSICAL_AUTHORITY_R1.md`;
 3. `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`;
 4. `handoff/CURRENT_NEXT_RESEARCH_CANDIDATE.md`;
 5. `handoff/20260909/P07_SEMANTIC_CONTRACT_ALIGNMENT_VIRTUAL_R1_CANDIDATE_CLOSURE_20260909.md`;
-6. `handoff/20260909/P07_POST_DELIVERY_RUNTIME_TRANSPORT_RECURRENCE_R1_20260909.md`;
-7. `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`;
-8. `handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_PREREG_R2_20260909.json`;
-9. `handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_R2_PREREG_AMENDMENT_R1_TARGETED_TEST_DEFINITION_20260909.json`;
-10. `handoff/20260908/START_HERE_P07_SYNC_R6_PHYSICAL_AUTHORITY_NEW_SESSION_HANDOFF_R1.md`.
+6. `handoff/CURRENT_DATABASE_RESEARCH_POINTER.md`;
+7. `handoff/20260909/P07_DB64_9CONTRACT_CANDIDATE_QUALIFICATION_R1_RESULT_20260909.md`;
+8. `handoff/20260909/P07_POST_DELIVERY_RUNTIME_TRANSPORT_RECURRENCE_R1_20260909.md`;
+9. `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`;
+10. `handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_PREREG_R2_20260909.json`;
+11. `handoff/20260909/P07_I4H_RECOVERY_QUALIFICATION_R2_PREREG_AMENDMENT_R1_TARGETED_TEST_DEFINITION_20260909.json`;
+12. `handoff/20260908/START_HERE_P07_SYNC_R6_PHYSICAL_AUTHORITY_NEW_SESSION_HANDOFF_R1.md`.
 
-Do not use the older Sync R8/Sync R9 packaging narrative as a substitute for this exact Sync R6-based Recovery R3 physical closure. Historical session-internal Sync R8 was not the developer-held parent used for this recovery. Do not treat the Semantic Alignment Virtual R1 candidate as Live-qualified until genuine OpenAI confirmation is performed against the frozen candidate.
+Do not use the older Sync R8/Sync R9 packaging narrative as a substitute for this exact Sync R6-based Recovery R3 physical closure. Historical session-internal Sync R8 was not the developer-held parent used for this recovery. Do not treat the Semantic Alignment Virtual R1 candidate as Live-qualified until genuine OpenAI confirmation is performed against the frozen candidate. Do not treat the current DB64 candidate as engine-qualified or adopted until its HOLD blockers are repaired and requalified.
