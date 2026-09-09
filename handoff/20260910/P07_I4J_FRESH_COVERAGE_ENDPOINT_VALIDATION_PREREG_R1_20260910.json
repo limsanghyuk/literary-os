@@ -1,0 +1,69 @@
+{
+  "schema":"P07I4JFreshCoverageEndpointValidationPreregR1",
+  "date":"2026-09-10",
+  "experiment_id":"P07-I4J-R1-FRESH-COVERAGE-ENDPOINT-VALIDATION",
+  "classification":"DEVELOPMENT_PREFORMAL__VIRTUAL_PROVIDER_ANALOG__PROSPECTIVE_FRESH_SOURCE_FREE",
+  "parent_package_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R2__I4I_R2_CLOSED_PRIMARY_FAIL",
+  "parent_package_set_material_sha256":"6e630bf4039953bd7b9969735c87fe7f273e760aa0811ee6c0322c2ea74b3b84",
+  "active_engine":"P07-I4H Recovery R3",
+  "db_authority":"DB59 frozen; no DB/source-script free text in the synthetic fresh task",
+  "prior_boundary":{
+    "R1":"PRIMARY_FAIL +0.2833333333333332",
+    "R2":"PRIMARY_FAIL +0.16666666666666607",
+    "I4J_audit":"ENDPOINT_MISALIGNMENT_SIGNAL_CONFIRMED__COVERAGE_ALONE_INSUFFICIENT__FRESH_VALIDATION_REQUIRED",
+    "rule":"No prior FAIL may be rewritten. This experiment validates future-only endpoint/coverage behavior."
+  },
+  "fresh_task":{
+    "must_be_new":true,
+    "forbidden_reuse":["마루역 사람들","남문박물관 사람들","festival/electrical-load central plot","museum artwork provenance central plot","R1/R2 dialogue or scene briefs"],
+    "scale_floors":{"unicode_chars_control":35000,"unicode_chars_each_arm":35000,"sequences":9,"scenes":45,"fixed_maximum":false},
+    "freeze_before_control":["Series State","Episode Synopsis","Sequence Plan","Scene Plan"]
+  },
+  "policy_lock":{
+    "selector":"exact existing I4H Recovery R3 six-dimensional selector; no threshold edits",
+    "ABSTAIN":"byte-identical Control in every arm",
+    "LOW":"exact existing R3 constraints",
+    "STANDARD":"exact existing R3 constraints",
+    "candidate_revision_rule":"Generate each selected LOW/STANDARD scene revision once only. The exact same sealed revision bytes are reused across coverage arms; no arm-specific rewriting.",
+    "failed_guard":"fallback to exact Control scene"
+  },
+  "coverage_ladder":{
+    "seed":"P07-I4J-R1-COVERAGE-LADDER-20260910",
+    "ARM_0":"0% of eligible LOW/STANDARD revisions; entire episode equals Control",
+    "ARM_50":"Within LOW and STANDARD separately, sort selected scene IDs by SHA256(seed + '|' + mode + '|' + scene_id); include the first round_half_up(0.50*n) from each mode; all other selected scenes use Control bytes.",
+    "ARM_100":"100% of all guard-passing LOW/STANDARD revisions",
+    "ABSTAIN":"always Control bytes",
+    "freeze":"Exact arm membership and episode SHA256 values must be sealed before evaluation."
+  },
+  "future_endpoint_candidate":{
+    "name":"SURFACE_RESPONSE_WITH_PROTECTION_GATE_R1",
+    "improvement_target_axes":["subtext_and_physicalization","pacing_and_line_economy","scene_turns_and_episode_exit_pressure"],
+    "candidate_primary":"ARM_100 Treatment-Control mean delta across target axes >= +0.30",
+    "protection_axes":["character_and_relationship_consistency","thread_management_and_carry_forward","ensemble_and_social_texture","temporal_validity","long_horizon_sustainability_and_overclosure_control","character_voice_differentiation"],
+    "protection_gate":["critical_failures=0","protection mean >= -0.10","every protection axis >= -0.50","character_voice_differentiation >= -0.25","ensemble_and_social_texture >= -0.25"],
+    "mixed_context_axes":["episode_structure_and_causal_progression","creativity_and_non_generic_specificity","comedy_melodrama_tonal_coexistence"],
+    "mixed_gate":["mixed mean >= -0.10","every mixed axis >= -0.50"],
+    "legacy_12_axis_delta":"record as secondary descriptive endpoint; legacy +0.30 is not the I4J candidate primary and R1/R2 remain FAIL under their own preregistration"
+  },
+  "coverage_hypotheses":{
+    "H1":"ARM_100 target-axis delta >= +0.30 while all protection/mixed gates pass.",
+    "H2":"Target-axis response is monotonic: ARM_100 >= ARM_50 >= ARM_0.",
+    "H3":"ARM_100 target-axis response exceeds ARM_50 by at least +0.05, indicating measurable coverage sensitivity beyond mere presence of any intervention.",
+    "H4":"Harmful intervention rate among guard-passing LOW/STANDARD revisions <= 0.20 and ABSTAIN identity = 1.0."
+  },
+  "evaluation":{
+    "axes":12,
+    "arm_masking":"Random secret mapping of ARM_0/ARM_50/ARM_100 to neutral labels; only map SHA committed before scoring; map opened only after all arm scores are sealed.",
+    "evidence_class":"MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL unless independent evaluator becomes available before any scoring output",
+    "no_threshold_change_after_output":true
+  },
+  "decision":{
+    "QUALIFIED_FOR_SECOND_FRESH_ENDPOINT_REPLICATION":"H1-H4 all PASS",
+    "HOLD":"integrity/reliability or infrastructure prevents valid scoring",
+    "FAIL":"valid execution but any H1-H4 primary hypothesis fails",
+    "endpoint_adoption":"not allowed from one I4J run; at least one further fresh replication and later governance/human or independent evidence are required"
+  },
+  "claim_boundary":{"formal_count_delta":0,"production_change":false,"active_engine_change":false,"DB_change":false,"actual_openai_live":false,"retrospective_reclassification":false},
+  "outputs_before_execution":0,
+  "status":"PREREGISTERED__FRESH_PLAN_0__CONTROL_0__SELECTOR_0__REVISION_POOL_0__ARM_SCORES_0"
+}
