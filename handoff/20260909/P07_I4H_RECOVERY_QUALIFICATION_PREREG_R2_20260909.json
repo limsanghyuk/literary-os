@@ -1,0 +1,167 @@
+{
+  "schema": "P07I4HRecoveryQualificationPreregR2",
+  "date": "2026-09-09",
+  "experiment_id": "P07-I4H-RECOVERY-QUAL-R2",
+  "classification": "DEVELOPMENT_PREFORMAL__PHYSICAL_RECOVERY_QUALIFICATION__NEW_EVIDENCE_NOT_HISTORICAL_REPRODUCTION",
+  "reason_for_new_suite": {
+    "historical_qualification_result": "8fa611b801118ecf2b703cf1f41288c6a7e84bcc",
+    "historical_test_identity": {
+      "path": "tests/test_p07_i4h_runtime_promotion.py",
+      "bytes": 15130,
+      "sha256": "9b7ef43744dfe094b2b1d1ec850c8712ba38a1f450a11c689ff43215f01fbf7a"
+    },
+    "recovery_finding": "The exact historical test-body source is not currently rediscoverable in the GitHub tree, File Library index, or connected Google Drive searches. The historical qualification result remains durable evidence, but its exact 42-test body must not be fabricated or falsely claimed as rerun.",
+    "resolution": "Preregister a new recovery qualification suite before implementation or execution. Its results, if any, will be new recovery evidence and will not be called byte-identical reproduction of the historical suite."
+  },
+  "frozen_parent": {
+    "developer_held_physical_authority": "LITERARY_OS_SYNC_R6_I4H_VIRTUAL_PRETEST_20260908",
+    "active_parent_engine": "CURRENT_PHYSICAL_AUTHORITY__P07_I4D_SURFACE_REALIZATION_MODES_R1",
+    "combined_parent_c2_sha256": "9878aac8532e9f1eb6b16ef4c84bcfe6be90b58a49ecf0f6afaabe993fad3be7",
+    "combined_parent_c2_bytes": 318351029,
+    "combined_parent_c2_entries": 3765,
+    "db59_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9"
+  },
+  "durable_i4h_runtime_sources": {
+    "literary_os_runtime/i4h_intervention_policy.py": {
+      "bytes": 3313,
+      "sha256": "cb643e1cee8e47dfafafb87db1f335abc7203d25ac016b774678f2266cd94684"
+    },
+    "literary_os_runtime/i4h_runtime_renderer.py": {
+      "bytes": 13286,
+      "sha256": "94f766c23c45a22fc8655a56f89908cf38db384af9c8046042b474a1085a76ed"
+    },
+    "literary_os_runtime/i4h_episode_render_wiring.py": {
+      "bytes": 2138,
+      "sha256": "7f2f1b50ec9239ca5ca364b3863f28418aba2baf248fea31ca9178a7be33b741"
+    }
+  },
+  "research_basis": {
+    "I4H_R1": "HOLD_PREGENERATION_INPUT_CONTAMINATION__NO_CRAFT_CLAIM",
+    "I4H_R2": "HOLD_PRESELECTOR_CONTROL_MULTIPLICITY_AND_DURABLE_SEAL_CORRUPTION__NO_CRAFT_CLAIM",
+    "I4H_R3": "PASS_STRONGER_VIRTUAL_PROSPECTIVE_CRAFT_SIGNAL__DEVELOPMENT_PREFORMAL",
+    "I4H_R4": "PASS_FRESH_SOURCE_FREE_MASKED_PHYSICAL_REPLICATION__DEVELOPMENT_PROMOTION_CANDIDATE",
+    "historical_runtime_qualification": "PASS_RECORDED__42_OF_42_NEW__26_OF_26_TARGETED__255_OF_255_FULL__EXACT_TEST_BODY_NOT_RECOVERABLE"
+  },
+  "purpose": "Qualify the durable I4H fail-closed runtime sources against the exact developer-held Sync R6/I4D parent materialization before building and promoting a new developer-deliverable I4H 5-Part/9-Package authority set.",
+  "architecture_frozen_from_r1": [
+    "Pass 1 must use the exact existing I4D provider-backed renderer path to create the baseline scene.",
+    "Python may validate, select, route and enforce guards only; it authors no literary prose.",
+    "ABSTAIN performs zero revision calls and returns the exact committed I4D baseline result unchanged.",
+    "LOW/STANDARD permit at most one provider revision candidate from the same semantic payload plus exact sealed baseline scene and structured intervention constraints.",
+    "Candidate acceptance requires provider admissibility, existing local scene-contract PASS, deterministic delta guards PASS, external reliability PASS and external craft PASS.",
+    "Any exception, missing judgment, HOLD, BLOCK or non-PASS returns the exact I4D baseline result.",
+    "No literal R3/R4 treatment prose may be hardcoded into runtime code or tests."
+  ],
+  "selector_contract": {
+    "dimensions": [
+      "exposition_risk",
+      "procedural_pressure",
+      "social_texture",
+      "voice_specificity",
+      "already_playable",
+      "physicalizable_subtext"
+    ],
+    "range": "integer 0..3",
+    "decision_space": ["ABSTAIN", "LOW", "STANDARD"],
+    "rule_order": [
+      "ABSTAIN if already_playable>=2 and exposition_risk<=1",
+      "ABSTAIN if max(social_texture,voice_specificity)>=3 and exposition_risk<=2 unless physicalizable_subtext==3 permits additive LOW",
+      "STANDARD if exposition_risk>=2 and procedural_pressure>=2 and max(social_texture,voice_specificity)<=1 and already_playable<=1",
+      "LOW if physicalizable_subtext>=2 or exposition_risk>=2 unless STANDARD",
+      "otherwise ABSTAIN"
+    ]
+  },
+  "revision_constraints": {
+    "LOW": {
+      "dialogue_retention_min": 0.75,
+      "total_char_ratio_max": 1.35,
+      "operation": "ADD_OR_REPOSITION_PLAYABLE_PHYSICALIZATION__PRESERVE_CHARACTER_BEARING_DIALOGUE"
+    },
+    "STANDARD": {
+      "dialogue_retention_min": 0.55,
+      "total_char_ratio_max": 1.25,
+      "operation": "RESTRUCTURE_ACTION_DIALOGUE_FOR_INFORMATION_ECONOMY__PRESERVE_REASONING_VOICE_STATUS_SPEECH"
+    }
+  },
+  "required_external_reliability_fields": [
+    "semantic_source_future_fidelity",
+    "new_principal_character",
+    "korean_morphology_grammar",
+    "voice_social_texture",
+    "dialogue_overcompression",
+    "direction_bloat"
+  ],
+  "required_test_families": [
+    "profile schema, missing/extra-field and 0..3 boundary validation",
+    "selector deterministic decision cases covering ABSTAIN, LOW and STANDARD",
+    "ABSTAIN exact result identity and exactly one baseline provider call",
+    "ordinary I4D baseline request invariance when no I4H policy is present",
+    "LOW revision candidate acceptance after every required gate passes",
+    "STANDARD revision candidate acceptance after every required gate passes",
+    "unauthorized speaker candidate rejection and exact baseline fallback",
+    "exit-state mismatch rejection and exact baseline fallback",
+    "new foreign-script token rejection and exact baseline fallback",
+    "LOW dialogue-retention-floor rejection and fallback",
+    "STANDARD dialogue-retention-floor rejection and fallback",
+    "LOW total-character-ceiling rejection and fallback",
+    "STANDARD total-character-ceiling rejection and fallback",
+    "missing external reliability judgment rejection and fallback",
+    "each external reliability required field non-PASS rejection and fallback",
+    "missing or non-PASS external craft judgment rejection and fallback",
+    "revision provider exception/status/claim rejection and fallback",
+    "baseline non-COMMIT prevents revision attempt",
+    "episode wiring requires one valid profile for every frozen scene",
+    "episode wiring preserves sequence/scene order and uses semantic-render bridge",
+    "Python literary prose generated flag remains false throughout",
+    "literal R3/R4 treatment prose hardcoding scan returns zero hits",
+    "five frozen parent I4D files remain byte-identical",
+    "old I4D targeted regression remains 100% PASS",
+    "full nonhistorical regression remains at least parent baseline 213 PASS with zero new failures"
+  ],
+  "minimum_new_recovery_tests": 25,
+  "counting_rule": "The new suite must report its actual test count. It must not claim historical 42/42 unless it independently contains exactly 42 tests and all 42 execute PASS. The historical 42/42 result remains historical evidence only.",
+  "promotion_gates": {
+    "new_recovery_tests": "100% PASS and count >=25",
+    "old_i4d_targeted_tests": "100% PASS",
+    "full_nonhistorical_regression": "at least 213 PASS, 0 failures, no new failures",
+    "abstain_result_and_request_invariance": "100% PASS",
+    "fault_injection_reject_to_exact_baseline": "100% PASS",
+    "parent_i4d_files_byte_identical": "5/5",
+    "critical_failure_accepts": 0,
+    "python_literary_prose_generated": false,
+    "hardcoded_r3_r4_treatment_prose_hits": 0
+  },
+  "physical_recovery_dependency": {
+    "all_nine_sync_r6_parent_files_must_be_directly_byte_verified_before_build": true,
+    "parent_zip_crc_duplicate_unsafe_checks_required": true,
+    "parent_c2_reassembly_sha_required": "9878aac8532e9f1eb6b16ef4c84bcfe6be90b58a49ecf0f6afaabe993fad3be7",
+    "unchanged_packages_must_be_byte_identical": ["PART B1", "PART C1", "PART D1", "PART D2"],
+    "rebuild_packages": ["CONTROL", "PART A", "PART B2", "PART C2-A", "PART C2-B"],
+    "no_physical_promotion_before_full_nine_file_audit_and_developer_delivery": true
+  },
+  "claim_boundary": {
+    "supported_if_pass": "New Development/Preformal recovery qualification of the durable I4H runtime against the exact Sync R6 parent materialization, sufficient to support a newly audited I4H physical-authority candidate.",
+    "not_supported": [
+      "exact reproduction of the missing historical test body",
+      "exact reproduction of historical Sync R8 outer package bytes",
+      "independent-human validation",
+      "OpenAI Live qualification",
+      "human-writer equivalence",
+      "Production promotion",
+      "formal-count increment",
+      "R140 start or result",
+      "I4I execution or result"
+    ]
+  },
+  "authority_state_frozen": {
+    "developer_held_physical_authority": "Sync R6 / P07-I4D",
+    "hub_qualified_target": "P07-I4H",
+    "production": "ENG:R47",
+    "formal_scored_count": 137,
+    "latest_formal_authority": "R138",
+    "r140": [0, 0, 0],
+    "i4i_outputs": [0, 0, 0, 0]
+  },
+  "execution_precondition": "Do not implement or execute this suite while the current execution transport returns TransportTimeoutError even for minimal filesystem operations. Resume only in a trustworthy byte-addressable runtime.",
+  "status": "PREREGISTERED__NO_RECOVERY_TEST_BODY_IMPLEMENTED__NO_EXECUTION__NO_RESULT__NO_AUTHORITY_CHANGE"
+}
