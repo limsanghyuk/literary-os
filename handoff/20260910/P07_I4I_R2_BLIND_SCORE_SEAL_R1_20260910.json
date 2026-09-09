@@ -1,0 +1,15 @@
+{
+  "schema":"P07I4IR2BlindScoreHubSealR1",
+  "date":"2026-09-10",
+  "experiment_id":"P07-I4I-R2-WHOLE-EPISODE-FRESH-REPLICATION",
+  "map_sha256":"063fdebfac967630b5e96d4e63c381557b14d197552ad25db927c9c3428969e1",
+  "blind_score_sha256":"71539c66ac2ff5a0f84cc191605ac9a607f86ebd7287a3284521c0044a34125e",
+  "A_mean":8.333333333333334,
+  "B_mean":8.5,
+  "B_minus_A":0.16666666666666607,
+  "B_axis_nonloss_count":12,
+  "max_B_regression":0.0,
+  "mapping_opened_at_seal":false,
+  "evaluation_boundary":"MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__POLICY_BLINDNESS_NOT_INDEPENDENTLY_PROVABLE",
+  "status":"SCORES_SEALED_BEFORE_UNBLIND"
+}
