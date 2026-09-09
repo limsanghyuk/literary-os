@@ -1,0 +1,58 @@
+{
+  "schema":"P07NewSessionRecoveryManifestR2",
+  "date":"2026-09-10",
+  "status":"CURRENT",
+  "supersedes_for_metadata":"handoff/20260910/P07_NEW_SESSION_RECOVERY_MANIFEST_R1_20260910.json",
+  "first_read":"handoff/20260910/START_HERE_P07_NEW_SESSION_MASTER_HANDOFF_R2_20260910.md",
+  "detailed_master":"handoff/20260910/START_HERE_P07_NEW_SESSION_MASTER_HANDOFF_R1_20260910.md",
+  "failure_playbook":"handoff/20260910/P07_FAILURE_INCIDENT_RESPONSE_PLAYBOOK_R1_20260910.md",
+  "runtime_receipt_path_correction":"Use handoff/20260910/P07_I4J_RUNTIME_MINIMAL_PREFLIGHT_RECURRENCE_R2_20260910.md. Any R1 manifest/master/playbook reference to a similarly named MINIMAL_PROBE json path is a metadata typo.",
+  "authority":{
+    "physical_research_sync":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R2__I4I_R2_CLOSED_PRIMARY_FAIL",
+    "nine_file_material_sha256":"6e630bf4039953bd7b9969735c87fe7f273e760aa0811ee6c0322c2ea74b3b84",
+    "active_engine":"P07-I4H Recovery R3",
+    "combined_c2_sha256":"58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7",
+    "db_authority":"DB59",
+    "db59_sha256":"a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "production":"ENG:R47",
+    "formal_scored_count":137,
+    "latest_formal":"R138",
+    "r140":[0,0,0]
+  },
+  "research":{
+    "i4h_recovery_r3":{"status":"ACTIVE_ENGINE_FOUNDATION","full_nonhistorical":"258/258 PASS"},
+    "semantic_alignment_virtual_r1":{"status":"VIRTUAL_QUALIFIED_SHADOW_CANDIDATE__LIVE_CONFIRMATION_REQUIRED__NO_ACTIVE_AUTHORITY_PROMOTION","candidate_full":"281/281 PASS"},
+    "db64":{"status":"HOLD_FOR_DATA_REPAIR__ENGINE_A2_PROVENANCE_INVARIANCE_REPAIR_REQUIRED"},
+    "i4i_r1":{"verdict":"PRIMARY_FAIL","delta":0.2833333333333332,"threshold":0.3},
+    "i4i_r2":{"verdict":"PRIMARY_FAIL","delta":0.16666666666666607,"threshold":0.3},
+    "i4j_j0":{"verdict":"ENDPOINT_MISALIGNMENT_SIGNAL_CONFIRMED__COVERAGE_ALONE_INSUFFICIENT__FRESH_VALIDATION_REQUIRED"},
+    "i4j_j1":{"experiment_id":"P07-I4J-R1-FRESH-COVERAGE-ENDPOINT-VALIDATION","prereg_commit":"364e92c38772e6c78b1585b40eb6dc769eaebec9","fresh_plan":0,"control":0,"selector":0,"revision_pool":0,"coverage_arms":0,"blind_scores":0}
+  },
+  "current_runtime_block":{
+    "classification":"PREOUTPUT_INFRA_BLOCK__MINIMAL_PROCESS_3_OF_3_TRANSPORT_TIMEOUT__NO_SCIENTIFIC_FAIL__NO_FRESH_OUTPUTS",
+    "receipt":"handoff/20260910/P07_I4J_RUNTIME_MINIMAL_PREFLIGHT_RECURRENCE_R2_20260910.md",
+    "receipt_commit":"dcd805f2460c36018740e88b7e0b843c6cef7d5f",
+    "failed_probes":["/bin/true","/bin/echo runtime_probe_2","/usr/bin/env"]
+  },
+  "mandatory_resume_order":[
+    "minimal process PASS",
+    "filesystem read/write/stat PASS",
+    "cgroup memory/OOM inspection",
+    "small archive member read",
+    "verify Research Sync R2 execution identities",
+    "confirm I4J preregistration",
+    "freeze fresh complete plan with all runtime-required anchors",
+    "verify >=35k Unicode chars target, >=9 sequences, >=45 scenes before Control",
+    "create and seal one Control",
+    "run unchanged R3 profile/Selector",
+    "create each eligible revision once",
+    "assemble ARM_0/ARM_50/ARM_100 deterministically",
+    "seal arm identities/hashes",
+    "masked score then unblind",
+    "classify H1-H4",
+    "run 258-test post regression",
+    "audit package impact",
+    "rebuild/audit/deliver every changed transport"
+  ],
+  "failure_playbook_classes":["execution_transport","memory_page_cache","c2_materialization","fail_closed_ordering","semantic_prompt_validator_contract","missing_historical_test_body","historical_test_scope","provider_analog_harness","protected_guard_drift","noncanonical_packaging","stale_metadata","db64_schema_consumer","a2_provenance_semantic_invariance","utf8_bytes_vs_unicode_chars","speaker_participant_validation","blind_map_leakage","frozen_plan_missing_anchors","pre_freeze_plan_validation","working_file_storage","endpoint_mechanism_misalignment"]
+}
