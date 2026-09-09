@@ -1,0 +1,176 @@
+{
+  "schema": "P07NewSessionRecoveryManifestR1",
+  "date": "2026-09-10",
+  "classification": "DEVELOPMENT_PREFORMAL_CROSS_SESSION_RECOVERY",
+  "first_read": "handoff/20260910/START_HERE_P07_NEW_SESSION_MASTER_HANDOFF_R1_20260910.md",
+  "failure_playbook": "handoff/20260910/P07_FAILURE_INCIDENT_RESPONSE_PLAYBOOK_R1_20260910.md",
+  "physical_authority": {
+    "id": "P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R2__I4I_R2_CLOSED_PRIMARY_FAIL",
+    "nine_file_material_sha256": "6e630bf4039953bd7b9969735c87fe7f273e760aa0811ee6c0322c2ea74b3b84",
+    "active_engine": "P07-I4H Recovery R3",
+    "combined_c2_sha256": "58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7",
+    "post_r2_nonhistorical_regression": "258/258 PASS",
+    "changed_transports": {
+      "CONTROL": "395badc00eb61b0997805fa41e9d82a55d951ba4bcffdf826f9bf5657975ebd3",
+      "A": "47e7d622d1b7b4ea91f23ea52115cb4561ec24698a12a9f69a94939c9a32afca",
+      "B2": "71dc41bc47adca97fddd59ee3e95a6965256bf3aaf4d0de10e3e28dd1f1aae85"
+    },
+    "byte_identical_reused_transports": {
+      "B1": "00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98",
+      "C1": "dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518",
+      "C2_A": "d1fb7ba65ead633ec13d027d032e4bd3950e973b61408e04b620bd37f7997253",
+      "C2_B": "49d454647f0c1d0920a582c2a5aa222b345719a3d6d396374dcb0921560e9414",
+      "D1": "a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504",
+      "D2": "c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4"
+    }
+  },
+  "database_authority": {
+    "id": "DB59",
+    "sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "db64_status": "HOLD_FOR_DATA_REPAIR__ENGINE_A2_PROVENANCE_INVARIANCE_REPAIR_REQUIRED"
+  },
+  "global_governance": {
+    "production": "ENG:R47",
+    "formal_scored_count": 137,
+    "latest_formal_authority": "R138",
+    "r140": [0, 0, 0],
+    "openai_live_semantic_alignment_confirmed": false
+  },
+  "materialization_order": [
+    "CURRENT_R11_RFV_ACTIVE_DEVELOPMENT_OVERLAY",
+    "P07_I3_BROADCAST_SURFACE_R1/CODE",
+    "P07_I4A_PROVIDER_SHADOW_DELTA_R1",
+    "P07_I4B_SURFACE_INTERFACE_DELTA_R1",
+    "P07_I4D_SURFACE_REALIZATION_MODE_DELTA_R1",
+    "P07_I4H_RUNTIME_RECOVERY_R3_DELTA_R1"
+  ],
+  "completed_research": {
+    "i4h_recovery_r3": {
+      "status": "ACTIVE_ENGINE_FOUNDATION",
+      "r2_preserved": "HOLD 44/45",
+      "r3_new_tests": "45/45 PASS",
+      "targeted": "56/56 PASS",
+      "full_nonhistorical": "258/258 PASS",
+      "corrected_file_sha256": "f90a6cdc699f0c6dd5631af8283c6c97a75dd2ad9ed28d7e6ef83908815f9727"
+    },
+    "semantic_alignment_virtual_r1": {
+      "status": "VIRTUAL_QUALIFIED_SHADOW_CANDIDATE__LIVE_CONFIRMATION_REQUIRED__NO_ACTIVE_AUTHORITY_PROMOTION",
+      "parent": "258/258 PASS",
+      "new_tests": "23/23 PASS",
+      "candidate_full": "281/281 PASS",
+      "combined_c2_sha256": "36d93da0aeb8306234ce6b0951a9f6ddbe17b8b331c322bf80d51bac3b2eae1b",
+      "nine_set_manifest_hash": "924ff25023a969ee47b729eee94a2b8a64b9d474da5e45377db701bbbc3199db",
+      "live_pending": true
+    },
+    "db64_qualification_r1": {
+      "status": "HOLD_FOR_DATA_REPAIR__ENGINE_A2_PROVENANCE_INVARIANCE_REPAIR_REQUIRED",
+      "utility_comparison_executed": false
+    },
+    "i4i_r1": {
+      "verdict": "CLOSED__PRIMARY_GATE_FAIL__POSITIVE_SCENE_LEVEL_SIGNAL__NO_PROMOTION",
+      "delta": 0.2833333333333332,
+      "threshold": 0.3,
+      "axis_nonloss": "12/12",
+      "harmful_rate": 0.0
+    },
+    "i4i_r2": {
+      "verdict": "CLOSED__PRIMARY_GATE_FAIL__FRESH_REPLICATION_POSITIVE_NONHARMFUL_SIGNAL__NO_PROMOTION",
+      "delta": 0.16666666666666607,
+      "threshold": 0.3,
+      "axis_nonloss": "12/12",
+      "harmful_rate": 0.0,
+      "control_chars": 35738,
+      "treatment_chars": 37939,
+      "selector": {"ABSTAIN": 29, "LOW": 12, "STANDARD": 9}
+    },
+    "i4j_endpoint_audit": {
+      "verdict": "ENDPOINT_MISALIGNMENT_SIGNAL_CONFIRMED__COVERAGE_ALONE_INSUFFICIENT__FRESH_VALIDATION_REQUIRED",
+      "historical_verdicts_changed": false
+    }
+  },
+  "active_research": {
+    "experiment_id": "P07-I4J-R1-FRESH-COVERAGE-ENDPOINT-VALIDATION",
+    "prereg_commit": "364e92c38772e6c78b1585b40eb6dc769eaebec9",
+    "status": "PREOUTPUT_INFRA_BLOCK__MINIMAL_PROCESS_3_OF_3_TRANSPORT_TIMEOUT__NO_SCIENTIFIC_FAIL__NO_FRESH_OUTPUTS",
+    "outputs": {
+      "fresh_plan": 0,
+      "control": 0,
+      "selector": 0,
+      "revision_pool": 0,
+      "coverage_arms": 0,
+      "blind_scores": 0
+    },
+    "latest_runtime_receipt": "handoff/20260910/P07_I4J_RUNTIME_MINIMAL_PROBE_RECURRENCE_R2_20260910.json",
+    "latest_runtime_receipt_commit": "dcd805f2460c36018740e88b7e0b843c6cef7d5f"
+  },
+  "failure_classes": [
+    "A_EXECUTION_TRANSPORT_PLATFORM",
+    "B_MEMORY_PAGE_CACHE",
+    "C_C2_MATERIALIZATION_TOPOLOGY",
+    "D_FAIL_CLOSED_ORDERING",
+    "E_SEMANTIC_PROMPT_VALIDATOR_CONTRACT",
+    "F_MISSING_HISTORICAL_TEST_BODY",
+    "G_HISTORICAL_EXPECTED_FAIL_CONTAMINATION",
+    "H_PROVIDER_ANALOG_HARNESS_BOOKKEEPING",
+    "I_TRANSIENT_PROTECTED_GUARD_DRIFT",
+    "J_DUPLICATE_NONCANONICAL_PACKAGING",
+    "K_STALE_METADATA_PACKAGE_COUNT_DRIFT",
+    "L_DB64_SCHEMA_GENERATION_MISMATCH",
+    "M_A2_PROVENANCE_SEMANTIC_INVARIANCE",
+    "N_UTF8_BYTES_VS_UNICODE_CHARS",
+    "O_SPEAKER_PARTICIPANT_VALIDATION",
+    "P_BLIND_MAP_INFORMATION_LEAK",
+    "Q_FROZEN_PLAN_MISSING_RUNTIME_ANCHORS",
+    "R_PRE_FREEZE_PLAN_VALIDATION",
+    "S_WORKING_FILE_PERMISSION_TRANSIENT_STORAGE",
+    "T_ENDPOINT_MECHANISM_MISALIGNMENT"
+  ],
+  "mandatory_resume_order": [
+    "minimal process probe",
+    "small filesystem read/write/stat probe",
+    "cgroup memory/OOM inspection",
+    "small archive/member read",
+    "verify current Research Sync R2 execution identities",
+    "confirm Hub pointers and I4J prereg",
+    "freeze fresh Series/Episode/Sequence/Scene plan with all runtime-required anchors",
+    "verify design floors before Control",
+    "create Control once and seal",
+    "run unchanged R3 profile/Selector only after Control seal",
+    "create each eligible revision once",
+    "assemble deterministic ARM_0/ARM_50/ARM_100",
+    "seal arm membership/hashes before scoring",
+    "masked score then unblind",
+    "classify H1-H4",
+    "run post-experiment 258-test regression",
+    "compute package impact",
+    "physically rebuild/audit/deliver every changed transport"
+  ],
+  "experiment_recovery_contract": [
+    "Preregistration",
+    "Frozen Inputs",
+    "Control/Seal",
+    "Selector/Profile Freeze",
+    "Treatment/Integrity",
+    "Provider/Runtime Receipts if claimed",
+    "Blind Map Hash",
+    "Blind Scores",
+    "Unblind",
+    "Final Result",
+    "Post Regression",
+    "Package Impact",
+    "Changed Physical Packages"
+  ],
+  "forbidden_claims": [
+    "Production promotion beyond ENG:R47",
+    "formal count beyond 137",
+    "R140 result",
+    "Semantic Alignment actual OpenAI Live qualification",
+    "DB64 adoption",
+    "I4I R1 PASS",
+    "I4I R2 PASS",
+    "I4J fresh result before runtime recovery",
+    "independent-human qualification of I4I R1/R2",
+    "package corruption inferred only from TransportTimeoutError",
+    "exact rerun of missing historical test body"
+  ]
+}
