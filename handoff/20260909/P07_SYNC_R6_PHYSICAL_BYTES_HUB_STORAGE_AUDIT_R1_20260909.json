@@ -1,20 +1,10 @@
 {
   "schema": "P07SyncR6PhysicalBytesHubStorageAuditR1",
   "date": "2026-09-09",
-  "purpose": "Distinguish durable authority/evidence records from actual 5-Part/9-Package binary transport bytes in the developer GitHub hub.",
+  "purpose": "Distinguish durable authority/evidence records from actual 5-Part/9-Package binary transport bytes across all currently inspectable Hub-adjacent storage surfaces.",
   "hub_repository": "limsanghyuk/literary-os",
   "developer_held_package_set": "LITERARY_OS_SYNC_R6_I4H_VIRTUAL_PRETEST_20260908",
-  "logical_structure": [
-    "CONTROL",
-    "PART A",
-    "PART B1",
-    "PART B2",
-    "PART C1",
-    "PART C2-A",
-    "PART C2-B",
-    "PART D1",
-    "PART D2"
-  ],
+  "logical_structure": ["CONTROL","PART A","PART B1","PART B2","PART C1","PART C2-A","PART C2-B","PART D1","PART D2"],
   "expected_physical_files": [
     {"logical_part":"CONTROL","filename":"LITERARY_OS_CURRENT_CONTROL_P07_I4H_VIRTUAL_PRETEST_SYNC_R6_20260908.zip","bytes":108635838,"sha256":"c291e9a3866de66fae625ab899139a13f1e98468a3bff0d58a11fd34553f0aa6"},
     {"logical_part":"A","filename":"LITERARY_OS_CURRENT_PART_A_P07_I4H_VIRTUAL_PRETEST_SYNC_R6_20260908.zip","bytes":123051563,"sha256":"25eb489d07e78a3a3288e1e5029114ce791ada2ab43a8564ae9f9eed738306dd"},
@@ -34,22 +24,45 @@
     "crc_pass_historical_audit": true
   },
   "db59_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
-  "hub_default_branch_tree_audit": {
-    "tree_commit_at_audit": "4cf8a0397934e83b0bb5fdb06fb9beee563dfcb4",
-    "exact_control_binary_path_matches": 0,
-    "sync_r6_virtual_pretest_binary_path_matches": 0,
-    "finding": "The GitHub default-branch tree contains no actual Sync R6 9-package ZIP/BIN transport files. References to these filenames occur only in text/json authority, audit, handoff, and recovery documents."
-  },
-  "historical_i4d_commit_tree_check": {
-    "i4d_result_commit": "d1fef19e8f4c07a0266f17f2307e734fd50ea587",
-    "tree_sha": "57c0caaf4d2277aad5cac3f20010140eba57e996",
-    "frozen_parent_runtime_source_paths_found": false,
-    "finding": "The frozen I4D parent runtime source files required by I4H imports are not durable as ordinary GitHub source paths in the inspected historical tree; they were materialized inside the physical package authority."
-  },
-  "current_conversation_file_search": {
-    "physical_audit_json_found": true,
-    "direct_nine_binary_file_refs_returned_by_file_search": false,
-    "note": "File Search identifies the final physical audit record containing all 9 filenames/hashes, but does not expose the nine binary package bytes as GitHub-stored or container-addressable files."
+  "storage_surface_audits": {
+    "github_default_branch_tree": {
+      "tree_commit_at_initial_audit": "4cf8a0397934e83b0bb5fdb06fb9beee563dfcb4",
+      "exact_control_binary_path_matches": 0,
+      "sync_r6_virtual_pretest_binary_path_matches": 0,
+      "result": "ABSENT"
+    },
+    "github_historical_i4d_tree": {
+      "i4d_result_commit": "d1fef19e8f4c07a0266f17f2307e734fd50ea587",
+      "tree_sha": "57c0caaf4d2277aad5cac3f20010140eba57e996",
+      "frozen_parent_runtime_source_paths_found": false,
+      "result": "PARENT_MATERIALIZATION_NOT_DURABLE_AS_ORDINARY_GIT_PATHS"
+    },
+    "github_actions_physical_closure_run": {
+      "historical_i4h_physical_closure_commit": "2af29e335789aee7b72461d3bac3323cb79d6805",
+      "workflow_run_id": 34255676151,
+      "artifacts_found": 0,
+      "result": "NO_RECOVERABLE_ACTIONS_ARTIFACT"
+    },
+    "github_releases": {
+      "release_list_inspected": true,
+      "sync_r6_name_hits": 0,
+      "i4h_name_hits": 0,
+      "result": "NO_SYNC_R6_I4H_RELEASE_ASSET_FOUND"
+    },
+    "file_library_recent_uploads_2026_09_08_to_2026_09_09": {
+      "physical_audit_json_found": true,
+      "nine_sync_r6_binary_cards_found": 0,
+      "result": "NO_BYTE_ADDRESSABLE_9_PACKAGE_SET_FOUND"
+    },
+    "current_conversation_file_search": {
+      "physical_audit_json_found": true,
+      "direct_nine_binary_file_refs_returned": false,
+      "result": "AUTHORITY_RECORDS_ONLY_VISIBLE"
+    },
+    "connected_google_drive_prior_search": {
+      "same_sync_r6_nine_file_source_found": false,
+      "result": "NO_CONFIRMED_ALTERNATE_BYTE_SOURCE"
+    }
   },
   "current_local_execution": {
     "container_bin_true": "TransportTimeoutError",
@@ -59,7 +72,7 @@
   },
   "what_is_durable_on_hub": [
     "Sync R6 package topology",
-    "expected outer bytes and SHA256 values",
+    "expected outer byte lengths and SHA256 values",
     "historical CRC/path-safety audit results",
     "combined C2 identity",
     "DB59 identity",
@@ -67,15 +80,17 @@
     "I4H durable runtime source delta (3 files)",
     "historical runtime qualification result",
     "new Recovery Qualification R2 preregistration and 45-test implementation",
-    "R2 stubbed-parent implementation preflight 45/45 PASS"
+    "R2 stubbed-parent implementation preflight 45/45 PASS",
+    "recovery build specification and authority pointers"
   ],
-  "what_is_not_durable_on_hub": [
+  "what_is_not_durable_or_recoverable_from_current_hub_surfaces": [
     "the nine Sync R6 ZIP/BIN transport bytes themselves",
     "a newly rebuilt I4H 5-Part/9-Package physical set",
     "exact historical I4H 42-test body",
     "the frozen I4D parent runtime materialization required for non-stubbed R2 execution"
   ],
+  "exhaustive_current_finding": "Across the currently inspectable Git tree, historical I4D tree, the I4H physical-closure Actions run, repository Releases, recent File Library uploads and the previously searched connected Google Drive, no trustworthy byte-addressable copy of the complete nine Sync R6 package files is available. The durable Hub contains authority/evidence, not the nine physical package bytes.",
   "required_recovery_boundary": "No physical I4H promotion may occur until a trustworthy byte-addressable copy of all nine exact Sync R6 parents is available, verified 9/9, combined C2 is reassembled and verified, Recovery Qualification R2 is executed against the exact parent materialization, required regressions pass, and a new full nine-file physical audit is sealed.",
   "authority_effect": "NONE",
-  "status": "HUB_STORES_AUTHORITY_AND_EVIDENCE_NOT_9_PACKAGE_BYTES__PHYSICAL_RECOVERY_INPUT_BYTES_REQUIRED"
+  "status": "EXHAUSTIVE_CURRENT_STORAGE_AUDIT__HUB_STORES_AUTHORITY_EVIDENCE_NOT_9_PACKAGE_BYTES__PHYSICAL_RECOVERY_INPUT_BYTES_REQUIRED"
 }
