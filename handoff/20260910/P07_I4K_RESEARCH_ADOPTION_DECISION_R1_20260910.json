@@ -1,0 +1,100 @@
+{
+  "schema": "P07I4KResearchAdoptionDecisionR1",
+  "date": "2026-09-10",
+  "track_id": "P07-I4K-NARRATIVE-EVENT-ECOLOGY-WORLD-EVENT-ENGINE",
+  "working_names": [
+    "Narrative Event Ecology Engine",
+    "World Event Engine",
+    "Narrative Showrunner Engine"
+  ],
+  "decision": "ADOPTED_AS_NEXT_MAJOR_RESEARCH_TRACK",
+  "current_status": "PHASE0_EXTERNAL_RESEARCH_AND_DESIGN_READY__CAUSAL_EXPERIMENT_NOT_YET_PREREGISTERED__NO_ENGINE_PROMOTION",
+  "strategic_goal": "Raise Literary OS from narrative state/control and realization governance into a model-agnostic higher-order showrunner system that can discover, generate, simulate, rank and integrate diverse new events grounded in character state, relationship state, social institutions, environment and externally researched reality mechanisms.",
+  "non_goals": [
+    "generic plot-idea list generation",
+    "copying existing drama plots or identifiable anecdotes",
+    "replacing DB59 authority before DB64 requalification",
+    "rewriting I4I R1/R2 FAIL verdicts",
+    "cancelling preregistered I4J J1 without explicit preoutput governance change",
+    "Production or Formal promotion from design documents"
+  ],
+  "relationship_to_current_i4j": {
+    "i4j_status": "PREREGISTERED__FRESH_PLAN_0__CONTROL_0__SELECTOR_0__REVISION_POOL_0__ARM_SCORES_0__PREOUTPUT_INFRA_BLOCK",
+    "rule": "I4K Phase 0 may proceed in parallel during runtime outage. When runtime is healthy, resume and close I4J J1 first unless an explicit governance amendment changes ordering before any I4J fresh output. I4K causal execution requires its own fresh preregistration."
+  },
+  "research_program": [
+    "I4K-0 External Research / Architecture Qualification",
+    "I4K-1 Event Candidate Generation Effect",
+    "I4K-2 External Search Ablation",
+    "I4K-3 Event-to-Sequence Causal Adoption",
+    "I4K-4 Whole-Episode Prospective Validation",
+    "I4K-5 Independent Human / External Gate"
+  ],
+  "required_event_origins": [
+    "INTERNAL_CHARACTER_EVENT",
+    "RELATIONSHIP_EVENT",
+    "SOCIAL_INSTITUTIONAL_EVENT",
+    "ENVIRONMENTAL_CHANCE_EVENT"
+  ],
+  "external_search_policy": {
+    "purpose": "Reality Mechanism Mining",
+    "forbidden_primary_use": "Search for ready-made drama plots and copy them into generation",
+    "required_transformation": "Source fact/workflow -> abstract mechanism -> Event Primitive -> perspective expansion -> event candidate",
+    "required_receipts": [
+      "query_intent",
+      "source_title_or_url",
+      "source_date_when_available",
+      "retrieval_date",
+      "mechanism_claim",
+      "scope",
+      "confidence",
+      "non_inference_boundary",
+      "event_primitive_derivation"
+    ]
+  },
+  "integration_targets": [
+    "Macro Architecture",
+    "Character State",
+    "Relationship State",
+    "Ensemble / Social Ecology",
+    "Thread / Payoff / Information",
+    "Sequence Function",
+    "Scene Realization",
+    "Negative / Mismatch",
+    "Responsible Ancestor",
+    "State Carry"
+  ],
+  "governance_dependencies": [
+    "C1-C5 semantic/consumer contracts",
+    "A1 routing",
+    "A2 causal adoption and provenance/semantic invariance",
+    "G1 authority/source-cutoff/version",
+    "G2 responsible-ancestor repair"
+  ],
+  "phase0_exit_requirements": [
+    "external literature/research survey completed with source receipts",
+    "Reality Mechanism taxonomy frozen",
+    "Event Primitive Contract R1 frozen",
+    "Perspective Expansion contract frozen",
+    "Event Candidate evaluation rubric frozen",
+    "anti-copy/source governance frozen",
+    "I4K-1 hypotheses/control/treatment/sample/pass gates preregistered before any candidate generation"
+  ],
+  "physical_authority_effect": {
+    "active_engine_changed": false,
+    "db59_changed": false,
+    "current_5part_9package_changed": false,
+    "new_physical_authority_declared": false
+  },
+  "fixed_global_state": {
+    "active_engine": "P07-I4H Recovery R3",
+    "physical_research_sync_material_sha256": "6e630bf4039953bd7b9969735c87fe7f273e760aa0811ee6c0322c2ea74b3b84",
+    "combined_active_c2_sha256": "58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7",
+    "db_authority": "DB59",
+    "db59_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "production": "ENG:R47",
+    "formal_scored_count": 137,
+    "latest_formal": "R138",
+    "r140": [0,0,0]
+  }
+}
