@@ -1,0 +1,41 @@
+{
+  "schema": "P07I4K2SearchAblationPreregR1",
+  "date": "2026-09-10",
+  "experiment_id": "P07-I4K-R2-EXTERNAL-SEARCH-ABLATION",
+  "classification": "DEVELOPMENT_PREFORMAL__MASKED_SAME_AGENT__FRESH_SYNTHETIC_WORLD__THREE_ARM_ABLATION",
+  "parent_physical_authority": "P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R4__I4K0_EXIT_PASS__I4K1_PASS_TO_I4K2",
+  "parent_material_sha256": "90b0cbd6702be6eccea6f203f015ad7ce6e43bbd5dfa8fd5fb6bd0543cee76ab",
+  "active_engine": "P07-I4H Recovery R3",
+  "db_authority": "DB59 frozen; no DB free-text retrieval used",
+  "fresh_world_sha256": "9d6c25106c1d008aded428971bc8392a40306cf75582df0f3e8dbbd0832e3460",
+  "external_semantic_payload_sha256": "6b3dcc8c849c9c0d38862ad20d1bc37ca7b17addcbb63e0fdf7a7acb895b1a2c",
+  "a2_pregeneration_invariance_pass": true,
+  "arms": {
+    "INTERNAL_ONLY": {"n": 24, "quota": "12 INTERNAL_CHARACTER_EVENT + 12 RELATIONSHIP_EVENT"},
+    "EXTERNAL_ONLY": {"n": 24, "quota": "exactly 2 candidates per RM-001..RM-012"},
+    "COMBINED": {"n": 24, "quota": "6 candidates per each of four origins"}
+  },
+  "evaluation": {
+    "axes": ["causal_fit_to_current_state", "multi_perspective_richness", "institutional_social_plausibility", "non_generic_specificity", "ensemble_activation", "future_sustainability", "coincidence_convenience_safety"],
+    "scale": "1-10 integer or half-point",
+    "masking": "random secret mapping of all 72 candidates; arm/origin/mechanism IDs stripped before scoring; map SHA committed before scoring",
+    "evidence_class": "MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__BLINDNESS_NOT_INDEPENDENTLY_PROVABLE",
+    "hard_gates": ["continuity_violation=0", "protected_state_critical_violation=0", "fabricated_sourced_rule=0", "identifiable_anecdote_copy=0", "global_provenance_in_semantic_payload=0"]
+  },
+  "hypotheses": {
+    "H1": "COMBINED all-7 mean >= max(INTERNAL_ONLY, EXTERNAL_ONLY) +0.25.",
+    "H2": "EXTERNAL_ONLY minus INTERNAL_ONLY mean across institutional_social_plausibility and non_generic_specificity >= +0.40, while causal_fit_to_current_state delta >= -0.40.",
+    "H3": "COMBINED minus best single arm mean across ensemble_activation and future_sustainability >= +0.20, and COMBINED coincidence_convenience_safety >= best single arm -0.10.",
+    "H4": "All hard gate counts are zero; each arm has >=22/24 hard-gate-valid candidates; COMBINED each origin has >=5/6 candidates with seven-axis mean >=6.5; EXTERNAL_ONLY has >=18/24 candidates with causal_fit_to_current_state >=6.5."
+  },
+  "decision": {"PASS_TO_I4K3": "H1-H4 all PASS", "FAIL": "valid execution and any H1-H4 fails", "HOLD": "integrity/runtime/masking/count failure prevents valid scoring"},
+  "no_post_output_changes": true,
+  "formal_count_delta": 0,
+  "production_change": false,
+  "active_engine_change": false,
+  "db_change": false,
+  "actual_openai_live": false,
+  "local_prereg_sha256": "3c2bd18e9621a37b9ab1ed43bd10c244ed38c1887768586c634815d55bfaef71",
+  "local_freeze_manifest_sha256": "cdf9509298dd79c323b77299f850fa89683795cd1894fb7a38c91a03f61e9b17",
+  "outputs_at_seal": 0
+}
