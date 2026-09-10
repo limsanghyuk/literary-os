@@ -1,0 +1,12 @@
+{
+  "schema": "I4K1PreScoreSealReceiptR1",
+  "date": "2026-09-10",
+  "control_sha256": "7f963b6c562c56f0f55d02b7395bb1ba446f2a75feb18ba4843585906b6f5dc7",
+  "treatment_sha256": "d87ed96948211e8c3c6378136f2d13203062ec50f939b4a9076b8cbd10a1c82e",
+  "blind_map_sha256": "db34b37ce93ecf7f7c72ee447b180a34cc308f21617849239305e39d9b04320f",
+  "masked_packet_sha256": "72b61c2b94e95638808cac1a955511f73376317948efc0bfcf2c304cdfc4de2b",
+  "candidate_count": 64,
+  "masked_source_url_hits": 0,
+  "scores_at_seal": 0,
+  "evidence_class": "MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__BLINDNESS_NOT_INDEPENDENTLY_PROVABLE"
+}
