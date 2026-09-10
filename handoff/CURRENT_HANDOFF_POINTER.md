@@ -2,19 +2,29 @@
 Last updated: 2026-09-10
 
 ## READ FIRST
-1. `handoff/20260910/P07_I4K5R1_RESEARCH_SYNC_R18_PHYSICAL_CLOSURE_R1_20260910.md`
-2. `handoff/20260910/P07_I4K5R1_SURFACE_HYGIENE_REPAIR_PREREG_R1_20260910.json`
-3. `handoff/20260910/P07_I4K5R_SURFACE_HYGIENE_BOTTLENECK_DIAGNOSIS_R1_20260910.md`
-4. `handoff/20260910/SURFACE_HYGIENE_CONTRACT_R1_20260910.json`
-5. `handoff/20260910/P07_I4K5_RESEARCH_SYNC_R17_PHYSICAL_CLOSURE_R1_20260910.md`
-6. `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`
-7. `handoff/CURRENT_NEXT_RESEARCH_POINTER.md`
-8. `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`
+1. `handoff/20260910/I4K_RESEARCH_ARCHITECTURE_PROMOTION_AND_REPAIR_FORWARD_GOVERNANCE_R1_20260910.md`
+2. `handoff/20260910/P07_I4K5R1_RESEARCH_SYNC_R18_PHYSICAL_CLOSURE_R1_20260910.md`
+3. `handoff/20260910/P07_I4K5R1_SURFACE_HYGIENE_REPAIR_PREREG_R1_20260910.json`
+4. `handoff/20260910/P07_I4K5R_SURFACE_HYGIENE_BOTTLENECK_DIAGNOSIS_R1_20260910.md`
+5. `handoff/20260910/SURFACE_HYGIENE_CONTRACT_R1_20260910.json`
+6. `handoff/20260910/P07_I4K5_RESEARCH_SYNC_R17_PHYSICAL_CLOSURE_R1_20260910.md`
+7. `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`
+8. `handoff/CURRENT_NEXT_RESEARCH_POINTER.md`
+9. `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`
 
 ## CURRENT PHYSICAL AUTHORITY
 `P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R18__I4K5R1_PREREG_SURFACE_REPAIR`
 Material SHA256: `f9762c7de30c573c5324638c82c2e5067323c7d235970e5ff71924ed97d901c4`.
 Active Engine `P07-I4H Recovery R3`; Combined C2 `58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7`; DB59 frozen; Production `ENG:R47`; Formal 137; latest R138; R140 `0/0/0`.
+
+## GOVERNANCE — I4K ARCHITECTURE PROMOTION
+The I4K program is now accepted as a **promoted research architecture**. The official continuing upper-layer direction is:
+`Narrative State / Planning / Realization / Repair OS` -> `Narrative Event Ecology Engine` -> `Narrative Showrunner Operating System`.
+
+This is a research-architecture promotion, not an Active Engine/Production/Formal promotion. I4K-5 H3/H4 FAIL remains immutable. Its surface defects are handled under repair-forward doctrine while the independently supported Event Ecology structural gains are protected as invariants.
+
+Governance commit: `2888945e2959ae8beb55fb3311031fe79ad47687`.
+This governance note is Hub-sealed but not yet physically propagated into package bytes; physical authority therefore remains Sync R18 until the next Research Sync.
 
 ## PRESERVED I4K-5 RESULT
 I4K-5 external qualification remains immutable H1 PASS / H2 PASS / H3 FAIL / H4 FAIL. Structural Event Ecology benefit is preserved; broadcast-surface qualification failed. Post regression 258/258 PASS.
@@ -33,4 +43,4 @@ Both future arms must share byte-identical fresh Event Ecology/Sequence/Scene se
 Execute fresh shared upstream state/events/10-sequence/50-scene semantic architecture, seal it, then render Control/Treatment under the frozen protocols. No old I4K-4/I4K-5 prose reuse. Prescore hygiene/invariant gate must pass before masking.
 
 ## STATUS TOKEN
-`CURRENT_HANDOFF__SYNC_R18_F9762C7D__I4K5_EXTERNAL_FAIL_PRESERVED__I4K5R1_PREREG_SEALED_OUTPUTS_0__SURFACE_FIREWALL_REPAIR_NEXT__ACTIVE_I4H_R3__DB59__PRODUCTION_R47__FORMAL_137__R140_0_0_0`
+`CURRENT_HANDOFF__SYNC_R18_F9762C7D__I4K_RESEARCH_ARCHITECTURE_PROMOTED__I4K5_EXTERNAL_FAIL_PRESERVED__I4K5R1_PREREG_SEALED_OUTPUTS_0__SURFACE_FIREWALL_REPAIR_NEXT__ACTIVE_I4H_R3__DB59__PRODUCTION_R47__FORMAL_137__R140_0_0_0`
