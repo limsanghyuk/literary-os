@@ -1,0 +1,15 @@
+{
+  "schema":"P07I4K4SequenceAdoptionSealR1",
+  "experiment_id":"P07-I4K-4-WHOLE-EPISODE-PROSPECTIVE-VALIDATION",
+  "control_sequence_plan_sha256":"5df2b5e0dbf13885f17699e7a6c3d13470ea2466a46deb7db768304fc5bbe948",
+  "treatment_sequence_plan_sha256":"ae7d899b2f590187300a60c0f813323e5658abb82cf91a896d56bee47ff0a7f3",
+  "sequence_adoption_receipt_sha256":"1e2966f8a76b4329dc78373f625dbfdacd608b9a193037194e49d558eeb4f9d9",
+  "sequence_count_control":10,
+  "sequence_count_treatment":10,
+  "event_adoption_6_of_6":true,
+  "control_exact_title_contamination_0_of_6":true,
+  "scene_plans_at_seal":0,
+  "whole_episode_renders_at_seal":0,
+  "mask_at_seal":0,
+  "scores_at_seal":0
+}
