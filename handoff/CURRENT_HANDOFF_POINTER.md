@@ -2,30 +2,33 @@
 Last updated: 2026-09-10
 
 ## READ FIRST
-1. `handoff/20260910/P07_I4K5_R2_RESEARCH_SYNC_R16_PHYSICAL_CLOSURE_R1_20260910.md`
-2. `handoff/20260910/P07_I4K5_PRE_RELEASE_PROTOCOL_CORRECTION_R2_20260910.md`
-3. `handoff/20260910/P07_I4K5_JUDGE_RELEASE_MANIFEST_R2_20260910.json`
+1. `handoff/20260910/P07_I4K5_EXTERNAL_FAIL_RESEARCH_SYNC_R17_PHYSICAL_CLOSURE_R1_20260910.md`
+2. `handoff/20260910/P07_I4K5_INDEPENDENT_EXTERNAL_GPT_FAIL_CLOSURE_R2_20260910.md`
+3. `handoff/20260910/P07_I4K5_R2_UNBLIND_OPEN_AND_RESULT_RECEIPT_20260910.json`
 4. `handoff/20260910/P07_I4K5_INDEPENDENT_EXTERNAL_GPT_PREREG_R1_20260910.json`
 5. `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`
 6. `handoff/CURRENT_NEXT_RESEARCH_POINTER.md`
 7. `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`
 
 ## CURRENT PHYSICAL AUTHORITY
-`P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R16__I4K5_R2_PACKETS_SEALED_AWAITING_EXTERNAL_JUDGES`
-Material SHA256: `4f8c9be99c318fd5f15fc58f8a980f4fa123525a7cf4fc9c2eb3f50551c81ce3`.
-Active Engine `P07-I4H Recovery R3`; Combined C2 `58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7`; DB59 frozen; Production `ENG:R47`; Formal 137; latest R138; R140 `0/0/0`.
+`P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R17__I4K5_EXTERNAL_FAIL_H3_H4`
+Material SHA256: `eb93c2bca956d32242b5b3b3decbcd290a2dbecf245440b5400bdf8885d1f99e`.
+Active Engine `P07-I4H Recovery R3`; Combined C2 `58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7`; DB59 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`; Production `ENG:R47`; Formal 137; latest R138; R140 `0/0/0`.
 
-## I4K-5 STATE
-Original R1 judge packets are `SUPERSEDED_PRE_RELEASE__DO_NOT_USE` because coordinator-side integrity inspection made their A/B identity inferable before any judge response. Judge responses remained 0; scientific unblind remained 0.
+## I4K-5 EXTERNAL RESULT
+Three valid external GPT-5.6 Sol judge responses were sealed before R2 map reveal; no replacement judge was used.
+- H1 **PASS**: Treatment majority 11W/0T/1L, nonloss 11/12.
+- H2 **PASS**: J01 10W/1T/1L, J03 11W/0T/1L, J02 11W/0T/1L; 3/3 individual gates PASS.
+- H3 **FAIL**: U11 whole architecture Treatment win, but U12 whole broadcast-surface Control win 3/3. Target structural-axis median +1.00 passes, while dialogue/subtext/direction craft and broadcast readiness median deltas are each -0.50 below frozen -0.25 floor.
+- H4 **FAIL**: 12/12 outcome agreement and protocol breach 0 pass, but repeated scene-preface padding is verified by 3/3 judges in both arms and objective meta/engine leakage is mechanically verified.
+- Fleiss kappa diagnostic 0.7251908397.
+- Diagnostic readiness median Control 81 / Treatment 86; diagnostic only, does not override FAIL.
 
-Correct release authority is R2. Protocol correction commit `150a0254792541f1debf8835285c8d6050cb110c`; R2 packet manifest seal commit `c8b9bde3568b02030af70027337ed33d0c385e97`; R2 secret map SHA `2f8f209ab31668756d6fff747ab8993293916d7463fac9c484759b5e17606f47`. Mapping contents remain coordinator-private.
+Final verdict: `FAIL__H3_WHOLE_EPISODE_SURFACE_AND_PRIMARY_AXIS_FLOORS__H4_VERIFIED_CRITICAL_VIOLATIONS__REPAIR_AND_FRESH_EXTERNAL_REPLICATION_REQUIRED__NO_PROMOTION`.
+Post-I4K5 nonhistorical regression: **258/258 PASS**.
 
-R2 integrity: every judge packet contains the exact two sealed I4K-4 episode bodies as an unordered pair, each 10 sequences / 50 scenes; instructions and JSON response template complete; arm/internal-result leakage in episode bodies 0; ZIP CRC PASS.
-
-Scale boundary: final source files passed the frozen file-level 35k metric at 35,382/35,007 chars. After anonymized metadata-wrapper replacement, packet screenplay bodies are 35,346/34,969. No screenplay content was truncated. Do not claim both metadata-excluded bodies exceed 35k; future work must preregister `screenplay_body_chars` excluding metadata.
-
-## NEXT
-Release only R2 J01/J02/J03 to three separate fresh GPT conversations outside this Project. Do not use R1. Seal each exact response before any mapping reveal. J04/J05 are replacement-only for protocol-invalid/no-response. Judge responses 0 / unblind 0 / verdict none.
+## EXACT NEXT BOUNDARY
+Do not lower thresholds and do not discard Event Ecology. Independent judges strongly replicated structural value: causal coherence +1.5 median, ensemble downstream decision ownership +1.5, escalation +1.0, future-thread sustainability +1.0. Next is knowledge-only surface-bottleneck diagnosis focused on repeated sequence-purpose prefaces, meta/engine leakage, dialogue/subtext naturalness and broadcast-readiness. After diagnosis, preregister a completely fresh surface-hygiene repair replication. Old I4K-4/I4K-5 episode bytes are diagnosis-only and must not become future scored arms.
 
 ## STATUS TOKEN
-`CURRENT_HANDOFF__SYNC_R16_4F8C9BE9__I4K5_R2_RELEASE_READY__R1_SUPERSEDED__RESPONSES_0__UNBLIND_0__ACTIVE_I4H_R3__DB59__PRODUCTION_R47__FORMAL_137__R140_0_0_0`
+`CURRENT_HANDOFF__SYNC_R17_EB93C2BC__I4K5_EXTERNAL_H1_H2_PASS_H3_H4_FAIL__SURFACE_REPAIR_DIAGNOSIS_NEXT__REGRESSION_258_258__ACTIVE_I4H_R3__DB59__PRODUCTION_R47__FORMAL_137__R140_0_0_0`
