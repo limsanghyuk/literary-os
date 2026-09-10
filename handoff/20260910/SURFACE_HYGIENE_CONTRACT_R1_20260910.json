@@ -1,0 +1,69 @@
+{
+  "schema": "SurfaceHygieneContractR1",
+  "classification": "EXPERIMENTAL_REPAIR_CONTRACT__NOT_ACTIVE_ENGINE_POLICY",
+  "parent_result": "I4K5_EXTERNAL_FAIL_H3_H4",
+  "purpose": "Preserve narrative semantics while preventing planning/meta prose and repeated architecture explanation from entering broadcast surface.",
+  "semantic_inputs_allowed": [
+    "scene_local_goal",
+    "scene_local_obstacle",
+    "scene_turn",
+    "scene_exit_state",
+    "character_state",
+    "relationship_pressure",
+    "event_consequence",
+    "downstream_decision_owner",
+    "future_thread_owner",
+    "location_time",
+    "props",
+    "allowed_speakers",
+    "surface_realization_mode"
+  ],
+  "forbidden_surface_literals_regex": [
+    "Event Ecology",
+    "\\bCH\\d+\\b",
+    "\\bSQ\\d+\\b",
+    "\\bthread\\b",
+    "\\bsequence\\b",
+    "Treatment",
+    "Control",
+    "engine",
+    "planner",
+    "planning contract",
+    "threshold"
+  ],
+  "scene_entry_rules": {
+    "sequence_purpose_common_prefix_repeated_across_3plus_scenes": 0,
+    "scene_preface_must_be_scene_local_playable": true,
+    "no_explanatory_restatement_of_plan_fields": true,
+    "no_generic_camera_blocking_paragraph_reused_across_sequences": true
+  },
+  "duplication_rules": {
+    "exact_long_sentence_duplicate_outside_dialogue_and_whitelisted_diegetic_labels": 0,
+    "plan_purpose_verbatim_or_near_verbatim_copy_into_multiple_scene_prefaces": 0
+  },
+  "playability_rules": [
+    "stage direction grounds location/time/physical action",
+    "emotion preferably physicalized through behavior",
+    "causality shown by action/decision/consequence",
+    "detailed direction allowed but must be local and nonduplicative",
+    "dialogue must not explain architecture or internal control logic"
+  ],
+  "protected_invariants": [
+    "Event->Sequence causal adoption",
+    "Sequence->Scene causal adoption",
+    "second-order decision ownership",
+    "future-thread ownership",
+    "character/relationship/state continuity",
+    "allowed speaker set"
+  ],
+  "prescore_mechanical_gates": {
+    "meta_plan_token_leakage": 0,
+    "sequence_common_prefix_repetition": 0,
+    "exact_long_duplicate_ratio_max": 0.0,
+    "screenplay_body_chars_each_min": 35000,
+    "arm_body_char_relative_gap_max": 0.1,
+    "structural_adoption_nonloss_required": true,
+    "critical_continuity_violations": 0
+  },
+  "failure_rule": "Any prescore mechanical hygiene/invariant failure => HOLD before masking/scoring; no post-output repair in same preregistration."
+}
