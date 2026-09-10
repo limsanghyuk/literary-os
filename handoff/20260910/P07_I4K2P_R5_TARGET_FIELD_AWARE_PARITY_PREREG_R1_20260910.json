@@ -1,0 +1,66 @@
+{
+  "active_engine_change": false,
+  "actual_openai_live": false,
+  "arms": {
+    "BASELINE": 12,
+    "PROPAGATION": 12
+  },
+  "classification": "DEVELOPMENT_PREFORMAL__MASKED_SAME_AGENT__FRESH_SYNTHETIC_WORLD__PROSPECTIVE_RETRY_AFTER_R4_PARITY_HOLD",
+  "date": "2026-09-10",
+  "db_change": false,
+  "decision": {
+    "FAIL": "valid scored execution and any H fails",
+    "HOLD": "admission/parity/runtime/masking failure",
+    "PASS_TO_I4K3_PREREG": "H1-H4 all PASS"
+  },
+  "evaluation": {
+    "axes": [
+      "causal_fit_to_current_state",
+      "multi_perspective_richness",
+      "institutional_social_plausibility",
+      "non_generic_specificity",
+      "ensemble_activation",
+      "future_sustainability",
+      "coincidence_convenience_safety"
+    ],
+    "hard_gates": [
+      "continuity_violation=0",
+      "protected_state_critical_violation=0",
+      "fabricated_sourced_rule=0",
+      "identifiable_anecdote_copy=0",
+      "global_provenance_in_semantic_payload=0"
+    ],
+    "masking": "random secret mapping of 24 final candidates; map SHA committed before scoring",
+    "scale": "1-10 half-point"
+  },
+  "experiment_id": "P07-I4K-2P-R5-TARGET-FIELD-AWARE-PARITY-PROPAGATION-REPLICATION",
+  "formal_count_delta": 0,
+  "frozen_files": {
+    "01_FRESH_WORLD_R1.json": "4a9f6e77244a46fff8a0925456afa7c15be5665b63a6a2beef2863f6f3cdf60a",
+    "02_SELECTED_MECHANISMS_R1.json": "b2e1011c19b9d7424b74bce78e2a1f52633155fc6eea348f2efd11794eaca1a7",
+    "03_TARGET_AWARE_REPRESENTATION_BUDGET_R1.json": "d4fbd2cb6198863bb04fd92d5ad7e8017ffc7a1a4f8709957657eb4880da0719",
+    "04_STATE_ATTACHMENT_CONTRACT_R1.json": "bb9dcbf584a0d60a3d92d73fefae85bc3b999d2d2a42f52c631c4523d0380e0d",
+    "05_SECOND_ORDER_PROPAGATION_CONTRACT_R2.json": "9151c2c0bf49ce8b9e2babf36b52ba34a6a420fd2417d46983b5aaff254e872a",
+    "06_PREEMISSION_ADMISSION_GATE_R2.json": "425e6657a889b44f864eaf71fb5b794addbf153a9a738799df40cc3d90f57d36",
+    "07_ARM_INSTRUCTIONS_R1.json": "0399d2304e7ae39e98fd004f4b5818efb3772784cca2f8718aee8b2dcfba3ba9"
+  },
+  "generation_integrity": {
+    "coordinated_pair_parity_before_final_emission": true,
+    "deterministic_admission": true,
+    "final_arm_exactly_once": true,
+    "max_attempts": 3,
+    "no_post_admission_rewrite": true,
+    "provisional_non_output": true
+  },
+  "hypotheses": {
+    "H1": "PROPAGATION ensemble+future mean >= BASELINE +0.20.",
+    "H2": "PROPAGATION all-7 mean >= BASELINE +0.10.",
+    "H3": "PROPAGATION causal-fit mean >= BASELINE -0.10 and institutional+specificity mean >= BASELINE -0.10.",
+    "H4": "Hard gates zero; 12/12 admitted each arm; broad individual budgets and pair/arm total parity PASS; non-target field means <=10%; State Attachment 12/12 both; Propagation Contract 12/12 Treatment; mechanism quotas exact."
+  },
+  "outputs_before_execution": 0,
+  "parent_material_sha256": "06717b220bf6c17d9abe5ce39a847dd7154d53e3c4e0de945eb197a0daf7301a",
+  "parent_physical_authority": "P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R10__I4K2P_R4_HOLD_ARM_FIELD_MEAN_PARITY",
+  "production_change": false,
+  "schema": "P07I4K2PR5PreregistrationR1"
+}
