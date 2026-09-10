@@ -1,0 +1,11 @@
+{
+  "schema":"P07I4K4MaskSealR1",
+  "experiment_id":"P07-I4K-4-WHOLE-EPISODE-PROSPECTIVE-VALIDATION",
+  "map_sha256":"c50d67c6ac42e09b6d79b2f52c89a0059b7c0c8a7f3d911cb08a67321f2280b3",
+  "masked_packet_sha256":"0496e91d2f4774930f7c9ee95e5b871f5b76c84c9c904fc19cb9161143005628",
+  "mask_seal_sha256":"4c671e0fcc21a34b09a92ab41609bc56ac614a3ad648e9e9bfd43a8e107242bb",
+  "sequence_packets":20,
+  "whole_packets":2,
+  "scores_at_seal":0,
+  "unblind_at_seal":0
+}
