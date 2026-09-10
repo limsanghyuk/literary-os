@@ -1,0 +1,14 @@
+{
+  "schema": "P07I4K3SequencePlanPrescoreSealR1",
+  "experiment_id": "P07-I4K-3-EVENT-TO-SEQUENCE-CAUSAL-ADOPTION-R1",
+  "control_sequence_plan_sha256": "375c58b45375d9fc4b5102e25cccbeaf886f6d4bc83e73e4bb4f9a05960266ad",
+  "treatment_sequence_plan_sha256": "73a83866495fba5474d5d338aae8b58ac2bbbd78be7fcdd24630a2d825772b9c",
+  "prescore_integrity_adoption_receipt_sha256": "db0bc411317ef20313aca2cb40ae1e7c15c6ec455fe9dcee5739c12f7ba76f17",
+  "representation": {"control_total_chars":4711,"treatment_total_chars":4605,"whole_plan_relative_gap":0.02250053067289323},
+  "adoption": {"planner_receives": "6/6", "causal": "6/6", "second_order": "6/6", "future_thread": "6/6", "control_signature_contamination": "0/6"},
+  "hard_gate_violations": 0,
+  "prescore_status": "PASS",
+  "mask_outputs_at_seal": 0,
+  "scores_at_seal": 0,
+  "unblind_at_seal": 0
+}
