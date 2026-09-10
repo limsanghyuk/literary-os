@@ -1,0 +1,17 @@
+{
+  "schema": "P07I4K3EventSetSealR1",
+  "experiment_id": "P07-I4K-3-EVENT-TO-SEQUENCE-CAUSAL-ADOPTION-R1",
+  "preregistration_commit": "091ab201399a5616a8260b5dcd54597fc95df547",
+  "event_candidate_count": 6,
+  "event_ids": ["E01","E02","E03","E04","E05","E06"],
+  "slot_ids": ["EVS1","EVS2","EVS3","EVS4","EVS5","EVS6"],
+  "event_set_sha256": "93a1a85dd52298bdada8215f107e3b909cbb572b3173628b51ecdd14faec3d81",
+  "signature_ledger_sha256": "2759133fe3c8fbc8411e3c018fb3315bd64b80bfdd34e1ff7a3d0fa3fee689b5",
+  "integrity_receipt_sha256": "478bea311ed3922b1932a1c77399907d4ba501bf2dcb9d05903bbb9f50548ad4",
+  "integrity_status": "PASS",
+  "raw_provenance_in_semantic_payload": false,
+  "sequence_plan_outputs_at_seal": 0,
+  "mask_outputs_at_seal": 0,
+  "score_outputs_at_seal": 0,
+  "unblind_outputs_at_seal": 0
+}
