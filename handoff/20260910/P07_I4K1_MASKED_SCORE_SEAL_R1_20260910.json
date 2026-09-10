@@ -1,0 +1,9 @@
+{
+  "schema": "I4K1MaskedScoreSealR1",
+  "date": "2026-09-10",
+  "masked_score_sha256": "439e9879c8c78d0b1ff46f7881fabedd2245fe8d95829a025e25df17e4a74c77",
+  "candidate_count": 64,
+  "blind_map_sha256": "db34b37ce93ecf7f7c72ee447b180a34cc308f21617849239305e39d9b04320f",
+  "unblinded_at_seal": false,
+  "evidence_class": "MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__BLINDNESS_NOT_INDEPENDENTLY_PROVABLE"
+}
