@@ -1,0 +1,17 @@
+{
+  "experiment_id": "P07-I4K-3-EVENT-TO-SEQUENCE-CAUSAL-ADOPTION-R1",
+  "files": {
+    "00_PARENT_AUTHORITY_R1.json": {"bytes": 674, "sha256": "295dda9bbec5f53372306df9e485ddc40e4f0c6bc3e401c3c93141a1823dfb68"},
+    "01_FRESH_SERIES_EPISODE_STATE_R1.json": {"bytes": 6289, "sha256": "ac347c12057b4206ec7784b2d6fc1230609e5546fa1597d54484acf1cfa227b9"},
+    "02_EVENT_SLOTS_AND_GENERATION_CONTRACT_R1.json": {"bytes": 2921, "sha256": "50e1ae7b8cd55ac0153b4585f6213f8f6733e8e8846b8c4c99ea6c56dfbece20"},
+    "03_CONSUMER_ADOPTION_CONTRACT_R1.json": {"bytes": 1929, "sha256": "ed0dbac7f02ba97437db7ad76c4df319d1690422e8364eafde2207ef5a9138fd"},
+    "04_CONTROL_TREATMENT_AND_SEQUENCE_SCHEMA_R1.json": {"bytes": 1272, "sha256": "982112847b9506e9f2617657d7ea32dd49a29ce3fcbdc0c8d42ec34c26437409"},
+    "05_REPRESENTATION_BUDGET_R1.json": {"bytes": 895, "sha256": "1f571833000984e5a9d5898552b1ffef48173a90abcf2e8bd7185c17ae47d975"},
+    "06_MASKING_EVALUATION_H1_H4_R1.json": {"bytes": 2150, "sha256": "eedf3b15d6e41d2e21ba5bebfe53e97269e426ef4b7ca8d5258a9584c413feeb"},
+    "07_PREREGISTRATION_R1.json": {"bytes": 2658, "sha256": "250d42233d5d8e7305028357aa808259435aff4e0a8a2bb35dcb5029df2cffa1"}
+  },
+  "outputs": {"event_candidates": 0, "mask": 0, "scores": 0, "sequence_plans": 0, "unblind": 0},
+  "schema": "P07I4K3PreGenerationFreezeManifestR1",
+  "freeze_manifest_sha256": "746ce0a95a5ed041351eff1048a6b55f11e40680c16dfa1f45695ec7e7fe4ca3",
+  "freeze_zip_sha256": "e1712a1d9c0bb339afd114f712aad60f6863d1c6ac2fef561c3a2d6387a2731a"
+}
