@@ -1,0 +1,14 @@
+name: I4K5R1 temporary measurement
+on:
+  push:
+    branches: [i4k5r1-temp-measure]
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Measure sealed provisional files
+        run: python handoff/20260911/I4K5R1_MEASUREMENT_RUNNER_SPEC_R1.py
