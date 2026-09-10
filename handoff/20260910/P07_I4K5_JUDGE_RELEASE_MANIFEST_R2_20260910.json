@@ -1,0 +1,32 @@
+{
+  "schema": "P07I4K5JudgeReleaseManifestR2",
+  "protocol_correction_commit": "150a0254792541f1debf8835285c8d6050cb110c",
+  "judge_responses_at_generation": 0,
+  "secret_map_sha256": "2f8f209ab31668756d6fff747ab8993293916d7463fac9c484759b5e17606f47",
+  "packets": {
+    "J01": {"file":"J01_INDEPENDENT_GPT_BLIND_JUDGE_PACKET_R2.md","sha256":"6b693d1232185eac8696471a2e3d6235b6a7eb0c0281ac8a1f92960d95e631a5","bytes":173733},
+    "J02": {"file":"J02_INDEPENDENT_GPT_BLIND_JUDGE_PACKET_R2.md","sha256":"3953f4e325eb6aa6ce9d284d9413ed749cffe64e09207faba30c97e2fd321a25","bytes":173733},
+    "J03": {"file":"J03_INDEPENDENT_GPT_BLIND_JUDGE_PACKET_R2.md","sha256":"a671ae3ffe6eda791d7a21365a63f6ee81d5588407d01af775b30e0dea422901","bytes":173733},
+    "J04": {"file":"J04_INDEPENDENT_GPT_BLIND_JUDGE_PACKET_R2.md","sha256":"2a33bcf0a912cc5d177f330330f48382760f64ff3e9f80b7edf72b0f436029d6","bytes":173733},
+    "J05": {"file":"J05_INDEPENDENT_GPT_BLIND_JUDGE_PACKET_R2.md","sha256":"b42b745f4bcc683ca55fd226cb545f38c11b791272a96835b600e4e6670a3b57","bytes":173733}
+  },
+  "response_contract_sha256": "418ef25444aa53c8fdf3f0172affb6549fa41263a9eb12097d19630cd2925ab8",
+  "release_order": ["J01","J02","J03"],
+  "replacements": ["J04","J05"],
+  "validation": {
+    "unordered_exact_source_pair": "5/5 PASS",
+    "two_distinct_episode_bodies": "5/5 PASS",
+    "each_10_sequences": "5/5 PASS",
+    "each_50_scenes": "5/5 PASS",
+    "instruction_sections_complete": "5/5 PASS",
+    "json_template_present": "5/5 PASS",
+    "episode_body_forbidden_metadata_leaks": 0,
+    "primary_zip_crc": "PASS",
+    "replacement_zip_crc": "PASS"
+  },
+  "mapping_contents_exposed_to_coordinator_analysis": false,
+  "r1_packets_status": "SUPERSEDED_PRE_RELEASE__DO_NOT_USE",
+  "judge_responses_at_seal": 0,
+  "scientific_unblind_at_seal": 0,
+  "status": "R2_PACKETS_SEALED_AND_RELEASE_READY"
+}
