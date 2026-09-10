@@ -1,0 +1,46 @@
+{
+  "schema":"P07I4K5R1MechanicalAdmissionResultHoldR1",
+  "date":"2026-09-11",
+  "experiment":"P07-I4K-5R1-SURFACE-HYGIENE-AND-RENDER-BOUNDARY-REPAIR",
+  "physical_parent":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R19__I4K_RESEARCH_ARCHITECTURE_PROMOTED__I4K5R1_PREREG_SURFACE_REPAIR",
+  "physical_parent_material_sha256":"e8cef1a6431cc7618a898e5856a01f95fe2c856570f100e962dc31c74cf59575",
+  "measurement_method":{
+    "reason":"local container/Python transport unavailable",
+    "runner":"GitHub-hosted Ubuntu 24.04 / CPython 3.12.14 on non-authoritative temporary branch",
+    "workflow_run_id":34511056548,
+    "job_id":102984984356,
+    "runner_spec_commit":"4b114167fe807ca1ff754df101971bf2fb07fd3c",
+    "workflow_branch_commit":"b58faf217c111e55ab9499d7c9424687e1b199c7",
+    "scientific_constraint":"read-only measurement of exact sealed provisional files; no prose/threshold/mapping mutation"
+  },
+  "inputs":{
+    "control_blob_sha":"cc9937379d0b7f0ef8326a38b2c5fc7bcaa0c753",
+    "control_file_sha256":"4c9c7f7893539e91dfab1642477cd7cf2f682faf29502bf3fe0694d1d1e8044a",
+    "control_bytes":51194,
+    "treatment_blob_sha":"0cafb23ce0df11212b7651ea01c7cbd7df757806",
+    "treatment_file_sha256":"ee33cfb81d0539d5978df6eefc8cc9b86f999178f900b736aedb2d21cf809289",
+    "treatment_bytes":50323
+  },
+  "metrics":{
+    "control_body_chars":22382,
+    "treatment_body_chars":21993,
+    "body_chars_floor_each":35000,
+    "control_scale_pass":false,
+    "treatment_scale_pass":false,
+    "relative_body_char_gap":0.01738003753015816,
+    "relative_gap_max":0.10,
+    "relative_gap_pass":true,
+    "control_scene_count":50,
+    "treatment_scene_count":50,
+    "scene_ids_each":"1..50 exact",
+    "treatment_forbidden_literal_counts":{"Event Ecology":0,"thread":0,"engine":0,"planner":0,"Treatment":0,"Control":0},
+    "treatment_CH_id_count":0,
+    "treatment_SQ_id_count":0,
+    "treatment_exact_long_duplicate_sentence_count":0
+  },
+  "decision":"HOLD__BOTH_ARMS_UNDER_METADATA_EXCLUDED_35000_CHAR_FLOOR__NO_MASK__NO_SCORES__NO_UNBLIND",
+  "scientific_interpretation":"Prescore representation-scale admission failure. This is not evidence that SurfaceHygieneContractR1 helps or harms craft, because no scoring occurred. Hygiene indicators available at this stage are favorable but unscored.",
+  "immutability":"Do not expand, rewrite, mask, score, or unblind these R1 provisionals under the same preregistration. They remain diagnosis-only after closure.",
+  "external_evaluation":"deferred by developer environment; not attempted and not failed",
+  "authority_changes":{"active_engine":false,"production":false,"db":false,"formal":false,"r140":false}
+}
