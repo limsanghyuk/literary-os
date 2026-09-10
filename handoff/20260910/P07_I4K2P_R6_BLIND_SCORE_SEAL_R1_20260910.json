@@ -1,0 +1,10 @@
+{
+  "blind_scores_sha256": "eeeb7a2e510d835d963b2f2f64a0396bcdd59ea882fed6e37edb635764d29450",
+  "complete": true,
+  "experiment_id": "P07-I4K-2P-R6-FIVE-ATTEMPT-TARGET-AWARE-PROPAGATION-REPLICATION",
+  "map_opened_for_analysis_at_seal": false,
+  "masked_packet_sha256": "8d8f35638d054783a3f061a96241ccb6190ab9baaa58c875561f4a8a01a3db34",
+  "rows": 24,
+  "schema": "P07I4K2PR6BlindScoreSealR1",
+  "values": 168
+}
