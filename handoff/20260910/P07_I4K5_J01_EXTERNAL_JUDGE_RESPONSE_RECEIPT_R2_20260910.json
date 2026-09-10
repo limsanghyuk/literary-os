@@ -1,0 +1,27 @@
+{
+  "schema": "P07I4K5ExternalJudgeResponseReceiptR2",
+  "experiment_id": "P07-I4K-5-INDEPENDENT-HUMAN-EXTERNAL-QUALIFICATION-GATE",
+  "judge_id": "J01",
+  "receipt_order": 1,
+  "release_revision": "R2",
+  "package_sha256": "7296067f36771eddfa94aa20362e128517af8c1a863692268e86d934b577e438",
+  "response_json_name": "J01_JUDGE_RESULT_R2.json",
+  "response_json_sha256": "ac7d93c1802e0ccaaeb5f28f754284797bf85b883e8a26a014ade93fb86ca027",
+  "protocol_valid": true,
+  "judge_id_match": true,
+  "model_config": "GPT-5.6 Sol / High",
+  "independence_attestation": {
+    "fresh_external_conversation": true,
+    "no_mapping_seen": true,
+    "no_other_judge_response_seen": true,
+    "no_prior_pair_exposure": true
+  },
+  "unit_count": 12,
+  "global_axis_count": 8,
+  "critical_flags_present": true,
+  "critical_categories_reported": ["severe_padding_or_repetition","meta_source_or_engine_leakage"],
+  "replacement_allowed": false,
+  "coordinator_map_opened_for_analysis_at_receipt": false,
+  "scientific_verdict_at_receipt": null,
+  "note": "Exact uploaded response package is retained unchanged; receipt records immutable hashes before any R2 mapping reveal."
+}
