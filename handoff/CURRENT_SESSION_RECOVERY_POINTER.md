@@ -2,30 +2,25 @@
 Last updated: 2026-09-10
 
 ## CURRENT DURABLE STATE
-Physical authority: `P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R15__I4K5_PREREG_PACKETS_SEALED_AWAITING_EXTERNAL_JUDGES`.
-Material SHA256: `a21bdf7368541682e30828275e38d7a2018ed3c3d9c1da9eacbadf1af2f3cb8c`.
+Physical authority: `P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R16__I4K5_R2_PACKETS_SEALED_AWAITING_EXTERNAL_JUDGES`.
+Material SHA256: `4f8c9be99c318fd5f15fc58f8a980f4fa123525a7cf4fc9c2eb3f50551c81ce3`.
 Active Engine `P07-I4H Recovery R3`; C2 `58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7`; DB59; Production `ENG:R47`; Formal 137; latest R138; R140 `0/0/0`.
 
-## I4K-5 FROZEN STATE
-Prereg commit `bcad5e951dd9e3358ea7f9696c4ed664ffff58a2`.
-Pre-release freeze commit `8e669634fbab5b5712e0a0cace9014def6f5279c`.
-Packet/mapping hash seal commit `48d37639a3cdfdb57176243d6ae03c27e5ab3100`.
-Secret map SHA `725f835788a7e53917d201a3968d1e562df4cb06302915ae2294db760ae19806`; do not open for analysis.
-J01-J05 packets are already generated and hash-sealed; release order J01/J02/J03. Judge responses 0; unblind 0; no verdict.
+## IMPORTANT CORRECTION
+R1 judge packets are superseded and must never be used. Before any judge response, coordinator-side integrity verification made their A/B identity inferable. No judge response or scientific verdict existed. R2 remapped the same two sealed episode bodies in a nonprinting process and improved instruction clarity without changing frozen scientific rules.
 
-## MANDATORY RESUME ORDER
-1. Runtime/filesystem/cgroup/OOM preflight.
-2. Verify Sync R15 material SHA and read I4K-5 prereg/packet seal.
-3. Do not open coordinator secret map or inspect hidden A/B identity.
-4. Give J01/J02/J03 to three independent fresh GPT conversations outside this Project.
-5. Each response must include model/config + independence attestation + 12 A/B/TIE decisions + global axes + critical flags.
-6. Save and hash each exact response in chronological receipt order before any unblind.
-7. If a response is protocol-invalid/no-response, use J04/J05 only; never replace an unfavorable valid judge.
-8. After exactly three valid responses are sealed, open map once and apply frozen H1-H4 without changes.
-9. Then scientific closure → package impact/regression if applicable → next physical sync.
+R2 secret map SHA `2f8f209ab31668756d6fff747ab8993293916d7463fac9c484759b5e17606f47`; mapping contents remain unopened for scientific analysis. R2 J01-J05 packets and packet manifest are sealed. Responses 0 / unblind 0 / verdict none.
 
-## CLAIM BOUNDARY
-A future PASS may establish `INDEPENDENT_EXTERNAL_GPT_CONSENSUS` only. It is not independent human consensus, cross-family consensus unless the judge pool actually satisfies that condition, or Production/Formal/Live promotion.
+## RESUME ORDER
+1. Runtime/OOM preflight and verify Sync R16 material SHA.
+2. Read R16 physical closure + R2 protocol correction + R2 release manifest.
+3. Do not inspect/infer R2 side identity.
+4. Send R2 J01/J02/J03 to three separate fresh GPT conversations outside the Project.
+5. Save exact JSON responses in chronological receipt order and hash-seal each.
+6. Use J04/J05 only for protocol-invalid/no-response, never to replace an unfavorable valid result.
+7. Only after three valid responses are sealed, open R2 map once and apply unchanged H1-H4.
+
+Scale note: packet screenplay bodies are 35,346 and 34,969 chars after anonymized wrapper replacement; no content is truncated. Future whole-episode work must measure metadata-excluded `screenplay_body_chars` explicitly.
 
 ## STATUS TOKEN
-`SESSION_RECOVERY__SYNC_R15_A21BDF73__I4K5_PREREG_SEALED__PACKETS_SEALED__RESPONSES_0__UNBLIND_0__ACTIVE_I4H_R3__DB59__FORMAL_137__R140_0_0_0`
+`SESSION_RECOVERY__SYNC_R16_4F8C9BE9__I4K5_R2_PACKETS_SEALED__R1_SUPERSEDED__RESPONSES_0__UNBLIND_0__ACTIVE_I4H_R3__DB59__FORMAL_137__R140_0_0_0`
