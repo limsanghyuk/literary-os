@@ -1,0 +1,21 @@
+{
+  "schema": "P07I4K5JudgePacketAndMappingHashSealR1",
+  "experiment_id": "P07-I4K-5-INDEPENDENT-HUMAN-EXTERNAL-QUALIFICATION-GATE",
+  "prereg_commit": "bcad5e951dd9e3358ea7f9696c4ed664ffff58a2",
+  "pre_release_freeze_commit": "8e669634fbab5b5712e0a0cace9014def6f5279c",
+  "secret_map_sha256": "725f835788a7e53917d201a3968d1e562df4cb06302915ae2294db760ae19806",
+  "judge_response_contract_sha256": "418ef25444aa53c8fdf3f0172affb6549fa41263a9eb12097d19630cd2925ab8",
+  "packets": {
+    "J01": {"file":"J01_INDEPENDENT_GPT_BLIND_JUDGE_PACKET_R1.md","sha256":"683745391c3e50b7d14bbee712cfceee2e8107ef6df3943518605c77a3f8f047","bytes":169922},
+    "J02": {"file":"J02_INDEPENDENT_GPT_BLIND_JUDGE_PACKET_R1.md","sha256":"8d772b8d64ecf3c5a5e037de285aac81151ab0a9fe04946769de72c39c1bc3a9","bytes":169922},
+    "J03": {"file":"J03_INDEPENDENT_GPT_BLIND_JUDGE_PACKET_R1.md","sha256":"07e770a23c3a81fbdd2518b3e889d94829c5adbd36de079c21667ab1ba1f3a17","bytes":169922},
+    "J04": {"file":"J04_INDEPENDENT_GPT_BLIND_JUDGE_PACKET_R1.md","sha256":"6f9582ff4d44601d948f171590edfe00d18730ee167957aee3eedb4322ff9d91","bytes":169922},
+    "J05": {"file":"J05_INDEPENDENT_GPT_BLIND_JUDGE_PACKET_R1.md","sha256":"2d2dd47074e017255d460fb8c1169e2d50b2664c190a965b28158ae62539bae3","bytes":169922}
+  },
+  "judge_responses_at_seal": 0,
+  "valid_judges_at_seal": 0,
+  "map_opened_for_analysis": false,
+  "release_order": ["J01","J02","J03"],
+  "replacement_only_if_protocol_invalid_or_no_response": ["J04","J05"],
+  "status": "PACKETS_SEALED_BEFORE_EXTERNAL_JUDGING"
+}
