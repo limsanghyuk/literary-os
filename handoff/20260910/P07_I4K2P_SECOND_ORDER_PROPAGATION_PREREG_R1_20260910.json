@@ -1,0 +1,52 @@
+{
+  "schema": "P07I4K2PSecondOrderPropagationReplicationPreregR1",
+  "date": "2026-09-10",
+  "experiment_id": "P07-I4K-2P-SECOND-ORDER-PROPAGATION-REPLICATION",
+  "classification": "DEVELOPMENT_PREFORMAL__MASKED_SAME_AGENT__FRESH_SYNTHETIC_WORLD__PROSPECTIVE_REPAIR_REPLICATION",
+  "parent_physical_authority": "P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R6__I4K2R_FAIL_H3_ENSEMBLE_FUTURE_MARGIN",
+  "parent_material_sha256": "9df7f7f6cc6e3c6790e98e168b6eb82a0c56bb8729280bcf9c2d95309675d216",
+  "active_engine": "P07-I4H Recovery R3",
+  "db_authority": "DB59 frozen; no DB free-text retrieval used",
+  "frozen_inputs": {
+    "diagnostic_sha256": "232b592dcd17cf79ac37d27e891a58f480e70a1c3144646d51977257df746dcb",
+    "second_order_propagation_contract_sha256": "f31711ce10c32bc6569f6e71099b31161f95284ff71c97133e09dc23a0ba29c0",
+    "fresh_world_sha256": "3fb9a98393b638c7798e677613f02e0d92dd328fa0d8aa88ed924179a32d4c5a",
+    "arm_instructions_sha256": "3488eaa4e7cc34a47d5f482c25ecfbddf0c3484719d86cebf22284eb1ba114f4",
+    "selected_mechanism_set_sha256": "cbcf3e5ea50d0e262bc73db674bfae01bb42c5ddc2d16bef716479ee162282ec",
+    "reused_state_attachment_contract_sha256": "eea0f8fc7a02c72d8f2f2ab9a27a720b4fb733bf7b0de2edd808aaf07cf83c26",
+    "reused_representation_parity_contract_sha256": "ae3cfbe4c8417dfe17d32f44edc10e4b65896d15126bb2a90cbfcf7bdaf160e6"
+  },
+  "arms": {
+    "INTERNAL_ONLY": {"n": 16, "quota": "8 internal + 8 relationship"},
+    "EXTERNAL_STATE_ATTACHED_BASE": {"n": 16, "quota": "2 per selected RM; State Attachment mandatory; no propagation contract"},
+    "EXTERNAL_PROPAGATION_ATTACHED": {"n": 16, "quota": "2 per selected RM; State Attachment + Second-Order Propagation Contract mandatory"}
+  },
+  "generation_integrity": {
+    "exactly_once_per_arm": true,
+    "no_post_output_rewrite": true,
+    "same_neutral_schema": true,
+    "representation_parity": "Reuse R1: 320-520 neutral chars; summary 90-190; deps 3-4; stakeholders 3-5; arm mean length max relative gap <=0.15; mean dependency gap <=0.5; stakeholder gap <=0.75",
+    "propagation_audit_fields_stripped_before_masking": true
+  },
+  "evaluation": {
+    "axes": ["causal_fit_to_current_state","multi_perspective_richness","institutional_social_plausibility","non_generic_specificity","ensemble_activation","future_sustainability","coincidence_convenience_safety","second_order_decision_propagation","durable_thread_ownership"],
+    "scale": "1-10 integer or half-point",
+    "masking": "random secret mapping of 48 candidates; arm/mechanism/origin/attachment/propagation audit fields stripped; map SHA committed before scoring",
+    "evidence_class": "MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__BLINDNESS_NOT_INDEPENDENTLY_PROVABLE",
+    "hard_gates": ["continuity_violation=0","protected_state_critical_violation=0","fabricated_sourced_rule=0","identifiable_anecdote_copy=0","global_provenance_in_semantic_payload=0"]
+  },
+  "hypotheses": {
+    "H1": "PROPAGATION_ATTACHED mean across ensemble_activation,future_sustainability,second_order_decision_propagation,durable_thread_ownership >= STATE_ATTACHED_BASE +0.30 and >= INTERNAL_ONLY +0.20; additionally legacy ensemble+future mean >= best comparator +0.15.",
+    "H2": "PROPAGATION_ATTACHED causal-fit mean >= STATE_ATTACHED_BASE -0.10 and >= INTERNAL_ONLY -0.10; institutional+specificity mean >= STATE_ATTACHED_BASE -0.10.",
+    "H3": "PROPAGATION_ATTACHED all-9 mean >= max(INTERNAL_ONLY, STATE_ATTACHED_BASE) +0.15 and legacy all-7 mean >= max comparators +0.10.",
+    "H4": "All hard gates zero; each arm >=15/16 hard-gate-valid; Representation Parity PASS; both external arms State Attachment 16/16; PROPAGATION_ATTACHED Propagation Contract 16/16; at least 14/16 PROPAGATION_ATTACHED candidates score >=6.5 on both second_order_decision_propagation and durable_thread_ownership; mechanism quotas exact."
+  },
+  "decision": {"PASS_TO_I4K3_PREREG":"H1-H4 all PASS","FAIL":"valid execution and any H1-H4 fails","HOLD":"integrity/runtime/masking/parity/contract failure prevents valid scoring"},
+  "formal_count_delta": 0,
+  "production_change": false,
+  "active_engine_change": false,
+  "db_change": false,
+  "actual_openai_live": false,
+  "outputs_before_execution": 0,
+  "preregistration_sha256": "3d301a1d6c0abc803e085903ea10384470025ecbd63f1c7770ff6ad8f5055e63"
+}
