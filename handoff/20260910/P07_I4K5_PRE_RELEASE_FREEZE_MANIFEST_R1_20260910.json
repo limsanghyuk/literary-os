@@ -1,0 +1,19 @@
+{
+  "schema": "P07I4K5PreReleaseFreezeManifestR1",
+  "experiment_id": "P07-I4K-5-INDEPENDENT-HUMAN-EXTERNAL-QUALIFICATION-GATE",
+  "created_at": "2026-09-10",
+  "parent_material_sha256": "cf03cdf731a53e1ee9737d1ccc457e51f7ef69ae521afdffe3f64e035cf82418",
+  "prereg_file": "01_I4K5_INDEPENDENT_EXTERNAL_GPT_PREREG_R1.json",
+  "prereg_sha256": "49a1ee75d090ccacd9901e0bdc2f6fa615d802f5a2c3b489d91e57ced8ee5276",
+  "read_first_sha256": "bfa21484d022bf78e0aaa5f12dfd82e7056339f3c0e4400372f5f97dfeb952c2",
+  "control_episode_sha256": "191e2294228deb7c8a3ba35ecdd139450a43a7be1e3342846e71f2762d070885",
+  "treatment_episode_sha256": "249d310397f2844d9c0f9d1db76e2ab9db7611ccc8ebd285d21d13ae91191f3b",
+  "r14_manifest_sha256": "66ad51aa167f8ecd015146a567486f0e2e17c0373bb58c7bb15fbc8a90dd0271",
+  "r14_audit_sha256": "8c13144bfa08e31ffa2999fc010e8d31721a22f3ce3210943ed420753efdeacd",
+  "counts_at_freeze": {
+    "judge_packets": 0,
+    "judge_responses": 0,
+    "unblind": 0
+  },
+  "status": "PREREG_READY__NO_JUDGE_PACKET_RELEASE__NO_JUDGE_OUTPUTS"
+}
