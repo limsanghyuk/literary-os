@@ -1,34 +1,34 @@
 # CURRENT DEVELOPER HUB AUTHORITY
-Last updated: 2026-09-10
+Last updated: 2026-09-11
 
 ## CURRENT PHYSICAL RESEARCH AUTHORITY
-`P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R18__I4K5R1_PREREG_SURFACE_REPAIR`
-Full logical 5-Part / 9-transport material SHA256: `f9762c7de30c573c5324638c82c2e5067323c7d235970e5ff71924ed97d901c4`.
-Active Development Engine remains `P07-I4H Recovery R3`.
-Combined C2 `58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7`; DB59 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`; Production `ENG:R47`; Formal 137; latest R138; R140 `0/0/0`.
+`P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R19__I4K_RESEARCH_ARCHITECTURE_PROMOTED__I4K5R1_PREREG_SURFACE_REPAIR`
+Full logical 5-Part / 9-transport material SHA256: `e8cef1a6431cc7618a898e5856a01f95fe2c856570f100e962dc31c74cf59575`.
+Physical closure commit: `b4979d99ece9b7c02d69ee87a1b86a7cb10c1bab`.
 
-## CLOSED I4K-5 EXTERNAL RESULT
-Frozen verdict remains `FAIL__H3_WHOLE_EPISODE_SURFACE_AND_PRIMARY_AXIS_FLOORS__H4_VERIFIED_CRITICAL_VIOLATIONS__REPAIR_AND_FRESH_EXTERNAL_REPLICATION_REQUIRED__NO_PROMOTION`.
-H1/H2 structural evidence passed strongly; H3/H4 surface qualification failed. Post-regression 258/258 PASS.
+## PHYSICALLY PROPAGATED GOVERNANCE
+I4K / Narrative Event Ecology / Narrative Showrunner Architecture is adopted as the official continuing upper-layer research architecture under repair-forward governance. This is Research Architecture Promotion, not Active Engine/Production/Formal promotion.
 
-## ROOT CAUSE
-Knowledge-only diagnosis shows the I4K-4 experimental whole-episode render path omitted explicit consumption/validation of the previously established LiterarySurfaceContractR1 / I4D SurfaceRealizationModeR1 boundary and omitted duplicate/meta-leakage surface gates. Sealed I4K-4 scene-entry explanatory prefaces occupied ~68% of episode characters, with sequence-purpose common prefixes alone contributing ~21-22% through repetition. This is an experimental render-boundary integration omission, not a runtime-code regression or evidence against Event Ecology structure.
+I4K-5 remains immutable H1/H2 PASS and H3/H4 FAIL. External judges strongly replicated structural Event Ecology value; the broadcast-surface/render-boundary defect remains the local repair target.
 
-## I4K-5R1 PREREGISTRATION
-`P07-I4K-5R1-SURFACE-HYGIENE-AND-RENDER-BOUNDARY-REPAIR` is preregistered before any fresh outputs. Prereg commit `8abcb658c56d68518348e25525c0f5b41d353abb`; freeze-manifest commit `aaab28432afa7ea1ec886b00f6ca381059e0fa73`. `SurfaceHygieneContractR1` and `PlanToSurfaceFirewallR1` are experimental repair contracts only, not Active Engine policy.
+## ACTIVE REPAIR EXPERIMENT
+`P07-I4K-5R1-SURFACE-HYGIENE-AND-RENDER-BOUNDARY-REPAIR` is preregistered before fresh output. Prereg commit `8abcb658c56d68518348e25525c0f5b41d353abb`; freeze-manifest commit `aaab28432afa7ea1ec886b00f6ca381059e0fa73`. All fresh outputs were 0 at seal.
 
-Both arms must share byte-identical fresh Event Ecology/Sequence/Scene semantics. Treatment only adds the repaired surface boundary. Metadata-excluded screenplay_body_chars >=35,000 is required. Old I4K-4/I4K-5 prose is diagnosis-only and prohibited from scored arms.
-
-## RESEARCH SYNC R18
+## RESEARCH SYNC R19
 Changed transports:
-- CONTROL `159d09a4e3f5a9fbaef22db9733a9aba78c7c02f05236f7a0f284a480ed7bf88`
-- Part A `94cc7c5e6add1a1db810207c9283edd1b682e39c4ff51cb76545cf6a1f713dc8`
-- Part B2 `d0b537a6877c4de68942facaf5404c45a317c003d6ab684e258eb1cb19e73aaa`
+- CONTROL `8ed8fdfa94119251b664ac9dcb2de43ead6761f8a4bef46897c8abfc888f06d0`
+- Part A `a5e9f6ce651315c90e18bdcd24217b9eb609b6b0b9c3bf5db8c4bdab4bfabdf5`
+- Part B2 `c086f06c5630fc4fd41e9a222e8dc9053b8f1a7351c353e19b73f3a6bd18801a`
 
-B1/C1/C2-A/C2-B/D1/D2 byte-identical from R17. Parent metadata mismatch 0 for CONTROL/A/B2; exactly 7 diagnosis/prereg evidence entries appended; CRC/path/symlink/encryption audit PASS. C2 and DB59 reassembly PASS. New scored outputs at R18 seal: 0.
+Byte-identical from R18: B1 `00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98`; C1 `dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518`; C2-A `d1fb7ba65ead633ec13d027d032e4bd3950e973b61408e04b620bd37f7997253`; C2-B `49d454647f0c1d0920a582c2a5aa222b345719a3d6d396374dcb0921560e9414`; D1 `a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504`; D2 `c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4`.
+
+Physical audit PASS: R18 parent metadata mismatch 0 for CONTROL/A/B2; exactly 4 R19 governance/state entries appended to each; duplicate/unsafe/symlink/encrypted 0; CRC PASS; all 9 outer SHA256 values match manifest. Combined C2 reassembly 318,368,553 bytes / `58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7` PASS. DB59 reassembly 259,756,521 bytes / `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9` PASS.
+
+## UNCHANGED OPERATING AUTHORITIES
+Active Development Engine `P07-I4H Recovery R3`; Production `ENG:R47`; DB59 frozen; Formal scored count 137; latest formal R138; Formal R140 `0/0/0`; OpenAI Live authority unchanged.
 
 ## NEXT
-Execute the already-sealed fresh I4K-5R1 shared upstream architecture and renderer repair. No Active Engine/Production/DB/Formal/R140/OpenAI Live promotion.
+Generate and seal the completely fresh shared I4K-5R1 Series/Episode/Event/10-sequence/50-scene semantic architecture before any render.
 
 ## STATUS TOKEN
-`PHYSICAL_PACKAGE_RESEARCH_SYNC_R18__ACTIVE_I4H_R3__PACKAGE_SET_F9762C7D__I4K5_FAIL_PRESERVED__I4K5R1_PREREG_SEALED_OUTPUTS_0__SURFACE_FIREWALL_REPAIR_NEXT__DB59__PRODUCTION_R47__FORMAL_137__R140_0_0_0`
+`PHYSICAL_PACKAGE_RESEARCH_SYNC_R19__PACKAGE_SET_E8CEF1A6__I4K_RESEARCH_ARCHITECTURE_PROMOTED__I4K5R1_PREREG_OUTPUTS_0__ACTIVE_I4H_R3__DB59__PRODUCTION_R47__FORMAL_137__R140_0_0_0`
