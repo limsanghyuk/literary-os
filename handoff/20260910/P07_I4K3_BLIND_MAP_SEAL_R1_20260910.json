@@ -1,0 +1,10 @@
+{
+  "schema": "P07I4K3BlindMapSealR1",
+  "map_sha256": "5aeec81320e53c622ae75b0a0807e7b7ff999964e7f91fd6a21f0d11d66aa879",
+  "masked_packet_sha256": "07d37fb9fe9e043a39dc4c7d60d1098b376128ae92a971f09193fa59c0e4e7ca",
+  "packet_count": 22,
+  "sequence_packets": 20,
+  "whole_plan_packets": 2,
+  "scores_at_seal": 0,
+  "map_opened_for_analysis_at_seal": false
+}
