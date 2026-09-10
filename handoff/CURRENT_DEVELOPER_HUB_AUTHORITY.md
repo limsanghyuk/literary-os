@@ -2,35 +2,27 @@
 Last updated: 2026-09-10
 
 ## CURRENT PHYSICAL RESEARCH AUTHORITY
-`P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R15__I4K5_PREREG_PACKETS_SEALED_AWAITING_EXTERNAL_JUDGES`
-Full logical 5-Part / 9-transport material SHA256: `a21bdf7368541682e30828275e38d7a2018ed3c3d9c1da9eacbadf1af2f3cb8c`.
+`P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R16__I4K5_R2_PACKETS_SEALED_AWAITING_EXTERNAL_JUDGES`
+Full logical 5-Part / 9-transport material SHA256: `4f8c9be99c318fd5f15fc58f8a980f4fa123525a7cf4fc9c2eb3f50551c81ce3`.
 Active Development Engine remains `P07-I4H Recovery R3`.
 Combined C2 `58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7`; DB59 frozen; Production `ENG:R47`; Formal 137; latest R138; R140 `0/0/0`.
 
-## LATEST RESEARCH
-I4K-4 whole-episode prospective validation remains PASS_TO_INDEPENDENT_GATE. I4K-5 external qualification is now preregistered but has **no judge outputs yet**.
+## I4K-5 STATUS
+External multi-GPT qualification remains preregistered with judge responses 0 and unblind 0. R1 judge packets are superseded pre-release; use R2 only.
 
-Primary mode: three independent external GPT judge sessions. This is deliberately distinct from human consensus. Same-family residual bias remains a claim-boundary limitation if all judges are from the same GPT family.
+R2 protocol correction commit `150a0254792541f1debf8835285c8d6050cb110c`.
+R2 packet seal commit `c8b9bde3568b02030af70027337ed33d0c385e97`.
+R2 secret map SHA `2f8f209ab31668756d6fff747ab8993293916d7463fac9c484759b5e17606f47`; contents remain coordinator-private.
 
-Preregistered design: 12 blind paired units (10 sequence + whole architecture + whole broadcast craft), 5 judge slots with first three valid responses used, J04/J05 replacement-only for protocol invalid/no-response. Pairwise win/tie/loss is primary because the current OS is already near a high quality ceiling; absolute 0-100 scores are diagnostic only.
+R2 packet integrity: exact sealed two-episode unordered pair 5/5; each side 10 sequences/50 scenes; instruction/template completeness 5/5; forbidden arm/internal-result leakage 0; ZIP CRC PASS. The judge-facing instructions now explicitly define each craft axis, evaluation order, whole-episode judgments, critical flags, anti-verbosity bias, and JSON-only response format. No scientific thresholds changed.
 
-Prereg commit: `bcad5e951dd9e3358ea7f9696c4ed664ffff58a2`.
-Packet/mapping seal: `48d37639a3cdfdb57176243d6ae03c27e5ab3100`.
-Secret map SHA: `725f835788a7e53917d201a3968d1e562df4cb06302915ae2294db760ae19806`.
-Judge responses 0 / valid judges 0 / unblind 0 / scientific verdict none.
+Scale-count boundary: source final files passed I4K-4 frozen file-level counts 35,382/35,007. Anonymized packet screenplay bodies are 35,346/34,969 because seal/title metadata were removed/replaced; no screenplay content was truncated. Do not claim both metadata-excluded bodies exceed 35k. Future preregistration must define `screenplay_body_chars` excluding metadata.
 
-## RESEARCH SYNC R15
-Changed transports:
-- CONTROL `7b2c2c66d7341f51ae891447d7766c4d30a6b583f4b94b45c3104ed3e5b36d41`
-- A `ee15531e39204186dda5d8b59c25dd6e5fb0f0f3b6d052a6f0c08fcf4a835e85`
-- B2 `14e8d05d8f9b463b3537e38e5ab96591baff41ab468387ccdf651a2896121ab0`
-
-B1/C1/C2-A/C2-B/D1/D2 are byte-identical from R14. Parent-entry metadata mismatch 0 for CONTROL/A/B2; exactly 9 prereg/packet-seal evidence entries appended; duplicate/unsafe/symlink/encrypted 0; CRC PASS. Fresh C2 split-stream verification 318,368,553 bytes / `58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7` PASS. No runtime code change.
+## RESEARCH SYNC R16
+Changed CONTROL `5c12fedfc64af037f0c0ab1cb1029713888ca7633bff2fb35814c117f55010a5`, A `88e7f6dc893689dcb084d6b55b1d1f2cb9b2da795e6d3ddfc914b95ee8fae2d2`, B2 `e0dc1712a7a796d917cd75c9e011f14e94f9d42da80d8c16a2b33da73c3871ef`; exactly 6 R2 correction/release evidence entries appended to each, parent metadata mismatch 0, CRC/path safety PASS. Other six transports byte-identical from R15. Runtime code unchanged; parent post-I4K4 regression 258/258 remains applicable.
 
 ## NEXT
-Run J01/J02/J03 in separate fresh GPT conversations with no Project/Hub/mapping/other-judge context. Seal exact judge responses before unblind. Apply frozen H1-H4 only after three valid responses are sealed.
-
-No Active Engine/Production/DB/Formal/R140/OpenAI Live promotion.
+Release R2 J01/J02/J03 to three independent fresh GPT conversations and return exact responses. J04/J05 replacement-only. No Active Engine/Production/DB/Formal/R140/OpenAI Live promotion.
 
 ## STATUS TOKEN
-`PHYSICAL_PACKAGE_RESEARCH_SYNC_R15__ACTIVE_I4H_R3__PACKAGE_SET_A21BDF73__I4K5_PREREG_PACKETS_SEALED__JUDGES_0__UNBLIND_0__DB59__PRODUCTION_R47__FORMAL_137__R140_0_0_0`
+`PHYSICAL_PACKAGE_RESEARCH_SYNC_R16__ACTIVE_I4H_R3__PACKAGE_SET_4F8C9BE9__I4K5_R2_RELEASE_READY__RESPONSES_0__UNBLIND_0__DB59__PRODUCTION_R47__FORMAL_137__R140_0_0_0`
