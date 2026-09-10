@@ -1,0 +1,67 @@
+{
+  "active_engine_change": false,
+  "actual_openai_live": false,
+  "arms": {
+    "BASELINE": 12,
+    "PROPAGATION": 12
+  },
+  "classification": "DEVELOPMENT_PREFORMAL__MASKED_SAME_AGENT__FRESH_SYNTHETIC_WORLD__PROSPECTIVE_RETRY_AFTER_R5_ADMISSION_HOLD",
+  "date": "2026-09-10",
+  "db_change": false,
+  "decision": {
+    "FAIL": "valid scored execution and any H fails",
+    "HOLD": "admission/parity/runtime/masking failure",
+    "PASS_TO_I4K3_PREREG": "H1-H4 all PASS"
+  },
+  "evaluation": {
+    "axes": [
+      "causal_fit_to_current_state",
+      "multi_perspective_richness",
+      "institutional_social_plausibility",
+      "non_generic_specificity",
+      "ensemble_activation",
+      "future_sustainability",
+      "coincidence_convenience_safety"
+    ],
+    "hard_gates": [
+      "continuity_violation=0",
+      "protected_state_critical_violation=0",
+      "fabricated_sourced_rule=0",
+      "identifiable_anecdote_copy=0",
+      "global_provenance_in_semantic_payload=0"
+    ],
+    "masking": "random secret mapping of 24 final candidates; map SHA committed before scoring",
+    "scale": "1-10 half-point"
+  },
+  "experiment_id": "P07-I4K-2P-R6-FIVE-ATTEMPT-TARGET-AWARE-PROPAGATION-REPLICATION",
+  "formal_count_delta": 0,
+  "frozen_files": {
+    "01_FRESH_WORLD_R1.json": "983f178c650055e5ec15c87eb604fa9592b87c58b9efc9c57f9c1fd21560f969",
+    "02_SELECTED_MECHANISMS_R1.json": "6bab3bb6f70c55bb995435333713e2447797d9dd4ce75820fc37cd1530a670cc",
+    "03_TARGET_AWARE_REPRESENTATION_BUDGET_R1.json": "526ccfa8c36701b6623e2524e3997b8f7bb7657a15c330507d49b0c4928f8144",
+    "04_STATE_ATTACHMENT_CONTRACT_R1.json": "bb9dcbf584a0d60a3d92d73fefae85bc3b999d2d2a42f52c631c4523d0380e0d",
+    "05_SECOND_ORDER_PROPAGATION_CONTRACT_R2.json": "9151c2c0bf49ce8b9e2babf36b52ba34a6a420fd2417d46983b5aaff254e872a",
+    "06_PREEMISSION_ADMISSION_GATE_R3.json": "eb4f3954f75106b65c402d609076286e4b52ecda27d8e05d3453c872c08590f0",
+    "07_ARM_INSTRUCTIONS_R1.json": "6bf17589ed0a0b0b35ef63ba58909710933322a2590857b6462433055b439428"
+  },
+  "generation_integrity": {
+    "coordinated_pair_parity_before_final_emission": true,
+    "deterministic_admission": true,
+    "final_arm_exactly_once": true,
+    "max_attempts": 5,
+    "no_post_admission_rewrite": true,
+    "provisional_non_output": true
+  },
+  "hypotheses": {
+    "H1": "PROPAGATION ensemble+future mean >= BASELINE +0.20.",
+    "H2": "PROPAGATION all-7 mean >= BASELINE +0.10.",
+    "H3": "PROPAGATION causal-fit mean >= BASELINE -0.10 and institutional+specificity mean >= BASELINE -0.10.",
+    "H4": "Hard gates zero; 12/12 admitted each arm; broad individual budgets and pair/arm total parity PASS; non-target field means <=10%; State Attachment 12/12 both; Propagation Contract 12/12 Treatment; mechanism quotas exact."
+  },
+  "outputs_before_execution": 0,
+  "parent_material_sha256": "b7a6df5d175c0d8bd6e60243044934c8250d99e486fe124e655d880cd19995f6",
+  "parent_physical_authority": "P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R11__I4K2P_R5_HOLD_ADMISSION_EXHAUSTED",
+  "prior_boundary": "R5 was prescore HOLD after 23/24 eligibility; no effect verdict. Old candidates diagnosis-only and not reused.",
+  "production_change": false,
+  "schema": "P07I4K2PR6PreregistrationR1"
+}
