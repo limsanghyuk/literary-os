@@ -2,78 +2,88 @@
 Last updated: 2026-09-10
 
 ## READ FIRST — CURRENT NEW-SESSION ENTRYPOINT
-1. `handoff/20260910/START_HERE_P07_NEW_SESSION_MASTER_HANDOFF_R2_20260910.md`
-2. `handoff/20260910/P07_NEW_SESSION_DEVELOPER_STUDY_GUIDE_R1_20260910.md`
-3. `handoff/20260910/P07_I4K_NARRATIVE_EVENT_ECOLOGY_WORLD_EVENT_ENGINE_MASTER_PLAN_R1_20260910.md`
-4. `handoff/20260910/P07_I4K_RESEARCH_ADOPTION_DECISION_R1_20260910.json`
-5. `handoff/20260910/P07_I4K_PHASE0_EXTERNAL_REALITY_MECHANISM_RESEARCH_PROTOCOL_R1_20260910.md`
-6. `handoff/20260910/START_HERE_P07_NEW_SESSION_MASTER_HANDOFF_R1_20260910.md` — detailed prior research lineage; R2 corrects one runtime-receipt metadata path.
-7. `handoff/20260910/P07_FAILURE_INCIDENT_RESPONSE_PLAYBOOK_R1_20260910.md`
-8. `handoff/20260910/P07_NEW_SESSION_RECOVERY_MANIFEST_R2_20260910.json`
+1. `handoff/20260910/P07_I4J_R1_RESEARCH_SYNC_R3_PHYSICAL_CLOSURE_R1_20260910.md`
+2. `handoff/20260910/P07_I4J_R1_CONTROL_SCALE_FLOOR_HOLD_CLOSURE_R1_20260910.md`
+3. `handoff/20260910/START_HERE_P07_NEW_SESSION_MASTER_HANDOFF_R2_20260910.md` — historical lineage through pre-I4J execution.
+4. `handoff/20260910/P07_NEW_SESSION_DEVELOPER_STUDY_GUIDE_R1_20260910.md`
+5. `handoff/20260910/P07_I4K_NARRATIVE_EVENT_ECOLOGY_WORLD_EVENT_ENGINE_MASTER_PLAN_R1_20260910.md`
+6. `handoff/20260910/P07_I4K_RESEARCH_ADOPTION_DECISION_R1_20260910.json`
+7. `handoff/20260910/P07_I4K_PHASE0_EXTERNAL_REALITY_MECHANISM_RESEARCH_PROTOCOL_R1_20260910.md`
+8. `handoff/20260910/P07_FAILURE_INCIDENT_RESPONSE_PLAYBOOK_R1_20260910.md`
 9. `handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md`
-10. `handoff/20260910/P07_I4I_R2_FRESH_REPLICATION_CLOSURE_AND_PHYSICAL_SYNC_R2_20260910.md`
-11. `handoff/CURRENT_NEXT_RESEARCH_POINTER.md`
-12. `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`
-13. `handoff/CURRENT_NEXT_RESEARCH_CANDIDATE.md`
-14. `handoff/CURRENT_DATABASE_RESEARCH_POINTER.md`
-15. `handoff/20260909/START_HERE_P07_I4H_RECOVERY_R3_PHYSICAL_AUTHORITY_R1.md`
+10. `handoff/CURRENT_NEXT_RESEARCH_POINTER.md`
+11. `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`
 
 ## CURRENT PHYSICAL / ENGINE / DB AUTHORITY
 Physical research-sync authority:
-`P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R2__I4I_R2_CLOSED_PRIMARY_FAIL`
+`P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R3__I4J_R1_CONTROL_SCALE_FLOOR_HOLD`
 
-Full 9-file material SHA256:
-`6e630bf4039953bd7b9969735c87fe7f273e760aa0811ee6c0322c2ea74b3b84`
+Full 5-Part / 9-transport material SHA256:
+`7564dae4e61a15b5bfd57a7bb60745a4d3155c91711dc30ff105f799a95b312a`
 
-Active engine: `P07-I4H Recovery R3`.
-Combined active C2: `58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7`.
-DB authority: DB59 frozen `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
-Production `ENG:R47`; Formal `137`; latest `R138`; R140 `0/0/0`.
+Active Development Engine remains `P07-I4H Recovery R3`.
+Combined active C2 remains `58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7`.
+DB Authority remains frozen DB59 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
+Production `ENG:R47`; Formal scored count `137`; latest formal `R138`; Formal R140 `0/0/0`.
 
-## RESEARCH STATE
+Research Sync R3 changes research evidence only. Changed transports: CONTROL, Part A, Part B2. B1/C1/C2-A/C2-B/D1/D2 are byte-identical reuse from Sync R2.
+
+## I4J J1 — CLOSED AS PRESELECTOR HOLD
+Experiment:
+`P07-I4J-R1-FRESH-COVERAGE-ENDPOINT-VALIDATION`.
+
+Prereg commit:
+`364e92c38772e6c78b1585b40eb6dc769eaebec9`.
+
+Fresh source-free plan:
+- series `새벽 네 시의 공동주방`;
+- episode `아침까지 남겨둘 것`;
+- 10 sequences / 50 scenes;
+- active Scene→Renderer bridge 50/50 PASS before Control;
+- freeze manifest SHA256 `34c06bd359b707f98168562d068d5fa06e66b9feab57617654ddb87ad989c92c`.
+
+Single Control attempt:
+- 17,928 Unicode chars;
+- 10 sequences / 50 scenes;
+- SHA256 `0a8fbbe0017b1ecb92ae616839441ee4c7050a05a097114162128e5887f5a7ea`;
+- preregistered Control floor >=35,000 Unicode chars => scale floor MISS.
+
+Final classification:
+`HOLD__CONTROL_UNDER_SCALE_FLOOR__NO_SELECTOR__NO_REVISION_POOL__NO_ARMS__NO_SCORES__NO_SCIENTIFIC_H1_H4_VERDICT`.
+
+Exact post-closure state:
+Fresh Plan 1 / Control attempt 1 / Valid Control 0 / Selector 0 / Revision Pool 0 / Coverage Arms 0 / Blind Scores 0.
+
+Do not expand or rewrite this Control. Do not reinterpret J1 as H1–H4 scientific FAIL; valid scoring was never reached.
+
+## OTHER RESEARCH STATE
+- I4H Recovery R3: active foundation; full nonhistorical regression 258/258 PASS.
 - Semantic Alignment Virtual R1: virtual qualified shadow candidate; genuine OpenAI Live confirmation pending; NOT active.
 - DB64/9-Contract: HOLD; DB59 remains authority.
-- I4I R1: Primary FAIL +0.283333... vs +0.30; 12/12 nonloss; harmful 0%.
-- I4I R2: Primary FAIL +0.166666... vs +0.30; 12/12 nonloss; harmful 0%.
-- I4J J0 endpoint/coverage audit: complete, endpoint-misalignment signal confirmed; no retrospective verdict change.
-- I4J J1 fresh validation: current preregistered active experiment; fresh Plan/Control/Selector/Revision Pool/Arms/Scores all 0; runtime blocked.
-- I4K Narrative Event Ecology / World Event Engine: **ADOPTED AS NEXT MAJOR RESEARCH TRACK**. Phase 0 external reality-mechanism research/design may proceed without causal generation; causal I4K-1 requires healthy runtime and fresh preregistration.
+- I4I R1: Primary FAIL +0.283333... vs +0.30; old verdict unchanged.
+- I4I R2: Primary FAIL +0.166666... vs +0.30; old verdict unchanged.
+- I4J J0: endpoint/coverage audit complete; historical I4I verdicts unchanged.
+- I4J J1: CLOSED preselector HOLD as above.
+- I4K Narrative Event Ecology / World Event Engine: adopted next major research track; Phase 0 external reality-mechanism research/design is the next default research step.
 
-## I4K STRATEGIC DIRECTION
-I4K raises Literary OS toward a model-agnostic `Narrative Showrunner Operating System`.
+## LATEST RUNTIME / PHYSICAL AUDIT
+During J1 resume, one compound container call produced a transient `TransportTimeoutError`; immediate independent `/bin/true`, `/bin/echo`, `/usr/bin/env` probes then passed 3/3. Filesystem and OOM checks passed. High file/page cache was reduced before large binary reads. No OOM or OOM-kill occurred.
 
-Core capability:
-Current Character / Relationship / Ensemble / Thread / World state + externally researched Reality Mechanisms -> Event Primitives -> multi-perspective expansion -> event ecology simulation -> narrative event selection -> existing Series/Episode/Sequence/Scene lowering and Responsible-Ancestor repair.
+Research Sync R3 physical audit:
+- CONTROL/A/B2 parent entry mismatch 0;
+- exactly 7 new Sync R3 evidence entries appended to each;
+- duplicate/unsafe/symlink/encrypted 0;
+- ZIP CRC PASS;
+- combined C2 unchanged PASS;
+- DB59 reassembly PASS.
 
-External search purpose:
-`Reality Mechanism Mining`, not copying ready-made plots.
-
-Required event origins:
-- INTERNAL_CHARACTER_EVENT
-- RELATIONSHIP_EVENT
-- SOCIAL_INSTITUTIONAL_EVENT
-- ENVIRONMENTAL_CHANCE_EVENT
-
-Proposed research sequence:
-I4K-0 External Research/Architecture -> I4K-1 Event Candidate Generation Effect -> I4K-2 Search Ablation -> I4K-3 Event-to-Sequence Causal Adoption -> I4K-4 Whole-Episode Validation -> I4K-5 Independent Gate.
-
-## CURRENT EXECUTION BLOCK
-Latest receipt:
-`handoff/20260910/P07_I4J_RUNTIME_MINIMAL_PREFLIGHT_RECURRENCE_R2_20260910.md`
-Commit `dcd805f2460c36018740e88b7e0b843c6cef7d5f`.
-
-Latest three minimal probes all failed with `TransportTimeoutError`:
-- `/bin/true`
-- `/bin/echo runtime_probe_2`
-- `/usr/bin/env`
-
-Classification:
-`PREOUTPUT_INFRA_BLOCK__MINIMAL_PROCESS_3_OF_3_TRANSPORT_TIMEOUT__NO_SCIENTIFIC_FAIL__NO_FRESH_OUTPUTS`
-
-Do not infer package corruption. Do not create fresh I4J/I4K causal literary outputs or simulate missing runtime/provider receipts until minimal process + filesystem + memory/OOM + small archive preflight passes.
-
-## EXACT RESUME POINT
-When runtime is healthy: minimal process -> filesystem -> cgroup/OOM -> small archive read -> verify Sync R2 identities -> confirm I4J prereg -> resume/close I4J J1 from output 0 -> freeze I4K-1 exact preregistration after I4K-0 exit gate -> execute Event Candidate Generation Effect -> later I4K stages only after gates pass -> regression/package-impact -> physically deliver every changed transport before authority change.
+## EXACT NEXT RESEARCH BOUNDARY
+1. In every new session, repeat minimal process -> filesystem -> cgroup/OOM -> small archive preflight before heavy work.
+2. Treat I4J J1 as CLOSED HOLD; do not resume by editing its Control.
+3. Complete I4K-0 external Reality Mechanism research/architecture Exit Gate under its existing protocol.
+4. Freeze an exact I4K-1 preregistration before any causal event-candidate generation.
+5. If an I4J retry is desired later, it must be a separate preregistered fresh experiment with prospective Control-scale realization safeguards; do not reuse J1 output as a valid Control.
+6. After any meaningful new experiment, run regression/package-impact and physically synchronize all changed transports before authority change.
 
 ## STATUS TOKEN
-`CURRENT_HANDOFF__SYNC_R2_6E630BF4__ACTIVE_I4H_RECOVERY_R3__DB59_FROZEN__I4I_R1_FAIL__I4I_R2_FAIL__I4J_J1_OUTPUTS_0_RUNTIME_BLOCKED__I4K_EVENT_ECOLOGY_ADOPTED_PHASE0_READY__PRODUCTION_R47__FORMAL_137__R140_0_0_0`
+`CURRENT_HANDOFF__SYNC_R3_7564DAE4__ACTIVE_I4H_RECOVERY_R3__DB59_FROZEN__I4I_R1_FAIL__I4I_R2_FAIL__I4J_J1_CLOSED_CONTROL_SCALE_HOLD_17928_CHARS__SELECTOR_0_ARMS_0_SCORES_0__I4K_PHASE0_NEXT__PRODUCTION_R47__FORMAL_137__R140_0_0_0`
