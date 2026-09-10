@@ -1,0 +1,52 @@
+{
+  "schema": "P07I4K5R2UnblindOpenAndResultReceipt",
+  "experiment_id": "P07-I4K-5-INDEPENDENT-HUMAN-EXTERNAL-QUALIFICATION-GATE",
+  "release_revision": "R2",
+  "three_valid_responses_sealed_before_unblind": true,
+  "response_receipt_commits": [
+    "773a0b80d4d7b0a3690439ff1f98d94b3cfd8296",
+    "90fbbcd534d30c873fc155edfea0a171b99c6467",
+    "678ff80b6bcdb9ea52b1807c935263f62b70e7d2"
+  ],
+  "r2_secret_map_sha256_verified": "2f8f209ab31668756d6fff747ab8993293916d7463fac9c484759b5e17606f47",
+  "mapping_valid_judges": {
+    "J01": {"A":"CONTROL","B":"TREATMENT"},
+    "J03": {"A":"CONTROL","B":"TREATMENT"},
+    "J02": {"A":"CONTROL","B":"TREATMENT"}
+  },
+  "individual_judge_results": {
+    "J01": {"treatment_wins":10,"ties":1,"losses":1,"nonloss":11,"gate":"PASS"},
+    "J03": {"treatment_wins":11,"ties":0,"losses":1,"nonloss":11,"gate":"PASS"},
+    "J02": {"treatment_wins":11,"ties":0,"losses":1,"nonloss":11,"gate":"PASS"}
+  },
+  "aggregate_majority": {"treatment_wins":11,"ties":0,"losses":1,"nonloss":11,"U11":"TREATMENT_WIN","U12":"CONTROL_WIN"},
+  "global_axis_median_treatment_minus_control": {
+    "causal_coherence":1.5,
+    "event_organicness":0.0,
+    "character_relationship_integrity":0.5,
+    "ensemble_downstream_decision_ownership":1.5,
+    "escalation_pacing":1.0,
+    "dialogue_subtext_direction_craft":-0.5,
+    "future_thread_sustainability":1.0,
+    "broadcast_readiness_non_generic_specificity":-0.5
+  },
+  "target_axis_per_judge_mean_delta": {"J01":1.1666666667,"J03":0.8333333333,"J02":1.0},
+  "target_axis_median":1.0,
+  "primary_axis_worst_median_delta":-0.5,
+  "agreement": {"units_with_2plus_judge_outcome_agreement":"12/12","fleiss_kappa_diagnostic":0.7251908397},
+  "verified_critical_violations": [
+    "severe_padding_or_repetition: CONTROL recurring scene-preface / sequence-purpose direction, 3/3 judges",
+    "severe_padding_or_repetition: TREATMENT recurring scene-preface / sequence-purpose direction, 3/3 judges",
+    "meta_source_or_engine_leakage: CONTROL mechanically verified (CH03/SQ05/thread)",
+    "meta_source_or_engine_leakage: TREATMENT 2/3 judges plus mechanically verified (Event Ecology/CH05/SQ01/thread)"
+  ],
+  "protocol_breaches":0,
+  "H1_AGGREGATE_PAIRWISE":"PASS",
+  "H2_JUDGE_REPLICATION":"PASS",
+  "H3_WHOLE_EPISODE_AND_CEILING_SENSITIVE_AXES":"FAIL",
+  "H4_RELIABILITY_AND_SAFETY":"FAIL",
+  "final_verdict":"FAIL__H3_WHOLE_EPISODE_SURFACE_AND_PRIMARY_AXIS_FLOORS__H4_VERIFIED_CRITICAL_VIOLATIONS__REPAIR_AND_FRESH_EXTERNAL_REPLICATION_REQUIRED__NO_PROMOTION",
+  "local_result_sha256":"96e0d9e5bf6152e6e8e1d37caf7b0c17aded1966a65522728d8f3eb72606b0d4",
+  "local_closure_md_sha256":"595cfd018d19e0df2204b89d6bf71946f08c4147518569f012f96176c6157965",
+  "claim_boundary":"Independent same-family external GPT evidence only; not human/cross-family consensus and no Active Engine, Production, Formal R140, DB or Live promotion."
+}
