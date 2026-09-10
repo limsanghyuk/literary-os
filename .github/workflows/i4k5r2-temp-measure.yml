@@ -1,0 +1,14 @@
+name: I4K5R2 temporary measurement
+on:
+  push:
+    branches: [i4k5r2-temp-measure]
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Measure attempt 1
+        run: python handoff/20260911/I4K5R2_MEASUREMENT_RUNNER_R1.py
