@@ -1,0 +1,96 @@
+{
+  "schema":"P07I4K5R2FreshSurfaceRepairReplicationPreregR1",
+  "experiment_id":"P07-I4K-5R2-FRESH-SURFACE-HYGIENE-REPAIR-REPLICATION",
+  "date":"2026-09-11",
+  "classification":"DEVELOPMENT_PREFORMAL__INTERNAL_ONLY__FRESH_PROSPECTIVE",
+  "parent_physical_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R19__I4K_RESEARCH_ARCHITECTURE_PROMOTED__I4K5R1_PREREG_SURFACE_REPAIR",
+  "parent_material_sha256":"e8cef1a6431cc7618a898e5856a01f95fe2c856570f100e962dc31c74cf59575",
+  "prior_result":"I4K-5R1 HOLD__BOTH_ARMS_UNDER_METADATA_EXCLUDED_35000_CHAR_FLOOR__NO_MASK__NO_SCORES__NO_UNBLIND",
+  "purpose":"Test the plan-to-surface repair on a completely fresh whole episode while prospectively preventing under-scale admission and preserving normal Korean broadcast-script situation direction.",
+  "freshness":"COMPLETELY_FRESH_SYNTHETIC__NO_R1_SERIES_EPISODE_EVENT_SEQUENCE_SCENE_OR_PROSE_REUSE",
+  "evaluation_mode":"MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__INTERNAL_ONLY",
+  "external_status":"DEFERRED_BY_DEVELOPER_ENVIRONMENT__NOT_A_FAIL__NOT_REQUIRED_FOR_INTERNAL_RESEARCH_CONTINUATION",
+  "shared_upstream":{
+    "event_candidates":6,
+    "sequence_target":10,
+    "scene_target":50,
+    "arm_rule":"Control and Treatment consume byte-identical sealed Event Ecology / Sequence / Scene semantic architecture.",
+    "event_requirements":["character attachment","relationship attachment","social/institutional or environmental mechanism","downstream decision owner","future thread owner","second-order consequence"]
+  },
+  "surface_format_doctrine":{
+    "scene_opening_situation_direction":"ALLOWED_AND_PROTECTED; may be detailed and describe location/time/atmosphere/performer state/blocking/props/ongoing flow.",
+    "dialogue_adjacent_actor_cue":"Allowed as concise parenthetical or local action line when it directs emotion, delivery or immediate behavior.",
+    "forbidden":"Planning-purpose exposition, engine/planner/meta terminology, internal IDs, verbatim/near-verbatim plan-field restatement and mechanically reused generic direction templates.",
+    "no_direction_length_penalty":true
+  },
+  "arms":{
+    "CONTROL":"Shared upstream semantics rendered with the current I4K-4 experimental whole-episode render protocol, while respecting normal screenplay format doctrine.",
+    "TREATMENT":"Same shared upstream semantics plus LiterarySurfaceContractR1, eligible I4D SurfaceRealizationModeR1, PlanToSurfaceFirewallR1 and corrected SurfaceHygieneContractR2 semantics. Rich legitimate situation direction remains allowed."
+  },
+  "representation_and_pre_final_admission":{
+    "metadata_excluded_screenplay_body_chars_each_min":35000,
+    "arm_relative_body_char_gap_max":0.10,
+    "sequence_count_each":10,
+    "scene_count_each":50,
+    "planning_target_mean_scene_body_chars":"760-900 guidance only; not a quality score and not a hard per-scene minimum/maximum",
+    "bounded_provisional_attempts_max":3,
+    "attempt_rule":"Each attempt is PROVISIONAL_NON_SCORED. Before any final emission, run deterministic scale/structure/hygiene checks only. No blind quality scores or arm preference may be inspected between attempts.",
+    "allowed_between_attempt_changes":"Only deepen already-sealed scene-local situation direction, performer physical action, subtext-bearing interaction and consequence realization inside the same scene semantics. No new event, scene, sequence, responsibility owner or future-thread mutation.",
+    "stop_rule":"First attempt satisfying all prescore gates is frozen as final. If no attempt passes by attempt 3, HOLD with no scoring."
+  },
+  "prescore_gates":{
+    "body_chars_each_min":35000,
+    "body_length_gap_max":0.10,
+    "scene_count_each":50,
+    "scene_ids_exact":"1..50",
+    "treatment_meta_plan_token_leakage":0,
+    "treatment_CH_SQ_internal_ids":0,
+    "treatment_repeated_plan_purpose_copy":0,
+    "treatment_exact_long_mechanical_duplicate_ratio":0.0,
+    "shared_upstream_semantics_nonloss":true,
+    "critical_continuity_violations":0
+  },
+  "internal_blind_sample":{
+    "units":12,
+    "U01_U10":"corresponding full sequence surfaces",
+    "U11":"whole-episode architecture/continuity after full read",
+    "U12":"whole-episode broadcast surface/craft after full read",
+    "mapping":"neutral randomized A/B; mapping sealed before scores and not opened until score seal"
+  },
+  "evaluation_axes":[
+    "causal_coherence",
+    "event_organicness",
+    "character_relationship_integrity",
+    "ensemble_downstream_decision_ownership",
+    "escalation_pacing",
+    "dialogue_subtext_naturalness",
+    "stage_direction_playability",
+    "future_thread_sustainability",
+    "broadcast_readiness_non_generic_specificity"
+  ],
+  "hypotheses":{
+    "H1_PAIRWISE":"Treatment wins >=6/12; Treatment nonloss >=10/12; Treatment losses <=2/12.",
+    "H2_SURFACE_REPAIR":"Treatment-Control delta >=+0.30 on dialogue/subtext naturalness, >=+0.30 on stage-direction playability, >=+0.30 on broadcast readiness; no primary evaluation-axis delta below -0.25.",
+    "H3_STRUCTURAL_PRESERVATION":"For causal coherence, event organicness, character/relationship integrity, ensemble decision ownership, escalation/pacing and future-thread sustainability, every Treatment-Control delta >=-0.10; Event->Sequence->Scene->Future adoption nonloss.",
+    "H4_HYGIENE_SAFETY":"Verified critical violations=0; Treatment meta/internal leakage=0; repeated planning-purpose copy=0; exact long mechanical duplicate ratio=0; critical continuity violations=0."
+  },
+  "decision":{
+    "HOLD":"Any prescore admission/integrity failure after bounded attempt policy; no mask/scores/unblind.",
+    "FAIL":"Valid masked internal execution with any H1-H4 failure.",
+    "PASS":"H1-H4 all PASS => PASS__INTERNAL_ONLY_SURFACE_REPAIR_REPLICATION_SIGNAL__I4K_SHOWRUNNER_RESEARCH_CONTINUES. No independent external, human, Active Engine, Production, DB, Formal or R140 claim."
+  },
+  "outputs_at_prereg_seal":{
+    "fresh_series_episode_state":0,
+    "event_candidates":0,
+    "sequence_plan":0,
+    "scene_plan":0,
+    "control_render_attempts":0,
+    "treatment_render_attempts":0,
+    "final_renders":0,
+    "mask":0,
+    "scores":0,
+    "unblind":0
+  },
+  "unchanged_authorities":{"active_engine":"P07-I4H Recovery R3","production":"ENG:R47","db":"DB59","formal_scored_count":137,"latest_formal":"R138","formal_r140":"0/0/0"},
+  "no_threshold_change_after_output":true
+}
