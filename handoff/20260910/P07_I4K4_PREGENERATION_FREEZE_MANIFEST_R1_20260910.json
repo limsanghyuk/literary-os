@@ -1,0 +1,18 @@
+{
+  "decision": "PREGENERATION_FREEZE_COMPLETE__READY_FOR_GITHUB_OUTPUT0_SEAL",
+  "experiment_id": "P07-I4K-4-WHOLE-EPISODE-PROSPECTIVE-VALIDATION",
+  "files": [
+    {"bytes":4267,"filename":"01_FRESH_SERIES_STATE_R1.json","sha256":"10ccbdc407b7db5dd26a6a278a2d92b4ccba5e456b709db74796397f39e562a5"},
+    {"bytes":1148,"filename":"02_FRESH_EPISODE_SYNOPSIS_R1.json","sha256":"3404e5f37c10924843125b971320fded89c2d1d361dd7754660726bae42ffe0f"},
+    {"bytes":1331,"filename":"03_EVENT_SLOT_AND_SELECTION_RULE_R1.json","sha256":"4ea24f429b5045ac9bef5d628384cb55cbbd67518e0df254dd24710b9d288c01"},
+    {"bytes":855,"filename":"04_END_TO_END_ADOPTION_CONTRACT_R1.json","sha256":"d6036589e6b27e5c10f0643d2812f4d6ac4d30d3538625d4713c5d4b30dd3c11"},
+    {"bytes":1020,"filename":"05_ARCHITECTURE_SCALE_ANCHOR_CONTRACT_R1.json","sha256":"bbf649f333e5247ae852467775dc90c6b54af88ed14523b53442735d26d72b22"},
+    {"bytes":905,"filename":"06_CONTROL_TREATMENT_CONTRACT_R1.json","sha256":"a12cda4f6e17abba51f8bd4fc624d633ec0b62edf62b1180b1e3789415224ec3"},
+    {"bytes":969,"filename":"07_WHOLE_EPISODE_RENDER_ADMISSION_R1.json","sha256":"0fc9ba1aada059ba7190b9dd75c7141c355bc07942b6e9dad3ec348975101c0e"},
+    {"bytes":2293,"filename":"08_BLIND_EVALUATION_H1_H4_R1.json","sha256":"427e50e01aa45b10598701a6fc940e1c236b023d221fa9766fabc51126ffef78"},
+    {"bytes":2871,"filename":"09_PREREGISTRATION_R1.json","sha256":"342aeb96f88b78874002bb8ac1529d71f64d2c64dbea6a6c3d2a9da3179a04a8"}
+  ],
+  "outputs": {"event_candidates":0,"mask":0,"scene_plans":0,"scores":0,"sequence_plans":0,"unblind":0,"whole_episode_renders":0},
+  "parent_material_sha256":"73e25ebf555f72761ef0b1aa0f73fdc3e3e1c0b5b5c80311075d67a02502ca58",
+  "schema":"P07I4K4PreGenerationFreezeManifestR1"
+}
