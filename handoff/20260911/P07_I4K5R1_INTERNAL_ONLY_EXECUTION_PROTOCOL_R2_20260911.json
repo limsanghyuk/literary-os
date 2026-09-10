@@ -1,0 +1,119 @@
+{
+  "schema": "P07I4K5R1InternalOnlyExecutionProtocolR2",
+  "date": "2026-09-11",
+  "experiment_id": "P07-I4K-5R1-SURFACE-HYGIENE-AND-RENDER-BOUNDARY-REPAIR",
+  "parent_physical_authority": "P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R19__I4K_RESEARCH_ARCHITECTURE_PROMOTED__I4K5R1_PREREG_SURFACE_REPAIR",
+  "parent_material_sha256": "e8cef1a6431cc7618a898e5856a01f95fe2c856570f100e962dc31c74cf59575",
+  "execution_reason": "Developer environment currently cannot run independent external judging. Continue the preregistered research with internal masked evaluation without claiming external qualification.",
+  "pre_output_state": {
+    "fresh_series_state": 0,
+    "fresh_event_candidates": 0,
+    "fresh_sequence_plan": 0,
+    "fresh_scene_plan": 0,
+    "control_render": 0,
+    "treatment_render": 0,
+    "masked_packets": 0,
+    "scores": 0,
+    "unblind": 0
+  },
+  "surface_convention_correction_commit": "680d1f8d94208892d6ba159705d57a31ea572f26",
+  "evaluation_class": "MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__INTERNAL_ONLY",
+  "external_gate": "DEFERRED_BY_ENVIRONMENT__NOT_SCIENTIFIC_FAIL__NOT_REQUIRED_TO_CONTINUE_RESEARCH_ARCHITECTURE",
+  "freshness": {
+    "series_episode": "COMPLETELY_FRESH_SYNTHETIC",
+    "old_i4k4_i4k5_prose_reuse": 0,
+    "both_arms_share_identical_upstream_semantics": true
+  },
+  "scale": {
+    "sequences_each": 10,
+    "scenes_each": 50,
+    "metadata_excluded_screenplay_body_chars_each_min": 35000,
+    "arm_body_char_relative_gap_max": 0.10
+  },
+  "surface_format_doctrine": {
+    "scene_opening_situation_direction": "ALLOWED_AND_PROTECTED; may be detailed and may include setting, atmosphere, performer state, blocking, props and ongoing flow.",
+    "dialogue_adjacent_performer_cue": "ALLOWED; concise parenthetical or local action line near the affected dialogue/action. Parenthetical use is not mandatory.",
+    "planning_meta_explanation": "FORBIDDEN on broadcast surface.",
+    "scene_opening_direction_length_ratio": "DIAGNOSTIC_ONLY__NO_HARD_CAP"
+  },
+  "prescore_gates": {
+    "shared_upstream_semantic_hash_equal": true,
+    "event_adoption": "6/6 preserved in both arms",
+    "sequence_count": "10/10 each",
+    "scene_count": "50/50 each",
+    "screenplay_body_chars_each_min": 35000,
+    "arm_length_gap_max": 0.10,
+    "treatment_internal_meta_token_leakage": 0,
+    "treatment_repeated_sequence_purpose_copy": 0,
+    "treatment_mechanical_generic_direction_template_duplicates": 0,
+    "critical_continuity_violations": 0,
+    "scene_opening_situation_direction_not_penalized_for_length_alone": true
+  },
+  "internal_masked_sample": {
+    "units": 12,
+    "U01_U10": "corresponding full sequence surfaces",
+    "U11": "whole-episode architecture/continuity",
+    "U12": "whole-episode broadcast surface/craft",
+    "mapping": "neutral A/B labels; map sealed before scores; same-agent blindness is not claimed as independent"
+  },
+  "pairwise_axes": [
+    "causal_coherence",
+    "event_organicness",
+    "character_relationship_integrity",
+    "ensemble_downstream_decision_ownership",
+    "escalation_pacing",
+    "dialogue_subtext_naturalness",
+    "stage_direction_playability_and_performance_specificity",
+    "future_thread_sustainability",
+    "broadcast_readiness_non_generic_specificity"
+  ],
+  "hypotheses": {
+    "H1_INTERNAL_PAIRWISE_SURFACE": {
+      "treatment_wins_min": 6,
+      "treatment_nonloss_min": 10,
+      "treatment_losses_max": 2
+    },
+    "H2_SURFACE_AXIS_EFFECT": {
+      "dialogue_subtext_naturalness_delta_min": 0.30,
+      "stage_direction_playability_delta_min": 0.30,
+      "broadcast_readiness_delta_min": 0.30,
+      "any_primary_axis_delta_floor": -0.25
+    },
+    "H3_STRUCTURE_PRESERVATION": {
+      "protected_axes": [
+        "causal_coherence",
+        "event_organicness",
+        "character_relationship_integrity",
+        "ensemble_downstream_decision_ownership",
+        "escalation_pacing",
+        "future_thread_sustainability"
+      ],
+      "each_protected_axis_delta_floor": -0.10,
+      "event_to_sequence_to_scene_to_future_adoption": "NONLOSS"
+    },
+    "H4_HYGIENE_AND_CRITICAL_SAFETY": {
+      "verified_critical_violations": 0,
+      "treatment_internal_meta_token_leakage": 0,
+      "treatment_repeated_sequence_purpose_copy": 0,
+      "treatment_mechanical_generic_direction_template_duplicates": 0,
+      "critical_continuity_violations": 0
+    }
+  },
+  "decision_rule": {
+    "PASS": "H1-H4 all PASS => PASS__INTERNAL_ONLY_SURFACE_REPAIR_SIGNAL__I4K_SHOWRUNNER_RESEARCH_CONTINUES; no external qualification claim.",
+    "FAIL": "Valid internal scored execution with any H1-H4 effect/safety failure => preserve FAIL and repair-forward; do not change thresholds.",
+    "HOLD": "Any prescore integrity/scale/shared-semantics/masking failure => HOLD before scoring."
+  },
+  "claim_boundary": [
+    "Internal same-agent masked evaluation is development evidence only.",
+    "No independent GPT/human consensus is claimed.",
+    "External qualification remains deferred by environment, not failed.",
+    "A PASS may advance internal Narrative Showrunner research but does not promote Active Engine, Production, DB, Formal R140 or OpenAI Live authority."
+  ],
+  "no_threshold_change_after_output": true,
+  "formal_scored_count": 137,
+  "formal_r140": "0/0/0",
+  "active_engine": "P07-I4H Recovery R3",
+  "production": "ENG:R47",
+  "db": "DB59"
+}
