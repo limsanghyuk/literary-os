@@ -1,0 +1,14 @@
+{
+  "schema":"P07I4K4FinalEpisodeRenderSealR1",
+  "experiment_id":"P07-I4K-4-WHOLE-EPISODE-PROSPECTIVE-VALIDATION",
+  "control":{"sha256":"191e2294228deb7c8a3ba35ecdd139450a43a7be1e3342846e71f2762d070885","unicode_chars":35382,"sequence_count":10,"scene_count":50,"provisional_attempt":3},
+  "treatment":{"sha256":"249d310397f2844d9c0f9d1db76e2ab9db7611ccc8ebd285d21d13ae91191f3b","unicode_chars":35007,"sequence_count":10,"scene_count":50,"provisional_attempt":2},
+  "relative_char_gap":0.010598609462438529,
+  "render_admission_receipt_sha256":"ab3f9074cd490b9910cd6cbc3263a5682de621d5b908352aa4e6d40f08250ffa",
+  "event_to_render_surface_adoption_6_of_6":true,
+  "control_exact_event_title_contamination_0_of_6":true,
+  "quality_scores_seen_before_admission":false,
+  "post_final_rewrite_allowed":false,
+  "mask_at_seal":0,
+  "scores_at_seal":0
+}
