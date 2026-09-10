@@ -1,0 +1,16 @@
+{
+  "admission_receipt_sha256": "98def97315b7d475e7ba82427bf0f2f4d9880497ee0735690dcb6b8ef45e319f",
+  "candidate_count": 24,
+  "evidence_class": "MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__BLINDNESS_NOT_INDEPENDENTLY_PROVABLE",
+  "experiment_id": "P07-I4K-2P-R6-FIVE-ATTEMPT-TARGET-AWARE-PROPAGATION-REPLICATION",
+  "final_arm_sha256": {
+    "BASELINE": "4a79e8d986380856c85b5a61391d80dc4f7dd7dbe99c88457b241b1d047254ec",
+    "PROPAGATION": "850ecaa2e581bd2c91ec7393e5406f73e7e818e7dd829c219ed7dc345ae55b52"
+  },
+  "map_opened_for_scoring_at_seal": false,
+  "masked_packet_sha256": "8d8f35638d054783a3f061a96241ccb6190ab9baaa58c875561f4a8a01a3db34",
+  "prereg_commit": "23a5aeccefe5594dfed181bce42c30bc2062c2bf",
+  "schema": "P07I4K2PR6PreScoreMaskSealR1",
+  "scores_at_seal": 0,
+  "secret_mask_map_sha256": "ae149043f651608c3613b0dbe2119ffa32b44d3cf056675da0f04cd1d58ce2b1"
+}
