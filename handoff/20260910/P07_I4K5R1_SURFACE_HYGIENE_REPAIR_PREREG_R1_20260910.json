@@ -1,0 +1,49 @@
+{
+  "schema": "P07I4K5R1SurfaceHygieneRepairPreregR1",
+  "experiment_id": "P07-I4K-5R1-SURFACE-HYGIENE-AND-RENDER-BOUNDARY-REPAIR",
+  "date": "2026-09-10",
+  "classification": "DEVELOPMENT_PREFORMAL__FRESH_PROSPECTIVE_RENDERER_CAUSAL_REPAIR",
+  "parent_physical_authority": "P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R17__I4K5_EXTERNAL_FAIL_H3_H4",
+  "parent_material_sha256": "eb93c2bca956d32242b5b3b3decbcd290a2dbecf245440b5400bdf8885d1f99e",
+  "diagnosis_commit": "198a38cf6090c081daacf13d724a9695549bc401",
+  "surface_hygiene_contract_commit": "452a835d4e8d9d3da1d0d5c1ba505d4bcfce823d",
+  "hypothesis": "The I4K-5 external failure is caused by a plan-to-surface integration omission. Enforcing the existing Literary Surface interface plus a plan-to-surface firewall will improve broadcast surface craft while preserving independently validated Event Ecology structure.",
+  "frozen_files": {
+    "01_PLAN_TO_SURFACE_FIREWALL_R1.json": "383ae6901f29a2c3cb478c81ff35286d87b63ed7ce2cfa3b7737fa585acfaecb",
+    "02_SURFACE_HYGIENE_CONTRACT_R1.json": "e270a2fbc51cbf6b02825c2260752eec501e1b705d171c1ae261fa1e5bf61efd",
+    "03_FRESH_SHARED_ARCHITECTURE_PROTOCOL_R1.json": "4df642557a7b78719307345350eeeadf64a6a45de08ea26420aa9df736cad678",
+    "04_CONTROL_TREATMENT_CONTRACT_R1.json": "1078d2a2ce310e8d81ebf5dab5d3f22897cb5f144d45af4c5f79a868730c1164",
+    "05_RENDER_ADMISSION_R1.json": "1278aaea2910daf7edf5e278c0f98a2400dcbf4216553ca9acd6d3b6ecac7c79",
+    "06_INTERNAL_BLIND_EVALUATION_R1.json": "a3e3b137fbca56b35e95573c0a5f5ed75589f7241cee09b5f962b7588e17daea",
+    "07_EXTERNAL_REPLICATION_GATE_R1.json": "eea21c7d164fee4df8e8f34ee3cf88b03adcf0c0d8620325bc740b3ca943cc16"
+  },
+  "outputs_before_prereg_seal": {
+    "fresh_series_state": 0,
+    "fresh_episode": 0,
+    "event_candidates": 0,
+    "sequence_plan": 0,
+    "scene_plan": 0,
+    "control_render": 0,
+    "treatment_render": 0,
+    "mask": 0,
+    "scores": 0,
+    "external_judge_packets": 0,
+    "external_judge_responses": 0,
+    "unblind": 0
+  },
+  "old_episode_use": "I4K4/I4K5 episode bytes diagnosis-only; prohibited as scored arms",
+  "formal_count_delta": 0,
+  "formal_scored_count": 137,
+  "latest_formal": "R138",
+  "formal_r140": "0/0/0",
+  "active_engine": "P07-I4H Recovery R3",
+  "production": "ENG:R47",
+  "db": "DB59",
+  "no_threshold_change_after_output": true,
+  "decision": {
+    "HOLD": "prescore architecture/render/masking/integrity failure",
+    "FAIL": "valid scored internal execution with any H1-H4 fail; or later external gate fail",
+    "PASS_INTERNAL": "internal H1-H4 all pass => external judge release authorized",
+    "PASS_EXTERNAL": "frozen external gate passes => surface repair externally qualified; still no automatic engine/production/formal promotion"
+  }
+}
