@@ -1,0 +1,160 @@
+{
+  "schema": "P07I4K5IndependentExternalMultiGPTPreregR1",
+  "experiment_id": "P07-I4K-5-INDEPENDENT-HUMAN-EXTERNAL-QUALIFICATION-GATE",
+  "execution_mode": "INDEPENDENT_EXTERNAL_MULTI_GPT_PRIMARY__HUMAN_CONSENSUS_NOT_CLAIMED",
+  "date": "2026-09-10",
+  "classification": "DEVELOPMENT_PREFORMAL_EXTERNAL_QUALIFICATION",
+  "parent_physical_authority": "P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R14__I4K4_PASS_TO_INDEPENDENT_GATE",
+  "parent_material_sha256": "cf03cdf731a53e1ee9737d1ccc457e51f7ef69ae521afdffe3f64e035cf82418",
+  "active_engine": "P07-I4H Recovery R3",
+  "production": "ENG:R47",
+  "db": "DB59",
+  "formal_scored_count": 137,
+  "latest_formal": "R138",
+  "formal_r140": "0/0/0",
+  "source_episode": {
+    "series": "물비늘항 야간환승실",
+    "episode": "첫배 전에 남는 자리",
+    "control_sha256": "191e2294228deb7c8a3ba35ecdd139450a43a7be1e3342846e71f2762d070885",
+    "treatment_sha256": "249d310397f2844d9c0f9d1db76e2ab9db7611ccc8ebd285d21d13ae91191f3b",
+    "control_unicode_chars": 35382,
+    "treatment_unicode_chars": 35007,
+    "sequence_count_each": 10,
+    "scene_count_each": 50,
+    "source_status": "SEALED_I4K4_FINAL_BYTES__NO_REWRITE_ALLOWED"
+  },
+  "historical_method_basis": [
+    "2026-06-24 same-model AI-judge-AI 15/15 result was declared unreliable due self-family, length/context, and formatting bias.",
+    "R47 design required >=3 independent judges, complete source masking, agreement reporting, and multi-axis craft evaluation.",
+    "I4D fresh-human Stage B treated 3 wins +2 ties /9 as a meaningful human-competitive development signal rather than requiring domination.",
+    "I4G preserved preregistered win/tie thresholds even when 8 wins/3 losses/1 tie failed its nonloss gate."
+  ],
+  "ceiling_doctrine": {
+    "statement": "The current OS is already high-performing; this gate targets small, repeatable independent preference/nonloss rather than a large raw-score jump.",
+    "primary_statistics": "pairwise win/tie/loss under blindness",
+    "secondary_statistics": "within-judge axis deltas; absolute 0-100 readiness is diagnostic only and never a pass gate"
+  },
+  "judge_pool": {
+    "planned_slots": 5,
+    "required_valid_judges": 3,
+    "selection_rule": "Use the first three valid completed judge responses in chronological receipt order. Do not replace a valid unfavorable judge. Replacement slots J04/J05 are allowed only for no-response or protocol-invalid responses before unblind.",
+    "independence_requirements": [
+      "Each judge must run in a separate fresh GPT conversation outside the Literary OS Project and outside this coordinator conversation.",
+      "Judge must not receive GitHub/Hub access, coordinator mapping, I4K4 internal scores/results, or another judge response.",
+      "Judge must record model/config string and attest no prior exposure to the pair.",
+      "No cross-judge discussion before all three valid responses are sealed."
+    ],
+    "family_boundary": "If all valid judges are from the same GPT model family, PASS may be called INDEPENDENT_EXTERNAL_GPT_CONSENSUS only; it is not cross-family or human consensus."
+  },
+  "blind_mapping_custody": {
+    "strategy": "A/B assignment is independently randomized per judge packet; consistent within that judge across the full episode and all 12 units.",
+    "coordinator_map": "secret file retained coordinator-side; only SHA256 is published before judge release.",
+    "unblind_rule": "No mapping file may be opened for analysis until all three valid judge responses are sealed and hashed.",
+    "packet_release_rule": "Only anonymized judge-specific packet + common scoring contract may be released."
+  },
+  "sample": {
+    "units": 12,
+    "U01_U10": "10 corresponding full sequence pairs from the sealed I4K4 episodes",
+    "U11": "whole-episode architecture judgment after reading both complete anonymized episodes",
+    "U12": "whole-episode broadcast-surface/craft judgment after reading both complete anonymized episodes",
+    "independence_note": "Units come from one fresh whole episode and are not treated as 12 independent works; claims are episode-level external replication, not population generalization."
+  },
+  "pairwise_axes": [
+    "causal_necessity_and_progression",
+    "event_organicness_noncontrivance",
+    "character_relationship_continuity",
+    "ensemble_decision_ownership",
+    "sequence_scene_escalation",
+    "dialogue_subtext_naturalness",
+    "playable_direction_and_performance_specificity",
+    "future_thread_runway"
+  ],
+  "global_axis_scores": {
+    "scale": "1-10 in 0.5 increments, A and B separately after direct preference",
+    "axes": [
+      "causal_coherence",
+      "event_organicness",
+      "character_relationship_integrity",
+      "ensemble_downstream_decision_ownership",
+      "escalation_pacing",
+      "dialogue_subtext_direction_craft",
+      "future_thread_sustainability",
+      "broadcast_readiness_non_generic_specificity"
+    ]
+  },
+  "judge_output_contract": {
+    "for_each_U01_U12": [
+      "winner:A|B|TIE",
+      "confidence:LOW|MEDIUM|HIGH",
+      "decisive_axes:max_2",
+      "brief_reason:max_40_words"
+    ],
+    "after_all_units": [
+      "global_axis_scores_A_B",
+      "critical_violation_flags",
+      "absolute_readiness_A_B_0_100_diagnostic_only",
+      "model_config",
+      "independence_attestation"
+    ],
+    "no_chain_of_thought": "Judges provide concise reasons only, not hidden reasoning."
+  },
+  "critical_violations": [
+    "protected_state_or_continuity_contradiction",
+    "central_deus_ex_machina_or_unearned_coincidence",
+    "systemic_expository_dialogue_collapse",
+    "event_mechanism_ornamental_not_causal",
+    "severe_padding_or_repetition",
+    "incoherent_sequence_transition",
+    "meta_source_or_engine_leakage"
+  ],
+  "critical_verification": "A subjective critical violation is VERIFIED only when >=2 of 3 valid judges independently flag the same substantive locus/category. Objective source/meta leakage may be mechanically verified. Any VERIFIED critical violation fails H4.",
+  "individual_judge_gate": {
+    "treatment_wins_min": 5,
+    "treatment_nonloss_min": 8,
+    "treatment_losses_max": 4
+  },
+  "hypotheses": {
+    "H1_AGGREGATE_PAIRWISE": {
+      "treatment_majority_wins_min": 5,
+      "treatment_majority_nonloss_min": 9,
+      "treatment_majority_losses_max": 3
+    },
+    "H2_JUDGE_REPLICATION": {
+      "valid_judges_meeting_individual_gate_min": 2,
+      "valid_judges_required": 3
+    },
+    "H3_WHOLE_EPISODE_AND_CEILING_SENSITIVE_AXES": {
+      "U11_U12_rule": "At least one of U11/U12 is a Treatment majority win and the other is Treatment nonloss.",
+      "target_axes": [
+        "event_organicness",
+        "ensemble_downstream_decision_ownership",
+        "future_thread_sustainability"
+      ],
+      "median_within_judge_target_axis_delta_min": 0.15,
+      "primary_axis_worst_median_delta_floor": -0.25
+    },
+    "H4_RELIABILITY_AND_SAFETY": {
+      "verified_critical_violations": 0,
+      "units_with_2plus_judge_outcome_agreement_min": 10,
+      "valid_judge_protocol_breaches": 0,
+      "agreement_metric": "Fleiss kappa reported diagnostically; not a hard gate because of prevalence/tie effects."
+    }
+  },
+  "decision_rule": {
+    "PASS": "H1-H4 all PASS => PASS__INDEPENDENT_EXTERNAL_GPT_CONSENSUS__NEXT_SHOWRUNNER_RESEARCH_AUTHORIZED",
+    "FAIL": "Valid 3-judge execution with any H1-H4 effect/safety gate failed => FAIL, preserve result; no threshold change.",
+    "HOLD": "Fewer than 3 valid judges, mapping custody breach, packet mismatch, or scoring-contract integrity failure => HOLD, no scientific verdict."
+  },
+  "claim_boundary": [
+    "PASS is independent external GPT consensus on the sealed I4K4 episode, not independent human consensus.",
+    "PASS does not prove population-wide generalization, human-writer superiority, Production promotion, Formal R140, or genuine OpenAI Live qualification.",
+    "Because current ceiling is high, absence of large raw-score separation does not itself fail the gate; frozen pairwise/nonloss criteria govern."
+  ],
+  "outputs_at_prereg_seal": {
+    "judge_packets": 0,
+    "judge_responses": 0,
+    "valid_judges": 0,
+    "unblind": 0,
+    "verdict": null
+  }
+}
