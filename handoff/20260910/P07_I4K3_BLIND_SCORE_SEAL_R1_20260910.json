@@ -1,0 +1,10 @@
+{
+  "schema": "P07I4K3BlindScoreSealR1",
+  "score_sha256": "d895d70c4e4b0818487a8ca3a59a203cd5d65e6f22238d352c19888aa16e4537",
+  "masked_packet_sha256": "07d37fb9fe9e043a39dc4c7d60d1098b376128ae92a971f09193fa59c0e4e7ca",
+  "row_count": 22,
+  "value_count": 172,
+  "issues": [],
+  "map_opened_for_analysis_at_seal": false,
+  "status": "PASS"
+}
