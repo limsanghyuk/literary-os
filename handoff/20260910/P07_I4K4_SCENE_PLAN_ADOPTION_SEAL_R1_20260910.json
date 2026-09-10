@@ -1,0 +1,16 @@
+{
+  "schema":"P07I4K4ScenePlanAdoptionSealR1",
+  "experiment_id":"P07-I4K-4-WHOLE-EPISODE-PROSPECTIVE-VALIDATION",
+  "control_scene_plan_sha256":"8ac9a0bbd0924bbe9c690af535ba7fb293b375f013749f7d8cc19a567e8adecc",
+  "treatment_scene_plan_sha256":"555deccbe4761987a6573ede4ab9676f05d78519f67793428b2fc892278e08da",
+  "scene_integrity_adoption_receipt_sha256":"96688e90e077f9833c6fb605ec5f601056822835e745b2256bf2939d21f6e1c9",
+  "control_scene_count":50,
+  "treatment_scene_count":50,
+  "required_scene_anchor_count":13,
+  "event_scene_adoption_counts":{"EV01":16,"EV02":8,"EV03":16,"EV04":16,"EV05":16,"EV06":12},
+  "each_event_scene_adoption_at_least_2":true,
+  "control_exact_event_signature_contamination_0_of_6":true,
+  "whole_episode_renders_at_seal":0,
+  "mask_at_seal":0,
+  "scores_at_seal":0
+}
