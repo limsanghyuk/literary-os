@@ -1,0 +1,29 @@
+{
+  "count_method": "Unicode Python len() after joining fields with newline; no whitespace normalization beyond stored strings.",
+  "excluded_fields": [
+    "sequence_id",
+    "audit_adopted_event_ids",
+    "arm",
+    "event_id",
+    "mechanism_id",
+    "receipt ids/hashes"
+  ],
+  "frozen_before_sequence_plan_outputs": true,
+  "parity_formula": "abs(T-C)/max(T,C) for whole-plan and mean-per-sequence char gaps",
+  "schema": "P07I4K3RepresentationCountingImplementationR1",
+  "sequence_neutral_char_fields": [
+    "dramatic_function",
+    "active_characters(display names joined with |)",
+    "primary_goal",
+    "initiating_pressure",
+    "escalation",
+    "decision_owner(display name)",
+    "decision",
+    "information_change",
+    "relationship_change",
+    "thread_state_change",
+    "exit_state"
+  ],
+  "thresholds_reference": "05_REPRESENTATION_BUDGET_R1.json; thresholds unchanged",
+  "whole_plan_count": "sum of the 10 per-sequence neutral semantic char counts"
+}
