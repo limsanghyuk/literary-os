@@ -1,0 +1,14 @@
+{
+  "schema": "P07I4K3PlannerInputDeltaReceiptR1",
+  "control_input_sha256": "d376602139619280a906024bdd1811ecb88393a2437a5a52bf171ab8d9779715",
+  "treatment_input_sha256": "f289e4fb8362873bafba50212e62436a84c4526175423c61e3f5d2e3b4ffe482",
+  "common_input_sha256": "d376602139619280a906024bdd1811ecb88393a2437a5a52bf171ab8d9779715",
+  "added_top_level_keys_in_treatment": ["selected_event_ecology"],
+  "removed_top_level_keys_in_treatment": [],
+  "common_key_canonical_equality": {"experiment_id": true, "planner_instruction": true, "representation_budget": true, "sequence_output_schema": true, "sequence_requirement": true, "series_episode_state": true},
+  "selected_event_count": 6,
+  "selected_event_ids": ["E01","E02","E03","E04","E05","E06"],
+  "raw_provenance_present": false,
+  "status": "PASS",
+  "sequence_plan_outputs_at_receipt": 0
+}
