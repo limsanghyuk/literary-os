@@ -1,0 +1,39 @@
+{
+  "schema": "P07I4K2PR2FieldBudgetedPropagationReplicationPreregR1",
+  "date": "2026-09-10",
+  "experiment_id": "P07-I4K-2P-R2-FIELD-BUDGETED-PROPAGATION-REPLICATION",
+  "classification": "DEVELOPMENT_PREFORMAL__MASKED_SAME_AGENT__FRESH_SYNTHETIC_WORLD__PROSPECTIVE_RETRY_AFTER_INTEGRITY_HOLD",
+  "parent_physical_authority": "P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R7__I4K2P_HOLD_REPRESENTATION_PARITY",
+  "parent_material_sha256": "faf07340e780786978e91a8a389223a4805ec2f1546b2acb080ebc3610af8f22",
+  "prior_boundary": "I4K-2P is integrity HOLD only; old candidates diagnosis-only and not reused.",
+  "frozen_files": {
+    "01_FRESH_WORLD_R1.json": "05c01af23e15a4153ca55dc8960121a54931c5bf9e64503e3ee8511409419639",
+    "02_FIELD_LEVEL_REPRESENTATION_BUDGET_R1.json": "f49d7112a8e0532b919d38a2ffd8eb68fedc2aafb6e3e0d6e8fc19ddf5b1dbb0",
+    "03_STATE_ATTACHMENT_CONTRACT_R1.json": "202f62c95b6e011425a178dcc367ad4a653877d47cb4466f4119b4c6042c3be7",
+    "04_SECOND_ORDER_PROPAGATION_CONTRACT_R1.json": "9632706be5170023bbdc2ea540568dc78ea7dc6a51784a7007fb3ae777ff2ecc",
+    "05_SELECTED_MECHANISMS_R1.json": "70a84531e7e577dafe775b85b0fab8820111e05d0ba9776a6234776320f2687e",
+    "06_ARM_INSTRUCTIONS_R1.json": "c4a6e5a8224098b6b2e8a75b8b059f78ef7dbf7ce8500301a273cb0eb045fe02"
+  },
+  "arms": {"BASELINE": 12, "PROPAGATION": 12},
+  "generation_integrity": {"exactly_once_per_arm": true, "no_post_output_rewrite": true, "field_level_budget_mandatory": true, "same_neutral_schema": true, "same_mechanism_quota": true},
+  "evaluation": {
+    "axes": ["causal_fit_to_current_state", "multi_perspective_richness", "institutional_social_plausibility", "non_generic_specificity", "ensemble_activation", "future_sustainability", "coincidence_convenience_safety"],
+    "scale": "1-10 half-point",
+    "masking": "random secret mapping of 24 candidates; arm/mechanism/audit fields stripped; map SHA committed before scoring",
+    "evidence_class": "MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__BLINDNESS_NOT_INDEPENDENTLY_PROVABLE",
+    "hard_gates": ["continuity_violation=0", "protected_state_critical_violation=0", "fabricated_sourced_rule=0", "identifiable_anecdote_copy=0", "global_provenance_in_semantic_payload=0"]
+  },
+  "hypotheses": {
+    "H1": "PROPAGATION ensemble+future mean >= BASELINE +0.20.",
+    "H2": "PROPAGATION all-7 mean >= BASELINE +0.10.",
+    "H3": "PROPAGATION causal-fit mean >= BASELINE -0.10 and institutional+specificity mean >= BASELINE -0.10.",
+    "H4": "Hard gates zero; >=11/12 valid each arm; field-level and arm-level representation parity PASS; State Attachment 12/12 both; Propagation Contract 12/12 Treatment; mechanism quotas exact."
+  },
+  "decision": {"PASS_TO_I4K3_PREREG": "H1-H4 all PASS", "FAIL": "valid execution and any H fails", "HOLD": "integrity/runtime/masking failure"},
+  "outputs_before_execution": 0,
+  "formal_count_delta": 0,
+  "production_change": false,
+  "active_engine_change": false,
+  "db_change": false,
+  "actual_openai_live": false
+}
