@@ -1,0 +1,44 @@
+{
+  "schema": "P07I4K2RStateAttachedExternalReplicationPreregR1",
+  "date": "2026-09-10",
+  "experiment_id": "P07-I4K-2R-STATE-ATTACHED-EXTERNAL-MECHANISM-REPLICATION",
+  "classification": "DEVELOPMENT_PREFORMAL__MASKED_SAME_AGENT__FRESH_SYNTHETIC_WORLD__PROSPECTIVE_REPAIR_REPLICATION",
+  "parent_physical_authority": "P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R5__I4K2_FAIL_H2_EXTERNAL_ONLY_CAUSAL_FIT_DEGRADATION",
+  "parent_material_sha256": "b8c4d28370e6166851cd996bf89a37892268524824b00c511a3338f85031c87b",
+  "active_engine": "P07-I4H Recovery R3",
+  "db_authority": "DB59 frozen; no DB free-text retrieval used",
+  "prior_boundary": {
+    "I4K2": "FAIL H2; immutable",
+    "diagnostic": "representation confound + external state-attachment deficit identified descriptively; diagnostic cannot rewrite I4K2"
+  },
+  "fresh_world_sha256": "98912d5c2369ceee094322cefbd1dfbc5837e00b0211f5d2e614628b4b230f21",
+  "state_attachment_contract_sha256": "eea0f8fc7a02c72d8f2f2ab9a27a720b4fb733bf7b0de2edd808aaf07cf83c26",
+  "representation_parity_contract_sha256": "ae3cfbe4c8417dfe17d32f44edc10e4b65896d15126bb2a90cbfcf7bdaf160e6",
+  "selected_mechanism_set_sha256": "e1719089519356ae1b1414b219202a648270f1b8c487da16f35ab76472b6a86f",
+  "arms": {
+    "INTERNAL_ONLY": {"n": 16,"quota": "8 internal + 8 relationship"},
+    "EXTERNAL_UNATTACHED": {"n": 16,"quota": "2 per selected RM, no mandatory state attachment"},
+    "EXTERNAL_STATE_ATTACHED": {"n": 16,"quota": "2 per selected RM, State Attachment Contract mandatory"}
+  },
+  "generation_integrity": {"exactly_once_per_arm": true,"no_post_output_rewrite": true,"representation_parity_contract_mandatory": true},
+  "evaluation": {
+    "axes": ["causal_fit_to_current_state","multi_perspective_richness","institutional_social_plausibility","non_generic_specificity","ensemble_activation","future_sustainability","coincidence_convenience_safety"],
+    "scale": "1-10 integer or half-point",
+    "masking": "random secret mapping of 48 candidates; arm/mechanism/origin/attachment audit fields stripped; map SHA committed before scoring",
+    "evidence_class": "MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__BLINDNESS_NOT_INDEPENDENTLY_PROVABLE",
+    "hard_gates": ["continuity_violation=0","protected_state_critical_violation=0","fabricated_sourced_rule=0","identifiable_anecdote_copy=0","global_provenance_in_semantic_payload=0"]
+  },
+  "hypotheses": {
+    "H1": "EXTERNAL_STATE_ATTACHED causal-fit mean >= EXTERNAL_UNATTACHED +0.50 and >= INTERNAL_ONLY -0.20.",
+    "H2": "EXTERNAL_STATE_ATTACHED mean across institutional_social_plausibility and non_generic_specificity >= EXTERNAL_UNATTACHED -0.10 and >= INTERNAL_ONLY +0.30.",
+    "H3": "EXTERNAL_STATE_ATTACHED all-7 mean >= max(INTERNAL_ONLY, EXTERNAL_UNATTACHED) +0.20; ensemble+future mean >= best comparator +0.15.",
+    "H4": "All hard gates zero; each arm >=15/16 hard-gate-valid; Representation Parity Contract arm-level gates PASS; EXTERNAL_STATE_ATTACHED State Attachment Contract 16/16 PASS; EXTERNAL_STATE_ATTACHED >=14/16 causal-fit >=6.5; mechanism quotas exact."
+  },
+  "decision": {"PASS_TO_I4K3_PREREG": "H1-H4 all PASS","FAIL": "valid execution and any H1-H4 fails","HOLD": "integrity/runtime/masking/representation parity failure prevents valid scoring"},
+  "formal_count_delta": 0,
+  "production_change": false,
+  "active_engine_change": false,
+  "db_change": false,
+  "actual_openai_live": false,
+  "outputs_before_execution": 0
+}
