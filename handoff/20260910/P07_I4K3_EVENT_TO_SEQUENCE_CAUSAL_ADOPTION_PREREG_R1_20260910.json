@@ -1,0 +1,51 @@
+{
+  "active_engine_change": false,
+  "actual_openai_live": false,
+  "classification": "DEVELOPMENT_PREFORMAL__MASKED_SAME_AGENT__FRESH_SYNTHETIC_EPISODE__PROSPECTIVE",
+  "date": "2026-09-10",
+  "db_change": false,
+  "event_candidate_outputs_before_prereg": 0,
+  "execution_order": [
+    "generate and seal exactly 6 fresh event candidates from frozen slots",
+    "seal event IDs/signatures and event-set SHA",
+    "construct Control/Treatment planner inputs and input-delta receipts",
+    "generate Control Sequence Plan once and seal",
+    "generate Treatment Sequence Plan once and seal",
+    "run representation/adoption prescore audits",
+    "if prescore PASS, create and seal random blind map before scoring",
+    "score 20 sequence packets + 2 whole-plan packets",
+    "seal all scores",
+    "unblind once",
+    "evaluate H1-H4",
+    "run post nonhistorical regression",
+    "package impact and physical sync"
+  ],
+  "experiment_id": "P07-I4K-3-EVENT-TO-SEQUENCE-CAUSAL-ADOPTION-R1",
+  "forbidden_before_seal": [
+    "Sequence Plan generation",
+    "event candidate generation",
+    "mask generation",
+    "scoring",
+    "threshold edits"
+  ],
+  "formal_count_delta": 0,
+  "frozen_files": {
+    "00_PARENT_AUTHORITY_R1.json": "295dda9bbec5f53372306df9e485ddc40e4f0c6bc3e401c3c93141a1823dfb68",
+    "01_FRESH_SERIES_EPISODE_STATE_R1.json": "ac347c12057b4206ec7784b2d6fc1230609e5546fa1597d54484acf1cfa227b9",
+    "02_EVENT_SLOTS_AND_GENERATION_CONTRACT_R1.json": "50e1ae7b8cd55ac0153b4585f6213f8f6733e8e8846b8c4c99ea6c56dfbece20",
+    "03_CONSUMER_ADOPTION_CONTRACT_R1.json": "ed0dbac7f02ba97437db7ad76c4df319d1690422e8364eafde2207ef5a9138fd",
+    "04_CONTROL_TREATMENT_AND_SEQUENCE_SCHEMA_R1.json": "982112847b9506e9f2617657d7ea32dd49a29ce3fcbdc0c8d42ec34c26437409",
+    "05_REPRESENTATION_BUDGET_R1.json": "1f571833000984e5a9d5898552b1ffef48173a90abcf2e8bd7185c17ae47d975",
+    "06_MASKING_EVALUATION_H1_H4_R1.json": "eedf3b15d6e41d2e21ba5bebfe53e97269e426ef4b7ca8d5258a9584c413feeb"
+  },
+  "mask_outputs_before_prereg": 0,
+  "parent_material_sha256": "c708dfd606485ff80a9638c837b9528ccf6ec03f2e474ac59186c4c64fc093b9",
+  "parent_physical_authority": "P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R12__I4K2P_R6_PASS_TO_I4K3_PREREG",
+  "prerequisite": "I4K-2P R6 H1-H4 PASS_TO_I4K3_PREREG; post regression 258/258 PASS.",
+  "production_change": false,
+  "promotion_boundary": "Even PASS only authorizes I4K-4 preregistration; no Active Engine/Production/Formal/DB promotion.",
+  "schema": "P07I4K3EventToSequenceCausalAdoptionPreregR1",
+  "score_outputs_before_prereg": 0,
+  "sequence_plan_outputs_before_prereg": 0,
+  "unblind_outputs_before_prereg": 0
+}
