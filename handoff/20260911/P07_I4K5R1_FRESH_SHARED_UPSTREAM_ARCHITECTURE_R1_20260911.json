@@ -1,0 +1,122 @@
+{
+  "schema": "P07I4K5R1FreshSharedUpstreamArchitectureR1",
+  "experiment_id": "P07-I4K-5R1-SURFACE-HYGIENE-AND-RENDER-BOUNDARY-REPAIR",
+  "date": "2026-09-11",
+  "freshness": "COMPLETELY_FRESH_SYNTHETIC__NO_I4K4_I4K5_PROSE_REUSE",
+  "series": {
+    "title": "해류동 공동냉장창고",
+    "format": "ensemble workplace/community drama",
+    "premise": "해안 도시의 오래된 공공 냉장창고를 함께 쓰는 어민·시장상인·정비기사·시청 계약직·운송기사가 매일 서로 다른 생계의 시간을 한 건물 안에서 맞물려 살아간다.",
+    "persistent_world_state": [
+      "냉장창고는 네 개 구역을 가진 노후 시설이며 전력과 냉매 설비가 항상 빠듯하다.",
+      "새벽 첫 경매 전에 입고·보관·출고가 끝나야 어민과 상인의 하루가 이어진다.",
+      "시 보조금과 수협 자금, 상인들의 외상 거래가 서로 다른 일정으로 움직인다.",
+      "시설의 작은 장애가 한 사람의 문제가 아니라 어획물·시장·운송·행정 책임으로 연쇄된다."
+    ]
+  },
+  "episode": {
+    "title": "얼음이 녹기 전에",
+    "time_span": "하룻밤 21:40부터 다음 날 06:20까지",
+    "episode_question": "전력·돈·신뢰가 동시에 부족해진 밤, 누가 무엇을 포기하고 누구에게 책임을 넘겨야 첫 경매를 살릴 수 있는가?",
+    "end_state": "첫 경매는 열리지만 시설·관계·행정 책임이 완전히 해결되지는 않는다. 각 인물에게 다음 회차의 구체적 의무가 남는다."
+  },
+  "characters": [
+    {"id":"C01","name":"강서윤","age":39,"role":"야간 운영책임자","state":"능숙하지만 모든 결정을 혼자 떠안는 습관이 있다. 다른 도시 물류센터의 채용 제안을 받고 사직 의사를 아직 팀에 말하지 않았다.","need":"자신이 사라져도 작동하는 책임 구조를 만들어야 한다."},
+    {"id":"C02","name":"문태경","age":42,"role":"소형어선 협동조합 대표","state":"서윤을 믿어 왔지만 이전 냉각 장애 보고가 늦게 공유된 일로 불신이 남아 있다.","need":"어획물 손실 책임이 운영팀 내부에서 묻히지 않는다는 증거가 필요하다."},
+    {"id":"C03","name":"오미라","age":54,"role":"새벽시장 상인회 실무총무","state":"상인들의 외상과 반품을 몸으로 막아 온 인물. 규정보다 물건이 실제로 팔리는 시간을 우선한다.","need":"안전 검증과 시장 개장을 동시에 성립시킬 현실적 경로가 필요하다."},
+    {"id":"C04","name":"윤준호","age":29,"role":"시설 정비기사","state":"정규 전환 심사를 앞두고 있다. 이전 장애 때 임시 우회배선을 했고 서윤이 책임을 함께 졌다.","need":"상사의 보호가 아니라 자신의 기술 판단으로 책임을 증명해야 한다."},
+    {"id":"C05","name":"백하린","age":27,"role":"시청 저온유통 지원사업 계약직","state":"감사와 민원 기록을 담당한다. 현장을 모른다는 평가를 받지만 절차를 어기면 계약 연장이 불가능하다.","need":"규정 준수를 멈추지 않으면서 현장을 살리는 의사결정을 소유해야 한다."},
+    {"id":"C06","name":"임병수","age":61,"role":"야간 냉동탑차 기사·협동조합 원로","state":"사람과 길을 잘 알지만 최근 허리 통증으로 장거리 운행을 줄이고 있다.","need":"자신의 경험을 직접 운전이 아니라 다른 사람의 결정과 동선으로 이전해야 한다."}
+  ],
+  "relationship_state": [
+    {"pair":"C01-C02","state":"오래된 실무 신뢰가 이전 장애 보고 누락 의심으로 금이 간 상태"},
+    {"pair":"C01-C04","state":"보호자-후배 관계에서 독립적 책임 관계로 넘어가야 함"},
+    {"pair":"C03-C05","state":"시장 현실과 행정 규정이 자주 충돌하지만 서로의 능력을 조금씩 인정함"},
+    {"pair":"C02-C06","state":"오래된 선후배 신뢰가 있으나 병수의 신체 한계를 태경이 인정하지 않으려 함"},
+    {"pair":"C03-C01","state":"미라는 서윤의 능력을 믿지만 모든 결정을 혼자 쥐는 방식을 불신함"}
+  ],
+  "event_ecology": [
+    {"id":"E01","origin":"INTERNAL_CHARACTER_EVENT","trigger":"서윤에게 타 도시 물류센터의 최종 채용 확인 메일이 도착하고 회신 시한이 새벽 6시로 잡힌다.","attachment":{"character":"C01","relationship":"C01-C04/C01-C02","world":"야간 운영책임이 서윤에게 집중된 구조"},"first_order":"서윤이 평소처럼 모든 결정을 직접 쥘지, 다른 사람에게 실제 권한을 넘길지 선택해야 한다.","second_order_owner":"C05","transferred_burden":"비상상황의 기록·승인 책임 일부","future_owner":"C04","future_constraint":"다음 회차부터 준호가 야간 설비 판단의 서명권 후보가 된다."},
+    {"id":"E02","origin":"RELATIONSHIP_EVENT","trigger":"태경이 이전 냉각 장애 점검표에서 준호의 임시 우회배선 기록과 서윤의 사후 서명을 발견한다.","attachment":{"character":"C02/C04","relationship":"C01-C02/C01-C04","world":"손실 책임 기록"},"first_order":"태경은 이번 어획물 보관 결정에 구역별 책임표시를 요구하고 준호는 보호받는 후배가 아니라 설명 책임자가 된다.","second_order_owner":"C03","transferred_burden":"시장 반품 기준을 구역별로 분리해 공지할 책임","future_owner":"C02","future_constraint":"과거 장애 보고 절차를 다음 운영회의에서 공식 재검토해야 한다."},
+    {"id":"E03","origin":"SOCIAL_INSTITUTIONAL_EVENT","trigger":"익명 민원 때문에 시청 현장점검이 오후에서 새벽 5시 30분으로 앞당겨진다.","attachment":{"character":"C05","relationship":"C03-C05","world":"저온유통 보조사업·감사 기록"},"first_order":"하린은 점검을 피하거나 미룰 수 없고 밤새 이루어지는 모든 임시조치를 문서화해야 한다.","second_order_owner":"C01","transferred_burden":"운영 판단을 기록 가능한 단위로 분해할 책임","future_owner":"C05","future_constraint":"점검 후 시청에 임시조치와 개선기한을 직접 보고해야 한다."},
+    {"id":"E04","origin":"SOCIAL_INSTITUTIONAL_EVENT","trigger":"압축기 수리 보조금은 승인됐지만 세금증명 갱신 지연으로 실제 지급이 막히고, 정비업체는 착수금 없이는 새벽 출동을 거절한다.","attachment":{"character":"C03/C05","relationship":"C03-C05","world":"보조금·상인회 현금흐름"},"first_order":"미라와 하린은 규정을 깨지 않고 오늘 밤 쓸 수 있는 돈을 만들어야 한다.","second_order_owner":"C06","transferred_burden":"탑차 연료·임시 냉장공간 비용을 협동조합 쪽에서 선집행할지 결정","future_owner":"C03","future_constraint":"상인회가 다음 회차에 임시비용 정산 기준을 표결해야 한다."},
+    {"id":"E05","origin":"ENVIRONMENTAL_CHANCE_EVENT","trigger":"폭염과 염분 부식이 겹친 변압기에서 열경보가 발생해 전력회사가 90분간 시설 부하를 절반으로 제한한다.","attachment":{"character":"C04/C01","relationship":"C01-C04","world":"네 개 냉장구역과 전력 한계"},"first_order":"네 구역 중 두 구역만 정상 냉각할 수 있어 어떤 물건을 어디로 옮길지 선택해야 한다.","second_order_owner":"C02","transferred_burden":"자기 조합 어획물 일부를 우선순위에서 뒤로 미룰지 결정","future_owner":"C04","future_constraint":"다음 회차까지 전력 우선순위표와 비상배선 개선안을 제출해야 한다."},
+    {"id":"E06","origin":"SOCIAL_INSTITUTIONAL_EVENT","trigger":"녹은 얼음이 보이는 상자 사진이 시장 단체방에 퍼지며 두 점포가 추적기록이 없으면 전량 반품하겠다고 통보한다.","attachment":{"character":"C03/C02","relationship":"C03-C02/C03-C05","world":"시장 신뢰·추적 기록"},"first_order":"단순히 온도를 회복하는 것만으로는 부족하고 어떤 상자가 어느 구역과 차량을 거쳤는지 증명해야 한다.","second_order_owner":"C05","transferred_burden":"현장 기록을 소비자·상인이 이해할 수 있는 검증표로 바꿀 책임","future_owner":"C03","future_constraint":"다음 회차부터 상인회가 자체 추적표준을 운영할지 결정해야 한다."}
+  ],
+  "sequence_plan": [
+    {"id":"SQ01","title":"열이 오르는 밤","goal":"작은 온도 이상을 발견하고 야간 운영의 기본 관계를 세운다.","events":["E01"],"turn":"서윤이 채용확인 메일을 읽지만 회신을 미룬 채 현장으로 돌아간다.","exit_state":"운영책임은 여전히 서윤에게 집중되어 있고 설비 이상은 커지는 중."},
+    {"id":"SQ02","title":"점검 시간이 당겨진다","goal":"행정 시간이 현장 시간과 충돌한다.","events":["E03"],"turn":"하린이 새벽 5시30분 점검을 공식 통보하고 임시조치도 모두 기록 대상으로 선언한다.","exit_state":"현장 해결과 기록 책임이 동시에 필요해진다."},
+    {"id":"SQ03","title":"승인된 돈과 쓸 수 있는 돈","goal":"수리 필요와 현금 부재를 충돌시킨다.","events":["E04"],"turn":"보조금 승인서가 있어도 정비업체 착수금을 낼 수 없다는 사실이 확인된다.","exit_state":"수리와 임시 냉장 운송을 병행할 자금 선택이 필요하다."},
+    {"id":"SQ04","title":"사진 한 장의 속도","goal":"시설 내부 문제가 시장 신뢰 문제로 전파된다.","events":["E06"],"turn":"두 점포가 추적기록 없는 물량의 전량 반품을 예고한다.","exit_state":"온도 회복뿐 아니라 lot별 이동기록이 필수가 된다."},
+    {"id":"SQ05","title":"두 구역만 살릴 수 있다","goal":"전력 제한 아래 실제 희생 선택을 만든다.","events":["E05"],"turn":"태경이 자기 조합 물량 일부를 우선 냉각에서 빼는 대신 어린이급식 납품 물량을 살리기로 동의한다.","exit_state":"개인 이해보다 공동 우선순위가 처음 실행되지만 손실 책임 문제가 남는다."},
+    {"id":"SQ06","title":"지난번 서명","goal":"과거의 보호가 현재의 신뢰 비용으로 돌아온다.","events":["E02"],"turn":"준호가 우회배선의 기술적 판단은 자기 것이었다고 공개적으로 인정하고 서윤의 사후 서명을 방패로 쓰지 않는다.","exit_state":"서윤-태경 신뢰는 악화되지만 준호의 독립 책임이 시작된다."},
+    {"id":"SQ07","title":"책임을 나눠 갖는 표","goal":"한 사람이 모든 결정을 하는 구조를 분산한다.","events":["E01","E03","E04"],"turn":"서윤이 냉각·기록·시장·운송 결정권을 각 인물에게 실제로 나눠 주고 하린이 이를 현장기록 양식으로 묶는다.","exit_state":"여섯 인물 모두 별도의 결정권과 비용을 소유한다."},
+    {"id":"SQ08","title":"창고 밖의 냉장선","goal":"고정 시설이 아니라 차량·얼음·시장 동선으로 임시 cold-chain을 만든다.","events":["E04","E05","E06"],"turn":"병수가 직접 장거리 운전하지 않고 두 젊은 기사에게 동선을 넘기며 차량 두 대를 임시 구역처럼 운용한다.","exit_state":"냉장 능력은 회복되지만 첫 경매 전 검증 시간이 촉박하다."},
+    {"id":"SQ09","title":"새벽 다섯 시의 검증","goal":"각자가 가진 기록과 물량을 하나의 검증 가능한 흐름으로 합친다.","events":["E02","E03","E06"],"turn":"하린은 규정상 불완전한 항목을 숨기지 않고 조건부 적합으로 기록하고, 미라는 그 조건을 상인들에게 공개한다.","exit_state":"시장 개장은 가능해지지만 후속 개선 의무가 공식화된다."},
+    {"id":"SQ10","title":"얼음이 녹은 뒤","goal":"첫 경매를 열고 다음 회차의 책임 소유자를 남긴다.","events":["E01","E02","E03","E04","E05","E06"],"turn":"서윤은 채용제안에 즉시 떠나겠다고 답하지 않고 한 달 인수인계 조건을 제시하며, 자신이 떠나도 돌아갈 책임망을 시험하기로 한다.","exit_state":"경매는 열림. 준호=전력 개선안, 하린=시청 보고, 태경=과거 장애 절차 재검토, 미라=상인회 추적표준/비용정산, 병수=운송 동선 인수인계, 서윤=한 달 인수인계가 다음 회차 future threads로 남는다."}
+  ],
+  "scene_plan": [
+    {"id":"S01","sequence":"SQ01","location_time":"중앙제어실 / 21:40","goal":"1구역 온도 상승을 처음 감지","obstacle":"센서 흔들림일 가능성","turn":"준호가 실제 흡입압도 이상하다고 확인","exit_state":"현장 확인 필요","speakers":["C01","C04"]},
+    {"id":"S02","sequence":"SQ01","location_time":"1구역 통로 / 21:48","goal":"설비 이상을 몸으로 확인","obstacle":"문을 열면 냉기 손실","turn":"바닥의 물기와 느슨한 성에 확인","exit_state":"단순 센서 오류 배제","speakers":["C01","C04"]},
+    {"id":"S03","sequence":"SQ01","location_time":"운영사무실 / 21:55","goal":"서윤의 개인 선택 압력 제시","obstacle":"현장 호출 계속","turn":"채용 메일 회신시한 06:00 확인","exit_state":"서윤이 답장을 닫고 현장 우선","speakers":["C01"]},
+    {"id":"S04","sequence":"SQ01","location_time":"하역장 / 22:03","goal":"태경 물량 입고","obstacle":"평소보다 높은 외기온","turn":"태경이 1구역 문제를 눈치챔","exit_state":"운영정보 공개 요구 시작","speakers":["C01","C02","C06"]},
+    {"id":"S05","sequence":"SQ01","location_time":"하역장 옆 계단 / 22:12","goal":"임시 야간 역할 정리","obstacle":"서윤에게 질문 집중","turn":"서윤이 아직 모든 승인 질문을 자신에게 모음","exit_state":"중앙집중 구조 노출","speakers":["C01","C02","C04","C06"]},
+
+    {"id":"S06","sequence":"SQ02","location_time":"운영사무실 / 22:20","goal":"하린이 점검 변경 전달","obstacle":"현장 작업 방해 우려","turn":"05:30 현장점검 확정","exit_state":"기록 의무 급상승","speakers":["C01","C05"]},
+    {"id":"S07","sequence":"SQ02","location_time":"문서보관대 / 22:27","goal":"하린이 최근 장애 기록 수집","obstacle":"수기·전자 기록 불일치","turn":"이전 우회배선 점검표 발견","exit_state":"과거 문제 잠복","speakers":["C04","C05"]},
+    {"id":"S08","sequence":"SQ02","location_time":"상인회 사무실 통화 / 22:35","goal":"미라에게 점검 영향 전달","obstacle":"시장 개장 준비 중","turn":"미라가 점검 때문에 출고를 늦출 수 없다고 선을 긋음","exit_state":"현장-행정 시간 충돌","speakers":["C03","C05"]},
+    {"id":"S09","sequence":"SQ02","location_time":"2구역 앞 / 22:43","goal":"임시 이동조치 기록","obstacle":"물량 표식 혼재","turn":"하린이 lot 이동마다 시간·책임자 표기 요구","exit_state":"추적기록 기반 형성","speakers":["C01","C05","C04"]},
+    {"id":"S10","sequence":"SQ02","location_time":"복도 / 22:52","goal":"서윤-하린 권한 충돌","obstacle":"서윤의 속도 우선","turn":"하린이 서명 없는 임시조치는 자신이 승인하지 않겠다고 함","exit_state":"서윤이 기록 가능한 결정 필요성 수용 시작","speakers":["C01","C05"]},
+
+    {"id":"S11","sequence":"SQ03","location_time":"정비업체 통화 / 23:00","goal":"압축기 긴급출동 요청","obstacle":"착수금 요구","turn":"즉시결제 없이는 출동 불가","exit_state":"현금 문제 발생","speakers":["C04","C01"]},
+    {"id":"S12","sequence":"SQ03","location_time":"운영사무실 / 23:08","goal":"보조금 계좌 확인","obstacle":"승인과 지급 분리","turn":"세금증명 갱신 전 지급보류 확인","exit_state":"승인된 돈을 오늘 못 씀","speakers":["C05","C03"]},
+    {"id":"S13","sequence":"SQ03","location_time":"시장 주차장 / 23:16","goal":"미라가 상인회 비상기금 검토","obstacle":"기금 사용 규정","turn":"수리비 직접지급은 불가하지만 임시 운송비 선집행 가능","exit_state":"수리와 운송 재조합 가능","speakers":["C03","C05"]},
+    {"id":"S14","sequence":"SQ03","location_time":"냉동탑차 안 / 23:24","goal":"병수에게 임시 차량 사용 타진","obstacle":"연료비·운전자 부족","turn":"병수가 차량은 내되 자신은 장거리 운전 못 한다고 밝힘","exit_state":"운송 결정권 이전 필요","speakers":["C03","C06"]},
+    {"id":"S15","sequence":"SQ03","location_time":"하역장 / 23:33","goal":"수리 지연을 현장에 공유","obstacle":"태경의 손실 우려","turn":"태경이 비용 책임자를 먼저 정하라고 요구","exit_state":"금전 문제가 관계·책임 문제로 확대","speakers":["C01","C02","C03","C04"]},
+
+    {"id":"S16","sequence":"SQ04","location_time":"시장 단체방 / 23:41","goal":"사진 유포 확인","obstacle":"출처 불명","turn":"두 점포 전량 반품 예고","exit_state":"추적증명 필요","speakers":["C03","C02"]},
+    {"id":"S17","sequence":"SQ04","location_time":"1구역 입구 / 23:49","goal":"문제 사진의 상자 특정","obstacle":"라벨 젖음","turn":"입고시각 일부는 하린 기록에 남아 있음","exit_state":"기록 복원 가능성","speakers":["C03","C05","C04"]},
+    {"id":"S18","sequence":"SQ04","location_time":"하역대 / 23:58","goal":"태경이 조합원에게 설명","obstacle":"분노한 선주 전화","turn":"태경이 무조건 안전하다고 말하지 않고 확인 전 출고중지 동의","exit_state":"신뢰 비용 수용","speakers":["C02","C06"]},
+    {"id":"S19","sequence":"SQ04","location_time":"사무실 화이트보드 앞 / 00:07","goal":"lot별 경로 재구성","obstacle":"기록 단절","turn":"차량 GPS와 수기표를 결합하기로 함","exit_state":"검증 작업 분산","speakers":["C03","C05","C06"]},
+    {"id":"S20","sequence":"SQ04","location_time":"복도 / 00:15","goal":"서윤이 미라에게 낙관적 발표 요청","obstacle":"미라의 거부","turn":"미라가 확인 전에는 상인들에게 괜찮다고 말하지 않겠다고 함","exit_state":"표면적 안심보다 검증 우선","speakers":["C01","C03"]},
+
+    {"id":"S21","sequence":"SQ05","location_time":"중앙제어실 / 00:23","goal":"전력회사 열경보 통보 수신","obstacle":"90분 부하 절반 제한","turn":"두 구역만 정상냉각 가능 확정","exit_state":"희생 선택 필요","speakers":["C01","C04"]},
+    {"id":"S22","sequence":"SQ05","location_time":"냉장구역 도면 앞 / 00:31","goal":"우선순위 후보 작성","obstacle":"각 물량의 생계 가치 충돌","turn":"급식 납품 마감이 가장 이르다는 사실 확인","exit_state":"공동 기준 등장","speakers":["C01","C02","C03","C04"]},
+    {"id":"S23","sequence":"SQ05","location_time":"2구역 / 00:40","goal":"태경 물량 일부 이동 결정","obstacle":"조합원 손실 압력","turn":"태경이 자기 조합 일부를 후순위로 내림","exit_state":"태경이 실제 비용 소유","speakers":["C02","C06"]},
+    {"id":"S24","sequence":"SQ05","location_time":"3구역 / 00:49","goal":"준호가 전력 우회 구성","obstacle":"이전 임시배선 기억","turn":"이번에는 임시조치를 문서화하고 하린 확인 받음","exit_state":"준호 독립 판단 시작","speakers":["C04","C05"]},
+    {"id":"S25","sequence":"SQ05","location_time":"하역장 / 00:58","goal":"물량 이동 실행","obstacle":"인력 부족과 녹는 얼음","turn":"미라 상인들이 직접 분류 지원","exit_state":"상인회가 시설 결정의 비용을 함께 짐","speakers":["C02","C03","C04","C06"]},
+
+    {"id":"S26","sequence":"SQ06","location_time":"문서보관대 / 01:07","goal":"태경이 과거 점검표 확인","obstacle":"서윤이 지금은 작업 우선이라고 막음","turn":"태경이 준호의 우회배선 기록과 서윤 사후서명 발견","exit_state":"신뢰 갈등 폭발 직전","speakers":["C01","C02","C05"]},
+    {"id":"S27","sequence":"SQ06","location_time":"정비실 / 01:15","goal":"태경이 준호에게 직접 질문","obstacle":"준호가 서윤을 보호하려는 습관","turn":"준호가 판단은 자기 것이었다고 인정","exit_state":"책임 주체 명확화","speakers":["C02","C04"]},
+    {"id":"S28","sequence":"SQ06","location_time":"정비실 앞 / 01:23","goal":"서윤-준호 관계 재설정","obstacle":"서윤의 죄책감","turn":"준호가 이번 서명은 자기가 하겠다고 함","exit_state":"보호 관계에서 책임 관계로 이동","speakers":["C01","C04"]},
+    {"id":"S29","sequence":"SQ06","location_time":"외부 흡연구역 / 01:31","goal":"태경-서윤 신뢰 대면","obstacle":"시간 부족","turn":"태경이 지금 해결과 과거 검토를 분리하되 과거를 묻지 않겠다는 약속은 안 함","exit_state":"기능적 협력만 복원","speakers":["C01","C02"]},
+    {"id":"S30","sequence":"SQ06","location_time":"운영사무실 / 01:40","goal":"하린이 과거 기록을 점검자료에 포함할지 결정","obstacle":"현재 문제와 직접 연결 여부","turn":"숨기지 않고 개선조치 항목으로 넣기로 함","exit_state":"과거 문제가 공식 future thread가 됨","speakers":["C05","C01"]},
+
+    {"id":"S31","sequence":"SQ07","location_time":"화이트보드 앞 / 01:48","goal":"결정권 분산","obstacle":"모두 서윤 최종승인 기다림","turn":"서윤이 냉각=준호, 기록=하린, 시장=미라, 물량=태경, 운송=병수로 권한 분리","exit_state":"다중 결정 구조 시작","speakers":["C01","C02","C03","C04","C05","C06"]},
+    {"id":"S32","sequence":"SQ07","location_time":"중앙제어실 / 01:57","goal":"준호가 냉각 결정 독립 실행","obstacle":"서윤 확인 습관","turn":"서윤이 답을 주지 않고 준호의 선택을 기록만 함","exit_state":"준호 권한 실질화","speakers":["C01","C04"]},
+    {"id":"S33","sequence":"SQ07","location_time":"임시 기록대 / 02:05","goal":"하린이 기록 양식 단순화","obstacle":"현장 속도","turn":"한 장짜리 이동·온도·책임자 표로 축약","exit_state":"규정이 현장 도구로 바뀜","speakers":["C03","C05"]},
+    {"id":"S34","sequence":"SQ07","location_time":"하역장 / 02:14","goal":"태경이 물량 우선순위 최종 확정","obstacle":"조합원 항의 전화","turn":"자기 이름으로 후순위 결정을 확정","exit_state":"손실 결정 책임 소유","speakers":["C02","C06"]},
+    {"id":"S35","sequence":"SQ07","location_time":"주차장 / 02:22","goal":"병수가 운송 동선 인계","obstacle":"젊은 기사들이 시장 뒷문 동선 모름","turn":"병수가 지도·열쇠·연락처를 넘김","exit_state":"경험이 시스템으로 이전","speakers":["C03","C06"]},
+
+    {"id":"S36","sequence":"SQ08","location_time":"냉동탑차 1호 / 02:31","goal":"차량을 임시 냉장구역으로 전환","obstacle":"전원 연결 용량","turn":"준호가 부하를 계산해 한 차량만 상시전원, 다른 차량은 순환운전으로 설정","exit_state":"창고 밖 cold-chain 가동","speakers":["C04","C06"]},
+    {"id":"S37","sequence":"SQ08","location_time":"제빙창고 / 02:40","goal":"얼음 확보","obstacle":"현금 부족","turn":"미라가 상인회 운송비 예산으로 얼음·연료를 묶어 결제 가능하게 함","exit_state":"임시 운송 자금 해결","speakers":["C03","C05"]},
+    {"id":"S38","sequence":"SQ08","location_time":"항구 도로 / 02:49","goal":"첫 차량 출발","obstacle":"병수 직접 운전 불가","turn":"병수가 무전으로 동선을 지휘하고 젊은 기사가 운전","exit_state":"운송 지식 이전 증명","speakers":["C06","C02"]},
+    {"id":"S39","sequence":"SQ08","location_time":"시장 뒷문 / 03:01","goal":"임시 물량 인계","obstacle":"반품 예고 점포의 불신","turn":"미라가 lot표와 온도기록을 먼저 보여주고 물량은 나중에 내림","exit_state":"검증이 거래 조건이 됨","speakers":["C03","C05"]},
+    {"id":"S40","sequence":"SQ08","location_time":"창고 하역장 / 03:13","goal":"두 번째 차량 준비","obstacle":"1구역 온도 다시 상승","turn":"준호가 수리 전까지 이동 우선으로 판단","exit_state":"수리보다 물량 보존 선택","speakers":["C01","C04","C02"]},
+
+    {"id":"S41","sequence":"SQ09","location_time":"임시 기록대 / 03:25","goal":"전체 lot 이동기록 결합","obstacle":"수기 한 장 누락","turn":"병수 차량 GPS 시각으로 공백 보완","exit_state":"검증표 거의 완성","speakers":["C05","C06"]},
+    {"id":"S42","sequence":"SQ09","location_time":"시장 회의실 / 03:38","goal":"상인들에게 조건 공개","obstacle":"일부 상인의 전량폐기 요구","turn":"미라가 문제 구역 lot만 분리하고 나머지는 기록 조건부 판매를 제안","exit_state":"시장 내부 합의 가능성","speakers":["C03","C02","C05"]},
+    {"id":"S43","sequence":"SQ09","location_time":"운영사무실 / 03:52","goal":"점검용 개선조치 정리","obstacle":"과거 우회배선 포함 여부","turn":"준호가 자기 이름으로 개선안 제출 항목 기입","exit_state":"기술 future thread 공식화","speakers":["C04","C05"]},
+    {"id":"S44","sequence":"SQ09","location_time":"외부 하역장 / 04:07","goal":"서윤-태경 기능적 신뢰 시험","obstacle":"마지막 고위험 lot 처리","turn":"서윤이 태경 판단을 뒤집지 않고 후순위 폐기 결정을 존중","exit_state":"관계가 완전 회복은 아니지만 권한 인정","speakers":["C01","C02"]},
+    {"id":"S45","sequence":"SQ09","location_time":"점검 동선 / 05:05","goal":"05:30 점검 직전 현장 정리","obstacle":"완벽하지 않은 시설","turn":"하린이 숨길 항목과 공개할 항목을 나누지 않고 모두 조건부 개선으로 기록","exit_state":"점검을 받을 준비 완료","speakers":["C01","C05","C04"]},
+
+    {"id":"S46","sequence":"SQ10","location_time":"냉장창고 입구 / 05:32","goal":"현장점검 시작","obstacle":"수리 미완료","turn":"하린이 임시조치의 책임자와 시간을 즉시 제시","exit_state":"조건부 운영 허용 가능성","speakers":["C05","C01","C04"]},
+    {"id":"S47","sequence":"SQ10","location_time":"시장 경매장 / 05:48","goal":"첫 물량 경매 여부 결정","obstacle":"반품 우려","turn":"미라가 lot별 검증표를 붙이고 경매 시작 선언","exit_state":"시장 기능 회복","speakers":["C03","C02"]},
+    {"id":"S48","sequence":"SQ10","location_time":"하역장 / 05:56","goal":"태경과 준호의 후속 책임 확정","obstacle":"밤새 감정 잔존","turn":"태경은 과거 절차 회의를 요구하고 준호는 전력 개선안 제출 시한을 약속","exit_state":"갈등이 future work로 전환","speakers":["C02","C04"]},
+    {"id":"S49","sequence":"SQ10","location_time":"운영사무실 / 06:03","goal":"서윤의 채용회신 결정","obstacle":"떠나면 배신, 남으면 반복이라는 두려움","turn":"즉시 입사 대신 한 달 인수인계 후 이동 조건을 제안","exit_state":"떠남/남음 이분법 대신 책임망 시험","speakers":["C01","C05"]},
+    {"id":"S50","sequence":"SQ10","location_time":"창고 옥상 / 06:20","goal":"밤의 결과와 다음 책임망 확인","obstacle":"아직 수리·신뢰·정산 미완료","turn":"여섯 인물의 다음 의무가 서로 다른 장소와 시간표로 이어짐","exit_state":"경매는 열렸지만 세계는 계속 움직이고 다음 회차 사건 발생 조건이 남음","speakers":["C01","C02","C03","C04","C05","C06"]}
+  ],
+  "shared_arm_rule": "Control and Treatment must consume this same upstream semantic architecture without any event/sequence/scene addition, deletion or responsibility-owner reassignment.",
+  "render_outputs_at_seal": {"control":0,"treatment":0,"mask":0,"scores":0,"unblind":0},
+  "status": "SHARED_UPSTREAM_ARCHITECTURE_SEALED__READY_FOR_DUAL_RENDER"
+}
