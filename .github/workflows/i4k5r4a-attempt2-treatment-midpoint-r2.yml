@@ -1,0 +1,22 @@
+name: I4K5R4A Attempt2 Treatment midpoint R2
+on:
+  push:
+    branches: [i4k5r4a-attempt2-treatment-midpoint-r2]
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify frozen source commit is ancestor
+        run: git merge-base --is-ancestor 85657739644455faeb714442d123b5c67112ca57 HEAD
+      - name: Run Treatment R2 midpoint gate
+        run: python handoff/20260911/I4K5R4A_ATTEMPT2_TREATMENT_MIDPOINT_R2_RUNNER_R1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r4a-attempt2-treatment-midpoint-r2
+          path: /tmp/i4k5r4a_attempt2_treatment_midpoint_r2_metrics.json
