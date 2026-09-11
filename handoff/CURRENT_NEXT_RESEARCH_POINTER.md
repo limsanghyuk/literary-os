@@ -2,27 +2,30 @@
 Last updated: 2026-09-11
 
 ## CURRENT PHYSICAL BASELINE
-`P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R20__I4K_RESEARCH_ARCHITECTURE_PROMOTED__I4K5R2_ATTEMPT2_REINFORCED_PRESCORE`
-R20 transport-set root SHA256 `89a1f1b0a5052b81fc18861eb348f5693260136cd75f6deb5d6b9342cfc4b34c`.
+`P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R21__I4K5R2_VALID_FAIL_CLOSED__I4K5R3_PSSB_PREREG_OUTPUTS_0`
+R21 transport-set root SHA256 `65093f163ac38ab23e67153421494f0edf06a28bedac5debaa7d3a3be7de57eb`.
 Active Engine `P07-I4H Recovery R3`; C2 `58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7`; DB59 frozen; Production `ENG:R47`; Formal 137; latest R138; R140 `0/0/0`.
 
+## IMMUTABLE PREDECESSOR RESULT
+I4K-5R2 = valid internal scored FAIL: H1 PASS / H2 FAIL / H3 PASS / H4 PASS. Treatment 8W/2T/2L. Stage-direction +0.125 and broadcast-readiness +0.250 failed frozen +0.30 thresholds. Preserve unchanged.
+
 ## ACTIVE EXPERIMENT
-`P07-I4K-5R2-FRESH-SURFACE-HYGIENE-REPAIR-REPLICATION`
-Prereg `4f1e72851ef3d986679fcf4da33d660f18012cf1`; shared upstream `8875555c31ce62db20eb1471b249d33fe2023a59`.
+`P07-I4K-5R3-PERFORMANCE-SPECIFIC-SURFACE-BINDING-FRESH-REPLICATION`
+Prereg commit `433dbfa0e9ac9c886dd04b89fddb4bbe7672a11b`.
+Treatment adds only PSSB to the R2 repaired renderer baseline. Shared upstream semantics must be completely fresh and byte-identical between arms.
 
-## ATTEMPT2 STATE
-- Control: 10/10, S#1-S#50, 42,680 metadata-excluded chars.
-- Treatment: 10/10, S#1-S#50, 39,860 metadata-excluded chars.
-- clock continuity correction commit `d94150c9d4a4911405624f79a37f447ae8e48c73`.
-- correction receipt commit `9692ea67b92a0ff6bca3547a947ea90a48e958e6`.
-- corrected ordered transport manifest R2 commit `41bc00e7d4c470cd3e0a3644bdbebff485acf9dd`.
-- relative gap 6.607310%; exact S#1-S#50; Treatment meta/internal leakage 0; CH/SQ IDs 0; exact long duplicate 0.
-- deterministic mechanical gates PASS.
-- semantic/continuity final audit PENDING.
-- mask 0 / scores 0 / unblind 0.
+## CURRENT STATE
+fresh Series/Episode = 0; Event Ecology = 0; Sequence Plan = 0; Scene Plan = 0; Control = 0; Treatment = 0; Mask = 0; Scores = 0; Unblind = 0.
 
-## EXACT NEXT LEGAL ACTION
-Run/finish the prescore semantic/continuity audit only. Compare both arms against the frozen shared upstream and verify no critical event/scene/sequence/decision-owner/future-thread mutation or paired-world continuity defect remains. Do not inspect quality preference and do not score before the audit and final admission are sealed PASS.
+## EXACT NEXT ACTION
+1. Seal fresh Series/Episode state.
+2. Seal fresh Event Ecology.
+3. Seal shared 10-sequence plan.
+4. Seal shared 50-scene plan.
+5. Seal byte-identical Shared Upstream Architecture.
+6. Only then begin provisional Control/Treatment rendering.
+
+Do not lower R3 frozen H1-H4 thresholds. Do not inspect quality preference between provisional attempts. First prescore-admitted attempt becomes final.
 
 ## STATUS TOKEN
-`NEXT_RESEARCH__SYNC_R20_REINFORCED__I4K5R2_A2_COMPLETE__NEXT_SEMANTIC_CONTINUITY_AUDIT__MASK_0__SCORES_0__UNBLIND_0`
+`NEXT_RESEARCH__SYNC_R21__I4K5R3_PSSB__OUTPUTS_0__NEXT_FRESH_SERIES_EPISODE_THEN_EVENT_SEQUENCE_SCENE`
