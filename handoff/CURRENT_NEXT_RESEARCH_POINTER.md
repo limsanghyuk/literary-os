@@ -2,21 +2,20 @@
 Last updated: 2026-09-12
 
 ## CURRENT PHYSICAL BASELINE
-SYNC-R30 root `d3d2799c30a32211eb0c101110dfd32daa6b16c3205ebea2844bafb8d17559f9`.
+SYNC-R31 root `22b5d1fd1a03d5a3c06a5c23825b3d64da030f9122dfdb46245631e0ff5ffe86`.
 
 ## R4A TRACK
-G6 PASS; G7 PASS; provider dispatch HOLD because approved environment lacks authoritative real-provider execution. Mask=1; Judges=0; Mapping open=0. Exact surfaces remain frozen.
+G6 PASS; G7 PASS; provider HOLD; Judges=0; Mapping open=0. Exact surfaces frozen.
 
 ## EVOLUTION TRACK
-Whole-Episode Degradation=`MIXED_SIGNAL`.
-Residual Whole-Episode Craft Drift=`NO_STABLE_RESIDUAL_SIGNAL`.
-I4C Stage-B historical rationale taxonomy=`MIXED_QUALITATIVE_SIGNAL` after blind first-pass coding and historical-only unblind.
+I4C historical rationale taxonomy=`MIXED_QUALITATIVE_SIGNAL`.
+Fresh unused-scene mixed-craft annotation replication is preregistered and packets are sealed. Responses=0; replication mapping open=0.
 
 ## EXACT NEXT ORDER
-1. Preregister a fresh independent annotation/replication of the mixed craft signal before seeing any new annotation response.
-2. Freeze source cutoff, sample selection, craft-category definitions, response schema, evaluator independence rule, mapping/mask rule, and decision thresholds.
-3. Use fresh/unseen evaluation material or previously unused sealed scene pairs; do not reuse the 12 original Stage-B pairs as the primary replication sample.
-4. Construct and hash blind annotation packets without opening any current R4A mapping.
-5. If independent provider/evaluators are unavailable, stop at PACKETS_SEALED__RESPONSES_0; do not self-judge.
-6. Only after valid independent responses are sealed may the replication mapping be opened and the preregistered decision applied.
+1. Send J01/J02/J03 packets to three genuinely independent fresh evaluators only.
+2. Validate each response against the frozen response contract and independence metadata.
+3. Seal exactly three valid responses before any replication mapping regeneration/open.
+4. If evaluator execution is unavailable, stop at responses=0; coordinator self-judging is prohibited.
+5. After three valid response seals, regenerate/open only the replication mapping, verify SHA, and apply the preregistered positional decision rule without changes.
+6. Keep current R4A mapping entirely separate and closed.
 7. Immediately physical-propagate every meaningful state change.
