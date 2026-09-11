@@ -1,0 +1,14 @@
+{
+  "schema":"P07I4K5R4AControlRenderExecutionContractR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "shared_upstream_seal_commit":"4d23cebe5faa29696353863950d10c6d89bdc95f",
+  "control_definition":"Repaired baseline surface renderer + shared Actor-Visible Expression Hygiene; NO PSSB treatment.",
+  "shared_expression_rules":["Prefer visible facial/gaze/breath/posture/hand/timing changes over direct emotion labels when stageable.","Show emotional progression through observable change rather than naming the emotion.","Do not choreograph every micro-expression.","Do not make dialogue redundantly verbalize emotion already visible in performance direction.","Do not invent motive/backstory to justify expression."],
+  "control_non_PSSB_boundary":["Detailed situation direction allowed.","Actor-visible expression cues allowed under shared hygiene.","Do not systematically convert every important semantic turn into an explicit prop/blocking/action consequence as a treatment technique.","Required procedural facts may remain in concise dialogue when natural.","No scene/event/owner/future-thread mutation."],
+  "scale_execution":{"segments":10,"scenes_per_segment":5,"target_body_chars_per_segment_min":3600,"target_body_chars_per_segment_max":4200,"episode_body_chars_min":35000,"relative_gap_rule_deferred_until_treatment":true,"midpoint_scale_check_after_SQ05":true,"quality_inspection_at_midpoint":false},
+  "debug_rules":{"G0_runtime_before_bulk_render":true,"G4_scale_midpoint":true,"no_quality_comparison":true,"no_treatment_generation_before_control_scale_admissible":true},
+  "outputs_at_contract":{"control_segments":0,"control_scenes":0,"treatment_segments":0,"mask":0,"scores":0},
+  "next_legal_action":"Render Control SQ01-SQ05, seal each segment, then run scale-only midpoint measurement before SQ06-SQ10.",
+  "authority_change":false
+}
