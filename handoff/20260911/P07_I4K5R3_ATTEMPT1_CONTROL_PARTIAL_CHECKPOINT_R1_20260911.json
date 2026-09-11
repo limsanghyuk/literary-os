@@ -1,0 +1,27 @@
+{
+  "schema":"P07I4K5R3Attempt1ControlPartialCheckpointR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R3-PERFORMANCE-SPECIFIC-SURFACE-BINDING-FRESH-REPLICATION",
+  "physical_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R21__I4K5R2_VALID_FAIL_CLOSED__I4K5R3_PSSB_PREREG_OUTPUTS_0",
+  "shared_upstream_binding_sha256":"e75ef957439a8dd2ee8fba727677292a91003a3448e8813e73e6132e3814bde2",
+  "shared_upstream_seal_commit":"bf8950dbba45f074630aea8555b5cc2eae74d0fd",
+  "attempt":1,
+  "control_progress":{"segments_complete":6,"scenes_complete":"S#1-S#30","next":"SQ07 / S#31-S#35"},
+  "control_segment_commits":{
+    "SQ01":"d64a90f2e3e151e9dea768524b5112126e6496e0",
+    "SQ02":"6a63c8c77fc568e47e6e979e8e1c2b995c806d4b",
+    "SQ03":"85e9ae678d1df37c093a0ad1df2c515b15c45835",
+    "SQ04":"edf2a68d2a0c1f6b6e7663c5d62685e549aedcb0",
+    "SQ05":"56c1975b19972585726781d6ff1107f2a88a8659",
+    "SQ06":"72136044d7ccf96375debafec89568d083ca04e7"
+  },
+  "treatment_progress":{"segments_complete":0,"scenes_complete":0},
+  "quality_preference_inspected":false,
+  "scores":0,
+  "mask":0,
+  "unblind":0,
+  "semantic_mutation_detected":false,
+  "next_legal_action":"Continue Control Attempt1 at SQ07/S#31-S#35 through SQ10/S#50. Do not begin Treatment until Control SQ01-SQ10 is complete and sealed. No quality comparison.",
+  "authority_change":false,
+  "physical_propagation":"PENDING_POST_R21"
+}
