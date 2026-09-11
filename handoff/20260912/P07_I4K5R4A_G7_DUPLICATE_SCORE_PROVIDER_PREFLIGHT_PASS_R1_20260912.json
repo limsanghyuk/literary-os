@@ -1,0 +1,31 @@
+{
+  "schema":"P07I4K5R4AG7DuplicateScoreProviderPreflightPassR1",
+  "date":"2026-09-12",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "parent_physical_authority":"SYNC-R26",
+  "parent_transport_root":"c43ad4f04546e4c883ef961a70846d2f4c414abe2eaab86b5ce12f28410e2b1b",
+  "workflow_run_id":34626300892,
+  "workflow_head_sha":"037186622a189dfa48341aeab4053601ddd9d1a7",
+  "artifact_id":10274259048,
+  "artifact_digest":"sha256:6b9e1d94b9a8cb3b3a7e1e9b7ea16b96d1fb3907c3c6db75ca267d1f9a1f2074",
+  "receipt_sha256":"7ffdaee5123804e0353dffefa6528ec928afe1999d8378ea50034cdf79239d67",
+  "checks":{
+    "g6_pass":true,
+    "masked_packet_internal_sha256":"99828302087a214260f0b5e676ac333eb8e7f5c564112849e76e46228506da4f",
+    "mapping_internal_sha256_recorded":true,
+    "mapping_receipt_opened_false":true,
+    "prior_judge_score_files_count":0,
+    "mapping_open_hits_count":0,
+    "current_physical_sync_r26":true,
+    "current_judges_zero":true,
+    "provider_secret_present":false
+  },
+  "scientific_preflight_pass":true,
+  "provider_dispatch_ready":false,
+  "mask":1,
+  "judge_scores":0,
+  "mapping_open":0,
+  "status":"PASS__G7_DUPLICATE_SCORE_AND_PROVENANCE_PREFLIGHT__PROVIDER_SECRET_ABSENT__JUDGES_HELD",
+  "next_legal_action":"CONNECT_REAL_PROVIDER_SECRET_OR_USE_THREE_FRESH_EXTERNAL_JUDGE_CONVERSATIONS; DO_NOT_SELF_JUDGE; KEEP_MAPPING_CLOSED",
+  "authority_change":false
+}
