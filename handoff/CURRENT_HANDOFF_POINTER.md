@@ -2,16 +2,16 @@
 Last updated: 2026-09-12
 
 ## READ FIRST
-`handoff/20260912/START_HERE_SYNC_R26_G6_PASS_NEW_SESSION_HANDOFF_R1.md`
+`handoff/20260912/START_HERE_SYNC_R27_G7_PASS_PROVIDER_HOLD_NEW_SESSION_HANDOFF_R1.md`
 
 ## CURRENT PHYSICAL AUTHORITY
-SYNC-R26 root `c43ad4f04546e4c883ef961a70846d2f4c414abe2eaab86b5ce12f28410e2b1b`.
+SYNC-R27 root `dec5f407671015c9bfb29c34d3bbd40b78ec5f2c4e44bd857a5c3eb3aaf4eb0a`.
 
 ## CURRENT RESEARCH STATE
-R4A Attempt2 frozen; all prescore compliance PASS; G6 leak-resistant mask PASS. Mask=1; judges=0; mapping open=0. Mapping-secret artifact `10272549788` must stay unopened until all three judge packets are sealed.
+R4A Attempt2 frozen; all prescore compliance PASS; G6 mask PASS; G7 duplicate-score/provenance preflight PASS. Provider secret absent in GitHub Actions, so judges remain 0. Mask=1; judges=0; mapping open=0. Mapping-secret artifact `10272549788` remains unopened.
 
 ## EXACT NEXT ACTION
-G7 duplicate-score / provenance preflight -> exactly three independent real-provider judges -> seal all packets -> mapping open once -> H1-H4 / cross-judge decision.
+Connect real-provider secret or dispatch 3 fresh independent external judge conversations; do not self-judge. Seal all 3 valid score packets before mapping open once, then compute H1-H4/cross-judge decision. Parallel knowledge-only diagnostics are legal while provider remains blocked.
 
 ## STATUS TOKEN
-`CURRENT_HANDOFF__SYNC_R26__G6_PASS__JUDGES_0__MAPPING_CLOSED__G7_NEXT`
+`CURRENT_HANDOFF__SYNC_R27__G7_PASS__PROVIDER_HOLD__JUDGES_0__MAPPING_CLOSED`
