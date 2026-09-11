@@ -1,0 +1,82 @@
+{
+  "schema":"WholeEpisodeDegradationDiagnosticResultR1",
+  "date":"2026-09-12",
+  "classification":"KNOWLEDGE_ONLY_RETROSPECTIVE_DIAGNOSTIC__NO_SCORE_REWRITE__NO_PROMOTION",
+  "parent_prereg_commit":"1a6faa7363f84670f05a8d3f5bafeceeb6e90202",
+  "measurement_implementation_commit":"299546497ef057d07eef1b604da1e81b946e2594",
+  "physical_parent":"SYNC-R27",
+  "source_metrics":{
+    "I4C_R2":{
+      "surface_sha256":"5a4943106d9013777620299beb1ded5e233bf825d7a3fbdf7b2fce59c1206639",
+      "scenes":50,"scene_body_chars":34605,
+      "scene_entry_explanatory_preface_chars":0,"scene_entry_explanatory_preface_ratio":0.0,
+      "sequence_purpose_episode_share":0.0,"internal_plan_meta_token_hits":0,
+      "procedural_architecture_vocabulary_density_per_1000":0.1444877908,
+      "critical_semantic_continuity_violations":0,"speaker_contract":"50/50 PASS",
+      "human_comparison_position_summary":{"early_selected_scenes_03_07_11_14":{"candidate":3,"human":1},"middle_selected_scenes_19_21_28_33":{"candidate":0,"human":4},"late_selected_scenes_37_41_45_50":{"candidate":0,"human":4}},
+      "sealed_verdict_unchanged":"HOLD__WHOLE_EPISODE_SURFACE_NOT_HUMAN_COMPETITIVE__NO_LIVE_PROMOTION"
+    },
+    "I4E_R2":{
+      "surface_sha256":"008686ce8a960469ae6273cdfc297758c9dec2d4188a52f8b2fc48f89a0f6b59",
+      "scenes":50,"scene_body_chars":33953,
+      "scene_entry_explanatory_preface_chars":0,"scene_entry_explanatory_preface_ratio":0.0,
+      "sequence_purpose_episode_share":0.0,"internal_plan_meta_token_hits":0,
+      "procedural_architecture_vocabulary_density_per_1000":0.1472623921,
+      "critical_semantic_continuity_violations":0,"unauthorized_principal_speakers":0,"speaker_contract":"50/50 PASS",
+      "blind_position_summary":{"early_selected_scenes_03_07_11_14":{"treatment":2,"control":2},"middle_selected_scenes_19_21_28_33":{"treatment":2,"control":2},"late_selected_scenes_37_41_45_50":{"treatment":2,"control":2}},
+      "sealed_verdict_unchanged":"FAIL__STAGE_A_MODE_DRIVEN_WHOLE_EPISODE_NOT_BROADLY_SUPERIOR__NO_STAGE_B__NO_STATE_COMMIT__NO_PROMOTION"
+    },
+    "I4E_R1_secondary_continuity_history":{
+      "sealed_declared_unauthorized_principal_speakers":13,
+      "listed_violation_scene_ids":[37,46,47,48,49],
+      "listed_scene_distribution":"one middle-tercile scene and four late-tercile scenes",
+      "note":"The sealed R1 receipt declares 13 unauthorized principal speakers while its visible detail list contains 12 lines; this internal count discrepancy is preserved rather than silently corrected.",
+      "R2_repair_result":"unauthorized_principal_speakers=0 and critical_semantic_continuity_violations=0, yet Stage A still failed 6/12. Therefore historical continuity debt was real but not sufficient to explain the R2 whole-episode result."
+    },
+    "I4K5_CONTROL":{
+      "surface_sha256":"191e2294228deb7c8a3ba35ecdd139450a43a7be1e3342846e71f2762d070885",
+      "scenes":50,"scene_body_chars":33360,
+      "scene_entry_explanatory_preface_chars":20101,"scene_entry_explanatory_preface_ratio":0.6025479616,
+      "preface_ratio_terciles":{"early":0.6126,"middle":0.6538,"late":0.5370},
+      "sequence_purpose_episode_share_conservative_lower_bound":0.0437649880,
+      "internal_plan_meta_token_hits_under_frozen_regex":0,
+      "procedural_architecture_vocabulary_density_per_1000":5.0659472422
+    },
+    "I4K5_TREATMENT":{
+      "surface_sha256":"249d310397f2844d9c0f9d1db76e2ab9db7611ccc8ebd285d21d13ae91191f3b",
+      "scenes":50,"scene_body_chars":33114,
+      "scene_entry_explanatory_preface_chars":19903,"scene_entry_explanatory_preface_ratio":0.6010448753,
+      "preface_ratio_terciles":{"early":0.5834,"middle":0.6363,"late":0.5840},
+      "sequence_purpose_episode_share_conservative_lower_bound":0.0445430936,
+      "internal_plan_meta_token_hits_under_frozen_regex":5,
+      "procedural_architecture_vocabulary_density_per_1000":4.6807996618
+    },
+    "I4K5_external_evidence":{
+      "valid_independent_judges":3,
+      "U11":"TREATMENT_WIN","U12":"CONTROL_WIN",
+      "dialogue_subtext_direction_craft_median_delta":-0.5,
+      "broadcast_readiness_median_delta":-0.5,
+      "severe_repeated_scene_preface_padding":"3_of_3_judges_both_arms",
+      "meta_source_engine_leakage":"mechanically_verified_both_arms",
+      "structural_effect":"causal +1.5; ensemble downstream ownership +1.5; escalation +1.0; future-thread +1.0"
+    }
+  },
+  "hypothesis_assessment":{
+    "H_W1_CUMULATIVE_CONTAMINATION":"SUPPORTED_STRONGLY_IN_I4K5_AS_PATHOLOGICALLY_HIGH_COMMON_MODE_PREFACE; NOT_SUPPORTED_AS_GENERAL_EXPLANATION_FOR_I4C_OR_I4E_R2",
+    "H_W2_PLAN_PURPOSE_AMPLIFICATION":"SUPPORTED_STRONGLY_IN_I4K5_BY_3_OF_3_EXTERNAL_JUDGES_AND_DIRECT_SURFACE_PATTERN; FROZEN_R1_QUANTIFIER_IS_CONSERVATIVE_AND_UNDERSENSITIVE_AT_SEQUENCE_ENDS; NOT_PRESENT_IN_I4C/I4E_R2_UNDER_FROZEN_CLASSIFIER",
+    "H_W3_CONTINUITY_DEBT":"SUPPORTED_AS_HISTORICAL_I4E_R1_FAILURE_MODE_WITH_LATE_SCENE_CONCENTRATION; NOT_SUFFICIENT_BECAUSE_I4E_R2_REPAIRED_TO_ZERO_BUT_STILL_FAILED_STAGE_A; NOT_PRIMARY_IN_I4C_R2_OR_I4K5"
+  },
+  "measurement_validity_note":"The frozen R1 preface classifier requires two distinct meta markers. It conservatively misses some obvious sequence-end prefaces that contain only one frozen marker, making sequence-purpose copy share a lower bound. The implementation is not changed after observing results; external 3/3 judge verification is used only as independent corroboration, not to retroactively alter the metric.",
+  "decision_output":"MIXED_SIGNAL",
+  "interpretation":[
+    "There is no single stable degradation signature across all three historical cases.",
+    "I4K5 has a strong common-mode Plan-to-Surface serialization defect: roughly 60% of measured scene-body characters are classified scene-entry explanatory preface in both arms even under a conservative classifier, while the independent judges still confirm structural Treatment gains.",
+    "I4E demonstrates that continuity/speaker-authorization debt can concentrate late, but removing that debt does not by itself restore broad whole-episode superiority.",
+    "I4C shows a distinct residual pattern: candidate wins are concentrated early while all middle/late human-comparison samples favor human material despite zero measured preface/meta/critical-continuity defects. The preregistered H-W1..W3 metrics do not fully explain this case.",
+    "A new prospective renderer intervention should not yet be chosen from one dominant signature. First isolate the residual I4C-style craft-drift dimension with a new preregistered diagnostic, then design a fresh prospective intervention."
+  ],
+  "historical_verdicts_rewritten":false,
+  "current_R4A_changed":false,
+  "authority_change":false,
+  "next_research":"PREREGISTER_RESIDUAL_WHOLE_EPISODE_CRAFT_DRIFT_DIAGNOSTIC_WITH_DIALOGUE_SUBTEXT_LINE_ECONOMY_CHARACTER_VOICE_SCENE_SPECIFICITY_AND_POSITION_DRIFT; keep R4A provider-judge path separate and frozen."
+}
