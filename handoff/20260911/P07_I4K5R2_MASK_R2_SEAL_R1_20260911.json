@@ -1,0 +1,28 @@
+{
+  "schema": "P07I4K5R2MaskR2SealR1",
+  "date": "2026-09-11",
+  "experiment_id": "P07-I4K-5R2-FRESH-SURFACE-HYGIENE-REPAIR-REPLICATION",
+  "classification": "MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__INTERNAL_ONLY",
+  "prescore_admission_receipt": "P07_I4K5R2_ATTEMPT2_PRESCORE_ADMISSION_PASS_R1_20260911.json",
+  "mask_r1_status": "INVALIDATED_PRE_SCORE__NO_SCORES",
+  "mask_r2_workflow_run_id": 34561168091,
+  "mask_r2_workflow_head_sha": "f7a002c829f6a9716bf0845cff57a7eaf3caef0e",
+  "masked_packet_artifact_id": 10184350094,
+  "masked_packet_artifact_digest": "sha256:dceb0ff34a4338198767aefae77ca40db1b0033fdd9cd01af57cb528b72e129d",
+  "sealed_mapping_artifact_id": 10184350406,
+  "sealed_mapping_artifact_digest": "sha256:9c85484ec03b0332785dbd5e1f0976d8fceb01004c738015ef421ae123cc3b85",
+  "mapping_sha256": "4704abe1e39959024f08f06b4196270e7f5fd896c0c5ae87c36f1db2e5cf74f4",
+  "masked_packet_manifest_sha256": "6293f8e30f2e3f8ae2429f0fcb360533032160c16841edabaa795d17f1a291eb",
+  "mask_properties": {
+    "unit_count": 12,
+    "balanced_orientation": "6/6",
+    "source_arm_headers_removed": true,
+    "source_hashes_omitted_from_packet": true,
+    "pair_byte_lengths_equalized": true,
+    "mapping_separate": true
+  },
+  "mapping_artifact_downloaded_before_score_seal": false,
+  "scores_at_seal": 0,
+  "unblind_at_seal": 0,
+  "decision": "VALID_MASK_R2__SCORING_AUTHORIZED"
+}
