@@ -1,0 +1,19 @@
+{
+  "schema":"P07I4K5R4AAttempt2G5EarlyExecutionSupplementR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "classification":"DEBUG_EXECUTION_ORDER_HARDENING__NO_THRESHOLD_CHANGE__NO_RENDERER_CHANGE",
+  "trigger":"Attempt1 G5 exposed an Event-Ecology-to-Scene-Plan future-thread omission only after both surfaces had been rendered.",
+  "prereg_basis":"The original prereg already requires shared_upstream_semantics_nonloss=true and event/scene/sequence/decision-owner/future-thread mutation=0 under G5.",
+  "change":"For the final provisional Attempt2, apply the identical frozen G5 criterion twice: G5A before any arm rendering over Series/Event/Sequence/Scene/Shared-Upstream artifacts, then G5B after rendering over the two surfaces. G5A is an earlier execution of an existing criterion, not a new criterion.",
+  "G5A_pre_render_requirements":["every Event Ecology event appears in Sequence and Scene plans","every downstream decision owner is preserved","every future-thread owner and second-order obligation is explicitly adopted by a licensed future scene/exit","scene IDs and sequence ranges complete","no arm-specific surface instruction in shared upstream"],
+  "G5B_post_render_requirements":["shared upstream scene turns/exits preserved in both arms","no event/cause/decision-owner/future-thread mutation","critical continuity violations=0","expression/PSSB realization adds no motive/backstory/event"],
+  "unchanged":{"thresholds":true,"frozen_PSSB":true,"shared_expression_hygiene":true,"independent_judge_rule":true,"attempt_limit_max_2":true,"post_score_retry_forbidden":true},
+  "attempt2_freshness":"COMPLETELY_FRESH_SERIES_EVENT_SEQUENCE_SCENE_PROSE_REQUIRED",
+  "quality_scores_consulted":false,
+  "mask":0,
+  "independent_judge_scores":0,
+  "mapping_open":0,
+  "next_legal_action":"Create a completely fresh Attempt2 Series/Episode state, then Event Ecology, Sequence Plan, Scene Plan. Run G5A and seal PASS before rendering either arm.",
+  "authority_change":false
+}
