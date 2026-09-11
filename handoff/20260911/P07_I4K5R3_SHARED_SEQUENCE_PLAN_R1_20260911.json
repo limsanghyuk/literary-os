@@ -1,0 +1,125 @@
+{
+  "schema":"P07I4K5R3SharedSequencePlanR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R3-PERFORMANCE-SPECIFIC-SURFACE-BINDING-FRESH-REPLICATION",
+  "series_state_commit":"db22d387ee53ecd35a715a20796bbeed313f6293",
+  "event_ecology_commit":"1a7a86990d8db2335c43138ee9cbda54206d3d69",
+  "series":"온담 공동도예소",
+  "episode":"가마문은 아침에 열린다",
+  "shared_between_arms":true,
+  "sequence_count":10,
+  "scene_target":50,
+  "sequences":[
+    {
+      "id":"SQ01",
+      "title":"아직 열 수 없는 가마",
+      "scenes":[1,2,3,4,5],
+      "events":["E01"],
+      "goal":"평소처럼 행사 전날 일을 지안에게 모으는 공방에 가마 냉각 불확실성을 투입하고, 기술판단 owner가 민서여야 한다는 첫 균열을 만든다.",
+      "required_progression":["센서 불일치 발견","운송대상 작품이 가마 안에 있음 확인","일정 압박과 안전판단 분리","민서가 재확인 조건과 다음 판단시각을 자기 이름으로 설정"],
+      "end_state":"가마 개방은 지안 승인이나 행사시각이 아니라 민서의 기술조건에 묶인다."
+    },
+    {
+      "id":"SQ02",
+      "title":"유약실이 닫힌 저녁",
+      "scenes":[6,7,8,9,10],
+      "events":["E02"],
+      "goal":"환기장치 문제로 주민수업과 행사준비가 충돌하게 하고 수현이 학생·강사 경계를 유지한 대체수업을 직접 설계하게 한다.",
+      "required_progression":["배기장치 이상 확인","유약작업 중단","수업 취소 압박과 행사준비 인력전환 제안 발생","수현이 비유약 대체수업·정리범위·종료조건 결정"],
+      "end_state":"수업은 유지되지만 학생과 강사는 행사 포장인력으로 흡수되지 않는다."
+    },
+    {
+      "id":"SQ03",
+      "title":"누구의 그릇인가",
+      "scenes":[11,12,13,14,15],
+      "events":["E03"],
+      "goal":"선반 사고를 물리적 파손이 아닌 소유권·신뢰 문제로 전환하고, 하경이 자기 작품에도 같은 격리기준을 적용하도록 한다.",
+      "required_progression":["선반 기울어짐과 작품 혼합","무서명 작품 식별 불확실","하경이 과거 보상갈등을 상기하며 운영진을 의심","하경이 불확실 작품 전부 격리하고 자기 주문품도 예외로 빼지 않음","수현이 향후 최소표식 과제를 인수"],
+      "end_state":"'내 것부터 찾기'가 아니라 공동 식별 기준이 현재 행동을 지배한다."
+    },
+    {
+      "id":"SQ04",
+      "title":"손으로 아는 흙",
+      "scenes":[16,17,18,19,20],
+      "events":["E04"],
+      "goal":"재생토 혼합을 폐기/감각 독점의 이분법이 아니라 전수 가능한 판별 문제로 만들고 복의 암묵지를 다른 사람이 시험할 수 있게 한다.",
+      "required_progression":["샤모트 혼입 확인","복이 손으로 차이를 즉시 감지","수현·하경이 같은 구분을 재현하지 못함","복이 관찰순서와 실패징후를 보여줌","다른 사람이 독립적으로 한 배치를 분류"],
+      "end_state":"복의 솜씨는 대체되지 않지만 최소한의 반복 가능한 판별법이 다른 사람 손으로 넘어간다."
+    },
+    {
+      "id":"SQ05",
+      "title":"07시 20분 트럭",
+      "scenes":[21,22,23,24,25],
+      "events":["E05"],
+      "goal":"앞당겨진 운송시각을 모든 작품에 강제하지 않고 도윤이 외부 일정과 현장 안전조건 사이에 분할운송 선택지를 만든다.",
+      "required_progression":["픽업 07:20 통보","전부 싣자는 압박","가마 작품은 시간확약 불가","도윤이 1차/후속 운송 협상","하경이 자기 출품 일부도 후속편 가능성을 받아들임"],
+      "end_state":"07:20은 전체 마감이 아니라 owner가 붙은 1차 운송목록의 마감이 된다."
+    },
+    {
+      "id":"SQ06",
+      "title":"작업대가 모자라는 밤",
+      "scenes":[26,27,28,29,30],
+      "events":["E06","E02"],
+      "goal":"07:40 안전동선 점검과 대체수업·포장준비가 같은 공간을 차지하게 만들어 지안이 승인자가 아니라 충돌조정자로 행동하게 한다.",
+      "required_progression":["안전동선 점검 조기 통보","복도 적치 금지 조건 확인","대체수업·포장·건조 작업이 공간을 요구","각 owner가 필요한 시간과 공간을 직접 제시","지안이 빈 통로를 우선 고정하고 작업을 시간차 배치"],
+      "end_state":"지안은 작업내용을 다시 소유하지 않고 충돌하는 동선과 시간만 조정한다."
+    },
+    {
+      "id":"SQ07",
+      "title":"섞인 것을 나누는 기준",
+      "scenes":[31,32,33,34,35],
+      "events":["E03","E04"],
+      "goal":"작품 식별과 흙 판별에서 생긴 두 종류의 '감각 의존' 문제를 교차시켜 소유권과 공예지식의 인계방식을 실제 작업 속에서 검증한다.",
+      "required_progression":["격리 작품 재확인","재생토 분류법 다른 사람 손으로 재시험","하경이 자기 작품 하나를 불확실군에 남김","수현이 학생작품 표식 규칙 초안을 실제 분류에 적용","복이 틀린 분류를 대신 처리하지 않고 징후만 지적"],
+      "end_state":"식별과 재료 판단 모두 특정인의 기억을 넘어 검증 가능한 흔적을 남기기 시작한다."
+    },
+    {
+      "id":"SQ08",
+      "title":"가마를 기다리는 포장",
+      "scenes":[36,37,38,39,40],
+      "events":["E01","E05"],
+      "goal":"운송 준비가 거의 끝나도 가마만은 일정에 굴복하지 않는 상황을 만들고, 민서와 도윤이 서로의 owner 경계를 침범하지 않은 채 계획을 다시 맞추게 한다.",
+      "required_progression":["1차 포장 완료 접근","가마 재측정","민서가 아직 개방불가 판단 유지","도윤이 1차 운송목록을 실제로 축소·확정","지안이 가마 개방 결정을 회수하지 않고 물류 충돌만 조정"],
+      "end_state":"운송은 가마판단을 기다리는 것이 아니라 안전하게 나눠져 진행된다."
+    },
+    {
+      "id":"SQ09",
+      "title":"통로를 비우는 사람들",
+      "scenes":[41,42,43,44,45],
+      "events":["E06","E05","E03"],
+      "goal":"첫 트럭 도착 직전 포장상자·격리작품·아침 점검동선을 한 공간에서 충돌시키고 각 owner가 자기 비용을 감수하며 공동 동선을 지키게 한다.",
+      "required_progression":["하역 대기물 증가","격리작품은 운송대상에서 제외","하경이 자기 출품작도 불확실하면 남기는 결정 유지","도윤이 1차 목록에서 미확정품 제거","지안이 07:40 점검통로를 비우는 최종 공간충돌 조정"],
+      "end_state":"첫 운송은 숫자를 채우는 대신 owner와 식별이 확실한 작품만 싣는다."
+    },
+    {
+      "id":"SQ10",
+      "title":"가마문을 여는 사람들",
+      "scenes":[46,47,48,49,50],
+      "events":["E01","E02","E03","E04","E05","E06"],
+      "goal":"아침에 즉시 해결되는 것과 다음 회차로 넘어가는 책임을 분리하고, 지안이 다시 모든 후속업무를 거두지 않는 상태로 마무리한다.",
+      "required_progression":["민서의 조건 충족 여부에 따라 가마 개방 또는 추가대기 결정","수현의 수업·작품표식 후속과제 확정","복의 재생토 판별법 후속검증 일정 확정","도윤의 후속 운송·공동동선 도면 과제 확정","하경의 분할배송/불확실 작품 책임 확정","지안은 각 owner의 다음 약속을 확인만 하고 충돌조정 역할을 유지"],
+      "end_state":"공방은 하나의 총괄책임자가 모든 문제를 회수하는 조직이 아니라 서로 다른 craft·education·logistics future thread가 연결된 관계망으로 다음 회차에 진입한다."
+    }
+  ],
+  "sequence_checks":{
+    "sequence_count":10,
+    "scene_ranges_cover":"1..50 without overlap or gap",
+    "all_six_events_introduced_by_SQ05":true,
+    "all_six_events_reenter_after_introduction":true,
+    "distributed_owner_architecture_preserved":true,
+    "treatment_specific_surface_instruction":false
+  },
+  "outputs_at_this_seal":{
+    "fresh_series_state":1,
+    "fresh_event_ecology":1,
+    "fresh_sequence_plan":1,
+    "fresh_scene_plan":0,
+    "control_render":0,
+    "treatment_render":0,
+    "mask":0,
+    "scores":0,
+    "unblind":0
+  },
+  "next_legal_action":"Create and seal the shared 50-scene semantic plan. Do not write broadcast prose and do not render either arm until all 50 scenes are frozen.",
+  "authority_change":false
+}
