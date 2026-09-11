@@ -1,25 +1,24 @@
 # CURRENT SESSION RECOVERY POINTER
-Last updated: 2026-09-11
+Last updated: 2026-09-12
 
 ## CURRENT PHYSICAL AUTHORITY
-`P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R24__I4K5R4A_ATTEMPT1_PRESCORE_G5_REJECTED__ATTEMPT2_SERIES_SEALED__G5A_PENDING`
-R24 root `8b42c029f14f344ce7fbfc9407ab3cce1f9692f16ba8659c6045a327e3a8d043`.
-Post-R24 research is pending physical propagation.
+SYNC-R24 root `8b42c029f14f344ce7fbfc9407ab3cce1f9692f16ba8659c6045a327e3a8d043` remains physical authority. Post-R24 research is pending physical propagation.
 
 ## EXACT RESEARCH STATE
-R4A Attempt2 G5A PASS; Shared Upstream sealed. Canonical Control is complete and mechanically/hygienically admitted at 40,650 chars / 50 scenes / all segments >=3,600. PASS receipt `8b489639c2b754d0f5a229da518895379b84c6aa`.
-Treatment=0; Mask=0; independent judge scores=0; mapping open=0.
+R4A Attempt2 shared upstream sealed. Control and Treatment are complete and frozen. Paired mechanical prescore PASS `1468ecc329582b443dd09afee57524a80fd92ad5`; G5B semantic/continuity PASS `f0fb7e701f0083bd1c55442fd97a9788059aa1f1`; exact-arm freeze `494190b45db7889de94835de59692b110cbe6a8b`.
+Control 40,650 chars; Treatment 37,620 chars; mask=0; independent judge scores=0; mapping open=0. No surface mutation is legal.
 
 ## MANDATORY RESUME ORDER
-1. Verify R24 physical root remains current.
-2. Read G5A PASS and Shared Upstream seal.
-3. Read Control canonical manifest R2 and full-gate PASS receipt.
-4. Render Treatment SQ01-SQ05 using identical shared semantics/expression hygiene + frozen PSSB only.
-5. Run Treatment midpoint gate. Stop on any scale/hygiene failure.
-6. Only midpoint PASS permits Treatment SQ06-SQ10.
+1. Verify SYNC-R24 physical root remains current.
+2. Read `handoff/20260912/LITERARY_OS_EVOLUTION_ARCHITECTURE_R1_20260912.md`.
+3. Read `handoff/20260912/P07_I4K5R4A_PREFLIGHT_COMPLIANCE_AND_COMMON_MODE_AUDIT_PLAN_R1_20260912.json`.
+4. Execute frozen-surface audit of the already-preregistered `treatment_repeated_plan_purpose_copy == 0` condition. Do not repair prose.
+5. Separately compute common-mode contamination diagnostics as KNOWLEDGE_ONLY; do not add new R4A thresholds.
+6. Only compliance PASS authorizes G6 mask and independent judges. Compliance FAIL => R4A prescore HOLD/invalid; no third attempt.
+7. In parallel, whole-episode degradation and actual-load/contract-consumption audits may proceed without affecting R4A verdict rules.
 
 ## UNCHANGED AUTHORITIES
-Active Engine `P07-I4H Recovery R3`; Production `ENG:R47`; DB59 frozen; Formal 137; latest R138; R140 `0/0/0`.
+Active Engine P07-I4H Recovery R3; Production ENG:R47; DB59 frozen; Formal 137; latest R138; R140 0/0/0.
 
 ## STATUS TOKEN
-`SESSION_RECOVERY__SYNC_R24__R4A_ATTEMPT2_CONTROL_PASS__TREATMENT_SQ01_NEXT__MIDPOINT_REQUIRED`
+`SESSION_RECOVERY__SYNC_R24__R4A_A2_FROZEN__MECH_PASS__G5B_PASS__COMPLIANCE_AUDIT_NEXT__NO_SURFACE_MUTATION`
