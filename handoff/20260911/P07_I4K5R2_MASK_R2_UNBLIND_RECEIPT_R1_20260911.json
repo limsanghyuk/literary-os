@@ -1,0 +1,31 @@
+{
+  "schema": "P07I4K5R2MaskR2UnblindReceiptR1",
+  "date": "2026-09-11",
+  "experiment_id": "P07-I4K-5R2-FRESH-SURFACE-HYGIENE-REPAIR-REPLICATION",
+  "classification": "MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__INTERNAL_ONLY",
+  "score_seal_commit": "de781ad5935ebe61e55b9c375885a0aceb1ce443",
+  "mapping_artifact_id": 10184350406,
+  "mapping_artifact_digest": "sha256:9c85484ec03b0332785dbd5e1f0976d8fceb01004c738015ef421ae123cc3b85",
+  "mapping_file_sha256_verified": "4704abe1e39959024f08f06b4196270e7f5fd896c0c5ae87c36f1db2e5cf74f4",
+  "mapping_opened_only_after_score_seal": true,
+  "unit_mapping": {
+    "U01":{"A":"TREATMENT","B":"CONTROL"},
+    "U02":{"A":"CONTROL","B":"TREATMENT"},
+    "U03":{"A":"TREATMENT","B":"CONTROL"},
+    "U04":{"A":"CONTROL","B":"TREATMENT"},
+    "U05":{"A":"TREATMENT","B":"CONTROL"},
+    "U06":{"A":"TREATMENT","B":"CONTROL"},
+    "U07":{"A":"CONTROL","B":"TREATMENT"},
+    "U08":{"A":"CONTROL","B":"TREATMENT"},
+    "U09":{"A":"CONTROL","B":"TREATMENT"},
+    "U10":{"A":"CONTROL","B":"TREATMENT"},
+    "U11":{"A":"TREATMENT","B":"CONTROL"},
+    "U12":{"A":"TREATMENT","B":"CONTROL"}
+  },
+  "treatment_pairwise_outcomes": {
+    "U01":"WIN","U02":"WIN","U03":"WIN","U04":"WIN","U05":"TIE","U06":"WIN","U07":"WIN","U08":"LOSS","U09":"WIN","U10":"LOSS","U11":"TIE","U12":"WIN"
+  },
+  "summary":{"treatment_wins":8,"treatment_ties":2,"treatment_losses":2,"treatment_nonloss":10},
+  "scores_modified_after_unblind": false,
+  "thresholds_modified_after_unblind": false
+}
