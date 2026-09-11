@@ -1,0 +1,26 @@
+{
+  "schema":"P07I4K5R4AAttempt1ControlCanonicalManifestR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "classification":"PRESCORE_CANONICAL_CONTROL_BINDING",
+  "shared_upstream_seal_commit":"4d23cebe5faa29696353863950d10c6d89bdc95f",
+  "render_contract_commit":"a9501ea6522c5038a551aaa0a26b3b561b306966",
+  "debug_gate_commit":"2955267eaff55442c4a2be55ddfd90bae1eebd2a",
+  "segments":[
+    "handoff/20260911/i4k5r4a_attempt1/control_superseding_r2/P07_I4K5R4A_CONTROL_SQ01_S01_05_R2_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt1/control_superseding_r2/P07_I4K5R4A_CONTROL_SQ02_S06_10_R2_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt1/control_superseding_r2/P07_I4K5R4A_CONTROL_SQ03_S11_15_R2_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt1/control_superseding_r2/P07_I4K5R4A_CONTROL_SQ04_S16_20_R2_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt1/control_superseding_r2/P07_I4K5R4A_CONTROL_SQ05_S21_25_R2_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt1/control_superseding_r3/P07_I4K5R4A_CONTROL_SQ06_S26_30_R3_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt1/control_superseding_r3/P07_I4K5R4A_CONTROL_SQ07_S31_35_R3_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt1/control_superseding_r3/P07_I4K5R4A_CONTROL_SQ08_S36_40_R3_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt1/control_superseding_r3/P07_I4K5R4A_CONTROL_SQ09_S41_45_R3_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt1/control_superseding_r3/P07_I4K5R4A_CONTROL_SQ10_S46_50_R3_20260911.txt"
+  ],
+  "superseded_history_preserved":true,
+  "treatment_render":0,
+  "quality_inspection_performed":false,
+  "next_legal_action":"Run deterministic full Control prescore gate over exactly these ten files. Treatment remains forbidden until PASS.",
+  "authority_change":false
+}
