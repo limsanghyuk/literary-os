@@ -1,0 +1,22 @@
+{
+  "schema":"P07I4K5R4AAttempt2ControlRenderExecutionContractR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "attempt":2,
+  "classification":"PRE_RENDER_EXECUTION_GUIDANCE__NO_THRESHOLD_CHANGE",
+  "shared_upstream_seal_commit":"4585fd2c79e386b511f092f2b945aa904ab2cff8",
+  "shared_upstream_binding_sha256":"8e023a006aa9ff9fca9ef5b0a0cf5d5735d69e992f4f102a2e6734c5076aadd6",
+  "g5a_pass_commit":"4f7a6e54d3be12f21d4c7a8802f4a75fbcaca351",
+  "arm":"CONTROL",
+  "renderer":"R2-repaired baseline surface renderer + shared Actor-Visible Expression Hygiene; PSSB forbidden",
+  "expression_hygiene":["Prefer playable gaze/eyes/mouth/jaw/brow/breath/posture/tension/hands/object-handling/distance/timing/silence/hesitation/interruption over direct emotion labels when stageable.","Show facial-expression change as a readable progression tied to the licensed scene cause/turn/exit, not as a quota of micro-expressions.","Do not have dialogue explain an emotion already legible in behavior/expression.","Expression may reveal only already-licensed state; no new motive/backstory/event/decision/future-thread."],
+  "scale_guidance":{"sequence_body_chars_target_min":3800,"sequence_body_chars_target_max":4400,"purpose":"avoid known under-scale failure before full-arm completion","official_prescore_floor_each_arm":35000,"official_threshold_changed":false},
+  "semantic_rules":["Exactly five licensed scenes per sequence.","Preserve each scene goal/obstacle/turn/exit and event ownership.","No new event, cause, decision-owner, future-owner, second-order obligation or future-adoption mutation.","No PSSB-specific systematic binding intervention in Control."],
+  "execution_order":"SQ01 through SQ10; checkpoint after SQ05; run scale/hygiene gate before Treatment.",
+  "quality_inspection_performed":false,
+  "treatment_render":0,
+  "mask":0,
+  "judge_scores":0,
+  "mapping_open":0,
+  "authority_change":false
+}
