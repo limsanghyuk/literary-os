@@ -1,0 +1,42 @@
+{
+  "schema":"P07I4K5R3Attempt2ScaleRetryProcedureR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R3-PERFORMANCE-SPECIFIC-SURFACE-BINDING-FRESH-REPLICATION",
+  "classification":"DEVELOPMENT_PREFORMAL__INTERNAL_ONLY__FINAL_PROVISIONAL_ATTEMPT_PREOUTPUT",
+  "prereg_commit":"433dbfa0e9ac9c886dd04b89fddb4bbe7672a11b",
+  "attempt1_hold_commit":"139f4bb99029cfd630df6dd0131f8467631b9ce9",
+  "shared_upstream_seal_commit":"bf8950dbba45f074630aea8555b5cc2eae74d0fd",
+  "shared_upstream_binding_sha256":"e75ef957439a8dd2ee8fba727677292a91003a3448e8813e73e6132e3814bde2",
+  "attempt_number":2,
+  "attempt_limit":2,
+  "retry_reason_only":"Attempt1 failed prescore scale admission: both arms <35000 metadata-excluded chars and relative gap >10%. No quality score or preference was consulted.",
+  "render_rule":{
+    "fresh_rerender_from_shared_plan":true,
+    "attempt1_surface_prose_copy_prohibited":true,
+    "control":"R2 repaired surface renderer boundary only; no PSSB intervention.",
+    "treatment":"Same frozen upstream plus PSSB only; no event/scene/sequence/owner/future-thread/cause mutation.",
+    "detailed_stage_direction_allowed":true,
+    "expository_dialogue_disfavored":true,
+    "surface_meta_forbidden":true
+  },
+  "scale_guidance_not_quality_gate":{
+    "metadata_excluded_body_chars_each_target":"38000-42000",
+    "average_sequence_body_chars_guidance":"3800-4200",
+    "average_scene_body_chars_guidance":"760-840",
+    "hard_floor_each":35000,
+    "hard_relative_gap_max":0.10,
+    "note":"Target ranges are prescore admission safety guidance only and are not literary quality scores or per-scene quotas."
+  },
+  "execution_order":[
+    "Render Control SQ01-SQ10 and seal",
+    "Render Treatment SQ01-SQ10 and seal",
+    "Run deterministic mechanical prescore measurement without quality inspection",
+    "Run full semantic/continuity audit against frozen shared upstream",
+    "First admitted Attempt2 is final; no further render retry exists in R3",
+    "Only after final admission PASS may masking/scoring occur"
+  ],
+  "mask":0,
+  "scores":0,
+  "unblind":0,
+  "authority_change":false
+}
