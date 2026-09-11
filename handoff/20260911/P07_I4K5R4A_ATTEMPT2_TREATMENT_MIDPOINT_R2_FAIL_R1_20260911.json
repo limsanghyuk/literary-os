@@ -1,0 +1,15 @@
+{
+  "schema":"P07I4K5R4AAttempt2TreatmentMidpointR2FailR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "attempt":2,
+  "classification":"PRESCORE_MIDPOINT_PARTIAL_SCALE_PASS__TWO_SEGMENTS_UNDER_DEBUG_FLOOR__QUALITY_NOT_INSPECTED",
+  "source_commit":"85657739644455faeb714442d123b5c67112ca57",
+  "workflow_run_id":34612160107,
+  "artifact_id":10268383203,
+  "metrics":{"body_chars_total":18254,"body_chars_midpoint_min_18000_pass":true,"segment_chars":{"SQ01":4068,"SQ02":3577,"SQ03":3287,"SQ04":3702,"SQ05":3620},"all_segments_min_3600_pass":false,"scene_ids_exact_1_25":true,"meta_leak_zero":true,"CH_SQ_internal_id_zero":true,"direct_emotion_pattern_zero":true,"exact_long_duplicate_zero":true},
+  "repair_boundary":{"repair_only":["SQ02","SQ03"],"preserve":["SQ01_R2","SQ04_R2","SQ05_R2"],"allowed":"Increase actor-visible action, blocking, prop-state, expression-flow, and work-process realization without changing frozen scene semantics.","forbidden":"No quality inspection, threshold change, event/decision/future-thread mutation, mask, score, or unblind."},
+  "quality_scores_consulted":false,
+  "mask":0,"judge_scores":0,"mapping_open":0,
+  "authority_change":false
+}
