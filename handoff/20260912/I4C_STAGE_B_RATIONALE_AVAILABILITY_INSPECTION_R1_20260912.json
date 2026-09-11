@@ -1,0 +1,20 @@
+{
+  "schema":"I4CStageBRationaleAvailabilityInspectionR1",
+  "date":"2026-09-12",
+  "classification":"READ_ONLY_AVAILABILITY_INSPECTION__KNOWLEDGE_ONLY",
+  "physical_parent":"SYNC-R29",
+  "source_transport":"Part A",
+  "source_path":"P07_CUMULATIVE_RESEARCH_EVIDENCE_SYNC_R1/RAW_EVIDENCE/I4C_R2/I4C_R2_STAGE_B_JUDGMENTS_SEALED_R1.json",
+  "source_sha256":"306b6883bc3645c7de43fe601e3fb9bf2d4da761fc1b3d688e03cf05924b6b16",
+  "judge_mode":"INTERNAL_CALIBRATED_SINGLE_JUDGE__MAPPING_UNSEEN",
+  "judgment_count":12,
+  "nonempty_reason_count":12,
+  "reason_char_length_range":[47,59],
+  "substantive_rationale_available":true,
+  "inspection_boundary":"The reason text was read only to determine whether substantive rationale exists. No taxonomy coding, frequency count, causal attribution, score change, or historical verdict rewrite is performed in this receipt.",
+  "bias_disclosure":"Because rationale text became visible during availability inspection, any subsequent taxonomy recovery is exploratory/knowledge-only, not confirmatory. Taxonomy categories must be frozen from pre-existing Literary OS evaluation axes and pre-inspection hypotheses, not invented from observed rationale wording.",
+  "next_legal_action":"PREREGISTER_EXPLORATORY_CRAFT_ERROR_TAXONOMY_FROM_PREEXISTING_AXES_BEFORE_CODING_OR_OPENING_HISTORICAL_STAGE_B_MAPPING",
+  "historical_score_rewrite":false,
+  "current_R4A_changed":false,
+  "authority_change":false
+}
