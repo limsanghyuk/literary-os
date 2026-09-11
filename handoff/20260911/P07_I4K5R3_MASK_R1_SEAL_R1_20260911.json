@@ -1,0 +1,23 @@
+{
+  "schema":"P07I4K5R3MaskR1SealR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R3-PERFORMANCE-SPECIFIC-SURFACE-BINDING-FRESH-REPLICATION",
+  "admission_commit":"c481e6e1b3efa619525d3eef0fc5648734b9d9b7",
+  "workflow_run_id":34592058027,
+  "workflow_head_commit":"c628a3d1222a99c0827dbeebb56d83436a2935ca",
+  "masked_packet_artifact_id":10196016516,
+  "masked_packet_digest":"sha256:57b3f996839975775979309198d5e1f9c269870a91deee59fdc0f7270f543d85",
+  "mapping_artifact":"SEPARATE_NOT_OPENED",
+  "units":12,
+  "pair_byte_lengths_equal":true,
+  "arm_labels_exposed":false,
+  "source_hashes_exposed":false,
+  "source_paths_exposed":false,
+  "known_mask_leaks":0,
+  "mapping_opened":false,
+  "scores":0,
+  "unblind":0,
+  "mask_status":"VALID",
+  "next_legal_action":"Score U01-U12 A/B masked packet; seal all direct preferences and axis scores before opening mapping.",
+  "authority_change":false
+}
