@@ -1,0 +1,45 @@
+{
+  "schema":"P07I4K5R4AAttempt2Shared10SequencePlanR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "attempt":2,
+  "classification":"SHARED_UPSTREAM__SEMANTIC_ONLY__NO_SURFACE",
+  "series_state_commit":"3bc2da6d8717f2483073fe9cbfd078071f73ea20",
+  "event_ecology_commit":"7a95514cf10cedddb1d60d06e2f675b61aa23b3c",
+  "sequences":[
+    {"id":"SQ01","scene_range":[1,5],"time":"14:20-14:55","primary_events":["E01"],"purpose":"플라이바 이상을 발견하고 공연시간과 분리된 장치별 보류·재검사 문제로 정의한다.","required_turn":"C02가 4번 바를 즉시 사용보류하고 재검사 조건을 소유한다.","exit_state":"E01 active; 대체 고정방식 가능성이 열리지만 사용허가는 아직 없음."},
+    {"id":"SQ02","scene_range":[6,10],"time":"15:00-15:35","primary_events":["E02"],"purpose":"배우 개인물품과 극장 소품의 외형유사 충돌을 위치기억이 아닌 증거 문제로 전환한다.","required_turn":"C03가 두 담배케이스를 모두 격리하고 사진·흠집·인계기록 교차확인을 시작한다.","exit_state":"E02 active; 확인 전 반환·사용 금지."},
+    {"id":"SQ03","scene_range":[11,15],"time":"15:40-16:15","primary_events":["E03"],"purpose":"핵심 음향 큐의 암묵지를 교대자가 직접 실행할 수 있는 관찰신호로 전수한다.","required_turn":"C04가 대신 큐를 누르지 않고 교대자에게 두 관찰신호와 실패징후를 넘긴다.","exit_state":"E03 active; 첫 독립 실행은 아직 검증 필요."},
+    {"id":"SQ04","scene_range":[16,20],"time":"16:20-16:50","primary_events":["E04"],"purpose":"지연을 메우려는 자원봉사 도움을 업무경계 문제로 명확히 한다.","required_turn":"C06가 허용업무·금지업무·종료시각을 정하고 중량물/안전통제를 유급 스태프에게 남긴다.","exit_state":"E04 active; 인력압박은 남지만 봉사범위는 고정."},
+    {"id":"SQ05","scene_range":[21,25],"time":"16:55-17:25","primary_events":["E05"],"purpose":"반입시간 단축을 안전·식별상태와 분리해 회차별 물류문제로 전환한다.","required_turn":"C05가 확인완료 장비만 1차 반입으로 봉인하고 미확인 상자를 후속회차로 분리한다.","exit_state":"E05 active; 장비 지연이 실제 공연 큐 대체 필요성으로 연결될 수 있음."},
+    {"id":"SQ06","scene_range":[26,30],"time":"17:30-17:55","primary_events":["E06","E01","E02"],"purpose":"앞당겨진 피난시험을 공유공간 제약으로 도입하면서 E01 재검사와 E02 식별결과를 첫 분기결정으로 갱신한다.","required_turn":"C01이 각 책임자의 필수시간을 받아 피난복도를 우선 비우고 충돌시간만 분할한다.","exit_state":"E06 active; E01/E02는 일부 상태가 확정되지만 보류항목이 남음."},
+    {"id":"SQ07","scene_range":[31,35],"time":"18:00-18:25","primary_events":["E03","E04","E05"],"purpose":"교대 큐 독립검증, 자원봉사 종료 압박, 분할반입 실제 실행을 동시에 시험한다.","required_turn":"각 owner가 자기 경계를 유지한 채 C04는 교대자 실행을 확인하고 C06는 봉사종료를 집행하며 C05는 1차 반입목록을 동결한다.","exit_state":"세 사건 모두 실제 압박에서 owner 비중앙화가 유지됨."},
+    {"id":"SQ08","scene_range":[36,40],"time":"18:30-18:55","primary_events":["E06","E01","E05"],"purpose":"피난시험·대체장치 이동·후속반입이 같은 통로에서 재충돌하게 하여 시간분할 계획을 실행한다.","required_turn":"C01은 공유 충돌만 조정하고 C02/C05의 장치·반입 판단을 대신하지 않는다.","exit_state":"공연개시 전 공유동선이 작동하고 E06 현장문제는 해결됨."},
+    {"id":"SQ09","scene_range":[41,45],"time":"19:00-19:25","primary_events":["E01","E02","E03","E04","E05","E06"],"purpose":"막 오르기 직전 각 사건의 최종 공연개시 상태를 독립적으로 확정한다.","required_turn":"사용허가/보류, 물품확인, 큐 독립실행, 봉사종료, 반입봉인, 피난동선이 각각 자기 owner에게서 최종 확정된다.","exit_state":"공연은 축소·대체를 포함한 일관된 조건으로 개시 가능하고 후속개선 6개는 아직 열려 있음."},
+    {"id":"SQ10","scene_range":[46,50],"time":"19:30-19:45","primary_events":["E01","E02","E03","E04","E05","E06"],"purpose":"막이 오른 뒤 해결되지 않은 운영개선 6개를 다시 C01에게 모으지 않고 각 future owner에게 명시적으로 인계한다.","required_turn":"여섯 future_adoption_target 모두 장면 exit에 명시적으로 채택되고 owner·산출물·후속행동이 분리된다.","exit_state":"당일 공연위기는 닫히되 6개 개선의 future owner가 명시적으로 지속된다."}
+  ],
+  "future_adoption_carry":[
+    {"event":"E01","future_owner":"C02","required_target":"장치별 상태기록 양식과 재검사 인계 규칙","licensed_sequence":"SQ10"},
+    {"event":"E02","future_owner":"C06","required_target":"개인물품/소품 이중식별 안내규칙","licensed_sequence":"SQ10"},
+    {"event":"E03","future_owner":"C03","required_target":"관찰신호·실패징후를 포함한 큐 인계카드","licensed_sequence":"SQ10"},
+    {"event":"E04","future_owner":"C01","required_target":"자원봉사 업무경계·종료시각 사전 운영표","licensed_sequence":"SQ10"},
+    {"event":"E05","future_owner":"C04","required_target":"핵심장비 지연 시 대체 큐·음향 운용안","licensed_sequence":"SQ10"},
+    {"event":"E06","future_owner":"C05","required_target":"반입·퀵체인지·접근성·피난시험 시간대별 백스테이지 동선도","licensed_sequence":"SQ10"}
+  ],
+  "checks":{
+    "sequence_count":10,
+    "scene_ranges_exact_and_nonoverlapping":true,
+    "scene_coverage_1_to_50":true,
+    "all_six_events_opened":true,
+    "all_six_decision_owners_preserved":true,
+    "all_six_future_owners_preserved":true,
+    "all_six_future_adoption_targets_carried_to_SQ10":true,
+    "surface_instructions_written":false,
+    "dialogue_written":false,
+    "stage_direction_written":false,
+    "PSSB_written":false
+  },
+  "outputs_at_this_seal":{"series":1,"event_ecology":1,"sequence_plan":1,"scene_plan":0,"G5A":0,"control":0,"treatment":0,"mask":0,"judge_scores":0,"mapping_open":0},
+  "next_legal_action":"Create exactly 50 shared semantic scenes. Every future_adoption_carry item must be explicitly adopted in a licensed SQ10 scene/exit before G5A.",
+  "authority_change":false
+}
