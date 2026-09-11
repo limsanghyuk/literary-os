@@ -13,6 +13,7 @@ I4K-5R3 canonical same-agent internal PASS remains immutable: score `90a0d798502
 Experiment `P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION`; prereg `4a4b521c6c69883d08b0590c36156b0ffab5303e` immutable.
 Attempt1: mechanical prescore PASS then G5 shared-semantics nonloss FAIL; prescore rejected, not scored, not a quality failure.
 Attempt2: G5A PASS `4f7a6e54d3be12f21d4c7a8802f4a75fbcaca351`; Shared Upstream seal `4585fd2c79e386b511f092f2b945aa904ab2cff8`; Control 40,650 chars; Treatment 37,620 chars; paired mechanical prescore PASS `1468ecc329582b443dd09afee57524a80fd92ad5`; G5B semantic/continuity PASS `f0fb7e701f0083bd1c55442fd97a9788059aa1f1`; exact arms frozen `494190b45db7889de94835de59692b110cbe6a8b`.
+The previously unexecuted prereg condition `treatment_repeated_plan_purpose_copy == 0` was executed on the frozen Treatment and PASSed: full purpose copies 0, repeated copies 0; receipt commit `d308fc94f6a6a1a736ad4cd40793ffcddb17d966`.
 Mask 0; independent judge scores 0; mapping open 0. No further surface mutation is legal.
 
 ## EVOLUTION / AUDIT DESIGN
@@ -24,9 +25,12 @@ Human broadcast surface reference calibration prereg `aa7ea5703551c9baadb0bee345
 Claude analysis is external audit input, not authority. Verified findings are incorporated only where independently reproduced.
 
 ## EXACT NEXT LEGAL ACTION
-1. On the already frozen R4A exact arms, execute the preregistered-but-not-explicitly-enforced `treatment_repeated_plan_purpose_copy == 0` compliance audit using the inherited historical meaning of plan-purpose copy/restatement. Do not mutate prose.
-2. In parallel, compute common-mode surface contamination metrics as KNOWLEDGE_ONLY diagnostics only; they cannot change R4A thresholds after output.
-3. If the preregistered compliance audit PASSes, proceed to G6 leak-resistant mask and the preregistered three independent judges. If it FAILs, R4A becomes prescore HOLD/invalid for scoring; no repair or third attempt is allowed.
+1. G6: build a leak-resistant 12-unit mask from the frozen exact arms. U01-U10=corresponding sequences; U11=whole-episode architecture/continuity; U12=whole-episode broadcast surface/craft. A/B randomized per unit, byte lengths equalized, mapping stored separately.
+2. Audit mask leakage before any judge call.
+3. Run the preregistered three independent real-provider judges with provider receipts; R3 result and other judge scores hidden.
+4. Seal all three judge packets before opening mapping.
+5. Then compute H1-H4 and the independent-confirmation rule.
+6. Common-mode absolute metrics remain KNOWLEDGE_ONLY diagnostics for future gate calibration and do not retroactively change R4A thresholds.
 
 ## UNCHANGED AUTHORITIES
 Active Engine `P07-I4H Recovery R3`; Production `ENG:R47`; Combined C2 `58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7`; DB59 frozen; Formal 137; latest Formal R138; R140 `0/0/0`.
