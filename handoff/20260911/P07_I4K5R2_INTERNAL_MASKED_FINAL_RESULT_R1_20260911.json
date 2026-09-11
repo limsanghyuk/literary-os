@@ -1,0 +1,78 @@
+{
+  "schema": "P07I4K5R2InternalMaskedFinalResultR1",
+  "date": "2026-09-11",
+  "experiment_id": "P07-I4K-5R2-FRESH-SURFACE-HYGIENE-REPAIR-REPLICATION",
+  "classification": "MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__INTERNAL_ONLY",
+  "prereg_commit": "4f1e72851ef3d986679fcf4da33d660f18012cf1",
+  "final_prescore_admission": "P07_I4K5R2_ATTEMPT2_PRESCORE_ADMISSION_PASS_R1_20260911.json",
+  "valid_mask": "P07_I4K5R2_MASK_R2_SEAL_R1_20260911.json",
+  "score_seal_commit": "de781ad5935ebe61e55b9c375885a0aceb1ce443",
+  "unblind_receipt_commit": "da83bfc2a5f5afa8a897e6c48b40cf2dfd2367a6",
+  "pairwise": {
+    "treatment_wins": 8,
+    "treatment_ties": 2,
+    "treatment_losses": 2,
+    "treatment_nonloss": 10
+  },
+  "axis_means": {
+    "causal_coherence": {"treatment":8.5,"control":8.5,"delta":0.0},
+    "event_organicness": {"treatment":8.5,"control":8.5,"delta":0.0},
+    "character_relationship_integrity": {"treatment":8.2916666667,"control":8.25,"delta":0.0416666667},
+    "ensemble_downstream_decision_ownership": {"treatment":8.5416666667,"control":8.5,"delta":0.0416666667},
+    "escalation_pacing": {"treatment":8.375,"control":8.0833333333,"delta":0.2916666667},
+    "dialogue_subtext_naturalness": {"treatment":8.4166666667,"control":8.0,"delta":0.4166666667},
+    "stage_direction_playability": {"treatment":8.5,"control":8.375,"delta":0.125},
+    "future_thread_sustainability": {"treatment":8.5416666667,"control":8.5,"delta":0.0416666667},
+    "broadcast_readiness_non_generic_specificity": {"treatment":8.4166666667,"control":8.1666666667,"delta":0.25}
+  },
+  "hypotheses": {
+    "H1_PAIRWISE": {
+      "thresholds": "wins>=6; nonloss>=10; losses<=2",
+      "observed": "8 wins; 10 nonloss; 2 losses",
+      "result": "PASS"
+    },
+    "H2_SURFACE_REPAIR": {
+      "dialogue_subtext_naturalness": {"threshold":0.30,"observed":0.4166666667,"result":"PASS"},
+      "stage_direction_playability": {"threshold":0.30,"observed":0.125,"result":"FAIL"},
+      "broadcast_readiness_non_generic_specificity": {"threshold":0.30,"observed":0.25,"result":"FAIL"},
+      "any_primary_axis_delta_floor": {"threshold":-0.25,"observed_worst":0.0,"result":"PASS"},
+      "result": "FAIL"
+    },
+    "H3_STRUCTURAL_PRESERVATION": {
+      "protected_axis_deltas": {
+        "causal_coherence":0.0,
+        "event_organicness":0.0,
+        "character_relationship_integrity":0.0416666667,
+        "ensemble_downstream_decision_ownership":0.0416666667,
+        "escalation_pacing":0.2916666667,
+        "future_thread_sustainability":0.0416666667
+      },
+      "floor_each": -0.10,
+      "event_to_sequence_to_scene_to_future_adoption": "NONLOSS",
+      "result": "PASS"
+    },
+    "H4_HYGIENE_SAFETY": {
+      "verified_critical_violations":0,
+      "treatment_meta_internal_leakage":0,
+      "repeated_planning_purpose_copy":0,
+      "exact_long_mechanical_duplicate_ratio":0.0,
+      "critical_continuity_violations":0,
+      "result":"PASS"
+    }
+  },
+  "final_decision": "FAIL__VALID_INTERNAL_SCORED_EXECUTION__H2_SURFACE_EFFECT_INSUFFICIENT__PRESERVE_H1_H3_H4_PASS",
+  "interpretation": "The repair produced a repeatable pairwise preference and a material dialogue/subtext gain while preserving upper structural architecture, but the preregistered minimum effect was not reached for stage-direction playability or broadcast-readiness specificity. Thresholds remain unchanged; the valid FAIL is preserved.",
+  "research_implication": "Repair-Forward should continue at the narrower Plan-to-Surface realization boundary, concentrating on performance-specific stage direction and non-generic broadcast realization while preserving the proven Event Ecology / distributed ownership architecture and the observed dialogue gain.",
+  "claim_boundary": [
+    "Same-agent masked internal development evidence only; not independent GPT or human evidence.",
+    "No Active Engine, Production, DB, Formal R140 or OpenAI Live promotion.",
+    "No threshold change, score rewrite, re-mask substitution or post-unblind attempt may convert this valid FAIL into PASS."
+  ],
+  "physical_authority": "P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R20__I4K_RESEARCH_ARCHITECTURE_PROMOTED__I4K5R2_ATTEMPT2_REINFORCED_PRESCORE",
+  "post_r20_evidence": "PENDING_NEXT_PHYSICAL_PROPAGATION",
+  "formal_scored_count": 137,
+  "formal_r140": "0/0/0",
+  "active_engine": "P07-I4H Recovery R3",
+  "production": "ENG:R47",
+  "db": "DB59"
+}
