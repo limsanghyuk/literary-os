@@ -1,0 +1,23 @@
+name: I4K5R4A Control midpoint scale measure
+on:
+  push:
+    branches: [i4k5r4a-control-midpoint-measure]
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify frozen source commit is ancestor
+        run: git merge-base --is-ancestor dcd80d12bef0fa47fae53e74c6d5d4e77ad6ad64 HEAD
+      - name: Run scale-only midpoint measurement
+        run: python handoff/20260911/I4K5R4A_CONTROL_MIDPOINT_MEASURE_R1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r4a-control-midpoint-metrics-r1
+          path: handoff/20260911/i4k5r4a_control_midpoint_metrics_r1.json
+          if-no-files-found: error
