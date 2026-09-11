@@ -1,0 +1,22 @@
+name: I4K5R4A Attempt2 Control full gate R2
+on:
+  push:
+    branches: [i4k5r4a-attempt2-control-full-gate-r2]
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify frozen source commit is ancestor
+        run: git merge-base --is-ancestor 70ec77a33082428b3c2f20ba0b7fee0d220cbbb2 HEAD
+      - name: Run repaired full Control gate
+        run: python handoff/20260911/I4K5R4A_ATTEMPT2_CONTROL_FULL_GATE_RUNNER_R2.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r4a-attempt2-control-full-gate-r2
+          path: /tmp/i4k5r4a_attempt2_control_full_gate_r2_metrics.json
