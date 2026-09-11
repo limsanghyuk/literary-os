@@ -1,0 +1,25 @@
+name: I4K5R3 Attempt2 final paired prescore
+on:
+  push:
+    branches: [i4k5r3-a2-final-paired-prescore]
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify binding-map commit is ancestor
+        run: git merge-base --is-ancestor 599ebe7588b8383762a3469d18157422b676296d HEAD
+      - name: Materialize final paired arms and run mechanical prescore only
+        run: python handoff/20260911/I4K5R3_ATTEMPT2_FINAL_PAIRED_PRESCORE_R1.py
+      - name: Upload final materialized arms and metrics
+        uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r3-a2-final-paired-prescore-r1
+          path: _i4k5r3_a2_final_prescore/
