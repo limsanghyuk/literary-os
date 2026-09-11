@@ -1,0 +1,68 @@
+{
+  "schema":"P07I4K5R3Attempt2SharedSceneContextMaterializationContractR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R3-PERFORMANCE-SPECIFIC-SURFACE-BINDING-FRESH-REPLICATION",
+  "classification":"DEVELOPMENT_PREFORMAL__INTERNAL_ONLY__ATTEMPT2_PRESEAL_MATERIALIZATION_LOCK",
+  "prereg_commit":"433dbfa0e9ac9c886dd04b89fddb4bbe7672a11b",
+  "attempt2_procedure_commit":"5244361dd08872d03baa2c05129835cbd2b23df3",
+  "attempt2_control_preseal_diagnostic_commit":"681df313b7bcd3a77c600d37a6082c7b111408d7",
+  "shared_upstream_seal_commit":"bf8950dbba45f074630aea8555b5cc2eae74d0fd",
+  "shared_upstream_binding_sha256":"e75ef957439a8dd2ee8fba727677292a91003a3448e8813e73e6132e3814bde2",
+  "problem":"Direct renderer drafts systematically under-realized Korean screenplay body length despite exact 50-scene semantic coverage. The failure is scale realization, not an observed literary-quality result.",
+  "solution":"Create one frozen Shared Scene Context Expansion layer derived only from the already-frozen shared scene/world state, then materialize the exact same expansion bytes into both Control and Treatment before final arm sealing.",
+  "scientific_boundary":{
+    "expansion_identical_between_arms":true,
+    "treatment_specific_content_in_expansion":false,
+    "control_specific_content_in_expansion":false,
+    "new_event_scene_sequence_owner_future_thread_cause":0,
+    "new_backstory_or_relationship_fact":0,
+    "quality_preference_used":false,
+    "attempt_count_increment":false,
+    "reason":"Treatment outputs remain 0 and neither Attempt2 arm has been finally sealed or admitted. This is generation-stage materialization inside the same second provisional attempt."
+  },
+  "allowed_expansion_content":[
+    "place/time/ambient condition already licensed by scene location and episode continuity",
+    "existing props/equipment/work surfaces already licensed by series or scene",
+    "neutral ongoing work-state and spatial arrangement before the planned scene turn",
+    "non-decisive continuity detail that does not cause or resolve the scene turn"
+  ],
+  "forbidden_expansion_content":[
+    "new dialogue",
+    "new scene turn or obstacle",
+    "new decision ownership",
+    "new future-thread obligation",
+    "new causal mechanism",
+    "PSSB performance-turn binding",
+    "treatment-only voice/action/blocking",
+    "abstract explanation of research/governance/plan intent"
+  ],
+  "materialization_algorithm":{
+    "input_segments":"10 scene-sequence text files per arm",
+    "expansion_map":"scene_id -> frozen UTF-8 stage-direction paragraph",
+    "insertion_point":"immediately after each S# scene header and following blank line",
+    "same_expansion_map_for_both_arms":true,
+    "existing_surface_bytes_otherwise_unchanged":true,
+    "canonical_output":"new materialized directory; source drafts remain immutable historical evidence",
+    "validation":[
+      "S#1-S#50 exact",
+      "50 expansion insertions exact",
+      "expansion map SHA identical for both arms",
+      "no dialogue added by expansion map",
+      "metadata-excluded body chars measured after materialization"
+    ]
+  },
+  "scale_intent":{
+    "control_current_preseal_candidate_chars":27849,
+    "hard_floor_each":35000,
+    "shared_expansion_target_total_chars":"9000-11000 guidance",
+    "expected_control_materialized_range":"36800-39000 guidance",
+    "relative_gap_hard_max":0.10,
+    "note":"Character targets are prescore scale safety guidance only; no literary-quality threshold or scene quota is introduced."
+  },
+  "control_source_candidate":"handoff/20260911/i4k5r3_attempt2/control_final/",
+  "treatment_source_candidate":"TO_BE_GENERATED_FROM_FROZEN_SHARED_UPSTREAM_WITH_PSSB_ONLY",
+  "mask":0,
+  "scores":0,
+  "unblind":0,
+  "authority_change":false
+}
