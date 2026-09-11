@@ -1,0 +1,39 @@
+{
+  "schema": "P07I4K5R2Attempt2PrescoreAdmissionPassR1",
+  "date": "2026-09-11",
+  "experiment_id": "P07-I4K-5R2-FRESH-SURFACE-HYGIENE-REPAIR-REPLICATION",
+  "classification": "DEVELOPMENT_PREFORMAL__INTERNAL_ONLY__PRESCORE_ADMISSION",
+  "prereg_commit": "4f1e72851ef3d986679fcf4da33d660f18012cf1",
+  "shared_upstream_commit": "8875555c31ce62db20eb1471b249d33fe2023a59",
+  "final_transport_manifest": "P07_I4K5R2_ATTEMPT2_ORDERED_TRANSPORT_MANIFEST_R3_20260911.json",
+  "continuity_correction_receipt": "P07_I4K5R2_ATTEMPT2_PAIRED_WORLD_CONTINUITY_CORRECTION_R2_20260911.json",
+  "semantic_audit_receipt": "P07_I4K5R2_ATTEMPT2_SEMANTIC_CONTINUITY_AUDIT_R1_20260911.json",
+  "frozen_final_surfaces": {
+    "control_body_chars": 42680,
+    "treatment_body_chars": 39860,
+    "relative_gap_percent": 6.6073102155576375,
+    "control_logical_join_sha256": "fe36bc04e05d522ae3d7f5b0bd4ef8e69e9264c49e6de692a2860b61a23508bf",
+    "treatment_logical_join_sha256": "b0b8383ee22d598c6fad1787f1589143d46a69d5612f8b3cc0102b664f682c52"
+  },
+  "gate_results": {
+    "body_chars_each_min_35000": "PASS",
+    "body_length_gap_max_0_10": "PASS",
+    "sequence_count_each_10": "PASS",
+    "scene_count_each_50": "PASS",
+    "scene_ids_exact_1_50": "PASS",
+    "treatment_meta_plan_token_leakage_0": "PASS",
+    "treatment_CH_SQ_internal_ids_0": "PASS",
+    "treatment_repeated_plan_purpose_copy_0": "PASS",
+    "treatment_exact_long_mechanical_duplicate_ratio_0": "PASS",
+    "shared_upstream_semantics_nonloss": "PASS",
+    "critical_continuity_violations_0": "PASS"
+  },
+  "quality_score_or_preference_inspected_before_admission": false,
+  "mask_before_admission": 0,
+  "scores_before_admission": 0,
+  "unblind_before_admission": 0,
+  "decision": "PASS__FREEZE_ATTEMPT2_AS_FINAL__MASKING_AND_INTERNAL_BLIND_SCORING_NOW_PERMITTED",
+  "claim_boundary": "Internal same-agent development preformal only. No independent external/human, Active Engine, Production, DB, Formal or R140 promotion.",
+  "physical_authority": "P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R20__I4K_RESEARCH_ARCHITECTURE_PROMOTED__I4K5R2_ATTEMPT2_REINFORCED_PRESCORE",
+  "authority_change": false
+}
