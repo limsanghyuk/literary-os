@@ -1,0 +1,23 @@
+{
+  "schema":"P07I4K5R4PreRenderRequirementChangeClosureR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4-PSSB-INDEPENDENT-MASKED-FRESH-CONFIRMATION",
+  "parent_physical_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R23__I4K5R4_INDEPENDENT_CONFIRMATION_PREREG__OUTPUTS_0",
+  "prereg_commit":"aa38377c806a1be8041b64394c60f87cd0e333a7",
+  "fresh_series_commit":"2b0976cc68b781aeea4f9c6e4f0b76c2f0f94419",
+  "fresh_event_ecology_commit":"7ff7f6addf52bdc9cd8afe4213e6b3adabb346d4",
+  "closure_reason":"USER_REQUIREMENT_CHANGE_BEFORE_SEQUENCE_SCENE_OR_RENDER: add shared actor-visible facial-expression and emotion-flow hygiene, and hard debugging/error-prevention gates. Existing prereg forbids renderer change after output, therefore do not amend R4 in place.",
+  "classification":"CLOSED_PRE_RENDER__DESIGN_REQUIREMENT_CHANGED__NOT_SCORED__NOT_QUALITY_FAIL",
+  "outputs_at_closure":{"series_episode":1,"event_ecology":1,"sequence_plan":0,"scene_plan":0,"control_render":0,"treatment_render":0,"mask":0,"independent_judge_scores":0,"mapping_open":0},
+  "quality_claim":null,
+  "attempt_consumed_for_quality":false,
+  "reuse_in_successor":"FORBIDDEN. Successor R4A must use completely fresh Series/Episode, characters, events, sequences, scenes and prose.",
+  "debug_gate_commit":"2955267eaff55442c4a2be55ddfd90bae1eebd2a",
+  "authority_change":false,
+  "active_engine":"P07-I4H Recovery R3",
+  "production":"ENG:R47",
+  "db":"DB59",
+  "formal_scored_count":137,
+  "latest_formal":"R138",
+  "formal_r140":"0/0/0"
+}
