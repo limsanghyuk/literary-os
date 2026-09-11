@@ -1,0 +1,102 @@
+{
+  "schema":"P07I4K5R4IndependentConfirmationPreregR1",
+  "experiment_id":"P07-I4K-5R4-PSSB-INDEPENDENT-MASKED-FRESH-CONFIRMATION",
+  "date":"2026-09-11",
+  "classification":"DEVELOPMENT_PREFORMAL__INDEPENDENT_EVALUATION__FRESH_PROSPECTIVE",
+  "parent_physical_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R22__I4K5R3_INTERNAL_PASS__DUPLICATE_RESCORE_QUARANTINED__INDEPENDENT_CONFIRMATION_PENDING",
+  "parent_transport_root_sha256":"b23866b816991da70a0262ab430fc5736fd394e838b4508010ed09ad806ba4aa",
+  "parent_physical_closure_commit":"26943e7c159a156c72570bcba95fce22046d9317",
+  "parent_internal_result_commit":"c241d0d7d030d143f2cd2e145308f9858953d566",
+  "parent_canonical_score_seal_commit":"90a0d7985025fa0ebf221ae32aaa942b82271b50",
+  "purpose":"Independently confirm on completely fresh unseen material whether the frozen PSSB intervention reproduces the I4K-5R3 surface-effect signal when generation and evaluation are separated and the quality judges have no access to arm identity, R3 scores, or R3 result.",
+  "research_question":"With a fresh episode and byte-identical shared upstream semantics, does the frozen R3 PSSB treatment outperform the frozen no-PSSB control under independent masked judges while preserving upper narrative architecture, continuity, and hygiene?",
+  "hypothesis":"Independent masked judges will reproduce the R3 direction of effect: Treatment will meet the unchanged H1 pairwise threshold and at least +0.30 mean gains on dialogue/subtext naturalness, stage-direction playability, and broadcast-readiness specificity, without protected-axis loss or critical hygiene/continuity violations.",
+  "freshness":{
+    "series_episode":"COMPLETELY_FRESH_SYNTHETIC",
+    "reuse_of_R3_series_episode_characters_events_sequences_scenes_or_prose":0,
+    "reuse_of_prior_scored_prose":0,
+    "target_material":"UNSEEN_AT_R3_SCORING",
+    "shared_upstream_between_arms":"BYTE_IDENTICAL"
+  },
+  "frozen_intervention":{
+    "source":"P07_I4K5R3_PSSB_FRESH_REPLICATION_PREREG_R1_20260911.json",
+    "control":"Frozen R2-repaired surface renderer baseline with legitimate detailed situation direction and dialogue repair, but without PSSB.",
+    "treatment":"Same byte-identical shared upstream plus the frozen R3 PSSB intervention only.",
+    "PSSB":"Bind already-licensed important scene turns to actor-visible or camera-legible consequence through naturally available action, prop use, blocking, timing, interruption, silence, failed action, bodily effort or spatial change; avoid abstract explanatory tails when action already carries the consequence; compress procedural exposition where facts can be distributed through action-response; preserve character-specific rhythm and already-licensed causal location/prop use.",
+    "forbidden_changes":["new PSSB feature","renderer repair discovered after output","new event/scene/sequence/cause","decision-owner mutation","future-thread mutation","new backstory added solely for surface decoration","threshold relaxation","R3 prose reuse"]
+  },
+  "generation_scale":{
+    "sequences_each":10,
+    "scenes_each":50,
+    "metadata_excluded_screenplay_body_chars_each_min":35000,
+    "arm_body_char_relative_gap_max":0.10,
+    "bounded_provisional_attempts_max":2,
+    "attempt_rule":"Only scale/structure/hygiene/shared-semantics admission failures detected before masking and before quality evaluation may trigger the second provisional attempt. First prescore-admitted attempt is final. No post-score retry."
+  },
+  "generation_evaluation_separation":{
+    "generation_agent_may_perform":"upstream design, arm rendering, deterministic mechanics, semantic/continuity admission, blind packet construction",
+    "generation_agent_must_not_perform":"authoritative R4 quality score used for independent confirmation",
+    "quality_evaluation":"three fresh independent judge invocations/sessions with no generation conversation context, no mapping, no R3 score/result, and no other judge score",
+    "mapping":"separate sealed mapping artifact; unavailable to judges; opened only after all three judge score packets are individually sealed",
+    "provider_receipt_required":true,
+    "test_double_allowed_for_authoritative_judge":false,
+    "required_judge_receipt_fields":["judge_id","provider_or_execution_identity","model_or_human_identity_class","response_or_evaluation_id","input_packet_sha256","output_sha256","timestamp","mapping_visible=false","R3_result_visible=false"]
+  },
+  "prescore_gates":{
+    "control_segments":10,
+    "treatment_segments":10,
+    "body_chars_each_min":35000,
+    "relative_body_char_gap_max":0.10,
+    "scene_count_each":50,
+    "scene_ids_each":"1..50 exact",
+    "treatment_internal_meta_plan_token_leakage":0,
+    "treatment_CH_SQ_internal_ids":0,
+    "treatment_repeated_plan_purpose_copy":0,
+    "treatment_exact_long_mechanical_duplicate_ratio":0.0,
+    "shared_upstream_semantics_nonloss":true,
+    "critical_continuity_violations":0,
+    "event_scene_sequence_decision_owner_future_thread_mutation":0
+  },
+  "masked_sample":{
+    "units":12,
+    "U01_U10":"corresponding full sequence surfaces",
+    "U11":"whole-episode architecture/continuity after full read",
+    "U12":"whole-episode broadcast surface/craft after full read",
+    "arm_labels":"neutral randomized A/B per unit",
+    "length_hint_control":"A/B bytes equalized within each unit without altering visible prose",
+    "mapping_separate":true
+  },
+  "score_scale":{"min":1.0,"max":10.0,"increment":0.5},
+  "axes":["causal_coherence","event_organicness","character_relationship_integrity","ensemble_downstream_decision_ownership","escalation_pacing","dialogue_subtext_naturalness","stage_direction_playability","future_thread_sustainability","broadcast_readiness_non_generic_specificity"],
+  "unchanged_judge_level_hypotheses":{
+    "H1_PAIRWISE":{"treatment_wins_min":6,"treatment_nonloss_min":10,"treatment_losses_max":2},
+    "H2_SURFACE_EFFECT":{"dialogue_subtext_naturalness_delta_min":0.30,"stage_direction_playability_delta_min":0.30,"broadcast_readiness_non_generic_specificity_delta_min":0.30,"any_primary_axis_delta_floor":-0.25},
+    "H3_STRUCTURE_PRESERVATION":{"protected_axes":["causal_coherence","event_organicness","character_relationship_integrity","ensemble_downstream_decision_ownership","escalation_pacing","future_thread_sustainability"],"each_protected_axis_delta_floor":-0.10,"event_to_sequence_to_scene_to_future_adoption":"NONLOSS"},
+    "H4_HYGIENE_SAFETY":{"verified_critical_violations":0,"treatment_internal_meta_token_leakage":0,"treatment_repeated_plan_purpose_copy":0,"treatment_exact_long_mechanical_duplicate_ratio":0.0,"critical_continuity_violations":0}
+  },
+  "independent_confirmation_rule":{
+    "judge_count":3,
+    "judge_individual_pass":"Each judge is evaluated against unchanged H1, H2 and H3; objective H4 must already pass before judging.",
+    "minimum_judges_passing_all_H1_H3":2,
+    "cross_judge_surface_rule":"For each of the three H2 surface axes, the median of the three judge-level Treatment-Control deltas must be >= +0.30.",
+    "cross_judge_structure_rule":"For every H3 protected axis, the median of the three judge-level deltas must be >= -0.10 and adoption must remain NONLOSS.",
+    "critical_rule":"Any verified critical continuity, hygiene or source/mapping leakage invalidates or fails the affected execution according to prespecified cause; it cannot be repaired after score inspection.",
+    "PASS":"At least 2/3 independent judges pass H1-H3, all cross-judge median H2/H3 rules pass, and H4 remains PASS => PASS__INDEPENDENT_JUDGE_CONFIRMATION__FRESH_HUMAN_VALIDATION_AUTHORIZED.",
+    "FAIL":"A valid scored execution that does not meet the confirmation rule => FAIL__INDEPENDENT_CONFIRMATION_NOT_REPRODUCED; preserve result and repair-forward only in a new preregistered experiment.",
+    "HOLD":"Provider/receipt/masking/prescore integrity failure before valid scoring => HOLD; do not infer quality result."
+  },
+  "critical_judge_flags":["protected_state_or_continuity_contradiction","central_deus_ex_machina_or_unearned_coincidence","systemic_expository_dialogue_collapse","event_mechanism_ornamental_not_causal","severe_padding_or_repetition","incoherent_sequence_transition","meta_source_or_engine_leakage","arm_identity_or_mapping_leakage"],
+  "execution_order":["seal fresh Series/Episode state","seal fresh Event Ecology","seal shared 10-sequence plan","seal shared 50-scene plan","seal byte-identical shared upstream architecture","render Control then Treatment under frozen arms","deterministic prescore mechanics only","semantic/continuity audit","freeze first admitted surfaces","build leak-resistant A/B mask and separate mapping","obtain and seal three independent judge packets separately","open mapping only after all three judge packets are sealed","compute judge-level and cross-judge H1-H4 confirmation result","if PASS authorize but do not perform fresh-human validation without its own sealed protocol"],
+  "no_threshold_change_after_output":true,
+  "no_renderer_change_after_output":true,
+  "no_post_score_retry":true,
+  "promotion_boundary":"Even R4 independent-judge PASS does not promote Active Engine, Production, DB, Formal count or R140. It authorizes a separately governed fresh-human validation step only.",
+  "pre_output_state":{"fresh_series_state":0,"fresh_event_ecology":0,"fresh_sequence_plan":0,"fresh_scene_plan":0,"control_render":0,"treatment_render":0,"mask":0,"independent_judge_scores":0,"mapping_open":0,"human_validation":0},
+  "active_engine":"P07-I4H Recovery R3",
+  "production":"ENG:R47",
+  "db":"DB59",
+  "formal_scored_count":137,
+  "latest_formal":"R138",
+  "formal_r140":"0/0/0",
+  "authority_change":false
+}
