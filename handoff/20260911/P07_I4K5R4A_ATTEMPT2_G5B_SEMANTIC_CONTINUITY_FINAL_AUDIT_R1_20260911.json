@@ -1,0 +1,45 @@
+{
+  "schema":"P07I4K5R4AAttempt2G5BSemanticContinuityFinalAuditR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "attempt":2,
+  "status":"PASS__G5B_SHARED_SEMANTICS_NONLOSS__CRITICAL_CONTINUITY_ZERO",
+  "inputs":{
+    "event_ecology":"handoff/20260911/P07_I4K5R4A_ATTEMPT2_FRESH_EVENT_ECOLOGY_R1_20260911.json",
+    "scene_plan":"handoff/20260911/P07_I4K5R4A_ATTEMPT2_SHARED_50_SCENE_PLAN_R1_20260911.json",
+    "control_manifest":"handoff/20260911/P07_I4K5R4A_ATTEMPT2_CONTROL_CANONICAL_MANIFEST_R2_20260911.json",
+    "treatment_manifest":"handoff/20260911/P07_I4K5R4A_ATTEMPT2_TREATMENT_CANONICAL_MANIFEST_R4_20260911.json",
+    "mechanical_prescore_pass_commit":"1468ecc329582b443dd09afee57524a80fd92ad5"
+  },
+  "event_audit":[
+    {"event":"E01","decision_owner":"C02","future_owner":"C02","control_current_decision_preserved":true,"treatment_current_decision_preserved":true,"control_future_adoption":"S#48 device-state/retest handoff","treatment_future_adoption":"S#48 device-state/retest handoff","pass":true},
+    {"event":"E02","decision_owner":"C03","future_owner":"C06","control_current_decision_preserved":true,"treatment_current_decision_preserved":true,"control_future_adoption":"S#48 photo+mark double-identification operations rule","treatment_future_adoption":"S#48 photo+mark double-identification operations rule","pass":true},
+    {"event":"E03","decision_owner":"C04","future_owner":"C03","control_current_decision_preserved":true,"treatment_current_decision_preserved":true,"control_future_adoption":"S#49 observable-signal/failure-sign cue handoff card","treatment_future_adoption":"S#49 observable-signal/failure-sign cue handoff card","pass":true},
+    {"event":"E04","decision_owner":"C06","future_owner":"C01","control_current_decision_preserved":true,"treatment_current_decision_preserved":true,"control_future_adoption":"S#49 volunteer scope/stop-time pre-operations rule","treatment_future_adoption":"S#49 volunteer scope/stop-time pre-operations rule","pass":true},
+    {"event":"E05","decision_owner":"C05","future_owner":"C04","control_current_decision_preserved":true,"treatment_current_decision_preserved":true,"control_future_adoption":"S#50 delayed-equipment fallback audio/cue technical handoff","treatment_future_adoption":"S#50 delayed-equipment fallback audio/cue technical handoff","pass":true},
+    {"event":"E06","decision_owner":"C01","future_owner":"C05","control_current_decision_preserved":true,"treatment_current_decision_preserved":true,"control_future_adoption":"S#50 time-based backstage flow map","treatment_future_adoption":"S#50 time-based backstage flow map","pass":true}
+  ],
+  "checks":{
+    "all_6_events_preserved":true,
+    "all_decision_owners_preserved":true,
+    "all_future_owners_preserved":true,
+    "all_second_order_obligations_preserved":true,
+    "all_6_future_adoptions_present":true,
+    "new_events_added":0,
+    "decision_owner_mutations":0,
+    "future_thread_mutations":0,
+    "critical_continuity_violations":0,
+    "scene_range_exact_1_50":true,
+    "actor_visible_expression_additions_only_reveal_existing_semantics":true,
+    "PSSB_additions_only_reveal_existing_semantics":true,
+    "quality_preference_consulted":false,
+    "shared_upstream_semantics_nonloss":true
+  },
+  "final_admission":"PASS",
+  "render_mutation_after_this_audit":"PROHIBITED",
+  "next_legal_action":"FREEZE_EXACT_ARMS_THEN_BLIND_MASK",
+  "mask":0,
+  "judge_scores":0,
+  "mapping_open":0,
+  "authority_change":false
+}
