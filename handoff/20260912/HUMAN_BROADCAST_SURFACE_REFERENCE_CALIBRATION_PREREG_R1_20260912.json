@@ -1,0 +1,30 @@
+{
+  "schema":"HumanBroadcastSurfaceReferenceCalibrationPreregR1",
+  "date":"2026-09-12",
+  "classification":"REFERENCE_DISTRIBUTION_CALIBRATION__NO_MODEL_OUTPUT_THRESHOLD_FITTING",
+  "purpose":"Calibrate future absolute surface-hygiene thresholds from human broadcast scripts rather than contaminated model Control/Treatment outputs.",
+  "source_policy":{
+    "primary":"Frozen human-broadcast-script subset available under existing licensed/authorized Literary OS research corpus boundaries.",
+    "exclude":"Any Literary OS generated Control/Treatment surface, any script used to tune the candidate threshold, any uncertain provenance sample.",
+    "stratify_by":"genre, episode length, scene count band, production format where metadata exists"
+  },
+  "metrics":[
+    "scene_entry_explanatory_preface_ratio",
+    "scene_entry_preface_chars",
+    "sequence_or_scene_purpose_repetition_ratio",
+    "internal_plan_token_hits",
+    "procedural_abstraction_vocabulary_density",
+    "actor_visible_action_expression_density",
+    "dialogue_expository_burden_proxy"
+  ],
+  "threshold_policy":{
+    "freeze_before_candidate_test":true,
+    "derive_from_human_distribution":true,
+    "candidate_outputs_used_for_threshold_selection":false,
+    "report_distribution":"median, IQR, 90th, 95th, 99th percentile where N supports it",
+    "gate_selection":"Choose thresholds prospectively with a declared false-reject tolerance on human references; do not optimize for passing current Literary OS outputs."
+  },
+  "regression_requirement":"Any future absolute surface gate must fail the sealed I4K-4 contamination case while retaining an acceptable share of frozen human references, otherwise the gate is not accepted.",
+  "claim_boundary":"Calibration defines future experiment admission rules only. It cannot retrospectively change historical experiment verdicts or current frozen R4A PASS/FAIL rules.",
+  "next_legal_action":"Identify the exact eligible human-reference subset and seal its file IDs/hashes before measuring distributions."
+}
