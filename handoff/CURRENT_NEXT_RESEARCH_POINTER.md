@@ -6,24 +6,23 @@ Last updated: 2026-09-11
 R23 root `8c2c283ac7f378b30c23a255d5d9835afc1b056df8865710a09999ffb296e901`.
 
 ## IMMUTABLE PARENT EVIDENCE
-I4K-5R3 canonical internal PASS remains immutable: score `90a0d7985025fa0ebf221ae32aaa942b82271b50`; result `c241d0d7d030d143f2cd2e145308f9858953d566`; Treatment 9W/2T/1L; H1-H4 PASS.
+I4K-5R3 canonical internal PASS remains immutable: score `90a0d7985025fa0ebf221ae32aaa942b82271b50`; result `c241d0d7d030d143f2cd2e145308f9858953d566`.
 
-## CLOSED PREDECESSOR
-Original R4 independent confirmation is `CLOSED_PRE_RENDER__DESIGN_REQUIREMENT_CHANGED__NOT_SCORED__NOT_QUALITY_FAIL`, closure commit `57e1ac5c645e0b64368254c67aecf8a86cc64b80`. Do not reuse its Series/Event material.
+## R4A ATTEMPT1
+Mechanical prescore PASS, but G5 shared semantic nonloss FAIL before mask/score. Defect = E06 Facility Flow future owner C05 / time-phased common flow-map obligation missing from final downstream Scene future-thread adoption. Attempt1 closure `fcba9b9d2f3bfb57186043a4d41fae6bcca87707`. It is not a quality failure and must never be scored or patched.
 
-## ACTIVE EXPERIMENT
-`P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION`
-Prereg commit `4a4b521c6c69883d08b0590c36156b0ffab5303e`; current outputs 0.
-Shared baseline adds Actor-Visible Expression Hygiene equally to both arms. Treatment-only difference remains frozen R3 PSSB. Hard debug gates commit `2955267eaff55442c4a2be55ddfd90bae1eebd2a`.
+## ACTIVE FINAL PROVISIONAL ATTEMPT
+R4A Attempt2 is authorized under the frozen `bounded_provisional_attempts_max=2` rule. Attempt2 outputs = 0.
+Shared expression hygiene and frozen PSSB remain unchanged. Thresholds and 3-independent-judge rule remain unchanged.
+G5 early-execution supplement `36b4965254cb24b7c15c430507f8a37569972bba` applies the same semantic criterion as G5A before render and G5B after render.
 
 ## EXACT NEXT ACTION
-1. G0-G3 must PASS.
-2. Seal completely fresh R4A Series/Episode.
-3. Seal fresh Event Ecology.
-4. Seal shared 10-sequence plan.
-5. Seal shared 50-scene plan.
-6. Seal byte-identical Shared Upstream Architecture.
-7. Only then render Control/Treatment.
+1. Create a completely fresh Attempt2 Series/Episode.
+2. Create fresh Event Ecology with explicit decision owner, future owner and second-order obligation per event.
+3. Create shared 10 Sequence.
+4. Create shared 50 Scene.
+5. Run G5A: every Event must retain event mechanism, decision owner, future owner and explicit second-order future adoption downstream.
+6. Only after G5A PASS, seal Shared Upstream and render Control/Treatment.
 
 ## STATUS TOKEN
-`NEXT_RESEARCH__SYNC_R23__R4A_EXPRESSION_HYGIENE_PREREG_OUTPUTS_0__DEBUG_GATED__NEXT_FRESH_SERIES_EPISODE`
+`NEXT_RESEARCH__SYNC_R23__R4A_ATTEMPT1_G5_REJECTED__FINAL_ATTEMPT2_OUTPUTS_0__NEXT_FRESH_UPSTREAM_G5A`
