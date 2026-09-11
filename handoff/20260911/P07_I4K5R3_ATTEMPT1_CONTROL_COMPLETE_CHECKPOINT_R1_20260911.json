@@ -1,0 +1,38 @@
+{
+  "schema":"P07I4K5R3Attempt1ControlCompleteCheckpointR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R3-PERFORMANCE-SPECIFIC-SURFACE-BINDING-FRESH-REPLICATION",
+  "parent_physical_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R21__I4K5R2_VALID_FAIL_CLOSED__I4K5R3_PSSB_PREREG_OUTPUTS_0",
+  "shared_upstream_seal_commit":"bf8950dbba45f074630aea8555b5cc2eae74d0fd",
+  "shared_upstream_binding_sha256":"e75ef957439a8dd2ee8fba727677292a91003a3448e8813e73e6132e3814bde2",
+  "control_status":"COMPLETE_10_OF_10__SCENES_1_TO_50",
+  "control_sequence_commits":[
+    "d64a90f2e3e151e9dea768524b5112126e6496e0",
+    "6a63c8c77fc568e47e6e979e8e1c2b995c806d4b",
+    "85e9ae678d1df37c093a0ad1df2c515b15c45835",
+    "edf2a68d2a0c1f6b6e7663c5d62685e549aedcb0",
+    "56c1975b19972585726781d6ff1107f2a88a8659",
+    "72136044d7ccf96375debafec89568d083ca04e7",
+    "1ba6ba2882c1d9fca0884f6643f56e393a7271b1",
+    "aa5391d8549be9ea47d490c780c37902d40bad7d",
+    "418765190416a17df6c3f03c9eebb87fee758e27",
+    "24733a44889f023bb66868e9468cddab446c77da"
+  ],
+  "treatment_status":"NOT_STARTED",
+  "mask":0,
+  "scores":0,
+  "unblind":0,
+  "quality_comparison_performed":false,
+  "interruption_recovery":{
+    "github_data_loss":false,
+    "last_authoritative_render_commit":"24733a44889f023bb66868e9468cddab446c77da",
+    "container_oom":0,
+    "container_oom_kill":0,
+    "observed_memory_current_before_recovery_bytes":4139499520,
+    "memory_max_bytes":4294967296,
+    "diagnosis":"Container was not OOM-killed, but page-cache-driven memory pressure left little headroom immediately after Control completion. Large R20/R21 file cache was released with POSIX_FADV_DONTNEED without altering files.",
+    "memory_current_after_cache_release_bytes":1792446464
+  },
+  "next_legal_action":"Render Treatment SQ01-SQ10 from the same frozen shared scene semantics with PSSB intervention only. Do not compare quality during generation.",
+  "authority_change":false
+}
