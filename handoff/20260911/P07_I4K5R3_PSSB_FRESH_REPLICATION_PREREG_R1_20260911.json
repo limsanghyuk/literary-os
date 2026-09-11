@@ -1,0 +1,133 @@
+{
+  "schema":"P07I4K5R3PSSBFreshReplicationPreregR1",
+  "experiment_id":"P07-I4K-5R3-PERFORMANCE-SPECIFIC-SURFACE-BINDING-FRESH-REPLICATION",
+  "date":"2026-09-11",
+  "classification":"DEVELOPMENT_PREFORMAL__INTERNAL_ONLY__FRESH_PROSPECTIVE",
+  "parent_physical_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R20__I4K_RESEARCH_ARCHITECTURE_PROMOTED__I4K5R2_ATTEMPT2_REINFORCED_PRESCORE",
+  "parent_transport_root_sha256":"89a1f1b0a5052b81fc18861eb348f5693260136cd75f6deb5d6b9342cfc4b34c",
+  "parent_scored_result":"P07_I4K5R2_INTERNAL_MASKED_FINAL_RESULT_R1_20260911.json",
+  "parent_result_commit":"003033379ee620e796807388f1e0467dd86b2bb6",
+  "parent_result":"VALID_INTERNAL_FAIL__H1_PASS__H2_FAIL__H3_PASS__H4_PASS",
+  "root_cause_document":"P07_I4K5R2_VALID_FAIL_ROOT_CAUSE_AND_REPAIR_BOUNDARY_R1_20260911.md",
+  "root_cause_commit":"6711eb746c42b943ce4676ee7b2759c9680d5ae3",
+  "purpose":"Test whether adding Performance-Specific Surface Binding at the renderer boundary produces a preregistered craft-effect gain in playable stage direction and non-generic broadcast realization while preserving the validated Event Ecology / distributed-ownership architecture and the prior dialogue/subtext gain.",
+  "research_question":"On a completely fresh whole episode with identical frozen upstream semantics, does PSSB improve the lower broadcast surface over the R2 repaired renderer baseline without structural loss?",
+  "hypothesis":"PSSB will create a repeatable masked preference and >=+0.30 mean Treatment-Control gain on dialogue/subtext naturalness, stage-direction playability, and broadcast-readiness specificity, with protected structural axes nonloss and zero critical hygiene/continuity violations.",
+  "freshness":{
+    "series_episode":"COMPLETELY_FRESH_SYNTHETIC",
+    "reuse_of_R1_R2_series_episode_event_sequence_scene_or_prose":0,
+    "reuse_of_prior_scored_episode_prose":0,
+    "upstream_semantics":"NEW_AND_SHARED_BYTE_IDENTICALLY_BETWEEN_ARMS"
+  },
+  "pre_output_state":{
+    "fresh_series_state":0,
+    "fresh_event_ecology":0,
+    "fresh_sequence_plan":0,
+    "fresh_scene_plan":0,
+    "control_render":0,
+    "treatment_render":0,
+    "masked_packet":0,
+    "scores":0,
+    "unblind":0
+  },
+  "frozen_arms":{
+    "CONTROL":"Current I4K-5R2 repaired surface renderer boundary; preserve legitimate detailed situation direction, semantic hygiene, dialogue repair, and all upper architecture. No PSSB intervention.",
+    "TREATMENT":"Byte-identical shared upstream plan plus PSSB only. No new event/scene/sequence/owner/future-thread/cause may be introduced."
+  },
+  "PSSB_intervention":{
+    "performance_turn_binding":"For each important scene turn already licensed upstream, realize at least one actor-visible or camera-legible consequence through action, prop use, blocking, timing, interruption, silence, failed action, bodily effort, or spatial change when naturally available.",
+    "abstract_tail_repair":"When action already communicates the scene consequence, do not add an abstract explanatory tail that restates its thematic/governance meaning; convert or omit the restatement without deleting semantic facts.",
+    "procedural_speech_compression":"Required procedure and decision facts remain, but avoid carrying them as extended policy explanation when they can be distributed through action-response, interruption, object handling, or character-specific exchange.",
+    "voice_specificity":"Preserve factual content while differentiating character rhythm, preferred phrasing, hesitation, interruption patterns and local vocabulary. No new backstory may be added solely to decorate voice.",
+    "causal_location_prop_use":"Use location and props as causal constraints where already licensed by the scene rather than adding decorative specificity.",
+    "no_quota_doctrine":"No fixed number of gestures, props, parentheticals, sensory details or stage-direction lines per scene. PSSB is a semantic realization constraint, not a template quota."
+  },
+  "surface_doctrine":{
+    "detailed_scene_opening_situation_direction":"ALLOWED_AND_PROTECTED",
+    "dialogue_adjacent_emotion_action_direction":"ALLOWED",
+    "explanatory_dialogue":"DISFAVORED; required facts should be dramatized where possible",
+    "planning_meta_explanation":"FORBIDDEN",
+    "emotion_direct_verbalization":"DISFAVORED when action/subtext can carry it"
+  },
+  "scale":{
+    "sequences_each":10,
+    "scenes_each":50,
+    "metadata_excluded_screenplay_body_chars_each_min":35000,
+    "arm_body_char_relative_gap_max":0.10,
+    "bounded_provisional_attempts_max":2,
+    "attempt_rule":"Only scale/structure/hygiene/semantic admission may trigger another provisional render attempt before any masking or quality scoring. The first prescore-admitted attempt is final. No post-score retry within R3."
+  },
+  "generation_order":[
+    "Seal fresh Series/Episode state",
+    "Seal fresh Event Ecology",
+    "Seal 10-sequence shared plan",
+    "Seal 50-scene shared plan",
+    "Render Control and seal",
+    "Render Treatment and seal",
+    "Run deterministic prescore gates with no quality inspection",
+    "Run semantic/continuity audit",
+    "If and only if prescore PASS, freeze surfaces",
+    "Build neutral A/B mask with mapping separate",
+    "Seal masked A/B scores before mapping open",
+    "Unblind and compute H1-H4"
+  ],
+  "prescore_gates":{
+    "control_segments":10,
+    "treatment_segments":10,
+    "body_chars_each_min":35000,
+    "relative_body_char_gap_max":0.10,
+    "scene_count_each":50,
+    "scene_ids_each":"1..50 exact",
+    "treatment_internal_meta_plan_token_leakage":0,
+    "treatment_CH_SQ_internal_ids":0,
+    "treatment_repeated_plan_purpose_copy":0,
+    "treatment_exact_long_mechanical_duplicate_ratio":0.0,
+    "shared_upstream_semantics_nonloss":true,
+    "critical_continuity_violations":0
+  },
+  "internal_masked_sample":{
+    "units":12,
+    "U01_U10":"corresponding full sequence surfaces",
+    "U11":"whole-episode architecture/continuity after full read",
+    "U12":"whole-episode broadcast surface/craft after full read",
+    "mapping":"neutral randomized A/B; separate sealed mapping; scores sealed before mapping open",
+    "claim":"same-agent internal development evidence only"
+  },
+  "score_scale":{"min":1.0,"max":10.0,"increment":0.5,"source":"inherited I4K-5 contract"},
+  "axes":[
+    "causal_coherence",
+    "event_organicness",
+    "character_relationship_integrity",
+    "ensemble_downstream_decision_ownership",
+    "escalation_pacing",
+    "dialogue_subtext_naturalness",
+    "stage_direction_playability",
+    "future_thread_sustainability",
+    "broadcast_readiness_non_generic_specificity"
+  ],
+  "hypotheses":{
+    "H1_PAIRWISE":{"treatment_wins_min":6,"treatment_nonloss_min":10,"treatment_losses_max":2},
+    "H2_SURFACE_EFFECT":{"dialogue_subtext_naturalness_delta_min":0.30,"stage_direction_playability_delta_min":0.30,"broadcast_readiness_non_generic_specificity_delta_min":0.30,"any_primary_axis_delta_floor":-0.25},
+    "H3_STRUCTURE_PRESERVATION":{"protected_axes":["causal_coherence","event_organicness","character_relationship_integrity","ensemble_downstream_decision_ownership","escalation_pacing","future_thread_sustainability"],"each_protected_axis_delta_floor":-0.10,"event_to_sequence_to_scene_to_future_adoption":"NONLOSS"},
+    "H4_HYGIENE_SAFETY":{"verified_critical_violations":0,"treatment_internal_meta_token_leakage":0,"treatment_repeated_plan_purpose_copy":0,"treatment_exact_long_mechanical_duplicate_ratio":0.0,"critical_continuity_violations":0}
+  },
+  "decision_rule":{
+    "PASS":"H1-H4 all PASS => PASS__INTERNAL_ONLY_PSSB_REPLICATION_SIGNAL__NEXT_RESEARCH_AUTHORIZED; no operational promotion.",
+    "FAIL":"Any valid scored H1-H4 failure => preserve FAIL and repair-forward; no threshold change or post-score retry.",
+    "HOLD":"Any prescore scale/integrity/shared-semantics/masking failure => HOLD before scoring."
+  },
+  "diagnostics_not_hard_gates":[
+    "abstract explanatory scene-tail frequency",
+    "procedural-governance vocabulary density",
+    "actor-visible decision-turn binding coverage",
+    "location/prop causal-use coverage"
+  ],
+  "no_threshold_change_after_output":true,
+  "authority_change":false,
+  "active_engine":"P07-I4H Recovery R3",
+  "production":"ENG:R47",
+  "db":"DB59",
+  "formal_scored_count":137,
+  "latest_formal":"R138",
+  "formal_r140":"0/0/0"
+}
