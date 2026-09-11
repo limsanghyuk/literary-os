@@ -1,0 +1,23 @@
+name: I4K5R4A Control canonical prescore R2
+on:
+  push:
+    branches: [i4k5r4a-control-canonical-prescore-r2]
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify frozen source commit is ancestor
+        run: git merge-base --is-ancestor c27d403a4366f1b2bdf69bd8a83eb58c0a7e879a HEAD
+      - name: Run canonical Control prescore gate
+        run: python handoff/20260911/I4K5R4A_CONTROL_CANONICAL_PRESCORE_RUNNER_R2.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: i4k5r4a-control-canonical-prescore-r2
+          path: i4k5r4a_control_canonical_prescore_r2.json
