@@ -1,0 +1,17 @@
+{
+  "schema":"P07I4K5R4AAttempt2TreatmentMidpointScaleFailR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "attempt":2,
+  "classification":"PRESCORE_MIDPOINT_UNDER_SCALE__QUALITY_NOT_INSPECTED__REPAIR_REQUIRED",
+  "source_commit":"dbd38c19ccd0e5049cc99f56eb42f80ebd8af7f2",
+  "workflow_run_id":34611513223,
+  "artifact_id":10268801592,
+  "metrics":{"body_chars_total":13508,"segments":5,"scenes":25,"body_chars_midpoint_min_18000_pass":false,"all_segments_min_3600_pass":false,"segment_chars":[2929,2749,2369,2633,2828],"scene_ids_exact_1_25":true,"meta_leak_zero":true,"CH_SQ_internal_id_zero":true,"direct_emotion_pattern_zero":true,"exact_long_duplicate_zero":true},
+  "quality_scores_consulted":false,
+  "mask":0,
+  "judge_scores":0,
+  "mapping_open":0,
+  "repair_boundary":{"allowed":"Rewrite Treatment SQ01-SQ05 as superseding R2 under the same frozen shared semantics, common expression hygiene, and frozen PSSB intervention; increase realized performance/blocking/prop/action detail only.","forbidden":"No event, decision, owner, future-thread, scene-turn, threshold, or evaluation-rule change. Do not start SQ06 before midpoint R2 PASS."},
+  "authority_change":false
+}
