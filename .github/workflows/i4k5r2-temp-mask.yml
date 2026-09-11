@@ -12,15 +12,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build neutral masked packet and separate mapping
-        run: python handoff/20260911/I4K5R2_MASK_BUILDER_R1.py
-      - name: Upload masked packet
+      - name: Build repaired neutral masked packet and separate mapping
+        run: python handoff/20260911/I4K5R2_MASK_BUILDER_R2.py
+      - name: Upload masked packet R2
         uses: actions/upload-artifact@v4
         with:
-          name: i4k5r2-masked-packet-r1
-          path: _i4k5r2_mask_build/masked_packet
-      - name: Upload sealed mapping separately
+          name: i4k5r2-masked-packet-r2
+          path: _i4k5r2_mask_build_r2/masked_packet
+      - name: Upload sealed mapping R2 separately
         uses: actions/upload-artifact@v4
         with:
-          name: i4k5r2-mask-map-sealed-r1
-          path: _i4k5r2_mask_build/sealed_mapping
+          name: i4k5r2-mask-map-sealed-r2
+          path: _i4k5r2_mask_build_r2/sealed_mapping
