@@ -2,28 +2,26 @@
 Last updated: 2026-09-11
 
 ## READ FIRST
-1. `handoff/20260911/P07_I4K_DEBUG_AND_ERROR_PREVENTION_GATE_R1_20260911.md`
-2. `handoff/20260911/P07_I4K5R4A_EXPRESSION_HYGIENE_INDEPENDENT_CONFIRMATION_PREREG_R1_20260911.json`
-3. `handoff/20260911/P07_I4K5R4A_ATTEMPT1_G5_SEMANTIC_NONLOSS_FAIL_R1_20260911.json`
-4. `handoff/20260911/P07_I4K5R4A_ATTEMPT2_G5_EARLY_EXECUTION_SUPPLEMENT_R1_20260911.json`
-5. `handoff/20260911/P07_I4K5R4_PREREG_SYNC_R23_PHYSICAL_CLOSURE_R1_20260911.md`
+1. `handoff/20260911/START_HERE_P07_I4K_NEW_SESSION_HANDOFF_R6_20260911.md`
+2. `handoff/20260911/P07_I4K_RESEARCH_SYNC_R24_PHYSICAL_CLOSURE_R1_20260911.md`
+3. `handoff/20260911/P07_I4K_RESEARCH_SYNC_R24_DELIVERY_MANIFEST_R1_20260911.json`
+4. `handoff/20260911/P07_I4K_RESEARCH_SYNC_R24_PHYSICAL_AUDIT_R1_20260911.json`
+5. `handoff/20260911/P07_I4K5R4A_ATTEMPT2_G5_EARLY_EXECUTION_SUPPLEMENT_R1_20260911.json`
 
 ## CURRENT PHYSICAL AUTHORITY
-`P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R23__I4K5R4_INDEPENDENT_CONFIRMATION_PREREG__OUTPUTS_0`
-R23 root `8c2c283ac7f378b30c23a255d5d9835afc1b056df8865710a09999ffb296e901`.
-Physical authority has not yet propagated the post-R23 R4A execution evidence.
+`P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R24__I4K5R4A_ATTEMPT1_PRESCORE_G5_REJECTED__ATTEMPT2_SERIES_SEALED__G5A_PENDING`
+R24 transport root `8b42c029f14f344ce7fbfc9407ab3cce1f9692f16ba8659c6045a327e3a8d043`.
+Physical closure commit `341228decb44eca7d8218d661366f6119da73a46`; delivery manifest `a871466f4727476401d0f0a95490d2301d6e7a6f`; audit `aaf47ccd8e317a190d0450c229708d2d795483a5`.
 
 ## CURRENT RESEARCH STATE
-R4A prereg commit `4a4b521c6c69883d08b0590c36156b0ffab5303e` remains immutable. Shared Actor-Visible Expression Hygiene applies equally to both arms; frozen PSSB is Treatment-only.
-Attempt1 completed mechanically with Control 42,037 chars and Treatment 41,400 chars, 50/50 scenes, 1.5153% length gap, meta leakage 0, direct-emotion-stage-pattern hits 0 and duplicate 0. However G5 found a shared-upstream semantic nonloss defect: E06 Facility Flow future owner C05 / future shared-flow-map obligation was not explicitly adopted by the final shared Scene Plan. Attempt1 is therefore `REJECTED_PRESCORE__NOT_SCORED__NOT_QUALITY_FAIL`, closure commit `fcba9b9d2f3bfb57186043a4d41fae6bcca87707`.
-The preregistered final provisional Attempt2 is authorized. G5 execution is hardened at commit `36b4965254cb24b7c15c430507f8a37569972bba`: the same frozen semantic criterion is now checked before rendering (G5A) and after rendering (G5B), with no threshold or renderer change.
-Attempt2 outputs = 0.
+R4A Attempt1 mechanically passed but failed G5 shared semantic nonloss before masking/scoring and is prescore-rejected, not a quality failure. Closure `fcba9b9d2f3bfb57186043a4d41fae6bcca87707`.
+Final provisional Attempt2 is active. Fresh Series/Episode `해온 시민극장 / 객석 불이 꺼지기 전에` is sealed at `3bc2da6d8717f2483073fe9cbfd078071f73ea20`. Event Ecology/Sequence/Scene/G5A/Control/Treatment/Mask/Judges remain 0.
 
 ## EXACT NEXT ACTION
-Create a completely fresh R4A Attempt2 Series/Episode state, then fresh Event Ecology -> shared 10 Sequence -> shared 50 Scene. Run and seal G5A upstream semantic/future-thread nonloss PASS before creating either arm. Only then render Control/Treatment.
+Attempt2 fresh Event Ecology -> shared 10 Sequence -> shared 50 Scene -> G5A semantic/future-thread nonloss. No rendering before G5A PASS.
 
 ## UNCHANGED AUTHORITIES
 Active Engine `P07-I4H Recovery R3`; Production `ENG:R47`; DB59 frozen; Formal 137; latest R138; R140 `0/0/0`.
 
 ## STATUS TOKEN
-`CURRENT_HANDOFF__SYNC_R23_PHYSICAL__R4A_ATTEMPT1_G5_REJECTED_PRESCORE__ATTEMPT2_AUTHORIZED_OUTPUTS_0__G5A_BEFORE_RENDER`
+`CURRENT_HANDOFF__SYNC_R24_PHYSICAL__R4A_ATTEMPT1_G5_REJECTED_PRESCORE__ATTEMPT2_SERIES_SEALED__G5A_PENDING`
