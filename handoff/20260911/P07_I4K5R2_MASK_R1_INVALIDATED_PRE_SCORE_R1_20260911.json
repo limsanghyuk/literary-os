@@ -1,0 +1,22 @@
+{
+  "schema": "P07I4K5R2MaskR1InvalidatedPrescoreR1",
+  "date": "2026-09-11",
+  "experiment_id": "P07-I4K-5R2-FRESH-SURFACE-HYGIENE-REPAIR-REPLICATION",
+  "classification": "DEVELOPMENT_PREFORMAL__INTERNAL_ONLY__MASK_INVALIDATION_PRE_SCORE",
+  "mask_workflow_run_id": 34561045761,
+  "masked_packet_artifact_id": 10184311095,
+  "sealed_mapping_artifact_id": 10184311447,
+  "sealed_mapping_downloaded": false,
+  "defects": [
+    "Masked A/B text retained source-arm metadata headers containing CONTROL or TREATMENT literals.",
+    "Masked packet manifest exposed source-file SHA256 values that can be matched to already-known arm hashes.",
+    "Artifact file sizes also retained avoidable arm-length cues."
+  ],
+  "score_or_preference_recorded_before_detection": false,
+  "scores": 0,
+  "unblind": 0,
+  "mapping_artifact_opened": false,
+  "decision": "INVALIDATED_PRE_SCORE__DO_NOT_USE_R1_PACKET_FOR_EVALUATION__REBUILD_MASK_R2",
+  "threshold_change": false,
+  "authority_change": false
+}
