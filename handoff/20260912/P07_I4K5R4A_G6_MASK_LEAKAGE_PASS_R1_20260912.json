@@ -1,0 +1,22 @@
+{
+  "schema":"P07I4K5R4AG6MaskLeakagePassR1",
+  "date":"2026-09-12",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "attempt":2,
+  "parent_physical_authority":"SYNC-R25",
+  "parent_transport_root":"238704e04574386d430d0dfe9b187ca2d6028bc37919bf5e0be463d2b2ed5863",
+  "freeze_commit":"494190b45db7889de94835de59692b110cbe6a8b",
+  "workflow_run_id":34623518109,
+  "workflow_head_sha":"d336471b49c04776d4a1389ea303f387f835abd9",
+  "masked_packet_artifact":{"id":10273575016,"name":"i4k5r4a-g6-masked-packet-r1","artifact_digest":"sha256:516eff141d544a67ac228d8de9f8c23ee047c05a97730ddef8940cf290d5c399","internal_packet_sha256":"99828302087a214260f0b5e676ac333eb8e7f5c564112849e76e46228506da4f"},
+  "mapping_secret_artifact":{"id":10272549788,"name":"i4k5r4a-g6-mapping-secret-r1","artifact_digest":"sha256:62b39f82b14701ad19ed954531f6042b145cba59a886775a641ea4b4b5e193ea","internal_mapping_sha256":"01a5791ca7a34006964a376a01c6cf00729d90275fe0a6640a4dd7355824e23b","opened":false},
+  "checks":{"unit_count":12,"A_B_bytes_equalized_all_units":true,"forbidden_token_hits":0,"packet_file_set_exact":true,"mapping_file_present_in_packet":false,"mask_leakage_pass":true},
+  "masked_sample":{"U01_U10":"corresponding full sequence surfaces","U11":"whole-episode architecture/continuity after full read","U12":"whole-episode broadcast surface/craft after full read"},
+  "surface_mutation":false,
+  "quality_scores_consulted":false,
+  "independent_judge_scores":0,
+  "mapping_open":0,
+  "status":"PASS__G6_LEAK_RESISTANT_MASK__MAPPING_SEPARATE_AND_UNOPENED",
+  "next_legal_action":"G7_DUPLICATE_SCORE_AUDIT_THEN_THREE_INDEPENDENT_REAL_PROVIDER_JUDGES",
+  "authority_change":false
+}
