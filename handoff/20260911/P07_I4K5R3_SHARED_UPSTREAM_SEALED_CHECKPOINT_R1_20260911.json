@@ -1,0 +1,19 @@
+{
+  "schema":"P07I4K5R3SharedUpstreamSealedCheckpointR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R3-PERFORMANCE-SPECIFIC-SURFACE-BINDING-FRESH-REPLICATION",
+  "physical_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R21__I4K5R2_VALID_FAIL_CLOSED__I4K5R3_PSSB_PREREG_OUTPUTS_0",
+  "physical_root":"65093f163ac38ab23e67153421494f0edf06a28bedac5debaa7d3a3be7de57eb",
+  "post_R21_research_state":"PENDING_PHYSICAL_PROPAGATION",
+  "series_episode_commit":"db22d387ee53ecd35a715a20796bbeed313f6293",
+  "event_ecology_commit":"1a7a86990d8db2335c43138ee9cbda54206d3d69",
+  "sequence_plan_commit":"ed00ac7f86cf4773a687e0f3abd91eae9b8336d5",
+  "scene_plan_commit":"925ef1119d1e9859f97dc354207f103023d23102",
+  "shared_upstream_seal_commit":"bf8950dbba45f074630aea8555b5cc2eae74d0fd",
+  "shared_upstream_binding_sha256":"e75ef957439a8dd2ee8fba727677292a91003a3448e8813e73e6132e3814bde2",
+  "counts":{"characters":6,"events":6,"sequences":10,"scenes":50},
+  "render_state":{"control_segments":0,"treatment_segments":0,"mask":0,"scores":0,"unblind":0},
+  "quality_preference_inspected":false,
+  "next_legal_action":"Render provisional Attempt1 Control SQ01-SQ10 in order from the sealed shared upstream, then Treatment SQ01-SQ10 with PSSB only. No semantic mutation and no quality comparison before deterministic prescore admission.",
+  "authority_change":false
+}
