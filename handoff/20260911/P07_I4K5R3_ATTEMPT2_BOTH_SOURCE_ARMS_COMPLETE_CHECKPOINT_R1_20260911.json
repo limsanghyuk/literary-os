@@ -1,0 +1,18 @@
+{
+  "schema":"P07I4K5R3Attempt2BothSourceArmsCompleteCheckpointR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R3-PERFORMANCE-SPECIFIC-SURFACE-BINDING-FRESH-REPLICATION",
+  "prereg_commit":"433dbfa0e9ac9c886dd04b89fddb4bbe7672a11b",
+  "shared_upstream_seal_commit":"bf8950dbba45f074630aea8555b5cc2eae74d0fd",
+  "shared_context_contract_commit":"4c85b85e14bc2f3168580bf98085a4a07d0bb62b",
+  "shared_context_expansion_commit":"4f8e70ad89c7d533171830adb3e66a7477217c8f",
+  "control_source_final":{"segments":10,"scenes":50,"path":"handoff/20260911/i4k5r3_attempt2/control_final/","materialized_scale_receipt_commit":"1829b269137f1b18c43c44c63232bc846d87967f"},
+  "treatment_source_final":{"segments":10,"scenes":50,"path":"handoff/20260911/i4k5r3_attempt2/treatment_final/","last_segment_commit":"2cbcb51bec8fbc17182a4dc84897a6439ddf2518"},
+  "shared_context_materialization":"PENDING_TREATMENT",
+  "quality_preference_used":false,
+  "mask":0,
+  "scores":0,
+  "unblind":0,
+  "attempt2_final_admission":"NOT_YET_DECIDED",
+  "authority_change":false
+}
