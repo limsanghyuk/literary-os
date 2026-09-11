@@ -1,0 +1,17 @@
+{
+  "schema":"I4CUnusedSceneMixedCraftResponseIngestionToolingSealR1",
+  "date":"2026-09-12",
+  "parent_physical":"SYNC-R31",
+  "provider_recheck_result":"HOLD__REAL_PROVIDER_SECRET_ABSENT",
+  "provider_recheck_receipt_sha256":"07d0ea339008697724019c0508fbb75a55640cbe6b4382968283262aa0886ecf",
+  "response_contract_sha256":"1e592b3bc176691d4160f3021d73c8c0063286ed968a6d529d4c5a023e270a9b",
+  "blind_packet_sha256":"c5c5dff8e1bf342dc955137e75c89937d6b8d3b9629830aa748d78f2d7935e3d",
+  "validator":{"commit":"d976132e38f1c7baaf5beb57aebe06de456fc6bf","sha256":"cc6a592110e70f324596911ae545a201ad41a23dcef6191c42b1824af51ef86a"},
+  "three_of_three_gate":{"commit":"9ad7c0ca7751ca3111e007aad711711fac5eb419","sha256":"962efc65665381add5876b59f2c40cc1077743508b1b275b3c3a3fa95b556104"},
+  "tests":{"synthetic_valid_three_response_gate_exit":0,"malformed_response_validator_exit":2,"real_scores_created":0},
+  "state":"PACKETS_SEALED__RESPONSES_0__INGESTION_GATE_READY__REPLICATION_MAPPING_CLOSED",
+  "mapping_open":0,
+  "R4A_mapping_open":0,
+  "next_legal_action":"Obtain J01/J02/J03 fresh independent responses; validate individually; run 3-of-3 gate; only PASS__THREE_VALID_RESPONSES__UNBLIND_AUTHORIZED permits replication mapping open once.",
+  "authority_change":false
+}
