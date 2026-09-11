@@ -1,0 +1,51 @@
+{
+  "schema":"P07I4K5R4FreshSeriesEpisodeStateR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4-PSSB-INDEPENDENT-MASKED-FRESH-CONFIRMATION",
+  "classification":"DEVELOPMENT_PREFORMAL__INDEPENDENT_EVALUATION__FRESH_PROSPECTIVE",
+  "execution_parent_physical_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R23__I4K5R4_INDEPENDENT_CONFIRMATION_PREREG__OUTPUTS_0",
+  "execution_parent_transport_root_sha256":"8c2c283ac7f378b30c23a255d5d9835afc1b056df8865710a09999ffb296e901",
+  "prereg_commit":"aa38377c806a1be8041b64394c60f87cd0e333a7",
+  "freshness":{
+    "series_episode":"COMPLETELY_FRESH_SYNTHETIC",
+    "reuse_of_R3_series_episode_characters":0,
+    "reuse_of_R3_event_sequence_scene_or_prose":0,
+    "reuse_of_prior_scored_prose":0,
+    "domain_change_from_R3":"ceramics_cooperative -> district_repair_and_reuse_hub"
+  },
+  "series":{
+    "title":"해솔 생활수리센터",
+    "format":"ensemble workplace/community drama",
+    "standing_premise":"A district-supported repair-and-reuse hub receives broken household goods, bicycles, textiles and donated equipment, combining paid technicians, community members, short classes and low-cost redistribution. Every item carries both a physical fault and an ownership, safety, labor or timing obligation, so practical repair choices become social decisions in shared space.",
+    "recurring_locations":["접수·인계대","전기수리 벤치","자전거 정비구역","봉제·업홀스터리실","부품창고","검수·격리선반","후면 수거하역장","작은 운영사무실"]
+  },
+  "episode":{
+    "title":"내일 다시 쓸 물건들",
+    "time_span":"17:40 to next day 09:10",
+    "episode_seed":"On the evening before the center's monthly low-cost reuse market, a dense batch of repaired and donated goods must be tested, identified, cleared, packed and handed off while new safety, ownership, parts and pickup constraints arrive faster than the center can resolve them centrally.",
+    "episode_boundary":"The overnight market-preparation crisis is resolved enough for opening, but several concrete maintenance, intake, training, customer-notification and municipal coordination obligations remain with different characters for later episodes.",
+    "tone":"grounded ensemble drama; practical pressure, tactile repair work, dry humor, restrained conflict; no catastrophe spectacle"
+  },
+  "characters":[
+    {"id":"C01","name":"송미래","age":32,"role":"야간 접수·인계 책임자","state":"사람 사이 충돌을 빨리 봉합하는 데 능하지만 불편한 결정을 미루기 위해 서로 다른 문제를 임시보관이라는 한 칸에 몰아넣는 버릇이 있다.","arc":"모든 불확실한 물건을 자기 접수대에서 붙잡는 대신 기술·소유권·물류 판단을 각각의 owner에게 넘기고 인계조건을 명확히 하는 쪽으로 이동한다."},
+    {"id":"C02","name":"강인호","age":52,"role":"소형가전 수리기사·안전검수 담당","state":"오래된 기기를 살려내는 솜씨가 뛰어나지만 이용자가 아까워하는 물건을 폐기판정하는 순간을 싫어해 위험한 회색지대를 오래 관찰하는 편이다.","arc":"수리 가능성보다 사용 안전을 먼저 판단하고, 보류·폐기·재검사의 조건을 자기 이름으로 명확히 남긴다."},
+    {"id":"C03","name":"윤서진","age":28,"role":"자전거·소형기계 정비사","state":"빠르게 분해하고 원인을 찾는 데 강하지만 다른 사람이 자기 공구배치를 건드리면 작업 자체를 빼앗긴 것처럼 예민해진다.","arc":"자기 손에만 맞는 작업순서에서 벗어나 핵심 검사순서를 다른 사람에게 반복 가능하게 인계한다."},
+    {"id":"C04","name":"백연주","age":61,"role":"봉제·가구천 수선 멘토","state":"재료를 버리지 않는 것을 센터의 가장 중요한 가치로 여기며 작은 얼룩이나 뜯김도 고쳐 쓸 방법부터 찾지만, 공짜 봉사노동이 당연시되는 순간에는 단호하다.","arc":"살릴 수 있는 물건과 공짜로 떠맡을 노동을 분리하고, 수선 범위와 종료조건을 공개적으로 정한다."},
+    {"id":"C05","name":"조태경","age":37,"role":"협동 수거·배송팀 배차담당","state":"현장 사람들의 사정을 잘 알지만 차량 회전율이 무너지면 하루 전체가 틀어져, 애매한 물건까지 정해진 시간에 실어가려는 습관이 있다.","arc":"픽업 시간을 압박수단으로 쓰는 대신 안전·소유·검수 상태에 맞춰 회차를 쪼개고 목록 책임을 직접 맡는다."},
+    {"id":"C06","name":"배유리","age":44,"role":"주민운영위원·이용자 권리 담당","state":"센터가 값싼 재사용품을 제공하는 취지를 지지하지만 과거 기증품의 개인자료가 남은 채 재판매될 뻔한 일을 겪어 인계기록과 소유확인에 민감하다.","arc":"운영진을 감시하는 역할에만 머물지 않고 불확실한 물건의 격리·연락·해제 기준을 자기 책임 아래 실행한다."}
+  ],
+  "relationship_state":[
+    {"pair":["C01","C06"],"state":"미래는 유리의 까다로운 확인절차가 접수를 늦춘다고 느끼고, 유리는 미래의 임시보관 습관이 문제를 뒤로 미룬다고 본다."},
+    {"pair":["C02","C05"],"state":"인호는 검수가 끝나지 않은 물건을 배차표에 올리는 것을 싫어하고, 태경은 검수시간을 예측할 수 없으면 차량을 운영할 수 없다고 반박한다."},
+    {"pair":["C03","C04"],"state":"서진은 연주의 느린 수선 방식을 답답해하지만 재료를 살리는 감각은 존중하고, 연주는 서진이 속도를 기술의 전부처럼 말할 때마다 받아친다."},
+    {"pair":["C01","C02"],"state":"미래는 고객 항의를 먼저 막기 위해 인호에게 대략적인 완료시각을 자주 요구하고, 인호는 안전검수에 예상시간을 약속으로 붙이는 것을 경계한다."},
+    {"pair":["C05","C06"],"state":"태경은 현장에서 유연하게 처리하자는 쪽이고 유리는 인계기록이 남지 않는 유연함을 책임회피로 본다."}
+  ],
+  "surface_neutrality":{
+    "note":"This state defines world, character and relationship facts only. It contains no Control/Treatment-specific gesture, blocking, dialogue, camera grammar or PSSB realization instruction.",
+    "control_treatment_access":"BYTE_IDENTICAL_AFTER_SHARED_UPSTREAM_SEAL"
+  },
+  "outputs_at_this_seal":{"fresh_series_state":1,"fresh_event_ecology":0,"fresh_sequence_plan":0,"fresh_scene_plan":0,"control_render":0,"treatment_render":0,"mask":0,"independent_judge_scores":0,"mapping_open":0},
+  "next_legal_action":"Generate and seal fresh Event Ecology only from this state. Do not create sequence/scene plans or render surfaces before Event Ecology is sealed.",
+  "authority_change":false
+}
