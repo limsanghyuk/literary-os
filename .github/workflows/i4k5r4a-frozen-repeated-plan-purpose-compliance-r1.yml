@@ -1,0 +1,20 @@
+name: I4K5R4A Frozen Repeated Plan Purpose Compliance R1
+on:
+  push:
+    branches: [main]
+jobs:
+  audit:
+    if: contains(github.event.head_commit.message, 'Run frozen R4A repeated plan-purpose compliance audit')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python handoff/20260912/P07_I4K5R4A_FROZEN_REPEATED_PLAN_PURPOSE_COMPLIANCE_RUNNER_R1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r4a-frozen-repeated-plan-purpose-compliance-r1
+          path: /tmp/i4k5r4a_frozen_repeated_plan_purpose_compliance_r1.json
