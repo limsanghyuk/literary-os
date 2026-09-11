@@ -1,0 +1,25 @@
+{
+  "schema":"LiteraryOSR31DeliveryManifestR1",
+  "date":"2026-09-12",
+  "revision_axis":"SYNC-R31",
+  "physical_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R31__I4C_UNUSED_SCENE_ANNOTATION_PACKETS_SEALED__RESPONSES_0__R4A_PROVIDER_HOLD__MAPPINGS_CLOSED",
+  "parent_sync":"SYNC-R30",
+  "parent_transport_root_sha256":"d3d2799c30a32211eb0c101110dfd32daa6b16c3205ebea2844bafb8d17559f9",
+  "transport_set_root_sha256":"22b5d1fd1a03d5a3c06a5c23825b3d64da030f9122dfdb46245631e0ff5ffe86",
+  "read_order":["CONTROL","A","B1","B2","C1","C2-A","C2-B","D1","D2"],
+  "changed_transports":["CONTROL","A","B2"],
+  "byte_identical_transports":["B1","C1","C2-A","C2-B","D1","D2"],
+  "files":[
+    {"role":"CONTROL","filename":"LITERARY_OS_CURRENT_CONTROL_P07_I4H_RECOVERY_R3_I4C_ANNOTATION_SYNC_R31_20260912.zip","bytes":110522485,"sha256":"2c184e6b2645350abe8cbcdedc51d8733c2945cea8b4cbfded0342ef433f3a75"},
+    {"role":"A","filename":"LITERARY_OS_CURRENT_PART_A_P07_I4H_RECOVERY_R3_I4C_ANNOTATION_SYNC_R31_20260912.zip","bytes":125098556,"sha256":"a8f13fb80333fdf3711825d96ae1e005f6f56a008f6b6a78a7cabfbcacfe65fb"},
+    {"role":"B1","filename":"LITERARY_OS_CURRENT_PART_B1_UNCHANGED_R1_20260909.zip","bytes":196427036,"sha256":"00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98"},
+    {"role":"B2","filename":"LITERARY_OS_CURRENT_PART_B2_P07_I4H_RECOVERY_R3_I4C_ANNOTATION_SYNC_R31_20260912.zip","bytes":257233462,"sha256":"fa5180310bb7d8805330239a87587a43f45bbbf36cc90ac8c5bfae143ad79665"},
+    {"role":"C1","filename":"LITERARY_OS_CURRENT_C1_RUNTIME_CORE_UNCHANGED_R1_20260909.zip","bytes":140020974,"sha256":"dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518"},
+    {"role":"C2-A","filename":"LITERARY_OS_CURRENT_C2_BINARY_A_P07_I4H_RECOVERY_R3_20260909.bin","bytes":159184277,"sha256":"d1fb7ba65ead633ec13d027d032e4bd3950e973b61408e04b620bd37f7997253"},
+    {"role":"C2-B","filename":"LITERARY_OS_CURRENT_C2_BINARY_B_P07_I4H_RECOVERY_R3_20260909.bin","bytes":159184276,"sha256":"49d454647f0c1d0920a582c2a5aa222b345719a3d6d396374dcb0921560e9414"},
+    {"role":"D1","filename":"LITERARY_OS_CURRENT_PART_D1_DB59_UNCHANGED_R1_20260909.zip","bytes":138011573,"sha256":"a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504"},
+    {"role":"D2","filename":"LITERARY_OS_CURRENT_PART_D2_DB59_UNCHANGED_R1_20260909.zip","bytes":173393886,"sha256":"c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4"}
+  ],
+  "research_state":{"i4c_historical_qualitative":"MIXED_QUALITATIVE_SIGNAL","replication":"PACKETS_SEALED__RESPONSES_0__REPLICATION_MAPPING_CLOSED","r4a":"G6_PASS__G7_PASS__JUDGES_0__MAPPING_CLOSED__PROVIDER_HOLD"},
+  "next_legal_action":"Obtain exactly three fresh independent evaluator responses to J01-J03 packets; seal all before opening replication mapping. No self-judging."
+}
