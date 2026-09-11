@@ -1,0 +1,97 @@
+{
+  "schema":"P07I4K5R4AAttempt2Shared50ScenePlanR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "attempt":2,
+  "classification":"SHARED_UPSTREAM__SEMANTIC_ONLY__NO_SURFACE",
+  "series_state_commit":"3bc2da6d8717f2483073fe9cbfd078071f73ea20",
+  "event_ecology_commit":"7a95514cf10cedddb1d60d06e2f675b61aa23b3c",
+  "sequence_plan_commit":"698bff141a86d8c79275ab2dd21faf16058e138b",
+  "scenes":[
+    {"id":1,"sequence":"SQ01","time":"14:20","location":"무대·플라이바","events":["E01"],"goal":"개막 리허설 첫 플라이 이동을 확인한다.","obstacle":"4번 바가 정지 뒤 되밀리지만 다른 바는 정상이다.","turn":"C02가 현상을 일정문제가 아닌 장치별 안전상태 문제로 선언한다.","exit":"4번 바만 즉시 관찰대상이 된다.","speakers":["C02","C01"]},
+    {"id":2,"sequence":"SQ01","time":"14:27","location":"무대·플라이바","events":["E01"],"goal":"이상이 전체 시스템 문제인지 분리한다.","obstacle":"재현 횟수가 적어 단정하기 어렵다.","turn":"C02가 인접 바와 동일 동작을 비교해 4번 라인에만 이상이 재현됨을 확인한다.","exit":"전면중단이 아닌 4번 바 보류가 근거를 얻는다.","speakers":["C02"]},
+    {"id":3,"sequence":"SQ01","time":"14:34","location":"무대우측 대기구역","events":["E01"],"goal":"공연운영표에 장치 상태를 반영한다.","obstacle":"C01은 리허설 순서가 무너지는 것을 피하고 싶다.","turn":"C02가 4번 바를 사용보류 상태로 분리하고 재검사 전 사용불가를 명시한다.","exit":"공연일정과 장치허가가 분리된다.","speakers":["C02","C01"]},
+    {"id":4,"sequence":"SQ01","time":"14:42","location":"후면 반입구","events":["E01","E05"],"goal":"4번 바를 쓰지 않을 대체 고정방식 가능성을 확인한다.","obstacle":"대체 지지대 일부가 아직 외부 차량에 있다.","turn":"C05는 반입가능성을 확인하되 장치사용 여부는 C02 결정으로 남긴다.","exit":"대체방식은 물류 입력을 얻지만 안전판정은 이동하지 않는다.","speakers":["C05","C02"]},
+    {"id":5,"sequence":"SQ01","time":"14:55","location":"무대·플라이바","events":["E01"],"goal":"재검사·해제·대체 조건을 고정한다.","obstacle":"공연시간 압박이 커지고 있다.","turn":"C02가 재검사 시점과 해제 기준, 기준 미달 시 고정대체 사용을 자기 책임으로 정한다.","exit":"E01 decision owner와 후속검사 조건이 고정된다.","speakers":["C02","C01"]},
+
+    {"id":6,"sequence":"SQ02","time":"15:00","location":"소품·의상 인계실","events":["E02"],"goal":"퀵체인지용 담배케이스를 준비한다.","obstacle":"외형이 같은 두 케이스가 한 트레이에 섞여 있다.","turn":"C03가 하나를 기억으로 골라내지 않고 준비를 멈춘다.","exit":"두 물건 모두 미확인 상태가 된다.","speakers":["C03"]},
+    {"id":7,"sequence":"SQ02","time":"15:08","location":"소품·의상 인계실","events":["E02"],"goal":"기존 인계사진으로 두 물건을 구분한다.","obstacle":"촬영각도 때문에 전체 외형은 동일해 보인다.","turn":"C03가 미세한 흠집과 내부 표식이 기록에 남아 있음을 찾아낸다.","exit":"식별 가능한 독립 특징이 확보된다.","speakers":["C03"]},
+    {"id":8,"sequence":"SQ02","time":"15:15","location":"무대우측 대기구역","events":["E02"],"goal":"배우 요청에 대응한다.","obstacle":"배우 개인물품을 당장 돌려달라는 요청이 온다.","turn":"C03가 확인 전 반환을 거절하고 두 케이스 모두 격리상태로 유지한다.","exit":"일정압박이 식별원칙을 바꾸지 않는다.","speakers":["C03","C01"]},
+    {"id":9,"sequence":"SQ02","time":"15:25","location":"소품·의상 인계실","events":["E02"],"goal":"인계기록과 실제 물건을 교차확인한다.","obstacle":"임시 트레이 교체시간 기록이 비어 있다.","turn":"C03가 사진·흠집·직전 인계자 기록 세 가지를 연결해 각 물건의 경로를 복원한다.","exit":"두 물건의 정체가 높은 신뢰도로 분리된다.","speakers":["C03","C05"]},
+    {"id":10,"sequence":"SQ02","time":"15:35","location":"소품·의상 인계실","events":["E02"],"goal":"반환·공연사용 범위를 확정한다.","obstacle":"한 번의 확인만으로 처리하고 싶은 압박이 있다.","turn":"C03가 개인물품 반환과 극장소품 사용을 각각 이중 확인 후 허가한다.","exit":"E02 current decision은 닫히고 이중식별 후속과제가 열린다.","speakers":["C03","C06"]},
+
+    {"id":11,"sequence":"SQ03","time":"15:40","location":"조명·음향부스","events":["E03"],"goal":"교대 오퍼레이터에게 핵심 음향 큐를 넘긴다.","obstacle":"큐시트의 초 단위만으로 실제 타이밍이 재현되지 않는다.","turn":"C04가 시간숫자보다 배우 숨의 끊김과 문짝 진동음을 관찰신호로 지정한다.","exit":"큐의 감각적 기준이 관찰 가능한 두 신호로 분해된다.","speakers":["C04"]},
+    {"id":12,"sequence":"SQ03","time":"15:48","location":"조명·음향부스","events":["E03"],"goal":"너무 빠른 큐의 실패징후를 확인한다.","obstacle":"교대자가 시간코드에 맞춰 먼저 큐를 낸다.","turn":"C04가 대신 조작하지 않고 어떤 신호가 아직 오지 않았는지 지적한다.","exit":"빠른 실패의 관찰조건이 공유된다.","speakers":["C04"]},
+    {"id":13,"sequence":"SQ03","time":"15:56","location":"조명·음향부스","events":["E03"],"goal":"너무 늦은 큐의 실패징후를 확인한다.","obstacle":"교대자가 첫 실패를 피하려다 반대로 늦어진다.","turn":"C04가 문짝 진동음 이후 허용되는 짧은 창을 설명한다.","exit":"늦은 실패의 경계도 공유된다.","speakers":["C04","C03"]},
+    {"id":14,"sequence":"SQ03","time":"16:05","location":"무대·음향부스 연결","events":["E03"],"goal":"교대자가 두 신호를 사용해 직접 실행한다.","obstacle":"배우 호흡 속도가 앞선 반복과 다르다.","turn":"교대자가 숫자가 아니라 두 관찰신호의 순서로 큐를 실행하고 C04는 조작하지 않는다.","exit":"첫 독립 실행이 성립한다.","speakers":["C04","C01"]},
+    {"id":15,"sequence":"SQ03","time":"16:15","location":"조명·음향부스","events":["E03"],"goal":"후반 실제 조건에서 재검증할 기준을 남긴다.","obstacle":"한 번의 성공만으로 전수가 끝났다고 보기 어렵다.","turn":"C04가 다음 검증 시점과 실패시 되돌아볼 관찰신호를 고정한다.","exit":"E03은 독립 재검증을 기다리는 상태가 된다.","speakers":["C04","C03"]},
+
+    {"id":16,"sequence":"SQ04","time":"16:20","location":"자원봉사 안내대","events":["E04"],"goal":"지연된 준비작업에 자원봉사를 배치한다.","obstacle":"봉사자들이 무거운 흡음패널 운반까지 돕겠다고 한다.","turn":"C06가 도움의 선의와 업무허용 범위를 분리한다.","exit":"봉사범위를 명시해야 하는 문제가 열린다.","speakers":["C06","C01"]},
+    {"id":17,"sequence":"SQ04","time":"16:28","location":"로비·후면 연결부","events":["E04"],"goal":"가능한 봉사업무를 구분한다.","obstacle":"현장에서는 가벼운 표지와 중량물이 같은 동선에 놓여 있다.","turn":"C06가 안내물·가벼운 표지 정리와 중량물·안전통제를 분리한다.","exit":"허용·금지 작업목록이 생긴다.","speakers":["C06","C05"]},
+    {"id":18,"sequence":"SQ04","time":"16:36","location":"후면 반입구","events":["E04","E05"],"goal":"지연된 반입에 필요한 인력을 계산한다.","obstacle":"C05는 사람이 많을수록 빨라질 것으로 본다.","turn":"C06가 보험·훈련경계를 근거로 중량물은 유급스태프에게 남긴다.","exit":"반입 지연은 남지만 봉사범위는 흔들리지 않는다.","speakers":["C06","C05","C01"]},
+    {"id":19,"sequence":"SQ04","time":"16:44","location":"자원봉사 안내대","events":["E04"],"goal":"봉사 종료조건을 정한다.","obstacle":"공연 직전까지 계속 돕겠다는 제안이 있다.","turn":"C06가 종료시각과 마지막 허용작업을 명시한다.","exit":"실제 압박에서 시험할 경계가 생긴다.","speakers":["C06"]},
+    {"id":20,"sequence":"SQ04","time":"16:50","location":"객석·로비","events":["E04"],"goal":"남는 작업의 책임을 확인한다.","obstacle":"봉사 종료 뒤 스태프 부담이 커진다.","turn":"C01이 남은 중량·기술작업을 직원 배치로 되돌리고 봉사범위를 재개방하지 않는다.","exit":"E04 current decision이 고정되고 운영표 후속과제가 열린다.","speakers":["C01","C06"]},
+
+    {"id":21,"sequence":"SQ05","time":"16:55","location":"후면 반입구","events":["E05"],"goal":"도로통제 변경을 반입계획에 반영한다.","obstacle":"대형차 진입 가능시간이 18:10 이전으로 당겨졌다.","turn":"C05가 전부 선반입이 아니라 확인상태별 분할반입 문제로 정의한다.","exit":"기존 단일 반입회차는 폐기된다.","speakers":["C05","C01"]},
+    {"id":22,"sequence":"SQ05","time":"17:02","location":"후면 반입구","events":["E05","E01","E02"],"goal":"1차 반입 가능한 상자를 분리한다.","obstacle":"일부 상자는 장치대체품·소품과 섞여 있고 확인이 끝나지 않았다.","turn":"C05가 안전·식별 확인완료 상태만 1차 후보에 넣는다.","exit":"검증상태가 물류우선순위보다 앞선다.","speakers":["C05","C02","C03"]},
+    {"id":23,"sequence":"SQ05","time":"17:10","location":"작은 운영사무실","events":["E05"],"goal":"후속 반입회차를 만든다.","obstacle":"첫 차량이 모든 공연장비를 싣지 못한다.","turn":"C05가 미확인·후속 장비를 별도 목록과 시각으로 분리한다.","exit":"두 회차의 책임목록이 생긴다.","speakers":["C05","C01"]},
+    {"id":24,"sequence":"SQ05","time":"17:18","location":"조명·음향부스","events":["E05","E03"],"goal":"후속으로 밀린 장비가 공연큐에 미치는 영향을 확인한다.","obstacle":"한 핵심 음향 장비가 2차 목록에 남을 가능성이 있다.","turn":"C04가 장비 도착 전 사용할 수 있는 대체 큐 경로가 필요함을 명시하되 반입결정은 C05에게 남긴다.","exit":"E05 second-order 기술의존성이 드러난다.","speakers":["C04","C05"]},
+    {"id":25,"sequence":"SQ05","time":"17:25","location":"후면 반입구","events":["E05"],"goal":"1차 반입목록과 봉인시각을 확정한다.","obstacle":"막판 확인품을 추가하고 싶은 압박이 있다.","turn":"C05가 봉인 이후 확인되는 물품은 자동으로 2차 회차로 넘긴다고 정한다.","exit":"E05 decision owner와 회차 규칙이 고정된다.","speakers":["C05","C01"]},
+
+    {"id":26,"sequence":"SQ06","time":"17:30","location":"피난복도·방화문","events":["E06"],"goal":"앞당겨진 피난시험을 반영한다.","obstacle":"18:35에 반입카트·의상카트·접근성 관객동선이 겹친다.","turn":"C01이 모든 카트를 한곳으로 몰지 않고 각 owner에게 필수시간창을 제출하게 한다.","exit":"E06이 공유시간·공간 조정문제로 열린다.","speakers":["C01","C05","C06","C03"]},
+    {"id":27,"sequence":"SQ06","time":"17:38","location":"작은 운영사무실","events":["E06"],"goal":"필수시간과 이동가능시간을 구분한다.","obstacle":"각 팀이 자기 동선을 계속 유지하고 싶어한다.","turn":"C05·C06·C03가 실제로 양보할 수 없는 시간창과 옮길 수 있는 작업을 분리해 제시한다.","exit":"공유동선 계획의 입력이 owner별로 유지된다.","speakers":["C01","C05","C06","C03"]},
+    {"id":28,"sequence":"SQ06","time":"17:45","location":"피난복도·방화문","events":["E06"],"goal":"18:35 시험 전후의 시간분할을 만든다.","obstacle":"한 공간을 연속으로 쓰면 다른 작업이 막힌다.","turn":"C01이 피난동선을 우선 비우고 반입·의상·접근성 이동을 서로 다른 시간창으로 나눈다.","exit":"E06 실행계획이 생긴다.","speakers":["C01","C05","C06"]},
+    {"id":29,"sequence":"SQ06","time":"17:50","location":"무대·플라이바","events":["E01"],"goal":"4번 바 재검사를 수행한다.","obstacle":"이상은 줄었지만 해제기준을 충족하지 못한다.","turn":"C02가 공연시간과 무관하게 보류를 유지하고 대체 고정방식을 사용하기로 한다.","exit":"E01 당일 사용상태가 확정된다.","speakers":["C02","C01","C05"]},
+    {"id":30,"sequence":"SQ06","time":"17:55","location":"소품·의상 인계실","events":["E02"],"goal":"담배케이스 최종 식별을 닫는다.","obstacle":"반환·사용 시각이 임박했다.","turn":"C03가 이중확인된 개인물품과 소품을 각각 올바른 경로로 인계한다.","exit":"E02 당일 식별문제가 해결되고 이중식별 절차개선만 남는다.","speakers":["C03","C06"]},
+
+    {"id":31,"sequence":"SQ07","time":"18:00","location":"조명·음향부스","events":["E03"],"goal":"실제 공연속도에 가까운 조건에서 교대 큐를 재검증한다.","obstacle":"배우 동작과 호흡간격이 리허설 전반과 달라졌다.","turn":"교대자가 관찰신호로 큐를 실행하고 C04는 직접 조작하지 않는다.","exit":"E03 독립실행이 두 번째 조건에서도 성립한다.","speakers":["C04","C01"]},
+    {"id":32,"sequence":"SQ07","time":"18:06","location":"조명·음향부스","events":["E03"],"goal":"전수된 기준의 실패대응을 확인한다.","obstacle":"문짝 진동음이 약해 두 번째 신호가 모호하다.","turn":"교대자가 첫 신호와 실패징후를 사용해 보수적으로 큐를 선택하고 C04가 기준만 확인한다.","exit":"암묵지 전수가 사람의 즉시개입 없이 유지된다.","speakers":["C04","C03"]},
+    {"id":33,"sequence":"SQ07","time":"18:10","location":"자원봉사 안내대","events":["E04"],"goal":"정해둔 봉사 종료시각을 집행한다.","obstacle":"반입·객석 준비가 아직 끝나지 않았다.","turn":"C06가 예정대로 봉사를 종료시키고 남은 작업을 직원에게 반환한다.","exit":"E04 경계가 실제 압박에서도 유지된다.","speakers":["C06","C01"]},
+    {"id":34,"sequence":"SQ07","time":"18:12","location":"후면 반입구","events":["E05"],"goal":"1차 차량에서 장비를 내린다.","obstacle":"2차 목록 물품도 같은 차량 가장자리에 실려 있다.","turn":"C05가 봉인된 1차 목록만 반입하고 나머지는 확인상태대로 보류한다.","exit":"E05 회차경계가 실제 반입에서도 유지된다.","speakers":["C05","C03"]},
+    {"id":35,"sequence":"SQ07","time":"18:25","location":"무대우측 대기구역","events":["E04","E05"],"goal":"봉사 종료 후 남은 이동작업을 재배치한다.","obstacle":"직원 수가 줄어 작업속도가 느려진다.","turn":"C01이 직원 업무만 재배치하고 봉사범위를 다시 열지 않는다.","exit":"인력압박이 owner 경계를 무너뜨리지 않는다.","speakers":["C01","C06","C05"]},
+
+    {"id":36,"sequence":"SQ08","time":"18:30","location":"후면 반입구·피난복도","events":["E06","E01"],"goal":"대체 고정장치를 무대로 이동한다.","obstacle":"장치카트 이동이 피난시험 준비시간과 겹친다.","turn":"C01이 C02의 장치 필요성을 바꾸지 않고 이동시간만 피난계획 안에서 조정한다.","exit":"대체장치와 피난우선순위가 양립한다.","speakers":["C01","C02","C05"]},
+    {"id":37,"sequence":"SQ08","time":"18:33","location":"피난복도·방화문","events":["E06","E05"],"goal":"후속 반입카트와 의상카트의 충돌을 피한다.","obstacle":"두 카트가 같은 문을 동시에 통과하려 한다.","turn":"각 owner가 정한 시간창에 따라 의상카트와 반입카트의 통과순서를 분리한다.","exit":"C01이 작업내용을 대신 결정하지 않고 공유충돌만 제거한다.","speakers":["C01","C05","C03"]},
+    {"id":38,"sequence":"SQ08","time":"18:35","location":"피난복도·방화문","events":["E06"],"goal":"방화문·피난통로 시험을 실시한다.","obstacle":"접근성 관객의 조기입장이 시작된다.","turn":"C06의 접근성 시간창을 유지한 채 시험구간을 비우고 검사를 실행한다.","exit":"시험과 접근성 이동이 충돌 없이 수행된다.","speakers":["C01","C06"]},
+    {"id":39,"sequence":"SQ08","time":"18:43","location":"후면 반입구","events":["E05","E03"],"goal":"2차 반입장비의 도착상태를 확인한다.","obstacle":"핵심 음향장비 하나가 여전히 늦는다.","turn":"C05가 지연상태를 유지하고 C04는 대체 큐 경로를 당일 운용안으로 준비한다.","exit":"물류지연이 안전·식별 결정을 덮지 않고 기술대체로 연결된다.","speakers":["C05","C04"]},
+    {"id":40,"sequence":"SQ08","time":"18:55","location":"무대·피난복도 경계","events":["E06"],"goal":"공연개시 전 공유동선을 최종 확인한다.","obstacle":"각 팀의 마지막 이동이 남아 있다.","turn":"C01이 시간창 준수만 확인하고 각 owner의 작업판단은 되돌려준다.","exit":"E06 당일 현장문제가 해결되고 시간대별 동선도 후속과제가 열린다.","speakers":["C01","C05","C06","C03"]},
+
+    {"id":41,"sequence":"SQ09","time":"19:00","location":"무대·플라이바","events":["E01"],"goal":"막 오르기 전 장치사용 상태를 최종 확정한다.","obstacle":"4번 바를 다시 쓰면 연출상 더 편하다.","turn":"C02가 보류를 유지하고 대체 고정상태만 공연허가한다.","exit":"E01 공연개시 상태가 최종 동결된다.","speakers":["C02","C01"]},
+    {"id":42,"sequence":"SQ09","time":"19:05","location":"소품·의상 인계실","events":["E02"],"goal":"개막 직전 소품·개인물품 인계상태를 확인한다.","obstacle":"퀵체인지 준비로 물건 이동이 잦다.","turn":"C03가 확인완료 표식이 있는 경로만 공연사용·반환 상태로 유지한다.","exit":"E02 공연개시 상태가 동결된다.","speakers":["C03","C06"]},
+    {"id":43,"sequence":"SQ09","time":"19:10","location":"조명·음향부스","events":["E03","E05"],"goal":"교대 오퍼레이터와 대체 큐 운용상태를 최종 확인한다.","obstacle":"지연장비가 아직 도착하지 않았다.","turn":"교대자가 전수된 관찰신호와 대체경로로 공연을 시작할 수 있음을 C04가 확인한다.","exit":"E03 공연개시 상태와 E05의 기술대체 상태가 함께 동결된다.","speakers":["C04","C05"]},
+    {"id":44,"sequence":"SQ09","time":"19:15","location":"객석·로비","events":["E04"],"goal":"자원봉사 업무종료와 관객안내 전환을 확인한다.","obstacle":"마지막 기술물품 이동을 도와달라는 요청이 있다.","turn":"C06가 기술작업 요청을 스태프에게 넘기고 봉사자는 안내업무만 유지한다.","exit":"E04 공연개시 상태가 동결된다.","speakers":["C06","C01"]},
+    {"id":45,"sequence":"SQ09","time":"19:25","location":"작은 운영사무실","events":["E01","E02","E03","E04","E05","E06"],"goal":"막 오르기 전 여섯 사건의 당일 조건을 한 번에 확인한다.","obstacle":"C01이 모든 미해결사항을 자기 콜시트로 다시 모을 위험이 있다.","turn":"각 owner가 자기 조건을 직접 확정하고 C01은 공유 개시시각만 조정한다.","exit":"공연은 축소·대체를 포함한 일관된 조건으로 개시 가능하다.","speakers":["C01","C02","C03","C04","C05","C06"]},
+
+    {"id":46,"sequence":"SQ10","time":"19:30","location":"무대우측 대기구역","events":["E01","E05"],"goal":"공연개시 후 즉시 발생한 마지막 변경요청을 처리한다.","obstacle":"늦게 도착한 장비를 지금이라도 투입하자는 요청이 있다.","turn":"C05가 봉인회차 밖 장비를 당장 투입하지 않고 C04의 대체운용을 유지한다.","exit":"당일 규칙이 막이 오른 뒤에도 유지된다.","speakers":["C05","C04","C01"]},
+    {"id":47,"sequence":"SQ10","time":"19:34","location":"작은 운영사무실","events":["E01","E02","E03","E04","E05","E06"],"goal":"당일 해결과 후속 개선을 분리한다.","obstacle":"모든 교훈을 하나의 운영메모로 합치면 future owner가 사라진다.","turn":"C01이 여섯 후속과제를 사건별로 분리해 각 future owner에게 돌려준다.","exit":"S#48-S#50에서 채택할 6개 future thread가 owner별로 분리된다.","speakers":["C01","C02","C03","C04","C05","C06"]},
+    {"id":48,"sequence":"SQ10","time":"19:37","location":"무대·소품 인계 경계","events":["E01","E02"],"goal":"E01과 E02의 미래 개선을 명시적으로 채택한다.","obstacle":"당일 문제가 해결돼 후속과제가 흐려질 수 있다.","turn":"C02는 장치별 상태기록·재검사 인계규칙을 소유하고, C06는 C03와 함께 개인물품/소품 이중식별 안내규칙을 다음 공연 운영표에 반영하기로 한다.","exit":"E01 future owner=C02 및 E02 future owner=C06의 second-order obligation이 명시적으로 채택된다.","speakers":["C02","C06","C03"]},
+    {"id":49,"sequence":"SQ10","time":"19:40","location":"음향부스·자원봉사 안내대 연결","events":["E03","E04"],"goal":"E03과 E04의 미래 개선을 명시적으로 채택한다.","obstacle":"개인 숙련과 임시 인력조정으로만 기억될 위험이 있다.","turn":"C03는 C04의 관찰신호·실패징후를 큐 인계카드로 표준화하고, C01은 C06와 자원봉사 업무경계·종료시각을 사전 운영표에 넣는 후속책임을 맡는다.","exit":"E03 future owner=C03 및 E04 future owner=C01의 second-order obligation이 명시적으로 채택된다.","speakers":["C03","C04","C01","C06"]},
+    {"id":50,"sequence":"SQ10","time":"19:45","location":"후면 반입구·피난복도 경계","events":["E05","E06"],"goal":"E05와 E06의 미래 개선을 채택하고 회차를 닫는다.","obstacle":"공연이 이미 진행 중이라 물류·동선 문제를 임시해결로 끝낼 수 있다.","turn":"C04는 핵심장비 지연 시 대체 큐·음향 운용안을 기술 인계자료에 연결하고, C05는 C01·C06·C03의 시간창을 받아 반입·퀵체인지·접근성·피난시험 시간대별 백스테이지 동선도를 후속 운영자료로 소유한다.","exit":"E05 future owner=C04 및 E06 future owner=C05까지 채택되어 여섯 future thread가 모두 분산된 owner와 함께 지속된다.","speakers":["C04","C05","C01","C06","C03"]}
+  ],
+  "future_adoption_register":[
+    {"event":"E01","scene":48,"future_owner":"C02","target":"장치별 상태기록 양식과 재검사 인계 규칙","adopted":true},
+    {"event":"E02","scene":48,"future_owner":"C06","target":"개인물품/소품 이중식별 안내규칙","adopted":true},
+    {"event":"E03","scene":49,"future_owner":"C03","target":"관찰신호·실패징후를 포함한 큐 인계카드","adopted":true},
+    {"event":"E04","scene":49,"future_owner":"C01","target":"자원봉사 업무경계·종료시각 사전 운영표","adopted":true},
+    {"event":"E05","scene":50,"future_owner":"C04","target":"핵심장비 지연 시 대체 큐·음향 운용안","adopted":true},
+    {"event":"E06","scene":50,"future_owner":"C05","target":"반입·퀵체인지·접근성·피난시험 시간대별 백스테이지 동선도","adopted":true}
+  ],
+  "checks":{
+    "scene_count":50,
+    "scene_ids_exact_1_to_50":true,
+    "sequence_distribution":{"SQ01":5,"SQ02":5,"SQ03":5,"SQ04":5,"SQ05":5,"SQ06":5,"SQ07":5,"SQ08":5,"SQ09":5,"SQ10":5},
+    "all_six_events_represented":true,
+    "all_six_decision_owners_preserved":true,
+    "future_adoption_register_count":6,
+    "all_six_future_owners_preserved":true,
+    "all_six_second_order_obligations_explicitly_adopted":true,
+    "dialogue_written":false,
+    "stage_direction_written":false,
+    "actor_expression_choreography_written":false,
+    "emotion_labels_written":false,
+    "PSSB_written":false
+  },
+  "outputs_at_this_seal":{"series":1,"event_ecology":1,"sequence_plan":1,"scene_plan":1,"G5A":0,"control":0,"treatment":0,"mask":0,"judge_scores":0,"mapping_open":0},
+  "next_legal_action":"Run G5A over Series/Event/Sequence/Scene artifacts. Rendering remains blocked until an immutable G5A PASS seal exists.",
+  "authority_change":false
+}
