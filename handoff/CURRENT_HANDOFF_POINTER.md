@@ -2,17 +2,17 @@
 Last updated: 2026-09-12
 
 ## READ FIRST
-`handoff/20260912/START_HERE_SYNC_R28_WHOLE_EPISODE_MIXED_SIGNAL_NEW_SESSION_HANDOFF_R1.md`
+`handoff/20260912/START_HERE_SYNC_R29_RESIDUAL_CRAFT_NO_STABLE_SIGNAL_NEW_SESSION_HANDOFF_R1.md`
 
 ## CURRENT PHYSICAL AUTHORITY
-SYNC-R28 root `ceb12269eb7562d472e8e375cd78e3f1cbce873bcab4721f9f3baaa9ef131f10`.
+SYNC-R29 root `e18bcc4e1981882f626eb611b7211fef077c915a48b19771ba64dac90356ff48`.
 
 ## CURRENT RESEARCH STATE
 R4A: frozen; G6 PASS; G7 PASS; provider secret absent; Mask=1; Judges=0; Mapping open=0.
-Evolution: Whole-Episode Degradation Diagnostic COMPLETE=`MIXED_SIGNAL` (`9d6b341f206162eff11e0d937adc4df4255feb9f`).
+Evolution: Whole-Episode Degradation=`MIXED_SIGNAL`; Residual Craft Drift=`NO_STABLE_RESIDUAL_SIGNAL`.
 
 ## EXACT NEXT ACTION
-R4A waits for real provider / 3 fresh external judges. In parallel preregister Residual Whole-Episode Craft Drift Diagnostic before further measurement. Do not alter R4A thresholds/surfaces or historical verdicts.
+Inspect sealed I4C Stage-B judgments read-only for substantive rationale. If sufficient, preregister qualitative craft-error taxonomy before coding. If insufficient, preregister a fresh blind annotation protocol. R4A provider path stays frozen and separate.
 
 ## STATUS TOKEN
-`CURRENT_HANDOFF__SYNC_R28__R4A_G7_PROVIDER_HOLD__WHOLE_DIAG_MIXED_SIGNAL__RESIDUAL_CRAFT_DIAG_NEXT`
+`CURRENT_HANDOFF__SYNC_R29__R4A_G7_PROVIDER_HOLD__RESIDUAL_CRAFT_NO_STABLE_SIGNAL__I4C_RATIONALE_INSPECTION_NEXT`
