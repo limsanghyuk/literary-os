@@ -1,0 +1,27 @@
+{
+  "schema":"P07I4K5R4AAttempt2ControlFullGateR1FailReceipt",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "attempt":2,
+  "classification":"PRESCORE_CONTROL_FULL_GATE__SEQUENCE_DENSITY_FAIL__CORRECTABLE__NO_QUALITY_INSPECTION",
+  "canonical_manifest_commit":"d264f9c247e53437e59f4d8ad6db9568d91494d2",
+  "workflow_run_id":34610295795,
+  "artifact_id":10267309259,
+  "body_chars_total":38467,
+  "body_chars_min_35000_pass":true,
+  "scene_ids_exact_1_50":true,
+  "meta_leak_zero":true,
+  "direct_emotion_pattern_zero":true,
+  "exact_long_duplicate_zero":true,
+  "segment_density_failures":[
+    {"sequence":"SQ07","body_chars":3068,"required_min":3600},
+    {"sequence":"SQ08","body_chars":3148,"required_min":3600}
+  ],
+  "quality_scores_consulted":false,
+  "treatment_written":false,
+  "repair_boundary":"Only SQ07 and SQ08 may receive superseding prescore density repair. Preserve the same shared scene semantics, event/decision/future-thread state, shared expression hygiene and Control renderer. No Treatment-specific PSSB.",
+  "mask":0,
+  "judge_scores":0,
+  "mapping_open":0,
+  "authority_change":false
+}
