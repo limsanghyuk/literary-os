@@ -1,0 +1,32 @@
+{
+  "schema":"P07I4K5R4AAttempt2FreshSeriesEpisodeStateR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "attempt":2,
+  "classification":"FINAL_PROVISIONAL_ATTEMPT__FRESH_SYNTHETIC__PRE_RENDER",
+  "prereg_commit":"4a4b521c6c69883d08b0590c36156b0ffab5303e",
+  "attempt1_prescore_closure":"fcba9b9d2f3bfb57186043a4d41fae6bcca87707",
+  "G5_early_supplement":"36b4965254cb24b7c15c430507f8a37569972bba",
+  "freshness":{"reuse_of_R3_original_R4_or_R4A_Attempt1_series_characters_events_sequences_scenes_or_prose":0,"domain":"municipal_civic_theater_opening_night_backstage","shared_upstream_between_arms":"BYTE_IDENTICAL_AFTER_G5A_PASS"},
+  "series":{"title":"해온 시민극장","format":"ensemble workplace/community drama","standing_premise":"A small municipal theater produces community performances with paid technical staff, guest artists, volunteers and public-access programs. Every performance decision crosses stage safety, performer property, tacit technical craft, volunteer scope, freight timing, audience access and fire-egress obligations.","recurring_locations":["무대·플라이바","조명·음향부스","소품·의상 인계실","무대우측 대기구역","객석·로비","자원봉사 안내대","후면 반입구","피난복도·방화문"]},
+  "episode":{"title":"객석 불이 꺼지기 전에","time_span":"14:20 to 19:45 on opening day","episode_seed":"Hours before the first public performance, a sequence of technical, property-identification, cue-transfer, volunteer-scope, freight and egress constraints forces the theater to decide what can safely enter the show and who owns each unresolved condition without centralizing every decision under one manager.","episode_boundary":"The curtain can rise safely with a reduced but coherent technical plan. Six concrete operating improvements remain assigned to different characters after the performance begins.","tone":"grounded ensemble backstage drama; tactile technical work, restrained emotion, dry humor, practical pressure; no catastrophe spectacle"},
+  "characters":[
+    {"id":"C01","name":"서도현","age":39,"role":"야간 공연운영·객석 총괄","state":"일정을 빠르게 묶는 데 능하지만 문제가 생기면 모든 확인을 자기 콜시트로 끌어모으는 습관이 있다.","arc":"각 기술·재산·봉사·물류 판단을 해당 책임자에게 남기고 공유공간 충돌만 조정하는 쪽으로 이동한다."},
+    {"id":"C02","name":"오나경","age":45,"role":"무대기계·플라이 안전담당","state":"무대장치 상태를 손과 소리로 빨리 읽지만 공연시간이 가까워질수록 다른 사람에게 재검사 중단결정을 설명하는 일을 싫어한다.","arc":"공연 진행보다 장치 사용조건을 우선해 사용·보류·대체조건을 자기 이름으로 명확히 남긴다."},
+    {"id":"C03","name":"임세윤","age":31,"role":"소품·의상 인계기록 담당","state":"배우 개인물품과 극장 소품을 꼼꼼히 구분하지만 바쁠 때는 자신의 기억을 신뢰해 표식 없는 물건도 빨리 돌려주려는 유혹을 받는다.","arc":"외형 기억 대신 표식·사진·인계기록을 교차검증하는 반복 가능한 소유·소품 식별절차를 만든다."},
+    {"id":"C04","name":"한기준","age":57,"role":"음향 큐 오퍼레이터·멘토","state":"배우 호흡과 무대소리를 듣고 큐를 잡는 감각이 뛰어나지만 그 타이밍을 숫자로만 설명할 수 없다고 생각한다.","arc":"자신이 계속 부스를 지키는 대신 관찰 가능한 소리·동작 신호와 실패징후를 다음 오퍼레이터에게 넘긴다."},
+    {"id":"C05","name":"박준호","age":35,"role":"무대물류·반입 배차담당","state":"차량·기사·반입구 시간을 잘 맞추지만 시간이 밀리면 확인 전 장비도 우선 내려놓고 나중에 정리하고 싶어한다.","arc":"외부 시간압박을 안전·식별 상태와 분리하고 반입회차와 봉인목록을 직접 소유한다."},
+    {"id":"C06","name":"김유정","age":48,"role":"자원봉사 안내·접근성 코디네이터","state":"지역 자원봉사의 힘을 믿지만 안내 봉사가 무대운반·안전통제 같은 유급·훈련업무로 번지는 순간을 경계한다.","arc":"사람을 더 투입하는 대신 자원봉사 범위·종료시각·접근성 안내책임을 명확히 실행한다."}
+  ],
+  "relationship_state":[
+    {"pair":["C01","C02"],"state":"도현은 나경에게 사용가능 시각을 빨리 요구하고, 나경은 재검사 결과보다 공연시간을 먼저 묻는 방식을 경계한다."},
+    {"pair":["C03","C05"],"state":"세윤은 표식 없는 물건이 반입동선으로 넘어가는 것을 싫어하고, 준호는 반입구 체류시간이 길어지는 것을 싫어한다."},
+    {"pair":["C04","C03"],"state":"기준은 세윤의 기록습관을 존중하지만 공연 큐는 체크박스만으로 못 넘긴다고 보고, 세윤은 그의 감각을 재현 가능한 신호로 만들고 싶어한다."},
+    {"pair":["C01","C06"],"state":"도현은 급하면 유정에게 봉사자를 더 붙여달라고 하고, 유정은 안내봉사가 기술인력 대체로 번지는 것을 막으려 한다."},
+    {"pair":["C05","C06"],"state":"준호는 현장 유연성을 중시하고 유정은 접근성·안전정보가 빠지는 유연함을 책임회피로 본다."}
+  ],
+  "surface_neutrality":{"dialogue":0,"stage_direction":0,"facial_expression_choreography":0,"emotion_labeling":0,"PSSB":0},
+  "outputs_at_this_seal":{"series":1,"event_ecology":0,"sequence_plan":0,"scene_plan":0,"G5A":0,"control":0,"treatment":0,"mask":0,"judge_scores":0,"mapping_open":0},
+  "next_legal_action":"Create fresh Attempt2 Event Ecology with explicit event mechanism, decision owner, future owner, second-order obligation and future_adoption_target for every event.",
+  "authority_change":false
+}
