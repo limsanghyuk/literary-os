@@ -1,0 +1,69 @@
+{
+  "schema": "P07I4K5R2Attempt2PartialExecutionCheckpointR1",
+  "date": "2026-09-11",
+  "experiment_id": "P07-I4K-5R2-FRESH-SURFACE-HYGIENE-REPAIR-REPLICATION",
+  "classification": "DEVELOPMENT_PREFORMAL__INTERNAL_ONLY__PROVISIONAL_NON_SCORED",
+  "parent_physical_authority": "P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R19__I4K_RESEARCH_ARCHITECTURE_PROMOTED__I4K5R1_PREREG_SURFACE_REPAIR",
+  "parent_material_sha256": "e8cef1a6431cc7618a898e5856a01f95fe2c856570f100e962dc31c74cf59575",
+  "prereg_commit": "4f1e72851ef3d986679fcf4da33d660f18012cf1",
+  "shared_upstream_commit": "8875555c31ce62db20eb1471b249d33fe2023a59",
+  "attempt1_mechanical_receipt_commit": "ea527ad5cdcb18a015cbca373d4ea80272edcb65",
+  "attempt2_execution_note_commit": "4a0eb79f85d4869abd2e5c68dc974c2c4cba135e",
+  "fresh_work": {
+    "series": "도담천 밤도서관",
+    "episode": "물이 차오르는 동안",
+    "shared_upstream": "6 Event Ecology candidates / 10 sequences / 50 scenes; same semantics for both arms",
+    "freshness": "COMPLETELY_FRESH_SYNTHETIC__NO_I4K5R1_WORLD_OR_PROSE_REUSE"
+  },
+  "attempt2_progress": {
+    "control_sequence_segments_completed": 10,
+    "control_sequence_segments_required": 10,
+    "control_scene_coverage": "S#1-S#50 complete across SQ01-SQ10 transport segments",
+    "control_directory_tree_sha": "805b20d7fd089f6a5cea2c9aa7c75042326bb4b7",
+    "control_last_completion_commit": "2652978c637ab3d4baadf639b859f8517e554c3a",
+    "treatment_sequence_segments_completed": 1,
+    "treatment_sequence_segments_required": 10,
+    "treatment_scene_coverage": "S#1-S#5 only; SQ01 complete, SQ02-SQ10 NOT YET AUTHORED",
+    "treatment_directory_tree_sha_at_checkpoint": "a650836bb4d3aff6352a7415a7e6cb39840f26b4",
+    "treatment_sq01_blob_sha": "3dc81d009ff9aca62931846afb8e69d12809fbad",
+    "treatment_sq01_commit": "abe5f38c47c4ad2bf9234b0ef3822d3c81935e03",
+    "mask": 0,
+    "quality_scores": 0,
+    "unblind": 0,
+    "final_render_manifest": 0,
+    "attempt2_mechanical_admission": "NOT_RUN__INCOMPLETE_TREATMENT_TRANSPORTS"
+  },
+  "control_segments": [
+    {"sq":"SQ01","scenes":"01-05","blob":"b4a6d65610d7ffb4d93593bdfe97c14fef8f9aa1"},
+    {"sq":"SQ02","scenes":"06-10","blob":"1dd15c0afa4750ee03c9dace8c1d49a3b350e499"},
+    {"sq":"SQ03","scenes":"11-15","blob":"ee1d5ab7d97d7f1236a1ddbea23e7e37a561db0b"},
+    {"sq":"SQ04","scenes":"16-20","blob":"98d2f80b86ad70e771aea8c1b4fb9529ec0e3e50"},
+    {"sq":"SQ05","scenes":"21-25","blob":"60c9748185ec78aa3a6af4ab4074e517538878ec"},
+    {"sq":"SQ06","scenes":"26-30","blob":"06a5b7cc990cc4da0c22ffa13c5df8822d900119"},
+    {"sq":"SQ07","scenes":"31-35","blob":"0e519ca47f51158030c337bcf73e4ad1f0eb3dee"},
+    {"sq":"SQ08","scenes":"36-40","blob":"65279d0d5f3dab29249b78334bc90e60c3c3e1f7"},
+    {"sq":"SQ09","scenes":"41-45","blob":"3e8c6271d40c29fd4e04bbba777c0c0d3a922500"},
+    {"sq":"SQ10","scenes":"46-50","blob":"1d5e5528bf21ff1262bad4888a260a8063d2f66e"}
+  ],
+  "next_legal_action": "Do not regenerate Control. Resume Treatment Attempt 2 at SQ02 / scenes S#6-S#10, then continue in order through SQ10 / S#50 under the frozen multipart execution note. Do not inspect quality preference. After all 20 segments exist, run deterministic attempt-2 mechanical admission against the original preregistered gates.",
+  "prescore_gate_after_completion": {
+    "body_chars_each_min": 35000,
+    "relative_body_char_gap_max": 0.10,
+    "scene_ids_each": "1..50 exact",
+    "treatment_meta_plan_token_leakage": 0,
+    "treatment_CH_SQ_internal_ids": 0,
+    "treatment_repeated_plan_purpose_copy": 0,
+    "treatment_exact_long_mechanical_duplicate_ratio": 0.0,
+    "shared_upstream_semantics_nonloss": true,
+    "critical_continuity_violations": 0
+  },
+  "physical_propagation": "PENDING_PHYSICAL_PROPAGATION__CURRENT_PHYSICAL_AUTHORITY_REMAINS_R19",
+  "unchanged_authorities": {
+    "active_engine": "P07-I4H Recovery R3",
+    "production": "ENG:R47",
+    "db": "DB59",
+    "formal_scored_count": 137,
+    "latest_formal": "R138",
+    "formal_r140": "0/0/0"
+  }
+}
