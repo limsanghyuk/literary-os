@@ -2,13 +2,23 @@ name: I4K5R2 temporary measurement
 on:
   push:
     branches: [i4k5r2-temp-measure]
+permissions:
+  contents: read
 jobs:
   measure:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Measure attempt 1
-        run: python handoff/20260911/I4K5R2_MEASUREMENT_RUNNER_R1.py
+      - name: Fetch authoritative main read-only
+        run: |
+          git fetch origin main:refs/remotes/origin/main
+          git worktree add /tmp/i4k5r2-main origin/main
+      - name: Measure Attempt 2 main transports
+        run: |
+          cd /tmp/i4k5r2-main
+          python "$GITHUB_WORKSPACE/handoff/20260911/I4K5R2_ATTEMPT2_MEASUREMENT_RUNNER_R1.py"
