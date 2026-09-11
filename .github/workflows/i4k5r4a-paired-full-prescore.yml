@@ -1,0 +1,23 @@
+name: I4K5R4A Paired full prescore
+on:
+  push:
+    branches: [i4k5r4a-paired-full-prescore]
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify frozen source commit is ancestor
+        run: git merge-base --is-ancestor 27f35eb5b63ca9202d1a6249e82a5dae0dc713dc HEAD
+      - name: Run paired full prescore
+        run: python handoff/20260911/I4K5R4A_PAIRED_FULL_PRESCORE_RUNNER_R1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: i4k5r4a-paired-full-prescore-r1
+          path: i4k5r4a_paired_full_prescore_r1.json
