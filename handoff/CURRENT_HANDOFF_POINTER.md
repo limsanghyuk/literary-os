@@ -2,16 +2,17 @@
 Last updated: 2026-09-12
 
 ## READ FIRST
-`handoff/20260912/START_HERE_SYNC_R27_G7_PASS_PROVIDER_HOLD_NEW_SESSION_HANDOFF_R1.md`
+`handoff/20260912/START_HERE_SYNC_R28_WHOLE_EPISODE_MIXED_SIGNAL_NEW_SESSION_HANDOFF_R1.md`
 
 ## CURRENT PHYSICAL AUTHORITY
-SYNC-R27 root `dec5f407671015c9bfb29c34d3bbd40b78ec5f2c4e44bd857a5c3eb3aaf4eb0a`.
+SYNC-R28 root `ceb12269eb7562d472e8e375cd78e3f1cbce873bcab4721f9f3baaa9ef131f10`.
 
 ## CURRENT RESEARCH STATE
-R4A Attempt2 frozen; all prescore compliance PASS; G6 mask PASS; G7 duplicate-score/provenance preflight PASS. Provider secret absent in GitHub Actions, so judges remain 0. Mask=1; judges=0; mapping open=0. Mapping-secret artifact `10272549788` remains unopened.
+R4A: frozen; G6 PASS; G7 PASS; provider secret absent; Mask=1; Judges=0; Mapping open=0.
+Evolution: Whole-Episode Degradation Diagnostic COMPLETE=`MIXED_SIGNAL` (`9d6b341f206162eff11e0d937adc4df4255feb9f`).
 
 ## EXACT NEXT ACTION
-Connect real-provider secret or dispatch 3 fresh independent external judge conversations; do not self-judge. Seal all 3 valid score packets before mapping open once, then compute H1-H4/cross-judge decision. Parallel knowledge-only diagnostics are legal while provider remains blocked.
+R4A waits for real provider / 3 fresh external judges. In parallel preregister Residual Whole-Episode Craft Drift Diagnostic before further measurement. Do not alter R4A thresholds/surfaces or historical verdicts.
 
 ## STATUS TOKEN
-`CURRENT_HANDOFF__SYNC_R27__G7_PASS__PROVIDER_HOLD__JUDGES_0__MAPPING_CLOSED`
+`CURRENT_HANDOFF__SYNC_R28__R4A_G7_PROVIDER_HOLD__WHOLE_DIAG_MIXED_SIGNAL__RESIDUAL_CRAFT_DIAG_NEXT`
