@@ -1,0 +1,78 @@
+{
+  "schema":"P07I4K5R4FreshEventEcologyR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4-PSSB-INDEPENDENT-MASKED-FRESH-CONFIRMATION",
+  "series_state_commit":"2b0976cc68b781aeea4f9c6e4f0b76c2f0f94419",
+  "series":"해솔 생활수리센터",
+  "episode":"내일 다시 쓸 물건들",
+  "freshness":"COMPLETELY_FRESH_SYNTHETIC__NO_R3_EVENT_REUSE",
+  "event_ecology":[
+    {
+      "id":"E01","origin":"ELECTRICAL_SAFETY_EVENT",
+      "mechanism":"재사용 장터에 내놓을 오래된 제습기가 냉간 절연검사에서는 정상인데 20분 이상 부하를 걸면 케이스 누설값이 간헐적으로 올라간다. 이미 구매예약 스티커가 붙어 있어 빨리 판정을 원하는 사람이 있지만 단순 부품교환으로 해결됐다고 단정할 수 없다.",
+      "attachments":["C02 사용안전 판정","C01 예약고객 응대","C05 출고분류"],
+      "downstream_decision_owner":"C02",
+      "required_decision":"인호가 수리 성공 여부와 별개로 장시간 부하 재검사 조건, 보류상태, 장터 제외 여부를 자기 이름으로 정한다.",
+      "future_thread_owner":"C01",
+      "second_order":"센터가 재사용 전기제품을 냉간검사만으로 통과시키지 않도록 부하시간과 인계표시를 접수 절차에 반영해야 한다."
+    },
+    {
+      "id":"E02","origin":"OWNERSHIP_PRIVACY_EVENT",
+      "mechanism":"기증품 상자에서 나온 소형 태블릿 한 대가 초기화되지 않은 채 이전 사용자의 가족사진과 계정 알림을 그대로 보여준다. 기증서류에는 상자 단위 인수만 있고 기기별 소유자 확인 정보가 없다.",
+      "attachments":["C06 개인정보·인계기록","C01 임시보관 관행","C05 재판매 목록"],
+      "downstream_decision_owner":"C06",
+      "required_decision":"유리가 기기를 판매목록에서 즉시 분리하고, 추정 초기화 대신 원소유자 확인·연락·해제 조건을 정해 동일 기준을 다른 미확인 디지털 기기에도 적용한다.",
+      "future_thread_owner":"C01",
+      "second_order":"기증품 접수에서 데이터 저장기기를 별도 식별하고 기증자 확인 없이는 초기화·재판매하지 않는 인계절차가 필요해진다."
+    },
+    {
+      "id":"E03","origin":"MECHANICAL_CRAFT_EVENT",
+      "mechanism":"장터 시승용으로 수리한 자전거 세 대 중 한 대의 뒷브레이크 케이블 끝단이 반복 제동 후 조금씩 밀린다. 같은 날 교체한 부품 상자에는 서로 다른 규격의 고정너트가 섞여 있고 육안만으로는 차이가 작다.",
+      "attachments":["C03 기계검수","C05 시승·운송 일정","C06 이용자 안전"],
+      "downstream_decision_owner":"C03",
+      "required_decision":"서진이 자신의 감각으로 한 대만 다시 조이는 대신 세 대 모두에 반복 제동·마킹·재확인 순서를 적용하고 규격판별법을 다른 정비자도 반복할 수 있게 넘긴다.",
+      "future_thread_owner":"C05",
+      "second_order":"부품 입고와 장터 시승 준비에서 소형 체결부품 규격·로트와 반복부하 검사를 연결하는 체크가 생겨야 한다."
+    },
+    {
+      "id":"E04","origin":"LABOR_AND_REPAIR_SCOPE_EVENT",
+      "mechanism":"주민 봉제수업이 끝난 직후 장터용 의자방석 열두 개의 지퍼박음이 잘못돼 다시 뜯어야 한다는 사실이 드러난다. 몇몇 수강생이 남아서 도와주겠다고 하지만 그것은 원래 수업과 무관한 센터 판매물품 보수작업이다.",
+      "attachments":["C04 수선범위·무급노동 경계","C01 장터준비","C06 주민참여 원칙"],
+      "downstream_decision_owner":"C04",
+      "required_decision":"연주가 수강생 도움을 당연한 인력으로 받지 않고, 오늘 자신이 맡을 유급·공식 수선 범위와 내일 이후로 넘길 잔여수량을 정한다.",
+      "future_thread_owner":"C06",
+      "second_order":"주민수업·자원봉사·센터 판매품 제작이 겹칠 때 노동의 자발성, 시간, 책임을 구분하는 운영원칙을 주민운영위가 정해야 한다."
+    },
+    {
+      "id":"E05","origin":"EXTERNAL_LOGISTICS_EVENT",
+      "mechanism":"다음 날 장터 입고차량이 도로행사 통제로 원래 09:30 수거에서 07:10 1차 수거로 앞당겨진다. 모든 품목을 그때 맞추면 전기·개인정보·기계검수를 건너뛸 위험이 있지만 이미 확정된 가구·섬유품은 먼저 보낼 수 있다.",
+      "attachments":["C05 수거·배송배차","C02 안전보류품","C06 소유확인보류품","C04 수선완료품"],
+      "downstream_decision_owner":"C05",
+      "required_decision":"태경이 ‘07:10까지 전부’라는 외부압박을 전달만 하지 않고 1차/후속 수거로 나눈 목록과 봉인시각을 직접 만들며 미검수품을 차량에서 제외한다.",
+      "future_thread_owner":"C06",
+      "second_order":"재사용품 공동수거에서 안전·소유·수선상태별 인계코드를 배송목록에 포함하고 이용자·기증자에게 분할 인계 이유를 설명하는 책임이 생긴다."
+    },
+    {
+      "id":"E06","origin":"BUILDING_SPATIAL_EVENT",
+      "mechanism":"센터 건물의 방화셔터와 후면 피난통로 정기시험이 관리업체 일정변경으로 당일 08:00으로 당겨진다. 평소 장터 상자와 수거카트를 두는 후면 통로, 자전거 시승출구, 봉제완료품 임시선반을 시험 전까지 비워야 한다.",
+      "attachments":["C01 공간인계","C03 자전거 시승동선","C04 수선완료품","C05 수거하역"],
+      "downstream_decision_owner":"C01",
+      "required_decision":"미래가 모든 물건을 임시보관구역으로 몰아넣는 대신 각 작업 owner에게 필요한 종료·이동조건을 받아 시험통로만 우선 비우고 충돌지점만 조정한다.",
+      "future_thread_owner":"C05",
+      "second_order":"장터일의 수거·시승·임시적치와 건물 피난시험을 함께 표시하는 공동 동선도가 관리업체와 배송팀 사이의 운영자료로 필요해진다."
+    }
+  ],
+  "ecology_checks":{
+    "event_count":6,
+    "all_events_have_character_or_relationship_attachment":true,
+    "all_events_have_mechanism":true,
+    "all_events_have_downstream_decision_owner":true,
+    "all_events_have_future_thread_owner":true,
+    "all_events_have_second_order_consequence":true,
+    "event_owner_distribution":{"C01":1,"C02":1,"C03":1,"C04":1,"C05":1,"C06":1},
+    "surface_realization_prescribed":false
+  },
+  "outputs_at_this_seal":{"fresh_series_state":1,"fresh_event_ecology":1,"fresh_sequence_plan":0,"fresh_scene_plan":0,"control_render":0,"treatment_render":0,"mask":0,"independent_judge_scores":0,"mapping_open":0},
+  "next_legal_action":"Create and seal a shared 10-sequence plan using only the sealed fresh Series/Episode state and these six events. Do not write scene prose or render either arm.",
+  "authority_change":false
+}
