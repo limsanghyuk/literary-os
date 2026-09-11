@@ -1,0 +1,23 @@
+{
+  "schema":"P07I4K5R4AControlFullPrescoreGateR1FailReceipt",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "classification":"PRESCORE_DEBUG_GATE__FAIL__CORRECTABLE_BEFORE_TREATMENT",
+  "source_commit":"74e1198c09744d2b27ca238f51e0a4e521afd099",
+  "workflow_run_id":34599428530,
+  "artifact_id":10263577425,
+  "artifact_digest":"sha256:97255fa3a26483fc60b06ca936e807ae98818648b1e64faf410954459a2f0ca2",
+  "mechanics":{"segments":10,"body_chars_total":39362,"body_chars_min_35000_pass":true,"scene_ids_exact_1_50":true,"direct_emotion_stage_zero":true,"exact_long_duplicate_zero":true},
+  "failures":[
+    {"type":"META_LEAK","token":"owner","count":2,"files":["SQ06","SQ10"]},
+    {"type":"PER_SEQUENCE_SCALE_GUIDANCE","required_min_body_chars":3600,"under_min":{"SQ06":3506,"SQ07":3317,"SQ08":2962,"SQ09":2963,"SQ10":3424}}
+  ],
+  "quality_inspection_performed":false,
+  "treatment_render":0,
+  "mask":0,
+  "scores":0,
+  "mapping_open":0,
+  "repair_boundary":"Create append-only superseding R3 versions of SQ06-SQ10 only. Remove research-meta token leakage and increase detailed stage/action/expression-flow realization without changing scene/event/decision/future-thread semantics. Do not modify SQ01-SQ05 R2 or any shared upstream artifact.",
+  "next_legal_action":"Seal SQ06-SQ10 R3 superseding segments, then rerun the full deterministic prescore gate over canonical SQ01-SQ05 R2 + SQ06-SQ10 R3. Treatment remains forbidden until PASS.",
+  "authority_change":false
+}
