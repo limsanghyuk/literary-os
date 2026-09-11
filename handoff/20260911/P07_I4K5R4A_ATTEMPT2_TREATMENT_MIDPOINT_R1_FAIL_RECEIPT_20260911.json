@@ -1,0 +1,23 @@
+{
+  "schema":"P07I4K5R4AAttempt2TreatmentMidpointR1FailReceipt",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "attempt":2,
+  "classification":"PRESCORE_TREATMENT_MIDPOINT__UNDER_DENSITY__CORRECTABLE__NO_QUALITY_INSPECTION",
+  "source_commit":"dbd38c19ccd0e5049cc99f56eb42f80ebd8af7f2",
+  "workflow_run_id":34611513223,
+  "artifact_id":10268801592,
+  "body_chars_total":13508,
+  "segment_chars":{"SQ01":2929,"SQ02":2749,"SQ03":2369,"SQ04":2633,"SQ05":2828},
+  "scene_ids_exact_1_25":true,
+  "meta_leak_zero":true,
+  "CH_SQ_internal_id_zero":true,
+  "direct_emotion_pattern_zero":true,
+  "exact_long_duplicate_zero":true,
+  "quality_scores_consulted":false,
+  "repair_boundary":"Supersede only Treatment SQ01-SQ05 before any S#26 output. Preserve identical shared scene semantics and shared Actor-Visible Expression Hygiene; deepen only the already-frozen PSSB realization and stageable physical detail. No new event, motive, decision, owner or future-thread.",
+  "mask":0,
+  "judge_scores":0,
+  "mapping_open":0,
+  "authority_change":false
+}
