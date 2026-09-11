@@ -1,0 +1,43 @@
+name: Literary OS Provider Availability Recheck R2
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  recheck:
+    if: contains(github.event.head_commit.message, 'Provider availability recheck R2')
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Write provider availability receipt
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, pathlib, hashlib
+          out = {
+            'schema':'LiteraryOSProviderAvailabilityRecheckR2',
+            'date':'2026-09-12',
+            'provider_secret_present': bool(os.environ.get('OPENAI_API_KEY','').strip()),
+            'scores_created':0,
+            'mapping_open':0,
+            'surface_mutation':False,
+            'status':'READY__REAL_PROVIDER_SECRET_PRESENT' if os.environ.get('OPENAI_API_KEY','').strip() else 'HOLD__REAL_PROVIDER_SECRET_ABSENT'
+          }
+          raw=json.dumps(out,ensure_ascii=False,indent=2).encode()
+          out['receipt_sha256']=hashlib.sha256(raw).hexdigest()
+          p=pathlib.Path('handoff/20260912/PROVIDER_AVAILABILITY_RECHECK_R2_RESULT.json')
+          p.write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf-8')
+          PY
+      - name: Commit receipt
+        shell: bash
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add handoff/20260912/PROVIDER_AVAILABILITY_RECHECK_R2_RESULT.json
+          git commit -m 'Seal provider availability recheck R2 result' || exit 0
+          git push
