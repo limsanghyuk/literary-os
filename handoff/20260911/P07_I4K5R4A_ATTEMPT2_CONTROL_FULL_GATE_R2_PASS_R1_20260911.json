@@ -1,0 +1,18 @@
+{
+  "schema":"P07I4K5R4AAttempt2ControlFullGateR2PassR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "attempt":2,
+  "classification":"PRESCORE_CONTROL_PASS__QUALITY_NOT_INSPECTED__TREATMENT_AUTHORIZED",
+  "canonical_manifest_commit":"70ec77a33082428b3c2f20ba0b7fee0d220cbbb2",
+  "workflow_run_id":34610736345,
+  "artifact_id":10267849839,
+  "metrics":{"body_chars_total":40650,"segments":10,"scenes":50,"all_segments_min_3600":true,"scene_ids_exact_1_50":true,"meta_leak_zero":true,"CH_SQ_internal_id_zero":true,"direct_emotion_pattern_zero":true,"exact_long_duplicate_zero":true},
+  "quality_scores_consulted":false,
+  "treatment_written":false,
+  "mask":0,
+  "judge_scores":0,
+  "mapping_open":0,
+  "next_legal_action":"Render Treatment SQ01-SQ10 from the byte-identical shared upstream. Apply the same shared Actor-Visible Expression Hygiene and add only the frozen PSSB intervention. Run Treatment midpoint scale/hygiene gate after S#25.",
+  "authority_change":false
+}
