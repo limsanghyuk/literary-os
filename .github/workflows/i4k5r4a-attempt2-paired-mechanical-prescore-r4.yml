@@ -1,0 +1,20 @@
+name: I4K5R4A Attempt2 Paired Mechanical Prescore R4
+on:
+  push:
+    branches: [main]
+jobs:
+  measure:
+    if: contains(github.event.head_commit.message, 'Run final paired mechanical prescore R4 for R4A Attempt2')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python handoff/20260911/P07_I4K5R4A_ATTEMPT2_PAIRED_MECHANICAL_PRESCORE_RUNNER_R4.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r4a-attempt2-paired-mechanical-prescore-r4
+          path: /tmp/i4k5r4a_attempt2_paired_mechanical_prescore_r4.json
