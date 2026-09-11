@@ -7,33 +7,42 @@ Full logical 5-Part / 9-transport material SHA256: `e8cef1a6431cc7618a898e5856a0
 Physical closure commit: `b4979d99ece9b7c02d69ee87a1b86a7cb10c1bab`.
 
 ## PHYSICALLY PROPAGATED GOVERNANCE
-I4K / Narrative Event Ecology / Narrative Showrunner Architecture remains the promoted continuing upper-layer research architecture. I4K-5 H1/H2 PASS and H3/H4 FAIL remain immutable. Research-architecture promotion does not imply Active Engine/Production/Formal promotion.
+I4K / Narrative Event Ecology / Narrative Showrunner Architecture is the promoted continuing upper-layer research architecture. Repair-forward governance is active. The independent I4K-5 result remains immutable H1/H2 PASS, H3/H4 FAIL. Research-architecture promotion does not imply implementation/Active Engine/Production/Formal promotion.
 
-## POST-R19 RESEARCH EVIDENCE — PENDING_PHYSICAL_PROPAGATION
-I4K-5R1 has advanced after R19 package sealing.
-- Surface convention correction R2 commit `680d1f8d94208892d6ba159705d57a31ea572f26`.
-- Internal-only execution protocol R2 commit `eadf2ebfffb3800519abe1979fe99e1a469ac1a4`.
-- Fresh shared Event Ecology / 10-sequence / 50-scene semantic architecture commit `1fb3364a0fa179850632885af43126dfeec652e6`.
-- Control provisional whole episode commit `96658b7c3a82c397041b9332be7de807791d0d75`.
-- Repaired-surface provisional whole episode commit `8d408126fa47aa255eb93c599044b1ee4c8dfb9b`.
-- Runtime incident checkpoint commit `71740230394d063d6be65aa500af5c934a2b5cd8`.
+## POST-R19 HUB RESEARCH — PENDING_PHYSICAL_PROPAGATION
+The definitive new-session handoff is:
+`handoff/20260911/START_HERE_P07_I4K_NEW_SESSION_HANDOFF_R1_20260911.md`
+commit `b62a06a933f1388e39075e5c3895a9f5f6536000`.
 
-Both provisional episodes are unscored and consume the same frozen 50-scene semantics. No mask or unblind exists.
+I4K-5R1 is CLOSED as prescore under-scale HOLD: Control 22,382 / Treatment 21,993 metadata-excluded chars; 50 scenes each; relative gap 1.738%; Treatment meta/internal leakage 0, CH/SQ IDs 0 and exact-long duplicate count 0; no mask/scores/unblind. It is diagnosis-only and may not be post-hoc expanded/scored.
+
+I4K-5R2 is ACTIVE:
+- prereg `4f1e72851ef3d986679fcf4da33d660f18012cf1`;
+- fresh shared architecture `8875555c31ce62db20eb1471b249d33fe2023a59` (`도담천 밤도서관 / 물이 차오르는 동안`, 6 events / 10 sequences / 50 scenes);
+- Attempt 1: 24,285 / 24,265 chars, 0.0824% gap, 50 scenes each, hygiene checks favorable, mechanically rejected under-scale and unscored; receipt commit `ea527ad5cdcb18a015cbca373d4ea80272edcb65`;
+- Attempt 2 execution note `4a0eb79f85d4869abd2e5c68dc974c2c4cba135e`;
+- Attempt 2 Control = **10/10 sequence transports complete, S#1-S#50**;
+- Attempt 2 Treatment = **SQ01/S#1-S#5 complete only**; SQ02-SQ10 not authored;
+- attempt-2 mechanical admission 0 / final manifest 0 / mask 0 / scores 0 / unblind 0;
+- machine checkpoint commit `8700fb3c3dc63fd2b95dbfcf2579cae0134cbd74`.
 
 ## CORRECTED BROADCAST-SCRIPT DOCTRINE
-Detailed scene-opening situation direction is allowed/protected and may describe atmosphere, location/time, performer state, blocking, props and ongoing flow. Performer micro-direction may be placed near dialogue using parenthetical or local action lines. Only planning/meta explanation, internal IDs/terms and mechanically duplicated planning/direction templates are prohibited.
+Detailed scene-opening situation direction is allowed/protected and may describe atmosphere, location/time, performer state, blocking, props and ongoing flow. Dialogue-adjacent performer emotion/action direction may use parenthetical or local action lines. The repair target is planning/meta explanation, internal IDs/terms, copied sequence-purpose prose and mechanically reused direction templates—not legitimate rich stage direction.
 
-## EVALUATION MODE
-Developer environment currently cannot perform independent external judging. Research therefore continues under `MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__INTERNAL_ONLY`; external qualification is deferred by environment, not failed. Internal PASS cannot be relabeled external consensus.
+## EVALUATION / CLAIM BOUNDARY
+Developer environment cannot currently perform a new independent external gate, so I4K-5R2 continues as `MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__INTERNAL_ONLY`. Any future PASS can guide research only and cannot be relabeled independent GPT/human evidence. External qualification remains deferred by environment.
 
-## INFRASTRUCTURE STATUS
-Local container/Python transport is presently unavailable (`TransportTimeoutError` even on minimal probe). Google Sheets external raw-URL import fallback is blocked by provider interactive authorization. These are infrastructure/tool failures and must not be counted as scientific FAIL.
+## INFRASTRUCTURE
+Local container/Python transport in this session repeatedly returned `TransportTimeoutError` even for minimal probes. Read-only GitHub-hosted CPython measurement successfully served as a non-authoritative fallback for R1 and R2 Attempt 1. Temporary measurement branches are infrastructure only, never authority.
 
-## CURRENT GATE
-`MECHANICAL_ADMISSION_PENDING_RUNTIME_RECOVERY`. No masking/scoring before exact verification of screenplay body scale/parity, 10/50 structure, Treatment hygiene gates, shared semantic/invariant nonloss and critical continuity safety.
+## EXACT NEXT LEGAL ACTION
+Read START_HERE and the I4K-5R2 prereg/Attempt-2 note/checkpoint. Preserve completed Control 10/10 and Treatment SQ01. Resume **Treatment SQ02 / S#6-S#10**, then SQ03→SQ10. Do not inspect quality preference. Once all 20 segments exist, run original deterministic prescore admission. Only prescore PASS permits masking/scoring/unblind. If Attempt 2 misses admission, Attempt 3 remains available only under the already-frozen bounded-attempt rule.
+
+## PHYSICAL PACKAGE BOUNDARY
+Do not call post-R19 work R20/current physical authority. It is `PENDING_PHYSICAL_PROPAGATION`. A later Research Sync requires full 5-Part/9-transport generation, 9/9 hashes, C2/DB59 reassembly and physical audit before CURRENT physical promotion.
 
 ## UNCHANGED OPERATING AUTHORITIES
 Active Development Engine `P07-I4H Recovery R3`; Production `ENG:R47`; DB59 frozen; Combined C2 `58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7`; Formal scored count 137; latest formal R138; Formal R140 `0/0/0`; OpenAI Live authority unchanged.
 
 ## STATUS TOKEN
-`PHYSICAL_SYNC_R19_CURRENT__POST_R19_I4K5R1_RESEARCH_PENDING_PHYSICAL_PROPAGATION__DUAL_PROVISIONAL_SEALED__MECHANICAL_ADMISSION_PENDING_RUNTIME__NO_SCORES__ACTIVE_I4H_R3__FORMAL_137__R140_0_0_0`
+`PHYSICAL_SYNC_R19_CURRENT__POST_R19_PENDING_PHYSICAL_PROPAGATION__I4K_RESEARCH_ARCH_PROMOTED__I4K5R1_HOLD__I4K5R2_ACTIVE__A1_UNDER_SCALE_REJECTED__A2_CONTROL_10_OF_10__TREATMENT_1_OF_10__NEXT_TREATMENT_SQ02__MASK_0__SCORES_0__UNBLIND_0__ACTIVE_I4H_R3__FORMAL_137__R140_0_0_0`
