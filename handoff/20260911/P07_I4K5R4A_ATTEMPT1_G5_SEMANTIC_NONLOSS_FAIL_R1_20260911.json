@@ -1,0 +1,27 @@
+{
+  "schema":"P07I4K5R4AAttempt1G5SemanticNonlossFailR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "classification":"ATTEMPT1_REJECTED_PRESCORE__G5_SHARED_SEMANTICS_NONLOSS_FAIL__NOT_SCORED__NOT_QUALITY_FAIL",
+  "mechanical_prescore_pass_commit":"c3d974bb87c972ae4e29a448f6b6b3e6b8114725",
+  "mechanical_state":{"control_body_chars":42037,"treatment_body_chars":41400,"relative_gap":0.015153317315698075,"scenes_each":50,"mechanical_hygiene_pass":true},
+  "semantic_defect":{
+    "event_id":"E06",
+    "event_origin":"FACILITY_FLOW_EVENT",
+    "frozen_future_thread_owner":"C05",
+    "frozen_second_order":"새벽 배송·세척·피난시험을 한 장에 표시하는 시간대별 동선도가 배송팀과 건물관리 사이의 공통 운영자료로 필요해진다.",
+    "loss_location":"Event Ecology -> shared 50-scene plan future-thread adoption",
+    "finding":"The shared scene plan carries E06 into the facility-test resolution but its final future-thread assignment set does not explicitly preserve the E06 time-phased shared-flow-map obligation under C05. Therefore all_six_events_represented is insufficient to prove future-thread nonloss.",
+    "surface_fault":false,
+    "control_treatment_preference_inspected":false,
+    "quality_scores_consulted":false
+  },
+  "prescore_gate":{"shared_upstream_semantics_nonloss":false,"critical_continuity_violations":0,"future_thread_nonloss":false},
+  "mask":0,
+  "independent_judge_scores":0,
+  "mapping_open":0,
+  "attempt1_consumed":true,
+  "attempt2_authorized_by_prereg":true,
+  "repair_boundary":"Do not patch or score Attempt1 surfaces. Attempt2 must use completely fresh Series/Episode, Event Ecology, Sequence Plan, Scene Plan and prose. Preserve the same renderer, same shared Actor-Visible Expression Hygiene, same frozen PSSB, same thresholds and same judge rules.",
+  "authority_change":false
+}
