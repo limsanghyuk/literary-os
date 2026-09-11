@@ -1,0 +1,30 @@
+name: I4K5R3 Attempt2 leak-resistant mask R1
+on:
+  push:
+    branches: [i4k5r3-a2-mask-r1]
+permissions:
+  contents: read
+jobs:
+  mask:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify frozen admission commit is ancestor
+        run: git merge-base --is-ancestor c481e6e1b3efa619525d3eef0fc5648734b9d9b7 HEAD
+      - name: Build neutral A/B packet and separate mapping seal
+        run: python handoff/20260911/I4K5R3_ATTEMPT2_MASK_BUILDER_R1.py
+      - name: Upload masked packet only
+        uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r3-a2-masked-packet-r1
+          path: _i4k5r3_mask_r1/packet/
+      - name: Upload mapping seal separately
+        uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r3-a2-mapping-seal-r1
+          path: _i4k5r3_mask_r1/mapping_seal/
