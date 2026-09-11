@@ -1,0 +1,24 @@
+name: I4K5R4A G6 Mask R1
+on:
+  push:
+    branches: [main]
+jobs:
+  mask:
+    if: contains(github.event.head_commit.message, 'Run R4A G6 leak-resistant blind mask')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python handoff/20260912/P07_I4K5R4A_G6_MASK_BUILDER_RUNNER_R1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r4a-g6-masked-packet-r1
+          path: /tmp/i4k5r4a_g6_mask_r1/masked_packet
+      - uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r4a-g6-mapping-secret-r1
+          path: /tmp/i4k5r4a_g6_mask_r1/mapping_secret
