@@ -1,0 +1,43 @@
+{
+  "schema":"P07I4K5R3Attempt2ControlMaterializationReceiptR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R3-PERFORMANCE-SPECIFIC-SURFACE-BINDING-FRESH-REPLICATION",
+  "classification":"DEVELOPMENT_PREFORMAL__INTERNAL_ONLY__PRESCORE_MATERIALIZATION",
+  "contract_commit":"4c85b85e14bc2f3168580bf98085a4a07d0bb62b",
+  "expansion_map_commit":"4f8e70ad89c7d533171830adb3e66a7477217c8f",
+  "control_source_final_commit":"717eb0bc13e0eb1ac7e5037d783f3a2e746078a6",
+  "control_source_dir":"handoff/20260911/i4k5r3_attempt2/control_final/",
+  "materializer_branch":"i4k5r3-a2-materialize-control",
+  "materializer_runner_commit":"a1bd14c0b009fe70021942fc0f249f170bc3e1de",
+  "workflow_commit":"f2524c3d4a7a78f200c1e43d2778e4114bb3f7d7",
+  "workflow_run_id":34590524187,
+  "artifact_id":10195424559,
+  "artifact_digest":"sha256:c9a41c5f5d2723e026c9d7c9f1b2318cb25175fcdca887cb702850c99ecef8e6",
+  "shared_expansion":{
+    "scene_count":50,
+    "insertions":50,
+    "total_chars":8590,
+    "canonical_sha256":"246d79d23bb9b13a3cc9620640a0138bfca1df5fe1c4a70b76a5ba3398844a60",
+    "identical_for_control_and_treatment":true
+  },
+  "materialized_control":{
+    "segment_count":10,
+    "scene_count":50,
+    "scene_ids_exact_1_50":true,
+    "metadata_excluded_body_chars":36539,
+    "body_ge_35000":true,
+    "logical_join_sha256":"00aee8b3a5a04d296bdbb9cbe189cfa5b9283719f837814a2b3ec7f61e9d62db"
+  },
+  "scientific_boundary":{
+    "quality_inspection_used":false,
+    "mask":0,
+    "scores":0,
+    "unblind":0,
+    "attempt_count_increment":false,
+    "treatment_output_at_receipt":0,
+    "control_source_bytes_modified":false,
+    "new_event_scene_sequence_owner_future_thread_cause":0
+  },
+  "status":"CONTROL_MATERIALIZATION_SCALE_PASS__TREATMENT_NOT_YET_RENDERED",
+  "next_legal_action":"Render Attempt2 Treatment source from the frozen shared upstream with PSSB only. Then materialize the exact same expansion map into Treatment and run paired deterministic prescore gates before any quality inspection."
+}
