@@ -1,0 +1,24 @@
+{
+  "schema":"P07I4K5R4AAttempt2SharedUpstreamArchitectureSealR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "attempt":2,
+  "classification":"BYTE_IDENTICAL_SHARED_UPSTREAM__G5A_PASSED__PRE_RENDER",
+  "g5a_pass_commit":"4f7a6e54d3be12f21d4c7a8802f4a75fbcaca351",
+  "canonical_binding_sha256":"8e023a006aa9ff9fca9ef5b0a0cf5d5735d69e992f4f102a2e6734c5076aadd6",
+  "canonical_binding_rule":"SHA256 of UTF-8 canonical JSON array sorted exactly as listed, each item containing commit, path and Git blob_sha with sort_keys=true and separators=(',',':').",
+  "bindings":[
+    {"path":"handoff/20260911/P07_I4K5R4A_ATTEMPT2_FRESH_SERIES_EPISODE_STATE_R1_20260911.json","commit":"3bc2da6d8717f2483073fe9cbfd078071f73ea20","blob_sha":"8b3eb478d3d3ba1506319b6872397984d4a7c658"},
+    {"path":"handoff/20260911/P07_I4K5R4A_ATTEMPT2_FRESH_EVENT_ECOLOGY_R1_20260911.json","commit":"7a95514cf10cedddb1d60d06e2f675b61aa23b3c","blob_sha":"d6192603bc875bc080b6b1f3a3892c56c1e552f7"},
+    {"path":"handoff/20260911/P07_I4K5R4A_ATTEMPT2_SHARED_10_SEQUENCE_PLAN_R1_20260911.json","commit":"698bff141a86d8c79275ab2dd21faf16058e138b","blob_sha":"56bf12baeeb9045e8e8dd49df56d880bc9c06811"},
+    {"path":"handoff/20260911/P07_I4K5R4A_ATTEMPT2_SHARED_50_SCENE_PLAN_R1_20260911.json","commit":"3440103b74da99f14e6cdd500b50ab6ae99eb1bc","blob_sha":"0913a0f0b923a11543d4a8e89d1eba8dc2f090f7"}
+  ],
+  "semantic_counts":{"characters":6,"events":6,"sequences":10,"scenes":50,"future_adoption_targets":6},
+  "arm_binding":"CONTROL_AND_TREATMENT_MUST_CONSUME_THESE_EXACT_FOUR_BLOBS",
+  "shared_actor_visible_expression_hygiene":"FROZEN_BY_PREREG__APPLIES_EQUALLY_TO_BOTH_ARMS",
+  "arm_difference":"Treatment adds frozen R3 PSSB only; Control does not.",
+  "mutation_after_seal_forbidden":["event","sequence","scene","decision_owner","future_owner","second_order_obligation","future_adoption_target","renderer_threshold"],
+  "outputs_at_this_seal":{"series":1,"event_ecology":1,"sequence_plan":1,"scene_plan":1,"G5A":1,"control":0,"treatment":0,"mask":0,"judge_scores":0,"mapping_open":0},
+  "next_legal_action":"Render Control SQ01-SQ10 from the exact sealed scene semantics using the shared Actor-Visible Expression Hygiene baseline and no PSSB. Run scale/hygiene prescore before Treatment.",
+  "authority_change":false
+}
