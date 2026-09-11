@@ -1,0 +1,60 @@
+{
+  "schema": "P07I4K5R2Attempt2PartialExecutionCheckpointR2",
+  "date": "2026-09-11",
+  "experiment_id": "P07-I4K-5R2-FRESH-SURFACE-HYGIENE-REPAIR-REPLICATION",
+  "classification": "DEVELOPMENT_PREFORMAL__INTERNAL_ONLY__PROVISIONAL_NON_SCORED",
+  "parent_physical_authority": "P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R19__I4K_RESEARCH_ARCHITECTURE_PROMOTED__I4K5R1_PREREG_SURFACE_REPAIR",
+  "parent_material_sha256": "e8cef1a6431cc7618a898e5856a01f95fe2c856570f100e962dc31c74cf59575",
+  "prereg_commit": "4f1e72851ef3d986679fcf4da33d660f18012cf1",
+  "shared_upstream_commit": "8875555c31ce62db20eb1471b249d33fe2023a59",
+  "attempt2_execution_note_commit": "4a0eb79f85d4869abd2e5c68dc974c2c4cba135e",
+  "supersedes_progress_checkpoint_only": "P07_I4K5R2_ATTEMPT2_PARTIAL_EXECUTION_CHECKPOINT_R1_20260911.json remains immutable history",
+  "attempt2_progress": {
+    "control_sequence_segments_completed": 10,
+    "control_sequence_segments_required": 10,
+    "control_scene_coverage": "S#1-S#50 complete across SQ01-SQ10; unchanged; do not regenerate",
+    "control_directory_tree_sha": "805b20d7fd089f6a5cea2c9aa7c75042326bb4b7",
+    "treatment_sequence_segments_completed": 5,
+    "treatment_sequence_segments_required": 10,
+    "treatment_scene_coverage": "S#1-S#25 complete across SQ01-SQ05; SQ06-SQ10 NOT YET AUTHORED",
+    "mask": 0,
+    "quality_scores": 0,
+    "unblind": 0,
+    "final_render_manifest": 0,
+    "attempt2_mechanical_admission": "NOT_RUN__INCOMPLETE_TREATMENT_TRANSPORTS"
+  },
+  "treatment_segments": [
+    {"sq":"SQ01","scenes":"01-05","blob":"3dc81d009ff9aca62931846afb8e69d12809fbad","size_bytes":9808,"commit":"abe5f38c47c4ad2bf9234b0ef3822d3c81935e03"},
+    {"sq":"SQ02","scenes":"06-10","blob":"2572613d29425635f2dbd06b0bcf852f9260d97c","size_bytes":9821,"commit":"b918aa779d5afdeaa6693f9feab7ee5c3c520532"},
+    {"sq":"SQ03","scenes":"11-15","blob":"96bb6149af27d18c3c70d848352af88f4661bda2","size_bytes":9018,"commit":"6107fd7aef8f0d1eb59d0f66877c5b923e653657"},
+    {"sq":"SQ04","scenes":"16-20","blob":"1fca01ebe59aac960f00bceedecbc5d2f116de27","size_bytes":9405,"commit":"626b9a13e5e2c9da287105d70f71fea2071ed0fd"},
+    {"sq":"SQ05","scenes":"21-25","blob":"00f6d58436e45696e356ff3302f269f15fb10c9e","size_bytes":9383,"commit":"6ae5df86afc36219145c6ac730e4f65d26b64458"}
+  ],
+  "governance_check": {
+    "quality_preference_inspected": false,
+    "threshold_changed": false,
+    "new_event_scene_sequence_owner_or_future_thread_added": false,
+    "allowed_deepening_only": "scene-local situation direction, performer physical action, subtext-bearing interaction, consequence realization"
+  },
+  "next_legal_action": "Resume Treatment Attempt 2 at SQ06 / scenes S#26-S#30, then continue SQ07-SQ10 in order under the frozen multipart execution note. Do not inspect quality preference. After all 20 segments exist, run deterministic attempt-2 mechanical admission against the original preregistered gates.",
+  "prescore_gate_after_completion": {
+    "body_chars_each_min": 35000,
+    "relative_body_char_gap_max": 0.10,
+    "scene_ids_each": "1..50 exact",
+    "treatment_meta_plan_token_leakage": 0,
+    "treatment_CH_SQ_internal_ids": 0,
+    "treatment_repeated_plan_purpose_copy": 0,
+    "treatment_exact_long_mechanical_duplicate_ratio": 0.0,
+    "shared_upstream_semantics_nonloss": true,
+    "critical_continuity_violations": 0
+  },
+  "physical_propagation": "PENDING_PHYSICAL_PROPAGATION__CURRENT_PHYSICAL_AUTHORITY_REMAINS_R19",
+  "unchanged_authorities": {
+    "active_engine": "P07-I4H Recovery R3",
+    "production": "ENG:R47",
+    "db": "DB59",
+    "formal_scored_count": 137,
+    "latest_formal": "R138",
+    "formal_r140": "0/0/0"
+  }
+}
