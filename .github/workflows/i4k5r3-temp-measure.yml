@@ -1,0 +1,25 @@
+name: I4K5R3 temporary prescore measurement
+on:
+  push:
+    branches: [i4k5r3-temp-measure-run]
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify frozen source commit ancestry
+        run: |
+          git fetch origin main
+          git merge-base --is-ancestor 7395faed683132d56352fdada1e1b18dabfb394f HEAD
+      - name: Measure Attempt1 arms without quality inspection
+        run: python handoff/20260911/I4K5R3_ATTEMPT1_MEASUREMENT_RUNNER_R1.py
+      - name: Upload deterministic metrics
+        uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r3-attempt1-prescore-metrics-r1
+          path: _i4k5r3_measure/metrics.json
