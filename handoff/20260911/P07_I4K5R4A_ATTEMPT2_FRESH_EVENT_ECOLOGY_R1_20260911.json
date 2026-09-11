@@ -1,0 +1,89 @@
+{
+  "schema":"P07I4K5R4AAttempt2FreshEventEcologyR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "attempt":2,
+  "classification":"FINAL_PROVISIONAL_ATTEMPT__FRESH_EVENT_ECOLOGY__PRE_RENDER",
+  "parent_physical_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R24__I4K5R4A_ATTEMPT1_PRESCORE_G5_REJECTED__ATTEMPT2_SERIES_SEALED__G5A_PENDING",
+  "parent_transport_root_sha256":"8b42c029f14f344ce7fbfc9407ab3cce1f9692f16ba8659c6045a327e3a8d043",
+  "series_state_commit":"3bc2da6d8717f2483073fe9cbfd078071f73ea20",
+  "g5_early_supplement_commit":"36b4965254cb24b7c15c430507f8a37569972bba",
+  "event_ecology":[
+    {
+      "id":"E01","origin":"STAGE_MACHINERY_SAFETY_EVENT",
+      "mechanism":"개막 리허설에서 플라이바 4번이 정지 후 수 센티미터 되밀리고, 같은 라인의 다른 바는 정상이다. 세트 전체를 포기할 근거도, 공연시간을 이유로 그대로 쓰기에도 근거가 부족하다.",
+      "attachments":["C02 무대기계 안전판정","C01 공연운영","C05 대체장치 반입"],
+      "downstream_decision_owner":"C02",
+      "required_decision":"나경이 공연시간과 분리해 4번 바를 사용보류하고 재검사 조건, 대체 고정방식, 해제 기준을 자기 이름으로 정한다.",
+      "future_thread_owner":"C02",
+      "second_order_obligation":"플라이 장치의 사용/보류/대체 상태와 재검사 결과를 공연 전 인계표에 남기는 장치별 상태기록 절차가 필요하다.",
+      "future_adoption_target":{"phase":"SQ10_FUTURE_ASSIGNMENT","required_semantics":"C02가 장치별 상태기록 양식과 재검사 인계 규칙을 후속 개선과제로 소유한다."}
+    },
+    {
+      "id":"E02","origin":"PROPERTY_IDENTITY_EVENT",
+      "mechanism":"소품실에 모양이 거의 같은 은색 담배케이스 두 개가 들어오는데 하나는 배우 개인 유품이고 하나는 극장 소품이다. 퀵체인지 중 임시 트레이가 바뀌어 기존 위치기억만으로는 구분이 불가능하다.",
+      "attachments":["C03 소품·개인물품 식별","C05 반입상자","C06 배우·관객 안내"],
+      "downstream_decision_owner":"C03",
+      "required_decision":"세윤이 두 물건을 모두 격리하고 사진·고유 흠집·인계기록을 교차확인해 확인된 것만 반환·사용하며 기억만으로 재분류하지 않는다.",
+      "future_thread_owner":"C06",
+      "second_order_obligation":"개인물품과 외형유사 소품에는 사진과 인계표식 두 개 이상의 독립 식별수단을 사용해야 한다.",
+      "future_adoption_target":{"phase":"SQ10_FUTURE_ASSIGNMENT","required_semantics":"C06가 C03와 함께 개인물품/소품 이중식별 안내규칙을 다음 공연 운영표에 반영하는 책임을 맡는다."}
+    },
+    {
+      "id":"E03","origin":"TACIT_CUE_TRANSFER_EVENT",
+      "mechanism":"저녁 공연의 핵심 음향 큐 하나가 대본 초 단위보다 배우의 숨 멎는 순간과 문짝 진동음에 맞춰져 있는데 기준이 교대 오퍼레이터에게 전해지지 않았다.",
+      "attachments":["C04 음향 큐 암묵지","C03 기록화","C01 공연진행"],
+      "downstream_decision_owner":"C04",
+      "required_decision":"기준이 부스에 끝까지 남아 대신 누르지 않고, 관찰 가능한 두 신호와 너무 빠르거나 늦은 실패징후를 실제 리허설로 넘겨 교대자가 직접 큐를 실행하게 한다.",
+      "future_thread_owner":"C03",
+      "second_order_obligation":"시간코드만이 아니라 배우·무대의 관찰 가능한 신호와 실패징후를 함께 적는 큐 인계카드가 필요하다.",
+      "future_adoption_target":{"phase":"SQ10_FUTURE_ASSIGNMENT","required_semantics":"C03가 C04의 관찰신호를 큐 인계카드 형식으로 표준화하는 후속과제를 소유한다."}
+    },
+    {
+      "id":"E04","origin":"VOLUNTEER_SCOPE_EVENT",
+      "mechanism":"객석 안내 자원봉사자들이 지연된 반입을 보고 무거운 흡음패널과 이동식 난간까지 옮기겠다고 나선다. 해당 작업은 훈련된 유급 스태프의 작업이며 부상·보험범위가 다르다.",
+      "attachments":["C06 자원봉사 범위","C01 인력조정","C05 반입작업"],
+      "downstream_decision_owner":"C06",
+      "required_decision":"유정이 도움을 전부 거절하거나 무제한 사용하지 않고, 안내물·가벼운 표지 정리까지만 허용하고 종료시각을 정하며 중량물과 안전통제는 스태프에게 남긴다.",
+      "future_thread_owner":"C01",
+      "second_order_obligation":"공연일 자원봉사와 유급·훈련업무를 위험도와 종료시각 기준으로 미리 나눈 운영표가 필요하다.",
+      "future_adoption_target":{"phase":"SQ10_FUTURE_ASSIGNMENT","required_semantics":"C01이 C06와 함께 자원봉사 업무경계·종료시각을 사전 운영표에 넣는 후속책임을 맡는다."}
+    },
+    {
+      "id":"E05","origin":"EXTERNAL_FREIGHT_TIMING_EVENT",
+      "mechanism":"도로통제로 후면 반입구의 대형차 진입 가능 시간이 18:10 이전으로 당겨지고, 늦게 오는 장비 상자 중 일부는 아직 내용 확인이 끝나지 않았다. 전부 먼저 들이면 식별·안전 확인이 뒤집히고, 전부 미루면 공연 핵심 장비도 놓친다.",
+      "attachments":["C05 반입 회차·봉인목록","C02 장비사용조건","C03 식별상태","C04 공연큐 대체"],
+      "downstream_decision_owner":"C05",
+      "required_decision":"준호가 확인 완료 장비만 1차 반입으로 봉인하고 미확인 상자는 후속 회차로 분리하며, 각 회차의 목록·시각·보류사유를 직접 소유한다.",
+      "future_thread_owner":"C04",
+      "second_order_obligation":"공연 핵심 장비가 후속 반입으로 밀릴 때 사용할 대체 음향·큐 운용안을 기술 인계자료에 연결해야 한다.",
+      "future_adoption_target":{"phase":"SQ10_FUTURE_ASSIGNMENT","required_semantics":"C04가 C05의 분할반입 상태를 입력으로 받아 핵심장비 지연 시 대체 큐·음향 운용안을 후속 기술자료에 연결한다."}
+    },
+    {
+      "id":"E06","origin":"EGRESS_FLOW_EVENT",
+      "mechanism":"소방점검 담당자가 피난복도·방화문 시험을 18:35로 앞당긴다. 같은 시간 후면 반입카트, 퀵체인지 의상카트, 접근성 관객 이동동선이 한 복도에서 겹친다.",
+      "attachments":["C01 공유공간 조정","C05 반입카트","C06 접근성 동선","C03 의상카트"],
+      "downstream_decision_owner":"C01",
+      "required_decision":"도현이 모든 작업을 자기 일정으로 흡수하지 않고 각 책임자가 반드시 필요한 시간대를 제시하게 한 뒤 피난동선을 우선 비우고 충돌구간만 시간분할한다.",
+      "future_thread_owner":"C05",
+      "second_order_obligation":"반입·퀵체인지·접근성 이동·피난시험을 한 장에 표시하는 시간대별 백스테이지 동선도가 필요하다.",
+      "future_adoption_target":{"phase":"SQ10_FUTURE_ASSIGNMENT","required_semantics":"C05가 C01·C06·C03의 시간창을 받아 시간대별 백스테이지 동선도를 후속 운영자료로 소유한다."}
+    }
+  ],
+  "checks":{
+    "event_count":6,
+    "downstream_decision_owner_distribution":{"C01":1,"C02":1,"C03":1,"C04":1,"C05":1,"C06":1},
+    "future_thread_owner_distribution":{"C01":1,"C02":1,"C03":1,"C04":1,"C05":1,"C06":1},
+    "all_events_have_mechanism":true,
+    "all_events_have_required_decision":true,
+    "all_events_have_second_order_obligation":true,
+    "all_events_have_explicit_future_adoption_target":true,
+    "dialogue_written":false,
+    "stage_direction_written":false,
+    "actor_expression_choreography_written":false,
+    "PSSB_written":false
+  },
+  "outputs_at_this_seal":{"series":1,"event_ecology":1,"sequence_plan":0,"scene_plan":0,"G5A":0,"control":0,"treatment":0,"mask":0,"judge_scores":0,"mapping_open":0},
+  "next_legal_action":"Create a shared 10-sequence plan that opens all six events and reserves an explicit SQ10 adoption slot for all six future_adoption_target obligations. No screenplay prose.",
+  "authority_change":false
+}
