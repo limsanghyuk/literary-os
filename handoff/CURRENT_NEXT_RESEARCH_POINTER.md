@@ -2,18 +2,17 @@
 Last updated: 2026-09-12
 
 ## CURRENT PHYSICAL BASELINE
-SYNC-R27 root `dec5f407671015c9bfb29c34d3bbd40b78ec5f2c4e44bd857a5c3eb3aaf4eb0a`.
+SYNC-R28 root `ceb12269eb7562d472e8e375cd78e3f1cbce873bcab4721f9f3baaa9ef131f10`.
 
-## ACTIVE EXPERIMENT
-`P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION`
-G6 mask PASS; G7 duplicate-score/provenance preflight PASS `a4a0636b023b599fdda28f36e429f8dc4e21c3f9`. Mask=1; judges=0; mapping open=0. GitHub Actions provider secret absent; provider dispatch is held.
+## R4A TRACK
+G6 PASS; G7 PASS; provider dispatch HOLD because GitHub Actions real-provider secret is absent. Mask=1; Judges=0; Mapping open=0. Exact surfaces remain frozen.
+
+## EVOLUTION TRACK
+Whole-Episode Degradation Diagnostic result `MIXED_SIGNAL` commit `9d6b341f206162eff11e0d937adc4df4255feb9f`.
 
 ## EXACT NEXT ORDER
-1. Connect a real-provider secret through an approved secret environment OR dispatch exactly three fresh external judge conversations.
-2. Each judge gets only the blind packet/context; hide R3 result and other judge scores.
-3. Seal all three valid score packets with provider/model/config/response receipt.
-4. Only then open mapping once and compute H1-H4 plus cross-judge confirmation.
-5. Immediately physical-propagate every meaningful result state before continuing.
-
-## PARALLEL LEGAL WORK
-While provider is blocked, proceed with KNOWLEDGE_ONLY whole-episode degradation diagnostic, human broadcast-reference calibration preparation, and actual-load/contract-consumption audits. None may change frozen R4A surfaces or thresholds.
+1. Preregister Residual Whole-Episode Craft Drift Diagnostic before measurement.
+2. Use sealed historical surfaces only; target unexplained I4C-style positional degradation with dialogue/subtext, line economy, character voice, scene specificity/genericness, action-vs-explanation and scene-position drift metrics.
+3. Keep this knowledge-only and do not rewrite historical verdicts.
+4. Separately, when a real provider becomes available, resume R4A with exactly 3 independent judges and keep mapping closed until all packets are sealed.
+5. Immediately physical-propagate every meaningful state change.
