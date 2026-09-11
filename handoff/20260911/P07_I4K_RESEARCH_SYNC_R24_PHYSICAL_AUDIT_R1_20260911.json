@@ -1,0 +1,23 @@
+{
+  "schema":"LiteraryOSR24PhysicalAuditR1",
+  "date":"2026-09-11",
+  "transport_set_root_sha256":"8b42c029f14f344ce7fbfc9407ab3cce1f9692f16ba8659c6045a327e3a8d043",
+  "changed_zip_audit":{
+    "CONTROL":{"entries":1512,"duplicate":0,"unsafe":0,"symlink":0,"encrypted":0,"crc_bad_entry":null},
+    "A":{"entries":1618,"duplicate":0,"unsafe":0,"symlink":0,"encrypted":0,"crc_bad_entry":null},
+    "B2":{"entries":1563,"duplicate":0,"unsafe":0,"symlink":0,"encrypted":0,"crc_bad_entry":null}
+  },
+  "unchanged_zip_audit":{
+    "B1":{"entries":56,"duplicate":0,"unsafe":0,"symlink":0,"encrypted":0,"crc_bad_entry":null},
+    "C1":{"entries":60,"duplicate":0,"unsafe":0,"symlink":0,"encrypted":0,"crc_bad_entry":null},
+    "D1":{"entries":25,"duplicate":0,"unsafe":0,"symlink":0,"encrypted":0,"crc_bad_entry":null},
+    "D2":{"entries":59,"duplicate":0,"unsafe":0,"symlink":0,"encrypted":0,"crc_bad_entry":null}
+  },
+  "overlay_entries":15,
+  "overlay_identical_CONTROL_A_B2":true,
+  "B2_unzip_tqq_exit":0,
+  "B2_local_central_filename_mismatch":0,
+  "combined_C2":{"bytes":318368553,"sha256":"58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7","entries":3774,"duplicate":0,"unsafe":0,"symlink":0,"encrypted":0,"crc_bad_entry":null},
+  "DB59":{"bytes":259756521,"sha256":"a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9"},
+  "final_pass":true
+}
