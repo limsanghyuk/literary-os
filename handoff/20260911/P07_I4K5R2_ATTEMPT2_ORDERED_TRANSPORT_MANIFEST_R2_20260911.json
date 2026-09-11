@@ -1,0 +1,70 @@
+{
+  "schema": "P07I4K5R2Attempt2OrderedTransportManifestR2",
+  "date": "2026-09-11",
+  "experiment_id": "P07-I4K-5R2-FRESH-SURFACE-HYGIENE-REPAIR-REPLICATION",
+  "classification": "DEVELOPMENT_PREFORMAL__INTERNAL_ONLY__PRESCORE_TRANSPORT_MANIFEST",
+  "supersedes": "P07_I4K5R2_ATTEMPT2_ORDERED_TRANSPORT_MANIFEST_R1_20260911.json",
+  "reason_for_supersession": "Prescore paired-world opening-time continuity correction in Treatment SQ10 before any masking/scoring/unblind.",
+  "correction_commit": "d94150c9d4a4911405624f79a37f447ae8e48c73",
+  "correction_receipt_commit": "9692ea67b92a0ff6bca3547a947ea90a48e958e6",
+  "measurement": {
+    "workflow_run_id": 34560018934,
+    "job_id": 103140506684,
+    "measurement_branch": "i4k5r2-temp-measure",
+    "measurement_branch_is_authority": false,
+    "measurement_class": "READ_ONLY_DETERMINISTIC_PRESCORE_NO_QUALITY",
+    "method": "sum(len(segment_body)) from first S# header to before END marker; transport metadata and synthetic inter-segment separators excluded"
+  },
+  "control": {
+    "segment_count": 10,
+    "scene_ids": "1..50 exact",
+    "body_chars": 42680,
+    "logical_join_sha256": "fe36bc04e05d522ae3d7f5b0bd4ef8e69e9264c49e6de692a2860b61a23508bf",
+    "segments": [
+      {"sq":"SQ01","scenes":"01-05","body_chars":4986,"bytes":11851,"sha256":"6735d4b4e9e93d587279a34528959f4dd7966407c49c689d479d646dcfa3dcaa"},
+      {"sq":"SQ02","scenes":"06-10","body_chars":4805,"bytes":11365,"sha256":"81882640f3ce7049857a3ccf44994866eaa4a5b0be603718493787ca3cbb3ada"},
+      {"sq":"SQ03","scenes":"11-15","body_chars":4458,"bytes":10579,"sha256":"361ac717c6be70e3881ae150a8554517afa3efdc84a0961e6341f7b84a58b65f"},
+      {"sq":"SQ04","scenes":"16-20","body_chars":4357,"bytes":10226,"sha256":"92af4804839186bbea153714b7ff93d1674fb9e14e55d500c16ea58c8f76e47b"},
+      {"sq":"SQ05","scenes":"21-25","body_chars":4388,"bytes":10374,"sha256":"e6f95a0b770047dcd1fc1ec346a78ba674dec61c0336f2feb0f3adef83458925"},
+      {"sq":"SQ06","scenes":"26-30","body_chars":4239,"bytes":9907,"sha256":"9b3aa6267627089301a3e515cefa22a5203b494b911a93311e9d72c053ebcdf8"},
+      {"sq":"SQ07","scenes":"31-35","body_chars":3990,"bytes":9461,"sha256":"551dc28888ecab1985963ea9442d19b7ece06b59863522ad03ca9d31a92f7474"},
+      {"sq":"SQ08","scenes":"36-40","body_chars":3790,"bytes":8896,"sha256":"95217cb597e3bfe82a07676c747d2981f5924d3ee95565aa7c03abc4a43b8e16"},
+      {"sq":"SQ09","scenes":"41-45","body_chars":3507,"bytes":8304,"sha256":"d72a950c8ee1ea424b226deaf0553c2cd19de8b95e64c215b7bb8d17bc924859"},
+      {"sq":"SQ10","scenes":"46-50","body_chars":4160,"bytes":9804,"sha256":"a5fcf258f79c7bd44ec62aa1f5956463036e27cc2dd66d1bf08ee93753486cad"}
+    ]
+  },
+  "treatment": {
+    "segment_count": 10,
+    "scene_ids": "1..50 exact",
+    "body_chars": 39860,
+    "logical_join_sha256": "b0b8383ee22d598c6fad1787f1589143d46a69d5612f8b3cc0102b664f682c52",
+    "segments": [
+      {"sq":"SQ01","scenes":"01-05","body_chars":4168,"bytes":9808,"sha256":"4e96fff02f1cd50adeb14f65714d826f454c02d4373cbe21d566ee59fcff09e1"},
+      {"sq":"SQ02","scenes":"06-10","body_chars":4228,"bytes":9821,"sha256":"e5b7a685d31755f00fc075769b6dd76c7e94337d7f74646a812f2d03957f1d9e"},
+      {"sq":"SQ03","scenes":"11-15","body_chars":3851,"bytes":9018,"sha256":"8a747291c43f44afd2366fb67fceaa6ac361cffab0b4d76e2ef81c60b88a2f61"},
+      {"sq":"SQ04","scenes":"16-20","body_chars":4014,"bytes":9405,"sha256":"4e42e61072371982b5614562478742c5f7ff3196249c0101c739ef70ee605b60"},
+      {"sq":"SQ05","scenes":"21-25","body_chars":3988,"bytes":9383,"sha256":"c3b150a8ba8834dad6b4bf94228ce0b81e6a6c9ecb91d41d77e7264263adc703"},
+      {"sq":"SQ06","scenes":"26-30","body_chars":4074,"bytes":9521,"sha256":"293bc13337b3afff09e11ace9648e8b2a5106b8f5d330f00e99d06d56718fc6b"},
+      {"sq":"SQ07","scenes":"31-35","body_chars":3854,"bytes":9119,"sha256":"af4bb25758f413b8b070b99b804aec05d31b226be5591f3b2c40b5a552a67cc3"},
+      {"sq":"SQ08","scenes":"36-40","body_chars":3908,"bytes":9101,"sha256":"a834331d12f1c5c276f447feadc340b99b6c402ca05235e074d96bf653dd351c"},
+      {"sq":"SQ09","scenes":"41-45","body_chars":3777,"bytes":8825,"sha256":"6231a58033e8c66d5d06fbd1c7ae33b51abab05c01d59a445b3ac7aaf5a68070"},
+      {"sq":"SQ10","scenes":"46-50","body_chars":3998,"bytes":9424,"sha256":"0021fc86d9d78cb35e6aa9ff8177c7736858f1899adffd39c26238031fafd03a"}
+    ]
+  },
+  "relative_body_char_gap": 0.06607310215557638,
+  "relative_body_char_gap_percent": 6.6073102155576375,
+  "mechanical_gates": {
+    "both_arms_ge_35000": true,
+    "gap_le_10_percent": true,
+    "scene_ids_exact_1_50": true,
+    "treatment_forbidden_internal_meta_literals_zero": true,
+    "treatment_CH_SQ_ids_zero": true,
+    "treatment_exact_long_duplicate_zero": true
+  },
+  "semantic_audit_final_seal": "PENDING",
+  "quality_score_or_preference_used": false,
+  "mask": 0,
+  "scores": 0,
+  "unblind": 0,
+  "physical_propagation": "PENDING_R20_REINFORCEMENT_SYNC"
+}
