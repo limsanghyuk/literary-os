@@ -1,0 +1,57 @@
+{
+  "schema":"ResidualWholeEpisodeCraftDriftDiagnosticResultR1",
+  "date":"2026-09-12",
+  "classification":"KNOWLEDGE_ONLY_RETROSPECTIVE_DIAGNOSTIC__NO_SCORE_REWRITE__NO_PROMOTION",
+  "prereg_commit":"90c45ab3df5ff7c56ef25820abdfd7ea6c991f23",
+  "physical_parent":"SYNC-R28",
+  "sources":{
+    "I4C_R2":"5a4943106d9013777620299beb1ded5e233bf825d7a3fbdf7b2fce59c1206639",
+    "I4E_R2":"008686ce8a960469ae6273cdfc297758c9dec2d4188a52f8b2fc48f89a0f6b59"
+  },
+  "tercile_metrics":{
+    "I4C_R2":{
+      "dialogue_share":{"early":0.38714,"middle":0.39590,"late":0.39337},
+      "dialogue_mean_chars":{"early":16.34573,"middle":14.85987,"late":15.59998},
+      "nearest_stage_4gram_jaccard":{"early":0.04043,"middle":0.04590,"late":0.04250},
+      "exact_repeated_stage_sentence_char_share":{"early":0.0,"middle":0.0,"late":0.0},
+      "observable_action_sentence_share":{"early":0.37247,"middle":0.38578,"late":0.32816},
+      "abstract_explanatory_sentence_share":{"early":0.0,"middle":0.0,"late":0.0},
+      "voice_mean_pairwise_jsd":{"early":0.97988,"middle":0.98216,"late":0.97478}
+    },
+    "I4E_R2":{
+      "dialogue_share":{"early":0.36949,"middle":0.36042,"late":0.33456},
+      "dialogue_mean_chars":{"early":16.70812,"middle":16.20214,"late":16.50220},
+      "nearest_stage_4gram_jaccard":{"early":0.04227,"middle":0.04527,"late":0.04399},
+      "exact_repeated_stage_sentence_char_share":{"early":0.0,"middle":0.0,"late":0.0},
+      "observable_action_sentence_share":{"early":0.37575,"middle":0.38804,"late":0.33020},
+      "abstract_explanatory_sentence_share":{"early":0.0,"middle":0.00420,"late":0.0},
+      "voice_mean_pairwise_jsd":{"early":0.97808,"middle":0.98100,"late":0.96747}
+    }
+  },
+  "I4C_selected_scene_outcome_association":{
+    "candidate_win_n":3,"human_win_n":9,
+    "dialogue_share_median":{"candidate_win":0.437900,"human_win":0.378102,"human_minus_candidate":-0.059798},
+    "dialogue_mean_chars_median":{"candidate_win":18.083333,"human_win":15.142857,"human_minus_candidate":-2.940476},
+    "dialogue_p90_chars_median":{"candidate_win":30.8,"human_win":23.0,"human_minus_candidate":-7.8},
+    "dialogue_gt30_share_median":{"candidate_win":0.125,"human_win":0.038462,"human_minus_candidate":-0.086538},
+    "nearest_stage_4gram_jaccard_median":{"candidate_win":0.036728,"human_win":0.043689,"human_minus_candidate":0.006961},
+    "observable_action_sentence_share_median":{"candidate_win":0.352941,"human_win":0.352941,"human_minus_candidate":0.0}
+  },
+  "hypothesis_assessment":{
+    "H_R1_POSITIONAL_GENERICNESS":"NOT_SUPPORTED_STABLY: I4C nearest-neighbor stage similarity rises slightly in middle but falls late; exact repeated stage sentences remain zero; I4E comparator shows nearly the same shape.",
+    "H_R2_DIALOGUE_ECONOMY_VOICE":"NOT_SUPPORTED: I4C dialogue length/economy does not degrade monotonically; candidate-win scenes are descriptively longer/more dialogue-heavy than human-win scenes; voice JSD is high and only slightly lower late, with similar I4E movement.",
+    "H_R3_ACTION_SPECIFICITY":"NOT_DISCRIMINATIVE: observable-action share falls late in I4C but falls almost identically in I4E, so it does not isolate the I4C residual failure.",
+    "H_R4_OUTCOME_ASSOCIATION":"WEAK_MIXED_ONLY: human-win scenes show slightly higher stage 4-gram nearest-neighbor similarity, but other preregistered metrics are equal or move opposite the hypothesized direction; n=3 candidate wins prevents strong inference."
+  },
+  "decision_output":"NO_STABLE_RESIDUAL_SIGNAL",
+  "interpretation":[
+    "The preregistered deterministic craft proxies do not explain the I4C middle/late human-competitiveness collapse.",
+    "The negative result rules out simple explanations based on dialogue line length, exact stage-direction repetition, gross lexical voice collapse, or the frozen action-sentence proxy.",
+    "The remaining gap is likely at a higher semantic/pragmatic craft level not captured by these shallow deterministic metrics: scene-specific dramatic choice, subtext quality, relationship pressure, status movement, surprise, or line-level intentionality are candidate dimensions, but they are hypotheses only.",
+    "Do not design a renderer intervention from these negative metrics. The next legal research step is a preregistered qualitative-error-taxonomy recovery using already sealed human-comparison pairs/judgment rationales if available, or a new blind human annotation protocol if the historical rationales are insufficient."
+  ],
+  "historical_verdicts_rewritten":false,
+  "current_R4A_changed":false,
+  "authority_change":false,
+  "next_research":"INSPECT_SEALED_I4C_STAGE_B_JUDGMENT_RATIONALES_WITHOUT_CHANGING_SCORES; IF RATIONALES_ARE_INSUFFICIENT, PREREGISTER_BLIND_CRAFT_ERROR_TAXONOMY_ANNOTATION_BEFORE_NEW_JUDGMENT."
+}
