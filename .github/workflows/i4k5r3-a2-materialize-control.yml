@@ -1,0 +1,23 @@
+name: I4K5R3 Attempt2 Control context materialization
+on:
+  push:
+    branches: [i4k5r3-a2-materialize-control]
+permissions:
+  contents: read
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Materialize shared context into Control
+        run: python handoff/20260911/I4K5R3_A2_SHARED_CONTEXT_MATERIALIZER_R1.py
+      - name: Upload materialized Control and metrics
+        uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r3-a2-materialized-control-r1
+          path: |
+            _i4k5r3_a2_materialized_control/
+            _i4k5r3_a2_materialized_control_metrics.json
