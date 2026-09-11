@@ -1,0 +1,60 @@
+{
+  "schema": "P07I4K5R2Attempt2SemanticContinuityAuditR1",
+  "date": "2026-09-11",
+  "experiment_id": "P07-I4K-5R2-FRESH-SURFACE-HYGIENE-REPAIR-REPLICATION",
+  "classification": "DEVELOPMENT_PREFORMAL__INTERNAL_ONLY__FINAL_PRESCORE_SEMANTIC_AUDIT",
+  "prereg_commit": "4f1e72851ef3d986679fcf4da33d660f18012cf1",
+  "shared_upstream_commit": "8875555c31ce62db20eb1471b249d33fe2023a59",
+  "shared_upstream_blob": "1062313e6bb59b9f58fc63321c292e62efd01ab1",
+  "control_state": {
+    "segments": 10,
+    "scenes": 50,
+    "logical_join_sha256": "fe36bc04e05d522ae3d7f5b0bd4ef8e69e9264c49e6de692a2860b61a23508bf",
+    "changed_since_prior_full_semantic_audit": false,
+    "prior_full_audit_result": "PASS__S01_S50_SHARED_UPSTREAM_SEMANTICS_NONLOSS__CRITICAL_CONTINUITY_0"
+  },
+  "treatment_state": {
+    "segments": 10,
+    "scenes": 50,
+    "logical_join_sha256": "b0b8383ee22d598c6fad1787f1589143d46a69d5612f8b3cc0102b664f682c52",
+    "sq10_sha256": "0021fc86d9d78cb35e6aa9ff8177c7736858f1899adffd39c26238031fafd03a",
+    "clock_continuity_correction_receipt": "P07_I4K5R2_ATTEMPT2_PAIRED_WORLD_CONTINUITY_CORRECTION_R2_20260911.json"
+  },
+  "sequence_audit": [
+    {"sq":"SQ01","scenes":"1-5","result":"PASS","preserved":"centralized-decision habit; rising-river signal; C02 technical judgment; partial basement restriction"},
+    {"sq":"SQ02","scenes":"6-10","result":"PASS","preserved":"overnight shelter designation; C03 staffing/end-condition authority; C02 public technical accountability; distributed role board"},
+    {"sq":"SQ03","scenes":"11-15","result":"PASS","preserved":"privacy vs emergency CCTV boundary; limited monitoring; actual-user access logging; C01 future emergency-CCTV rule ownership"},
+    {"sq":"SQ04","scenes":"16-20","result":"PASS","preserved":"C04 hearing-error exposure; radio-role transfer; local-knowledge externalization; C06 successor network ownership"},
+    {"sq":"SQ05","scenes":"21-25","result":"PASS","preserved":"approved-but-unusable grant; C05 named emergency purchaser/receipt chain; bounded purchase scope; C03 labor-governance future thread"},
+    {"sq":"SQ06","scenes":"26-30","result":"PASS","preserved":"C02 independent basement closure; C03 preservation/safety boundary; high-route knowledge propagation; 90-minute loading-ramp rule; direct owner board updates"},
+    {"sq":"SQ07","scenes":"31-35","result":"PASS","preserved":"clipped-video trust crisis; C06 direct factual correction; explicit unknowns; C01 future public-communication rule ownership"},
+    {"sq":"SQ08","scenes":"36-40","result":"PASS","preserved":"C01 enforced rest; C05 four-field receipt handoff; C04->C06 live knowledge transfer; public CCTV log; dynamic 90-minute owner reassignment"},
+    {"sq":"SQ09","scenes":"41-45","result":"PASS","preserved":"rear-door closure; CCTV uncertainty -> physical inspection; C06 resident-side cost-bearing withdrawal decision; joint factual notice; delayed city approval after field decisions"},
+    {"sq":"SQ10","scenes":"46-50","result":"PASS","preserved":"one-hour delayed opening; C04/C06 knowledge-update obligation; separate C03 labor and C05 city-support future owners; C01 CCTV/communication-rule future owner; distributed responsibilities retained at episode exit"}
+  ],
+  "mutation_checks": {
+    "new_event": 0,
+    "new_scene": 0,
+    "new_sequence": 0,
+    "responsibility_owner_mutation": 0,
+    "future_thread_owner_mutation": 0,
+    "sealed_scene_turn_loss": 0,
+    "critical_world_continuity_violation": 0,
+    "critical_relationship_continuity_violation": 0,
+    "critical_temporal_continuity_violation": 0
+  },
+  "surface_hygiene_semantic_check": {
+    "repeated_plan_purpose_copy": 0,
+    "plan_field_restated_as_surface_instruction": 0,
+    "legitimate_detailed_stage_direction_penalized": false
+  },
+  "preregistered_gate_results": {
+    "shared_upstream_semantics_nonloss": true,
+    "critical_continuity_violations": 0
+  },
+  "quality_score_or_preference_used": false,
+  "mask": 0,
+  "scores": 0,
+  "unblind": 0,
+  "decision": "PASS__FINAL_SEMANTIC_CONTINUITY_PRESCORE_GATE"
+}
