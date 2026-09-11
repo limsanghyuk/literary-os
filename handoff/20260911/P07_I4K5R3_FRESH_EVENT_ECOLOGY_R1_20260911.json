@@ -1,0 +1,94 @@
+{
+  "schema":"P07I4K5R3FreshEventEcologyR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R3-PERFORMANCE-SPECIFIC-SURFACE-BINDING-FRESH-REPLICATION",
+  "series_state_commit":"db22d387ee53ecd35a715a20796bbeed313f6293",
+  "series":"온담 공동도예소",
+  "episode":"가마문은 아침에 열린다",
+  "freshness":"COMPLETELY_FRESH_SYNTHETIC__NO_I4K5R1_R2_EVENT_REUSE",
+  "event_ecology":[
+    {
+      "id":"E01",
+      "origin":"CRAFT_TECHNICAL_EVENT",
+      "mechanism":"전날 밤 유약소성을 마친 2호 가마의 주 센서와 독립 확인 센서가 냉각구간에서 서로 다른 온도를 가리킨다. 다음 날 전시 운송 대상 작품 일부가 가마 안에 있어 개방 시각을 일정만으로 정할 수 없다.",
+      "attachments":["C02 가마 안전판단","C05 운송시각","C06 입주작가 출품작","C01 운영책임"],
+      "downstream_decision_owner":"C02",
+      "required_decision":"누가 재촉하더라도 가마를 열 수 있는 관찰조건과 재확인 시각을 민서가 자기 이름으로 정한다.",
+      "future_thread_owner":"C01",
+      "second_order":"이번 냉각판단의 근거와 인계방식이 향후 야간소성 후 개방·인수인계 규칙을 만드는 자료가 된다."
+    },
+    {
+      "id":"E02",
+      "origin":"FACILITY_AND_LABOR_EVENT",
+      "mechanism":"저녁 주민수업 직전 유약실 배기장치의 벨트가 미끄러져 충분한 환기를 보장할 수 없게 된다. 수업 자체를 취소하지 않으려면 작업 종류와 공간을 바꿔야 하지만 강사와 학생을 행사 준비 인력으로 돌리는 것은 허용되지 않는다.",
+      "attachments":["C03 학생안전·강사노동 경계","C01 공간배분","C04 비유약 대체수업 기술"],
+      "downstream_decision_owner":"C03",
+      "required_decision":"수현이 유약 작업을 중단하고 학생수업을 다른 공간의 비유약 작업으로 전환하며 종료·정리 범위를 직접 정한다.",
+      "future_thread_owner":"C01",
+      "second_order":"공방은 특정 실이 닫힐 때 수업을 취소/전환/연기하는 권한과 대체공간 조건을 정식 운영안으로 남겨야 한다."
+    },
+    {
+      "id":"E03",
+      "origin":"OWNERSHIP_RELATIONSHIP_EVENT",
+      "mechanism":"이동식 건조선반의 바퀴 하나가 빠지며 선반이 기울고, 청소년 수업의 무서명 초벌작품과 하경의 소형 주문작품 일부가 같은 완충매트 위로 섞인다. 깨진 작품은 없지만 소유자를 확신할 수 없는 조각이 생긴다.",
+      "attachments":["C06 지난해 공동선반 파손 보상 갈등","C03 학생 작품 소유권","C01 운영 신뢰"],
+      "downstream_decision_owner":"C06",
+      "required_decision":"하경이 자기 작품을 먼저 골라가는 대신 불확실 작품 전체를 격리하고, 자기 주문품에도 동일한 식별 기준을 적용하는 결정을 소유한다.",
+      "future_thread_owner":"C03",
+      "second_order":"학생·입주작가가 공간을 공유할 때 소성 전후 작품을 어떤 최소표식과 사진으로 인계할지 다음 수업운영 규칙으로 남는다."
+    },
+    {
+      "id":"E04",
+      "origin":"MATERIAL_CRAFT_EVENT",
+      "mechanism":"재생토 통에 조형용 굵은 샤모트 흙이 섞인 사실이 뒤늦게 확인된다. 폐기할 정도는 아니지만 얇은 물레작업에는 부적합할 수 있고, 현재는 복만 손의 저항과 표면 입자로 빠르게 구분할 수 있다.",
+      "attachments":["C04 암묵적 흙 판별기술","C03 수업재료","C06 개인 작업재료"],
+      "downstream_decision_owner":"C04",
+      "required_decision":"복이 혼합토를 전부 버리거나 자기만 판별하는 대신 용도별로 나누는 관찰법과 실패징후를 다른 두 사람에게 실제로 넘긴다.",
+      "future_thread_owner":"C03",
+      "second_order":"재생토 분류가 장인의 기억이 아니라 다음 사람이 반복 확인할 수 있는 공방의 재료 인계 절차가 된다."
+    },
+    {
+      "id":"E05",
+      "origin":"EXTERNAL_LOGISTICS_EVENT",
+      "mechanism":"전시 운송업체가 도심 오전 통제구간 때문에 픽업을 원래 10시에서 07:20으로 앞당긴다. 모든 작품을 무리하게 맞추면 가마 안전과 포장 안정성을 해치지만 일부 상자는 먼저 보낼 수 있다.",
+      "attachments":["C05 외부운송 조정","C02 가마 개방조건","C06 작품 납품약속","C01 행사 운영"],
+      "downstream_decision_owner":"C05",
+      "required_decision":"도윤이 ‘전부 07:20’ 요구를 전달만 하지 않고 1차 운송/후속 운송으로 나누는 협상안을 만들고 실제 운송 목록 owner가 된다.",
+      "future_thread_owner":"C06",
+      "second_order":"공동운송에서 개인작가가 어떤 시점에 분할배송을 받아들이고 고객·전시측과 약속을 갱신할지 조합원 물류 규칙으로 이어진다."
+    },
+    {
+      "id":"E06",
+      "origin":"INSTITUTIONAL_SPATIAL_EVENT",
+      "mechanism":"다음 주 예정이던 건물 안전동선 현장점검이 담당자의 일정 변경으로 당일 07:40으로 앞당겨진다. 평소 포장상자를 쌓아두는 복도와 후면 하역 대기구역을 점검 전까지 비워야 해, 전시 포장 동선과 아침 수업 준비가 같은 공간을 놓고 충돌한다.",
+      "attachments":["C01 공간운영 판단","C05 구청 일정","C03 수업공간","C06 포장·하역"],
+      "downstream_decision_owner":"C01",
+      "required_decision":"지안이 모든 작업을 직접 재배치하는 대신 각 owner의 시간·공간 조건을 받아 충돌하는 동선만 조정하고, 점검용 빈 통로를 우선순위로 확정한다.",
+      "future_thread_owner":"C05",
+      "second_order":"행사·수업·운송이 겹치는 날의 임시 적치구역과 점검동선을 구청·공방 공동 운영도면에 반영해야 한다."
+    }
+  ],
+  "ecology_checks":{
+    "event_count":6,
+    "all_events_have_character_or_relationship_attachment":true,
+    "all_events_have_mechanism":true,
+    "all_events_have_downstream_decision_owner":true,
+    "all_events_have_future_thread_owner":true,
+    "all_events_have_second_order_consequence":true,
+    "event_owner_distribution":{"C01":1,"C02":1,"C03":1,"C04":1,"C05":1,"C06":1},
+    "surface_realization_prescribed":false
+  },
+  "outputs_at_this_seal":{
+    "fresh_series_state":1,
+    "fresh_event_ecology":1,
+    "fresh_sequence_plan":0,
+    "fresh_scene_plan":0,
+    "control_render":0,
+    "treatment_render":0,
+    "mask":0,
+    "scores":0,
+    "unblind":0
+  },
+  "next_legal_action":"Create and seal a shared 10-sequence plan using only the sealed Series/Episode state and these six events. Do not write scene prose or render either arm.",
+  "authority_change":false
+}
