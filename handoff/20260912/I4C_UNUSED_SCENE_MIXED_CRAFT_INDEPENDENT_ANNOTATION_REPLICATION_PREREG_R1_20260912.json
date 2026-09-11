@@ -1,0 +1,30 @@
+{
+  "schema":"I4CUnusedSceneMixedCraftIndependentAnnotationReplicationPreregR1",
+  "date":"2026-09-12",
+  "classification":"EXPLORATORY_REPLICATION__KNOWLEDGE_ONLY__NO_RENDERER_INTERVENTION__NO_SCORE_REWRITE",
+  "parent_physical":"SYNC-R30",
+  "parent_transport_root":"d3d2799c30a32211eb0c101110dfd32daa6b16c3205ebea2844bafb8d17559f9",
+  "motivation_commit":"759b8a6e3e066e9c46fa14bf2cad40ddc08911c0",
+  "purpose":"Independently test whether the historical I4C candidate screenplay shows a broader multi-dimensional craft deficit in middle/late episode positions than in early positions, without reusing the 12 original Stage-B comparison scenes or their winner labels.",
+  "source_cutoff":"sealed I4C_R2_FINAL_SCREENPLAY_R1 only; no R4A material; no historical Stage-B rationales inside evaluator packets",
+  "eligible_scenes":"I4C R2 S01-S50 excluding original Stage-B scene ids S03,S07,S11,S14,S19,S21,S28,S33,S37,S41,S45,S50",
+  "strata":{"EARLY":"S01-S17","MIDDLE":"S18-S34","LATE":"S35-S50"},
+  "sample_rule":{"rng":"Python random.Random","seed":202609120304,"per_stratum":4,"selection":"sample 4 eligible scene ids independently within each stratum, then sort selected scene ids numerically for extraction","packet_order_seed":202609120305,"packet_order":"shuffle the 12 selected scenes and assign opaque ids AP01-AP12; mapping kept separate until all valid responses are sealed"},
+  "mask_rule":{"remove_numeric_scene_id":true,"preserve_location_time_heading_text":true,"preserve_character_names":true,"remove_sequence_number_if_present":true,"do_not_rewrite_dialogue_or_stage_direction":true,"do_not_truncate_scene":true},
+  "frozen_axes":{
+    "DIALOGUE_SUBTEXT":"literal/explanatory dialogue versus implication, avoidance, humor, indirect emotional information or subtext",
+    "CHARACTER_VOICE":"speaker-specific diction, rhythm, occupational/life language and differentiated verbal identity",
+    "RELATIONSHIP_STATUS_PRESSURE":"trust, hierarchy, power, status movement and relational pressure embedded in scene behavior/dialogue",
+    "PHYSICALIZATION_ACTION":"dramatic action, props, blocking, work process, command/action simultaneity rather than explanation",
+    "PACING_ESCALATION_TIME_PRESSURE":"scene-goal pressure, compression, escalation, countdown/immediacy and end pressure",
+    "ENSEMBLE_WORLD_SPECIFICITY":"distinct ensemble functions, world/occupation specificity, group rhythm and non-generic texture",
+    "INFORMATION_REVEAL_IRREVERSIBILITY":"reversal, disclosure, surprise, trust collapse or irreversible informational/emotional turn",
+    "LINE_ECONOMY_RHYTHM":"line economy, compactness, purposeful repetition, question/avoidance rhythm and removal of verbal overhead"
+  },
+  "annotation_contract":{"independent_evaluators":3,"fresh_sessions_required":true,"provider_receipt_required_for_authoritative_AI_evaluator":true,"coordinator_self_judging_prohibited":true,"per_axis_severity":{"0":"no material deficit","1":"minor/local deficit","2":"material scene-level deficit"},"per_scene_output":"8 axis severities plus one concise evidence note naming observable text/behavior only; no chain-of-thought","no_position_guessing":true},
+  "derived_metrics":{"scene_breadth":"count of axes whose cross-evaluator median severity >=1","scene_material_breadth":"count of axes whose cross-evaluator median severity >=2","scene_severity_sum":"sum of cross-evaluator median severities across 8 axes","stratum_mean_breadth":"mean scene_breadth within hidden stratum","stratum_mean_severity":"mean scene_severity_sum within hidden stratum"},
+  "decision_rule":{"POSITIVE_MIXED_CRAFT_POSITIONAL_REPLICATION":"after all 3 valid responses are sealed and mapping is opened once: (middle+late pooled mean breadth >= early mean breadth + 1.0) AND (middle+late pooled mean severity >= early mean severity + 2.0) AND at least 2/3 evaluators individually show middle+late mean raw severity > early mean raw severity","MIXED_OR_WEAK_REPLICATION":"direction is middle+late worse on at least one aggregate metric but full positive threshold is not met, or evaluator direction agreement <2/3","NO_POSITIONAL_REPLICATION":"middle+late is not worse than early on either aggregate breadth or aggregate severity"},
+  "valid_response_rule":"all 12 opaque scene ids present exactly once, all 8 axes integer 0-2, evidence note present, evaluator/provider identity metadata present, independence attestation present; malformed response may be replaced only before mapping open and without inspecting partial aggregate outcome",
+  "guardrails":["no use of original 12 Stage-B scenes in primary replication sample","no historical score rewrite","no R4A mapping or surface access","no renderer intervention from packet construction alone","no mapping open before three valid responses are sealed","no threshold changes after any response is seen"],
+  "next_legal_action":"mechanically sample eligible scene ids by frozen seeds; extract exact sealed scenes; build opaque annotation packet and separate mapping; hash/seal both; if independent evaluator execution unavailable stop at PACKETS_SEALED__RESPONSES_0__MAPPING_CLOSED"
+}
