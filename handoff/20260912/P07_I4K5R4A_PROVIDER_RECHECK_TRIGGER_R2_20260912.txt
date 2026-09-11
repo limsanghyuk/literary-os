@@ -1,0 +1,1 @@
+Provider availability recheck trigger only. No score, no mapping, no authority change.
