@@ -1,0 +1,32 @@
+{
+  "schema":"P07I4K5R4AAttempt2ControlCanonicalManifestR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "attempt":2,
+  "classification":"PRESCORE_CANONICAL_CONTROL_BINDING__QUALITY_NOT_INSPECTED",
+  "shared_upstream_seal_commit":"4585fd2c79e386b511f092f2b945aa904ab2cff8",
+  "G5A_pass_commit":"4f7a6e54d3be12f21d4c7a8802f4a75fbcaca351",
+  "midpoint_R2_pass_commit":"4c36912710aee24951ab10d95186e4bc2cbe9c92",
+  "canonical_segments":[
+    "handoff/20260911/i4k5r4a_attempt2/control_superseding_r2/P07_I4K5R4A_ATTEMPT2_CONTROL_SQ01_S01_05_R2_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt2/control_superseding_r2/P07_I4K5R4A_ATTEMPT2_CONTROL_SQ02_S06_10_R2_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt2/control_superseding_r2/P07_I4K5R4A_ATTEMPT2_CONTROL_SQ03_S11_15_R2_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt2/control_superseding_r2/P07_I4K5R4A_ATTEMPT2_CONTROL_SQ04_S16_20_R2_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt2/control_superseding_r2/P07_I4K5R4A_ATTEMPT2_CONTROL_SQ05_S21_25_R2_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt2/control/P07_I4K5R4A_ATTEMPT2_CONTROL_SQ06_S26_30_R1_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt2/control/P07_I4K5R4A_ATTEMPT2_CONTROL_SQ07_S31_35_R1_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt2/control/P07_I4K5R4A_ATTEMPT2_CONTROL_SQ08_S36_40_R1_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt2/control/P07_I4K5R4A_ATTEMPT2_CONTROL_SQ09_S41_45_R1_20260911.txt",
+    "handoff/20260911/i4k5r4a_attempt2/control/P07_I4K5R4A_ATTEMPT2_CONTROL_SQ10_S46_50_R1_20260911.txt"
+  ],
+  "segment_count":10,
+  "scene_range":"1..50",
+  "R1_SQ01_to_SQ05_status":"HISTORICAL_UNDER_SCALE__NOT_CANONICAL",
+  "quality_scores_consulted":false,
+  "treatment_written":false,
+  "mask":0,
+  "judge_scores":0,
+  "mapping_open":0,
+  "next_legal_action":"Run deterministic full-Control mechanical/hygiene gate over exactly these ten canonical segments. Treatment remains blocked until Control PASS.",
+  "authority_change":false
+}
