@@ -2,27 +2,25 @@
 Last updated: 2026-09-11
 
 ## CURRENT PHYSICAL BASELINE
-`P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R23__I4K5R4_INDEPENDENT_CONFIRMATION_PREREG__OUTPUTS_0`
-R23 root `8c2c283ac7f378b30c23a255d5d9835afc1b056df8865710a09999ffb296e901`.
+`P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R24__I4K5R4A_ATTEMPT1_PRESCORE_G5_REJECTED__ATTEMPT2_SERIES_SEALED__G5A_PENDING`
+R24 root `8b42c029f14f344ce7fbfc9407ab3cce1f9692f16ba8659c6045a327e3a8d043`.
 
-## IMMUTABLE PARENT EVIDENCE
-I4K-5R3 canonical internal PASS remains immutable: score `90a0d7985025fa0ebf221ae32aaa942b82271b50`; result `c241d0d7d030d143f2cd2e145308f9858953d566`.
-
-## R4A ATTEMPT1
-Mechanical prescore PASS, but G5 shared semantic nonloss FAIL before mask/score. Defect = E06 Facility Flow future owner C05 / time-phased common flow-map obligation missing from final downstream Scene future-thread adoption. Attempt1 closure `fcba9b9d2f3bfb57186043a4d41fae6bcca87707`. It is not a quality failure and must never be scored or patched.
-
-## ACTIVE FINAL PROVISIONAL ATTEMPT
-R4A Attempt2 is authorized under the frozen `bounded_provisional_attempts_max=2` rule. Attempt2 outputs = 0.
-Shared expression hygiene and frozen PSSB remain unchanged. Thresholds and 3-independent-judge rule remain unchanged.
-G5 early-execution supplement `36b4965254cb24b7c15c430507f8a37569972bba` applies the same semantic criterion as G5A before render and G5B after render.
+## ACTIVE EXPERIMENT
+`P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION`
+Prereg `4a4b521c6c69883d08b0590c36156b0ffab5303e` remains immutable.
+Attempt1 is prescore-rejected for G5 shared semantic nonloss failure, not scored and not a quality failure.
+Attempt2 is the final provisional attempt. Fresh Series/Episode `해온 시민극장 / 객석 불이 꺼지기 전에` is sealed at `3bc2da6d8717f2483073fe9cbfd078071f73ea20`.
 
 ## EXACT NEXT ACTION
-1. Create a completely fresh Attempt2 Series/Episode.
-2. Create fresh Event Ecology with explicit decision owner, future owner and second-order obligation per event.
-3. Create shared 10 Sequence.
-4. Create shared 50 Scene.
-5. Run G5A: every Event must retain event mechanism, decision owner, future owner and explicit second-order future adoption downstream.
-6. Only after G5A PASS, seal Shared Upstream and render Control/Treatment.
+1. Create completely fresh Attempt2 Event Ecology.
+2. For every event seal mechanism, downstream decision owner, future owner, second-order obligation, and explicit `future_adoption_target`.
+3. Seal shared 10-sequence plan.
+4. Seal shared 50-scene plan.
+5. Run G5A semantic/future-thread nonloss audit.
+6. Only a G5A PASS may authorize Control/Treatment rendering.
+
+## CURRENT OUTPUTS
+Series/Episode 1; Event Ecology 0; Sequence 0; Scene 0; G5A 0; Control 0; Treatment 0; Mask 0; Judges 0; mapping open 0.
 
 ## STATUS TOKEN
-`NEXT_RESEARCH__SYNC_R23__R4A_ATTEMPT1_G5_REJECTED__FINAL_ATTEMPT2_OUTPUTS_0__NEXT_FRESH_UPSTREAM_G5A`
+`NEXT_RESEARCH__SYNC_R24__R4A_ATTEMPT2_SERIES_SEALED__EVENT_ECOLOGY_NEXT__G5A_BEFORE_RENDER`
