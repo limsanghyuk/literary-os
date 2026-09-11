@@ -1,0 +1,24 @@
+{
+  "schema":"P07I4K5R4ASharedUpstreamArchitectureSealR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "prereg_commit":"4a4b521c6c69883d08b0590c36156b0ffab5303e",
+  "debug_gate_commit":"2955267eaff55442c4a2be55ddfd90bae1eebd2a",
+  "preoutput_gate_pass_commit":"fdacd1c17ab0ac669e07d7794fe02633b9a3322c",
+  "bindings":[
+    {"path":"handoff/20260911/P07_I4K5R4A_FRESH_SERIES_EPISODE_STATE_R1_20260911.json","commit":"69ab7258fc2d985f1749422b049b19bd759c6186","blob_sha":"47fd5e2144301eee28b8f00930be8c185a142af0"},
+    {"path":"handoff/20260911/P07_I4K5R4A_FRESH_EVENT_ECOLOGY_R1_20260911.json","commit":"aa248743c1dfadb1608af1d52c5e27f4949a1319","blob_sha":"2cf3f261dc27f14d5700c3526af9891a62e7879d"},
+    {"path":"handoff/20260911/P07_I4K5R4A_SHARED_10_SEQUENCE_PLAN_R1_20260911.json","commit":"1200d656eb9bb2605b75dfe9a47b10e1b935c9bd","blob_sha":"ae08263bafdf8fac4b95c79a61ab55f52df42453"},
+    {"path":"handoff/20260911/P07_I4K5R4A_SHARED_50_SCENE_PLAN_R1_20260911.json","commit":"e62a37be85c7617da4e6715219f493bac622171f","blob_sha":"8d23e392a272871cf1fb71bcd728f1270c6432a9"}
+  ],
+  "canonical_binding_encoding":"UTF-8 lines: <path>\\t<blob_sha>\\n in the listed order",
+  "canonical_binding_sha256":"bd85b341394e018765a303f1f3ed1a9f95b1800207eb09405241240534db9029",
+  "architecture_counts":{"characters":6,"events":6,"sequences":10,"scenes":50},
+  "control_treatment_semantic_access":"BYTE_IDENTICAL",
+  "shared_expression_hygiene":"Applied equally to both arms only at surface rendering; not encoded as different semantic upstream.",
+  "frozen_after_this_seal":["series facts","character facts","relationship facts","events","event mechanisms","sequence goals/turns/exits","scene goals/obstacles/turns/exits","decision owners","future-thread owners"],
+  "forbidden_render_mutations":["new event","deleted event","scene insertion/deletion","sequence reassignment","cause mutation","decision-owner mutation","future-thread mutation","new backstory used to justify emotion/expression"],
+  "outputs_at_this_seal":{"fresh_series_state":1,"fresh_event_ecology":1,"fresh_sequence_plan":1,"fresh_scene_plan":1,"shared_upstream_sealed":1,"control_render":0,"treatment_render":0,"mask":0,"independent_judge_scores":0,"mapping_open":0},
+  "next_legal_action":"Render provisional Control from this sealed architecture under the shared expression-hygiene baseline, with no PSSB. Run scale-only checkpoint before Treatment generation. Do not compare quality.",
+  "authority_change":false
+}
