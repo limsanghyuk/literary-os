@@ -21,5 +21,10 @@ jobs:
       - name: Measure Attempt 2 main transports
         run: |
           cd /tmp/i4k5r2-main
-          python "$GITHUB_WORKSPACE/handoff/20260911/I4K5R2_ATTEMPT2_MEASUREMENT_RUNNER_R1.py"
-      # rerun after prescore paired-world clock continuity repair
+          python "$GITHUB_WORKSPACE/handoff/20260911/I4K5R2_ATTEMPT2_MEASUREMENT_RUNNER_R1.py" | tee "$GITHUB_WORKSPACE/i4k5r2_measurement_after_clock_repair.json"
+      - name: Upload measurement artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r2-measurement-after-clock-repair
+          path: i4k5r2_measurement_after_clock_repair.json
+          if-no-files-found: error
