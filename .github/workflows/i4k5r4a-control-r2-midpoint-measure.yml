@@ -1,0 +1,22 @@
+name: I4K5R4A Control R2 midpoint scale measure
+on:
+  push:
+    branches: [i4k5r4a-control-r2-midpoint-measure]
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify frozen source commit is ancestor
+        run: git merge-base --is-ancestor 4ee0efeeab17759e1273231638c578fd7cabb3a2 HEAD
+      - name: Run scale-only R2 midpoint measurement
+        run: python handoff/20260911/I4K5R4A_CONTROL_R2_MIDPOINT_MEASUREMENT_RUNNER_R1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r4a-control-r2-midpoint-metrics-r1
+          path: i4k5r4a_control_r2_midpoint_metrics_r1.json
