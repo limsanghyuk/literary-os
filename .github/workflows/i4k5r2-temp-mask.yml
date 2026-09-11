@@ -1,0 +1,26 @@
+name: I4K5R2 temporary blind masking
+on:
+  push:
+    branches: [i4k5r2-temp-mask]
+permissions:
+  contents: read
+jobs:
+  mask:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build neutral masked packet and separate mapping
+        run: python handoff/20260911/I4K5R2_MASK_BUILDER_R1.py
+      - name: Upload masked packet
+        uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r2-masked-packet-r1
+          path: _i4k5r2_mask_build/masked_packet
+      - name: Upload sealed mapping separately
+        uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r2-mask-map-sealed-r1
+          path: _i4k5r2_mask_build/sealed_mapping
