@@ -1,0 +1,49 @@
+{
+  "schema":"I4CStageBExploratoryCraftTaxonomyPreregR1",
+  "date":"2026-09-12",
+  "classification":"EXPLORATORY_KNOWLEDGE_ONLY__RATIONALE_TEXT_PREVIOUSLY_EXPOSED_FOR_AVAILABILITY_ONLY__NO_SCORE_REWRITE",
+  "parent_physical":"SYNC-R29",
+  "availability_receipt_commit":"47e874600ee2a478c6c2f943d5edbafb4a607962",
+  "source_judgment_sha256":"306b6883bc3645c7de43fe601e3fb9bf2d4da761fc1b3d688e03cf05924b6b16",
+  "category_source_basis":[
+    "Existing R130/I4 evaluation dimensions: dialogue/subtext, character voice differentiation, physicalization, pacing/line economy, ensemble/relationship craft.",
+    "Existing R4A axes: character_relationship_integrity, ensemble_downstream_decision_ownership, escalation_pacing, dialogue_subtext_naturalness, stage_direction_playability, broadcast_readiness_non_generic_specificity.",
+    "Pre-inspection SYNC-R29 hypotheses: scene-specific dramatic choice, subtext, relationship pressure/status movement, surprise, line intentionality."
+  ],
+  "frozen_categories":{
+    "DIALOGUE_SUBTEXT":"Preference reason credits implication, avoidance, humor, indirect emotional information, or dialogue carrying more than literal exposition.",
+    "CHARACTER_VOICE":"Preference reason credits differentiated/idiosyncratic speech, life-language, occupational voice, or speaker-specific verbal rhythm.",
+    "RELATIONSHIP_STATUS_PRESSURE":"Preference reason credits trust, hierarchy, threat, family/work ethical conflict, power relation, status movement, or relational pressure embedded in the scene.",
+    "PHYSICALIZATION_ACTION":"Preference reason credits action, prop/object use, blocking, work process, command/action simultaneity, or procedure becoming dramatic action rather than explanation.",
+    "PACING_ESCALATION_TIME_PRESSURE":"Preference reason credits compression, countdown, immediacy, scene-goal pressure, rising end pressure, or escalation rhythm.",
+    "ENSEMBLE_WORLD_SPECIFICITY":"Preference reason credits multiple characters functioning distinctly, occupational/world specificity, group rhythm, community texture, or ensemble energy.",
+    "INFORMATION_REVEAL_IRREVERSIBILITY":"Preference reason credits reversal, disclosure, surprise, trust collapse, irreversible emotional/informational turn, or revelation shock.",
+    "LINE_ECONOMY_RHYTHM":"Preference reason credits economy, short-line rhythm, question/avoidance rhythm, compactness, or removal of explanatory verbal overhead."
+  },
+  "coding_rule":{
+    "unit":"one sealed Stage-B reason string per BPAIR",
+    "multi_label":true,
+    "max_labels_per_reason":3,
+    "primary_label":"choose the single category most directly named as the preference basis; ties resolved by earliest explicit craft basis in the reason, not by winner identity",
+    "secondary_labels":"up to two additional categories only when explicitly supported by wording",
+    "no_new_category_after_coding_starts":true,
+    "unknown_rule":"if no frozen category is explicit, label UNCLASSIFIED rather than create a new category",
+    "mapping_blind_first_pass":"code all 12 reasons before opening the already-sealed historical Stage-B mapping",
+    "mapping_use_after_coding":"after first-pass labels are sealed, open only the historical I4C Stage-B mapping/result needed to identify whether the preferred side was candidate or human and which selected scene/pair it represents",
+    "R4A_mapping":"PROHIBITED; current R4A mapping remains closed and unrelated"
+  },
+  "analysis_outputs":[
+    "overall frequency of primary/secondary craft bases",
+    "candidate-win vs human-win primary/secondary category frequencies after historical unblind",
+    "early/middle/late selected-scene category distribution",
+    "whether human wins cluster in one or more higher-level craft dimensions not captured by the prior deterministic proxy diagnostic"
+  ],
+  "decision_outputs":["QUALITATIVE_CLUSTER_SIGNAL","MIXED_QUALITATIVE_SIGNAL","NO_STABLE_QUALITATIVE_SIGNAL"],
+  "guardrails":[
+    "historical winner/confidence/verdict immutable",
+    "no R4A threshold/surface/mapping change",
+    "no causal claim from one internal judge rationale set",
+    "no renderer intervention authorized solely from this exploratory taxonomy",
+    "if a stable cluster appears, it may only motivate a fresh blind annotation/replication prereg before prospective intervention"
+  ]
+}
