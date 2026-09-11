@@ -1,0 +1,61 @@
+{
+  "schema": "P07I4K5R2Attempt2OrderedTransportManifestR3",
+  "date": "2026-09-11",
+  "experiment_id": "P07-I4K-5R2-FRESH-SURFACE-HYGIENE-REPAIR-REPLICATION",
+  "classification": "DEVELOPMENT_PREFORMAL__INTERNAL_ONLY__FINAL_PRESCORE_TRANSPORT_MANIFEST",
+  "supersedes": [
+    "P07_I4K5R2_ATTEMPT2_ORDERED_TRANSPORT_MANIFEST_R1_20260911.json",
+    "P07_I4K5R2_ATTEMPT2_ORDERED_TRANSPORT_MANIFEST_R2_20260911.json"
+  ],
+  "supersession_reason": "R3 incorporates the corrected SQ10 clock continuity, exact rerun provenance, and completed final semantic/continuity audit.",
+  "correction_commit": "d94150c9d4a4911405624f79a37f447ae8e48c73",
+  "correction_receipt_r2": "P07_I4K5R2_ATTEMPT2_PAIRED_WORLD_CONTINUITY_CORRECTION_R2_20260911.json",
+  "measurement": {
+    "workflow_run_id": 34560018934,
+    "job_id": 103140638655,
+    "workflow_head_sha": "3588f2d7c73402afdf55c5eac7d27923b312edd8",
+    "artifact_id": 10183967935,
+    "artifact_digest": "sha256:82e991a558db0e9c6974c6541112c1e7b65292f444ba19c15c686a84ec88fa4e",
+    "measurement_branch": "i4k5r2-temp-measure",
+    "measurement_branch_is_authority": false,
+    "measurement_class": "READ_ONLY_DETERMINISTIC_PRESCORE_NO_QUALITY",
+    "control_body_chars": 42680,
+    "treatment_body_chars": 39860,
+    "relative_gap_percent": 6.6073102155576375
+  },
+  "control": {
+    "segment_count": 10,
+    "scene_ids": "1..50 exact",
+    "logical_join_sha256": "fe36bc04e05d522ae3d7f5b0bd4ef8e69e9264c49e6de692a2860b61a23508bf"
+  },
+  "treatment": {
+    "segment_count": 10,
+    "scene_ids": "1..50 exact",
+    "logical_join_sha256": "b0b8383ee22d598c6fad1787f1589143d46a69d5612f8b3cc0102b664f682c52",
+    "sq10_body_chars": 3998,
+    "sq10_bytes": 9424,
+    "sq10_sha256": "0021fc86d9d78cb35e6aa9ff8177c7736858f1899adffd39c26238031fafd03a"
+  },
+  "mechanical_gates": {
+    "both_arms_ge_35000": true,
+    "gap_le_10_percent": true,
+    "scene_count_each_50": true,
+    "scene_ids_exact_1_50": true,
+    "treatment_forbidden_internal_meta_literals": 0,
+    "treatment_CH_SQ_ids": 0,
+    "treatment_exact_long_duplicate_ratio": 0.0
+  },
+  "semantic_audit": {
+    "receipt": "P07_I4K5R2_ATTEMPT2_SEMANTIC_CONTINUITY_AUDIT_R1_20260911.json",
+    "shared_upstream_semantics_nonloss": true,
+    "critical_continuity_violations": 0,
+    "new_event_scene_sequence_owner_mutations": 0,
+    "repeated_plan_purpose_copy": 0
+  },
+  "quality_score_or_preference_used": false,
+  "mask": 0,
+  "scores": 0,
+  "unblind": 0,
+  "physical_authority": "SYNC_R20_REINFORCED_REMAINS_CURRENT",
+  "post_r20_research": "PENDING_NEXT_PHYSICAL_PROPAGATION"
+}
