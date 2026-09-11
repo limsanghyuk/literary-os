@@ -1,0 +1,25 @@
+name: I4K5R3 Attempt2 paired materialize and prescore measure
+on:
+  push:
+    branches: [i4k5r3-a2-paired-materialize-measure]
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify frozen source checkpoint is ancestor
+        run: git merge-base --is-ancestor e3c67cf1f1818db20c2a08131407f30b4708a22f HEAD
+      - name: Materialize both arms and measure prescore mechanics only
+        run: python handoff/20260911/I4K5R3_ATTEMPT2_PAIRED_MATERIALIZE_MEASURE_R1.py
+      - name: Upload paired materialized arms and metrics
+        uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r3-a2-paired-materialized-prescore-r1
+          path: _i4k5r3_a2_paired/
