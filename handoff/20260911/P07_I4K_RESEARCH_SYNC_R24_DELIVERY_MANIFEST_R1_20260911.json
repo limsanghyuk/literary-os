@@ -1,0 +1,22 @@
+{
+  "schema": "LiteraryOSR24DeliveryManifestR1",
+  "date": "2026-09-11",
+  "physical_authority": "P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R24__I4K5R4A_ATTEMPT1_PRESCORE_G5_REJECTED__ATTEMPT2_SERIES_SEALED__G5A_PENDING",
+  "transport_set_root_sha256": "8b42c029f14f344ce7fbfc9407ab3cce1f9692f16ba8659c6045a327e3a8d043",
+  "read_order": ["CONTROL","A","B1","B2","C1","C2-A","C2-B","D1","D2"],
+  "changed_transports": ["CONTROL","A","B2"],
+  "byte_identical_transports": ["B1","C1","C2-A","C2-B","D1","D2"],
+  "files": [
+    {"role":"CONTROL","filename":"LITERARY_OS_CURRENT_CONTROL_P07_I4H_RECOVERY_R3_I4K_R4A_ATTEMPT2_SYNC_R24_20260911.zip","bytes":110151004,"sha256":"499eb39b1d0df58730f6c983e4ee53cb0d8bbdb49cd301732c5db89532469bca"},
+    {"role":"A","filename":"LITERARY_OS_CURRENT_PART_A_P07_I4H_RECOVERY_R3_I4K_R4A_ATTEMPT2_SYNC_R24_20260911.zip","bytes":124727075,"sha256":"8f718a5d8ad79c186cbc75d1a16451d937b84f73f06c9dbe4f4539de6afb15f3"},
+    {"role":"B1","filename":"LITERARY_OS_CURRENT_PART_B1_UNCHANGED_R1_20260909.zip","bytes":196427036,"sha256":"00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98"},
+    {"role":"B2","filename":"LITERARY_OS_CURRENT_PART_B2_P07_I4H_RECOVERY_R3_I4K_R4A_ATTEMPT2_SYNC_R24_20260911.zip","bytes":256861981,"sha256":"ff0a9576374ec06e3a550a3949a56fee2ca949d41f807404db080939aa38f710"},
+    {"role":"C1","filename":"LITERARY_OS_CURRENT_C1_RUNTIME_CORE_UNCHANGED_R1_20260909.zip","bytes":140020974,"sha256":"dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518"},
+    {"role":"C2-A","filename":"LITERARY_OS_CURRENT_C2_BINARY_A_P07_I4H_RECOVERY_R3_20260909.bin","bytes":159184277,"sha256":"d1fb7ba65ead633ec13d027d032e4bd3950e973b61408e04b620bd37f7997253"},
+    {"role":"C2-B","filename":"LITERARY_OS_CURRENT_C2_BINARY_B_P07_I4H_RECOVERY_R3_20260909.bin","bytes":159184276,"sha256":"49d454647f0c1d0920a582c2a5aa222b345719a3d6d396374dcb0921560e9414"},
+    {"role":"D1","filename":"LITERARY_OS_CURRENT_PART_D1_DB59_UNCHANGED_R1_20260909.zip","bytes":138011573,"sha256":"a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504"},
+    {"role":"D2","filename":"LITERARY_OS_CURRENT_PART_D2_DB59_UNCHANGED_R1_20260909.zip","bytes":173393886,"sha256":"c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4"}
+  ],
+  "final_physical_audit_pass": true,
+  "authority_boundary": {"active_engine":"P07-I4H Recovery R3","production":"ENG:R47","db":"DB59","formal_scored_count":137,"latest_formal":"R138","R140":"0/0/0"}
+}
