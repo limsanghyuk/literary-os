@@ -1,0 +1,36 @@
+{
+  "schema":"P07I4K5R3MaskR1InternalScoreSealR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R3-PERFORMANCE-SPECIFIC-SURFACE-BINDING-FRESH-REPLICATION",
+  "classification":"MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__INTERNAL_ONLY",
+  "mask_seal_commit":"737ecb3ac7c4ed02797046391f81a1deff44b253",
+  "scoring_contract_commit":"a172494fd8339c1c2e5a9aa7583b10e7154c4b94",
+  "mapping_opened_before_score_seal":false,
+  "score_scale":{"min":1.0,"max":10.0,"increment":0.5},
+  "axes_order":["causal_coherence","event_organicness","character_relationship_integrity","ensemble_downstream_decision_ownership","escalation_pacing","dialogue_subtext_naturalness","stage_direction_playability","future_thread_sustainability","broadcast_readiness_non_generic_specificity"],
+  "units":{
+    "U01":{"winner":"A","confidence":"HIGH","A":[8.5,8.5,8.0,8.5,8.5,8.5,9.0,8.5,9.0],"B":[8.5,8.5,8.0,8.5,8.0,8.0,8.0,8.5,8.0],"decisive_axes":["dialogue_subtext_naturalness","stage_direction_playability","broadcast_readiness_non_generic_specificity"],"critical_flags":[]},
+    "U02":{"winner":"A","confidence":"MEDIUM","A":[8.5,8.5,8.5,8.5,8.5,8.5,9.0,8.5,9.0],"B":[8.5,8.5,8.5,8.5,8.0,8.0,8.0,8.5,8.0],"decisive_axes":["stage_direction_playability","broadcast_readiness_non_generic_specificity"],"critical_flags":[]},
+    "U03":{"winner":"B","confidence":"MEDIUM","A":[8.5,8.5,8.5,8.5,8.0,8.0,8.0,9.0,8.0],"B":[8.5,8.5,8.5,8.5,8.5,8.5,9.0,9.0,9.0],"decisive_axes":["dialogue_subtext_naturalness","stage_direction_playability","broadcast_readiness_non_generic_specificity"],"critical_flags":[]},
+    "U04":{"winner":"A","confidence":"MEDIUM","A":[8.5,8.5,8.0,8.5,8.5,8.5,9.0,8.5,9.0],"B":[8.5,8.5,8.0,8.5,8.0,8.0,8.0,8.5,8.0],"decisive_axes":["dialogue_subtext_naturalness","stage_direction_playability","broadcast_readiness_non_generic_specificity"],"critical_flags":[]},
+    "U05":{"winner":"A","confidence":"HIGH","A":[8.5,8.5,8.5,9.0,8.5,8.5,9.0,9.0,9.0],"B":[8.5,8.5,8.5,9.0,8.0,8.0,8.0,9.0,8.0],"decisive_axes":["dialogue_subtext_naturalness","stage_direction_playability","broadcast_readiness_non_generic_specificity"],"critical_flags":[]},
+    "U06":{"winner":"TIE","confidence":"MEDIUM","A":[8.5,8.5,8.5,9.0,7.5,8.0,8.5,9.0,8.5],"B":[8.5,8.5,8.5,9.0,8.0,8.0,8.0,9.0,8.0],"decisive_axes":["escalation_pacing","stage_direction_playability"],"critical_flags":[]},
+    "U07":{"winner":"B","confidence":"HIGH","A":[8.5,8.5,8.5,8.5,8.0,8.0,8.0,9.0,8.0],"B":[8.5,8.5,8.5,8.5,8.5,8.5,9.0,9.0,9.0],"decisive_axes":["dialogue_subtext_naturalness","stage_direction_playability","broadcast_readiness_non_generic_specificity"],"critical_flags":[]},
+    "U08":{"winner":"A","confidence":"HIGH","A":[8.5,8.5,8.5,9.0,8.5,8.5,9.0,9.0,9.0],"B":[8.5,8.5,8.5,9.0,8.0,8.0,8.0,9.0,8.0],"decisive_axes":["dialogue_subtext_naturalness","stage_direction_playability","broadcast_readiness_non_generic_specificity"],"critical_flags":[]},
+    "U09":{"winner":"B","confidence":"HIGH","A":[8.5,8.5,8.5,9.0,8.5,8.0,8.0,9.0,8.5],"B":[8.5,8.5,8.5,9.0,8.5,8.5,9.0,9.0,9.0],"decisive_axes":["dialogue_subtext_naturalness","stage_direction_playability","broadcast_readiness_non_generic_specificity"],"critical_flags":[]},
+    "U10":{"winner":"B","confidence":"MEDIUM","A":[8.5,8.5,8.5,9.0,8.0,8.0,9.0,9.0,8.5],"B":[8.5,8.5,8.5,9.0,8.5,8.5,8.5,9.0,8.5],"decisive_axes":["escalation_pacing","dialogue_subtext_naturalness","stage_direction_playability"],"critical_flags":[]},
+    "U11":{"winner":"TIE","confidence":"MEDIUM","A":[9.0,8.5,8.5,9.0,8.5,8.0,8.0,9.0,8.0],"B":[9.0,8.5,8.5,9.0,8.5,8.5,8.5,9.0,8.5],"decisive_axes":["causal_coherence","ensemble_downstream_decision_ownership","future_thread_sustainability"],"critical_flags":[]},
+    "U12":{"winner":"B","confidence":"HIGH","A":[9.0,8.5,8.5,9.0,8.5,8.0,8.0,9.0,8.0],"B":[9.0,8.5,8.5,9.0,8.5,8.5,9.0,9.0,9.0],"decisive_axes":["dialogue_subtext_naturalness","stage_direction_playability","broadcast_readiness_non_generic_specificity"],"critical_flags":[]}
+  },
+  "masked_pairwise_totals":{"A":5,"B":5,"TIE":2},
+  "masked_arm_axis_means":{
+    "A":{"causal_coherence":8.5833333333,"event_organicness":8.5,"character_relationship_integrity":8.4166666667,"ensemble_downstream_decision_ownership":8.7916666667,"escalation_pacing":8.2916666667,"dialogue_subtext_naturalness":8.2083333333,"stage_direction_playability":8.5416666667,"future_thread_sustainability":8.875,"broadcast_readiness_non_generic_specificity":8.5416666667},
+    "B":{"causal_coherence":8.5833333333,"event_organicness":8.5,"character_relationship_integrity":8.4166666667,"ensemble_downstream_decision_ownership":8.7916666667,"escalation_pacing":8.25,"dialogue_subtext_naturalness":8.25,"stage_direction_playability":8.4166666667,"future_thread_sustainability":8.875,"broadcast_readiness_non_generic_specificity":8.4166666667}
+  },
+  "critical_flag_count":0,
+  "mapping_opened":false,
+  "scores_sealed":true,
+  "unblind":0,
+  "next_legal_action":"Open the separately sealed mapping artifact for the first time, transform fixed A/B scores into Treatment/Control, then compute H1-H4 without altering any score or threshold.",
+  "authority_change":false
+}
