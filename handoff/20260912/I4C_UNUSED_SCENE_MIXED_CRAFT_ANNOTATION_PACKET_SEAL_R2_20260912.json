@@ -1,0 +1,26 @@
+{
+  "schema":"I4CUnusedSceneMixedCraftAnnotationPacketSealR2",
+  "date":"2026-09-12",
+  "prereg_commit":"b4a323edb9efbecd34e196848f5c9f2c6c260163",
+  "source_zip_sha256":"5ecae6dedef560aa18bacd740e28598b506d804942563867500cb82e563f43a7",
+  "source_entry":"P07_CUMULATIVE_RESEARCH_EVIDENCE_SYNC_R1/RAW_EVIDENCE/I4C_R2/I4C_R2_FINAL_SCREENPLAY_R1.txt",
+  "source_screenplay_sha256":"5a4943106d9013777620299beb1ded5e233bf825d7a3fbdf7b2fce59c1206639",
+  "original_stage_b_excluded":["S03","S07","S11","S14","S19","S21","S28","S33","S37","S41","S45","S50"],
+  "selected_count":12,
+  "selected_by_stratum":{"EARLY":["S02","S10","S13","S16"],"MIDDLE":["S23","S26","S27","S29"],"LATE":["S42","S43","S46","S48"]},
+  "blind_packet_sha256":"c5c5dff8e1bf342dc955137e75c89937d6b8d3b9629830aa748d78f2d7935e3d",
+  "mapping_sha256":"46f8972c408250614761733ac29da956d1f1eecd3b0d3dbe9d14f13877ff2377",
+  "response_contract_sha256":"1e592b3bc176691d4160f3021d73c8c0063286ed968a6d529d4c5a023e270a9b",
+  "dispatch_slots":{
+    "J01":{"bytes":21320,"sha256":"5b9f56f1ff034bc6b2b760646bcac4ef5432bd1e89c7a354f0ae8d9cffd823c7"},
+    "J02":{"bytes":21320,"sha256":"e007411a395f70676391673082e98e0e922ff487361aaf5ade59cbc419d7b465"},
+    "J03":{"bytes":21320,"sha256":"6d9ebc75dccb7999c96946d5fec84e9ccc8c0f6120fcfccb203ba235a0e87a1d"}
+  },
+  "dispatch_bundle":{"bytes":26534,"sha256":"ccbe1b37d3f7bc045985e654855c701e5e3cd99cca98dca8b81810c0c9ccf59d","mapping_secret_included":false},
+  "mapping_open":0,
+  "responses":0,
+  "provider_dispatch_ready":false,
+  "R4A_mapping_open":0,
+  "status":"PACKETS_SEALED__RESPONSES_0__REPLICATION_MAPPING_CLOSED",
+  "next_legal_action":"Three fresh independent evaluator responses only. If unavailable, remain RESPONSES_0. Do not open replication mapping."
+}
