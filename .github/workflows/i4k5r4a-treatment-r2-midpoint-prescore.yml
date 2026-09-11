@@ -1,0 +1,23 @@
+name: I4K5R4A Treatment R2 midpoint prescore
+on:
+  push:
+    branches: [i4k5r4a-treatment-r2-midpoint-prescore]
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify frozen source commit is ancestor
+        run: git merge-base --is-ancestor 0ea02298e3807f5f5767cb2c173ba991a2ee57ce HEAD
+      - name: Run Treatment R2 midpoint prescore gate
+        run: python handoff/20260911/I4K5R4A_TREATMENT_R2_MIDPOINT_PRESCORE_RUNNER_R1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: i4k5r4a-treatment-r2-midpoint-prescore-r1
+          path: i4k5r4a_treatment_r2_midpoint_prescore_r1.json
