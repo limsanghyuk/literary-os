@@ -1,0 +1,50 @@
+{
+  "schema":"WholeEpisodeDegradationDiagnosticPreregR1",
+  "date":"2026-09-12",
+  "classification":"KNOWLEDGE_ONLY_RETROSPECTIVE_DIAGNOSTIC__NO_NEW_GENERATION__NO_PROMOTION",
+  "purpose":"Determine whether the repeated local-pass/whole-episode-degradation pattern is driven primarily by cumulative surface contamination, repeated plan-purpose serialization, continuity debt, or a mixture, using only sealed historical outputs.",
+  "source_sets":[
+    {"id":"I4C","role":"whole_episode_degradation_case_1"},
+    {"id":"I4E","role":"whole_episode_degradation_case_2"},
+    {"id":"I4K5","role":"whole_episode_degradation_case_3"}
+  ],
+  "hypotheses":{
+    "H_W1_CUMULATIVE_CONTAMINATION":"Absolute surface-contamination metrics increase or remain pathologically high across episode progression and predict whole-episode craft degradation.",
+    "H_W2_PLAN_PURPOSE_AMPLIFICATION":"Repeated sequence/scene plan-purpose serialization accumulates approximately with member-scene count and accounts for a material share of whole-episode surface length.",
+    "H_W3_CONTINUITY_DEBT":"State/temporal/logistical/relationship violations concentrate in later scene indices or after repeated state transitions."
+  },
+  "measurements":[
+    "scene_index",
+    "scene_body_chars",
+    "scene_entry_explanatory_preface_chars",
+    "scene_entry_explanatory_preface_ratio",
+    "sequence_purpose_copy_chars",
+    "sequence_purpose_copy_occurrences",
+    "internal_plan_meta_token_hits",
+    "procedural_architecture_vocabulary_density",
+    "state_continuity_violation_count",
+    "temporal_logistical_violation_count",
+    "relationship_state_violation_count"
+  ],
+  "analysis_plan":{
+    "per_work":"Compute scene-level time series and early/middle/late tercile summaries.",
+    "trend":"Estimate robust slope vs scene index for contamination and continuity metrics.",
+    "cross_case":"Compare direction and magnitude across the three sealed historical cases.",
+    "no_causal_overclaim":"A positive slope is diagnostic association, not proof of causality."
+  },
+  "decision_outputs":[
+    "DOMINANT_SIGNAL_H_W1",
+    "DOMINANT_SIGNAL_H_W2",
+    "DOMINANT_SIGNAL_H_W3",
+    "MIXED_SIGNAL",
+    "NO_STABLE_WHOLE_EPISODE_DEGRADATION_SIGNATURE"
+  ],
+  "forbidden_actions":[
+    "no historical score rewriting",
+    "no threshold lowering",
+    "no generation repair",
+    "no production or active-engine promotion",
+    "no use of results to reinterpret a sealed PASS/FAIL verdict"
+  ],
+  "next_after_diagnostic":"Use the dominant signature only to design a completely fresh prospective intervention and preregister it before new outputs."
+}
