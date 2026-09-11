@@ -1,0 +1,21 @@
+{
+  "schema":"LiteraryOSSyncR32PhysicalAuditR1",
+  "date":"2026-09-12",
+  "status":"PASS",
+  "transport_set_root_sha256":"b37a3774a4f701ab4caabac3cb5e62442403f499d21d89203ef85d199b6a2ffb",
+  "zip_audits":{
+    "CONTROL":{"entries":1568,"duplicate_count":0,"unsafe_path_count":0,"symlink_count":0,"encrypted_count":0,"crc_bad":null,"r32_overlay_entries":6},
+    "A":{"entries":1674,"duplicate_count":0,"unsafe_path_count":0,"symlink_count":0,"encrypted_count":0,"crc_bad":null,"r32_overlay_entries":6},
+    "B1":{"entries":56,"duplicate_count":0,"unsafe_path_count":0,"symlink_count":0,"encrypted_count":0,"crc_bad":null,"r32_overlay_entries":0},
+    "B2":{"entries":1619,"duplicate_count":0,"unsafe_path_count":0,"symlink_count":0,"encrypted_count":0,"crc_bad":null,"r32_overlay_entries":6},
+    "C1":{"entries":60,"duplicate_count":0,"unsafe_path_count":0,"symlink_count":0,"encrypted_count":0,"crc_bad":null,"r32_overlay_entries":0},
+    "D1":{"entries":25,"duplicate_count":0,"unsafe_path_count":0,"symlink_count":0,"encrypted_count":0,"crc_bad":null,"r32_overlay_entries":0},
+    "D2":{"entries":59,"duplicate_count":0,"unsafe_path_count":0,"symlink_count":0,"encrypted_count":0,"crc_bad":null,"r32_overlay_entries":0}
+  },
+  "r32_overlay_identical_across_CONTROL_A_B2":true,
+  "parent_entry_metadata_identity":{"CONTROL":true,"A":true,"B2":true},
+  "unchanged_transport_identity":{"B1":true,"C1":true,"C2-A":true,"C2-B":true,"D1":true,"D2":true},
+  "combined_C2":{"bytes":318368553,"sha256":"58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7","pass":true},
+  "DB59":{"sha256":"a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9","basis":"parent-preserved; D1/D2 transports byte-identical"},
+  "mapping_secrets_included":{"R4A":false,"I4C_replication":false}
+}
