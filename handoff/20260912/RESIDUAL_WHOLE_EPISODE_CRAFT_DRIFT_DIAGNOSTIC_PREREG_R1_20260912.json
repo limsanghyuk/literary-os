@@ -1,0 +1,50 @@
+{
+  "schema":"ResidualWholeEpisodeCraftDriftDiagnosticPreregR1",
+  "date":"2026-09-12",
+  "classification":"KNOWLEDGE_ONLY_RETROSPECTIVE_DIAGNOSTIC__NO_NEW_GENERATION__NO_PROMOTION",
+  "parent_result_commit":"9d6b341f206162eff11e0d937adc4df4255feb9f",
+  "physical_parent":"SYNC-R28",
+  "purpose":"Isolate the residual I4C-style middle/late whole-episode craft degradation that remains after scene-entry plan-preface, internal meta-token, and critical-continuity defects are absent.",
+  "primary_sources":[
+    {"id":"I4C_R2","surface_sha256":"5a4943106d9013777620299beb1ded5e233bf825d7a3fbdf7b2fce59c1206639","role":"residual_degradation_target"},
+    {"id":"I4E_R2","surface_sha256":"008686ce8a960469ae6273cdfc297758c9dec2d4188a52f8b2fc48f89a0f6b59","role":"same_episode_mode_driven_comparator"}
+  ],
+  "sealed_outcome_context":{
+    "I4C_R2_human_selected_scenes":[3,7,11,14,19,21,28,33,37,41,45,50],
+    "I4C_R2_outcomes":["HUMAN","CANDIDATE","CANDIDATE","CANDIDATE","HUMAN","HUMAN","HUMAN","HUMAN","HUMAN","HUMAN","HUMAN","HUMAN"],
+    "use":"descriptive association only; cannot create or rewrite quality scores"
+  },
+  "hypotheses":{
+    "H_R1_POSITIONAL_GENERICNESS":"I4C scene surface becomes more cross-scene-similar or mechanically repeated in middle/late scenes even without explicit plan-preface leakage.",
+    "H_R2_DIALOGUE_ECONOMY_VOICE":"I4C middle/late scenes show longer/more uniform dialogue and/or reduced speaker lexical differentiation relative to early scenes and/or I4E R2.",
+    "H_R3_ACTION_SPECIFICITY":"I4C middle/late stage directions contain a lower share of concrete observable-action sentences, leaving more abstract/expository connective tissue.",
+    "H_R4_OUTCOME_ASSOCIATION":"Within the frozen 12 I4C human-comparison scenes, human-win scenes are descriptively associated with worse values on one or more preregistered craft-drift metrics. Association is not causal proof."
+  },
+  "parser":{
+    "scene_regex":"(?m)^S#(\\d{2})\\.[^\\n]*$",
+    "dialogue_regex":"^([가-힣A-Za-z0-9_]+)(?:\\([^\\n:]+\\))?:\\s*(.+)$",
+    "terciles":"1-17 early; 18-34 middle; 35-50 late",
+    "word_regex":"[가-힣A-Za-z]+"
+  },
+  "metrics":{
+    "dialogue_share":"dialogue characters / all normalized scene-body characters",
+    "dialogue_line_economy":["mean dialogue chars","median dialogue chars","p90 dialogue chars","share lines >30 chars","share lines >45 chars"],
+    "speaker_voice_differentiation":"For speakers with >=8 dialogue lines in a tercile, build character-trigram frequency distributions from that speaker's dialogue and compute mean pairwise Jensen-Shannon divergence base2; no speaker-name tokens are added.",
+    "exact_stage_sentence_repetition":"Normalize whitespace; split nondialogue stage directions on Korean/ASCII sentence endings; sentences >=15 chars. Repeated-stage-sentence char share counts sentences that occur in more than one scene.",
+    "scene_genericness":"For each scene, form a set of character 4-grams from normalized nondialogue stage direction text; compute its maximum Jaccard similarity to another scene. Summarize mean nearest-neighbor Jaccard by tercile.",
+    "observable_action_sentence_share":"Stage-direction sentences matching at least one frozen observable-action regex / all stage-direction sentences >=8 chars.",
+    "observable_action_regexes":["본다","바라본다","놓는다","내려놓는다","잡는다","쥔다","걷는다","일어난다","앉는다","연다","닫는다","넣는다","꺼낸다","민다","밀어","당긴다","돌린다","멈춘다","건넨다","적는다","쓴다","접는다","펼친다","들어간다","나간다","따라간다","가리킨다","누른다","세운다","옮긴다","기댄다","고개를","손을","시선을"],
+    "abstract_explanatory_sentence_share":"Stage-direction sentences matching at least one frozen meta-explanatory regex / all stage-direction sentences >=8 chars.",
+    "abstract_explanatory_regexes":["보여준다","드러낸다","강조한다","표현한다","느끼게 한다","보이게 한다","이어져야 한다","해야 한다","설명한다","관계 변화","구조를","의미를"],
+    "position_trend":"Early/middle/late summaries plus Theil-Sen scene-index slope where a per-scene metric exists."
+  },
+  "analysis_plan":{
+    "within_I4C":"Compare early/middle/late direction and magnitude.",
+    "same_episode_comparator":"Compare I4C_R2 vs I4E_R2 using identical parser/metrics.",
+    "outcome_association":"Compare medians for I4C selected candidate-win vs human-win scenes; descriptive only.",
+    "no_threshold":"No metric threshold is a PASS/FAIL gate in this retrospective diagnostic."
+  },
+  "decision_outputs":["POSITIONAL_CRAFT_DRIFT_SIGNAL","VOICE_ECONOMY_SIGNAL","ACTION_SPECIFICITY_SIGNAL","MIXED_RESIDUAL_SIGNAL","NO_STABLE_RESIDUAL_SIGNAL"],
+  "forbidden_actions":["no historical score rewrite","no current R4A threshold change","no generation repair","no Active Engine/Production/DB/Formal promotion","no causal claim from descriptive association"],
+  "next_after_result":"Only after the residual signature is isolated may a fresh prospective renderer intervention be preregistered."
+}
