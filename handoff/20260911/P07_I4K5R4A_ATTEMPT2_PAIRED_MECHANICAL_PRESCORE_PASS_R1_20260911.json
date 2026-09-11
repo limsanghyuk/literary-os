@@ -1,0 +1,21 @@
+{
+  "schema":"P07I4K5R4AAttempt2PairedMechanicalPrescorePassR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "attempt":2,
+  "status":"PASS__MECHANICAL_PRESCORE__QUALITY_NOT_INSPECTED",
+  "control_chars":40650,
+  "treatment_chars":37620,
+  "relative_gap":0.07453874538745388,
+  "all_sequences_min_3600":true,
+  "scene_ids_exact_1_50_both":true,
+  "meta_leak_zero_both":true,
+  "direct_emotion_pattern_zero_both":true,
+  "exact_long_duplicate_zero_both":true,
+  "quality_inspection_performed":false,
+  "mask":0,
+  "judge_scores":0,
+  "mapping_open":0,
+  "next_legal_action":"G5B_SEMANTIC_CONTINUITY_FINAL_AUDIT",
+  "render_mutation_after_this_receipt":"PROHIBITED"
+}
