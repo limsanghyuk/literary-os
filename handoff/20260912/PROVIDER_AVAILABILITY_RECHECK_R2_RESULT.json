@@ -1,0 +1,10 @@
+{
+  "schema": "LiteraryOSProviderAvailabilityRecheckR2",
+  "date": "2026-09-12",
+  "provider_secret_present": false,
+  "scores_created": 0,
+  "mapping_open": 0,
+  "surface_mutation": false,
+  "status": "HOLD__REAL_PROVIDER_SECRET_ABSENT",
+  "receipt_sha256": "07d0ea339008697724019c0508fbb75a55640cbe6b4382968283262aa0886ecf"
+}
