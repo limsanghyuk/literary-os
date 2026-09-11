@@ -1,0 +1,22 @@
+name: I4K5R4A Attempt2 Control midpoint R2
+on:
+  push:
+    branches: [i4k5r4a-attempt2-control-midpoint-r2]
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify frozen source commit is ancestor
+        run: git merge-base --is-ancestor 1c3345ca26114f59532a61d8be703fe2ee2ab6d7 HEAD
+      - name: Run R2 midpoint gate
+        run: python handoff/20260911/I4K5R4A_ATTEMPT2_CONTROL_MIDPOINT_R2_RUNNER_R1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: i4k5r4a-attempt2-control-midpoint-r2
+          path: /tmp/i4k5r4a_attempt2_control_midpoint_r2_metrics.json
