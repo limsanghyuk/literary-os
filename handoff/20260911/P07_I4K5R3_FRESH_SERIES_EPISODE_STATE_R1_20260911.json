@@ -1,0 +1,114 @@
+{
+  "schema":"P07I4K5R3FreshSeriesEpisodeStateR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R3-PERFORMANCE-SPECIFIC-SURFACE-BINDING-FRESH-REPLICATION",
+  "classification":"DEVELOPMENT_PREFORMAL__INTERNAL_ONLY__FRESH_PROSPECTIVE",
+  "execution_parent_physical_authority":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R21__I4K5R2_VALID_FAIL_CLOSED__I4K5R3_PSSB_PREREG_OUTPUTS_0",
+  "execution_parent_transport_root_sha256":"65093f163ac38ab23e67153421494f0edf06a28bedac5debaa7d3a3be7de57eb",
+  "prereg_commit":"433dbfa0e9ac9c886dd04b89fddb4bbe7672a11b",
+  "freshness":{
+    "series_episode":"COMPLETELY_FRESH_SYNTHETIC",
+    "reuse_of_I4K5R1_R2_series":0,
+    "reuse_of_I4K5R1_R2_episode":0,
+    "reuse_of_I4K5R1_R2_characters":0,
+    "reuse_of_I4K5R1_R2_event_sequence_scene_or_prose":0,
+    "prior_scored_prose_reuse":0
+  },
+  "series":{
+    "title":"온담 공동도예소",
+    "format":"ensemble workplace/community drama",
+    "standing_premise":"A district-supported ceramics cooperative mixes resident artists, community classes, equipment maintenance and neighborhood cultural programs in one converted warehouse, so craft decisions and public obligations repeatedly collide in tangible shared space.",
+    "recurring_locations":[
+      "공동 작업홀",
+      "가마실",
+      "유약실",
+      "건조실",
+      "포장실",
+      "재생토 작업대",
+      "후면 하역장",
+      "작은 사무실"
+    ]
+  },
+  "episode":{
+    "title":"가마문은 아침에 열린다",
+    "time_span":"18:20 to next day 08:20",
+    "episode_seed":"On the night before a district youth ceramics exhibition pickup, the cooperative must decide what can safely be unloaded, taught, identified, remade, packed and handed off when equipment, material, ownership and schedule constraints stop lining up.",
+    "episode_boundary":"The episode resolves the overnight operational crisis but leaves multiple concrete craft, labor, documentation and relationship obligations owned by different characters for later episodes.",
+    "tone":"grounded ensemble drama; practical pressure, dry humor, craft intimacy, restrained emotion; no disaster spectacle"
+  },
+  "characters":[
+    {
+      "id":"C01",
+      "name":"임지안",
+      "age":44,
+      "role":"공동도예소 운영책임자",
+      "state":"빠르고 유능하지만 사고가 나면 모든 승인과 사후처리를 자기 이름으로 모으는 습관이 있다.",
+      "private_pressure":"다음 달 재위탁 심사를 앞두고 있어 작은 문제도 운영 실패로 보일까 예민하다.",
+      "arc":"모든 결정을 대신하는 책임자에서 서로 다른 기술·교육·물류 판단이 충돌할 때 조정하는 책임자로 이동한다."
+    },
+    {
+      "id":"C02",
+      "name":"남민서",
+      "age":34,
+      "role":"가마·설비 담당 기술자",
+      "state":"수치와 절차에 강하지만 이전 시즌 과소성 판정 논란 뒤 안전 판단을 말하기 전에 상급 확인을 한 번 더 받는 버릇이 생겼다.",
+      "arc":"가마와 설비의 시간·안전 판단을 자기 이름으로 내리고, 그 근거와 해제조건까지 다른 사람에게 넘길 수 있게 한다."
+    },
+    {
+      "id":"C03",
+      "name":"조수현",
+      "age":39,
+      "role":"지역 주민·청소년 도예수업 강사",
+      "state":"학생 작품과 강사 노동의 경계를 강하게 지키며, 행사 일정 때문에 수업이 임시 노동력으로 변하는 것을 싫어한다.",
+      "arc":"무조건적인 일정 방어가 아니라 학생 안전·작품 권리·강사 노동을 지키면서도 필요한 임시 협업의 종료조건과 인계자를 직접 설계한다."
+    },
+    {
+      "id":"C04",
+      "name":"윤복",
+      "age":67,
+      "role":"창립 조합원·전업 도예가",
+      "state":"흙의 수분과 입자를 손끝으로 구분하는 데 탁월하지만 감각을 표와 매뉴얼로 옮기면 기술이 죽는다고 여긴다.",
+      "arc":"자기 손이 있어야만 가능한 솜씨로 남는 대신 다른 사람이 반복해서 검증할 수 있는 관찰법과 실패 징후를 넘긴다."
+    },
+    {
+      "id":"C05",
+      "name":"강도윤",
+      "age":30,
+      "role":"구청 문화사업 계약 코디네이터",
+      "state":"일정·운송·지원사업 문서는 잘 다루지만 공방 기술판단에 개입할 권한은 없다.",
+      "arc":"마감시간을 현장에 밀어 넣는 전달자에서 외부 일정과 행정 제약을 현장 owner들이 쓸 수 있는 선택지로 바꾸는 조정자가 된다."
+    },
+    {
+      "id":"C06",
+      "name":"서하경",
+      "age":36,
+      "role":"입주 도예가·조합원",
+      "state":"지난해 공동 선반 파손 때 개인 작품 보상이 늦었던 일로 운영진을 신뢰하지 않으며 자기 작품과 공간 경계를 분명히 한다.",
+      "arc":"공동 시스템을 감시하는 위치에만 머물지 않고 자기 작품에도 손해가 돌아오는 공동 물류·식별 결정을 직접 소유한다."
+    }
+  ],
+  "relationship_state":[
+    {"pair":["C01","C06"],"state":"지난 선반 파손 보상 지연으로 신뢰가 낮지만 서로의 실무 능력은 인정한다."},
+    {"pair":["C02","C05"],"state":"도윤은 일정확정을 원하고 민서는 수치가 나오기 전 확답을 꺼려 자주 마찰한다."},
+    {"pair":["C03","C04"],"state":"수현은 복의 솜씨를 존중하지만 학생에게 '보고 배우면 된다'는 식의 전수를 교육으로 보지 않는다."},
+    {"pair":["C01","C02"],"state":"민서는 설비 판단을 지안에게 보고한 뒤 승인받는 습관이 있고 지안도 그것을 당연하게 받아왔다."},
+    {"pair":["C03","C06"],"state":"학생 작품과 입주작가 작품이 공간을 나눠 쓰며 작은 충돌이 잦지만 둘 다 작품 소유권에는 민감하다."}
+  ],
+  "surface_neutrality":{
+    "note":"This state defines world, character and relationship facts only. It does not prescribe PSSB gestures, blocking quotas, camera grammar, dialogue style or Treatment-specific surface realization.",
+    "control_treatment_access":"BYTE_IDENTICAL_AFTER_SHARED_UPSTREAM_SEAL"
+  },
+  "outputs_at_this_seal":{
+    "fresh_series_state":1,
+    "fresh_event_ecology":0,
+    "fresh_sequence_plan":0,
+    "fresh_scene_plan":0,
+    "control_render":0,
+    "treatment_render":0,
+    "mask":0,
+    "scores":0,
+    "unblind":0
+  },
+  "next_legal_action":"Generate and seal fresh Event Ecology only, using this sealed Series/Episode state; do not create sequence/scene plans or render surfaces before Event Ecology is sealed.",
+  "authority_change":false
+}
