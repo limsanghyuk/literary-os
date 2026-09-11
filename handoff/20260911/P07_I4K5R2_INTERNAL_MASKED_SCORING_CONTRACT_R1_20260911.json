@@ -1,0 +1,38 @@
+{
+  "schema": "P07I4K5R2InternalMaskedScoringContractR1",
+  "date": "2026-09-11",
+  "experiment_id": "P07-I4K-5R2-FRESH-SURFACE-HYGIENE-REPAIR-REPLICATION",
+  "classification": "MASKED_SAME_AGENT__DEVELOPMENT_PREFORMAL__INTERNAL_ONLY",
+  "prereg": "P07_I4K5R2_FRESH_SURFACE_REPAIR_REPLICATION_PREREG_R1_20260911.json",
+  "mask_seal": "P07_I4K5R2_MASK_R2_SEAL_R1_20260911.json",
+  "scale_source": "Inherited from the immediately preceding I4K-5 evaluation contract: 1-10 in 0.5 increments. No new scale or threshold introduced after outputs.",
+  "unit_scoring_order": "For each U01-U12: first record direct A/B/TIE preference under masking; then score A and B on all preregistered axes. Do not open mapping before score seal.",
+  "score_scale": {"min":1.0,"max":10.0,"increment":0.5},
+  "pairwise_outcomes": ["A","B","TIE"],
+  "confidence": ["LOW","MEDIUM","HIGH"],
+  "axes": [
+    "causal_coherence",
+    "event_organicness",
+    "character_relationship_integrity",
+    "ensemble_downstream_decision_ownership",
+    "escalation_pacing",
+    "dialogue_subtext_naturalness",
+    "stage_direction_playability",
+    "future_thread_sustainability",
+    "broadcast_readiness_non_generic_specificity"
+  ],
+  "aggregation": "Arithmetic mean across U01-U12 for each masked arm and axis. Pairwise H1 uses the 12 direct unit preferences after unblind. H2/H3 use Treatment-minus-Control axis mean deltas after unblind.",
+  "critical_flags": [
+    "protected_state_or_continuity_contradiction",
+    "central_deus_ex_machina_or_unearned_coincidence",
+    "systemic_expository_dialogue_collapse",
+    "event_mechanism_ornamental_not_causal",
+    "severe_padding_or_repetition",
+    "incoherent_sequence_transition",
+    "meta_source_or_engine_leakage"
+  ],
+  "mapping_open_before_score_seal": false,
+  "scores_at_contract_seal": 0,
+  "unblind_at_contract_seal": 0,
+  "no_threshold_change": true
+}
