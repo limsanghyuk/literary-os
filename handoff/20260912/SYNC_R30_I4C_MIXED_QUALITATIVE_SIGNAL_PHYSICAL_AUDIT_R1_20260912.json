@@ -1,0 +1,27 @@
+{
+  "schema":"LiteraryOSR30PhysicalAuditR1",
+  "date":"2026-09-12",
+  "transport_root_sha256":"d3d2799c30a32211eb0c101110dfd32daa6b16c3205ebea2844bafb8d17559f9",
+  "checks":{
+    "CONTROL":{"entries":1554,"duplicate":0,"unsafe":0,"symlink":0,"encrypted":0,"crc_bad":null,"pass":true},
+    "A":{"entries":1660,"duplicate":0,"unsafe":0,"symlink":0,"encrypted":0,"crc_bad":null,"pass":true},
+    "B1":{"byte_identity_via_sha256":true,"sha256":"00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98","pass":true},
+    "B2":{"entries":1605,"duplicate":0,"unsafe":0,"symlink":0,"encrypted":0,"crc_bad":null,"pass":true},
+    "C1":{"byte_identity_via_sha256":true,"sha256":"dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518","pass":true},
+    "C2-A":{"byte_identity_via_sha256":true,"sha256":"d1fb7ba65ead633ec13d027d032e4bd3950e973b61408e04b620bd37f7997253","pass":true},
+    "C2-B":{"byte_identity_via_sha256":true,"sha256":"49d454647f0c1d0920a582c2a5aa222b345719a3d6d396374dcb0921560e9414","pass":true},
+    "D1":{"byte_identity_via_sha256":true,"sha256":"a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504","pass":true},
+    "D2":{"byte_identity_via_sha256":true,"sha256":"c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4","pass":true}
+  },
+  "overlay":{
+    "CONTROL":{"entries":4,"digest":"59b871bd8509fc4c1b635fe7861dd25e735b60c1433db3d62ea846acab71474f"},
+    "A":{"entries":4,"digest":"59b871bd8509fc4c1b635fe7861dd25e735b60c1433db3d62ea846acab71474f"},
+    "B2":{"entries":4,"digest":"59b871bd8509fc4c1b635fe7861dd25e735b60c1433db3d62ea846acab71474f"}
+  },
+  "overlay_identical":true,
+  "stable_seal_verification":{
+    "combined_C2":{"bytes":318368553,"sha256":"58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7","pass":true},
+    "DB59":{"db59_sha256":"a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9","basis":"parent-preserved; D1 and D2 transport SHA256 values are byte-identical to SYNC-R29","D1_sha256":"a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504","D2_sha256":"c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4","pass":true}
+  },
+  "status":"PASS"
+}
