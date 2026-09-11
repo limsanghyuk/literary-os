@@ -2,16 +2,16 @@
 Last updated: 2026-09-12
 
 ## CURRENT PHYSICAL BASELINE
-SYNC-R27 root `dec5f407671015c9bfb29c34d3bbd40b78ec5f2c4e44bd857a5c3eb3aaf4eb0a`.
+SYNC-R28 root `ceb12269eb7562d472e8e375cd78e3f1cbce873bcab4721f9f3baaa9ef131f10`.
 
-## ACTIVE CANDIDATE
-`P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION`
-Exact surfaces frozen; all prescore gates PASS; G6 blind-integrity PASS; G7 duplicate-score/provenance preflight PASS `a4a0636b023b599fdda28f36e429f8dc4e21c3f9`.
+## R4A CANDIDATE
+R4A exact surfaces frozen; G6/G7 PASS; provider dispatch HOLD; Mask=1; Judges=0; Mapping open=0. Independent-confirmation quality result does not yet exist.
 
-## CURRENT CLAIM BOUNDARY
-Mask=1; independent judges=0; mapping open=0. G7 proves no prior judge score duplication and no premature mapping reveal. GitHub Actions provider secret was absent, so independent-confirmation quality result does not yet exist. No Active Engine, Production, DB or Formal promotion.
+## EVOLUTION CANDIDATE
+Whole-Episode Degradation Diagnostic=`MIXED_SIGNAL`. The next candidate research is a preregistered Residual Whole-Episode Craft Drift Diagnostic focused on the I4C-style unexplained middle/late degradation after known preface/meta/continuity defects are absent.
+
+## CLAIM BOUNDARY
+This diagnostic is knowledge-only. No Active Engine, Production, DB, Formal or R4A threshold change. A prospective renderer intervention is not yet authorized until the residual signature is isolated.
 
 ## EXACT NEXT ACTION
-Connect real-provider secret or use exactly 3 fresh independent external judge conversations -> seal all valid judge packets -> mapping open once -> H1-H4 and cross-judge decision. Do not self-judge and do not modify frozen surfaces/thresholds.
-
-Parallel knowledge-only whole-episode degradation / human-reference / load-consumption research remains authorized while provider is blocked.
+Preregister residual craft-drift metrics and source bindings before execution; then measure sealed historical surfaces. R4A provider path stays frozen and separate.
