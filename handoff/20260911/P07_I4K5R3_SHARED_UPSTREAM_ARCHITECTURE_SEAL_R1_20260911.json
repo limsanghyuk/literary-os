@@ -1,0 +1,68 @@
+{
+  "schema":"P07I4K5R3SharedUpstreamArchitectureSealR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R3-PERFORMANCE-SPECIFIC-SURFACE-BINDING-FRESH-REPLICATION",
+  "physical_parent":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R21__I4K5R2_VALID_FAIL_CLOSED__I4K5R3_PSSB_PREREG_OUTPUTS_0",
+  "physical_parent_root_sha256":"65093f163ac38ab23e67153421494f0edf06a28bedac5debaa7d3a3be7de57eb",
+  "prereg_commit":"433dbfa0e9ac9c886dd04b89fddb4bbe7672a11b",
+  "series":"온담 공동도예소",
+  "episode":"가마문은 아침에 열린다",
+  "canonical_binding_input":"series:4a204daa20eaf7c05fe77adc82763514013996f1\\nevent:09b3ec5820e4cb1cd5f3f55e3306ba36f25c949a\\nsequence:92d0b514a205f0ef282c62aa93091a320dc2c64e\\nscene:5ec0e103780cc554121fc985d9d9181bfe8ad754\\n",
+  "canonical_binding_sha256":"e75ef957439a8dd2ee8fba727677292a91003a3448e8813e73e6132e3814bde2",
+  "components":[
+    {
+      "role":"SERIES_EPISODE_STATE",
+      "path":"handoff/20260911/P07_I4K5R3_FRESH_SERIES_EPISODE_STATE_R1_20260911.json",
+      "creation_commit":"db22d387ee53ecd35a715a20796bbeed313f6293",
+      "git_blob_sha":"4a204daa20eaf7c05fe77adc82763514013996f1"
+    },
+    {
+      "role":"EVENT_ECOLOGY",
+      "path":"handoff/20260911/P07_I4K5R3_FRESH_EVENT_ECOLOGY_R1_20260911.json",
+      "creation_commit":"1a7a86990d8db2335c43138ee9cbda54206d3d69",
+      "git_blob_sha":"09b3ec5820e4cb1cd5f3f55e3306ba36f25c949a"
+    },
+    {
+      "role":"SHARED_SEQUENCE_PLAN",
+      "path":"handoff/20260911/P07_I4K5R3_SHARED_SEQUENCE_PLAN_R1_20260911.json",
+      "creation_commit":"ed00ac7f86cf4773a687e0f3abd91eae9b8336d5",
+      "git_blob_sha":"92d0b514a205f0ef282c62aa93091a320dc2c64e"
+    },
+    {
+      "role":"SHARED_SCENE_PLAN",
+      "path":"handoff/20260911/P07_I4K5R3_SHARED_SCENE_PLAN_R1_20260911.json",
+      "creation_commit":"925ef1119d1e9859f97dc354207f103023d23102",
+      "git_blob_sha":"5ec0e103780cc554121fc985d9d9181bfe8ad754"
+    }
+  ],
+  "counts":{"characters":6,"events":6,"sequences":10,"scenes":50},
+  "semantic_constraints":{
+    "control_and_treatment_consume_same_component_blobs":true,
+    "event_mutation_after_seal":false,
+    "sequence_mutation_after_seal":false,
+    "scene_mutation_after_seal":false,
+    "decision_owner_mutation_after_seal":false,
+    "future_thread_owner_mutation_after_seal":false,
+    "new_cause_or_backstory_in_arm_render":false,
+    "surface_realization_may_differ_only_under_frozen_arm_contracts":true
+  },
+  "arm_contracts":{
+    "CONTROL":"Render the exact shared upstream with the R2 repaired surface renderer boundary and no PSSB.",
+    "TREATMENT":"Render the exact same shared upstream plus PSSB only; no semantic addition or deletion."
+  },
+  "outputs_at_upstream_seal":{
+    "fresh_series_state":1,
+    "fresh_event_ecology":1,
+    "fresh_sequence_plan":1,
+    "fresh_scene_plan":1,
+    "shared_upstream_sealed":1,
+    "control_render":0,
+    "treatment_render":0,
+    "mask":0,
+    "scores":0,
+    "unblind":0
+  },
+  "next_legal_action":"Begin provisional Attempt 1 arm rendering from this exact shared upstream. Preserve 10 ordered sequence transports per arm. Do not inspect arm preference or quality scores. After both arms exist, run deterministic prescore gates only.",
+  "authority_change":false,
+  "physical_propagation":"PENDING_POST_R21"
+}
