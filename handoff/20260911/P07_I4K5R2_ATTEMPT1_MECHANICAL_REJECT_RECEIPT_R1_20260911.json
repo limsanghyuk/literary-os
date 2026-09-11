@@ -1,0 +1,41 @@
+{
+  "schema": "P07I4K5R2Attempt1MechanicalRejectReceiptR1",
+  "date": "2026-09-11",
+  "experiment_id": "P07-I4K-5R2-FRESH-SURFACE-HYGIENE-REPAIR-REPLICATION",
+  "parent_prereg_commit": "4f1e72851ef3d986679fcf4da33d660f18012cf1",
+  "shared_upstream_commit": "8875555c31ce62db20eb1471b249d33fe2023a59",
+  "control_attempt1_commit": "9a5418f810f7001cd1e4b818365eb4448d9f69a3",
+  "treatment_attempt1_commit": "9344da7bd0636d61516a0b975fb3498bf4403cd8",
+  "measurement_runner_commit": "f5c62ac79dab652e3842937b32a98d2617141090",
+  "measurement_execution": {
+    "method": "GitHub-hosted runner on temporary non-authoritative branch because local container/Python transport was unavailable",
+    "workflow_run_id": 34512714786,
+    "job_id": 102990533535,
+    "scientific_boundary": "read-only deterministic scale/structure/hygiene measurement; no quality score, preference, mask or unblind"
+  },
+  "metrics": {
+    "control_body_chars": 24285,
+    "treatment_body_chars": 24265,
+    "body_floor_each": 35000,
+    "control_scale_pass": false,
+    "treatment_scale_pass": false,
+    "relative_gap": 0.0008235536339304097,
+    "relative_gap_percent": 0.08235536339304097,
+    "relative_gap_pass": true,
+    "control_scene_count": 50,
+    "treatment_scene_count": 50,
+    "scene_ids_each": "1..50 exact",
+    "control_forbidden_internal_meta_literals": 0,
+    "treatment_forbidden_internal_meta_literals": 0,
+    "control_CH_SQ_ids": 0,
+    "treatment_CH_SQ_ids": 0,
+    "control_exact_long_duplicate_lines": 0,
+    "treatment_exact_long_duplicate_lines": 0,
+    "control_file_sha256": "177f66e70bd0abf738f837dfecbb411d6d1e7f79f244543335c57a30e01721dd",
+    "treatment_file_sha256": "11e111d609de1a0918e85404e11938cff9d87847595c36881758f9018dde182e"
+  },
+  "decision": "ATTEMPT1_REJECTED_UNDER_SCALE__CONTINUE_TO_PREREGISTERED_ATTEMPT2__NO_MASK__NO_SCORES__NO_UNBLIND",
+  "interpretation": "Attempt 1 did not qualify for scoring because both arms were under the preregistered metadata-excluded 35,000-character floor. Hygiene and parity checks were favorable, but no craft-effect claim may be made from this attempt.",
+  "governance": "This does not close I4K-5R2. The preregistration prospectively allows up to three provisional attempts using only the frozen scene semantics and allowed deepening classes. Attempt 1 remains immutable and unscored.",
+  "authority_change": false
+}
