@@ -1,0 +1,52 @@
+{
+  "schema":"WholeEpisodeDegradationMeasurementImplementationSupplementR1",
+  "date":"2026-09-12",
+  "parent_prereg_commit":"1a6faa7363f84670f05a8d3f5bafeceeb6e90202",
+  "classification":"KNOWLEDGE_ONLY_MEASUREMENT_IMPLEMENTATION__FROZEN_BEFORE_METRIC_EXECUTION",
+  "source_binding":{
+    "I4C_primary":"I4C_R2_FINAL_SCREENPLAY_R1 + sealed R2 mechanical/final hold receipts",
+    "I4E_primary":"I4E_R2_FINAL_TREATMENT_SCREENPLAY_R1 + sealed R2 mechanical/Stage-A receipts",
+    "I4E_secondary_continuity_history":"I4E_R1 sealed HOLD receipt only; used only to localize historical late-scene speaker-authorization debt, not as the primary R2 surface",
+    "I4K5_primary":"I4K4 sealed Control and Treatment whole-episode final surfaces that were evaluated by I4K5 independent judges + sealed I4K5 result/closure"
+  },
+  "scene_parsing":{
+    "I4C_I4E_regex":"(?m)^S#(\\d{2})\\.",
+    "I4K5_surface_regex":"(?m)^### SCENE (\\d{2})\\.",
+    "terciles":"scenes 1-17 early, 18-34 middle, 35-50 late"
+  },
+  "scene_entry_explanatory_preface":{
+    "candidate":"first non-empty paragraph after scene header",
+    "normalize":"collapse all whitespace to one ASCII space",
+    "meta_marker_regexes":["\\bsequence\\b","시퀀스","카메라","배우","지문","동선","프레임","결정 장면","첫 선택의 파급","sequence의 끝","설명하는 대사","관계 변화","화면 안"],
+    "classification_rule":"candidate paragraph is explanatory preface only when at least two distinct marker regexes hit",
+    "preface_chars":"length of normalized classified paragraph",
+    "preface_ratio":"sum classified preface chars / sum normalized scene-body chars"
+  },
+  "sequence_purpose_copy":{
+    "sequence_partition":"fixed groups of five scenes: 1-5,6-10,...,46-50",
+    "input":"classified explanatory-preface paragraph of each scene; nonclassified scene contributes empty string",
+    "common_prefix":"longest character prefix shared by all five normalized prefaces, trimmed to final whitespace boundary",
+    "serialized_chars":"common_prefix_chars * 5",
+    "redundant_only_chars":"common_prefix_chars * 4",
+    "occurrences":"5 when common prefix >= 40 chars, otherwise 0",
+    "episode_share":"sum serialized_chars / sum normalized scene-body chars"
+  },
+  "internal_plan_meta_tokens":{
+    "regexes":["\\bCH\\d{2}\\b","\\bSQ\\d{2}\\b","Event Ecology","Sequence Plan","Scene Plan","PSSB","LiterarySurfaceContractR1","SurfaceRealizationModeR1"],
+    "scope":"scene bodies only; title/header excluded"
+  },
+  "procedural_architecture_vocabulary":{
+    "regexes":["\\bsequence\\b","시퀀스","카메라","배우","지문","동선","프레임","대사","결정 장면","파급","관계 변화","화면 안"],
+    "density":"total hits / normalized scene-body chars * 1000"
+  },
+  "continuity_measurement":{
+    "rule":"Do not infer continuity violations subjectively from prose. Use only already-sealed mechanical/semantic receipts.",
+    "I4E_R1_secondary":"record sealed unauthorized-principal-speaker violations and their scene indices as historical continuity-debt localization evidence",
+    "primary_case_rule":"R2/final primary surfaces use their own sealed critical-continuity/speaker-authorization counts"
+  },
+  "trend":{
+    "tercile_summary":"mean/sum by early,middle,late as appropriate",
+    "robust_slope":"Theil-Sen median pairwise slope vs scene index for per-scene preface chars, architecture-vocabulary density and meta-token hits"
+  },
+  "decision_guard":"No new PASS/FAIL threshold is introduced. Output is diagnostic association only and cannot rewrite any sealed historical verdict or current R4A threshold."
+}
