@@ -2,16 +2,17 @@
 Last updated: 2026-09-12
 
 ## CURRENT PHYSICAL BASELINE
-SYNC-R29 root `e18bcc4e1981882f626eb611b7211fef077c915a48b19771ba64dac90356ff48`.
+SYNC-R30 root `d3d2799c30a32211eb0c101110dfd32daa6b16c3205ebea2844bafb8d17559f9`.
 
 ## R4A CANDIDATE
 R4A exact surfaces frozen; G6/G7 PASS; provider dispatch HOLD; Mask=1; Judges=0; Mapping open=0. Independent-confirmation quality result does not yet exist.
 
 ## EVOLUTION CANDIDATE
-Whole-Episode Degradation=`MIXED_SIGNAL`; Residual Whole-Episode Craft Drift=`NO_STABLE_RESIDUAL_SIGNAL`. The next candidate research is read-only inspection of sealed I4C Stage-B judgment rationales, followed by preregistered qualitative taxonomy only if rationale text is sufficient.
+Whole-Episode Degradation=`MIXED_SIGNAL`; Residual Whole-Episode Craft Drift=`NO_STABLE_RESIDUAL_SIGNAL`; I4C Stage-B rationale taxonomy=`MIXED_QUALITATIVE_SIGNAL`.
+The historical rationale evidence confirms a strong early-to-middle/late competitiveness shift but spreads human-win reasons across multiple frozen craft dimensions. Relationship/status pressure is frequent but not sufficient to define a single failure mode.
 
 ## CLAIM BOUNDARY
-No qualitative failure cause has yet been established for the residual I4C middle/late degradation. Higher-level dimensions such as subtext, relationship pressure, status movement, scene-specific dramatic choice, surprise, or line intentionality remain hypotheses only.
+No causal renderer defect has been established. The exploratory historical single-judge rationale set cannot authorize an intervention, promotion, score rewrite, or threshold change.
 
 ## EXACT NEXT ACTION
-Inspect sealed rationale availability only. If rationale is sufficient, preregister taxonomy before coding; if insufficient, preregister a fresh blind craft-error annotation protocol. No renderer intervention is authorized yet.
+Preregister a fresh independent annotation/replication using fresh/unseen evaluation material or previously unused sealed scene pairs. Freeze source/sample/mask/category/evaluator-independence/decision rules before responses. Construct and hash packets; if independent evaluation is unavailable, stop with responses=0 and mapping closed.
