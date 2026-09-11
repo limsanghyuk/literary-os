@@ -1,0 +1,44 @@
+{
+  "schema":"P07I4K5R4APreflightComplianceAndCommonModeAuditPlanR1",
+  "date":"2026-09-12",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "classification":"PREFLIGHT_AUDIT__FROZEN_SURFACES__NO_NEW_QUALITY_GATE",
+  "frozen_surface_commit":"494190b45db7889de94835de59692b110cbe6a8b",
+  "mechanical_prescore_pass_commit":"1468ecc329582b443dd09afee57524a80fd92ad5",
+  "g5b_pass_commit":"f0fb7e701f0083bd1c55442fd97a9788059aa1f1",
+  "mask":0,
+  "judge_scores":0,
+  "mapping_open":0,
+  "surface_mutation_allowed":false,
+  "audit_A_preregistered_compliance":{
+    "purpose":"Execute a gate already frozen in the original R4A preregistration but not explicitly enforced by the final mechanical runner.",
+    "gate":"treatment_repeated_plan_purpose_copy == 0",
+    "status_effect":"AUTHORITATIVE_PRESCORE_COMPLIANCE",
+    "rule":"No new threshold. Measure the frozen Treatment against the frozen shared Sequence/Scene plan-purpose text using deterministic exact and normalized-copy detection. Any direct serialized plan-purpose copy that meets the frozen definition constitutes failure.",
+    "on_pass":"R4A remains eligible for G6 masking.",
+    "on_fail":"R4A becomes PRESCORE_HOLD_INVALID_FOR_SCORING. No prose repair, no third attempt, no masking, no judge scoring. Start a new fresh experiment only."
+  },
+  "audit_B_common_mode_diagnostics":{
+    "purpose":"Measure Claude-identified absolute surface contamination on frozen R4A arms without adding post-output PASS/FAIL gates.",
+    "status_effect":"KNOWLEDGE_ONLY_DIAGNOSTIC",
+    "metrics":[
+      "scene_entry_explanatory_preface_chars_and_ratio",
+      "mean_and_distribution_scene_entry_preface_chars",
+      "sequence_purpose_repetition_count_and_char_ratio",
+      "internal_plan_meta_token_occurrences",
+      "procedural_architecture_vocabulary_density",
+      "scene_index_vs_contamination_metric_slope"
+    ],
+    "no_threshold_change":true,
+    "no_pass_fail_effect_on_R4A":true,
+    "historical_regression_control":"The same diagnostic implementation must reproduce the known I4K-4 contamination signature before its R4A numbers are trusted."
+  },
+  "audit_C_claim_boundary":{
+    "R3_internal_pass":"SAME_AGENT_INTERNAL_EFFECT_EVIDENCE_ONLY",
+    "R4A_current_state":"INDEPENDENT_CONFIRMATION_NOT_YET_SCORED",
+    "production_promotion":false,
+    "active_engine_promotion":false,
+    "formal_increment":false
+  },
+  "next_legal_action":"Implement and run Audit A and Audit B on the already frozen exact-arm manifests. Do not create the mask until Audit A passes."
+}
