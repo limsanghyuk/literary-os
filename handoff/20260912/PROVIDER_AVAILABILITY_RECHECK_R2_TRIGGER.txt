@@ -1,0 +1,1 @@
+Trigger provider availability recheck R2 only. No scoring, no mapping, no surface mutation.
