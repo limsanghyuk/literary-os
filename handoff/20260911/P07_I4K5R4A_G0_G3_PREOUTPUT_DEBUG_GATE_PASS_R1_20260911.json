@@ -1,0 +1,17 @@
+{
+  "schema":"P07I4K5R4AG0G3PreoutputDebugGatePassR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION",
+  "physical_parent":"P07_I4H_RECOVERY_R3__POST_R3_RESEARCH_SYNC_R23__I4K5R4_INDEPENDENT_CONFIRMATION_PREREG__OUTPUTS_0",
+  "physical_parent_root":"8c2c283ac7f378b30c23a255d5d9835afc1b056df8865710a09999ffb296e901",
+  "debug_gate_commit":"2955267eaff55442c4a2be55ddfd90bae1eebd2a",
+  "original_r4_closure_commit":"57e1ac5c645e0b64368254c67aecf8a86cc64b80",
+  "r4a_prereg_commit":"4a4b521c6c69883d08b0590c36156b0ffab5303e",
+  "G0_RUNTIME_CONTAINER":{"memory_current_bytes":2163527680,"memory_max_bytes":4294967296,"memory_current_below_3_2_GiB":true,"oom":0,"oom_kill":0,"disk_free_approx_GiB":26,"basic_container":true,"python":true,"result":"PASS"},
+  "G1_AUTHORITY_POINTER":{"developer_hub_commit":"98e0d17b124993f550e4f49f5b03b38b304049a8","handoff_pointer_commit":"060872a3cd4b79d721c868e69ab2395172453157","next_research_pointer_commit":"f0042b42acdf44c4e6de7739375bcfc996778e55","session_recovery_pointer_commit":"23607084773896d81e9e7866f3ea6844ed5a86b2","next_candidate_commit":"0d748892bf41c0caa5e05a1f91caea563f217cd2","all_point_to_R23_and_R4A_outputs_0":true,"result":"PASS"},
+  "G2_PREREG_IMMUTABILITY":{"original_R4_modified_in_place":false,"original_R4_closed_pre_render":true,"successor_new_experiment_id":true,"successor_reuses_original_R4_material":false,"result":"PASS"},
+  "G3_PROVENANCE":{"prereg_precedes_successor_outputs":true,"debug_gate_precedes_successor_outputs":true,"source_commits_unambiguous":true,"no_mixed_workflow_receipt":true,"result":"PASS"},
+  "outputs_at_gate":{"series_episode":0,"event_ecology":0,"sequence_plan":0,"scene_plan":0,"control_render":0,"treatment_render":0,"mask":0,"independent_judge_scores":0,"mapping_open":0},
+  "next_legal_action":"Seal completely fresh R4A Series/Episode state only.",
+  "authority_change":false
+}
