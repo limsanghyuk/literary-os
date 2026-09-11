@@ -1,0 +1,30 @@
+{
+  "schema":"P07I4K5R3Attempt2ControlPresealUnderscaleDiagnosticR1",
+  "date":"2026-09-11",
+  "experiment_id":"P07-I4K-5R3-PERFORMANCE-SPECIFIC-SURFACE-BINDING-FRESH-REPLICATION",
+  "classification":"DEVELOPMENT_PREFORMAL__INTERNAL_ONLY__GENERATION_STAGE_DIAGNOSTIC",
+  "prereg_commit":"433dbfa0e9ac9c886dd04b89fddb4bbe7672a11b",
+  "attempt2_procedure_commit":"5244361dd08872d03baa2c05129835cbd2b23df3",
+  "attempt2_status_at_diagnostic":"IN_PROGRESS__NOT_ARM_SEALED__TREATMENT_OUTPUTS_0",
+  "control_draft_path":"handoff/20260911/i4k5r3_attempt2/control/",
+  "control_draft_last_commit":"edc2cba2cbbc5cbc980e77d7b1267e7136570900",
+  "diagnostic":{
+    "measurement_run_id":34586639263,
+    "artifact_id":10193852477,
+    "body_chars":23703,
+    "segments":10,
+    "scenes":50,
+    "scene_ids_exact_1_50":true,
+    "hard_floor":35000,
+    "body_ge_35000":false
+  },
+  "interpretation":"This is not an Attempt2 prescore admission result because the Treatment arm had not yet been generated and the Attempt2 final arms had not been sealed. It is a generation-stage scale diagnostic used only to prevent repeating the preregistered under-scale failure mode.",
+  "disposition":"QUARANTINE_AS_PRESEAL_DRAFT__DO_NOT_SCORE__DO_NOT_MASK__DO_NOT_USE_AS_FINAL_CONTROL",
+  "legal_next_action":"Continue the same second and final provisional attempt by generating a new final Control surface from the unchanged frozen shared upstream at sufficient scale, then generate Treatment. No quality preference may be inspected.",
+  "attempt_count_increment":false,
+  "quality_score_or_preference_consulted":false,
+  "mask":0,
+  "scores":0,
+  "unblind":0,
+  "authority_change":false
+}
