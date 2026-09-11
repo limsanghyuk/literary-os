@@ -1,0 +1,27 @@
+{
+  "schema":"I4CStageBExploratoryCraftTaxonomyBlindCodingR1",
+  "date":"2026-09-12",
+  "classification":"EXPLORATORY_KNOWLEDGE_ONLY__FIRST_PASS_BLIND_TO_HISTORICAL_MAPPING",
+  "prereg_commit":"55207581733c2f298a3ef2ccea8b1a221560dfcc",
+  "source_judgment_sha256":"306b6883bc3645c7de43fe601e3fb9bf2d4da761fc1b3d688e03cf05924b6b16",
+  "historical_mapping_opened_for_this_coding":false,
+  "coding":[
+    {"pair_id":"BPAIR-01","primary":"RELATIONSHIP_STATUS_PRESSURE","secondary":["LINE_ECONOMY_RHYTHM"]},
+    {"pair_id":"BPAIR-02","primary":"DIALOGUE_SUBTEXT","secondary":["RELATIONSHIP_STATUS_PRESSURE","PHYSICALIZATION_ACTION"]},
+    {"pair_id":"BPAIR-03","primary":"ENSEMBLE_WORLD_SPECIFICITY","secondary":["CHARACTER_VOICE","PHYSICALIZATION_ACTION"]},
+    {"pair_id":"BPAIR-04","primary":"PHYSICALIZATION_ACTION","secondary":["LINE_ECONOMY_RHYTHM","CHARACTER_VOICE"]},
+    {"pair_id":"BPAIR-05","primary":"INFORMATION_REVEAL_IRREVERSIBILITY","secondary":["RELATIONSHIP_STATUS_PRESSURE","CHARACTER_VOICE"]},
+    {"pair_id":"BPAIR-06","primary":"ENSEMBLE_WORLD_SPECIFICITY","secondary":["LINE_ECONOMY_RHYTHM"]},
+    {"pair_id":"BPAIR-07","primary":"PACING_ESCALATION_TIME_PRESSURE","secondary":["PHYSICALIZATION_ACTION"]},
+    {"pair_id":"BPAIR-08","primary":"INFORMATION_REVEAL_IRREVERSIBILITY","secondary":["RELATIONSHIP_STATUS_PRESSURE"]},
+    {"pair_id":"BPAIR-09","primary":"RELATIONSHIP_STATUS_PRESSURE","secondary":["DIALOGUE_SUBTEXT"]},
+    {"pair_id":"BPAIR-10","primary":"PHYSICALIZATION_ACTION","secondary":["PACING_ESCALATION_TIME_PRESSURE","RELATIONSHIP_STATUS_PRESSURE"]},
+    {"pair_id":"BPAIR-11","primary":"ENSEMBLE_WORLD_SPECIFICITY","secondary":["PHYSICALIZATION_ACTION","RELATIONSHIP_STATUS_PRESSURE"]},
+    {"pair_id":"BPAIR-12","primary":"PACING_ESCALATION_TIME_PRESSURE","secondary":["INFORMATION_REVEAL_IRREVERSIBILITY","PHYSICALIZATION_ACTION"]}
+  ],
+  "unclassified_count":0,
+  "next_legal_action":"OPEN_ONLY_HISTORICAL_I4C_STAGE_B_MAPPING_AND_RESULT; JOIN_PAIR_TO_SELECTED_SCENE_AND_CANDIDATE_OR_HUMAN_WIN; DO_NOT_CHANGE_FIRST_PASS_LABELS",
+  "R4A_mapping_open":0,
+  "historical_score_rewrite":false,
+  "authority_change":false
+}
