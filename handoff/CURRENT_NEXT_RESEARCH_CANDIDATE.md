@@ -6,18 +6,20 @@ Last updated: 2026-09-11
 R24 root `8b42c029f14f344ce7fbfc9407ab3cce1f9692f16ba8659c6045a327e3a8d043`.
 
 ## ACTIVE PREREGISTERED CANDIDATE
-`P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION`
-Prereg commit `4a4b521c6c69883d08b0590c36156b0ffab5303e`.
-Attempt1 is immutable prescore G5 rejection. Final provisional Attempt2 is active.
+`P07-I4K-5R4A-PSSB-EXPRESSION-HYGIENE-INDEPENDENT-FRESH-CONFIRMATION`, prereg `4a4b521c6c69883d08b0590c36156b0ffab5303e`.
+Attempt2 is the final provisional attempt. G5A PASS `4f7a6e54d3be12f21d4c7a8802f4a75fbcaca351`; Shared Upstream seal `4585fd2c79e386b511f092f2b945aa904ab2cff8`.
 
-## ATTEMPT2 CURRENT STATE
-Fresh Series/Episode `해온 시민극장 / 객석 불이 꺼지기 전에`, commit `3bc2da6d8717f2483073fe9cbfd078071f73ea20`.
-Shared expression baseline: actor-visible gaze/face/breath/posture/hands/objects/distance/timing/silence/hesitation/interruption instead of direct emotion labels when stageable. Control and Treatment share this baseline; Treatment alone adds frozen PSSB.
+## SHARED EXPRESSION BASELINE
+Both arms render facial expression/emotion-flow primarily through actor-visible eyes/gaze, mouth/jaw/brow, breath, posture/tension, hands/objects, distance, timing, silence/hesitation/interruption rather than direct emotion naming when stageable. Avoid micro-expression quota and explanatory dialogue redundancy.
 
-Current outputs: Series/Episode 1; Event Ecology 0; Sequence 0; Scene 0; G5A 0; Control 0; Treatment 0; Mask 0; independent judge scores 0; mapping open 0.
+## ARM DIFFERENCE
+Control = sealed shared upstream + shared expression hygiene, NO PSSB. Treatment = byte-identical shared upstream + same expression hygiene + frozen R3 PSSB only.
+
+## CURRENT OUTPUT STATE
+Series/Episode 1; Event Ecology 1; Sequence 1; Scene 1; G5A PASS; Control 0; Treatment 0; Mask 0; independent judge scores 0; mapping open 0.
 
 ## EXACT NEXT ACTION
-Create fresh Attempt2 Event Ecology with explicit event mechanism, downstream decision owner, future owner, second-order obligation and `future_adoption_target`, then shared 10 Sequence -> shared 50 Scene -> G5A. No render before G5A PASS.
+Render Control SQ01-SQ10, then deterministic scale/hygiene prescore. Treatment remains blocked until Control PASS.
 
 ## STATUS TOKEN
-`ACTIVE_CANDIDATE__SYNC_R24__R4A_ATTEMPT2_SERIES_SEALED__G5A_REQUIRED_BEFORE_RENDER`
+`ACTIVE_CANDIDATE__SYNC_R24__POST_R24_R4A_ATTEMPT2_G5A_PASS__CONTROL_NEXT__PENDING_PHYSICAL_PROPAGATION`
