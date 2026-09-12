@@ -2,17 +2,19 @@
 Last updated: 2026-09-12
 
 ## READ FIRST
-`handoff/20260912/START_HERE_SYNC_R32_I4C_INGESTION_GATE_READY_NEW_SESSION_HANDOFF_R1.md`
+`handoff/20260912/START_HERE_POST_R32_I4C_MIXED_WEAK_R33_PHYSICALIZATION_PENDING_NEW_SESSION_HANDOFF_R1.md`
 
 ## CURRENT PHYSICAL AUTHORITY
-SYNC-R32 root `b37a3774a4f701ab4caabac3cb5e62442403f499d21d89203ef85d199b6a2ffb`.
+SYNC-R32 root `b37a3774a4f701ab4caabac3cb5e62442403f499d21d89203ef85d199b6a2ffb` remains the latest fully materialized/audited physical authority.
 
 ## CURRENT RESEARCH STATE
-R4A: G6/G7 PASS; provider recheck=`HOLD__REAL_PROVIDER_SECRET_ABSENT`; Judges=0; Mapping open=0.
-Evolution: I4C fresh unused-scene replication=`PACKETS_SEALED__RESPONSES_0__INGESTION_GATE_READY__REPLICATION_MAPPING_CLOSED`.
+I4C unused-scene replication is complete with `MIXED_OR_WEAK_REPLICATION`: 3/3 valid independent evaluator responses, exact I4C mapping byte-seal replay PASS, breadth delta `+0.875`, severity delta `+0.875`, evaluator directional agreement `3/3`. R4A remains Judges=0 / Mapping open=0.
+
+## PHYSICALIZATION BOUNDARY
+Post-R32 research is sealed but not yet integrated into a full 9-transport SYNC-R33 because the current CAAS/container transport plane is unavailable. Exact R32→R33 delta manifest commit: `b34a5c0437186afa415dfdc7a30d58284c12a8e7`.
 
 ## EXACT NEXT ACTION
-Obtain J01/J02/J03 fresh independent response JSONs. Validate each using the sealed validator; run the sealed 3-of-3 gate; only `PASS__THREE_VALID_RESPONSES__UNBLIND_AUTHORIZED` permits replication mapping open once. If independent evaluation is unavailable, remain responses=0 and do not self-judge. R4A remains separate and closed.
+First restore/verify a functioning container and materialize/audit SYNC-R33 from exact R32 parent bytes plus the sealed deterministic delta. Do not start another experiment before R33 physical closure PASS.
 
 ## STATUS TOKEN
-`CURRENT_HANDOFF__SYNC_R32__RESPONSES_0__INGESTION_GATE_READY__REPLICATION_MAPPING_CLOSED__R4A_PROVIDER_HOLD__R4A_MAPPING_CLOSED`
+`CURRENT_HANDOFF__PHYSICAL_SYNC_R32__POST_R32_I4C_MIXED_OR_WEAK__R33_PHYSICALIZATION_PENDING__R4A_MAPPING_CLOSED`
