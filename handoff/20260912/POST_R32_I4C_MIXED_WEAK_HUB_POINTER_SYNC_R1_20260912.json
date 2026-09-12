@@ -1,0 +1,35 @@
+{
+  "schema":"PostR32I4CMixedWeakHubPointerSyncR1",
+  "date":"2026-09-12",
+  "current_physical_authority":"SYNC-R32",
+  "current_physical_root":"b37a3774a4f701ab4caabac3cb5e62442403f499d21d89203ef85d199b6a2ffb",
+  "post_r32_scientific_result":"MIXED_OR_WEAK_REPLICATION",
+  "scientific_result_commit":"f808af0a0482ba775bcac4df4128726ad5ac0827",
+  "r33_delta_manifest_commit":"b34a5c0437186afa415dfdc7a30d58284c12a8e7",
+  "caas_incident_commit":"313faf92c029df010f925c960ab24409b3e3f3ce",
+  "new_session_handoff_commit":"5c60f7433d8bc8409fad7e6f192207b98c88c0b0",
+  "current_pointer_commits":{
+    "CURRENT_DEVELOPER_HUB_AUTHORITY":"89b102b009c4403c1822e5d5fa3b3ea0c69df35d",
+    "CURRENT_HANDOFF_POINTER":"2d3ac417815deb03375690e421b1f646e9501e97",
+    "CURRENT_NEXT_RESEARCH_POINTER":"c429f8b8a9d57c42df5be7a1752c0e1b27d8059d",
+    "CURRENT_SESSION_RECOVERY_POINTER":"3107f1587b5d3b63fd0e7acfcab67c670375284c",
+    "CURRENT_NEXT_RESEARCH_CANDIDATE":"113971e9a76ece4b855bba92ea6b2617cd6cf7b0"
+  },
+  "i4c_replication":{
+    "responses_valid":3,
+    "three_of_three_gate":"PASS__THREE_VALID_RESPONSES__UNBLIND_AUTHORIZED",
+    "mapping_exact_byte_seal_match":true,
+    "mapping_open":1,
+    "decision":"MIXED_OR_WEAK_REPLICATION"
+  },
+  "R4A":{
+    "judges":0,
+    "mapping_open":0,
+    "provider":"HOLD__REAL_PROVIDER_SECRET_ABSENT"
+  },
+  "physicalization":{
+    "SYNC_R33_created":false,
+    "reason":"Current ChatGPT CAAS/container transport returns TransportTimeoutError even for minimal commands.",
+    "mandatory_resume_first_action":"Full-physicalize SYNC-R33 from exact SYNC-R32 bytes using the sealed deterministic delta manifest, audit, then promote physical authority before any new experiment."
+  }
+}
