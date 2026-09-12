@@ -1,0 +1,93 @@
+{
+  "schema":"SyncR33PendingDeterministicDeltaManifestR1",
+  "date":"2026-09-12",
+  "parent_physical":"SYNC-R32",
+  "parent_root_sha256":"b37a3774a4f701ab4caabac3cb5e62442403f499d21d89203ef85d199b6a2ffb",
+  "target_physical":"SYNC-R33",
+  "status":"DETERMINISTIC_DELTA_SEALED__FULL_PHYSICALIZATION_PENDING_CAAS_RECOVERY",
+  "transport_mutation_plan":{
+    "changed":["CONTROL","A","B2"],
+    "byte_identical":["B1","C1","C2-A","C2-B","D1","D2"],
+    "overlay_root":"research_sync_r33/"
+  },
+  "required_overlay_sources":[
+    {
+      "target":"research_sync_r33/J01_I4C_UNUSED_SCENE_MIXED_CRAFT_RESPONSE_R1.json",
+      "github_path":"handoff/20260912/i4c_unused_scene_responses/J01_I4C_UNUSED_SCENE_MIXED_CRAFT_RESPONSE_R1.json",
+      "commit":"76b09dcdee07ae2df1368b5caf1291872ef1f478",
+      "sha256":"6bc7d546dabe96dea8785d4f7f97520fc91cc32ecfeb9a6209a82386180e1799"
+    },
+    {
+      "target":"research_sync_r33/J02_I4C_UNUSED_SCENE_MIXED_CRAFT_RESPONSE_R1.json",
+      "github_path":"handoff/20260912/i4c_unused_scene_responses/J02_I4C_UNUSED_SCENE_MIXED_CRAFT_RESPONSE_R1.json",
+      "commit":"17c3980273625a57352d37aa3fb5fce958c73660",
+      "sha256":"d7128feed3e5a1a7e54bca8cb53f0031d52b996a2a524da3f45e521b627712d2"
+    },
+    {
+      "target":"research_sync_r33/J03_I4C_UNUSED_SCENE_MIXED_CRAFT_RESPONSE_R1.json",
+      "github_path":"handoff/20260912/i4c_unused_scene_responses/J03_I4C_UNUSED_SCENE_MIXED_CRAFT_RESPONSE_R1.json",
+      "commit":"e6a91142ff0d6ae04fd054936f2ab5661ead78ac",
+      "sha256":"92103ff48714a5b2f552c298ec17f74813bb02e38991f216586069fd115317df"
+    },
+    {
+      "target":"research_sync_r33/I4C_UNUSED_SCENE_THREE_OF_THREE_GATE_PASS_RECEIPT_R1_20260912.json",
+      "github_path":"handoff/20260912/I4C_UNUSED_SCENE_THREE_OF_THREE_GATE_PASS_RECEIPT_R1_20260912.json",
+      "commit":"8c4f4ec929972ed9f799309ec58fc529dfece989"
+    },
+    {
+      "target":"research_sync_r33/I4C_UNUSED_SCENE_MAPPING_EXACT_REPLAY_R1.py",
+      "github_path":"handoff/20260912/I4C_UNUSED_SCENE_MAPPING_EXACT_REPLAY_R1.py",
+      "commit":"6870afb65a73a8783e18add75dacbd531b9ed664"
+    },
+    {
+      "target":"research_sync_r33/I4C_UNUSED_SCENE_MAPPING_EXACT_REPLAY_PASS_RECEIPT_R1_20260912.json",
+      "github_path":"handoff/20260912/I4C_UNUSED_SCENE_MAPPING_EXACT_REPLAY_PASS_RECEIPT_R1_20260912.json",
+      "commit":"6b9eb840ba3e8cf88ae5721094f1ae0cb5f826fb",
+      "sealed_mapping_sha256":"46f8972c408250614761733ac29da956d1f1eecd3b0d3dbe9d14f13877ff2377"
+    },
+    {
+      "target":"research_sync_r33/I4C_UNUSED_SCENE_POSITIONAL_REPLICATION_AGGREGATOR_R1.py",
+      "github_path":"handoff/20260912/I4C_UNUSED_SCENE_POSITIONAL_REPLICATION_AGGREGATOR_R1.py",
+      "commit":"1fa98baa5d9b870cc9ab470e910b1aec90018152"
+    },
+    {
+      "target":"research_sync_r33/I4C_UNUSED_SCENE_POSITIONAL_REPLICATION_FINAL_RECEIPT_R1_20260912.json",
+      "github_path":"handoff/20260912/I4C_UNUSED_SCENE_POSITIONAL_REPLICATION_FINAL_RECEIPT_R1_20260912.json",
+      "commit":"f808af0a0482ba775bcac4df4128726ad5ac0827",
+      "result_sha256_without_self_hash":"e901326f8198c9a5031f2fd955751f4f66d170b908510f9368f446a67ee4cd1f"
+    },
+    {
+      "target":"research_sync_r33/POST_R32_CAAS_TRANSPORT_INCIDENT_AND_FAILOVER_RECEIPT_R1_20260912.json",
+      "github_path":"handoff/20260912/POST_R32_CAAS_TRANSPORT_INCIDENT_AND_FAILOVER_RECEIPT_R1_20260912.json",
+      "commit":"313faf92c029df010f925c960ab24409b3e3f3ce"
+    }
+  ],
+  "scientific_state":{
+    "i4c_replication_responses":3,
+    "i4c_three_of_three_gate":"PASS__THREE_VALID_RESPONSES__UNBLIND_AUTHORIZED",
+    "i4c_replication_mapping_open":1,
+    "i4c_replication_mapping_byte_seal_match":true,
+    "i4c_replication_decision":"MIXED_OR_WEAK_REPLICATION",
+    "R4A_judges":0,
+    "R4A_mapping_open":0
+  },
+  "unchanged_authorities":{
+    "active_engine":"P07-I4H Recovery R3",
+    "production":"ENG:R47",
+    "combined_c2_sha256":"58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7",
+    "db59_sha256":"a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "formal_scored_total":137,
+    "latest_formal":"R138",
+    "formal_r140":"0/0/0"
+  },
+  "physicalization_algorithm":[
+    "Use the exact SYNC-R32 nine transport files as parent bytes.",
+    "For CONTROL/A/B2, copy every parent ZipInfo entry and payload without semantic modification, preserving metadata as in prior Sync builds.",
+    "Append the required_overlay_sources under research_sync_r33/ with identical bytes across CONTROL/A/B2.",
+    "Copy B1/C1/C2-A/C2-B/D1/D2 byte-for-byte from SYNC-R32.",
+    "Audit changed ZIP CRC, duplicate names=0, unsafe paths=0, symlink=0, encrypted=0, parent-entry preservation, three-way overlay byte identity and unchanged-six exact SHA equality.",
+    "Recompute ordered nine-transport SHA list and transport-set root; generate delivery manifest, physical audit, physical closure, root input and SHA256SUMS.",
+    "Only after audit PASS may CURRENT PHYSICAL AUTHORITY move from SYNC-R32 to SYNC-R33."
+  ],
+  "next_legal_action":"FULL_PHYSICALIZE_SYNC_R33_FIRST__THEN_PREREGISTER_ANY_NEXT_CRAFT_MECHANISM_RESEARCH"
+}
