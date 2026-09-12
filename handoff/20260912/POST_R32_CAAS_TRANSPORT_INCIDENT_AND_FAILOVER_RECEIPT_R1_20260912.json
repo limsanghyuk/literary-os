@@ -1,0 +1,32 @@
+{
+  "schema":"PostR32CaasTransportIncidentAndFailoverReceiptR1",
+  "date":"2026-09-12",
+  "physical_parent":"SYNC-R32",
+  "physical_parent_root":"b37a3774a4f701ab4caabac3cb5e62442403f499d21d89203ef85d199b6a2ffb",
+  "incident":{
+    "symptom":"Repeated TransportTimeoutError from python.exec, python_user_visible.exec, container.exec; even /bin/true and print('ok') failed.",
+    "scope":"Current ChatGPT CAAS/Jupyter/container transport plane",
+    "evaluator_data_corruption_evidence":false,
+    "github_api_status":"operational",
+    "github_actions_status":"operational"
+  },
+  "scientific_failover":{
+    "strategy":"Move deterministic validator, 3-of-3 gate, exact mapping replay and frozen aggregation to GitHub Actions.",
+    "scientific_rules_changed":false,
+    "thresholds_changed":false,
+    "responses_replaced":false,
+    "R4A_mapping_open":0
+  },
+  "completed_after_failover":{
+    "three_of_three_gate":"PASS__THREE_VALID_RESPONSES__UNBLIND_AUTHORIZED",
+    "exact_mapping_replay":"PASS__EXACT_MAPPING_BYTE_SEAL_REPRODUCED",
+    "positional_replication_decision":"MIXED_OR_WEAK_REPLICATION"
+  },
+  "physicalization_state":{
+    "SYNC_R33_full_nine_transport_created":false,
+    "reason":"R32 parent transport bytes are conversation-local and CAAS is unavailable; they are not stored in GitHub, so GitHub Actions cannot preserve byte lineage for CONTROL/A/B2.",
+    "current_physical_authority_remains":"SYNC-R32",
+    "next_required_action":"When a functioning container is available, use exact R32 nine transports as parent; append the sealed post-R32 research delta to CONTROL/A/B2 only; preserve the other six byte-identically; audit and seal as SYNC-R33 before starting another intervention experiment."
+  },
+  "claim_boundary":"This receipt documents execution infrastructure failover. It is not a scientific result and does not alter engine, production, DB or formal authority."
+}
