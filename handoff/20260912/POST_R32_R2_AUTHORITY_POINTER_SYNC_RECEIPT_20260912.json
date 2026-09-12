@@ -1,0 +1,50 @@
+{
+  "schema": "PostR32R2AuthorityPointerSyncReceipt",
+  "date": "2026-09-12",
+  "physical_authority": {
+    "sync": "SYNC-R32",
+    "transport_root_sha256": "b37a3774a4f701ab4caabac3cb5e62442403f499d21d89203ef85d199b6a2ffb",
+    "status": "LATEST_FULLY_MATERIALIZED_AUDITED_PHYSICAL_AUTHORITY"
+  },
+  "hub_research_authority": {
+    "i4c_unused_scene_replication": "MIXED_OR_WEAK_REPLICATION",
+    "final_result_commit": "f808af0a0482ba775bcac4df4128726ad5ac0827",
+    "i4c_three_of_three_gate": "PASS__THREE_VALID_RESPONSES__UNBLIND_AUTHORIZED",
+    "i4c_mapping_exact_replay": "PASS__EXACT_MAPPING_BYTE_SEAL_REPRODUCED",
+    "breadth_delta": 0.875,
+    "severity_delta": 0.875,
+    "evaluator_direction_agreement": "3/3",
+    "r4a_judges": 0,
+    "r4a_mapping_open": 0
+  },
+  "detailed_authority_snapshot": {
+    "path": "handoff/20260912/POST_R32_CURRENT_AUTHORITY_SNAPSHOT_R2_20260912.md",
+    "commit": "8e0a31c61a2c4246d93b7ef3798175565aafb7ab"
+  },
+  "new_session_handoff": {
+    "path": "handoff/20260912/START_HERE_POST_R32_I4C_MIXED_WEAK_R33_PHYSICALIZATION_PENDING_NEW_SESSION_HANDOFF_R2.md",
+    "commit": "a2e5e59a24f45381e29072e3700cb585dd494049"
+  },
+  "current_pointer_commits": {
+    "CURRENT_DEVELOPER_HUB_AUTHORITY": "9a1619b9842b8f2c6752a4b90ac83f6889e8c562",
+    "CURRENT_HANDOFF_POINTER": "11f800cbf76c1a1be3f3f9a2221b0cc2a32c10f3",
+    "CURRENT_NEXT_RESEARCH_POINTER": "ff3da0fd1cfa7d29d4edd13fe8c4ba7c144432fc",
+    "CURRENT_SESSION_RECOVERY_POINTER": "a8bafa2fcf2a969949b77925ba8253c84343ee4e",
+    "CURRENT_NEXT_RESEARCH_CANDIDATE": "56f19c8ff60fc5424f98daa21b11e541ede86413"
+  },
+  "r33_pending_delta": {
+    "path": "handoff/20260912/SYNC_R33_PENDING_DETERMINISTIC_DELTA_MANIFEST_R1_20260912.json",
+    "commit": "b34a5c0437186afa415dfdc7a30d58284c12a8e7",
+    "status": "SEALED__PHYSICALIZATION_PENDING",
+    "changed_roles": ["CONTROL", "A", "B2"],
+    "byte_identical_roles": ["B1", "C1", "C2-A", "C2-B", "D1", "D2"]
+  },
+  "next_legal_action": "VERIFY_SYNC_R32_AND_RUNTIME__FULL_PHYSICALIZE_AND_AUDIT_SYNC_R33_FIRST__THEN_PREREGISTER_ANY_NEW_SCIENTIFIC_EXPERIMENT",
+  "authority_promotions": {
+    "active_engine": false,
+    "production": false,
+    "db": false,
+    "formal": false
+  },
+  "status": "PASS__R2_AUTHORITY_AND_HANDOFF_POINTERS_SYNCHRONIZED"
+}
