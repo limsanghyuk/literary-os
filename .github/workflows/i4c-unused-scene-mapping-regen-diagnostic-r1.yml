@@ -1,0 +1,19 @@
+name: I4C Unused Scene Mapping Regen Diagnostic R1
+on:
+  push:
+    branches: [main]
+jobs:
+  regen:
+    if: contains(github.event.head_commit.message, 'Run I4C unused-scene mapping regeneration diagnostic')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Regenerate semantic mapping and test sealed SHA candidates
+        run: |
+          set -euo pipefail
+          python handoff/20260912/I4C_UNUSED_SCENE_MAPPING_REGEN_DIAGNOSTIC_R1.py > /tmp/I4C_UNUSED_SCENE_MAPPING_REGEN_DIAGNOSTIC_R1.json
+          cat /tmp/I4C_UNUSED_SCENE_MAPPING_REGEN_DIAGNOSTIC_R1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: i4c-unused-scene-mapping-regen-diagnostic-r1
+          path: /tmp/I4C_UNUSED_SCENE_MAPPING_REGEN_DIAGNOSTIC_R1.json
