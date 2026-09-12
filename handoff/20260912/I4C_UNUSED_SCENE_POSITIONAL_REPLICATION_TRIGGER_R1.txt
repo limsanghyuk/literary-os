@@ -1,0 +1,1 @@
+Trigger frozen-rule I4C unused-scene positional replication aggregation after 3-of-3 PASS and exact mapping replay PASS.
