@@ -2,17 +2,17 @@
 Last updated: 2026-09-12
 
 ## CURRENT PHYSICAL BASELINE
-SYNC-R32 root `b37a3774a4f701ab4caabac3cb5e62442403f499d21d89203ef85d199b6a2ffb`.
+SYNC-R32 root `b37a3774a4f701ab4caabac3cb5e62442403f499d21d89203ef85d199b6a2ffb` remains physical authority until R33 full materialization/audit succeeds.
 
 ## R4A CANDIDATE
-R4A exact surfaces frozen; G6/G7 PASS; provider recheck=`HOLD__REAL_PROVIDER_SECRET_ABSENT`; Judges=0; Mapping open=0. Independent-confirmation result does not exist.
+R4A exact surfaces frozen; G6/G7 PASS; provider=`HOLD__REAL_PROVIDER_SECRET_ABSENT`; Judges=0; Mapping open=0. Independent-confirmation result does not exist.
 
-## EVOLUTION CANDIDATE
+## EVOLUTION RESULT
 I4C historical Stage-B rationale taxonomy=`MIXED_QUALITATIVE_SIGNAL`.
-Fresh unused-scene independent annotation replication remains responses=0 with replication mapping closed. Response validator and 3-of-3 gate are sealed and tested, so the next external responses can be admitted without changing rules.
+Fresh unused-scene independent annotation replication is now complete with `MIXED_OR_WEAK_REPLICATION` after three valid independent GPT responses and exact mapping byte-seal verification. Directional worsening from EARLY to MIDDLE+LATE was 3/3 evaluators, but preregistered breadth/severity strong-positive thresholds were not met.
 
 ## CLAIM BOUNDARY
-No causal renderer defect has been established. Packet construction, validator readiness, and positional replication design do not constitute a quality result. No intervention, score rewrite, threshold change, or authority promotion is authorized.
+The result weakly supports a positional craft-degradation signal but does not establish a broad/material multi-dimensional collapse or a causal renderer defect. No renderer intervention, score rewrite, threshold change, Production/Engine/Formal promotion, human-consensus claim, or population generalization is authorized.
 
 ## EXACT NEXT ACTION
-Collect exactly three fresh independent J01/J02/J03 response JSONs under the frozen contract. Validate each, run the 3-of-3 gate, and only on PASS open the replication mapping once and compute the preregistered positional decision. If independent evaluation is unavailable, remain responses=0 and do not self-judge. R4A stays separately frozen and closed.
+First full-physicalize and audit SYNC-R33 from SYNC-R32 using the sealed deterministic delta manifest. Only after R33 physical closure may the next candidate be preregistered. That next candidate must narrow to a specifically reproducible craft mechanism on fresh/unseen material rather than applying a generic whole-episode renderer patch.
