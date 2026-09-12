@@ -2,17 +2,19 @@
 Last updated: 2026-09-12
 
 ## CURRENT PHYSICAL AUTHORITY
-SYNC-R32 root `b37a3774a4f701ab4caabac3cb5e62442403f499d21d89203ef85d199b6a2ffb`.
+SYNC-R32 root `b37a3774a4f701ab4caabac3cb5e62442403f499d21d89203ef85d199b6a2ffb` remains the latest fully physicalized/audited authority.
 
 ## EXACT STATE
-R4A: G6/G7 PASS; provider recheck=`HOLD__REAL_PROVIDER_SECRET_ABSENT`; Judges=0; Mapping open=0; no surface mutation.
-Evolution: I4C historical rationale=`MIXED_QUALITATIVE_SIGNAL`; unused-scene annotation replication=`PACKETS_SEALED__RESPONSES_0__INGESTION_GATE_READY__REPLICATION_MAPPING_CLOSED`.
+R4A: G6/G7 PASS; provider=`HOLD__REAL_PROVIDER_SECRET_ABSENT`; Judges=0; Mapping open=0; surfaces frozen.
+I4C evolution replication: J01/J02/J03 sealed valid; 3-of-3 gate PASS; I4C replication mapping exact replay SHA PASS; final decision=`MIXED_OR_WEAK_REPLICATION`. I4C replication mapping is legitimately open; R4A mapping remains closed.
+
+Post-R32 result is Hub-sealed but full SYNC-R33 physicalization is pending because the current CAAS/Jupyter/container transport layer repeatedly returns `TransportTimeoutError` even for minimal commands.
 
 ## MANDATORY RESUME ORDER
-1. Read `handoff/20260912/START_HERE_SYNC_R32_I4C_INGESTION_GATE_READY_NEW_SESSION_HANDOFF_R1.md` and verify SYNC-R32 root.
-2. Do not open either R4A or replication mapping.
-3. Obtain J01/J02/J03 response JSONs from genuinely independent fresh evaluators only.
-4. Validate each response with the sealed validator.
-5. Run the sealed 3-of-3 gate; only PASS authorizes replication mapping open.
-6. Then open replication mapping once, verify its SHA `46f8972c408250614761733ac29da956d1f1eecd3b0d3dbe9d14f13877ff2377`, and apply the frozen preregistered thresholds.
-7. Never coordinator-self-judge; immediately reseal physical packages after any meaningful result change.
+1. Read `handoff/20260912/START_HERE_POST_R32_I4C_MIXED_WEAK_R33_PHYSICALIZATION_PENDING_NEW_SESSION_HANDOFF_R1.md`.
+2. Verify SYNC-R32 root `b37a3774a4f701ab4caabac3cb5e62442403f499d21d89203ef85d199b6a2ffb` and confirm container minimal command succeeds.
+3. Before any new experiment, build SYNC-R33 using `handoff/20260912/SYNC_R33_PENDING_DETERMINISTIC_DELTA_MANIFEST_R1_20260912.json`, commit `b34a5c0437186afa415dfdc7a30d58284c12a8e7`.
+4. Audit and seal all 9 transports; only then promote physical authority to SYNC-R33.
+5. Preserve R4A Judges=0 / Mapping open=0.
+6. Do not modify the frozen I4C result or thresholds.
+7. Only after R33 closure may a next fresh craft-mechanism preregistration begin.
