@@ -1,0 +1,31 @@
+name: I4C Unused Scene Three-of-Three Gate R1
+on:
+  push:
+    paths:
+      - '.github/workflows/i4c-unused-scene-three-of-three-gate-r1.yml'
+      - 'handoff/20260912/i4c_unused_scene_responses/**'
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run individual validators and 3-of-3 gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p handoff/20260912/i4c_unused_scene_gate_output
+          python handoff/20260912/I4C_UNUSED_SCENE_MIXED_CRAFT_RESPONSE_VALIDATOR_R1.py handoff/20260912/i4c_unused_scene_responses/J01_I4C_UNUSED_SCENE_MIXED_CRAFT_RESPONSE_R1.json J01 > handoff/20260912/i4c_unused_scene_gate_output/J01_VALIDATION.json
+          python handoff/20260912/I4C_UNUSED_SCENE_MIXED_CRAFT_RESPONSE_VALIDATOR_R1.py handoff/20260912/i4c_unused_scene_responses/J02_I4C_UNUSED_SCENE_MIXED_CRAFT_RESPONSE_R1.json J02 > handoff/20260912/i4c_unused_scene_gate_output/J02_VALIDATION.json
+          python handoff/20260912/I4C_UNUSED_SCENE_MIXED_CRAFT_RESPONSE_VALIDATOR_R1.py handoff/20260912/i4c_unused_scene_responses/J03_I4C_UNUSED_SCENE_MIXED_CRAFT_RESPONSE_R1.json J03 > handoff/20260912/i4c_unused_scene_gate_output/J03_VALIDATION.json
+          python handoff/20260912/I4C_UNUSED_SCENE_MIXED_CRAFT_3OF3_GATE_R1.py \
+            handoff/20260912/i4c_unused_scene_responses/J01_I4C_UNUSED_SCENE_MIXED_CRAFT_RESPONSE_R1.json \
+            handoff/20260912/i4c_unused_scene_responses/J02_I4C_UNUSED_SCENE_MIXED_CRAFT_RESPONSE_R1.json \
+            handoff/20260912/i4c_unused_scene_responses/J03_I4C_UNUSED_SCENE_MIXED_CRAFT_RESPONSE_R1.json \
+            > handoff/20260912/i4c_unused_scene_gate_output/THREE_OF_THREE_GATE.json
+          cat handoff/20260912/i4c_unused_scene_gate_output/THREE_OF_THREE_GATE.json
+      - name: Upload validation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: i4c-unused-scene-three-of-three-gate-r1
+          path: handoff/20260912/i4c_unused_scene_gate_output/*.json
