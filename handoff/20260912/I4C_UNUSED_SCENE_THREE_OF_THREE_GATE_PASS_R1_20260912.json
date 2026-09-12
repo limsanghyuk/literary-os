@@ -1,0 +1,28 @@
+{
+  "schema": "I4CUnusedSceneThreeOfThreeGatePassReceiptR1",
+  "date": "2026-09-12",
+  "parent_physical": "SYNC-R32",
+  "prereg_commit": "b4a323edb9efbecd34e196848f5c9f2c6c260163",
+  "packet_seal_commit": "502889858b874bd1f0e0f7172240b5b543235508",
+  "response_commits": {
+    "J01": "76b09dcdee07ae2df1368b5caf1291872ef1f478",
+    "J02": "17c3980273625a57352d37aa3fb5fce958c73660",
+    "J03": "e6a91142ff0d6ae04fd054936f2ab5661ead78ac"
+  },
+  "response_sha256": {
+    "J01": "6bc7d546dabe96dea8785d4f7f97520fc91cc32ecfeb9a6209a82386180e1799",
+    "J02": "d7128feed3e5a1a7e54bca8cb53f0031d52b996a2a524da3f45e521b627712d2",
+    "J03": "92103ff48714a5b2f552c298ec17f74813bb02e38991f216586069fd115317df"
+  },
+  "workflow_run_id": 34678041251,
+  "workflow_head_sha": "87b9f96c651f3acdd9945fc3d3db00ddecf02349",
+  "artifact_id": 10293370204,
+  "artifact_digest": "sha256:02c18b1ecb26c74bf3c0177d080f8ce196d182432cf1b941b8bec86ac01bcdf6",
+  "valid_response_count": 3,
+  "gate_errors": [],
+  "gate_receipt_sha256": "711032cc23dcbe25c2f510037ab204c29d5da97632fdb7939fe8c2c7068de4a9",
+  "status": "PASS__THREE_VALID_RESPONSES__UNBLIND_AUTHORIZED",
+  "replication_mapping_open_at_seal": 0,
+  "R4A_mapping_open": 0,
+  "next_legal_action": "Regenerate only the preregistered I4C replication mapping from frozen builder/seed logic, verify mapping SHA256 equals 46f8972c408250614761733ac29da956d1f1eecd3b0d3dbe9d14f13877ff2377, then apply frozen positional decision rule."
+}
