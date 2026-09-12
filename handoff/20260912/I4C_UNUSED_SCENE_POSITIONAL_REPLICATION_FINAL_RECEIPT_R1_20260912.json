@@ -1,0 +1,62 @@
+{
+  "schema": "I4CUnusedSceneMixedCraftPositionalReplicationFinalReceiptR1",
+  "date": "2026-09-12",
+  "parent_physical": "SYNC-R32",
+  "experiment": "I4C_UNUSED_SCENE_MIXED_CRAFT_INDEPENDENT_ANNOTATION_REPLICATION",
+  "classification": "EXPLORATORY_REPLICATION__KNOWLEDGE_ONLY__NO_RENDERER_INTERVENTION",
+  "prereg_commit": "b4a323edb9efbecd34e196848f5c9f2c6c260163",
+  "packet_seal_commit": "502889858b874bd1f0e0f7172240b5b543235508",
+  "three_of_three_gate": {
+    "status": "PASS__THREE_VALID_RESPONSES__UNBLIND_AUTHORIZED",
+    "run_id": 34678041251,
+    "job_id": 103511339068,
+    "gate_receipt_sha256": "711032cc23dcbe25c2f510037ab204c29d5da97632fdb7939fe8c2c7068de4a9"
+  },
+  "responses": {
+    "J01": {"sha256": "6bc7d546dabe96dea8785d4f7f97520fc91cc32ecfeb9a6209a82386180e1799", "valid": true},
+    "J02": {"sha256": "d7128feed3e5a1a7e54bca8cb53f0031d52b996a2a524da3f45e521b627712d2", "valid": true},
+    "J03": {"sha256": "92103ff48714a5b2f552c298ec17f74813bb02e38991f216586069fd115317df", "valid": true}
+  },
+  "mapping": {
+    "expected_sha256": "46f8972c408250614761733ac29da956d1f1eecd3b0d3dbe9d14f13877ff2377",
+    "replayed_sha256": "46f8972c408250614761733ac29da956d1f1eecd3b0d3dbe9d14f13877ff2377",
+    "bytes": 1501,
+    "byte_seal_match": true,
+    "status": "PASS__EXACT_MAPPING_BYTE_SEAL_REPRODUCED"
+  },
+  "aggregation": {
+    "workflow_run_id": 34679153731,
+    "workflow_job_id": 103514388174,
+    "workflow_conclusion": "success",
+    "artifact_id": 10293716231,
+    "artifact_digest": "sha256:2a57753b8f430c088a2e17b54837f0c37879f132e07791abf157f33634fd1615",
+    "result_sha256_without_self_hash": "e901326f8198c9a5031f2fd955751f4f66d170b908510f9368f446a67ee4cd1f"
+  },
+  "stratum_metrics": {
+    "EARLY": {"mean_breadth": 1.0, "mean_severity": 1.0, "mean_material_breadth": 0.0, "scene_count": 4},
+    "MIDDLE": {"mean_breadth": 2.0, "mean_severity": 2.0, "mean_material_breadth": 0.0, "scene_count": 4},
+    "LATE": {"mean_breadth": 1.75, "mean_severity": 1.75, "mean_material_breadth": 0.0, "scene_count": 4},
+    "MIDDLE_LATE_POOLED": {"mean_breadth": 1.875, "mean_severity": 1.875, "scene_count": 8}
+  },
+  "middle_late_minus_early": {"breadth": 0.875, "severity": 0.875},
+  "individual_evaluator_direction": {
+    "J01": {"early": 0.5, "middle_late": 0.875, "delta": 0.375, "middle_late_worse": true},
+    "J02": {"early": 1.25, "middle_late": 1.875, "delta": 0.625, "middle_late_worse": true},
+    "J03": {"early": 1.75, "middle_late": 2.0, "delta": 0.25, "middle_late_worse": true}
+  },
+  "frozen_thresholds": {"breadth_delta_min": 1.0, "severity_delta_min": 2.0, "evaluator_direction_min": 2},
+  "threshold_checks": {"breadth": false, "severity": false, "evaluator_direction_agreement": true},
+  "decision": "MIXED_OR_WEAK_REPLICATION",
+  "interpretation": [
+    "All three independent evaluators directionally rated middle/late scenes as having higher raw craft-deficit severity than early scenes.",
+    "The pooled middle/late cross-evaluator median breadth and severity were each 0.875 above early, so the preregistered strong positive thresholds (+1.0 breadth and +2.0 severity) were not met.",
+    "No cross-evaluator median axis reached severity 2 in any scene; material-breadth was 0 across all strata.",
+    "Therefore the earlier exploratory mixed qualitative signal receives weak directional support but not strong positional replication."
+  ],
+  "claim_boundary": "Knowledge-only replication on one sealed I4C episode with 12 previously unused scenes and three independent GPT sessions. No renderer intervention, Production promotion, Formal R140, human-consensus, population-generalization, or historical-score rewrite is authorized.",
+  "R4A_mapping_open": 0,
+  "R4A_judges": 0,
+  "historical_score_rewrite": false,
+  "authority_change": false,
+  "next_research_rule": "Do not patch the renderer from this weak replication. Any next intervention hypothesis must narrow to a specifically reproducible craft mechanism and be preregistered on fresh/unseen material."
+}
