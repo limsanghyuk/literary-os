@@ -2,17 +2,19 @@
 Last updated: 2026-09-12
 
 ## CURRENT PHYSICAL BASELINE
-SYNC-R32 root `b37a3774a4f701ab4caabac3cb5e62442403f499d21d89203ef85d199b6a2ffb` remains the latest fully materialized/audited physical authority.
+**SYNC-R33** root `39487b9dc0ff12e2c75c16a1d5d8d7192dfb53e1ef14dc71d03c4474f1541d87` is the latest fully materialized and twice-audited physical authority.
 
-## REQUIRED RECOVERY DOCS
-- `handoff/20260912/POST_R32_CURRENT_AUTHORITY_SNAPSHOT_R2_20260912.md`
-- `handoff/20260912/START_HERE_POST_R32_I4C_MIXED_WEAK_R33_PHYSICALIZATION_PENDING_NEW_SESSION_HANDOFF_R2.md`
+Recovery handoff:
+`handoff/20260912/START_HERE_SYNC_R33_PHYSICAL_AUTHORITY_I4C_MIXED_WEAK_NEW_SESSION_HANDOFF_R1.md`
+
+Delivery manifest:
+`handoff/20260912/SYNC_R33_DELIVERY_MANIFEST_R1_20260912.json`
 
 ## R4A TRACK
 G6 PASS; G7 PASS; provider=`HOLD__REAL_PROVIDER_SECRET_ABSENT`; Judges=0; Mapping open=0. Exact surfaces frozen. Do not open mapping or claim independent confirmation.
 
-## EVOLUTION TRACK — LATEST SEALED RESULT
-I4C unused-scene mixed-craft independent annotation replication is complete.
+## EVOLUTION TRACK — LATEST SEALED AND PHYSICALLY PROPAGATED RESULT
+I4C unused-scene mixed-craft independent annotation replication is complete and included in SYNC-R33.
 - J01/J02/J03 valid and sealed.
 - 3-of-3 gate PASS.
 - I4C replication mapping exact byte-seal replay PASS.
@@ -22,15 +24,17 @@ I4C unused-scene mixed-craft independent annotation replication is complete.
 - Frozen strong thresholds breadth=`+1.0`, severity=`+2.0`, direction=`>=2/3`; strong positive replication NOT met.
 
 ## EXACT NEXT ORDER
-1. Do not start another scientific experiment yet.
-2. Read/verify the nine SYNC-R32 transports in CONTROL-first order.
-3. Verify a functioning container/runtime with a minimal command.
-4. Build SYNC-R33 from exact R32 parent bytes using `handoff/20260912/SYNC_R33_PENDING_DETERMINISTIC_DELTA_MANIFEST_R1_20260912.json` (commit `b34a5c0437186afa415dfdc7a30d58284c12a8e7`).
-5. CONTROL/A/B2 append-only change under `research_sync_r33/`; B1/C1/C2-A/C2-B/D1/D2 byte-identical.
-6. Complete physical audit, delivery manifest, closure, root input, SHA256SUMS.
-7. Only after R33 physical closure PASS may current physical authority advance to R33.
-8. Then design any next craft-mechanism research on fresh/unseen material. The hypothesis must be narrower than a generic whole-episode renderer patch.
-9. Preserve R4A mapping entirely separate and closed.
+1. Use SYNC-R33 as the physical baseline and preserve its 9 transport hashes/root.
+2. Do not alter R4A; Judges=0 and Mapping open=0 remain frozen.
+3. Before any new generation/evaluation, preregister one narrow craft-mechanism hypothesis on fresh/unseen material.
+4. The hypothesis must be more specific than “middle/late scenes degrade” or “the renderer is weak”; it must identify an observable craft mechanism with a falsifiable intervention.
+5. Freeze input, source cutoff, Control/Treatment, response contract, mapping policy, metrics and thresholds before outputs.
+6. Keep absolute-surface quality, relative intervention effect, contract-consumption fidelity and independent evaluation as separate evidence layers.
+7. Do not rewrite I4C thresholds or historical scores.
+8. Only a later qualified result may change Engine/Production/DB/Formal authority.
 
 ## CLAIM BOUNDARY
-The `MIXED_OR_WEAK_REPLICATION` result is knowledge-only and does not authorize renderer intervention, threshold rewriting, historical-score rewriting, Production/Engine/Formal promotion, human-consensus claims, or population generalization.
+`MIXED_OR_WEAK_REPLICATION` is knowledge-only. Physical propagation to R33 closes synchronization debt; it does not convert the result into causal evidence or authorize a broad renderer patch.
+
+## STATUS TOKEN
+`PHYSICAL_SYNC_R33_READY__NEXT_NARROW_CRAFT_MECHANISM_PREREGISTRATION_ALLOWED__NOT_YET_ACTIVE__R4A_CLOSED`
