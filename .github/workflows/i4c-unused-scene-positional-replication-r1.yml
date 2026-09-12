@@ -1,0 +1,19 @@
+name: I4C Unused Scene Positional Replication R1
+on:
+  push:
+    branches: [main]
+jobs:
+  aggregate:
+    if: contains(github.event.head_commit.message, 'Run I4C unused-scene positional replication')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Aggregate sealed responses under frozen rule
+        run: |
+          set -euo pipefail
+          python handoff/20260912/I4C_UNUSED_SCENE_POSITIONAL_REPLICATION_AGGREGATOR_R1.py
+          cat /tmp/I4C_UNUSED_SCENE_POSITIONAL_REPLICATION_RESULT_R1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: i4c-unused-scene-positional-replication-r1
+          path: /tmp/I4C_UNUSED_SCENE_POSITIONAL_REPLICATION_RESULT_R1.json
