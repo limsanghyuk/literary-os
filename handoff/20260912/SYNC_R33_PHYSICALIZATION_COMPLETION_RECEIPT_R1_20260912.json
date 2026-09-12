@@ -1,0 +1,60 @@
+{
+  "schema": "SyncR33PhysicalizationCompletionReceiptR1",
+  "date": "2026-09-12",
+  "parent_physical": "SYNC-R32",
+  "parent_root_sha256": "b37a3774a4f701ab4caabac3cb5e62442403f499d21d89203ef85d199b6a2ffb",
+  "new_physical": "SYNC-R33",
+  "transport_set_root_sha256": "39487b9dc0ff12e2c75c16a1d5d8d7192dfb53e1ef14dc71d03c4474f1541d87",
+  "parent_nine_transport_sha_verification": "PASS__9_OF_9_EXACT_SYNC_R32_BYTES",
+  "runtime_preflight": "PASS",
+  "build_method": "COPY_EXACT_R32_PARENT_BYTES__APPEND_RESEARCH_SYNC_R33_TO_CONTROL_A_B2_ONLY",
+  "changed_roles": ["CONTROL", "A", "B2"],
+  "unchanged_roles": ["B1", "C1", "C2-A", "C2-B", "D1", "D2"],
+  "overlay_root": "research_sync_r33/",
+  "overlay_entry_count_each_changed_transport": 9,
+  "overlay_identical_across_CONTROL_A_B2": true,
+  "judge_response_sha256_verified": {
+    "J01": "6bc7d546dabe96dea8785d4f7f97520fc91cc32ecfeb9a6209a82386180e1799",
+    "J02": "d7128feed3e5a1a7e54bca8cb53f0031d52b996a2a524da3f45e521b627712d2",
+    "J03": "92103ff48714a5b2f552c298ec17f74813bb02e38991f216586069fd115317df"
+  },
+  "mapping_exact_replay": {
+    "status": "PASS__EXACT_MAPPING_BYTE_SEAL_REPRODUCED",
+    "sha256": "46f8972c408250614761733ac29da956d1f1eecd3b0d3dbe9d14f13877ff2377"
+  },
+  "aggregation_reexecution": {
+    "decision": "MIXED_OR_WEAK_REPLICATION",
+    "breadth_delta": 0.875,
+    "severity_delta": 0.875,
+    "direction_agreement": "3/3",
+    "result_sha256_without_self_hash": "e901326f8198c9a5031f2fd955751f4f66d170b908510f9368f446a67ee4cd1f"
+  },
+  "physical_audit": {
+    "first_pass": "PASS",
+    "independent_fresh_process_recheck": "PASS",
+    "errors": 0,
+    "zip_crc": "PASS",
+    "duplicate_names": 0,
+    "unsafe_paths": 0,
+    "symlinks": 0,
+    "encrypted_entries": 0,
+    "parent_entry_metadata_crc_size_preservation": "PASS",
+    "unchanged_six_exact_sha_identity": "PASS",
+    "combined_c2_sha256": "58d28ecc900dcc62f820e7523294f840d506f451aecef12ea7b1b3d97ec2a9f7"
+  },
+  "scientific_state": {
+    "i4c_replication_decision": "MIXED_OR_WEAK_REPLICATION",
+    "R4A_judges": 0,
+    "R4A_mapping_open": 0
+  },
+  "unchanged_authorities": {
+    "active_engine": "P07-I4H Recovery R3",
+    "production": "ENG:R47",
+    "db59_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "formal_scored_total": 137,
+    "latest_formal": "R138",
+    "formal_r140": "0/0/0"
+  },
+  "status": "PASS__SYNC_R33_IS_ELIGIBLE_FOR_CURRENT_PHYSICAL_AUTHORITY",
+  "next_legal_action": "PROMOTE_CURRENT_POINTERS_TO_SYNC_R33__THEN_PREREGISTER_A_NARROW_FRESH_CRAFT_MECHANISM_STUDY"
+}
