@@ -1,0 +1,32 @@
+{
+  "schema": "LiteraryOSSyncR42E1R2CurrentStatusR1",
+  "date": "2026-09-15",
+  "physical_authority": {
+    "sync": "SYNC-R42",
+    "root_sha256": "921d97529a6d0c9741968b305eba18d7d1a241702a75cc036a5bca9316f2d4ef",
+    "parent_sync": "SYNC-R39",
+    "parent_root_sha256": "e60bd46e5f9e41614aaa3a2a227eb8a6fe4a0175e3684ae5180178ae7cc12009"
+  },
+  "maturity": "PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS",
+  "E2": "CLOSED_PASS__A2R35_CANONICAL_10W_2T_0L",
+  "E1": {
+    "R1": "SUPERSEDED_BEFORE_JUDGMENT__NO_SCORE",
+    "R2_experiment_id": "P07-LEVEL3-E1-R2-FRESH-SURFACE-FORMAT-CLOSURE",
+    "state": "PREREGISTERED__FRESH_SAFE_SAMPLE_12__CANDIDATE_12_OF_12_MECHANICAL_PASS__CANDIDATE_SEALED__HUMAN_REFERENCE_SEALED__NEUTRAL_PRESENTATION_SEALED__3_EXTERNAL_JUDGE_PACKETS_SEALED__JUDGES_0__MAPPING_CLOSED",
+    "candidate_units": 12,
+    "valid_judge_responses": 0,
+    "mapping_open": false,
+    "secret_mapping_sha256": "8c77653ae9ec47e5dbf0b6ec60cb5c6dde7a3e7b3a1278c2ca4ccc2502ab0b55",
+    "next_legal_action": "COLLECT_FIRST_3_VALID_INDEPENDENT_EXTERNAL_GPT_OR_CLAUDE_RESPONSES__SEAL_ALL_RESPONSE_BYTES__THEN_OPEN_MAPPING_ONCE__APPLY_FROZEN_GATE"
+  },
+  "stable_authorities": {
+    "active_engine": "P07-I4H Recovery R3",
+    "production_engine": "ENG:R47",
+    "formal_scored_total": 137,
+    "latest_formal": "R138",
+    "formal_r140": [0, 0, 0],
+    "db64_is_production": false,
+    "level3_entered": false
+  },
+  "status_token": "SYNC_R42__E2_CLOSED_PASS__E1_R1_SUPERSEDED_NO_SCORE__E1_R2_CANDIDATE_12_12_MECH_PASS__JUDGE_PACKETS_3__JUDGES_0__MAPPING_CLOSED__NEXT_EXTERNAL_JUDGMENT"
+}
