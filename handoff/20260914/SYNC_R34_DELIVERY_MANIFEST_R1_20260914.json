@@ -1,0 +1,92 @@
+{
+  "schema": "LiteraryOSSyncR34DeliveryManifestR1",
+  "date": "2026-09-14",
+  "physical_authority": "SYNC-R34",
+  "parent": {
+    "physical_authority": "SYNC-R33",
+    "root_sha256": "39487b9dc0ff12e2c75c16a1d5d8d7192dfb53e1ef14dc71d03c4474f1541d87"
+  },
+  "transport_root_sha256": "3781c4d1d9f02019cf53fd6c373074e4f086edf40ca0b109cf3b69c485707d25",
+  "session_research_evidence_bundle": {
+    "artifact_count": 314,
+    "sha256": "5b014ed59e93436375d322f34af25572232472e734fb40bc9de6204cc861e054"
+  },
+  "parts": {
+    "PART_1_CONTROL": [
+      {
+        "file": "LITERARY_OS_CURRENT_CONTROL_P07_I4H_RECOVERY_R3_DB64_LEVEL3_RESEARCH_SYNC_R34_20260914.zip",
+        "sha256": "dd2848ca1a2cdf03215fd2430ae44fd31766e369ba25335df594c5e7eb7f0602",
+        "changed_from_r33": true
+      }
+    ],
+    "PART_2_A": [
+      {
+        "file": "LITERARY_OS_CURRENT_PART_A_P07_I4H_RECOVERY_R3_DB64_LEVEL3_RESEARCH_SYNC_R34_20260914.zip",
+        "sha256": "ea5e0aecd990aa6adba3e4643ff9dcbba5a1e626cffcb0c89b90e2b2e9fc4635",
+        "changed_from_r33": true
+      }
+    ],
+    "PART_3_B": [
+      {
+        "file": "LITERARY_OS_CURRENT_PART_B1_UNCHANGED_R1_20260909.zip",
+        "sha256": "00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98",
+        "changed_from_r33": false
+      },
+      {
+        "file": "LITERARY_OS_CURRENT_PART_B2_P07_I4H_RECOVERY_R3_DB64_LEVEL3_RESEARCH_SYNC_R34_20260914.zip",
+        "sha256": "48f7e69a7c8c806afbc353094cdbda11f0ad85c38306aa7956020174f99b70e0",
+        "changed_from_r33": true
+      }
+    ],
+    "PART_4_C": [
+      {
+        "file": "LITERARY_OS_CURRENT_C1_RUNTIME_CORE_UNCHANGED_R1_20260909.zip",
+        "sha256": "dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518",
+        "changed_from_r33": false
+      },
+      {
+        "file": "LITERARY_OS_CURRENT_C2_BINARY_A_P07_I4H_RECOVERY_R3_20260909.bin",
+        "sha256": "d1fb7ba65ead633ec13d027d032e4bd3950e973b61408e04b620bd37f7997253",
+        "changed_from_r33": false
+      },
+      {
+        "file": "LITERARY_OS_CURRENT_C2_BINARY_B_P07_I4H_RECOVERY_R3_20260909.bin",
+        "sha256": "49d454647f0c1d0920a582c2a5aa222b345719a3d6d396374dcb0921560e9414",
+        "changed_from_r33": false
+      }
+    ],
+    "PART_5_D": [
+      {
+        "file": "LITERARY_OS_CURRENT_PART_D1_DB59_UNCHANGED_R1_20260909.zip",
+        "sha256": "a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504",
+        "changed_from_r33": false
+      },
+      {
+        "file": "LITERARY_OS_CURRENT_PART_D2_DB59_UNCHANGED_R1_20260909.zip",
+        "sha256": "c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4",
+        "changed_from_r33": false
+      }
+    ]
+  },
+  "changed_transports": ["CONTROL", "A", "B2"],
+  "byte_identical_transports": ["B1", "C1", "C2-A", "C2-B", "D1", "D2"],
+  "authority_boundaries": {
+    "active_engine": "P07-I4H Recovery R3",
+    "production_engine": "ENG:R47",
+    "formal_scored_total": 137,
+    "latest_formal": "R138",
+    "formal_r140": "0/0/0",
+    "db59_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "db64_sha256": "19f3c446a73408045d02d4d99e168251dca42da3bfa00abaff1d8f9159d7ea46",
+    "db64_bytes": 313702945,
+    "db64_production_promoted": false
+  },
+  "research_state": {
+    "a2r10_retrieval_fuel": "PASS",
+    "canonical_a2r26_optional_advisory_abstention": "PASS_10W_2T_0L",
+    "a2r31_full_planning": "FAIL_6W_2T_4L",
+    "e2": "OPEN_ADVANCED",
+    "level3": "NOT_CLOSED"
+  },
+  "read_first": "handoff/20260914/START_HERE_SYNC_R34_DB64_LEVEL3_NEW_SESSION_HANDOFF_R1.md"
+}
