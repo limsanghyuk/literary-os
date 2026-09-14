@@ -3,69 +3,83 @@ Last updated: 2026-09-14
 
 ## CURRENT PHYSICAL AUTHORITY
 **SYNC-R34** root:
-
 `3781c4d1d9f02019cf53fd6c373074e4f086edf40ca0b109cf3b69c485707d25`
 
 Parent: SYNC-R33 root `39487b9dc0ff12e2c75c16a1d5d8d7192dfb53e1ef14dc71d03c4474f1541d87`.
 
-## READ THESE FIRST AFTER CONTROL-FIRST PACKAGE REVIEW
-1. `handoff/20260914/START_HERE_SYNC_R34_DB64_LEVEL3_NEW_SESSION_HANDOFF_R1.md`
-2. `handoff/20260914/SESSION_CHECKPOINT_DB64_PLANNING_R1_20260914.md`
-3. `handoff/20260914/LEVEL3_TO_LEVEL4_STATUS_R1_20260914.md`
-4. `handoff/20260914/SYNC_R34_DELIVERY_MANIFEST_R1_20260914.json`
+## CORRECT MATURITY STATE
+`PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS`
 
-Required physical read order:
+The system has not entered Level 3. Earlier `Level 3 advanced/not closed` wording is superseded.
 
+## READ AFTER CONTROL-FIRST PACKAGE REVIEW
+1. `handoff/20260914/START_HERE_SYNC_R34_PRE_LEVEL3_ENTRY_R2.md`
+2. `handoff/20260914/PRE_LEVEL3_ENTRY_QUALIFICATION_STATUS_R1_20260914.md`
+3. `handoff/20260914/SESSION_CHECKPOINT_DB64_PLANNING_R1_20260914.md`
+4. `handoff/20260914/A2R31_FAILURE_DIAGNOSIS_BOUNDARY_R1_20260914.md`
+5. `research/20260914/A2R32_FRESH_POOL_24_R1.json`
+6. `research/20260914/A2R32_PREREGISTRATION_R1.md`
+7. `handoff/20260914/SYNC_R34_DELIVERY_MANIFEST_R1_20260914.json`
+
+Physical read order:
 `CONTROL → A → B1 → B2 → C1 → C2-A → C2-B → D1 → D2`
 
 ## CURRENT RESEARCH STATE
-DB64 research has progressed well beyond schema compatibility.
+- A2R10 Rolling Retrieval Fuel: PASS
+- canonical A2R26 Optional Advisory + Abstention: PASS 10W/2T/0L
+- A2R31 Full Planning: FAIL 6W/2T/4L, immutable
+- A2R32: `PREREGISTERED__OUTPUTS_0__RUNTIME_HOLD`
 
-Closed positive evidence:
-- A2R10 rolling research retrieval fuel: **PASS**
-- canonical A2R26 optional advisory + abstention interface: **PASS 10W/2T/0L**
+A2R32 fresh pool Git seal:
+`84aee3ecf641ab2ec3ea94e03f591d28797b9bee`
 
-Latest full-planning evidence:
-- A2R31: **FAIL 6W/2T/4L**
-- all 12 selected A/B plans were materially distinct
-- identity leak 0
-- duplicate injection 0
-- the full novelty signature reached sequence realization
+A2R32 preregistration Git seal:
+`5d41262255dce76d81b3a30f7ae50ee626d58597`
 
-Therefore:
-- `E2 = OPEN_ADVANCED`
-- Level 3 = `NOT_CLOSED`
+## EXACT RESUME ORDER
+1. Verify SYNC-R34 root and delivery manifest.
+2. Run a minimal container/runtime command.
+3. If runtime is healthy, SHA256-seal A2R32 fresh pool and preregistration.
+4. Byte-reverify frozen A2R10 scorer, structured abstraction, and A2R26 advisory doctrine implementation.
+5. Freeze and SHA256 the A2R32 utility-control implementation.
+6. Only then produce retrieval and planning outputs.
+7. Enforce preblind mechanical gates.
+8. Seal plan bytes before fresh 6/6 mapping.
+9. Seal blind judgment before unblind.
+10. Write immutable PASS/FAIL closure immediately and update the hub.
 
-The remaining DB blocker is the utility-controlled bridge from additive DB64 structured novelty into full Showrunner event architecture.
+## A2R32 INTERVENTION
+Preserve DB59 protected baseline + optional DB64 advisory + abstention.
 
-## MANDATORY RESUME ORDER
-1. Verify SYNC-R34 root and delivery manifest before any new work.
-2. Verify runtime/container with a minimal command before large archive operations.
-3. Preserve A2R31 as immutable FAIL; do not rerun or rescore its outputs.
-4. Diagnose only the four Treatment losses.
-5. Do not reduce the frozen full-planning gate `>=7 wins / >=10 nonloss / <=2 losses`.
-6. Preregister a fresh successor on unseen cases.
-7. Preserve DB59 baseline protection + optional DB64 additive advisory + abstention + identity-free structured abstraction.
-8. Seal plan bytes before mapping; seal blind judgment before unblind.
-9. Immediately write immutable closure and update hub pointer after the result.
-10. If package contents materially change, reseal the 5 Parts / 9 Packages before proceeding beyond the next major gate.
+Add only:
+- Case-Relevance Veto
+- Minimal Novelty Budget, max 2 atoms
+- Physical-Affordance Veto
+- Plant/Payoff Lifecycle Coherence Veto
+- deterministic target-axis sequence placement
+
+Full-planning gate remains unchanged:
+`>=7 wins / >=10 nonloss / <=2 losses`.
+
+## RUNTIME FAILURE MODE
+Current execution layers repeatedly return `TransportTimeoutError`.
+
+Do not fabricate outputs or infer mappings while this persists.
+
+If interrupted, recover from this pointer and the two A2R32 Git seals above.
 
 ## UNCHANGED AUTHORITIES
-- Active Engine: `P07-I4H Recovery R3`
-- Production: `ENG:R47`
-- Formal scored total: `137`
-- Latest Formal: `R138`
-- Formal R140: `0/0/0`
-- DB59 frozen SHA: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
-- DB64 SHA: `19f3c446a73408045d02d4d99e168251dca42da3bfa00abaff1d8f9159d7ea46`
-- DB64 is not Production DB.
+- Active Engine: P07-I4H Recovery R3
+- Production: ENG:R47
+- Formal: 137 scored, latest R138
+- R140: 0/0/0
+- DB59 historical benchmark unchanged
+- DB64 not Production DB
 
-## FAILURE MODE
-If runtime/container/transport fails:
-- stop at the last physically sealed boundary,
-- do not fabricate a successor result,
-- do not guess missing secret mappings or judgments,
-- recover from this pointer + SYNC-R34 physical package hashes.
+## LEVEL-3 ENTRY SEQUENCE
+`E2 closure → E3 whole-episode integration → E4 >=3 episode state carry → E5 fault recovery → E6 formal Level-3 qualification → LEVEL_3_ENTERED`
+
+Level 4 has not begun.
 
 ## STATUS TOKEN
-`RECOVER_FROM_SYNC_R34__A2R10_RETRIEVAL_PASS__A2R26_ADVISORY_PASS__A2R31_PLANNING_FAIL__E2_OPEN_ADVANCED__NEXT_FRESH_PLANNING_INTERFACE_REPAIR`
+`RECOVER_SYNC_R34__PRE_LEVEL3__A2R32_PREREG_OUTPUTS0__RUNTIME_HOLD`
