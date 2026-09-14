@@ -4,73 +4,87 @@ Last updated: 2026-09-15
 ## READ FIRST
 Canonical recovery bootstrap:
 
-`handoff/20260915/START_HERE_SYNC_R39_BRANCH_RECONCILIATION_R1.md`
+`handoff/20260915/START_HERE_SYNC_R42_E1_R2_EXTERNAL_JUDGE_PENDING_R1.md`
 
-Detailed branch reconciliation:
+Machine-readable current status:
 
-`handoff/20260915/A2R35_BRANCH_RECONCILIATION_R1_20260915.md`
-
-Current status:
-
-`handoff/20260915/SYNC_R39_CURRENT_STATUS_R1.json`
+`handoff/20260915/SYNC_R42_E1_R2_CURRENT_STATUS_R1.json`
 
 ## PHYSICAL BASE
-Last audited physical authority: **SYNC-R39**
+Last audited physical authority: **SYNC-R42**
 
 Root SHA256:
-`e60bd46e5f9e41614aaa3a2a227eb8a6fe4a0175e3684ae5180178ae7cc12009`
+`921d97529a6d0c9741968b305eba18d7d1a241702a75cc036a5bca9316f2d4ef`
 
-Parent authority: **SYNC-R38**
+Parent authority: **SYNC-R39**
 
 Parent root SHA256:
-`4611c1e5e0ff9c2ec22750817d5471b06781c018c66d66e9dabd221eac430d9c`
+`e60bd46e5f9e41614aaa3a2a227eb8a6fe4a0175e3684ae5180178ae7cc12009`
 
 Required physical read order:
 `CONTROL → A → B1 → B2 → C1 → C2-A → C2-B → D1 → D2`
 
-## BRANCH RECONCILIATION
-Canonical A2R35 is the first completed branch physically sealed in SYNC-R38:
-- PASS `10W/2T/0L`
-- Treatment nonloss `12/12`
-- Mechanical PASS
-- E2 `CLOSED_PASS`
-
-A later same-preregistration A2R35 rerun produced `8W/1T/3L` but is quarantined as:
-
-`DUPLICATE_BRANCH_NOT_SCORED__AUXILIARY_DIAGNOSTIC_ONLY`
-
-It may not alter the canonical A2R35 result.
-
-A2R36 was opened from that duplicate FAIL branch and is therefore:
-
-`ABORTED_NOT_SCORED__INVALID_DUPLICATE_PARENT__OUTPUTS_0`
-
-Do not resume A2R36.
+R40/R41 artifacts created during interrupted E1 preparation were not promoted by the Developer Hub and are not parents of R42. R42 was rebuilt directly from the audited R39 physical authority.
 
 ## MATURITY
 `PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS`
 
 Level 3 has not been entered. Level 4 has not begun.
 
-## CURRENT RESEARCH STATE
-- A2R10 retrieval fuel: PASS
-- canonical A2R26 optional advisory + abstention: PASS `10W/2T/0L`
-- A2R31 full planning: immutable FAIL `6W/2T/4L`
-- A2R32: immutable preblind FAIL
-- A2R33: immutable FAIL `4W/2T/6L`
-- A2R34: immutable FAIL `6W/1T/5L`
+## E2
 - canonical A2R35: PASS `10W/2T/0L`
+- Treatment nonloss: `12/12`
 - E2 DB64 Fuel / Full-Planning Qualification: `CLOSED_PASS`
 
-## EXACT RESUME RULE
-Next gate:
+The later duplicate A2R35 rerun remains quarantined and A2R36 remains aborted/not scored.
 
-`E1_CLEAN_INDEPENDENT_HUMAN_SURFACE_CLOSURE`
+## E1-R1
+The first E1 external-judge packet set was superseded before judgment because the screenplay presentation contract and source-format blinding were insufficiently strict.
+
+State:
+`SUPERSEDED_BEFORE_JUDGMENT__NO_SCORE`
+
+No R1 judge response, mapping open, unblind, PASS or FAIL exists.
+
+## E1-R2 CURRENT STATE
+Experiment:
+`P07-LEVEL3-E1-R2-FRESH-SURFACE-FORMAT-CLOSURE`
+
+State:
+`PREREGISTERED__FRESH_SAFE_SAMPLE_12__CANDIDATE_12_OF_12_MECHANICAL_PASS__CANDIDATE_SEALED__HUMAN_REFERENCE_SEALED__NEUTRAL_PRESENTATION_SEALED__3_EXTERNAL_JUDGE_PACKETS_SEALED__JUDGES_0__MAPPING_CLOSED`
+
+Key boundaries:
+- fresh 4-work / 12-scene sample
+- Candidate generation consumed sanitized semantic contracts only
+- raw human scene prose was not exposed before Candidate seal
+- Candidate surface contract uses `(씬 설정: ...)`, `등장인물명: (연기지문) 대사`, and optional `(지문: ...)` between turns
+- Candidate mechanical admission: PASS `12/12`
+- Candidate bytes: SEALED
+- Human reference bytes: SEALED after Candidate seal
+- Neutral presentation: SEALED
+- External judge packets J01/J02/J03: SEALED
+- Valid judge responses: `0`
+- Secret mapping: CLOSED
+- Secret mapping SHA256:
+  `8c77653ae9ec47e5dbf0b6ec60cb5c6dde7a3e7b3a1278c2ca4ccc2502ab0b55`
+
+## EXACT RESUME RULE
+Do not regenerate or edit Candidate scenes.
+Do not regenerate or edit Human references.
+Do not open or infer the secret mapping.
+Do not replace a valid unfavorable judge response.
+
+Next legal actions only:
+1. collect exactly the first three valid independent external GPT/Claude responses for J01/J02/J03;
+2. SHA256-seal all three response bytes;
+3. validate response schema and independence;
+4. only then open the secret mapping once;
+5. apply the frozen E1-R2 gates;
+6. immutable-close E1-R2;
+7. if PASS, continue to `E3 Fresh Whole-Episode Integration`; if FAIL, diagnose a fresh successor without relabeling E1-R2.
 
 After E1 closes:
 `E3 Fresh Whole-Episode Integration → E4 >=3 Episode State Carry → E5 Fault Injection/Autonomous Recovery → E6 Formal Level-3 Qualification → LEVEL_3_ENTERED`
-
-Do not infer Level-3 entry from E2 alone.
 
 ## UNCHANGED SYSTEM AUTHORITIES
 - Active Engine: `P07-I4H Recovery R3`
@@ -82,4 +96,4 @@ Do not infer Level-3 entry from E2 alone.
 - DB64 remains non-Production
 
 ## STATUS TOKEN
-`SYNC_R39__A2R35_CANONICAL_PASS_10W2T0L__DUPLICATE_RERUN_QUARANTINED__A2R36_ABORTED_OUTPUTS0__E2_CLOSED_PASS__NEXT_E1`
+`SYNC_R42__E2_CLOSED_PASS__E1_R1_SUPERSEDED_NO_SCORE__E1_R2_CANDIDATE_12_12_MECH_PASS__JUDGE_PACKETS_3__JUDGES_0__MAPPING_CLOSED__NEXT_EXTERNAL_JUDGMENT`
