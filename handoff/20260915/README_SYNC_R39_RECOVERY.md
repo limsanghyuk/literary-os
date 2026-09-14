@@ -1,0 +1,1 @@
+Use `START_HERE_SYNC_R39_BRANCH_RECONCILIATION_R1.md` as the recovery bootstrap for the 2026-09-15 branch reconciliation. It supersedes any continuation instruction that treats the later A2R35 8W/1T/3L rerun as canonical or treats A2R36 as resumable.
