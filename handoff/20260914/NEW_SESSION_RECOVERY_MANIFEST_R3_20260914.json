@@ -1,0 +1,149 @@
+{
+  "schema": "LiteraryOSNewSessionRecoveryManifestR3",
+  "date": "2026-09-14",
+  "canonical_bootstrap": "handoff/20260914/START_HERE_SYNC_R34_HUB_OVERLAY_NEW_SESSION_HANDOFF_R3.md",
+  "physical_authority": {
+    "sync": "SYNC-R34",
+    "root_sha256": "3781c4d1d9f02019cf53fd6c373074e4f086edf40ca0b109cf3b69c485707d25",
+    "parent_sync": "SYNC-R33",
+    "parent_root_sha256": "39487b9dc0ff12e2c75c16a1d5d8d7192dfb53e1ef14dc71d03c4474f1541d87",
+    "is_last_physical_delivery": true,
+    "next_sync_exists": false,
+    "read_order": ["CONTROL", "A", "B1", "B2", "C1", "C2-A", "C2-B", "D1", "D2"],
+    "changed_from_parent": ["CONTROL", "A", "B2"],
+    "byte_identical_from_parent": ["B1", "C1", "C2-A", "C2-B", "D1", "D2"],
+    "session_evidence_bundle_sha256": "5b014ed59e93436375d322f34af25572232472e734fb40bc9de6204cc861e054",
+    "delivery_manifest": "handoff/20260914/SYNC_R34_DELIVERY_MANIFEST_R1_20260914.json"
+  },
+  "hub_overlay": {
+    "newer_than_physical_sync": true,
+    "must_be_incorporated_in_next_physical_reseal": true,
+    "files": [
+      "handoff/20260914/SYNC_R34_PRE_LEVEL3_MATURITY_ERRATUM_R1.md",
+      "handoff/20260914/PRE_LEVEL3_ENTRY_QUALIFICATION_STATUS_R1_20260914.md",
+      "handoff/20260914/SESSION_CHECKPOINT_DB64_PLANNING_R1_20260914.md",
+      "handoff/20260914/A2R31_FAILURE_DIAGNOSIS_BOUNDARY_R1_20260914.md",
+      "research/20260914/A2R32_FRESH_POOL_24_R1.json",
+      "research/20260914/A2R32_PREREGISTRATION_R1.md",
+      "research/20260914/a2r32_utility_control_r1.py",
+      "research/20260914/A2R32_IMPLEMENTATION_FREEZE_R1.md",
+      "handoff/20260914/A2R32_RUNTIME_HOLD_RECEIPT_R2_20260914.md"
+    ]
+  },
+  "maturity": {
+    "token": "PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS",
+    "level_3_entered": false,
+    "level_4_started": false,
+    "entry_sequence": [
+      "E2_DB_FULL_PLANNING_CLOSURE",
+      "E3_FRESH_WHOLE_EPISODE_INTEGRATION",
+      "E4_MULTI_EPISODE_STATE_CARRY_GE_3",
+      "E5_FAULT_INJECTION_AUTONOMOUS_RECOVERY",
+      "E6_FORMAL_LEVEL3_QUALIFICATION",
+      "LEVEL_3_ENTERED"
+    ]
+  },
+  "stable_authorities": {
+    "active_engine": "P07-I4H Recovery R3",
+    "production_engine": "ENG:R47",
+    "formal_scored_total": 137,
+    "latest_formal": "R138",
+    "r139": "CLOSED_NOT_SCORED",
+    "formal_r140": "0/0/0",
+    "db59_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "db64_bytes": 313702945,
+    "db64_sha256": "19f3c446a73408045d02d4d99e168251dca42da3bfa00abaff1d8f9159d7ea46",
+    "db64_is_production_db": false
+  },
+  "closed_research_evidence": {
+    "A2R10": {
+      "status": "PASS",
+      "claim": "rolling research retrieval fuel qualified",
+      "treatment_wins": 22,
+      "ties": 18,
+      "control_wins": 8,
+      "nonloss": 40,
+      "total": 48
+    },
+    "canonical_A2R26": {
+      "status": "PASS",
+      "claim": "optional DB64 advisory plus abstention with DB59 baseline protection",
+      "treatment_wins": 10,
+      "ties": 2,
+      "control_wins": 0
+    },
+    "A2R31": {
+      "status": "FAIL_IMMUTABLE",
+      "treatment_wins": 6,
+      "ties": 2,
+      "control_wins": 4,
+      "nonloss": 8,
+      "mechanical_distinct_pairs": "12/12",
+      "identity_leak": 0,
+      "duplicate_advisory_injection": 0
+    }
+  },
+  "current_experiment": {
+    "id": "P07-DATA-A2R32-UTILITY-CONTROLLED-MINIMAL-NOVELTY-PLANNING-QUALIFICATION",
+    "status": "PREREGISTERED__IMPLEMENTATION_FROZEN__OUTPUTS_0__RUNTIME_HOLD",
+    "fresh_pool_commit": "84aee3ecf641ab2ec3ea94e03f591d28797b9bee",
+    "preregistration_commit": "5d41262255dce76d81b3a30f7ae50ee626d58597",
+    "implementation_source_commit": "8315e0c94ea45f3bdd840eaacfc90ead48ab0036",
+    "implementation_freeze_commit": "e5148930525915e464c6aacb4c0bf933b0388f4e",
+    "runtime_hold_r2_commit": "7a3884ea282d0f4875257543837ff58f4fd94037",
+    "implementation_sha256": "PENDING_RUNTIME_RECOVERY",
+    "scientific_outputs": {
+      "retrieval": 0,
+      "planning": 0,
+      "eligibility": 0,
+      "secret_mapping": null,
+      "blind_packet": null,
+      "blind_judgment": null,
+      "result": null
+    },
+    "final_gate": {
+      "treatment_wins_min": 7,
+      "treatment_nonloss_min": 10,
+      "treatment_losses_max": 2
+    }
+  },
+  "runtime": {
+    "status": "RUNTIME_TRANSPORT_FAILURE__NOT_SCIENTIFIC_FAILURE",
+    "observed_error": "TransportTimeoutError",
+    "scientific_execution_allowed": false
+  },
+  "resume_order": [
+    "READ_9_PHYSICAL_PACKAGES_CONTROL_FIRST",
+    "VERIFY_SYNC_R34_ROOT",
+    "READ_R3_BOOTSTRAP_AND_MANIFEST",
+    "MINIMAL_RUNTIME_PROBE",
+    "VERIFY_MNT_DATA_AND_TMP_READ_WRITE",
+    "SHA256_SEAL_A2R32_POOL",
+    "SHA256_SEAL_A2R32_PREREG",
+    "SHA256_SEAL_A2R32_IMPLEMENTATION",
+    "BYTE_REVERIFY_A2R10_ABSTRACTION_A2R26_COMPONENTS",
+    "CREATE_PREOUTPUT_RECOVERY_BUNDLE",
+    "EXECUTE_RETRIEVAL_AND_PLANNING",
+    "MECHANICAL_GATE",
+    "SEAL_PLAN_BYTES",
+    "CREATE_FRESH_BALANCED_6_6_MAPPING",
+    "SEAL_BLIND_JUDGMENT_BEFORE_UNBLIND",
+    "UNBLIND_ONCE",
+    "APPLY_UNCHANGED_7_10_2_GATE",
+    "WRITE_IMMUTABLE_CLOSURE",
+    "UPDATE_HUB_POINTERS",
+    "PHYSICALLY_RESEAL_NEXT_5_PART_9_PACKAGE_SYNC"
+  ],
+  "forbidden": [
+    "CLAIM_R35_EXISTS",
+    "CLAIM_LEVEL3_ENTERED",
+    "CLAIM_LEVEL4_STARTED",
+    "INFER_A2R32_RESULTS",
+    "RECONSTRUCT_MISSING_SECRET_MAPPING",
+    "LOWER_7_10_2_GATE",
+    "RELABEL_A2R31_PASS",
+    "PROMOTE_DB64_TO_PRODUCTION_WITHOUT_QUALIFICATION",
+    "PROMOTE_ACTIVE_ENGINE_PRODUCTION_FORMAL_FROM_THIS_RESEARCH_ALONE"
+  ],
+  "status_token": "PHYSICAL_SYNC_R34__HUB_OVERLAY_NEWER__PRE_LEVEL3_ENTRY__A2R10_PASS__A2R26_PASS__A2R31_FAIL__A2R32_IMPLEMENTATION_FROZEN__OUTPUTS0_RUNTIME_HOLD__NEXT_PHYSICAL_RESEAL_PENDING"
+}
