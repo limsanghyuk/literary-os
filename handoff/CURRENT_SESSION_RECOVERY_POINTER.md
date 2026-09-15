@@ -10,15 +10,22 @@ Parent: **SYNC-R51**
 Parent Root:
 `9ca674f11ff1b75ef6d0ce3d0a1b3894c87c59d1f0feb7b2c3148eb11067a75a`
 
-Required read order:
+Required physical read order:
 `CONTROL → A → B1 → B2 → C1 → C2-A → C2-B → D1 → D2`
 
-## MATURITY
-**LEVEL_3_ENTERED**
+No post-R52 physical reseal is claimed yet.
+
+## MATURITY / CLAIM STATUS
+Historical R52 declaration: `LEVEL_3_ENTERED` — preserved in lineage.
+
+Current operational research claim:
+`LEVEL_3_OPERATIONAL_CLAIM_SUSPENDED__DRAMATURGY_REQUALIFICATION_IN_PROGRESS`
+
+Reason: the original E6-R2 qualification gates did not adequately measure whole-episode broadcast dramaturgy. This is a claim-boundary correction, not a retroactive rewrite of the historical E6-R2 binary result.
 
 Level 4 has NOT started.
 
-## LEVEL-3 ENTRY EVIDENCE
+## PRESERVED LEVEL-3 EVIDENCE
 - E1 Clean Independent/Human Surface: `CLOSED_PASS`
 - E2 DB64 Fuel / Full-Planning: `CLOSED_PASS`
 - E3 Fresh Whole-Episode Integration: `CLOSED_PASS`
@@ -26,113 +33,121 @@ Level 4 has NOT started.
 - E5 Fault Injection / Autonomous Recovery: `CLOSED_PASS`
 - E6-R1 Formal Qualification: `IMMUTABLE_FAIL__SAFE_NO_COMMIT` — preserved
 - E6 successor Surface Boundary / Validator Repair: `CLOSED_PASS__SEALED`
-- E6-R2 Fresh Formal Qualification: `CLOSED_PASS__LEVEL_3_ENTRY_ELIGIBLE`
-- Physical/Hub Reseal: `PASS__SYNC_R52`
+- E6-R2 Fresh Formal Qualification: `PASS_UNDER_ORIGINAL_FROZEN_GATES` — preserved, claim boundary narrowed
 
-## E6-R1 FAILURE — PRESERVED
-Fresh sample: `서림항 야간운항센터 / QUAL_EP01 〈등대가 꺼진 밤〉`
+## POST-R52 CONSTRUCT-VALIDITY FINDING
+User-supplied full-script review independently read all QSC01-QSC50 of the E6-R2 45,064-character screenplay.
 
-E6-R1 passed stale-advisory and planning gates and generated a 61,563-char / 10-sequence / 50-scene surface, but failed because internal Scene Contract state expressions leaked into final dialogue. The initial validator missed those token classes. Coordinator audit caught the failure before commit.
+Post-hoc audit verdict:
+`CONSTRUCT_VALIDITY_FAIL__HISTORICAL_E6_R2_PASS_PRESERVED__LEVEL3_OPERATIONAL_CLAIM_SUSPENDED__FRESH_DRAMATURGY_REQUALIFICATION_REQUIRED`
 
-Verdict:
-`FAIL__E6_FORMAL_LEVEL3_QUALIFICATION__SAFE_NO_COMMIT`
+Direct report evidence includes:
+- 300 dialogue utterances;
+- every scene exactly 6 utterances;
+- every scene exactly 4 speaking characters;
+- only 153 distinct dialogue strings;
+- three identical dialogue strings repeated 50 times each, totaling 150/300 utterances;
+- identical role-separation direction repeated 50 times;
+- 139 limited-scope Korean name-particle errors;
+- scene-summary dialogue, displaced decisive agency, skipped crisis processes, spatial/communication ambiguity, weak civilian agency and weak climax/final image.
 
-State Commit: `0`
-Failed surface was NOT edited, rerun, or rescored.
+Root cause:
+`SEMANTIC_PLAN_LEAKAGE_IN_NATURAL_LANGUAGE + FIXED_4_PERSON_6_UTTERANCE_RENDERER`
 
-## SUCCESSOR REPAIR — R51
-Implementation SHA256:
-`2585688a7d59672ef8867f9902775396832ebb997b1b488e456abe13cb88763e`
+Do not edit the E6-R2 original screenplay into a replacement PASS.
 
-Repair:
-- renderer never consumes internal Scene Contract `state_delta` text for screenplay realization;
-- validator detects dynamic state field names/enums, snake_case, assignment syntax, and non-whitelisted ALL_CAPS enum-like tokens.
+## L3C1 ENDURANCE
+`HOLD_PREOUTPUT__SUPERSEDED_BY_DRAMATURGY_REPAIR`
+No L3C1 scientific output had begun.
 
-Regression:
-- E6-R1 failed surface: 50 leak detections under repaired validator;
-- synthetic `hidden_state=BAZ_QUX` state_delta: 0 leaks in repaired renderer output.
-
-## E6-R2 FRESH FORMAL QUALIFICATION
-Fresh sample: `청연시 산불대피통합센터 / QUAL2_EP01 〈바람이 골짜기를 넘는 밤〉`
-E6-R1 sample reuse: NO.
-
-Challenge:
-- `E6R2C1_STALE_ROUTE_ADVISORY`: PASS
-- Responsible Ancestor: `RETRIEVAL_ADVISORY / SELECTOR`
-- Action: `ABSTAIN_DROP_ADVISORY`
-- downstream contamination: 0
-
-Planning:
-- 10/10 sequences
-- 50/50 scene contracts
-- orphan scene 0
-- R1-R4 plant/payoff connectivity PASS
-- ensemble ownership PASS
-
-Surface:
-- 45,064 chars
-- 10 sequences / 50 scenes
-- dialogue format errors 0
-- missing scene openings 0
-- internal state / snake_case / assignment / enum leakage 0
-- scene-entry unique prefixes 50
-- Surface PASS
-- SHA256 `5b230524a4b3fab158756714cdf86abbd78fe9dc9443e75ea401141787190be4`
-
-Semantic/Continuity:
-- scene contract consumption 50/50
-- plant/payoff 4/4
-- field road verification + GIS/sensor analysis + resident/transport coordination + center authorization all required
-- no lone hero
-- no premature blame
-- target exit evidence PASS
-
-Commit:
-`STATE_COMMIT`
-State Delta SHA256:
-`785649f5797d1f48c9f19b49feaafeee292f30b3d7c749d0be2190a48b2a1bb0`
+## E6-R3 DRAMATURGY REPAIR / REQUALIFICATION
+### R3-A Dramaturgy Microbench
+Fresh domain: `동백시 야간철도복구본부`
+12 fresh scenes.
 
 Verdict:
-`PASS__E6_R2_FRESH_FORMAL_LEVEL3_QUALIFICATION__LEVEL_3_ENTRY_ELIGIBLE`
+`PASS__R3A_DRAMATURGY_MICROBENCH__STAGE_B_FRESH_WHOLE_EPISODE_ALLOWED`
 
-Immutable Closure SHA256:
-`9a1d96fcb4924e28e6df59f32581008c40b5c2d40092c754dbe6e510f741d03d`
+Scientific output commit:
+`b0364db8ff0ad9c1f501549739935ffabb813aae`
 
-Because the qualification PASS is now physically resealed in SYNC-R52 and the Hub authority/pointer is updated, the preregistered entry condition is complete. The maturity is therefore `LEVEL_3_ENTERED`.
+Audit result commit:
+`10dd1ed976a7b9c5776f97c011ed9e56b6b3aab1`
+
+Topology evidence:
+- speaking-cast sizes: 1/2/3/4/6
+- utterance counts: 1/4/5/6/7/8/9/10
+- no fixed 4-person/6-utterance pattern
+- direct refusal/approval ownership PASS
+- two-person fracture/repair PASS
+- failed first attempt + costly second attempt PASS
+- remote two-location continuity PASS
+- civilian stakeholder resistance PASS
+- low-dialogue transition PASS
+- 6-person evidence-diverse ensemble PASS
+- irreversible climax PASS
+
+### R3-B Fresh Whole-Episode Requalification
+Fresh domain:
+`백림시 수문통합센터 / R3B_EP01 〈물이 돌아오는 길〉`
+
+Status:
+`PLANNING_AND_45_SCENE_CONTRACTS_SEALED__SURFACE_0__STATE_COMMIT_0__EXTERNAL_JUDGMENTS_0`
+
+Preregistration commit:
+`29783a8d732f79add260f2228f3ab74991d691e1`
+
+Planning/Scene Contracts commit:
+`ba3e6c4cca9e466cbdc4a431cea0687429df3efa`
+
+Planning topology:
+- 9 sequences / 45 scenes
+- speaking-cast sizes 1/2/3/4/5/6
+- 12 two-person scenes
+- 6 low-dialogue scenes
+- 9 scenes with 5+ speakers
+- 5 remote/cross-cut scenes
+- 7 civilian choice/resistance scenes
+- 3 designated crisis chains
+- orphan scenes 0
+
+## NEXT LEGAL ACTION
+Generate the full >=35,000-character R3-B episode only from the sealed plan/contracts and frozen R3 dramaturgy rules.
+Then run whole-episode dramaturgy/state/spatial/Korean-surface validators.
+If internal PASS, seal output and prepare the preregistered external blind quality gate.
+
+No Stage-B rule, threshold, scene contract or implementation rule may change after the sealed planning output.
+
+## CLAIM RESTORATION RULE
+`LEVEL_3_OPERATIONAL_CLAIM_RESTORED` requires all of:
+1. R3-A PASS;
+2. R3-B internal whole-episode PASS;
+3. fresh external blind PASS;
+4. physical 5-Part/9-Package reseal;
+5. Hub pointer update to the new physical authority.
 
 ## RESEARCH HISTORY — READ FIRST
-1. `handoff/20260915/START_HERE_SYNC_R52_LEVEL3_ENTERED_R1.md`
-2. `handoff/20260915/SYNC_R52_CURRENT_STATUS_R1.json`
-3. `handoff/20260915/RESEARCH_EVOLUTION_MAP_R7.json`
-4. `handoff/20260915/LEVEL3_ENTRY_GATE_LEDGER_R9.json`
-5. `research/20260915/e6/E6_R2_IMMUTABLE_CLOSURE_R1.json`
-6. `handoff/20260915/START_HERE_SYNC_R51_E6_SUCCESSOR_REPAIR_R1.md`
-7. `handoff/20260915/START_HERE_SYNC_R50_E6_R1_FAIL_R1.md`
-8. prior E1-E5 records as needed
-
-## WHAT LEVEL 3 MEANS
-Evidence supports a bounded autonomous showrunner loop:
-Research/Data → Planning → Scene Contracts → Broadcast-scale Surface → Validation → State Commit → Multi-Episode Carry → Detect/Localize/Repair-or-Abstain/Safe-No-Commit.
-
-## CLAIM BOUNDARY
-Level 3 entry does NOT:
-- replace Production Engine `ENG:R47`;
-- promote DB64 to Production;
-- change Formal scored total `137` or latest Formal `R138`;
-- complete Formal R140 (`0/0/0` unchanged);
-- start Level 4;
-- establish universal autonomy across every genre or every possible fault class.
-
-## NEXT RESEARCH BOUNDARY
-Level-3 post-entry consolidation and independent endurance evidence before any Level-4 program.
+1. `handoff/20260915/START_HERE_POST_R52_DRAMATURGY_REQUALIFICATION_R1.md`
+2. `handoff/20260915/E6_R2_POSTHOC_DRAMATURGY_AUDIT_PREREG_R1.md`
+3. `handoff/20260915/E6_R2_POSTHOC_DRAMATURGY_AUDIT_RESULT_R1.md`
+4. `handoff/20260915/E6_R3_DRAMATURGY_REPAIR_PREREG_R1.md`
+5. `handoff/20260915/E6_R3A_MICROBENCH_FROZEN_INPUT_R1.json`
+6. `handoff/20260915/E6_R3A_MICROBENCH_SURFACE_R1.md`
+7. `handoff/20260915/E6_R3A_MICROBENCH_AUDIT_RESULT_R1.md`
+8. `handoff/20260915/E6_R3B_FRESH_WHOLE_EPISODE_PREREG_R1.md`
+9. `handoff/20260915/E6_R3B_PLAN_AND_SCENE_CONTRACTS_R1.json`
+10. `handoff/20260915/START_HERE_SYNC_R52_LEVEL3_ENTERED_R1.md` for historical R52 lineage
+11. prior E1-E6 records as needed
 
 ## UNCHANGED AUTHORITIES
+- Physical: `SYNC-R52`
 - Active Engine: `P07-I4H Recovery R3`
 - Production: `ENG:R47`
 - Formal scored total: `137`
 - Latest Formal: `R138`
 - Formal R140: `0/0/0`
 - DB64 remains non-Production
+- Level 4: NOT STARTED
 
 ## STATUS TOKEN
-`SYNC_R52__LEVEL_3_ENTERED__E6_R1_FAIL_PRESERVED__E6_R2_PASS__LEVEL_4_NOT_STARTED`
+`SYNC_R52_PHYSICAL__LEVEL3_HISTORICAL_ENTRY_PRESERVED__OPERATIONAL_CLAIM_SUSPENDED__E6_R3A_PASS__E6_R3B_PLANNING_SEALED__SURFACE_PENDING`
