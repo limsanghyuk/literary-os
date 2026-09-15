@@ -4,27 +4,37 @@ Last updated: 2026-09-15
 ## READ FIRST
 Canonical recovery bootstrap:
 
-`handoff/20260915/START_HERE_SYNC_R42_E1_R2_EXTERNAL_JUDGE_PENDING_R1.md`
+`handoff/20260915/START_HERE_SYNC_R43_E1_CLOSED_E3_PREREG_R1.md`
 
 Machine-readable current status:
 
-`handoff/20260915/SYNC_R42_E1_R2_CURRENT_STATUS_R1.json`
+`handoff/20260915/SYNC_R43_CURRENT_STATUS_R1.json`
+
+Research evolution map:
+
+`handoff/20260915/RESEARCH_EVOLUTION_MAP_R1.json`
+
+Level-3 gate ledger:
+
+`handoff/20260915/LEVEL3_ENTRY_GATE_LEDGER_R2.json`
+
+Experiment preservation schema:
+
+`research/20260915/EXPERIMENT_RECORD_SCHEMA_R1.md`
 
 ## PHYSICAL BASE
-Last audited physical authority: **SYNC-R42**
+Last audited physical authority: **SYNC-R43**
 
 Root SHA256:
-`921d97529a6d0c9741968b305eba18d7d1a241702a75cc036a5bca9316f2d4ef`
+`2722a2483d6f6417bc0de84f8d2a67fe6863d93b9c7adbef75c66bb027cd4912`
 
-Parent authority: **SYNC-R39**
+Parent authority: **SYNC-R42**
 
 Parent root SHA256:
-`e60bd46e5f9e41614aaa3a2a227eb8a6fe4a0175e3684ae5180178ae7cc12009`
+`921d97529a6d0c9741968b305eba18d7d1a241702a75cc036a5bca9316f2d4ef`
 
 Required physical read order:
 `CONTROL → A → B1 → B2 → C1 → C2-A → C2-B → D1 → D2`
-
-R40/R41 artifacts created during interrupted E1 preparation were not promoted by the Developer Hub and are not parents of R42. R42 was rebuilt directly from the audited R39 physical authority.
 
 ## MATURITY
 `PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS`
@@ -32,63 +42,90 @@ R40/R41 artifacts created during interrupted E1 preparation were not promoted by
 Level 3 has not been entered. Level 4 has not begun.
 
 ## E2
+`CLOSED_PASS`
 - canonical A2R35: PASS `10W/2T/0L`
-- Treatment nonloss: `12/12`
-- E2 DB64 Fuel / Full-Planning Qualification: `CLOSED_PASS`
+- DB64 remains non-Production.
 
-The later duplicate A2R35 rerun remains quarantined and A2R36 remains aborted/not scored.
-
-## E1-R1
-The first E1 external-judge packet set was superseded before judgment because the screenplay presentation contract and source-format blinding were insufficiently strict.
-
-State:
-`SUPERSEDED_BEFORE_JUDGMENT__NO_SCORE`
-
-No R1 judge response, mapping open, unblind, PASS or FAIL exists.
-
-## E1-R2 CURRENT STATE
+## E1
+`CLOSED_PASS`
 Experiment:
 `P07-LEVEL3-E1-R2-FRESH-SURFACE-FORMAT-CLOSURE`
 
-State:
-`PREREGISTERED__FRESH_SAFE_SAMPLE_12__CANDIDATE_12_OF_12_MECHANICAL_PASS__CANDIDATE_SEALED__HUMAN_REFERENCE_SEALED__NEUTRAL_PRESENTATION_SEALED__3_EXTERNAL_JUDGE_PACKETS_SEALED__JUDGES_0__MAPPING_CLOSED`
+Primary panel:
+- J01 GPT: Candidate `9W/1T/2L`
+- J02 Claude: Candidate `11W/0T/1L`
+- J03 Claude: Candidate `10W/1T/1L`
+- Majority: Candidate `11W/0T/1L`
+- Individual judge gates: `3/3 PASS`
+- Verified Candidate critical violations: `0`
 
-Key boundaries:
-- fresh 4-work / 12-scene sample
-- Candidate generation consumed sanitized semantic contracts only
-- raw human scene prose was not exposed before Candidate seal
-- Candidate surface contract uses `(씬 설정: ...)`, `등장인물명: (연기지문) 대사`, and optional `(지문: ...)` between turns
-- Candidate mechanical admission: PASS `12/12`
-- Candidate bytes: SEALED
-- Human reference bytes: SEALED after Candidate seal
-- Neutral presentation: SEALED
-- External judge packets J01/J02/J03: SEALED
-- Valid judge responses: `0`
-- Secret mapping: CLOSED
-- Secret mapping SHA256:
-  `8c77653ae9ec47e5dbf0b6ec60cb5c6dde7a3e7b3a1278c2ca4ccc2502ab0b55`
+Auxiliary replication:
+- GPT-family majority: `9W/1T/2L`
+- Claude-family majority: `11W/0T/1L`
+
+E1R2U08 contains one localized abstract clause. It is preserved as `MINOR_SURFACE_HYGIENE_DEFECT__NOT_VERIFIED_CRITICAL`; Candidate/judgment bytes and thresholds were not changed.
+
+Canonical E1 closure:
+`research/20260915/E1_R2_IMMUTABLE_CLOSURE_R1.json`
+
+## E3 CURRENT STATE
+Experiment:
+`P07-LEVEL3-E3-FRESH-WHOLE-EPISODE-INTEGRATION-R1`
+
+State:
+`PREREGISTERED__FROZEN_INPUTS_SEALED__OUTPUTS_0`
+
+Fresh synthetic series seed:
+`해람시 긴급주거팀`
+
+Sample instance:
+- 1 episode
+- 10 sequences
+- 50 scenes
+- >=35,000 Korean characters
+
+These counts are experiment-sample values, not global fixed maxima.
+
+Surface contract inherits E1:
+- `(씬 설정: ...)`
+- `등장인물명: (연기 가능한 지문) 대사`
+- optional `(지문: ...)`
+- explanatory dialogue prohibited
+- abstract internal-state narration prohibited when an observable performance/action can carry the beat
+
+E3 preregistration:
+`research/20260915/E3_PREREGISTRATION_R1.json`
+
+## RESEARCH-HISTORY RECOVERY RULE
+A new session must reconstruct not only current state but evolution.
+Read:
+1. CURRENT_SESSION_RECOVERY_POINTER
+2. current START_HERE
+3. RESEARCH_EVOLUTION_MAP_R1
+4. LEVEL3_ENTRY_GATE_LEDGER_R2
+5. relevant individual Experiment Record / closure / preregistration
+6. deeper B-package evidence when historical detail is needed
+
+Do not erase FAIL, SUPERSEDED, HOLD, ABORTED_NOT_SCORED, infrastructure incidents, duplicate-branch quarantines, or claim boundaries.
 
 ## EXACT RESUME RULE
-Do not regenerate or edit Candidate scenes.
-Do not regenerate or edit Human references.
-Do not open or infer the secret mapping.
-Do not replace a valid unfavorable judge response.
+Do not regenerate E1.
+Do not modify E1/E2 thresholds or evidence.
+Do not change E3 frozen seed, surface contract or gates after output begins.
 
 Next legal actions only:
-1. collect exactly the first three valid independent external GPT/Claude responses for J01/J02/J03;
-2. SHA256-seal all three response bytes;
-3. validate response schema and independence;
-4. only then open the secret mapping once;
-5. apply the frozen E1-R2 gates;
-6. immutable-close E1-R2;
-7. if PASS, continue to `E3 Fresh Whole-Episode Integration`; if FAIL, diagnose a fresh successor without relabeling E1-R2.
-
-After E1 closes:
-`E3 Fresh Whole-Episode Integration → E4 >=3 Episode State Carry → E5 Fault Injection/Autonomous Recovery → E6 Formal Level-3 Qualification → LEVEL_3_ENTERED`
+1. execute E3 Episode Plan;
+2. seal 10 Sequence Plans;
+3. seal 50 Scene Contracts;
+4. realize >=35,000-character broadcast episode;
+5. run mechanical / semantic-continuity / surface-hygiene / state-delta validators;
+6. State Commit only if all critical gates pass, otherwise Safe No-Commit;
+7. immutable-close E3;
+8. if PASS, proceed to E4 >=3 Episode State Carry.
 
 ## UNCHANGED SYSTEM AUTHORITIES
 - Active Engine: `P07-I4H Recovery R3`
-- Production Engine: `ENG:R47`
+- Production: `ENG:R47`
 - Formal scored total: `137`
 - Latest Formal: `R138`
 - Formal R140: `0/0/0`
@@ -96,4 +133,4 @@ After E1 closes:
 - DB64 remains non-Production
 
 ## STATUS TOKEN
-`SYNC_R42__E2_CLOSED_PASS__E1_R1_SUPERSEDED_NO_SCORE__E1_R2_CANDIDATE_12_12_MECH_PASS__JUDGE_PACKETS_3__JUDGES_0__MAPPING_CLOSED__NEXT_EXTERNAL_JUDGMENT`
+`SYNC_R43__E1_CLOSED_PASS__E2_CLOSED_PASS__E3_PREREGISTERED_FROZEN_INPUTS_OUTPUTS0__LEVEL3_NOT_ENTERED__NEXT_E3_EXECUTION`
