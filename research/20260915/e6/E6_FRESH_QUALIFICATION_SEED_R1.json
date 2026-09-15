@@ -1,0 +1,141 @@
+{
+  "schema": "E6FreshQualificationSeedR1",
+  "date": "2026-09-15",
+  "experiment_id": "P07-LEVEL3-E6-FORMAL-QUALIFICATION-R1",
+  "series_title": "서림항 야간운항센터",
+  "episode_id": "QUAL_EP01",
+  "episode_title": "등대가 꺼진 밤",
+  "fictionality": "All characters, institutions, places and events are synthetic qualification inputs. No human-written episode is an answer key.",
+  "genre": ["workplace drama", "maritime emergency", "institutional mystery", "ensemble"],
+  "time_window": "18:20-05:40, one storm night",
+  "setting": {
+    "city": "서림시",
+    "primary_unit": "서림항 야간운항센터",
+    "core_incident": "폭풍 접근 중 외항 방파제 등표와 항로 AIS 중계가 동시에 불안정해지고, 승객 186명이 탄 여객선 해진호가 입항 결정을 기다린다.",
+    "secondary_incident": "센터 기록에는 최근 교체된 항로 중계기 점검완료가 표시돼 있지만 현장 시리얼 번호가 문서와 맞지 않는다."
+  },
+  "characters": [
+    {
+      "name": "한서진",
+      "age": 39,
+      "role": "야간운항센터장",
+      "entry_state": "절차 중심이지만 현장 판단을 무시한 과거 지연사건을 경계한다.",
+      "public_goal": "해진호 186명을 안전하게 입항 또는 대체항으로 전환한다.",
+      "private_pressure": "새벽 시장 브리핑 전에 항만 폐쇄 여부를 결정해야 한다.",
+      "voice": "짧은 질문, 확인되지 않은 안심을 거부한다."
+    },
+    {
+      "name": "오태규",
+      "age": 45,
+      "role": "도선안전관 / 전직 선장",
+      "entry_state": "센터 화면보다 파도·시야·부표의 실제 상태를 먼저 믿는다.",
+      "public_goal": "선박이 잘못된 항로선에 들어가지 않게 한다.",
+      "private_pressure": "과거 폭풍 사고에서 후배 선장을 잃은 기억이 있다.",
+      "voice": "거리·방위·풍속 같은 구체값으로 말한다."
+    },
+    {
+      "name": "문가람",
+      "age": 33,
+      "role": "항로시스템 엔지니어",
+      "entry_state": "최근 교체된 AIS 중계기 검수에 자신의 전자서명이 들어가 있다.",
+      "public_goal": "통신장애 원인을 찾아 항로 정보를 복구한다.",
+      "private_pressure": "현장 시리얼 불일치가 자기 검수책임으로 돌아올까 두렵다.",
+      "voice": "로그와 타임스탬프를 정확히 말하고 감정 질문을 피한다."
+    },
+    {
+      "name": "정하린",
+      "age": 30,
+      "role": "승객·선사 연락 담당",
+      "entry_state": "해진호 선사와 승객 가족의 연락이 동시에 몰린다.",
+      "public_goal": "확인되지 않은 입항시간을 약속하지 않고 행동지침을 전달한다.",
+      "private_pressure": "해진호 항해사가 친오빠의 친구다.",
+      "voice": "정책용어보다 다음 행동과 다음 확인시간을 말한다."
+    },
+    {
+      "name": "백준혁",
+      "age": 52,
+      "role": "항만공사 운영본부장",
+      "entry_state": "밤새 항만을 닫으면 다음 날 물류손실과 정치적 비난이 커진다.",
+      "public_goal": "가능하면 항만을 열어 둔다.",
+      "private_pressure": "최근 중계기 교체사업을 조기완료 실적으로 보고했다.",
+      "voice": "비용·마감·대외보고 언어를 사용한다."
+    },
+    {
+      "name": "조민석",
+      "age": 47,
+      "role": "해진호 선장",
+      "entry_state": "외항에서 대기 중이며 연료와 승객 상태를 함께 관리해야 한다.",
+      "public_goal": "불확실한 항로 정보로 무리하게 입항하지 않는다.",
+      "private_pressure": "대체항 전환 시 연료여유가 빠르게 줄어든다.",
+      "voice": "선박상태와 시간을 짧게 보고한다."
+    },
+    {
+      "name": "이채원",
+      "age": 36,
+      "role": "지역 해양기자",
+      "entry_state": "최근 항로설비 교체사업이 예정보다 빨리 끝난 이유를 취재 중이다.",
+      "public_goal": "현재 장애가 단순 폭풍피해인지 검수문제인지 확인한다.",
+      "private_pressure": "센터 내부자료를 얻으려다 현장 대응을 방해하지 않아야 한다.",
+      "voice": "날짜·계약번호·완료보고 시점을 구체적으로 묻는다."
+    }
+  ],
+  "initial_state": {
+    "passengers_on_haejinho": 186,
+    "haejinho_location": "outer waiting sector",
+    "harbor_open_status": "CONDITIONAL_OPEN",
+    "channel_beacon": "UNSTABLE",
+    "ais_relay": "INTERMITTENT",
+    "alternate_harbor_option": "AVAILABLE_BUT_FUEL_COSTLY",
+    "seoJin_taeGyu_relationship": "PROCEDURAL_FRICTION",
+    "seoJin_gaRam_relationship": "PROFESSIONAL_TRUST",
+    "gaRam_relay_liability": "UNKNOWN",
+    "relay_serial_mismatch_known": false,
+    "political_pressure": "HIGH",
+    "state_commit_allowed": false
+  },
+  "episode_objective": "폭풍이 최고조에 이르기 전 해진호 186명의 항로 결정을 안전하게 끝내고, 항로설비 시리얼 불일치의 증거를 보존하며 검증 전 어떠한 허위 정상상태도 반영하지 않는다.",
+  "target_exit_state": {
+    "passengers_safe": 186,
+    "haejinho_outcome": "CONTROLLED_ENTRY_AFTER_PHYSICAL_CHANNEL_VERIFICATION",
+    "harbor_open_status": "RESTRICTED_CORRIDOR_ONLY",
+    "channel_beacon": "PHYSICAL_BACKUP_MARKERS_DEPLOYED",
+    "ais_relay": "QUARANTINED_PENDING_FORENSICS",
+    "relay_serial_mismatch_known": true,
+    "gaRam_relay_liability": "REVIEW_OPEN__NO_PREMATURE_BLAME",
+    "seoJin_taeGyu_relationship": "CONDITIONAL_OPERATIONAL_TRUST",
+    "seoJin_gaRam_relationship": "TRUST_WITH_FORMAL_REVIEW",
+    "procurement_thread": "OPEN__SERIAL_AND_COMPLETION_REPORT_DISCREPANCY",
+    "state_commit_allowed": true
+  },
+  "ensemble_ownership_rule": "Safe entry requires field channel verification + system log analysis + passenger/ship communication + center authorization. No lone-hero resolution is valid.",
+  "plants_payoffs": [
+    {
+      "id": "Q1_SERIAL_PLATE",
+      "plant": "현장 중계기 시리얼 플레이트 사진",
+      "payoff": "완료보고서 시리얼과 불일치가 확인되어 장비가 검수대상으로 격리된다."
+    },
+    {
+      "id": "Q2_RED_FLOAT",
+      "plant": "도선선 창고의 예비 적색 발광 부표",
+      "payoff": "전자 항로정보가 불안정한 구간에 물리적 임시 항로표지로 배치된다."
+    },
+    {
+      "id": "Q3_FUEL_WINDOW",
+      "plant": "해진호의 대체항 전환 가능한 마지막 연료창",
+      "payoff": "결정시한을 정치적 마감이 아니라 선박 안전시한으로 재정의한다."
+    },
+    {
+      "id": "Q4_COMPLETION_EMAIL",
+      "plant": "교체사업 조기완료를 재촉한 이메일의 존재",
+      "payoff": "장비결함 책임과 별개로 조기완료 압력이 공식 조사대상이 된다."
+    }
+  ],
+  "forbidden_shortcuts": [
+    "전자시스템이 갑자기 완벽하게 복구되는 기적",
+    "한 인물이 모든 안전·기술·승객·승인 문제를 혼자 해결",
+    "검증되지 않은 시리얼 불일치를 곧바로 범죄 또는 특정 인물 책임으로 단정",
+    "대사로 전체 사건을 요약해 관객에게 설명",
+    "validator pass 전에 state commit",
+    "내부 엔진·프롬프트·상태ID·평가용어가 최종 대본에 노출"
+  ]
+}
