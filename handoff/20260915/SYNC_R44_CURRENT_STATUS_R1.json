@@ -1,0 +1,20 @@
+{
+  "schema":"LiteraryOSSyncR44CurrentStatusR1",
+  "date":"2026-09-15",
+  "physical_authority":"SYNC-R44",
+  "root_sha256":"363be826551a61b7dae03b948de5bdda0e09aeaf14fe67435a81fed23860700f",
+  "parent":"SYNC-R43",
+  "maturity":"PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS",
+  "E1":"CLOSED_PASS",
+  "E2":"CLOSED_PASS",
+  "E3":{
+    "state":"IN_PROGRESS__PLANNING_OUTPUTS_SEALED__SURFACE_0__STATE_COMMIT_0",
+    "episode_plan_sha256":"a5caf2046a62d63207658434ae0151b48529f65725285a28a1cf1b3e35a73bdb",
+    "sequence_plans_sha256":"7401aee7a3579c1d9f2839e50c8644285869490df14ad77a2f07785e5364d417",
+    "scene_contracts_sha256":"926c7f02f2ae726f88724223c86c394b8148724653148d7d8cbc856a79759a6e",
+    "planning_seal_sha256":"463f433c37521b2709e862e9228be51cc36d6e4632705c494eb4194a9a855314",
+    "planning_audit":"PASS__10_SEQUENCES__50_SCENES__0_ORPHANS",
+    "next":"Generate >=35000-character surface strictly from sealed planning outputs, validate, then commit or safe no-commit."
+  },
+  "level3_entered":false
+}
