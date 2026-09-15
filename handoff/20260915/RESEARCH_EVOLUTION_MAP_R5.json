@@ -1,0 +1,23 @@
+{
+  "schema": "LiteraryOSResearchEvolutionMapR5",
+  "date": "2026-09-15",
+  "mandatory_recovery_read_order": [
+    "CURRENT_SESSION_RECOVERY_POINTER",
+    "START_HERE current sync",
+    "RESEARCH_EVOLUTION_MAP_R5",
+    "LEVEL3_ENTRY_GATE_LEDGER_R7",
+    "E6-R1 immutable failure record",
+    "earlier experiment records/evidence"
+  ],
+  "major_lineage": [
+    {"node":"E1_R2","status":"CLOSED_PASS","role":"independent external surface-quality closure against held-out human-written scenes"},
+    {"node":"E2_A2R35","status":"CLOSED_PASS","role":"DB64 fuel/full-planning qualification"},
+    {"node":"E3_R1","status":"FAIL__CRITICAL_META_LEAKAGE__SAFE_NO_COMMIT","problem":"single final-surface internal-meta leak"},
+    {"node":"E3_R2","status":"CLOSED_PASS","role":"prospective targeted boundary recovery on same fresh episode"},
+    {"node":"E4","status":"CLOSED_PASS","role":"three-episode exact-parent-hash state carry"},
+    {"node":"E5","status":"CLOSED_PASS","role":"nine frozen fault classes; corrupted commits 0"},
+    {"node":"E6_R1","status":"FAIL__E6_FORMAL_LEVEL3_QUALIFICATION__SAFE_NO_COMMIT","sample":"서림항 야간운항센터 / QUAL_EP01 〈등대가 꺼진 밤〉","passed_before_failure":["pre-output SHA256 seal","stale advisory challenge","10/10 sequence planning","50/50 scene contracts","61,563-char surface mechanical format"],"critical_failure":"internal state field/enum expressions rendered directly into final screenplay; coordinator audit detected 13 occurrences","root_cause":"state_delta copied verbatim into character dialogue; automated scanner did not cover internal state field names/enums","state_commit":0,"evolution_required":"new authority must repair Semantic State→Surface boundary and validator coverage, then use a fresh qualification sample; E6-R1 cannot be edited/rerun/rescored"}
+  ],
+  "current_transition": "E6-R1 formal qualification failed safely. Level 3 NOT entered. Successor repair + fresh requalification required.",
+  "unchanged_authorities": {"active_engine":"P07-I4H Recovery R3","production_engine":"ENG:R47","formal_scored_total":137,"latest_formal":"R138","formal_r140":"0/0/0","db64_is_production":false,"level3_entered":false}
+}
