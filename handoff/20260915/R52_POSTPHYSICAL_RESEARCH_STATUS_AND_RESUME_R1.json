@@ -1,0 +1,92 @@
+{
+  "schema": "LiteraryOSPostPhysicalResearchStatusR1",
+  "date": "2026-09-15",
+  "canonical_handoff": "handoff/20260915/START_HERE_R52_POSTPHYSICAL_SHOWRUNNER_REQUALIFICATION_NEW_SESSION_HANDOFF_R1.md",
+  "physical_authority": {
+    "sync": "SYNC-R52",
+    "root_sha256": "62d2cec1a47e557a342dcedeb6eb63a7c18f1336f756b3b38bf0df7b7079a359",
+    "post_r52_physical_reseal_exists": false,
+    "developer_last_physical_delivery": true,
+    "read_order": ["CONTROL", "A", "B1", "B2", "C1", "C2-A", "C2-B", "D1", "D2"]
+  },
+  "physical_delivery_boundary": [
+    "CONTROL_SYNC_R52",
+    "PART_A_SYNC_R52",
+    "PART_B1_BYTE_UNCHANGED",
+    "PART_B2_SYNC_R52",
+    "PART_C1_BYTE_UNCHANGED",
+    "PART_C2_A_BYTE_UNCHANGED",
+    "PART_C2_B_BYTE_UNCHANGED",
+    "PART_D1_BYTE_UNCHANGED",
+    "PART_D2_BYTE_UNCHANGED",
+    "SYNC_R52_VERIFICATION_META_BUNDLE",
+    "SYNC_R52_RESEARCH_EVIDENCE_BUNDLE",
+    "E6_R1_IMMUTABLE_FAILURE_PACKAGE",
+    "E6_SUCCESSOR_REPAIR_PACKAGE",
+    "E6_R2_IMMUTABLE_CLOSURE_PACKAGE",
+    "E6_R2_FINAL_45064_CHAR_SCREENPLAY"
+  ],
+  "post_r52_work_is": "HUB_ONLY_RESEARCH_AND_DEVELOPMENT_EVIDENCE__NOT_PHYSICALLY_RESEALED_OR_PROVIDED",
+  "maturity": {
+    "historical_level3_entry_preserved": true,
+    "operational_level3_claim": "SUSPENDED__SHOWRUNNER_REQUALIFICATION_IN_PROGRESS",
+    "level4_started": false
+  },
+  "unchanged_authorities": {
+    "active_engine": "P07-I4H Recovery R3",
+    "production_engine": "ENG:R47",
+    "formal_scored_total": 137,
+    "latest_formal": "R138",
+    "formal_r140": "0/0/0",
+    "db64_production": false
+  },
+  "post_r52_lineage": {
+    "E6_R2_posthoc_claim_narrowing": "DONE",
+    "R3_A_dramaturgy_microbench": "PASS",
+    "R3_B_fresh_whole_episode": "IMMUTABLE_FAIL__SAFE_NO_COMMIT",
+    "R3_C_C1_direction_detection_regression": "PASS",
+    "R3_C_C2_show_only_microbench": "PASS",
+    "R3_D_D1_historical_contract_restoration": "PASS",
+    "R3_D_D2_hierarchical_architecture_microbench": "PASS",
+    "R3_D_D3_50_scene_contract_lowering": "PASS__SURFACE_0__STATE_COMMIT_0__EXTERNAL_0",
+    "R3_E_master_plan": "FROZEN",
+    "R3_E_scientific_execution": "NOT_STARTED"
+  },
+  "controlling_diagnosis": [
+    "ARCHITECTURE_CONSUMPTION_REGRESSION",
+    "SURFACE_REALIZATION_REGRESSION",
+    "WHOLE_EPISODE_DRAMATURGY_CONSTRUCT_VALIDITY_GAP"
+  ],
+  "control_roles": {
+    "E3_R2": "POSITIVE_PARTIAL_CONTROL",
+    "E6_R2": "NEGATIVE_REGRESSION_CONTROL",
+    "human_drama_db": "CRAFT_STRUCTURE_REFERENCE_ONLY__NO_STORY_COPY",
+    "R3_D": "RECONNECTED_PLANNER_DEVELOPMENT_EVIDENCE__NOT_FORMAL_ANSWER"
+  },
+  "unfinished_root_cause_question": "Whether the historical showrunner/hierarchical concepts are implemented and mandatory in the candidate-engine main path, and whether E6 bypassed, partially bypassed, or truncated that path.",
+  "candidate_engine_audit_outcomes_to_classify": [
+    "IMPLEMENTED_AND_WIRED__E6_HARNESS_BYPASS",
+    "IMPLEMENTED_BUT_DORMANT_OR_PARTIALLY_WIRED",
+    "SCHEMA_PRESENT__ALGORITHM_NOT_IMPLEMENTED",
+    "IMPLEMENTED__CONSUMPTION_RECEIPT_MISSING",
+    "MIXED_BY_LAYER"
+  ],
+  "next_exact_action": "SHOWRUNNER_MAIN_PATH_CONSUMPTION_AND_E6_PARITY_AUDIT_R1",
+  "next_sequence_after_audit": [
+    "seal code-path/consumption audit",
+    "if needed implement fail-closed SHOWRUNNER_MAIN_PATH_CONSUMPTION_RECEIPT plus tests",
+    "R3-E0 Authority/Evidence Lock",
+    "R3-E1 E3-vs-E6 Regression Causal Audit",
+    "R3-E2 paired Showrunner Consumption Causal Ablation with architecture only",
+    "only on PASS continue candidate portfolio -> architecture seal -> scene lowering -> >=35000-char fresh surface -> forward-reverse closure -> internal audit -> independent blind -> physical reseal"
+  ],
+  "prohibitions": [
+    "DO_NOT_CLAIM_POST_R52_PHYSICAL_AUTHORITY",
+    "DO_NOT_START_LEVEL4",
+    "DO_NOT_RESTORE_OPERATIONAL_LEVEL3_BEFORE_R3E_EXTERNAL_PASS_AND_PHYSICAL_RESEAL",
+    "DO_NOT_USE_R3D_50_SCENE_PLAN_AS_FORMAL_R3E_ANSWER",
+    "DO_NOT_GENERATE_NEW_WHOLE_EPISODE_BEFORE_ENGINE_MAIN_PATH_AUDIT_AND_R3E_CAUSAL_GATES",
+    "DO_NOT_COPY_HUMAN_STORY_CONTENT"
+  ],
+  "status_token": "PHYSICAL_SYNC_R52_ONLY__POST_R52_HUB_ONLY__LEVEL3_OPERATIONAL_CLAIM_SUSPENDED__R3A_PASS__R3B_FAIL__R3C_PASS__R3D_D1_D2_D3_PASS_SURFACE0__R3E_FROZEN_NOT_STARTED__NEXT_ENGINE_MAIN_PATH_AUDIT"
+}
