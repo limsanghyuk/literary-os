@@ -1,0 +1,42 @@
+name: L3C1 Preoutput Seal R1
+on:
+  push:
+    branches: [main]
+jobs:
+  seal:
+    if: contains(github.event.head_commit.message, 'Run L3C1 preoutput seal')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compute exact preoutput seals
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, json
+          files = [
+            Path('research/20260915/l3c1/L3C1_FRESH_SERIES_SEED_R1.json'),
+            Path('research/20260915/l3c1/L3C1_PREREGISTRATION_R1.md'),
+          ]
+          def sha(p):
+              h=hashlib.sha256()
+              with p.open('rb') as f:
+                  for c in iter(lambda:f.read(1024*1024), b''):
+                      h.update(c)
+              return h.hexdigest()
+          receipt={
+            'schema':'L3C1PreoutputSHA256SealReceiptR1',
+            'experiment_id':'P07-LEVEL3-POSTENTRY-L3C1-CROSSDOMAIN-4EP-ENDURANCE-R1',
+            'scientific_outputs':0,
+            'state_commits':0,
+            'files':[{'path':str(p),'bytes':p.stat().st_size,'sha256':sha(p)} for p in files],
+            'status':'PREOUTPUT_SHA256_SEALED__SCIENTIFIC_OUTPUTS_0'
+          }
+          out=Path('/tmp/L3C1_PREOUTPUT_SHA256_SEAL_RECEIPT_R1.json')
+          out.write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(out.read_text(encoding='utf-8'))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: l3c1-preoutput-sha256-seal-r1
+          path: /tmp/L3C1_PREOUTPUT_SHA256_SEAL_RECEIPT_R1.json
