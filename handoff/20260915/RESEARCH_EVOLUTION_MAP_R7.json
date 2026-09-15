@@ -1,0 +1,18 @@
+{
+  "schema":"LiteraryOSResearchEvolutionMapR7",
+  "date":"2026-09-15",
+  "major_lineage":[
+    {"node":"E1_R2","status":"CLOSED_PASS","role":"external blind surface quality vs held-out human-written scenes"},
+    {"node":"E2_A2R35","status":"CLOSED_PASS","role":"DB64 fuel/full-planning qualification"},
+    {"node":"E3_R1","status":"IMMUTABLE_FAIL__SAFE_NO_COMMIT","problem":"final-surface internal meta leakage"},
+    {"node":"E3_R2","status":"CLOSED_PASS","role":"targeted prospective boundary recovery"},
+    {"node":"E4","status":"CLOSED_PASS","role":"three-episode state carry"},
+    {"node":"E5","status":"CLOSED_PASS","role":"bounded detect/localize/repair-or-abstain/revalidate recovery"},
+    {"node":"E6_R1","status":"IMMUTABLE_FAIL__SAFE_NO_COMMIT","problem":"state_delta/internal state fields rendered into screenplay and validator coverage gap"},
+    {"node":"E6_SUCCESSOR_REPAIR_R1","status":"CLOSED_PASS__SEALED","role":"renderer no longer consumes state_delta; validator covers dynamic fields/enums/snake_case/assignment syntax"},
+    {"node":"E6_R2","status":"CLOSED_PASS","sample":"청연시 산불대피통합센터 / QUAL2_EP01 〈바람이 골짜기를 넘는 밤〉","result":"stale advisory PASS; planning 10/50 PASS; surface 45,064 chars; internal leaks 0; semantic/continuity PASS; STATE_COMMIT","verdict":"PASS__E6_R2_FRESH_FORMAL_LEVEL3_QUALIFICATION__LEVEL_3_ENTRY_ELIGIBLE"}
+  ],
+  "maturity_transition":"SYNC-R52 physical + Hub reseal completed: LEVEL_3_ENTERED",
+  "claim_boundary":"Level 3 supports bounded autonomous end-to-end narrative operation within the tested evidence envelope. Production ENG:R47, DB64 Production, Formal R140 and Level 4 remain unchanged.",
+  "unchanged_authorities":{"production_engine":"ENG:R47","formal_scored_total":137,"latest_formal":"R138","formal_r140":"0/0/0","db64_is_production":false}
+}
