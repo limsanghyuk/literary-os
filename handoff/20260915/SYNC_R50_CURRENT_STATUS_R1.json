@@ -1,0 +1,13 @@
+{
+  "schema":"LiteraryOSSyncR50CurrentStatusR1",
+  "date":"2026-09-15",
+  "parent_sync":"SYNC-R49",
+  "parent_root_sha256":"ceea3188a4acbe5b58fc198f26bc5e3d2e4e64f9163c81664141c7aef7352762",
+  "transport_root_sha256":"811cb8557811778de36bb5b1c3404f679a779c71728b76fae0b093b9680e989c",
+  "maturity":"PRE_LEVEL_3__E6_R1_FAILED__SUCCESSOR_REQUIRED",
+  "E1":"CLOSED_PASS","E2":"CLOSED_PASS","E3":"CLOSED_PASS","E4":"CLOSED_PASS","E5":"CLOSED_PASS",
+  "E6_R1":{"verdict":"FAIL__E6_FORMAL_LEVEL3_QUALIFICATION__SAFE_NO_COMMIT","surface_sha256":"36df546ee202ed8abd8f0b5f9ca00bcaa1bb011b9dd83d8aa15ac37fdc690f3b","surface_chars":61563,"internal_state_leak_occurrences":13,"state_commit":0,"closure_sha256":"a31853013631a3f054c629c4f1635a63ee9bfb0315f67e78b5563f5b6c939288","failure_package_sha256":"8f6f2b1d1a837829d0a508c0f8caffac618e0c964877887d16aae65aa39785bb"},
+  "E6_successor":"REQUIRED__NOT_STARTED",
+  "level3_entered":false,
+  "unchanged_system_authorities":{"active_engine":"P07-I4H Recovery R3","production_engine":"ENG:R47","formal_scored_total":137,"latest_formal":"R138","formal_r140":"0/0/0","db64_is_production":false}
+}
