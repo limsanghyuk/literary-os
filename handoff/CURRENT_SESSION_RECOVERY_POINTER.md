@@ -12,137 +12,132 @@ Required physical read order:
 No post-R52 physical reseal is claimed yet.
 
 ## CANONICAL BOOTSTRAP
-`handoff/20260915/START_HERE_SYNC_R52_R3D_HIERARCHY_RECONNECTION_R1.md`
+`handoff/20260915/START_HERE_SYNC_R52_R3D_D3_SCENE_CONTRACTS_SEALED_R2.md`
 
 ## MATURITY / CLAIM STATUS
-Historical R52 `LEVEL_3_ENTERED` declaration is preserved in lineage.
+Historical `LEVEL_3_ENTERED` declaration is preserved in lineage.
 
 Current operational research claim:
 `LEVEL_3_OPERATIONAL_CLAIM_SUSPENDED__DRAMATURGY_AND_HIERARCHICAL_ARCHITECTURE_REQUALIFICATION_IN_PROGRESS`
 
 Level 4 has NOT started.
 
-## PRESERVED LEVEL-3 / E6 HISTORY
-- E1 Clean Independent/Human Surface: CLOSED_PASS
-- E2 DB64 Fuel / Full-Planning: CLOSED_PASS
-- E3 Fresh Whole-Episode Integration: CLOSED_PASS
-- E4 Multi-Episode State Carry: CLOSED_PASS
-- E5 Fault Injection / Autonomous Recovery: CLOSED_PASS
-- E6-R1: IMMUTABLE_FAIL__SAFE_NO_COMMIT
-- E6 successor Surface Boundary / Validator Repair: CLOSED_PASS__SEALED
-- E6-R2 Fresh Formal Qualification: PASS_UNDER_ORIGINAL_FROZEN_GATES, later construct-validity claim narrowed
+## PRESERVED HISTORY
+- E1 PASS
+- E2 PASS
+- E3 PASS
+- E4 PASS
+- E5 PASS
+- E6-R1 immutable FAIL / SAFE_NO_COMMIT
+- E6 successor Surface Boundary / Validator Repair PASS
+- E6-R2 PASS under original frozen gates, later construct-validity claim narrowed
+- R3-A fresh dramaturgy microbench PASS
+- R3-B fresh whole episode immutable FAIL / SAFE_NO_COMMIT
+- R3-C C1 direction detection PASS
+- R3-C C2 fresh show-only dramaturgy microbench PASS
 
-Do not rewrite historical verdicts.
-
-## POST-R52 DRAMATURGY REQUALIFICATION
-### R3-A
-Fresh dramaturgy microbench PASS.
-
-### R3-B
-Fresh 45-scene whole episode immutable FAIL / SAFE_NO_COMMIT.
-Old fixed topology was repaired, but stage directions retained systemic authorial dramaturgical commentary.
-
-### R3-C
-- C1 Show-Only direction detection regression PASS
-- C2 fresh show-only dramaturgy microbench PASS
-
-R3-C repairs Surface Direction Boundary only. It does not establish macro episode architecture.
-
-## NEW ROOT-CAUSE FINDING
-The project had already researched Series/Episode/Sequence/Scene architecture extensively.
-
-Current root cause:
+## ROOT CAUSE
 `HISTORICAL_HIERARCHICAL_PLANNING_KNOWLEDGE_PRESENT__ACTIVE_E6_PLANNER_CONTRACT_PARTIALLY_COLLAPSED__CONSUMPTION_REGRESSION`
 
-The active R3B contract had compressed a richer historical hierarchy into roughly:
-`episode objective -> sequence goals -> scene obligations/turns`.
-
-This allowed locally improved scenes to remain branches of one parent operational task.
+The project already possessed Series/Episode/Sequence/Scene architecture research. Recent E6/R3 planning had compressed too much of that hierarchy into one episode objective, sequence goals and scene obligations, allowing a single operational task tree to dominate a full episode.
 
 Root-cause audit:
 `handoff/20260915/HIERARCHICAL_PLANNING_LINEAGE_AND_CURRENT_CONSUMPTION_GAP_AUDIT_R1.md`
 
 ## GOVERNANCE DEFECT CLOSED
-Prior to this update:
-- this Session Recovery Pointer had advanced to SYNC-R52/R3-C;
-- `CURRENT_DEVELOPER_HUB_AUTHORITY.md` and `CURRENT_HANDOFF_POINTER.md` were still stale at SYNC-R34/A2R32.
+The former split between a SYNC-R52 Session Recovery Pointer and stale SYNC-R34 Developer/Handoff pointers has been corrected. All three current pointers now use SYNC-R52 + R3-D research state.
 
-That authority split was a recovery-critical defect.
-The three current pointers are now synchronized to SYNC-R52 + R3-D research state.
-
-## E6-R3D HIERARCHICAL ARCHITECTURE RECONNECTION
-Preregistration:
-`handoff/20260915/E6_R3D_HIERARCHICAL_ARCHITECTURE_RECONNECTION_PREREG_R1.md`
-
+## E6-R3D CURRENT STATE
 ### D1 Historical Contract Restoration Audit
-Verdict:
-`PASS__D1_HISTORICAL_HIERARCHY_RECOVERED__CURRENT_R3B_CONSUMPTION_GAPS_IDENTIFIED__D2_ALLOWED`
-
-Result:
-`handoff/20260915/E6_R3D_D1_HISTORICAL_CONTRACT_RESTORATION_AUDIT_RESULT_R1.md`
+PASS.
 
 ### D2 Fresh Hierarchical Architecture Microbench
+PASS.
 Fresh domain:
 `해람일보 탐사보도팀 / EP07 〈한 줄을 빼는 값〉`
 
-Architecture output:
-`handoff/20260915/E6_R3D_D2_FRESH_HIERARCHICAL_ARCHITECTURE_OUTPUT_R1.json`
-
-Verdict:
-`PASS__R3D_D2_FRESH_HIERARCHICAL_ARCHITECTURE__ANTI_TASK_COLLAPSE_GATES_PASS__FULL_SCENE_CONTRACT_LOWERING_ALLOWED`
-
-Frozen D2 facts:
+D2 frozen facts:
 - 4 independent story axes
 - 10 sequences
 - 7 cross-axis collision/convergence points
-- dominant single story axis 3/10 = 30%
-- non-primary/protagonist-owned sequences 8/10
-- explicit owner/obstacle/value_shift 10/10
-- every story axis has durable state delta
-- relationship and thread operations change later sequence conditions
-- 12 sentinel scene contracts, EARLY/MIDDLE/LATE 4/4/4
-- sequence scene budgets total exactly 50
-- screenplay surface prose bytes = 0
+- dominant single story axis = 30%
+- non-primary/protagonist-owned sequences = 8/10
+- explicit owner/obstacle/value_shift = 10/10
+- 12 sentinel scenes
+- planned 50-scene budget
+- surface prose = 0
+
+### D3 50-Scene Contract Lowering
+Preoutput seal:
+`handoff/20260915/E6_R3D_D3_50SCENE_LOWERING_PREOUTPUT_SEAL_R1.md`
+
+Output:
+`handoff/20260915/E6_R3D_D3_50SCENE_CONTRACTS_R1.json`
+
+Audit:
+`handoff/20260915/E6_R3D_D3_50SCENE_LOWERING_AUDIT_RESULT_R1.md`
+
+Verdict:
+`PASS__R3D_D3_50_SCENE_CONTRACT_LOWERING__HIERARCHY_PRESERVED__FRESH_WHOLE_EPISODE_SURFACE_ALLOWED`
+
+D3 frozen facts:
+- 50/50 scenes
+- orphan scenes 0
+- per-sequence budgets exactly 4/4/5/5/5/6/5/6/5/5
+- primary-axis scene ownership A=10, B=15, C=10, D=15
+- dominant axis 30%
+- all seven D2 cross-axis regions preserved
+- relationship/thread operations alter later choices
+- low-dialogue, ensemble and remote/cross-cut candidates exceed frozen minimums
+- fixed 4-person/6-utterance topology not encoded
+- screenplay surface prose = 0
 - State Commit = 0
 - external judgments = 0
 
-Audit:
-`handoff/20260915/E6_R3D_D2_FRESH_HIERARCHICAL_ARCHITECTURE_AUDIT_RESULT_R1.md`
-
 ## EXACT NEXT LEGAL ACTION
-Do not generate screenplay prose yet.
+Generate a fresh >=35,000-character whole-episode screenplay only from the exact sealed 50 scene contracts.
 
-1. lower the sealed D2 hierarchy into all 50 scene contracts;
-2. preserve H0-H3 story axes, ownership, value shifts and cross-axis obligations;
-3. seal and audit the 50-scene contracts;
-4. only then generate a fresh >=35,000-character whole-episode screenplay;
-5. apply R3-C `SHOW_ONLY_DIRECTION_BOUNDARY`;
-6. run whole-episode architecture, dramaturgy, continuity/state, spatial/communication and Korean-surface audits;
-7. only internal PASS may proceed to fresh independent external blind evaluation;
-8. only external PASS plus physical 5-Part/9-Package reseal may restore the operational Level-3 claim.
+Mandatory inheritance:
+- R3-C `SHOW_ONLY_DIRECTION_BOUNDARY`
+- four story axes and their ownership
+- seven cross-axis consequences
+- sequence value shifts
+- direct decision/agency holder
+- no scene-summary dialogue
+- no authorial explanation of what physical action means
+- no fixed utterance topology
 
-## CLAIM RESTORATION RULE
-`LEVEL_3_OPERATIONAL_CLAIM_RESTORED` requires all of:
-1. R3-A PASS preserved;
-2. R3-B immutable FAIL preserved;
-3. R3-C C1+C2 PASS preserved;
-4. R3-D hierarchy reconnection PASS;
-5. fresh successor 50-scene contract seal;
-6. fresh >=35,000-character whole-episode internal PASS;
-7. fresh external blind PASS;
-8. physical 5-Part/9-Package reseal;
-9. Hub pointers updated to that physical authority.
+Then run:
+- whole-episode architecture audit
+- dramaturgy audit
+- continuity/state audit
+- spatial/communication audit
+- Korean-surface audit
+
+Only internal PASS may proceed to fresh independent external blind evaluation.
+Only external PASS + physical 5-Part/9-Package reseal + pointer update may restore the operational Level-3 claim.
 
 ## RESEARCH EVOLUTION — READ FIRST
 1. this pointer
-2. `handoff/20260915/START_HERE_SYNC_R52_R3D_HIERARCHY_RECONNECTION_R1.md`
-3. `handoff/20260915/HIERARCHICAL_PLANNING_LINEAGE_AND_CURRENT_CONSUMPTION_GAP_AUDIT_R1.md`
-4. `handoff/20260915/E6_R3D_HIERARCHICAL_ARCHITECTURE_RECONNECTION_PREREG_R1.md`
-5. `handoff/20260915/E6_R3D_D1_HISTORICAL_CONTRACT_RESTORATION_AUDIT_RESULT_R1.md`
-6. `handoff/20260915/E6_R3D_D2_FRESH_HIERARCHICAL_ARCHITECTURE_OUTPUT_R1.json`
-7. `handoff/20260915/E6_R3D_D2_FRESH_HIERARCHICAL_ARCHITECTURE_AUDIT_RESULT_R1.md`
+2. `handoff/20260915/START_HERE_SYNC_R52_R3D_D3_SCENE_CONTRACTS_SEALED_R2.md`
+3. hierarchy root-cause audit
+4. R3-D preregistration
+5. D1 result
+6. D2 architecture output + audit
+7. D3 preoutput seal + 50-scene contracts + audit
 8. prior R3-A/R3-B/R3-C records
-9. historical macro/4-layer/consumption/master-blueprint documents listed in START_HERE
+9. historical macro planning / 4-layer / subplot / consumption / master-blueprint documents named in START_HERE
+
+## CLAIM RESTORATION RULE
+`LEVEL_3_OPERATIONAL_CLAIM_RESTORED` requires:
+1. R3-A PASS preserved;
+2. R3-B immutable FAIL preserved;
+3. R3-C C1+C2 PASS preserved;
+4. R3-D D1+D2+D3 PASS;
+5. fresh >=35,000-character whole-episode internal PASS;
+6. fresh external blind PASS;
+7. physical 5-Part/9-Package reseal;
+8. Hub pointers updated to that physical authority.
 
 ## UNCHANGED AUTHORITIES
 - Physical: SYNC-R52
@@ -155,4 +150,4 @@ Do not generate screenplay prose yet.
 - Level 4: NOT STARTED
 
 ## STATUS TOKEN
-`SYNC_R52_PHYSICAL__LEVEL3_OPERATIONAL_CLAIM_SUSPENDED__R3D_D1_PASS__R3D_D2_PASS__CURRENT_POINTERS_SYNCHRONIZED__50_SCENE_CONTRACT_LOWERING_NEXT__SURFACE0`
+`SYNC_R52_PHYSICAL__LEVEL3_OPERATIONAL_CLAIM_SUSPENDED__R3D_D1_PASS__D2_PASS__D3_50SCENE_CONTRACTS_PASS__CURRENT_POINTERS_SYNCHRONIZED__WHOLE_EPISODE_SURFACE_NEXT__SURFACE0`
