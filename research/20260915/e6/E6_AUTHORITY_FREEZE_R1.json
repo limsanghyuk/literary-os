@@ -1,0 +1,23 @@
+{
+  "schema": "E6AuthorityFreezeR1",
+  "date": "2026-09-15",
+  "experiment_id": "P07-LEVEL3-E6-FORMAL-QUALIFICATION-R1",
+  "parent_physical_authority": "SYNC-R49",
+  "parent_root_sha256": "ceea3188a4acbe5b58fc198f26bc5e3d2e4e64f9163c81664141c7aef7352762",
+  "maturity_before_run": "PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS",
+  "frozen_authorities": {
+    "active_engine": "P07-I4H Recovery R3",
+    "production_engine": "ENG:R47",
+    "data_fuel": "E2 CLOSED_PASS / DB64 research-qualified non-Production interface with protected DB59 baseline",
+    "surface_contract": "E1-R2 CLOSED_PASS surface contract",
+    "whole_episode_integration": "E3 CLOSED_PASS",
+    "multi_episode_state_carry": "E4 CLOSED_PASS",
+    "bounded_recovery": "E5 CLOSED_PASS",
+    "formal_scored_total_before_run": 137,
+    "latest_formal_authority": "R138",
+    "formal_r140": "0/0/0"
+  },
+  "no_development_change_after_output": true,
+  "promotion_rule": "Only an E6 PASS under this frozen authority may declare LEVEL_3_ENTERED. Production ENG:R47, DB64 Production status, and Formal R140 remain unchanged unless separately promoted by their own authority.",
+  "outputs_at_freeze": 0
+}
