@@ -1,0 +1,21 @@
+{
+  "schema":"LiteraryOSSyncR43CurrentStatusR1",
+  "date":"2026-09-15",
+  "physical_authority":"SYNC-R43",
+  "root_sha256":"2722a2483d6f6417bc0de84f8d2a67fe6863d93b9c7adbef75c66bb027cd4912",
+  "parent":"SYNC-R42",
+  "maturity":"PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS",
+  "E1":"CLOSED_PASS",
+  "E2":"CLOSED_PASS",
+  "E3":"PREREGISTERED__FROZEN_INPUTS_SEALED__OUTPUTS_0",
+  "level3_entered":false,
+  "next_legal_action":"Execute E3 planning outputs from R43-sealed frozen inputs.",
+  "unchanged_system_authorities":{
+    "active_engine":"P07-I4H Recovery R3",
+    "production":"ENG:R47",
+    "formal_scored_total":137,
+    "latest_formal":"R138",
+    "formal_r140":"0/0/0",
+    "db64_production":false
+  }
+}
