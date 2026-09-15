@@ -1,0 +1,17 @@
+{
+  "schema": "Level3EntryGateLedgerR6",
+  "date": "2026-09-15",
+  "maturity": "PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS",
+  "gates": {
+    "G0_AUTHORITY_RECONCILIATION": "PASS",
+    "E1_CLEAN_INDEPENDENT_HUMAN_SURFACE": "CLOSED_PASS",
+    "E2_DB64_FUEL_FULL_PLANNING": "CLOSED_PASS",
+    "E3_FRESH_WHOLE_EPISODE_INTEGRATION": "CLOSED_PASS",
+    "E4_MULTI_EPISODE_STATE_CARRY": "CLOSED_PASS",
+    "E5_FAULT_INJECTION_AUTONOMOUS_RECOVERY": "CLOSED_PASS",
+    "E6_FORMAL_LEVEL3_QUALIFICATION": "NEXT__NOT_STARTED"
+  },
+  "promotion_rule": "Only an E6 PASS under frozen authority may declare LEVEL_3_ENTERED. E1-E5 PASS are necessary but not sufficient.",
+  "next_legal_action": "Preregister E6 Formal Level-3 Qualification using frozen engine/data/state/planning/surface/recovery authorities and a fresh qualification sample.",
+  "level3_entered": false
+}
