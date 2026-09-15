@@ -1,0 +1,15 @@
+{
+  "schema":"LiteraryOSSyncR52CurrentStatusR1",
+  "date":"2026-09-15",
+  "parent_sync":"SYNC-R51",
+  "parent_root_sha256":"9ca674f11ff1b75ef6d0ce3d0a1b3894c87c59d1f0feb7b2c3148eb11067a75a",
+  "transport_root_sha256":"62d2cec1a47e557a342dcedeb6eb63a7c18f1336f756b3b38bf0df7b7079a359",
+  "maturity":"LEVEL_3_ENTERED",
+  "E1":"CLOSED_PASS","E2":"CLOSED_PASS","E3":"CLOSED_PASS","E4":"CLOSED_PASS","E5":"CLOSED_PASS",
+  "E6_R1":"IMMUTABLE_FAIL__SAFE_NO_COMMIT",
+  "successor_repair":"CLOSED_PASS__SEALED",
+  "E6_R2":{"verdict":"PASS__E6_R2_FRESH_FORMAL_LEVEL3_QUALIFICATION__LEVEL_3_ENTRY_ELIGIBLE","fresh_sample":"청연시 산불대피통합센터 / QUAL2_EP01 〈바람이 골짜기를 넘는 밤〉","surface_chars":45064,"sequences":10,"scenes":50,"internal_surface_leaks":0,"state_commit":"STATE_COMMIT","surface_sha256":"5b230524a4b3fab158756714cdf86abbd78fe9dc9443e75ea401141787190be4","closure_sha256":"9a1d96fcb4924e28e6df59f32581008c40b5c2d40092c754dbe6e510f741d03d","closure_package_sha256":"7dc2d878ee212d80f16b4558fbfbb0139049db1c9324d97a119f2873f3c48b1b"},
+  "level3_entered":true,
+  "level4_started":false,
+  "unchanged_system_authorities":{"active_engine":"P07-I4H Recovery R3","production_engine":"ENG:R47","formal_scored_total":137,"latest_formal":"R138","formal_r140":"0/0/0","db64_is_production":false}
+}
