@@ -1,0 +1,41 @@
+{
+  "schema": "LiteraryOSResearchEvolutionMapR2",
+  "date": "2026-09-15",
+  "purpose": "Allow a new session to reconstruct how Literary OS evolved, including failures, repairs, claim boundaries, and successor rationale.",
+  "mandatory_recovery_read_order": [
+    "CURRENT_SESSION_RECOVERY_POINTER",
+    "START_HERE current sync",
+    "RESEARCH_EVOLUTION_MAP_R2",
+    "LEVEL3_ENTRY_GATE_LEDGER_R4",
+    "individual experiment records and immutable evidence packages"
+  ],
+  "lineage": [
+    {"node":"R129","status":"PASS","role":"Scene Architecture effect established."},
+    {"node":"R130","status":"PASS","role":"Broadcast-scale Surface Realization effect established."},
+    {"node":"R133","status":"FAIL_EXTERNAL","problem":"Internal scores did not transfer to external judges; surface craft gap exposed."},
+    {"node":"R135","status":"CLOSED_LINKED_EXTERNAL_CONFIRMATION_PASS","residual":"voice/surface bottleneck remained."},
+    {"node":"R138","status":"LATEST_FORMAL_AUTHORITY","formal_scored_total":137},
+    {"node":"A2R31","status":"FAIL_6W_2T_4L","problem":"DB64 novelty/utility/realization instability."},
+    {"node":"A2R32","status":"FAIL_PREBLIND","problem":"eligible pool 11/24, below frozen minimum."},
+    {"node":"A2R33","status":"FAIL_4W_2T_6L","problem":"novelty not concretely bound to case actions/roles."},
+    {"node":"A2R34","status":"FAIL_6W_1T_5L","problem":"abstention could suppress useful control advisory."},
+    {"node":"A2R35","status":"PASS_10W_2T_0L","evolution":"monotonic retention + all-axis case binding closed E2."},
+    {"node":"E2","status":"CLOSED_PASS","claim":"DB64 fuel/full-planning interface qualified; DB64 remains non-Production."},
+    {"node":"E1_R1","status":"SUPERSEDED_BEFORE_JUDGMENT__NO_SCORE","problem":"screenplay presentation and source-format blinding insufficient."},
+    {"node":"E1_R2","status":"CLOSED_PASS","result":"primary external majority Candidate 11W/0T/1L; GPT and Claude family replications both competitive","residual":"one localized U08 abstract clause preserved as minor hygiene defect."},
+    {"node":"E3_R1","status":"FAIL__CRITICAL_META_LEAKAGE__SAFE_NO_COMMIT","result":"41,637 chars / 10 sequences / 50 scenes; planning and semantic audit passed","problem":"SC49 leaked internal State Commit / 내부 용어; frozen zero-meta gate failed.","state_commit":0},
+    {"node":"E3_R2_PREOUTPUT_IMPL_R1","status":"INVALID_PREOUTPUT","problem":"double-escaped regex; scientific outputs 0."},
+    {"node":"E3_R2_PREOUTPUT_IMPL_R2","status":"SUPERSEDED_PREOUTPUT","problem":"attempted correction recorded but source unchanged; scientific outputs 0."},
+    {"node":"E3_R2","status":"CLOSED_PASS","result":"targeted boundary recovery changed exactly one line; final 41,583 chars / 10 sequences / 50 scenes; mechanical + semantic/state PASS; STATE_COMMIT","claim":"E3 closed on same fresh episode; not independent replication."}
+  ],
+  "current_transition": "E1 CLOSED_PASS + E2 CLOSED_PASS + E3 CLOSED_PASS -> E4 Multi-Episode State Carry",
+  "unchanged_authorities": {
+    "active_engine": "P07-I4H Recovery R3",
+    "production_engine": "ENG:R47",
+    "formal_scored_total": 137,
+    "latest_formal": "R138",
+    "formal_r140": "0/0/0",
+    "db64_is_production": false,
+    "level3_entered": false
+  }
+}
