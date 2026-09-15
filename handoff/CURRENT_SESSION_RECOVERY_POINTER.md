@@ -60,8 +60,7 @@ Do not edit the E6-R2 original screenplay into a replacement PASS.
 `HOLD_PREOUTPUT__SUPERSEDED_BY_DRAMATURGY_REPAIR`
 No L3C1 scientific output had begun.
 
-## E6-R3 DRAMATURGY REPAIR / REQUALIFICATION
-### R3-A Dramaturgy Microbench
+## E6-R3A DRAMATURGY MICROBENCH
 Fresh domain: `동백시 야간철도복구본부`
 12 fresh scenes.
 
@@ -74,70 +73,128 @@ Scientific output commit:
 Audit result commit:
 `10dd1ed976a7b9c5776f97c011ed9e56b6b3aab1`
 
-Topology evidence:
-- speaking-cast sizes: 1/2/3/4/6
-- utterance counts: 1/4/5/6/7/8/9/10
-- no fixed 4-person/6-utterance pattern
-- direct refusal/approval ownership PASS
-- two-person fracture/repair PASS
-- failed first attempt + costly second attempt PASS
-- remote two-location continuity PASS
-- civilian stakeholder resistance PASS
-- low-dialogue transition PASS
-- 6-person evidence-diverse ensemble PASS
-- irreversible climax PASS
-
-### R3-B Fresh Whole-Episode Requalification
+## E6-R3B FRESH WHOLE-EPISODE REQUALIFICATION
 Fresh domain:
 `백림시 수문통합센터 / R3B_EP01 〈물이 돌아오는 길〉`
 
-Status:
-`PLANNING_AND_45_SCENE_CONTRACTS_SEALED__SURFACE_0__STATE_COMMIT_0__EXTERNAL_JUDGMENTS_0`
-
-Preregistration commit:
-`29783a8d732f79add260f2228f3ab74991d691e1`
-
-Planning/Scene Contracts commit:
-`ba3e6c4cca9e466cbdc4a431cea0687429df3efa`
-
-Planning topology:
+Frozen planning:
 - 9 sequences / 45 scenes
-- speaking-cast sizes 1/2/3/4/5/6
-- 12 two-person scenes
-- 6 low-dialogue scenes
-- 9 scenes with 5+ speakers
-- 5 remote/cross-cut scenes
-- 7 civilian choice/resistance scenes
-- 3 designated crisis chains
-- orphan scenes 0
+- diverse speaking-cast/utterance topology
+- direct decisive agency
+- resident choice/refusal
+- crisis-process chains
+- remote/cross-cut scenes
+
+Scientific surface output:
+- commit `3283dc768102293d45b483b11db8586a5ea213af`
+- Git blob `52d525c5904fb67892398ed4c8476d3adad992e2`
+
+Internal audit verdict:
+`FAIL__R3B_SYSTEMIC_DRAMATURGICAL_COMMENTARY_LEAKAGE_IN_DIRECTION__SAFE_NO_COMMIT`
+
+Failure record commit:
+`745b4e50a092576d7df5f034d0f5bde14bd23dee`
+
+What improved:
+- old fixed 4-person / 6-utterance renderer did not recur;
+- direct refusal/approval/relationship agency substantially repaired;
+- visible failure -> attempt -> obstacle -> costly choice -> consequence chains present;
+- resident/civilian agency materially improved.
+
+Remaining failure:
+Stage directions still sometimes explain what action means, e.g. agency/relationship/causal/thematic interpretation after the physical action has already shown it.
+
+State Commit: 0
+External blind release: prohibited
+External judgments: 0
+The R3-B failed surface is immutable and must not be edited into PASS.
+
+## E6-R3C SHOW-ONLY DIRECTION BOUNDARY REPAIR
+### C1 detection-only regression
+Prereg commit:
+`4bfeaad64be9fad301585ec8f911ffd90e1a1cf2`
+
+Result commit:
+`3fbd345cd52c83403db10adf5343b2514966a623`
+
+Verdict:
+`PASS__R3C_C1_DETECTION_ONLY_REGRESSION__C2_FRESH_MICROBENCH_ALLOWED`
+
+Results:
+- 14/14 frozen R3-B commentary failures detected
+- false negatives 0
+- 8 representative physical-direction negative controls not overblocked
+- immutable R3-B surface rewritten: NO
+
+### C2 fresh microbench
+Fresh domain:
+`해진도 심야도서의료이송센터`
+
+Frozen input commit:
+`9fbeb4d6cdef206479cf1c2d53b047da70ca61ea`
+
+Scientific surface commit:
+`c6dd59cd3ce244d0db6e4d62f903de92785451dd`
+
+Audit result commit:
+`4edf92d6f3efaae56ea86faf3a8e4cf527baee98`
+
+Verdict:
+`PASS__R3C_C2_FRESH_MICROBENCH__FRESH_WHOLE_EPISODE_SUCCESSOR_ALLOWED`
+
+Evidence:
+- speaking-cast sizes 1/2/3/4/6
+- 0-line and 1-line scenes present
+- multiple 2-person scenes
+- multiple 5+ speaker scenes
+- remote/cross-cut continuity PASS
+- direct family refusal/choice PASS
+- first transport attempt visibly fails
+- successor transport plan contains a new obstacle
+- relationship apology/trust condition enacted directly
+- irreversible rope-cut climax enacted by responsible field actor
+- authorial direction-commentary criticals 0
+- dialogue-summary criticals 0
+- displaced decisive-agency criticals 0
+- repeated-template critical 0
+- systemic Korean particle defect 0
+
+## CURRENT SCIENTIFIC BOUNDARY
+R3-C C1+C2 PASS permits a completely fresh whole-episode successor requalification.
+It does NOT restore the Level-3 operational claim.
 
 ## NEXT LEGAL ACTION
-Generate the full >=35,000-character R3-B episode only from the sealed plan/contracts and frozen R3 dramaturgy rules.
-Then run whole-episode dramaturgy/state/spatial/Korean-surface validators.
-If internal PASS, seal output and prepare the preregistered external blind quality gate.
-
-No Stage-B rule, threshold, scene contract or implementation rule may change after the sealed planning output.
+Open a fresh whole-episode successor on a domain not used in E6-R2, R3-A, R3-B or R3-C.
+Freeze whole-episode plan/scene contracts and the `SHOW_ONLY_DIRECTION_BOUNDARY` before surface output.
+Generate >=35,000 Korean characters with >=9 sequences / >=45 scenes.
+Run whole-episode dramaturgy/state/spatial/Korean-surface audits.
+Only an internal PASS may proceed to fresh independent external blind evaluation.
 
 ## CLAIM RESTORATION RULE
 `LEVEL_3_OPERATIONAL_CLAIM_RESTORED` requires all of:
 1. R3-A PASS;
-2. R3-B internal whole-episode PASS;
-3. fresh external blind PASS;
-4. physical 5-Part/9-Package reseal;
-5. Hub pointer update to the new physical authority.
+2. R3-B failure preserved;
+3. R3-C C1+C2 PASS;
+4. fresh successor whole-episode internal PASS;
+5. fresh external blind PASS;
+6. physical 5-Part/9-Package reseal;
+7. Hub pointer update to the new physical authority.
 
 ## RESEARCH HISTORY — READ FIRST
-1. `handoff/20260915/START_HERE_POST_R52_DRAMATURGY_REQUALIFICATION_R1.md`
-2. `handoff/20260915/E6_R2_POSTHOC_DRAMATURGY_AUDIT_PREREG_R1.md`
+1. `handoff/CURRENT_SESSION_RECOVERY_POINTER.md`
+2. `handoff/20260915/START_HERE_POST_R52_DRAMATURGY_REQUALIFICATION_R1.md`
 3. `handoff/20260915/E6_R2_POSTHOC_DRAMATURGY_AUDIT_RESULT_R1.md`
 4. `handoff/20260915/E6_R3_DRAMATURGY_REPAIR_PREREG_R1.md`
-5. `handoff/20260915/E6_R3A_MICROBENCH_FROZEN_INPUT_R1.json`
-6. `handoff/20260915/E6_R3A_MICROBENCH_SURFACE_R1.md`
-7. `handoff/20260915/E6_R3A_MICROBENCH_AUDIT_RESULT_R1.md`
-8. `handoff/20260915/E6_R3B_FRESH_WHOLE_EPISODE_PREREG_R1.md`
-9. `handoff/20260915/E6_R3B_PLAN_AND_SCENE_CONTRACTS_R1.json`
-10. `handoff/20260915/START_HERE_SYNC_R52_LEVEL3_ENTERED_R1.md` for historical R52 lineage
-11. prior E1-E6 records as needed
+5. `handoff/20260915/E6_R3B_FRESH_WHOLE_EPISODE_PREREG_R1.md`
+6. `handoff/20260915/E6_R3B_PLAN_AND_SCENE_CONTRACTS_R1.json`
+7. `handoff/20260915/E6_R3B_WHOLE_EPISODE_SURFACE_R1.md`
+8. `handoff/20260915/E6_R3B_INTERNAL_WHOLE_EPISODE_AUDIT_RESULT_R1.md`
+9. `handoff/20260915/E6_R3C_SHOW_ONLY_DIRECTION_REPAIR_PREREG_R1.md`
+10. `handoff/20260915/E6_R3C_C1_DIRECTION_DETECTION_REGRESSION_RESULT_R1.md`
+11. `handoff/20260915/E6_R3C_C2_FRESH_MICROBENCH_INPUT_R1.json`
+12. `handoff/20260915/E6_R3C_C2_FRESH_MICROBENCH_SURFACE_R1.md`
+13. `handoff/20260915/E6_R3C_C2_FRESH_MICROBENCH_AUDIT_RESULT_R1.md`
+14. historical R52 / E1-E6 evidence as needed
 
 ## UNCHANGED AUTHORITIES
 - Physical: `SYNC-R52`
@@ -150,4 +207,4 @@ No Stage-B rule, threshold, scene contract or implementation rule may change aft
 - Level 4: NOT STARTED
 
 ## STATUS TOKEN
-`SYNC_R52_PHYSICAL__LEVEL3_HISTORICAL_ENTRY_PRESERVED__OPERATIONAL_CLAIM_SUSPENDED__E6_R3A_PASS__E6_R3B_PLANNING_SEALED__SURFACE_PENDING`
+`SYNC_R52_PHYSICAL__LEVEL3_HISTORICAL_ENTRY_PRESERVED__OPERATIONAL_CLAIM_SUSPENDED__R3B_IMMUTABLE_FAIL__R3C_C1_PASS__R3C_C2_PASS__FRESH_WHOLE_EPISODE_SUCCESSOR_NEXT`
