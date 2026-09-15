@@ -1,0 +1,172 @@
+{
+  "schema": "E6R3D50SceneContractsR1",
+  "date": "2026-09-15",
+  "experiment_id": "P07-E6-R3D-D3-50SCENE-CONTRACT-LOWERING",
+  "parent_architecture_commit": "9f50b3ba100a31a8501eb61b40d132ef8ae5a178",
+  "preoutput_seal_commit": "7893b9488b6858c7c0a1d5a54dfbad39e86293e6",
+  "series": "해람일보 탐사보도팀",
+  "episode": "EP07_한 줄을 빼는 값",
+  "surface_prose_bytes": 0,
+  "sequence_budgets": {"SQ01":4,"SQ02":4,"SQ03":5,"SQ04":5,"SQ05":5,"SQ06":6,"SQ07":5,"SQ08":6,"SQ09":5,"SQ10":5},
+  "scenes": [
+    {
+      "scene_id":"SC01","sequence_id":"SQ01","primary_axis":"AX_B_NARI_ETHICS_EMPLOYMENT","dramatic_owner":"이나리","location":"해람일보 인사행정석","scene_function":"나리의 계약갱신 압력을 사건과 독립적으로 개시","conflict_pressure":"48시간 뒤 갱신면담이 확정되고 최근 자료관리기록 제출을 요구받음","beats":["갱신일정 통보","자료관리기록 요구","나리 반응 억제","제출기한 확인"],"information_action":"갱신심사 48시간과 제출요건 고정","relationship_action":"없음-개인축 독립 개시","thread_action":"T4_NARI_CONTRACT_RENEWAL OPEN_ESCALATE","entry_state":"갱신 가능성 불확실","exit_state":"자료관리 이력이 심사변수가 됨","agency_holder":"인사담당자/이나리","cross_axis_refs":[],"topology_candidate":"TWO_PERSON"
+    },
+    {
+      "scene_id":"SC02","sequence_id":"SQ01","primary_axis":"AX_B_NARI_ETHICS_EMPLOYMENT","dramatic_owner":"이나리","location":"탐사팀 자료보관석","scene_function":"과거 메타데이터 실수를 현재의 숨은 부채로 재활성화","conflict_pressure":"제출기록 안에 과거 취재원 파일전송 흔적이 남아 있음","beats":["기록목록 열기","과거 전송항목 발견","삭제가능 여부 확인","삭제하지 않고 창 닫기"],"information_action":"추적가능한 과거 파일기록 존재 확인","relationship_action":"세원에게 아직 알리지 않음","thread_action":"T2_SOURCE_PROTECTION LATENT_ESCALATE; T4 CONSTRAIN","entry_state":"실수는 과거문제라고 믿음","exit_state":"실수가 갱신과 취재원 모두의 위험으로 복귀","agency_holder":"이나리","cross_axis_refs":[],"topology_candidate":"LOW_DIALOGUE"
+    },
+    {
+      "scene_id":"SC03","sequence_id":"SQ01","primary_axis":"AX_B_NARI_ETHICS_EMPLOYMENT","dramatic_owner":"이나리","location":"회사 화장실 앞 빈 복도","scene_function":"은폐를 계속하기 위한 첫 적극적 선택","conflict_pressure":"세원이 자료관리점검 이유를 묻는 메시지를 보냄","beats":["메시지 확인","답변 초안 작성","실수내용 삭제","일반 점검이라고 회신"],"information_action":"세원은 실제 위험을 모름","relationship_action":"세원-나리 정보비대칭 확대","thread_action":"T4 ESCALATE; T2 LATENT","entry_state":"고백 가능","exit_state":"은폐를 선택해 관계부채 생성","agency_holder":"이나리","cross_axis_refs":[],"topology_candidate":"LOW_DIALOGUE_REMOTE"
+    },
+    {
+      "scene_id":"SC04","sequence_id":"SQ01","primary_axis":"AX_B_NARI_ETHICS_EMPLOYMENT","dramatic_owner":"정세원","location":"탐사팀 회의테이블","scene_function":"나리 개인축을 새 입찰취재 배정과 접촉시키되 아직 결합하지 않음","conflict_pressure":"경쟁지 단독예고 때문에 즉시 자료검토 인력이 필요","beats":["세원 취재배정","나리 자료담당 수락","갱신심사 일정 겹침 확인","나리 실수 비공개 유지"],"information_action":"나리가 새 입찰취재의 데이터 담당이 됨","relationship_action":"세원-나리 업무의존 증가","thread_action":"T4 -> later T1/T2 collision prepared","entry_state":"개인문제와 사건 분리","exit_state":"은폐한 인물이 핵심자료 담당이 됨","agency_holder":"이나리","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"SMALL_GROUP"
+    },
+
+    {
+      "scene_id":"SC05","sequence_id":"SQ02","primary_axis":"AX_C_DOHYUN_FAMILY","dramatic_owner":"박도현","location":"사진부 암실 옆 휴게공간","scene_function":"도현 가족축을 사건과 독립적으로 개시","conflict_pressure":"조카 학교행사 초대장이 왔지만 도현은 최근 약속을 여러 번 어김","beats":["초대장 확인","일정표 대조","카메라 일정 비우기","윤미에게 참석의사 전달 준비"],"information_action":"학교행사 시각 고정","relationship_action":"도현이 먼저 관계회복 행동을 시도","thread_action":"T5_DOHYUN_FAMILY_REPAIR OPEN","entry_state":"남매 냉각","exit_state":"도현이 약속을 걸어 회복기회 생성","agency_holder":"박도현","cross_axis_refs":[],"topology_candidate":"LOW_DIALOGUE"
+    },
+    {
+      "scene_id":"SC06","sequence_id":"SQ02","primary_axis":"AX_C_DOHYUN_FAMILY","dramatic_owner":"박윤미","location":"윤미의 직장 휴게실 / 도현 사진부 전화 연결","scene_function":"가족 회복의 조건을 윤미가 직접 설정","conflict_pressure":"윤미는 도현의 반복된 약속위반을 믿지 않음","beats":["도현 참석약속","윤미 과거위반 상기","윤미 조건 제시","도현 수락"],"information_action":"행사 시작 19시30분과 장소 확정","relationship_action":"윤미가 조건부 신뢰를 부여","thread_action":"T5 ADVANCE","entry_state":"연락은 되지만 신뢰 없음","exit_state":"실패비용 있는 조건부 기회","agency_holder":"박윤미","cross_axis_refs":[],"topology_candidate":"REMOTE_TWO_ENDPOINT"
+    },
+    {
+      "scene_id":"SC07","sequence_id":"SQ02","primary_axis":"AX_C_DOHYUN_FAMILY","dramatic_owner":"박도현","location":"사진부 배차보드","scene_function":"도현이 가족약속을 실제 일정결정으로 반영","conflict_pressure":"저녁 현장대기 당번과 학교행사가 겹침","beats":["배차보드 확인","동료와 당번교환 요청","교환 성립","행사시간 표시"],"information_action":"도현은 19시 이전 현장철수를 전제로 업무가능","relationship_action":"가족약속이 업무제약으로 실체화","thread_action":"T5 CONSTRAIN_FUTURE_ACTION","entry_state":"약속은 말뿐","exit_state":"약속이 스케줄 제약이 됨","agency_holder":"박도현","cross_axis_refs":[],"topology_candidate":"TWO_PERSON"
+    },
+    {
+      "scene_id":"SC08","sequence_id":"SQ02","primary_axis":"AX_C_DOHYUN_FAMILY","dramatic_owner":"박도현","location":"신문사 출입구","scene_function":"가족축을 조건부 안정상태로 닫고 후반 충돌 준비","conflict_pressure":"세원이 긴급취재 가능성을 알리지만 아직 구체장소는 미정","beats":["세원 대기요청","도현 교대사실 알림","세원 조건부 승인","도현 행사초대장 챙김"],"information_action":"업무팀도 도현의 시간제약을 앎","relationship_action":"세원은 일단 가족약속을 존중","thread_action":"T5 READY_FOR_COLLISION","entry_state":"업무와 가족 분리","exit_state":"향후 사건이 시간약속과 충돌할 조건","agency_holder":"정세원/박도현","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"TWO_PERSON"
+    },
+
+    {
+      "scene_id":"SC09","sequence_id":"SQ03","primary_axis":"AX_A_INVESTIGATION","dramatic_owner":"정세원","location":"탐사팀 회의실","scene_function":"입찰의혹 사건축 개시","conflict_pressure":"경쟁지는 단독예고를 냈지만 탐사팀에는 직접증거가 없음","beats":["익명제보 요약 확인","예고기사 비교","검증가능 항목 분리","공개기록부터 시작 결정"],"information_action":"청년임대주택 위탁입찰 업체군이 조사대상으로 확정","relationship_action":"세원-나리 업무분담 강화","thread_action":"T1_YOUTH_HOUSING_TENDER OPEN_ESCALATE","entry_state":"소문/경쟁압박","exit_state":"검증대상 구체화","agency_holder":"정세원","cross_axis_refs":[],"topology_candidate":"ENSEMBLE"
+    },
+    {
+      "scene_id":"SC10","sequence_id":"SQ03","primary_axis":"AX_A_INVESTIGATION","dramatic_owner":"이나리","location":"자료분석석","scene_function":"공개입찰문서를 구조화해 사건을 수치가 아닌 연결로 전환","conflict_pressure":"업체명이 다르고 표면상 독립기업으로 보임","beats":["입찰공고 3건 정렬","대표자 변경이력 비교","공통주소 표시","법인등기 조회목록 생성"],"information_action":"서로 다른 업체의 주소반복 발견","relationship_action":"없음","thread_action":"T1 ADVANCE","entry_state":"업체별 독립자료","exit_state":"연결 가능성 발견","agency_holder":"이나리","cross_axis_refs":[],"topology_candidate":"LOW_DIALOGUE"
+    },
+    {
+      "scene_id":"SC11","sequence_id":"SQ03","primary_axis":"AX_A_INVESTIGATION","dramatic_owner":"정세원","location":"법원등기 열람실","scene_function":"주소연결을 담보·지분관계까지 확장","conflict_pressure":"같은 주소만으로 특혜를 주장할 수 없음","beats":["법인등기 출력","담보권자 대조","과거 대표자 연결 확인","사진으로 기록"],"information_action":"세 업체가 동일 금융·대표자망으로 이어짐","relationship_action":"세원은 나리 분석을 신뢰해 현장추적 확대","thread_action":"T1 ADVANCE","entry_state":"약한 연결","exit_state":"반복업체망 가설 강화","agency_holder":"정세원","cross_axis_refs":[],"topology_candidate":"TWO_PERSON"
+    },
+    {
+      "scene_id":"SC12","sequence_id":"SQ03","primary_axis":"AX_A_INVESTIGATION","dramatic_owner":"이나리","location":"탐사팀 자료벽","scene_function":"외부기록과 내부평가표 필요성 분리","conflict_pressure":"공개자료만으로 입찰평가 조작은 입증 불가","beats":["업체관계 지도 부착","평가점수 빈칸 표시","실무평가 과정 추정","취재원 접촉 필요 확정"],"information_action":"입찰평가표가 핵심 미확인정보로 정의","relationship_action":"세원-나리 공동목표 선명화","thread_action":"T1 -> T2 dependency prepared","entry_state":"업체관계 중심","exit_state":"평가과정 증거 필요","agency_holder":"이나리","cross_axis_refs":[],"topology_candidate":"SMALL_GROUP"
+    },
+    {
+      "scene_id":"SC13","sequence_id":"SQ03","primary_axis":"AX_A_INVESTIGATION","dramatic_owner":"정세원","location":"탐사팀 전체회의","scene_function":"사건축 첫 단계 종료와 다중축 연결 준비","conflict_pressure":"경쟁마감은 빠르지만 취재원 접촉은 보호절차가 필요","beats":["현재증거 공유","도현 현장사진 요청","나리 취재원 접촉 배정","문경에게 취재개시 보고"],"information_action":"역할별 다음행동 확정","relationship_action":"문경이 검증우선 조건으로 취재 승인","thread_action":"T1 ADVANCE; T2/T3 collision prepared","entry_state":"개별 단서","exit_state":"팀 단위 조사로 전환","agency_holder":"최문경/정세원","cross_axis_refs":["AX_B_NARI_ETHICS_EMPLOYMENT","AX_C_DOHYUN_FAMILY","AX_D_NEWSROOM_GOVERNANCE"],"topology_candidate":"ENSEMBLE"
+    },
+
+    {
+      "scene_id":"SC14","sequence_id":"SQ04","primary_axis":"AX_D_NEWSROOM_GOVERNANCE","dramatic_owner":"최문경","location":"경영-편집 합동회의실","scene_function":"광고지면 갈등을 독립 경영축으로 개시","conflict_pressure":"강태석이 대형 광고특집 4면을 요구해 탐사면이 줄어듦","beats":["광고매출표 제시","4면 요구","문경 2면 제안","결론 보류"],"information_action":"광고계약이 감원회피 재원임을 확인","relationship_action":"문경-태석 제한적 휴전 흔들림","thread_action":"T3_AD_DEPENDENCE ESCALATE; T6 BOARD_REVIEW latent","entry_state":"일상적 지면협상","exit_state":"탐사면 존립이 광고조건에 묶임","agency_holder":"최문경","cross_axis_refs":[],"topology_candidate":"ENSEMBLE"
+    },
+    {
+      "scene_id":"SC15","sequence_id":"SQ04","primary_axis":"AX_D_NEWSROOM_GOVERNANCE","dramatic_owner":"최문경","location":"편집국 지면배치판","scene_function":"경영결정을 실제 편집제약으로 물리화할 준비","conflict_pressure":"탐사면과 광고특집이 같은 지면을 요구","beats":["지면모형 배치","탐사면 축소안 확인","문경 빈칸 유지","마감시간 재설정"],"information_action":"탐사기사 공간이 잠정 보류됨","relationship_action":"문경이 편집팀에 아직 취소는 아니라고 선을 긋음","thread_action":"T3 CONSTRAIN","entry_state":"기사공간 존재","exit_state":"기사공간 불확실","agency_holder":"최문경","cross_axis_refs":[],"topology_candidate":"LOW_DIALOGUE"
+    },
+    {
+      "scene_id":"SC16","sequence_id":"SQ04","primary_axis":"AX_D_NEWSROOM_GOVERNANCE","dramatic_owner":"강태석","location":"경영지원실","scene_function":"광고의존 비용을 수치로 고정","conflict_pressure":"광고 철회 시 계약직 감원 가능성이 실제 예산표에 나타남","beats":["광고수입 비중 확인","감원예상표 제시","태석 경고","문경 자료사본 확보"],"information_action":"광고철회가 나리 같은 계약직 고용에도 영향 가능","relationship_action":"문경-태석 갈등에 인력비용 추가","thread_action":"T3 -> T4 cross-pressure prepared","entry_state":"광고는 추상적 압박","exit_state":"광고가 고용비용으로 구체화","agency_holder":"강태석/최문경","cross_axis_refs":["AX_B_NARI_ETHICS_EMPLOYMENT"],"topology_candidate":"TWO_PERSON"
+    },
+    {
+      "scene_id":"SC17","sequence_id":"SQ04","primary_axis":"AX_D_NEWSROOM_GOVERNANCE","dramatic_owner":"이나리","location":"자료분석석 / 문경 편집책상","scene_function":"경영축과 입찰사건축 첫 직접 충돌","conflict_pressure":"광고대행사와 입찰참여기업의 지분관계가 발견됨","beats":["지분자료 확인","나리 문경에게 전달","문경 광고계약서 대조","지면결정 중단"],"information_action":"광고주 이해관계가 조사대상과 연결","relationship_action":"문경이 탐사팀 정보의 중요성을 받아들임","thread_action":"T1 + T3 COLLIDE","entry_state":"지면협상과 사건분리","exit_state":"편집권 이해충돌로 전환","agency_holder":"이나리/최문경","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"REMOTE_DIGITAL"
+    },
+    {
+      "scene_id":"SC18","sequence_id":"SQ04","primary_axis":"AX_D_NEWSROOM_GOVERNANCE","dramatic_owner":"최문경","location":"편집국 중앙데스크","scene_function":"첫 교차결과를 공개 편집결정으로 확정","conflict_pressure":"태석은 광고면 확정을 요구하고 문경은 이해충돌 확인 전 승인거부","beats":["태석 최종승인 요청","문경 이해충돌자료 제시","광고면 동결","태석 직무평가 언급"],"information_action":"이사회 평가가 기사선택과 연결될 가능성 공개","relationship_action":"문경-태석 휴전 붕괴","thread_action":"T3 ESCALATE; T6 OPEN","entry_state":"협상 가능","exit_state":"편집권 공개충돌","agency_holder":"최문경","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"ENSEMBLE"
+    },
+
+    {
+      "scene_id":"SC19","sequence_id":"SQ05","primary_axis":"AX_B_NARI_ETHICS_EMPLOYMENT","dramatic_owner":"이나리","location":"지하철역 외부 벤치","scene_function":"취재원 보호축을 나리 개인부채와 직접 접촉","conflict_pressure":"한지수는 전자기기 없이 만나고 파일수령을 거부하라고 요구","beats":["접촉확인","지수 보호조건 제시","나리 휴대전화 전원종료","종이메모 시작"],"information_action":"취재원은 평가표 구조를 말로만 설명할 의사","relationship_action":"나리-지수 보호약속 강화","thread_action":"T2_SOURCE_PROTECTION ESCALATE","entry_state":"취재원 접근만 필요","exit_state":"접근보다 보호방식이 우선조건","agency_holder":"한지수","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"TWO_PERSON"
+    },
+    {
+      "scene_id":"SC20","sequence_id":"SQ05","primary_axis":"AX_B_NARI_ETHICS_EMPLOYMENT","dramatic_owner":"한지수","location":"지하철역 보행육교","scene_function":"입찰조작 정보는 얻되 원본증거는 얻지 못하게 제한","conflict_pressure":"지수는 평가표 원본이 자신을 특정한다고 판단","beats":["평가항목 설명","위원교체 시점 제시","원본요청 거부","공개회의록 위치만 알려줌"],"information_action":"평가위원 교체와 점수항목 조작 방식 확보","relationship_action":"지수가 나리의 보호능력을 시험","thread_action":"T1 ADVANCE; T2 CONSTRAIN_EVIDENCE","entry_state":"원본파일 기대","exit_state":"구조정보만 보유","agency_holder":"한지수","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"TWO_PERSON"
+    },
+    {
+      "scene_id":"SC21","sequence_id":"SQ05","primary_axis":"AX_B_NARI_ETHICS_EMPLOYMENT","dramatic_owner":"이나리","location":"역 화장실 세면대 앞","scene_function":"과거 실수와 현재 보호요청을 나리 스스로 연결","conflict_pressure":"지수의 추적우려가 과거 메타데이터 실수와 동일한 경로임을 깨달음","beats":["종이메모 확인","과거기록 떠올림","회사 기록접속","전송흔적 재확인"],"information_action":"과거 실수가 현재 취재원 식별위험과 동형임을 확인","relationship_action":"고백부채 급증","thread_action":"T2 + T4 COLLIDE","entry_state":"실수 은폐 유지 가능","exit_state":"은폐가 취재원 위험을 키울 수 있음","agency_holder":"이나리","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"LOW_DIALOGUE"
+    },
+    {
+      "scene_id":"SC22","sequence_id":"SQ05","primary_axis":"AX_B_NARI_ETHICS_EMPLOYMENT","dramatic_owner":"정세원","location":"신문사 계단참","scene_function":"나리에게 안전확인을 요구하지만 진실은 아직 나오지 않음","conflict_pressure":"세원은 원본이 없는 이유와 취재원 접촉방식을 묻음","beats":["세원 확인질문","나리 오프라인 접촉 설명","세원 추적위험 질문","나리 과거실수 비공개"],"information_action":"팀은 지수 원본을 아직 받지 않았음을 공유","relationship_action":"세원-나리 신뢰는 겉으로 유지되나 비대칭 심화","thread_action":"T2 HOLD; T4 ESCALATE","entry_state":"세원은 나리를 신뢰","exit_state":"신뢰 위에 미공개 위험 누적","agency_holder":"이나리","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"TWO_PERSON"
+    },
+    {
+      "scene_id":"SC23","sequence_id":"SQ05","primary_axis":"AX_B_NARI_ETHICS_EMPLOYMENT","dramatic_owner":"이나리","location":"자료보관 캐비닛","scene_function":"나리가 위험한 원본 대신 종이메모만 보존하는 선택으로 시퀀스 종료","conflict_pressure":"특종속도를 위해 파일을 받을 유혹과 보호원칙 충돌","beats":["빈 저장매체 확인","종이메모 봉투화","접촉시각 기록 최소화","개인 잠금캐비닛 보관"],"information_action":"원본파일 미수령 상태 확정","relationship_action":"지수와의 보호약속은 지킴","thread_action":"T2 PROTECT; T1 NEEDS_ALTERNATIVE_EVIDENCE","entry_state":"증거획득 중심","exit_state":"보호가 증거한계를 만듦","agency_holder":"이나리","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"LOW_DIALOGUE"
+    },
+
+    {
+      "scene_id":"SC24","sequence_id":"SQ06","primary_axis":"AX_C_DOHYUN_FAMILY","dramatic_owner":"박도현","location":"청년임대주택 단지 외곽","scene_function":"도현 가족축과 사건축을 물리적으로 충돌시키는 중간전환 시작","conflict_pressure":"현장촬영 대상단지에서 윤미를 예상치 못하게 발견","beats":["도현 외관촬영","윤미 프레임 안 등장","도현 촬영중단","서로 존재확인"],"information_action":"윤미 거주지가 취재대상 단지임을 도현이 처음 앎","relationship_action":"조건부 회복이 취재상황에 노출","thread_action":"T5 + T1 COLLIDE","entry_state":"가족과 사건분리","exit_state":"가족이 사건당사자로 편입","agency_holder":"박도현","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"LOW_DIALOGUE"
+    },
+    {
+      "scene_id":"SC25","sequence_id":"SQ06","primary_axis":"AX_C_DOHYUN_FAMILY","dramatic_owner":"박윤미","location":"단지 우편함 앞","scene_function":"윤미가 취재경계를 직접 선언","conflict_pressure":"도현은 현장증언이 기사에 중요하지만 윤미는 가족관계를 취재통로로 쓰는 것을 거부","beats":["도현 설명시도","윤미 촬영여부 확인","윤미 실명/사진 거부","도현 카메라 내려놓음"],"information_action":"윤미는 관리업체 변경 피해를 겪었지만 실명증언하지 않음","relationship_action":"윤미가 도현에게 명확한 사용금지 조건 설정","thread_action":"T5 ESCALATE; T1 EVIDENCE_PATH_BLOCKED","entry_state":"가족신뢰 회복기회","exit_state":"관계파열/취재경계 확정","agency_holder":"박윤미","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"TWO_PERSON"
+    },
+    {
+      "scene_id":"SC26","sequence_id":"SQ06","primary_axis":"AX_C_DOHYUN_FAMILY","dramatic_owner":"박도현","location":"단지 지상주차장","scene_function":"도현이 빠른 취재보다 가족경계를 우선하는 첫 결정","conflict_pressure":"세원이 전화로 현장증언 가능 여부를 묻고 촬영마감도 다가옴","beats":["세원 전화수신","도현 윤미 실명사용 불가 통보","세원 대체증거 요청","도현 공개영역만 촬영 제안"],"information_action":"팀은 윤미 증언을 기사근거에서 제외","relationship_action":"도현이 윤미의 조건을 팀에 강제","thread_action":"T5 PROTECT; T1 REPLAN","entry_state":"가족을 취재자원으로 사용할 수 있음","exit_state":"가족경계가 팀의 증거규칙이 됨","agency_holder":"박도현","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"REMOTE_TWO_ENDPOINT"
+    },
+    {
+      "scene_id":"SC27","sequence_id":"SQ06","primary_axis":"AX_C_DOHYUN_FAMILY","dramatic_owner":"정세원","location":"탐사팀 회의테이블","scene_function":"가족축 결과를 사건계획 변경으로 수용","conflict_pressure":"팀은 가장 쉬운 피해자증언과 사진을 사용할 수 없음","beats":["도현 제한조건 공유","나리 공개회의록 대안 제시","세원 증언중심 계획 폐기","공개기록 취재 추가"],"information_action":"기사증거 전략이 개인증언에서 공개기록 교차로 이동","relationship_action":"세원이 도현 경계를 존중해 업무갈등을 막음","thread_action":"T1 REPLAN; T5 CONDITION_PRESERVED","entry_state":"피해자증언 기대","exit_state":"공개자료 재구성 필요","agency_holder":"정세원","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"ENSEMBLE"
+    },
+    {
+      "scene_id":"SC28","sequence_id":"SQ06","primary_axis":"AX_C_DOHYUN_FAMILY","dramatic_owner":"박도현","location":"사진부 편집석","scene_function":"식별가능 촬영물을 실제 사용불가 상태로 분리","conflict_pressure":"강한 표정/인물사진이 있지만 윤미 동의가 없음","beats":["촬영물 검토","식별가능 컷 선택","사용불가 폴더 이동","공개공간 이미지 별도보존"],"information_action":"사용가능 증거경계 명확화","relationship_action":"도현이 윤미 조건을 행동으로 지킴","thread_action":"T5 ADVANCE; T1 CONSTRAIN","entry_state":"좋은 사진이 기사자원","exit_state":"동의없는 사진은 자원이 아님","agency_holder":"박도현","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"LOW_DIALOGUE"
+    },
+    {
+      "scene_id":"SC29","sequence_id":"SQ06","primary_axis":"AX_C_DOHYUN_FAMILY","dramatic_owner":"박도현","location":"신문사 출입구 -> 조카 학교 이동","scene_function":"도현이 취재현장을 떠나 가족약속을 지켜 사건축에 실제 인력비용 발생","conflict_pressure":"재촬영이 필요하지만 학교행사 시간이 도래","beats":["재촬영 요청 확인","대체촬영자 지정","도현 카메라 일부 인계","도현 학교로 출발"],"information_action":"현장 재촬영이 다른 인력에게 넘어감","relationship_action":"윤미와의 약속을 이번에는 우선","thread_action":"T5 ADVANCE; T1 COST_INCURRED","entry_state":"업무가 가족약속을 다시 삼킬 가능성","exit_state":"관계선택이 취재자원 배분을 바꿈","agency_holder":"박도현","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"TRANSITION_LOW_DIALOGUE"
+    },
+
+    {
+      "scene_id":"SC30","sequence_id":"SQ07","primary_axis":"AX_D_NEWSROOM_GOVERNANCE","dramatic_owner":"강태석","location":"강태석 사무실 / 광고대행사 전화 연결","scene_function":"광고철회 위협을 실제 경영행동으로 개시","conflict_pressure":"광고대행사가 기사취재 사실을 알고 계약재검토를 통보","beats":["광고대행사 연락","기사중단 조건 확인","태석 매출영향 계산","문경 호출"],"information_action":"기사중단 요구가 광고계약과 직접 연결","relationship_action":"태석이 문경에게 압박 전달 준비","thread_action":"T3 ESCALATE","entry_state":"광고압박 가능성","exit_state":"광고철회 조건부 통보","agency_holder":"강태석","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"REMOTE_TWO_ENDPOINT"
+    },
+    {
+      "scene_id":"SC31","sequence_id":"SQ07","primary_axis":"AX_D_NEWSROOM_GOVERNANCE","dramatic_owner":"최문경","location":"편집국 법무검토 회의","scene_function":"기사검증과 조직위험을 동시에 가시화","conflict_pressure":"법무는 취재원 원본 없이 평가조작 단정은 위험하다고 지적","beats":["현재근거 제시","법무 반론","표현수위 하향 요구","문경 추가검증 시간 확보"],"information_action":"현재증거로는 강한 단정 불가","relationship_action":"문경-세원 속도갈등 잠재","thread_action":"T1 CONSTRAIN; T3/T6 ESCALATE","entry_state":"기사형태 미정","exit_state":"검증범위 축소 필요","agency_holder":"최문경","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"ENSEMBLE"
+    },
+    {
+      "scene_id":"SC32","sequence_id":"SQ07","primary_axis":"AX_D_NEWSROOM_GOVERNANCE","dramatic_owner":"최문경","location":"이사회 소회의실","scene_function":"편집결정의 인사비용을 직접 확정","conflict_pressure":"이사회가 광고주 관련 기사취소를 직무평가와 연결","beats":["매출자료 제시","기사취소 요구","문경 편집독립 반박","직무심사 예고"],"information_action":"문경 심사가 기사선택에 연동됨","relationship_action":"문경-경영진 갈등 공개화","thread_action":"T6_BOARD_REVIEW OPEN_ESCALATE","entry_state":"비공식 압력","exit_state":"공식 인사위험","agency_holder":"최문경","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"ENSEMBLE"
+    },
+    {
+      "scene_id":"SC33","sequence_id":"SQ07","primary_axis":"AX_D_NEWSROOM_GOVERNANCE","dramatic_owner":"최문경","location":"편집국 지면배치판","scene_function":"압박에도 기사공간을 실제로 보존","conflict_pressure":"광고특집 마감과 탐사기사 마감이 겹침","beats":["광고면 시안 도착","문경 탐사면 유지표시","다른 기사 이동","최종마감 90분 고정"],"information_action":"기사공간과 최종시한 확정","relationship_action":"문경이 팀에 책임을 떠맡겠다는 신호","thread_action":"T3 COST_LOCK; T6 ESCALATE","entry_state":"기사공간 상실 가능","exit_state":"공간 확보 대신 시간압박 증가","agency_holder":"최문경","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"LOW_DIALOGUE"
+    },
+    {
+      "scene_id":"SC34","sequence_id":"SQ07","primary_axis":"AX_D_NEWSROOM_GOVERNANCE","dramatic_owner":"최문경","location":"탐사팀 중앙데스크","scene_function":"조직비용을 팀 전체의 선택조건으로 전달","conflict_pressure":"기사발행 시 광고철회와 문경 심사 가능성이 현실화","beats":["문경 조건공개","세원 기사강행 의사","나리 침묵","공개기록만으로 다시 짜기로 합의"],"information_action":"팀이 조직비용을 알고도 취재계속 결정","relationship_action":"문경-세원 공동책임 강화","thread_action":"T3/T6 CONSTRAIN; T1 REPLAN","entry_state":"압력은 문경 개인문제","exit_state":"팀의 공유비용","agency_holder":"최문경/정세원","cross_axis_refs":["AX_A_INVESTIGATION","AX_B_NARI_ETHICS_EMPLOYMENT"],"topology_candidate":"ENSEMBLE"
+    },
+
+    {
+      "scene_id":"SC35","sequence_id":"SQ08","primary_axis":"AX_B_NARI_ETHICS_EMPLOYMENT","dramatic_owner":"이나리","location":"자료분석석","scene_function":"경쟁지 예고가 나리의 은폐를 더 이상 유지할 수 없게 만듦","conflict_pressure":"경쟁지 예고문에 지수만 알 법한 평가항목 표현이 등장","beats":["예고문 확인","지수 메모와 표현대조","과거 전송기록 재확인","나리 추적가능성 판단"],"information_action":"취재원 정보가 외부로 샜을 가능성 상승","relationship_action":"나리의 고백결심 준비","thread_action":"T2 CRITICAL_ESCALATE; T7_INTERNAL_LEAK ESCALATE","entry_state":"은폐 유지","exit_state":"침묵이 취재원 위해가 될 수 있음","agency_holder":"이나리","cross_axis_refs":["AX_A_INVESTIGATION","AX_D_NEWSROOM_GOVERNANCE"],"topology_candidate":"LOW_DIALOGUE_DIGITAL"
+    },
+    {
+      "scene_id":"SC36","sequence_id":"SQ08","primary_axis":"AX_B_NARI_ETHICS_EMPLOYMENT","dramatic_owner":"이나리","location":"비상계단","scene_function":"나리가 계약위험보다 고백을 선택","conflict_pressure":"고백 즉시 갱신과 업무신뢰가 흔들릴 수 있음","beats":["세원 호출","전송기록 제시","과거 실수 인정","현재 취재원 위험 설명"],"information_action":"메타데이터 실수가 팀에 최초 공개","relationship_action":"세원-나리 멘토신뢰 파열","thread_action":"T4 ESCALATE; T2 PROTECTION_ACTION_REQUIRED","entry_state":"은폐","exit_state":"공개책임","agency_holder":"이나리","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"TWO_PERSON"
+    },
+    {
+      "scene_id":"SC37","sequence_id":"SQ08","primary_axis":"AX_B_NARI_ETHICS_EMPLOYMENT","dramatic_owner":"정세원","location":"탐사팀 보안석","scene_function":"고백을 증거사용 결정으로 연결","conflict_pressure":"원본문서가 기사에 가장 강하지만 취재원 추적위험을 포함","beats":["전송경로 확인","문서식별정보 대조","추적가능성 판정","사용중단 표시"],"information_action":"단독문서 사용금지 결정 근거 확정","relationship_action":"세원은 나리를 질책하지만 보호책임을 공동부담","thread_action":"T2 PROTECT; T1 EVIDENCE_LOSS","entry_state":"강한 단독증거 보유","exit_state":"증거는 보유하지만 사용할 수 없음","agency_holder":"정세원","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"SMALL_GROUP"
+    },
+    {
+      "scene_id":"SC38","sequence_id":"SQ08","primary_axis":"AX_B_NARI_ETHICS_EMPLOYMENT","dramatic_owner":"이나리","location":"자료보안 파쇄대","scene_function":"위험증거 비사용을 되돌리기 어려운 물리행동으로 확정할 준비","conflict_pressure":"마감 직전이라 다시 사용할 유혹이 남음","beats":["추적가능 출력본 분리","보안봉투 봉인","기사근거목록에서 제거","사용금지 표기"],"information_action":"기사근거 세트에서 민감자료 제거","relationship_action":"나리가 자신의 실수 정리책임 수행","thread_action":"T2 PROTECT; T4 COST_PENDING","entry_state":"사용금지 구두결정","exit_state":"사용금지 운영상태","agency_holder":"이나리","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"LOW_DIALOGUE"
+    },
+    {
+      "scene_id":"SC39","sequence_id":"SQ08","primary_axis":"AX_B_NARI_ETHICS_EMPLOYMENT","dramatic_owner":"최문경","location":"편집국 데스크","scene_function":"취재원 보호결정을 조직과 고용결정에 반영","conflict_pressure":"단독성 상실과 나리의 책임문제가 동시에 발생","beats":["문경 고백보고 수신","계약갱신 즉시결정 중단","징계보다 사실확인 우선","공개기록 재취재 승인"],"information_action":"나리 계약결정 보류","relationship_action":"문경-나리 관계가 평가에서 책임검토로 이동","thread_action":"T4 DEFER; T1 REPLAN; T6 COST_ESCALATE","entry_state":"나리 갱신심사 예정","exit_state":"계약판단 보류/책임검토","agency_holder":"최문경","cross_axis_refs":["AX_D_NEWSROOM_GOVERNANCE","AX_A_INVESTIGATION"],"topology_candidate":"SMALL_GROUP"
+    },
+    {
+      "scene_id":"SC40","sequence_id":"SQ08","primary_axis":"AX_B_NARI_ETHICS_EMPLOYMENT","dramatic_owner":"정세원","location":"탐사팀 전체회의","scene_function":"시퀀스 반전을 새 증거전략으로 전환","conflict_pressure":"90분 내 공개기록만으로 기사성립 필요","beats":["사용불가 근거 제거","남은 공개기록 목록화","인력 재배치","45분 1차 검증시한 고정"],"information_action":"새 기사근거 전략 확정","relationship_action":"세원-나리 신뢰는 파열됐지만 역할은 유지","thread_action":"T1 ALTERNATIVE_PATH; T2 PROTECTED; T3/T6 continue","entry_state":"단독자료 중심 기사","exit_state":"공개기록 중심 기사로 전환","agency_holder":"정세원/최문경","cross_axis_refs":["AX_A_INVESTIGATION","AX_D_NEWSROOM_GOVERNANCE"],"topology_candidate":"ENSEMBLE"
+    },
+
+    {
+      "scene_id":"SC41","sequence_id":"SQ09","primary_axis":"AX_A_INVESTIGATION","dramatic_owner":"이나리","location":"시의회 공개자료실","scene_function":"공개기록만으로 평가위원 교체시점을 복원","conflict_pressure":"회의록이 분산되고 표현이 모호함","beats":["회의록 색인","위원명 대조","교체일자 확인","입찰공고 시점과 결합"],"information_action":"평가위원 교체가 특정 업체 참여 직전에 이루어짐 확인","relationship_action":"세원이 나리 분석을 검증절차 아래 다시 사용","thread_action":"T1 ADVANCE; T2 SAFE_PATH","entry_state":"증거공백","exit_state":"공개기록 인과고리 확보","agency_holder":"이나리","cross_axis_refs":[],"topology_candidate":"LOW_DIALOGUE"
+    },
+    {
+      "scene_id":"SC42","sequence_id":"SQ09","primary_axis":"AX_A_INVESTIGATION","dramatic_owner":"박도현","location":"조카 학교행사장 밖 -> 청년임대주택 단지 공용복도","scene_function":"도현이 가족약속을 지킨 뒤 합의된 경계 안에서 취재에 복귀","conflict_pressure":"현장이미지가 필요하지만 윤미 개인공간은 촬영불가","beats":["행사종료 확인","윤미와 촬영범위 합의","공용게시판 촬영","개인문패 제외"],"information_action":"공개게시물 자료 확보","relationship_action":"도현-윤미 조건부 협력 시작","thread_action":"T5 PARTIAL_PAY; T1 SAFE_EVIDENCE","entry_state":"가족/취재 충돌","exit_state":"경계합의가 취재방법이 됨","agency_holder":"박윤미/박도현","cross_axis_refs":["AX_C_DOHYUN_FAMILY"],"topology_candidate":"TWO_PERSON"
+    },
+    {
+      "scene_id":"SC43","sequence_id":"SQ09","primary_axis":"AX_A_INVESTIGATION","dramatic_owner":"박윤미","location":"단지 공용게시판","scene_function":"윤미가 피취재자 아닌 사실검증 참여자로 제한적 기여","conflict_pressure":"게시공고 날짜가 도현의 촬영목록과 다름","beats":["윤미 날짜지적","도현 이전공고 사진대조","관리업체 변경일 확인","세원에게 날짜만 전달"],"information_action":"관리업체 변경 공고가 평가위원 교체 직후 게시됨 확인","relationship_action":"윤미가 사용범위를 통제한 채 협력","thread_action":"T5 PARTIAL_PAY; T1 ADVANCE","entry_state":"윤미는 기사참여 거부","exit_state":"개인노출 없이 사실검증에는 참여","agency_holder":"박윤미","cross_axis_refs":["AX_C_DOHYUN_FAMILY"],"topology_candidate":"TWO_PERSON"
+    },
+    {
+      "scene_id":"SC44","sequence_id":"SQ09","primary_axis":"AX_A_INVESTIGATION","dramatic_owner":"정세원","location":"탐사팀 자료벽","scene_function":"파편 공개기록을 기사방어 가능한 구조로 결합","conflict_pressure":"각 자료는 단독으로 특혜를 확정하지 못함","beats":["법인등기 연결","위원교체 회의록 연결","공고날짜 연결","법무검토용 증거표 생성"],"information_action":"업체연결-위원교체-관리변경의 시간순 구조 완성","relationship_action":"세원-나리 업무신뢰를 검증절차 기반으로 재설정","thread_action":"T1 PARTIAL_PAY; T2 SAFE","entry_state":"파편증거","exit_state":"좁지만 방어가능한 기사근거","agency_holder":"정세원/이나리","cross_axis_refs":["AX_B_NARI_ETHICS_EMPLOYMENT"],"topology_candidate":"ENSEMBLE"
+    },
+    {
+      "scene_id":"SC45","sequence_id":"SQ09","primary_axis":"AX_A_INVESTIGATION","dramatic_owner":"최문경","location":"법무검토 회의","scene_function":"공개기록 버전이 실제 발행가능 수준인지 마지막 검증","conflict_pressure":"법무는 표현수위를 낮추면 발행가능하다고 판단","beats":["증거표 검토","단정문구 삭제요청","문경 수정범위 승인","두 기사버전 준비"],"information_action":"공개기록 버전 발행가능 판정","relationship_action":"문경-세원 속도갈등이 책임분담으로 전환","thread_action":"T1 ELIGIBLE_FOR_PUBLICATION; T3/T6 CLIMAX_READY","entry_state":"기사성립 불확실","exit_state":"최종선택 가능","agency_holder":"최문경","cross_axis_refs":["AX_D_NEWSROOM_GOVERNANCE","AX_B_NARI_ETHICS_EMPLOYMENT","AX_C_DOHYUN_FAMILY"],"topology_candidate":"ENSEMBLE"
+    },
+
+    {
+      "scene_id":"SC46","sequence_id":"SQ10","primary_axis":"AX_D_NEWSROOM_GOVERNANCE","dramatic_owner":"최문경","location":"편집국 데스크","scene_function":"클라이맥스 선택지를 두 버전으로 물리적 비교 가능하게 만듦","conflict_pressure":"민감자료 버전은 강하지만 취재원 위험, 공개자료 버전은 약하지만 방어가능","beats":["두 버전 나란히 검토","근거차이 표시","광고마감 확인","문경 단독결정시간 요청"],"information_action":"선택비용의 두 경로 명확화","relationship_action":"세원은 최종편집권을 문경에게 맡김","thread_action":"T1/T2/T3/T6 CLIMAX_CONVERGENCE","entry_state":"팀 내부에서도 선택 미확정","exit_state":"문경의 비용선택만 남음","agency_holder":"최문경","cross_axis_refs":["AX_A_INVESTIGATION","AX_B_NARI_ETHICS_EMPLOYMENT"],"topology_candidate":"SMALL_GROUP"
+    },
+    {
+      "scene_id":"SC47","sequence_id":"SQ10","primary_axis":"AX_D_NEWSROOM_GOVERNANCE","dramatic_owner":"강태석","location":"강태석 사무실 / 문경 데스크 전화 연결","scene_function":"최종선택 직전 광고·인사 비용을 현실화","conflict_pressure":"태석이 기사강행 시 광고계약 철회와 이사회 심사를 통보","beats":["태석 최종경고","문경 조건 재확인","광고철회 문서 전송","통화종료"],"information_action":"비용이 조건부가 아니라 실행대기 상태임을 확인","relationship_action":"문경-태석 타협선 완전 소멸","thread_action":"T3/T6 IRREVERSIBLE_PRESSURE","entry_state":"비용위협","exit_state":"비용문서 존재","agency_holder":"강태석","cross_axis_refs":["AX_A_INVESTIGATION"],"topology_candidate":"REMOTE_TWO_ENDPOINT"
+    },
+    {
+      "scene_id":"SC48","sequence_id":"SQ10","primary_axis":"AX_D_NEWSROOM_GOVERNANCE","dramatic_owner":"최문경","location":"편집국 데스크","scene_function":"회차의 되돌리기 어려운 선택 실행","conflict_pressure":"특종 우위와 광고보호를 포기해야 취재원 보호·검증을 지킬 수 있음","beats":["민감자료 단락 선택","삭제","공개자료 버전 최종승인","인쇄송고"],"information_action":"취재원 추적가능 근거를 기사에서 완전 제거","relationship_action":"문경-세원 공동책임 확정; 나리 책임은 별도검토로 분리","thread_action":"T2 PROTECTED; T1 PARTIAL_PAY; T3/T6 COST_TRIGGER","entry_state":"손실 회피 가능성 남음","exit_state":"보호 선택과 조직비용 감수 확정","agency_holder":"최문경","cross_axis_refs":["AX_A_INVESTIGATION","AX_B_NARI_ETHICS_EMPLOYMENT"],"topology_candidate":"ENSEMBLE_LOW_DIALOGUE"
+    },
+    {
+      "scene_id":"SC49","sequence_id":"SQ10","primary_axis":"AX_D_NEWSROOM_GOVERNANCE","dramatic_owner":"이나리","location":"A=인쇄송고실 / B=광고관리석 / C=윤미 집","scene_function":"한 결정의 서로 다른 축 결과를 병렬로 확인","conflict_pressure":"기사 발행과 동시에 광고철회·계약보류·가족반응이 발생","beats":["인쇄송고 상태 확인","광고면 철회표시","나리 계약심사 보류통지 수신","윤미 온라인 기사에서 자신의 신원 비노출 확인"],"information_action":"기사발행/광고철회/계약보류 동시 확정","relationship_action":"윤미의 조건이 지켜졌음을 결과로 확인; 나리-팀 관계는 미해결","thread_action":"T3 COST_PAID; T4 DEFER; T5 PARTIAL_PAY","entry_state":"결정 직후 결과 미확인","exit_state":"각 축의 실제 비용/보호 결과 확인","agency_holder":"각 축 당사자","cross_axis_refs":["AX_A_INVESTIGATION","AX_B_NARI_ETHICS_EMPLOYMENT","AX_C_DOHYUN_FAMILY"],"topology_candidate":"CROSSCUT_MULTI_LOCATION"
+    },
+    {
+      "scene_id":"SC50","sequence_id":"SQ10","primary_axis":"AX_D_NEWSROOM_GOVERNANCE","dramatic_owner":"최문경","location":"새벽 편집국","scene_function":"회차 종료와 다음회차 장기압력 이월","conflict_pressure":"기사는 나갔지만 이사회 소환과 내부유출 의혹이 동시에 남음","beats":["이사회 소환통지 도착","경쟁지 기사에서 내부문구 발견","문경/세원 유출경로 표시","다음 조사파일 생성"],"information_action":"내부 피치 유출 가능성 강화","relationship_action":"문경-세원 신뢰는 강화되지만 조직 내부 불신이 새 축으로 열림","thread_action":"T6 NEXT_EPISODE; T7_INTERNAL_PITCH_LEAK ESCALATE","entry_state":"발행으로 회차사건 종료 기대","exit_state":"보도비용과 내부유출축이 다음회차를 강제","agency_holder":"최문경/정세원","cross_axis_refs":["AX_A_INVESTIGATION","AX_B_NARI_ETHICS_EMPLOYMENT","AX_C_DOHYUN_FAMILY"],"topology_candidate":"QUIET_ENSEMBLE_EXIT"
+    }
+  ]
+}
