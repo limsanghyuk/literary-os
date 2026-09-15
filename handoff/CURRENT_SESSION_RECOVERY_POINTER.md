@@ -2,55 +2,61 @@
 Last updated: 2026-09-15
 
 ## CURRENT PHYSICAL AUTHORITY
-**SYNC-R46**
+**SYNC-R47**
 Root SHA256:
-`2aafe621ac2c42e5d9558646c2c16ab45701b4025ea8328d6070fc3843dc0cf1`
+`fc259f51e177ce5fb24ec918657966ef116e8ca47aa5f41afcbcf989f40d19f8`
 
-Parent: **SYNC-R45**
+Parent: **SYNC-R46**
 Parent Root:
-`89167016810dccd5887b58a4930cc6084fa6bee5889e53ccb76eea775d0f00fb`
+`2aafe621ac2c42e5d9558646c2c16ab45701b4025ea8328d6070fc3843dc0cf1`
 
 Required read order:
 `CONTROL → A → B1 → B2 → C1 → C2-A → C2-B → D1 → D2`
 
-## RESEARCH HISTORY
-Read first:
-- `handoff/20260915/START_HERE_SYNC_R43_E1_CLOSED_E3_PREREG_R1.md`
-- `handoff/20260915/RESEARCH_EVOLUTION_MAP_R1.json`
+## RESEARCH HISTORY — READ FIRST
+- `handoff/20260915/START_HERE_SYNC_R47_E3_CLOSED_E4_NEXT_R1.md`
+- `handoff/20260915/RESEARCH_EVOLUTION_MAP_R2.json`
+- `handoff/20260915/LEVEL3_ENTRY_GATE_LEDGER_R4.json`
 - `research/20260915/EXPERIMENT_RECORD_SCHEMA_R1.md`
 
-## CLOSED GATES
-- E1: `CLOSED_PASS`
-- E2: `CLOSED_PASS`
+## CLOSED LEVEL-3 ENTRY GATES
+- E1 Clean Independent/Human Surface: `CLOSED_PASS`
+- E2 DB64 Fuel / Full-Planning: `CLOSED_PASS`
+- E3 Fresh Whole-Episode Integration: `CLOSED_PASS`
 
-## E3-R1
-Immutable verdict:
+## E3 PRESERVED LINEAGE
+E3-R1 is immutable FAIL:
 `FAIL__CRITICAL_META_LEAKAGE__SAFE_NO_COMMIT`
+- 41,637 chars / 10 sequences / 50 scenes
+- planning and semantic audit passed
+- one SC49 internal validation-language leak violated the zero-meta gate
+- State Commit = 0
 
-The failed 41,637-character episode is preserved. Planning and semantic audit passed, but one SC49 stage-direction line leaked internal validation language. State commit = 0.
+E3-R2 is immutable PASS:
+`PASS__E3_FRESH_WHOLE_EPISODE_INTEGRATION_CLOSED`
+- prospective targeted recovery on the same fresh episode
+- pre-output implementation R1 invalid regex, outputs 0
+- attempted R2 source freeze superseded pre-output, outputs 0
+- final Implementation R3 unit-test PASS
+- scientific run changed exactly one line
+- final 41,583 chars / 10 sequences / 50 scenes
+- mechanical + semantic/state PASS
+- `STATE_COMMIT`
+- this is a targeted recovery, not an independent replication
 
-## E3-R2 CURRENT STATE
-`PREREGISTERED__IMPLEMENTATION_R3_FROZEN__OUTPUTS_0`
+## NEXT GATE
+E4 Multi-Episode State Carry: `NEXT__NOT_STARTED`
 
-Pre-output implementation history is preserved:
-1. R1 implementation: invalid double-escaped regex; scientific outputs 0.
-2. attempted R2 freeze: recorded no actual source change; superseded pre-output; scientific outputs 0.
-3. final Implementation R3: SHA256 `ce194655c95a117bb4859c151d0947af5192aaf5500ec24eb9543dfce4b822a4`; synthetic unit test PASS; scientific outputs 0.
-
-## EXACT RESUME RULE
-Run Implementation R3 exactly once on frozen E3-R1 failed surface.
-Then:
-1. seal diff receipt;
-2. rerun frozen mechanical validator;
-3. rerun semantic/state audit;
-4. if every critical gate passes, seal Episode State Delta and STATE_COMMIT receipt;
-5. otherwise SAFE_NO_COMMIT;
-6. immutable-close E3-R2;
-7. preserve E3-R1 and all pre-output incidents permanently.
+Next legal action:
+1. preregister E4 from the committed E3-R2 episode state;
+2. test at least three consecutive episode states with no reset;
+3. seal every episode input state, planning output, surface/validation result and state delta;
+4. fail closed on any continuity contradiction or premature state commit;
+5. preserve PASS/FAIL and every successor repair in the evolution map.
 
 ## MATURITY
 `PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS`
-Level 3 has not been entered.
+Level 3 has not been entered. Level 4 has not begun.
 
 ## UNCHANGED AUTHORITIES
 - Active Engine: `P07-I4H Recovery R3`
@@ -61,4 +67,4 @@ Level 3 has not been entered.
 - DB64 remains non-Production
 
 ## STATUS TOKEN
-`SYNC_R46__E1_PASS__E2_PASS__E3_R1_FAIL_PRESERVED__E3_R2_IMPLEMENTATION_R3_FROZEN_OUTPUTS0__NEXT_RUN_ONCE`
+`SYNC_R47__E1_PASS__E2_PASS__E3_PASS__E3_R1_FAIL_PRESERVED__E3_R2_TARGETED_RECOVERY_PASS__NEXT_E4_MULTI_EPISODE_STATE_CARRY`
