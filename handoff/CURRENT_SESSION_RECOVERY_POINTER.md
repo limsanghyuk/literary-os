@@ -2,96 +2,85 @@
 Last updated: 2026-09-15
 
 ## READ FIRST
-Canonical recovery bootstrap:
-
+Canonical recovery bootstrap remains:
 `handoff/20260915/START_HERE_SYNC_R43_E1_CLOSED_E3_PREREG_R1.md`
 
-Current machine-readable status:
-
-`handoff/20260915/SYNC_R44_CURRENT_STATUS_R1.json`
+Current status:
+`handoff/20260915/SYNC_R45_CURRENT_STATUS_R1.json`
 
 Research evolution map:
-
 `handoff/20260915/RESEARCH_EVOLUTION_MAP_R1.json`
 
-Level-3 gate ledger:
-
-`handoff/20260915/LEVEL3_ENTRY_GATE_LEDGER_R2.json`
-
 Experiment preservation schema:
-
 `research/20260915/EXPERIMENT_RECORD_SCHEMA_R1.md`
 
 ## PHYSICAL BASE
-Last audited physical authority: **SYNC-R44**
-
+Last audited physical authority: **SYNC-R45**
 Root SHA256:
+`89167016810dccd5887b58a4930cc6084fa6bee5889e53ccb76eea775d0f00fb`
+
+Parent: **SYNC-R44**
+Parent root:
 `363be826551a61b7dae03b948de5bdda0e09aeaf14fe67435a81fed23860700f`
 
-Parent authority: **SYNC-R43**
-Parent root SHA256:
-`2722a2483d6f6417bc0de84f8d2a67fe6863d93b9c7adbef75c66bb027cd4912`
-
-Required physical read order:
+Read order:
 `CONTROL → A → B1 → B2 → C1 → C2-A → C2-B → D1 → D2`
 
 ## MATURITY
 `PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS`
-
 Level 3 has not been entered.
 
 ## CLOSED GATES
-- E1 Clean Independent/Human Surface: `CLOSED_PASS`
-- E2 DB64 Fuel / Full-Planning: `CLOSED_PASS`
+- E1: `CLOSED_PASS`
+- E2: `CLOSED_PASS`
 
-## E3 CURRENT STATE
-Experiment:
-`P07-LEVEL3-E3-FRESH-WHOLE-EPISODE-INTEGRATION-R1`
+## E3-R1 — IMMUTABLE FAIL
+Experiment: `P07-LEVEL3-E3-FRESH-WHOLE-EPISODE-INTEGRATION-R1`
+Verdict:
+`FAIL__CRITICAL_META_LEAKAGE__SAFE_NO_COMMIT`
 
+Facts:
+- sealed planning: 10 sequences / 50 scenes / 0 orphans
+- surface: 41,637 chars
+- dialogue format errors: 0
+- missing scene openings: 0
+- semantic/plant-payoff/ensemble/target-exit audit: PASS
+- critical failure: one SC49 stage direction leaked internal validation words `State Commit / 내부 용어`
+- frozen gate required meta leakage = 0
+- state commit = 0
+- failed surface is immutable and may not be silently edited into PASS
+
+## E3-R2 — CURRENT
+Experiment: `P07-LEVEL3-E3-R2-SURFACE-BOUNDARY-GUARD-RECOVERY`
 State:
-`IN_PROGRESS__PLANNING_OUTPUTS_SEALED__SURFACE_0__STATE_COMMIT_0`
+`PREREGISTERED__IMPLEMENTATION_FROZEN__OUTPUTS_0`
 
-Sealed planning artifacts:
-- Episode Plan SHA256 `a5caf2046a62d63207658434ae0151b48529f65725285a28a1cf1b3e35a73bdb`
-- Sequence Plans SHA256 `7401aee7a3579c1d9f2839e50c8644285869490df14ad77a2f07785e5364d417`
-- Scene Contracts SHA256 `926c7f02f2ae726f88724223c86c394b8148724653148d7d8cbc856a79759a6e`
-- Planning Seal SHA256 `463f433c37521b2709e862e9228be51cc36d6e4632705c494eb4194a9a855314`
-- Planning Audit: PASS — 10 sequences / 50 scenes / 0 orphan scenes
+Frozen intervention only:
+- deterministic Surface Boundary Guard R1
+- remove only forbidden internal-meta sentence clauses from stage directions
+- all planning/story/dialogue and all other surface lines remain frozen
+- if forbidden meta occurs outside stage direction or no playable clause remains: fail preoutput
 
-Surface output: `0`
-State Commit: `0`
-
-## RESEARCH-HISTORY RECOVERY RULE
-A new session must reconstruct current state and evolution:
-1. CURRENT_SESSION_RECOVERY_POINTER
-2. current START_HERE
-3. RESEARCH_EVOLUTION_MAP_R1
-4. Level-3 gate ledger
-5. relevant individual Experiment Record / closure / preregistration
-6. deeper B-package evidence as needed
-
-Do not erase FAIL, SUPERSEDED, HOLD, ABORTED_NOT_SCORED, infrastructure incidents, duplicate-branch quarantines, or claim boundaries.
+Prereg SHA256:
+`a6e199ed96359b9c7eb56da3fa10d6779e78f5aa15f8f053241b278d9f097d85`
+Compiler SHA256:
+`40cf938a2b57c91f0bd37bef7a1704e52a253e15d5e8d3c1c3630006b331e152`
 
 ## EXACT RESUME RULE
-Do not regenerate or edit the sealed E3 Episode Plan, Sequence Plans or Scene Contracts.
-Do not modify E1/E2 evidence or E3 thresholds.
+Run E3-R2 compiler exactly once on the frozen E3-R1 failed surface.
+Then:
+1. seal diff receipt;
+2. rerun frozen validators;
+3. if all critical gates pass, seal state delta + commit receipt;
+4. otherwise Safe No-Commit;
+5. immutable-close E3-R2;
+6. preserve E3-R1 failure permanently.
 
-Next legal actions only:
-1. realize whole-episode Surface from the sealed 50 Scene Contracts;
-2. final Korean episode length >=35,000 characters;
-3. run mechanical / semantic-continuity / surface-hygiene / state-delta validators;
-4. State Commit only if all critical gates pass, otherwise Safe No-Commit;
-5. immutable-close E3;
-6. if PASS, proceed to E4 >=3 Episode State Carry.
-
-## UNCHANGED SYSTEM AUTHORITIES
+## UNCHANGED AUTHORITIES
 - Active Engine: `P07-I4H Recovery R3`
 - Production: `ENG:R47`
-- Formal scored total: `137`
-- Latest Formal: `R138`
-- Formal R140: `0/0/0`
-- DB59 historical benchmark unchanged
-- DB64 remains non-Production
+- Formal total: `137`, latest `R138`, R140 `0/0/0`
+- DB64 non-Production
 
 ## STATUS TOKEN
-`SYNC_R44__E1_PASS__E2_PASS__E3_PLANNING_SEALED_10SEQ_50SCENES__SURFACE0__NEXT_SURFACE_REALIZATION`
+`SYNC_R45__E1_PASS__E2_PASS__E3_R1_FAIL_META_LEAK_SAFE_NO_COMMIT__E3_R2_PREREG_OUTPUTS0__NEXT_R2_GUARD_EXECUTION`
