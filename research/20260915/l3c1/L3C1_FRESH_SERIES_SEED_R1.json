@@ -1,0 +1,37 @@
+{
+  "schema": "L3C1FreshSeriesSeedR1",
+  "date": "2026-09-15",
+  "experiment_id": "P07-LEVEL3-POSTENTRY-L3C1-CROSSDOMAIN-4EP-ENDURANCE-R1",
+  "parent_physical_authority": "SYNC-R52",
+  "parent_root_sha256": "62d2cec1a47e557a342dcedeb6eb63a7c18f1336f756b3b38bf0df7b7079a359",
+  "series_title": "은하고개 광역응급전원센터",
+  "fictionality": "모든 인물·기관·사건은 합성 시험 입력이며 인간 대본 정답지는 사용하지 않는다.",
+  "genre": ["workplace drama", "medical coordination", "disaster logistics", "institutional mystery", "ensemble"],
+  "core_unit": "은하고개 광역응급전원센터",
+  "characters": [
+    {"name":"윤하경","role":"야간 전원조정팀장","voice":"짧은 질문, 확인되지 않은 낙관을 거부","entry":"규정 중심이지만 현장 병상정보의 지연을 경계"},
+    {"name":"서태문","role":"현장 응급의학 자문의","voice":"활력징후·거리·시간으로 말함","entry":"화면보다 환자 상태와 이동시간을 우선"},
+    {"name":"이민아","role":"병상·시스템 엔지니어","voice":"로그·타임스탬프·병상코드를 정확히 말함","entry":"최근 병상연동 교체 검수에 전자서명"},
+    {"name":"정소라","role":"환자·보호자 연락조정","voice":"다음 행동과 확인시간 중심","entry":"확정되지 않은 병상 약속을 거부"},
+    {"name":"장기석","role":"광역의료본부 운영국장","voice":"가동률·마감·대외보고 언어","entry":"이송 지연 보도 압박"},
+    {"name":"고윤재","role":"민간구급 이송대표","voice":"편의·속도를 강조","entry":"긴급 장거리 이송 계약 확대를 원함"},
+    {"name":"박해원","role":"지역 의료기자","voice":"날짜·계약번호·보고시점 질문","entry":"병상연동 시스템 조기완료를 취재"}
+  ],
+  "episode_chain": [
+    {"episode_id":"END_EP01","title":"빈 병상이 있다고 뜬 밤","objective":"산악도로 다중추돌 환자 23명의 실제 병상과 이송경로를 확정하고 허위 가용병상을 상태에 반영하지 않는다."},
+    {"episode_id":"END_EP02","title":"열세 번째 구급차","objective":"EP01의 병상오류 조사와 관계상태를 이어 받아 새 환자 11명과 기존 잔류 6명의 전원 우선순위를 재배치한다."},
+    {"episode_id":"END_EP03","title":"꺼진 링크의 주인","objective":"병상연동 지연 원인을 추적하면서 민아의 검수책임을 증거보다 앞서 단정하지 않고 장거리 이송 의존도를 줄인다."},
+    {"episode_id":"END_EP04","title":"새벽 네 시의 네트워크","objective":"센터 간 통신장애와 동시다발 환자상황에서 앞선 세 회차의 상태·부채·관계·제약을 유지한 채 안전한 분산 전원을 완수한다."}
+  ],
+  "global_constraints": [
+    "각 회차 한국어 최종대본 35000자 이상",
+    "각 회차 9개 시퀀스와 45개 씬은 이 실험 표본의 고정 규모",
+    "모든 대사 턴은 등장인물명: (연기 가능한 지문) 대사 형식",
+    "모든 씬은 (씬 설정: ...)으로 시작",
+    "중요 변화는 손·시선·소품·동선·침묵·실패행동으로 물리화",
+    "내부 상태 field/enum/snake_case/assignment/meta leakage 0",
+    "검증 전 State Commit 금지",
+    "이전 Commit 사건·관계·미결부채의 무단 리셋 금지",
+    "단독영웅 해결 금지"
+  ]
+}
