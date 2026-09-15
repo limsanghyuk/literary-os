@@ -1,0 +1,41 @@
+{
+  "schema": "LiteraryOSResearchEvolutionMapR1",
+  "date": "2026-09-15",
+  "purpose": "Allow a fresh session to reconstruct how Literary OS evolved, including failures and causal repairs, without relying on conversational memory.",
+  "read_order": [
+    "CURRENT_SESSION_RECOVERY_POINTER",
+    "START_HERE current sync",
+    "RESEARCH_EVOLUTION_MAP_R1",
+    "LEVEL3_ENTRY_GATE_LEDGER_R2",
+    "individual experiment records/evidence"
+  ],
+  "major_lineage": [
+    {"node":"Stage1_R001_R103","status":"HISTORICAL_COMPLETE","role":"core architecture and early validation foundation"},
+    {"node":"Stage2_PRE104_AUX","status":"HISTORICAL_COMPLETE","role":"auxiliary integration, consumer wiring, provider-analog and recovery work"},
+    {"node":"R129","status":"PASS","result":"Scene Architecture effect; H1-H9 9/9","evolution":"established strong structural scene architecture"},
+    {"node":"R130","status":"PASS","result":"broadcast-scale surface realization effect; H1-H9 9/9","evolution":"showed surface layer can improve while structure stays fixed"},
+    {"node":"R133","status":"FAIL_EXTERNAL","result":"external judges 0/12 PASS","problem":"internal score did not transfer to external judgment; surface naturalness/craft gap exposed"},
+    {"node":"R135","status":"CLOSED_LINKED_EXTERNAL_CONFIRMATION_PASS","evolution":"relative surface effect externally supported; voice bottleneck remained"},
+    {"node":"R138","status":"LATEST_FORMAL_AUTHORITY","formal_scored_total":137},
+    {"node":"P07_I4C_I4H","status":"RESEARCH_LINEAGE","evolution":"whole-episode surface contract, bidirectional planning, provider/runtime containment; active engine authority P07-I4H Recovery R3"},
+    {"node":"A2R10","status":"PASS","result":"rolling DB64 research retrieval fuel qualified","boundary":"DB64 not Production"},
+    {"node":"A2R26","status":"PASS_10W_2T_0L","evolution":"optional advisory + abstention protected DB59 baseline"},
+    {"node":"A2R31","status":"FAIL_6W_2T_4L","problem":"novelty overload / utility control / abstract realization"},
+    {"node":"A2R32","status":"FAIL_PREBLIND","problem":"11/24 eligible; frozen pool discrimination shortfall"},
+    {"node":"A2R33","status":"FAIL_4W_2T_6L","problem":"selected novelty not concretely bound to case actions/roles/lifecycle"},
+    {"node":"A2R34","status":"FAIL_6W_1T_5L","problem":"abstention could suppress useful control advisory; all-axis binding incomplete"},
+    {"node":"A2R35","status":"PASS_10W_2T_0L","evolution":"monotonic retention + all-axis case binding closed E2 full-planning qualification"},
+    {"node":"E2","status":"CLOSED_PASS","boundary":"data/fuel/full-planning qualification closed; no Level3 entry"},
+    {"node":"E1_R1","status":"SUPERSEDED_BEFORE_JUDGMENT__NO_SCORE","problem":"screenplay format and source-format blinding insufficient"},
+    {"node":"E1_R2","status":"PASS__CLOSED","result":"primary majority Candidate 11W/0T/1L; 3/3 individual gates PASS; GPT and Claude auxiliary replications independently competitive","evolution":"physicalized surface contract transferred to blind comparison against held-out human-written scenes","residual":"one localized U08 abstract clause preserved as minor hygiene defect"}
+  ],
+  "current_transition": "E1 CLOSED_PASS + E2 CLOSED_PASS -> E3 Fresh Whole-Episode Integration",
+  "unchanged_authorities": {
+    "active_engine":"P07-I4H Recovery R3",
+    "production":"ENG:R47",
+    "formal_scored_total":137,
+    "latest_formal":"R138",
+    "formal_r140":"0/0/0",
+    "db64_production":false
+  }
+}
