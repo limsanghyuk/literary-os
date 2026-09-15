@@ -2,21 +2,21 @@
 Last updated: 2026-09-15
 
 ## CURRENT PHYSICAL AUTHORITY
-**SYNC-R48**
+**SYNC-R49**
 Root SHA256:
-`63abc48d6b158b12d03d1f19ac377d9d1f2597edae4b2e09cc1138a5a4e920cd`
+`ceea3188a4acbe5b58fc198f26bc5e3d2e4e64f9163c81664141c7aef7352762`
 
-Parent: **SYNC-R47**
+Parent: **SYNC-R48**
 Parent Root:
-`fc259f51e177ce5fb24ec918657966ef116e8ca47aa5f41afcbcf989f40d19f8`
+`63abc48d6b158b12d03d1f19ac377d9d1f2597edae4b2e09cc1138a5a4e920cd`
 
 Required read order:
 `CONTROL → A → B1 → B2 → C1 → C2-A → C2-B → D1 → D2`
 
 ## RESEARCH HISTORY — READ FIRST
-- `handoff/20260915/START_HERE_SYNC_R48_E4_CLOSED_E5_NEXT_R1.md`
-- `handoff/20260915/RESEARCH_EVOLUTION_MAP_R3.json`
-- `handoff/20260915/LEVEL3_ENTRY_GATE_LEDGER_R5.json`
+- `handoff/20260915/START_HERE_SYNC_R49_E5_CLOSED_E6_NEXT_R1.md`
+- `handoff/20260915/RESEARCH_EVOLUTION_MAP_R4.json`
+- `handoff/20260915/LEVEL3_ENTRY_GATE_LEDGER_R6.json`
 - `research/20260915/EXPERIMENT_RECORD_SCHEMA_R1.md`
 
 ## CLOSED LEVEL-3 ENTRY GATES
@@ -24,43 +24,42 @@ Required read order:
 - E2 DB64 Fuel / Full-Planning: `CLOSED_PASS`
 - E3 Fresh Whole-Episode Integration: `CLOSED_PASS`
 - E4 Multi-Episode State Carry: `CLOSED_PASS`
+- E5 Fault Injection / Autonomous Recovery: `CLOSED_PASS`
 
-## E4 CHAIN
-EP01 state SHA256:
-`673239249955ce50d390dcfdbb921f95ca8f4d685b5378b4f5f425fd84b8145a`
+## E5 RESULT
+Frozen healthy fixture: committed EP03 state + validated 45-scene EP03 surface.
 
-EP02:
-- exact EP01 parent state
-- 52,705 chars / 9 sequences / 45 scenes
-- validation PASS
-- STATE_COMMIT
-- state SHA256 `678a4b9f20a669994c3bdaebb2f1288b446f2432087b735c9f0d2634a7a49d22`
+Fault classes:
+1. state corruption
+2. relationship regression
+3. duplicated event
+4. false payoff
+5. wrong plot ownership
+6. stale DB advisory
+7. provider hard failure
+8. truncated surface
+9. premature state commit
 
-EP03:
-- exact EP02 parent state
-- 51,717 chars / 9 sequences / 45 scenes
-- validation PASS
-- STATE_COMMIT
-- state SHA256 `3b688526116cb921d08effc93fb863b29066a7bf756f467decf9cacbbf8b77d7`
+Results:
+- Detect 9/9
+- Responsible Ancestor localization 9/9
+- Repair/Abstain action 9/9
+- Revalidation outcome 9/9
+- Repair scope 9/9
+- Corrupted state commits 0
+- Provider hard failure: `SAFE_NO_COMMIT`
 
-Preserved transitions:
-- 윤서하↔강태우: conditional operational trust → strengthened operational trust → stable operational trust
-- 윤서하↔배수민: first visible fracture → guarded transparency → partial professional repair
-- resident state: 28 sheltered → 19 returned / 9 remained → prior 9 + new 17 = 26 safely sheltered
-- procurement case: phantom evidence → 12/8/7/5 breakdown + approval-chain debt → formal audit referral
-- political responsibility remains OPEN
-
-EP02 had one pre-output implementation error before scientific output: the first scene generator assumed exactly three participants and failed on four-person ensemble scenes. Outputs=0, commit=0. It was repaired by variable-length participant handling without input/threshold change.
+Recovery implementation used Fault ID only for injection. Detection/localization/repair used observed invariant violations.
 
 ## NEXT GATE
-E5 Fault Injection / Autonomous Recovery: `NEXT__NOT_STARTED`
+E6 Formal Level-3 Qualification: `NEXT__NOT_STARTED`
 
 Next legal action:
-1. preregister E5 against committed EP03 state;
-2. inject frozen fault classes;
-3. Detect → Localize Responsible Ancestor → Repair or Abstain → Revalidate;
-4. commit only if all required validators pass; otherwise SAFE_NO_COMMIT;
-5. preserve each injected fault, diagnosis, repair scope and result.
+1. freeze engine/data/state/planning/surface/recovery authorities;
+2. preregister a fresh E6 qualification sample and all gates before outputs;
+3. no development changes after E6 output begins;
+4. run the frozen system end-to-end;
+5. only E6 PASS may declare `LEVEL_3_ENTERED`; otherwise preserve FAIL/HOLD and do not promote.
 
 ## MATURITY
 `PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS`
@@ -75,4 +74,4 @@ Level 3 has not been entered. Level 4 has not begun.
 - DB64 remains non-Production
 
 ## STATUS TOKEN
-`SYNC_R48__E1_PASS__E2_PASS__E3_PASS__E4_PASS__NEXT_E5_FAULT_INJECTION_AUTONOMOUS_RECOVERY`
+`SYNC_R49__E1_PASS__E2_PASS__E3_PASS__E4_PASS__E5_PASS__NEXT_E6_FORMAL_LEVEL3_QUALIFICATION`
