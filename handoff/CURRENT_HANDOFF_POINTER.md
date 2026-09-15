@@ -2,9 +2,7 @@
 Last updated: 2026-09-15
 
 ## CANONICAL NEW-SESSION BOOTSTRAP
-Read FIRST after physical package verification:
-
-`handoff/20260915/START_HERE_SYNC_R52_R3D_HIERARCHY_RECONNECTION_R1.md`
+`handoff/20260915/START_HERE_SYNC_R52_R3D_D3_SCENE_CONTRACTS_SEALED_R2.md`
 
 ## PHYSICAL PACKAGE ORDER
 `CONTROL -> A -> B1 -> B2 -> C1 -> C2-A -> C2-B -> D1 -> D2`
@@ -17,59 +15,54 @@ Root SHA256:
 No post-R52 physical reseal is claimed yet.
 
 ## CURRENT MATURITY
-Historical Level-3 entry declaration is preserved, but current operational claim is suspended:
+Historical Level-3 entry declaration is preserved.
+Current operational claim remains suspended:
 `LEVEL_3_OPERATIONAL_CLAIM_SUSPENDED__DRAMATURGY_AND_HIERARCHICAL_ARCHITECTURE_REQUALIFICATION_IN_PROGRESS`
 
 Level 4 has NOT started.
 
 ## CURRENT RESEARCH STATE
-- R3-A dramaturgy microbench: PASS
-- R3-B fresh whole episode: immutable FAIL / SAFE_NO_COMMIT
-- R3-C C1 detection: PASS
-- R3-C C2 fresh show-only microbench: PASS
-- R3-D D1 historical hierarchy restoration: PASS
-- R3-D D2 fresh hierarchical architecture microbench: PASS
+- R3-A PASS
+- R3-B immutable FAIL / SAFE_NO_COMMIT
+- R3-C C1 PASS
+- R3-C C2 PASS
+- R3-D D1 PASS
+- R3-D D2 PASS
+- R3-D D3 50-scene contract lowering PASS
 
-R3-D diagnosis:
-`HISTORICAL_HIERARCHICAL_PLANNING_KNOWLEDGE_PRESENT__ACTIVE_E6_PLANNER_CONTRACT_PARTIALLY_COLLAPSED__CONSUMPTION_REGRESSION`
+Current frozen planning output:
+`handoff/20260915/E6_R3D_D3_50SCENE_CONTRACTS_R1.json`
 
-D2 fresh domain:
-`해람일보 탐사보도팀 / EP07 〈한 줄을 빼는 값〉`
-
-D2 preserved facts:
-- 4 story axes
-- 10 sequences
-- 7 cross-axis convergence points
+D3 facts:
+- 50/50 scene contracts
+- sequence budgets 4/4/5/5/5/6/5/6/5/5
+- four story axes preserved
 - dominant single axis 30%
-- non-primary/protagonist-owned sequences 8/10
-- owner/obstacle/value shift 10/10
-- 12 sentinel scenes, EARLY/MIDDLE/LATE 4/4/4
-- planned 50-scene budget
-- screenplay surface output 0
-- State Commit 0
-- external judgments 0
+- seven cross-axis collision/convergence regions preserved
+- no fixed dialogue topology encoded
+- screenplay surface = 0
+- State Commit = 0
+- external judgments = 0
 
 ## EXACT RESUME
-1. verify SYNC-R52 if physical package work is needed;
-2. read the canonical bootstrap;
-3. read the hierarchy root-cause audit and R3-D prereg/D1/D2 records;
-4. lower D2 into all 50 scene contracts;
-5. seal scene-contract bytes and audit hierarchy preservation;
-6. only then generate >=35,000 Korean-character whole-episode surface under R3-C Show-Only Direction Boundary;
-7. run internal whole-episode architecture/dramaturgy/state/spatial/Korean-surface audits;
-8. only internal PASS -> fresh independent external blind evaluation;
-9. only external PASS -> physical 5-Part/9-Package reseal;
-10. only after physical closure + Hub update may operational Level-3 claim be restored.
+1. read the canonical bootstrap and R3-D root-cause/D1/D2/D3 records;
+2. do not alter the sealed 50 scene contracts silently;
+3. generate a fresh >=35,000 Korean-character whole-episode screenplay from those exact contracts;
+4. inherit R3-C `SHOW_ONLY_DIRECTION_BOUNDARY`;
+5. run internal architecture/dramaturgy/continuity-state/spatial-communication/Korean-surface audits;
+6. only internal PASS -> fresh independent external blind evaluation;
+7. only external PASS -> physical 5-Part/9-Package reseal;
+8. only after physical closure and pointer update may operational Level-3 claim be restored.
 
 ## RESEARCH HISTORY
-Read the evolution, not only the latest experiment:
+For evolution, not merely latest state, read:
 - `handoff/20260915/HIERARCHICAL_PLANNING_LINEAGE_AND_CURRENT_CONSUMPTION_GAP_AUDIT_R1.md`
 - `handoff/20260915/E6_R3D_HIERARCHICAL_ARCHITECTURE_RECONNECTION_PREREG_R1.md`
-- `handoff/20260915/E6_R3D_D1_HISTORICAL_CONTRACT_RESTORATION_AUDIT_RESULT_R1.md`
-- `handoff/20260915/E6_R3D_D2_FRESH_HIERARCHICAL_ARCHITECTURE_OUTPUT_R1.json`
-- `handoff/20260915/E6_R3D_D2_FRESH_HIERARCHICAL_ARCHITECTURE_AUDIT_RESULT_R1.md`
+- D1 result
+- D2 architecture output + audit
+- D3 preoutput seal + 50-scene contracts + audit
 - prior R3-A/R3-B/R3-C records
-- historical macro planning and 4-layer design documents named in the bootstrap
+- historical macro planning / 4-layer / subplot / consumption / master-blueprint documents listed in START_HERE
 
 ## UNCHANGED AUTHORITIES
 - Active Engine: P07-I4H Recovery R3
@@ -80,4 +73,4 @@ Read the evolution, not only the latest experiment:
 - DB64: non-Production
 
 ## STATUS TOKEN
-`CURRENT_HANDOFF__SYNC_R52_PHYSICAL__R3D_D1_PASS__R3D_D2_PASS__50_SCENE_CONTRACT_LOWERING_NEXT__SURFACE0`
+`CURRENT_HANDOFF__SYNC_R52_PHYSICAL__R3D_D1_PASS__D2_PASS__D3_50SCENE_CONTRACTS_PASS__WHOLE_EPISODE_SURFACE_NEXT__SURFACE0`
