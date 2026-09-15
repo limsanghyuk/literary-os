@@ -1,0 +1,28 @@
+{
+  "schema": "LiteraryOSSyncR48CurrentStatusR1",
+  "date": "2026-09-15",
+  "physical_authority": "SYNC-R48",
+  "transport_root_sha256": "63abc48d6b158b12d03d1f19ac377d9d1f2597edae4b2e09cc1138a5a4e920cd",
+  "parent_sync": "SYNC-R47",
+  "parent_root_sha256": "fc259f51e177ce5fb24ec918657966ef116e8ca47aa5f41afcbcf989f40d19f8",
+  "maturity": "PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS",
+  "E1": "CLOSED_PASS",
+  "E2": "CLOSED_PASS",
+  "E3": "CLOSED_PASS",
+  "E4": {
+    "verdict": "PASS__E4_MULTI_EPISODE_STATE_CARRY_CLOSED",
+    "EP01_state_sha256": "673239249955ce50d390dcfdbb921f95ca8f4d685b5378b4f5f425fd84b8145a",
+    "EP02_state_sha256": "678a4b9f20a669994c3bdaebb2f1288b446f2432087b735c9f0d2634a7a49d22",
+    "EP03_state_sha256": "3b688526116cb921d08effc93fb863b29066a7bf756f467decf9cacbbf8b77d7",
+    "EP02_surface_chars": 52705,
+    "EP03_surface_chars": 51717
+  },
+  "E5": "NEXT__NOT_STARTED",
+  "active_engine": "P07-I4H Recovery R3",
+  "production_engine": "ENG:R47",
+  "formal_scored_total": 137,
+  "latest_formal": "R138",
+  "formal_r140": "0/0/0",
+  "db64_is_production": false,
+  "level3_entered": false
+}
