@@ -2,10 +2,13 @@
 Last updated: 2026-09-15
 
 ## CANONICAL BOOTSTRAP
-`handoff/20260915/START_HERE_SYNC_R52_R3D_D3_SCENE_CONTRACTS_SEALED_R2.md`
+`handoff/20260915/START_HERE_R52_POSTPHYSICAL_SHOWRUNNER_REQUALIFICATION_NEW_SESSION_HANDOFF_R1.md`
 
-## CURRENT PHYSICAL AUTHORITY
-Latest physically materialized/audited 5-Part / 9-Package authority remains:
+Machine-readable status:
+`handoff/20260915/R52_POSTPHYSICAL_RESEARCH_STATUS_AND_RESUME_R1.json`
+
+## PHYSICAL AUTHORITY / DEVELOPER CUSTODY BOUNDARY
+Latest physically materialized/audited and developer-provided 5-Part / 9-Package authority remains:
 
 **SYNC-R52**
 Root SHA256:
@@ -14,101 +17,82 @@ Root SHA256:
 Required physical read order:
 `CONTROL -> A -> B1 -> B2 -> C1 -> C2-A -> C2-B -> D1 -> D2`
 
-No post-R52 physical reseal is claimed yet.
+No post-R52 physical reseal exists or is claimed.
+All R3-A/R3-B/R3-C/R3-D/R3-E work described below is post-R52 Hub-only research/development evidence and has NOT yet been incorporated into a newly delivered physical 5-Part/9-Package authority.
 
 ## MATURITY / CLAIM STATUS
-Historical `LEVEL_3_ENTERED` declaration is preserved in lineage.
-
+Historical `LEVEL_3_ENTERED` declaration is preserved.
 Current operational claim:
-`LEVEL_3_OPERATIONAL_CLAIM_SUSPENDED__DRAMATURGY_AND_HIERARCHICAL_ARCHITECTURE_REQUALIFICATION_IN_PROGRESS`
-
+`LEVEL_3_OPERATIONAL_CLAIM_SUSPENDED__SHOWRUNNER_REQUALIFICATION_IN_PROGRESS`
 Level 4 has NOT started.
 
-## GOVERNANCE CORRECTION
-The former pointer split is closed. `CURRENT_DEVELOPER_HUB_AUTHORITY.md`, `CURRENT_HANDOFF_POINTER.md`, and `CURRENT_SESSION_RECOVERY_POINTER.md` now share SYNC-R52 and the current R3-D lineage.
-
-The stale SYNC-R34/A2R32 pointer state is historical only and must not be used as current bootstrap.
-
-## ROOT CAUSE
-`HISTORICAL_HIERARCHICAL_PLANNING_KNOWLEDGE_PRESENT__ACTIVE_E6_PLANNER_CONTRACT_PARTIALLY_COLLAPSED__CONSUMPTION_REGRESSION`
-
-The project already researched Series/Episode/Sequence/Scene hierarchy, subplot allocation, causal spine, ensemble/event ownership, character/relationship/thread state, value shifts, bidirectional repair and state carry. The recent active E6 contract consumed only a compressed subset, allowing whole episodes to collapse into one operational task tree.
-
-Audit:
-`handoff/20260915/HIERARCHICAL_PLANNING_LINEAGE_AND_CURRENT_CONSUMPTION_GAP_AUDIT_R1.md`
-
-## PRESERVED R3 HISTORY
+## POST-R52 RESEARCH LINEAGE
+- E6-R2 post-hoc whole-script review narrowed the original claim
 - R3-A dramaturgy microbench PASS
-- R3-B fresh whole episode immutable FAIL / SAFE_NO_COMMIT
-- R3-C C1 direction-detection PASS
-- R3-C C2 fresh show-only microbench PASS
+- R3-B fresh whole-episode immutable FAIL / SAFE_NO_COMMIT
+- R3-C C1 direction detection PASS
+- R3-C C2 show-only dramaturgy microbench PASS
+- R3-D D1 Historical Contract Restoration Audit PASS
+- R3-D D2 Hierarchical Architecture Microbench PASS
+- R3-D D3 50-Scene Contract Lowering PASS / surface=0 / State Commit=0 / external=0
+- R3-E Showrunner Requalification Master Plan frozen
+- R3-E scientific execution not started
 
-## CURRENT E6-R3D STATE
-### D1 Historical Contract Restoration
-PASS.
+## CONTROLLING ROOT CAUSE
+The project already researched the Series/Episode/Sequence/Scene hierarchy and a showrunner/writer-room operating loop. The present failure is not absence of conceptual knowledge.
 
-### D2 Fresh Hierarchical Architecture Microbench
-PASS.
-Fresh domain: `해람일보 탐사보도팀 / EP07 〈한 줄을 빼는 값〉`.
+Current diagnosis:
+`HISTORICAL_SHOWRUNNER_KNOWLEDGE_PRESENT__ACTIVE_NEW_CREATION_CONSUMPTION_NOT_YET_PROVEN__ARCHITECTURE_CONSUMPTION_REGRESSION_PLUS_SURFACE_REALIZATION_REGRESSION`
 
-### D3 50-Scene Contract Lowering
-PASS.
+The unfinished question is implementation-level:
+- does the candidate engine contain the algorithms?;
+- are they on the mandatory main path?;
+- did E6 bypass or truncate that path?;
+- are the required fields actually consumed?;
+- can fallback silently degrade to objective/state task decomposition?
 
-Output:
-`handoff/20260915/E6_R3D_D3_50SCENE_CONTRACTS_R1.json`
+## EXACT NEXT ACTION
+Run:
+`SHOWRUNNER_MAIN_PATH_CONSUMPTION_AND_E6_PARITY_AUDIT_R1`
 
-Audit:
-`handoff/20260915/E6_R3D_D3_50SCENE_LOWERING_AUDIT_RESULT_R1.md`
+Do not generate a new whole-episode screenplay first.
+Do not treat the R3-D 50-scene development plan as a formal requalification answer.
 
-Frozen D3 facts:
-- 50/50 scene contracts
-- orphan scenes 0
-- sequence budgets exactly 4/4/5/5/5/6/5/6/5/5
-- four story axes preserved
-- primary-axis scene counts A=10 / B=15 / C=10 / D=15
-- dominant axis 30%
-- seven cross-axis collision/convergence regions preserved
-- fixed 4-person/6-utterance topology not encoded
-- screenplay surface prose = 0
-- State Commit = 0
-- external judgments = 0
+The audit must build the real candidate-engine/E6 call path and classify each architecture layer as:
+- `IMPLEMENTED_AND_WIRED__E6_HARNESS_BYPASS`
+- `IMPLEMENTED_BUT_DORMANT_OR_PARTIALLY_WIRED`
+- `SCHEMA_PRESENT__ALGORITHM_NOT_IMPLEMENTED`
+- `IMPLEMENTED__CONSUMPTION_RECEIPT_MISSING`
+- mixed by layer.
 
-Verdict:
-`PASS__R3D_D3_50_SCENE_CONTRACT_LOWERING__HIERARCHY_PRESERVED__FRESH_WHOLE_EPISODE_SURFACE_ALLOWED`
+If the main path can bypass showrunner consumption or cannot prove field-level use, implement a fail-closed `SHOWRUNNER_MAIN_PATH_CONSUMPTION_RECEIPT` plus tests before continuing.
 
-## NEXT LEGAL ACTION
-Generate a fresh >=35,000-character whole-episode screenplay only from the exact sealed 50 scene contracts.
+Then resume:
+`R3-E0 Authority/Evidence Lock -> R3-E1 E3-vs-E6 causal audit -> R3-E2 paired showrunner-consumption ablation`.
 
-Mandatory inheritance:
-- R3-C `SHOW_ONLY_DIRECTION_BOUNDARY`
-- four D2 story axes
-- seven cross-axis consequences
-- direct agency
-- no scene-summary dialogue
-- no authorial explanation of what physical action means
-- no fixed utterance topology
-
-Then run internal whole-episode architecture, dramaturgy, continuity/state, spatial/communication and Korean-surface audits.
-Only internal PASS may proceed to fresh independent external blind evaluation.
+Only subsequent PASS may unlock candidate portfolio, fresh whole-episode generation, Forward-Reverse Architecture Closure, internal audit, independent blind, State Commit and physical reseal.
 
 ## CLAIM RESTORATION RULE
-Operational Level-3 restoration still requires:
-1. R3-A PASS preserved;
-2. R3-B immutable FAIL preserved;
-3. R3-C C1+C2 PASS preserved;
-4. R3-D D1+D2+D3 PASS;
-5. fresh >=35,000-char whole-episode internal PASS;
-6. fresh external blind PASS;
-7. physical 5-Part/9-Package reseal;
-8. Hub pointers updated to that physical authority.
+Operational Level-3 restoration requires all of:
+1. showrunner main-path/consumption proof;
+2. R3-E causal architecture PASS;
+3. fresh whole-episode architecture + surface PASS;
+4. Forward-Reverse Architecture Closure PASS;
+5. fresh independent external blind PASS;
+6. physical 5-Part/9-Package reseal;
+7. all Hub current pointers updated to that new physical authority.
+
+## SESSION-INDEPENDENCE RULE
+Chat memory is not persistence. Research must survive as executable code, contracts, tests/gates, immutable records, Hub handoff/evolution documents and physical package reseals when authority changes.
 
 ## UNCHANGED AUTHORITIES
+- Physical: SYNC-R52
 - Active Engine: P07-I4H Recovery R3
 - Production: ENG:R47
 - Formal scored total: 137
 - Latest Formal: R138
 - Formal R140: 0/0/0
-- DB64 remains non-Production
+- DB64: non-Production
 
 ## STATUS TOKEN
-`PHYSICAL_SYNC_R52__LEVEL3_OPERATIONAL_CLAIM_SUSPENDED__R3D_D1_PASS__D2_PASS__D3_50SCENE_CONTRACTS_PASS__WHOLE_EPISODE_SURFACE_NEXT__SURFACE0`
+`DEVELOPER_HUB__PHYSICAL_SYNC_R52_ONLY__POST_R52_HUB_ONLY__LEVEL3_OPERATIONAL_CLAIM_SUSPENDED__R3E_FROZEN_NOT_STARTED__NEXT_ENGINE_MAIN_PATH_AUDIT__NO_LEVEL4`
