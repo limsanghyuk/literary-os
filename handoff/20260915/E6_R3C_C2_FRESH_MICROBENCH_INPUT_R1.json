@@ -1,0 +1,42 @@
+{
+  "schema": "E6R3CC2FreshMicrobenchInputR1",
+  "date": "2026-09-15",
+  "experiment_id": "P07-E6-R3C-C2-SHOWONLY-DIRECTION-FRESH-MICROBENCH-R1",
+  "domain": "해진도 심야도서의료이송센터",
+  "fictionality": "all persons, places and events synthetic",
+  "premise": "폭풍 전선이 다가오는 밤, 외딴 섬 진료소의 응급환자를 육지 병원으로 옮겨야 하지만 헬기와 정기선이 모두 불확실하다. 이송센터는 환자 가족의 선택, 선박의 실제 운항조건, 통신 사각과 제한된 접안 시간을 동시에 다뤄야 한다.",
+  "characters": [
+    {"name":"강세영","role":"야간 의료이송 조정팀장","voice":"짧은 질문, 확정되지 않은 약속을 하지 않음"},
+    {"name":"오준호","role":"해상 이송 현장조정관","voice":"거리·파고·접안조건을 구체적으로 말함"},
+    {"name":"김아라","role":"통신·배차 엔지니어","voice":"채널·위치·시간을 정확히 말함"},
+    {"name":"신유진","role":"해진도 진료소 의사","voice":"환자 상태와 이송 필요를 짧고 구체적으로 전달"},
+    {"name":"서복자","role":"환자의 어머니","voice":"가족 분리와 실제 동행 조건을 직접 요구"},
+    {"name":"박민호","role":"민간 고속선 선장","voice":"선체·엔진·항로 위험을 현장 언어로 말함"},
+    {"name":"문태식","role":"해경 구조정장","voice":"구조선 운용한계와 인계조건을 명확히 말함"}
+  ],
+  "scenes": [
+    {"id":"C2S01","cast":3,"utterances":5,"owner":"강세영","act":"QUESTION","location":"육지 이송센터","obligation":"헬기 출동표시와 실제 기상제한의 모순을 확인한다."},
+    {"id":"C2S02","cast":2,"utterances":6,"owner":"서복자","act":"REFUSE","location":"해진도 진료소","obligation":"복자가 아들만 먼저 보내고 자신은 뒤에 오라는 안을 직접 거절한다."},
+    {"id":"C2S03","cast":4,"utterances":4,"owner":"김아라","act":"REPORT_FOR_DECISION","location":"A=육지 이송센터 / B=해진도 진료소","remote":"radio+video cross-cut","obligation":"통신지연과 환자 이송시한을 두 장소가 서로 다른 화면으로 확인한다."},
+    {"id":"C2S04","cast":1,"utterances":1,"owner":"오준호","act":"NONE_OR_ONE_LINE","location":"해진도 방파제","obligation":"준호가 접안계단에 직접 올라 파도 높이와 미끄럼 상태를 확인한다."},
+    {"id":"C2S05","cast":6,"utterances":9,"owner":"강세영","act":"CHOOSE","location":"다중통신 회의","remote":"center+clinic+harbor","obligation":"헬기 포기 후 민간 고속선 첫 시도를 결정하되 가족동행·접안·통신 조건을 함께 건다."},
+    {"id":"C2S06","cast":2,"utterances":5,"owner":"박민호","act":"WARN","location":"민간 고속선 기관실","obligation":"첫 출항 준비 중 냉각수 경보가 실제로 발생하고 민호가 출항을 중단한다."},
+    {"id":"C2S07","cast":4,"utterances":7,"owner":"오준호","act":"DISCOVER","location":"A=방파제 / B=육지 센터","remote":"radio cross-cut","obligation":"고속선 실패 뒤 해경 구조선은 외항에 있으나 부두 직접접안이 어렵다는 새 장애를 발견한다."},
+    {"id":"C2S08","cast":2,"utterances":4,"owner":"서복자","act":"CHOOSE","location":"진료소 복도","obligation":"복자가 더 빠른 소형보트가 아니라 시간이 더 걸려도 의료진과 함께 옮길 수 있는 구조선을 선택한다."},
+    {"id":"C2S09","cast":6,"utterances":10,"owner":"문태식","act":"BARGAIN","location":"다중통신","remote":"rescue craft+harbor+clinic+center","obligation":"구조선이 방파제 외곽에서만 인계 가능해 들것 이동·조명·로프 인력을 새로 배치한다."},
+    {"id":"C2S10","cast":1,"utterances":0,"owner":"오준호","act":"SILENT_TRANSITION","location":"해진도 방파제","obligation":"준호가 비에 젖은 계단에 미끄럼 방지 매트를 직접 고정하고 한 칸을 시험해 본다."},
+    {"id":"C2S11","cast":2,"utterances":8,"owner":"강세영","act":"APOLOGIZE_AND_REPAIR","location":"육지 이송센터 통신실","obligation":"세영이 아라에게 통신지연을 사람 실수로 먼저 의심했던 것을 직접 사과하고 아라가 업무 신뢰 조건을 요구한다."},
+    {"id":"C2S12","cast":6,"utterances":9,"owner":"오준호","act":"CHOOSE","location":"해진도 방파제+외곽 구조선","remote":"short-range radio","obligation":"파도가 높아지는 가운데 준호가 마지막 안전창에서 환자 인계를 실행하고, 로프 하나를 절단해 들것을 선체 쪽으로 넘기는 되돌리기 어려운 현장행동을 한다."}
+  ],
+  "topology_audit": {
+    "cast_sizes_present":[1,2,3,4,6],
+    "two_person_scenes":["C2S02","C2S06","C2S08","C2S11"],
+    "low_dialogue_scenes":["C2S04","C2S10"],
+    "five_plus_speaker_scenes":["C2S05","C2S09","C2S12"],
+    "remote_crosscut_scenes":["C2S03","C2S07","C2S09","C2S12"],
+    "civilian_choice_refusal_scenes":["C2S02","C2S08"],
+    "failed_attempt_chains":["C2S05-C2S07","C2S09-C2S12"],
+    "relationship_repair_scene":"C2S11",
+    "irreversible_climax":"C2S12"
+  }
+}
