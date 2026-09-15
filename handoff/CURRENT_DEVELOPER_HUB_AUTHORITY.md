@@ -1,89 +1,104 @@
 # CURRENT DEVELOPER HUB AUTHORITY
-Last updated: 2026-09-14
+Last updated: 2026-09-15
 
 ## CANONICAL BOOTSTRAP
-`handoff/20260914/START_HERE_SYNC_R34_HUB_OVERLAY_NEW_SESSION_HANDOFF_R3.md`
+`handoff/20260915/START_HERE_SYNC_R52_R3D_HIERARCHY_RECONNECTION_R1.md`
 
-Machine-readable manifest:
-`handoff/20260914/NEW_SESSION_RECOVERY_MANIFEST_R3_20260914.json`
+## CURRENT PHYSICAL AUTHORITY
+Latest physically materialized/audited 5-Part / 9-Package authority:
 
-## PHYSICAL AUTHORITY
-Last physically materialized/audited 5-Part / 9-Package authority: **SYNC-R34**
-
+**SYNC-R52**
 Root SHA256:
-`3781c4d1d9f02019cf53fd6c373074e4f086edf40ca0b109cf3b69c485707d25`
+`62d2cec1a47e557a342dcedeb6eb63a7c18f1336f756b3b38bf0df7b7079a359`
 
-Required read order:
-`CONTROL → A → B1 → B2 → C1 → C2-A → C2-B → D1 → D2`
+Required physical read order:
+`CONTROL -> A -> B1 -> B2 -> C1 -> C2-A -> C2-B -> D1 -> D2`
 
-No R35 physical authority exists yet.
+No post-R52 physical reseal is claimed yet.
 
-## NEWER HUB RESEARCH OVERLAY
-Research newer than R34 package bytes is preserved in the hub and is authoritative for session recovery, but is not yet a replacement physical sync.
+## MATURITY / CLAIM STATUS
+Historical `LEVEL_3_ENTERED` declaration is preserved in lineage.
 
-Current overlay includes:
-- Pre-Level-3 maturity correction;
-- DB64 planning research through immutable A2R31 FAIL;
-- A2R32 fresh pool and preregistration;
-- A2R32 utility-control implementation source/freeze;
-- runtime-hold receipts.
+Current operational claim:
+`LEVEL_3_OPERATIONAL_CLAIM_SUSPENDED__DRAMATURGY_AND_HIERARCHICAL_ARCHITECTURE_REQUALIFICATION_IN_PROGRESS`
 
-These materials must be incorporated into the next audited physical 5-Part / 9-Package reseal.
+Level 4 has NOT started.
 
-## MATURITY AUTHORITY
-`PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS`
+## PRESERVED LEVEL-3 EVIDENCE
+- E1: CLOSED_PASS
+- E2: CLOSED_PASS
+- E3: CLOSED_PASS
+- E4: CLOSED_PASS
+- E5: CLOSED_PASS
+- E6-R1: IMMUTABLE_FAIL__SAFE_NO_COMMIT
+- E6 successor surface-boundary/validator repair: CLOSED_PASS__SEALED
+- E6-R2: PASS_UNDER_ORIGINAL_FROZEN_GATES, claim boundary later narrowed by construct-validity audit
 
-The system has NOT entered Level 3. Level 4 has not begun.
+## POST-R52 DRAMATURGY LINEAGE
+- E6-R2 post-hoc dramaturgy audit: construct-validity FAIL; historical PASS preserved; operational Level-3 claim suspended.
+- R3-A fresh dramaturgy microbench: PASS.
+- R3-B fresh 45-scene whole episode: immutable FAIL / SAFE_NO_COMMIT due dramaturgical commentary leakage in stage direction.
+- R3-C C1 direction detection regression: PASS.
+- R3-C C2 fresh show-only dramaturgy microbench: PASS.
 
-## DB64 RESEARCH AUTHORITY
-Positive closed evidence:
-- A2R10 rolling research retrieval fuel: PASS
-- canonical A2R26 optional additive advisory + abstention: PASS 10W/2T/0L
+## NEW HIERARCHICAL PLANNING DIAGNOSIS
+The project already possessed substantial Series/Episode/Sequence/Scene planning research. The current defect is not absence of theory but active consumption regression.
 
-Latest closed full-planning evidence:
-- A2R31: immutable FAIL 6W/2T/4L
+Status:
+`HISTORICAL_HIERARCHICAL_PLANNING_KNOWLEDGE_PRESENT__ACTIVE_E6_PLANNER_CONTRACT_PARTIALLY_COLLAPSED__CONSUMPTION_REGRESSION`
 
-Current successor:
-`P07-DATA-A2R32-UTILITY-CONTROLLED-MINIMAL-NOVELTY-PLANNING-QUALIFICATION`
+Root-cause audit:
+`handoff/20260915/HIERARCHICAL_PLANNING_LINEAGE_AND_CURRENT_CONSUMPTION_GAP_AUDIT_R1.md`
 
-Current state:
-`PREREGISTERED__IMPLEMENTATION_FROZEN__OUTPUTS_0__RUNTIME_HOLD`
+Additional governance defect corrected here:
+older `CURRENT_DEVELOPER_HUB_AUTHORITY.md` and `CURRENT_HANDOFF_POINTER.md` had remained on SYNC-R34/A2R32 while `CURRENT_SESSION_RECOVERY_POINTER.md` had advanced to SYNC-R52/R3-C. That pointer drift is invalid as a new-session bootstrap and is superseded by this synchronized authority.
 
-Custody commits:
-- pool `84aee3ecf641ab2ec3ea94e03f591d28797b9bee`
-- preregistration `5d41262255dce76d81b3a30f7ae50ee626d58597`
-- implementation source `8315e0c94ea45f3bdd840eaacfc90ead48ab0036`
-- implementation freeze `e5148930525915e464c6aacb4c0bf933b0388f4e`
-- runtime hold R2 `7a3884ea282d0f4875257543837ff58f4fd94037`
+## CURRENT SCIENTIFIC STATE — E6-R3D
+Preregistration:
+`handoff/20260915/E6_R3D_HIERARCHICAL_ARCHITECTURE_RECONNECTION_PREREG_R1.md`
 
-No A2R32 scientific output exists yet.
+D1 Historical Contract Restoration Audit:
+`PASS__D1_HISTORICAL_HIERARCHY_RECOVERED__CURRENT_R3B_CONSUMPTION_GAPS_IDENTIFIED__D2_ALLOWED`
 
-## CURRENT BOTTLENECK
-`DB64 additive structured novelty → utility control → sequence placement → Showrunner event architecture`
+D2 Fresh Hierarchical Architecture Microbench:
+`PASS__R3D_D2_FRESH_HIERARCHICAL_ARCHITECTURE__ANTI_TASK_COLLAPSE_GATES_PASS__FULL_SCENE_CONTRACT_LOWERING_ALLOWED`
 
-A2R32 preserves DB59 baseline protection + optional DB64 advisory + abstention and adds only conservative utility control. Final gate remains unchanged:
-`>=7W / >=10 nonloss / <=2L`.
+Fresh domain:
+`해람일보 탐사보도팀 / EP07 〈한 줄을 빼는 값〉`
 
-## RUNTIME AUTHORITY
-Current recorded failure:
-`RUNTIME_TRANSPORT_FAILURE__NOT_SCIENTIFIC_FAILURE`
+D2 key evidence:
+- 4 story axes;
+- 10 sequences;
+- dominant single axis 30%;
+- non-primary/protagonist-owned sequences 8/10;
+- 7 cross-axis collision/convergence points;
+- owner/obstacle/value shift present 10/10;
+- 12 sentinel scenes with EARLY/MIDDLE/LATE 4/4/4;
+- sequence scene budgets sum to 50;
+- screenplay surface prose = 0;
+- State Commit = 0;
+- external judgments = 0.
 
-Repeated container/Python transport returned `TransportTimeoutError`.
+## NEXT LEGAL ACTION
+Do not generate screenplay prose yet.
 
-Before any A2R32 scientific output, a healthy runtime must be established and byte-level SHA256 seals generated for pool/prereg/implementation; frozen parent components must be reverified; a pre-output recovery bundle must be written.
+Next exact step:
+1. lower the sealed D2 hierarchy into all 50 scene contracts;
+2. preserve H0-H3 story axes, ownership, value shifts and cross-axis obligations;
+3. seal the 50-scene contracts;
+4. then generate a fresh >=35,000-character whole-episode screenplay under R3-C `SHOW_ONLY_DIRECTION_BOUNDARY`;
+5. run whole-episode architecture/dramaturgy/state/spatial/Korean-surface audits;
+6. only internal PASS may proceed to fresh independent external blind evaluation;
+7. only external PASS + physical 5-Part/9-Package reseal may restore the operational Level-3 claim.
 
 ## UNCHANGED AUTHORITIES
-- Active Engine: `P07-I4H Recovery R3`
-- Production: `ENG:R47`
-- Formal scored total: `137`
-- latest Formal: `R138`
-- Formal R140: `0/0/0`
-- DB59 historical benchmark SHA256: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
-- DB64 candidate SHA256: `19f3c446a73408045d02d4d99e168251dca42da3bfa00abaff1d8f9159d7ea46`
-- DB64 Production promotion: NO
-
-## LEVEL-3 ENTRY PROGRAM
-`E2 DB/full-planning closure → E3 fresh whole-episode integration → E4 >=3 episode State Carry → E5 fault injection/autonomous recovery → E6 Formal Level-3 qualification → LEVEL_3_ENTERED`
+- Active Engine: P07-I4H Recovery R3
+- Production: ENG:R47
+- Formal scored total: 137
+- Latest Formal: R138
+- Formal R140: 0/0/0
+- DB59 historical benchmark preserved
+- DB64 remains non-Production
 
 ## STATUS TOKEN
-`PHYSICAL_SYNC_R34__HUB_OVERLAY_R3__PRE_LEVEL3_ENTRY__A2R32_IMPLEMENTATION_FROZEN_OUTPUTS0_RUNTIME_HOLD__NEXT_PHYSICAL_RESEAL_PENDING`
+`PHYSICAL_SYNC_R52__OPERATIONAL_LEVEL3_SUSPENDED__R3D_D1_PASS__R3D_D2_PASS__50_SCENE_CONTRACT_LOWERING_NEXT__SURFACE0`
