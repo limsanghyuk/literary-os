@@ -1,0 +1,20 @@
+{
+  "schema":"E6R2ImmutableClosureR1",
+  "date":"2026-09-15",
+  "experiment_id":"P07-LEVEL3-E6-R2-FRESH-FORMAL-QUALIFICATION",
+  "parent_physical_authority":"SYNC-R51",
+  "parent_root_sha256":"9ca674f11ff1b75ef6d0ce3d0a1b3894c87c59d1f0feb7b2c3148eb11067a75a",
+  "fresh_sample":"청연시 산불대피통합센터 / QUAL2_EP01 〈바람이 골짜기를 넘는 밤〉",
+  "e6_r1_sample_reused":false,
+  "repair_implementation_sha256":"2585688a7d59672ef8867f9902775396832ebb997b1b488e456abe13cb88763e",
+  "verdict":"PASS__E6_R2_FRESH_FORMAL_LEVEL3_QUALIFICATION__LEVEL_3_ENTRY_ELIGIBLE",
+  "immutable":true,
+  "challenge":{"decision":"PASS","responsible_ancestor":"RETRIEVAL_ADVISORY / SELECTOR","action":"ABSTAIN_DROP_ADVISORY"},
+  "planning":{"decision":"PASS","sequences":10,"scenes":50,"orphans":0,"seal_sha256":"24018ae6e876d17f48c4d118a9ef2f7830813b771b4827576bb4ad7c51b6adaf"},
+  "surface":{"decision":"PASS","chars":45064,"sequences":10,"scenes":50,"dialogue_turns":300,"format_errors":0,"missing_openings":0,"internal_surface_leaks":0,"scene_entry_unique_prefixes":50,"sha256":"5b230524a4b3fab158756714cdf86abbd78fe9dc9443e75ea401141787190be4"},
+  "semantic_continuity":{"decision":"PASS","scene_contract_consumption":"50/50","plant_payoff":"4/4","ensemble_joint_decision":"PASS","no_premature_blame":"PASS"},
+  "recovery_commit":{"decision":"STATE_COMMIT","state_delta_sha256":"785649f5797d1f48c9f19b49feaafeee292f30b3d7c749d0be2190a48b2a1bb0","no_post_output_development_change":true},
+  "level3_entry_eligible":true,
+  "level3_entered_at_closure":false,
+  "claim_boundary":"E6-R2 PASS makes the current system eligible for LEVEL_3_ENTERED only after physical and Hub reseal. Production ENG:R47, DB64 Production, Formal R140 and Level 4 remain unchanged."
+}
