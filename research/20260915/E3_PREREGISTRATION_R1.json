@@ -1,0 +1,59 @@
+{
+  "schema": "E3FreshWholeEpisodeIntegrationPreregR1",
+  "date": "2026-09-15",
+  "experiment_id": "P07-LEVEL3-E3-FRESH-WHOLE-EPISODE-INTEGRATION-R1",
+  "maturity_gate": "PRE_LEVEL_3 / E3",
+  "parent_evidence": {
+    "E1":"CLOSED_PASS",
+    "E2":"CLOSED_PASS",
+    "active_engine":"P07-I4H Recovery R3",
+    "production":"ENG:R47 unchanged",
+    "db64_status":"research-qualified, non-Production"
+  },
+  "purpose": "Test one fresh broadcast-scale episode as an end-to-end integrated system from state/data-informed planning through surface realization, validation and guarded state commit.",
+  "hypothesis": "With E1 surface contract and E2 data/full-planning interface fixed, the system can produce one fresh 35,000+ character episode whose planning hierarchy, scene semantics, surface craft, continuity and state delta remain coherent end-to-end without critical validation failure.",
+  "sample_scale": {
+    "episode_count":1,
+    "target_chars_min":35000,
+    "sequence_guidance":"9-10 minimum guidance; not a global fixed maximum",
+    "scene_guidance":"45-50 minimum guidance; not a global fixed maximum",
+    "this_sample_plan":"10 sequences / 50 scenes, chosen for this experiment only"
+  },
+  "pipeline": [
+    "Frozen Story State",
+    "DB64 advisory retrieval under E2-qualified interface",
+    "Episode Objective/State Delta",
+    "10 Sequence Plans",
+    "50 Scene Contracts",
+    "Surface Realization",
+    "Mechanical Validation",
+    "Semantic/Continuity Validation",
+    "Surface Hygiene Validation",
+    "State Delta Validation",
+    "Commit or Safe No-Commit"
+  ],
+  "surface_contract": {
+    "scene_opening":"(씬 설정: ...)",
+    "dialogue_turn":"등장인물명: (연기 가능한 행동·표정·시선·호흡·목소리·감정 흐름) 대사",
+    "between_turn":"(지문: ...)",
+    "expository_dialogue_forbidden":true,
+    "abstract_internal_state_narration_forbidden_when_observable_performance_can_carry_beat":true
+  },
+  "critical_pass_gates": {
+    "final_korean_episode_chars_min":35000,
+    "sequences":10,
+    "scenes":50,
+    "meta_leakage":0,
+    "missing_scene_opening":0,
+    "duplicate_scene_ids":0,
+    "orphan_scenes":0,
+    "repeated_explanatory_scene_purpose_preface":0,
+    "systemic_expository_dialogue_critical":0,
+    "verified_abstract_unplayable_direction_critical":0,
+    "no_lone_hero_shortcut":true,
+    "state_commit_before_all_validators":false
+  },
+  "claim_boundary": "PASS closes E3 only. It does not close E4, E5, E6, Production promotion or Level-3 entry.",
+  "outputs_at_prereg": {"episode_plan":0,"sequence_plans":0,"scene_contracts":0,"surface_chars":0,"state_commit":0},
+  "threshold_change_after_output":"PROHIBITED"
+}
