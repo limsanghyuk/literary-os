@@ -1,0 +1,16 @@
+{
+  "schema": "LiteraryOSResearchEvolutionMapR4",
+  "date": "2026-09-15",
+  "mandatory_recovery_read_order": ["CURRENT_SESSION_RECOVERY_POINTER","START_HERE current sync","RESEARCH_EVOLUTION_MAP_R4","LEVEL3_ENTRY_GATE_LEDGER_R6","individual experiment records/evidence"],
+  "major_lineage": [
+    {"node":"E1_R2","status":"CLOSED_PASS","result":"held-out human-reference external blind surface closure"},
+    {"node":"E2_A2R35","status":"CLOSED_PASS","result":"DB64 full-planning qualification 10W/2T/0L"},
+    {"node":"E3_R1","status":"FAIL__CRITICAL_META_LEAKAGE__SAFE_NO_COMMIT","problem":"single internal-meta leak after otherwise successful whole-episode integration"},
+    {"node":"E3_R2","status":"CLOSED_PASS","result":"prospective targeted one-line boundary recovery; 41,583 chars; STATE_COMMIT"},
+    {"node":"E4","status":"CLOSED_PASS","result":"EP01→EP02→EP03 exact-hash carry; EP02 52,705 chars; EP03 51,717 chars; two sequential STATE_COMMITs"},
+    {"node":"E5","status":"CLOSED_PASS","result":"9 frozen fault classes: detect 9/9, localize 9/9, action 9/9, revalidate 9/9, scope 9/9, corrupted commits 0; provider hard failure SAFE_NO_COMMIT"}
+  ],
+  "E5_fault_classes": ["state corruption","relationship regression","duplicated event","false payoff","wrong plot ownership","stale DB advisory","provider hard failure","truncated surface","premature state commit"],
+  "current_transition": "E1 PASS + E2 PASS + E3 PASS + E4 PASS + E5 PASS -> E6 Formal Level-3 Qualification",
+  "unchanged_authorities": {"active_engine":"P07-I4H Recovery R3","production_engine":"ENG:R47","formal_scored_total":137,"latest_formal":"R138","formal_r140":"0/0/0","db64_is_production":false,"level3_entered":false}
+}
