@@ -1,0 +1,108 @@
+{
+  "schema": "E6R3BPlanAndSceneContractsR1",
+  "date": "2026-09-15",
+  "experiment_id": "P07-E6-R3B-FRESH-WHOLE-EPISODE-DRAMATURGY-REQUALIFICATION-R1",
+  "episode": {
+    "series": "백림시 수문통합센터",
+    "episode_id": "R3B_EP01",
+    "title": "물이 돌아오는 길",
+    "objective": "상류 저류지의 긴급방류 전에 동측 수문의 실제 개도율을 확인하고, 산업단지와 강변마을 어느 한쪽에 검증되지 않은 위험을 떠넘기지 않은 채 인명피해를 막는다.",
+    "entry_state": {
+      "dashboard_east_gate": "60_PERCENT_OPEN",
+      "field_gate_position": "UNKNOWN",
+      "retention_basin": "RISING_FAST",
+      "industrial_bypass": "AVAILABLE_BUT_RISK_TRANSFER_UNVERIFIED",
+      "riverside_households": 47,
+      "relationship_seojin_harin": "PROFESSIONAL_TRUST_WITH_CALIBRATION_PRESSURE",
+      "relationship_seojin_doyoon": "MUTUAL_RESPECT_WITH_METHOD_CONFLICT"
+    },
+    "target_exit": {
+      "east_gate": "MANUALLY_VERIFIED_AND_STABILIZED",
+      "residents_at_immediate_risk": 0,
+      "industrial_bypass": "LIMITED_USE_WITH_DOWNSTREAM_GUARD",
+      "harin_accountability": "REVIEW_OPEN_NOT_GUILT_DECLARED",
+      "relationship_seojin_harin": "GUARDED_PROFESSIONAL_TRUST",
+      "relationship_seojin_doyoon": "OPERATIONAL_TRUST_STRENGTHENED",
+      "open_thread": "WHO_ORDERED_ACCELERATED_SENSOR_ACCEPTANCE"
+    }
+  },
+  "sequences": [
+    {"id":"SQ01","title":"60퍼센트와 물자국","goal":"대시보드와 현장수위의 모순을 사건의 중심으로 세운다.","scene_ids":["SC01","SC02","SC03","SC04","SC05"]},
+    {"id":"SQ02","title":"누구의 물인가","goal":"산업단지 보호와 강변마을 위험전가의 갈등을 주민 선택과 함께 드러낸다.","scene_ids":["SC06","SC07","SC08","SC09","SC10"]},
+    {"id":"SQ03","title":"움직이지 않는 수문","goal":"현장 검증과 첫 구동 시도를 실제 실패로 만든다.","scene_ids":["SC11","SC12","SC13","SC14","SC15"]},
+    {"id":"SQ04","title":"빛을 끄는 값","goal":"두 번째 시도의 대가를 전력·펌프·대피동선의 희생으로 구체화한다.","scene_ids":["SC16","SC17","SC18","SC19","SC20"]},
+    {"id":"SQ05","title":"우회로의 아래쪽","goal":"산업단지 우회방류가 강변마을에 주는 실제 위험을 계산·현장·주민 판단으로 충돌시킨다.","scene_ids":["SC21","SC22","SC23","SC24","SC25"]},
+    {"id":"SQ06","title":"서명한 사람","goal":"하린의 검수서명과 실제 고장 원인을 분리하고 책임을 증거보다 앞서 확정하지 않는다.","scene_ids":["SC26","SC27","SC28","SC29","SC30"]},
+    {"id":"SQ07","title":"마지막 두 대의 펌프","goal":"주민 대피와 이동펌프 배치를 병행하며 숫자 대신 사람의 선택과 대가를 보여준다.","scene_ids":["SC31","SC32","SC33","SC34","SC35"]},
+    {"id":"SQ08","title":"수동 핸들","goal":"되돌리기 어려운 현장행동으로 수문을 살리고 제한 우회방류를 실행한다.","scene_ids":["SC36","SC37","SC38","SC39","SC40"]},
+    {"id":"SQ09","title":"물이 빠진 자리","goal":"안전결과·관계변화·책임검토를 실제 행동으로 마무리하고 새로운 증거 훅을 남긴다.","scene_ids":["SC41","SC42","SC43","SC44","SC45"]}
+  ],
+  "scene_contracts": [
+    {"id":"SC01","title":"빗줄기보다 빠른 숫자","location":"백림시 수문통합상황실","present":["강서진","박하린","최유라"],"remote":[],"props":["수문 대시보드","강우레이더","벽시계"],"speaking_cast_size":3,"target_utterances":5,"dramatic_owner":"강서진","speech_act":"QUESTION","obligation":"서진이 60% 개방 표시와 급격한 하류수위 상승의 모순을 직접 묻는다.","turn":"현장확인 없이는 방류결정 불가"},
+    {"id":"SC02","title":"계단의 물선","location":"동측 수문 하류 점검계단","present":["이도윤","최유라"],"remote":[],"props":["손전등","수위자","젖은 난간"],"speaking_cast_size":2,"target_utterances":7,"dramatic_owner":"이도윤","speech_act":"WARN","obligation":"도윤이 실제 물선이 대시보드 개도율과 맞지 않는다고 경고한다.","turn":"현장 불일치가 구체화"},
+    {"id":"SC03","title":"두 화면","location":"A=상황실 / B=동측 수문 점검계단","present":["강서진 at A","박하린 at A","이도윤 at B","최유라 at B"],"remote":["radio cross-cut"],"props":["A: 대시보드, 헤드셋","B: 수위자, 손전등"],"speaking_cast_size":4,"target_utterances":4,"dramatic_owner":"박하린","speech_act":"REPORT_FOR_DECISION","obligation":"하린이 원격센서와 현장수위의 불일치를 숨기지 않고 공개한다.","turn":"센서값은 참고값으로 강등"},
+    {"id":"SC04","title":"검수서명","location":"상황실 서버석","present":["박하린"],"remote":[],"props":["검수서 PDF","서명로그","이어폰"],"speaking_cast_size":1,"target_utterances":1,"dramatic_owner":"박하린","speech_act":"ADMIT","obligation":"하린이 자신이 최근 검수서에 전자서명한 사실을 처음으로 혼잣말이 아닌 통화상대에게 짧게 밝힌다.","turn":"책임압력 심기"},
+    {"id":"SC05","title":"새벽 브리핑 압력","location":"상황실 회의탁자","present":["강서진","박하린","최유라","김태경","정우람"],"remote":[],"props":["도시침수지도","산업단지 물류표","주민명단"],"speaking_cast_size":5,"target_utterances":9,"dramatic_owner":"김태경","speech_act":"PRESS","obligation":"태경이 산업단지 우회방류를 서두르지만 각자가 다른 위험근거를 내놓는다.","turn":"정치적 시간압력 시작"},
+
+    {"id":"SC06","title":"문을 잠그지 않는 사람","location":"강변마을 한미숙 상점","present":["한미숙","최유라"],"remote":[],"props":["가게 셔터","아버지 약통","대피문자"],"speaking_cast_size":2,"target_utterances":6,"dramatic_owner":"한미숙","speech_act":"REFUSE","obligation":"미숙이 거동불편 아버지를 두고 먼저 나가라는 대피안을 직접 거절한다.","turn":"가족단위 대피조건 필요"},
+    {"id":"SC07","title":"47가구의 이름","location":"마을회관","present":["최유라","한미숙","강서진"],"remote":[],"props":["47가구 명단","약품목록","마을지도"],"speaking_cast_size":3,"target_utterances":5,"dramatic_owner":"최유라","speech_act":"BARGAIN","obligation":"유라가 주민대표와 취약가구 우선순서를 협상한다.","turn":"숫자47이 구체적 가구조건으로 바뀜"},
+    {"id":"SC08","title":"공장 쪽 전화","location":"상황실 통신석","present":["강서진","김태경","박하린","최유라"],"remote":["산업단지 관리자 via phone"],"props":["스피커폰","우회방류 예상도"],"speaking_cast_size":4,"target_utterances":8,"dramatic_owner":"강서진","speech_act":"REFUSE","obligation":"서진이 강변 위험검증 전 전면 우회방류 요구를 직접 거절한다.","turn":"산업단지와 마을의 위험배분이 공개갈등"},
+    {"id":"SC09","title":"약통 하나","location":"한미숙 상점 앞 골목","present":["한미숙","최유라"],"remote":[],"props":["아버지 약통","손수레","비닐우비"],"speaking_cast_size":2,"target_utterances":4,"dramatic_owner":"한미숙","speech_act":"CHOOSE","obligation":"미숙이 상점을 포기하고 아버지와 함께 대피하기로 결정하되 약통을 찾느라 출발이 늦어진다.","turn":"주민선택에 실제 대가 발생"},
+    {"id":"SC10","title":"빈 의자 여섯 개","location":"마을버스 승차장","present":["한미숙","최유라","강서진","김태경","정우람","마을이장"],"remote":[],"props":["버스좌석표","접이식 경사판","우산"],"speaking_cast_size":6,"target_utterances":10,"dramatic_owner":"최유라","speech_act":"ORDER","obligation":"취약가구·보호자 동반 때문에 비어 보이는 좌석을 두고 수송효율 논쟁이 벌어진다.","turn":"가구단위 대피원칙 확정"},
+
+    {"id":"SC11","title":"수문 아래 손","location":"동측 수문 구동실","present":["이도윤","정우람","박하린"],"remote":[],"props":["수동 위치표시기","유압압력계","구동스위치"],"speaking_cast_size":3,"target_utterances":7,"dramatic_owner":"이도윤","speech_act":"WARN","obligation":"도윤이 물리표시기가 20% 부근임을 확인한다.","turn":"대시보드 60%와 정면충돌"},
+    {"id":"SC12","title":"첫 구동","location":"동측 수문 구동실","present":["이도윤"],"remote":["강서진 via radio"],"props":["구동스위치","압력계","진동센서"],"speaking_cast_size":1,"target_utterances":2,"dramatic_owner":"이도윤","speech_act":"REPORT_FOR_DECISION","obligation":"첫 원격보조 구동을 실행하지만 압력만 오르고 문은 움직이지 않는다.","turn":"첫 시도 실패"},
+    {"id":"SC13","title":"걸린 체인","location":"수문 측면 점검통로","present":["이도윤","정우람"],"remote":[],"props":["정비체인","내시경카메라","볼트통"],"speaking_cast_size":2,"target_utterances":5,"dramatic_owner":"정우람","speech_act":"DISCOVER","obligation":"구동 체인이 비틀려 있는 새 장애를 발견한다.","turn":"재시도 전 기계접근 필요"},
+    {"id":"SC14","title":"물이 차오르는 통로","location":"수문 측면 점검통로","present":["이도윤","정우람","최유라","강서진"],"remote":[],"props":["방수등","로프","수위표"],"speaking_cast_size":4,"target_utterances":6,"dramatic_owner":"강서진","speech_act":"CHOOSE","obligation":"점검통로 수위상승 때문에 작업시간을 12분으로 제한한다.","turn":"시간비용 부여"},
+    {"id":"SC15","title":"한 번 더가 아니다","location":"구동실 출입문","present":["이도윤","강서진","김태경","박하린","정우람"],"remote":[],"props":["실패기록표","압력그래프"],"speaking_cast_size":5,"target_utterances":9,"dramatic_owner":"이도윤","speech_act":"REFUSE","obligation":"도윤이 같은 조건의 단순 재시도를 직접 거절한다.","turn":"두 번째 시도에는 조건변경 필수"},
+
+    {"id":"SC16","title":"세 대가 아니라 두 대","location":"이동펌프 집결지","present":["정우람","최유라"],"remote":[],"props":["이동펌프 두 대","배차표","호스"],"speaking_cast_size":2,"target_utterances":4,"dramatic_owner":"정우람","speech_act":"ADMIT","obligation":"우람이 요청한 세 대 중 실제 두 대만 도착했다고 밝힌다.","turn":"보호범위 축소 필요"},
+    {"id":"SC17","title":"전력 하나를 끈다","location":"상황실 전력보조석","present":["박하린","강서진","김태경"],"remote":[],"props":["전력배분표","산업단지 보조펌프 스위치"],"speaking_cast_size":3,"target_utterances":7,"dramatic_owner":"강서진","speech_act":"CHOOSE","obligation":"수문 구동용 전력을 확보하기 위해 산업단지 비필수 배수펌프 일부를 끄기로 한다.","turn":"산업단지 침수위험 소폭 증가라는 비용"},
+    {"id":"SC18","title":"불 꺼진 창고","location":"산업단지 배수펌프장","present":["김태경","정우람","강서진","박하린"],"remote":[],"props":["펌프 차단반","침수표시선"],"speaking_cast_size":4,"target_utterances":5,"dramatic_owner":"김태경","speech_act":"CHALLENGE","obligation":"태경이 산업단지 비용을 따지지만 결국 제한정지를 받아들인다.","turn":"정치압력에 실제 비용 발생"},
+    {"id":"SC19","title":"체인을 푼다","location":"수문 측면 점검통로","present":["이도윤","정우람","최유라","한미숙","강서진","박하린"],"remote":[],"props":["체인분리공구","로프","휴대등"],"speaking_cast_size":6,"target_utterances":11,"dramatic_owner":"이도윤","speech_act":"ORDER","obligation":"기계작업과 주민대피시각이 충돌하는 가운데 체인을 풀기 위한 두 번째 시도를 실행한다.","turn":"체인 정렬 성공, 작업자 손 부상"},
+    {"id":"SC20","title":"움직인 4센티미터","location":"동측 수문 구동실","present":["이도윤"],"remote":[],"props":["물리 위치눈금","손수건"],"speaking_cast_size":1,"target_utterances":1,"dramatic_owner":"이도윤","speech_act":"NONE_OR_ONE_LINE","obligation":"수문이 실제 4cm 움직인 것을 말보다 눈금과 물소리로 확인한다.","turn":"두 번째 시도 부분성공"},
+
+    {"id":"SC21","title":"우회로 아래 마을","location":"A=상황실 / B=강변마을 제방","present":["강서진 at A","박하린 at A","최유라 at B"],"remote":["radio cross-cut"],"props":["A: 우회방류모델","B: 제방수위표"],"speaking_cast_size":3,"target_utterances":6,"dramatic_owner":"박하린","speech_act":"WARN","obligation":"우회방류 100%가 마을 제방여유를 잠식한다는 계산을 공개한다.","turn":"전면우회 불가"},
+    {"id":"SC22","title":"상점의 마지막 상자","location":"한미숙 상점","present":["한미숙","최유라"],"remote":[],"props":["젖은 상자","현금통","대피가방"],"speaking_cast_size":2,"target_utterances":8,"dramatic_owner":"한미숙","speech_act":"WITHHOLD_THEN_CHOOSE","obligation":"미숙이 생계 때문에 마지막 상자를 챙기려다 포기한다.","turn":"대피선택의 개인적 비용"},
+    {"id":"SC23","title":"30퍼센트","location":"상황실 회의탁자","present":["강서진","박하린","김태경","정우람","최유라"],"remote":[],"props":["우회방류곡선","펌프배치도","대피진행표"],"speaking_cast_size":5,"target_utterances":9,"dramatic_owner":"강서진","speech_act":"BARGAIN","obligation":"전면 우회 대신 30% 제한우회+마을 펌프 배치를 조합한다.","turn":"위험을 한쪽에 몰지 않는 혼합안"},
+    {"id":"SC24","title":"펌프가 잠긴다","location":"강변마을 저지대 펌프지점","present":["정우람","최유라","강서진","한미숙"],"remote":[],"props":["이동펌프","흡입호스","진흙"],"speaking_cast_size":4,"target_utterances":5,"dramatic_owner":"정우람","speech_act":"WARN","obligation":"첫 펌프 흡입구가 진흙에 막혀 멈춘다.","turn":"혼합안도 즉시 성공하지 않음"},
+    {"id":"SC25","title":"골목을 내준다","location":"강변마을 골목","present":["한미숙","정우람"],"remote":[],"props":["상점 적재함","펌프호스","손수레"],"speaking_cast_size":2,"target_utterances":4,"dramatic_owner":"한미숙","speech_act":"CHOOSE","obligation":"미숙이 자기 상점 앞 적재물을 치워 펌프호스 통로를 내준다.","turn":"주민이 해결행동 주체가 됨"},
+
+    {"id":"SC26","title":"전자서명 시각","location":"상황실 서버석","present":["박하린"],"remote":["강서진 via phone","외부검증담당 via phone"],"props":["검수서","서명로그","원본 센서로그"],"speaking_cast_size":3,"target_utterances":8,"dramatic_owner":"박하린","speech_act":"ADMIT","obligation":"하린이 서명시각과 자신이 확인한 범위를 직접 설명하되 원인책임은 단정하지 않는다.","turn":"검수책임 범위 구체화"},
+    {"id":"SC27","title":"같은 18분","location":"상황실 서버석","present":["박하린","강서진"],"remote":[],"props":["로그 출력지","검수메일"],"speaking_cast_size":2,"target_utterances":4,"dramatic_owner":"강서진","speech_act":"CHALLENGE","obligation":"같은 18분 로그 공백을 서진은 누락 가능성, 하린은 장비 재동기화로 다르게 본다.","turn":"증거 이중해석"},
+    {"id":"SC28","title":"메일 제목","location":"상황실 기록석","present":["박하린","강서진","김태경","최유라"],"remote":[],"props":["검수촉진 메일","첨부목록"],"speaking_cast_size":4,"target_utterances":6,"dramatic_owner":"박하린","speech_act":"DISCLOSE","obligation":"하린이 조기검수 요구 메일을 먼저 내놓는다.","turn":"책임검토가 개인에서 지시체계로 확장"},
+    {"id":"SC29","title":"배제할 건가요","location":"상황실 뒤편 계단","present":["박하린","강서진","이도윤","김태경","최유라","한미숙"],"remote":[],"props":["원본로그 봉투","젖은 우비"],"speaking_cast_size":6,"target_utterances":10,"dramatic_owner":"박하린","speech_act":"ASK","obligation":"하린이 자신의 업무배제 여부를 직접 묻고 서진이 검토와 업무를 분리해 답한다.","turn":"관계 균열을 실제 교환으로 처리"},
+    {"id":"SC30","title":"원본 봉인","location":"상황실 기록보관실","present":["박하린"],"remote":[],"props":["원본로그 USB","봉인봉투","봉인번호 스티커"],"speaking_cast_size":1,"target_utterances":1,"dramatic_owner":"박하린","speech_act":"NONE_OR_ONE_LINE","obligation":"하린이 원본을 직접 봉인하고 복제본만 운영판단에 남긴다.","turn":"책임확정 대신 증거보존"},
+
+    {"id":"SC31","title":"아버지가 안 탄다","location":"마을버스 승차장","present":["한미숙","최유라","강서진"],"remote":[],"props":["휠체어","버스계단","약가방"],"speaking_cast_size":3,"target_utterances":5,"dramatic_owner":"한미숙","speech_act":"REFUSE","obligation":"미숙의 아버지가 계단형 버스 탑승을 거부하고 미숙이 대안을 요구한다.","turn":"수송계획 재조정"},
+    {"id":"SC32","title":"두 대의 펌프, 세 곳의 물","location":"상황실 지도탁자","present":["강서진","정우람"],"remote":[],"props":["침수지도","펌프자석"],"speaking_cast_size":2,"target_utterances":7,"dramatic_owner":"정우람","speech_act":"BARGAIN","obligation":"두 펌프를 세 위험지점 중 어디에 놓을지 실제 포기대상을 정한다.","turn":"한 골목은 대피로만 남기고 재산보호 포기"},
+    {"id":"SC33","title":"두 번째 펌프 시동","location":"강변마을 제방","present":["정우람","최유라","한미숙","이도윤"],"remote":[],"props":["이동펌프","호스","제방수위표"],"speaking_cast_size":4,"target_utterances":6,"dramatic_owner":"정우람","speech_act":"ORDER","obligation":"진흙 문제를 우회한 두 번째 펌프 설치가 실제 가동된다.","turn":"마을 수위상승 속도 둔화"},
+    {"id":"SC34","title":"출발하지 않는 버스","location":"마을회관 앞","present":["한미숙","최유라","김태경","강서진","마을이장"],"remote":[],"props":["버스","휠체어 경사판","47가구 명단"],"speaking_cast_size":5,"target_utterances":9,"dramatic_owner":"최유라","speech_act":"ORDER","obligation":"마지막 취약가구가 오기 전 버스를 보내자는 압력을 유라가 거절한다.","turn":"대피효율보다 누락방지"},
+    {"id":"SC35","title":"빈 상점 셔터","location":"한미숙 상점 앞","present":["한미숙"],"remote":[],"props":["내려간 셔터","물에 젖은 간판"],"speaking_cast_size":1,"target_utterances":1,"dramatic_owner":"한미숙","speech_act":"NONE_OR_ONE_LINE","obligation":"미숙이 상점 셔터를 직접 내리고 대피버스로 걸어간다.","turn":"주민대피 완료의 개인 이미지"},
+
+    {"id":"SC36","title":"18센티미터","location":"동측 수문 구동실","present":["이도윤","강서진","박하린"],"remote":[],"props":["물리위치눈금","유압계","수동핸들"],"speaking_cast_size":3,"target_utterances":5,"dramatic_owner":"이도윤","speech_act":"REPORT_FOR_DECISION","obligation":"부분복구 뒤에도 수문이 필요한 만큼 열리지 않았음을 확인한다.","turn":"수동 전환 필요"},
+    {"id":"SC37","title":"수동으로 가면","location":"구동실","present":["이도윤","강서진"],"remote":[],"props":["수동핸들","잠금핀"],"speaking_cast_size":2,"target_utterances":7,"dramatic_owner":"이도윤","speech_act":"WARN","obligation":"수동전환 뒤 자동복귀가 즉시 불가능하다는 대가를 도윤이 설명한다.","turn":"되돌리기 어려운 선택 준비"},
+    {"id":"SC38","title":"30퍼센트 시작","location":"A=상황실 / B=산업우회수로 / C=강변마을 펌프지점","present":["강서진 at A","박하린 at A","김태경 at B","정우람 at C","최유라 at C","한미숙 at C"],"remote":["multi-site radio"],"props":["A: 우회제어판","B: 수문표지","C: 펌프와 수위표"],"speaking_cast_size":6,"target_utterances":11,"dramatic_owner":"강서진","speech_act":"CHOOSE","obligation":"제한우회 30%를 시작하면서 세 장소가 각자 위험신호를 보고한다.","turn":"혼합안 실제 실행"},
+    {"id":"SC39","title":"핸들이 돌아오지 않는다","location":"동측 수문 수동핸들 플랫폼","present":["이도윤","박하린","정우람","강서진"],"remote":[],"props":["수동핸들","잠금핀","휴대등"],"speaking_cast_size":4,"target_utterances":5,"dramatic_owner":"이도윤","speech_act":"CHOOSE","obligation":"첫 힘주기가 실패하고 핀 간섭을 제거한 뒤 손부상을 감수해 두 번째 시도를 한다.","turn":"수문 수동개방 성공"},
+    {"id":"SC40","title":"물길이 갈라진다","location":"수문 하류 관측데크","present":["이도윤","강서진"],"remote":[],"props":["수위자","휴대등"],"speaking_cast_size":2,"target_utterances":4,"dramatic_owner":"강서진","speech_act":"CONFIRM","obligation":"수문개방과 제한우회 후 실제 하류수위가 안정되는 것을 관찰한다.","turn":"클라이맥스 결과 확인"},
+
+    {"id":"SC41","title":"47번째 이름","location":"대피소 접수대","present":["최유라","한미숙","강서진"],"remote":[],"props":["47가구 명단","약가방"],"speaking_cast_size":3,"target_utterances":8,"dramatic_owner":"최유라","speech_act":"CONFIRM","obligation":"마지막 가구의 실제 도착을 확인하고 숫자가 아니라 사람으로 대피완료를 닫는다.","turn":"즉시 인명위험 0"},
+    {"id":"SC42","title":"로그를 다시 읽다","location":"상황실 서버석","present":["박하린"],"remote":[],"props":["원본복제 로그","검수메일"],"speaking_cast_size":1,"target_utterances":2,"dramatic_owner":"박하린","speech_act":"NONE_OR_ONE_LINE","obligation":"하린이 업무를 계속하면서도 원인검토가 끝나지 않았음을 행동으로 남긴다.","turn":"관계와 책임 미결 유지"},
+    {"id":"SC43","title":"다음 교대에게","location":"상황실 회의탁자","present":["강서진","박하린","이도윤","최유라"],"remote":[],"props":["수문상태표","대피완료표","원본봉인번호"],"speaking_cast_size":4,"target_utterances":5,"dramatic_owner":"강서진","speech_act":"HANDOFF","obligation":"성공상태와 미결책임을 구분해 다음 교대에 넘긴다.","turn":"운영종결과 조사부채 분리"},
+    {"id":"SC44","title":"조기검수 메일의 참조자","location":"상황실 기록석","present":["박하린","강서진"],"remote":[],"props":["검수촉진 메일 원본","참조자 목록"],"speaking_cast_size":2,"target_utterances":7,"dramatic_owner":"박하린","speech_act":"DISCOVER","obligation":"하린이 조기검수 메일에 예상 밖 상급자 참조자가 있었음을 발견한다.","turn":"새 책임훅 생성"},
+    {"id":"SC45","title":"젖은 선","location":"동측 수문 하류 계단","present":["이도윤","강서진","박하린","최유라","한미숙"],"remote":[],"props":["벽의 이전 최고수위 물선","새 수위표","새벽빛"],"speaking_cast_size":5,"target_utterances":9,"dramatic_owner":"강서진","speech_act":"WITHHOLD","obligation":"모두가 낮아진 수위를 직접 보지만 책임결론은 말하지 않는다. 마지막 이미지는 이전 물선 아래에서 멈춘 새 물높이와 봉인된 로그번호다.","turn":"안전은 닫고 책임은 연다"}
+  ],
+  "planning_audit": {
+    "sequence_count": 9,
+    "scene_count": 45,
+    "speaking_cast_sizes_present": [1,2,3,4,5,6],
+    "two_person_scenes": ["SC02","SC06","SC09","SC13","SC16","SC22","SC25","SC27","SC32","SC37","SC40","SC44"],
+    "low_dialogue_scenes_0_to_2": ["SC04","SC12","SC20","SC30","SC35","SC42"],
+    "five_plus_speaker_scenes": ["SC05","SC10","SC15","SC19","SC23","SC29","SC34","SC38","SC45"],
+    "remote_crosscut_scenes": ["SC03","SC08","SC21","SC26","SC38"],
+    "civilian_choice_scenes": ["SC06","SC09","SC22","SC25","SC31","SC35","SC41"],
+    "designated_crisis_chains": ["SC11-SC20","SC21-SC25","SC36-SC40"],
+    "orphan_scenes": 0,
+    "fresh_domain": true
+  }
+}
