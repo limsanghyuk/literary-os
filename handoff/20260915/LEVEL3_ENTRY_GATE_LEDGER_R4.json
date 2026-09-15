@@ -1,0 +1,16 @@
+{
+  "schema": "Level3EntryGateLedgerR4",
+  "date": "2026-09-15",
+  "maturity": "PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS",
+  "gates": {
+    "G0_AUTHORITY_RECONCILIATION": "PASS",
+    "E1_CLEAN_INDEPENDENT_HUMAN_SURFACE": "CLOSED_PASS",
+    "E2_DB64_FUEL_FULL_PLANNING": "CLOSED_PASS",
+    "E3_FRESH_WHOLE_EPISODE_INTEGRATION": "CLOSED_PASS",
+    "E4_MULTI_EPISODE_STATE_CARRY": "NEXT__NOT_STARTED",
+    "E5_FAULT_INJECTION_AUTONOMOUS_RECOVERY": "PENDING",
+    "E6_FORMAL_LEVEL3_QUALIFICATION": "PENDING"
+  },
+  "promotion_rule": "LEVEL_3_ENTERED only after all required E1-E6 evidence closes. E1-E3 alone are insufficient.",
+  "next_legal_action": "Preregister E4 from the E3-R2 committed episode state while preserving E3-R1 FAIL and E3-R2 recovery evidence."
+}
