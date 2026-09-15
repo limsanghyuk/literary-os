@@ -1,0 +1,41 @@
+{
+  "schema": "E1R2ImmutableClosureR1",
+  "date": "2026-09-15",
+  "experiment_id": "P07-LEVEL3-E1-R2-FRESH-SURFACE-FORMAT-CLOSURE",
+  "parent_physical_authority": "SYNC-R42",
+  "verdict": "PASS__E1_CLEAN_INDEPENDENT_HUMAN_SURFACE_CLOSED",
+  "immutable": true,
+  "primary_panel_rule": "First valid response per J01/J02/J03 packet in user attachment arrival order; later same-packet responses are auxiliary replication.",
+  "primary_panel": {
+    "J01": {"provider_family":"GPT","candidate_W":9,"T":1,"L":2,"nonloss":10,"individual_gate":"PASS"},
+    "J02": {"provider_family":"Claude","candidate_W":11,"T":0,"L":1,"nonloss":11,"individual_gate":"PASS"},
+    "J03": {"provider_family":"Claude","candidate_W":10,"T":1,"L":1,"nonloss":11,"individual_gate":"PASS"},
+    "majority": {"candidate_W":11,"T":0,"L":1,"nonloss":11},
+    "judges_passing_individual_gate": 3,
+    "position_nonloss": {"EARLY":true,"MIDDLE":true,"LATE":true},
+    "verified_candidate_critical_violations": 0
+  },
+  "auxiliary_replication": {
+    "GPT_three_judge_majority": {"candidate_W":9,"T":1,"L":2,"nonloss":10},
+    "Claude_three_judge_majority": {"candidate_W":11,"T":0,"L":1,"nonloss":11},
+    "localized_hygiene_defect": "E1R2U08 abstract clause adjudicated minor, not critical."
+  },
+  "critical_adjudication": {
+    "unit_id":"E1R2U08",
+    "flagged_clause":"‘여기 있을 동안’이라는 말이 생각보다 오래 남는다.",
+    "context":"태경의 손이 가방 지퍼에서 멈춘다. ‘여기 있을 동안’이라는 말이 생각보다 오래 남는다.",
+    "decision":"MINOR_SURFACE_HYGIENE_DEFECT__NOT_VERIFIED_CRITICAL",
+    "candidate_modified":false,
+    "judgments_modified":false,
+    "threshold_changed":false
+  },
+  "claim_boundary": [
+    "Closes E1 Clean Independent/Human Surface evidence for Level-3 entry qualification.",
+    "Does not by itself enter Level 3.",
+    "Does not validate fresh whole-episode integration, multi-episode state carry, autonomous recovery, Production promotion, or Formal R140."
+  ],
+  "next_gate": "E3_FRESH_WHOLE_EPISODE_INTEGRATION",
+  "formal_scored_increment": 0,
+  "production_promotion": false,
+  "level3_entered": false
+}
