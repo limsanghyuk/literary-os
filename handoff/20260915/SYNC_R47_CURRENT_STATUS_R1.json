@@ -1,0 +1,26 @@
+{
+  "schema": "LiteraryOSSyncR47CurrentStatusR1",
+  "date": "2026-09-15",
+  "physical_authority": "SYNC-R47",
+  "transport_root_sha256": "fc259f51e177ce5fb24ec918657966ef116e8ca47aa5f41afcbcf989f40d19f8",
+  "parent_sync": "SYNC-R46",
+  "parent_root_sha256": "2aafe621ac2c42e5d9558646c2c16ab45701b4025ea8328d6070fc3843dc0cf1",
+  "maturity": "PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS",
+  "E1": "CLOSED_PASS",
+  "E2": "CLOSED_PASS",
+  "E3": {
+    "R1": "FAIL__CRITICAL_META_LEAKAGE__SAFE_NO_COMMIT",
+    "R2": "PASS__E3_FRESH_WHOLE_EPISODE_INTEGRATION_CLOSED",
+    "R2_surface_sha256": "f963dc1455c25c0690864aa499f5be340fb70c1f5c02424e0c4f68794410b92c",
+    "R2_surface_chars": 41583,
+    "state_commit": "STATE_COMMIT"
+  },
+  "E4": "NEXT__NOT_STARTED",
+  "active_engine": "P07-I4H Recovery R3",
+  "production_engine": "ENG:R47",
+  "formal_scored_total": 137,
+  "latest_formal": "R138",
+  "formal_r140": "0/0/0",
+  "db64_is_production": false,
+  "level3_entered": false
+}
