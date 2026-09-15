@@ -1,0 +1,16 @@
+{
+  "schema": "Level3EntryGateLedgerR5",
+  "date": "2026-09-15",
+  "maturity": "PRE_LEVEL_3__LEVEL_3_ENTRY_QUALIFICATION_IN_PROGRESS",
+  "gates": {
+    "G0_AUTHORITY_RECONCILIATION": "PASS",
+    "E1_CLEAN_INDEPENDENT_HUMAN_SURFACE": "CLOSED_PASS",
+    "E2_DB64_FUEL_FULL_PLANNING": "CLOSED_PASS",
+    "E3_FRESH_WHOLE_EPISODE_INTEGRATION": "CLOSED_PASS",
+    "E4_MULTI_EPISODE_STATE_CARRY": "CLOSED_PASS",
+    "E5_FAULT_INJECTION_AUTONOMOUS_RECOVERY": "NEXT__NOT_STARTED",
+    "E6_FORMAL_LEVEL3_QUALIFICATION": "PENDING"
+  },
+  "next_legal_action": "Preregister E5 against the committed EP03 state. E5 must test Detect -> Localize Responsible Ancestor -> Repair/Abstain -> Revalidate -> STATE_COMMIT or SAFE_NO_COMMIT.",
+  "level3_entered": false
+}
