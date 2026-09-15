@@ -1,6 +1,12 @@
 # CURRENT SESSION RECOVERY POINTER
 Last updated: 2026-09-15
 
+## CANONICAL NEW-SESSION BOOTSTRAP
+`handoff/20260915/START_HERE_R52_POSTPHYSICAL_SHOWRUNNER_REQUALIFICATION_NEW_SESSION_HANDOFF_R1.md`
+
+Machine-readable status:
+`handoff/20260915/R52_POSTPHYSICAL_RESEARCH_STATUS_AND_RESUME_R1.json`
+
 ## CURRENT PHYSICAL AUTHORITY
 **SYNC-R52**
 Root SHA256:
@@ -9,104 +15,72 @@ Root SHA256:
 Required physical read order:
 `CONTROL -> A -> B1 -> B2 -> C1 -> C2-A -> C2-B -> D1 -> D2`
 
-No post-R52 physical reseal is claimed yet.
+**No post-R52 physical reseal is claimed.**
+The developer's last physically provided package set is SYNC-R52 plus its verification/evidence bundles, E6-R1 failure package, E6 successor repair package, E6-R2 closure package and E6-R2 45,064-character screenplay.
 
-## MATURITY / CLAIM STATUS
+All research described below occurred after that physical boundary and is Hub-only development/research evidence unless explicitly stated otherwise.
+
+## CLAIM STATUS
 Historical `LEVEL_3_ENTERED` declaration is preserved in lineage.
-Current operational research claim:
+Current operational claim:
 `LEVEL_3_OPERATIONAL_CLAIM_SUSPENDED__SHOWRUNNER_REQUALIFICATION_IN_PROGRESS`
 Level 4 has NOT started.
 
-## PRESERVED HISTORY
-- E1 PASS
-- E2 PASS
-- E3 PASS
-- E4 PASS
-- E5 PASS
-- E6-R1 immutable FAIL / SAFE_NO_COMMIT
-- E6 successor Surface Boundary / Validator Repair PASS
-- E6-R2 PASS under original frozen gates; later whole-script review narrowed its claim
+## POST-R52 HUB-ONLY RESEARCH STATE
+- E6-R2 post-hoc whole-script review narrowed the claim
 - R3-A dramaturgy microbench PASS
-- R3-B whole-episode immutable FAIL / SAFE_NO_COMMIT
-- R3-C C1 direction-detection PASS
+- R3-B fresh whole-episode immutable FAIL / SAFE_NO_COMMIT
+- R3-C C1 direction-detection regression PASS
 - R3-C C2 show-only dramaturgy microbench PASS
 - R3-D D1 Historical Contract Restoration Audit PASS
 - R3-D D2 Hierarchical Architecture Microbench PASS
-- R3-D D3 50-Scene Contract Lowering PASS / surface=0
+- R3-D D3 50-Scene Contract Lowering PASS / screenplay surface=0 / State Commit=0 / external judgments=0
+- R3-E Showrunner Requalification Master Plan FROZEN
+- R3-E scientific execution NOT STARTED
 
-## CONFIRMED ROOT CAUSE
-Two coupled regressions are now the controlling diagnosis.
-
+## CONTROLLING DIAGNOSIS
 1. `ARCHITECTURE_CONSUMPTION_REGRESSION`
-   - FullSeriesArc/EpisodeArc/SequenceBlueprint/SceneBlueprint and writer-room/showrunner research existed historically.
-   - Active E3/E6 planner contracts did not force the whole architecture to remain load-bearing.
-   - E6 in particular compressed planning toward objective/state/sequence-task decomposition.
-
 2. `SURFACE_REALIZATION_REGRESSION`
-   - E6 formal hardening improved mechanical/state/token leakage control.
-   - E6-R2 fixed renderer topology and semantic-plan paraphrase reduced dialogue/scene diversity and direct agency.
-   - Original E6 gates did not adequately measure whole-episode dramaturgy construct validity.
+3. `WHOLE_EPISODE_DRAMATURGY_CONSTRUCT_VALIDITY_GAP`
 
-E3-R2 is therefore retained as a `POSITIVE_PARTIAL_CONTROL`: its surface was more human/socially varied than E6, but its secondary lines were still overly dependent on one parent operational objective.
-E6-R2 is retained as a `NEGATIVE_REGRESSION_CONTROL`.
+Historical Series/Episode/Sequence/Scene and showrunner research exists. The unresolved question is whether those algorithms are actually implemented and mandatory in the candidate-engine main path, and whether E6 bypassed or truncated that path.
 
-## HUMAN / HISTORICAL REFERENCE
-The human DB is a structural/craft reference, not a story-copy source.
-Use abstract architecture evidence only: episode function, acts/movements, POV/owners, value shifts, relationship/thread debts, subplot allocation, collision/convergence and scene-function patterns.
-Never copy names, incidents, plot solutions, distinctive twists, dialogue or scene order into a fresh work.
+## EXACT FIRST ACTION
+Before a new screenplay and before R3-E2:
 
-The original target is a Showrunner Operating Layer:
-`Series Identity/Long Arc -> Narrative State -> Episode Function -> Character/Relationship/Thread Debts -> Multi-story Allocation -> Ensemble/Event Ownership -> Candidate Portfolio -> Episode Architecture -> Sequence Value Shifts -> Scene Contracts -> Surface -> Diagnostics -> Responsible-Ancestor Replan -> State Commit/Carry`.
+Run `SHOWRUNNER_MAIN_PATH_CONSUMPTION_AND_E6_PARITY_AUDIT_R1`.
 
-## R3-D CURRENT DEVELOPMENT EVIDENCE
-D2 fresh domain:
-`해람일보 탐사보도팀 / EP07 〈한 줄을 빼는 값〉`
+Prove, by code/call-path evidence:
+- concept/schema existence;
+- algorithm implementation existence;
+- main-path wiring/invocation;
+- E3/E6 harness parity or bypass;
+- field-level consumption;
+- fallback/bypass behavior;
+- fail-closed vs silent degradation.
 
-D3 status:
-- 50/50 scene contracts
-- orphan scenes 0
-- four development story axes preserved
-- dominant axis 30%
-- all seven cross-axis regions preserved
-- direct supporting-character agency represented
-- no fixed 4-person/6-utterance topology encoded
-- screenplay surface = 0
-- State Commit = 0
-- external judgments = 0
+Classify each layer as one of:
+- `IMPLEMENTED_AND_WIRED__E6_HARNESS_BYPASS`
+- `IMPLEMENTED_BUT_DORMANT_OR_PARTIALLY_WIRED`
+- `SCHEMA_PRESENT__ALGORITHM_NOT_IMPLEMENTED`
+- `IMPLEMENTED__CONSUMPTION_RECEIPT_MISSING`
+- mixed by layer.
 
-R3-D is development evidence only. Four story axes are NOT a new fixed writing formula.
+If wiring can be bypassed or consumption cannot be proven, implement a fail-closed `SHOWRUNNER_MAIN_PATH_CONSUMPTION_RECEIPT` plus tests before continuing.
 
-## NEW MASTER PLAN
-Read:
+Then resume frozen sequence:
+`R3-E0 -> R3-E1 -> R3-E2 -> conditional E3/E4/E5/E6/E7/E8/E9/E10`.
+
+## MASTER PLAN
 `handoff/20260915/R3E_SHOWRUNNER_REQUALIFICATION_MASTER_PLAN_R1.md`
 
-The plan introduces a mandatory Forward-Reverse Architecture Closure gate: after a new top-down episode is rendered, the plan is hidden and the human-style reverse-analysis stack must recover EpisodeArc/SequenceBlueprint structure from the screenplay. A plan that claims multi-story architecture but renders as one operational chain fails.
-
-## EXACT NEXT LEGAL ACTION
-Do NOT immediately use the existing R3-D 50-scene plan as the formal requalification answer.
-
-Proceed in this order:
-1. R3-E0 Authority / Evidence Lock.
-2. R3-E1 E3-vs-E6 Regression Causal Audit at Episode/Sequence/Scene/Surface levels.
-3. R3-E2 fresh paired Showrunner Consumption Causal Ablation:
-   - Control = objective/state-only planner;
-   - Treatment = full showrunner architecture consumption;
-   - same frozen fresh synthetic series state;
-   - architecture only, no screenplay prose.
-4. Only if Treatment passes causal architecture gates, run Candidate Portfolio / Selector.
-5. Freeze a fresh selected Episode/Sequence/Scene architecture.
-6. Render a fresh >=35,000-character whole episode under R3-C surface rules.
-7. Run Forward-Reverse Architecture Closure plus whole-episode dramaturgy/state/spatial/Korean audits.
-8. Only internal PASS may proceed to independent external blind evaluation.
-9. Only external PASS + physical 5-Part/9-Package reseal + pointer update may restore the operational Level-3 claim.
-
-The existing R3-D plan may be used later as development-only renderer diagnostics, but it may not substitute for the fresh preregistered R3-E qualification.
+Do NOT use the existing R3-D 50-scene plan as the formal R3-E answer. It is development evidence only.
 
 ## CLAIM RESTORATION RULE
-`LEVEL_3_OPERATIONAL_CLAIM_RESTORED` remains prohibited until:
-- Showrunner-consumption causal proof PASS;
+`LEVEL_3_OPERATIONAL_CLAIM_RESTORED` is prohibited until:
+- showrunner-consumption causal proof PASS;
 - fresh whole-episode architecture and surface PASS;
-- Forward-Reverse Closure PASS;
+- Forward-Reverse Architecture Closure PASS;
 - fresh independent external blind PASS;
 - physical 5-Part/9-Package reseal;
 - all Hub pointers updated to that physical authority.
@@ -118,8 +92,7 @@ The existing R3-D plan may be used later as development-only renderer diagnostic
 - Formal scored total: 137
 - Latest Formal: R138
 - Formal R140: 0/0/0
-- DB64 remains non-Production
-- Level 4: NOT STARTED
+- DB64: non-Production
 
 ## STATUS TOKEN
-`SYNC_R52_PHYSICAL__LEVEL3_OPERATIONAL_CLAIM_SUSPENDED__R3D_D1_D2_D3_PASS__R3E_MASTER_PLAN_FROZEN__NEXT_R3E0_E1_E2__NO_NEW_SURFACE_OUTPUT`
+`PHYSICAL_SYNC_R52_ONLY__POST_R52_HUB_ONLY__LEVEL3_OPERATIONAL_CLAIM_SUSPENDED__R3A_PASS__R3B_FAIL__R3C_PASS__R3D_D1_D2_D3_PASS_SURFACE0__R3E_FROZEN_NOT_STARTED__NEXT_ENGINE_MAIN_PATH_AUDIT__NO_LEVEL4`
