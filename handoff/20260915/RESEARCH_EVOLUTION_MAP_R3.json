@@ -1,0 +1,26 @@
+{
+  "schema": "LiteraryOSResearchEvolutionMapR3",
+  "date": "2026-09-15",
+  "mandatory_recovery_read_order": ["CURRENT_SESSION_RECOVERY_POINTER","START_HERE current sync","RESEARCH_EVOLUTION_MAP_R3","LEVEL3_ENTRY_GATE_LEDGER_R5","individual experiment records/evidence"],
+  "major_lineage": [
+    {"node":"R133","status":"FAIL_EXTERNAL","problem":"internal/external surface-quality gap exposed"},
+    {"node":"A2R31-A2R34","status":"FAIL_LINEAGE","evolution":"successive DB64 utility/realization failures isolated monotonic-retention and case-binding requirements"},
+    {"node":"A2R35 / E2","status":"CLOSED_PASS","result":"10W/2T/0L; full-planning interface qualified"},
+    {"node":"E1_R1","status":"SUPERSEDED_BEFORE_JUDGMENT__NO_SCORE","problem":"screenplay format/source-format blinding inadequate"},
+    {"node":"E1_R2","status":"CLOSED_PASS","result":"primary external majority 11W/0T/1L; GPT/Claude replication support"},
+    {"node":"E3_R1","status":"FAIL__CRITICAL_META_LEAKAGE__SAFE_NO_COMMIT","problem":"one final-surface internal-meta leak despite planning/semantic success"},
+    {"node":"E3_R2","status":"CLOSED_PASS","result":"prospective targeted one-line boundary recovery; 41,583 chars; STATE_COMMIT"},
+    {"node":"E4_EP02_PREOUTPUT_IMPL","status":"PREOUTPUT_IMPLEMENTATION_ERROR__NOT_SCIENTIFIC_FAILURE","problem":"fixed-three-participant generator failed on four-person ensemble; outputs 0"},
+    {"node":"E4_EP02","status":"PASS__STATE_COMMIT","result":"52,705 chars / 9 sequences / 45 scenes; EP01 parent hash consumed exactly"},
+    {"node":"E4_EP03","status":"PASS__STATE_COMMIT","result":"51,717 chars / 9 sequences / 45 scenes; exact EP02 committed-state parent"},
+    {"node":"E4","status":"CLOSED_PASS","result":"three-episode carry chain passed character/relationship/ensemble/social-ecology/events/plot/open-thread/debt/world/provenance gates"}
+  ],
+  "E4_key_transitions": {
+    "윤서하↔강태우": "CONDITIONAL_OPERATIONAL_TRUST → OPERATIONAL_TRUST_STRENGTHENED → STABLE_OPERATIONAL_TRUST",
+    "윤서하↔배수민": "FIRST_VISIBLE_FRACTURE → GUARDED_TRANSPARENCY → PARTIAL_PROFESSIONAL_REPAIR",
+    "resident_state": "28 sheltered → 19 returned / 9 remained → prior 9 + new 17 = 26 safely sheltered",
+    "investigation": "phantom-unit evidence → 12/8/7/5 classification + approval-chain debt → formal audit referral; political responsibility remains open"
+  },
+  "current_transition": "E1 PASS + E2 PASS + E3 PASS + E4 PASS -> E5 Fault Injection / Autonomous Recovery",
+  "unchanged_authorities": {"active_engine":"P07-I4H Recovery R3","production_engine":"ENG:R47","formal_scored_total":137,"latest_formal":"R138","formal_r140":"0/0/0","db64_is_production":false,"level3_entered":false}
+}
