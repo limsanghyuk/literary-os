@@ -1,91 +1,98 @@
 # CURRENT SESSION RECOVERY POINTER
-Last updated: 2026-09-16
+Last updated: 2026-09-17
 
 ## READ FIRST
-Physical recovery root remains **SYNC-R53** with direct **9/9 PASS** verification.
+Current sealed physical successor set: **SYNC-R57**.
+Parent historical recovery root: **SYNC-R53**.
+Production remains **ENG:R47 / LEGACY_R53**.
+Candidate execution must use the physically integrated **R57 `ADAPTIVE_UL16`** route.
+Runtime DB authority remains **DB59 frozen**.
 
-Mandatory execution protocol:
-`handoff/20260916/RUNTIME_CONTAINER_HUB_ATOMIC_EXECUTION_PROTOCOL_R4.md`
+Canonical R57 receipt:
+`handoff/20260917/SYNC_R57_PHYSICALIZATION_AND_DELIVERY_RECEIPT_R1.md`
 
-Direct 9/9 recovery receipt:
-`handoff/20260916/R53_DIRECT_9_OF_9_RECOVERY_VERIFICATION_RECEIPT_R1.md`
+Mandatory execution safety:
+- `handoff/20260916/RUNTIME_CONTAINER_HUB_AUTHORITY_SYNC_GATE_R6.md`
+- `handoff/20260916/RUNTIME_CONTAINER_HUB_TURN_BOUNDED_EXECUTION_PROTOCOL_R5.md`
+- `handoff/20260916/RUNTIME_CONTAINER_HUB_ATOMIC_EXECUTION_PROTOCOL_R4.md`
 
-## RECURRING FAILURE ROOT CAUSE
-The repeated interruption/error pattern is classified as:
+## R57 5 PARTS / 9 PACKAGES — READ ORDER
+1. CONTROL — `LITERARY_OS_CURRENT_CONTROL_P07_I4H_RECOVERY_R3_SYNC_R57_20260917.zip`
+   SHA256 `b9729444453f57da34b2a5f7c5796ce4d6f8c51389f3f1333719370dd5720058`
+2. A — `LITERARY_OS_CURRENT_PART_A_P07_I4H_RECOVERY_R3_UPPER_LAYER_SYNC_R57_20260917.zip`
+   SHA256 `4ff7dba51dfe4e50af75a6091b646240addea55912db144d262ac4ca2d5e8b92`
+3. B1 — `LITERARY_OS_CURRENT_PART_B1_UNCHANGED_R1_20260909_SYNC_R57_BYTE_UNCHANGED.zip`
+   SHA256 `00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98`
+4. B2 — `LITERARY_OS_CURRENT_PART_B2_P07_I4H_RECOVERY_R3_UPPER_LAYER_SYNC_R57_20260917.zip`
+   SHA256 `492c908f31ca742fe2ac1bf07ffac26d0a8245296c1b1654cb2d13ef4caffc34`
+5. C1 — `LITERARY_OS_CURRENT_C1_RUNTIME_CORE_P07_I4H_RECOVERY_R3_SYNC_R57_20260917.zip`
+   SHA256 `d9bf7cfb6df3c9d8dcde71ee90e329eb49ced25b1f29dd035dd5e02e89e1c463`
+6. C2-A — `LITERARY_OS_CURRENT_C2_BINARY_A_P07_I4H_RECOVERY_R3_SYNC_R57_20260917.bin`
+   SHA256 `79b8106590f91bfcd63221b048ab4117551d77fc920ee2ca4a0807398e4cb37c`
+7. C2-B — `LITERARY_OS_CURRENT_C2_BINARY_B_P07_I4H_RECOVERY_R3_SYNC_R57_20260917.bin`
+   SHA256 `c123a404c8eae654bf88fff67a76bc1bb1bcf6eb94c79fb79d173b5a9478f76e`
+8. D1 — `LITERARY_OS_CURRENT_PART_D1_DB59_UNCHANGED_R1_20260909_SYNC_R57_BYTE_UNCHANGED.zip`
+   SHA256 `a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504`
+9. D2 — `LITERARY_OS_CURRENT_PART_D2_DB59_UNCHANGED_R1_20260909_SYNC_R57_BYTE_UNCHANGED.zip`
+   SHA256 `c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4`
 
-`NON_ATOMIC_LONG_WORKFLOW + LARGE_IO_PRESSURE + LATE_CHECKPOINTING + STATUS_CLASSIFICATION_AMBIGUITY`.
+Changed from R53: CONTROL / A / B2 / C1 / C2-A / C2-B.
+Byte-unchanged: B1 / D1 / D2.
 
-Historical runtime evidence:
-- cgroup hard limit: 4 GiB;
-- historical memory peak: 4 GiB;
-- historical `memory.events max`: 117;
-- OOM/OOM-kill: 0;
-- final UL-16 lightweight checkpoint transaction: `memory.events max` delta 0.
+## CRITICAL BINDINGS
+Integrated R57 runtime SHA256:
+`2c57f6b5ade4061d01cdf62bda1d0c5a856053604e9d519bce04ebd6d6528a7c`.
 
-R4 requires atomic transaction boundaries. Do not chain multiple heavy corpus/package operations before writing a small receipt and CURRENT pointer.
+Candidate overlay SHA256:
+`5b82217cc81a686de8e45afe7bdc1b31a36874f62374ce9883b859224654570a`.
 
-## PHYSICAL RECOVERY ROOT
-**SYNC-R53** remains the physical authority/root.
+C1/C2 runtime identity: PASS.
+C1/C2 Candidate overlay identity: PASS.
+C2 A+B reconstruction:
+- bytes 338,045,637
+- SHA256 `2f7b95fc555e48f235bc2eb9c9b82a286c7aa407f112528ff6abff75665f556a`
+- CRC PASS.
 
-Order:
-`CONTROL -> A -> B1 -> B2 -> C1 -> C2-A -> C2-B -> D1 -> D2`
+Narrative Engine Master unchanged:
+`5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649`.
 
-Critical canonical reconstruction receipts remain valid:
-- Narrative Engine Master SHA256 `5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649` PASS;
-- DB59 SHA256 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9` PASS.
+DB59 unchanged:
+`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
 
-Do not repeat full R53/DB64 reconstruction merely for reassurance if sealed receipts remain applicable.
+## WHAT R57 ADDS
+R57 physically carries the session's Showrunner repairs:
+- Adaptive Multi-Obligation planning;
+- semantic relationship/information/social preservation;
+- transaction-local ensemble topology;
+- State Commit/Carry and next-episode semantic reconsumption;
+- Responsible-Ancestor Replan;
+- Legacy Canonical compatibility;
+- fail-closed anti-repetition.
 
-## UPPER-LAYER RESEARCH CORRECTION
-Previous upper-layer stability assumption is withdrawn.
+Anti-repetition means no cloned obligation phases and no repeated scene padding. Insufficient unique material must HOLD and replan upstream.
 
-Canonical read order:
-1. `research/upper_layer/20260916/UL14_HUMAN_AUTHORED_HIERARCHICAL_CENSUS_AND_GAP_AUDIT_R1.md`
-2. `research/upper_layer/20260916/UL15_ADAPTIVE_MULTI_OBLIGATION_PLANNER_PREREGISTRATION_R1.md`
-3. `research/upper_layer/20260916/UL15_IMPLEMENTATION_AND_CANONICAL_COMPATIBILITY_RECEIPT_R1.md`
-4. `research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_PLAN_R1.md`
-5. `research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_RECEIPT_R1.md`
+## PERSISTENT CUSTODY
+Library path:
+`/Literary_OS/Physical_Archive/SYNC_R57_20260917/`
 
-Current claim:
-`UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED`.
+All 9 packages are re-listable and byte sizes match the local sealed set. Raw Library re-download/rehash is not authorized by this Project path, so durable independent archive proof remains NOT_VERIFIED.
 
-## CURRENT UL-16 CHECKPOINT
-Actual R53 runtime source working copy now contains research-only Candidate route `ADAPTIVE_UL16` while preserving Legacy route `LEGACY_R53`.
+If future local bytes do not match these hashes, do not substitute R53, R5, or ENG:R47 for Candidate execution. Enter `AUTHORITY_BYTES_UNAVAILABLE_HOLD` or use the exact R57 packages supplied to the developer/user.
 
-Closed software/structural gates:
-- current-state obligation compiler PASS;
-- same-input adaptive graph PASS;
-- due/defer integrity PASS;
-- dynamic sequence count PASS;
-- future-source leakage fail-closed PASS;
-- unknown mode fail-closed PASS;
-- Canonical IR PASS;
-- runtime compile 45/45 PASS;
-- Legacy graph-hash invariance PASS.
+## QUALIFICATION RESET
+Old R5 architecture blind packets predate R57 anti-repetition and cannot qualify R57.
 
-Research runtime package SHA256:
-`c1dfda09c97771f56aa88adc402c8fe05a03c0fd2b93205b83dafdc8d2101441`
-
-Persistent Library:
-`/Literary_OS/Physical_Archive/RESEARCH_UL16_20260916/LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R1_20260916.zip`
-
-This does not change physical authority.
-
-## EXACT NEXT EXECUTION ORDER
-1. Open a new R4 atomic transaction and freeze resource/event baseline.
-2. Run multi-work cutoff-safe structural replay using small derived fixtures/receipts rather than reopening the full corpus.
-3. Audit relationship/social-ecology/ensemble obligation semantics and Scene Transaction quality.
-4. Close state commit/carry and Responsible-Ancestor Replan regression on adaptive graphs.
-5. Run architecture-only independent blind evaluation at Episode/Sequence/Scene levels.
-6. Only after architecture qualification run real fresh-context OpenAI Provider generation with receipts and >=35k broadcast surface evaluation.
-7. Close whole-system regression.
-8. Only then build a NEW SYNC successor and independently pass all 12 custody gates.
+Next execution:
+1. SHA-sync to R57 Candidate bytes;
+2. create fresh R57 architecture-only blind packets vs ENG:R47 control;
+3. collect independent judgments and close R57 blind gate;
+4. only if PASS, run real Provider >=35k screenplay qualification;
+5. whole-system regression;
+6. Production promotion remains separate and has not occurred.
 
 ## UNCHANGED AUTHORITIES
-- Physical: SYNC-R53
 - Production: ENG:R47
-- Candidate Base authority: P07-I4H Recovery R3
-- DB: DB59 frozen
+- Runtime DB: DB59 frozen
 - Formal total: 137
 - Latest Formal: R138
 - R140: 0/0/0
@@ -93,4 +100,4 @@ This does not change physical authority.
 - Level 4: NOT STARTED
 
 ## STATUS TOKEN
-`RECOVERY__SYNC_R53_ROOT__R4_ATOMIC_EXECUTION__UL16_MAIN_PATH_RESEARCH_INTEGRATION_PASS__NEXT_MULTIWORK_ARCHITECTURE_STATE_CARRY_BLIND_PROVIDER__NO_AUTHORITY_CHANGE`
+`RECOVERY__SYNC_R57_SEALED_PHYSICAL_SUCCESSOR__9_PACKAGE_HASH_MANIFEST_LOCKED__R57_ADAPTIVE_UL16_REQUIRED_FOR_CANDIDATE__ANTI_REPETITION_PHYSICAL__ENG_R47_CONTROL_ONLY__FRESH_R57_BLIND_NEXT__DURABLE_REDOWNLOAD_NOT_VERIFIED`
