@@ -1,40 +1,47 @@
 # CURRENT NEXT RESEARCH POINTER
-Last updated: 2026-09-12
+Last updated: 2026-09-16
 
 ## CURRENT PHYSICAL BASELINE
-**SYNC-R33** root `39487b9dc0ff12e2c75c16a1d5d8d7192dfb53e1ef14dc71d03c4474f1541d87` is the latest fully materialized and twice-audited physical authority.
+**SYNC-R53** is the last complete developer-held 5-Part / 9-Package baseline.
 
-Recovery handoff:
-`handoff/20260912/START_HERE_SYNC_R33_PHYSICAL_AUTHORITY_I4C_MIXED_WEAK_NEW_SESSION_HANDOFF_R1.md`
+Canonical recovery handoff:
+`handoff/20260916/START_HERE_SYNC_R53_POSTSESSION_RESEARCH_HANDOFF_R1.md`
 
-Delivery manifest:
-`handoff/20260912/SYNC_R33_DELIVERY_MANIFEST_R1_20260912.json`
+Machine-readable state:
+`handoff/20260916/R53_POSTSESSION_RESEARCH_STATUS_AND_RESUME_R1.json`
 
-## R4A TRACK
-G6 PASS; G7 PASS; provider=`HOLD__REAL_PROVIDER_SECRET_ABSENT`; Judges=0; Mapping open=0. Exact surfaces frozen. Do not open mapping or claim independent confirmation.
+Do not use R33/R52 as the current physical baseline. Do not promote local R54/R55/R56 build names over R53.
 
-## EVOLUTION TRACK — LATEST SEALED AND PHYSICALLY PROPAGATED RESULT
-I4C unused-scene mixed-craft independent annotation replication is complete and included in SYNC-R33.
-- J01/J02/J03 valid and sealed.
-- 3-of-3 gate PASS.
-- I4C replication mapping exact byte-seal replay PASS.
-- Final decision=`MIXED_OR_WEAK_REPLICATION`.
-- MIDDLE+LATE minus EARLY breadth=`+0.875`, severity=`+0.875`.
-- Evaluator direction agreement=`3/3`.
-- Frozen strong thresholds breadth=`+1.0`, severity=`+2.0`, direction=`>=2/3`; strong positive replication NOT met.
+## CURRENT RESEARCH POSITION
+The conceptual upper-layer design is substantially closed enough that the next priority is NOT to invent another broad theory.
+
+Current post-R53 research includes UL-11 / UL-12 / UL-13 on top of the prior UL-1..UL-10 lineage.
+
+- UL-11: blind-continuation integrity and fresh-context isolation.
+- UL-12: stateless Provider qualification runner with stable chain_id, unique per-call execution_nonce, and real-receipt requirement.
+- UL-13: end-to-end Synopsis -> Sequence -> Scene -> full Surface qualification plus two-stage external blind protocol.
+
+External judge responses remain 0. Live OpenAI qualification outputs remain 0.
 
 ## EXACT NEXT ORDER
-1. Use SYNC-R33 as the physical baseline and preserve its 9 transport hashes/root.
-2. Do not alter R4A; Judges=0 and Mapping open=0 remain frozen.
-3. Before any new generation/evaluation, preregister one narrow craft-mechanism hypothesis on fresh/unseen material.
-4. The hypothesis must be more specific than “middle/late scenes degrade” or “the renderer is weak”; it must identify an observable craft mechanism with a falsifiable intervention.
-5. Freeze input, source cutoff, Control/Treatment, response contract, mapping policy, metrics and thresholds before outputs.
-6. Keep absolute-surface quality, relative intervention effect, contract-consumption fidelity and independent evaluation as separate evidence layers.
-7. Do not rewrite I4C thresholds or historical scores.
-8. Only a later qualified result may change Engine/Production/DB/Formal authority.
+1. Recover a healthy container/runtime.
+2. Recover and verify the developer-held SYNC-R53 nine-package baseline.
+3. Reintegrate the full validated post-R53 Candidate overlay in a clean build.
+4. Create a NEW SYNC successor number; do not rewrite R54/R55/R56 history.
+5. Pass the 12-step physical-custody gate, including actual attachment/download 9/9 and durable archive locator.
+6. Run UL-13 external Stage-1 Surface-only blind evaluation and seal responses.
+7. Reveal plans only in Stage 2 and score plan-to-surface fidelity / hierarchical recoverability.
+8. Run actual OpenAI Responses API Candidate qualification with separate fresh contexts for sibling candidates and ablation arms and with real provider receipts.
+9. Repeat whole-episode end-to-end qualification under the real Provider.
+10. Only after external + live Provider evidence and physical reseal may Candidate Production promotion be considered.
 
 ## CLAIM BOUNDARY
-`MIXED_OR_WEAK_REPLICATION` is knowledge-only. Physical propagation to R33 closes synchronization debt; it does not convert the result into causal evidence or authorize a broad renderer patch.
+- Production ENG:R47 unchanged.
+- Operational Level-3 claim remains SUSPENDED.
+- Level 4 NOT STARTED.
+- Internal/virtual PASS is not external literary-quality PASS.
+- Virtual receipt is not a live OpenAI receipt.
+- Public-target hidden-file status is not proof against model memorization.
 
 ## STATUS TOKEN
-`PHYSICAL_SYNC_R33_READY__NEXT_NARROW_CRAFT_MECHANISM_PREREGISTRATION_ALLOWED__NOT_YET_ACTIVE__R4A_CLOSED`
+`PHYSICAL_SYNC_R53__NEXT_RECOVER_REBUILD_NEW_SYNC_9_OF_9__THEN_UL13_EXTERNAL_BLIND__THEN_REAL_FRESH_CONTEXT_PROVIDER_QUALIFICATION__NO_PRODUCTION_PROMOTION_YET`
