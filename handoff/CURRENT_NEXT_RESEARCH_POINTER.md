@@ -8,8 +8,11 @@ Last updated: 2026-09-16
 - Runtime DB authority: **DB59 frozen**.
 
 Mandatory execution protocols:
+- **authority-sync gate first:** `handoff/20260916/RUNTIME_CONTAINER_HUB_AUTHORITY_SYNC_GATE_R6.md`
 - turn-bounded closure: `handoff/20260916/RUNTIME_CONTAINER_HUB_TURN_BOUNDED_EXECUTION_PROTOCOL_R5.md`
 - atomic transaction parent: `handoff/20260916/RUNTIME_CONTAINER_HUB_ATOMIC_EXECUTION_PROTOCOL_R4.md`
+
+Before any Candidate runtime execution: fetch this pointer, resolve the canonical package SHA, hash the local bytes, and require exact equality. A local filename is not authority evidence. If canonical bytes cannot be obtained, enter `AUTHORITY_BYTES_UNAVAILABLE_HOLD`; never substitute a stale package.
 
 ## CURRENT RESEARCH CLAIM
 The former upper-layer stability claim remains withdrawn.
@@ -39,6 +42,22 @@ SHA256:
 Corrected prior profile hash:
 `f18c8d6224b23fbd00ad9d8883745945fcb1a0bfa375c829e4baef0fceb2d6ac`
 
+### Authority-desynchronization incident — CLOSED
+Incident receipt:
+`research/upper_layer/20260916/UL16_LOCAL_HUB_AUTHORITY_DESYNC_INCIDENT_RECEIPT_R1.md`
+
+A resumed turn loaded stale local R1 bytes while Hub CURRENT had already advanced to R2. Those stale R1-derived replay/recheck artifacts were quarantined as `STALE_R1_DERIVED_NONAUTHORITATIVE` and are not research authority.
+
+The exact canonical R2 Library asset has now been re-materialized into the active container as:
+`/mnt/data/LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R2_CANONICAL_20260916.zip`
+
+Reverification:
+- size `18,681,762` bytes;
+- SHA256 exact match `7f71484cd2687262d18104b3a9a5cfe727d003d7ed4b616ce8d64702b2da2ca8`;
+- ZIP CRC PASS;
+- current `memory.events max` delta = 0;
+- OOM/OOM-kill = 0.
+
 ## MULTI-WORK STRUCTURAL REPLAY — CLOSED
 Current authoritative replay receipt:
 `research/upper_layer/20260916/UL16_R2_MULTIWORK_STRUCTURAL_REPLAY_RECEIPT_R1.md`
@@ -63,21 +82,21 @@ R2 replay hashes:
 - fixture manifest object: `fd74a802533939ea5fac94e23599dd4489b6030864d028f8cbe5417c535dbcd5`
 - result object: `89b3e708dcf949b8524756ffb3508de802778605e6e2e8242e1b4be2f50dbe68`
 
-An earlier R1 replay attempt was detected before pointer advancement as using superseded runtime input and is explicitly preserved as NON_AUTHORITATIVE audit history:
-`research/upper_layer/20260916/UL16_MULTIWORK_STRUCTURAL_REPLAY_RECEIPT_R1.md`.
+Earlier superseded-runtime replay attempts remain NON_AUTHORITATIVE audit history and must never replace the R2 receipt.
 
 ## INTERPRETATION BOUNDARY
 The replay closes one structural question only: current UL-16 R2 does not collapse diverse multi-work structural burdens into a single fixed Episode/Sequence/Scene grid.
 
 It does **not** establish dramatic/semantic architecture quality because the fixtures intentionally exclude target semantics.
 
-## EXACT NEXT R5-BOUNDED TRANSACTION
+## EXACT NEXT R6+R5-BOUNDED TRANSACTION
 Only the next item should be executed in the next deep transaction:
-1. precheck and resource baseline;
-2. run a cutoff-safe **semantic architecture audit** focused on relationship, social-ecology, ensemble, information and Scene Transaction preservation using small hash-bound fixtures;
-3. seal immutable audit receipt;
-4. update CURRENT pointer;
-5. verify and report completion.
+1. run R6 authority-sync check and resource baseline;
+2. use the verified canonical UL-16 R2 bytes;
+3. run a cutoff-safe **semantic architecture audit** focused on relationship, social-ecology, ensemble, information and Scene Transaction preservation using small hash-bound fixtures;
+4. seal immutable audit receipt;
+5. update CURRENT pointer;
+6. verify and report completion.
 
 After that, later bounded transactions may proceed to:
 - state commit/carry + Responsible-Ancestor Replan regression;
@@ -92,6 +111,7 @@ After that, later bounded transactions may proceed to:
 - Do not use fixed 9–10 sequence / 45–50 scene quotas.
 - Do not repeat 1GB+ scans when sealed receipts and small derived fixtures suffice.
 - Do not treat same-chat simulation as live Provider evidence.
+- Do not execute Candidate research from a local package whose SHA does not exactly match this pointer.
 
 ## STATUS TOKEN
-`NEXT__R5_BOUNDED__UL16_R2_MULTIWORK_STRUCTURAL_REPLAY_12_OF_12_PASS__NEXT_SEMANTIC_ARCHITECTURE_AUDIT__THEN_STATE_CARRY__ARCHITECTURE_BLIND__REAL_PROVIDER__NEW_SYNC_LAST__NO_AUTHORITY_CHANGE`
+`NEXT__R6_AUTHORITY_SYNC__R5_BOUNDED__UL16_R2_CANONICAL_BYTES_VERIFIED__MULTIWORK_STRUCTURAL_REPLAY_12_OF_12_PASS__NEXT_SEMANTIC_ARCHITECTURE_AUDIT__THEN_STATE_CARRY__ARCHITECTURE_BLIND__REAL_PROVIDER__NEW_SYNC_LAST__NO_AUTHORITY_CHANGE`
