@@ -8,7 +8,9 @@ Last updated: 2026-09-16
 - DB Authority: **DB59 frozen** unchanged.
 
 Mandatory safety protocol:
-`handoff/20260916/RUNTIME_CONTAINER_AND_HUB_FAILURE_PREVENTION_PROTOCOL_R2.md`
+`handoff/20260916/RUNTIME_CONTAINER_AND_HUB_FAILURE_PREVENTION_PROTOCOL_R3.md`
+
+R3 rule: record cgroup memory-event baseline before each large I/O phase and use delta afterward. A positive `memory.events max` delta enters `MEMORY_IO_PRESSURE_HOLD`; preserve completed receipts, clean temp/cache state and defer further large reconstruction to a fresh runtime.
 
 ## MATERIAL CORRECTION
 The former statement that the conceptual upper layer was sufficiently closed for physicalization is withdrawn.
@@ -40,8 +42,8 @@ Development direction:
 `handoff/20260916/SHOWRUNNER_ENGINE_DEVELOPMENT_DIRECTION_AFTER_UL14_R1.md`
 
 ## EXACT NEXT ORDER
-1. Run Safety Protocol R2 preflight.
-2. Preserve the freshly verified SYNC-R53 9/9 set as recovery root; do not modify authority.
+1. Run Safety Protocol R3 preflight and freeze memory-event baseline.
+2. Preserve the freshly verified SYNC-R53 9/9 set as recovery root; avoid reopening all payloads when small derived evidence packets suffice.
 3. Implement a provenance-preserving State -> Obligation Portfolio adapter on the Candidate Main Path.
 4. Implement UL-15 Episode selection/defer, Ensemble/Weave, Sequence Transaction and Scene Transaction generators as actual Candidate runtime code.
 5. Version the new schema; keep `EpisodeSynopsisPlan.v0.3-r1` legacy/analytic-only for Candidate forward generation.
@@ -59,4 +61,4 @@ Development direction:
 - Do not describe same-chat ChatGPT simulation as live Candidate execution.
 
 ## STATUS TOKEN
-`NEXT__UL15_MAIN_PATH_IMPLEMENTATION__UL16_A2_CAUSAL_ADOPTION__ARCHITECTURE_BLIND__REAL_PROVIDER__THEN_NEW_SYNC__UPPER_LAYER_GENERATIVE_QUALITY_NOT_QUALIFIED`
+`NEXT__SAFETY_R3__UL15_MAIN_PATH_IMPLEMENTATION__UL16_A2_CAUSAL_ADOPTION__ARCHITECTURE_BLIND__REAL_PROVIDER__THEN_NEW_SYNC__UPPER_LAYER_GENERATIVE_QUALITY_NOT_QUALIFIED`
