@@ -1,0 +1,35 @@
+{
+  "parent_runtime_r5_sha256": "922f9e6ec6f98a4016467f670669b6d16c6866e20c92d5f9ada71e925dd1fd99",
+  "status": "PACKETS_SEALED__JUDGMENTS_0__INDEPENDENT_GATE_PENDING",
+  "gate": {
+    "required_judges": 3,
+    "candidate_pair_wins_min": 12,
+    "candidate_win_plus_tie_min": 15,
+    "total_judge_pairs": 18,
+    "critical_violation_majority_forbidden": true
+  },
+  "judges": {
+    "J01": {
+      "packet_sha256": "605eacf8f8542c933ae3ef749e3fa467f8d2b8aa5d5cddc72ca29e7fd1f7210d",
+      "zip_sha256": "82f884cd44aff82ccb09b6e4177cb648430522ea08a9c5c525e844cfe755efbb",
+      "mapping_sha256": "0eee7bff041aedd29d07d6e9ed80669ec4e53d0611846a1445d99bf548be372a",
+      "arm_balance": {"candidate_A": 3, "candidate_B": 3},
+      "leak_audit": {"status": "PASS", "bad_tokens": []}
+    },
+    "J02": {
+      "packet_sha256": "1ca063b826c7606aa051e590782f513b40d245e46f2d33247ad4da733fbcd046",
+      "zip_sha256": "e3f2b9261cbbb89a1c7366e70c9664e3034a59572b4c78da93b6371bd9d33424",
+      "mapping_sha256": "9bf9d90a15d0d1e7e900eec8fc7e4d1f8b6f3fa3ed49772416ecc49a987741ec",
+      "arm_balance": {"candidate_A": 3, "candidate_B": 3},
+      "leak_audit": {"status": "PASS", "bad_tokens": []}
+    },
+    "J03": {
+      "packet_sha256": "37c195b762cb238b0935fd4bf55da34d089c0c042d0a42ab74bfead71fa12656",
+      "zip_sha256": "26400c321bb584ef748110a369097272140dec29dfd9e07a0a27209d810631b5",
+      "mapping_sha256": "ee3baabc3969bd32a74f2d8696cc235bc9b295604e8f6c2f06601e377b085ea2",
+      "arm_balance": {"candidate_A": 3, "candidate_B": 3},
+      "leak_audit": {"status": "PASS", "bad_tokens": []}
+    }
+  },
+  "coordinator_secret_sha256": "68a47e25006b3908362afe4bc5ef230244c63f3a108b51d78dd5938c287627d6"
+}
