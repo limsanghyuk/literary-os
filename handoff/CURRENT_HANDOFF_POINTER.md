@@ -1,75 +1,67 @@
 # CURRENT HANDOFF POINTER
 Last updated: 2026-09-16
 
-## CANONICAL NEW-SESSION BOOTSTRAP
-`handoff/20260916/START_HERE_SYNC_R53_POSTSESSION_RESEARCH_HANDOFF_R1.md`
+## READ FIRST
+Physical recovery root remains **SYNC-R53** and has fresh direct **9/9 PASS** verification.
 
-Machine-readable status:
-`handoff/20260916/R53_POSTSESSION_RESEARCH_STATUS_AND_RESUME_R1.json`
-
-Mandatory runtime/container/Hub safety protocol:
+Safety protocol:
 `handoff/20260916/RUNTIME_CONTAINER_AND_HUB_FAILURE_PREVENTION_PROTOCOL_R2.md`
 
-Direct recovery verification receipt:
+Recovery receipt:
 `handoff/20260916/R53_DIRECT_9_OF_9_RECOVERY_VERIFICATION_RECEIPT_R1.md`
 
-## PHYSICAL BASELINE
-Last complete developer-held 5-Part / 9-Package physical baseline remains **SYNC-R53**.
+## CRITICAL NEW RESEARCH CORRECTION
+Do not resume from the old assumption that the upper generative layer is stable.
 
-Read order:
-`CONTROL -> A -> B1 -> B2 -> C1 -> C2-A -> C2-B -> D1 -> D2`
+Read in this order:
+1. `handoff/20260916/UL14_UPPER_LAYER_DEFECT_CLOSURE_AND_HUMAN_AUTHORED_CENSUS_R1.md`
+2. `handoff/20260916/UL15_ADAPTIVE_MULTI_OBLIGATION_SHOWRUNNER_CONTRACT_R1.md`
+3. `handoff/20260916/UL16_CAUSAL_ADOPTION_AND_PROVIDER_QUALIFICATION_PREREG_R1.md`
+4. `handoff/20260916/SHOWRUNNER_ENGINE_DEVELOPMENT_DIRECTION_AFTER_UL14_R1.md`
 
-Changed at R53: `CONTROL / A / B2 / C1 / C2-A / C2-B`.
-Byte-unchanged at R53: `B1 / D1 / D2`.
+Current corrected status:
+**`UPPER_LAYER_GENERATIVE_QUALITY = NOT_QUALIFIED`**.
 
-R54/R55/R56 remain local historical candidate-physicalization attempts and do not replace R53.
+R53 upper-layer overlay is principally a validator/gate layer, not the missing adaptive Episode/Sequence/Scene generator. Previous same-chat/virtual screenplay runs are MOCK/ANALOG evidence only.
 
-## FRESH DIRECT RECOVERY VERIFICATION
-The current healthy runtime directly reverified the full R53 transport set: **9/9 PASS**.
+## NEW FORWARD CONTRACT
+UL-15 replaces the legacy forward-planning assumption with:
 
-Key canonical reconstructions:
-- C2-A+B valid ZIP reconstruction PASS; SHA256 `e51da441f932f4bf445ddb09b62cdb0caf940a209a9649d8518075b6f25bffb9`.
-- Narrative Engine Master reconstruction PASS at canonical SHA256 `5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649`.
-- DB59 reconstruction from D1+D2 PASS at canonical SHA256 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
+`Cutoff-Safe State -> Typed Obligation Portfolio -> Episode Function / Select-Defer -> Ensemble & Weave -> Sequence Transactions -> Scene Transactions -> Surface -> Reverse Reconstruction -> State Commit/Carry -> Responsible-Ancestor Replan`
 
-This is recovery verification only. It does not create a new SYNC authority or prove durable Hub archive custody.
+No fixed axis/sequence/scene quotas.
 
-## CONTAINER / HUB SAFETY BOUNDARY
-- cgroup hard memory limit: 4 GiB; no OOM/OOM-kill/max event observed in the full audit.
-- large-file scans must be sequential/streaming with page-cache management.
-- `/mnt/data` and `/tmp` share the same overlay filesystem; temporary-output size must be budgeted.
-- overlay reports `fsync=volatile`; container-local fsync/hash is not durable-archive evidence.
-- `/dev/shm` is memory-backed and is not for casual multi-hundred-MiB reconstruction.
-- GitHub updates require exact-path read -> latest blob SHA -> single update; code-search misses never prove absence.
-- runtime/audit/custody/package/scientific failures remain separate classifications.
+Reference implementation + schema + tests:
+`research/upper_layer/ul15/`
 
-## CURRENT RESEARCH STATE
-Post-R53 Candidate research preserves UL-1..UL-13.
-- UL-11 reported preflight: 24/24 PASS.
-- UL-12 reported preflight: 24/24 PASS.
-- UL-13 reported internal preflight: 16/16 PASS; Candidate 46 scenes / 38,277 chars; Control 50 scenes / 35,277 chars.
-- External UL-13 responses: 0.
-- Live OpenAI qualification outputs: 0.
+Local reference preflight: **5/5 PASS**. Main-Path adoption remains pending.
 
-## AUTHORITY STACK
-- Production Engine: ENG:R47 unchanged
+## AUTHORITY STACK — UNCHANGED
+- Physical: SYNC-R53
+- Production: ENG:R47
 - Candidate Base: P07-I4H Recovery R3
-- DB Authority: DB59 frozen
-- Formal scored total: 137
+- DB: DB59 frozen
+- Formal scored: 137
 - Latest Formal: R138
-- Formal R140: 0/0/0
+- R140: 0/0/0
 - Operational Level-3: SUSPENDED
 - Level 4: NOT STARTED
 
 ## EXACT RESUME ORDER
-1. Run Safety Protocol R2 preflight before any large package work.
-2. Use the now-directly-reverified SYNC-R53 9/9 set as physical recovery root.
-3. Reapply the validated post-R53 Candidate research overlay (UL-1..UL-13) in a clean build.
-4. Build a NEW SYNC successor; never rewrite R54/R55/R56 history.
-5. Independently pass the full 12-step physical-custody gate on the successor, including actual attachment/download 9/9 and durable archive evidence.
-6. Run UL-13 external Stage-1 Surface-only blind; seal responses; then Stage-2 plan reveal/fidelity evaluation.
-7. Run real fresh-context OpenAI Responses API qualification with receipts.
-8. Repeat end-to-end full-surface qualification before any Production promotion.
+1. Safety Protocol R2 preflight.
+2. Use verified R53 9/9 as immutable recovery root.
+3. Implement UL-15 as actual Candidate Main-Path generator, not only validators.
+4. Enforce new versioned schema and quarantine `EpisodeSynopsisPlan.v0.3-r1` from Candidate forward generation.
+5. Run UL-16 deterministic adoption gates and A2 causal interventions.
+6. Run independent architecture-only blind evaluation at Episode, Sequence and Scene levels.
+7. Only after architecture qualification run real fresh-context Provider end-to-end generation and full screenplay surface.
+8. Close reverse reconstruction, state carry and regression.
+9. Only then build a NEW SYNC successor and independently pass all 12 custody gates.
+
+Do not build a new SYNC before steps 3–8 close; doing so would physicalize a known generative defect.
+
+## PERSISTENT PHYSICAL MATERIAL
+R53 9-package files and DB64 R108 research-support files have been copied into ChatGPT persistent Library and are re-listable across the Library surface. This is useful for cross-session recovery but is not yet independent raw-byte re-download/re-hash proof.
 
 ## STATUS TOKEN
-`CURRENT_HANDOFF__SYNC_R53_DIRECT_9_OF_9_RECOVERY_PASS__ENGINE_MASTER_PASS__DB59_CANONICAL_PASS__RUNTIME_HUB_SAFETY_R2_MANDATORY__AUTHORITY_UNCHANGED__NEXT_CLEAN_NEW_SYNC_BUILD`
+`HANDOFF__SYNC_R53_9_OF_9_ROOT__UL14_CORRECTION__UL15_MAIN_PATH_PENDING__UL16_A2_AND_ARCHITECTURE_BLIND_NEXT__SURFACE_AFTER_ARCHITECTURE__NO_AUTHORITY_CHANGE`
