@@ -1,5 +1,5 @@
 # CURRENT NEXT RESEARCH POINTER
-Last updated: 2026-09-16
+Last updated: 2026-09-17
 
 ## AUTHORITY — UNCHANGED
 - Physical baseline: **SYNC-R53**, direct 9/9 verified.
@@ -21,106 +21,121 @@ The former upper-layer stability claim remains withdrawn.
 `UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED`
 
 ## CLOSED PREDECESSOR EVIDENCE
-- UL-14 gap audit: `research/upper_layer/20260916/UL14_HUMAN_AUTHORED_HIERARCHICAL_CENSUS_AND_GAP_AUDIT_R1.md`
-- UL-15 adaptive planner prereg/prototype: `research/upper_layer/20260916/UL15_ADAPTIVE_MULTI_OBLIGATION_PLANNER_PREREGISTRATION_R1.md`, `research/upper_layer/20260916/UL15_IMPLEMENTATION_AND_CANONICAL_COMPATIBILITY_RECEIPT_R1.md`
-- UL-16 R2 multi-work structural replay: `research/upper_layer/20260916/UL16_R2_MULTIWORK_STRUCTURAL_REPLAY_RECEIPT_R1.md` — 12/12 PASS; sequence range 9..19; scene range 77..138; rho 0.8392; due/defer loss 0; future-source use 0.
-- UL-16 R3 semantic architecture repair: `research/upper_layer/20260916/UL16_R3_SEMANTIC_ARCHITECTURE_AUDIT_AND_REPAIR_RECEIPT_R1.md` — semantic-preservation defects 90 -> 0; Canonical 68-node PASS; renderer projection PASS.
+- UL-14 human-authored census/gap audit.
+- UL-15 Adaptive Multi-Obligation prereg/prototype.
+- UL-16 R2 multi-work structural replay: 12/12 PASS; sequence range 9..19; scene range 77..138; rho 0.8392; due/defer loss 0; future-source use 0.
+- UL-16 R3 semantic architecture repair: semantic-preservation defects 90 -> 0; Canonical/renderer projection PASS.
+- UL-16 R4 State Commit/Carry + Responsible-Ancestor Replan: exact relationship/information/social/deferred carry PASS; next-episode reconsumption PASS; SCENE/SEQUENCE/EPISODE/SERIES ancestor selection PASS; immutable series anchor BLOCK PASS; Legacy state/carry exact invariant PASS.
 
-## UL-16 R4 STATE COMMIT/CARRY + RESPONSIBLE-ANCESTOR REPLAN — CLOSED
-Canonical receipt:
+R4 canonical receipt:
 `research/upper_layer/20260916/UL16_R4_STATE_COMMIT_CARRY_RESPONSIBLE_ANCESTOR_REPLAN_RECEIPT_R1.md`
 
-Parent canonical R3 SHA256:
-`495acdc8957c8085e10c22e3a6af3c455be31c73fe1d793242e62e26e224eee8`
+## UL-16 R5 ARCHITECTURE-BLIND PREPARATION — CLOSED
+Canonical receipt:
+`research/upper_layer/20260917/UL16_R5_ARCHITECTURE_ONLY_BLIND_PREPARATION_AND_COMPAT_RECEIPT_R1.md`
 
-R3 baseline defects confirmed:
-- generic relationship placeholders committed instead of exact Scene semantic delta;
-- information state not committed;
-- social-ecology state not committed;
-- deferred residue not carried into next-state obligations;
-- Responsible-Ancestor replan selection absent.
+Public blind manifest:
+`research/upper_layer/20260917/UL16_R5_ARCHITECTURE_BLIND_PUBLIC_MANIFEST_R1.json`
 
-R4 repair result:
-- exact relationship state commit: PASS;
-- exact information state commit: PASS;
-- exact social-ecology state commit: PASS;
-- deferred obligation carry with original metadata: PASS;
-- canonical state hash chain: PASS;
-- next-episode Active Obligation Portfolio reconsumes carried semantics: PASS;
-- normal cross-episode semantic carry selects `EPISODE` and emits `REPLAN_REQUIRED`;
-- ancestor selector probes: single Scene -> `SCENE`; multi-Scene single Sequence -> `SEQUENCE`; multi-Sequence -> `EPISODE`; series-anchor touch -> `SERIES`;
-- illegal immutable series-anchor mutation -> `BLOCK`;
-- Legacy no-semantic Scene state/carry path exact output+trace invariant PASS.
+### Legacy Canonical compatibility repair
+Architecture-blind packet generation exposed a backward-compatibility defect: R3 semantic hash validation expected fields absent from unchanged Legacy scene contracts, causing Legacy Control Canonical validation to HOLD.
 
-Full integration compatibility probe:
-- Adaptive validation: PASS;
-- sequence count: 9;
-- scene count: 55;
-- Canonical nodes: 66;
-- Canonical errors: 0;
-- Canonical graph hash: `3af644aa9e9724d92bad2578c91e34f35b9da7ca866c31265ff35c638f8c4533`;
-- State Integrity: PASS;
-- carry committed: true;
-- next-state semantic reconsumption: PASS.
+Repair in R5:
+- derive deterministic empty/existing semantic topology/state hashes only when Legacy contracts omit them;
+- do not alter Legacy planning content;
+- do not alter Candidate contracts when hashes already exist.
 
-Runtime regression:
-- Python compile 45/45 PASS;
-- Legacy exact output+trace SHA256 both parent and R4: `d9d618b3d8ce0fbf88617f79c5018360af385584986d3da85982c7a3d6c9f8ae`;
-- `memory.events max` 117 -> 117, delta 0;
-- OOM/OOM-kill 0.
+Verification:
+- Candidate probe graph before/after repair identical: `b3c9c7a7bffb317f590b51f6e6b51aa8c6632ec5567c166c396da212e5f82cc5`;
+- Candidate output invariant PASS;
+- Legacy Control restored to PASS: 9 sequences / 20 scenes / 31 Canonical nodes;
+- Python compile 45/45 PASS.
 
 ## CURRENT UL-16 RESEARCH RUNTIME
 Current research package:
-`LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R4_STATE_CARRY_REPLAN_PASS_20260916.zip`
+`LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R5_ARCH_BLIND_COMPAT_20260917.zip`
 
 SHA256:
-`4fc6411ff91a2f524a0ed2bafc61a6ce98cc80b13521b804a27dd46cf1931558`
+`922f9e6ec6f98a4016467f670669b6d16c6866e20c92d5f9ada71e925dd1fd99`
 
 Size:
-`18,658,253 bytes`
+`19,151,872 bytes`
 
-ZIP CRC:
-PASS.
+ZIP CRC: PASS.
 
-Entries:
-440.
+Persistent Library:
+`/Literary_OS/Physical_Archive/RESEARCH_UL16_ARCH_BLIND_20260917/LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R5_ARCH_BLIND_COMPAT_20260917.zip`
 
-Persistent Library path:
-`/Literary_OS/Physical_Archive/RESEARCH_UL16_20260916/LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R4_STATE_CARRY_REPLAN_PASS_20260916.zip`
+This is research evidence only and does not supersede SYNC-R53 or Production ENG:R47.
 
-This package is **research evidence only**. It does not supersede SYNC-R53 or Production ENG:R47.
+## INDEPENDENT ARCHITECTURE-ONLY BLIND — PACKETS SEALED / JUDGMENTS PENDING
+Six cutoff-safe architecture pairs were frozen before prose rendering, covering Episode Plan -> Sequence Plan -> Scene Plan.
 
-## INTERPRETATION BOUNDARY
-R4 closes software wiring for:
-`Scene semantic state -> canonical State Commit -> Carry -> next-episode semantic obligation consumption -> Responsible-Ancestor replan directive`.
+Frozen axes:
+1. Episode multi-strand architecture
+2. Sequence functional diversity
+3. Ensemble/relationship weaving
+4. Information asymmetry use
+5. Social-ecology integration
+6. Scene transaction specificity/necessity
+7. Causal/state continuity
+8. Escalation/turning architecture
 
-It does NOT prove:
-- human-level dramatic architecture;
-- independent blind architecture quality;
-- real OpenAI Provider execution;
-- full >=35k screenplay quality;
-- physical Candidate promotion.
+Three fresh-context judge packets are sealed:
+- J01: Candidate A 3 / B 3, leak audit PASS
+- J02: Candidate A 3 / B 3, leak audit PASS
+- J03: Candidate A 3 / B 3, leak audit PASS
+
+Frozen independent gate:
+- 3 judges x 6 pairs = 18 judge-pair outcomes;
+- Candidate wins >=12/18;
+- Candidate wins+ties >=15/18;
+- no critical-violation majority.
+
+Public three-judge packet set SHA256:
+`f0c2e38e9b6579d068ee3c7a16e0774265f2f5bbc32c7dbe8293ba941bb06fdc`
+
+Coordinator secret SHA256:
+`68a47e25006b3908362afe4bc5ef230244c63f3a108b51d78dd5938c287627d6`
+
+Current independent judgments received:
+**0/3 judges, 0/18 pair outcomes**.
+
+Therefore:
+`INDEPENDENT_ARCHITECTURE_BLIND_GATE = PENDING`.
+
+### Internal diagnostic boundary
+Same-session diagnostics are NOT counted toward the independent gate.
+They show a real trade-off that independent judges must resolve:
+- Candidate exact supplied relationship/information/social/action semantic-target coverage: 100% across all six fixtures;
+- Legacy exact supplied target coverage: 0%;
+- Candidate scene architecture: 90..103 scenes;
+- Legacy scene architecture: 20 scenes;
+- Candidate shows risk of repeated generic phase expansion despite much richer semantic coverage.
+
+No independent winner is claimed until J01/J02/J03 judgments are sealed and mapping is revealed afterward.
 
 ## EXACT NEXT R6+R5-BOUNDED TRANSACTION
-Only the next item should be executed in the next deep transaction:
-1. run R6 authority-sync check against current R4 SHA and resource baseline;
-2. use only verified R4 bytes;
-3. freeze and run **independent architecture-only blind evaluation** at Episode / Sequence / Scene-plan levels, before prose rendering;
-4. seal blind packets, judgments and mapping receipts;
-5. update CURRENT pointer;
-6. verify and report completion.
+Only the next item should be executed:
+1. collect sealed J01/J02/J03 fresh-context independent JSON judgments without mapping exposure;
+2. verify response schemas and packet hashes;
+3. freeze all judgments;
+4. reveal coordinator mapping only after all three are sealed;
+5. compute 18 pair outcomes and critical-violation gate;
+6. seal independent Architecture-Only Blind result;
+7. update CURRENT pointer and report completion.
 
-Only after architecture blind qualification may later bounded transactions proceed to:
-- real fresh-context OpenAI Provider generation with receipts and >=35k broadcast surface evaluation;
+Only after that gate passes may later bounded transactions proceed to:
+- real fresh-context OpenAI Provider generation with receipts and >=35k broadcast screenplay evaluation;
 - whole-system regression;
 - only then a NEW SYNC successor and full 12-step custody gate.
 
 ## DO NOT DO
-- Do not promote R4 to physical authority yet.
-- Do not treat software regression PASS as literary-quality proof.
-- Do not start Provider screenplay generation before architecture-only blind qualification.
-- Do not use fixed 9–10 sequence / 45–50 scene quotas.
-- Do not repeat 1GB+ scans when sealed receipts and small hash-bound packets suffice.
+- Do not promote R5 to physical authority.
+- Do not treat same-session/internal scoring as independent evidence.
+- Do not reveal coordinator mapping to J01/J02/J03 before their judgments are sealed.
+- Do not start Provider screenplay generation while Architecture Blind Gate is PENDING.
+- Do not use fixed 9–10 sequence / 45–50 scene quotas as generation targets.
 
 ## STATUS TOKEN
-`NEXT__R6_SYNC_R4__UL16_R4_STATE_CARRY_REPLAN_PASS__EXACT_REL_INFO_SOCIAL_DEFER_CARRY__RESPONSIBLE_ANCESTOR_PASS__LEGACY_EXACT_INVARIANT__NEXT_ARCHITECTURE_ONLY_BLIND__THEN_REAL_PROVIDER__NEW_SYNC_LAST__NO_AUTHORITY_CHANGE`
+`NEXT__R6_SYNC_R5__ARCHITECTURE_BLIND_PACKETS_SEALED__JUDGMENTS_0_OF_3__INDEPENDENT_GATE_PENDING__R5_LEGACY_CANONICAL_COMPAT_PASS__CANDIDATE_OUTPUT_INVARIANT__PROVIDER_BLOCKED__NO_AUTHORITY_CHANGE`
