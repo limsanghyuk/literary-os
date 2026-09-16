@@ -1,98 +1,81 @@
 # CURRENT SESSION RECOVERY POINTER
-Last updated: 2026-09-15
+Last updated: 2026-09-16
 
-## CANONICAL NEW-SESSION BOOTSTRAP
-`handoff/20260915/START_HERE_R52_POSTPHYSICAL_SHOWRUNNER_REQUALIFICATION_NEW_SESSION_HANDOFF_R1.md`
+## READ FIRST
+`handoff/20260916/START_HERE_SYNC_R53_POSTSESSION_RESEARCH_HANDOFF_R1.md`
 
-Machine-readable status:
-`handoff/20260915/R52_POSTPHYSICAL_RESEARCH_STATUS_AND_RESUME_R1.json`
+Machine-readable state:
+`handoff/20260916/R53_POSTSESSION_RESEARCH_STATUS_AND_RESUME_R1.json`
 
-## CURRENT PHYSICAL AUTHORITY
-**SYNC-R52**
-Root SHA256:
-`62d2cec1a47e557a342dcedeb6eb63a7c18f1336f756b3b38bf0df7b7079a359`
+## PHYSICAL RECOVERY ROOT
+**SYNC-R53** is the last complete developer-held 5-Part / 9-Package baseline.
 
-Required physical read order:
+Order:
 `CONTROL -> A -> B1 -> B2 -> C1 -> C2-A -> C2-B -> D1 -> D2`
 
-**No post-R52 physical reseal is claimed.**
-The developer's last physically provided package set is SYNC-R52 plus its verification/evidence bundles, E6-R1 failure package, E6 successor repair package, E6-R2 closure package and E6-R2 45,064-character screenplay.
+Changed at R53:
+`CONTROL / A / B2 / C1 / C2-A / C2-B`
 
-All research described below occurred after that physical boundary and is Hub-only development/research evidence unless explicitly stated otherwise.
+Byte-unchanged at R53:
+`B1 / D1 / D2`
 
-## CLAIM STATUS
-Historical `LEVEL_3_ENTERED` declaration is preserved in lineage.
-Current operational claim:
-`LEVEL_3_OPERATIONAL_CLAIM_SUSPENDED__SHOWRUNNER_REQUALIFICATION_IN_PROGRESS`
-Level 4 has NOT started.
+Do not recover from R52 unless R53 bytes are genuinely unavailable. Do not treat R54/R55/R56 local build names as physical authority.
 
-## POST-R52 HUB-ONLY RESEARCH STATE
-- E6-R2 post-hoc whole-script review narrowed the claim
-- R3-A dramaturgy microbench PASS
-- R3-B fresh whole-episode immutable FAIL / SAFE_NO_COMMIT
-- R3-C C1 direction-detection regression PASS
-- R3-C C2 show-only dramaturgy microbench PASS
-- R3-D D1 Historical Contract Restoration Audit PASS
-- R3-D D2 Hierarchical Architecture Microbench PASS
-- R3-D D3 50-Scene Contract Lowering PASS / screenplay surface=0 / State Commit=0 / external judgments=0
-- R3-E Showrunner Requalification Master Plan FROZEN
-- R3-E scientific execution NOT STARTED
+## RECOVERED RESEARCH STATE
+Preserve the full upper-layer lineage UL-1..UL-10 plus:
 
-## CONTROLLING DIAGNOSIS
-1. `ARCHITECTURE_CONSUMPTION_REGRESSION`
-2. `SURFACE_REALIZATION_REGRESSION`
-3. `WHOLE_EPISODE_DRAMATURGY_CONSTRUCT_VALIDITY_GAP`
+### UL-11
+Blind Continuation Integrity & Isolation Gate.
+Reported preflight: `24/24 PASS`.
+Key boundaries: target leakage control, sibling/arm fresh-context isolation, hidden target opened only after selector freeze, memorization-risk control, Counterfactual Divergence Arm for public works.
 
-Historical Series/Episode/Sequence/Scene and showrunner research exists. The unresolved question is whether those algorithms are actually implemented and mandatory in the candidate-engine main path, and whether E6 bypassed or truncated that path.
+### UL-12
+Fresh-Context Provider Qualification Runner.
+Reported preflight: `24/24 PASS`.
+Qualification calls must not use provider conversation carry or previous_response_id; one Candidate uses a stable chain_id and every provider call uses a unique execution_nonce. LIVE qualification requires real provider receipts.
 
-## EXACT FIRST ACTION
-Before a new screenplay and before R3-E2:
+### UL-13
+End-to-End Hierarchical Surface Qualification.
+Reported internal preflight: `16/16 PASS`.
+Candidate full surface: 46 scenes / 38,277 chars.
+Flat Control full surface: 50 scenes / 35,277 chars.
+External judge responses: `0`.
+Two-stage blind protocol: Surface-only reverse reconstruction first; after sealing, reveal Synopsis/Sequence/Scene plans and score plan-to-surface fidelity.
 
-Run `SHOWRUNNER_MAIN_PATH_CONSUMPTION_AND_E6_PARITY_AUDIT_R1`.
+## IMPORTANT SESSION FINDINGS
+- Obligation coverage alone is insufficient; both Candidate and Control could nominally cover all obligations while differing sharply in state-changing weave.
+- Causal-only weaving was too narrow; justified functional/thematic weaving is allowed when removal materially weakens episode function/debt progression.
+- Finale handling should use narrative-obligation / Terminal Closure accounting, not fixed sequence quotas.
+- DB64 runtime-safe inputs required a Cutoff-Safe State Projection because future payoff/closure references were found.
+- Same-chat virtual analog cannot scientifically prove sibling independence or FULL-vs-RECENT5 ablation.
+- Public/famous works carry pretraining memorization risk.
+- Surface quality must be evaluated end-to-end from Synopsis through Sequence and Scene plans to full screenplay.
 
-Prove, by code/call-path evidence:
-- concept/schema existence;
-- algorithm implementation existence;
-- main-path wiring/invocation;
-- E3/E6 harness parity or bypass;
-- field-level consumption;
-- fallback/bypass behavior;
-- fail-closed vs silent degradation.
+## DELIVERY / RUNTIME FAILURE TO REMEMBER
+R56 B2 was not reliably present on the user-visible conversation file surface, and the session container later failed even on minimal I/O with `TransportTimeoutError`.
+Therefore the next physical successor must add an explicit 9/9 attachment/download audit and durable package archive requirement.
 
-Classify each layer as one of:
-- `IMPLEMENTED_AND_WIRED__E6_HARNESS_BYPASS`
-- `IMPLEMENTED_BUT_DORMANT_OR_PARTIALLY_WIRED`
-- `SCHEMA_PRESENT__ALGORITHM_NOT_IMPLEMENTED`
-- `IMPLEMENTED__CONSUMPTION_RECEIPT_MISSING`
-- mixed by layer.
-
-If wiring can be bypassed or consumption cannot be proven, implement a fail-closed `SHOWRUNNER_MAIN_PATH_CONSUMPTION_RECEIPT` plus tests before continuing.
-
-Then resume frozen sequence:
-`R3-E0 -> R3-E1 -> R3-E2 -> conditional E3/E4/E5/E6/E7/E8/E9/E10`.
-
-## MASTER PLAN
-`handoff/20260915/R3E_SHOWRUNNER_REQUALIFICATION_MASTER_PLAN_R1.md`
-
-Do NOT use the existing R3-D 50-scene plan as the formal R3-E answer. It is development evidence only.
-
-## CLAIM RESTORATION RULE
-`LEVEL_3_OPERATIONAL_CLAIM_RESTORED` is prohibited until:
-- showrunner-consumption causal proof PASS;
-- fresh whole-episode architecture and surface PASS;
-- Forward-Reverse Architecture Closure PASS;
-- fresh independent external blind PASS;
-- physical 5-Part/9-Package reseal;
-- all Hub pointers updated to that physical authority.
+## EXACT NEXT EXECUTION ORDER
+1. Verify container/runtime I/O health.
+2. Recover the nine SYNC-R53 physical packages.
+3. Verify R53 package hashes/integrity before modification.
+4. Reapply post-R53 Candidate research overlay, including UL-11/12/13 and prior UL lineage.
+5. Build a NEW SYNC successor number; never rewrite R54/R55/R56 history.
+6. Run the 12-step physical-custody gate and archive/deliver 9/9.
+7. Conduct UL-13 Stage-1 external Surface-only blind evaluation; seal responses.
+8. Conduct Stage-2 plan reveal/fidelity evaluation.
+9. Execute actual OpenAI Responses API qualification in fresh isolated contexts with real provider receipts.
+10. Repeat full end-to-end Surface qualification before considering Candidate Production promotion.
 
 ## UNCHANGED AUTHORITIES
-- Physical: SYNC-R52
-- Active Engine: P07-I4H Recovery R3
 - Production: ENG:R47
+- Candidate Base: P07-I4H Recovery R3
+- DB: DB59 frozen (`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`)
 - Formal scored total: 137
 - Latest Formal: R138
-- Formal R140: 0/0/0
-- DB64: non-Production
+- R140: 0/0/0
+- Operational Level-3 claim: SUSPENDED
+- Level 4: NOT STARTED
 
 ## STATUS TOKEN
-`PHYSICAL_SYNC_R52_ONLY__POST_R52_HUB_ONLY__LEVEL3_OPERATIONAL_CLAIM_SUSPENDED__R3A_PASS__R3B_FAIL__R3C_PASS__R3D_D1_D2_D3_PASS_SURFACE0__R3E_FROZEN_NOT_STARTED__NEXT_ENGINE_MAIN_PATH_AUDIT__NO_LEVEL4`
+`RECOVERY__SYNC_R53_PHYSICAL_ROOT__POST_R53_UL11_UL12_UL13_PRESERVED__CONTAINER_FAILURE_RECORDED__NEXT_REBUILD_NEW_SYNC_9_OF_9_THEN_EXTERNAL_AND_LIVE_PROVIDER`
