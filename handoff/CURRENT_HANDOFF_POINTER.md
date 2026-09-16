@@ -4,13 +4,16 @@ Last updated: 2026-09-16
 ## READ FIRST
 Physical recovery root remains **SYNC-R53** and has fresh direct **9/9 PASS** verification.
 
-Safety protocol:
-`handoff/20260916/RUNTIME_CONTAINER_AND_HUB_FAILURE_PREVENTION_PROTOCOL_R2.md`
+Mandatory runtime safety protocol:
+`handoff/20260916/RUNTIME_CONTAINER_AND_HUB_FAILURE_PREVENTION_PROTOCOL_R3.md`
 
 Recovery receipt:
 `handoff/20260916/R53_DIRECT_9_OF_9_RECOVERY_VERIFICATION_RECEIPT_R1.md`
 
-## CRITICAL NEW RESEARCH CORRECTION
+### Runtime caution added in R3
+The extended large-file session reached `memory.peak = 4 GiB` and `memory.events max = 117` with `oom=0 / oom_kill=0`. This is memory-pressure/reclaim evidence, not package corruption. Future large-I/O work must record an event baseline and use the **delta** after each phase; a positive `max` delta enters `MEMORY_IO_PRESSURE_HOLD`, cleans temp/cache state and defers further large work to a fresh runtime.
+
+## CRITICAL RESEARCH CORRECTION
 Do not resume from the old assumption that the upper generative layer is stable.
 
 Read in this order:
@@ -25,7 +28,7 @@ Current corrected status:
 R53 upper-layer overlay is principally a validator/gate layer, not the missing adaptive Episode/Sequence/Scene generator. Previous same-chat/virtual screenplay runs are MOCK/ANALOG evidence only.
 
 ## NEW FORWARD CONTRACT
-UL-15 replaces the legacy forward-planning assumption with:
+UL-15 forward path:
 
 `Cutoff-Safe State -> Typed Obligation Portfolio -> Episode Function / Select-Defer -> Ensemble & Weave -> Sequence Transactions -> Scene Transactions -> Surface -> Reverse Reconstruction -> State Commit/Carry -> Responsible-Ancestor Replan`
 
@@ -48,8 +51,8 @@ Local reference preflight: **5/5 PASS**. Main-Path adoption remains pending.
 - Level 4: NOT STARTED
 
 ## EXACT RESUME ORDER
-1. Safety Protocol R2 preflight.
-2. Use verified R53 9/9 as immutable recovery root.
+1. Safety Protocol R3 preflight and memory-event baseline.
+2. Use verified R53 9/9 as immutable recovery root; avoid reopening all 1GB+ payloads when a small hash-bound derived packet suffices.
 3. Implement UL-15 as actual Candidate Main-Path generator, not only validators.
 4. Enforce new versioned schema and quarantine `EpisodeSynopsisPlan.v0.3-r1` from Candidate forward generation.
 5. Run UL-16 deterministic adoption gates and A2 causal interventions.
@@ -61,7 +64,7 @@ Local reference preflight: **5/5 PASS**. Main-Path adoption remains pending.
 Do not build a new SYNC before steps 3–8 close; doing so would physicalize a known generative defect.
 
 ## PERSISTENT PHYSICAL MATERIAL
-R53 9-package files and DB64 R108 research-support files have been copied into ChatGPT persistent Library and are re-listable across the Library surface. This is useful for cross-session recovery but is not yet independent raw-byte re-download/re-hash proof.
+R53 9-package files and DB64 R108 research-support files have been copied into ChatGPT persistent Library and are re-listable. This reduces repeated user uploads, but raw-byte Library re-materialization/re-hash is not authorized in the current Project path and is therefore not final independent durable-archive proof.
 
 ## STATUS TOKEN
-`HANDOFF__SYNC_R53_9_OF_9_ROOT__UL14_CORRECTION__UL15_MAIN_PATH_PENDING__UL16_A2_AND_ARCHITECTURE_BLIND_NEXT__SURFACE_AFTER_ARCHITECTURE__NO_AUTHORITY_CHANGE`
+`HANDOFF__SYNC_R53_9_OF_9_ROOT__SAFETY_R3__UL14_CORRECTION__UL15_MAIN_PATH_PENDING__UL16_A2_AND_ARCHITECTURE_BLIND_NEXT__SURFACE_AFTER_ARCHITECTURE__NO_AUTHORITY_CHANGE`
