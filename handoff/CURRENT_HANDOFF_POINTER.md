@@ -2,47 +2,73 @@
 Last updated: 2026-09-16
 
 ## READ FIRST
-Physical recovery root remains **SYNC-R53** and has fresh direct **9/9 PASS** verification.
+Physical recovery root remains **SYNC-R53** with fresh direct **9/9 PASS** verification.
 
-Mandatory runtime safety protocol:
-`handoff/20260916/RUNTIME_CONTAINER_AND_HUB_FAILURE_PREVENTION_PROTOCOL_R3.md`
+Mandatory execution safety:
+`handoff/20260916/RUNTIME_CONTAINER_HUB_ATOMIC_EXECUTION_PROTOCOL_R4.md`
 
-Recovery receipt:
+R53 recovery receipt:
 `handoff/20260916/R53_DIRECT_9_OF_9_RECOVERY_VERIFICATION_RECEIPT_R1.md`
 
-### Runtime caution added in R3
-The extended large-file session reached `memory.peak = 4 GiB` and `memory.events max = 117` with `oom=0 / oom_kill=0`. This is memory-pressure/reclaim evidence, not package corruption. Future large-I/O work must record an event baseline and use the **delta** after each phase; a positive `max` delta enters `MEMORY_IO_PRESSURE_HOLD`, cleans temp/cache state and defers further large work to a fresh runtime.
+## RECURRING-PROBLEM ROOT CAUSE
+The recurring interruption/error pattern was traced to a systemic execution defect rather than package corruption:
+
+`NON_ATOMIC_LONG_WORKFLOW + LARGE_IO_PRESSURE + LATE_CHECKPOINTING + STATUS_CLASSIFICATION_AMBIGUITY`.
+
+Important runtime evidence:
+- cgroup hard limit 4 GiB;
+- historical `memory.peak` reached 4 GiB;
+- historical `memory.events max=117`;
+- OOM/OOM-kill remained 0;
+- during the final UL-16 checkpoint phase `memory.events max` delta was 0.
+
+R4 rule: one bounded research transaction at a time, with immediate local receipt -> Hub receipt -> CURRENT pointer update -> cleanup -> health delta before the next stage.
+
+Expected pre-create 404, SIGPIPE 141 from audit pipelines, unavailable optional utilities and unsupported Library raw-materialization are classified separately and must not be treated as package/scientific failure.
 
 ## CRITICAL RESEARCH CORRECTION
 Do not resume from the old assumption that the upper generative layer is stable.
 
 Read in this order:
-1. `handoff/20260916/UL14_UPPER_LAYER_DEFECT_CLOSURE_AND_HUMAN_AUTHORED_CENSUS_R1.md`
-2. `handoff/20260916/UL15_ADAPTIVE_MULTI_OBLIGATION_SHOWRUNNER_CONTRACT_R1.md`
-3. `handoff/20260916/UL16_CAUSAL_ADOPTION_AND_PROVIDER_QUALIFICATION_PREREG_R1.md`
-4. `handoff/20260916/SHOWRUNNER_ENGINE_DEVELOPMENT_DIRECTION_AFTER_UL14_R1.md`
+1. `research/upper_layer/20260916/UL14_HUMAN_AUTHORED_HIERARCHICAL_CENSUS_AND_GAP_AUDIT_R1.md`
+2. `research/upper_layer/20260916/UL15_ADAPTIVE_MULTI_OBLIGATION_PLANNER_PREREGISTRATION_R1.md`
+3. `research/upper_layer/20260916/UL15_IMPLEMENTATION_AND_CANONICAL_COMPATIBILITY_RECEIPT_R1.md`
+4. `research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_PLAN_R1.md`
+5. `research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_RECEIPT_R1.md`
 
 Current corrected status:
-**`UPPER_LAYER_GENERATIVE_QUALITY = NOT_QUALIFIED`**.
+**`UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED`**.
 
-R53 upper-layer overlay is principally a validator/gate layer, not the missing adaptive Episode/Sequence/Scene generator. Previous same-chat/virtual screenplay runs are MOCK/ANALOG evidence only.
+## UL-16 ACTUAL MAIN-PATH RESEARCH INTEGRATION
+The repaired planner is now integrated into an isolated working copy of the actual R53 runtime source behind Candidate mode `ADAPTIVE_UL16`.
 
-## NEW FORWARD CONTRACT
-UL-15 forward path:
+Confirmed:
+- Legacy `LEGACY_R53` route behavior invariant on before/after regression fixture;
+- current-state active-obligation compiler PASS;
+- rich adaptive fixture: 9 sequences / 59 scenes / variable 5..10 scene depth;
+- larger 30-obligation fixture: 11 sequences / 97 scenes, proving dynamic expansion;
+- due obligation loss 0;
+- deferred loss/false settlement 0;
+- future-source leakage fail-closed PASS;
+- unknown mode fail-closed PASS;
+- Canonical Typed IR V2 PASS;
+- Python compile 45/45 PASS.
 
-`Cutoff-Safe State -> Typed Obligation Portfolio -> Episode Function / Select-Defer -> Ensemble & Weave -> Sequence Transactions -> Scene Transactions -> Surface -> Reverse Reconstruction -> State Commit/Carry -> Responsible-Ancestor Replan`
+Research runtime package:
+`LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R1_20260916.zip`
 
-No fixed axis/sequence/scene quotas.
+SHA256:
+`c1dfda09c97771f56aa88adc402c8fe05a03c0fd2b93205b83dafdc8d2101441`
 
-Reference implementation + schema + tests:
-`research/upper_layer/ul15/`
+Persistent Library locator:
+`/Literary_OS/Physical_Archive/RESEARCH_UL16_20260916/LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R1_20260916.zip`
 
-Local reference preflight: **5/5 PASS**. Main-Path adoption remains pending.
+This is research integration evidence only; no physical authority change.
 
 ## AUTHORITY STACK — UNCHANGED
 - Physical: SYNC-R53
 - Production: ENG:R47
-- Candidate Base: P07-I4H Recovery R3
+- Candidate Base authority: P07-I4H Recovery R3
 - DB: DB59 frozen
 - Formal scored: 137
 - Latest Formal: R138
@@ -51,20 +77,20 @@ Local reference preflight: **5/5 PASS**. Main-Path adoption remains pending.
 - Level 4: NOT STARTED
 
 ## EXACT RESUME ORDER
-1. Safety Protocol R3 preflight and memory-event baseline.
-2. Use verified R53 9/9 as immutable recovery root; avoid reopening all 1GB+ payloads when a small hash-bound derived packet suffices.
-3. Implement UL-15 as actual Candidate Main-Path generator, not only validators.
-4. Enforce new versioned schema and quarantine `EpisodeSynopsisPlan.v0.3-r1` from Candidate forward generation.
-5. Run UL-16 deterministic adoption gates and A2 causal interventions.
-6. Run independent architecture-only blind evaluation at Episode, Sequence and Scene levels.
-7. Only after architecture qualification run real fresh-context Provider end-to-end generation and full screenplay surface.
-8. Close reverse reconstruction, state carry and regression.
-9. Only then build a NEW SYNC successor and independently pass all 12 custody gates.
+1. Begin with an R4 atomic transaction precheck and memory-event baseline.
+2. Use sealed R53/DB64 receipts and small derived packets; do not repeat full 1GB+ scans without necessity.
+3. Run multi-work cutoff-safe structural replay on the integrated UL-16 path.
+4. Evaluate relationship/social-ecology/ensemble obligation semantics and Scene Transaction quality.
+5. Close state commit/carry + Responsible-Ancestor Replan regression on adaptive graphs.
+6. Freeze and run independent architecture-only blind evaluation at Episode/Sequence/Scene levels.
+7. Only after architecture qualification run real fresh-context OpenAI Provider generation and >=35k broadcast surface evaluation.
+8. Close whole-system regression.
+9. Only then build a NEW SYNC successor and pass all 12 custody gates independently.
 
-Do not build a new SYNC before steps 3–8 close; doing so would physicalize a known generative defect.
+Do not build a new SYNC before steps 3–8 close; doing so would physicalize a research-stage planner before qualification.
 
 ## PERSISTENT PHYSICAL MATERIAL
-R53 9-package files and DB64 R108 research-support files have been copied into ChatGPT persistent Library and are re-listable. This reduces repeated user uploads, but raw-byte Library re-materialization/re-hash is not authorized in the current Project path and is therefore not final independent durable-archive proof.
+R53 9-package files, DB64 R108 research-support files, prior-session evidence and UL-16 research runtime are copied into ChatGPT persistent Library and re-listable. Library raw-byte re-materialization/re-hash remains unavailable in the current Project path, so final independent archive proof remains separate.
 
 ## STATUS TOKEN
-`HANDOFF__SYNC_R53_9_OF_9_ROOT__SAFETY_R3__UL14_CORRECTION__UL15_MAIN_PATH_PENDING__UL16_A2_AND_ARCHITECTURE_BLIND_NEXT__SURFACE_AFTER_ARCHITECTURE__NO_AUTHORITY_CHANGE`
+`HANDOFF__SYNC_R53_ROOT__R4_ATOMIC_EXECUTION__UL14_CORRECTION__UL15_PROTOTYPE__UL16_ACTUAL_MAIN_PATH_RESEARCH_INTEGRATION_PASS__NEXT_MULTIWORK_ARCHITECTURE_STATE_CARRY_BLIND_PROVIDER__NO_AUTHORITY_CHANGE`
