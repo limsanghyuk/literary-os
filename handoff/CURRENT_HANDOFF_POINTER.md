@@ -1,128 +1,91 @@
 # CURRENT HANDOFF POINTER
-Last updated: 2026-09-16
+Last updated: 2026-09-17
 
-## READ FIRST
-Physical recovery root remains **SYNC-R53** with fresh direct **9/9 PASS** verification.
+## READ FIRST — CURRENT PHYSICAL SUCCESSOR
+The session repairs are no longer research-only. They have been physically integrated into a new 5-Part / 9-package successor set:
 
-Mandatory execution safety — highest current protocol:
-`handoff/20260916/RUNTIME_CONTAINER_HUB_TURN_BOUNDED_EXECUTION_PROTOCOL_R5.md`
+**SYNC-R57**
 
-Parent protocols retained:
+Canonical physicalization receipt:
+`handoff/20260917/SYNC_R57_PHYSICALIZATION_AND_DELIVERY_RECEIPT_R1.md`
+
+Parent/root preserved for historical recovery: **SYNC-R53**.
+Production Engine remains **ENG:R47 / LEGACY_R53**.
+Candidate execution path is now physically integrated as **R57 `ADAPTIVE_UL16`**.
+Runtime DB authority remains **DB59 frozen**.
+Formal authority unchanged: total 137, latest R138, R140 0/0/0.
+
+Mandatory execution protocols remain:
+- `handoff/20260916/RUNTIME_CONTAINER_HUB_AUTHORITY_SYNC_GATE_R6.md`
+- `handoff/20260916/RUNTIME_CONTAINER_HUB_TURN_BOUNDED_EXECUTION_PROTOCOL_R5.md`
 - `handoff/20260916/RUNTIME_CONTAINER_HUB_ATOMIC_EXECUTION_PROTOCOL_R4.md`
-- `handoff/20260916/RUNTIME_CONTAINER_AND_HUB_FAILURE_PREVENTION_PROTOCOL_R3.md`
 
-Machine-readable state:
-`handoff/20260916/R53_POSTSESSION_RESEARCH_STATUS_AND_RESUME_R1.json`
+## WHAT R57 PHYSICALLY CONTAINS
+R57 C1 actual runtime source and C2 active-development overlay now physically contain the repairs developed in this session:
+- Adaptive Multi-Obligation Episode/Sequence/Scene planning;
+- concrete relationship / information / social-ecology preservation;
+- transaction-local ensemble topology;
+- deferred residue preservation;
+- exact State Commit/Carry and next-episode semantic reconsumption;
+- Responsible-Ancestor Replan;
+- Legacy Canonical compatibility;
+- **anti-repetition fail-closed planning**.
 
-R53 recovery receipt:
-`handoff/20260916/R53_DIRECT_9_OF_9_RECOVERY_VERIFICATION_RECEIPT_R1.md`
+Anti-repetition rule:
+- never clone an obligation to hit a sequence target;
+- never cycle one obligation across multiple scenes to hit a scene-count target;
+- each due obligation is consumed once in Sequence planning and once in Scene transaction planning;
+- semantically duplicate material with different IDs is blocked;
+- insufficient unique dramatic material produces `UNDERDEVELOPED_*_HOLD` and requires upstream replanning with genuinely different material.
 
-## RECURRING-PROBLEM ROOT CAUSE — CLOSED AT EXECUTION-GOVERNANCE LEVEL
-The recurring interruption/error pattern is classified as:
+Thus human-authored sequence/scene counts are priors, not padding quotas.
 
-`NON_ATOMIC_LONG_WORKFLOW + LARGE_IO_PRESSURE + LATE_CHECKPOINTING + STATUS_CLASSIFICATION_AMBIGUITY + TURN_ORCHESTRATION_OVERLOAD`.
+Integrated R57 runtime SHA256:
+`2c57f6b5ade4061d01cdf62bda1d0c5a856053604e9d519bce04ebd6d6528a7c`
 
-Confirmed observations:
-- runtime cgroup hard limit = 4 GiB;
-- historical `memory.peak` reached 4 GiB;
-- historical `memory.events max=117` with `oom=0 / oom_kill=0`;
-- final UL-16 correction transaction kept `memory.events max` at 117, delta 0;
-- prior turns chained too many dependent tool calls, so Hub work could complete before the final user-facing completion message;
-- expected 404/SIGPIPE/optional-utility/capability-limit states were sometimes surfaced like new failures;
-- long-turn interruption also allowed premature same-name research artifacts to appear before canonical receipt closure.
+Explicit Candidate overlay SHA256:
+`5b82217cc81a686de8e45afe7bdc1b31a36874f62374ce9883b859224654570a`
 
-R5 rule:
-`PRECHECK -> <=1 bounded mutation/experiment -> RECEIPT -> CURRENT_HANDOFF_POINTER UPDATE -> VERIFY -> USER COMPLETION MESSAGE`.
+## PHYSICAL AUDIT
+9 transport packages: local SHA/CRC/integrity PASS.
+C1/C2 runtime binding: PASS.
+C1/C2 Candidate overlay binding: PASS.
+C2 reconstruction: PASS.
+Narrative Engine Master remains exact canonical SHA256:
+`5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649`.
+DB59 remains exact canonical SHA256:
+`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
+B1 / D1 / D2 are byte-identical to their R53 counterparts.
 
-Do not enter the next deep research stage in the same turn after this closure.
+Persistent Library path:
+`/Literary_OS/Physical_Archive/SYNC_R57_20260917/`
 
-## CRITICAL UPPER-LAYER CORRECTION
-The old claim that the upper generative layer was stable remains withdrawn.
+Library re-list: 9/9 PASS and sizes match. Raw Library re-download + SHA is not authorized by the current Project materialization path, so durable independent re-download proof remains `NOT_VERIFIED`.
 
-Current claim:
-**`UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED`**.
+Use status:
+`SYNC_R57__PHYSICAL_SUCCESSOR_SEALED__USER_DELIVERY_READY_9_OF_9__LIBRARY_LISTED_9_OF_9__DURABLE_REDOWNLOAD_NOT_VERIFIED`.
 
-Read in this order:
-1. `research/upper_layer/20260916/UL14_HUMAN_AUTHORED_HIERARCHICAL_CENSUS_AND_GAP_AUDIT_R1.md`
-2. `research/upper_layer/20260916/UL15_ADAPTIVE_MULTI_OBLIGATION_PLANNER_PREREGISTRATION_R1.md`
-3. `research/upper_layer/20260916/UL15_IMPLEMENTATION_AND_CANONICAL_COMPATIBILITY_RECEIPT_R1.md`
-4. `research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_PLAN_R1.md`
-5. `research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_RECEIPT_R2.md`
+Do NOT claim `DEVELOPER_DELIVERY_COMPLETE__9_OF_9` until external/durable re-download + exact SHA closes.
 
-## CANONICAL CENSUS CORRECTION
-The earlier value `10,853 sequences` is retired as a metadata transcription error.
+## EXECUTION BOUNDARY FOR ALL FUTURE SESSIONS
+For Candidate research/generation, execute the physically integrated **R57 `ADAPTIVE_UL16`** route.
 
-Canonical 61-work prior:
-- works: 61
-- episodes: 1,160
-- sequence records: **11,213**
-- scene cards: 73,639
+Do **not** substitute ENG:R47 for Candidate execution. ENG:R47 remains Production/control only.
 
-This is consistent with the stored A0 result and the episode-plan aggregate.
+If R57 Candidate bytes are unavailable, enter `AUTHORITY_BYTES_UNAVAILABLE_HOLD`; do not silently fall back to ENG:R47 or an older UL-16 research ZIP.
 
-Corrected prior profile hash:
-`f18c8d6224b23fbd00ad9d8883745945fcb1a0bfa375c829e4baef0fceb2d6ac`
+## ARCHITECTURE-BLIND RESET
+The previously sealed R5 Architecture-Only Blind packets were created before the R57 anti-repetition change. They remain historical evidence only and cannot qualify R57.
 
-## CURRENT UL-16 ACTUAL MAIN-PATH RESEARCH INTEGRATION
-Current canonical research receipt:
-`research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_RECEIPT_R2.md`
+Fresh R57 Architecture-Only Blind packets/judgments must be generated from the physical R57 Candidate path.
 
-Current research runtime package:
-`LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R2_20260916.zip`
-
-Size:
-`18,681,762 bytes`
-
-SHA256:
-`7f71484cd2687262d18104b3a9a5cfe727d003d7ed4b616ce8d64702b2da2ca8`
-
-Persistent Library canonical locator:
-`/Literary_OS/Physical_Archive/RESEARCH_UL16_20260916/LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R2_20260916.zip`
-
-A prematurely created different R2 artifact is preserved under an explicit `PREMATURE_UNVERIFIED` name and must not be used.
-
-Closed research/software gates:
-- actual R53 runtime working-copy integration behind `ADAPTIVE_UL16`;
-- Legacy `LEGACY_R53` behavior invariant before/after;
-- current-state obligation compiler PASS;
-- due obligation loss 0;
-- deferred loss / false settlement 0;
-- dynamic sequence expansion PASS;
-- future-source leakage fail-closed PASS;
-- unknown mode fail-closed PASS;
-- Canonical Typed IR V2 PASS;
-- Python runtime compile 45/45 PASS;
-- corrected R2 regression all boolean gates PASS.
-
-This is research integration evidence only; no physical authority change.
-
-## AUTHORITY STACK — UNCHANGED
-- Physical: SYNC-R53
-- Production: ENG:R47
-- Candidate Base authority: P07-I4H Recovery R3
-- Runtime DB: DB59 frozen
-- Formal scored: 137
-- Latest Formal: R138
-- R140: 0/0/0
-- Operational Level-3: SUSPENDED
-- Level 4: NOT STARTED
-
-## NEXT R5-BOUNDED TRANSACTION — ONLY THIS NEXT
-1. precheck + resource/event baseline;
-2. multi-work cutoff-safe structural replay using small hash-bound derived fixtures;
-3. seal replay receipt;
-4. update `CURRENT_HANDOFF_POINTER`;
-5. verify and report completion.
-
-Later bounded transactions, not the same deep turn:
-- relationship/social-ecology/ensemble and Scene Transaction semantic audit;
-- state commit/carry + Responsible-Ancestor Replan regression;
-- independent architecture-only blind evaluation;
-- real fresh-context OpenAI Provider generation and >=35k broadcast surface evaluation;
-- whole-system regression;
-- only then a NEW SYNC successor and full 12-step custody gate.
-
-Do not reopen the full 1GB+ corpus merely for reassurance when sealed receipts/derived packets suffice.
+## EXACT NEXT ORDER
+1. R6 sync against R57 physical Candidate bytes.
+2. Generate fresh R57 architecture-only A/B blind packets from R57 `ADAPTIVE_UL16` vs ENG:R47 control.
+3. Obtain fresh independent judgments and close the blind gate.
+4. Only if that passes, run real fresh-context OpenAI Provider end-to-end generation with receipts and >=35k broadcast screenplay evaluation.
+5. Close whole-system regression.
+6. Production promotion remains a later decision; no promotion occurred in this physicalization.
 
 ## STATUS TOKEN
-`HANDOFF__SYNC_R53_ROOT__R5_TURN_BOUNDED_EXECUTION__CENSUS_CORRECTED_11213__UL16_R2_MAIN_PATH_RESEARCH_PASS__NEXT_ONE_TRANSACTION_MULTIWORK_REPLAY__NO_AUTHORITY_CHANGE`
+`HANDOFF__SYNC_R57_PHYSICAL_SUCCESSOR_SEALED__SESSION_REPAIRS_IN_RUNTIME__ANTI_REPETITION_FAIL_CLOSED__CANDIDATE_R57_ADAPTIVE_UL16_REQUIRED__ENG_R47_CONTROL_ONLY__R57_BLIND_RESET_REQUIRED__DURABLE_REDOWNLOAD_NOT_VERIFIED__NO_PRODUCTION_PROMOTION`
