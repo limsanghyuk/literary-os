@@ -4,106 +4,96 @@
   "project": "Literary OS Development",
   "physical_baseline": {
     "authority": "SYNC-R53",
-    "developer_held_complete_set": true,
-    "read_order": ["CONTROL", "A", "B1", "B2", "C1", "C2-A", "C2-B", "D1", "D2"],
-    "changed_at_r53": ["CONTROL", "A", "B2", "C1", "C2-A", "C2-B"],
-    "byte_unchanged_at_r53": ["B1", "D1", "D2"],
-    "hub_archive_of_all_9_payload_bytes_verified": false,
-    "fresh_direct_recovery_verification": {
-      "status": "9/9 PASS",
-      "authority_change": false,
-      "receipt": "handoff/20260916/R53_DIRECT_9_OF_9_RECOVERY_VERIFICATION_RECEIPT_R1.md",
-      "safety_protocol": "handoff/20260916/RUNTIME_CONTAINER_AND_HUB_FAILURE_PREVENTION_PROTOCOL_R2.md",
-      "narrative_engine_master_sha256": "5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649",
-      "narrative_engine_master_canonical_match": true,
-      "db59_reconstructed_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
-      "db59_canonical_match": true,
-      "durable_external_archive_proven": false
-    }
+    "direct_recovery_verification": "9/9 PASS",
+    "authority_change": false,
+    "narrative_engine_master_sha256": "5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649",
+    "db59_reconstructed_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "hub_durable_archive_9_of_9_verified": false
   },
   "authority_stack": {
     "production_engine": "ENG:R47",
-    "candidate_base_engine": "P07-I4H Recovery R3",
+    "candidate_base": "P07-I4H Recovery R3",
     "db_authority": "DB59",
-    "db59_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
     "formal_scored_total": 137,
-    "latest_formal_authority": "R138",
-    "formal_r140": "0/0/0",
-    "operational_level_3_claim": "SUSPENDED",
+    "latest_formal": "R138",
+    "r140": "0/0/0",
+    "operational_level_3": "SUSPENDED",
     "level_4": "NOT_STARTED"
   },
-  "runtime_safety": {
-    "memory_max_bytes": 4294967296,
-    "memory_peak_approx_gib": 2.18,
-    "memory_events_max": 0,
-    "oom": 0,
-    "oom_kill": 0,
-    "mnt_data_and_tmp_same_overlay": true,
-    "overlay_reports_fsync_volatile": true,
-    "local_fsync_is_durable_archive_evidence": false,
-    "dev_shm_memory_backed": true,
-    "open_files_soft_limit": 16384,
-    "file_size_limit": "unlimited",
-    "required_large_io_mode": "sequential_streaming_with_temp_space_budget_and_page_cache_management"
+  "upper_layer_correction": {
+    "upper_layer_generative_quality": "NOT_QUALIFIED",
+    "previous_upper_layer_stability_claim": "WITHDRAWN",
+    "r53_upper_overlay_role": "VALIDATORS_AND_GATES_NOT_COMPLETE_GENERATOR",
+    "previous_virtual_screenplay_evidence": "MOCK_ANALOG_ONLY",
+    "legacy_episode_synopsis_plan_forward_status": "QUARANTINED_ANALYTIC_ONLY",
+    "surface_first_promotion_path": "PAUSED_UNTIL_ARCHITECTURE_QUALIFIES"
+  },
+  "human_authored_census_61_work": {
+    "works": 61,
+    "episodes": 1160,
+    "thick_sequences": 11213,
+    "runtime_scene_projections": 73639,
+    "scenes_per_episode_mean": 63.48,
+    "scenes_per_episode_median": 62,
+    "scenes_per_episode_p10": 46,
+    "scenes_per_episode_p90": 81.1,
+    "sequences_per_episode_mean": 9.666,
+    "sequences_per_episode_median": 9,
+    "sequences_per_episode_min": 2,
+    "sequences_per_episode_max": 29,
+    "multi_dimension_sequence_share_ge2": 0.8434,
+    "multi_dimension_sequence_share_ge3": 0.5424
+  },
+  "defects": {
+    "validator_misclassified_as_generator": "CORRECTED_AT_EVIDENCE_GOVERNANCE_LEVEL",
+    "axis_compression": "LEGACY_FORWARD_SCHEMA_QUARANTINED",
+    "schema_consumer_drift": "NEW_VERSION_REQUIRED_AND_100_PERCENT_CONFORMANCE_GATE",
+    "single_owner_sequence": "REPLACED_IN_UL15_CONTRACT_BY_PRIMARY_PLUS_COOWNERS_PLUS_OBLIGATIONS",
+    "defer_not_operational": "REPLACED_IN_UL15_BY_EPISODE_LEVEL_DISPOSITION",
+    "fixed_structure_defaults": "FORBIDDEN_IN_CANDIDATE_FORWARD_CONTRACT",
+    "forward_scene_plan_gap": "UL15_SCENE_TRANSACTION_CONTRACT_ADDED",
+    "db64_a2_causal_adoption": "PENDING_UL16",
+    "social_ecology_incomplete": "PROVENANCE_AWARE_OPTIONAL_UNKNOWN_HANDLING_REQUIRED"
   },
   "post_r53_research": {
-    "ul11": {
-      "name": "Blind Continuation Integrity & Isolation Gate",
-      "reported_preflight": "24/24 PASS",
-      "key_additions": ["target leakage gate", "fresh-context sibling isolation", "arm isolation", "target-open-after-selector-freeze", "counterfactual divergence for public works", "pretraining memorization risk control"]
+    "ul14": {
+      "status": "SEALED_RESEARCH_CORRECTION",
+      "path": "handoff/20260916/UL14_UPPER_LAYER_DEFECT_CLOSURE_AND_HUMAN_AUTHORED_CENSUS_R1.md"
     },
-    "ul12": {
-      "name": "Fresh-Context Provider Qualification Runner",
-      "reported_preflight": "24/24 PASS",
-      "key_additions": ["forbid conversation reuse", "forbid previous_response_id reuse", "stable candidate chain_id", "unique execution_nonce per provider call", "real provider receipts required for LIVE qualification"]
+    "ul15": {
+      "status": "CONTRACT_AND_REFERENCE_IMPLEMENTATION_PASS__MAIN_PATH_PENDING",
+      "reference_preflight": "5/5 PASS",
+      "path": "handoff/20260916/UL15_ADAPTIVE_MULTI_OBLIGATION_SHOWRUNNER_CONTRACT_R1.md",
+      "code_root": "research/upper_layer/ul15/"
     },
-    "ul13": {
-      "name": "End-to-End Hierarchical Surface Qualification",
-      "reported_internal_preflight": "16/16 PASS",
-      "reported_candidate_surface": {"scenes": 46, "characters": 38277},
-      "reported_control_surface": {"scenes": 50, "characters": 35277},
-      "external_judge_responses": 0,
-      "external_status": "PENDING",
-      "key_additions": ["whole-episode synopsis-to-sequence-to-scene-to-surface trace", "surface-first reverse reconstruction", "two-stage blind evaluation", "neutral A/B remapping and leakage audit"]
+    "ul16": {
+      "status": "PREREGISTERED__OUTPUTS_0",
+      "path": "handoff/20260916/UL16_CAUSAL_ADOPTION_AND_PROVIDER_QUALIFICATION_PREREG_R1.md"
     }
   },
-  "r54_r56_local_builds": {
-    "classification": "LOCAL_CANDIDATE_PHYSICALIZATION_ATTEMPTS_NOT_DEVELOPER_PHYSICAL_AUTHORITY",
-    "reported_regressions": {"R54": "33/33 PASS", "R55": "57/57 PASS", "R56": "67/67 PASS"},
-    "reason_not_promoted_over_r53": ["complete 9/9 user-visible delivery not reliably preserved", "R56 B2 missing from conversation download surface", "container later failed with TransportTimeoutError", "full physical archive in Hub not verified"]
+  "persistent_library": {
+    "sync_r53_path": "/Literary_OS/Physical_Archive/SYNC_R53_20260916",
+    "db64_r108_path": "/Literary_OS/Physical_Archive/DB64_R108_20260912",
+    "session_evidence_path": "/Literary_OS/Physical_Archive/SESSION_EVIDENCE_20260916",
+    "upload_and_relist": "PASS",
+    "raw_materialize_and_rehash": "NOT_AUTHORIZED_IN_CURRENT_PROJECT_PATH",
+    "final_durable_archive_verified": false
   },
-  "physical_custody_gate_for_next_sync": [
-    "build_pass",
-    "crc_or_binary_integrity_pass",
-    "per_package_sha256_pass",
-    "c2_reconstruction_pass",
-    "c1_c2_candidate_overlay_identity_pass",
-    "unchanged_package_verification_pass",
-    "narrative_engine_master_reconstruction_pass",
-    "db59_reconstruction_pass",
-    "conversation_attachment_9_of_9_pass",
-    "user_download_surface_9_of_9_pass",
-    "hub_physical_package_manifest_written",
-    "durable_archive_locator_verified"
-  ],
   "next_steps": [
     "run Runtime/Container/Hub Safety Protocol R2 preflight",
-    "use freshly reverified SYNC-R53 9/9 as physical recovery root",
-    "reapply post-R53 UL-1..UL-13 candidate research overlay in a clean build",
-    "build a new SYNC successor number without rewriting R54/R55/R56 history",
-    "independently pass the complete 12-step physical custody gate on the new successor",
-    "run UL-13 stage-1 then stage-2 external blind evaluation",
-    "run actual OpenAI Responses API qualification in fresh isolated contexts",
-    "repeat end-to-end full-surface qualification under real provider receipts"
+    "preserve SYNC-R53 9/9 as immutable recovery root",
+    "implement UL15 State-to-Obligation adapter and Episode/Weave/Sequence/Scene generators on actual P07 Candidate Main Path",
+    "freeze/version new schema and run 100 percent conformance/adoption gates",
+    "execute UL16 A2 causal-adoption interventions before screenplay surface",
+    "run independent architecture-only blind evaluation for Episode Sequence Scene",
+    "run real fresh-context Provider end-to-end qualification with receipts only after architecture qualification",
+    "close reverse reconstruction state-carry and regression",
+    "only then build a new SYNC successor and pass full 12-step physical custody gate"
   ],
-  "canonical_handoff": "handoff/20260916/START_HERE_SYNC_R53_POSTSESSION_RESEARCH_HANDOFF_R1.md",
   "claim_boundaries": {
-    "r53_is_last_developer_held_physical_baseline": true,
-    "r53_direct_9_of_9_recovery_verified": true,
-    "r54_r55_r56_replace_r53": false,
     "candidate_promoted_to_production": false,
     "live_openai_qualification_passed": false,
-    "ul13_external_blind_passed": false,
-    "hub_durable_archive_9_of_9_verified": false
+    "repaired_architecture_external_blind_passed": false,
+    "new_sync_successor_built": false
   }
 }
