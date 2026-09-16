@@ -2,106 +2,87 @@
 Last updated: 2026-09-16
 
 ## PHYSICAL / PRODUCTION AUTHORITY — UNCHANGED
-- Physical baseline: **SYNC-R53**.
-- Fresh direct R53 recovery verification: **9/9 PASS**.
+- Physical baseline: **SYNC-R53** — direct 9/9 verified.
 - Production Engine: **ENG:R47**.
 - Candidate Base authority: **P07-I4H Recovery R3**.
-- DB Authority: **DB59 frozen** (`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`).
-- Formal scored total: 137; latest Formal R138; R140 0/0/0.
+- Runtime DB Authority: **DB59 frozen** (`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`).
+- Formal total: 137; latest R138; R140 0/0/0.
 - Operational Level-3: SUSPENDED.
 - Level 4: NOT STARTED.
 
-Mandatory execution safety:
+Mandatory execution protocol:
 `handoff/20260916/RUNTIME_CONTAINER_HUB_ATOMIC_EXECUTION_PROTOCOL_R4.md`
 
-R4 root-cause correction:
+Recurring workflow root cause:
 `NON_ATOMIC_LONG_WORKFLOW + LARGE_IO_PRESSURE + LATE_CHECKPOINTING + STATUS_CLASSIFICATION_AMBIGUITY`.
 
-The runtime previously reached cgroup `memory.peak=4GiB` and historical `memory.events max=117` without OOM/OOM-kill. Future large work uses per-transaction baseline/delta and one bounded heavy-I/O operation per transaction. Completed research stages must write immutable Hub receipts and update CURRENT pointers before proceeding.
+## UPPER-LAYER CORRECTION
+Previous upper-layer stability claim remains withdrawn.
 
-## UPPER-LAYER CLAIM CORRECTION — UL-14
-The previous interpretation that the upper generative hierarchy was sufficiently stable remains withdrawn.
+Current claim:
+`UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED`.
 
-Canonical audit:
+UL-14 canonical audit:
 `research/upper_layer/20260916/UL14_HUMAN_AUTHORED_HIERARCHICAL_CENSUS_AND_GAP_AUDIT_R1.md`
 
-Confirmed defect classes:
-- contract loss from over-compressed episode/sequence ownership;
-- consumer loss because DB64-derived research priors were not actual forward-generation inputs;
-- fixed/near-fixed structural lowering in the legacy Episode/Sequence/Scene spine;
-- defer recorded but not structurally operational;
-- relationship/social-ecology obligations checked late rather than generatively scheduled.
+Corrected 61-work census:
+- works 61
+- episodes 1,160
+- sequence records **11,213**
+- scene cards 73,639
 
-Current claim boundary:
-**`UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED`**.
+The earlier 10,853 value was a metadata transcription error, not DB/package corruption.
 
-## UL-15 / UL-16 REPAIR STATE
+## UL-15 / UL-16 CURRENT RESEARCH STATE
 UL-15 preregistration:
 `research/upper_layer/20260916/UL15_ADAPTIVE_MULTI_OBLIGATION_PLANNER_PREREGISTRATION_R1.md`
 
-UL-15 prototype/canonical compatibility:
+UL-15 prototype receipt:
 `research/upper_layer/20260916/UL15_IMPLEMENTATION_AND_CANONICAL_COMPATIBILITY_RECEIPT_R1.md`
 
-UL-16 integration plan:
-`research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_PLAN_R1.md`
+UL-16 current integration receipt:
+`research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_RECEIPT_R2.md`
 
-UL-16 actual Main-Path integration receipt:
-`research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_RECEIPT_R1.md`
+Current corrected prior profile hash:
+`f18c8d6224b23fbd00ad9d8883745945fcb1a0bfa375c829e4baef0fceb2d6ac`
 
-Research integration results:
-- actual R53 runtime working copy integrated behind `ADAPTIVE_UL16` Candidate mode;
-- Legacy route `LEGACY_R53` remains available and before/after graph hash is byte-for-byte behavior invariant at the regression fixture;
-- rich adaptive fixture: 9 sequences / 59 scenes, variable 5..10 scenes per sequence;
-- larger 30-obligation fixture: 11 sequences / 97 scenes, proving sequence count is not fixed at 9;
-- current-state active-obligation compiler PASS;
+Current research runtime package:
+`LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R2_20260916.zip`
+
+SHA256:
+`7f71484cd2687262d18104b3a9a5cfe727d003d7ed4b616ce8d64702b2da2ca8`
+
+Persistent Library path:
+`/Literary_OS/Physical_Archive/RESEARCH_UL16_20260916/LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R2_20260916.zip`
+
+Current software/structural evidence:
+- actual runtime working-copy integration behind `ADAPTIVE_UL16`;
+- Legacy route behavior invariant;
+- current-state obligation compiler PASS;
 - due obligation loss 0;
-- deferred loss 0;
-- deferred false fulfillment 0;
+- deferred loss / false fulfillment 0;
+- dynamic sequence/scene architecture PASS;
 - future-source leakage fail-closed PASS;
-- unknown authoring mode fail-closed PASS;
-- Canonical Typed IR V2 validation PASS;
-- runtime Python compile 45/45 PASS.
+- unknown mode fail-closed PASS;
+- Canonical Typed IR PASS;
+- Python compile 45/45 PASS;
+- corrected R2 full structural regression PASS.
 
-Research runtime package SHA256:
-`c1dfda09c97771f56aa88adc402c8fe05a03c0fd2b93205b83dafdc8d2101441`
+This remains research evidence only and does not supersede SYNC-R53.
 
-Persistent Library locator:
-`/Literary_OS/Physical_Archive/RESEARCH_UL16_20260916/LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R1_20260916.zip`
+## STILL REQUIRED BEFORE PHYSICAL SUCCESSOR
+1. diverse multi-work cutoff-safe structural replay;
+2. relationship/social-ecology/ensemble semantic preservation qualification;
+3. Scene Transaction semantic quality and necessity tests;
+4. state commit/carry + Responsible-Ancestor Replan closure;
+5. independent architecture-only blind evaluation;
+6. real fresh-context OpenAI Provider end-to-end qualification with receipts and >=35k surface;
+7. whole-system regression closure.
 
-This package is **research evidence only**. It is not a physical successor and does not supersede SYNC-R53.
-
-## CURRENT RESEARCH AUTHORITY
-Preserve UL-1..UL-13 under corrected evidence boundaries and add:
-- UL-14 — gap audit / human-authored census / upper-layer stability claim withdrawn;
-- UL-15 — Adaptive Multi-Obligation planner preregistration + executable prototype/canonical compatibility;
-- UL-16 — actual Main-Path research integration PASS at software/structural level.
-
-Still not qualified:
-- multi-work historical/counterfactual architecture quality;
-- independent blind Episode/Sequence/Scene evaluation;
-- state commit/carry + Responsible-Ancestor Replan closure on adaptive graphs;
-- real fresh-context OpenAI Provider generation;
-- whole broadcast screenplay literary quality;
-- physical successor regression/custody closure.
-
-UL-13 external judge responses remain 0.
-Live OpenAI qualification outputs remain 0.
-
-## NEXT PHYSICALIZATION BOUNDARY
-Do **not** build or promote a new SYNC from the current UL-16 research package yet.
-
-Before a new physical successor:
-1. multi-work cutoff-safe structural replay / qualification;
-2. relationship/social-ecology/ensemble semantic preservation tests;
-3. state commit/carry + replanning closure;
-4. architecture-only independent blind evaluation;
-5. real fresh-context Provider end-to-end qualification and >=35k surface evaluation;
-6. whole-system regression closure.
-
-Only then build a new SYNC successor and independently pass the full 12-step physical-custody gate.
+Only afterward may a new SYNC successor be built and subjected to all 12 custody gates.
 
 ## ARCHIVE BOUNDARY
-R53 9-package files, DB64 R108 research-support files and the UL-16 research runtime are present in ChatGPT persistent Library and re-listable. Independent raw Library re-materialization/re-hash is not currently authorized in this Project path, so Library presence is persistent custody evidence but not final byte-for-byte durable archive proof.
+R53, DB64 and UL-16 research packages are present in persistent Library and re-listable. Raw Library re-materialization/re-hash remains unavailable in the current Project path, so persistent Library presence is not final independent durable-archive proof.
 
 ## STATUS TOKEN
-`DEVELOPER_HUB__SYNC_R53_AUTHORITY__ENG_R47_PRODUCTION__R4_ATOMIC_EXECUTION__UL14_DEFECT_CORRECTION__UL15_PROTOTYPE_PASS__UL16_MAIN_PATH_RESEARCH_INTEGRATION_PASS__ARCHITECTURE_PROVIDER_PHYSICAL_PROMOTION_PENDING__NO_AUTHORITY_CHANGE`
+`DEVELOPER_HUB__SYNC_R53_AUTHORITY__ENG_R47_PRODUCTION__R4_ATOMIC__UL14_CENSUS_CORRECTED_11213__UL16_R2_MAIN_PATH_RESEARCH_PASS__MULTIWORK_BLIND_PROVIDER_PHYSICAL_PROMOTION_PENDING__NO_AUTHORITY_CHANGE`
