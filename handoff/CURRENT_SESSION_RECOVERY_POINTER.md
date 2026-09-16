@@ -7,6 +7,11 @@ Last updated: 2026-09-16
 Machine-readable state:
 `handoff/20260916/R53_POSTSESSION_RESEARCH_STATUS_AND_RESUME_R1.json`
 
+Mandatory runtime / container / Hub safety addendum:
+`handoff/20260916/RUNTIME_CONTAINER_AND_HUB_FAILURE_PREVENTION_PROTOCOL_R1.md`
+
+The safety addendum is mandatory before large ZIP/BIN work. It separates runtime/transport, memory/I/O, package integrity, custody/delivery, Hub concurrency/search-index, audit-script, compute-timeout, and scientific failures. GitHub existence/update checks must use exact repository contents paths and the latest blob SHA; code-search zero results are not evidence of absence.
+
 ## PHYSICAL RECOVERY ROOT
 **SYNC-R53** is the last complete developer-held 5-Part / 9-Package baseline.
 
@@ -20,6 +25,9 @@ Byte-unchanged at R53:
 `B1 / D1 / D2`
 
 Do not recover from R52 unless R53 bytes are genuinely unavailable. Do not treat R54/R55/R56 local build names as physical authority.
+
+## CURRENT DIRECT RECOVERY CHECKPOINT
+In the healthy 2026-09-16 runtime, CONTROL / A / B1 / B2 have been directly reverified as `4/9` of the R53 transport set. All four passed outer ZIP CRC and archive safety checks; CONTROL/A/B2 `research_sync_r53` overlay files are 8/8 byte-identical. This is a recovery checkpoint only, not a new authority declaration. C1 -> C2-A -> C2-B -> D1 -> D2 remain required for a fresh 9/9 direct physical verification.
 
 ## RECOVERED RESEARCH STATE
 Preserve the full upper-layer lineage UL-1..UL-10 plus:
@@ -55,8 +63,10 @@ Two-stage blind protocol: Surface-only reverse reconstruction first; after seali
 R56 B2 was not reliably present on the user-visible conversation file surface, and the session container later failed even on minimal I/O with `TransportTimeoutError`.
 Therefore the next physical successor must add an explicit 9/9 attachment/download audit and durable package archive requirement.
 
+Historical/runtime investigations also established that `TransportTimeoutError`, `ClientError`, `GeneratedFileUploadError`, page-cache pressure, GitHub/DNS failure, shell/audit-script errors, stale GitHub blob SHA conflicts, search-index delay, and missing user-visible attachment are distinct failure domains. None should be collapsed into package corruption or scientific FAIL without direct evidence.
+
 ## EXACT NEXT EXECUTION ORDER
-1. Verify container/runtime I/O health.
+1. Run the mandatory runtime/container/Hub safety preflight.
 2. Recover the nine SYNC-R53 physical packages.
 3. Verify R53 package hashes/integrity before modification.
 4. Reapply post-R53 Candidate research overlay, including UL-11/12/13 and prior UL lineage.
@@ -78,4 +88,4 @@ Therefore the next physical successor must add an explicit 9/9 attachment/downlo
 - Level 4: NOT STARTED
 
 ## STATUS TOKEN
-`RECOVERY__SYNC_R53_PHYSICAL_ROOT__POST_R53_UL11_UL12_UL13_PRESERVED__CONTAINER_FAILURE_RECORDED__NEXT_REBUILD_NEW_SYNC_9_OF_9_THEN_EXTERNAL_AND_LIVE_PROVIDER`
+`RECOVERY__SYNC_R53_PHYSICAL_ROOT__RUNTIME_HUB_SAFETY_R1_MANDATORY__R53_DIRECT_REVERIFY_4_OF_9__POST_R53_UL11_UL12_UL13_PRESERVED__NEXT_COMPLETE_9_OF_9_THEN_NEW_SYNC_EXTERNAL_AND_LIVE_PROVIDER`
