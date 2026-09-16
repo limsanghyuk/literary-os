@@ -20,74 +20,81 @@
     "operational_level_3": "SUSPENDED",
     "level_4": "NOT_STARTED"
   },
+  "execution_safety": {
+    "protocol": "handoff/20260916/RUNTIME_CONTAINER_HUB_ATOMIC_EXECUTION_PROTOCOL_R4.md",
+    "root_cause": "NON_ATOMIC_LONG_WORKFLOW + LARGE_IO_PRESSURE + LATE_CHECKPOINTING + STATUS_CLASSIFICATION_AMBIGUITY",
+    "memory_max_bytes": 4294967296,
+    "historical_memory_peak_bytes": 4294967296,
+    "historical_memory_events_max": 117,
+    "oom": 0,
+    "oom_kill": 0,
+    "final_ul16_checkpoint_memory_events_max_delta": 0,
+    "required_execution_shape": "PRECHECK -> ONE_BOUNDED_OPERATION -> LOCAL_RECEIPT -> HUB_RECEIPT -> POINTER_UPDATE -> CLEANUP -> HEALTH_DELTA"
+  },
   "upper_layer_correction": {
-    "upper_layer_generative_quality": "NOT_QUALIFIED",
+    "upper_layer_generative_quality": "NOT_YET_QUALIFIED",
     "previous_upper_layer_stability_claim": "WITHDRAWN",
-    "r53_upper_overlay_role": "VALIDATORS_AND_GATES_NOT_COMPLETE_GENERATOR",
     "previous_virtual_screenplay_evidence": "MOCK_ANALOG_ONLY",
-    "legacy_episode_synopsis_plan_forward_status": "QUARANTINED_ANALYTIC_ONLY",
     "surface_first_promotion_path": "PAUSED_UNTIL_ARCHITECTURE_QUALIFIES"
   },
   "human_authored_census_61_work": {
     "works": 61,
     "episodes": 1160,
-    "thick_sequences": 11213,
-    "runtime_scene_projections": 73639,
-    "scenes_per_episode_mean": 63.48,
-    "scenes_per_episode_median": 62,
-    "scenes_per_episode_p10": 46,
-    "scenes_per_episode_p90": 81.1,
-    "sequences_per_episode_mean": 9.666,
+    "sequence_records": 11213,
+    "scene_cards": 73639,
+    "sequence_total_correction": "10853_WAS_METADATA_TRANSCRIPTION_ERROR",
+    "sequences_per_episode_mean": 9.666379310344828,
     "sequences_per_episode_median": 9,
+    "sequences_per_episode_p10": 6,
+    "sequences_per_episode_p90": 14,
     "sequences_per_episode_min": 2,
     "sequences_per_episode_max": 29,
-    "multi_dimension_sequence_share_ge2": 0.8434,
-    "multi_dimension_sequence_share_ge3": 0.5424
-  },
-  "defects": {
-    "validator_misclassified_as_generator": "CORRECTED_AT_EVIDENCE_GOVERNANCE_LEVEL",
-    "axis_compression": "LEGACY_FORWARD_SCHEMA_QUARANTINED",
-    "schema_consumer_drift": "NEW_VERSION_REQUIRED_AND_100_PERCENT_CONFORMANCE_GATE",
-    "single_owner_sequence": "REPLACED_IN_UL15_CONTRACT_BY_PRIMARY_PLUS_COOWNERS_PLUS_OBLIGATIONS",
-    "defer_not_operational": "REPLACED_IN_UL15_BY_EPISODE_LEVEL_DISPOSITION",
-    "fixed_structure_defaults": "FORBIDDEN_IN_CANDIDATE_FORWARD_CONTRACT",
-    "forward_scene_plan_gap": "UL15_SCENE_TRANSACTION_CONTRACT_ADDED",
-    "db64_a2_causal_adoption": "PENDING_UL16",
-    "social_ecology_incomplete": "PROVENANCE_AWARE_OPTIONAL_UNKNOWN_HANDLING_REQUIRED"
+    "scenes_per_episode_mean": 63.48189655172414,
+    "scenes_per_episode_median": 62,
+    "scenes_per_episode_p10": 46,
+    "scenes_per_episode_p90": 81.1
   },
   "post_r53_research": {
     "ul14": {
-      "status": "SEALED_RESEARCH_CORRECTION",
-      "path": "handoff/20260916/UL14_UPPER_LAYER_DEFECT_CLOSURE_AND_HUMAN_AUTHORED_CENSUS_R1.md"
+      "status": "SEALED_GAP_AUDIT__CENSUS_CORRECTED_11213",
+      "path": "research/upper_layer/20260916/UL14_HUMAN_AUTHORED_HIERARCHICAL_CENSUS_AND_GAP_AUDIT_R1.md"
     },
     "ul15": {
-      "status": "CONTRACT_AND_REFERENCE_IMPLEMENTATION_PASS__MAIN_PATH_PENDING",
-      "reference_preflight": "5/5 PASS",
-      "path": "handoff/20260916/UL15_ADAPTIVE_MULTI_OBLIGATION_SHOWRUNNER_CONTRACT_R1.md",
-      "code_root": "research/upper_layer/ul15/"
+      "status": "PREREGISTERED_AND_PROTOTYPE_PASS",
+      "path": "research/upper_layer/20260916/UL15_ADAPTIVE_MULTI_OBLIGATION_PLANNER_PREREGISTRATION_R1.md",
+      "prototype_receipt": "research/upper_layer/20260916/UL15_IMPLEMENTATION_AND_CANONICAL_COMPATIBILITY_RECEIPT_R1.md"
     },
     "ul16": {
-      "status": "PREREGISTERED__OUTPUTS_0",
-      "path": "handoff/20260916/UL16_CAUSAL_ADOPTION_AND_PROVIDER_QUALIFICATION_PREREG_R1.md"
+      "status": "MAIN_PATH_RESEARCH_INTEGRATION_R2_PASS__NOT_PHYSICAL_AUTHORITY",
+      "integration_receipt": "research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_RECEIPT_R2.md",
+      "research_package_sha256": "7f71484cd2687262d18104b3a9a5cfe727d003d7ed4b616ce8d64702b2da2ca8",
+      "research_package_size_bytes": 18681762,
+      "corrected_prior_profile_hash": "f18c8d6224b23fbd00ad9d8883745945fcb1a0bfa375c829e4baef0fceb2d6ac",
+      "legacy_invariant": true,
+      "runtime_python_compile": "45/45 PASS",
+      "regression_all_boolean_pass": true,
+      "live_provider_outputs": 0,
+      "architecture_external_blind_outputs": 0
     }
   },
   "persistent_library": {
     "sync_r53_path": "/Literary_OS/Physical_Archive/SYNC_R53_20260916",
     "db64_r108_path": "/Literary_OS/Physical_Archive/DB64_R108_20260912",
-    "session_evidence_path": "/Literary_OS/Physical_Archive/SESSION_EVIDENCE_20260916",
+    "ul16_current_path": "/Literary_OS/Physical_Archive/RESEARCH_UL16_20260916/LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R2_20260916.zip",
+    "ul16_premature_unverified_preserved": true,
     "upload_and_relist": "PASS",
     "raw_materialize_and_rehash": "NOT_AUTHORIZED_IN_CURRENT_PROJECT_PATH",
     "final_durable_archive_verified": false
   },
   "next_steps": [
-    "run Runtime/Container/Hub Safety Protocol R2 preflight",
-    "preserve SYNC-R53 9/9 as immutable recovery root",
-    "implement UL15 State-to-Obligation adapter and Episode/Weave/Sequence/Scene generators on actual P07 Candidate Main Path",
-    "freeze/version new schema and run 100 percent conformance/adoption gates",
-    "execute UL16 A2 causal-adoption interventions before screenplay surface",
-    "run independent architecture-only blind evaluation for Episode Sequence Scene",
-    "run real fresh-context Provider end-to-end qualification with receipts only after architecture qualification",
-    "close reverse reconstruction state-carry and regression",
+    "start each stage as an R4 atomic transaction with resource baseline",
+    "use sealed receipts and small derived fixtures instead of repeated 1GB+ rescans",
+    "run diverse cutoff-safe multi-work structural replay on UL16 R2",
+    "audit relationship social-ecology ensemble and scene-transaction semantic preservation",
+    "close state commit/carry plus Responsible-Ancestor Replan regression",
+    "run independent architecture-only blind evaluation at Episode Sequence Scene levels",
+    "only after architecture qualification run real fresh-context Provider end-to-end qualification with receipts and >=35k surface",
+    "close whole-system regression",
     "only then build a new SYNC successor and pass full 12-step physical custody gate"
   ],
   "claim_boundaries": {
