@@ -4,6 +4,9 @@ Date: 2026-09-16
 Status: PREREGISTERED__IMPLEMENTATION_PROTOTYPE_ALLOWED__NO_PRODUCTION_CLAIM
 Parent evidence: UL-14 Human-Authored Hierarchical Architecture Census & Gap Audit R1
 
+## Census correction note
+The frozen prior's sequence total is **11,213**, not 10,853. The earlier value was a transcription/metadata error discovered by consistency audit against the stored A0 structural-representability result and the episode-plan aggregate. Distribution quantiles used by the planner were unchanged. UL-16 R2 binds the corrected prior profile hash.
+
 ## Purpose
 Repair the Candidate Showrunner upper planning spine so that rich narrative state is not collapsed into a small fixed set of axes, single-owner sequences, and deterministic 2/3-scene lowering.
 
@@ -42,7 +45,7 @@ It must not provide the hidden target episode's actual future event/scene conten
 
 Frozen distributional prior from UL-14:
 - 61 works / 1,160 episodes;
-- 10,853 source-grounded sequences;
+- **11,213 source-grounded/planned sequence records**;
 - 73,639 source-grounded scene cards;
 - episode sequence count: P10 6 / median 9 / P90 14 / observed 2..29;
 - episode scene budget: P10 46 / median 62 / P90 81.1 / observed 6..182;
@@ -122,4 +125,4 @@ A same-chat analog or mock generation cannot qualify UL-15. Live qualification r
 UL-15 prototype/test PASS does not modify Production ENG:R47, Candidate physical authority, DB59, Formal count, or SYNC-R53. A new physical successor can only be built after implementation and regression closure, followed by the full 12-step custody gate.
 
 Status token:
-`UL15__PREREGISTERED__ADAPTIVE_MULTI_OBLIGATION_PLANNER__DUE_DEFER_SEPARATION__VARIABLE_SEQUENCE_SCENE_ARCHITECTURE__REVERSE_RECONSTRUCTION__CANONICAL_IR_COMPATIBILITY_REQUIRED`
+`UL15__PREREGISTERED__CENSUS_CORRECTED_11213__ADAPTIVE_MULTI_OBLIGATION_PLANNER__DUE_DEFER_SEPARATION__VARIABLE_SEQUENCE_SCENE_ARCHITECTURE__REVERSE_RECONSTRUCTION__CANONICAL_IR_COMPATIBILITY_REQUIRED`
