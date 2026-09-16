@@ -4,70 +4,95 @@ Last updated: 2026-09-16
 ## READ FIRST
 Physical recovery root remains **SYNC-R53** with fresh direct **9/9 PASS** verification.
 
-Mandatory execution safety:
+Mandatory execution safety — highest current protocol:
 `handoff/20260916/RUNTIME_CONTAINER_HUB_TURN_BOUNDED_EXECUTION_PROTOCOL_R5.md`
 
 Parent protocols retained:
 - `handoff/20260916/RUNTIME_CONTAINER_HUB_ATOMIC_EXECUTION_PROTOCOL_R4.md`
 - `handoff/20260916/RUNTIME_CONTAINER_AND_HUB_FAILURE_PREVENTION_PROTOCOL_R3.md`
 
+Machine-readable state:
+`handoff/20260916/R53_POSTSESSION_RESEARCH_STATUS_AND_RESUME_R1.json`
+
 R53 recovery receipt:
 `handoff/20260916/R53_DIRECT_9_OF_9_RECOVERY_VERIFICATION_RECEIPT_R1.md`
 
-## RECURRING-PROBLEM ROOT CAUSE
-The recurring interruption/error pattern is now classified as:
+## RECURRING-PROBLEM ROOT CAUSE — CLOSED AT EXECUTION-GOVERNANCE LEVEL
+The recurring interruption/error pattern is classified as:
 
 `NON_ATOMIC_LONG_WORKFLOW + LARGE_IO_PRESSURE + LATE_CHECKPOINTING + STATUS_CLASSIFICATION_AMBIGUITY + TURN_ORCHESTRATION_OVERLOAD`.
 
-The newest confirmed factor is `TURN_ORCHESTRATION_OVERLOAD`: too many dependent tool calls were chained inside one assistant turn. Hub commits and pointers could already be correct while the final user-facing completion message had not yet been emitted, making completed work appear to have failed again.
+Confirmed observations:
+- runtime cgroup hard limit = 4 GiB;
+- historical `memory.peak` reached 4 GiB;
+- historical `memory.events max=117` with `oom=0 / oom_kill=0`;
+- final UL-16 correction transaction kept `memory.events max` at 117, delta 0;
+- prior turns chained too many dependent tool calls, so Hub work could complete before the final user-facing completion message;
+- expected 404/SIGPIPE/optional-utility/capability-limit states were sometimes surfaced like new failures;
+- long-turn interruption also allowed premature same-name research artifacts to appear before canonical receipt closure.
 
-Current runtime check at R5 diagnosis:
-- memory.current about 1.72 GiB / 4 GiB;
-- historical memory.events max remained 117 with **delta 0**;
-- oom=0, oom_kill=0;
-- no >16 MiB `/tmp` residue;
-- about 27 GiB disk free.
+R5 rule:
+`PRECHECK -> <=1 bounded mutation/experiment -> RECEIPT -> CURRENT_HANDOFF_POINTER UPDATE -> VERIFY -> USER COMPLETION MESSAGE`.
 
-Therefore this recurrence was **not** a new package-corruption or current-memory-pressure event.
+Do not enter the next deep research stage in the same turn after this closure.
 
-R5 rule: one small bounded transaction per deep turn:
-`PRECHECK -> <=1 bounded mutation/experiment -> RECEIPT -> CURRENT POINTER UPDATE -> VERIFY -> USER COMPLETION MESSAGE`.
+## CRITICAL UPPER-LAYER CORRECTION
+The old claim that the upper generative layer was stable remains withdrawn.
 
-Do not expand into the next deep research stage before that closure.
-
-## CRITICAL RESEARCH CORRECTION
-Do not resume from the old assumption that the upper generative layer is stable.
+Current claim:
+**`UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED`**.
 
 Read in this order:
 1. `research/upper_layer/20260916/UL14_HUMAN_AUTHORED_HIERARCHICAL_CENSUS_AND_GAP_AUDIT_R1.md`
 2. `research/upper_layer/20260916/UL15_ADAPTIVE_MULTI_OBLIGATION_PLANNER_PREREGISTRATION_R1.md`
 3. `research/upper_layer/20260916/UL15_IMPLEMENTATION_AND_CANONICAL_COMPATIBILITY_RECEIPT_R1.md`
 4. `research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_PLAN_R1.md`
-5. `research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_RECEIPT_R1.md`
+5. `research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_RECEIPT_R2.md`
 
-Current corrected status:
-**`UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED`**.
+## CANONICAL CENSUS CORRECTION
+The earlier value `10,853 sequences` is retired as a metadata transcription error.
 
-## UL-16 ACTUAL MAIN-PATH RESEARCH INTEGRATION
-The repaired planner is integrated into an isolated working copy of the actual R53 runtime source behind Candidate mode `ADAPTIVE_UL16`.
+Canonical 61-work prior:
+- works: 61
+- episodes: 1,160
+- sequence records: **11,213**
+- scene cards: 73,639
 
-Confirmed:
-- Legacy `LEGACY_R53` route invariant on before/after regression fixture;
-- current-state active-obligation compiler PASS;
-- rich adaptive fixture: 9 sequences / 59 scenes / variable 5..10 scene depth;
-- larger 30-obligation fixture: 11 sequences / 97 scenes;
+This is consistent with the stored A0 result and the episode-plan aggregate.
+
+Corrected prior profile hash:
+`f18c8d6224b23fbd00ad9d8883745945fcb1a0bfa375c829e4baef0fceb2d6ac`
+
+## CURRENT UL-16 ACTUAL MAIN-PATH RESEARCH INTEGRATION
+Current canonical research receipt:
+`research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_RECEIPT_R2.md`
+
+Current research runtime package:
+`LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R2_20260916.zip`
+
+Size:
+`18,681,762 bytes`
+
+SHA256:
+`7f71484cd2687262d18104b3a9a5cfe727d003d7ed4b616ce8d64702b2da2ca8`
+
+Persistent Library canonical locator:
+`/Literary_OS/Physical_Archive/RESEARCH_UL16_20260916/LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R2_20260916.zip`
+
+A prematurely created different R2 artifact is preserved under an explicit `PREMATURE_UNVERIFIED` name and must not be used.
+
+Closed research/software gates:
+- actual R53 runtime working-copy integration behind `ADAPTIVE_UL16`;
+- Legacy `LEGACY_R53` behavior invariant before/after;
+- current-state obligation compiler PASS;
 - due obligation loss 0;
-- deferred loss/false settlement 0;
+- deferred loss / false settlement 0;
+- dynamic sequence expansion PASS;
 - future-source leakage fail-closed PASS;
 - unknown mode fail-closed PASS;
 - Canonical Typed IR V2 PASS;
-- Python compile 45/45 PASS.
-
-Research runtime package SHA256:
-`c1dfda09c97771f56aa88adc402c8fe05a03c0fd2b93205b83dafdc8d2101441`
-
-Persistent Library locator:
-`/Literary_OS/Physical_Archive/RESEARCH_UL16_20260916/LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R1_20260916.zip`
+- Python runtime compile 45/45 PASS;
+- corrected R2 regression all boolean gates PASS.
 
 This is research integration evidence only; no physical authority change.
 
@@ -75,22 +100,21 @@ This is research integration evidence only; no physical authority change.
 - Physical: SYNC-R53
 - Production: ENG:R47
 - Candidate Base authority: P07-I4H Recovery R3
-- DB: DB59 frozen
+- Runtime DB: DB59 frozen
 - Formal scored: 137
 - Latest Formal: R138
 - R140: 0/0/0
 - Operational Level-3: SUSPENDED
 - Level 4: NOT STARTED
 
-## EXACT RESUME ORDER
-The **next** R5-bounded transaction is only:
-1. precheck and resource baseline;
+## NEXT R5-BOUNDED TRANSACTION — ONLY THIS NEXT
+1. precheck + resource/event baseline;
 2. multi-work cutoff-safe structural replay using small hash-bound derived fixtures;
 3. seal replay receipt;
-4. update canonical pointer;
+4. update `CURRENT_HANDOFF_POINTER`;
 5. verify and report completion.
 
-After that, in later bounded transactions:
+Later bounded transactions, not the same deep turn:
 - relationship/social-ecology/ensemble and Scene Transaction semantic audit;
 - state commit/carry + Responsible-Ancestor Replan regression;
 - independent architecture-only blind evaluation;
@@ -101,4 +125,4 @@ After that, in later bounded transactions:
 Do not reopen the full 1GB+ corpus merely for reassurance when sealed receipts/derived packets suffice.
 
 ## STATUS TOKEN
-`HANDOFF__SYNC_R53_ROOT__R5_TURN_BOUNDED_EXECUTION__UL16_MAIN_PATH_RESEARCH_INTEGRATION_PASS__NEXT_ONE_TRANSACTION_MULTIWORK_REPLAY__NO_AUTHORITY_CHANGE`
+`HANDOFF__SYNC_R53_ROOT__R5_TURN_BOUNDED_EXECUTION__CENSUS_CORRECTED_11213__UL16_R2_MAIN_PATH_RESEARCH_PASS__NEXT_ONE_TRANSACTION_MULTIWORK_REPLAY__NO_AUTHORITY_CHANGE`
