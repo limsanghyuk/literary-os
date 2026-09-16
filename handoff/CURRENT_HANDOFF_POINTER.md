@@ -1,73 +1,53 @@
 # CURRENT HANDOFF POINTER
-Last updated: 2026-09-15
+Last updated: 2026-09-16
 
 ## CANONICAL NEW-SESSION BOOTSTRAP
-`handoff/20260915/START_HERE_R52_POSTPHYSICAL_SHOWRUNNER_REQUALIFICATION_NEW_SESSION_HANDOFF_R1.md`
+`handoff/20260916/START_HERE_SYNC_R53_POSTSESSION_RESEARCH_HANDOFF_R1.md`
 
 Machine-readable status:
-`handoff/20260915/R52_POSTPHYSICAL_RESEARCH_STATUS_AND_RESUME_R1.json`
+`handoff/20260916/R53_POSTSESSION_RESEARCH_STATUS_AND_RESUME_R1.json`
 
-## PHYSICAL PACKAGE ORDER
+## PHYSICAL BASELINE
+Last complete developer-held 5-Part / 9-Package set: **SYNC-R53**
+
+Read order:
 `CONTROL -> A -> B1 -> B2 -> C1 -> C2-A -> C2-B -> D1 -> D2`
 
-## CURRENT PHYSICAL AUTHORITY
-**SYNC-R52**
-Root SHA256:
-`62d2cec1a47e557a342dcedeb6eb63a7c18f1336f756b3b38bf0df7b7079a359`
+R53 changed packages:
+`CONTROL / A / B2 / C1 / C2-A / C2-B`
 
-No post-R52 physical reseal exists or is claimed.
-The developer's last physically delivered set remains the SYNC-R52 5-Part/9-Package authority plus the R52 verification/evidence and E6-R1/E6-repair/E6-R2 packages and the final 45,064-character E6-R2 screenplay.
+R53 byte-unchanged packages:
+`B1 / D1 / D2`
 
-## CURRENT CLAIM
-Historical Level-3 entry is preserved.
-Operational claim is suspended:
-`LEVEL_3_OPERATIONAL_CLAIM_SUSPENDED__SHOWRUNNER_REQUALIFICATION_IN_PROGRESS`
-Level 4 has NOT started.
+Do not downgrade the physical baseline to R52. R54/R55/R56 were local candidate-physicalization attempts and do not replace R53 because complete durable 9/9 developer delivery was not established.
 
-## POST-R52 HUB-ONLY STATE
-- R3-A PASS
-- R3-B immutable FAIL / SAFE_NO_COMMIT
-- R3-C C1 PASS
-- R3-C C2 PASS
-- R3-D D1 PASS
-- R3-D D2 PASS
-- R3-D D3 PASS / 50 scene contracts / surface=0 / commit=0 / external=0
-- R3-E master plan frozen
-- R3-E scientific execution not started
+## CURRENT RESEARCH STATE
+Post-R53 Candidate research includes UL-1..UL-10 plus:
+- UL-11 Blind Continuation Integrity & Isolation Gate — reported 24/24 preflight PASS.
+- UL-12 Fresh-Context Provider Qualification Runner — reported 24/24 preflight PASS.
+- UL-13 End-to-End Hierarchical Surface Qualification — reported 16/16 internal preflight PASS; Candidate 46 scenes / 38,277 chars; Control 50 scenes / 35,277 chars; external responses 0.
 
-## EXACT RESUME
-Read the canonical bootstrap first.
+UL-13 external literary-quality PASS is NOT claimed. Live OpenAI qualification PASS is NOT claimed.
 
-Do NOT immediately render the R3-D 50-scene plan.
-
-First execute:
-`SHOWRUNNER_MAIN_PATH_CONSUMPTION_AND_E6_PARITY_AUDIT_R1`
-
-The audit must determine whether historical Series/Episode/Sequence/Scene and showrunner algorithms are:
-- implemented and wired but bypassed by E6;
-- implemented but dormant/partially wired;
-- schema-only with missing algorithm implementation;
-- implemented but lacking field-level consumption receipts;
-- mixed by layer.
-
-If consumption is not mechanically provable or the main path can silently bypass the showrunner layer, add a fail-closed `SHOWRUNNER_MAIN_PATH_CONSUMPTION_RECEIPT` plus tests.
-
-Then continue the frozen master plan:
-`R3-E0 -> R3-E1 -> R3-E2` and only on PASS proceed toward a fresh architecture/surface, Forward-Reverse Closure, internal audit, external blind and eventual physical reseal.
-
-Master plan:
-`handoff/20260915/R3E_SHOWRUNNER_REQUALIFICATION_MASTER_PLAN_R1.md`
-
-## SESSION-INDEPENDENCE RULE
-Chat memory is not authority. A concept must survive in code/contracts/tests/Hub records and, when authority changes, the physical 5-Part/9-Package reseal. Current pointer files must never disagree.
-
-## UNCHANGED AUTHORITIES
-- Active Engine: P07-I4H Recovery R3
-- Production: ENG:R47
+## AUTHORITY STACK
+- Production Engine: ENG:R47 unchanged
+- Candidate Base: P07-I4H Recovery R3
+- DB Authority: DB59 frozen
 - Formal scored total: 137
 - Latest Formal: R138
 - Formal R140: 0/0/0
-- DB64: non-Production
+- Operational Level-3 claim: SUSPENDED
+- Level 4: NOT STARTED
+
+## EXACT RESUME ORDER
+1. Verify fresh container/runtime I/O health.
+2. Recover/rebuild from developer-held SYNC-R53 physical baseline.
+3. Reapply validated post-R53 Candidate overlay research (UL-11/12/13 and prior UL-1..10 lineage).
+4. Build a NEW SYNC successor; do not rewrite R54/R55/R56 history.
+5. Pass the 12-step physical-custody gate including attachment/download 9/9 and durable archive manifest.
+6. Run UL-13 Stage-1 surface-only external blind; seal responses; then Stage-2 plan reveal/fidelity evaluation.
+7. Run actual OpenAI Responses API qualification in fresh isolated contexts with real provider receipts.
+8. Repeat end-to-end full-surface qualification under real provider receipts before any production promotion.
 
 ## STATUS TOKEN
-`CURRENT_HANDOFF__PHYSICAL_SYNC_R52_ONLY__POST_R52_HUB_ONLY__R3E_FROZEN__NEXT_SHOWRUNNER_ENGINE_MAIN_PATH_AUDIT__NO_NEW_SURFACE__NO_LEVEL4`
+`CURRENT_HANDOFF__PHYSICAL_BASELINE_SYNC_R53__POST_R53_UL11_UL12_UL13_RESEARCH__ENG_R47_PRODUCTION_UNCHANGED__EXTERNAL0__LIVE_PROVIDER0__NEXT_CLEAN_REBUILD_THEN_EXTERNAL_AND_LIVE_QUALIFICATION`
