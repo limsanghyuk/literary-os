@@ -4,6 +4,9 @@ Date: 2026-09-16
 Project: Literary OS Development
 Status: CLOSED__GAP_CONFIRMED__UPPER_LAYER_QUALIFICATION_REVOKED_PENDING_REPAIR
 
+## Census correction note
+A later consistency audit found that the original text incorrectly recorded `10,853` sequences. The canonical total across the same 1,160 episode plans is **11,213**. This is consistent with the stored A0 structural-representability result (`total_sequences=11213`) and with the reported mean sequence count (`9.666379... * 1160 = 11213`). The incorrect 10,853 value was metadata/census transcription error, not a package-integrity failure.
+
 ## Purpose
 Re-audit the assumption that the Candidate upper planning layer was sufficiently mature, using the latest sealed research-support database and the actual R53 Candidate/Main-Path source rather than ChatGPT conceptual analog generation.
 
@@ -19,12 +22,13 @@ Re-audit the assumption that the Candidate upper planning layer was sufficiently
 - Reconstructed DB64 SHA256: `19f3c446a73408045d02d4d99e168251dca42da3bfa00abaff1d8f9159d7ea46`.
 - ZIP integrity: PASS.
 - 61-work 9-contract audit status: `PASS_61_61_A2_PENDING`.
-- Source-grounded 61-work census: 1,160 episodes, 10,853 extracted sequences, 73,639 scene cards.
+- Source-grounded 61-work census: 1,160 episodes, **11,213 planned/source-grounded sequence records**, 73,639 scene cards.
 
 ## Human-authored structural census
 Using the 1,160 episode plans whose sequence references and scene-budget hints are source-grounded:
-- planned sequence count: mean 9.67, median 9, P10 6, P90 14, min 2, max 29;
-- episode scene budget: mean 63.49, median 62, P10 46, P90 81.1, min 6, max 182;
+- planned sequence count: mean 9.6663793103, median 9, P10 6, P90 14, min 2, max 29;
+- total planned sequences: **11,213**;
+- episode scene budget: mean 63.4819, median 62, P10 46, P90 81.1, min 6, max 182;
 - scene budget per sequence: mean 6.57, median 7, P10 3, P90 10, min 1, max 25.
 
 These are distributional observations, not fixed quotas. Broadcast mode may use a minimum-depth guard, but generation must remain obligation-driven and variable.
@@ -91,4 +95,4 @@ Replace the lossy upper planning spine with an Adaptive Multi-Obligation Showrun
 No Production, DB, Formal, or physical authority change.
 
 Status token:
-`UL14__HUMAN_AUTHORED_CENSUS_COMPLETE__MAIN_PATH_FLATTENING_CONFIRMED__DB64_CONSUMPTION_GAP_CONFIRMED__UPPER_LAYER_QUALIFICATION_REVOKED_PENDING_UL15_REPAIR`
+`UL14__HUMAN_AUTHORED_CENSUS_CORRECTED_11213_SEQUENCES__MAIN_PATH_FLATTENING_CONFIRMED__DB64_CONSUMPTION_GAP_CONFIRMED__UPPER_LAYER_QUALIFICATION_REVOKED_PENDING_UL15_REPAIR`
