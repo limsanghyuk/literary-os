@@ -1,54 +1,62 @@
 # CURRENT NEXT RESEARCH POINTER
 Last updated: 2026-09-16
 
-## CURRENT PHYSICAL BASELINE
-**SYNC-R53** remains the last complete developer-held 5-Part / 9-Package baseline.
-
-Canonical handoff:
-`handoff/20260916/START_HERE_SYNC_R53_POSTSESSION_RESEARCH_HANDOFF_R1.md`
+## CURRENT PHYSICAL / PRODUCTION AUTHORITY
+- Physical baseline: **SYNC-R53** — direct 9/9 recovery verified.
+- Production: **ENG:R47** unchanged.
+- Candidate Base: **P07-I4H Recovery R3** unchanged.
+- DB Authority: **DB59 frozen** unchanged.
 
 Mandatory safety protocol:
 `handoff/20260916/RUNTIME_CONTAINER_AND_HUB_FAILURE_PREVENTION_PROTOCOL_R2.md`
 
-Direct recovery receipt:
-`handoff/20260916/R53_DIRECT_9_OF_9_RECOVERY_VERIFICATION_RECEIPT_R1.md`
+## MATERIAL CORRECTION
+The former statement that the conceptual upper layer was sufficiently closed for physicalization is withdrawn.
 
-Fresh direct recovery verification of SYNC-R53 is complete at **9/9 PASS**. Narrative Engine Master and DB59 both reconstruct to their canonical SHA256 values. This does not change authority and does not prove durable Hub byte archive custody.
+New evidence shows:
+- R53 Candidate upper-layer physical code is primarily validators/gates, not a new generative planner;
+- previous virtual screenplay generation is MOCK/ANALOG evidence, not Candidate Engine execution proof;
+- legacy EpisodeSynopsisPlan axis compression, single-owner sequence allocation, schema drift, non-operational defer, fixed structural defaults and missing forward Scene Planner create a material generative-quality gap.
 
-## CURRENT RESEARCH POSITION
-The conceptual upper-layer design is sufficiently closed for the current phase. The next priority is execution/physicalization, not another broad theory.
+Canonical correction:
+`handoff/20260916/UL14_UPPER_LAYER_DEFECT_CLOSURE_AND_HUMAN_AUTHORED_CENSUS_R1.md`
 
-Preserve the full post-R53 Candidate research lineage UL-1..UL-13:
-- UL-11: blind-continuation integrity and fresh-context isolation;
-- UL-12: stateless Provider qualification runner with stable `chain_id`, unique per-call `execution_nonce`, and real-receipt requirement;
-- UL-13: end-to-end Synopsis -> Sequence -> Scene -> full Surface qualification plus two-stage external blind protocol.
+Current status:
+`UPPER_LAYER_GENERATIVE_QUALITY = NOT_QUALIFIED`
 
-External judge responses remain 0. Live OpenAI qualification outputs remain 0.
+## REPAIRED DESIGN
+New forward contract:
+`handoff/20260916/UL15_ADAPTIVE_MULTI_OBLIGATION_SHOWRUNNER_CONTRACT_R1.md`
+
+Reference implementation/schema/tests:
+`research/upper_layer/ul15/`
+
+Local reference preflight: **5/5 PASS**. This proves contract executability only; it is not Main-Path or literary-quality qualification.
+
+Causal-adoption/provider preregistration:
+`handoff/20260916/UL16_CAUSAL_ADOPTION_AND_PROVIDER_QUALIFICATION_PREREG_R1.md`
+
+Development direction:
+`handoff/20260916/SHOWRUNNER_ENGINE_DEVELOPMENT_DIRECTION_AFTER_UL14_R1.md`
 
 ## EXACT NEXT ORDER
 1. Run Safety Protocol R2 preflight.
-2. Use the freshly reverified SYNC-R53 9/9 set as the physical root.
-3. Reintegrate the complete validated post-R53 Candidate overlay UL-1..UL-13 in a clean build.
-4. Create a NEW SYNC successor number; do not rewrite or promote R54/R55/R56.
-5. Independently pass the complete 12-step physical-custody gate on the new successor, including actual conversation/file attachment 9/9, user-visible download 9/9, Hub Physical Package Manifest, durable archive locator, and archive re-download/re-hash verification.
-6. Run UL-13 external Stage-1 Surface-only blind evaluation and seal responses.
-7. Reveal plans only in Stage 2 and evaluate plan-to-surface fidelity / hierarchical recoverability.
-8. Run actual OpenAI Responses API Candidate qualification with isolated fresh contexts and real provider receipts.
-9. Repeat whole-episode end-to-end qualification under the real Provider.
-10. Only then may Candidate Production promotion be considered.
+2. Preserve the freshly verified SYNC-R53 9/9 set as recovery root; do not modify authority.
+3. Implement a provenance-preserving State -> Obligation Portfolio adapter on the Candidate Main Path.
+4. Implement UL-15 Episode selection/defer, Ensemble/Weave, Sequence Transaction and Scene Transaction generators as actual Candidate runtime code.
+5. Version the new schema; keep `EpisodeSynopsisPlan.v0.3-r1` legacy/analytic-only for Candidate forward generation.
+6. Run deterministic schema/Main-Path adoption gates.
+7. Run UL-16 A2 causal-adoption interventions before screenplay surface generation.
+8. Run architecture-only independent blind evaluation at Episode, Sequence and Scene levels.
+9. Only after architecture qualification, run real fresh-context Provider end-to-end generation and >=35k surface evaluation with receipts.
+10. Only after provider/regression closure build a NEW SYNC successor and independently pass the 12-step physical-custody gate.
 
-## RUNTIME / CUSTODY CAUTION
-The current container overlay reports `fsync=volatile`; `/mnt/data` and `/tmp` share the same overlay capacity. Local CRC/hash/fsync verification is therefore not a durable external archive. Use streaming I/O, explicit temp-space budgeting, page-cache management, and exact-path GitHub blob-SHA updates.
-
-## CLAIM BOUNDARY
-- Production ENG:R47 unchanged.
-- Candidate Base P07-I4H Recovery R3 unchanged.
-- DB Authority DB59 frozen.
-- Operational Level-3 SUSPENDED.
-- Level 4 NOT STARTED.
-- Internal/virtual PASS is not external literary-quality PASS.
-- Virtual receipt is not a live OpenAI receipt.
-- public-target hidden-file status is not proof against model memorization.
+## DO NOT DO NEXT
+- Do not build a new SYNC merely by repackaging UL-1..UL-13.
+- Do not resume surface-first optimization before architecture qualification.
+- Do not treat validator PASS as generator-quality PASS.
+- Do not use fixed 9–10 sequences / 45–50 scenes as generation quotas.
+- Do not describe same-chat ChatGPT simulation as live Candidate execution.
 
 ## STATUS TOKEN
-`PHYSICAL_SYNC_R53_DIRECT_9_OF_9_VERIFIED__NEXT_REAPPLY_UL1_TO_UL13_AND_BUILD_NEW_SYNC__RUNTIME_HUB_SAFETY_R2__DURABLE_ARCHIVE_STILL_REQUIRED__THEN_EXTERNAL_AND_REAL_PROVIDER_QUALIFICATION`
+`NEXT__UL15_MAIN_PATH_IMPLEMENTATION__UL16_A2_CAUSAL_ADOPTION__ARCHITECTURE_BLIND__REAL_PROVIDER__THEN_NEW_SYNC__UPPER_LAYER_GENERATIVE_QUALITY_NOT_QUALIFIED`
