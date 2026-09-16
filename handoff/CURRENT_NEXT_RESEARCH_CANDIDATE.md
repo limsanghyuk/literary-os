@@ -1,35 +1,44 @@
 # CURRENT NEXT RESEARCH CANDIDATE
-Last updated: 2026-09-12
+Last updated: 2026-09-16
 
-## CURRENT PHYSICAL BASELINE
-**SYNC-R33** root `39487b9dc0ff12e2c75c16a1d5d8d7192dfb53e1ef14dc71d03c4474f1541d87` is current physical authority after full materialization and dual audit PASS.
+## PHYSICAL ROOT
+**SYNC-R53** is the last complete developer-held physical baseline.
 
-Recovery authority:
-- `handoff/20260912/START_HERE_SYNC_R33_PHYSICAL_AUTHORITY_I4C_MIXED_WEAK_NEW_SESSION_HANDOFF_R1.md`
-- `handoff/20260912/SYNC_R33_PHYSICALIZATION_COMPLETION_RECEIPT_R1_20260912.json`
+Canonical handoff:
+`handoff/20260916/START_HERE_SYNC_R53_POSTSESSION_RESEARCH_HANDOFF_R1.md`
 
-## R4A CANDIDATE
-R4A exact surfaces frozen; G6/G7 PASS; provider=`HOLD__REAL_PROVIDER_SECRET_ABSENT`; Judges=0; Mapping open=0. Independent-confirmation result does not exist.
+## CANDIDATE RESEARCH STATE
+Candidate Base Engine: `P07-I4H Recovery R3`.
+Production remains `ENG:R47`.
 
-## EVOLUTION RESULT
-I4C historical Stage-B rationale taxonomy=`MIXED_QUALITATIVE_SIGNAL`.
-Fresh unused-scene independent annotation replication is complete with `MIXED_OR_WEAK_REPLICATION` and is physically propagated in SYNC-R33.
+The next Candidate is NOT a new broad literary theory. It is the clean rebuilt successor that integrates the already-developed post-R53 upper-layer qualification stack:
+- UL-1..UL-10 upper-layer architecture/portfolio/weaving/replan/closure/state lineage;
+- UL-11 integrity/isolation gate;
+- UL-12 fresh-context Provider qualification runner;
+- UL-13 end-to-end hierarchical Surface qualification.
 
-Evidence:
-- middle/late minus early breadth=`+0.875`
-- middle/late minus early severity=`+0.875`
-- evaluator directional agreement=`3/3`
-- prereg strong thresholds breadth `+1.0`, severity `+2.0`; both not met
+## REQUIRED EVIDENCE BEFORE PROMOTION
+A Candidate successor is eligible for promotion consideration only after all of the following:
+1. rebuilt from verified SYNC-R53 baseline;
+2. 12-step physical-custody gate PASS and developer-visible/archive-visible 9/9 delivery;
+3. UL-13 external two-stage blind evidence acquired;
+4. actual OpenAI Responses API execution in fresh isolated contexts;
+5. real provider receipts with response/request identity, model, usage, input/output hash and failure status;
+6. whole-episode Synopsis -> Sequence -> Scene -> Surface hierarchical quality preserved under the real Provider;
+7. no target leakage / sibling contamination / arm contamination / pretraining-memory overclaim;
+8. production/state-commit gates remain fail-closed until qualification is complete.
 
-## CLAIM BOUNDARY
-The result weakly supports a positional craft-degradation signal but does not establish a broad/material multi-dimensional collapse or a causal renderer defect. No generic renderer intervention, score rewrite, threshold change, Production/Engine/Formal promotion, human-consensus claim, or population generalization is authorized.
+## CURRENT HOLD
+- External UL-13 judges: 0.
+- Live OpenAI qualification outputs: 0.
+- Candidate Production promotion: NO.
+- Operational Level-3: SUSPENDED.
+- Level 4: NOT STARTED.
 
 ## NEXT CANDIDATE STATUS
-The synchronization prerequisite is complete, so candidate design is now legally allowed. However, **no new scientific candidate has yet been selected or preregistered**.
+`READY_FOR_CLEAN_PHYSICAL_REBUILD_AND_EXTERNAL/LIVE_QUALIFICATION__NOT_READY_FOR_PRODUCTION_PROMOTION`
 
-A valid next candidate must target one specifically reproducible craft mechanism on fresh/unseen material. It should convert an observed craft weakness into a falsifiable mechanism-level hypothesis, freeze its Control/Treatment and thresholds before outputs, and keep absolute-surface, relative-effect, contract-consumption and independent-evaluation evidence separate.
-
-Do not use a generic hypothesis such as “middle/late scenes are worse” or “patch the renderer.” R4A remains independent and closed.
+Do not use the locally named R54/R55/R56 builds as the new developer physical root. Rebuild a new successor from R53 and preserve those names as historical local attempts.
 
 ## STATUS TOKEN
-`SYNC_R33_CLOSED__NEXT_CANDIDATE_DESIGN_ALLOWED_BUT_NOT_SELECTED__POST_R32_MIXED_OR_WEAK_PHYSICALLY_PROPAGATED__R4A_MAPPING_CLOSED`
+`NEXT_CANDIDATE__BASE_SYNC_R53__INTEGRATE_UL1_TO_UL13__NEW_SYNC_REQUIRED__EXTERNAL0__LIVE0__PROMOTION_HOLD`
