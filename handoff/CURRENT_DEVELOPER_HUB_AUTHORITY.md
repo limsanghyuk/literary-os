@@ -11,16 +11,19 @@ Last updated: 2026-09-16
 - Operational Level-3: SUSPENDED.
 - Level 4: NOT STARTED.
 
-Runtime safety:
-`handoff/20260916/RUNTIME_CONTAINER_AND_HUB_FAILURE_PREVENTION_PROTOCOL_R2.md`
+Mandatory runtime safety:
+`handoff/20260916/RUNTIME_CONTAINER_AND_HUB_FAILURE_PREVENTION_PROTOCOL_R3.md`
 
 R53 recovery receipt:
 `handoff/20260916/R53_DIRECT_9_OF_9_RECOVERY_VERIFICATION_RECEIPT_R1.md`
 
-## MATERIAL RESEARCH CORRECTION — UL-14
-The previous interpretation that the upper generative hierarchy was sufficiently stable is no longer valid.
+### Runtime observation
+The extended DB64/research/archive session reached cgroup `memory.peak = 4 GiB` and `memory.events max = 117` with `oom=0 / oom_kill=0`. This is classified `MEMORY_IO_PRESSURE`, not package corruption. R3 replaces absolute-zero memory-event assumptions with preflight baseline/delta checks and phase-separated large I/O.
 
-Evidence now confirms:
+## MATERIAL RESEARCH CORRECTION — UL-14
+The previous interpretation that the upper generative hierarchy was sufficiently stable is withdrawn.
+
+Evidence confirms:
 - the R53 Candidate upper-layer physical overlay contains executable validators/gates but not the intended new adaptive Episode/Sequence/Scene generator;
 - prior same-chat/virtual screenplay outputs do not establish Candidate Engine execution and are reclassified as MOCK/ANALOG evidence;
 - the legacy forward planning path contains material flattening risks: small-axis compression, singular sequence ownership, schema/consumer drift, non-operational defer, fixed structural defaults and lack of a complete forward Scene Transaction planner;
@@ -32,7 +35,7 @@ Canonical defect closure:
 Research status:
 **`UPPER_LAYER_GENERATIVE_QUALITY = NOT_QUALIFIED`**.
 
-This correction does not invalidate useful UL-1..UL-13 concepts/validators; it narrows what their previous PASS evidence proves.
+This correction does not discard useful UL-1..UL-13 concepts/validators; it narrows what their previous PASS evidence proves.
 
 ## REPAIRED CANDIDATE DESIGN
 UL-15 contract:
@@ -73,7 +76,7 @@ Only then build a new SYNC successor and independently pass the full 12-step phy
 R54/R55/R56 remain historical local attempts and are never promoted retroactively.
 
 ## ARCHIVE BOUNDARY
-The full R53 set and DB64 R108 research-support files have been copied into the ChatGPT persistent Library and are re-listable, reducing the need for repeated user uploads. Independent Library raw-byte re-materialization/re-hash is not authorized in the current Project path, so final durable byte-for-byte archive verification remains distinct and unproven.
+The full R53 set and DB64 R108 research-support files have been copied into the ChatGPT persistent Library and are re-listable, reducing repeated user uploads. Independent Library raw-byte re-materialization/re-hash is not authorized in the current Project path, so final durable byte-for-byte archive verification remains distinct and unproven.
 
 ## STATUS TOKEN
-`DEVELOPER_HUB__SYNC_R53_AUTHORITY__ENG_R47_PRODUCTION__UL14_DEFECT_CORRECTION__UL15_REFERENCE_PASS_MAIN_PATH_PENDING__UL16_PREREG_OUTPUTS0__UPPER_LAYER_GENERATIVE_QUALITY_NOT_QUALIFIED__NO_PROMOTION`
+`DEVELOPER_HUB__SYNC_R53_AUTHORITY__ENG_R47_PRODUCTION__SAFETY_R3__UL14_DEFECT_CORRECTION__UL15_REFERENCE_PASS_MAIN_PATH_PENDING__UL16_PREREG_OUTPUTS0__UPPER_LAYER_GENERATIVE_QUALITY_NOT_QUALIFIED__NO_PROMOTION`
