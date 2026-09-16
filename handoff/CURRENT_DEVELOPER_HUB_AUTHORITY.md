@@ -1,98 +1,62 @@
 # CURRENT DEVELOPER HUB AUTHORITY
-Last updated: 2026-09-15
+Last updated: 2026-09-16
 
 ## CANONICAL BOOTSTRAP
-`handoff/20260915/START_HERE_R52_POSTPHYSICAL_SHOWRUNNER_REQUALIFICATION_NEW_SESSION_HANDOFF_R1.md`
+`handoff/20260916/START_HERE_SYNC_R53_POSTSESSION_RESEARCH_HANDOFF_R1.md`
 
 Machine-readable status:
-`handoff/20260915/R52_POSTPHYSICAL_RESEARCH_STATUS_AND_RESUME_R1.json`
+`handoff/20260916/R53_POSTSESSION_RESEARCH_STATUS_AND_RESUME_R1.json`
 
 ## PHYSICAL AUTHORITY / DEVELOPER CUSTODY BOUNDARY
-Latest physically materialized/audited and developer-provided 5-Part / 9-Package authority remains:
+Latest complete developer-held 5-Part / 9-Package physical baseline: **SYNC-R53**.
 
-**SYNC-R52**
-Root SHA256:
-`62d2cec1a47e557a342dcedeb6eb63a7c18f1336f756b3b38bf0df7b7079a359`
-
-Required physical read order:
+Required order:
 `CONTROL -> A -> B1 -> B2 -> C1 -> C2-A -> C2-B -> D1 -> D2`
 
-No post-R52 physical reseal exists or is claimed.
-All R3-A/R3-B/R3-C/R3-D/R3-E work described below is post-R52 Hub-only research/development evidence and has NOT yet been incorporated into a newly delivered physical 5-Part/9-Package authority.
+Changed at R53:
+`CONTROL / A / B2 / C1 / C2-A / C2-B`
 
-## MATURITY / CLAIM STATUS
-Historical `LEVEL_3_ENTERED` declaration is preserved.
-Current operational claim:
-`LEVEL_3_OPERATIONAL_CLAIM_SUSPENDED__SHOWRUNNER_REQUALIFICATION_IN_PROGRESS`
-Level 4 has NOT started.
+Byte-unchanged at R53:
+`B1 / D1 / D2`
 
-## POST-R52 RESEARCH LINEAGE
-- E6-R2 post-hoc whole-script review narrowed the original claim
-- R3-A dramaturgy microbench PASS
-- R3-B fresh whole-episode immutable FAIL / SAFE_NO_COMMIT
-- R3-C C1 direction detection PASS
-- R3-C C2 show-only dramaturgy microbench PASS
-- R3-D D1 Historical Contract Restoration Audit PASS
-- R3-D D2 Hierarchical Architecture Microbench PASS
-- R3-D D3 50-Scene Contract Lowering PASS / surface=0 / State Commit=0 / external=0
-- R3-E Showrunner Requalification Master Plan frozen
-- R3-E scientific execution not started
+This supersedes older R52 custody statements. However, a complete durable GitHub archive of all nine R53 payload bytes was NOT verified in the 2026-09-16 session.
 
-## CONTROLLING ROOT CAUSE
-The project already researched the Series/Episode/Sequence/Scene hierarchy and a showrunner/writer-room operating loop. The present failure is not absence of conceptual knowledge.
+Local build names R54/R55/R56 are not developer-held physical authorities. Their research/validation evidence remains post-R53 development evidence only until rebuilt from R53 and delivered/archived 9/9 under the physical-custody gate.
 
-Current diagnosis:
-`HISTORICAL_SHOWRUNNER_KNOWLEDGE_PRESENT__ACTIVE_NEW_CREATION_CONSUMPTION_NOT_YET_PROVEN__ARCHITECTURE_CONSUMPTION_REGRESSION_PLUS_SURFACE_REALIZATION_REGRESSION`
+## CURRENT RESEARCH AUTHORITY
+Post-R53 Candidate research includes:
+- UL-11 Blind Continuation Integrity & Isolation Gate: reported 24/24 preflight PASS.
+- UL-12 Fresh-Context Provider Qualification Runner: reported 24/24 preflight PASS.
+- UL-13 End-to-End Hierarchical Surface Qualification: reported 16/16 internal preflight PASS; full Candidate surface 46 scenes / 38,277 chars; flat Control 50 scenes / 35,277 chars; external judge responses 0.
 
-The unfinished question is implementation-level:
-- does the candidate engine contain the algorithms?;
-- are they on the mandatory main path?;
-- did E6 bypass or truncate that path?;
-- are the required fields actually consumed?;
-- can fallback silently degrade to objective/state task decomposition?
+Earlier UL-1..UL-10 upper-layer lineage remains active as research state. See canonical bootstrap for detailed lineage and findings.
+
+## CLAIM BOUNDARIES
+- Production Engine remains ENG:R47.
+- Candidate has NOT been promoted to Production.
+- DB Authority remains DB59 frozen.
+- Operational Level-3 claim remains SUSPENDED.
+- Level 4 has NOT started.
+- Live OpenAI qualification outputs: 0.
+- UL-13 independent external blind verdicts: 0.
+
+## PHYSICAL-CUSTODY GATE FOR NEXT SYNC
+A new SYNC successor may be declared developer-delivery-complete only after:
+1. build PASS;
+2. CRC/binary integrity PASS;
+3. per-package SHA256 PASS;
+4. C2 reconstruction PASS;
+5. C1/C2 Candidate overlay identity PASS where applicable;
+6. unchanged-package verification PASS;
+7. Narrative Engine Master canonical reconstruction PASS;
+8. DB59 canonical reconstruction PASS;
+9. conversation/file-surface attachment audit 9/9;
+10. user-visible download audit 9/9;
+11. Hub Physical Package Manifest with name/size/SHA/custody/archive locator;
+12. durable archive locator verified.
 
 ## EXACT NEXT ACTION
-Run:
-`SHOWRUNNER_MAIN_PATH_CONSUMPTION_AND_E6_PARITY_AUDIT_R1`
-
-Do not generate a new whole-episode screenplay first.
-Do not treat the R3-D 50-scene development plan as a formal requalification answer.
-
-The audit must build the real candidate-engine/E6 call path and classify each architecture layer as:
-- `IMPLEMENTED_AND_WIRED__E6_HARNESS_BYPASS`
-- `IMPLEMENTED_BUT_DORMANT_OR_PARTIALLY_WIRED`
-- `SCHEMA_PRESENT__ALGORITHM_NOT_IMPLEMENTED`
-- `IMPLEMENTED__CONSUMPTION_RECEIPT_MISSING`
-- mixed by layer.
-
-If the main path can bypass showrunner consumption or cannot prove field-level use, implement a fail-closed `SHOWRUNNER_MAIN_PATH_CONSUMPTION_RECEIPT` plus tests before continuing.
-
-Then resume:
-`R3-E0 Authority/Evidence Lock -> R3-E1 E3-vs-E6 causal audit -> R3-E2 paired showrunner-consumption ablation`.
-
-Only subsequent PASS may unlock candidate portfolio, fresh whole-episode generation, Forward-Reverse Architecture Closure, internal audit, independent blind, State Commit and physical reseal.
-
-## CLAIM RESTORATION RULE
-Operational Level-3 restoration requires all of:
-1. showrunner main-path/consumption proof;
-2. R3-E causal architecture PASS;
-3. fresh whole-episode architecture + surface PASS;
-4. Forward-Reverse Architecture Closure PASS;
-5. fresh independent external blind PASS;
-6. physical 5-Part/9-Package reseal;
-7. all Hub current pointers updated to that new physical authority.
-
-## SESSION-INDEPENDENCE RULE
-Chat memory is not persistence. Research must survive as executable code, contracts, tests/gates, immutable records, Hub handoff/evolution documents and physical package reseals when authority changes.
-
-## UNCHANGED AUTHORITIES
-- Physical: SYNC-R52
-- Active Engine: P07-I4H Recovery R3
-- Production: ENG:R47
-- Formal scored total: 137
-- Latest Formal: R138
-- Formal R140: 0/0/0
-- DB64: non-Production
+Recover a healthy build runtime, use SYNC-R53 as the physical root, reapply the post-R53 Candidate research overlay, build a NEW SYNC successor, pass the physical-custody gate, then perform UL-13 external two-stage blind evaluation and real fresh-context OpenAI Provider qualification.
 
 ## STATUS TOKEN
-`DEVELOPER_HUB__PHYSICAL_SYNC_R52_ONLY__POST_R52_HUB_ONLY__LEVEL3_OPERATIONAL_CLAIM_SUSPENDED__R3E_FROZEN_NOT_STARTED__NEXT_ENGINE_MAIN_PATH_AUDIT__NO_LEVEL4`
+`DEVELOPER_HUB__PHYSICAL_BASELINE_SYNC_R53__POST_R53_RESEARCH_UL11_UL12_UL13__ENG_R47_UNCHANGED__NO_PRODUCTION_PROMOTION__EXTERNAL0__LIVE_PROVIDER0__NEXT_NEW_SYNC_WITH_12_STEP_CUSTODY_GATE`
