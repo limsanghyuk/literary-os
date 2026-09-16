@@ -8,7 +8,18 @@
     "read_order": ["CONTROL", "A", "B1", "B2", "C1", "C2-A", "C2-B", "D1", "D2"],
     "changed_at_r53": ["CONTROL", "A", "B2", "C1", "C2-A", "C2-B"],
     "byte_unchanged_at_r53": ["B1", "D1", "D2"],
-    "hub_archive_of_all_9_payload_bytes_verified": false
+    "hub_archive_of_all_9_payload_bytes_verified": false,
+    "fresh_direct_recovery_verification": {
+      "status": "9/9 PASS",
+      "authority_change": false,
+      "receipt": "handoff/20260916/R53_DIRECT_9_OF_9_RECOVERY_VERIFICATION_RECEIPT_R1.md",
+      "safety_protocol": "handoff/20260916/RUNTIME_CONTAINER_AND_HUB_FAILURE_PREVENTION_PROTOCOL_R2.md",
+      "narrative_engine_master_sha256": "5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649",
+      "narrative_engine_master_canonical_match": true,
+      "db59_reconstructed_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+      "db59_canonical_match": true,
+      "durable_external_archive_proven": false
+    }
   },
   "authority_stack": {
     "production_engine": "ENG:R47",
@@ -21,29 +32,30 @@
     "operational_level_3_claim": "SUSPENDED",
     "level_4": "NOT_STARTED"
   },
+  "runtime_safety": {
+    "memory_max_bytes": 4294967296,
+    "memory_peak_approx_gib": 2.18,
+    "memory_events_max": 0,
+    "oom": 0,
+    "oom_kill": 0,
+    "mnt_data_and_tmp_same_overlay": true,
+    "overlay_reports_fsync_volatile": true,
+    "local_fsync_is_durable_archive_evidence": false,
+    "dev_shm_memory_backed": true,
+    "open_files_soft_limit": 16384,
+    "file_size_limit": "unlimited",
+    "required_large_io_mode": "sequential_streaming_with_temp_space_budget_and_page_cache_management"
+  },
   "post_r53_research": {
     "ul11": {
       "name": "Blind Continuation Integrity & Isolation Gate",
       "reported_preflight": "24/24 PASS",
-      "key_additions": [
-        "target leakage gate",
-        "fresh-context sibling isolation",
-        "arm isolation",
-        "target-open-after-selector-freeze",
-        "counterfactual divergence for public works",
-        "pretraining memorization risk control"
-      ]
+      "key_additions": ["target leakage gate", "fresh-context sibling isolation", "arm isolation", "target-open-after-selector-freeze", "counterfactual divergence for public works", "pretraining memorization risk control"]
     },
     "ul12": {
       "name": "Fresh-Context Provider Qualification Runner",
       "reported_preflight": "24/24 PASS",
-      "key_additions": [
-        "forbid conversation reuse",
-        "forbid previous_response_id reuse",
-        "stable candidate chain_id",
-        "unique execution_nonce per provider call",
-        "real provider receipts required for LIVE qualification"
-      ]
+      "key_additions": ["forbid conversation reuse", "forbid previous_response_id reuse", "stable candidate chain_id", "unique execution_nonce per provider call", "real provider receipts required for LIVE qualification"]
     },
     "ul13": {
       "name": "End-to-End Hierarchical Surface Qualification",
@@ -52,27 +64,13 @@
       "reported_control_surface": {"scenes": 50, "characters": 35277},
       "external_judge_responses": 0,
       "external_status": "PENDING",
-      "key_additions": [
-        "whole-episode synopsis-to-sequence-to-scene-to-surface trace",
-        "surface-first reverse reconstruction",
-        "two-stage blind evaluation",
-        "neutral A/B remapping and leakage audit"
-      ]
+      "key_additions": ["whole-episode synopsis-to-sequence-to-scene-to-surface trace", "surface-first reverse reconstruction", "two-stage blind evaluation", "neutral A/B remapping and leakage audit"]
     }
   },
   "r54_r56_local_builds": {
     "classification": "LOCAL_CANDIDATE_PHYSICALIZATION_ATTEMPTS_NOT_DEVELOPER_PHYSICAL_AUTHORITY",
-    "reported_regressions": {
-      "R54": "33/33 PASS",
-      "R55": "57/57 PASS",
-      "R56": "67/67 PASS"
-    },
-    "reason_not_promoted_over_r53": [
-      "complete 9/9 user-visible delivery not reliably preserved",
-      "R56 B2 missing from conversation download surface",
-      "container later failed with TransportTimeoutError",
-      "full physical archive in Hub not verified"
-    ]
+    "reported_regressions": {"R54": "33/33 PASS", "R55": "57/57 PASS", "R56": "67/67 PASS"},
+    "reason_not_promoted_over_r53": ["complete 9/9 user-visible delivery not reliably preserved", "R56 B2 missing from conversation download surface", "container later failed with TransportTimeoutError", "full physical archive in Hub not verified"]
   },
   "physical_custody_gate_for_next_sync": [
     "build_pass",
@@ -89,11 +87,11 @@
     "durable_archive_locator_verified"
   ],
   "next_steps": [
-    "verify fresh container/runtime IO health",
-    "recover from developer-held SYNC-R53 physical baseline",
-    "reapply post-R53 UL-11/UL-12/UL-13 plus prior UL-1..UL-10 candidate research overlay",
+    "run Runtime/Container/Hub Safety Protocol R2 preflight",
+    "use freshly reverified SYNC-R53 9/9 as physical recovery root",
+    "reapply post-R53 UL-1..UL-13 candidate research overlay in a clean build",
     "build a new SYNC successor number without rewriting R54/R55/R56 history",
-    "pass the 12-step physical custody gate and deliver/archive 9/9",
+    "independently pass the complete 12-step physical custody gate on the new successor",
     "run UL-13 stage-1 then stage-2 external blind evaluation",
     "run actual OpenAI Responses API qualification in fresh isolated contexts",
     "repeat end-to-end full-surface qualification under real provider receipts"
@@ -101,9 +99,11 @@
   "canonical_handoff": "handoff/20260916/START_HERE_SYNC_R53_POSTSESSION_RESEARCH_HANDOFF_R1.md",
   "claim_boundaries": {
     "r53_is_last_developer_held_physical_baseline": true,
+    "r53_direct_9_of_9_recovery_verified": true,
     "r54_r55_r56_replace_r53": false,
     "candidate_promoted_to_production": false,
     "live_openai_qualification_passed": false,
-    "ul13_external_blind_passed": false
+    "ul13_external_blind_passed": false,
+    "hub_durable_archive_9_of_9_verified": false
   }
 }
