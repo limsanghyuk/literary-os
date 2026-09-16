@@ -1,47 +1,64 @@
 # CURRENT DATABASE RESEARCH POINTER
-Last updated: 2026-09-09
+Last updated: 2026-09-16
 
-## Current database research result
-`P07_DB64_9CONTRACT_CONSUMER_QUALIFICATION_R1`
+## ACTIVE DATABASE AUTHORITY
+**DB59 remains the frozen Production/Runtime database authority.**
 
-Classification:
-`HOLD_FOR_DATA_REPAIR__ENGINE_A2_PROVENANCE_INVARIANCE_REPAIR_REQUIRED__NO_DB_AUTHORITY_PROMOTION`
+Canonical DB59 SHA256:
+`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
 
-Result document:
-`handoff/20260909/P07_DB64_9CONTRACT_CANDIDATE_QUALIFICATION_R1_RESULT_20260909.md`
+No DB promotion occurred in the 2026-09-16 session.
 
-Result commit:
-`a17e4e8fcf8fd3510995caa347202d2ab7d8ec57`
+## CURRENT DB64 RESEARCH-SUPPORT STATE
+DB64 R108 is a **final-sealed research-support candidate only**, not Production DB authority.
 
-## Authority boundary
-- Active physical authority remains `CURRENT_PHYSICAL_AUTHORITY__P07_I4H_FAIL_CLOSED_RUNTIME_RECOVERY_R3`.
-- DB59 remains frozen SHA256 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
-- DB64 remains a candidate and is not adopted.
-- Semantic Alignment Virtual R1 remains a separate candidate; its Live gate is still pending.
-- Production ENG:R47, Formal 137, R140 0/0/0, I4I 0/0/0/0 unchanged.
+Current status token:
+`DB64_R108__PHYSICAL_PAYLOAD_PASS__FINAL_HASH_EXACT__LEARNING_BUNDLE_LINK_PASS__RESEARCH_SUPPORT_CANDIDATE_ONLY__A2_PENDING__NOT_ADOPTED__METADATA_CLOSURE_INCOMPLETE`
 
-## What passed
-- candidate physical integrity and exact 595/595 cross-package pairing;
-- zero JSON/JSONL parse errors;
-- 식객 C1/C2/C4 118/118;
-- selected A2 dependency mutation changes selected semantic/provider-facing content;
-- no false Consumer-Ready-A promotion claim;
-- current parent engine regression 258/258 PASS.
+Reported reassembled DB64 SHA256:
+`19f3c446a73408045d02d4d99e168251dca42da3bfa00abaff1d8f9159d7ea46`
 
-## Blockers
-Data-side:
-- PlannerInput unresolved-payoff schema generations are not uniform: thread_id objects, edge_id-only objects, and strings coexist;
-- current R3 NAP generates `THREAD:None` for 시티헌터/식객 and exceptions for 스카이캐슬/스타일/시그널/시크릿가든;
-- EP01 ThreadState missing for 신사의품격/신의퀴즈1/신화;
-- C3/C5/A1/G1/G2 hardening/normalization remains required.
+Reported DB64 physical statistics:
+- 313,702,945 bytes
+- 42,568 entries
 
-Engine-side:
-- unrelated unselected mutation changes full provider-facing payload through global snapshot provenance; this reproduces on frozen DB59 as well;
-- full NKB path is authority-locked to DB59, so a later DB64 pilot needs an explicit candidate authority adapter rather than relabeling.
+Reported source parts:
+- part01 SHA256 `36c6204edf0ad3d5d29b1918c637399fbf22eee2238cc75e09eb704b950e753e`
+- part02 SHA256 `ece6ee2f1cbcaf74a17b3888541149a23d36b0e24e4a9940ca3c0eda89073719`
+- Learning Bundle SHA256 `288a901bd1096e789bc914b810e0b2713bcb8403af2a9746e9fd897b166bf197`
 
-## Next exact order
-1. Reinforcement GPT produces a NEW DB64 candidate version with the data-side repairs; preserve current HOLD candidate unchanged.
-2. In a separate preregistered engine cycle, repair A2 semantic-selection/provenance separation and null/duplicate evidence-ID fail-closed handling.
-3. Re-run DB64 qualification from the frozen control conditions.
-4. Only if qualification passes, run paired DB59-vs-DB64 comparative utility under equal packet budget/source cutoff/engine settings.
-5. Do not proceed to DB adoption or I4I on the basis of the current DB64 candidate.
+IMPORTANT: any `R53_HARDENED` string inside DB64 file/data lineage is a database-data lineage label and must NOT be interpreted as Literary OS SYNC-R53 physical package authority.
+
+## HOW DB64 WAS USED IN POST-R53 RESEARCH
+DB64 was used as research/evaluation support for:
+- human-writer structure census;
+- descriptive position/work-length/ensemble/weaving priors;
+- long-horizon causal-edge metrology;
+- cutoff-state investigation;
+- upper-layer research input analysis.
+
+It was NOT adopted as Candidate canonical runtime DB. Candidate canonical runtime DB remains DB59 unless a future explicit DB qualification/adoption changes authority.
+
+## IMPORTANT DATA FINDING
+During blind-continuation development, some DB64 `runtime_safe` ThreadState records were found to contain future payoff/closure references. Therefore `runtime_safe` must not be assumed sufficient for hidden-target continuation experiments.
+
+A `Cutoff-Safe State Projection` research layer was introduced to remove future payoff/closure episode/sequence references before continuation use.
+
+This finding does not itself invalidate DB64 as research-support data, but it prohibits treating unprojected runtime-safe state as contamination-free continuation input.
+
+## CLAIM BOUNDARY
+- DB59 = active authority.
+- DB64 = research-support candidate only.
+- A2 remains pending.
+- DB64 metadata closure remains incomplete.
+- No DB59->DB64 adoption claim.
+- No Production Engine promotion follows from DB64 research.
+
+## NEXT DB-SPECIFIC ACTION
+Do not make DB adoption the immediate main-path priority. The next general recovery session should first rebuild the post-R53 Candidate physical successor and preserve the current authority split. Any future DB64 adoption cycle must be separately preregistered and must close A2/provenance/metadata concerns before comparative DB59-vs-DB64 utility testing and adoption consideration.
+
+## CANONICAL SESSION HANDOFF
+`handoff/20260916/START_HERE_SYNC_R53_POSTSESSION_RESEARCH_HANDOFF_R1.md`
+
+## STATUS TOKEN
+`DB59_FROZEN_AUTHORITY__DB64_R108_FINAL_SEALED_RESEARCH_SUPPORT_ONLY__A2_PENDING__NOT_ADOPTED__CUTOFF_SAFE_PROJECTION_REQUIRED_FOR_BLIND_CONTINUATION`
