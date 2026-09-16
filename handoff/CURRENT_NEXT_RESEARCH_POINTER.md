@@ -1,82 +1,77 @@
 # CURRENT NEXT RESEARCH POINTER
 Last updated: 2026-09-16
 
-## CURRENT PHYSICAL / PRODUCTION AUTHORITY
-- Physical baseline: **SYNC-R53** — direct 9/9 recovery verified.
-- Production: **ENG:R47** unchanged.
-- Candidate Base authority: **P07-I4H Recovery R3** unchanged.
-- DB Authority: **DB59 frozen** unchanged.
+## AUTHORITY — UNCHANGED
+- Physical baseline: **SYNC-R53**, direct 9/9 verified.
+- Production: **ENG:R47**.
+- Candidate Base authority: **P07-I4H Recovery R3**.
+- Runtime DB authority: **DB59 frozen**.
 
 Mandatory execution protocol:
 `handoff/20260916/RUNTIME_CONTAINER_HUB_ATOMIC_EXECUTION_PROTOCOL_R4.md`
 
-R4 supersedes the former long monolithic workflow. Every stage must run as an atomic research transaction:
-`PRECHECK -> ONE BOUNDED OPERATION -> LOCAL RECEIPT -> HUB RECEIPT -> POINTER UPDATE -> CLEANUP -> HEALTH DELTA`.
+## CURRENT RESEARCH CLAIM
+The former upper-layer stability claim is withdrawn.
 
-Historical cgroup pressure (`memory.peak=4GiB`, `memory.events max=117`) is not itself a new failure. Use per-transaction event deltas.
-
-## MATERIAL CORRECTION — STILL ACTIVE
-The former claim that upper generative planning was sufficiently closed is withdrawn.
+`UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED`
 
 Canonical gap audit:
 `research/upper_layer/20260916/UL14_HUMAN_AUTHORED_HIERARCHICAL_CENSUS_AND_GAP_AUDIT_R1.md`
 
-Current claim boundary:
-`UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED`.
+Canonical census correction:
+- 61 works
+- 1,160 episodes
+- **11,213 sequence records**
+- 73,639 scene cards
+- prior `10,853` value = metadata transcription error
 
-## UL-15 / UL-16 REPAIR STATUS
-UL-15 adaptive planner preregistration:
-`research/upper_layer/20260916/UL15_ADAPTIVE_MULTI_OBLIGATION_PLANNER_PREREGISTRATION_R1.md`
+## CURRENT UL-16 IMPLEMENTATION
+Current research integration receipt:
+`research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_RECEIPT_R2.md`
 
-UL-15 prototype/canonical receipt:
-`research/upper_layer/20260916/UL15_IMPLEMENTATION_AND_CANONICAL_COMPATIBILITY_RECEIPT_R1.md`
+Corrected prior profile hash:
+`f18c8d6224b23fbd00ad9d8883745945fcb1a0bfa375c829e4baef0fceb2d6ac`
 
-UL-16 integration plan:
-`research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_PLAN_R1.md`
+Current research runtime package:
+`LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R2_20260916.zip`
 
-UL-16 **actual Main-Path research integration receipt**:
-`research/upper_layer/20260916/UL16_MAIN_PATH_INTEGRATION_RECEIPT_R1.md`
-
-Current UL-16 research implementation status:
-- actual R53 runtime source working copy patched behind Candidate mode `ADAPTIVE_UL16`;
-- Legacy/Production route preserved as `LEGACY_R53`;
-- Legacy before/after graph hash invariant PASS;
-- same-input rich Candidate test: 9 sequences / 59 scenes / variable 5..10 scene allocation;
-- rich 30-obligation test expands to 11 sequences / 97 scenes, so 9 is not a fixed sequence quota;
-- current-state obligation compiler PASS;
-- due obligation loss 0;
-- deferred false fulfillment 0;
-- future-source leakage fail-closed PASS;
-- unknown mode fail-closed PASS;
-- Canonical IR compatibility PASS;
-- Python runtime compile 45/45 PASS.
-
-Research runtime package SHA256:
-`c1dfda09c97771f56aa88adc402c8fe05a03c0fd2b93205b83dafdc8d2101441`
+SHA256:
+`7f71484cd2687262d18104b3a9a5cfe727d003d7ed4b616ce8d64702b2da2ca8`
 
 Persistent Library locator:
-`/Literary_OS/Physical_Archive/RESEARCH_UL16_20260916/LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R1_20260916.zip`
+`/Literary_OS/Physical_Archive/RESEARCH_UL16_20260916/LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R2_20260916.zip`
 
-This is **research integration evidence**, not a new physical Candidate authority.
+R1 is superseded for current research execution. A prematurely emitted different R2 file is preserved as `PREMATURE_UNVERIFIED` and is not current research authority.
+
+Closed software/structural gates:
+- actual R53 runtime working-copy Main-Path integration behind `ADAPTIVE_UL16`;
+- Legacy `LEGACY_R53` before/after behavior invariant;
+- current-state obligation compiler PASS;
+- due/defer integrity PASS;
+- dynamic sequence expansion PASS;
+- future-source leakage fail-closed PASS;
+- unknown mode fail-closed PASS;
+- Canonical IR PASS;
+- runtime Python compile 45/45 PASS;
+- corrected R2 regression all boolean gates PASS.
 
 ## EXACT NEXT ORDER
-1. Start a new R4 atomic transaction and record memory-event baseline.
-2. Do **not** reopen/re-hash the full R53/DB64 corpus unless a sealed receipt is insufficient; use small hash-bound derived fixtures.
-3. Run diverse cutoff-safe historical replay across multiple DB64 works as structural/metrology evaluation without target semantic leakage.
-4. Test relationship/social-ecology/ensemble obligation preservation and scene-transaction semantics, not only counts/coverage.
-5. Integrate and regress state commit/carry + Responsible-Ancestor Replan against UL-16 adaptive graphs.
-6. Freeze architecture-only blind packets and run independent Episode/Sequence/Scene plan evaluation before prose rendering.
-7. Only after architecture qualification, execute real fresh-context OpenAI Provider generation with receipts and full >=35k broadcast surface evaluation.
+1. Start a new R4 atomic transaction and freeze resource/event baseline.
+2. Use small hash-bound derived fixtures; do not reopen full R53/DB64 payloads without necessity.
+3. Run diverse cutoff-safe multi-work structural replay on UL-16 R2.
+4. Audit relationship/social-ecology/ensemble obligation semantics and Scene Transaction quality.
+5. Close state commit/carry + Responsible-Ancestor Replan regression.
+6. Run independent architecture-only blind evaluation at Episode/Sequence/Scene levels.
+7. Only after architecture qualification run real fresh-context OpenAI Provider generation with receipts and >=35k broadcast surface evaluation.
 8. Close whole-system regression.
-9. Only then build a NEW SYNC successor and independently pass all 12 physical-custody gates.
+9. Only then build a NEW SYNC successor and independently pass all 12 custody gates.
 
-## DO NOT DO NEXT
-- Do not repack UL-16 research runtime as physical authority yet.
-- Do not treat structural coverage as literary-quality proof.
-- Do not resume surface-first optimization before architecture blind qualification.
-- Do not use fixed 9–10 sequence / 45–50 scene generation quotas.
-- Do not repeat full 1GB+ corpus scans when sealed hashes/derived packets suffice.
-- Do not call ChatGPT same-chat analog execution live Provider evidence.
+## DO NOT DO
+- Do not promote UL-16 R2 to physical authority yet.
+- Do not use fixed 9–10 sequence / 45–50 scene quotas.
+- Do not treat coverage metrics alone as literary quality.
+- Do not repeat 1GB+ scans when sealed receipts suffice.
+- Do not treat same-chat simulation as live Provider evidence.
 
 ## STATUS TOKEN
-`NEXT__R4_ATOMIC_EXECUTION__UL16_MAIN_PATH_RESEARCH_INTEGRATED__LEGACY_INVARIANT__NEXT_MULTIWORK_ARCHITECTURE_AND_STATE_CARRY_QUALIFICATION__THEN_REAL_PROVIDER__THEN_NEW_SYNC__NO_AUTHORITY_CHANGE`
+`NEXT__R4_ATOMIC__UL16_R2_CORRECTED_11213__MAIN_PATH_RESEARCH_INTEGRATION_PASS__NEXT_MULTIWORK_SEMANTIC_STATE_CARRY_ARCHITECTURE_BLIND__THEN_REAL_PROVIDER__THEN_NEW_SYNC__NO_AUTHORITY_CHANGE`
