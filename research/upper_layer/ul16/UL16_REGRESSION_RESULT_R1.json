@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-16",
+  "classification": "RESEARCH_MAIN_PATH_INTEGRATION_REGRESSION",
+  "base_runtime_zip_sha256": "b3873e98d8f5df44aee22c388ac9b19bf61cbdafd5f9c09cda7f06952125da55",
+  "db64_research_sha256": "19f3c446a73408045d02d4d99e168251dca42da3bfa00abaff1d8f9159d7ea46",
+  "db64_prior_profile_hash": "a89dd2f9dd29635f294432703f2f908e2567ddc7c59acb4a90d910fa62689b22",
+  "research_runtime_zip_sha256": "c1dfda09c97771f56aa88adc402c8fe05a03c0fd2b93205b83dafdc8d2101441",
+  "legacy_normal_path": {
+    "status": "PASS",
+    "sequence_count": 9,
+    "scene_count": 20,
+    "graph_hash_before": "f27df4468b4d2a8de1dfe50fdd6508a63dddd3d9dbb67d31eeb4428e39f9af6b",
+    "graph_hash_after": "f27df4468b4d2a8de1dfe50fdd6508a63dddd3d9dbb67d31eeb4428e39f9af6b",
+    "summary_byte_equal": true
+  },
+  "adaptive_rich_ensemble": {
+    "status": "PASS",
+    "sequence_count": 9,
+    "scene_count": 59,
+    "scene_count_range": [5, 10],
+    "weaving_fraction": 0.889,
+    "deferred_count": 2,
+    "due_obligation_loss": 0,
+    "lost_deferred": 0,
+    "false_fulfilled_deferred": 0,
+    "canonical_node_count": 70,
+    "canonical_validation_errors": 0
+  },
+  "adaptive_current_state_derived": {
+    "status": "PASS",
+    "compiler_mode": "CURRENT_STATE_DERIVED",
+    "obligation_count": 15,
+    "due_count": 14,
+    "defer_count": 1,
+    "sequence_count": 9,
+    "scene_count": 67,
+    "canonical_validation": "PASS"
+  },
+  "dynamic_architecture": {
+    "input_obligations": 30,
+    "sequence_count": 11,
+    "scene_count": 97,
+    "sequence_scene_range": [5, 11],
+    "validation": "PASS"
+  },
+  "gates": {
+    "legacy_pass": true,
+    "explicit_adaptive_pass": true,
+    "broadcast_depth": true,
+    "defer_integrity": true,
+    "derived_current_state_pass": true,
+    "dynamic_not_fixed_9": true,
+    "future_leak_fail_closed": true,
+    "unknown_mode_fail_closed": true,
+    "all_boolean_pass": true
+  },
+  "python_compile": {"source_modules": 45, "errors": 0},
+  "authority_change": false,
+  "production_promotion": false,
+  "next": "UL16_A2_CAUSAL_ADOPTION_AND_ARCHITECTURE_ONLY_BLIND"
+}
