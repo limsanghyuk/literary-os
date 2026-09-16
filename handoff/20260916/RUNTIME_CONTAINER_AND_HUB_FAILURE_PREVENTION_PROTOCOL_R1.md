@@ -18,7 +18,7 @@ Current physical root remains `SYNC-R53`; this document does not change Producti
 4. `CUSTODY_DELIVERY`: local file exists but conversation attachment/download surface is missing; durable archive missing; user-visible 9/9 not established.
 5. `HUB_CONCURRENCY`: GitHub update attempted with stale blob SHA, producing a 409 conflict.
 6. `HUB_DISCOVERY`: code-search/index returns zero even though the exact path exists in repository contents.
-7. `AUDIT_SCRIPT`: expected grep/search no-match treated as shell failure, directory filter mistake, shell arithmetic/pipeline error.
+7. `AUDIT_SCRIPT`: expected grep/search no-match treated as shell failure, unavailable utility/dependency, directory filter mistake, shell arithmetic/pipeline error.
 8. `COMPUTE_TIMEOUT`: redundant full-corpus recomputation or oversized in-memory transform exceeding execution budget.
 9. `SCIENTIFIC_FAILURE`: only a preregistered experimental gate or evaluation result may create a scientific FAIL.
 
@@ -30,21 +30,25 @@ Run in this order:
 2. `/mnt/data` and `/tmp` create/write/read/stat/delete;
 3. disk + inode availability;
 4. cgroup `memory.max`, `memory.current`, `memory.peak`, `memory.events`;
-5. small archive/member read;
-6. exact authority/pointer path reads;
-7. only then large-package SHA/CRC/reconstruction;
-8. only after physical health passes may research generation or experimental execution begin.
+5. file-descriptor/process limits when a large archive job is planned;
+6. small archive/member read;
+7. exact authority/pointer path reads;
+8. only then large-package SHA/CRC/reconstruction;
+9. only after physical health passes may research generation or experimental execution begin.
 
 If even minimal process execution fails, stop at `RUNTIME_INFRASTRUCTURE_HOLD`. Do not attempt to diagnose package corruption from the failed runtime.
 
-## 4. MEMORY / PAGE-CACHE RULES
+## 4. MEMORY / PAGE-CACHE / TEMP-SPACE RULES
 
 Observed in this session:
 
 - cgroup `memory.max = 4 GiB`;
-- no OOM / OOM-kill events observed;
+- `memory.high = max`; no OOM / OOM-kill events observed;
 - large sequential ZIP reads materially increase file page cache;
-- after advising scanned archives `POSIX_FADV_DONTNEED`, `memory.current` fell from about 1.81 GiB to about 1.14 GiB without any OOM/max event.
+- after advising scanned archives `POSIX_FADV_DONTNEED`, `memory.current` returned to about 1.08 GiB after the extended C1/C2 audit;
+- peak memory during the extended audit remained about 2.18 GiB, below the 4 GiB hard limit;
+- `/mnt/data` and `/tmp` are on the same `overlay` filesystem/device in this runtime;
+- `/dev/shm` is tmpfs and must NOT be used casually for multi-hundred-MiB reconstruction because it consumes memory-backed capacity.
 
 Required operating rules:
 
@@ -53,8 +57,10 @@ Required operating rules:
 - avoid full extraction when targeted member reads or ZIP central-directory inspection are sufficient;
 - use streaming I/O rather than reading large ZIP/BIN payloads into Python memory;
 - after one-pass large sequential scans, use `posix_fadvise(..., POSIX_FADV_DONTNEED)` when available;
-- use `/tmp` for large temporary/reconstruction bytes; keep `/mnt/data` for mounted inputs and final evidence/deliverables;
-- before a new large operation, HOLD if OOM/OOM-kill has incremented, memory.events `max` is incrementing, or available headroom is unsafe;
+- use `/tmp` for reconstruction semantics so mounted inputs/final deliverables in `/mnt/data` are not mutated, but do NOT assume `/tmp` provides separate disk capacity;
+- before reconstruction, calculate expected temporary output size and preserve explicit free-space headroom because `/tmp` and `/mnt/data` can share the same underlying filesystem;
+- avoid `/dev/shm` for large reconstruction unless a deliberate memory-backed operation has been budgeted;
+- before a new large operation, HOLD if OOM/OOM-kill has incremented, memory.events `max` is incrementing, file-descriptor/process limits are near exhaustion, or available disk/memory headroom is unsafe;
 - never treat page-cache growth by itself as package corruption.
 
 ## 5. ZIP / BINARY SAFETY CHECK
@@ -68,7 +74,17 @@ For every transport package before modification:
 - symlink surprises = 0 unless explicitly expected;
 - encrypted entries = 0 unless explicitly expected;
 - expected authority overlay/member set present;
+- manifest-listed internal members re-hashed where feasible;
 - only then inspect or append overlays.
+
+For split binary transport such as C2:
+
+1. hash each split part independently;
+2. reconstruct sequentially in a temporary file;
+3. verify reconstructed size and file type;
+4. verify reconstructed ZIP central directory / CRC;
+5. verify split/chunk manifests;
+6. delete temporary reconstruction after receipts are sealed.
 
 Do not recursively unpack all nested archives merely to prove integrity when streaming/member-level verification is sufficient.
 
@@ -80,14 +96,19 @@ Directly reverified in the healthy 2026-09-16 runtime:
 - A SHA256 `11e3298aa62706a1e30abc41af4d13b13048aa86523a40a4b0f6b6f84ac98314` — ZIP CRC PASS.
 - B1 SHA256 `00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98` — ZIP CRC PASS.
 - B2 SHA256 `12b6e6dd18c224d5bc98dd6714c6a24e3be7b5531d3546db09f7915c5476b3a0` — ZIP CRC PASS.
-- All four: duplicate=0, unsafe path=0, symlink=0, encrypted=0.
-- `research_sync_r53` overlay in CONTROL/A/B2: 8/8 files same path set and byte-identical.
-- 32 MiB `/tmp` write -> fsync -> atomic rename -> read/hash probe: PASS.
-- repeated random-offset reads of current B2: stable.
-- current disk headroom at audit: about 29 GiB; inode use about 1%.
-- cgroup audit after probes: `memory.events max=0`, `oom=0`, `oom_kill=0`.
+- C1 SHA256 `b2a06fa2add7f66d31d7ebf32a5264be9431e38b56f098b4241a2858e7da8cf4` — ZIP CRC PASS; 72 entries; duplicate=0, unsafe=0, symlink=0, encrypted=0.
+- C2-A SHA256 `aeb14bd4523466445411c8d6c00e38557e4847fce944eb314506ebb19dbc653f`.
+- C2-B SHA256 `ee85bab92b3c6ae52ca338ad0f4d5c04582c7fac2491d62e57ccac219b07af2d`.
+- C2-A + C2-B reconstructed size `319254266` bytes; reconstructed SHA256 `e51da441f932f4bf445ddb09b62cdb0caf940a209a9649d8518075b6f25bffb9`; ZIP CRC PASS; 3786 entries; duplicate=0, unsafe=0, symlink=0, encrypted=0.
+- `research_sync_r53` overlay in C1 and reconstructed C2: 8/8 same path set and byte-identical; this is consistent with prior CONTROL/A/B2 overlay identity.
+- C1 `PART_MANIFEST`: 4/4 referenced required/split members size+SHA PASS.
+- C2 `PART_MANIFEST`: 3/3 referenced required/split/candidate-overlay members size+SHA PASS.
+- Candidate runtime overlay in C1 and C2: SHA256 `d8c622cef4b3b853814efe896208494b7fb2bd6b2399dd6296adde8e498931ef`, byte-identical.
+- Narrative Engine Master reconstruction from C1 part001 + C2 part002: size `204167926` bytes; SHA256 `5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649`, exactly equal to canonical authority SHA; reconstructed ZIP CRC PASS with 4683 entries.
+- current disk headroom after temp cleanup: about 29 GiB; inode use about 1%.
+- current cgroup after cleanup: `memory.events max=0`, `oom=0`, `oom_kill=0`; `memory.current` about 1.08 GiB.
 
-This is a `4/9 DIRECTLY REVERIFIED` checkpoint, not a new 9/9 physical authority declaration.
+This is a `7/9 DIRECTLY REVERIFIED` checkpoint: `CONTROL / A / B1 / B2 / C1 / C2-A / C2-B`. It is not a new 9/9 physical authority declaration. D1 and D2 remain required for fresh 9/9 direct verification and DB59 reconstruction.
 
 ## 7. GITHUB CONTENTS / POINTER UPDATE RULE
 
@@ -133,6 +154,8 @@ R54/R55/R56 remain historical local attempts; do not reuse them as physical auth
 
 - expected `grep`/search no-match must be handled explicitly and must not be confused with command failure under `set -e`;
 - distinguish `0 records found` from `tool execution failed`;
+- do not assume nonessential utilities such as `xxd` are installed; prefer Python stdlib or POSIX tools (`od`) for portable byte inspection;
+- current session reproduced this exact case: `xxd` missing caused status 127 after SHA calculations had already succeeded; it was classified as `AUDIT_SCRIPT`, not package corruption, and only the affected byte-display step was rerun;
 - prefer small independently checkable Python audit steps over long fragile shell pipelines for package inventories and comparisons;
 - record scope next to every regression count so numbers from different candidate trees/suites are not treated as contradictory;
 - after any audit-script error, rerun only the affected audit stage and confirm source bytes were not modified.
@@ -159,10 +182,10 @@ Unchanged:
 - DB Authority: `DB59 frozen`.
 - Formal scored total: `137`; latest Formal `R138`; R140 `0/0/0`.
 - Operational Level-3: `SUSPENDED`.
-- Level 4: `NOT STARTED`.
+- Level 4: `NOT_STARTED`.
 - External UL-13 responses: `0`.
 - Live OpenAI qualification outputs: `0`.
 
 ## 13. STATUS TOKEN
 
-`RUNTIME_HUB_SAFETY_R1__FAILURE_DOMAINS_SEPARATED__DIRECT_PATH_SHA_UPDATES_ONLY__SEARCH_NOT_EXISTENCE_AUTHORITY__STREAMING_LARGE_IO__PAGE_CACHE_MANAGED__4_OF_9_R53_REVERIFIED__NO_AUTHORITY_CHANGE`
+`RUNTIME_HUB_SAFETY_R1__FAILURE_DOMAINS_SEPARATED__DIRECT_PATH_SHA_UPDATES_ONLY__SEARCH_NOT_EXISTENCE_AUTHORITY__STREAMING_LARGE_IO__TEMP_SPACE_BUDGETED__PAGE_CACHE_MANAGED__7_OF_9_R53_REVERIFIED__ENGINE_MASTER_RECONSTRUCTION_PASS__NO_AUTHORITY_CHANGE`
