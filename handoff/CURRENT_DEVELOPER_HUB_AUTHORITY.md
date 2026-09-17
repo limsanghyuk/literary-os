@@ -1,91 +1,85 @@
 # CURRENT DEVELOPER HUB AUTHORITY
 Last updated: 2026-09-17
 
-## PHYSICAL / PRODUCTION AUTHORITY BOUNDARY
-Sealed physical successor package set: **SYNC-R57**.
-Parent historical recovery root: **SYNC-R53**.
-Production Engine: **ENG:R47 / LEGACY_R53** — unchanged and not promoted.
-Candidate execution path physically integrated in R57: **ADAPTIVE_UL16**.
-Runtime DB Authority: **DB59 frozen** (`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`).
+## CURRENT PHYSICAL / PRODUCTION AUTHORITY
+Current sealed physical successor: **SYNC-R58**.
+Parent physical successor: **SYNC-R57**.
+Historical recovery root: **SYNC-R53**.
+Production/control remains **ENG:R47 / LEGACY_R53** — unchanged and not promoted.
+Candidate execution route: **SYNC-R58 `ADAPTIVE_UL16`**.
+Runtime DB authority: **DB59 frozen** (`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`).
 Formal total 137; latest R138; R140 0/0/0.
 Operational Level-3 remains SUSPENDED. Level 4 NOT STARTED.
 
-Canonical R57 receipt:
-`handoff/20260917/SYNC_R57_PHYSICALIZATION_AND_DELIVERY_RECEIPT_R1.md`
+Canonical R58 receipt:
+`handoff/20260917/SYNC_R58_PHYSICALIZATION_AND_DELIVERY_RECEIPT_R1.md`
 
-## R57 PHYSICAL INTEGRATION
-R57 C1 actual runtime and C2 active-development overlay physically contain the session repairs rather than merely linking to research notes:
-- Adaptive Multi-Obligation planning;
-- relationship / information / social-ecology semantic preservation;
-- transaction-local ensemble topology;
-- deferred residue;
-- exact State Commit/Carry;
-- next-episode semantic reconsumption;
-- Responsible-Ancestor Replan;
-- Legacy Canonical compatibility;
-- anti-repetition fail-closed planning.
+## WHAT R58 PHYSICALLY ADDS
+R58 physically integrates the closed R58/R58B/R58C repairs into the actual C1 runtime source and C2 Candidate overlay:
+- one obligation may develop across multiple **distinct transaction stages**;
+- exactly one final resolution per due obligation;
+- no quota padding or cloned obligation phases;
+- entity/id-normalized mechanical material clones are blocked;
+- resolving Scenes preserve concrete `visible_action`;
+- pre-resolution Scenes use obligation-specific statement/obstacle plus transaction-stage primitives;
+- identical stage/function/action/state signatures are forbidden.
 
-Current integrated runtime SHA256:
-`2c57f6b5ade4061d01cdf62bda1d0c5a856053604e9d519bce04ebd6d6528a7c`
+Physical R58 revalidation:
+- 12 sequences / 66 scenes;
+- visible-action grounding 37/37;
+- exact action duplicates 0;
+- duplicate Scene-function signatures 0;
+- generic fallback ratio 0;
+- due resolution exactly once PASS;
+- concrete-action NN Jaccard mean 0.2162;
+- mechanical-clone fixture BLOCK;
+- Python 45/45 compile PASS.
+
+Integrated runtime SHA256:
+`30281db791d9bb629218a79c51c230bffb8f9088d79c2cfe6d676f996098b250`.
 
 Candidate overlay SHA256:
-`5b82217cc81a686de8e45afe7bdc1b31a36874f62374ce9883b859224654570a`
+`d4215a8a5075054a054d5ca60e10e5992c4139588cccaeb0dabe14281f2fd633`.
 
-Anti-repetition design is physical code:
-- no obligation cloning for sequence-count priors;
-- no scene padding by cycling one obligation;
-- each due obligation consumed exactly once at Sequence and Scene transaction levels;
-- duplicate semantic material is blocked;
-- insufficient unique material produces UNDERDEVELOPED HOLD and must be repaired upstream with distinct events/relationships/information/social actions.
-
-Regression:
-- 54 unique obligations -> 16 sequences / 54 scenes, repeat/padding 0, PASS;
-- 12 unique obligations -> expected UNDERDEVELOPED HOLD rather than padding;
-- duplicate semantic material -> BLOCK;
-- Python runtime compile 45/45 PASS.
-
-## PHYSICAL VERIFICATION
-9 transports local SHA/CRC/integrity: PASS.
-C2 A+B reconstruction:
-- bytes 338,045,637
-- SHA256 `2f7b95fc555e48f235bc2eb9c9b82a286c7aa407f112528ff6abff75665f556a`
+## PHYSICAL / CUSTODY VERIFICATION
+9 transport SHA/CRC/integrity: PASS.
+C1/C2 runtime identity: PASS.
+C1/C2 Candidate overlay identity: PASS.
+C2 A+B:
+- bytes 356,855,467
+- SHA256 `8c75dcc0c3c4962068cae3881ed2686d7e64145f996b373540385cefddc004a6`
 - CRC PASS.
 
-C1/C2 runtime byte identity: PASS.
-C1/C2 Candidate overlay byte identity: PASS.
-Narrative Engine Master unchanged canonical SHA256:
+Narrative Engine Master canonical exact:
 `5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649`.
-DB59 unchanged canonical SHA256:
+DB59 canonical exact:
 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
-B1/D1/D2 byte-identical to R53.
+B1/D1/D2 unchanged claims: PASS.
 
 Persistent Library:
-`/Literary_OS/Physical_Archive/SYNC_R57_20260917/`
-9/9 re-list PASS; sizes match.
-Raw Library re-materialization/re-download is not authorized in the current Project path, so independent durable re-download + rehash remains `NOT_VERIFIED`.
+`/Literary_OS/Physical_Archive/SYNC_R58_20260917/`
 
-Authority token:
-`SYNC_R57__PHYSICAL_SUCCESSOR_SEALED__USER_DELIVERY_READY_9_OF_9__LIBRARY_LISTED_9_OF_9__DURABLE_REDOWNLOAD_NOT_VERIFIED`.
+Library list 9/9 PASS. Raw-byte re-materialization of all nine objects into a fresh verification directory succeeded; independent SHA256 rehash matched the sealed hashes **9/9 PASS**.
 
-Do not upgrade this to `DEVELOPER_DELIVERY_COMPLETE__9_OF_9` until a durable external re-download/rehash succeeds.
+Authority/custody token:
+`SYNC_R58__DEVELOPER_DELIVERY_COMPLETE__9_OF_9__DURABLE_LIBRARY_REDOWNLOAD_REHASH_PASS`.
 
 ## CANDIDATE EXECUTION RULE
-All future Candidate experiments and generation must execute **R57 `ADAPTIVE_UL16`** after R6 SHA synchronization.
-ENG:R47 is Production/control only. It must never be silently substituted as Candidate execution.
+All future Candidate research/generation must execute physical **SYNC-R58 `ADAPTIVE_UL16`** after R6 SHA synchronization.
+Do not silently substitute ENG:R47, SYNC-R57, or the research-only R58C ZIP as Candidate execution.
 
 ## QUALIFICATION STATE
-`UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED` remains true because physical integration is not independent literary-quality qualification.
+`UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED` remains true.
+Physical integration and custody closure are not independent literary-quality proof.
 
-The prior R5 Architecture-Only Blind packets are pre-R57 and therefore historical only. R57 changed anti-repetition behavior, so fresh R57 blind packets/judgments are required.
-
-No real Provider qualification has occurred for R57. No Production promotion has occurred.
+All pre-R58 Architecture-Only Blind packets are historical. Fresh R58 packets and independent judgments are required.
 
 ## NEXT
-1. fresh R57 Architecture-Only Blind from physical R57 Candidate vs ENG:R47 control;
-2. independent sealed judgments + mapping reveal after sealing;
+1. fresh physical-R58 Architecture-Only Blind vs ENG:R47 control;
+2. independent sealed judgments, mapping reveal only after sealing;
 3. if PASS, real fresh-context OpenAI Provider end-to-end >=35k screenplay qualification;
 4. whole-system regression;
-5. only after qualification may Production promotion be considered.
+5. Production promotion remains a later decision.
 
 ## STATUS TOKEN
-`DEVELOPER_HUB__SYNC_R57_PHYSICAL_SUCCESSOR_SEALED__ENG_R47_PRODUCTION_UNCHANGED__R57_ADAPTIVE_UL16_PHYSICALLY_INTEGRATED__ANTI_REPETITION_FAIL_CLOSED__FRESH_R57_BLIND_REQUIRED__DURABLE_REDOWNLOAD_NOT_VERIFIED__NO_PRODUCTION_PROMOTION`
+`DEVELOPER_HUB__SYNC_R58_CURRENT_PHYSICAL_AUTHORITY__R58C_PHYSICAL__DURABLE_9_OF_9_REDOWNLOAD_PASS__ADAPTIVE_UL16_CANDIDATE__ENG_R47_PRODUCTION_CONTROL_ONLY__FRESH_R58_BLIND_NEXT__NO_PROMOTION`
