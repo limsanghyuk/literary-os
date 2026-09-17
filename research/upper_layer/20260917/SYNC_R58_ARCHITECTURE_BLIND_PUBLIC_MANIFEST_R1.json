@@ -1,0 +1,28 @@
+{
+  "id": "SYNC_R58_ARCHITECTURE_ONLY_BLIND_PUBLIC_MANIFEST_R1",
+  "date": "2026-09-17",
+  "physical_c1_sha256": "9282eb4b3241c13e17cf032c3814674409d5efac67c26024580930ecbb633307",
+  "runtime_sha256": "30281db791d9bb629218a79c51c230bffb8f9088d79c2cfe6d676f996098b250",
+  "prereg_sha256": "7bbc2e11a54f367f0178fca9d5615276af22a41de12802e5fcc6a4849b77ec7e",
+  "status": "PACKETS_SEALED__JUDGMENTS_0__INDEPENDENT_GATE_PENDING",
+  "gate": {
+    "required_judges": 3,
+    "total_judge_pairs": 18,
+    "candidate_pair_wins_min": 12,
+    "candidate_win_plus_tie_min": 15,
+    "critical_violation_majority_forbidden": true
+  },
+  "metrology_without_mapping": [
+    {"pair_id":"P01","candidate_sequences":12,"candidate_scenes":66,"control_sequences":9,"control_scenes":20,"weaving_fraction":0.917,"candidate_unique_actions":66,"candidate_generic_fallback_ratio":0.0,"deferred_count":0},
+    {"pair_id":"P02","candidate_sequences":10,"candidate_scenes":55,"control_sequences":9,"control_scenes":20,"weaving_fraction":1.0,"candidate_unique_actions":55,"candidate_generic_fallback_ratio":0.0,"deferred_count":3},
+    {"pair_id":"P03","candidate_sequences":11,"candidate_scenes":55,"control_sequences":9,"control_scenes":20,"weaving_fraction":0.909,"candidate_unique_actions":55,"candidate_generic_fallback_ratio":0.0,"deferred_count":3},
+    {"pair_id":"P04","candidate_sequences":11,"candidate_scenes":55,"control_sequences":9,"control_scenes":20,"weaving_fraction":0.727,"candidate_unique_actions":55,"candidate_generic_fallback_ratio":0.0,"deferred_count":3},
+    {"pair_id":"P05","candidate_sequences":10,"candidate_scenes":56,"control_sequences":9,"control_scenes":20,"weaving_fraction":0.9,"candidate_unique_actions":56,"candidate_generic_fallback_ratio":0.0,"deferred_count":3},
+    {"pair_id":"P06","candidate_sequences":11,"candidate_scenes":55,"control_sequences":9,"control_scenes":20,"weaving_fraction":0.909,"candidate_unique_actions":55,"candidate_generic_fallback_ratio":0.0,"deferred_count":3}
+  ],
+  "judges": {
+    "J01": {"packet_sha256":"2d0c4bedba70358c64517d306933e93b35a3ec66dfb4bf14a6c26db4e6ae1bb7","zip_sha256":"c35b219bd99be26b3fa94176c1a91ee2b06e94f49b6351515ddcdb5e07bf9421","leak_audit":{"status":"PASS","bad_tokens":[]},"arm_balance":{"candidate_A":3,"candidate_B":3}},
+    "J02": {"packet_sha256":"f4bb8b360bda2cdf7689af069471ede41ea8ab0f118e4b7fe70700d688d01f58","zip_sha256":"4a4a4100c4dbe85bbe9689606c5f11781c4b790ddb673946db01c4787aca9066","leak_audit":{"status":"PASS","bad_tokens":[]},"arm_balance":{"candidate_A":3,"candidate_B":3}},
+    "J03": {"packet_sha256":"b9478117ee8f046755f70e4fbae30e3e2cbb972bee44d4c7e2ba304d6e285e9e","zip_sha256":"5b5f369e57d8ad223a415eee7b4a168ec92b30b4468b2ee850291b90b0ff1195","leak_audit":{"status":"PASS","bad_tokens":[]},"arm_balance":{"candidate_A":3,"candidate_B":3}}
+  }
+}
