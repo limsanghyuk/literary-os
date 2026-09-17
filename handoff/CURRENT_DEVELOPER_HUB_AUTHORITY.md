@@ -9,77 +9,62 @@ Production/control remains **ENG:R47 / LEGACY_R53** — unchanged and not promot
 Candidate execution route: **SYNC-R58 `ADAPTIVE_UL16`**.
 Runtime DB authority: **DB59 frozen** (`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`).
 Formal total 137; latest R138; R140 0/0/0.
-Operational Level-3 remains SUSPENDED. Level 4 NOT STARTED.
 
-Canonical R58 receipt:
+Canonical R58 physical receipt:
 `handoff/20260917/SYNC_R58_PHYSICALIZATION_AND_DELIVERY_RECEIPT_R1.md`
 
-## WHAT R58 PHYSICALLY ADDS
-R58 physically integrates the closed R58/R58B/R58C repairs into the actual C1 runtime source and C2 Candidate overlay:
-- one obligation may develop across multiple **distinct transaction stages**;
-- exactly one final resolution per due obligation;
-- no quota padding or cloned obligation phases;
-- entity/id-normalized mechanical material clones are blocked;
-- resolving Scenes preserve concrete `visible_action`;
-- pre-resolution Scenes use obligation-specific statement/obstacle plus transaction-stage primitives;
-- identical stage/function/action/state signatures are forbidden.
-
-Physical R58 revalidation:
-- 12 sequences / 66 scenes;
-- visible-action grounding 37/37;
-- exact action duplicates 0;
-- duplicate Scene-function signatures 0;
-- generic fallback ratio 0;
-- due resolution exactly once PASS;
-- concrete-action NN Jaccard mean 0.2162;
-- mechanical-clone fixture BLOCK;
-- Python 45/45 compile PASS.
+## R58 PHYSICAL / CUSTODY STATUS
+R58 physically contains the R58/R58B/R58C Showrunner repairs: multi-stage obligation development with one final resolution, no quota padding/cloned phases, material-pattern clone blocking, concrete visible-action grounding, and duplicate Scene-function prevention.
 
 Integrated runtime SHA256:
 `30281db791d9bb629218a79c51c230bffb8f9088d79c2cfe6d676f996098b250`.
-
 Candidate overlay SHA256:
 `d4215a8a5075054a054d5ca60e10e5992c4139588cccaeb0dabe14281f2fd633`.
 
-## PHYSICAL / CUSTODY VERIFICATION
 9 transport SHA/CRC/integrity: PASS.
-C1/C2 runtime identity: PASS.
-C1/C2 Candidate overlay identity: PASS.
-C2 A+B:
-- bytes 356,855,467
-- SHA256 `8c75dcc0c3c4962068cae3881ed2686d7e64145f996b373540385cefddc004a6`
-- CRC PASS.
-
-Narrative Engine Master canonical exact:
-`5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649`.
-DB59 canonical exact:
-`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
+C1/C2 runtime and overlay identity: PASS.
+Narrative Engine Master canonical exact: `5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649`.
+DB59 canonical exact: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
 B1/D1/D2 unchanged claims: PASS.
 
-Persistent Library:
-`/Literary_OS/Physical_Archive/SYNC_R58_20260917/`
-
-Library list 9/9 PASS. Raw-byte re-materialization of all nine objects into a fresh verification directory succeeded; independent SHA256 rehash matched the sealed hashes **9/9 PASS**.
-
-Authority/custody token:
+Persistent Library 9/9 raw-byte re-download + independent SHA rehash: **PASS**.
 `SYNC_R58__DEVELOPER_DELIVERY_COMPLETE__9_OF_9__DURABLE_LIBRARY_REDOWNLOAD_REHASH_PASS`.
 
+## INDEPENDENT ARCHITECTURE QUALIFICATION
+Canonical result:
+`research/upper_layer/20260917/SYNC_R58_ARCHITECTURE_BLIND_RESULT_R1.md`
+
+Three fresh-context independent judges were sealed before mapping reveal. Preregistered gate required Candidate >=12 wins, win+tie >=15/18, and no Candidate critical-violation majority.
+
+Observed mapped result:
+- Candidate **18 wins / 0 ties / 0 losses**;
+- Candidate critical-majority **0/6 pair majorities**;
+- gate **PASS**.
+
+Mapped descriptive axis means:
+- Candidate overall 7.882;
+- Control overall 3.125.
+
+Independent judges consistently supported stronger Candidate multi-strand architecture, ensemble/relationship weaving, information asymmetry, social-ecology integration, due-now realization, and state continuity.
+
+Shared remaining weakness: Scene-level bridge/action grammar still shows recognizable ENGAGE/PROBE/TEST -> RESOLVE regularity and some generic state phrasing. This prevents treating the architecture result as final screenplay-surface proof.
+
+## QUALIFICATION BOUNDARY
+`UPPER_LAYER_ARCHITECTURE_QUALIFICATION = PASS`.
+`UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED`.
+
+No real Provider full-screenplay qualification has yet closed for SYNC-R58. No Production promotion occurred.
+
 ## CANDIDATE EXECUTION RULE
-All future Candidate research/generation must execute physical **SYNC-R58 `ADAPTIVE_UL16`** after R6 SHA synchronization.
-Do not silently substitute ENG:R47, SYNC-R57, or the research-only R58C ZIP as Candidate execution.
-
-## QUALIFICATION STATE
-`UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED` remains true.
-Physical integration and custody closure are not independent literary-quality proof.
-
-All pre-R58 Architecture-Only Blind packets are historical. Fresh R58 packets and independent judgments are required.
+All future Candidate experiments/generation must execute physical SYNC-R58 `ADAPTIVE_UL16` after R6 SHA synchronization. Never silently substitute ENG:R47, SYNC-R57, or research-only R58C bytes.
 
 ## NEXT
-1. fresh physical-R58 Architecture-Only Blind vs ENG:R47 control;
-2. independent sealed judgments, mapping reveal only after sealing;
-3. if PASS, real fresh-context OpenAI Provider end-to-end >=35k screenplay qualification;
-4. whole-system regression;
-5. Production promotion remains a later decision.
+1. real fresh-context OpenAI Provider end-to-end execution from physical SYNC-R58;
+2. preserve provider receipts and input/output hashes;
+3. generate >=35,000-character broadcast screenplay;
+4. test Synopsis -> Sequence -> Scene -> Surface fidelity, material/action diversity, Scene necessity, dialogue/direction quality, State Carry, and reverse reconstruction;
+5. whole-system regression;
+6. only then consider Production promotion.
 
 ## STATUS TOKEN
-`DEVELOPER_HUB__SYNC_R58_CURRENT_PHYSICAL_AUTHORITY__R58C_PHYSICAL__DURABLE_9_OF_9_REDOWNLOAD_PASS__ADAPTIVE_UL16_CANDIDATE__ENG_R47_PRODUCTION_CONTROL_ONLY__FRESH_R58_BLIND_NEXT__NO_PROMOTION`
+`DEVELOPER_HUB__SYNC_R58_CURRENT_PHYSICAL_AUTHORITY__DURABLE_9_OF_9_PASS__INDEPENDENT_ARCHITECTURE_BLIND_PASS_18W_0T_0L__UPPER_LAYER_ARCHITECTURE_QUALIFIED__PROVIDER_FULL_SURFACE_NEXT__ENG_R47_PRODUCTION_UNCHANGED__NO_PROMOTION`
