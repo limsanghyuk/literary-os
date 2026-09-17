@@ -3,11 +3,9 @@ Last updated: 2026-09-17
 
 ## CURRENT PHYSICAL CANDIDATE EXECUTION SOURCE
 Current sealed physical successor: **SYNC-R58**.
-Parent physical successor: **SYNC-R57**.
 Production/control: **ENG:R47 / LEGACY_R53** unchanged.
-Candidate route for all new research/generation: physical **SYNC-R58 `ADAPTIVE_UL16`**.
+Candidate route: physical **SYNC-R58 `ADAPTIVE_UL16`**.
 Runtime DB authority: **DB59 frozen**.
-Formal total 137; latest R138; R140 0/0/0.
 
 Canonical physicalization receipt:
 `handoff/20260917/SYNC_R58_PHYSICALIZATION_AND_DELIVERY_RECEIPT_R1.md`
@@ -22,90 +20,62 @@ Candidate overlay SHA256:
 R58 9/9 Library raw-byte re-download + independent SHA rehash: **PASS**.
 `DEVELOPER_DELIVERY_COMPLETE__9_OF_9 = PASS`.
 
-## CURRENT RESEARCH CLAIM
+## INDEPENDENT SYNC-R58 ARCHITECTURE-ONLY BLIND — PASS
+Canonical result:
+`research/upper_layer/20260917/SYNC_R58_ARCHITECTURE_BLIND_RESULT_R1.md`
+
+Judgment seal receipt:
+`research/upper_layer/20260917/SYNC_R58_ARCHITECTURE_BLIND_JUDGMENTS_SEALED_RECEIPT_R1.md`
+
+Preregistered gate:
+- 3 independent judges x 6 pairs = 18 mapped outcomes;
+- Candidate wins >=12/18;
+- Candidate wins+ties >=15/18;
+- Candidate critical-violation majority forbidden.
+
+Observed after sealed judgment mapping reveal:
+- Candidate wins: **18/18**
+- ties: **0/18**
+- Control wins: **0/18**
+- Candidate win+tie: **18/18**
+- Candidate critical-majority: **0/6 pair majorities**
+
+`INDEPENDENT_ARCHITECTURE_BLIND_GATE_R58 = PASS`.
+
+Mapped overall axis-score mean (descriptive, not the gate rule):
+- Candidate 7.882
+- Control 3.125
+
+Strongest architecture gains were in multi-strand architecture, ensemble/relationship weaving, information asymmetry, and social-ecology integration.
+
+Remaining shared judge criticism:
+- recognizable ENGAGE/PROBE/TEST -> RESOLVE regularity;
+- some generic state phrasing;
+- Scene-level specificity/necessity remains the weakest Candidate axis (mapped mean 6.667).
+
+Therefore upper-layer architecture is now independently qualified, but full screenplay-surface/generative quality is not yet qualified.
+
+## CURRENT CLAIM BOUNDARY
+`UPPER_LAYER_ARCHITECTURE_QUALIFICATION = PASS`.
 `UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED`.
 
-R58 materially improves Scene depth and material/action diversity relative to R57, but physical integration alone is not human-level literary-quality proof.
-
-## FRESH SYNC-R58 ARCHITECTURE-ONLY BLIND — PACKETS SEALED
-Canonical preparation receipt:
-`research/upper_layer/20260917/SYNC_R58_ARCHITECTURE_ONLY_BLIND_PREPARATION_RECEIPT_R1.md`
-
-Public manifest:
-`research/upper_layer/20260917/SYNC_R58_ARCHITECTURE_BLIND_PUBLIC_MANIFEST_R1.json`
-
-Prereg SHA256:
-`7bbc2e11a54f367f0178fca9d5615276af22a41de12802e5fcc6a4849b77ec7e`.
-
-Frozen axes:
-1. Episode multi-strand architecture
-2. Sequence functional diversity
-3. Ensemble/relationship weaving
-4. Information asymmetry use
-5. Social-ecology integration
-6. Scene transaction specificity/necessity
-7. Causal/state continuity
-8. Escalation/turning architecture
-
-Fresh physical-R58 Candidate metrology across six workload pairs:
-- sequences 10..12;
-- scenes 55..66;
-- weaving fraction 0.727..1.000;
-- Candidate unique action count equals Scene count in every pair;
-- generic fallback ratio 0;
-- deferred obligations 0..3 and preserved.
-
-ENG:R47 control on the paired episode contracts:
-- 9 sequences / 20 scenes per pair.
-
-These counts are descriptive metrology, not quality winners.
-
-Three independent judge packets are sealed:
-- J01: Candidate A 3 / B 3; leak audit PASS;
-- J02: Candidate A 3 / B 3; leak audit PASS;
-- J03: Candidate A 3 / B 3; leak audit PASS.
-
-Independent gate frozen before judgments:
-- 3 judges x 6 pairs = 18 judge-pair outcomes;
-- Candidate wins >=12/18;
-- Candidate wins + ties >=15/18;
-- no critical-violation majority.
-
-External packet-set SHA256:
-`de700c7b0ac9bc827d94b534e40d9e66f8ed243e68e6e5ac7a9c2aa8e1613a7f`.
-
-Coordinator-secret ZIP SHA256:
-`211cb4669b86d40f759df6be649f33b7201ba0ae795fb71ec28e0deacd14451c`.
-
-Persistent Library:
-`/Literary_OS/Physical_Archive/RESEARCH_SYNC_R58_ARCH_BLIND_20260917/`.
-
-Current sealed independent judgments:
-**0/3 judges, 0/18 judge-pair outcomes**.
-
-`INDEPENDENT_ARCHITECTURE_BLIND_GATE_R58 = PENDING`.
+No Production promotion occurred.
 
 ## EXACT NEXT R6+R5-BOUNDED TRANSACTION
 Only this next:
-1. send J01/J02/J03 packets to separate fresh-context independent judges without coordinator mapping;
-2. receive JSON judgments and verify schemas/packet associations;
-3. seal all three judgments;
-4. reveal mapping only after all three are sealed;
-5. compute 18 mapped pair outcomes and critical-violation gate;
-6. write immutable R58 blind result and update CURRENT pointer.
-
-Only if the fresh R58 Architecture Blind passes:
-- real fresh-context OpenAI Provider end-to-end generation with receipts;
-- >=35k broadcast screenplay evaluation;
-- whole-system regression;
-- only then consider Production promotion.
+1. SHA-sync to physical SYNC-R58 Candidate bytes;
+2. run real fresh-context OpenAI Provider end-to-end execution from the R58 Candidate path, not ENG:R47;
+3. preserve provider receipts: response id, request id, model, usage, input/output hashes, failure receipts;
+4. generate a full broadcast screenplay >=35,000 Korean characters with no quota padding or material/action repetition;
+5. evaluate Episode Synopsis -> Sequence -> Scene -> Surface fidelity, Scene necessity, material/action diversity, dialogue/direction craft, state carry, and reverse reconstruction;
+6. run whole-system regression;
+7. only after those gates may Production promotion be considered.
 
 ## DO NOT DO
-- do not expose coordinator mapping to judges;
-- do not count same-session/internal assessment as independent evidence;
-- do not run Candidate generation with ENG:R47 or R57;
-- do not treat raw scene count as literary quality;
-- do not start Provider screenplay qualification while the R58 Architecture Blind gate is pending.
+- do not substitute ENG:R47 or R57 for Candidate execution;
+- do not call Architecture Blind PASS final screenplay-quality proof;
+- do not ignore the judges' repeated Scene-level regularity criticism;
+- do not promote Production before real Provider + full-surface + regression gates close.
 
 ## STATUS TOKEN
-`NEXT__SYNC_R58_PHYSICAL_CURRENT__DURABLE_9_OF_9_PASS__FRESH_R58_ARCH_BLIND_PACKETS_SEALED__JUDGMENTS_0_OF_3__MAPPING_HIDDEN__INDEPENDENT_GATE_PENDING__PROVIDER_BLOCKED__NO_PROMOTION`
+`NEXT__SYNC_R58_ARCHITECTURE_BLIND_PASS__18W_0T_0L__UPPER_LAYER_ARCHITECTURE_QUALIFIED__PROVIDER_E2E_NOW_PERMITTED__FULL_GENERATIVE_QUALITY_PENDING__NO_PRODUCTION_PROMOTION`
