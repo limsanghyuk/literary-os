@@ -1,93 +1,88 @@
 # CURRENT NEXT RESEARCH POINTER
 Last updated: 2026-09-17
 
-## CURRENT PHYSICAL CANDIDATE EXECUTION SOURCE
-Sealed physical successor set: **SYNC-R57**.
-Parent historical recovery root: **SYNC-R53**.
+## PHYSICAL AUTHORITY — UNCHANGED
+Sealed physical successor: **SYNC-R57**.
 Production/control: **ENG:R47 / LEGACY_R53** unchanged.
-Candidate route for all new research/generation: **R57 `ADAPTIVE_UL16`**.
-Runtime DB: **DB59 frozen**.
+Physical Candidate route: R57 `ADAPTIVE_UL16`.
+Runtime DB authority: DB59 frozen.
 Formal total 137; latest R138; R140 0/0/0.
 
-Canonical physicalization receipt:
+Canonical R57 physicalization receipt:
 `handoff/20260917/SYNC_R57_PHYSICALIZATION_AND_DELIVERY_RECEIPT_R1.md`
 
-Mandatory pre-execution rule:
-1. fetch this pointer;
-2. resolve the R57 physical Candidate/runtime SHA;
-3. hash local bytes and require exact match;
-4. never substitute ENG:R47 or an older UL-16 research ZIP for Candidate execution.
+## MANDATORY EXECUTION PROTOCOLS
+- R6 authority SHA sync before using physical Candidate bytes;
+- R5 turn-bounded closure;
+- R4 atomic execution;
+- **R7 Small-Source Research Lane:** `handoff/20260917/RUNTIME_SMALL_SOURCE_RESEARCH_LANE_R7.md`.
 
-Integrated R57 runtime SHA256:
-`2c57f6b5ade4061d01cdf62bda1d0c5a856053604e9d519bce04ebd6d6528a7c`
+R7 exists because repeated large-package reads in the 4GiB cgroup produced page-cache/transport pressure and brittle audit-shell failures. Ordinary research must use the smallest verified runtime source + hash-bound fixtures; nine-package reconstruction is reserved for deliberate physicalization/custody work.
 
-Candidate overlay SHA256:
-`5b82217cc81a686de8e45afe7bdc1b31a36874f62374ce9883b859224654570a`
+## CURRENT RESEARCH SUCCESSOR — UL16 R58C
+Canonical receipt:
+`research/upper_layer/20260917/UL16_R58C_SCENE_DEPTH_AND_MATERIAL_DIVERSITY_REPAIR_RECEIPT_R1.md`
 
-C1/C2 binding: PASS.
-C2 reconstruction SHA256:
-`2f7b95fc555e48f235bc2eb9c9b82a286c7aa407f112528ff6abff75665f556a`.
+Research package:
+`LITERARY_OS_UL16_CANDIDATE_RUNTIME_SOURCE_RESEARCH_R58C_SCENE_DIVERSITY_PASS_20260917.zip`
 
-## R57 ANTI-REPETITION IS NOW PHYSICAL
-The prior R5 Candidate could expand one obligation through repeated phases to satisfy 9-sequence / 46-scene priors. R57 removes that mechanism.
+SHA256:
+`121aa57b8df9bcf0173aaa7420d9b7dadf59c87c7588e175c133b8f4df4b03a8`
 
-Current fail-closed rules:
-- no obligation cloning to satisfy sequence-count priors;
-- no repeated scene cycling to satisfy scene-count priors;
-- every due obligation appears once in Sequence assignment and once in Scene transaction assignment;
-- duplicate semantic material is blocked even when IDs differ;
-- if unique dramatic material is insufficient, return UNDERDEVELOPED HOLD and require upstream replanning with genuinely distinct events/relationships/information/social actions.
+Size: 18,738,343 bytes. ZIP CRC PASS.
+Persistent Library:
+`/Literary_OS/Physical_Archive/RESEARCH_UL16_R58C_20260917/`
 
-Regression:
-- rich unique fixture: 54 obligations -> 16 sequences / 54 scenes, repeat 0, PASS;
-- sparse fixture: HOLD instead of padding;
-- duplicate-material fixture: BLOCK;
-- Python 45/45 compile PASS.
+### What R58C repairs beyond physical R57
+R57 correctly forbade quota padding and obligation cloning, but over-corrected repetition into an effective one-obligation/one-Scene rule and still collapsed diverse material into generic kind-level action templates.
 
-## PREVIOUS RESEARCH PRESERVED
-R57 physically incorporates the useful R2-R5 repairs:
-- Adaptive Multi-Obligation planning;
-- semantic preservation;
-- transaction-local ensemble topology;
-- exact State Commit/Carry;
-- next-episode semantic reconsumption;
-- Responsible-Ancestor Replan;
-- Legacy Canonical compatibility.
+R58/R58B/R58C repair chain:
+- allow one obligation to develop across multiple **distinct transaction stages** while resolving exactly once;
+- keep quota padding/cloned obligation phases forbidden;
+- normalize entity/id substitutions and block mechanically cloned obligation semantic patterns;
+- preserve distinct upstream material into distinct Scene actions by grounding the resolving Scene in caller-supplied `visible_action`;
+- use obligation-specific statement/obstacle + transaction primitive for pre-resolution scenes instead of a tiny shared paraphrase set.
 
-## R5 BLIND PACKETS ARE SUPERSEDED FOR CURRENT QUALIFICATION
-The sealed R5 Architecture-Only Blind packets were generated before the anti-repetition code change. They remain historical evidence only.
+Frozen diverse-fixture result:
+- 12 sequences / 66 scenes;
+- Scene range 2..8;
+- weaving fraction 0.917;
+- visible-action grounding 37/37;
+- concrete-action duplicates 0;
+- duplicate Scene-function signatures 0;
+- due obligations resolved exactly once PASS;
+- generic fallback ratio 0;
+- NN concrete-action Jaccard mean 0.2162, median 0.1429, p90 0.45;
+- mechanical clone fixture remains fail-closed BLOCK;
+- Python compile 45/45 PASS.
 
-Do not collect their judgments as R57 qualification.
+Human comparison retained for metrology only:
+- DB64 61-work episode Scene median ≈64.8;
+- Princess Man episode Scene median ≈75;
+- Princess Man within-episode Scene-function nearest-neighbor Jaccard mean ≈0.0938.
 
-`INDEPENDENT_ARCHITECTURE_BLIND_GATE_R57 = NOT_STARTED`.
+The Candidate metric is concrete-action text while the human metric is Scene-function text, so exact numeric equivalence is not claimed. R58C materially narrows mechanical repetition but does not prove human-level autonomous material invention.
 
-## EXACT NEXT R6+R5-BOUNDED TRANSACTION
-Only this next:
-1. SHA-sync to the physical R57 Candidate bytes;
-2. generate fresh cutoff-safe R57 Episode/Sequence/Scene architecture pairs against ENG:R47 control;
-3. seal leak-free balanced J01/J02/J03 packets and coordinator mapping;
-4. collect fresh independent judgments;
-5. reveal mapping only after all judgments are sealed;
-6. compute the pre-registered R57 architecture gate and write immutable receipt.
+## AUTHORITY BOUNDARY
+**R58C is research-only. Physical authority is still SYNC-R57.**
+Do not silently execute R58C as if it were already in the nine physical packages.
+Do not run fresh qualification blind packets from physical R57 if the intent is to qualify the newest research behavior; R58C changed Candidate planning and would supersede such packets.
 
-Only if fresh R57 Architecture Blind passes:
-- real fresh-context OpenAI Provider end-to-end generation with receipts;
-- >=35k broadcast screenplay evaluation;
-- whole-system regression;
-- only then consider Production promotion.
+## EXACT NEXT BOUNDED TRANSACTION
+Because the user requires meaningful research repairs to become executable across sessions rather than remain chat concepts, the next bounded operation is:
+1. physicalize the closed R58C repair into a new audited **SYNC-R58** successor of R57;
+2. preserve ENG:R47 production/control and DB59 unchanged;
+3. verify C1/C2 runtime binding, Candidate overlay binding, C2 reconstruction, Engine Master, DB59, unchanged B1/D1/D2 claims, transport SHA/CRC, and custody manifest;
+4. update physical/recovery/handoff authority pointers only after the audit passes;
+5. then generate **fresh SYNC-R58 Architecture-Only Blind** packets against ENG:R47 control.
 
-## PHYSICAL CUSTODY BOUNDARY
-R57 Library path:
-`/Literary_OS/Physical_Archive/SYNC_R57_20260917/`
-
-Library re-list 9/9 PASS. Raw Library re-download + SHA is not authorized by the current Project materialization path and remains NOT_VERIFIED.
+Only if the fresh blind gate passes may real fresh-context Provider screenplay qualification proceed.
 
 ## DO NOT DO
-- Do not run Candidate generation with ENG:R47.
-- Do not use old R5 blind packets to qualify R57.
-- Do not reintroduce quota padding or repeated obligation phases.
-- Do not call physical integration literary-quality qualification.
-- Do not claim durable 9/9 archive completion until external re-download/rehash closes.
+- do not reopen all nine packages during ordinary research;
+- do not use R57 or ENG:R47 as a substitute for R58C behavior when evaluating the newest Candidate;
+- do not call R58C human-level literary quality proof;
+- do not reintroduce quota padding, obligation cloning, entity-renamed material clones, or shared generic Scene-action templates.
 
 ## STATUS TOKEN
-`NEXT__R6_SYNC_PHYSICAL_R57__ANTI_REPETITION_FAIL_CLOSED__R2_TO_R5_REPAIRS_PHYSICALLY_INTEGRATED__FRESH_R57_ARCHITECTURE_BLIND_REQUIRED__ENG_R47_CONTROL_ONLY__PROVIDER_AFTER_BLIND__NO_PRODUCTION_PROMOTION`
+`NEXT__PHYSICALIZE_UL16_R58C_TO_SYNC_R58__R7_SMALL_SOURCE_LANE_ACTIVE__R57_PHYSICAL_AUTHORITY_UNCHANGED_UNTIL_AUDIT__SCENE_DEPTH_66__VISIBLE_ACTION_37_OF_37__MATERIAL_PATTERN_CLONES_BLOCKED__FRESH_R58_BLIND_AFTER_PHYSICALIZATION__NO_PRODUCTION_PROMOTION`
