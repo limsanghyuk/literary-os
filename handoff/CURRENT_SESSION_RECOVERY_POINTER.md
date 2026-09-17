@@ -1,5 +1,5 @@
 # CURRENT SESSION RECOVERY POINTER
-Last updated: 2026-09-17
+Last updated: 2026-09-18
 
 ## READ FIRST
 Current sealed physical successor: **SYNC-R58**.
@@ -9,14 +9,18 @@ Production/control remains **ENG:R47 / LEGACY_R53**.
 Candidate execution must use physical **SYNC-R58 `ADAPTIVE_UL16`**.
 Runtime DB authority remains **DB59 frozen**.
 
-Canonical receipt:
+Canonical physical receipt:
 `handoff/20260917/SYNC_R58_PHYSICALIZATION_AND_DELIVERY_RECEIPT_R1.md`
+
+Continuity checkpoint:
+`handoff/20260918/CONTINUITY_FIRST_RESEARCH_CHECKPOINT_R1.md`
 
 Mandatory safety:
 - R6 authority sync;
 - R5 turn-bounded execution;
 - R4 atomic execution;
-- R7 Small-Source Research Lane.
+- R7 Small-Source Research Lane;
+- Continuity-First transaction checkpoint before beginning another research task.
 
 ## SYNC-R58 5 PARTS / 9 PACKAGES — READ ORDER
 1. CONTROL — `LITERARY_OS_CURRENT_CONTROL_P07_I4H_RECOVERY_R3_SYNC_R58_20260917.zip`
@@ -44,7 +48,6 @@ Byte-unchanged: B1 / D1 / D2.
 ## CRITICAL BINDINGS
 Integrated R58 runtime SHA256:
 `30281db791d9bb629218a79c51c230bffb8f9088d79c2cfe6d676f996098b250`.
-
 Candidate overlay SHA256:
 `d4215a8a5075054a054d5ca60e10e5992c4139588cccaeb0dabe14281f2fd633`.
 
@@ -60,17 +63,6 @@ Narrative Engine Master canonical exact:
 DB59 canonical exact:
 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
 
-## WHAT R58 ADDS OVER R57
-- multi-stage Scene development for one obligation without duplicate resolution;
-- mechanical material-pattern clone blocking after entity/id normalization;
-- concrete visible-action grounding;
-- obligation-specific pre-resolution action generation;
-- duplicate stage/function/action/state signatures blocked;
-- preserves R57 no-padding/no-cloned-phase safeguards.
-
-Physical fixture:
-12 sequences / 66 scenes; 37/37 visible-action grounding; action duplicate 0; generic fallback 0; due resolve-once PASS; clone fixture BLOCK.
-
 ## PERSISTENT CUSTODY — CLOSED
 Library path:
 `/Literary_OS/Physical_Archive/SYNC_R58_20260917/`
@@ -82,17 +74,65 @@ All 9 Library objects were re-materialized as raw bytes and independently SHA256
 
 If future local bytes do not match these hashes, enter `AUTHORITY_BYTES_UNAVAILABLE_HOLD`; do not substitute R57, a research-only ZIP, or ENG:R47.
 
-## QUALIFICATION STATE
-All pre-R58 blind packets are historical.
-Fresh physical-R58 Architecture-Only Blind is next.
+## QUALIFICATION STATE — CURRENT
+Architecture-only blind is **already complete** and must not be rerun as the next step.
+Canonical result:
+`research/upper_layer/20260917/SYNC_R58_ARCHITECTURE_BLIND_RESULT_R1.md`
+
+Observed:
+- Candidate 18W / 0T / 0L;
+- critical-majority gate PASS;
+- `UPPER_LAYER_ARCHITECTURE_QUALIFICATION = PASS`.
+
+Full generative/screenplay quality remains:
 `UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED`.
 
-## NEXT
-1. fresh R58 architecture-only blind packets vs ENG:R47 control;
-2. independent judgments and mapping reveal after sealing;
-3. if PASS, real Provider >=35k screenplay qualification;
-4. whole-system regression;
-5. Production promotion remains separate.
+## CURRENT NEXT EXPERIMENT — SEALED PREREGISTRATION, OUTPUTS 0
+`SYNC_R58_PROVIDER_E2E_FULL_EPISODE_QUALIFICATION_R1`
+
+Preregistration:
+`research/provider/20260918/SYNC_R58_PROVIDER_E2E_PREREG_R1.md`
+
+Status:
+`PREREGISTERED__LOGIC_LOCKED__OUTPUTS_0__PROVIDER_EXECUTION_PENDING`.
+
+Frozen failure guards include:
+- E6-type repeated Scene/dialogue/direction template collapse;
+- E3-type procedural monoculture where heterogeneous conflicts collapse into confirm/record/verify/sign;
+- due-now omission;
+- deferred false closure;
+- quota padding/material clone;
+- missing concrete visible action;
+- under-35k screenplay;
+- missing Provider receipts/hashes;
+- State Carry inconsistency.
+
+Current chat environment cannot produce a valid fresh Provider response/request receipt. Same-chat text must not be counted as Provider evidence.
+
+## EXACT NEW-SESSION NEXT ACTION
+When a receipt-capable Provider execution environment is available:
+1. R6 SHA-sync the physical R58 Candidate;
+2. read the sealed Provider preregistration before output generation;
+3. execute the frozen P06 Candidate architecture surface run through the real Provider path;
+4. preserve response id/request id/model/usage/input-output hashes/failure receipts;
+5. require >=35,000 Korean characters;
+6. run anti-repetition + E6/E3 regression audit + reverse reconstruction + State Carry audit;
+7. collect at least 3 independent screenplay judges under the frozen surface gate;
+8. whole-system regression if PASS;
+9. only after Provider surface PASS begin Human Next-Episode Paired Blind.
+
+## HUMAN PARITY RESEARCH — NOT STARTED
+After Provider PASS only:
+- freeze Source Cutoff EP N;
+- Candidate may not see human EP N+1;
+- blind compare human EP N+1 vs Candidate EP N+1;
+- repeat across multiple works and early/middle/late/finale strata;
+- development and final holdout works must be separate.
+
+## CONTINUITY INVARIANT
+Every subsequent research transaction must checkpoint:
+`RESEARCH_FINDING -> IMPLEMENTED_IN_CANDIDATE -> PHYSICALIZED_IN_9_PACKAGES`.
+Do not call a finding an engine improvement before physicalization.
 
 ## UNCHANGED AUTHORITIES
 - Production: ENG:R47
@@ -102,4 +142,4 @@ Fresh physical-R58 Architecture-Only Blind is next.
 - R140: 0/0/0
 
 ## STATUS TOKEN
-`RECOVERY__SYNC_R58_CURRENT__9_PACKAGE_HASH_MANIFEST_LOCKED__DURABLE_LIBRARY_REDOWNLOAD_9_OF_9_PASS__R58_ADAPTIVE_UL16_REQUIRED__FRESH_R58_BLIND_NEXT__ENG_R47_CONTROL_ONLY__NO_PROMOTION`
+`RECOVERY__SYNC_R58_CURRENT__9_PACKAGE_HASH_MANIFEST_LOCKED__DURABLE_LIBRARY_REDOWNLOAD_9_OF_9_PASS__ARCHITECTURE_BLIND_PASS_18W_0T_0L__CONTINUITY_R1_ACTIVE__PROVIDER_E2E_PREREGISTERED_OUTPUTS_0__HUMAN_PAIRED_BLIND_AFTER_PROVIDER_PASS__NO_PROMOTION`
