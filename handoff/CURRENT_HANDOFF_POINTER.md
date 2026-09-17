@@ -2,90 +2,84 @@
 Last updated: 2026-09-17
 
 ## READ FIRST — CURRENT PHYSICAL SUCCESSOR
-The session repairs are no longer research-only. They have been physically integrated into a new 5-Part / 9-package successor set:
-
-**SYNC-R57**
-
-Canonical physicalization receipt:
-`handoff/20260917/SYNC_R57_PHYSICALIZATION_AND_DELIVERY_RECEIPT_R1.md`
-
-Parent/root preserved for historical recovery: **SYNC-R53**.
-Production Engine remains **ENG:R47 / LEGACY_R53**.
-Candidate execution path is now physically integrated as **R57 `ADAPTIVE_UL16`**.
+Current sealed physical successor: **SYNC-R58**.
+Parent physical successor: **SYNC-R57**.
+Historical recovery root: **SYNC-R53**.
+Production/control remains **ENG:R47 / LEGACY_R53**.
+Candidate execution must use physical **SYNC-R58 `ADAPTIVE_UL16`**.
 Runtime DB authority remains **DB59 frozen**.
 Formal authority unchanged: total 137, latest R138, R140 0/0/0.
 
-Mandatory execution protocols remain:
-- `handoff/20260916/RUNTIME_CONTAINER_HUB_AUTHORITY_SYNC_GATE_R6.md`
-- `handoff/20260916/RUNTIME_CONTAINER_HUB_TURN_BOUNDED_EXECUTION_PROTOCOL_R5.md`
-- `handoff/20260916/RUNTIME_CONTAINER_HUB_ATOMIC_EXECUTION_PROTOCOL_R4.md`
+Canonical physicalization receipt:
+`handoff/20260917/SYNC_R58_PHYSICALIZATION_AND_DELIVERY_RECEIPT_R1.md`
 
-## WHAT R57 PHYSICALLY CONTAINS
-R57 C1 actual runtime source and C2 active-development overlay now physically contain the repairs developed in this session:
-- Adaptive Multi-Obligation Episode/Sequence/Scene planning;
-- concrete relationship / information / social-ecology preservation;
+Mandatory protocols:
+- R6 authority SHA sync;
+- R5 turn-bounded closure;
+- R4 atomic execution;
+- R7 Small-Source Research Lane for ordinary research.
+
+## R58 PHYSICAL CONTENT
+R58 carries the cumulative R57 upper-layer repairs plus the R58/R58B/R58C Scene-depth/material-diversity repair:
+- Adaptive Multi-Obligation planning;
+- relationship/information/social-ecology semantic preservation;
 - transaction-local ensemble topology;
-- deferred residue preservation;
-- exact State Commit/Carry and next-episode semantic reconsumption;
+- State Commit/Carry and next-episode semantic reconsumption;
 - Responsible-Ancestor Replan;
 - Legacy Canonical compatibility;
-- **anti-repetition fail-closed planning**.
+- no quota padding / no cloned obligation phases;
+- one obligation may span multiple distinct transaction stages but resolves exactly once;
+- entity/id-normalized material clones are blocked;
+- concrete `visible_action` grounding at the resolving Scene;
+- obligation-specific pre-resolution Scene actions;
+- duplicate stage/function/action/state signatures forbidden.
 
-Anti-repetition rule:
-- never clone an obligation to hit a sequence target;
-- never cycle one obligation across multiple scenes to hit a scene-count target;
-- each due obligation is consumed once in Sequence planning and once in Scene transaction planning;
-- semantically duplicate material with different IDs is blocked;
-- insufficient unique dramatic material produces `UNDERDEVELOPED_*_HOLD` and requires upstream replanning with genuinely different material.
+Integrated runtime SHA256:
+`30281db791d9bb629218a79c51c230bffb8f9088d79c2cfe6d676f996098b250`.
+Candidate overlay SHA256:
+`d4215a8a5075054a054d5ca60e10e5992c4139588cccaeb0dabe14281f2fd633`.
 
-Thus human-authored sequence/scene counts are priors, not padding quotas.
+Physical R58 fixture:
+- 12 sequences / 66 scenes;
+- visible-action grounding 37/37;
+- exact action duplicates 0;
+- generic fallback 0;
+- due resolution exactly once PASS;
+- action NN Jaccard mean 0.2162;
+- mechanical clone fixture BLOCK.
 
-Integrated R57 runtime SHA256:
-`2c57f6b5ade4061d01cdf62bda1d0c5a856053604e9d519bce04ebd6d6528a7c`
+## PHYSICAL / CUSTODY AUDIT
+9 transports SHA/CRC/integrity PASS.
+C1/C2 runtime and Candidate overlay binding PASS.
+C2 A+B SHA256:
+`8c75dcc0c3c4962068cae3881ed2686d7e64145f996b373540385cefddc004a6`.
+Narrative Engine Master exact canonical PASS.
+DB59 exact canonical PASS.
+B1/D1/D2 unchanged claims PASS.
 
-Explicit Candidate overlay SHA256:
-`5b82217cc81a686de8e45afe7bdc1b31a36874f62374ce9883b859224654570a`
+Persistent Library:
+`/Literary_OS/Physical_Archive/SYNC_R58_20260917/`
 
-## PHYSICAL AUDIT
-9 transport packages: local SHA/CRC/integrity PASS.
-C1/C2 runtime binding: PASS.
-C1/C2 Candidate overlay binding: PASS.
-C2 reconstruction: PASS.
-Narrative Engine Master remains exact canonical SHA256:
-`5ee441168e7f3af2586c1a819170b42d504ea6f2bcf25857f696495cda1bd649`.
-DB59 remains exact canonical SHA256:
-`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`.
-B1 / D1 / D2 are byte-identical to their R53 counterparts.
-
-Persistent Library path:
-`/Literary_OS/Physical_Archive/SYNC_R57_20260917/`
-
-Library re-list: 9/9 PASS and sizes match. Raw Library re-download + SHA is not authorized by the current Project materialization path, so durable independent re-download proof remains `NOT_VERIFIED`.
+Library 9/9 list PASS; all 9 files were independently re-materialized and rehashed with exact SHA match 9/9 PASS.
 
 Use status:
-`SYNC_R57__PHYSICAL_SUCCESSOR_SEALED__USER_DELIVERY_READY_9_OF_9__LIBRARY_LISTED_9_OF_9__DURABLE_REDOWNLOAD_NOT_VERIFIED`.
+`SYNC_R58__DEVELOPER_DELIVERY_COMPLETE__9_OF_9__DURABLE_LIBRARY_REDOWNLOAD_REHASH_PASS`.
 
-Do NOT claim `DEVELOPER_DELIVERY_COMPLETE__9_OF_9` until external/durable re-download + exact SHA closes.
-
-## EXECUTION BOUNDARY FOR ALL FUTURE SESSIONS
-For Candidate research/generation, execute the physically integrated **R57 `ADAPTIVE_UL16`** route.
-
-Do **not** substitute ENG:R47 for Candidate execution. ENG:R47 remains Production/control only.
-
-If R57 Candidate bytes are unavailable, enter `AUTHORITY_BYTES_UNAVAILABLE_HOLD`; do not silently fall back to ENG:R47 or an older UL-16 research ZIP.
+## FUTURE EXECUTION BOUNDARY
+For Candidate research/generation, use physical SYNC-R58 only after R6 SHA sync.
+If exact R58 bytes are unavailable, enter `AUTHORITY_BYTES_UNAVAILABLE_HOLD`; never fall back silently to R57, a research ZIP, or ENG:R47.
 
 ## ARCHITECTURE-BLIND RESET
-The previously sealed R5 Architecture-Only Blind packets were created before the R57 anti-repetition change. They remain historical evidence only and cannot qualify R57.
-
-Fresh R57 Architecture-Only Blind packets/judgments must be generated from the physical R57 Candidate path.
+All blind packets created before physical SYNC-R58 are historical for current qualification.
+Fresh R58 Architecture-Only Blind packets must be generated from physical R58 Candidate vs ENG:R47 control.
 
 ## EXACT NEXT ORDER
-1. R6 sync against R57 physical Candidate bytes.
-2. Generate fresh R57 architecture-only A/B blind packets from R57 `ADAPTIVE_UL16` vs ENG:R47 control.
-3. Obtain fresh independent judgments and close the blind gate.
-4. Only if that passes, run real fresh-context OpenAI Provider end-to-end generation with receipts and >=35k broadcast screenplay evaluation.
-5. Close whole-system regression.
-6. Production promotion remains a later decision; no promotion occurred in this physicalization.
+1. generate fresh R58 Episode/Sequence/Scene architecture A/B pairs;
+2. seal leak-free balanced J01/J02/J03 packets and coordinator mapping;
+3. collect independent judgments and reveal mapping only after judgments are sealed;
+4. if PASS, run real fresh-context OpenAI Provider >=35k screenplay qualification;
+5. whole-system regression;
+6. Production promotion remains separate.
 
 ## STATUS TOKEN
-`HANDOFF__SYNC_R57_PHYSICAL_SUCCESSOR_SEALED__SESSION_REPAIRS_IN_RUNTIME__ANTI_REPETITION_FAIL_CLOSED__CANDIDATE_R57_ADAPTIVE_UL16_REQUIRED__ENG_R47_CONTROL_ONLY__R57_BLIND_RESET_REQUIRED__DURABLE_REDOWNLOAD_NOT_VERIFIED__NO_PRODUCTION_PROMOTION`
+`HANDOFF__SYNC_R58_CURRENT__R58C_PHYSICALIZED__DURABLE_9_OF_9_PASS__R58_ADAPTIVE_UL16_REQUIRED__ENG_R47_CONTROL_ONLY__FRESH_R58_BLIND_NEXT__NO_PROMOTION`
