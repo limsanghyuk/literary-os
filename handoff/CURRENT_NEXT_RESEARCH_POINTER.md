@@ -1,5 +1,5 @@
 # CURRENT NEXT RESEARCH POINTER
-Last updated: 2026-09-17
+Last updated: 2026-09-18
 
 ## CURRENT PHYSICAL CANDIDATE EXECUTION SOURCE
 Current sealed physical successor: **SYNC-R58**.
@@ -17,65 +17,81 @@ Physical C1 transport SHA256:
 Candidate overlay SHA256:
 `d4215a8a5075054a054d5ca60e10e5992c4139588cccaeb0dabe14281f2fd633`.
 
-R58 9/9 Library raw-byte re-download + independent SHA rehash: **PASS**.
+R58 9/9 Library raw-byte re-download + independent SHA rehash: PASS.
 `DEVELOPER_DELIVERY_COMPLETE__9_OF_9 = PASS`.
 
-## INDEPENDENT SYNC-R58 ARCHITECTURE-ONLY BLIND — PASS
+## CONTINUITY-FIRST RULE — ACTIVE
+Canonical checkpoint:
+`handoff/20260918/CONTINUITY_FIRST_RESEARCH_CHECKPOINT_R1.md`
+
+Every future research transaction must separate:
+`RESEARCH_FINDING -> IMPLEMENTED_IN_CANDIDATE -> PHYSICALIZED_IN_9_PACKAGES`.
+Do not claim engine improvement before physicalization.
+Checkpoint exact recovery state before beginning the next research task.
+
+## INDEPENDENT SYNC-R58 ARCHITECTURE-ONLY BLIND — COMPLETE / PASS
 Canonical result:
 `research/upper_layer/20260917/SYNC_R58_ARCHITECTURE_BLIND_RESULT_R1.md`
 
-Judgment seal receipt:
-`research/upper_layer/20260917/SYNC_R58_ARCHITECTURE_BLIND_JUDGMENTS_SEALED_RECEIPT_R1.md`
-
-Preregistered gate:
-- 3 independent judges x 6 pairs = 18 mapped outcomes;
-- Candidate wins >=12/18;
-- Candidate wins+ties >=15/18;
-- Candidate critical-violation majority forbidden.
-
-Observed after sealed judgment mapping reveal:
+Observed after sealed-judgment mapping reveal:
 - Candidate wins: **18/18**
 - ties: **0/18**
 - Control wins: **0/18**
-- Candidate win+tie: **18/18**
 - Candidate critical-majority: **0/6 pair majorities**
 
 `INDEPENDENT_ARCHITECTURE_BLIND_GATE_R58 = PASS`.
-
-Mapped overall axis-score mean (descriptive, not the gate rule):
-- Candidate 7.882
-- Control 3.125
-
-Strongest architecture gains were in multi-strand architecture, ensemble/relationship weaving, information asymmetry, and social-ecology integration.
+`UPPER_LAYER_ARCHITECTURE_QUALIFICATION = PASS`.
+`UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED`.
 
 Remaining shared judge criticism:
 - recognizable ENGAGE/PROBE/TEST -> RESOLVE regularity;
 - some generic state phrasing;
-- Scene-level specificity/necessity remains the weakest Candidate axis (mapped mean 6.667).
+- Scene specificity/necessity remains weakest Candidate architecture axis.
 
-Therefore upper-layer architecture is now independently qualified, but full screenplay-surface/generative quality is not yet qualified.
+## EXACT NEXT EXPERIMENT — PREREGISTERED, OUTPUTS 0
+Experiment:
+`SYNC_R58_PROVIDER_E2E_FULL_EPISODE_QUALIFICATION_R1`
 
-## CURRENT CLAIM BOUNDARY
-`UPPER_LAYER_ARCHITECTURE_QUALIFICATION = PASS`.
-`UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED`.
+Preregistration:
+`research/provider/20260918/SYNC_R58_PROVIDER_E2E_PREREG_R1.md`
 
-No Production promotion occurred.
+Status:
+`PREREGISTERED__LOGIC_LOCKED__OUTPUTS_0__PROVIDER_EXECUTION_PENDING`.
 
-## EXACT NEXT R6+R5-BOUNDED TRANSACTION
-Only this next:
-1. SHA-sync to physical SYNC-R58 Candidate bytes;
-2. run real fresh-context OpenAI Provider end-to-end execution from the R58 Candidate path, not ENG:R47;
-3. preserve provider receipts: response id, request id, model, usage, input/output hashes, failure receipts;
-4. generate a full broadcast screenplay >=35,000 Korean characters with no quota padding or material/action repetition;
-5. evaluate Episode Synopsis -> Sequence -> Scene -> Surface fidelity, Scene necessity, material/action diversity, dialogue/direction craft, state carry, and reverse reconstruction;
-6. run whole-system regression;
-7. only after those gates may Production promotion be considered.
+Frozen primary target: sealed P06 Candidate architecture from the completed R58 blind set.
+Frozen critical regression guards include E6-type template collapse and E3-type procedural monoculture.
+
+A valid run must:
+1. R6 SHA-sync physical R58 Candidate bytes;
+2. execute a real fresh-context OpenAI Responses Provider request from the R58 Candidate surface path;
+3. preserve response id / x-request-id / exact model / usage / input-output hashes / failed-attempt receipts;
+4. generate >=35,000 Korean characters, with no quota padding or material/action repetition;
+5. pass architecture-to-surface fidelity, anti-repetition, State Carry, reverse reconstruction, and E6/E3 regression audits;
+6. pass at least 3 independent fresh-context screenplay judges under the preregistered surface gate;
+7. run whole-system regression.
+
+Current coordinating chat cannot execute the required independent receipt-bearing Provider call. Same-chat generation is invalid evidence and must not increment outputs.
+
+## RESEARCH INFRASTRUCTURE WORK PERMITTED WHILE OUTPUTS=0
+Prepare a receipt-capable Provider execution harness and frozen request packet. This is infrastructure only and must be labeled:
+`NO_ENGINE_CODE_CHANGE__PHYSICAL_AUTHORITY_UNCHANGED`.
+
+## AFTER PROVIDER FULL-SURFACE PASS ONLY
+Begin `HUMAN_NEXT_EPISODE_PAIRED_BLIND`:
+- freeze Source Cutoff at EP N;
+- Candidate cannot see human EP N+1;
+- blind compare human-authored EP N+1 vs Candidate EP N+1;
+- multiple works + early/middle/late/finale strata;
+- development and final holdout works separated.
+
+Human-comparable / Human-parity / Human-superior claims require that later paired-human evidence; Architecture 18/18 and Provider surface PASS are insufficient by themselves.
 
 ## DO NOT DO
+- do not rerun the already-completed R58 Architecture Blind as the next step;
 - do not substitute ENG:R47 or R57 for Candidate execution;
-- do not call Architecture Blind PASS final screenplay-quality proof;
-- do not ignore the judges' repeated Scene-level regularity criticism;
+- do not simulate Provider evidence in this chat;
+- do not call Architecture Blind PASS human-level screenplay proof;
 - do not promote Production before real Provider + full-surface + regression gates close.
 
 ## STATUS TOKEN
-`NEXT__SYNC_R58_ARCHITECTURE_BLIND_PASS__18W_0T_0L__UPPER_LAYER_ARCHITECTURE_QUALIFIED__PROVIDER_E2E_NOW_PERMITTED__FULL_GENERATIVE_QUALITY_PENDING__NO_PRODUCTION_PROMOTION`
+`NEXT__SYNC_R58_PHYSICAL__ARCHITECTURE_BLIND_PASS_18W_0T_0L__CONTINUITY_R1_ACTIVE__PROVIDER_E2E_PREREGISTERED_OUTPUTS_0__RECEIPT_RUNNER_PREP_ALLOWED__HUMAN_PAIRED_BLIND_AFTER_PROVIDER_PASS__NO_PRODUCTION_PROMOTION`
