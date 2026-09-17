@@ -1,5 +1,5 @@
 # CURRENT DEVELOPER HUB AUTHORITY
-Last updated: 2026-09-17
+Last updated: 2026-09-18
 
 ## CURRENT PHYSICAL / PRODUCTION AUTHORITY
 Current sealed physical successor: **SYNC-R58**.
@@ -12,6 +12,18 @@ Formal total 137; latest R138; R140 0/0/0.
 
 Canonical R58 physical receipt:
 `handoff/20260917/SYNC_R58_PHYSICALIZATION_AND_DELIVERY_RECEIPT_R1.md`
+
+## CONTINUITY-FIRST RESEARCH GOVERNANCE — ACTIVE
+Canonical checkpoint:
+`handoff/20260918/CONTINUITY_FIRST_RESEARCH_CHECKPOINT_R1.md`
+
+Every new research transaction must distinguish:
+1. `RESEARCH_FINDING`
+2. `IMPLEMENTED_IN_CANDIDATE`
+3. `PHYSICALIZED_IN_9_PACKAGES`
+
+A research finding is not an engine improvement until state 3 is reached.
+Every bounded transaction must close with synchronized Current Hub / Handoff / Recovery / Next Research pointers before another research task starts.
 
 ## R58 PHYSICAL / CUSTODY STATUS
 R58 physically contains the R58/R58B/R58C Showrunner repairs: multi-stage obligation development with one final resolution, no quota padding/cloned phases, material-pattern clone blocking, concrete visible-action grounding, and duplicate Scene-function prevention.
@@ -30,7 +42,7 @@ B1/D1/D2 unchanged claims: PASS.
 Persistent Library 9/9 raw-byte re-download + independent SHA rehash: **PASS**.
 `SYNC_R58__DEVELOPER_DELIVERY_COMPLETE__9_OF_9__DURABLE_LIBRARY_REDOWNLOAD_REHASH_PASS`.
 
-## INDEPENDENT ARCHITECTURE QUALIFICATION
+## INDEPENDENT ARCHITECTURE QUALIFICATION — COMPLETE
 Canonical result:
 `research/upper_layer/20260917/SYNC_R58_ARCHITECTURE_BLIND_RESULT_R1.md`
 
@@ -55,16 +67,32 @@ Shared remaining weakness: Scene-level bridge/action grammar still shows recogni
 
 No real Provider full-screenplay qualification has yet closed for SYNC-R58. No Production promotion occurred.
 
+## CURRENT NEXT EXPERIMENT — PREREGISTERED, OUTPUTS 0
+Canonical preregistration:
+`research/provider/20260918/SYNC_R58_PROVIDER_E2E_PREREG_R1.md`
+
+Status:
+`PREREGISTERED__LOGIC_LOCKED__OUTPUTS_0__PROVIDER_EXECUTION_PENDING`.
+
+The experiment freezes:
+- physical R58 as the only Candidate execution source;
+- the sealed P06 Candidate architecture as the primary surface target;
+- >=35,000 Korean-character full episode;
+- provider receipt requirements;
+- E6-type template-collapse failure guards;
+- E3-type procedural-monoculture failure guards;
+- anti-repetition / reverse-reconstruction / State Carry / external screenplay evaluation gates.
+
+Same-chat generation is not valid Provider evidence. The coordinating chat currently has no action that can perform the required fresh `/v1/responses` execution with independent Provider receipts, so outputs legitimately remain 0.
+
+Research infrastructure may prepare a receipt-capable runner and frozen request packet without changing Candidate runtime. Such work must be labeled:
+`NO_ENGINE_CODE_CHANGE__PHYSICAL_AUTHORITY_UNCHANGED`.
+
+## AFTER PROVIDER PASS ONLY
+Begin Human Next-Episode Paired Blind. Human-level claims require direct hidden-next-episode comparison across multiple works and episode positions with development/holdout separation.
+
 ## CANDIDATE EXECUTION RULE
 All future Candidate experiments/generation must execute physical SYNC-R58 `ADAPTIVE_UL16` after R6 SHA synchronization. Never silently substitute ENG:R47, SYNC-R57, or research-only R58C bytes.
 
-## NEXT
-1. real fresh-context OpenAI Provider end-to-end execution from physical SYNC-R58;
-2. preserve provider receipts and input/output hashes;
-3. generate >=35,000-character broadcast screenplay;
-4. test Synopsis -> Sequence -> Scene -> Surface fidelity, material/action diversity, Scene necessity, dialogue/direction quality, State Carry, and reverse reconstruction;
-5. whole-system regression;
-6. only then consider Production promotion.
-
 ## STATUS TOKEN
-`DEVELOPER_HUB__SYNC_R58_CURRENT_PHYSICAL_AUTHORITY__DURABLE_9_OF_9_PASS__INDEPENDENT_ARCHITECTURE_BLIND_PASS_18W_0T_0L__UPPER_LAYER_ARCHITECTURE_QUALIFIED__PROVIDER_FULL_SURFACE_NEXT__ENG_R47_PRODUCTION_UNCHANGED__NO_PROMOTION`
+`DEVELOPER_HUB__SYNC_R58_CURRENT_PHYSICAL_AUTHORITY__DURABLE_9_OF_9_PASS__INDEPENDENT_ARCHITECTURE_BLIND_PASS_18W_0T_0L__CONTINUITY_R1_ACTIVE__PROVIDER_E2E_PREREGISTERED_OUTPUTS_0__UPPER_LAYER_ARCHITECTURE_QUALIFIED__FULL_GENERATIVE_QUALITY_PENDING__ENG_R47_PRODUCTION_UNCHANGED__NO_PROMOTION`
