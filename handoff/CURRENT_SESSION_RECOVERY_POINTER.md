@@ -2,107 +2,72 @@
 Last updated: 2026-09-18
 
 ## READ FIRST
-1. `handoff/20260918/START_HERE_SYNC_R58_POST_PHYSICAL_RESEARCH_HANDOFF_R2.md`
-2. `handoff/20260918/CONTINUITY_FIRST_RESEARCH_CHECKPOINT_R2.md`
+1. `handoff/20260918/START_HERE_SYNC_R58_POST_PHYSICAL_RESEARCH_HANDOFF_R3.md`
+2. `handoff/20260918/CONTINUITY_FIRST_RESEARCH_CHECKPOINT_R3.md`
 
 ## CURRENT PHYSICAL AUTHORITY
-- Current sealed physical successor: **SYNC-R58**
-- Candidate route: **ADAPTIVE_UL16**
+- sealed physical successor: **SYNC-R58**
+- route: **ADAPTIVE_UL16**
 - Production/control: **ENG:R47 / LEGACY_R53**
 - DB: **DB59 frozen**
 
-## SYNC-R58 5 PARTS / 9 PACKAGES
-Read order:
+## PHYSICAL PACKAGE READ ORDER
 **CONTROL -> A -> B1 -> B2 -> C1 -> C2-A -> C2-B -> D1 -> D2**
 
-1. CONTROL
-   `LITERARY_OS_CURRENT_CONTROL_P07_I4H_RECOVERY_R3_SYNC_R58_20260917.zip`
-   SHA256 `7253c03f8b96eecdb5c89ef5dca0a449b72bced5ec4c8c0b76189b8d8ebf4e26`
+Authoritative SHA256 values remain those in:
+`handoff/20260918/START_HERE_SYNC_R58_POST_PHYSICAL_RESEARCH_HANDOFF_R2.md`
+and the R58 physicalization receipt.
 
-2. A
-   `LITERARY_OS_CURRENT_PART_A_P07_I4H_RECOVERY_R3_UPPER_LAYER_SYNC_R58_20260917.zip`
-   SHA256 `d07eb17074962d3c19f5025b130638d14d2b8d7261e39be93c3322235a8a6360`
-
-3. B1
-   `LITERARY_OS_CURRENT_PART_B1_UNCHANGED_R1_20260909_SYNC_R58_BYTE_UNCHANGED.zip`
-   SHA256 `00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98`
-
-4. B2
-   `LITERARY_OS_CURRENT_PART_B2_P07_I4H_RECOVERY_R3_UPPER_LAYER_SYNC_R58_20260917.zip`
-   SHA256 `7f0495a0e7b06e39dab8ea3d738e25a29761c89de3af1149e19235dcec811651`
-
-5. C1
-   `LITERARY_OS_CURRENT_C1_RUNTIME_CORE_P07_I4H_RECOVERY_R3_SYNC_R58_20260917.zip`
-   SHA256 `9282eb4b3241c13e17cf032c3814674409d5efac67c26024580930ecbb633307`
-
-6. C2-A
-   `LITERARY_OS_CURRENT_C2_BINARY_A_P07_I4H_RECOVERY_R3_SYNC_R58_20260917.bin`
-   SHA256 `97ebd3afcc9e1cd49e4fbde24da65b60a1f5e949b4643ea6beeac40695f65275`
-
-7. C2-B
-   `LITERARY_OS_CURRENT_C2_BINARY_B_P07_I4H_RECOVERY_R3_SYNC_R58_20260917.bin`
-   SHA256 `a26c4c20483650528793728de446cb7476278ea84c6eda2d048f8f330d75becf`
-
-8. D1
-   `LITERARY_OS_CURRENT_PART_D1_DB59_UNCHANGED_R1_20260909_SYNC_R58_BYTE_UNCHANGED.zip`
-   SHA256 `a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504`
-
-9. D2
-   `LITERARY_OS_CURRENT_PART_D2_DB59_UNCHANGED_R1_20260909_SYNC_R58_BYTE_UNCHANGED.zip`
-   SHA256 `c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4`
-
-If any authoritative byte mismatches:
+Any mismatch:
 `AUTHORITY_BYTES_UNAVAILABLE_HOLD`
 
 ## CRITICAL BINDINGS
-Integrated R58 runtime SHA256:
+Integrated runtime:
 `30281db791d9bb629218a79c51c230bffb8f9088d79c2cfe6d676f996098b250`
 
-Candidate overlay SHA256:
+Candidate overlay:
 `d4215a8a5075054a054d5ca60e10e5992c4139588cccaeb0dabe14281f2fd633`
 
-C2 A+B logical SHA256:
-`8c75dcc0c3c4962068cae3881ed2686d7e64145f996b373540385cefddc004a6`
-
-DB59 SHA256:
+DB59:
 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
 
 ## POST-R58 RESEARCH RECOVERY
-Architecture result:
-`research/upper_layer/20260917/SYNC_R58_ARCHITECTURE_BLIND_RESULT_R1.md`
-- PASS 18W / 0T / 0L.
+Architecture blind:
+- PASS 18W/0T/0L.
 
-Provider external run report:
-`research/provider/20260918/SYNC_R58_PROVIDER_E2E_EXTERNAL_RUN_REPORT_R1.md`
-- one real P06 run reported;
-- evidence ingest pending.
+P06 evidence:
+- independently ingested;
+- 46/46 manifest SHA/size PASS;
+- output extraction PASS;
+- verified outputs counter = 1.
 
-Current audit preregistration:
-`research/provider/20260918/SYNC_R58_P06_FULL_SURFACE_DRAMATIC_REALIZATION_AUDIT_PREREG_R1.md`
+P06 audit:
+`research/provider/20260918/SYNC_R58_P06_FULL_SURFACE_DRAMATIC_REALIZATION_AUDIT_RESULT_R1.md`
+- 55/55 complete;
+- due CRC 4/6 PASS;
+- S13 and S35 HOLD;
+- semantic repetition supported;
+- State Carry HOLD.
 
 ## EXACT NEXT ACTION
-In a healthy session:
-1. minimal container health check;
-2. ingest `gpt09_provider_e2e_P06_R1_COMPLETED_EVIDENCE.zip`;
-3. verify request/receipt/raw-response/screenplay hashes;
-4. recompute length metrics;
-5. complete all 55 scene audit rows;
-6. run semantic repetition audit;
-7. run fresh output-only reverse reconstruction;
-8. compare text state with architecture/State Carry;
-9. localize failures;
-10. decide 3-judge screenplay-evaluation eligibility.
+1. use a fresh evaluator that has not seen P06 architecture;
+2. provide completed screenplay only;
+3. execute output-only reverse reconstruction;
+4. seal result;
+5. only afterward compare to architecture;
+6. close/HOLD State Carry;
+7. then decide 3-judge eligibility.
 
 Do not rerun Architecture Blind.
-Do not rerun Provider before existing evidence is audited.
-Do not modify Candidate from F01-F08 hypotheses without evidence-backed localization.
+Do not rerun Provider.
+Do not modify Candidate from the diagnostic findings yet.
 
 ## CONTINUITY RULE
 If code changes:
-`RESEARCH_FINDING -> IMPLEMENTED_IN_CANDIDATE -> PHYSICALIZED_IN_9_PACKAGES`
+`RESEARCH_FINDING -> IMPLEMENTED_IN_CANDIDATE -> REGRESSION_PASS -> C1/C2_BINDING_PASS -> 9_PACKAGE_RESEAL -> SHA/CRC/CUSTODY_PASS -> NEW_PHYSICAL_AUTHORITY`
 
-Until physical reseal:
+Until then:
 `CURRENT_PHYSICAL_AUTHORITY = SYNC-R58`
 
-## STATUS TOKEN
-`RECOVERY__SYNC_R58_9_PACKAGE_MANIFEST_LOCKED__POST_R58_ARCH_PASS_RECOVERED__P06_PROVIDER_ATTEMPT_REPORTED__EVIDENCE_INGEST_PENDING__55_SCENE_AUDIT_NEXT__NO_POST_R58_PHYSICALIZATION__NO_PROMOTION`
+Status token:
+`RECOVERY__SYNC_R58_CURRENT__P06_PROVIDER_VERIFIED_1__AUDIT_COMPLETE__OUTPUT_ONLY_FRESH_EVALUATOR_NEXT__STATE_CARRY_HOLD__NO_PHYSICALIZATION__NO_PROMOTION`
