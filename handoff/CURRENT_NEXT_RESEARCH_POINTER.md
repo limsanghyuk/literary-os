@@ -93,5 +93,35 @@ Human-comparable / Human-parity / Human-superior claims require that later paire
 - do not call Architecture Blind PASS human-level screenplay proof;
 - do not promote Production before real Provider + full-surface + regression gates close.
 
+## PROVIDER EXECUTION INFRASTRUCTURE — PREPARED / OUTPUTS 0
+
+Canonical preparation receipt:
+`research/provider/20260918/SYNC_R58_PROVIDER_E2E_EXECUTION_PREPARATION_RECEIPT_R1.md`
+
+Execution kit:
+- `research/provider/20260918/prepare_sync_r58_p06_provider_request_r1.mjs`
+- `research/provider/20260918/run_openai_responses_with_receipt_r1.mjs`
+- `research/provider/20260918/README_SYNC_R58_PROVIDER_E2E_EXECUTION_KIT_R1.md`
+
+State:
+- sealed J02 packet is frozen as the P06 source; exact ZIP SHA `4a4a4100c4dbe85bbe9689606c5f11781c4b790ddb673946db01c4787aca9066`;
+- legally revealed J02 P06 Candidate arm = A;
+- request builder source prepared and static syntax PASS;
+- Provider receipt runner source prepared and static syntax PASS;
+- secure OpenAI Platform key setup flow initiated; no raw key exposed;
+- frozen request has not yet been built because the coordinating container returns `TransportTimeoutError` even on minimal commands;
+- Provider outputs remain **0**;
+- same-chat output remains invalid Provider evidence.
+
+This is research infrastructure only:
+`NO_ENGINE_CODE_CHANGE__PHYSICAL_AUTHORITY_UNCHANGED__9_PACKAGES_UNCHANGED`.
+
+Exact next executable step in a healthy receipt-capable environment:
+1. R6-sync physical SYNC-R58;
+2. execute the frozen P06 request builder;
+3. seal `provider_request_manifest.json`;
+4. execute the receipt runner;
+5. continue the preregistered Provider full-surface gates.
+
 ## STATUS TOKEN
 `NEXT__SYNC_R58_PHYSICAL__ARCHITECTURE_BLIND_PASS_18W_0T_0L__CONTINUITY_R1_ACTIVE__PROVIDER_E2E_PREREGISTERED_OUTPUTS_0__RECEIPT_RUNNER_PREP_ALLOWED__HUMAN_PAIRED_BLIND_AFTER_PROVIDER_PASS__NO_PRODUCTION_PROMOTION`
