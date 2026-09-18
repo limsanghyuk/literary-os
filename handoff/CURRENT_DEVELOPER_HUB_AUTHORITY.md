@@ -147,5 +147,41 @@ Do **not** rerun Provider as the next step. First ingest and audit the existing 
 No engine/runtime/package change:
 `NO_ENGINE_CODE_CHANGE__SYNC_R58_PHYSICAL_UNCHANGED__9_PACKAGES_UNCHANGED`.
 
+## CURRENT NEXT RESEARCH — EXISTING P06 SURFACE AUDIT
+
+Canonical preregistration:
+`research/provider/20260918/SYNC_R58_P06_FULL_SURFACE_DRAMATIC_REALIZATION_AUDIT_PREREG_R1.md`
+
+Why this is next:
+- a real P06 Provider attempt has been reported as completed;
+- do **not** regenerate or extend the screenplay before auditing the existing attempt;
+- current evidence bundle still requires independent local ingest/hash verification in a healthy execution environment;
+- the diagnostic target is the architecture→surface gap, not raw length expansion.
+
+Frozen audit targets:
+- all 55 scenes;
+- behavior vs explanatory direction;
+- character individuation;
+- semantic scene repetition beyond exact strings;
+- choice/resistance/cost/state-change realization;
+- due-now processing vs dramatic resolution;
+- output-only reverse reconstruction;
+- realized-text state vs architecture/State Carry;
+- attribution across architecture / request context / Provider realization / validator / state integration.
+
+The supplied handoff F01-F08 are currently `RESEARCH_FINDING_OR_HYPOTHESIS`, not engine defects proven enough for code changes.
+
+No Candidate code changed. No package bytes changed.
+`NO_ENGINE_CODE_CHANGE__PHYSICAL_AUTHORITY_UNCHANGED__SYNC_R58_CURRENT`.
+
+Exact continuation:
+1. ingest/hash-check the completed P06 evidence ZIP;
+2. recompute length metrology;
+3. complete the 55-scene dramatic audit;
+4. run fresh output-only reverse reconstruction;
+5. compare realized state with P06 architecture/State Carry;
+6. only then decide eligibility for 3 independent screenplay judges;
+7. only after localized evidence may an engine intervention be preregistered.
+
 ## STATUS TOKEN
-`SYNC_R58_CURRENT__ARCHITECTURE_BLIND_PASS_18W_0T_0L__PROVIDER_ATTEMPT_1_REPORTED__EVIDENCE_INGEST_PENDING__VERIFIED_PROVIDER_OUTPUTS_0__QUALITY_GATES_PENDING__NO_ENGINE_CODE_CHANGE__9_PACKAGES_UNCHANGED__ENG_R47_PRODUCTION_UNCHANGED__NO_PROMOTION`
+`SYNC_R58_CURRENT__ARCHITECTURE_BLIND_PASS_18W_0T_0L__P06_PROVIDER_ATTEMPT_REPORTED_COMPLETED__EVIDENCE_INGEST_PENDING__P06_SURFACE_DRAMATIC_AUDIT_PREREGISTERED__55_SCENE_AUDIT_PENDING__OUTPUT_ONLY_RECONSTRUCTION_PENDING__NO_ENGINE_CODE_CHANGE__9_PACKAGES_UNCHANGED__ENG_R47_PRODUCTION_UNCHANGED__NO_PROMOTION`
