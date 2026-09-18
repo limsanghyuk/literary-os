@@ -94,5 +94,35 @@ Begin Human Next-Episode Paired Blind. Human-level claims require direct hidden-
 ## CANDIDATE EXECUTION RULE
 All future Candidate experiments/generation must execute physical SYNC-R58 `ADAPTIVE_UL16` after R6 SHA synchronization. Never silently substitute ENG:R47, SYNC-R57, or research-only R58C bytes.
 
+## PROVIDER EXECUTION INFRASTRUCTURE — PREPARED / OUTPUTS 0
+
+Canonical preparation receipt:
+`research/provider/20260918/SYNC_R58_PROVIDER_E2E_EXECUTION_PREPARATION_RECEIPT_R1.md`
+
+Execution kit:
+- `research/provider/20260918/prepare_sync_r58_p06_provider_request_r1.mjs`
+- `research/provider/20260918/run_openai_responses_with_receipt_r1.mjs`
+- `research/provider/20260918/README_SYNC_R58_PROVIDER_E2E_EXECUTION_KIT_R1.md`
+
+State:
+- sealed J02 packet is frozen as the P06 source; exact ZIP SHA `4a4a4100c4dbe85bbe9689606c5f11781c4b790ddb673946db01c4787aca9066`;
+- legally revealed J02 P06 Candidate arm = A;
+- request builder source prepared and static syntax PASS;
+- Provider receipt runner source prepared and static syntax PASS;
+- secure OpenAI Platform key setup flow initiated; no raw key exposed;
+- frozen request has not yet been built because the coordinating container returns `TransportTimeoutError` even on minimal commands;
+- Provider outputs remain **0**;
+- same-chat output remains invalid Provider evidence.
+
+This is research infrastructure only:
+`NO_ENGINE_CODE_CHANGE__PHYSICAL_AUTHORITY_UNCHANGED__9_PACKAGES_UNCHANGED`.
+
+Exact next executable step in a healthy receipt-capable environment:
+1. R6-sync physical SYNC-R58;
+2. execute the frozen P06 request builder;
+3. seal `provider_request_manifest.json`;
+4. execute the receipt runner;
+5. continue the preregistered Provider full-surface gates.
+
 ## STATUS TOKEN
 `DEVELOPER_HUB__SYNC_R58_CURRENT_PHYSICAL_AUTHORITY__DURABLE_9_OF_9_PASS__INDEPENDENT_ARCHITECTURE_BLIND_PASS_18W_0T_0L__CONTINUITY_R1_ACTIVE__PROVIDER_E2E_PREREGISTERED_OUTPUTS_0__UPPER_LAYER_ARCHITECTURE_QUALIFIED__FULL_GENERATIVE_QUALITY_PENDING__ENG_R47_PRODUCTION_UNCHANGED__NO_PROMOTION`
