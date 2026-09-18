@@ -6,9 +6,10 @@ Last updated: 2026-09-18
 2. `handoff/20260918/CONTINUITY_FIRST_RESEARCH_CHECKPOINT_R3.md`
 3. `research/provider/20260918/R59_P06_OUTPUT_ONLY_REVERSE_RECONSTRUCTION_PREREG_R1.md`
 4. `handoff/20260918/R59_RESEARCH_START_RECEIPT_R1.md`
+5. `handoff/20260918/R59_EXTERNAL_BLIND_EVALUATION_EXECUTION_READINESS_R1.md`
 
 ## NUMBERING
-Research order is:
+Research order:
 `R58 -> R59 -> R60 -> R61 ...`
 No sub-numbered research transactions.
 
@@ -16,13 +17,8 @@ No sub-numbered research transactions.
 - sealed physical successor: **SYNC-R58**
 - route: **ADAPTIVE_UL16**
 - Production/control: **ENG:R47 / LEGACY_R53**
-- DB: **DB59 frozen**
-
-## PHYSICAL PACKAGE READ ORDER
-**CONTROL -> A -> B1 -> B2 -> C1 -> C2-A -> C2-B -> D1 -> D2**
-
-Any authoritative SHA mismatch:
-`AUTHORITY_BYTES_UNAVAILABLE_HOLD`
+- Runtime DB authority: **DB59 frozen**
+- Development/semantic research DB: **DB64**
 
 ## CRITICAL BINDINGS
 Integrated runtime:
@@ -34,36 +30,43 @@ Candidate overlay:
 DB59:
 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
 
-## COMPLETED POST-R58
-- Architecture Blind (구조 블라인드): PASS 18W/0T/0L.
-- P06 Provider (제공자) evidence: independently verified.
-- P06 55-scene dramatic audit (55장면 극적 감사): COMPLETE.
-- due-now Choice–Resistance–Cost (선택–저항–대가): 4/6 PASS, S13/S35 HOLD.
-- Semantic repetition (의미 반복): supported.
-- Coordinator State Carry (상태 이월): HOLD.
+DB64 development/semantic candidate:
+`19f3c446a73408045d02d4d99e168251dca42da3bfa00abaff1d8f9159d7ea46`
 
 ## ACTIVE RESEARCH
 `R59 = Output-Only Reverse Reconstruction (출력물 전용 역재구성)`
 
-Preregistration (사전등록): SEALED.
-Fresh evaluator result: NOT YET AVAILABLE.
+State:
+`PREREGISTERED__EXECUTION_KIT_SEALED__AWAITING_FRESH_INDEPENDENT_EVALUATOR`
 
-Frozen packet:
+Frozen evaluator packet:
 `SYNC_R58_P06_OUTPUT_ONLY_RECONSTRUCTION_PACKET_R1.zip`
 SHA256:
 `26cb904b69ae446d6d2d08e8e6b4e6735376efe33d18ffc4c5a83320122ff515`
 
-## EXACT NEXT ACTION
-1. use one fresh evaluator (신규 평가자) that has not seen P06 architecture or prior audit conclusions;
-2. provide the frozen completed-screenplay-only packet;
-3. reconstruct narrative state from screenplay evidence only;
-4. mark unsupported state `NOT_RECOVERABLE (복원 불가)`;
-5. seal evaluator result before architecture disclosure;
-6. compare sealed reconstruction with frozen P06 architecture under the R59 preregistered taxonomy;
-7. close R59 as PASS or HOLD;
-8. only after R59 closes begin `R60 = Text-Derived State Carry Closure (대본 기반 상태 이월 폐쇄)`.
+External execution kit:
+`R59_EXTERNAL_BLIND_EVALUATION_EXECUTION_KIT_R1.zip`
+SHA256:
+`36a4d988c0431352561244810e3ffbf70ea104d1de8759b0a72133db517c9e70`
 
-The current coordinator cannot serve as the fresh R59 evaluator because it has seen the original P06 architecture.
+## EXACT NEXT ACTION
+1. fresh evaluator (신규 평가자) receives only the R59 blind execution material;
+2. evaluator reconstructs narrative state from screenplay evidence only;
+3. unsupported state is marked `NOT_RECOVERABLE (복원 불가)`;
+4. evaluator seals exact result bytes + SHA256 before architecture disclosure;
+5. ingest sealed result;
+6. compare with frozen P06 architecture under R59 preregistered taxonomy;
+7. close R59 as PASS or HOLD;
+8. only then begin R60 Text-Derived State Carry Closure (대본 기반 상태 이월 폐쇄).
+
+The current coordinator is ineligible as R59 blind evaluator because it has seen P06 architecture and prior audit findings.
+
+## DATABASE RULE
+R59 must not use DB59/DB64 as reconstruction evidence.
+R60 must derive state primarily from actual screenplay text.
+
+After R60, generative-planning research should use the qualified DB64 doctrine rather than DB59-only research:
+`DB64 research fuel + DB59 protected baseline/fallback + structured abstraction + utility arbitration + abstention + load/consumption receipts`.
 
 ## PROHIBITIONS
 Do not rerun Architecture Blind.
@@ -80,4 +83,4 @@ Until then:
 `CURRENT_PHYSICAL_AUTHORITY = SYNC-R58`
 
 Status token:
-`RECOVERY__R59_ACTIVE__SYNC_R58_CURRENT__R59_PREREG_SEALED__FRESH_EVALUATOR_REQUIRED__R60_BLOCKED__NO_PHYSICALIZATION__NO_PROMOTION`
+`RECOVERY__R59_EXECUTION_READY__SYNC_R58_CURRENT__FRESH_EVALUATOR_REQUIRED__R60_BLOCKED__DB64_POST_R60_GENERATIVE_USE__NO_PHYSICALIZATION__NO_PROMOTION`
