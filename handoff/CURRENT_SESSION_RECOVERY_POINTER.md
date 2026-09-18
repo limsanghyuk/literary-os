@@ -171,4 +171,28 @@ Exact next executable step in a healthy receipt-capable environment:
 4. execute the receipt runner;
 5. continue the preregistered Provider full-surface gates.
 
-## STATUS TOKEN\n`SYNC_R58_CURRENT__ARCHITECTURE_BLIND_PASS_18W_0T_0L__CONTINUITY_R1_ACTIVE__PROVIDER_E2E_PREREGISTERED__EXEC_KIT_PREPARED__REQUEST_NOT_BUILT__PROVIDER_OUTPUTS_0__CONTAINER_TRANSPORT_RUNTIME_HOLD__NO_ENGINE_CODE_CHANGE__9_PACKAGES_UNCHANGED__ENG_R47_PRODUCTION_UNCHANGED__NO_PROMOTION`\n
+## PROVIDER ATTEMPT 1 — REPORTED / EVIDENCE INGEST PENDING
+
+Canonical report:
+`research/provider/20260918/SYNC_R58_PROVIDER_E2E_EXTERNAL_RUN_REPORT_R1.md`
+
+Developer reported one completed real Provider run from sealed J02 P06 Candidate=A:
+- HTTP 200 / completed / no retry;
+- 11 sequences / 55 scenes;
+- 38,236 chars including spaces / 27,714 excluding spaces;
+- receipt/hash chain reportedly complete.
+
+This coordinating session has NOT independently ingested the completed-evidence ZIP because both Python execution paths return `TransportTimeoutError` before ZIP access.
+
+Counters:
+- external reported attempts = 1;
+- independently verified Provider outputs = 0;
+- quality-qualified Provider outputs = 0.
+
+Do **not** rerun Provider as the next step. First ingest and audit the existing evidence ZIP in a healthy session, then execute the frozen E6/E3/fidelity/State Carry/reverse-reconstruction audits and 3 independent screenplay judges.
+
+No engine/runtime/package change:
+`NO_ENGINE_CODE_CHANGE__SYNC_R58_PHYSICAL_UNCHANGED__9_PACKAGES_UNCHANGED`.
+
+## STATUS TOKEN
+`SYNC_R58_CURRENT__ARCHITECTURE_BLIND_PASS_18W_0T_0L__PROVIDER_ATTEMPT_1_REPORTED__EVIDENCE_INGEST_PENDING__VERIFIED_PROVIDER_OUTPUTS_0__QUALITY_GATES_PENDING__NO_ENGINE_CODE_CHANGE__9_PACKAGES_UNCHANGED__ENG_R47_PRODUCTION_UNCHANGED__NO_PROMOTION`
