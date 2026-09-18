@@ -1,5 +1,5 @@
 # CURRENT NEXT RESEARCH POINTER
-Last updated: 2026-09-18
+Last updated: 2026-09-19
 
 ## NUMBERING RULE
 Research transactions proceed sequentially:
@@ -50,12 +50,26 @@ Unsupported state must be marked:
 `NOT_RECOVERABLE (복원 불가)`.
 
 ## EXACT NEXT ACTION
-1. execute the R59 blind packet with one fresh evaluator;
-2. seal the result before architecture disclosure;
-3. ingest sealed result;
-4. compare against frozen P06 architecture using the R59 preregistered taxonomy;
-5. close R59 as PASS or HOLD;
-6. only then begin R60.
+Historical external-evaluation method is confirmed as Manual External GPT (수동 외부 GPT):
+
+1. open one completely new GPT conversation outside the Literary OS Project and coordinator conversation;
+2. assign evaluator ID J01;
+3. attach only `R59_EXTERNAL_BLIND_EVALUATION_EXECUTION_KIT_R1.zip`;
+4. paste the frozen launch instruction from `R59_MANUAL_EXTERNAL_GPT_EXECUTION_GUIDE_R1.md`;
+5. receive exactly one JSON result and preserve it unchanged;
+6. coordinator validates evaluator ID / independence declaration / schema and seals exact SHA256;
+7. only after sealing reveal frozen P06 architecture;
+8. compare under the R59 preregistered taxonomy;
+9. close R59 as PASS or HOLD;
+10. only then begin R60.
+
+Method-correction receipt:
+`handoff/20260919/R59_EXTERNAL_EVALUATION_METHOD_CORRECTION_R1.md`
+
+Manual guide SHA256:
+`232b3de6d390a8265c56ad19fbb12e7d21b99f52cef4dcfd376e0c0a655d88ab`
+
+A valid unfavorable result must not be replaced. Redo is permitted only for malformed/protocol-invalid output before unblind.
 
 ## DATABASE RULE
 R59 must not consume DB59 or DB64 because database knowledge would contaminate an output-only reconstruction.
