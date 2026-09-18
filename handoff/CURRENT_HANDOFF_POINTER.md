@@ -1,196 +1,44 @@
 # CURRENT HANDOFF POINTER
 Last updated: 2026-09-18
 
-## READ FIRST — CURRENT PHYSICAL SUCCESSOR
-Current sealed physical successor: **SYNC-R58**.
-Parent physical successor: **SYNC-R57**.
-Historical recovery root: **SYNC-R53**.
-Production/control remains **ENG:R47 / LEGACY_R53** — unchanged and not promoted.
-Candidate execution must use physical **SYNC-R58 `ADAPTIVE_UL16`**.
-Runtime DB authority remains **DB59 frozen**.
-Formal authority unchanged: total 137, latest R138, R140 0/0/0.
+## CANONICAL NEW-SESSION HANDOFF
+Read first:
+`handoff/20260918/START_HERE_SYNC_R58_POST_PHYSICAL_RESEARCH_HANDOFF_R2.md`
 
-Canonical physical receipt:
-`handoff/20260917/SYNC_R58_PHYSICALIZATION_AND_DELIVERY_RECEIPT_R1.md`
+Then:
+`handoff/20260918/CONTINUITY_FIRST_RESEARCH_CHECKPOINT_R2.md`
 
-Mandatory protocols:
-- R6 authority SHA sync;
-- R5 turn-bounded closure;
-- R4 atomic execution;
-- R7 Small-Source Research Lane;
-- Continuity-First Research Checkpoint R1:
-  `handoff/20260918/CONTINUITY_FIRST_RESEARCH_CHECKPOINT_R1.md`.
+These documents supersede older handoff summaries for deciding where to resume.
 
-## CONTINUITY RULE — MANDATORY
-Every research change must be classified as:
-1. `RESEARCH_FINDING`
-2. `IMPLEMENTED_IN_CANDIDATE`
-3. `PHYSICALIZED_IN_9_PACKAGES`
-
-Do not say the Candidate/Literary OS improved until state 3 is reached.
-At the end of every bounded transaction, write the recovery checkpoint before starting another task.
-
-## SYNC-R58 PHYSICAL CONTENT
-R58 physically carries:
-- Adaptive Multi-Obligation planning;
-- relationship/information/social-ecology semantic preservation;
-- transaction-local ensemble topology;
-- State Commit/Carry and next-episode semantic reconsumption;
-- Responsible-Ancestor Replan;
-- Legacy Canonical compatibility;
-- no quota padding / no cloned obligation phases;
-- multi-stage development of one obligation with exactly one final resolution;
-- entity/id-normalized material clone blocking;
-- concrete visible-action grounding;
-- duplicate stage/function/action/state signature blocking.
-
-Integrated runtime SHA256:
-`30281db791d9bb629218a79c51c230bffb8f9088d79c2cfe6d676f996098b250`.
-Candidate overlay SHA256:
-`d4215a8a5075054a054d5ca60e10e5992c4139588cccaeb0dabe14281f2fd633`.
-
-Persistent Library 9/9 raw-byte re-download + independent SHA rehash: PASS.
-`SYNC_R58__DEVELOPER_DELIVERY_COMPLETE__9_OF_9__DURABLE_LIBRARY_REDOWNLOAD_REHASH_PASS`.
-
-## INDEPENDENT ARCHITECTURE QUALIFICATION — COMPLETE
-Canonical result:
-`research/upper_layer/20260917/SYNC_R58_ARCHITECTURE_BLIND_RESULT_R1.md`
-
-Fresh independent judges were sealed before mapping reveal.
-Mapped result:
-- Candidate 18 wins / 0 ties / 0 losses;
-- Candidate critical-majority 0/6 pair majorities;
-- gate PASS.
-
-`UPPER_LAYER_ARCHITECTURE_QUALIFICATION = PASS`.
-`UPPER_LAYER_GENERATIVE_QUALITY = NOT_YET_QUALIFIED`.
-
-Shared remaining weakness:
-- recognizable Scene-level ENGAGE/PROBE/TEST -> RESOLVE regularity;
-- generic state phrasing;
-- Scene specificity/necessity remains the weakest architecture axis.
-
-## CURRENT NEXT RESEARCH — PREREGISTERED, OUTPUTS 0
-Experiment:
-`SYNC_R58_PROVIDER_E2E_FULL_EPISODE_QUALIFICATION_R1`
-
-Preregistration:
-`research/provider/20260918/SYNC_R58_PROVIDER_E2E_PREREG_R1.md`
-
-Status:
-`PREREGISTERED__LOGIC_LOCKED__OUTPUTS_0__PROVIDER_EXECUTION_PENDING`.
-
-This experiment freezes E6-type template-collapse and E3-type procedural-monoculture regressions as explicit failure guards before output generation.
-
-A valid run must execute physical R58 in a real fresh-context OpenAI Provider call and preserve response/request/model/usage/input-output hash receipts. Same-chat generation is invalid Provider evidence.
-
-Current chat environment has no action that can execute the required fresh Provider call with receipts, so the experiment is correctly stopped at outputs 0 rather than simulated.
-
-## AFTER PROVIDER PASS ONLY
-Run `HUMAN_NEXT_EPISODE_PAIRED_BLIND`:
-- Source Cutoff EP N;
-- Candidate must not see human EP N+1;
-- compare human EP N+1 vs Candidate EP N+1 blind;
-- repeat across works and early/middle/late/finale strata;
-- keep development and final holdout works separate.
+## CURRENT STATE
+- Physical authority: **SYNC-R58**
+- Candidate route: **ADAPTIVE_UL16**
+- Production/control: **ENG:R47 / LEGACY_R53**
+- DB: **DB59 frozen**
+- Architecture Blind: **PASS 18W / 0T / 0L**
+- Full generative quality: **NOT YET QUALIFIED**
+- Provider P06 attempt: **reported completed; evidence ingest pending**
+- Current research: **existing 55-scene dramatic-realization audit**
+- Post-R58 Candidate code change: **NONE**
+- Post-R58 physical successor: **NONE**
+- Production promotion: **NONE**
 
 ## INTERRUPTION RECOVERY
-If a new session starts now:
-1. verify SYNC-R58 9-package hashes in `CURRENT_SESSION_RECOVERY_POINTER.md`;
-2. verify Candidate route `ADAPTIVE_UL16`;
-3. read the Continuity checkpoint;
-4. read Provider E2E preregistration;
-5. do **not** rerun Architecture Blind — it is already PASS 18/18;
-6. resume at real Provider execution when a receipt-capable execution environment is available.
+A new session must:
+1. recover SYNC-R58 from the 9 physical packages;
+2. recover the post-R58 Hub research overlay from the canonical handoff;
+3. do not rerun Architecture Blind;
+4. do not rerun Provider before auditing the existing reported P06 attempt;
+5. ingest the existing evidence ZIP;
+6. execute the preregistered 55-scene audit and output-only reverse reconstruction;
+7. only after localized evidence may an engine intervention be designed.
 
-## PROVIDER EXECUTION INFRASTRUCTURE — PREPARED / OUTPUTS 0
+## REQUIRED EVIDENCE BUNDLES WHEN AVAILABLE
+Developer-supplied:
+- `gpt09_provider_e2e_P06_R1_COMPLETED_EVIDENCE.zip`
+- `LITERARY_OS_COMPLETION_HANDOFF_20260918.zip`
 
-Canonical preparation receipt:
-`research/provider/20260918/SYNC_R58_PROVIDER_E2E_EXECUTION_PREPARATION_RECEIPT_R1.md`
-
-Execution kit:
-- `research/provider/20260918/prepare_sync_r58_p06_provider_request_r1.mjs`
-- `research/provider/20260918/run_openai_responses_with_receipt_r1.mjs`
-- `research/provider/20260918/README_SYNC_R58_PROVIDER_E2E_EXECUTION_KIT_R1.md`
-
-State:
-- sealed J02 packet is frozen as the P06 source; exact ZIP SHA `4a4a4100c4dbe85bbe9689606c5f11781c4b790ddb673946db01c4787aca9066`;
-- legally revealed J02 P06 Candidate arm = A;
-- request builder source prepared and static syntax PASS;
-- Provider receipt runner source prepared and static syntax PASS;
-- secure OpenAI Platform key setup flow initiated; no raw key exposed;
-- frozen request has not yet been built because the coordinating container returns `TransportTimeoutError` even on minimal commands;
-- Provider outputs remain **0**;
-- same-chat output remains invalid Provider evidence.
-
-This is research infrastructure only:
-`NO_ENGINE_CODE_CHANGE__PHYSICAL_AUTHORITY_UNCHANGED__9_PACKAGES_UNCHANGED`.
-
-Exact next executable step in a healthy receipt-capable environment:
-1. R6-sync physical SYNC-R58;
-2. execute the frozen P06 request builder;
-3. seal `provider_request_manifest.json`;
-4. execute the receipt runner;
-5. continue the preregistered Provider full-surface gates.
-
-## PROVIDER ATTEMPT 1 — REPORTED / EVIDENCE INGEST PENDING
-
-Canonical report:
-`research/provider/20260918/SYNC_R58_PROVIDER_E2E_EXTERNAL_RUN_REPORT_R1.md`
-
-Developer reported one completed real Provider run from sealed J02 P06 Candidate=A:
-- HTTP 200 / completed / no retry;
-- 11 sequences / 55 scenes;
-- 38,236 chars including spaces / 27,714 excluding spaces;
-- receipt/hash chain reportedly complete.
-
-This coordinating session has NOT independently ingested the completed-evidence ZIP because both Python execution paths return `TransportTimeoutError` before ZIP access.
-
-Counters:
-- external reported attempts = 1;
-- independently verified Provider outputs = 0;
-- quality-qualified Provider outputs = 0.
-
-Do **not** rerun Provider as the next step. First ingest and audit the existing evidence ZIP in a healthy session, then execute the frozen E6/E3/fidelity/State Carry/reverse-reconstruction audits and 3 independent screenplay judges.
-
-No engine/runtime/package change:
-`NO_ENGINE_CODE_CHANGE__SYNC_R58_PHYSICAL_UNCHANGED__9_PACKAGES_UNCHANGED`.
-
-## CURRENT NEXT RESEARCH — EXISTING P06 SURFACE AUDIT
-
-Canonical preregistration:
-`research/provider/20260918/SYNC_R58_P06_FULL_SURFACE_DRAMATIC_REALIZATION_AUDIT_PREREG_R1.md`
-
-Why this is next:
-- a real P06 Provider attempt has been reported as completed;
-- do **not** regenerate or extend the screenplay before auditing the existing attempt;
-- current evidence bundle still requires independent local ingest/hash verification in a healthy execution environment;
-- the diagnostic target is the architecture→surface gap, not raw length expansion.
-
-Frozen audit targets:
-- all 55 scenes;
-- behavior vs explanatory direction;
-- character individuation;
-- semantic scene repetition beyond exact strings;
-- choice/resistance/cost/state-change realization;
-- due-now processing vs dramatic resolution;
-- output-only reverse reconstruction;
-- realized-text state vs architecture/State Carry;
-- attribution across architecture / request context / Provider realization / validator / state integration.
-
-The supplied handoff F01-F08 are currently `RESEARCH_FINDING_OR_HYPOTHESIS`, not engine defects proven enough for code changes.
-
-No Candidate code changed. No package bytes changed.
-`NO_ENGINE_CODE_CHANGE__PHYSICAL_AUTHORITY_UNCHANGED__SYNC_R58_CURRENT`.
-
-Exact continuation:
-1. ingest/hash-check the completed P06 evidence ZIP;
-2. recompute length metrology;
-3. complete the 55-scene dramatic audit;
-4. run fresh output-only reverse reconstruction;
-5. compare realized state with P06 architecture/State Carry;
-6. only then decide eligibility for 3 independent screenplay judges;
-7. only after localized evidence may an engine intervention be preregistered.
+Treat internal claims as supplemental until independently rehashed/read in a healthy execution environment.
 
 ## STATUS TOKEN
-`SYNC_R58_CURRENT__ARCHITECTURE_BLIND_PASS_18W_0T_0L__P06_PROVIDER_ATTEMPT_REPORTED_COMPLETED__EVIDENCE_INGEST_PENDING__P06_SURFACE_DRAMATIC_AUDIT_PREREGISTERED__55_SCENE_AUDIT_PENDING__OUTPUT_ONLY_RECONSTRUCTION_PENDING__NO_ENGINE_CODE_CHANGE__9_PACKAGES_UNCHANGED__ENG_R47_PRODUCTION_UNCHANGED__NO_PROMOTION`
+`HANDOFF__START_HERE_R2_CURRENT__SYNC_R58_PHYSICAL__POST_R58_RESEARCH_OVERLAY__P06_EVIDENCE_INGEST_NEXT__55_SCENE_AUDIT_NEXT__NO_ENGINE_CHANGE__NO_NEW_9_PACKAGES__NO_PROMOTION`
