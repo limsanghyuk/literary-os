@@ -1,6 +1,12 @@
 # CURRENT NEXT RESEARCH POINTER
 Last updated: 2026-09-18
 
+## NUMBERING RULE
+Research transactions proceed sequentially:
+`R58 -> R59 -> R60 -> R61 ...`
+
+Do not use sub-numbered research transactions such as R59-0/R59-1.
+
 ## CURRENT PHYSICAL SOURCE
 - Candidate: **SYNC-R58**
 - route: **ADAPTIVE_UL16**
@@ -10,59 +16,64 @@ Last updated: 2026-09-18
 Canonical handoff:
 `handoff/20260918/START_HERE_SYNC_R58_POST_PHYSICAL_RESEARCH_HANDOFF_R3.md`
 
-## COMPLETED
-- Architecture Blind: PASS 18W/0T/0L.
-- P06 Provider evidence: independently verified, verified-output counter = 1.
-- 55-scene dramatic-realization audit: complete.
-- due-now CRC: 4/6 PASS; S13/S35 FAIL-HOLD.
-- semantic repetition: supported.
-- coordinator State Carry comparison: HOLD.
+## COMPLETED BEFORE R59
+- Architecture Blind (구조 블라인드): PASS 18W/0T/0L.
+- P06 Provider (제공자) evidence: independently verified, verified-output counter = 1.
+- 55-scene dramatic-realization audit (55장면 극적 실현 감사): complete.
+- due-now Choice–Resistance–Cost (선택–저항–대가): 4/6 PASS; S13/S35 FAIL-HOLD.
+- semantic repetition (의미 반복): supported.
+- coordinator State Carry (상태 이월) comparison: HOLD.
 
-Canonical audit:
-`research/provider/20260918/SYNC_R58_P06_FULL_SURFACE_DRAMATIC_REALIZATION_AUDIT_RESULT_R1.md`
+## CURRENT RESEARCH
+`R59 = P06_OUTPUT_ONLY_REVERSE_RECONSTRUCTION`
 
-## EXACT NEXT RESEARCH
-`P06_OUTPUT_ONLY_REVERSE_RECONSTRUCTION_R1`
+Preregistration:
+`research/provider/20260918/R59_P06_OUTPUT_ONLY_REVERSE_RECONSTRUCTION_PREREG_R1.md`
 
-Independence requirement:
-the evaluator must not have seen P06 architecture, mappings, handoff conclusions, or current coordinator findings.
+Start receipt:
+`handoff/20260918/R59_RESEARCH_START_RECEIPT_R1.md`
 
-Execute:
-1. completed screenplay only;
-2. reconstruct episode premise;
-3. reconstruct major threads and sequence functions;
-4. reconstruct major scene transactions;
-5. reconstruct relationship/information/social deltas;
-6. list due-now items apparently resolved;
-7. list deferred/open obligations;
-8. reconstruct final next-episode state;
-9. mark NOT RECOVERABLE where text does not support a state;
-10. seal the reconstruction;
-11. only then expose original P06 architecture for comparison.
+Frozen evaluator packet:
+`SYNC_R58_P06_OUTPUT_ONLY_RECONSTRUCTION_PACKET_R1.zip`
+SHA256:
+`26cb904b69ae446d6d2d08e8e6b4e6735376efe33d18ffc4c5a83320122ff515`
 
-After comparison:
-- classify causal loss / invented closure / hidden-state dependence / drift;
-- close or HOLD text-derived State Carry;
-- then decide 3-independent-full-screenplay-judge eligibility.
+Screenplay SHA256:
+`88e74a280be7c657eb241309144475be4fcc702f1052646f31b8fe608e25d653`
+
+## EXACT NEXT ACTION
+Execute R59 with a fresh evaluator (신규 평가자) that has not seen P06 architecture (구조), mappings, prior audit conclusions, or handoffs.
+
+The evaluator receives completed screenplay only and reconstructs:
+- episode premise (회차 전제);
+- major threads (주요 서사선);
+- sequence functions (시퀀스 기능);
+- major scene transactions (주요 장면 거래);
+- relationship/information/social deltas (관계·정보·사회 변화);
+- due-now resolutions (현재 해결 의무);
+- deferred/open obligations (유예·열린 의무);
+- final next-episode state (다음 회차 상태).
+
+Mark unsupported state:
+`NOT_RECOVERABLE (복원 불가)`.
+
+Seal the blind reconstruction before architecture disclosure.
+
+Only after sealing:
+compare against frozen P06 architecture using R59 preregistered taxonomy.
 
 ## CURRENT HOLD
+`R60 = BLOCKED_UNTIL_R59_CLOSES`
 `THREE_JUDGE_FULL_SCREENPLAY = HOLD`
 
-Reasons:
-- fresh output-only reconstruction pending;
-- State Carry closure pending;
-- two due-now CRC failures already identified diagnostically.
-
-## ENGINE GOVERNANCE
-F01/F04/F06/F07 and F08 have support, but no Candidate change is authorized yet.
-F02/F05 remain unresolved.
-
-A controlled intervention must be preregistered before code changes.
+The current coordinator is not eligible as the R59 blind evaluator because it has already seen the P06 architecture.
 
 ## AUTHORITY IMPACT
-No post-R58 Candidate code change.
+No Candidate code change.
 No post-R58 package change.
 No Production promotion.
 
+`CURRENT_PHYSICAL_AUTHORITY = SYNC-R58`
+
 Status token:
-`NEXT__P06_OUTPUT_ONLY_RECONSTRUCTION__FRESH_EVALUATOR_REQUIRED__SEAL_THEN_COMPARE__STATE_CARRY_CLOSE_OR_HOLD__THEN_3_JUDGES_DECISION__NO_ENGINE_CHANGE__SYNC_R58_CURRENT`
+`NEXT__R59_ACTIVE__OUTPUT_ONLY_REVERSE_RECONSTRUCTION__PREREG_SEALED__FRESH_EVALUATOR_REQUIRED__R60_BLOCKED__NO_ENGINE_CHANGE__SYNC_R58_CURRENT`
