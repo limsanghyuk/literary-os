@@ -1,112 +1,75 @@
 # CURRENT DEVELOPER HUB AUTHORITY
-Last updated: 2026-09-18
+Last updated: 2026-09-19
 
 ## READ FIRST
-Canonical new-session handoff:
-`handoff/20260918/START_HERE_SYNC_R58_POST_PHYSICAL_RESEARCH_HANDOFF_R3.md`
+Canonical handoff:
+`handoff/20260919/START_HERE_SYNC_R59_R62_RESEARCH_CANDIDATE_R1.md`
 
-Canonical continuity checkpoint:
-`handoff/20260918/CONTINUITY_FIRST_RESEARCH_CHECKPOINT_R3.md`
+Physicalization receipt:
+`handoff/20260919/SYNC_R59_R62_PHYSICALIZATION_RECEIPT_R1.md`
 
 ## CURRENT AUTHORITY
-- Physical Candidate: **SYNC-R58**
-- Candidate route: **SYNC-R58 ADAPTIVE_UL16**
+- Physical Candidate: **SYNC-R59**
+- Candidate route: **ADAPTIVE_UL16_R62_F01_RESEARCH**
+- Parent physical authority: **SYNC-R58**
 - Production/control: **ENG:R47 / LEGACY_R53**
 - Runtime DB: **DB59 frozen**
+- Development/semantic research DB: **DB64**
 - Formal total: 137
 - latest formal: R138
 - R140: 0/0/0
 - Production promotion: **NONE**
 
 Integrated runtime SHA256:
-`30281db791d9bb629218a79c51c230bffb8f9088d79c2cfe6d676f996098b250`
+`a6a0e65460948562c2cd7146efcb207a6b02ff77403f67a6bf9049792d95d625`
 
 Candidate overlay SHA256:
-`d4215a8a5075054a054d5ca60e10e5992c4139588cccaeb0dabe14281f2fd633`
+`059e10a3b2cb71acf3db8144240ebfebeeac6924daf13fdb2d1858f1a3369e41`
+
+Adaptive R62 source SHA256:
+`7c150389a688b4d769b96ade341921a77b7fe86289645c0c613a035c6151a377`
 
 DB59 SHA256:
 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
 
-R58 durable custody:
-`DEVELOPER_DELIVERY_COMPLETE__9_OF_9 = PASS`
+C2 logical SHA256:
+`ae4fbfbb53c51157890ce45c1f9bf3f5671be4f60e5eed688e5e1f7dc9f95741`
 
-## POST-R58 RESEARCH AUTHORITY
-### Architecture
-`research/upper_layer/20260917/SYNC_R58_ARCHITECTURE_BLIND_RESULT_R1.md`
-- 18W / 0T / 0L
-- critical-majority 0/6
-- PASS
-- `UPPER_LAYER_ARCHITECTURE_QUALIFICATION = PASS`
+## RESEARCH
+- R59: CLOSED HOLD
+- R60: CLOSED PASS
+- R61: CLOSED
+- R62: IMPLEMENTED / mechanical + regression PASS / external blind **0/3 pending**
 
-### P06 Provider evidence
-Existing completed attempt is now independently verified:
-- 46/46 manifest size+SHA PASS;
-- ZIP CRC PASS;
-- raw response -> sealed screenplay exact extraction PASS;
-- model gpt-5.5-2026-04-23;
-- HTTP 200 / completed / retry 0;
-- 11 sequences / 55 scenes;
-- 38,236 chars incl whitespace / 27,714 excl whitespace;
-- output SHA256 `88e74a280be7c657eb241309144475be4fcc702f1052646f31b8fe608e25d653`.
+R62 physically changes only F01 stage/transaction selection.
+F04/F06/F07 runtime/F08/DB authority are unchanged.
 
-Counters:
-- external reported attempts: 1
-- independently verified Provider outputs: **1**
-- quality-qualified Provider outputs: **0**
+Fresh 12-case R62 mechanical transmission:
+- Control precursor families 7; Treatment 10
+- EVENT same-kind diversity 1 -> 4
+- INFORMATION 1 -> 3
+- RELATIONSHIP 1 -> 3
+- entropy 2.531148 -> 2.807003
+- repeated path ratio 0.854167 -> 0.791667
+- due/deferred/blocked fidelity PASS
+- duplicate concrete actions 0
 
-Do not rerun Provider.
+R58B regression:
+- 12 sequences / 66 scenes retained
+- unique scene functions 12 -> 19
+- validation PASS
+- whole runtime compile 45/45 PASS
 
-### P06 full-surface audit
-Canonical:
-`research/provider/20260918/SYNC_R58_P06_FULL_SURFACE_DRAMATIC_REALIZATION_AUDIT_RESULT_R1.md`
+## CURRENT QUALIFICATION BOUNDARY
+Physicalization: PASS.
+R62 F01 quality effect: **NOT YET QUALIFIED**.
+External blind judge responses: **0/3**.
+Production promotion: NO.
 
-Result:
-- 55/55 scenes audited;
-- 25 PASS / 28 CONCERN / 2 HOLD;
-- due-now CRC 4/6 PASS;
-- S13 and S35 = PROCESSING_WITHOUT_DRAMATIC_RESOLUTION;
-- semantic repetition beyond exact strings supported;
-- scene-necessity concerns supported;
-- State Carry full text-derived closure not established;
-- DEFER-3 not sufficiently text-recoverable.
+## EXACT NEXT ACTION
+Run J01/J02/J03 R62 blind packets in three separate fresh GPT conversations, return exact JSONs unchanged, seal 3/3, reveal mapping, and compute the frozen 12-pair gate.
 
-Current findings:
-- F01 SUPPORTED
-- F02 NOT YET CAUSALLY ISOLATED
-- F03 TEST PENDING
-- F04 SUPPORTED
-- F05 NOT ESTABLISHED
-- F06 SUPPORTED
-- F07 SUPPORTED / HOLD
-- F08 SUPPORTED AS CONTRIBUTOR
-
-## CURRENT NEXT RESEARCH
-Fresh output-only reverse reconstruction.
-
-The current coordinator has seen P06 architecture and cannot be the fresh evaluator.
-
-Required:
-1. screenplay-only fresh evaluator reconstruction;
-2. seal before architecture disclosure;
-3. compare with P06 architecture;
-4. close/HOLD text-derived State Carry;
-5. only then decide 3-judge full-screenplay eligibility.
-
-Current 3-judge state:
-`HOLD__OUTPUT_ONLY_RECONSTRUCTION_AND_STATE_CARRY_CLOSURE_REQUIRED`
-
-## QUALIFICATION BOUNDARY
-- Architecture: PASS
-- Generative quality: NOT_YET_QUALIFIED
-- Human parity: NOT TESTED
-- Production promotion: NO
-
-## PHYSICALIZATION RULE
-No post-R58 Candidate code change has been accepted.
-No post-R58 9-package successor has been sealed.
-
-Therefore:
-`CURRENT_PHYSICAL_AUTHORITY = SYNC-R58`
+Do not assign R63 until R62 closes.
 
 Status token:
-`DEVELOPER_HUB__SYNC_R58_CURRENT__PROVIDER_EVIDENCE_VERIFIED_1__P06_AUDIT_COMPLETE__DUE_CRC_4_PASS_2_FAIL__OUTPUT_ONLY_BLIND_NEXT__STATE_CARRY_HOLD__NO_ENGINE_CHANGE__NO_NEW_9_PACKAGES__NO_PROMOTION`
+`DEVELOPER_HUB__SYNC_R59_CURRENT__R62_F01_PHYSICALIZED__MECHANICAL_REGRESSION_PASS__EXTERNAL_BLIND_0_OF_3_PENDING__PRODUCTION_ENG_R47_UNCHANGED`
