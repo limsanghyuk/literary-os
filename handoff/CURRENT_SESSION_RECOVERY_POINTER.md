@@ -2,54 +2,65 @@
 Last updated: 2026-09-19
 
 ## READ FIRST
-1. `handoff/20260918/START_HERE_SYNC_R58_POST_PHYSICAL_RESEARCH_HANDOFF_R3.md`
-2. `handoff/20260918/CONTINUITY_FIRST_RESEARCH_CHECKPOINT_R3.md`
-3. `research/provider/20260919/R59_P06_OUTPUT_ONLY_REVERSE_RECONSTRUCTION_RESULT_R1.md`
-4. `research/state_carry/20260919/R60_TEXT_DERIVED_STATE_CARRY_CLOSURE_RESULT_R1.md`
-5. `research/causal_map/20260919/R61_DRAMATIC_REALIZATION_CAUSAL_MAP_RESULT_R1.md`
-6. `research/interventions/20260919/R62_F01_STAGE_GRAMMAR_DIVERSIFICATION_PREREG_R1.md`
+1. `handoff/20260919/START_HERE_SYNC_R59_R62_RESEARCH_CANDIDATE_R1.md`
+2. `handoff/20260919/SYNC_R59_R62_PHYSICALIZATION_RECEIPT_R1.md`
+3. `research/interventions/20260919/R62_F01_STAGE_GRAMMAR_DIVERSIFICATION_PREREG_R1.md`
 
 ## CURRENT PHYSICAL AUTHORITY
-- SYNC-R58 / ADAPTIVE_UL16
+- SYNC-R59 / ADAPTIVE_UL16_R62_F01_RESEARCH
+- Parent: SYNC-R58
 - Production: ENG:R47 / LEGACY_R53
 - Runtime DB: DB59 frozen
-- DB64: development/semantic research DB
+- Research DB: DB64
 
-Critical bindings remain:
-- integrated runtime: `30281db791d9bb629218a79c51c230bffb8f9088d79c2cfe6d676f996098b250`
-- Candidate overlay: `d4215a8a5075054a054d5ca60e10e5992c4139588cccaeb0dabe14281f2fd633`
-- DB59: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
+## CRITICAL BINDINGS
+Integrated runtime:
+`a6a0e65460948562c2cd7146efcb207a6b02ff77403f67a6bf9049792d95d625`
+
+Candidate overlay:
+`059e10a3b2cb71acf3db8144240ebfebeeac6924daf13fdb2d1858f1a3369e41`
+
+Adaptive source:
+`7c150389a688b4d769b96ade341921a77b7fe86289645c0c613a035c6151a377`
+
+C2 logical:
+`ae4fbfbb53c51157890ce45c1f9bf3f5671be4f60e5eed688e5e1f7dc9f95741`
+
+DB59:
+`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
 
 ## RESEARCH STATE
-R59:
-`CLOSED_HOLD`
-J01 SHA:
-`d7543baf4488112b577bf0ddf4ec35066bcfa1fd72a8f29bb624cfe3a381f2cb`
+- R59 CLOSED HOLD
+- R60 CLOSED PASS
+- R61 CLOSED
+- R62 IMPLEMENTED / mechanical PASS / regression PASS / 9-package physicalization PASS / external blind 0/3 pending
 
-R60:
-`CLOSED_PASS__DUAL_LEDGER_STATE_CARRY`
+## PHYSICAL PACKAGE READ ORDER
+`CONTROL -> A -> B1 -> B2 -> C1 -> C2-A -> C2-B -> D1 -> D2`
 
-R61:
-`CLOSED__CAUSAL_MAP_COMPLETE`
-
-R62:
-`PREREGISTERED__IMPLEMENTATION_NOT_STARTED__OUTPUTS_0`
+Any transport SHA or runtime binding mismatch:
+`AUTHORITY_BYTES_UNAVAILABLE_HOLD`
 
 ## EXACT NEXT ACTION
-Implement only the R62 F01 stage-grammar treatment in an isolated candidate research overlay.
-Before outputs:
-- preserve exact SYNC-R58 Control;
-- verify treatment boundary;
-- keep F04/F06/F07/F08 and DB authority unchanged;
-- seal implementation bytes;
-- then run fresh paired qualification.
+Do not mutate Candidate.
 
-## CONTINUITY RULE
-Any later physical authority requires:
-`RESEARCH FINDING -> IMPLEMENTED IN CANDIDATE -> REGRESSION PASS -> C1/C2 BINDING PASS -> 9-PACKAGE RESEAL -> SHA/CRC/CUSTODY PASS -> NEW PHYSICAL AUTHORITY`
+Execute only R62 external blind quality evaluation:
+1. J01/J02/J03 separate fresh contexts;
+2. each gets only its sealed judge packet;
+3. return exact JSONs unchanged;
+4. validate all 3;
+5. SHA-seal all 3;
+6. only then open coordinator mapping;
+7. compute aggregate 12-pair gate;
+8. close R62;
+9. only then start R63.
 
-Until then:
-`CURRENT_PHYSICAL_AUTHORITY = SYNC-R58`
+## PROHIBITIONS
+- do not rerun R59/R60/R61
+- do not rerun R62 mechanical generation unless integrity failure is found
+- do not open coordinator mapping before 3/3 judgments
+- do not claim R62 quality PASS yet
+- do not promote Production
 
 Status token:
-`RECOVERY__R62_PREREG_ACTIVE__OUTPUTS_0__SYNC_R58_CURRENT__NO_PHYSICALIZATION__NO_PROMOTION`
+`RECOVERY__SYNC_R59_PHYSICAL__R62_EXTERNAL_BLIND_PENDING__NO_CANDIDATE_MUTATION__R63_BLOCKED`
