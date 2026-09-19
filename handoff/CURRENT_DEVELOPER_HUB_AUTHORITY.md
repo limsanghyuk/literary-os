@@ -8,6 +8,9 @@ Canonical handoff:
 Physicalization receipt:
 `handoff/20260919/SYNC_R59_R62_PHYSICALIZATION_RECEIPT_R1.md`
 
+B2 transport correction:
+`handoff/20260919/SYNC_R59_B2_TRANSPORT_CORRECTION_R2.md`
+
 ## CURRENT AUTHORITY
 - Physical Candidate: **SYNC-R59**
 - Candidate route: **ADAPTIVE_UL16_R62_F01_RESEARCH**
@@ -34,6 +37,22 @@ DB59 SHA256:
 
 C2 logical SHA256:
 `ae4fbfbb53c51157890ce45c1f9bf3f5671be4f60e5eed688e5e1f7dc9f95741`
+
+## B2 CURRENT DELIVERY TRANSPORT
+Current downloadable B2:
+- bytes: **268276811**
+- SHA256: `753db03b5c161d3c016ef95388f93e2dfe2c469d2e1eb6182429b3d16cd549e6`
+
+The superseded pre-correction B2 transport SHA:
+`9d9c878cc3c794740b8b0fe4c6a13f6c5fa46c6a1e6b33e7f3631679dfdee0bf`
+
+must not be used for developer delivery.
+
+Correction is transport-only:
+- 1805/1805 member names/sizes/CRC identical;
+- ZIP CRC PASS;
+- logical content unchanged;
+- other 8 packages unchanged.
 
 ## RESEARCH
 - R59: CLOSED HOLD
@@ -72,4 +91,4 @@ Run J01/J02/J03 R62 blind packets in three separate fresh GPT conversations, ret
 Do not assign R63 until R62 closes.
 
 Status token:
-`DEVELOPER_HUB__SYNC_R59_CURRENT__R62_F01_PHYSICALIZED__MECHANICAL_REGRESSION_PASS__EXTERNAL_BLIND_0_OF_3_PENDING__PRODUCTION_ENG_R47_UNCHANGED`
+`DEVELOPER_HUB__SYNC_R59_CURRENT__B2_TRANSPORT_R2_DOWNLOADABLE__R62_F01_PHYSICALIZED__MECHANICAL_REGRESSION_PASS__EXTERNAL_BLIND_0_OF_3_PENDING__PRODUCTION_ENG_R47_UNCHANGED`
