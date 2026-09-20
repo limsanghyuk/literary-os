@@ -1,39 +1,25 @@
 # CURRENT SESSION RECOVERY POINTER
 Last updated: 2026-09-20
 
-## RECOVERY STATUS
-`POST_R62_PHYSICAL_RECOVERY_ALIGNMENT = COMPLETE`
+## STATUS
+`RECOVERY_AND_POST_R63_PHYSICAL_ALIGNMENT_COMPLETE`
 
 Latest physical authority:
-**SYNC-R60**
+**SYNC-R61**
 
-Canonical entry:
-`handoff/20260920/START_HERE_POST_R62_RECOVERED_SYNC_R60_R1.md`
+Canonical:
+`handoff/20260920/START_HERE_POST_R63_SYNC_R61_R1.md`
 
-Physicalization receipt:
-`handoff/20260920/SYNC_R60_RECOVERY_ALIGNMENT_PHYSICALIZATION_RECEIPT_R1.md`
+Trust root:
+`18eaa49ecc2aa514f053466b9718a1e6bda92ea3b6055b28a712cdd71ee3b839`
 
 ## AUTHORITY
-- SYNC-R60: latest physical recovery-aligned package set
-- SYNC-R58 / ADAPTIVE_UL16: active qualified Candidate
-- SYNC-R59 / R62: quarantined failed research evidence
+- active qualified Candidate: SYNC-R58 / ADAPTIVE_UL16
+- R62 failed research evidence preserved
+- R63 failed research evidence preserved
 - Production: ENG:R47 / LEGACY_R53
-- Runtime DB: DB59 frozen
-- Research DB: DB64
-- R62 CLOSED FAIL 9W/0T/3L
-- R63 NOT STARTED
-
-## RECOVERY AUDIT
-- SYNC-R59 parent verified 9/9
-- SYNC-R60 new transports verified 9/9
-- ZIP CRC PASS
-- C2 logical reassembly PASS
-- C1 current runtime = exact SYNC-R58 runtime
-- quarantined R62 evidence preserved
-- DB59 PASS
-- DB64 research reference PASS
-- secret audit PASS
-- B2 downloadability boundary PASS
+- Runtime DB: DB59
+- R64: NOT STARTED
 
 ## NEW SESSION FIRST ACTION
-Verify the SYNC-R60 trust root and package hashes. If they pass, proceed to R63 preregistration. Do not rerun or rescore R59-R62.
+Verify SYNC-R61 package hashes/trust root. If PASS, continue with R64 preregistration. Do not rerun R59-R63 and do not treat R62/R63 sources as active.
