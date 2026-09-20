@@ -2,125 +2,43 @@
 Last updated: 2026-09-20
 
 ## CANONICAL READ FIRST
-`handoff/20260920/START_HERE_POST_R62_NEW_SESSION_RECOVERY_FROM_SYNC_R59_R1.md`
+`handoff/20260920/START_HERE_POST_R62_RECOVERED_SYNC_R60_R1.md`
 
-Supporting recovery docs:
-- `handoff/20260920/SESSION_R59_R62_RESEARCH_EXPERIMENT_LEDGER_R1.md`
-- `handoff/20260920/POST_SYNC_R59_PHYSICAL_RECOVERY_RESEAL_PLAN_R1.md`
-- `handoff/20260920/R62_EXTERNAL_JUDGE_CUSTODY_RESULT_MATRIX_R1.md`
+Supporting receipt:
+`handoff/20260920/SYNC_R60_RECOVERY_ALIGNMENT_PHYSICALIZATION_RECEIPT_R1.md`
 
-## AUTHORITY MUST BE READ ON TWO AXES
+## CURRENT AUTHORITY
+- Latest complete physical authority: **SYNC-R60**
+- Parent physical custody baseline: **SYNC-R59**
+- Active qualified Candidate: **SYNC-R58 / ADAPTIVE_UL16**
+- Quarantined failed research snapshot: **SYNC-R59 / R62 F01**
+- Production: **ENG:R47 / LEGACY_R53**
+- Runtime DB: **DB59 frozen**
+- Research DB: **DB64**
+- R62: **CLOSED FAIL — 9W / 0T / 3L**
+- R63: **NOT STARTED**
 
-### Last complete developer-held physical package baseline
-**SYNC-R59**
+SYNC-R60 is a recovery-alignment physical successor, not a new research experiment. It incorporates the post-SYNC-R59 R62 FAIL authority overlay and binds active execution to exact qualified SYNC-R58 bytes while preserving SYNC-R59/R62 bytes as quarantined evidence.
 
-This is the latest complete 5-Part / 9-Package set physically delivered to the developer.
+## SYNC-R60 hashes
+CONTROL d00b1d7b1aaaf30fc99d7043c2b0124755215f961e0c794989cd817bcc388b89
+A 2e80c6673be977402297169d481c7d70603b396c783d79751ae0e359b11d07ee
+B1 00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98
+B2 35d2d47754ab5e8fc71b2220b49317e58e8fd3b899f66205f66e0b7c75793167
+C1 b39ed8434945423c1aa7c4a57bf0794c0612208f0594cdc4db72d3b26d28bef1
+C2-A 7bf931e3dfbdc908e810660993d14875088c8943ddafa7edf5ffc58db8329b12
+C2-B a939de91914302668ce85c08e9a671cba44ee368db19c7543e366bda16967aea
+D1 a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504
+D2 c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4
 
-SYNC-R59 contains:
-- the R62 F01 diversification implementation;
-- mechanical/regression-passed research candidate bytes;
-- pre-final-blind research state.
+C2 logical:
+`5788e13216a6fe5c86834621efc34a90917a0ebb35c387fc5d7a08c9614ffe04`
 
-### Current active qualified Candidate
-**SYNC-R58 / ADAPTIVE_UL16**
+Trust root:
+`657f0986debef9574a7710ad27cc1b41f1cbd189bf297334ff55c49919b476d4`
 
-Reason:
-R62 later closed FAIL under the frozen external-blind gate.
+## NEXT
+Physical recovery alignment is complete. The next research number remains:
+`R63 = F01 Semantic Applicability + Abstention Gate`
 
-Therefore:
-- SYNC-R59 = **QUARANTINED FAILED RESEARCH SNAPSHOT**
-- SYNC-R58 = **ACTIVE QUALIFIED CANDIDATE**
-- Production = **ENG:R47 / LEGACY_R53**
-
-Do not collapse these two authority axes into one label.
-
-## POST-SYNC-R59 OVERLAY
-The following occurred after SYNC-R59 package bytes were sealed:
-1. J01/J02/J03 independent blind judgments received.
-2. R62 mapped aggregate completed.
-3. R62 = CLOSED FAIL, 9W / 0T / 3L.
-4. SYNC-R59 reclassified QUARANTINED.
-5. active qualified Candidate remained/reverted to SYNC-R58.
-6. R63 selected as next research.
-7. container TransportTimeout prevented a new aligned 9-package reseal.
-
-No accepted post-SYNC-R59 runtime source byte change exists.
-
-Thus:
-`POST_SYNC_R59_RUNTIME_BYTE_DELTA = NONE`
-`POST_SYNC_R59_RESEARCH_AUTHORITY_DELTA = YES`
-
-## SYNC-R59 CURRENT DELIVERY HASHES
-- CONTROL:
-  `15a93e22943da557c12ba17c61301526806328df92593a83bfe9b943161e4b44`
-- A:
-  `f904affeac55ed64e110c3abf300c427b82da3d00e1324c13d882a766dedbbbf`
-- B1:
-  `00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98`
-- B2 corrected R2:
-  `753db03b5c161d3c016ef95388f93e2dfe2c469d2e1eb6182429b3d16cd549e6`
-- C1:
-  `a2acd64e682f92082fe28868fcd6d9603901e88413d89f6cc8eac0fecee0acf8`
-- C2-A:
-  `e8c15eaaded0cf49781d8471527a9343fa85d68a7adc4aaee8f6984a8b8d4eaa`
-- C2-B:
-  `bce2bae57de48383715195427a3ca5cd476c014517760835c536553336546ee2`
-- D1:
-  `a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504`
-- D2:
-  `c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4`
-
-SYNC-R59 bindings:
-- runtime:
-  `a6a0e65460948562c2cd7146efcb207a6b02ff77403f67a6bf9049792d95d625`
-- overlay:
-  `059e10a3b2cb71acf3db8144240ebfebeeac6924daf13fdb2d1858f1a3369e41`
-- R62 source:
-  `7c150389a688b4d769b96ade341921a77b7fe86289645c0c613a035c6151a377`
-- C2 logical:
-  `ae4fbfbb53c51157890ce45c1f9bf3f5671be4f60e5eed688e5e1f7dc9f95741`
-
-SYNC-R58 qualified bindings:
-- runtime:
-  `30281db791d9bb629218a79c51c230bffb8f9088d79c2cfe6d676f996098b250`
-- overlay:
-  `d4215a8a5075054a054d5ca60e10e5992c4139588cccaeb0dabe14281f2fd633`
-- source:
-  `42510706a7876e649fe869c48910460f976d4528f0aa0dbd09a98a4256a7eb68`
-
-DB59:
-`a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
-
-## RESEARCH STATE
-- R59: CLOSED HOLD
-- R60: CLOSED PASS
-- R61: CLOSED
-- R62: CLOSED FAIL — 9W / 0T / 3L
-- R63: NOT STARTED
-
-## EXACT NEXT OPERATION
-Not R63.
-
-First:
-`PHYSICAL_RECOVERY_ALIGNMENT_FROM_SYNC_R59`
-
-A healthy new session must:
-1. verify all SYNC-R59 developer-held packages;
-2. apply the post-R59 Hub overlay;
-3. preserve SYNC-R59/R62 bytes as quarantined evidence;
-4. bind the new aligned successor's active runtime to exact SYNC-R58 qualified bytes;
-5. reseal 5 Parts / 9 Packages;
-6. audit SHA/CRC/C2/secret/trust-root/downloadability;
-7. deliver all 9 files to developer;
-8. update Hub to that exact new physical authority;
-9. only then start R63.
-
-## CURRENT BLOCKER
-Current session local container:
-`TransportTimeoutError`
-
-Classification:
-`RUNTIME_TRANSPORT_HOLD__NOT_PACKAGE_CORRUPTION__NOT_SCIENTIFIC_FAILURE`
-
-Status token:
-`DEVELOPER_HUB__SYNC_R59_LAST_PHYSICAL_BASELINE__POST_R59_R62_FAIL_OVERLAY__ALIGNMENT_RESEAL_REQUIRED__ACTIVE_QUALIFIED_SYNC_R58__R63_NOT_STARTED`
+R63 has not yet started.
