@@ -123,10 +123,13 @@ Now blocks R63 until:
 `PHYSICAL_RECOVERY_ALIGNMENT_FROM_SYNC_R59`
 
 ### CURRENT_HANDOFF_POINTER
-Updated commit:
+Initial recovery-chain update commit:
 `09e2a564b722f09c82b3bdb74976e504ee972ed5`
 
-Now points to the new canonical post-R62 recovery chain.
+Final pointer commit after adding this handoff seal to READ FIRST:
+`c3ffa719f8472fba248686074195fe9ed9049de1`
+
+Now points to the new canonical post-R62 recovery chain and this seal receipt.
 
 ### CURRENT_SESSION_RECOVERY_POINTER
 Updated commit:
