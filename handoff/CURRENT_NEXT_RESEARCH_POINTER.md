@@ -2,55 +2,53 @@
 Last updated: 2026-09-20
 
 ## CURRENT STATE
-- Logical physical authority: **SYNC-R61**
-- Current transport revision: **R2**
+- Physical authority: **SYNC-R62** (physical namespace)
 - Active qualified Candidate: **SYNC-R58 / ADAPTIVE_UL16**
 - Production: **ENG:R47 / LEGACY_R53**
 - Runtime DB: **DB59**
 - Research DB: **DB64**
 
 ## CLOSED
-- R59 CLOSED HOLD
-- R60 CLOSED PASS
-- R61 CLOSED
 - R62 CLOSED FAIL 9W/0T/3L
 - R63 CLOSED FAIL PREBLIND
+- R64 CLOSED FAIL PREBLIND
 
-## R63
-Canonical primary result:
-`research/interventions/20260920/R63_F01_PRIMARY_MECHANICAL_SAFETY_RESULT_R1.md`
-
-Supplemental custody reinforcement:
-`research/interventions/20260920/R63_F01_SEMANTIC_APPLICABILITY_ABSTENTION_RESULT_R1.md`
+## R64
+Canonical result:
+`research/interventions/20260920/R64_F01_TYPED_SEMANTIC_ROLE_RESULT_R1.md`
 
 Failure class:
-`LEXICAL_LICENSE_IS_NOT_SEMANTIC_LICENSE`
+`FIELD_TYPED_LEXICAL_EVIDENCE_IS_STILL_NOT_SENSE_DISAMBIGUATED_SEMANTICS`
 
-External blind was not run because the preregistered selector-safety gate failed.
+Mechanical:
+- Control 12/12 PASS
+- Treatment 12/12 PASS
+- Treatment ACCEPT 30 / ABSTAIN 18
+
+Safety failure:
+`표면 마감` was interpreted as deadline/time pressure, falsely licensing PRESSURE_ESCALATION.
+
+External blind:
+NOT RUN.
 
 ## PHYSICAL GATE
-`POST_R63_RESEARCH_OVERLAY_ALIGNMENT = COMPLETE`
-
-Current retained transport:
-**SYNC-R61 Delivery Correction R2**
+Post-R64 physical alignment: COMPLETE.
 
 Trust root:
-`1e592e73665beeaf59aee33cd7c5d72075854d863308ae0262d5237b453edce1`
+`c9acf57e92663f03c3231b45601dcef622e6bc8ff9cd18876874eaa1bff18b68`
 
 ## NEXT
-`R64 = F01 Typed Semantic-Role License Gate`
+`R65 = F01 Sense-Disambiguated Semantic Predicate Gate`
 
 Status:
 `NOT_STARTED`
 
 Required repair:
-- typed semantic-role evidence rather than raw substring matching;
-- distinguish physical pressure from dramatic/social pressure;
-- actor/action structure for opposing prior move;
-- required-failure proof cannot be substituted by generic visible action;
-- word/token boundaries where lexical evidence remains;
+- predicate/argument or equivalent semantic-role disambiguation;
+- compound/process senses cannot trigger unrelated dramatic roles;
+- causal structure independently corroborates licenses;
 - exact R58 fail-closed fallback;
-- R62/R63 failures regression-only;
-- fresh R64 qualification cases only after R64 source freeze.
+- R62/R63/R64 failures regression-only;
+- fresh R65 cases only after R65 source freeze.
 
 Do not start F04.
