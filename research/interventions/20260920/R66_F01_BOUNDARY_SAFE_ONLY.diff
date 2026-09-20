@@ -1,0 +1,78 @@
+--- R65/r65.py
++++ R66/r66.py
+@@ -627,9 +627,53 @@
+     return any(any(tok.startswith(stem) for stem in stems) for tok in toks)
+ 
+ 
++def _r66_phrase_match(text, phrase):
++    """Boundary-safe token/phrase matcher for positive F01 evidence.
++
++    Internal substrings never match.  A single Korean lexical atom must be an
++    exact token or carry only a small whitelisted grammatical suffix.  For
++    multi-token phrases, prefix alignment is allowed inside each already
++    separated token so ordinary inflectional fragments such as ``사실이 드러``
++    can match ``사실이 드러난다`` without permitting ``시한`` inside
++    ``표시한다``.
++    """
++    text_tokens=_r64_tokens(text)
++    phrase_tokens=_r64_tokens(phrase)
++    if not phrase_tokens or not text_tokens or len(phrase_tokens)>len(text_tokens):
++        return False
++
++    ko_suffixes=(
++        "이","가","을","를","은","는","에","에서","에게","한테",
++        "와","과","도","만","까지","부터","의","로","으로",
++        "이다","입니다","이었다","였다","이고","이며","이면","이라","이라고",
++        "하다","한다","했다","하는","한","해","해서","하고","하며","하면",
++        "되다","된다","됐다","되는","된","돼","되어"
++    )
++
++    def atom_match(tok,ptok,multi):
++        if tok==ptok:
++            return True
++        if re.fullmatch(r"[A-Za-z0-9]+", ptok):
++            return tok.lower()==ptok.lower()
++        if re.fullmatch(r"[가-힣]+", ptok):
++            if multi:
++                # Token boundary already proves we are not inside another word.
++                return tok.startswith(ptok)
++            return any(tok==ptok+s for s in ko_suffixes)
++        return False
++
++    n=len(phrase_tokens)
++    multi=n>1
++    for i in range(len(text_tokens)-n+1):
++        if all(atom_match(tok,ptok,multi) for tok,ptok in zip(text_tokens[i:i+n],phrase_tokens)):
++            return True
++    return False
++
++
+ def _r64_has_phrase(text, *phrases):
+-    t=_norm_text(text)
+-    return any(_norm_text(p) in t for p in phrases)
++    # R66 deliberately replaces R64/R65's raw substring matcher globally
++    # inside the F01 semantic-evidence path.
++    return any(_r66_phrase_match(text,p) for p in phrases)
+ 
+ 
+ def _r64_typed_evidence(o):
+@@ -1074,12 +1118,19 @@
+             "required_predicate":rec["required_predicate"],"evidence":rec["evidence"]}
+ 
+ 
++def _r66_transaction_decision(o):
++    """R66 decision wrapper: R65 semantics with boundary-safe lexical parsing."""
++    d=dict(_r65_transaction_decision(o))
++    d["parser"]="R66_BOUNDARY_SAFE_TOKEN_PHRASE_V1"
++    return d
++
++
+ def _stage_plan_for_obligation(o):
+-    """Return the R65 F01 sense-disambiguated predicate / abstention path."""
++    """Return the R66 F01 boundary-safe predicate / abstention path."""
+     baseline=_r58_stage_plan_for_obligation(o)
+     if baseline==["RESOLVE"]:
+         return baseline
+-    d=_r65_transaction_decision(o)
++    d=_r66_transaction_decision(o)
+     return [d["selected"],"RESOLVE"]
