@@ -2,7 +2,7 @@
 Last updated: 2026-09-20
 
 ## STATUS
-`POST_R64_PHYSICAL_ALIGNMENT_COMPLETE`
+`POST_R64_PHYSICAL_ALIGNMENT_COMPLETE__SYNC_R62_RETAINED`
 
 Physical authority:
 **SYNC-R62**
@@ -15,14 +15,20 @@ Trust root:
 
 ## AUTHORITY
 - active qualified Candidate: SYNC-R58 / ADAPTIVE_UL16
-- R62 failed evidence preserved
-- R63 failed evidence preserved
-- R64 failed evidence preserved
+- R62/R63/R64 failed evidence preserved
 - Production: ENG:R47 / LEGACY_R53
 - Runtime DB: DB59
+- Research DB: DB64
 - R65: NOT STARTED
 
+## VERIFIED
+- 9/9 transport SHA PASS
+- all ZIP CRC PASS
+- C2 logical reassembly PASS
+- C1 CURRENT runtime exact SYNC-R58 PASS
+- R64 source/evidence preserved and non-active PASS
+
 ## NEW SESSION FIRST ACTION
-Verify SYNC-R62 9-package hashes/trust root.
-If PASS, read R64 result and then preregister R65.
-Do not rerun/rescore R62-R64 and do not treat failed R62/R63/R64 sources as active.
+Verify the SYNC-R62 trust root and 9 package hashes. If PASS, continue with R65 preregistration.
+
+Do not rerun or rescore R59-R64.
