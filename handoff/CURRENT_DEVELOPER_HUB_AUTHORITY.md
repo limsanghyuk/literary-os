@@ -16,7 +16,8 @@ Supporting receipt:
 - Runtime DB: **DB59 frozen**
 - Research DB: **DB64**
 - R62: **CLOSED FAIL — 9W / 0T / 3L**
-- R63: **NOT STARTED**
+- R63: **CLOSED FAIL — PREBLIND SELECTOR SAFETY**
+- R64: **NOT STARTED**
 
 SYNC-R60 is a recovery-alignment physical successor, not a new research experiment. It incorporates the post-SYNC-R59 R62 FAIL authority overlay and binds active execution to exact qualified SYNC-R58 bytes while preserving SYNC-R59/R62 bytes as quarantined evidence.
 
@@ -38,7 +39,12 @@ Trust root:
 `657f0986debef9574a7710ad27cc1b41f1cbd189bf297334ff55c49919b476d4`
 
 ## NEXT
-Physical recovery alignment is complete. The next research number remains:
-`R63 = F01 Semantic Applicability + Abstention Gate`
+Physical recovery alignment through R62 is complete. R63 was executed after SYNC-R60 and closed FAIL on a preregistered pre-blind semantic-safety gate.
 
-R63 has not yet started.
+Current post-SYNC-R60 research overlay:
+`R63 CLOSED_FAIL__LEXICAL_LICENSE_NOT_SEMANTIC_LICENSE`
+
+Before R64, physically align this R63 research overlay into a new 5-Part / 9-Package successor while keeping exact SYNC-R58 active runtime.
+
+Next research after that alignment:
+`R64 = F01 Typed Semantic-Role License Gate`
