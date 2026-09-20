@@ -1,0 +1,192 @@
+--- R62/adaptive_showrunner_ul16.py
++++ R63/adaptive_showrunner_ul16.py
+@@ -451,22 +451,175 @@
+     return uniq[_variant_index(o, len(uniq))]
+ 
+ 
+-def _stage_plan_for_obligation(o):
+-    """Return the R62 F01-only context-sensitive transaction path.
+-
+-    R62 changes only the precursor transaction-family selection.  Resolution
+-    semantics, due/deferred accounting, scene-necessity policy, semantic-repeat
+-    validator, Provider context, and State Carry remain unchanged.
+-    """
++def _r58_stage_plan_for_obligation(o):
++    """Exact R58 safe-baseline stage plan used by the R63 abstention path."""
+     kind=str(o.get("kind") or "EVENT").upper()
+     owners=o.get("owners") or []
+-    rich=bool(o.get("obstacle") or o.get("depends_on") or len(owners)>=2 or
+-              o.get("information_delta") or o.get("relationship_delta") or
+-              o.get("social_delta") or o.get("payoff_ref"))
+-    # Preserve the R58 depth boundary for CHARACTER/THREAD simple material.
+-    if kind in {"CHARACTER","THREAD"} and not rich:
+-        return ["RESOLVE"]
+-    return [_select_transaction_precursor(o),"RESOLVE"]
++    rich=bool(o.get("obstacle") or o.get("depends_on") or len(owners)>=2)
++    if kind=="EVENT": return ["ENGAGE_EVENT","RESOLVE"]
++    if kind=="RELATIONSHIP": return ["TEST_BOUNDARY","RESOLVE"]
++    if kind=="INFORMATION": return ["PROBE_INFORMATION","RESOLVE"]
++    if kind=="SOCIAL": return ["APPLY_INSTITUTIONAL_PRESSURE","RESOLVE"]
++    if kind=="PAYOFF": return ["ACTIVATE_PAYOFF","RESOLVE"]
++    if kind=="CHARACTER": return ["TEST_CHOICE","RESOLVE"] if rich else ["RESOLVE"]
++    if kind=="THREAD": return ["COMPLICATE_THREAD","RESOLVE"] if rich else ["RESOLVE"]
++    return ["RESOLVE"]
++
++
++def _r63_semantic_license(o, family):
++    """Return (licensed, reason_code) for one R62 diversified family.
++
++    R63 is fail-closed: positive semantic support must come from the obligation's
++    admitted burden, not merely from a setting/obstacle keyword.  Ambiguity is
++    therefore an abstention signal, never a reason to invent a transaction.
++    """
++    f=_transaction_context_flags(o)
++    kind=f["kind"]
++    statement=_norm_text(o.get("statement"))
++    visible=_norm_text(o.get("visible_action"))
++    info=_norm_text(o.get("information_delta"))
++    rel=_norm_text(o.get("relationship_delta"))
++    social=_norm_text(o.get("social_delta"))
++    obstacle=_norm_text(o.get("obstacle"))
++    core=" ".join(x for x in (statement,visible,info,rel,social) if x)
++
++    def has(text,*tokens):
++        return any(t in text for t in tokens)
++
++    preserve_open=has(statement,
++        "단정하지", "확정하지", "미확정", "유예", "아직", "계속 추적",
++        "열어 둔", "열어둔", "보류", "not conclude", "remain open", "defer")
++
++    if family=="MISINTERPRETATION":
++        if kind not in {"INFORMATION","RELATIONSHIP","THREAD"}:
++            return False,"KIND_INCOMPATIBLE"
++        explicit_false_belief=has(core,
++            "오해하", "착각하", "오인하", "잘못 해석", "잘못 판단",
++            "misread", "misunderstand", "mistaken belief", "false belief")
++        if not explicit_false_belief:
++            return False,"NO_EXISTING_FALSE_BELIEF_STATE"
++        if has(core,"오해하지", "착각하지", "오인하지", "잘못 해석하지"):
++            return False,"NEGATED_FALSE_BELIEF"
++        return True,"LICENSED_EXISTING_FALSE_BELIEF"
++
++    if family=="COST_BEARING_CHOICE":
++        if kind not in {"CHARACTER","RELATIONSHIP","THREAD","EVENT"}:
++            return False,"KIND_INCOMPATIBLE"
++        choice=has(core,"선택", "포기", "감수", "대신", "둘 중", "양자", "choose", "give up", "accept the cost")
++        cost=has(core,"대가", "손실", "희생", "비용", "징계", "책임을 진", "위험을 감수", "cost", "sacrifice", "loss")
++        if not (choice and cost):
++            return False,"NO_OBLIGATION_LEVEL_CHOICE_AND_COST"
++        if preserve_open and kind=="THREAD":
++            return False,"OPEN_THREAD_PREMATURE_CHOICE_RISK"
++        return True,"LICENSED_EXPLICIT_CHOICE_AND_COST"
++
++    if family=="PHYSICAL_RISK_FAILURE":
++        if kind not in {"EVENT","THREAD","PAYOFF"}:
++            return False,"KIND_INCOMPATIBLE"
++        physical=has(core,"위험", "추락", "충돌", "화재", "침수", "고장", "부상", "붕괴", "눈사태", "전원", "risk", "break", "injur")
++        failure=has(core,"실패", "막히", "무산", "손상", "고장", "되돌아", "철수", "fail", "damage", "break")
++        if not physical:
++            return False,"NO_REQUIRED_PHYSICAL_RISK"
++        if not (failure or visible):
++            return False,"NO_SUPPORTED_FAILURE_OR_PHYSICAL_ACTION"
++        return True,"LICENSED_REQUIRED_PHYSICAL_RISK"
++
++    if family=="NEGOTIATION_EXCHANGE":
++        if kind not in {"RELATIONSHIP","SOCIAL","CHARACTER","EVENT"}:
++            return False,"KIND_INCOMPATIBLE"
++        exchange=has(core,"협상", "교환", "거래", "합의", "양보", "조건", "협조", "입찰", "계약", "negot", "exchange", "deal", "bargain")
++        if not exchange:
++            return False,"NO_EXPLICIT_EXCHANGE_OR_BARGAIN"
++        if not (f["multi_owner"] or f["has_relationship"]):
++            return False,"NO_COUNTERPARTY"
++        return True,"LICENSED_EXPLICIT_EXCHANGE"
++
++    if family=="RELATIONSHIP_BOUNDARY_CHANGE":
++        if kind!="RELATIONSHIP" or not f["has_relationship"]:
++            return False,"NO_RELATIONSHIP_TARGET"
++        return True,"LICENSED_RELATIONSHIP_TARGET"
++
++    if family=="WITHHELD_INFORMATION_MOVE":
++        if kind not in {"INFORMATION","RELATIONSHIP","THREAD"}:
++            return False,"KIND_INCOMPATIBLE"
++        intentional=has(core,"숨", "감추", "은폐", "비공개", "익명", "공개하지", "보류", "withhold", "conceal", "secret")
++        if not intentional:
++            return False,"NO_INTENTIONAL_WITHHOLDING_ACTION"
++        return True,"LICENSED_INTENTIONAL_WITHHOLDING"
++
++    if family=="DISCOVERY":
++        if kind not in {"INFORMATION","THREAD"}:
++            return False,"KIND_INCOMPATIBLE"
++        new_fact=has(core,"발견", "드러난", "드러낸", "밝혀", "새 사실", "찾아낸", "discover", "reveal", "establish")
++        if not new_fact:
++            return False,"VERIFICATION_ONLY_NO_NEW_FACT"
++        return True,"LICENSED_NEW_FACT_DISCOVERY"
++
++    if family=="SOCIAL_INSTITUTIONAL_PRESSURE":
++        if kind!="SOCIAL" and not f["has_social"]:
++            return False,"KIND_INCOMPATIBLE"
++        mechanism=has(core,"승인", "규칙", "절차", "권한", "배분", "통제", "기관", "위원회", "조합", "법", "rule", "authority", "procedure", "approval")
++        if not mechanism and not (o.get("group_refs") or []):
++            return False,"NO_INSTITUTIONAL_MECHANISM"
++        return True,"LICENSED_INSTITUTIONAL_MECHANISM"
++
++    if family=="PARTIAL_CONSEQUENCE":
++        if kind not in {"PAYOFF","EVENT","THREAD"}:
++            return False,"KIND_INCOMPATIBLE"
++        supported=bool(o.get("depends_on") or o.get("payoff_ref") or o.get("event_ref")) or has(core,"결과", "후속", "여파", "대가", "consequence", "aftermath")
++        if not supported:
++            return False,"NO_SUPPORTED_PRIOR_CAUSE"
++        return True,"LICENSED_SUPPORTED_CONSEQUENCE"
++
++    if family=="COUNTERMOVE":
++        if kind not in {"EVENT","THREAD","PAYOFF","CHARACTER"}:
++            return False,"KIND_INCOMPATIBLE"
++        prior_move=bool(o.get("depends_on")) or has(obstacle,"요구", "거부", "막", "차단", "압박", "공격", "통제", "선점", "demand", "block", "attack", "control")
++        if not prior_move:
++            return False,"NO_IDENTIFIABLE_OPPOSING_MOVE"
++        return True,"LICENSED_RESPONSE_TO_PRIOR_MOVE"
++
++    if family=="FAILED_ATTEMPT":
++        if kind not in {"EVENT","THREAD","CHARACTER"}:
++            return False,"KIND_INCOMPATIBLE"
++        explicit_failure=has(core,"실패", "막혀", "좌절", "무산", "못하", "철수", "되돌아", "fail", "abort")
++        if not explicit_failure:
++            return False,"NO_SUPPORTED_FAILED_ATTEMPT"
++        return True,"LICENSED_EXPLICIT_FAILURE"
++
++    if family=="PRESSURE_ESCALATION":
++        if kind not in {"EVENT","THREAD","RELATIONSHIP"}:
++            return False,"KIND_INCOMPATIBLE"
++        escalation=has(core,"압박", "압력", "강화", "악화", "더 좁", "촉박", "시한", "마감", "궁지", "escalat", "deadline")
++        if not escalation:
++            return False,"NO_REQUIRED_ESCALATION_TRAJECTORY"
++        return True,"LICENSED_ESCALATION_TRAJECTORY"
++
++    return False,"UNKNOWN_OR_UNLICENSED_FAMILY"
++
++
++def _r63_transaction_decision(o):
++    """Deterministic R63 selector diagnostic with exact R58 fail-closed fallback."""
++    baseline=_r58_stage_plan_for_obligation(o)
++    if baseline==["RESOLVE"]:
++        return {"mode":"BASELINE_ONLY","proposal":None,"selected":"RESOLVE",
++                "baseline":"RESOLVE","reason":"R58_SIMPLE_DEPTH_BOUNDARY"}
++    proposal=_select_transaction_precursor(o)
++    licensed,reason=_r63_semantic_license(o,proposal)
++    if licensed:
++        return {"mode":"ACCEPT","proposal":proposal,"selected":proposal,
++                "baseline":baseline[0],"reason":reason}
++    return {"mode":"ABSTAIN","proposal":proposal,"selected":baseline[0],
++            "baseline":baseline[0],"reason":reason}
++
++
++def _stage_plan_for_obligation(o):
++    """Return the R63 F01 semantic-license / abstention transaction path."""
++    baseline=_r58_stage_plan_for_obligation(o)
++    if baseline==["RESOLVE"]:
++        return baseline
++    d=_r63_transaction_decision(o)
++    return [d["selected"],"RESOLVE"]
+ 
+ 
+ def _variant_index(o, modulo=4):
