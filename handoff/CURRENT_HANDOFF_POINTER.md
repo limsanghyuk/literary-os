@@ -2,40 +2,68 @@
 Last updated: 2026-09-20
 
 ## READ FIRST
-1. `research/interventions/20260920/R62_F01_STAGE_GRAMMAR_DIVERSIFICATION_EXTERNAL_BLIND_RESULT_R1.md`
-2. `handoff/20260919/SYNC_R59_R62_PHYSICALIZATION_RECEIPT_R1.md`
-3. `research/interventions/20260919/R62_F01_STAGE_GRAMMAR_DIVERSIFICATION_PREREG_R1.md`
+1. `handoff/20260920/START_HERE_POST_R62_NEW_SESSION_RECOVERY_FROM_SYNC_R59_R1.md`
+2. `handoff/20260920/SESSION_R59_R62_RESEARCH_EXPERIMENT_LEDGER_R1.md`
+3. `handoff/20260920/POST_SYNC_R59_PHYSICAL_RECOVERY_RESEAL_PLAN_R1.md`
+4. `handoff/20260920/R62_EXTERNAL_JUDGE_CUSTODY_RESULT_MATRIX_R1.md`
+5. `research/interventions/20260920/R62_F01_STAGE_GRAMMAR_DIVERSIFICATION_EXTERNAL_BLIND_RESULT_R1.md`
 
-## CURRENT STATE
+## PRIMARY RECOVERY FACT
+**SYNC-R59 is the last complete physical package set delivered to the developer.**
+
+Do not recover as though SYNC-R58 were the last physical package.
+
+## AUTHORITY SPLIT
+- Last physical custody baseline: **SYNC-R59**
+- SYNC-R59 status after R62: **QUARANTINED failed research snapshot**
 - Active qualified Candidate: **SYNC-R58 / ADAPTIVE_UL16**
-- Latest physicalized research snapshot: **SYNC-R59 — QUARANTINED**
 - Production: **ENG:R47 / LEGACY_R53**
 - Runtime DB: **DB59 frozen**
 - Research DB: **DB64**
-- R59: CLOSED HOLD
-- R60: CLOSED PASS
-- R61: CLOSED
-- R62: **CLOSED FAIL — 9W / 0T / 3L**
-- R63: NEXT, not yet executed
 
-## R62 CONCLUSION
-Diversification transmitted and improved 9/12 cases, but semantic misapplication caused three unanimous Treatment losses:
-- C06 Factory Strike
-- C08 Mountain Rescue
-- C11 Museum Theft
+## SESSION RESEARCH STATE
+- R59 CLOSED HOLD
+- R60 CLOSED PASS
+- R61 CLOSED
+- R62 CLOSED FAIL: 9W / 0T / 3L
+- R63 NOT STARTED
 
-The repair target is not “more diversity.”
-It is:
-`SEMANTIC_APPLICABILITY + ABSTENTION + SAFE_BASELINE_FALLBACK`.
+## POST-SYNC-R59 DELTA
+No accepted runtime-source byte change after SYNC-R59 physicalization.
 
-## INTERRUPTION RECOVERY
-A fresh session must:
-1. recover active Candidate from SYNC-R58, not SYNC-R59;
-2. retain SYNC-R59 only as failed research evidence;
-3. do not rerun R62;
-4. begin R63 with a new preregistration;
-5. repair only the F01 selector semantic applicability/abstention defect;
-6. do not combine F04/F06/F07/F08.
+Post-package changes are:
+- R62 J01/J02/J03 external judgments
+- final gate computation
+- R62 FAIL closure
+- SYNC-R59 quarantine classification
+- active qualified Candidate -> SYNC-R58
+- R63 next target
+- container TransportTimeout incident
+
+## EXACT NEW-SESSION CONTINUATION
+1. verify container/runtime health;
+2. load developer-held SYNC-R59 9 packages;
+3. verify exact transport hashes, corrected B2 R2, C1/C2 bindings, C2 logical SHA, DB59;
+4. load post-R59 Hub overlay;
+5. preserve R59/R62 bytes as quarantined evidence;
+6. construct a recovery-aligned physical successor with active runtime bound to exact SYNC-R58;
+7. include the complete R59-R62 research ledger and R62 final result;
+8. reseal/audit 5 Parts / 9 Packages;
+9. deliver all 9 to developer;
+10. update Current Hub pointers;
+11. only then preregister/start R63.
+
+## DO NOT
+- rerun R59-R62
+- rescore R62 judges
+- silently delete SYNC-R59 failed Candidate bytes
+- silently execute SYNC-R59 as qualified
+- start R63 before physical alignment
+- start F04 early
+
+## CURRENT INCIDENT
+`TransportTimeoutError`
+prevents safe package rebuild in this session.
 
 Status token:
-`HANDOFF__R62_CLOSED_FAIL__ACTIVE_SYNC_R58__SYNC_R59_QUARANTINED__R63_NEXT`
+`HANDOFF__SYNC_R59_LAST_PHYSICAL__POST_R59_OVERLAY_RECORDED__NEW_SESSION_MUST_RESEAL_ALIGNMENT_BEFORE_R63`
