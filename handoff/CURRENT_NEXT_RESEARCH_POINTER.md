@@ -4,10 +4,11 @@ Last updated: 2026-09-20
 ## NUMBERING
 `R58 -> R59 -> R60 -> R61 -> R62 -> R63 -> ...`
 
-## CURRENT ACTIVE AUTHORITY
+## CURRENT STATE
+- Last complete developer-held physical baseline: **SYNC-R59**
+- SYNC-R59 scientific status: **QUARANTINED FAILED RESEARCH SNAPSHOT**
 - Active qualified Candidate: **SYNC-R58 / ADAPTIVE_UL16**
-- Latest physicalized research snapshot: **SYNC-R59 / ADAPTIVE_UL16_R62_F01_RESEARCH — QUARANTINED**
-- Production/control: **ENG:R47 / LEGACY_R53**
+- Production: **ENG:R47 / LEGACY_R53**
 - Runtime DB: **DB59 frozen**
 - Research DB: **DB64**
 
@@ -15,61 +16,67 @@ Last updated: 2026-09-20
 - R59: CLOSED HOLD
 - R60: CLOSED PASS
 - R61: CLOSED
-- R62: **CLOSED FAIL — 9W / 0T / 3L**
+- R62: CLOSED FAIL — **9W / 0T / 3L**
 
-R62 canonical result:
-`research/interventions/20260920/R62_F01_STAGE_GRAMMAR_DIVERSIFICATION_EXTERNAL_BLIND_RESULT_R1.md`
+## NEXT RESEARCH NUMBER
+`R63 = F01 Semantic Applicability + Abstention Gate`
 
-## R62 FINDING
-Raw Stage-Grammar Diversification transmitted successfully and improved 9/12 cases, but three cases failed unanimously across the three judges:
+But:
+`R63 = NOT_STARTED`
 
-- C06_FACTORY_STRIKE
-  - wrong use of `THREAD::COST_BEARING_CHOICE`
-  - Control `COMPLICATE_THREAD` better preserved investigative/open-thread function.
+## REQUIRED NON-RESEARCH GATE BEFORE R63
+`PHYSICAL_RECOVERY_ALIGNMENT_FROM_SYNC_R59`
 
-- C08_MOUNTAIN_RESCUE
-  - wrong use of `RELATIONSHIP::PHYSICAL_RISK_FAILURE`
-  - Control `TEST_BOUNDARY` better matched a relationship-boundary negotiation.
+This is a continuity/physicalization operation, not a new research number.
 
-- C11_MUSEUM_THEFT
-  - `MISINTERPRETATION` injected unsupported causal novelty.
-  - Control evidence-probe/payoff-reuse path was more faithful.
+Reason:
+SYNC-R59 is the last complete physical package held by the developer, but the R62 final external-blind verdict happened after those bytes were sealed.
 
-Frozen R62 gate:
-- Treatment wins >= 7/12 -> PASS (9)
-- wins+ties >= 10/12 -> FAIL (9)
-- losses <= 2/12 -> FAIL (3)
-- critical state-fidelity violations -> PASS (0)
+A fresh session must first:
+1. verify SYNC-R59 9/9;
+2. apply the post-R59 Hub overlay;
+3. preserve R59/R62 failed Candidate bytes as quarantined evidence;
+4. set active executable binding in the successor to exact qualified SYNC-R58;
+5. reseal 5 Parts / 9 Packages;
+6. deliver them to developer;
+7. update Hub to that new physical authority.
 
-Therefore:
-`F01_STAGE_GRAMMAR_DIVERSIFICATION_EFFECT = NOT_QUALIFIED`
+Only then preregister/start R63.
 
-## NEXT RESEARCH
-`R63 = F01 Semantic Applicability + Abstention Gate (F01 의미 적합성 + 사용 자제 게이트)`
+## R62 FAILURE TO REPAIR
+Three unanimous Treatment losses:
+- C06_FACTORY_STRIKE:
+  investigative THREAD -> wrong COST_BEARING_CHOICE
+- C08_MOUNTAIN_RESCUE:
+  relationship-boundary obligation -> wrong PHYSICAL_RISK_FAILURE
+- C11_MUSEUM_THEFT:
+  unsupported MISINTERPRETATION novelty
 
-R63 must repair only the failure exposed by R62.
+R63 hypothesis:
+`DIVERSITY IS ALLOWED ONLY WHEN SEMANTICALLY LICENSED`
 
-### R63 causal hypothesis
-Diversified dramatic transaction families are useful only when semantically licensed by the obligation.
+Required selector checks:
+- obligation kind/function
+- required information movement
+- relationship target
+- physical affordance
+- causal preconditions
+- open/deferred preservation
+- unsupported novelty risk
 
-The selector must check:
-- obligation kind/function;
-- required information movement;
-- relationship target;
-- physical affordance;
-- causal preconditions;
-- whether the obligation must remain open/deferred;
-- whether a proposed family invents unsupported events.
+Fallback:
+`ABSTAIN -> SAFE BASELINE`
 
-If no diversified family is safely licensed:
-`ABSTAIN -> preserve safe baseline stage`.
+## PROHIBITED
+Before physical recovery alignment:
+- do not start R63 implementation
+- do not start F04
+- do not treat SYNC-R59 as qualified
+- do not discard SYNC-R59 physical bytes
+- do not pretend SYNC-R58 was the last physical package
 
-### Important doctrine
-This mirrors the previously qualified DB64 A2 doctrine:
-`protected baseline + optional additive novelty + utility gate + abstention`.
-
-## BLOCKED
-Do not begin F04 Semantic Repetition work until F01 is repaired and requalified.
+## CANONICAL HANDOFF
+`handoff/20260920/START_HERE_POST_R62_NEW_SESSION_RECOVERY_FROM_SYNC_R59_R1.md`
 
 Status token:
-`NEXT__R62_CLOSED_FAIL_9W_0T_3L__SYNC_R59_QUARANTINED__ACTIVE_SYNC_R58__R63_F01_APPLICABILITY_ABSTENTION_NEXT`
+`NEXT__PHYSICAL_ALIGNMENT_FROM_SYNC_R59_FIRST__R63_NOT_STARTED__R62_FAIL_CLOSED__ACTIVE_QUALIFIED_SYNC_R58`
