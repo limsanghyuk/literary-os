@@ -2,18 +2,26 @@
 Last updated: 2026-09-20
 
 ## READ FIRST
-1. `handoff/20260920/R66_EXTERNAL_BLIND_PENDING_HANDOFF_R1.md`
-2. `research/interventions/20260920/R66_F01_PREBLIND_GATE_RESULT_R1.md`
-3. `research/interventions/20260920/R66_EXTERNAL_BLIND_EXECUTION_PROTOCOL_ADDENDUM_R1.md`
-4. `research/interventions/20260920/R66_F01_BOUNDARY_SAFE_IMPLEMENTATION_FREEZE_R1.md`
-5. `research/interventions/20260920/R66_F01_BOUNDARY_SAFE_PREDICATE_PARSER_PREREG_R1.md`
-6. `handoff/20260920/SYNC_R63_POST_R65_HUB_ALIGNMENT_SEAL_R1.md`
+1. `handoff/20260920/START_HERE_POST_R66_SYNC_R64_R1.md`
+2. `handoff/20260920/SYNC_R64_POST_R66_PHYSICALIZATION_RECEIPT_R1.md`
+3. `research/interventions/20260920/R66_F01_BOUNDARY_SAFE_FINAL_RESULT_R1.md`
+4. `research/interventions/20260920/R66_F01_PREBLIND_GATE_RESULT_R1.md`
+5. `research/interventions/20260920/R66_F01_BOUNDARY_SAFE_IMPLEMENTATION_FREEZE_R1.md`
+6. `research/interventions/20260920/R66_F01_BOUNDARY_SAFE_PREDICATE_PARSER_PREREG_R1.md`
+7. `handoff/20260920/SYNC_R63_POST_R65_HUB_ALIGNMENT_SEAL_R1.md`
 
 ## CURRENT
-- Physical authority: **SYNC-R63**
-- Active qualified Candidate: **SYNC-R58 / ADAPTIVE_UL16**
-- R66: **ACTIVE — PREBLIND PASS**
-- external blind: **PENDING J01/J02/J03**
+- Physical authority: **SYNC-R64**
+- Active qualified Candidate: **R66 F01 Boundary-Safe Predicate Parser**
+- Qualified parent/fallback: **exact SYNC-R58**
+- Production: **ENG:R47 / LEGACY_R53**
+- R66: **CLOSED PASS**
+- R67: **NOT STARTED / target selection pending**
 
-Do not rerun R62-R65.
-Do not modify R66 source/cases/packets.
+Trust root:
+`157d5ed7e6cebca9c2b8966b768447f9a4a9bd2f54498e339a19cb67fde88e92`
+
+Important custody note:
+Current B2 is a verified rebuild from SYNC-R59 corrected B2 because retained local SYNC-R60..R63 B2 copies were found truncated.
+
+A new session must verify SYNC-R64 package hashes and trust root before starting R67.
