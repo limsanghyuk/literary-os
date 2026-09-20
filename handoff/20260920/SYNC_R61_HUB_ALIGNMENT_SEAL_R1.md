@@ -1,0 +1,34 @@
+# SYNC-R61 HUB ALIGNMENT SEAL R1
+
+Date: 2026-09-20
+Status: `HUB_AND_PHYSICAL_AUTHORITY_ALIGNED__POST_R63`
+
+## Authority
+- physical: SYNC-R61
+- active qualified Candidate: SYNC-R58 / ADAPTIVE_UL16
+- R62: CLOSED FAIL
+- R63: CLOSED FAIL before external blind
+- R64: NOT STARTED at this seal
+- Production: ENG:R47 / LEGACY_R53
+- Runtime DB: DB59
+- Research DB: DB64
+
+## Physical trust
+Trust root:
+`18eaa49ecc2aa514f053466b9718a1e6bda92ea3b6055b28a712cdd71ee3b839`
+
+C2 logical:
+`b9b2869c4ae4e1a17282564a49760c27516f6812bf0a18e3c374a0ea21c53e34`
+
+R63 failed source:
+`7236eba306305269b06f9924c617139ecca038a5c6697891bac770a07913b7dd`
+
+## Hub transaction
+- START HERE commit: 9774a2e9dde1ef75cb1c5e550ea04096a89c2b5b
+- Physicalization receipt commit: 4b786092e44c7744781109b459a5feb59383822d
+- CURRENT_DEVELOPER_HUB_AUTHORITY: 00c3f0946d4cbf65b2023d6e0fa6f6daf432576f
+- CURRENT_NEXT_RESEARCH_POINTER: eda35f2c6144cba8af214128ec55d4ca289c8ec6
+- CURRENT_HANDOFF_POINTER: 803ae3c4f4929f1766d668d9e23e44244b67b5ac
+- CURRENT_SESSION_RECOVERY_POINTER: 8866f50be2db2357c63f0ae604b4abbacc1fba7f
+
+R59-R63 are not to be rerun merely for recovery.
