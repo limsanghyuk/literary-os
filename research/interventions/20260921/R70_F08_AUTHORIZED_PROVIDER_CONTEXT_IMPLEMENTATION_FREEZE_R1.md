@@ -31,10 +31,10 @@ Treatment `provider_backed_renderer.py` SHA256:
 `d5723ce674cebf30f7415522927fbeb8e0ded11bedad6279b092c2eb2c6e67c6`
 
 Context-only canonical diff SHA256:
-`7bdeaeef74e92dabc57fd560f339ca3ebe1f9f73fd092f878edbb6061ab5028f`
+`9c0218bbf6054749f3fb74bc36601d4c500b7f1e677fae4514dcd0f4d6637fdf`
 
-Source Freeze Evidence ZIP SHA256:
-`21398d3a6bf82e3f9762cc16c6d575147e4e9de7a9e626024920b5171718e4f9`
+Source Freeze Evidence R2 ZIP SHA256:
+`30055d3cbbae92ee9db47ffa981c3c9b00603e0edafeda19319b6d89ebb66c86`
 
 ## Implementation (구현)
 Added Authorized Context Projection (허가 문맥 투영):
@@ -97,10 +97,10 @@ Runtime Compile (런타임 컴파일):
 Receipt SHA256:
 `9a2ada3af31606aad32a50844ef25fdae49ed790ae172de0418e4ca72ee42364`
 
-Code Boundary Audit (코드 경계 감사):
-PASS.
+Code Boundary Audit R2 (코드 경계 감사 R2):
+PASS. Legacy Control helpers are AST-identical to R69 Control.
 Receipt SHA256:
-`aadd5a9c2d446abfeb76e00cca5f246a9ff3aa2cb98a100e535209065653f395`
+`d4240135742dd579cae717975ef6dbdfc5191c24b30bfe8f1a4bb547e2299777`
 
 ## Freeze Rule (동결 규칙)
 This Treatment runtime is immutable for R70 Stage A primary qualification and all Stage B paired payload construction.
@@ -113,3 +113,7 @@ Stage B Provider Execution requires a separate pre-output execution seal specify
 
 Status token:
 `R70_STAGE_A_SOURCE_FROZEN__F08_AUTHORIZED_PROVIDER_CONTEXT__R66_R69_REGRESSION_PASS__FRESH_CONTEXT_CASES_NOT_CREATED__STAGE_B_NOT_STARTED`
+
+
+## Custody correction note (보관 정정 기록)
+The frozen Treatment runtime/source bytes did not change. This document was updated only to point to the final post-repair canonical diff and Source Freeze Evidence R2 after re-verifying that the legacy Control helpers are AST-identical to R69.
