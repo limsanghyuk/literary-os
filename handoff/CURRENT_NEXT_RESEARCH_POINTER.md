@@ -2,49 +2,52 @@
 Last updated: 2026-09-20
 
 ## CURRENT
-- Physical Authority (물리 권위): **SYNC-R65**
-- Active Qualified Candidate (활성 자격 후보): **R67 F07 Dual-Ledger State Carry Runtime / R66 F01 lineage**
+- Physical Authority (물리 권위): **SYNC-R66**
+- Active Qualified Candidate (활성 자격 후보): **R68 F04 / R67 F07 / R66 F01 lineage**
 - Production Engine (운영 엔진): **ENG:R47 / LEGACY_R53**
 
 ## CLOSED
 - R66 CLOSED PASS
 - R67 CLOSED PASS
+- R68 CLOSED PASS
 
-## R67 FINAL
+## R68 FINAL
 Canonical:
-`research/interventions/20260920/R67_F07_DUAL_LEDGER_STATE_CARRY_RUNTIME_RESULT_R1.md`
+`research/interventions/20260920/R68_F04_SEMANTIC_TRANSACTION_REPETITION_RESULT_R1.md`
 
 Result:
-`F07_DUAL_LEDGER_STATE_CARRY_RUNTIME_ENFORCEMENT = QUALIFIED`
+`16/16 PASS`
 
-Fresh Treatment:
-`12/12 PASS`
+Positive Detection:
+`8/8`
 
-Fresh Control:
-`2/12 PASS`
+Negative Correct Non-Detection:
+`8/8`
 
-Hidden-state contamination:
+False Positive:
 `0`
 
-Planner continuity:
-`11/11 PASS`
+False Negative:
+`0`
+
+Claim:
+`F04_SEMANTIC_TRANSACTION_REPETITION_VALIDATOR = QUALIFIED_AT_SCENE_GRAPH_VALIDATION_LEVEL`
 
 ## PHYSICALIZATION
-`POST_R67_QUALIFIED_CANDIDATE_PHYSICALIZATION = COMPLETE`
+`POST_R68_QUALIFIED_CANDIDATE_PHYSICALIZATION = COMPLETE`
 
 Physical Authority:
-**SYNC-R65**
+**SYNC-R66**
 
 Trust Root:
-`009d1825ea0e54314b5c458e1148e44b9b3e9ea52aeec63edea3a0e4e2c23740`
+`0305d9fd03a41ff4d70571f3af14c52d7690e1d6caf1063f79a764692618e85e`
 
 ## NEXT RESEARCH
 `NOT_STARTED__TARGET_SELECTION_PENDING`
 
-Remaining causal targets:
-- F04 Semantic Repetition Validator Gap (의미 반복 검증기 결함)
+Remaining:
 - F06 Scene Necessity (장면 필요성)
 - F08 Provider Context (제공자 문맥)
 - F02/F05 unresolved (미해결)
 
-Do not silently combine multiple causal targets.
+Do not combine multiple causal targets.
