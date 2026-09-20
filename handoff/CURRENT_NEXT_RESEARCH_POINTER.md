@@ -15,25 +15,28 @@ Last updated: 2026-09-20
 - R61 CLOSED
 - R62 CLOSED FAIL — 9W / 0T / 3L
 
-## PHYSICAL RECOVERY GATE
-`PHYSICAL_RECOVERY_ALIGNMENT_FROM_SYNC_R59 = COMPLETE`
+## R63
+Title:
+`F01 Semantic Applicability + Abstention Gate`
 
-SYNC-R60 5-Part / 9-Package successor has been sealed and audited with active execution rebound to exact SYNC-R58.
+Status:
+`PREREGISTERED__IMPLEMENTATION_NOT_STARTED__OUTPUTS_0`
 
-## NEXT RESEARCH NUMBER
-`R63 = F01 Semantic Applicability + Abstention Gate`
+Canonical preregistration:
+`research/interventions/20260920/R63_F01_SEMANTIC_APPLICABILITY_ABSTENTION_PREREG_R1.md`
 
-Current status:
-`R63 = NOT_STARTED`
+Preregistration commit:
+`a91180860dde0f7503a8b47f7358a966df53123f`
 
-R63 must repair only the R62 failure mechanism:
-- obligation kind/function compatibility
-- information movement
-- relationship target
-- physical affordance
-- causal preconditions
-- unresolved/deferred preservation
-- unsupported novelty risk
-- fallback: `ABSTAIN -> SAFE BASELINE`
+Control:
+exact SYNC-R58 / ADAPTIVE_UL16.
 
-Do not begin F04 before F01 is safely closed.
+Treatment boundary:
+R62 F01 diversification lineage + semantic-license gate + exact R58 fallback on ABSTAIN. No F04/F06/F07/F08 patch.
+
+Known R62 losses C06/C08/C11 are regression-only and cannot enter the fresh primary qualification set.
+
+Next operation:
+`IMPLEMENT_R63_F01_LICENSE_GATE -> KNOWN_FAILURE_REGRESSION -> SOURCE_FREEZE -> FRESH_12_CASE_PRIMARY`
+
+Do not start F04.
