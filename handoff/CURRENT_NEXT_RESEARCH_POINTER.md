@@ -4,55 +4,30 @@ Last updated: 2026-09-20
 ## CURRENT
 - Physical authority: **SYNC-R63**
 - Active qualified Candidate: **SYNC-R58 / ADAPTIVE_UL16**
-- Production: **ENG:R47 / LEGACY_R53**
-- Runtime DB: **DB59**
-- Research DB: **DB64**
+- R66: **ACTIVE**
 
-## CLOSED
-- R62 CLOSED FAIL
-- R63 CLOSED FAIL PREBLIND
-- R64 CLOSED FAIL PREBLIND
-- R65 CLOSED FAIL PREBLIND
+## R66 STATUS
+`PREBLIND_PASS__WAITING_EXTERNAL_BLIND_3_JUDGES`
 
-## R65
-Canonical:
-`research/interventions/20260920/R65_F01_SENSE_DISAMBIGUATED_RESULT_R1.md`
+Canonical pre-blind result:
+`research/interventions/20260920/R66_F01_PREBLIND_GATE_RESULT_R1.md`
 
-Failure class:
-`TARGETED_SENSE_DISAMBIGUATION_IS_NOT_BOUNDARY_SAFE_SEMANTIC_PARSING`
+Blind protocol:
+`research/interventions/20260920/R66_EXTERNAL_BLIND_EXECUTION_PROTOCOL_ADDENDUM_R1.md`
 
-Mechanical:
-12/12 both arms PASS.
+Handoff:
+`handoff/20260920/R66_EXTERNAL_BLIND_PENDING_HANDOFF_R1.md`
 
-Safety:
-FAIL because `시한` was found as an unbounded substring inside `표시한다`.
+## FROZEN
+- Treatment source SHA256: `0558c910896556048bb6acf0e1d4097477c3c31a60d47f16c4bd83e3f6253f1d`
+- Fresh primary SHA256: `9ba77865f1fd4f9f9ec91a23456686c026269f3ec5ed62c3490f2e43065bc5a7`
+- J01/J02/J03 packets sealed
+- mapping secret sealed separately
 
-External blind:
-NOT RUN.
+## NEXT OPERATION
+Collect three independent judgments.
+After all three are sealed:
+`MAP -> 3-JUDGE MAJORITY -> APPLY FROZEN GATE -> CLOSE R66`
 
-## PHYSICAL ALIGNMENT
-`POST_R65_RESEARCH_OVERLAY_ALIGNMENT = COMPLETE`
-
-Current physical authority:
-**SYNC-R63**
-
-Trust root:
-`94697514918cff9091132fb6adafeb75dadf195c4be5e6e2c51861d561ba3916`
-
-## NEXT
-`R66 = F01 Boundary-Safe Predicate Parser Gate`
-
-Status:
-`NOT_STARTED`
-
-Required repair:
-- eliminate unbounded substring matching from all positive license evidence;
-- token/morpheme-bound lexical atoms;
-- compound-first word-sense resolution;
-- predicate/argument evidence for positive licenses;
-- lexical atoms may support but never independently establish causal roles;
-- exact R58 fail-closed fallback;
-- R62/R63/R64/R65 failures regression-only;
-- fresh R66 qualification cases only after R66 source freeze.
-
+Do not tune source or regenerate packets.
 Do not start F04.
