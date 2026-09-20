@@ -1,0 +1,18 @@
+{
+  "api_family": "responses",
+  "credential_policy": "OPENAI_API_KEY via environment/secret manager only; key never written to artifacts",
+  "frozen_runtime_sha256": "1e4ca6fd7e60ce9e70507dbb7deb90a2438be6ca62a709222d00ff3b8db13182",
+  "mapping_sha256": "058cff81f62666d32b58cec9d5cf2181552592074e2f48f6bc84f2ec9949849d",
+  "max_attempts_per_arm": 2,
+  "max_output_tokens": null,
+  "model": null,
+  "paired_payload_file_sha256": "8ad241820986dc383961da47df36d7f19ef31f80a7ab403febdceabb7bc6a169",
+  "paired_payload_logical_sha256": "8ad241820986dc383961da47df36d7f19ef31f80a7ab403febdceabb7bc6a169",
+  "provider": "openai",
+  "reasoning_effort": null,
+  "retry_policy": "max 2 attempts per arm only for provider/local-contract invalidity; no fallback; pair invalid if either arm remains invalid",
+  "schema": "R70StageBProviderExecutionSealR1",
+  "stage_b_input_sha256": "3bf7b1a20317b20f02e45ae70fe59863c8362d9d582bbf84de0d91e643b6017e",
+  "status": "TEMPLATE_NOT_SEALED",
+  "timeout_seconds": 120
+}
