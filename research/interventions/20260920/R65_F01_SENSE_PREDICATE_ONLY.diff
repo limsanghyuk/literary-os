@@ -1,0 +1,206 @@
+--- /mnt/data/r64_research/r64.py	2026-09-20 11:41:13.755591460 +0000
++++ /tmp/r65work/r65.py	2026-09-20 12:27:11.798278791 +0000
+@@ -885,12 +885,201 @@
+             "required_role":rec["required_role"],"evidence":rec["evidence"]}
+ 
+ 
++
++
++def _r65_compound_senses(o):
++    """Resolve narrow polysemous senses needed by the R65 F01 gate.
++
++    This is intentionally fail-closed.  A generic token such as 마감 or 압력 is
++    never enough; domain compounds and predicate/argument context decide the
++    sense, and unresolved cases abstain.
++    """
++    statement=_norm_text(o.get("statement"))
++    visible=_norm_text(o.get("visible_action"))
++    info=_norm_text(o.get("information_delta"))
++    rel=_norm_text(o.get("relationship_delta"))
++    social=_norm_text(o.get("social_delta"))
++    text=" ".join(x for x in (statement,visible,info,rel,social) if x)
++
++    finishing_compound=_r64_has_phrase(text,
++        "표면 마감","도장 마감","바닥 마감","벽면 마감","천장 마감",
++        "외장 마감","내장 마감","코팅 마감","목재 마감","마감 작업",
++        "마감 공정","마감 처리","마감재","finish coat","surface finish")
++    explicit_deadline=_r64_has_phrase(text,
++        "제출 마감","접수 마감","원고 마감","마감 시각","마감 시간","마감 기한",
++        "마감까지","마감이 다가","마감 직전","마감 전에","시한","기한",
++        "deadline","due by","time limit","시간이 줄","남은 시간")
++    deadline_sense=explicit_deadline and not finishing_compound
++
++    physical_pressure=_r64_has_phrase(text,
++        "호스 압력","공급 압력","배관 압력","압력계","유압","기압","수압",
++        "공기압","증기압","압력 센서","압력센서","fluid pressure","air pressure")
++    dramatic_pressure=(
++        _r64_has_token_stem(social,"압박","강요","위협","제재","궁지") or
++        _r64_has_token_stem(rel,"압박","강요","위협","궁지") or
++        _r64_has_phrase(text,"사회적 압박","시간 압박","압박을 받","선택지가 좁",
++                        "선택지를 좁","위협이 커","통제가 강화","제재가 강화") or
++        deadline_sense
++    ) and not physical_pressure
++
++    # Successful mitigation is a distinct sense from failure realization.
++    mitigation_success=_r64_has_phrase(visible,
++        "상승을 멈춘","정상으로 돌아","안정적으로 고정","복구한다","복구해",
++        "차단에 성공","정상화한다","정상화해","문제를 해결","작동을 회복")
++
++    return {
++        "finishing_process":bool(finishing_compound),
++        "deadline":bool(deadline_sense),
++        "physical_pressure":bool(physical_pressure),
++        "dramatic_pressure":bool(dramatic_pressure),
++        "successful_mitigation":bool(mitigation_success),
++    }
++
++
++def _r65_semantic_predicates(o):
++    """Build sense-disambiguated predicates from R64 typed evidence."""
++    e=_r64_typed_evidence(o)
++    r=dict(e["roles"])
++    senses=_r65_compound_senses(o)
++
++    # R64's field-typed dramatic pressure is overridden by resolved sense.
++    r["dramatic_pressure"]=senses["dramatic_pressure"]
++    r["physical_pressure"]=senses["physical_pressure"]
++
++    # Success semantics is authoritative for failure licensing.
++    if senses["successful_mitigation"]:
++        r["successful_mitigation"]=True
++
++    # COUNTERMOVE must contain a response predicate, not merely a dependency.
++    prior_move=bool(e["sources"]["depends_on"])
++    response=r.get("response_action",False)
++    r["sense_disambiguated_countermove"]=bool(prior_move and response)
++
++    return {"evidence":e,"roles":r,"senses":senses}
++
++
++def _r65_receipt(predicate, sense, fields, arguments=None, structural=None):
++    return {
++        "predicate":predicate,
++        "sense":sense,
++        "source_fields":list(fields),
++        "arguments":dict(arguments or {}),
++        "structural":list(structural or []),
++    }
++
++
++def _r65_semantic_license(o, family):
++    """Sense-disambiguated semantic-predicate license for R65."""
++    x=_r65_semantic_predicates(o); e=x["evidence"]; r=x["roles"]; s=x["senses"]
++    kind=e["kind"]
++    owners=e["sources"]["owners"]
++
++    def no(reason, predicate):
++        return {"licensed":False,"reason":reason,"required_predicate":predicate,"evidence":[]}
++    def yes(reason, predicate, sense, fields, arguments=None, structural=None):
++        return {"licensed":True,"reason":reason,"required_predicate":predicate,
++                "evidence":[_r65_receipt(predicate,sense,fields,arguments,structural)]}
++
++    if family=="MISINTERPRETATION":
++        if kind not in {"INFORMATION","RELATIONSHIP","THREAD"}: return no("KIND_INCOMPATIBLE","EXISTING_FALSE_BELIEF")
++        if r["false_belief_negated"]: return no("NEGATED_FALSE_BELIEF","EXISTING_FALSE_BELIEF")
++        if not r["existing_false_belief"]: return no("NO_SENSE_RESOLVED_FALSE_BELIEF","EXISTING_FALSE_BELIEF")
++        fields=[f for f in ("information_delta","relationship_delta") if e["sources"][f]]
++        return yes("LICENSED_EXISTING_FALSE_BELIEF_PREDICATE","EXISTING_FALSE_BELIEF","BELIEF_STATE",fields,{"holder":owners[:1]})
++
++    if family=="COST_BEARING_CHOICE":
++        if kind not in {"CHARACTER","RELATIONSHIP","THREAD","EVENT"}: return no("KIND_INCOMPATIBLE","CHOOSE+BEAR_COST")
++        if not (r["choice"] and r["actor_bearing_cost"]): return no("NO_CHOICE_COST_PREDICATE","CHOOSE+BEAR_COST")
++        if kind=="THREAD" and r["preserve_open"]: return no("OPEN_THREAD_PREMATURE_CHOICE_RISK","CHOOSE+BEAR_COST")
++        fields=[f for f in ("visible_action","relationship_delta","statement") if e["sources"][f]]
++        return yes("LICENSED_CHOICE_COST_PREDICATE","CHOOSE+BEAR_COST","ACTOR_CHOICE",fields,{"actor":owners[:1]})
++
++    if family=="PHYSICAL_RISK_FAILURE":
++        if kind not in {"EVENT","THREAD","PAYOFF"}: return no("KIND_INCOMPATIBLE","PHYSICAL_FAILURE_OR_RISK_REALIZATION")
++        if r["successful_mitigation"] and not r["physical_failure_visible"]: return no("SUCCESSFUL_MITIGATION_NOT_FAILURE","PHYSICAL_FAILURE_OR_RISK_REALIZATION")
++        if not (r["physical_failure_visible"] and r["physical_failure_statement"]): return no("NO_REQUIRED_FAILURE_PREDICATE","PHYSICAL_FAILURE_OR_RISK_REALIZATION")
++        return yes("LICENSED_PHYSICAL_FAILURE_PREDICATE","PHYSICAL_FAILURE_OR_RISK_REALIZATION","FAILURE_REALIZATION",["visible_action","statement"],{"actor_or_entity":owners[:1]})
++
++    if family=="NEGOTIATION_EXCHANGE":
++        if kind not in {"RELATIONSHIP","SOCIAL","CHARACTER","EVENT"}: return no("KIND_INCOMPATIBLE","CONDITIONAL_EXCHANGE")
++        if not r["counterparty"]: return no("NO_COUNTERPARTY_ARGUMENT","CONDITIONAL_EXCHANGE")
++        if not r["conditional_exchange"]: return no("NO_EXCHANGE_PREDICATE","CONDITIONAL_EXCHANGE")
++        fields=[f for f in ("relationship_delta","social_delta","visible_action") if e["sources"][f]]
++        return yes("LICENSED_CONDITIONAL_EXCHANGE_PREDICATE","CONDITIONAL_EXCHANGE","RECIPROCAL_TERM",fields,{"parties":owners[:2]})
++
++    if family=="RELATIONSHIP_BOUNDARY_CHANGE":
++        if kind!="RELATIONSHIP": return no("KIND_INCOMPATIBLE","RELATIONSHIP_BOUNDARY_DELTA")
++        if not r["relationship_boundary"]: return no("NO_RELATIONSHIP_BOUNDARY_PREDICATE","RELATIONSHIP_BOUNDARY_DELTA")
++        return yes("LICENSED_RELATIONSHIP_BOUNDARY_PREDICATE","RELATIONSHIP_BOUNDARY_DELTA","RELATIONAL_ACCESS_TRUST",["relationship_delta"],{"parties":owners[:2]})
++
++    if family=="WITHHELD_INFORMATION_MOVE":
++        if kind not in {"INFORMATION","RELATIONSHIP","THREAD"}: return no("KIND_INCOMPATIBLE","INTENTIONAL_WITHHOLD")
++        if not r["intentional_withholding"]: return no("NO_INTENTIONAL_WITHHOLD_PREDICATE","INTENTIONAL_WITHHOLD")
++        return yes("LICENSED_INTENTIONAL_WITHHOLD_PREDICATE","INTENTIONAL_WITHHOLD","VOLITIONAL_INFORMATION_CONTROL",["information_delta"],{"actor":owners[:1]})
++
++    if family=="DISCOVERY":
++        if kind not in {"INFORMATION","THREAD"}: return no("KIND_INCOMPATIBLE","NEW_FACT_ESTABLISHED")
++        if not r["new_fact_reveal"]: return no("NO_NEW_FACT_PREDICATE","NEW_FACT_ESTABLISHED")
++        return yes("LICENSED_NEW_FACT_PREDICATE","NEW_FACT_ESTABLISHED","FACT_REVELATION",["information_delta"],{"actor":owners[:1]})
++
++    if family=="SOCIAL_INSTITUTIONAL_PRESSURE":
++        if kind!="SOCIAL" and not e["sources"]["social_delta"]: return no("KIND_INCOMPATIBLE","INSTITUTIONAL_CONSTRAINT")
++        if not r["institutional_mechanism"]: return no("NO_INSTITUTIONAL_CONSTRAINT_PREDICATE","INSTITUTIONAL_CONSTRAINT")
++        return yes("LICENSED_INSTITUTIONAL_CONSTRAINT_PREDICATE","INSTITUTIONAL_CONSTRAINT","AUTHORITY_RULE_PROCESS",["social_delta"],{"target":owners[:1]},["group_refs"] if e["sources"]["group_refs"] else [])
++
++    if family=="PARTIAL_CONSEQUENCE":
++        if kind not in {"PAYOFF","EVENT","THREAD"}: return no("KIND_INCOMPATIBLE","CAUSE_CURRENT_CONSEQUENCE")
++        if not r["prior_cause"]: return no("NO_PRIOR_CAUSE_ARGUMENT","CAUSE_CURRENT_CONSEQUENCE")
++        if not (e["sources"]["visible_action"] or e["sources"]["statement"]): return no("NO_CURRENT_CONSEQUENCE_PREDICATE","CAUSE_CURRENT_CONSEQUENCE")
++        structural=[z for z in ("depends_on","payoff_ref","event_ref") if (o.get(z) or [])]
++        return yes("LICENSED_CAUSAL_CONSEQUENCE_PREDICATE","CAUSE_CURRENT_CONSEQUENCE","DEPENDENCY_CONSEQUENCE",["visible_action"] if e["sources"]["visible_action"] else ["statement"],{"actor":owners[:1]},structural)
++
++    if family=="COUNTERMOVE":
++        if kind not in {"EVENT","THREAD","PAYOFF","CHARACTER"}: return no("KIND_INCOMPATIBLE","OPPOSING_MOVE+RESPONSE_ACTION")
++        if not e["sources"]["depends_on"]: return no("NO_STRUCTURAL_PRIOR_MOVE","OPPOSING_MOVE+RESPONSE_ACTION")
++        if not r["sense_disambiguated_countermove"]: return no("NO_RESPONSE_PREDICATE_TO_PRIOR_MOVE","OPPOSING_MOVE+RESPONSE_ACTION")
++        return yes("LICENSED_COUNTERMOVE_PREDICATE","OPPOSING_MOVE+RESPONSE_ACTION","CAUSAL_RESPONSE",["visible_action"],{"responder":owners[:1]},["depends_on"])
++
++    if family=="FAILED_ATTEMPT":
++        if kind not in {"EVENT","THREAD","CHARACTER"}: return no("KIND_INCOMPATIBLE","ATTEMPT+FAIL")
++        if not r["failed_attempt"]: return no("NO_FAILED_ATTEMPT_PREDICATE","ATTEMPT+FAIL")
++        return yes("LICENSED_FAILED_ATTEMPT_PREDICATE","ATTEMPT+FAIL","FAILED_ACTION",["visible_action","statement"],{"actor":owners[:1]})
++
++    if family=="PRESSURE_ESCALATION":
++        if kind not in {"EVENT","THREAD","RELATIONSHIP"}: return no("KIND_INCOMPATIBLE","DRAMATIC_PRESSURE+ESCALATE")
++        if s["physical_pressure"]: return no("PHYSICAL_PRESSURE_SENSE_EXCLUDED","DRAMATIC_PRESSURE+ESCALATE")
++        if s["finishing_process"] and not s["deadline"]: return no("FINISHING_PROCESS_SENSE_EXCLUDED","DRAMATIC_PRESSURE+ESCALATE")
++        if not s["dramatic_pressure"]: return no("NO_SENSE_RESOLVED_DRAMATIC_PRESSURE","DRAMATIC_PRESSURE+ESCALATE")
++        fields=[f for f in ("social_delta","relationship_delta","statement") if e["sources"][f]]
++        sense="DEADLINE_PRESSURE" if s["deadline"] else "SOCIAL_RELATIONAL_PRESSURE"
++        return yes("LICENSED_SENSE_RESOLVED_PRESSURE_PREDICATE","DRAMATIC_PRESSURE+ESCALATE",sense,fields,{"target":owners[:1]})
++
++    return no("UNKNOWN_OR_UNLICENSED_FAMILY","UNKNOWN")
++
++
++def _r65_transaction_decision(o):
++    baseline=_r58_stage_plan_for_obligation(o)
++    if baseline==["RESOLVE"]:
++        return {"mode":"BASELINE_ONLY","proposal":None,"selected":"RESOLVE",
++                "baseline":"RESOLVE","reason":"R58_SIMPLE_DEPTH_BOUNDARY",
++                "required_predicate":None,"evidence":[]}
++    proposal=_select_transaction_precursor(o)
++    rec=_r65_semantic_license(o,proposal)
++    if rec["licensed"]:
++        return {"mode":"ACCEPT","proposal":proposal,"selected":proposal,
++                "baseline":baseline[0],"reason":rec["reason"],
++                "required_predicate":rec["required_predicate"],"evidence":rec["evidence"]}
++    return {"mode":"ABSTAIN","proposal":proposal,"selected":baseline[0],
++            "baseline":baseline[0],"reason":rec["reason"],
++            "required_predicate":rec["required_predicate"],"evidence":rec["evidence"]}
++
++
+ def _stage_plan_for_obligation(o):
+-    """Return the R64 F01 typed semantic-role license / abstention path."""
++    """Return the R65 F01 sense-disambiguated predicate / abstention path."""
+     baseline=_r58_stage_plan_for_obligation(o)
+     if baseline==["RESOLVE"]:
+         return baseline
+-    d=_r64_transaction_decision(o)
++    d=_r65_transaction_decision(o)
+     return [d["selected"],"RESOLVE"]
+ 
+ 
