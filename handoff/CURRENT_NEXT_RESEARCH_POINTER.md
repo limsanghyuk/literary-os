@@ -20,23 +20,30 @@ Title:
 `F01 Semantic Applicability + Abstention Gate`
 
 Status:
-`PREREGISTERED__IMPLEMENTATION_NOT_STARTED__OUTPUTS_0`
+`IMPLEMENTED_SOURCE_FROZEN__FRESH_PRIMARY_NOT_CREATED`
 
-Canonical preregistration:
+Preregistration:
 `research/interventions/20260920/R63_F01_SEMANTIC_APPLICABILITY_ABSTENTION_PREREG_R1.md`
-
-Preregistration commit:
+Prereg commit:
 `a91180860dde0f7503a8b47f7358a966df53123f`
 
-Control:
-exact SYNC-R58 / ADAPTIVE_UL16.
+Implementation freeze:
+`research/interventions/20260920/R63_F01_IMPLEMENTATION_FREEZE_R1.md`
+Freeze commit:
+`2618f84a09cf27c3d6f8c8c06923a05b0f81dd2b`
 
-Treatment boundary:
-R62 F01 diversification lineage + semantic-license gate + exact R58 fallback on ABSTAIN. No F04/F06/F07/F08 patch.
+Frozen Treatment adaptive source SHA256:
+`7236eba306305269b06f9924c617139ecca038a5c6697891bac770a07913b7dd`
 
-Known R62 losses C06/C08/C11 are regression-only and cannot enter the fresh primary qualification set.
+F01-only diff SHA256:
+`ff007539ed3843ede68e882ac1538d680687a1b385342335daecb8a44fc0a5ad`
 
-Next operation:
-`IMPLEMENT_R63_F01_LICENSE_GATE -> KNOWN_FAILURE_REGRESSION -> SOURCE_FREEZE -> FRESH_12_CASE_PRIMARY`
+Known R62 failures C06/C08/C11: regression-only repair PASS.
+R58B regression: PASS.
+Whole runtime compile: 45/45 PASS.
 
+## NEXT
+Create and seal 12 fresh primary cases after the frozen Treatment source, then run exact R58 Control vs frozen R63 Treatment.
+
+No source tuning after fresh-case creation.
 Do not start F04.
