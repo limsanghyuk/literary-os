@@ -14,36 +14,37 @@ Last updated: 2026-09-20
 - R60 CLOSED PASS
 - R61 CLOSED
 - R62 CLOSED FAIL — 9W / 0T / 3L
+- R63 CLOSED FAIL — PREBLIND SELECTOR SAFETY
 
-## R63
-Title:
-`F01 Semantic Applicability + Abstention Gate`
+## R63 final
+Canonical result:
+`research/interventions/20260920/R63_F01_PRIMARY_MECHANICAL_SAFETY_RESULT_R1.md`
 
-Status:
-`IMPLEMENTED_SOURCE_FROZEN__FRESH_PRIMARY_NOT_CREATED`
+Result commit:
+`b79c1049358d1f2917fe05871e6125b47f63294f`
 
-Preregistration:
-`research/interventions/20260920/R63_F01_SEMANTIC_APPLICABILITY_ABSTENTION_PREREG_R1.md`
-Prereg commit:
-`a91180860dde0f7503a8b47f7358a966df53123f`
+Failure:
+`LEXICAL_LICENSE_IS_NOT_SEMANTIC_LICENSE`
 
-Implementation freeze:
-`research/interventions/20260920/R63_F01_IMPLEMENTATION_FREEZE_R1.md`
-Freeze commit:
-`2618f84a09cf27c3d6f8c8c06923a05b0f81dd2b`
+Fresh safety failures included:
+- physical hose pressure -> false PRESSURE_ESCALATION license;
+- 막차 substring -> false COUNTERMOVE license.
 
-Frozen Treatment adaptive source SHA256:
-`7236eba306305269b06f9924c617139ecca038a5c6697891bac770a07913b7dd`
+No external blind was run because the preregistered pre-blind safety gate failed.
 
-F01-only diff SHA256:
-`ff007539ed3843ede68e882ac1538d680687a1b385342335daecb8a44fc0a5ad`
+## REQUIRED PHYSICAL ALIGNMENT BEFORE R64
+Integrate R63 preregistration, source freeze, fresh-case seal and final FAIL result into the current 5-Part / 9-Package authority without changing the active runtime.
 
-Known R62 failures C06/C08/C11: regression-only repair PASS.
-R58B regression: PASS.
-Whole runtime compile: 45/45 PASS.
+The next physical successor must:
+- retain exact active SYNC-R58 runtime;
+- preserve R62 and R63 failed research sources as non-active evidence;
+- keep DB59 unchanged;
+- record R64 as NEXT / NOT STARTED.
 
-## NEXT
-Create and seal 12 fresh primary cases after the frozen Treatment source, then run exact R58 Control vs frozen R63 Treatment.
+## NEXT RESEARCH
+`R64 = F01 Typed Semantic-Role License Gate`
 
-No source tuning after fresh-case creation.
+R64 status:
+`NOT_STARTED__BLOCKED_ON_R63_RESEARCH_OVERLAY_PHYSICAL_ALIGNMENT`
+
 Do not start F04.
