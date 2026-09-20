@@ -2,32 +2,52 @@
 Last updated: 2026-09-20
 
 ## CURRENT
-- Physical authority: **SYNC-R63**
-- Active qualified Candidate: **SYNC-R58 / ADAPTIVE_UL16**
-- R66: **ACTIVE**
+- Physical authority: **SYNC-R64**
+- Active qualified Candidate: **R66 F01 Boundary-Safe Predicate Parser**
+- Qualified parent/fallback: **SYNC-R58**
+- Production: **ENG:R47 / LEGACY_R53**
 
-## R66 STATUS
-`PREBLIND_PASS__WAITING_EXTERNAL_BLIND_3_JUDGES`
+## CLOSED
+- R62 CLOSED FAIL
+- R63 CLOSED FAIL
+- R64 CLOSED FAIL
+- R65 CLOSED FAIL
+- R66 **CLOSED PASS**
 
-Canonical pre-blind result:
-`research/interventions/20260920/R66_F01_PREBLIND_GATE_RESULT_R1.md`
+## R66 FINAL
+Canonical:
+`research/interventions/20260920/R66_F01_BOUNDARY_SAFE_FINAL_RESULT_R1.md`
 
-Blind protocol:
-`research/interventions/20260920/R66_EXTERNAL_BLIND_EXECUTION_PROTOCOL_ADDENDUM_R1.md`
+Result:
+`12W / 0T / 0L`
 
-Handoff:
-`handoff/20260920/R66_EXTERNAL_BLIND_PENDING_HANDOFF_R1.md`
+Mapped Treatment votes:
+`36 / 36`
 
-## FROZEN
-- Treatment source SHA256: `0558c910896556048bb6acf0e1d4097477c3c31a60d47f16c4bd83e3f6253f1d`
-- Fresh primary SHA256: `9ba77865f1fd4f9f9ec91a23456686c026269f3ec5ed62c3490f2e43065bc5a7`
-- J01/J02/J03 packets sealed
-- mapping secret sealed separately
+Confirmed Treatment critical violations:
+`0`
 
-## NEXT OPERATION
-Collect three independent judgments.
-After all three are sealed:
-`MAP -> 3-JUDGE MAJORITY -> APPLY FROZEN GATE -> CLOSE R66`
+Claim:
+`F01_BOUNDARY_SAFE_PREDICATE_PARSER_GATE = QUALIFIED_AT_PLANNING/SCENE-CONTRACT_LEVEL`
 
-Do not tune source or regenerate packets.
-Do not start F04.
+## PHYSICALIZATION
+`POST_R66_QUALIFIED_CANDIDATE_PHYSICALIZATION = COMPLETE`
+
+Physical authority:
+**SYNC-R64**
+
+Trust root:
+`157d5ed7e6cebca9c2b8966b768447f9a4a9bd2f54498e339a19cb67fde88e92`
+
+## NEXT RESEARCH
+`R67 = NOT_STARTED__TARGET_SELECTION_PENDING`
+
+R61 remaining map:
+- F04 Semantic Repetition Validator Gap — SUPPORTED
+- F06 Scene Necessity Declarative — SUPPORTED
+- F07 State Carry runtime — CONTRACT_RESOLVED_RUNTIME_PENDING
+- F08 Provider Context — CONTRIBUTOR
+- F02/F05 — UNRESOLVED
+
+No R67 target has been preregistered yet.
+Do not silently combine multiple causal targets.
