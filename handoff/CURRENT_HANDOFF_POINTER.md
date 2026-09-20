@@ -2,37 +2,40 @@
 Last updated: 2026-09-20
 
 ## READ FIRST
-1. `handoff/20260919/START_HERE_SYNC_R59_R62_RESEARCH_CANDIDATE_R1.md`
+1. `research/interventions/20260920/R62_F01_STAGE_GRAMMAR_DIVERSIFICATION_EXTERNAL_BLIND_RESULT_R1.md`
 2. `handoff/20260919/SYNC_R59_R62_PHYSICALIZATION_RECEIPT_R1.md`
 3. `research/interventions/20260919/R62_F01_STAGE_GRAMMAR_DIVERSIFICATION_PREREG_R1.md`
-4. `handoff/20260920/R62_EXTERNAL_BLIND_EXECUTION_READINESS_R2.md`
 
 ## CURRENT STATE
-- Physical authority: **SYNC-R59**
-- Candidate route: **ADAPTIVE_UL16_R62_F01_RESEARCH**
-- Production/control: **ENG:R47 / LEGACY_R53**
+- Active qualified Candidate: **SYNC-R58 / ADAPTIVE_UL16**
+- Latest physicalized research snapshot: **SYNC-R59 — QUARANTINED**
+- Production: **ENG:R47 / LEGACY_R53**
 - Runtime DB: **DB59 frozen**
 - Research DB: **DB64**
 - R59: CLOSED HOLD
 - R60: CLOSED PASS
 - R61: CLOSED
-- R62: IMPLEMENTED / mechanical + regression PASS / physicalized / external blind execution ready / judgments 0/3
-- Production promotion: NONE
+- R62: **CLOSED FAIL — 9W / 0T / 3L**
+- R63: NEXT, not yet executed
+
+## R62 CONCLUSION
+Diversification transmitted and improved 9/12 cases, but semantic misapplication caused three unanimous Treatment losses:
+- C06 Factory Strike
+- C08 Mountain Rescue
+- C11 Museum Theft
+
+The repair target is not “more diversity.”
+It is:
+`SEMANTIC_APPLICABILITY + ABSTENTION + SAFE_BASELINE_FALLBACK`.
 
 ## INTERRUPTION RECOVERY
-Do not re-implement or rerun R62 mechanical generation.
-
-Resume at the external blind gate:
-1. J01/J02/J03 fresh independent conversations;
-2. one sealed packet per judge only;
-3. exact JSON results returned unchanged;
-4. validate + SHA seal 3/3;
-5. mapping stays closed until 3/3;
-6. compute frozen gate;
-7. close R62;
-8. then assign R63.
-
-Current coordinator runtime TransportTimeout is non-scientific and must not trigger regeneration.
+A fresh session must:
+1. recover active Candidate from SYNC-R58, not SYNC-R59;
+2. retain SYNC-R59 only as failed research evidence;
+3. do not rerun R62;
+4. begin R63 with a new preregistration;
+5. repair only the F01 selector semantic applicability/abstention defect;
+6. do not combine F04/F06/F07/F08.
 
 Status token:
-`HANDOFF__SYNC_R59_CURRENT__R62_EXTERNAL_BLIND_READY__JUDGMENTS_0_OF_3__MAPPING_CLOSED__R63_BLOCKED`
+`HANDOFF__R62_CLOSED_FAIL__ACTIVE_SYNC_R58__SYNC_R59_QUARANTINED__R63_NEXT`
