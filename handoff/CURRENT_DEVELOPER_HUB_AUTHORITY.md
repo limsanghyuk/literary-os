@@ -2,58 +2,63 @@
 Last updated: 2026-09-20
 
 ## CANONICAL READ FIRST
-`handoff/20260920/START_HERE_POST_R66_SYNC_R64_R1.md`
+`handoff/20260920/START_HERE_POST_R67_SYNC_R65_R1.md`
 
 Supporting:
-- `handoff/20260920/SYNC_R64_POST_R66_PHYSICALIZATION_RECEIPT_R1.md`
-- `research/interventions/20260920/R66_F01_BOUNDARY_SAFE_FINAL_RESULT_R1.md`
+- `handoff/20260920/SYNC_R65_POST_R67_PHYSICALIZATION_RECEIPT_R1.md`
+- `research/interventions/20260920/R67_F07_DUAL_LEDGER_STATE_CARRY_RUNTIME_RESULT_R1.md`
 
 ## CURRENT AUTHORITY
-- Physical authority: **SYNC-R64**
-- Active qualified Candidate: **R66 F01 Boundary-Safe Predicate Parser / ADAPTIVE_UL16 lineage**
-- Qualified parent/fallback: **exact SYNC-R58 / ADAPTIVE_UL16**
-- Production: **ENG:R47 / LEGACY_R53**
-- Runtime DB: **DB59 frozen**
-- Research DB: **DB64 research-only**
+- Physical Authority (물리 권위): **SYNC-R65**
+- Active Qualified Candidate (활성 자격 후보): **R67 F07 Dual-Ledger State Carry Runtime / R66 F01 lineage**
+- Qualified Parent Candidate (자격 부모 후보): **R66 F01 Boundary-Safe Predicate Parser**
+- Qualified Fallback (자격 대체 경로): **exact SYNC-R58**
+- Production Engine (운영 엔진): **ENG:R47 / LEGACY_R53**
+- Runtime DB (런타임 DB): **DB59 frozen**
+- Research DB (연구 DB): **DB64 research-only**
 
-## R66
-`CLOSED PASS — 12W / 0T / 0L — 36/36 mapped Treatment votes — 0 confirmed critical violations`
+## RESEARCH STATE
+- R66 CLOSED PASS
+- R67 CLOSED PASS
 
-Qualification scope:
-`F01_BOUNDARY_SAFE_PREDICATE_PARSER_GATE__PLANNING_SCENE_CONTRACT_LEVEL`
+R67 qualification:
+`F07_DUAL_LEDGER_STATE_CARRY_RUNTIME_ENFORCEMENT = QUALIFIED`
 
-Active candidate runtime:
-`575fd5378c69d282c9b4c39d03e52d4cc436744fa67c792db8515fe91c384e75`
+Fresh runtime qualification:
+- Treatment (처치군): 12/12 PASS
+- Control (대조군): 2/12 PASS
+- Hidden-state contamination (숨은 상태 오염): 0
+- Planner continuity (기획 연속성): 11/11
 
-Active candidate source:
-`0558c910896556048bb6acf0e1d4097477c3c31a60d47f16c4bd83e3f6253f1d`
+## ACTIVE RUNTIME
+Runtime SHA256:
+`9ab625122d7b572bf781ffa8062271f085cfde2d757e42dd79a18b977d9a72b8`
 
-Exact SYNC-R58 fallback runtime:
-`30281db791d9bb629218a79c51c230bffb8f9088d79c2cfe6d676f996098b250`
+Adaptive source SHA256:
+`6574449a4a0b0520db5993b1f1abe532709b19aa9a5c7dc706df24b8c1fc6b91`
+
+State Carry source SHA256:
+`ce38885171d0f318aeb2142ec16d119814be7fb736ebc361166007b4d2eea087`
 
 ## PHYSICAL TRUST
-SYNC-R64 trust root:
-`157d5ed7e6cebca9c2b8966b768447f9a4a9bd2f54498e339a19cb67fde88e92`
+SYNC-R65 Trust Root (신뢰 루트):
+`009d1825ea0e54314b5c458e1148e44b9b3e9ea52aeec63edea3a0e4e2c23740`
 
-C2 logical:
-`0ddeaa58d43189f7805d014382f0b0b93e06a139673115d47ed980bfc4ff555b`
-
-## B2 CUSTODY NOTE
-Local retained B2 copies for SYNC-R60..R63 were discovered truncated and are not valid current custody bytes.
-
-SYNC-R64 B2 was rebuilt from the last locally byte-verified corrected SYNC-R59 B2 payload plus an explicit supersession notice.
-
-Current B2:
-`62c30bb4e28945deafc77fc18c888dc5e97527fe2f00a7536e250dce370fedba`
-
-No guessed byte repair was performed.
+C2 logical SHA256:
+`bfc6af39a85118f22dc3c1e64258cfd234b0b4c994fc7787a332055fee409de0`
 
 ## PRODUCTION BOUNDARY
 Production remains:
 `ENG:R47 / LEGACY_R53`
 
-R66 qualification does not constitute Production promotion.
+R67 qualification does not constitute Production promotion.
 
 ## NEXT
-R67 is **NOT STARTED / NOT PREREGISTERED**.
-Target selection remains pending from the R61 causal map.
+Next Research (다음 연구):
+`NOT_STARTED__TARGET_SELECTION_PENDING`
+
+Remaining supported/pending causal targets:
+- F04 Semantic Repetition Validator Gap (의미 반복 검증기 결함)
+- F06 Scene Necessity (장면 필요성)
+- F08 Provider Context (제공자 문맥)
+- F02/F05 unresolved (미해결)
