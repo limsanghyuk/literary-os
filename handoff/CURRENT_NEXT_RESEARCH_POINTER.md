@@ -2,27 +2,30 @@
 Last updated: 2026-09-21
 
 ## CURRENT
-- Physical Authority: SYNC-R67
-- Active Qualified Candidate: R69/R68/R67/R66 lineage
-- R70 Stage A: PASS
-- R70 Stage B R1: VALIDITY HOLD
+- Physical Authority: **SYNC-R67**
+- Active Qualified Candidate: **R69/R68/R67/R66 lineage**
+- R70: **ACTIVE**
+
+## R70 STATUS
+Stage B R1:
+`VALIDITY_HOLD__NO_QUALITY_VERDICT`
+
+Stage B R2:
+`READY_FOR_CODEX_LIVE_EXECUTION__OUTPUTS_0`
 
 Canonical handoff:
-handoff/20260921/START_HERE_R70_STAGE_B_R1_VALIDITY_HOLD_R1.md
+`handoff/20260921/R70_STAGE_B_R2_READY_LIVE_EXECUTION_HANDOFF_R1.md`
 
-Canonical result:
-research/interventions/20260921/R70_STAGE_B_LIVE_PROVIDER_RESULT_R1_VALIDITY_HOLD.md
+R2 Prereg:
+`research/interventions/20260921/R70_STAGE_B_R2_EXIT_STATE_CONTRACT_REPAIR_PREREG_R1.md`
 
-## NEXT TARGET
-EXIT_STATE_MACHINE_CONTRACT_BOUNDARY_REPAIR
+R2 Implementation Freeze:
+`research/interventions/20260921/R70_STAGE_B_R2_EXIT_STATE_CONTRACT_REPAIR_IMPLEMENTATION_FREEZE_R1.md`
 
-Before any new output:
-- preregister the narrow repair;
-- require exact literal handling for machine contract exit_state;
-- keep screenplay prose non-repetition guidance separate from machine fields;
-- apply the same repaired contract to both experimental arms;
-- freeze new source and request hashes;
-- use only fresh paired outputs.
+R2 Fresh Input/Execution Seal:
+`research/interventions/20260921/R70_STAGE_B_R2_FRESH_INPUT_EXECUTION_SEAL_R1.md`
 
-Do not count the invalid R1 pairs as literary losses.
-Do not begin F02, F05, or integrated Level-3 qualification yet.
+## NEXT OPERATION
+`CODEX LIVE R2 -> POSTRUN VALIDITY AUDIT -> IF 12/12 VALID: J01/J02/J03 BLIND -> MAPPING REVEAL -> UNCHANGED QUALITY GATE`
+
+Do not start R71.
