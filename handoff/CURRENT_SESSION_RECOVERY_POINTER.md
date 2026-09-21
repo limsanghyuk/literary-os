@@ -2,47 +2,43 @@
 Last updated: 2026-09-21
 
 ## STATUS
-SYNC_R67_RETAINED__R70_STAGE_A_PASS__R70_STAGE_B_R1_VALIDITY_HOLD__EXIT_STATE_REPAIR_NEXT
+`SYNC_R67_RETAINED__C_PART_SLIM_REPACK__R70_STAGE_B_R1_VALIDITY_HOLD__R70_STAGE_B_R2_READY_LIVE_OUTPUTS_0`
 
-## AUTHORITY
-Physical Authority: SYNC-R67
-Active Qualified Candidate: R69 F06 / R68 F04 / R67 F07 / R66 F01 lineage
-Production: ENG:R47 / LEGACY_R53
+Physical Authority:
+**SYNC-R67**
 
-## PART C DELIVERY
-Use:
-handoff/20260921/SYNC_R67_C_PART_TRANSPORT_REPACK_R1.md
+Part C transport:
+`handoff/20260921/SYNC_R67_C_PART_TRANSPORT_REPACK_R1.md`
 
-C1 Slim Runtime Core:
-- 140372821 bytes
-- SHA256 44b5e65704da3567ef144133838ce8dda3338768637adf50e517af0c21dfcd80
+## R70 R1
+- 48 live calls
+- 0/12 valid pairs
+- EXIT_STATE_MISMATCH 48/48
+- no quality verdict
+- mapping not revealed
 
-C2-A:
-- SHA256 7a1361a3ac0ff68ba2c16a591ffb73d8d1a9d54842d79ae97e2b1712d12024de
+## R70 R2
+Frozen Runtime:
+`34476d35f365a27e7e8e773b05c2951c4febc72bde8104e29f68e1e6d754d31d`
 
-C2-B:
-- SHA256 184e32f269a2a919cacf277491808e5fed0f749cf085153709e0af49921a43ee
+Fresh Input:
+`2d16692cc970e3d54ce66b4dd318c83dcee08170fb2445739095f7750985c56e`
 
-## R70 STAGE B R1
-Canonical result:
-research/interventions/20260921/R70_STAGE_B_LIVE_PROVIDER_RESULT_R1_VALIDITY_HOLD.md
+Paired Payload:
+`bf0426e1c02c262a328c4691560048bcf737d7f4b3399ad1e0101b17a4e0ed76`
 
-Evidence ZIP SHA256:
-dd6d42033a0595e525eb0df5651eb5ef7d5c1a4140c1759c81f5739800c07120
+Hidden Mapping:
+`c3340b146c3901b4e652b2b947ae76eb9a846fcbaad21a2bd17dda6b0e9cec17`
 
-Observed result:
-- provider calls 48
-- HTTP 200: 48
-- Provider OK: 48
-- valid arms: 0
-- valid pairs: 0
-- invalid pairs: 12
-- EXIT_STATE_MISMATCH: 48
-- literary judges: 0
+Execution Seal:
+`0c8a9781fbf27a78e2a583f45d2d23afb244991cbd052872ac3759fb0b6735b7`
+
+Status:
+`READY_FOR_CODEX_LIVE_EXECUTION__OUTPUTS_0`
 
 ## RESUME
-1. Read handoff/20260921/START_HERE_R70_STAGE_B_R1_VALIDITY_HOLD_R1.md
-2. Preserve R1 immutably.
-3. Preregister narrow exit-state machine-contract boundary repair.
-4. Freeze the repaired source/request contract before any new output.
-5. Do not start broader F02/F05/Level-3 integrated work yet.
+Read:
+`handoff/20260921/R70_STAGE_B_R2_READY_LIVE_EXECUTION_HANDOFF_R1.md`
+
+Do not regenerate R2 inputs, mapping, runtime, prompts or requests.
+Do not start R71.
