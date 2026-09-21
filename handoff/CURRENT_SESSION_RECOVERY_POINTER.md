@@ -63,3 +63,19 @@ For C1/C2-A download recovery, read:
 - Original SYNC-R67 C1 retained file is unavailable in the current file surface.
 - Use C1 Recovery R1 with its Recovery Trust Root; do not compare it against the historical original C1 SHA.
 - This does not change Physical Authority or R70 research state.
+
+
+## PART C TRANSPORT REPACK (파트 C 전송 재패키지)
+Canonical:
+`handoff/20260921/SYNC_R67_C_PART_TRANSPORT_REPACK_R1.md`
+
+Commit:
+`6fb2368105a3bfc1a9faf0c965051569f5219719`
+
+Use this Part C delivery layout for SYNC-R67:
+- C1 Slim Runtime Core (경량 런타임 코어): 140372821 bytes / SHA256 `44b5e65704da3567ef144133838ce8dda3338768637adf50e517af0c21dfcd80`
+- C2-A: exact original SYNC-R67 bytes / SHA256 `7a1361a3ac0ff68ba2c16a591ffb73d8d1a9d54842d79ae97e2b1712d12024de`
+- C2-B: exact original SYNC-R67 bytes / SHA256 `184e32f269a2a919cacf277491808e5fed0f749cf085153709e0af49921a43ee`
+- C2 logical SHA256 remains `af84d97d59b9383caf5b53e3467e9479c8a3ce226b9e336b750e4b666f873b02`
+
+This is a transport/package-layout correction only. Physical Authority remains SYNC-R67 and R70 remains Stage B live-provider pending.
