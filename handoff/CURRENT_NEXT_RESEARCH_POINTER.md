@@ -2,36 +2,27 @@
 Last updated: 2026-09-21
 
 ## CURRENT
-- Physical Authority (물리 권위): **SYNC-R67**
-- Active Qualified Candidate (활성 자격 후보): **R69 F06 / R68 F04 / R67 F07 / R66 F01 lineage**
-- R70: **ACTIVE**
-
-## R70 STATUS
-`STAGE_A_PASS__STAGE_B_WAITING_LIVE_PROVIDER_EXECUTION`
+- Physical Authority: SYNC-R67
+- Active Qualified Candidate: R69/R68/R67/R66 lineage
+- R70 Stage A: PASS
+- R70 Stage B R1: VALIDITY HOLD
 
 Canonical handoff:
-`handoff/20260921/R70_STAGE_B_PENDING_LIVE_PROVIDER_HANDOFF_R1.md`
+handoff/20260921/START_HERE_R70_STAGE_B_R1_VALIDITY_HOLD_R1.md
 
-Stage A result:
-`research/interventions/20260921/R70_F08_STAGE_A_RESULT_R1.md`
+Canonical result:
+research/interventions/20260921/R70_STAGE_B_LIVE_PROVIDER_RESULT_R1_VALIDITY_HOLD.md
 
-Stage B protocol:
-`research/interventions/20260921/R70_STAGE_B_LIVE_EXECUTION_PROTOCOL_R1.md`
+## NEXT TARGET
+EXIT_STATE_MACHINE_CONTRACT_BOUNDARY_REPAIR
 
-Frozen Treatment Runtime SHA256:
-`1e4ca6fd7e60ce9e70507dbb7deb90a2438be6ca62a709222d00ff3b8db13182`
+Before any new output:
+- preregister the narrow repair;
+- require exact literal handling for machine contract exit_state;
+- keep screenplay prose non-repetition guidance separate from machine fields;
+- apply the same repaired contract to both experimental arms;
+- freeze new source and request hashes;
+- use only fresh paired outputs.
 
-Stage B input SHA256:
-`3bf7b1a20317b20f02e45ae70fe59863c8362d9d582bbf84de0d91e643b6017e`
-
-Paired payload SHA256:
-`8ad241820986dc383961da47df36d7f19ef31f80a7ab403febdceabb7bc6a169`
-
-Mapping SHA256:
-`058cff81f62666d32b58cec9d5cf2181552592074e2f48f6bc84f2ec9949849d`
-
-## NEXT OPERATION
-`LIVE_PROVIDER_EXECUTION_SEAL -> 24 PAIRED CALLS -> VALIDITY AUDIT -> OUTPUT SEAL -> J01/J02/J03 BLIND -> MAPPING REVEAL -> FROZEN GATE`
-
-Do not start R71.
-Do not tune R70 frozen context code, inputs, payloads or mapping.
+Do not count the invalid R1 pairs as literary losses.
+Do not begin F02, F05, or integrated Level-3 qualification yet.
