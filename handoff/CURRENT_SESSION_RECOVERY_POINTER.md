@@ -2,13 +2,35 @@
 Last updated: 2026-09-21
 
 ## STATUS
-`SYNC_R67_RETAINED__R70_STAGE_A_PASS__STAGE_B_FROZEN_AND_WAITING_LIVE_PROVIDER`
+`SYNC_R67_RETAINED__C1_DELIVERY_RECOVERY_R1__R70_STAGE_A_PASS__STAGE_B_FROZEN_AND_WAITING_LIVE_PROVIDER`
 
 Physical Authority (물리 권위):
 **SYNC-R67**
 
-Trust Root:
+Historical Trust Root:
 `0c172e029b8c03d2cc18c5d1ac2da2fba9b348a6f0253b9335e8cdd4a8b527db`
+
+## DELIVERY RECOVERY
+Canonical recovery note:
+`handoff/20260921/SYNC_R67_C1_DELIVERY_RECOVERY_R1.md`
+
+C2-A:
+- exact original bytes
+- SHA256: `7a1361a3ac0ff68ba2c16a591ffb73d8d1a9d54842d79ae97e2b1712d12024de`
+
+C1 Recovery R1:
+- bytes: `366837474`
+- SHA256: `9a09e970f4285473dada97c02340bfdaea35ea01bfe220d225c07f33ebf01056`
+- ZIP CRC: PASS
+- active R69 runtime: exact
+- R68 qualified parent runtime: exact
+- NOT byte-identical to historical C1
+
+Recovery Trust Root SHA256:
+`41e69f4fc14de4e153c6b3a5c78ab49a121b42607cce53f7743b553f0458e4fc`
+
+Recovery Audit Receipt SHA256:
+`8ef4a85533022ef9278011acca27a16740847809d422473747c9aadc9e542e48`
 
 ## R70
 Frozen Treatment Runtime:
@@ -26,8 +48,8 @@ Stage B:
 - outputs 0
 
 ## RESUME
-Use:
-`handoff/20260921/R70_STAGE_B_PENDING_LIVE_PROVIDER_HANDOFF_R1.md`
-
-Do not regenerate R70 inputs or mapping.
-Do not start R71.
+1. Read `handoff/20260921/R70_STAGE_B_PENDING_LIVE_PROVIDER_HANDOFF_R1.md`
+2. Read `handoff/20260921/SYNC_R67_C1_DELIVERY_RECOVERY_R1.md`
+3. Use Recovery R1 C1 for delivery/recovery.
+4. Do not regenerate R70 inputs or mapping.
+5. Do not start R71.
