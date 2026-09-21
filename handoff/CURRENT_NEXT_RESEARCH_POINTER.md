@@ -2,32 +2,36 @@
 Last updated: 2026-09-21
 
 ## CURRENT
-- Physical Authority: **SYNC-R67**
+- Physical Authority: **SYNC-R68**
 - Active Qualified Candidate: **R69/R68/R67/R66 lineage**
-- R70: **ACTIVE**
+- R70: **ACTIVE RESEARCH / REAL-PROVIDER HOLD**
 
-## R70 STATUS
-Stage A:
-`PASS`
+## R70
+`STAGE_A_PASS__STAGE_B_R1_VALIDITY_HOLD__STAGE_B_R2_PREAPI_VIRTUAL_QUALIFIED__REAL_PROVIDER_HOLD__LIVE_R2_OUTPUTS_0`
 
-Stage B R1:
-`VALIDITY_HOLD__NO_QUALITY_VERDICT`
+When real API/Codex access is restored:
+use only the PREAPI_VALIDATED R2 bundle and resume from the frozen live-provider boundary.
 
-Stage B R2:
-`PREAPI_VIRTUAL_QUALIFIED__REAL_PROVIDER_PENDING__LIVE_OUTPUTS_0`
+## NEXT API-INDEPENDENT RESEARCH
+`R71 — F02 Visible-Action Causal Realization`
 
-Canonical handoff:
-`handoff/20260921/R70_STAGE_B_R2_PREAPI_VIRTUAL_QUALIFIED_HANDOFF_R1.md`
+R71 status:
+`PLANNED__NOT_STARTED`
 
-Pre-API result:
-`research/interventions/20260921/R70_STAGE_B_R2_PREAPI_VIRTUAL_QUALIFICATION_RESULT_R1.md`
+Before any R71 output, preregister:
+- hypothesis / purpose / research question;
+- source cutoff;
+- Control/Treatment;
+- visible-carrier ontology;
+- deterministic gates;
+- fresh-case rule;
+- architecture blind rubric;
+- pass thresholds;
+- prohibited-change boundary.
 
-Execution-harness amendment:
-`research/interventions/20260921/R70_STAGE_B_R2_PREAPI_EXECUTION_HARNESS_AMENDMENT_PREREG_R1.md`
+R72 candidate follows only after R71:
+`F05 Adaptive Distribution / Count Pressure`
 
-## NEXT OPERATION
-When live provider access is available:
-`PREAPI_VALIDATED R2 BUNDLE -> REAL PROVIDER EXECUTION -> VALIDITY AUDIT -> IF 12/12 VALID: J01/J02/J03 BLIND -> MAPPING REVEAL -> UNCHANGED QUALITY GATE`
-
-Do not start R71.
-Do not change R2 runtime, inputs, payloads or mapping.
+Do not merge R71 into R70.
+Do not start R72 before R71 closes.
+Do not claim Level-3 restoration before integrated requalification.
