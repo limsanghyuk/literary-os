@@ -53,3 +53,13 @@ Stage B:
 3. Use Recovery R1 C1 for delivery/recovery.
 4. Do not regenerate R70 inputs or mapping.
 5. Do not start R71.
+
+
+## DELIVERY RECOVERY NOTE (전달 복구 주의)
+For C1/C2-A download recovery, read:
+`handoff/20260921/SYNC_R67_C1_C2A_REDELIVERY_RECOVERY_R1.md`
+
+- C2-A historical original bytes remain valid and byte-identical.
+- Original SYNC-R67 C1 retained file is unavailable in the current file surface.
+- Use C1 Recovery R1 with its Recovery Trust Root; do not compare it against the historical original C1 SHA.
+- This does not change Physical Authority or R70 research state.
