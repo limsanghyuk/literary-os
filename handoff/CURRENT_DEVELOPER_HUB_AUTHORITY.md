@@ -2,15 +2,15 @@
 Last updated: 2026-09-22
 
 ## CANONICAL READ FIRST
-1. `research/interventions/20260922/SYNC_R69_POST_R72_PREFLIGHT_PHYSICALIZATION_RECEIPT_R1.md`
-2. `research/interventions/20260922/R72_A_SYNTHETIC_MECHANISM_PREFLIGHT_R2_RESULT.md`
-3. `research/interventions/20260922/R72_F05_ADAPTIVE_DISTRIBUTION_COUNT_PRESSURE_PREREGISTRATION_R2.md`
+1. `research/interventions/20260922/SYNC_R70_POST_R72_CLOSURE_PHYSICALIZATION_RECEIPT_R1.md`
+2. `research/interventions/20260922/R72_F05_ADAPTIVE_DISTRIBUTION_FINAL_CLOSURE_R1.md`
+3. `research/interventions/20260922/R72_F05_ADAPTIVE_DISTRIBUTION_COUNT_PRESSURE_PREREGISTRATION_R5.md`
 4. `research/interventions/20260922/R71_F02_VISIBLE_ACTION_CAUSAL_REALIZATION_CLOSED_PASS_R1.md`
 5. `research/interventions/20260922/R70_STAGE_B_R2_LIVE_VALIDITY_PASS_MAPPING_CUSTODY_FAILURE_R1.md`
 
 ## CURRENT AUTHORITY
-- Physical Authority: **SYNC-R69**
-- Parent Physical Authority: **SYNC-R68**
+- Physical Authority: **SYNC-R70**
+- Parent Physical Authority: **SYNC-R69**
 - Active Qualified Candidate: **R69/R68/R67/R66 lineage**
 - Active Runtime: exact R69 — SHA256 `3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1`
 - Production Engine: **ENG:R47 / LEGACY_R53**
@@ -30,18 +30,32 @@ Last updated: 2026-09-22
 Blind aggregate: Treatment 12W / 0T / 0L; critical violations 0.
 
 ## R72
-`R72_R2_PREREGISTERED__R72_A_PREFLIGHT_PASS_METROLOGY_ONLY__PRIMARY_NOT_STARTED`
+`CLOSED_FAIL__F05_ADAPTIVE_DISTRIBUTION_NOT_QUALIFIED__HIGH_PRESSURE_EFFECT_GATE_FAILED`
 
-R72-R2 preregistration SHA256:
-`a38d9e6230d6dc3f7499dcd2d99d49512de215cff682c3d0f6eb86d43adfdf41`
+Valid primary revision: R5.
+- 24/24 valid Control/Treatment pairs
+- LOW-pressure economy: 8/8 improved — PASS
+- MEDIUM-pressure noninferiority: 8/8 — PASS
+- HIGH-pressure effect: 0/8 improved, required >=6/8 — FAIL
+- critical violations: 0
+- blind stage: NOT RUN because deterministic gate G9 failed
+- R72 must not be reinterpreted as PASS post hoc.
 
-R72-A result SHA256:
-`02219738f956bc58e3e84f865832e21c32bcd0ada87bbfd67c90da39c55d98aa`
+R72 R5 scientific result SHA256:
+`a9854210bf21bcc50915cd953abaca6742b150917cc91ba2f5d117ec80292144`
+
+R72 final closure receipt SHA256:
+`a57b6436e6be983109cbb6a0c20d17b3205f902ec004e36733dda3b382e5f5c1`
 
 ## PHYSICAL SEAL
-- 9-package manifest SHA256: `07c25f892b51ce9f9e6e5ae28ca259da749d594477ea2025877b1e8137889919`
-- Trust Root SHA256: `85a906f0b0a9b199aced9dfb06a315712a114ecb3365717bc1918c9860084675`
-- C2 logical SHA256: `a953c719cf40357342e942f4b257dd97409af65817e1cd8921f22cb289b3776c`
+- 9-package manifest SHA256: `7f084a85172e0eee6b03e51e6f00cf2bea6b25c05ad6c40da84775d145b2390f`
+- Trust Root SHA256: `b5cebd0fd07589e0a7377cb4964719b357f83797a63a440d3e434becd45f5c94`
+- C2 logical SHA256: `cbf98ace924c9fcff775899bab52f5c1bf7ee94125245f7f29cb72d0780b765c`
 
 ## NEXT
-Materialize DB64 independently-verified source material, freeze 24 fresh primary cases (8 low / 8 medium / 8 high), seal the ledger, then run exact Control vs F05 Treatment. Synthetic preflight cases are not primary evidence.
+`R73 — F05 High-Pressure Ceiling / Effect-Target Diagnostic`
+
+Status:
+`PLANNED__NOT_STARTED__PREREGISTRATION_REQUIRED`
+
+R73 must use fresh preregistration and fresh cases. It may diagnose why exact R69 already showed zero measured high-pressure overload, but it must not retroactively change the R72 metric or verdict.
