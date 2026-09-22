@@ -1,0 +1,26 @@
+name: R74 Stage M Clean Qualification
+on:
+  pull_request:
+    paths:
+      - 'research/interventions/20260922/R74_STAGE_M_CLEAN_TRIGGER_R1.txt'
+      - 'research/interventions/20260922/r74_stage_m_clean_r1.py'
+      - 'research/interventions/20260922/r74_symmetric_semantic_measurement_bridge_r2.py'
+permissions:
+  contents: read
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run R74 Stage M clean qualification
+        run: python research/interventions/20260922/r74_stage_m_clean_r1.py
+      - name: Upload result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r74-stage-m-clean-result
+          path: r74_stage_m_clean_result.json
+          if-no-files-found: error
