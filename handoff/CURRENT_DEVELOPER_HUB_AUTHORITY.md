@@ -1,24 +1,19 @@
 # CURRENT DEVELOPER HUB AUTHORITY
 Last updated: 2026-09-22
 
-## CURRENT AUTHORITY
-- Physical Authority: **SYNC-R72**
-- Research Overlay: **POST-SYNC-R72 / R74 STAGE-M PASS / FREEZE HARNESS PASS / PRIMARY CUSTODY HOLD / RUNTIME SAFETY HOLD**
-- Active Qualified Candidate: **R69/R68/R67/R66 lineage**
-- Active Runtime: exact R69 — SHA256 `3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1`
-- Production Engine: **ENG:R47 / LEGACY_R53**
-- Runtime DB: **DB59 frozen**
-- Research DB: **DB64 R127 research-only**
-- Operational Level-3: **SUSPENDED / REQUALIFICATION REQUIRED**
-- Formal R140: **NOT STARTED**
+## START HERE
+`handoff/20260922/START_HERE_SYNC_R72_R74_STAGE_M_NEW_SESSION_HANDOFF_R1.md`
 
-## READ FIRST
-1. `research/interventions/20260922/R74_RUNTIME_PHYSICAL_PACKAGE_SAFETY_PROTOCOL_R1.md`
-2. `research/interventions/20260922/R74_CURRENT_EXECUTION_HOLD_RESUME_BOUNDARY_R1.md`
-3. `research/interventions/20260922/R74_PRIMARY_EXCLUSION_CUSTODY_AUDIT_R1.md`
-4. `research/interventions/20260922/R74_PRIMARY_FREEZE_HARNESS_QUALIFICATION_R1.md`
-5. `research/interventions/20260922/R74_STAGE_M_QUALIFICATION_RESULT_R1.md`
-6. `research/interventions/20260922/R74_CANONICAL_PREREGISTRATION_AUTHORITY_CLARIFICATION_R1.md`
+## CURRENT AUTHORITY
+- Physical Authority(물리 권위): **SYNC-R72**
+- Research Overlay(연구 오버레이): **POST-SYNC-R72 / R74 STAGE-M PASS / FREEZE HARNESS PASS / PRIMARY CUSTODY HOLD / RUNTIME SAFETY HOLD**
+- Active Qualified Candidate(활성 자격 후보): **R69/R68/R67/R66 lineage**
+- Active Runtime(활성 런타임): exact R69 — SHA256 `3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1`
+- Production Engine(운영 엔진): **ENG:R47 / LEGACY_R53**
+- Runtime DB(런타임 데이터베이스): **DB59 frozen**
+- Research DB(연구 데이터베이스): **DB64 R127 research-only**
+- Operational Level-3(운영 레벨3): **SUSPENDED / REQUALIFICATION REQUIRED**
+- Formal R140: **NOT STARTED**
 
 ## RESEARCH STATUS
 - R70: Provider validity PASS / formal literary quality HOLD.
@@ -28,20 +23,20 @@ Last updated: 2026-09-22
 - R74: Stage M PASS; primary efficacy NOT STARTED; primary Control outputs 0; primary Treatment outputs 0.
 
 ## R74 QUALIFIED COMPONENTS
-### Symmetric Measurement Bridge
+### Symmetric Measurement Bridge(대칭 측정 브리지)
 - canonical preregistration SHA256:
   `8ae36a1a2c56b147bb76181b6b9f9a16e979977c3ec6d34fd74c0be7e61cf0dd`
 - shared contract SHA256:
   `f8bd7b9ad211d603861d47cd41986c3fc9242fc981b41c33f8e3c1bb5e988be1`
-- qualified bridge: R3
+- qualified bridge: **R3**
 - bridge SHA256:
   `a68f463177310d3857dd773811ba05400248e65436d686a81087184df1d4a6a7`
 - Stage M: M1-M7 all PASS
 - R68 F04 regression: 16/16 PASS
 - R69 F06 regression: 16/16 PASS
-- independent clean reexecution: PASS
+- independent clean GitHub Actions reexecution: PASS
 
-### Primary Freeze Harness
+### Primary Freeze Harness(본 실험 동결 하네스)
 - status: PASS / harness qualified
 - deterministic 24-case selection: PASS
 - >=12 works / max2-work constraints: PASS
@@ -67,4 +62,4 @@ Current protected physical state:
 No successor Physical Authority is declared.
 
 ## NEXT
-Healthy-runtime safety gate PASS -> verify SYNC-R72 9/9 -> inspect known R72 research paths in logical C2 -> recover exact R72 R2/R3/R4/R5 case IDs -> complete exclusion manifest -> run qualified R74 primary freeze harness -> seal 24 fully fresh cases -> paired exact-R69 Control vs unchanged-F05 Treatment -> symmetric R74 R3 scoring -> P1-P11 -> only after research closure create a NEW successor SYNC ID.
+healthy-runtime safety gate -> SYNC-R72 9/9 verification -> known-path R72 custody recovery -> complete exclusion manifest -> qualified R74 primary freeze harness -> seal 24 fully fresh cases -> paired exact-R69 Control vs unchanged-F05 Treatment -> symmetric R74 R3 scoring -> P1-P11 -> close R74 -> only then new unique successor SYNC physicalization.
