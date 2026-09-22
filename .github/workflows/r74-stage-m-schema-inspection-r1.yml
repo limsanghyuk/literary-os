@@ -1,0 +1,18 @@
+name: R74 Stage M Frozen Case Schema Inspection R1
+on:
+  push:
+    branches: [main]
+jobs:
+  inspect:
+    if: contains(github.event.head_commit.message, 'Run R74 Stage M schema inspection')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect frozen R68/R69 case schemas
+        run: |
+          set -euo pipefail
+          python research/interventions/20260922/r74_stage_m_schema_inspection.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r74-stage-m-schema-inspection-r1
+          path: /tmp/R74_STAGE_M_FROZEN_CASE_SCHEMA_INSPECTION_R1.json
