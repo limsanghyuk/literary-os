@@ -1,0 +1,82 @@
+{
+  "schema": "R73_F05_HIGH_PRESSURE_CEILING_EFFECT_TARGET_DIAGNOSTIC_PREREGISTRATION_R1",
+  "date": "2026-09-22",
+  "research_id": "R73",
+  "family": "F05",
+  "title": "High-Pressure Ceiling / Effect-Target Diagnostic",
+  "status": "PREREGISTERED__OUTPUTS_0__CONTROL_CENSUS_0__TREATMENT_OUTPUTS_0",
+  "authority": {
+    "physical_authority": "SYNC-R71",
+    "active_qualified_candidate": "R69/R68/R67/R66 lineage",
+    "active_runtime": "exact R69",
+    "active_runtime_sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+    "production": "ENG:R47 / LEGACY_R53",
+    "runtime_db": "DB59 frozen",
+    "research_db": "DB64 R127 research-only",
+    "r72": "CLOSED_FAIL__F05_ADAPTIVE_DISTRIBUTION_NOT_QUALIFIED__HIGH_PRESSURE_EFFECT_GATE_FAILED",
+    "r72_result_sha256": "a9854210bf21bcc50915cd953abaca6742b150917cc91ba2f5d117ec80292144"
+  },
+  "purpose": "Determine whether R72 G9 failed because F05 has no high-pressure allocation value, or because the preregistered forced-compression/overload target had a ceiling/no-headroom and wrong-direction problem. Diagnose the effect target without changing the R72 verdict.",
+  "research_questions": [
+    "Among fresh high-pressure exact-R69 Control cases, how often is the old R72 G9 forced-compression/overload target greater than zero?",
+    "Among the same fresh high-pressure Controls, how often is there measurable economy/fragmentation headroom despite old-G9 headroom being zero?",
+    "On fresh high-pressure cases with preregistered Control-only economy headroom, does the unchanged F05 Treatment reduce economy/fragmentation violations while preserving all required causal work?"
+  ],
+  "hypotheses": {
+    "H1_ceiling_replication": "Old-G9 forced-compression/overload headroom is present in no more than 25% of fresh high-pressure exact-R69 Controls.",
+    "H2_alternative_headroom": "At least 50% of fresh high-pressure exact-R69 Controls have economy/fragmentation headroom (control_economy_violations >= 1).",
+    "H3_treatment_signal": "If Stage B is eligible, unchanged F05 Treatment reduces economy/fragmentation violations versus exact R69 in at least 18/24 fresh high-pressure headroom cases, with no critical safety loss.",
+    "H4_no_compression_regression": "Treatment is never worse than Control on the old forced-compression/overload count in any Stage-B case."
+  },
+  "source_and_fresh_case_rule": {
+    "source": "DB64 R127 independently verified consumer_ready_r53 corpus",
+    "source_cutoff": "Use only cutoff-safe planner_input, thick_sequence, authored_arc, and runtime_safe thread_state artifacts already available in DB64 R127.",
+    "exclude_works": "All 12 R71 primary works.",
+    "exclude_cases": "Every case used as a primary case in R72 R2, R3, R4, or R5.",
+    "runtime_input_validity": "Candidate case must successfully pass exact R69 compile_active_obligation_portfolio using the frozen DB64-derived explicit episode input. Only pass/fail is used before pressure stratification.",
+    "pressure_stratum": "Sort all fresh eligible cases by the unchanged R72 total-pressure ontology and split into equal tertiles; only the HIGH tertile enters R73 Stage A.",
+    "per_work_cap_stage_b": 2,
+    "distinct_work_min_stage_b": 12
+  },
+  "stage_a_control_only_census": {
+    "treatment_calls": 0,
+    "control": "Exact R69 adaptive_showrunner_ul16.compile_adaptive_architecture on every fresh HIGH case.",
+    "old_g9_headroom_definition": "control_forced_compression_overload_violations > 0, using the unchanged R72 bridge metric.",
+    "economy_headroom_definition": "control_economy_violations >= 1, where economy violations are unchanged R72 sum of allocation duplicate count + empty/unnecessary allocation scenes + F04 semantic repetition groups + F06 redundant_or_mergeable count.",
+    "stage_a_gates": {
+      "A1_ceiling_replication": "old-G9 headroom prevalence <= 25%",
+      "A2_economy_headroom": "economy-headroom prevalence >= 50%",
+      "A3_stage_b_availability": "at least 24 economy-headroom HIGH cases across at least 12 distinct works after all exclusions"
+    }
+  },
+  "stage_b_treatment_test": {
+    "eligibility": "Run only if A3 passes. Selection is from fresh HIGH cases with control_economy_violations >= 1.",
+    "selection": "Deterministically rank eligible cases by SHA256(preregistration_sha256|work|episode_no), enforce max 2 cases/work, select first 24, require >=12 works, then seal the ledger before any Treatment output.",
+    "control": "The already sealed exact-R69 Control result from Stage A; do not rerun or replace for scoring unless a documented infrastructure corruption is proven.",
+    "treatment": "Exact unchanged R72 F05 Adaptive Pressure Allocator R2; no allocator tuning, no threshold tuning, no non-F05 module changes.",
+    "gates": {
+      "B1_execution": "24/24 valid Control/Treatment pairs",
+      "B2_due_now_coverage": "100% Treatment required-atom coverage",
+      "B3_visible_carrier_coverage": "100% Treatment required visible-carrier coverage",
+      "B4_premature_deferred_resolution": "0",
+      "B5_critical_violations": "0",
+      "B6_economy_effect": "Treatment economy violations < Control in at least 18/24 cases",
+      "B7_economy_nonworsening": "Treatment economy violations <= Control in at least 23/24 cases",
+      "B8_old_g9_nonregression": "Treatment forced-compression/overload violations <= Control in 24/24 cases",
+      "B9_F04_F06_F07_R71_regression": "0 confirmed regressions"
+    },
+    "scene_count_rule": "Raw scene-count reduction or expansion is descriptive only and cannot by itself satisfy any efficacy gate. Fewer scenes are not automatically better."
+  },
+  "prohibited_changes": [
+    "Do not change R72 verdict, G9 definition, or thresholds.",
+    "Do not use any R72 primary case in R73.",
+    "Do not inspect R73 Treatment outputs before the Stage-B ledger is sealed.",
+    "Do not modify F01, F02, F04, F06, F07, retrieval, renderer, DB authority, or exact-R69 Control behavior.",
+    "Do not tune the F05 allocator in R73; R73 tests target/ceiling diagnosis with the unchanged allocator.",
+    "Do not promote Production, restore Level-3, or claim F05 qualification from R73 alone."
+  ],
+  "claim_boundary": "Diagnostic evidence at the planning/allocation layer only. R73 can establish whether R72's high-pressure metric had ceiling/direction mismatch and whether an unchanged F05 allocator has fresh high-pressure economy signal. It cannot retroactively pass R72, qualify F05 for Production, restore operational Level-3, or validate screenplay surface quality.",
+  "outputs_at_seal": 0,
+  "control_census_outputs_at_seal": 0,
+  "treatment_outputs_at_seal": 0
+}
