@@ -2,52 +2,52 @@
 Last updated: 2026-09-22
 
 ## CURRENT AUTHORITY
-- Physical Authority(물리 권위): **SYNC-R72**
-- Active Qualified Candidate(활성 자격 후보): **R69/R68/R67/R66 lineage**
-- Active Runtime(활성 런타임): exact R69 — SHA256 `3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1`
-- Production Engine(운영 엔진): **ENG:R47 / LEGACY_R53**
-- Runtime DB(런타임 DB): **DB59 frozen**
-- Research DB(연구 DB): **DB64 R127 research-only**
-- Operational Level-3(운영 레벨3): **SUSPENDED / REQUALIFICATION REQUIRED**
-- Formal R140(정식 R140): **NOT STARTED**
+- Physical Authority: **SYNC-R72**
+- Research Overlay: **POST-SYNC-R72 / R74 STAGE-M PASS / PRIMARY INPUT CUSTODY HOLD**
+- Active Qualified Candidate: **R69/R68/R67/R66 lineage**
+- Active Runtime: exact R69 — SHA256 `3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1`
+- Production Engine: **ENG:R47 / LEGACY_R53**
+- Runtime DB: **DB59 frozen**
+- Research DB: **DB64 R127 research-only**
+- Operational Level-3: **SUSPENDED / REQUALIFICATION REQUIRED**
+- Formal R140: **NOT STARTED**
 
-## RESEARCH
-- R70: Provider validity PASS / formal literary quality HOLD
-- R71: F02 CLOSED PASS
-- R72 Research: F05 CLOSED FAIL
-- R73: diagnostic PASS; Stage-B efficacy invalidated by metric non-comparability
-- R74: **Stage M PASS / Primary NOT STARTED**
+## CLOSED / CURRENT RESEARCH
+- R70: Provider validity PASS / formal literary quality HOLD.
+- R71: F02 CLOSED PASS.
+- R72 Research: F05 CLOSED FAIL.
+- R73: diagnostic PASS; Stage-B efficacy invalidated by metric non-comparability; F05 NOT QUALIFIED.
+- R74: **Stage M PASS; primary efficacy NOT STARTED; primary outputs 0.**
 
-## R74 STAGE M
-Final token:
-`R74_STAGE_M_PASS__M1_M7_ALL_PASS__R68_F04_16_16__R69_F06_16_16`
+## R74 CANONICAL SCIENTIFIC AUTHORITY
+Canonical preregistration:
+`research/interventions/20260922/R74_F05_SYMMETRIC_SEMANTIC_TRANSACTION_MEASUREMENT_BRIDGE_PREREG_R1.md`
+SHA256:
+`8ae36a1a2c56b147bb76181b6b9f9a16e979977c3ec6d34fd74c0be7e61cf0dd`
 
-Canonical:
-- `research/interventions/20260922/R74_STAGE_M_QUALIFICATION_RESULT_R1.md`
-- `research/interventions/20260922/R74_F05_SYMMETRIC_SEMANTIC_TRANSACTION_MEASUREMENT_BRIDGE_PREREG_R1.md`
-- `research/interventions/20260922/R74_SHARED_SYMMETRIC_SEMANTIC_REPRESENTATION_CONTRACT_R1.md`
-- `research/interventions/20260922/r74_symmetric_semantic_measurement_bridge_r3.py`
+Shared representation contract SHA256:
+`f8bd7b9ad211d603861d47cd41986c3fc9242fc981b41c33f8e3c1bb5e988be1`
 
-Qualified bridge R3 SHA256:
-`a68f463177310d3857dd773811ba05400248e65436d686a81087184df1d4a6a7`
+Canonical-prereg clarification:
+`research/interventions/20260922/R74_CANONICAL_PREREGISTRATION_AUTHORITY_CLARIFICATION_R1.md`
 
-Clean Actions run:
-- run ID `35736951547`
-- conclusion **success**
-- artifact digest `sha256:5e8807593307b9242e2c95c3b43f47c6c0462bf5b1ba4a8c87b63c55a5a91469`
+Qualified bridge:
+- implementation: R3
+- SHA256: `a68f463177310d3857dd773811ba05400248e65436d686a81087184df1d4a6a7`
+- Stage-M result: `PASS__M1_M7_ALL_PASS__R68_F04_16_OF_16__R69_F06_16_OF_16`
+- independent clean reexecution: PASS
 
-## R74 PRIMARY
+## PRIMARY HOLD
 `PRIMARY_INPUT_CUSTODY_PRESENT__CONTENT_ACCESS_BLOCKED__PRIMARY_OUTPUTS_0`
 
-DB64 raw custody exists, but current ChatGPT container/private-Python/visible-Jupyter runtime returns repeated `TransportTimeoutError` on minimal commands. GitHub Actions bypassed that runtime for repository-resident Stage-M data, but the DB64 conversation-file splits are not repository-resident and no byte/provenance-equivalent DB64 mirror is proven in GitHub.
+DB64 split custody remains present, but current ChatGPT local execution runtimes return TransportTimeoutError.
+GitHub Actions successfully bypassed that failure for repository-resident Stage-M data.
+The DB64 split uploads are not repository-resident and no verified equivalent mirror is available.
 
-Do NOT substitute `seqcard_ko` or the 17 R73 Treatment-naive cases for the fully fresh DB64 primary sample.
-
-Canonical hold:
-`research/interventions/20260922/R74_PRIMARY_INPUT_CUSTODY_HOLD_R1.md`
+Do not weaken freshness.
+Do not use the 17 R73 Control-only cases as the fully-fresh primary cohort.
 
 ## NEXT
-Resume R74 itself:
-DB64 content access recovery -> fully fresh 24-case freeze -> ledger SHA seal -> exact Control/Treatment paired execution -> symmetric R74 bridge scoring -> P1-P11 gates.
+Restore DB64 content access -> verify DB64 hashes -> enumerate frozen exclusions -> freeze exactly 24 fully fresh cases (>=12 works, <=2/work) -> seal ledger -> exact R69 Control vs unchanged F05 Treatment -> score both arms through qualified R74 R3 bridge -> apply P1-P11.
 
-No F05 qualification, Production promotion, DB authority change, Level-3 restoration, or new SYNC snapshot is claimed from Stage M alone.
+Physical Authority remains SYNC-R72 until an actual successor 5-Part / 9-Package reseal is completed.
