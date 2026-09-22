@@ -1,0 +1,3 @@
+R74 Stage M schema probe trigger
+Date: 2026-09-22
+Scientific status: schema probe only; not Stage M qualification.
