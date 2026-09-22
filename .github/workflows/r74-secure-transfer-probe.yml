@@ -1,0 +1,24 @@
+name: R74 Secure Transfer Probe
+on:
+  pull_request:
+    paths:
+      - 'research/interventions/20260922/R74_SECURE_TRANSFER_TRIGGER.txt'
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Secure transfer probe
+        run: python research/interventions/20260922/r74_secure_transfer_probe.py
+      - name: Upload transfer result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r74-secure-transfer-probe-result
+          path: r74_secure_transfer_probe_result.json
+          if-no-files-found: error
