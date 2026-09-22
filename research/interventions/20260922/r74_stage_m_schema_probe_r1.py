@@ -91,6 +91,23 @@ def main():
       "r68_source_sha256":hashlib.sha256(R68.read_bytes()).hexdigest(),
       "r69_source_sha256":hashlib.sha256(R69.read_bytes()).hexdigest(),
     }
+
+    missing=[]
+    for exp,data in (("R68",r68),("R69",r69)):
+        for case in data["cases"]:
+            for i,scene in enumerate(case["scene_graph"]["scenes"]):
+                ids=scene.get("transaction_obligation_ids")
+                if not ids:
+                    missing.append({
+                      "experiment":exp,"case_id":case["case_id"],"label":case.get("label"),
+                      "scene_index":i,"scene":scene,
+                      "portfolio_obligation_ids":[o.get("id") for o in case["portfolio"].get("obligations",[])],
+                      "due_ids":case["portfolio"].get("due_ids",[]),
+                      "defer_ids":case["portfolio"].get("defer_ids",[]),
+                      "blocked_ids":case["portfolio"].get("blocked_ids",[]),
+                    })
+    result["missing_transaction_obligation_ids"]=missing
+
     pathlib.Path("r74_stage_m_probe_result.json").write_text(json.dumps(result,ensure_ascii=False,indent=2))
     print(json.dumps(result,ensure_ascii=False,indent=2))
     if not all([m1,m2,m3,m6,m7]):
