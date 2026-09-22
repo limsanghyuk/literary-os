@@ -2,31 +2,37 @@
 Last updated: 2026-09-22
 
 ## CURRENT
-- Physical Authority: **SYNC-R69**
+- Physical Authority: **SYNC-R71**
 - Active Qualified Candidate: **R69/R68/R67/R66 lineage**
 - Production: **ENG:R47 / LEGACY_R53**
 
 ## R70
-`LIVE_VALIDITY_PASS_12_12__FORMAL_QUALITY_HOLD_MAPPING_CUSTODY_FAILURE`
+`LIVE_PROVIDER_VALIDITY_PASS__FORMAL_LITERARY_QUALITY_HOLD_MAPPING_CUSTODY_FAILURE`
 
 ## R71
 `CLOSED_PASS__F02_VISIBLE_ACTION_CAUSAL_REALIZATION_QUALIFIED_AT_PLANNING_SCENE_CONTRACT_LAYER`
 
-## ACTIVE RESEARCH
-`R72 — F05 Adaptive Distribution / Count Pressure`
+## R72
+`CLOSED_FAIL__F05_ADAPTIVE_DISTRIBUTION_NOT_QUALIFIED__HIGH_PRESSURE_EFFECT_GATE_FAILED`
+
+- deterministic G9 HIGH-pressure improvement: 0/8
+- required: >=6/8
+- LOW economy: PASS 8/8
+- MEDIUM noninferiority: PASS 8/8
+- critical violations: 0
+- blind stage: NOT RUN
+
+## NEXT RESEARCH
+`R73 — F05 High-Pressure Ceiling / Effect-Target Diagnostic`
 
 Status:
-`R72_R2_PREREGISTERED__R72_A_PREFLIGHT_PASS_METROLOGY_ONLY__PRIMARY_NOT_STARTED`
+`PLANNED__NOT_STARTED__FRESH_PREREGISTRATION_REQUIRED`
 
-## NEXT EXECUTION BOUNDARY
-1. Materialize DB64 R127 independently-verified source material.
-2. Apply frozen exclusions.
-3. Freeze 24 fresh primary cases: 8 low / 8 medium / 8 high; at least 12 works.
-4. Seal case ledger before any Treatment scientific output.
-5. Execute exact Control vs F05 Treatment.
-6. Apply frozen deterministic gates.
-7. Only after deterministic PASS, prepare blind evaluation.
+## REQUIRED NEXT BOUNDARY
+1. Freeze a fresh R73 hypothesis and effect target before outputs.
+2. Define HIGH-pressure eligibility so the Control side has measurable headroom.
+3. Use fresh cases not used in R72 primary.
+4. Preserve R72 as a negative result; do not rescore or change its G9.
+5. Separate diagnostic evidence from promotion / Level-3 claims.
 
-Do not alter thresholds after Treatment output.
-Do not use 45–50 scenes as a hard quota.
-Do not claim Level-3 restoration from R72 alone.
+Do not start generation before R73 preregistration is sealed.
