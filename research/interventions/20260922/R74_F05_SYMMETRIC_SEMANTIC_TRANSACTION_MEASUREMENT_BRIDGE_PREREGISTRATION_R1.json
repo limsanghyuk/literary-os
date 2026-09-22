@@ -1,0 +1,121 @@
+{
+  "schema": "R74_F05_SYMMETRIC_SEMANTIC_TRANSACTION_MEASUREMENT_BRIDGE_PREREGISTRATION_R1",
+  "date": "2026-09-22",
+  "research_id": "R74",
+  "family": "F05",
+  "title": "Symmetric Semantic-Transaction Measurement Bridge",
+  "status": "PREREGISTERED__OUTPUTS_0__BRIDGE_OUTPUTS_0__PAIRED_OUTPUTS_0",
+  "authority": {
+    "physical_authority": "SYNC-R72",
+    "active_qualified_candidate": "R69/R68/R67/R66 lineage",
+    "active_runtime": "exact R69",
+    "active_runtime_sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+    "production": "ENG:R47 / LEGACY_R53",
+    "runtime_db": "DB59 frozen",
+    "research_db": "DB64 R127 research-only",
+    "r72": "CLOSED_FAIL__F05_ADAPTIVE_DISTRIBUTION_NOT_QUALIFIED__HIGH_PRESSURE_EFFECT_GATE_FAILED",
+    "r73": "CLOSED_DIAGNOSTIC_PASS__STAGE_B_EFFICACY_INVALIDATED_METRIC_NONCOMPARABILITY__F05_NOT_QUALIFIED"
+  },
+  "purpose": "Close the R73 asymmetric-measurement defect by realizing Control and Treatment into the same scene-level semantic transaction and protected-contribution representation, then applying the exact frozen R68 F04 and R69 F06 rules symmetrically.",
+  "research_questions": [
+    "Can one deterministic bridge map both exact-R69 Control scenes and unchanged-F05 Treatment scenes into the same R68 F04 semantic-transaction schema without arm-specific fields or scoring logic?",
+    "Can the same bridged scene graphs be scored by the exact R69 F06 protected-contribution removal/merge rules on both arms?",
+    "On all 17 R73-Stage-A HIGH cases that never received R73 Treatment, does unchanged F05 reduce F04 semantic repetition without worsening F06 scene necessity or required causal coverage?"
+  ],
+  "exact_control": "Exact R69 adaptive_showrunner_ul16 output on the frozen case input, rerun only to recover full scene-level structure; no Control mutation.",
+  "exact_treatment": "Exact unchanged R72 F05 Adaptive Pressure Allocator R2 SHA256 9aa36906be260b3ae734340e0d9be951692a18088bc1a40ae5c829e166088c0f.",
+  "shared_bridge": {
+    "arm_blind_rule": "The bridge receives only scene graph + obligation/atom metadata; no Control/Treatment flag may affect projection or validation.",
+    "f04_signature_fields": [
+      "transaction_stage",
+      "transaction_kind_role",
+      "causal_role_profile",
+      "state_delta_role_profile",
+      "resolution_role"
+    ],
+    "f04_exclusions": [
+      "obligation_id",
+      "character/entity names",
+      "group names",
+      "event/payoff IDs",
+      "numbers",
+      "locations",
+      "props",
+      "literal statement text",
+      "literal concrete action text"
+    ],
+    "f04_rule": "For non-RESOLVE scenes, same normalized five-field signature >=3 occurrences in one episode graph is SEMANTIC_TRANSACTION_REPEAT_GE3. One/two occurrences allowed; RESOLVE excluded.",
+    "f06_protected_contributions": [
+      "N1 unique RESOLVE_OBLIGATION",
+      "N2 unique DEFERRED_PRESSURE",
+      "N3 supported factual information/relationship/social/physical/payoff state delta",
+      "N4 unique ADVANCE:<obligation_id>:<semantic_transaction_signature>",
+      "N5 dependency-aware CAUSAL_BRIDGE"
+    ],
+    "f06_rule": "NECESSARY_SEPARATE_SCENE iff removal causes protected loss and no lossless adjacent merge exists; otherwise REDUNDANT_OR_MERGEABLE_SCENE. Adjacent merge requires same sequence, same obligation-id set, compatible deferred/delta roles, and no two distinct transaction stages in one merged scene.",
+    "symmetry_requirement": "Exact same bridge code, exact same F04 code, exact same F06 code, exact same thresholds for both arms."
+  },
+  "sample_rule": {
+    "sample_size": 17,
+    "cases": [
+      "싸인__EP18",
+      "싸인__EP20",
+      "싸인__EP19",
+      "연애시대__EP05",
+      "오나의귀신님__EP01",
+      "싸인__EP02",
+      "드림__EP01",
+      "연애시대__EP07",
+      "오나의귀신님__EP16",
+      "그저바라보다가__EP01",
+      "싸인__EP13",
+      "연애시대__EP08",
+      "연애시대__EP01",
+      "그대웃어요__EP01",
+      "대물__EP01",
+      "내이름은김삼순__EP10",
+      "구르미그린달빛__EP02"
+    ],
+    "rationale": "Use every R73 Stage-A HIGH case that was not selected into the R73 Stage-B Treatment cohort. No outcome-based subsampling is allowed.",
+    "r72_primary_overlap": 0,
+    "r73_stage_b_treatment_overlap": 0,
+    "limitation": "Control was observed previously in R73 Stage A; Treatment is fresh. Therefore R74 is a bridge/paired-signal study, not a clean fully-fresh qualification study."
+  },
+  "stages": {
+    "A_bridge_qualification": {
+      "purpose": "Validate projection/measurement symmetry before any primary paired efficacy claim.",
+      "gates": [
+        "A1 arm-label invariance: swapping arm labels changes 0 projected fields and 0 verdicts",
+        "A2 identical input graph yields bit-identical bridged representation and F04/F06 result",
+        "A3 R68 F04 canonical metrology cases = 16/16 correct",
+        "A4 R69 F06 canonical metrology cases = 16/16 correct",
+        "A5 no arm-specific validator branch",
+        "A6 bridge projection loss = 0 for required F04/F06 fields"
+      ]
+    },
+    "B_paired_signal": {
+      "prerequisite": "All Stage-A gates PASS and 17-case ledger sealed before Treatment outputs.",
+      "gates": {
+        "B1_execution": "17/17 valid Control/Treatment pairs",
+        "B2_bridge_symmetry": "17/17 both arms successfully represented by identical bridge",
+        "B3_required_coverage": "Treatment required-atom and visible-carrier coverage 100%",
+        "B4_critical_violations": "0",
+        "B5_f04_effect": "Treatment F04 semantic repetition group count < Control in at least 12/17 cases",
+        "B6_f04_nonworsening": "Treatment F04 count <= Control in at least 16/17 cases",
+        "B7_f06_nonworsening": "Treatment REDUNDANT_OR_MERGEABLE count <= Control in at least 16/17 cases",
+        "B8_old_g9_nonregression": "Treatment forced-compression/overload <= Control in 17/17 cases"
+      }
+    }
+  },
+  "prohibited_changes": [
+    "Do not alter R68 F04 signature fields, threshold >=3, or RESOLVE exclusion.",
+    "Do not alter R69 F06 protected contributions, removal/merge logic, or atomicity rule.",
+    "Do not tune the F05 allocator.",
+    "Do not select a subset of the 17 cases after seeing Treatment outputs.",
+    "Do not use arm identity in bridge projection or scoring.",
+    "Do not reinterpret R72 or R73 as PASS.",
+    "Do not claim Production promotion, F05 qualification, Level-3 restoration, or screenplay-surface quality from R74 alone."
+  ],
+  "claim_boundary": "At most, R74 can qualify the symmetric F04/F06 measurement bridge and establish a paired planning-layer signal on a Treatment-fresh but Control-previously-observed 17-case cohort. Full F05 qualification requires a later fully fresh independent replication.",
+  "outputs_at_seal": 0
+}
