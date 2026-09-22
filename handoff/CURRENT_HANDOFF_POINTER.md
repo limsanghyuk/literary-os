@@ -2,10 +2,10 @@
 Last updated: 2026-09-22
 
 ## READ FIRST
-1. `research/interventions/20260922/R72_F05_ADAPTIVE_DISTRIBUTION_COUNT_PRESSURE_PREREGISTRATION_R1.md`
-2. `research/interventions/20260922/R71_F02_VISIBLE_ACTION_CAUSAL_REALIZATION_CLOSED_PASS_R1.md`
-3. `research/interventions/20260922/R70_STAGE_B_R2_LIVE_VALIDITY_PASS_MAPPING_CUSTODY_FAILURE_R1.md`
-4. `handoff/20260921/START_HERE_SYNC_R68_POST_R70_SESSION_HANDOFF_R1.md`
+1. `research/interventions/20260922/R72_A_SYNTHETIC_MECHANISM_PREFLIGHT_R2_RESULT.md`
+2. `research/interventions/20260922/R72_F05_ADAPTIVE_DISTRIBUTION_COUNT_PRESSURE_PREREGISTRATION_R2.md`
+3. `research/interventions/20260922/R71_F02_VISIBLE_ACTION_CAUSAL_REALIZATION_CLOSED_PASS_R1.md`
+4. `research/interventions/20260922/R70_STAGE_B_R2_LIVE_VALIDITY_PASS_MAPPING_CUSTODY_FAILURE_R1.md`
 
 ## CURRENT
 - Physical Authority: **SYNC-R68**
@@ -13,16 +13,17 @@ Last updated: 2026-09-22
 - Production: **ENG:R47 / LEGACY_R53**
 - Runtime DB: **DB59 frozen**
 - Research DB: **DB64 research-only**
-- R70 Stage A: PASS
-- R70 Stage B R1: VALIDITY HOLD
-- R70 Stage B R2 live validity: PASS 12/12 valid pairs
-- R70 Stage B R2 formal quality: HOLD — original mapping bytes unavailable
-- R71 F02: CLOSED PASS at Planning / Scene-Contract layer
-- R72 F05: PREREGISTERED / OUTPUTS 0
+- R70: live validity PASS / formal quality HOLD
+- R71 F02: CLOSED PASS
+- R72 F05: R2 preregistered
+- R72-A synthetic mechanism preflight R2: PASS, metrology only
+- R72 primary: NOT STARTED
+
+## R72 R1/R2 NOTE
+R72-R1 preflight exposed a pressure-scale defect before primary outputs. R1 remains immutable. R2 repaired only the capacity scale and modifier caps, then passed the same mechanism preflight.
 
 ## RESUME
-Continue R72 from mechanism preflight. Primary case selection may begin only after preflight PASS and must obey the frozen fresh-case rule.
+Materialize fresh DB64 independently-verified source material. Then freeze 24 primary cases under the R72-R2 fresh-case rule before any Treatment scientific output.
 
-Do not rerun R70 R2 merely because the mapping is unavailable.
-Do not substitute the R1 mapping.
-Do not mutate Physical Authority or Production from R71/R72 component evidence alone.
+Synthetic cases are not primary evidence.
+Do not mutate Physical Authority, Production, DB authority, or Level-3 status from R72-A.
