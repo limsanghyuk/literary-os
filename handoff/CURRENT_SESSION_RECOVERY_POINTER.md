@@ -2,7 +2,7 @@
 Last updated: 2026-09-22
 
 ## STATUS
-`SYNC_R72_PHYSICAL__R74_STAGE_M_PASS__PRIMARY_INPUT_CUSTODY_HOLD__PRIMARY_OUTPUTS_0`
+`SYNC_R72_PHYSICAL__R74_STAGE_M_PASS__R74_FREEZE_HARNESS_PASS__R72_EXCLUSION_CUSTODY_HOLD__PRIMARY_OUTPUTS_0`
 
 ## PHYSICAL
 Physical Authority: **SYNC-R72**
@@ -18,19 +18,21 @@ Production: **ENG:R47 / LEGACY_R53**
 Runtime DB: **DB59 frozen**
 Research DB: **DB64 R127 research-only**
 DB64 raw split custody: PRESENT
-DB64 content access in current ChatGPT local runtime: BLOCKED
 
 ## R74
 - canonical prereg SHA256: `8ae36a1a2c56b147bb76181b6b9f9a16e979977c3ec6d34fd74c0be7e61cf0dd`
 - shared contract SHA256: `f8bd7b9ad211d603861d47cd41986c3fc9242fc981b41c33f8e3c1bb5e988be1`
 - qualified R3 bridge SHA256: `a68f463177310d3857dd773811ba05400248e65436d686a81087184df1d4a6a7`
-- Stage M: **PASS**
+- Stage M: PASS
+- primary freeze harness: PASS
+- R73 exclusion manifest: exact 41 cases recovered
+- R72 R2/R3/R4/R5 exact exclusion IDs: NOT RECOVERED
 - primary ledger: NOT CREATED
 - primary Control outputs: 0
 - primary Treatment outputs: 0
-- scientific efficacy verdict: NONE YET
+- efficacy verdict: NONE
 
 ## RESUME
-DB64 hash verification -> fresh 24-case deterministic freeze -> ledger seal -> paired execution -> symmetric R74 R3 scoring -> P1-P11.
+Recover R72 primary ledgers/case IDs from physical C2 -> verify receipts/hashes -> complete exclusion manifest -> run qualified freeze harness -> paired execution.
 
-Infrastructure failure must not be counted as scientific failure.
+Infrastructure/custody hold is not a scientific failure.
