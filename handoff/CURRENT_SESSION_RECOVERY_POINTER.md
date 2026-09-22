@@ -1,6 +1,9 @@
 # CURRENT SESSION RECOVERY POINTER
 Last updated: 2026-09-22
 
+## START HERE
+`handoff/20260922/START_HERE_SYNC_R72_R74_STAGE_M_NEW_SESSION_HANDOFF_R1.md`
+
 ## STATUS
 `SYNC_R72_PHYSICAL__R74_STAGE_M_PASS__R74_FREEZE_HARNESS_PASS__R72_EXCLUSION_CUSTODY_HOLD__RUNTIME_ACCESS_HOLD__PRIMARY_OUTPUTS_0`
 
@@ -10,7 +13,7 @@ Manifest SHA256: `05d6e2be8d472b8ff91ac6174d31f41ad41a6da3b89f6983c09eb4911c3b7c
 Trust Root SHA256: `52ce353bdd72ef7574a6f54c4dd946256d8cb88d5ed9c8e9e8c4efddad90606f`
 Logical C2 SHA256: `87b79628a5ffd35b13849009146cf2b8429288befd9d7523a39f7c77af2252a8`
 
-No successor Physical Authority is declared in the current runtime-failure session.
+No successor Physical Authority is declared.
 
 ## ACTIVE ENGINE
 Active Qualified Candidate: **R69/R68/R67/R66 lineage**
@@ -42,6 +45,7 @@ Repeated TransportTimeoutError reproduced on:
 - visible Jupyter runtime
 
 GitHub Actions remained successful.
+
 Classification:
 `SESSION_RUNTIME_LAYER_FAILURE__NOT_SCIENTIFIC_FAIL__NOT_DB_CORRUPTION`
 
@@ -56,6 +60,6 @@ Classification:
 8. paired exact R69 Control / unchanged F05 Treatment
 9. symmetric R74 R3 scoring
 10. P1-P11
-11. after closure only, new unique successor SYNC physicalization
+11. after R74 closure only, new unique successor SYNC physicalization
 
 Do not mutate physical packages while the runtime gate is failing.
