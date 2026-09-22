@@ -1,0 +1,28 @@
+name: R74 Stage M Schema Probe
+on:
+  pull_request:
+    paths:
+      - 'research/interventions/20260922/R74_STAGE_M_TRIGGER_R1.txt'
+      - 'research/interventions/20260922/r74_stage_m_schema_probe_r1.py'
+      - 'research/interventions/20260922/r74_symmetric_semantic_measurement_bridge_r1.py'
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run R74 Stage M schema probe
+        run: python research/interventions/20260922/r74_stage_m_schema_probe_r1.py
+      - name: Upload probe result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r74-stage-m-schema-probe
+          path: r74_stage_m_probe_result.json
+          if-no-files-found: error
