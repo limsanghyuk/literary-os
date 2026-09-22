@@ -1,26 +1,20 @@
 # CURRENT HANDOFF POINTER
-Last updated: 2026-09-21
+Last updated: 2026-09-22
 
 ## READ FIRST
-1. `handoff/20260921/START_HERE_SYNC_R68_POST_R70_SESSION_HANDOFF_R1.md`
-2. `handoff/20260921/SYNC_R68_R70_RESEARCH_SNAPSHOT_PHYSICALIZATION_RECEIPT_R1.md`
+1. `research/interventions/20260922/R70_STAGE_B_R2_LIVE_VALIDITY_PASS_MAPPING_CUSTODY_FAILURE_R1.md`
+2. `handoff/20260921/START_HERE_SYNC_R68_POST_R70_SESSION_HANDOFF_R1.md`
 3. `research/interventions/20260921/R70_STAGE_B_R2_PREAPI_VIRTUAL_QUALIFICATION_RESULT_R1.md`
-4. `research/interventions/20260921/R70_STAGE_B_LIVE_PROVIDER_RESULT_R1_VALIDITY_HOLD.md`
-5. `research/interventions/20260921/R70_STAGE_B_R2_EXIT_STATE_CONTRACT_REPAIR_PREREG_R1.md`
-6. `research/interventions/20260921/R70_STAGE_B_R2_EXIT_STATE_CONTRACT_REPAIR_IMPLEMENTATION_FREEZE_R1.md`
-7. `research/interventions/20260921/R70_STAGE_B_R2_FRESH_INPUT_EXECUTION_SEAL_R1.md`
-8. `handoff/20260921/SYNC_R67_C_PART_TRANSPORT_REPACK_R1.md`
 
 ## CURRENT
 - Physical Authority: **SYNC-R68**
 - Active Qualified Candidate: **R69/R68/R67/R66**
 - R70 Stage A: PASS
 - R70 Stage B R1: VALIDITY HOLD
-- R70 Stage B R2: PREAPI VIRTUAL QUALIFIED / REAL PROVIDER HOLD / OUTPUTS 0
+- R70 Stage B R2 live validity: PASS 12/12 valid pairs
+- R70 Stage B R2 formal quality: HOLD — original mapping bytes unavailable
 - R71: PLANNED / NOT STARTED
 - Production: **ENG:R47 / LEGACY_R53**
 
-Trust Root:
-`38069b916f4d02f827f74cf76812e559d369e72c3c649895825c803c92d0c274`
-
-Do not treat SYNC-R68 as R70 promotion. It is the latest research-state physical snapshot.
+Do not rerun R2 generation solely because the mapping is unavailable.
+Do not substitute the R1 mapping.
