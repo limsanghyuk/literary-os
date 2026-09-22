@@ -1,6 +1,9 @@
 # CURRENT NEXT RESEARCH POINTER
 Last updated: 2026-09-22
 
+## START HERE
+`handoff/20260922/START_HERE_SYNC_R72_R74_STAGE_M_NEW_SESSION_HANDOFF_R1.md`
+
 ## ACTIVE RESEARCH
 `R74 — F05 Symmetric Semantic-Transaction Measurement Bridge`
 
@@ -18,6 +21,7 @@ Status:
 - R73 41-case exclusion manifest recovered
 - fail-closed primary freeze harness qualified
 - runtime/package safety protocol sealed
+- new-session handoff sealed
 
 ## CURRENT BLOCKERS
 1. Exact R72 R2/R3/R4/R5 primary case IDs are not durably recovered.
@@ -30,4 +34,4 @@ Do not weaken R74 freshness.
 Next healthy session:
 runtime safety gate -> SYNC-R72 parent verification -> known-path C2 custody recovery -> complete R72 exclusion manifest -> R74 24-case fresh freeze -> paired Control/Treatment -> symmetric R3 scoring -> P1-P11.
 
-No successor physical snapshot is created until the physical-package safety gate passes.
+No successor physical snapshot is created until R74 closes and the physical-package safety gate passes.
