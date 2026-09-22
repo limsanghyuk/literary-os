@@ -2,9 +2,10 @@
 Last updated: 2026-09-22
 
 ## CANONICAL READ FIRST
-1. `research/interventions/20260922/R72_F05_ADAPTIVE_DISTRIBUTION_COUNT_PRESSURE_PREREGISTRATION_R1.md`
-2. `research/interventions/20260922/R71_F02_VISIBLE_ACTION_CAUSAL_REALIZATION_CLOSED_PASS_R1.md`
-3. `research/interventions/20260922/R70_STAGE_B_R2_LIVE_VALIDITY_PASS_MAPPING_CUSTODY_FAILURE_R1.md`
+1. `research/interventions/20260922/R72_A_SYNTHETIC_MECHANISM_PREFLIGHT_R2_RESULT.md`
+2. `research/interventions/20260922/R72_F05_ADAPTIVE_DISTRIBUTION_COUNT_PRESSURE_PREREGISTRATION_R2.md`
+3. `research/interventions/20260922/R71_F02_VISIBLE_ACTION_CAUSAL_REALIZATION_CLOSED_PASS_R1.md`
+4. `research/interventions/20260922/R70_STAGE_B_R2_LIVE_VALIDITY_PASS_MAPPING_CUSTODY_FAILURE_R1.md`
 
 ## CURRENT AUTHORITY
 - Physical Authority: **SYNC-R68**
@@ -19,20 +20,23 @@ Last updated: 2026-09-22
 - Stage B R2 live validity: PASS — 24/24 valid arms, 12/12 valid pairs
 - Formal literary quality: HOLD — original coordinator mapping bytes unavailable
 - R70 is NOT promoted
-- Mapping commitment: `c3340b146c3901b4e652b2b947ae76eb9a846fcbaad21a2bd17dda6b0e9cec17`
 
 ## R71
 `CLOSED_PASS__F02_VISIBLE_ACTION_CAUSAL_REALIZATION_QUALIFIED_AT_PLANNING_SCENE_CONTRACT_LAYER`
-
-Blind aggregate: Treatment 12W / 0T / 0L, confirmed critical violations 0.
+Blind aggregate: Treatment 12W / 0T / 0L; confirmed critical violations 0.
 
 ## R72
-`PREREGISTERED__OUTPUTS_0__PRIMARY_CASES_0__JUDGMENTS_0`
+`R72_R2_PREREGISTERED__R72_A_PREFLIGHT_PASS_METROLOGY_ONLY__PRIMARY_NOT_STARTED`
 
-Preregistration JSON SHA256:
-`ecc511c3100d3c6bf17d55b3451d06dc93a4126998d719013f6707b4628b692b`
+R72-R1 preflight scale defect is preserved as historical metrology evidence. R72-R2 repaired the scale before primary outputs.
 
-R72 is the current active research branch. It does not alter Physical Authority, Production, DB authority, or Level-3 status.
+R72-R2 preregistration JSON SHA256:
+`a38d9e6230d6dc3f7499dcd2d99d49512de215cff682c3d0f6eb86d43adfdf41`
+
+R72-A result SHA256:
+`02219738f956bc58e3e84f865832e21c32bcd0ada87bbfd67c90da39c55d98aa`
+
+R72 remains a research component and does not alter Physical Authority, Production, DB authority, or Level-3 status.
 
 ## NEXT
-Run R72-A mechanism/metrology preflight. Only after preflight PASS may fresh DB64 source-grounded primary cases be materialized.
+Materialize fresh DB64 independently-verified source material and freeze the 24 primary cases. Do not use synthetic preflight cases as primary evidence.
