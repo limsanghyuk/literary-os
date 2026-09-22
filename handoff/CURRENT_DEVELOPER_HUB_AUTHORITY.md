@@ -3,7 +3,7 @@ Last updated: 2026-09-22
 
 ## CURRENT AUTHORITY
 - Physical Authority: **SYNC-R72**
-- Research Overlay: **POST-SYNC-R72 / R74 STAGE-M PASS / PRIMARY INPUT CUSTODY HOLD**
+- Research Overlay: **POST-SYNC-R72 / R74 STAGE-M PASS / PRIMARY FREEZE HARNESS PASS / R72 EXCLUSION CUSTODY HOLD**
 - Active Qualified Candidate: **R69/R68/R67/R66 lineage**
 - Active Runtime: exact R69 — SHA256 `3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1`
 - Production Engine: **ENG:R47 / LEGACY_R53**
@@ -12,42 +12,55 @@ Last updated: 2026-09-22
 - Operational Level-3: **SUSPENDED / REQUALIFICATION REQUIRED**
 - Formal R140: **NOT STARTED**
 
-## CLOSED / CURRENT RESEARCH
+## RESEARCH STATUS
 - R70: Provider validity PASS / formal literary quality HOLD.
 - R71: F02 CLOSED PASS.
 - R72 Research: F05 CLOSED FAIL.
 - R73: diagnostic PASS; Stage-B efficacy invalidated by metric non-comparability; F05 NOT QUALIFIED.
-- R74: **Stage M PASS; primary efficacy NOT STARTED; primary outputs 0.**
+- R74: Stage M PASS; primary efficacy NOT STARTED; Control outputs 0; Treatment outputs 0.
 
-## R74 CANONICAL SCIENTIFIC AUTHORITY
-Canonical preregistration:
-`research/interventions/20260922/R74_F05_SYMMETRIC_SEMANTIC_TRANSACTION_MEASUREMENT_BRIDGE_PREREG_R1.md`
-SHA256:
-`8ae36a1a2c56b147bb76181b6b9f9a16e979977c3ec6d34fd74c0be7e61cf0dd`
-
-Shared representation contract SHA256:
-`f8bd7b9ad211d603861d47cd41986c3fc9242fc981b41c33f8e3c1bb5e988be1`
-
-Canonical-prereg clarification:
-`research/interventions/20260922/R74_CANONICAL_PREREGISTRATION_AUTHORITY_CLARIFICATION_R1.md`
-
-Qualified bridge:
-- implementation: R3
-- SHA256: `a68f463177310d3857dd773811ba05400248e65436d686a81087184df1d4a6a7`
-- Stage-M result: `PASS__M1_M7_ALL_PASS__R68_F04_16_OF_16__R69_F06_16_OF_16`
+## R74 QUALIFIED COMPONENTS
+### Symmetric Measurement Bridge
+- canonical preregistration SHA256:
+  `8ae36a1a2c56b147bb76181b6b9f9a16e979977c3ec6d34fd74c0be7e61cf0dd`
+- shared contract SHA256:
+  `f8bd7b9ad211d603861d47cd41986c3fc9242fc981b41c33f8e3c1bb5e988be1`
+- qualified bridge: R3
+- bridge SHA256:
+  `a68f463177310d3857dd773811ba05400248e65436d686a81087184df1d4a6a7`
+- Stage M: M1-M7 all PASS
+- R68 F04 regression: 16/16 PASS
+- R69 F06 regression: 16/16 PASS
 - independent clean reexecution: PASS
 
-## PRIMARY HOLD
-`PRIMARY_INPUT_CUSTODY_PRESENT__CONTENT_ACCESS_BLOCKED__PRIMARY_OUTPUTS_0`
+### Primary Freeze Harness
+- source:
+  `research/interventions/20260922/r74_primary_materialize_freeze_r1.py`
+- qualification:
+  `research/interventions/20260922/R74_PRIMARY_FREEZE_HARNESS_QUALIFICATION_R1.md`
+- GitHub Actions self-test: PASS
+- deterministic 24-case selection: PASS
+- >=12 works / max2-work constraints: PASS
+- missing R72 revision custody -> fail-closed: PASS
+- literary prose generation bytes: 0
 
-DB64 split custody remains present, but current ChatGPT local execution runtimes return TransportTimeoutError.
-GitHub Actions successfully bypassed that failure for repository-resident Stage-M data.
-The DB64 split uploads are not repository-resident and no verified equivalent mirror is available.
+## CURRENT HOLD
+`HOLD__R72_R2_R3_R4_R5_CASE_ID_CUSTODY_INCOMPLETE__NO_PRIMARY_FREEZE`
 
-Do not weaken freshness.
-Do not use the 17 R73 Control-only cases as the fully-fresh primary cohort.
+Canonical audit:
+`research/interventions/20260922/R74_PRIMARY_EXCLUSION_CUSTODY_AUDIT_R1.md`
+
+Known:
+- R2 selected 24 cases and had Treatment outputs; exact IDs missing.
+- R3 selected fresh 24 cases; Control precheck 22/24; Treatment outputs 0; exact IDs missing.
+- R4 selected fresh 24 cases; Control precheck 20/24; Treatment outputs 0; exact IDs missing.
+- R5 completed fresh 24-case primary; ledger SHA256 `d4398a3568f55258fb664f782f5542431795ab471f944a5df168c5501478a364`; exact IDs missing from current custody.
+- R73 41-case exclusion manifest is recovered and sealed.
+
+Current local container/Python/Jupyter runtimes remain unavailable due TransportTimeoutError. GitHub Actions bypasses this only for repository-resident data. DB64 split custody remains present in conversation storage but is not repository-resident.
 
 ## NEXT
-Restore DB64 content access -> verify DB64 hashes -> enumerate frozen exclusions -> freeze exactly 24 fully fresh cases (>=12 works, <=2/work) -> seal ledger -> exact R69 Control vs unchanged F05 Treatment -> score both arms through qualified R74 R3 bridge -> apply P1-P11.
+Recover exact R72 R2/R3/R4/R5 case IDs from physical C2 / historical local evidence when content access is restored -> build complete R72 exclusion manifest -> run qualified R74 primary freeze harness -> seal fully fresh 24-case ledger and selected DB64 bundle -> exact R69 Control vs unchanged F05 Treatment -> score symmetrically through R74 R3 -> apply P1-P11.
 
-Physical Authority remains SYNC-R72 until an actual successor 5-Part / 9-Package reseal is completed.
+Do not weaken freshness or infer missing R72 case IDs.
+Physical Authority remains SYNC-R72 until a successor 5-Part / 9-Package reseal is actually completed.
