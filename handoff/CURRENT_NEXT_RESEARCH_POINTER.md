@@ -5,7 +5,7 @@ Last updated: 2026-09-22
 `R74 — F05 Symmetric Semantic-Transaction Measurement Bridge`
 
 Status:
-`STAGE_M_PASS__FREEZE_HARNESS_PASS__PRIMARY_NOT_STARTED__R72_EXCLUSION_CUSTODY_HOLD__PRIMARY_OUTPUTS_0`
+`STAGE_M_PASS__FREEZE_HARNESS_PASS__PRIMARY_NOT_STARTED__R72_EXCLUSION_CUSTODY_HOLD__RUNTIME_ACCESS_HOLD__PRIMARY_OUTPUTS_0`
 
 ## COMPLETED
 - canonical preregistration authority clarified and sealed
@@ -14,16 +14,20 @@ Status:
 - M1-M7 PASS
 - R68 F04 regression 16/16 PASS
 - R69 F06 regression 16/16 PASS
-- independent Stage-M reexecution PASS
+- independent Stage-M clean reexecution PASS
 - R73 41-case exclusion manifest recovered
 - fail-closed primary freeze harness qualified
+- runtime/package safety protocol sealed
 
-## CURRENT BLOCKER
-Exact R72 R2/R3/R4/R5 primary case IDs are not durably recovered in current accessible custody.
-
-R2/R3/R4/R5 all selected fresh 24-case cohorts, so canonical R74 freshness cannot be guaranteed without their exact case IDs.
+## CURRENT BLOCKERS
+1. Exact R72 R2/R3/R4/R5 primary case IDs are not durably recovered.
+2. Current session container/Python/Jupyter runtime fails minimal health checks with TransportTimeoutError.
 
 ## NEXT EXECUTION BOUNDARY
-Physical C2 / historical local evidence recovery -> complete R72 exclusion manifest -> DB64 exact hash verification -> deterministic fully fresh 24-case freeze -> ledger seal -> paired Control/Treatment execution -> symmetric R74 R3 scoring -> P1-P11.
+Do not begin R75.
+Do not weaken R74 freshness.
 
-No R75 begins while R74 primary remains unexecuted for custody reasons.
+Next healthy session:
+runtime safety gate -> SYNC-R72 parent verification -> known-path C2 custody recovery -> complete R72 exclusion manifest -> R74 24-case fresh freeze -> paired Control/Treatment -> symmetric R3 scoring -> P1-P11.
+
+No successor physical snapshot is created until the physical-package safety gate passes.
