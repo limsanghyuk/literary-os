@@ -3,7 +3,7 @@ Last updated: 2026-09-22
 
 ## CURRENT AUTHORITY
 - Physical Authority: **SYNC-R72**
-- Research Overlay: **POST-SYNC-R72 / R74 STAGE-M PASS / PRIMARY FREEZE HARNESS PASS / R72 EXCLUSION CUSTODY HOLD**
+- Research Overlay: **POST-SYNC-R72 / R74 STAGE-M PASS / FREEZE HARNESS PASS / PRIMARY CUSTODY HOLD / RUNTIME SAFETY HOLD**
 - Active Qualified Candidate: **R69/R68/R67/R66 lineage**
 - Active Runtime: exact R69 — SHA256 `3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1`
 - Production Engine: **ENG:R47 / LEGACY_R53**
@@ -12,12 +12,20 @@ Last updated: 2026-09-22
 - Operational Level-3: **SUSPENDED / REQUALIFICATION REQUIRED**
 - Formal R140: **NOT STARTED**
 
+## READ FIRST
+1. `research/interventions/20260922/R74_RUNTIME_PHYSICAL_PACKAGE_SAFETY_PROTOCOL_R1.md`
+2. `research/interventions/20260922/R74_CURRENT_EXECUTION_HOLD_RESUME_BOUNDARY_R1.md`
+3. `research/interventions/20260922/R74_PRIMARY_EXCLUSION_CUSTODY_AUDIT_R1.md`
+4. `research/interventions/20260922/R74_PRIMARY_FREEZE_HARNESS_QUALIFICATION_R1.md`
+5. `research/interventions/20260922/R74_STAGE_M_QUALIFICATION_RESULT_R1.md`
+6. `research/interventions/20260922/R74_CANONICAL_PREREGISTRATION_AUTHORITY_CLARIFICATION_R1.md`
+
 ## RESEARCH STATUS
 - R70: Provider validity PASS / formal literary quality HOLD.
 - R71: F02 CLOSED PASS.
 - R72 Research: F05 CLOSED FAIL.
 - R73: diagnostic PASS; Stage-B efficacy invalidated by metric non-comparability; F05 NOT QUALIFIED.
-- R74: Stage M PASS; primary efficacy NOT STARTED; Control outputs 0; Treatment outputs 0.
+- R74: Stage M PASS; primary efficacy NOT STARTED; primary Control outputs 0; primary Treatment outputs 0.
 
 ## R74 QUALIFIED COMPONENTS
 ### Symmetric Measurement Bridge
@@ -34,33 +42,29 @@ Last updated: 2026-09-22
 - independent clean reexecution: PASS
 
 ### Primary Freeze Harness
-- source:
-  `research/interventions/20260922/r74_primary_materialize_freeze_r1.py`
-- qualification:
-  `research/interventions/20260922/R74_PRIMARY_FREEZE_HARNESS_QUALIFICATION_R1.md`
-- GitHub Actions self-test: PASS
+- status: PASS / harness qualified
 - deterministic 24-case selection: PASS
 - >=12 works / max2-work constraints: PASS
-- missing R72 revision custody -> fail-closed: PASS
+- missing exclusion custody -> fail-closed: PASS
 - literary prose generation bytes: 0
 
 ## CURRENT HOLD
-`HOLD__R72_R2_R3_R4_R5_CASE_ID_CUSTODY_INCOMPLETE__NO_PRIMARY_FREEZE`
+`HOLD__R72_EXCLUSION_CUSTODY_INCOMPLETE__RUNTIME_ACCESS_UNAVAILABLE__NO_PRIMARY_FREEZE__NO_EFFICACY_VERDICT`
 
-Canonical audit:
-`research/interventions/20260922/R74_PRIMARY_EXCLUSION_CUSTODY_AUDIT_R1.md`
+Exact R72 R2/R3/R4/R5 case IDs are not durably recovered in current accessible custody.
 
-Known:
-- R2 selected 24 cases and had Treatment outputs; exact IDs missing.
-- R3 selected fresh 24 cases; Control precheck 22/24; Treatment outputs 0; exact IDs missing.
-- R4 selected fresh 24 cases; Control precheck 20/24; Treatment outputs 0; exact IDs missing.
-- R5 completed fresh 24-case primary; ledger SHA256 `d4398a3568f55258fb664f782f5542431795ab471f944a5df168c5501478a364`; exact IDs missing from current custody.
-- R73 41-case exclusion manifest is recovered and sealed.
+The session container, private Python runtime, and visible Jupyter runtime all reproduced `TransportTimeoutError` even on minimal health checks. GitHub Actions remained healthy, proving this is a local session runtime-layer failure rather than a scientific or DB failure.
 
-Current local container/Python/Jupyter runtimes remain unavailable due TransportTimeoutError. GitHub Actions bypasses this only for repository-resident data. DB64 split custody remains present in conversation storage but is not repository-resident.
+## PHYSICAL PACKAGE PROTECTION
+Do not mutate, rebuild, split, rejoin, rename, or reseal a successor 5-Part / 9-Package set while the runtime safety gate is failing.
+
+Current protected physical state:
+- Physical Authority: **SYNC-R72**
+- Manifest SHA256: `05d6e2be8d472b8ff91ac6174d31f41ad41a6da3b89f6983c09eb4911c3b7cf0`
+- Trust Root SHA256: `52ce353bdd72ef7574a6f54c4dd946256d8cb88d5ed9c8e9e8c4efddad90606f`
+- Logical C2 SHA256: `87b79628a5ffd35b13849009146cf2b8429288befd9d7523a39f7c77af2252a8`
+
+No successor Physical Authority is declared.
 
 ## NEXT
-Recover exact R72 R2/R3/R4/R5 case IDs from physical C2 / historical local evidence when content access is restored -> build complete R72 exclusion manifest -> run qualified R74 primary freeze harness -> seal fully fresh 24-case ledger and selected DB64 bundle -> exact R69 Control vs unchanged F05 Treatment -> score symmetrically through R74 R3 -> apply P1-P11.
-
-Do not weaken freshness or infer missing R72 case IDs.
-Physical Authority remains SYNC-R72 until a successor 5-Part / 9-Package reseal is actually completed.
+Healthy-runtime safety gate PASS -> verify SYNC-R72 9/9 -> inspect known R72 research paths in logical C2 -> recover exact R72 R2/R3/R4/R5 case IDs -> complete exclusion manifest -> run qualified R74 primary freeze harness -> seal 24 fully fresh cases -> paired exact-R69 Control vs unchanged-F05 Treatment -> symmetric R74 R3 scoring -> P1-P11 -> only after research closure create a NEW successor SYNC ID.
