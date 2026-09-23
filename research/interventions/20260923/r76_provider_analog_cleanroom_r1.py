@@ -181,11 +181,15 @@ def main():
       api.create({"model":MODEL,"input":"x"},lambda p:{},fault="500")["http_status"]==500,
     ]
     baseline=r69_baseline_sequences(OBS)
-    p1=api.create({"model":MODEL,"input":{"experiment":"R76-R2A","frozen_input":"51e5289e..."}},
-                  lambda p:{"sequence_count":len(r2a_cohesion_sequences(OBS)),
-                            "zero_related_pairs":zero_pairs(r2a_cohesion_sequences(OBS)),
-                            "coverage_ids":[o["id"] for b in r2a_cohesion_sequences(OBS) for o in b]},
-                  "r76-r2a")
+    p1=api.create({"model":MODEL,"input":{"experiment":"R76-R2A-R2","frozen_input":"51e5289e..."}},
+                  lambda p:{"r2a_r1_sequence_count":len(r2a_cohesion_sequences(OBS)),
+                            "sequence_count":len(r2a_r2_causal_spine_sequences(OBS)),
+                            "zero_related_pairs":zero_pairs(r2a_r2_causal_spine_sequences(OBS)),
+                            "owner_only_four_bundle_count":owner_only_four_bundle_count(r2a_r2_causal_spine_sequences(OBS)),
+                            "bundle_sizes":[len(b) for b in r2a_r2_causal_spine_sequences(OBS)],
+                            "bundles":[[o["id"] for o in b] for b in r2a_r2_causal_spine_sequences(OBS)],
+                            "coverage_ids":[o["id"] for b in r2a_r2_causal_spine_sequences(OBS) for o in b]},
+                  "r76-r2a-r2")
     r2a=json.loads(p1["body"]["output"][0]["content"][0]["text"])
     p2=api.create({"model":MODEL,"input":{"experiment":"R76-R2B","frozen_input":"51e5289e..."}},
                   lambda p:{"baseline_f04_groups":baseline_f04_groups(OBS),
