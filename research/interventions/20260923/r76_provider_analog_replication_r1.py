@@ -17,16 +17,17 @@ contract=[
 ]
 
 p1=api.create(
-    {"model":base.MODEL,"input":{"experiment":"R76-FRESH-REPLICATION-R2A-R2","work":inp["work_id"]}},
+    {"model":base.MODEL,"input":{"experiment":"R76-FRESH-REPLICATION-R2A-R3","work":inp["work_id"]}},
     lambda p:{
-        "sequence_count":len(base.r2a_r2_causal_spine_sequences(OBS)),
-        "zero_related_pairs":base.zero_pairs(base.r2a_r2_causal_spine_sequences(OBS)),
-        "owner_only_four_bundle_count":base.owner_only_four_bundle_count(base.r2a_r2_causal_spine_sequences(OBS)),
-        "bundle_sizes":[len(b) for b in base.r2a_r2_causal_spine_sequences(OBS)],
-        "bundles":[[o["id"] for o in b] for b in base.r2a_r2_causal_spine_sequences(OBS)],
-        "coverage_ids":[o["id"] for b in base.r2a_r2_causal_spine_sequences(OBS) for o in b]
+        "sequence_count":len(base.r2a_r3_causal_spine_participation_sequences(OBS)),
+        "zero_related_pairs":base.zero_pairs(base.r2a_r3_causal_spine_participation_sequences(OBS)),
+        "owner_only_four_bundle_count":base.owner_only_four_bundle_count(base.r2a_r3_causal_spine_participation_sequences(OBS)),
+        "invalid_four_bundle_count_r3":base.invalid_four_bundle_count_r3(base.r2a_r3_causal_spine_participation_sequences(OBS)),
+        "bundle_sizes":[len(b) for b in base.r2a_r3_causal_spine_participation_sequences(OBS)],
+        "bundles":[[o["id"] for o in b] for b in base.r2a_r3_causal_spine_participation_sequences(OBS)],
+        "coverage_ids":[o["id"] for b in base.r2a_r3_causal_spine_participation_sequences(OBS) for o in b]
     },
-    "r76-repl-r2a-r2"
+    "r76-repl-r2a-r3"
 )
 r2a=json.loads(p1["body"]["output"][0]["content"][0]["text"])
 
@@ -46,6 +47,7 @@ gates={
     "P3_clone_omission_0":len(r2a["coverage_ids"])==len(set(r2a["coverage_ids"]))==len(OBS),
     "P4_zero_related_pairs_0":len(r2a["zero_related_pairs"])==0,
     "P5_owner_only_four_bundle_0":r2a["owner_only_four_bundle_count"]==0,
+    "P5b_invalid_four_bundle_r3_0":r2a["invalid_four_bundle_count_r3"]==0,
     "P6_sequence_count_ge9":r2a["sequence_count"]>=9,
     "P7_sequence_count_le14":r2a["sequence_count"]<=14,
     "P8_f04_groups_0":len(r2b["treatment_f04_groups"])==0,
