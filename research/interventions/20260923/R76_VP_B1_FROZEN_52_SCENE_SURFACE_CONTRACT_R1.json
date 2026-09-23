@@ -1,0 +1,832 @@
+{
+  "schema": "R76_VP_B1_FROZEN_52_SCENE_SURFACE_CONTRACT_R1",
+  "date": "2026-09-23",
+  "status": "FROZEN_BEFORE_SURFACE_OUTPUTS",
+  "parent_prereg": "research/interventions/20260923/R76_VP_B1_BROADCAST_SURFACE_PRETEST_PREREG_R1.md",
+  "work_id": "SYNTH_R76_BREAKWATER_THEATER",
+  "title": "방파제 극장",
+  "premise": "폭풍 피해 뒤 폐쇄된 해안 소도시의 시민극장을 재개관하려는 하루 동안, 안전·예산·생계·가족의 이해가 충돌한다.",
+  "sequence_count": 9,
+  "scene_count": 52,
+  "sequence_order": {
+    "SQ01": {
+      "obligations": [
+        "EV01",
+        "INF01",
+        "CHAR01"
+      ],
+      "scene_count": 6
+    },
+    "SQ02": {
+      "obligations": [
+        "INF02",
+        "INF04",
+        "CHAR02"
+      ],
+      "scene_count": 6
+    },
+    "SQ03": {
+      "obligations": [
+        "INF03",
+        "INF06",
+        "INF07"
+      ],
+      "scene_count": 6
+    },
+    "SQ04": {
+      "obligations": [
+        "INF05",
+        "INF08",
+        "PAY03"
+      ],
+      "scene_count": 6
+    },
+    "SQ05": {
+      "obligations": [
+        "PAY01",
+        "REL02",
+        "REL01"
+      ],
+      "scene_count": 6
+    },
+    "SQ06": {
+      "obligations": [
+        "PAY02",
+        "REL03",
+        "SOC02"
+      ],
+      "scene_count": 6
+    },
+    "SQ07": {
+      "obligations": [
+        "SOC01",
+        "EV02"
+      ],
+      "scene_count": 4
+    },
+    "SQ08": {
+      "obligations": [
+        "EV03",
+        "EV05",
+        "EV07"
+      ],
+      "scene_count": 6
+    },
+    "SQ09": {
+      "obligations": [
+        "EV04",
+        "EV06",
+        "EV08"
+      ],
+      "scene_count": 6
+    }
+  },
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "sequence_id": "SQ01",
+      "sequence_scene_index": 1,
+      "obligation_id": "EV01",
+      "phase": "ADVANCE",
+      "dramatic_target": "객석 천장 균열 발견과 리허설 중단",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC02",
+      "sequence_id": "SQ01",
+      "sequence_scene_index": 2,
+      "obligation_id": "EV01",
+      "phase": "RESOLVE",
+      "dramatic_target": "객석 천장 균열 발견과 리허설 중단",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC03",
+      "sequence_id": "SQ01",
+      "sequence_scene_index": 3,
+      "obligation_id": "INF01",
+      "phase": "ADVANCE",
+      "dramatic_target": "균열 사진 공개와 안전상태 공유",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC04",
+      "sequence_id": "SQ01",
+      "sequence_scene_index": 4,
+      "obligation_id": "INF01",
+      "phase": "RESOLVE",
+      "dramatic_target": "균열 사진 공개와 안전상태 공유",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC05",
+      "sequence_id": "SQ01",
+      "sequence_scene_index": 5,
+      "obligation_id": "CHAR01",
+      "phase": "ADVANCE",
+      "dramatic_target": "윤서—사적 방어와 공적 안전판단 분리",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC06",
+      "sequence_id": "SQ01",
+      "sequence_scene_index": 6,
+      "obligation_id": "CHAR01",
+      "phase": "RESOLVE",
+      "dramatic_target": "윤서—사적 방어와 공적 안전판단 분리",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC07",
+      "sequence_id": "SQ02",
+      "sequence_scene_index": 1,
+      "obligation_id": "INF02",
+      "phase": "ADVANCE",
+      "dramatic_target": "지원금 집행 마감시각 공개",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC08",
+      "sequence_id": "SQ02",
+      "sequence_scene_index": 2,
+      "obligation_id": "INF02",
+      "phase": "RESOLVE",
+      "dramatic_target": "지원금 집행 마감시각 공개",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC09",
+      "sequence_id": "SQ02",
+      "sequence_scene_index": 3,
+      "obligation_id": "INF04",
+      "phase": "ADVANCE",
+      "dramatic_target": "임시직 미지급 급여 규모 확인",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC10",
+      "sequence_id": "SQ02",
+      "sequence_scene_index": 4,
+      "obligation_id": "INF04",
+      "phase": "RESOLVE",
+      "dramatic_target": "임시직 미지급 급여 규모 확인",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC11",
+      "sequence_id": "SQ02",
+      "sequence_scene_index": 5,
+      "obligation_id": "CHAR02",
+      "phase": "ADVANCE",
+      "dramatic_target": "민호—재개관 목표를 생계·안전 보존 목표로 수정",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC12",
+      "sequence_id": "SQ02",
+      "sequence_scene_index": 6,
+      "obligation_id": "CHAR02",
+      "phase": "RESOLVE",
+      "dramatic_target": "민호—재개관 목표를 생계·안전 보존 목표로 수정",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC13",
+      "sequence_id": "SQ03",
+      "sequence_scene_index": 1,
+      "obligation_id": "INF03",
+      "phase": "ADVANCE",
+      "dramatic_target": "비공식 배선 사진과 오래된 위험 정보",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC14",
+      "sequence_id": "SQ03",
+      "sequence_scene_index": 2,
+      "obligation_id": "INF03",
+      "phase": "RESOLVE",
+      "dramatic_target": "비공식 배선 사진과 오래된 위험 정보",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC15",
+      "sequence_id": "SQ03",
+      "sequence_scene_index": 3,
+      "obligation_id": "INF06",
+      "phase": "ADVANCE",
+      "dramatic_target": "보수계약서 위조 가능성 공개",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC16",
+      "sequence_id": "SQ03",
+      "sequence_scene_index": 4,
+      "obligation_id": "INF06",
+      "phase": "RESOLVE",
+      "dramatic_target": "보수계약서 위조 가능성 공개",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC17",
+      "sequence_id": "SQ03",
+      "sequence_scene_index": 5,
+      "obligation_id": "INF07",
+      "phase": "ADVANCE",
+      "dramatic_target": "윤서 아버지 이름의 제한적 공개",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC18",
+      "sequence_id": "SQ03",
+      "sequence_scene_index": 6,
+      "obligation_id": "INF07",
+      "phase": "RESOLVE",
+      "dramatic_target": "윤서 아버지 이름의 제한적 공개",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC19",
+      "sequence_id": "SQ04",
+      "sequence_scene_index": 1,
+      "obligation_id": "INF05",
+      "phase": "ADVANCE",
+      "dramatic_target": "주민 민원·상인 매출 자료의 혼합 신호",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC20",
+      "sequence_id": "SQ04",
+      "sequence_scene_index": 2,
+      "obligation_id": "INF05",
+      "phase": "RESOLVE",
+      "dramatic_target": "주민 민원·상인 매출 자료의 혼합 신호",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC21",
+      "sequence_id": "SQ04",
+      "sequence_scene_index": 3,
+      "obligation_id": "INF08",
+      "phase": "ADVANCE",
+      "dramatic_target": "야외무대 전환 시 지원금 일부 유지 조건",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC22",
+      "sequence_id": "SQ04",
+      "sequence_scene_index": 4,
+      "obligation_id": "INF08",
+      "phase": "RESOLVE",
+      "dramatic_target": "야외무대 전환 시 지원금 일부 유지 조건",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC23",
+      "sequence_id": "SQ04",
+      "sequence_scene_index": 5,
+      "obligation_id": "PAY03",
+      "phase": "ADVANCE",
+      "dramatic_target": "상인회 공동서명의 조건부 지지 근거 회수",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC24",
+      "sequence_id": "SQ04",
+      "sequence_scene_index": 6,
+      "obligation_id": "PAY03",
+      "phase": "RESOLVE",
+      "dramatic_target": "상인회 공동서명의 조건부 지지 근거 회수",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC25",
+      "sequence_id": "SQ05",
+      "sequence_scene_index": 1,
+      "obligation_id": "PAY01",
+      "phase": "ADVANCE",
+      "dramatic_target": "낡은 배선 도면이 불법 증설 위치를 특정",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC26",
+      "sequence_id": "SQ05",
+      "sequence_scene_index": 2,
+      "obligation_id": "PAY01",
+      "phase": "RESOLVE",
+      "dramatic_target": "낡은 배선 도면이 불법 증설 위치를 특정",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC27",
+      "sequence_id": "SQ05",
+      "sequence_scene_index": 3,
+      "obligation_id": "REL02",
+      "phase": "ADVANCE",
+      "dramatic_target": "윤서·태경이 증거 공동보존 동맹으로 이동",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC28",
+      "sequence_id": "SQ05",
+      "sequence_scene_index": 4,
+      "obligation_id": "REL02",
+      "phase": "RESOLVE",
+      "dramatic_target": "윤서·태경이 증거 공동보존 동맹으로 이동",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC29",
+      "sequence_id": "SQ05",
+      "sequence_scene_index": 5,
+      "obligation_id": "REL01",
+      "phase": "ADVANCE",
+      "dramatic_target": "윤서·민호가 조건부 신뢰로 이동",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC30",
+      "sequence_id": "SQ05",
+      "sequence_scene_index": 6,
+      "obligation_id": "REL01",
+      "phase": "RESOLVE",
+      "dramatic_target": "윤서·민호가 조건부 신뢰로 이동",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC31",
+      "sequence_id": "SQ06",
+      "sequence_scene_index": 1,
+      "obligation_id": "PAY02",
+      "phase": "ADVANCE",
+      "dramatic_target": "이동식 조명 장비가 야외무대 해법으로 회수",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC32",
+      "sequence_id": "SQ06",
+      "sequence_scene_index": 2,
+      "obligation_id": "PAY02",
+      "phase": "RESOLVE",
+      "dramatic_target": "이동식 조명 장비가 야외무대 해법으로 회수",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC33",
+      "sequence_id": "SQ06",
+      "sequence_scene_index": 3,
+      "obligation_id": "REL03",
+      "phase": "ADVANCE",
+      "dramatic_target": "지우·수경이 조건 협상 가능한 협력으로 이동",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC34",
+      "sequence_id": "SQ06",
+      "sequence_scene_index": 4,
+      "obligation_id": "REL03",
+      "phase": "RESOLVE",
+      "dramatic_target": "지우·수경이 조건 협상 가능한 협력으로 이동",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC35",
+      "sequence_id": "SQ06",
+      "sequence_scene_index": 5,
+      "obligation_id": "SOC02",
+      "phase": "ADVANCE",
+      "dramatic_target": "상인회·공연팀의 시간·동선 조건부 공간공유",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC36",
+      "sequence_id": "SQ06",
+      "sequence_scene_index": 6,
+      "obligation_id": "SOC02",
+      "phase": "RESOLVE",
+      "dramatic_target": "상인회·공연팀의 시간·동선 조건부 공간공유",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC37",
+      "sequence_id": "SQ07",
+      "sequence_scene_index": 1,
+      "obligation_id": "SOC01",
+      "phase": "ADVANCE",
+      "dramatic_target": "극장 직원·시청의 안전·예산 책임경계 문서화",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC38",
+      "sequence_id": "SQ07",
+      "sequence_scene_index": 2,
+      "obligation_id": "SOC01",
+      "phase": "RESOLVE",
+      "dramatic_target": "극장 직원·시청의 안전·예산 책임경계 문서화",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC39",
+      "sequence_id": "SQ07",
+      "sequence_scene_index": 3,
+      "obligation_id": "EV02",
+      "phase": "ADVANCE",
+      "dramatic_target": "지원금 마감과 임시직 급여 압박",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC40",
+      "sequence_id": "SQ07",
+      "sequence_scene_index": 4,
+      "obligation_id": "EV02",
+      "phase": "RESOLVE",
+      "dramatic_target": "지원금 마감과 임시직 급여 압박",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC41",
+      "sequence_id": "SQ08",
+      "sequence_scene_index": 1,
+      "obligation_id": "EV03",
+      "phase": "ADVANCE",
+      "dramatic_target": "지하 전기실 불법 증설 흔적 발견",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC42",
+      "sequence_id": "SQ08",
+      "sequence_scene_index": 2,
+      "obligation_id": "EV03",
+      "phase": "RESOLVE",
+      "dramatic_target": "지하 전기실 불법 증설 흔적 발견",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC43",
+      "sequence_id": "SQ08",
+      "sequence_scene_index": 3,
+      "obligation_id": "EV05",
+      "phase": "ADVANCE",
+      "dramatic_target": "안전보고서·보수계약서 서명 불일치와 공개 압박",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC44",
+      "sequence_id": "SQ08",
+      "sequence_scene_index": 4,
+      "obligation_id": "EV05",
+      "phase": "RESOLVE",
+      "dramatic_target": "안전보고서·보수계약서 서명 불일치와 공개 압박",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC45",
+      "sequence_id": "SQ08",
+      "sequence_scene_index": 5,
+      "obligation_id": "EV07",
+      "phase": "ADVANCE",
+      "dramatic_target": "윤서가 가족기록과 안전판단을 분리해 제한사용 대안 제시",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC46",
+      "sequence_id": "SQ08",
+      "sequence_scene_index": 6,
+      "obligation_id": "EV07",
+      "phase": "RESOLVE",
+      "dramatic_target": "윤서가 가족기록과 안전판단을 분리해 제한사용 대안 제시",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC47",
+      "sequence_id": "SQ09",
+      "sequence_scene_index": 1,
+      "obligation_id": "EV04",
+      "phase": "ADVANCE",
+      "dramatic_target": "지우의 즉석 거리공연 준비와 여론 움직임",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC48",
+      "sequence_id": "SQ09",
+      "sequence_scene_index": 2,
+      "obligation_id": "EV04",
+      "phase": "RESOLVE",
+      "dramatic_target": "지우의 즉석 거리공연 준비와 여론 움직임",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC49",
+      "sequence_id": "SQ09",
+      "sequence_scene_index": 3,
+      "obligation_id": "EV06",
+      "phase": "ADVANCE",
+      "dramatic_target": "거리공연 군중·통행·영업 피해 충돌",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC50",
+      "sequence_id": "SQ09",
+      "sequence_scene_index": 4,
+      "obligation_id": "EV06",
+      "phase": "RESOLVE",
+      "dramatic_target": "거리공연 군중·통행·영업 피해 충돌",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    },
+    {
+      "scene_id": "SC51",
+      "sequence_id": "SQ09",
+      "sequence_scene_index": 5,
+      "obligation_id": "EV08",
+      "phase": "ADVANCE",
+      "dramatic_target": "재개관 취소·야외무대 전환·지원금 재협상",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "increase pressure or expose actionable evidence without final closure"
+      ]
+    },
+    {
+      "scene_id": "SC52",
+      "sequence_id": "SQ09",
+      "sequence_scene_index": 6,
+      "obligation_id": "EV08",
+      "phase": "RESOLVE",
+      "dramatic_target": "재개관 취소·야외무대 전환·지원금 재협상",
+      "hard_rules": [
+        "screen-visible action carrier required",
+        "no research/schema token in screenplay",
+        "no future-episode factual source",
+        "produce observable state/result change"
+      ]
+    }
+  ],
+  "deferred_must_remain_open": [
+    "THR01",
+    "THR02",
+    "THR03",
+    "THR04",
+    "THR05",
+    "THR06"
+  ],
+  "surface_rules": {
+    "min_chars": 35000,
+    "exact_sequences": 9,
+    "exact_scenes": 52,
+    "dialogue": "non-expository when action/stage direction can carry state/emotion",
+    "stage_direction": "detailed allowed; important changes must be visible",
+    "metadata_leak": "forbidden",
+    "exact_scene_body_duplication": "forbidden"
+  },
+  "claim_boundary": "Virtual Provider Surface Pretest only; not actual OpenAI API and not literary-quality qualification."
+}
