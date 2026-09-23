@@ -1,0 +1,56 @@
+{
+  "schema": "R76_VP_B1_EXTERNAL_3JUDGE_PREREGISTRATION_R1",
+  "date": "2026-09-23",
+  "status": "SEALED_BEFORE_EXTERNAL_JUDGE_OUTPUTS",
+  "candidate_surface_sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4",
+  "judges": [
+    "J01",
+    "J02",
+    "J03"
+  ],
+  "independence": [
+    "Each judge receives only the screenplay-only packet, the pre-frozen six-scene packet, and this evaluation instruction stripped of hidden-plan fields.",
+    "Judges must not search Literary OS project/GitHub, request hidden architecture, inspect prior scores, or view other judges.",
+    "Same-session/internal evaluator results are hidden from judges."
+  ],
+  "whole_episode_axes": [
+    "EPISODE_PREMISE_COHERENCE",
+    "CAUSAL_SEQUENCE_PROGRESSION",
+    "THREAD_AND_SUBPLOT_INTEGRATION",
+    "CHARACTER_RELATIONSHIP_TRAJECTORY",
+    "INFORMATION_TOPOLOGY_DRAMATIZATION",
+    "SCENE_NECESSITY_AND_DISTINCT_FUNCTION",
+    "ESCALATION_PACING",
+    "CLOSURE_DEFERRED_BALANCE"
+  ],
+  "scene_axes": [
+    "DIALOGUE_SUBTEXT",
+    "CHARACTER_VOICE",
+    "RELATIONSHIP_STATUS_PRESSURE",
+    "PHYSICALIZATION_ACTION",
+    "PACING_ESCALATION_TIME_PRESSURE",
+    "ENSEMBLE_WORLD_SPECIFICITY",
+    "INFORMATION_DRAMATIZATION",
+    "KOREAN_SPOKEN_NATURALNESS"
+  ],
+  "score_scale": "1-10, integer or one decimal",
+  "critical_violations": [
+    "INTERNAL_SCHEMA_OR_RESEARCH_META_LEAK",
+    "IMPORTANT_STATE_CHANGE_WITHOUT_SCREEN_VISIBLE_CARRIER",
+    "EXPOSITORY_EMOTION_STATE_DIALOGUE_AS_DOMINANT_CRAFT",
+    "SEVERE_CHARACTER_VOICE_COLLAPSE",
+    "MAJOR_CAUSAL_OR_CONTINUITY_BREAK"
+  ],
+  "reverse_reconstruction": [
+    "episode_premise",
+    "major_threads",
+    "sequence_functions",
+    "relationship_trajectories",
+    "resolved_due_now",
+    "deferred_open_obligations"
+  ],
+  "judge_pass_rule": "whole_episode_mean >=7.0 AND scene_sample_mean >=7.0 AND CHARACTER_VOICE mean >=6.5 AND KOREAN_SPOKEN_NATURALNESS mean >=6.5 AND no confirmed critical violation.",
+  "aggregate_pass_rule": "At least 2 of 3 judges PASS; pooled median whole-episode axis score >=7.0; pooled median scene-axis score >=7.0; no critical violation confirmed independently by >=2 judges.",
+  "no_posthoc_rule": "No score threshold, scene sample, candidate text, or critical-violation definition may change after first external judge output.",
+  "claim_boundary": "External blind PASS would qualify R76-VP-B1 as a virtual-provider broadcast-scale literary candidate. It would not equal actual OpenAI API validation, Operational Level-3, Production promotion, or R140."
+}
