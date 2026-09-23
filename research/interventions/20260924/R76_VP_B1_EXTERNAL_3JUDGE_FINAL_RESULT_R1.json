@@ -1,0 +1,116 @@
+{
+  "schema": "R76_VP_B1_EXTERNAL_3JUDGE_FINAL_RESULT_R1",
+  "date": "2026-09-24",
+  "status": "PASS__EXTERNAL_3JUDGE_ABSOLUTE_BROADCAST_SCREENPLAY_QUALITY_QUALIFIED",
+  "candidate": {
+    "work": "SYNTH_R76_BREAKWATER_THEATER",
+    "title": "방파제 극장",
+    "surface_chars": 35333,
+    "sequences": 9,
+    "scenes": 52,
+    "surface_sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4"
+  },
+  "preregistered_gate": {
+    "per_judge": {
+      "whole_episode_mean_min": 7,
+      "scene_sample_mean_min": 7,
+      "character_voice_mean_min": 6.5,
+      "korean_spoken_naturalness_mean_min": 6.5,
+      "critical_violation_required": 0
+    },
+    "aggregate": {
+      "judges_pass_min": "2/3",
+      "pooled_median_whole_episode_axis_min": 7,
+      "pooled_median_scene_axis_min": 7,
+      "confirmed_critical_violation_rule": "same substantive violation independently confirmed by >=2 judges"
+    }
+  },
+  "judges": {
+    "J01": {
+      "whole_episode_mean": 8.625,
+      "scene_sample_mean": 8.645833333333334,
+      "character_voice_mean": 8.5,
+      "korean_spoken_naturalness_mean": 8.5,
+      "critical_violations": [],
+      "pass": true
+    },
+    "J02": {
+      "whole_episode_mean": 8.375,
+      "scene_sample_mean": 8.416666666666666,
+      "character_voice_mean": 8.333333333333334,
+      "korean_spoken_naturalness_mean": 8.5,
+      "critical_violations": [],
+      "pass": true
+    },
+    "J03": {
+      "whole_episode_mean": 8.25,
+      "scene_sample_mean": 8.229166666666666,
+      "character_voice_mean": 8.166666666666666,
+      "korean_spoken_naturalness_mean": 8.166666666666666,
+      "critical_violations": [],
+      "pass": true
+    }
+  },
+  "pooled": {
+    "judge_passes": "3/3",
+    "whole_episode_score_median": 8.5,
+    "scene_score_median": 8,
+    "whole_axis_medians": {
+      "EPISODE_PREMISE_COHERENCE": 9,
+      "CAUSAL_SEQUENCE_PROGRESSION": 8,
+      "THREAD_AND_SUBPLOT_INTEGRATION": 9,
+      "CHARACTER_RELATIONSHIP_TRAJECTORY": 8,
+      "INFORMATION_TOPOLOGY_DRAMATIZATION": 9,
+      "SCENE_NECESSITY_AND_DISTINCT_FUNCTION": 7,
+      "ESCALATION_PACING": 8,
+      "CLOSURE_DEFERRED_BALANCE": 9
+    },
+    "scene_axis_medians": {
+      "DIALOGUE_SUBTEXT": 8,
+      "CHARACTER_VOICE": 8,
+      "RELATIONSHIP_STATUS_PRESSURE": 8,
+      "PHYSICALIZATION_ACTION": 9,
+      "PACING_ESCALATION_TIME_PRESSURE": 8,
+      "ENSEMBLE_WORLD_SPECIFICITY": 9,
+      "INFORMATION_DRAMATIZATION": 9,
+      "KOREAN_SPOKEN_NATURALNESS": 8
+    },
+    "confirmed_critical_violations": []
+  },
+  "reconstruction_consensus": {
+    "status": "PASS__CORE_ARCHITECTURE_AND_STATE_BOUNDARY_RECOVERABLE_FROM_FINISHED_SCREENPLAY",
+    "consensus": [
+      "All three judges reconstructed the same central episode premise: safety shutdown plus preservation of labor/performance through an outdoor alternative.",
+      "All three recovered the major safety, funding/labor, outdoor-performance/community, historical-repair/evidence, responsibility/authority, and relationship threads.",
+      "All three recovered a nine-stage functional progression closely aligned at the episode-movement level.",
+      "All three separated due-now closure from deferred building repair, historical liability, funding finalization, family responsibility, and Jiwoo future-state.",
+      "Minor differences were limited to whether some secondary character-function interpretations were EVIDENCED or INFERRED; these did not affect the canonical due/deferred boundary."
+    ]
+  },
+  "convergent_strengths": [
+    "Safety, labor/funding, community access, historical responsibility, and performance survival constrain one another causally rather than running as isolated subplots.",
+    "Information/state changes are repeatedly carried by visible props, documents, spatial boundaries, devices, and actions rather than narration alone.",
+    "Outdoor-performance resolution creates new operational resistance instead of functioning as an effortless solution.",
+    "The ending closes the immediate performance objective while preserving long-horizon repair, liability, budget, family, and career obligations."
+  ],
+  "convergent_weaknesses": [
+    "Procedural evidence handling—photos, records, seals, documents, responsibility wording—repeats enough to slow the middle and reduce perceived scene distinctness.",
+    "Some dialogue states principles or procedural logic in unusually clean, writerly formulations, reducing subtext in places.",
+    "Principal voices are distinguishable but several characters share concise, highly logical phrasing; stronger idiolect differentiation remains possible.",
+    "The family/history investigation occasionally competes with the immediate outdoor-performance line for middle-episode focus."
+  ],
+  "claim_boundary": {
+    "establishes": [
+      "External 3-judge absolute literary-quality qualification for this sealed virtual-provider broadcast-scale screenplay.",
+      "External support that core upper-layer architecture and due/deferred state boundaries survive into the finished screenplay sufficiently to be reconstructed."
+    ],
+    "does_not_establish": [
+      "Causal improvement versus ENG:R47 or another full-scale Control, because no same-input hidden full-scale Control screenplay was included in this gate.",
+      "Actual OpenAI API model equivalence of the virtual provider environment.",
+      "Operational Level-3 activation.",
+      "Production promotion.",
+      "R140 completion."
+    ]
+  },
+  "next_permitted_step": "Seal evidence-backed canonical state commit from the finished screenplay, close R76 VP-B1, then preregister R77 EP01->EP02->EP03 broadcast-scale state-carry research. Do not alter the judged R76 screenplay."
+}
