@@ -1,0 +1,28 @@
+name: R76 VP B1 Broadcast Surface Mechanical Validation R1
+
+on:
+  push:
+    paths:
+      - 'research/interventions/20260923/r76_vp_b1_surface/**'
+      - 'research/interventions/20260923/r76_vp_b1_mechanical_validator_r1.py'
+      - '.github/workflows/r76-vp-b1-mechanical-validation-r1.yml'
+  workflow_dispatch:
+
+jobs:
+  mechanical-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate 35k+ / 9-sequence / 52-scene virtual-provider surface
+        run: |
+          python research/interventions/20260923/r76_vp_b1_mechanical_validator_r1.py | tee r76_vp_b1_mechanical_stdout.jsonl
+      - name: Upload R76 VP B1 evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: r76-vp-b1-mechanical-evidence-r1
+          path: |
+            research/interventions/20260923/r76_vp_b1_evidence/
+            r76_vp_b1_mechanical_stdout.jsonl
