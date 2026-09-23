@@ -1,0 +1,285 @@
+{
+  "schema": "R76_FRESH_REPLICATION_STRUCTURAL_INPUT_R1",
+  "date": "2026-09-23",
+  "work_id": "SYNTH_R76_NIGHT_FERRY_TERMINAL",
+  "episode_id": "EP01",
+  "source_boundary": "Fresh structural projection authored after R2A-R2/R2B repair freeze; no outcome-based replacement.",
+  "obligations": [
+    {
+      "id": "EVR01",
+      "kind": "EVENT",
+      "owners": [
+        "하린",
+        "도현"
+      ],
+      "deps": [],
+      "role": "WEATHER_OPERATION_HALT"
+    },
+    {
+      "id": "EVR02",
+      "kind": "EVENT",
+      "owners": [
+        "미정",
+        "준서"
+      ],
+      "deps": [],
+      "role": "PASSENGER_CAPACITY_CONFLICT"
+    },
+    {
+      "id": "EVR03",
+      "kind": "EVENT",
+      "owners": [
+        "도현",
+        "기태"
+      ],
+      "deps": [
+        "EVR01"
+      ],
+      "role": "EQUIPMENT_FAILURE_DISCOVERY"
+    },
+    {
+      "id": "EVR04",
+      "kind": "EVENT",
+      "owners": [
+        "준서",
+        "미정"
+      ],
+      "deps": [
+        "EVR02"
+      ],
+      "role": "QUEUE_ESCALATION"
+    },
+    {
+      "id": "EVR05",
+      "kind": "EVENT",
+      "owners": [
+        "하린",
+        "기태"
+      ],
+      "deps": [
+        "EVR03"
+      ],
+      "role": "SAFETY_ROUTE_REVISION"
+    },
+    {
+      "id": "EVR06",
+      "kind": "EVENT",
+      "owners": [
+        "하린",
+        "미정",
+        "도현"
+      ],
+      "deps": [
+        "EVR03",
+        "EVR04"
+      ],
+      "role": "JOINT_OPERATION_NEGOTIATION"
+    },
+    {
+      "id": "EVR07",
+      "kind": "EVENT",
+      "owners": [
+        "기태",
+        "준서"
+      ],
+      "deps": [
+        "EVR05"
+      ],
+      "role": "RESOURCE_REALLOCATION"
+    },
+    {
+      "id": "EVR08",
+      "kind": "EVENT",
+      "owners": [
+        "하린",
+        "도현",
+        "미정"
+      ],
+      "deps": [
+        "EVR06",
+        "EVR07"
+      ],
+      "role": "SERVICE_STRATEGY_PIVOT"
+    },
+    {
+      "id": "INR01",
+      "kind": "INFORMATION",
+      "owners": [
+        "하린",
+        "도현"
+      ],
+      "deps": [],
+      "role": "WEATHER_WINDOW_REVEAL"
+    },
+    {
+      "id": "INR02",
+      "kind": "INFORMATION",
+      "owners": [
+        "미정",
+        "준서"
+      ],
+      "deps": [],
+      "role": "CAPACITY_LIMIT_DISCLOSURE"
+    },
+    {
+      "id": "INR03",
+      "kind": "INFORMATION",
+      "owners": [
+        "도현",
+        "기태"
+      ],
+      "deps": [],
+      "role": "MAINTENANCE_EVIDENCE_REVEAL"
+    },
+    {
+      "id": "INR04",
+      "kind": "INFORMATION",
+      "owners": [
+        "하린",
+        "기태"
+      ],
+      "deps": [],
+      "role": "ALTERNATE_ROUTE_DISCOVERY"
+    },
+    {
+      "id": "INR05",
+      "kind": "INFORMATION",
+      "owners": [
+        "미정",
+        "하린"
+      ],
+      "deps": [],
+      "role": "MEDICAL_PRIORITY_DISCLOSURE"
+    },
+    {
+      "id": "INR06",
+      "kind": "INFORMATION",
+      "owners": [
+        "준서",
+        "미정"
+      ],
+      "deps": [],
+      "role": "CROWD_RISK_SIGNAL"
+    },
+    {
+      "id": "INR07",
+      "kind": "INFORMATION",
+      "owners": [
+        "도현",
+        "하린"
+      ],
+      "deps": [],
+      "role": "RESTRICTED_MAINTENANCE_DISCLOSURE"
+    },
+    {
+      "id": "INR08",
+      "kind": "INFORMATION",
+      "owners": [
+        "기태",
+        "준서",
+        "하린"
+      ],
+      "deps": [],
+      "role": "THIRD_OPTION_RESOURCE_REVEAL"
+    },
+    {
+      "id": "PYR01",
+      "kind": "PAYOFF",
+      "owners": [
+        "도현",
+        "기태"
+      ],
+      "deps": [],
+      "role": "SPARE_PART_PAYOFF"
+    },
+    {
+      "id": "PYR02",
+      "kind": "PAYOFF",
+      "owners": [
+        "미정",
+        "준서"
+      ],
+      "deps": [],
+      "role": "QUEUE_TOKEN_PAYOFF"
+    },
+    {
+      "id": "PYR03",
+      "kind": "PAYOFF",
+      "owners": [
+        "하린",
+        "도현"
+      ],
+      "deps": [],
+      "role": "WEATHER_MAP_PAYOFF"
+    },
+    {
+      "id": "RLR01",
+      "kind": "RELATIONSHIP",
+      "owners": [
+        "하린",
+        "도현"
+      ],
+      "deps": [],
+      "role": "PROFESSIONAL_TRUST_RECALIBRATION"
+    },
+    {
+      "id": "RLR02",
+      "kind": "RELATIONSHIP",
+      "owners": [
+        "미정",
+        "준서"
+      ],
+      "deps": [],
+      "role": "PUBLIC_SERVICE_BOUNDARY"
+    },
+    {
+      "id": "RLR03",
+      "kind": "RELATIONSHIP",
+      "owners": [
+        "하린",
+        "기태"
+      ],
+      "deps": [],
+      "role": "EVIDENCE_BASED_ALLIANCE"
+    },
+    {
+      "id": "SOR01",
+      "kind": "SOCIAL",
+      "owners": [
+        "미정",
+        "하린"
+      ],
+      "deps": [],
+      "role": "PORT_AUTHORITY_RESPONSIBILITY"
+    },
+    {
+      "id": "SOR02",
+      "kind": "SOCIAL",
+      "owners": [
+        "준서",
+        "도현"
+      ],
+      "deps": [],
+      "role": "PASSENGER_STAFF_SPACE_RULE"
+    },
+    {
+      "id": "CHR01",
+      "kind": "CHARACTER",
+      "owners": [
+        "하린"
+      ],
+      "deps": [],
+      "role": "RISK_AUTHORITY_CHOICE"
+    },
+    {
+      "id": "CHR02",
+      "kind": "CHARACTER",
+      "owners": [
+        "미정"
+      ],
+      "deps": [],
+      "role": "PUBLIC_DUTY_UNDER_PRESSURE"
+    }
+  ],
+  "deferred_thread_count": 6
+}
