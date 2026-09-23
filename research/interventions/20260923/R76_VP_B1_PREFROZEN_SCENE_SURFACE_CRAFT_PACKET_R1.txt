@@ -1,0 +1,35 @@
+R76 VP B1 — PRE-FROZEN SCENE SURFACE-CRAFT PACKET
+
+Selection was frozen from the sealed surface SHA256 before quality scoring.
+Selected scenes: SC07, SC15, SC30, SC32, SC39, SC41.
+Do not consult hidden architecture or prior results.
+Evaluate each scene on 8 axes: DIALOGUE_SUBTEXT, CHARACTER_VOICE, RELATIONSHIP_STATUS_PRESSURE, PHYSICALIZATION_ACTION, PACING_ESCALATION_TIME_PRESSURE, ENSEMBLE_WORLD_SPECIFICITY, INFORMATION_DRAMATIZATION, KOREAN_SPOKEN_NATURALNESS. Also flag critical violations.
+
+=== PRE-FROZEN SCENES ===
+
+씬 07
+
+
+---
+
+씬 15
+
+
+---
+
+씬 30
+
+
+---
+
+씬 32
+
+
+---
+
+씬 39
+
+
+---
+
+씬 41
