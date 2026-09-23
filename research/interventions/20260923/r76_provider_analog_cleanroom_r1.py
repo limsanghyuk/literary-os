@@ -109,6 +109,49 @@ def r2a_r2_causal_spine_sequences(obs):
             bundles.append([o])
     return bundles
 
+
+def internal_dependency_participants(bundle):
+    ids={x["id"] for x in bundle}
+    p=set()
+    for o in bundle:
+        for d in o["deps"]:
+            if d in ids:
+                p.add(d); p.add(o["id"])
+    return p
+
+def internal_root_count(bundle):
+    ids={x["id"] for x in bundle}
+    return sum(1 for o in bundle if not any(d in ids for d in o["deps"]))
+
+def valid_four_bundle_r3(bundle):
+    if len(bundle)!=4:
+        return True
+    return len(internal_dependency_participants(bundle))>=3 and internal_root_count(bundle)<=2
+
+def r2a_r3_causal_spine_participation_sequences(obs):
+    bundles=[]
+    for o in dependency_order(obs):
+        choices=[]
+        for i,b in enumerate(bundles):
+            candidate=b+[o]
+            if len(candidate)>4:
+                continue
+            rel=[related(o,x) for x in b]
+            if not (rel and min(rel)>=2):
+                continue
+            if len(candidate)==4 and not valid_four_bundle_r3(candidate):
+                continue
+            choices.append((sum(rel)/len(rel),len(internal_dependency_participants(candidate)),i))
+        if choices:
+            _,_,i=max(choices,key=lambda x:(x[0],x[1],-x[2]))
+            bundles[i].append(o)
+        else:
+            bundles.append([o])
+    return bundles
+
+def invalid_four_bundle_count_r3(bundles):
+    return sum(1 for b in bundles if len(b)==4 and not valid_four_bundle_r3(b))
+
 def owner_only_four_bundle_count(bundles):
     return sum(1 for b in bundles if len(b)==4 and len(internal_dependency_edges(b))==0)
 def zero_pairs(bundles):
@@ -181,15 +224,16 @@ def main():
       api.create({"model":MODEL,"input":"x"},lambda p:{},fault="500")["http_status"]==500,
     ]
     baseline=r69_baseline_sequences(OBS)
-    p1=api.create({"model":MODEL,"input":{"experiment":"R76-R2A-R2","frozen_input":"51e5289e..."}},
+    p1=api.create({"model":MODEL,"input":{"experiment":"R76-R2A-R3","frozen_input":"51e5289e..."}},
                   lambda p:{"r2a_r1_sequence_count":len(r2a_cohesion_sequences(OBS)),
-                            "sequence_count":len(r2a_r2_causal_spine_sequences(OBS)),
-                            "zero_related_pairs":zero_pairs(r2a_r2_causal_spine_sequences(OBS)),
-                            "owner_only_four_bundle_count":owner_only_four_bundle_count(r2a_r2_causal_spine_sequences(OBS)),
-                            "bundle_sizes":[len(b) for b in r2a_r2_causal_spine_sequences(OBS)],
-                            "bundles":[[o["id"] for o in b] for b in r2a_r2_causal_spine_sequences(OBS)],
-                            "coverage_ids":[o["id"] for b in r2a_r2_causal_spine_sequences(OBS) for o in b]},
-                  "r76-r2a-r2")
+                            "sequence_count":len(r2a_r3_causal_spine_participation_sequences(OBS)),
+                            "zero_related_pairs":zero_pairs(r2a_r3_causal_spine_participation_sequences(OBS)),
+                            "owner_only_four_bundle_count":owner_only_four_bundle_count(r2a_r3_causal_spine_participation_sequences(OBS)),
+                            "invalid_four_bundle_count_r3":invalid_four_bundle_count_r3(r2a_r3_causal_spine_participation_sequences(OBS)),
+                            "bundle_sizes":[len(b) for b in r2a_r3_causal_spine_participation_sequences(OBS)],
+                            "bundles":[[o["id"] for o in b] for b in r2a_r3_causal_spine_participation_sequences(OBS)],
+                            "coverage_ids":[o["id"] for b in r2a_r3_causal_spine_participation_sequences(OBS) for o in b]},
+                  "r76-r2a-r3")
     r2a=json.loads(p1["body"]["output"][0]["content"][0]["text"])
     p2=api.create({"model":MODEL,"input":{"experiment":"R76-R2B","frozen_input":"51e5289e..."}},
                   lambda p:{"baseline_f04_groups":baseline_f04_groups(OBS),
@@ -201,6 +245,7 @@ def main():
       "r2a_sequence_count_ge9":r2a["sequence_count"]>=9,
       "r2a_zero_related_pairs_0":len(r2a["zero_related_pairs"])==0,
       "r2a_owner_only_four_bundle_0":r2a["owner_only_four_bundle_count"]==0,
+      "r2a_invalid_four_bundle_r3_0":r2a["invalid_four_bundle_count_r3"]==0,
       "r2a_sequence_count_le14":r2a["sequence_count"]<=14,
       "r2a_no_clone_full_coverage":sorted(r2a["coverage_ids"])==sorted(o["id"] for o in OBS),
       "r2b_f04_groups_0":len(r2b["treatment_f04_groups"])==0,
