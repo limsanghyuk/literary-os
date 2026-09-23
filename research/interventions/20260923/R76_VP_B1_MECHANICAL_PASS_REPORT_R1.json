@@ -1,0 +1,36 @@
+{
+  "schema": "R76_VP_B1_MECHANICAL_PASS_REPORT_R1",
+  "date": "2026-09-23",
+  "status": "PASS",
+  "workflow_run_id": 35862972306,
+  "workflow_job_id": 107187469623,
+  "artifact_id": 10750932426,
+  "artifact_zip_sha256": "d5fac1083df80d0242cb5ee1ef312aeb09ec7adc0bf57af0b38fa3a3f20f9203",
+  "surface": {
+    "char_count": 35333,
+    "sequence_count": 9,
+    "scene_count": 52,
+    "dialogue_scene_count": 52,
+    "surface_sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4"
+  },
+  "gates": {
+    "B1_char_count_ge35000": true,
+    "B2_sequence_headings_9": true,
+    "B3_scene_headings_52": true,
+    "B4_internal_metadata_leak_0": true,
+    "B5_empty_scene_0": true,
+    "B6_stage_direction_all_scenes": true,
+    "B7_dialogue_ge45_scenes": true,
+    "B8_numbering_monotonic": true,
+    "B9_exact_duplicate_scene_bodies_0": true,
+    "B10_output_hash_and_virtual_receipt": true
+  },
+  "virtual_provider_receipt": {
+    "X-Client-Request-Id": "r76-vp-b1-surface-r1",
+    "x-request-id": "req_254a5fc009354f5cbc9c5eac0172108c",
+    "response_id": "resp_f914f041e39848b489a73bb4f857498c",
+    "model": "gpt-5.6-sol-chatgpt-virtual-provider",
+    "status": "completed"
+  },
+  "scientific_boundary": "Mechanical Virtual Provider Surface Pretest PASS only; not literary-quality, external-blind, Production, Level-3, or R140 qualification."
+}
