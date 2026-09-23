@@ -111,7 +111,7 @@ def r2a_r2_causal_spine_sequences(obs):
 
 def owner_only_four_bundle_count(bundles):
     return sum(1 for b in bundles if len(b)==4 and len(internal_dependency_edges(b))==0)
-\ndef zero_pairs(bundles):
+def zero_pairs(bundles):
     out=[]
     for qi,b in enumerate(bundles,1):
         for i in range(len(b)):
