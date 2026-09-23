@@ -85,7 +85,33 @@ def r2a_cohesion_sequences(obs):
             bundles.append([o])
     return bundles
 
-def zero_pairs(bundles):
+
+def internal_dependency_edges(bundle):
+    ids={x["id"] for x in bundle}
+    return [(d,o["id"]) for o in bundle for d in o["deps"] if d in ids]
+
+def r2a_r2_causal_spine_sequences(obs):
+    bundles=[]
+    for o in dependency_order(obs):
+        choices=[]
+        for i,b in enumerate(bundles):
+            candidate=b+[o]
+            internal=internal_dependency_edges(candidate)
+            cap=4 if internal else 3
+            if len(candidate)>cap: continue
+            rel=[related(o,x) for x in b]
+            if rel and min(rel)>=2:
+                choices.append((sum(rel)/len(rel),len(internal),i))
+        if choices:
+            _,_,i=max(choices,key=lambda x:(x[0],x[1],-x[2]))
+            bundles[i].append(o)
+        else:
+            bundles.append([o])
+    return bundles
+
+def owner_only_four_bundle_count(bundles):
+    return sum(1 for b in bundles if len(b)==4 and len(internal_dependency_edges(b))==0)
+\ndef zero_pairs(bundles):
     out=[]
     for qi,b in enumerate(bundles,1):
         for i in range(len(b)):
@@ -170,6 +196,8 @@ def main():
       "provider_contract":all(contract),
       "r2a_sequence_count_ge9":r2a["sequence_count"]>=9,
       "r2a_zero_related_pairs_0":len(r2a["zero_related_pairs"])==0,
+      "r2a_owner_only_four_bundle_0":r2a["owner_only_four_bundle_count"]==0,
+      "r2a_sequence_count_le14":r2a["sequence_count"]<=14,
       "r2a_no_clone_full_coverage":sorted(r2a["coverage_ids"])==sorted(o["id"] for o in OBS),
       "r2b_f04_groups_0":len(r2b["treatment_f04_groups"])==0,
       "r2b_threshold_unchanged":True,
