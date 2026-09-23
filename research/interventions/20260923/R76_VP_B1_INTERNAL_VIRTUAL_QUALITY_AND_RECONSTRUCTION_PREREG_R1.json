@@ -1,0 +1,41 @@
+{
+  "schema": "R76_VP_B1_INTERNAL_VIRTUAL_QUALITY_AND_RECONSTRUCTION_PREREG_R1",
+  "date": "2026-09-23",
+  "status": "PREREGISTERED_BEFORE_INTERNAL_QUALITY_SCORING",
+  "surface_sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4",
+  "evaluation_boundary": "INTERNAL_VIRTUAL_EVALUATION. Same ChatGPT session has project context, so this cannot count as independent external blind evidence.",
+  "whole_episode_axes": {
+    "EPISODE_PREMISE_COHERENCE": "1-10",
+    "CAUSAL_SEQUENCE_PROGRESSION": "1-10",
+    "THREAD_AND_SUBPLOT_INTEGRATION": "1-10",
+    "CHARACTER_RELATIONSHIP_TRAJECTORY": "1-10",
+    "INFORMATION_TOPOLOGY_DRAMATIZATION": "1-10",
+    "SCENE_NECESSITY_AND_DISTINCT_FUNCTION": "1-10",
+    "ESCALATION_PACING": "1-10",
+    "CLOSURE_DEFERRED_BALANCE": "1-10"
+  },
+  "whole_episode_internal_pass": "mean >=7.0, every axis >=6.0, critical violations 0",
+  "scene_sample": "Use only frozen scenes SC07, SC15, SC30, SC32, SC39, SC41.",
+  "scene_axes": [
+    "DIALOGUE_SUBTEXT",
+    "CHARACTER_VOICE",
+    "RELATIONSHIP_STATUS_PRESSURE",
+    "PHYSICALIZATION_ACTION",
+    "PACING_ESCALATION_TIME_PRESSURE",
+    "ENSEMBLE_WORLD_SPECIFICITY",
+    "INFORMATION_DRAMATIZATION",
+    "KOREAN_SPOKEN_NATURALNESS"
+  ],
+  "scene_internal_pass": "overall mean >=7.0, axis medians >=6.0, critical violations 0",
+  "reverse_reconstruction_required": [
+    "episode_premise",
+    "major_threads",
+    "sequence_functions",
+    "character_relationship_trajectories",
+    "information_shifts",
+    "resolved_due_now",
+    "deferred_open_obligations"
+  ],
+  "state_extraction_rule": "Commit only state changes visibly evidenced in screenplay; each committed state must cite one or more scene numbers. Planner-only or hidden intended state is forbidden.",
+  "external_requirement": "Independent external blind remains mandatory before literary-quality qualification or R76 final quality PASS."
+}
