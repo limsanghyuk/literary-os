@@ -1,0 +1,106 @@
+{
+  "schema": "R76_VP_B1_INTERNAL_VIRTUAL_QUALITY_RESULT_R1",
+  "date": "2026-09-23",
+  "status": "INTERNAL_PASS__EXTERNAL_BLIND_STILL_REQUIRED",
+  "surface_sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4",
+  "evaluator_boundary": "INTERNAL_VIRTUAL_EVALUATION; same-session project-aware evaluator, not independent blind.",
+  "whole_episode": {
+    "scores": {
+      "EPISODE_PREMISE_COHERENCE": 8.3,
+      "CAUSAL_SEQUENCE_PROGRESSION": 7.4,
+      "THREAD_AND_SUBPLOT_INTEGRATION": 7.9,
+      "CHARACTER_RELATIONSHIP_TRAJECTORY": 8.3,
+      "INFORMATION_TOPOLOGY_DRAMATIZATION": 8.2,
+      "SCENE_NECESSITY_AND_DISTINCT_FUNCTION": 7.1,
+      "ESCALATION_PACING": 7.2,
+      "CLOSURE_DEFERRED_BALANCE": 8.5
+    },
+    "mean": 7.8625,
+    "critical_violations": [],
+    "strengths": [
+      "Safety, funding/payroll, documentary evidence, community-space negotiation, and outdoor-performance threads converge causally rather than as isolated subplots.",
+      "Relationship changes are repeatedly carried by observable procedures/props: disclosure of documents, responsibility table, safety tape, floor plans, signed agreements, and shared evidence custody.",
+      "Episode ending distinguishes achieved present action from unresolved long-horizon debt instead of falsely closing the building/funding/family problems."
+    ],
+    "weaknesses": [
+      "Electrical/document evidence investigation recurs across SQ03, SQ05, and SQ08; each adds information, but the aggregate rhythm can feel procedurally repetitive.",
+      "Several middle sequences are document/verification heavy, so escalation sometimes advances through paperwork rather than sharper interpersonal reversals.",
+      "Some dialogue cadences share the same concise adversarial pattern across characters, leaving room for stronger voice differentiation."
+    ]
+  },
+  "scene_sample": {
+    "selected": [
+      "SC07",
+      "SC15",
+      "SC30",
+      "SC32",
+      "SC39",
+      "SC41"
+    ],
+    "per_scene": {
+      "SC07": {
+        "DIALOGUE_SUBTEXT": 7.1,
+        "CHARACTER_VOICE": 7.5,
+        "RELATIONSHIP_STATUS_PRESSURE": 7,
+        "PHYSICALIZATION_ACTION": 7.4,
+        "PACING_ESCALATION_TIME_PRESSURE": 7.4,
+        "ENSEMBLE_WORLD_SPECIFICITY": 8,
+        "INFORMATION_DRAMATIZATION": 7.7,
+        "KOREAN_SPOKEN_NATURALNESS": 7.6
+      },
+      "SC15": {
+        "DIALOGUE_SUBTEXT": 7.8,
+        "CHARACTER_VOICE": 7.8,
+        "RELATIONSHIP_STATUS_PRESSURE": 6.8,
+        "PHYSICALIZATION_ACTION": 7.5,
+        "PACING_ESCALATION_TIME_PRESSURE": 7.5,
+        "ENSEMBLE_WORLD_SPECIFICITY": 8.1,
+        "INFORMATION_DRAMATIZATION": 8.3,
+        "KOREAN_SPOKEN_NATURALNESS": 7.8
+      },
+      "SC30": {
+        "DIALOGUE_SUBTEXT": 8.4,
+        "CHARACTER_VOICE": 8.3,
+        "RELATIONSHIP_STATUS_PRESSURE": 8.7,
+        "PHYSICALIZATION_ACTION": 8.2,
+        "PACING_ESCALATION_TIME_PRESSURE": 7.8,
+        "ENSEMBLE_WORLD_SPECIFICITY": 7.4,
+        "INFORMATION_DRAMATIZATION": 8.3,
+        "KOREAN_SPOKEN_NATURALNESS": 8.4
+      },
+      "SC32": {
+        "DIALOGUE_SUBTEXT": 7.2,
+        "CHARACTER_VOICE": 7.8,
+        "RELATIONSHIP_STATUS_PRESSURE": 7.5,
+        "PHYSICALIZATION_ACTION": 8.1,
+        "PACING_ESCALATION_TIME_PRESSURE": 7.1,
+        "ENSEMBLE_WORLD_SPECIFICITY": 8.2,
+        "INFORMATION_DRAMATIZATION": 7.4,
+        "KOREAN_SPOKEN_NATURALNESS": 8
+      },
+      "SC39": {
+        "DIALOGUE_SUBTEXT": 7.7,
+        "CHARACTER_VOICE": 8.1,
+        "RELATIONSHIP_STATUS_PRESSURE": 7.8,
+        "PHYSICALIZATION_ACTION": 8,
+        "PACING_ESCALATION_TIME_PRESSURE": 8.5,
+        "ENSEMBLE_WORLD_SPECIFICITY": 7.8,
+        "INFORMATION_DRAMATIZATION": 8.1,
+        "KOREAN_SPOKEN_NATURALNESS": 8
+      },
+      "SC41": {
+        "DIALOGUE_SUBTEXT": 7.2,
+        "CHARACTER_VOICE": 7.8,
+        "RELATIONSHIP_STATUS_PRESSURE": 7.1,
+        "PHYSICALIZATION_ACTION": 8.5,
+        "PACING_ESCALATION_TIME_PRESSURE": 7.9,
+        "ENSEMBLE_WORLD_SPECIFICITY": 8.6,
+        "INFORMATION_DRAMATIZATION": 8.2,
+        "KOREAN_SPOKEN_NATURALNESS": 7.7
+      }
+    },
+    "critical_violations": [],
+    "interpretation": "Internal sample clears the preregistered internal threshold. Strongest areas are physicalization, information dramatization, and world-specific procedural action. Voice/subtext are adequate-to-strong but remain the main literary-quality uncertainty for external blind review."
+  },
+  "final_boundary": "This result cannot substitute for independent external blind evaluation and does not qualify Production, Operational Level-3, or R140."
+}
