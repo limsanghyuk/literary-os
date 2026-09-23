@@ -1,0 +1,26 @@
+name: R76 VP B1 External Judge Dispatch Build R1
+on:
+  push:
+    paths:
+      - 'research/interventions/20260923/R76_VP_B1_EXTERNAL_**'
+      - 'research/interventions/20260923/R76_VP_B1_WHOLE_EPISODE_SCREENPLAY_ONLY_BLIND_PACKET_R1.txt'
+      - 'research/interventions/20260923/R76_VP_B1_PREFROZEN_SCENE_SURFACE_CRAFT_PACKET_R1.txt'
+      - 'research/interventions/20260923/r76_vp_b1_external_dispatch_build_r1.py'
+      - '.github/workflows/r76-vp-b1-external-dispatch-build-r1.yml'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build isolated judge packets
+        run: python research/interventions/20260923/r76_vp_b1_external_dispatch_build_r1.py | tee r76_external_dispatch_build_result.jsonl
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r76-vp-b1-external-3judge-dispatch-r1
+          path: |
+            research/interventions/20260923/R76_VP_B1_EXTERNAL_3JUDGE_DISPATCH_BUNDLE_R1.zip
+            r76_external_dispatch_build_result.jsonl
