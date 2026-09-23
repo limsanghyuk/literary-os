@@ -1,0 +1,189 @@
+{
+  "schema": "R76_VP_B1_OUTPUT_ONLY_REVERSE_RECONSTRUCTION_R1",
+  "date": "2026-09-23",
+  "evaluator_boundary": "INTERNAL_VIRTUAL_RECONSTRUCTION_FROM_SCREENPLAY_PACKET; not independent external blind.",
+  "surface_sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4",
+  "reconstructed_episode_premise": "After storm damage forces a civic theater to close its interior, the staff, city official, performers, and merchants must preserve safety, wages, public accountability, and a viable performance by shifting the event outdoors without pretending the building problem is solved.",
+  "major_threads": [
+    "Building safety: ceiling crack -> nonstandard wiring -> historical repair evidence -> limited-use/closed-interior decision.",
+    "Funding and labor: same-day subsidy deadline and unpaid temporary labor -> revised outdoor-operation proposal -> conditional continuation, not full financial closure.",
+    "Community/social ecology: merchant support conflicts with traffic/business costs -> explicit time/space conditions -> jointly managed outdoor-performance rules.",
+    "Document/accountability: suspicious old repair records and signature mismatch -> evidence preservation -> bounded public disclosure without premature blame.",
+    "Yunseo family conflict: father appears in historical work records -> conflict-of-interest disclosure and procedural safeguards; responsibility remains unresolved.",
+    "Performance survival: indoor reopening abandoned -> mobile equipment + negotiated public-space operation -> actual outdoor performance."
+  ],
+  "reconstructed_sequence_functions": [
+    {
+      "sequence": 1,
+      "function": "Detect safety defect, halt rehearsal, establish evidence-first safety rule and Yunseo's possible conflict of interest."
+    },
+    {
+      "sequence": 2,
+      "function": "Make the financial/labor deadline concrete and shift Minho's goal from opening the building to preserving people/work."
+    },
+    {
+      "sequence": 3,
+      "function": "Establish historical/non-storm electrical risk, suspicious documents, and controlled evidence custody."
+    },
+    {
+      "sequence": 4,
+      "function": "Show mixed community support and convert it into conditional spatial/time constraints for an outdoor alternative."
+    },
+    {
+      "sequence": 5,
+      "function": "Deepen historical evidence and convert Yunseo–Taekyung and Yunseo–Minho relationships toward procedural trust."
+    },
+    {
+      "sequence": 6,
+      "function": "Materialize outdoor-performance feasibility through portable equipment and Jiwoo–Sookyung negotiated cooperation."
+    },
+    {
+      "sequence": 7,
+      "function": "Formalize responsibility boundaries and submit the revised funding/labor operating proposal before deadline."
+    },
+    {
+      "sequence": 8,
+      "function": "Verify wiring/document evidence further, separate fact from accusation, and define limited-use zones without reopening the building."
+    },
+    {
+      "sequence": 9,
+      "function": "Execute the outdoor performance under live crowd/business pressure, receive conditional funding response, and end with long-horizon problems explicitly open."
+    }
+  ],
+  "relationship_trajectories": [
+    {
+      "pair": "윤서-민호",
+      "from": "safety-vs-survival conflict with mutual withholding",
+      "to": "conditional procedural trust with reciprocal disclosure and noninterference rules",
+      "evidence": [
+        "SC29",
+        "SC30",
+        "SC37",
+        "SC38"
+      ]
+    },
+    {
+      "pair": "윤서-태경",
+      "from": "technical collaboration with conflict over personal-family evidence",
+      "to": "shared evidence-custody alliance with mutual checks",
+      "evidence": [
+        "SC17",
+        "SC18",
+        "SC27",
+        "SC28",
+        "SC45",
+        "SC46"
+      ]
+    },
+    {
+      "pair": "지우-수경",
+      "from": "performance urgency vs merchant access/business protection",
+      "to": "condition-based operational cooperation",
+      "evidence": [
+        "SC33",
+        "SC34",
+        "SC35",
+        "SC36",
+        "SC49",
+        "SC50"
+      ]
+    }
+  ],
+  "reconstructed_resolved_or_realized": [
+    {
+      "state": "Indoor rehearsal/reopening is halted; audience interior remains closed.",
+      "evidence": [
+        "SC02",
+        "SC12",
+        "SC46",
+        "SC52"
+      ]
+    },
+    {
+      "state": "Outdoor performance becomes a concrete, negotiated, and executed alternative.",
+      "evidence": [
+        "SC24",
+        "SC31",
+        "SC36",
+        "SC48",
+        "SC52"
+      ]
+    },
+    {
+      "state": "Responsibility boundaries among safety, operation, and city budget/permission are written and publicly visible.",
+      "evidence": [
+        "SC37",
+        "SC38"
+      ]
+    },
+    {
+      "state": "Revised outdoor-operation/funding proposal is submitted before the deadline and later receives conditional rather than final approval.",
+      "evidence": [
+        "SC40",
+        "SC51"
+      ]
+    },
+    {
+      "state": "Historical wiring/repair evidence is preserved and publicly described only at the level actually verified.",
+      "evidence": [
+        "SC41",
+        "SC42",
+        "SC43",
+        "SC44",
+        "SC46"
+      ]
+    }
+  ],
+  "reconstructed_deferred_open": [
+    {
+      "state": "Long-term building repair and financing remain unresolved.",
+      "evidence": [
+        "SC51",
+        "SC52"
+      ]
+    },
+    {
+      "state": "Final responsibility for historical repair irregularities remains unresolved.",
+      "evidence": [
+        "SC44",
+        "SC52"
+      ]
+    },
+    {
+      "state": "Yunseo's father's role/responsibility remains unresolved.",
+      "evidence": [
+        "SC28",
+        "SC45",
+        "SC52"
+      ]
+    },
+    {
+      "state": "Long-term city-theater budget relationship remains open.",
+      "evidence": [
+        "SC51",
+        "SC52"
+      ]
+    },
+    {
+      "state": "Jiwoo's longer-term career/local commitment remains open.",
+      "evidence": [
+        "SC52"
+      ]
+    },
+    {
+      "state": "Merchant-community division over future theater activity remains open.",
+      "evidence": [
+        "SC52"
+      ]
+    }
+  ],
+  "reconstruction_assessment": {
+    "premise_recoverable": true,
+    "major_threads_recoverable": true,
+    "nine_functional_movements_recoverable": true,
+    "relationship_trajectories_recoverable": true,
+    "realized_vs_deferred_boundary_recoverable": true,
+    "note": "The screenplay supports reconstruction of the intended closed-loop state boundary. Exact hidden planner labels are not necessary for this reconstruction."
+  },
+  "claim_boundary": "Internal reconstruction evidence only; same-session knowledge prevents an independent-blind claim."
+}
