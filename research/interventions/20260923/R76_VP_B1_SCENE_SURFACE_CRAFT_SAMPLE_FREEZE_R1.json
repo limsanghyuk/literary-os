@@ -1,0 +1,40 @@
+{
+  "schema": "R76_VP_B1_SCENE_SURFACE_CRAFT_SAMPLE_FREEZE_R1",
+  "date": "2026-09-23",
+  "status": "FROZEN_BEFORE_SCENE_SAMPLE_QUALITY_SCORING",
+  "surface_sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4",
+  "rule": "Partition SC01-17 / SC18-35 / SC36-52. For each third, use two consecutive 4-hex chunks of the already-sealed surface SHA256 modulo that third's span; if collision, advance second pick by one modulo span. No outcome-based replacement.",
+  "selected_scene_numbers": [
+    7,
+    15,
+    30,
+    32,
+    39,
+    41
+  ],
+  "selected_scene_ids": [
+    "SC07",
+    "SC15",
+    "SC30",
+    "SC32",
+    "SC39",
+    "SC41"
+  ],
+  "axes": [
+    "DIALOGUE_SUBTEXT",
+    "CHARACTER_VOICE",
+    "RELATIONSHIP_STATUS_PRESSURE",
+    "PHYSICALIZATION_ACTION",
+    "PACING_ESCALATION_TIME_PRESSURE",
+    "ENSEMBLE_WORLD_SPECIFICITY",
+    "INFORMATION_DRAMATIZATION",
+    "KOREAN_SPOKEN_NATURALNESS"
+  ],
+  "evaluator_boundary": "Same-session evaluation cannot count as external independent blind. Internal evaluation must be labeled INTERNAL_VIRTUAL_EVALUATION. External blind remains required for final literary-quality qualification.",
+  "critical_violations": [
+    "EXPOSITORY_EMOTION_IN_DIALOGUE",
+    "INTERNAL_SCHEMA_OR_RESEARCH_META_LEAK",
+    "IMPORTANT_STATE_CHANGE_WITHOUT_VISIBLE_CARRIER",
+    "CHARACTER_VOICE_COLLAPSE"
+  ]
+}
