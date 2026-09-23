@@ -1,0 +1,178 @@
+{
+  "schema": "R76_VP_B1_TEXT_CANONICAL_STATE_LEDGER_R1",
+  "date": "2026-09-23",
+  "rule": "Only facts visibly evidenced in the finished screenplay are committed. Hidden planner intentions are excluded.",
+  "surface_sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4",
+  "committed_state": [
+    {
+      "id": "STATE:THEATER_INTERIOR",
+      "value": "CLOSED_FOR_PUBLIC_USE_PENDING_FURTHER_SAFETY_WORK",
+      "evidence": [
+        "SC02",
+        "SC12",
+        "SC46",
+        "SC52"
+      ]
+    },
+    {
+      "id": "STATE:OUTDOOR_PERFORMANCE",
+      "value": "EXECUTED_UNDER_CONDITIONAL_SPACE_SAFETY_RULES",
+      "evidence": [
+        "SC36",
+        "SC48",
+        "SC49",
+        "SC50",
+        "SC52"
+      ]
+    },
+    {
+      "id": "STATE:FUNDING",
+      "value": "REVISED_PROPOSAL_SUBMITTED__CONDITIONAL_PARTIAL_CONVERSION_UNDER_REVIEW",
+      "evidence": [
+        "SC40",
+        "SC51"
+      ]
+    },
+    {
+      "id": "STATE:LABOR_PAY",
+      "value": "PAYROLL_RISK_ACKNOWLEDGED_AND_INCLUDED_IN_REVISED_REQUEST__NOT_CONFIRMED_PAID",
+      "evidence": [
+        "SC08",
+        "SC09",
+        "SC39",
+        "SC40",
+        "SC51"
+      ]
+    },
+    {
+      "id": "STATE:RESPONSIBILITY_MATRIX",
+      "value": "SAFETY_OPERATION_BUDGET_RESPONSIBILITIES_DOCUMENTED",
+      "evidence": [
+        "SC37",
+        "SC38"
+      ]
+    },
+    {
+      "id": "STATE:ELECTRICAL_EVIDENCE",
+      "value": "NONSTANDARD_OLD_WIRING_AND_UNRECORDED_ADDITION_EVIDENCE_PRESERVED",
+      "evidence": [
+        "SC13",
+        "SC14",
+        "SC25",
+        "SC26",
+        "SC41",
+        "SC42"
+      ]
+    },
+    {
+      "id": "STATE:DOCUMENT_EVIDENCE",
+      "value": "REPAIR_DOCUMENT_SIGNATURE_IRREGULARITY_REQUIRES_FURTHER_VERIFICATION",
+      "evidence": [
+        "SC15",
+        "SC43",
+        "SC44"
+      ]
+    },
+    {
+      "id": "STATE:YUNSEO_FAMILY_LINK",
+      "value": "FATHER_NAME_PRESENT_IN_HISTORICAL_WORK_RECORDS__RESPONSIBILITY_NOT_ESTABLISHED",
+      "evidence": [
+        "SC17",
+        "SC28",
+        "SC43",
+        "SC45"
+      ]
+    },
+    {
+      "id": "REL:YUNSEO_MINHO",
+      "value": "CONDITIONAL_PROCEDURAL_TRUST_WITH_RECIPROCAL_DISCLOSURE_RULE",
+      "evidence": [
+        "SC29",
+        "SC30"
+      ]
+    },
+    {
+      "id": "REL:YUNSEO_TAEKYUNG",
+      "value": "SHARED_EVIDENCE_CUSTODY_WITH_MUTUAL_CHECKS",
+      "evidence": [
+        "SC17",
+        "SC18",
+        "SC27",
+        "SC28"
+      ]
+    },
+    {
+      "id": "REL:JIWOO_SOOKYUNG",
+      "value": "CONDITION_BASED_OPERATIONAL_COOPERATION",
+      "evidence": [
+        "SC33",
+        "SC34",
+        "SC35",
+        "SC36",
+        "SC49",
+        "SC50"
+      ]
+    },
+    {
+      "id": "SOC:MERCHANT_PERFORMANCE_SPACE",
+      "value": "TEMPORARY_TIME_ROUTE_SPACE_RULES_ESTABLISHED_AND_ENFORCED",
+      "evidence": [
+        "SC35",
+        "SC36",
+        "SC49",
+        "SC50"
+      ]
+    }
+  ],
+  "planner_only_or_unresolved": [
+    {
+      "id": "OPEN:LONG_TERM_REPAIR_FINANCE",
+      "evidence": [
+        "SC51",
+        "SC52"
+      ]
+    },
+    {
+      "id": "OPEN:HISTORICAL_LIABILITY",
+      "evidence": [
+        "SC44",
+        "SC52"
+      ]
+    },
+    {
+      "id": "OPEN:YUNSEO_FATHER_RESPONSIBILITY",
+      "evidence": [
+        "SC28",
+        "SC45",
+        "SC52"
+      ]
+    },
+    {
+      "id": "OPEN:LONG_TERM_CITY_BUDGET_RELATION",
+      "evidence": [
+        "SC51",
+        "SC52"
+      ]
+    },
+    {
+      "id": "OPEN:JIWOO_LONG_TERM_CAREER_LOCATION",
+      "evidence": [
+        "SC52"
+      ]
+    },
+    {
+      "id": "OPEN:MERCHANT_INTERNAL_DIVISION",
+      "evidence": [
+        "SC52"
+      ]
+    }
+  ],
+  "forbidden_commits": [
+    "Do not commit that the building is repaired or reopened.",
+    "Do not commit that subsidy money has been finally approved or paid.",
+    "Do not commit that temporary-worker wages have been paid.",
+    "Do not commit that Yunseo's father caused or approved the unsafe wiring.",
+    "Do not commit that merchant opposition is resolved permanently."
+  ],
+  "next_episode_consumer_boundary": "Only committed_state may enter canonical next-episode state. planner_only_or_unresolved remains an open-obligation queue and must not be promoted to facts."
+}
