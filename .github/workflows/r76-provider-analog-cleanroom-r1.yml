@@ -1,0 +1,25 @@
+name: R76 Provider Analog Cleanroom R1
+
+on:
+  push:
+    paths:
+      - 'research/interventions/20260923/r76_provider_analog_cleanroom_r1.py'
+      - '.github/workflows/r76-provider-analog-cleanroom-r1.yml'
+  workflow_dispatch:
+
+jobs:
+  r76-provider-analog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Responses-API provider analog and R76 R2A/R2B pretest
+        run: |
+          python research/interventions/20260923/r76_provider_analog_cleanroom_r1.py | tee r76_provider_analog_result.jsonl
+      - name: Upload clean-room evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: r76-provider-analog-cleanroom-r1
+          path: r76_provider_analog_result.jsonl
