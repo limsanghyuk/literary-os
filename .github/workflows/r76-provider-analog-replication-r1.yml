@@ -1,0 +1,26 @@
+name: R76 Provider Analog Fresh Replication R1
+
+on:
+  push:
+    paths:
+      - 'research/interventions/20260923/r76_provider_analog_replication_r1.py'
+      - 'research/interventions/20260923/R76_FRESH_REPLICATION_STRUCTURAL_INPUT_R1.json'
+      - '.github/workflows/r76-provider-analog-replication-r1.yml'
+  workflow_dispatch:
+
+jobs:
+  fresh-replication:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run fresh provider-analog structural replication
+        run: |
+          python research/interventions/20260923/r76_provider_analog_replication_r1.py | tee r76_provider_analog_replication_result.jsonl
+      - name: Upload fresh replication evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: r76-provider-analog-fresh-replication-r1
+          path: r76_provider_analog_replication_result.jsonl
