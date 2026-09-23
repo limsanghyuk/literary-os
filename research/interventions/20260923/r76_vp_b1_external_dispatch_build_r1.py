@@ -40,6 +40,6 @@ print(json.dumps({
  "zip":zip_path.name,
  "bytes":zip_path.stat().st_size,
  "sha256":hashlib.sha256(zip_path.read_bytes()).hexdigest(),
- "judge_packet_identity":len({json.dumps(v,sort_keys=True) for v in manifest["judges"].values()})==1,
+ "judge_payload_identity_excluding_judge_id":len({json.dumps({k:v for k,v in m.items() if k!="JUDGE_ID.txt"},sort_keys=True) for m in manifest["judges"].values()})==1,
  "manifest":manifest
 },ensure_ascii=False,sort_keys=True))
