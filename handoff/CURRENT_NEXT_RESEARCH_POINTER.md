@@ -8,7 +8,7 @@ Last updated: 2026-09-25
 R77-H1 — Human Next-Episode Prospective Benchmark Three-Position Pilot
 
 ## CURRENT STATUS
-`CENSUS_COMPLETE__SELECTION_COMPLETE__PAST_ONLY_PACKAGES_SEALED__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_STORY_PAYLOAD_UNOPENED__PRIMARY_OUTPUTS_0`
+`CENSUS_COMPLETE__SELECTION_COMPLETE__PAST_ONLY_PACKAGES_SEALED__GENERATOR_DISPATCH_READY__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_STORY_PAYLOAD_UNOPENED__PRIMARY_OUTPUTS_0`
 
 Completed:
 - H0 PASS 8/8
@@ -24,7 +24,7 @@ Selected:
 - LATE: 굿캐스팅
 
 ## EXACT NEXT
-Run fresh isolated generator contexts. For each stratum:
+Use private Library bundle `/R77_H1_PROGRESS/R77_H1_FRESH_ISOLATED_GENERATOR_DISPATCH_BUNDLE_R1.zip` (SHA256 `765c76f4460e4b62be8e12501abd77191be5c7d17542122564164a3bb5d471d4`) in fresh isolated generator contexts. For each stratum:
 1. C typed plan + >=35k surface
 2. T typed plan + >=35k surface
 3. output-only reconstruction + text-derived state ledger
