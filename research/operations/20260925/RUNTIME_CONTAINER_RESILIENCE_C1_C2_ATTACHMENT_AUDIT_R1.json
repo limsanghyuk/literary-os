@@ -1,0 +1,53 @@
+{
+  "schema": "RUNTIME_CONTAINER_RESILIENCE_C1_C2_ATTACHMENT_AUDIT_R1",
+  "date": "2026-09-25",
+  "authority_effect": "NONE",
+  "scientific_effect": "NONE",
+  "C1": {
+    "bytes": 140395336,
+    "sha256": "1175f40e8156580f34dad3f4dd3477d4051cc11511582b2f9320d646265d8ecd",
+    "entries": 91,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe": 0,
+    "crc_pass": true,
+    "manifest_match": true
+  },
+  "C2A": {
+    "bytes": 264039861,
+    "sha256": "a0485cecad46d4437277dc4845a5fd133d686a10ec7707b8dd1b1f6899c77959",
+    "manifest_match": true
+  },
+  "C2B": {
+    "bytes": 264039860,
+    "sha256": "5d73f5d59eda5bce30c7ba6cb1990cdfeb91cec0f00490ed8a58c6b2e154d53d",
+    "manifest_match": true
+  },
+  "C2_LOGICAL": {
+    "bytes": 528079721,
+    "sha256": "87b79628a5ffd35b13849009146cf2b8429288befd9d7523a39f7c77af2252a8",
+    "entries": 4001,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe": 0,
+    "crc_pass": true,
+    "manifest_match": true,
+    "working_location": "/tmp only",
+    "temporary_file_deleted": true
+  },
+  "operational_lessons": [
+    "local container health does not establish tool-gateway health",
+    "latest CURRENT pointer and physical snapshot manifest override preserved historical bootstrap documents",
+    "same-name different-hash authority objects must not be overwritten or merged",
+    "deterministic preflight completeness checks should run before expensive render/provider execution",
+    "superseded materialization protocols remain immutable evidence"
+  ],
+  "resource_observation": {
+    "memory_max_bytes": 4294967296,
+    "initial_memory_current_bytes": 3266998272,
+    "final_memory_current_bytes": 2578878464,
+    "oom": 0,
+    "oom_kill": 0
+  },
+  "current_research_state_unchanged": "R77_H1__CENSUS_COMPLETE__SELECTION_COMPLETE__PAST_ONLY_PACKAGES_SEALED__GENERATOR_DISPATCH_READY__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_STORY_PAYLOAD_UNOPENED__PRIMARY_OUTPUTS_0"
+}
