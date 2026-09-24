@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# rebuild includes latest 20260924 handoff R2
 import pathlib, zipfile, hashlib, json
 
 ROOT=pathlib.Path(__file__).resolve().parents[3]
