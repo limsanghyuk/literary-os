@@ -1,0 +1,47 @@
+{
+  "schema": "LITERARY_OS_FULL_RESEARCH_GENEALOGY_DB64_R131_AUDIT_R1",
+  "date": "2026-09-25",
+  "authority_effect": {
+    "physical": "NONE__SYNC_R72_UNCHANGED",
+    "runtime": "NONE__EXACT_R69_UNCHANGED",
+    "production": "NONE__ENG_R47_LEGACY_R53_UNCHANGED",
+    "runtime_db": "NONE__DB59_FROZEN_UNCHANGED",
+    "research_db_pointer": "DB64_R131_RESEARCH_ONLY",
+    "operational_level3": "SUSPENDED__REQUALIFICATION_REQUIRED",
+    "formal": "137_SCORED__LATEST_R138__R140_NOT_STARTED"
+  },
+  "db64_r131": {
+    "data_authority": "DATA:DB64_R131_SIKGAEK_INDEPENDENT_THICK_REPAIR_R1",
+    "full_bytes": 333821596,
+    "full_sha256": "4986730dc062610a2395960af83615dddaf986f53172914d2175b459fdaf9d7b",
+    "logical_files": 45324,
+    "crc_pass": true,
+    "duplicate_paths": 0,
+    "encrypted_entries": 0,
+    "unsafe_paths": 0,
+    "physical_final_sealed": "73/98",
+    "corpus_semantic_certification": "SUSPENDED_PENDING_UNIFORM_V4_RECERTIFICATION",
+    "current_v4_repaired": [
+      "38사기동대",
+      "시티헌터",
+      "식객"
+    ],
+    "next_default_target": "건빵선생과별사탕",
+    "a2_status": "PENDING"
+  },
+  "formal_history": {
+    "stage1_R001_R103": 103,
+    "stage2_AUX": 68,
+    "formal_completed_scored_total": 137,
+    "latest_scored": "R138",
+    "r135_counted": false,
+    "r139_counted": false,
+    "r140": "NOT_STARTED"
+  },
+  "active_main_research": {
+    "id": "R77-H1",
+    "status": "CENSUS_COMPLETE__SELECTION_COMPLETE__PAST_ONLY_PACKAGES_SEALED__GENERATOR_DISPATCH_READY__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_STORY_PAYLOAD_UNOPENED__PRIMARY_OUTPUTS_0",
+    "r131_retroactive_contamination_forbidden": true
+  },
+  "namespace_warning": "DB64-R131 database revision and Formal Experiment R131 are separate namespaces."
+}
