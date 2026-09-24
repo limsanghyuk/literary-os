@@ -1,0 +1,91 @@
+{
+  "schema": "R77_H1_THREE_POSITION_PILOT_SELECTION_AND_CONTEXT_ISOLATION_PREREG_R1",
+  "date": "2026-09-24",
+  "status": "PREREGISTERED__TARGET_CONTENT_NOT_OPENED_FOR_H1",
+  "parent_h0": "PASS__R77_H0_INFRASTRUCTURE_8_OF_8",
+  "purpose": "Select and execute one EARLY, one MIDDLE, and one LATE human next-episode prospective benchmark without allowing target/future information into candidate-generation context.",
+  "eligibility": {
+    "common": [
+      "work is in independently verified THICK research set",
+      "required source screenplay bytes exist for past cutoff and hidden target",
+      "past-only provenance package can be constructed without unknown story-bearing provenance",
+      "candidate generator can be run in a fresh isolated context receiving only past-only package and frozen typed contract",
+      "target human episode is withheld until C and T candidate surfaces plus output-only state ledgers are sealed"
+    ],
+    "EARLY": "at least EP01-EP02 available; candidate sees EP01 only",
+    "MIDDLE": "at least EP01-EP06 available; candidate sees EP01-EP05 only",
+    "LATE": "at least EP01-EP13 available; candidate sees EP01-EP12 only"
+  },
+  "selection_rule": {
+    "metadata_only_before_selection": true,
+    "outcome_based_selection": false,
+    "per_stratum": "Sort eligible work IDs by SHA256(H1_prereg_sha256|stratum|work_id); choose first work passing custody/preflight.",
+    "replacement": "Only objective pre-output ineligibility may trigger next hash-ranked work. Preserve rejected work and reason."
+  },
+  "context_isolation": {
+    "coordinator_role": "May hold encrypted/sealed target identity and target bytes but must not supply target/future content to generator.",
+    "generator_role": "Fresh context with no Project chat history, no GitHub browsing, no Memory, no target/future files; receives only past-only package, typed contract, generation protocol.",
+    "evaluator_role": "Fresh independent contexts; receives sealed blind packets only.",
+    "current_chat_role": "Coordinator/design only. Do not use this conversation as the H1 candidate prose generator."
+  },
+  "arms": {
+    "C": "Current candidate planning/surface route under same past-only cutoff, without Position-Aware treatment decisions.",
+    "T": "Same generation provider/context class with Position-Aware typed decisions enabled.",
+    "H": "Actual human target episode revealed only after both C and T are fully sealed."
+  },
+  "surface_requirements": {
+    "min_chars": 35000,
+    "sequence_min_reference": 9,
+    "scene_min_reference": 45,
+    "no_upper_cap": true,
+    "no_quota_padding": true,
+    "stage_direction": "Detailed scene-opening and performance directions allowed and evaluated."
+  },
+  "comparison_after_reveal": {
+    "upper": [
+      "EPISODE_POSITION_APPROPRIATENESS",
+      "EPISODE_FUNCTION_SELECTION",
+      "CHARACTER_FOCUS_ALLOCATION",
+      "MATERIAL_PORTFOLIO_BALANCE",
+      "THREAD_OPERATION",
+      "RELATIONSHIP_OPERATION",
+      "INFORMATION_RELEASE_TIMING",
+      "SOCIAL_ECOLOGY_USE",
+      "OPPOSITION_EXPOSURE_TIMING",
+      "INCIDENT_TIMING",
+      "SEQUENCE_FUNCTION_ARCHITECTURE",
+      "SCENE_FUNCTION_NECESSITY",
+      "PAYOFF_DEFERRED_BALANCE"
+    ],
+    "surface": [
+      "DIALOGUE_SUBTEXT",
+      "CHARACTER_VOICE",
+      "RELATIONSHIP_STATUS_PRESSURE",
+      "PHYSICALIZATION_ACTION",
+      "PACING_ESCALATION_TIME_PRESSURE",
+      "ENSEMBLE_WORLD_SPECIFICITY",
+      "INFORMATION_DRAMATIZATION",
+      "KOREAN_SPOKEN_NATURALNESS",
+      "SCENE_OPENING_VISUALIZATION",
+      "PERFORMANCE_DIRECTION_QUALITY",
+      "ACTION_DIALOGUE_BINDING",
+      "EMOTION_EXTERNALIZATION",
+      "CINEMATIC_READABILITY",
+      "DIRECTION_DETAIL_ECONOMY"
+    ]
+  },
+  "abort_conditions": [
+    "generator context has access to target/future story content",
+    "target episode opened before C and T sealing",
+    "future-derived provenance survives cutoff audit",
+    "C or T surface below 35,000 chars",
+    "hidden identity/mapping custody lost"
+  ],
+  "current_outputs": {
+    "eligible_census": 0,
+    "selected_works": 0,
+    "candidate_plans": 0,
+    "candidate_surfaces": 0,
+    "human_targets_revealed": 0
+  }
+}
