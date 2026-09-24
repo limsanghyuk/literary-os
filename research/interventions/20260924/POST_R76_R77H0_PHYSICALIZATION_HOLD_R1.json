@@ -1,0 +1,24 @@
+{
+  "schema": "POST_R76_R77H0_PHYSICALIZATION_HOLD_R1",
+  "date": "2026-09-24",
+  "status": "PHYSICAL_AUTHORITY_REMAINS_SYNC_R72__NEW_RESEAL_BLOCKED_RAW_BYTE_CUSTODY",
+  "physical_authority": "SYNC-R72",
+  "research_overlay": {
+    "r76": "CLOSED_PASS__VIRTUAL_PROVIDER_BROADCAST_SCALE_ABSOLUTE_QUALITY_QUALIFIED",
+    "r77_h0": "PASS__INFRASTRUCTURE_QUALIFIED__HUMAN_TARGET_NOT_ACCESSED__PRIMARY_OUTPUTS_0"
+  },
+  "raw_byte_failure": "Project file does not have an authorized raw-byte materialization path",
+  "no_new_sync_claim": true,
+  "expected_delta_map": {
+    "CONTROL": "UPDATE",
+    "A": "UPDATE",
+    "B1": "UNCHANGED_CANDIDATE",
+    "B2": "UPDATE",
+    "C1": "UPDATE",
+    "C2A": "UPDATE",
+    "C2B": "UPDATE",
+    "D1": "UNCHANGED_CANDIDATE",
+    "D2": "UNCHANGED_CANDIDATE"
+  },
+  "next": "R77-H1 past-only pilot package construction; physicalization resumes only after raw-byte custody restoration"
+}
