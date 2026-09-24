@@ -2,7 +2,7 @@
 Last updated: 2026-09-25
 
 ## CANONICAL RECOVERY
-1. `handoff/20260925/START_HERE_POST_SYNC_R72_R77_H1_CENSUS_SELECTION_PAST_ONLY_R4.md`
+1. `handoff/20260925/START_HERE_POST_SYNC_R72_R77_H1_DB64_R131_RESEARCH_AUTHORITY_R5.md`
 2. `research/interventions/20260925/R77_H1_METADATA_CENSUS_SELECTION_PAST_ONLY_CLOSURE_R1.json`
 3. `research/interventions/20260924/R77_H1_THREE_POSITION_PILOT_SELECTION_AND_CONTEXT_ISOLATION_PREREG_R1.json`
 4. `research/interventions/20260924/R77_H0_PAST_ONLY_CUTOFF_CONTRACT_R1.json`
@@ -48,3 +48,10 @@ Latest direct C1/C2 attachment audit:
 
 Latest direct D1/D2 + DB59 carrier audit:
 `research/operations/20260925/RUNTIME_CONTAINER_RESILIENCE_D1_D2_ATTACHMENT_AUDIT_R1.json`
+
+
+## DB64-R131 research recovery
+Current research DB pointer: DB64-R131 research-only.
+Full verified SHA256: `4986730dc062610a2395960af83615dddaf986f53172914d2175b459fdaf9d7b`.
+Whole-corpus semantic certification remains `SUSPENDED_PENDING_UNIFORM_V4_RECERTIFICATION`.
+R77-H1 frozen inputs remain pre-R131 and MUST NOT be regenerated or reselected.
