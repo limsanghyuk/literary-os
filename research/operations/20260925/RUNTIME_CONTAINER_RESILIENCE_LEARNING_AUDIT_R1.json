@@ -1,0 +1,49 @@
+{
+  "schema": "RUNTIME_CONTAINER_RESILIENCE_LEARNING_AUDIT_R1",
+  "date": "2026-09-25",
+  "authority_effect": "NONE",
+  "scientific_effect": "NONE",
+  "attached_audit": {
+    "B1": {
+      "bytes": 196427036,
+      "sha256": "00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98",
+      "entries": 56,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe": 0,
+      "crc_pass": true,
+      "manifest_match": true
+    },
+    "B2": {
+      "bytes": 268681858,
+      "sha256": "0807ef0a820a2836349724097481d88301768114ca1ac291a9ef294aa7766ba5",
+      "entries": 1874,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe": 0,
+      "crc_pass": true,
+      "manifest_match": true
+    }
+  },
+  "reproduced_incident": {
+    "symptom": "private Python tool ClientError during simultaneous B1+B2 central-directory inspection",
+    "immediate_container_health": "PASS",
+    "container_python_health": "PASS",
+    "mnt_data_health": "PASS",
+    "tmp_rw_health": "PASS",
+    "retry_strategy": "one archive at a time through healthy container Python subprocess",
+    "retry_result": "PASS",
+    "classification": "PATH_SPECIFIC_CAAS_TOOL_TRANSPORT_FAILURE__ARCHIVE_CORRUPTION_NOT_ESTABLISHED"
+  },
+  "memory": {
+    "max_bytes": 4294967296,
+    "initial_observed_current_bytes": 3057074176,
+    "after_b1_crc_bytes": 2855108608,
+    "after_b2_crc_bytes": 2579083264,
+    "oom": 0,
+    "oom_kill": 0,
+    "mitigation": "sequential CRC plus POSIX_FADV_DONTNEED"
+  },
+  "learned_protocol": "research/operations/20260925/LITERARY_OS_RUNTIME_CONTAINER_RESILIENCE_PROTOCOL_R2.md",
+  "current_research_state_unchanged": "R77_H1__CENSUS_COMPLETE__SELECTION_COMPLETE__PAST_ONLY_PACKAGES_SEALED__GENERATOR_DISPATCH_READY__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_STORY_PAYLOAD_UNOPENED__PRIMARY_OUTPUTS_0"
+}
