@@ -1,53 +1,47 @@
 # CURRENT HANDOFF POINTER
-Last updated: 2026-09-23
+Last updated: 2026-09-24
 
-## START HERE
-1. `handoff/20260922/START_HERE_SYNC_R72_R74_STAGE_M_NEW_SESSION_HANDOFF_R1.md`
-2. `research/interventions/20260923/R74_RUNTIME_RECOVERY_PARENT_ACCESS_AUDIT_R1.md`
+## CANONICAL START HERE
+`handoff/20260924/START_HERE_POST_SYNC_R72_FULL_RESEARCH_RECOVERY_R77_H1_HOLD_R3.md`
 
-## THEN READ
-3. `research/interventions/20260922/R74_RUNTIME_PHYSICAL_PACKAGE_SAFETY_PROTOCOL_R1.md`
-4. `research/interventions/20260922/R74_CURRENT_EXECUTION_HOLD_RESUME_BOUNDARY_R1.md`
-5. `research/interventions/20260922/R74_PRIMARY_EXCLUSION_CUSTODY_AUDIT_R1.md`
-6. `research/interventions/20260922/R74_PRIMARY_FREEZE_HARNESS_QUALIFICATION_R1.md`
-7. `research/interventions/20260922/R74_STAGE_M_QUALIFICATION_RESULT_R1.md`
-8. `research/interventions/20260922/R74_CANONICAL_PREREGISTRATION_AUTHORITY_CLARIFICATION_R1.md`
-9. `research/interventions/20260922/SYNC_R72_POST_R73_DIAGNOSTIC_PHYSICALIZATION_RECEIPT_R1.md`
+This R3 supersedes older post-SYNC-R72 R1/R2 START_HERE documents for new-session bootstrapping.
 
-## CURRENT
-- Physical Authority: **SYNC-R72**
-- R74 Stage M: **PASS**
-- R74 R3 symmetric bridge: **QUALIFIED**
-- R74 primary freeze harness: **QUALIFIED**
-- local process/filesystem/Python runtime: **HEALTHY in 2026-09-23 session**
-- CONTROL direct byte/CRC verification: **PASS**
-- Part A direct byte/CRC verification: **PASS**
-- remaining 7 package raw bytes: **NOT MATERIALIZABLE in current session**
-- parent 9/9 direct reverify: **INCOMPLETE**
-- logical C2 current-session rejoin: **NOT EXECUTED**
-- R72 R2/R3/R4/R5 exact exclusion IDs: **NOT RECOVERED**
-- R74 primary ledger: **NOT CREATED**
-- R74 primary Control outputs: **0**
-- R74 primary Treatment outputs: **0**
+## CURRENT AUTHORITY
+- Physical Authority: SYNC-R72
+- Active Runtime: exact R69
+- Production: ENG:R47 / LEGACY_R53
+- Runtime DB: DB59 frozen
+- Research DB: DB64-R128 research-only
+- Operational Level-3: SUSPENDED__REQUALIFICATION_REQUIRED
+- Formal latest scored: R138
+- Formal R140: NOT_STARTED
 
-## PACKAGE SAFETY
-`PHYSICALIZATION_HOLD__NO_PACKAGE_MUTATION`
+## COMPLETED AFTER SYNC-R72
+- R74: CLOSED_NO_EFFICACY_VERDICT; F05 NOT QUALIFIED
+- R75: PARTIAL PASS causal schema consumption
+- R76: CLOSED PASS, 35,333-char / 9-sequence / 52-scene broadcast surface, external J01/J02/J03 PASS 3/3
+- R77-H0: infrastructure PASS 8/8
 
-Do not overwrite SYNC-R72.
-Do not reuse a published SYNC ID.
+## CURRENT RESEARCH
+R77-H1 Three-Position Human Next-Episode Pilot
 
-## RESUME
-1. obtain raw-byte access to remaining SYNC-R72 packages
-2. verify SYNC-R72 9/9 hash/size
-3. rejoin and verify logical C2
-4. recover exact R72 R2/R3/R4/R5 ledgers/materialization protocols from known paths
-5. build complete R72 exclusion manifest
-6. run qualified R74 primary freeze harness
-7. seal 24 fully fresh cases before output
-8. exact R69 Control vs unchanged F05 Treatment
-9. symmetric R74 R3 scoring
-10. P1-P11
-11. close R74
-12. only then new unique successor SYNC physicalization
+Status:
+`R77_H1__PREREGISTERED__INPUT_CUSTODY_ESTABLISHED__METADATA_CENSUS_NOT_EXECUTED__CAAS_RUNTIME_HOLD__HUMAN_TARGET_ACCESSED_FALSE__PRIMARY_OUTPUTS_0`
 
-The prior runtime incident is no longer the active blocker; package-byte access and exclusion custody are.
+Human target content has NOT been opened.
+
+## EXACT NEXT
+When trustworthy executable runtime returns:
+1. inspect H1 analysis ZIP central-directory/file-name metadata only;
+2. build work/episode census;
+3. apply frozen eligibility;
+4. deterministically select EARLY/MIDDLE/LATE works;
+5. build Past-Only packages;
+6. only then begin isolated C/T generation.
+
+## PHYSICALIZATION
+Current nine physical transports remain SYNC-R72.
+Post-R72 research is durable in Hub/full recovery overlay but not yet embedded into a successor 9-package set.
+
+See:
+`research/interventions/20260924/POST_R76_R77H1_PHYSICALIZATION_FINAL_BLOCKER_R1.md`
