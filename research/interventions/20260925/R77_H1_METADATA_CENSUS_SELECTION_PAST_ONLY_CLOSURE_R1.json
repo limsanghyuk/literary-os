@@ -1,0 +1,123 @@
+{
+  "schema": "R77_H1_METADATA_CENSUS_SELECTION_PAST_ONLY_CLOSURE_R1",
+  "date": "2026-09-25",
+  "status": "PASS__METADATA_CENSUS_COMPLETE__DETERMINISTIC_SELECTION_COMPLETE__PAST_ONLY_PACKAGES_SEALED__C_T_GENERATION_NOT_STARTED",
+  "authority": {
+    "physical": "SYNC-R72",
+    "active_runtime": "exact R69",
+    "production": "ENG:R47 / LEGACY_R53",
+    "runtime_db": "DB59 frozen",
+    "research_db": "DB64-R128 research-only",
+    "operational_level3": "SUSPENDED__REQUALIFICATION_REQUIRED",
+    "formal_latest_scored": "R138",
+    "formal_r140": "NOT_STARTED"
+  },
+  "h1_prereg_sha256": "809d474b9ab343c98fa33c8d9518c1b03ca907c63b18fc347c0f3dbcc9a471b3",
+  "runtime_recovery": {
+    "root_cause": "R127/R128 Library split snapshots remained blocked by a raw-byte authorization/materialization boundary. This was an access boundary, not research-data corruption.",
+    "resolution": "SYNC-R72 D1/D2 DB59 transports materialized successfully. Their embedded split DB59 archive was reassembled and validated.",
+    "db59_reassembled_bytes": 259756521,
+    "db59_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "db59_zip_crc": "PASS",
+    "c2_rejoin_sha256_confirmed": "87b79628a5ffd35b13849009146cf2b8429288befd9d7523a39f7c77af2252a8"
+  },
+  "metadata_census": {
+    "verified_works": 72,
+    "EARLY_eligible": 72,
+    "MIDDLE_eligible": 72,
+    "LATE_eligible": 69,
+    "late_objective_ineligible": [
+      {
+        "work_id": "미생",
+        "reason": "only EP01-EP11 available; EP13 target unavailable"
+      },
+      {
+        "work_id": "신의퀴즈1",
+        "reason": "only EP01-EP10 available; EP13 target unavailable"
+      },
+      {
+        "work_id": "한성별곡",
+        "reason": "only EP01-EP08 available; EP13 target unavailable"
+      }
+    ],
+    "method": "R127 verified-work metadata + DB59 ZIP central-directory episode filenames only. Extra EP00 does not invalidate required EP01..target availability.",
+    "human_target_story_payload_opened_for_census": false
+  },
+  "deterministic_selection": [
+    {
+      "stratum": "EARLY",
+      "rank": 1,
+      "work_id": "구르미그린달빛",
+      "past_cutoff": "EP01",
+      "hidden_target": "EP02",
+      "hash": "046b6333f0600eadc654226cd95842d943226fed81930e0916d2174b2ef8ea91",
+      "source_custody": "PASS"
+    },
+    {
+      "stratum": "MIDDLE",
+      "rank": 1,
+      "work_id": "신화",
+      "past_cutoff": "EP05",
+      "hidden_target": "EP06",
+      "hash": "008484cfd8a36bb23c6b93f1cc65b2c4af3075bbd17ed5d2724ed68a224fef05",
+      "source_custody": "PASS"
+    },
+    {
+      "stratum": "LATE",
+      "rank": 1,
+      "work_id": "굿캐스팅",
+      "past_cutoff": "EP12",
+      "hidden_target": "EP13",
+      "hash": "03122c0b65597d56044397fae713831dfd8a978be645743ce0bb38313ed110e3",
+      "source_custody": "PASS"
+    }
+  ],
+  "past_only_policy": "FAIL_CLOSED__RAW_PAST_SOURCE_ONLY__NO_WHOLE_SERIES_DERIVED_DB_FIELDS",
+  "past_only_packages": [
+    {
+      "stratum": "EARLY",
+      "work_id": "구르미그린달빛",
+      "episodes": "EP01",
+      "sha256": "2d8669b263b46622d87e768b4f3f04529b1c18562c6d8f4e66b2834f0ef429cb",
+      "audit": "PASS"
+    },
+    {
+      "stratum": "MIDDLE",
+      "work_id": "신화",
+      "episodes": "EP01-EP05",
+      "sha256": "509466daa6252c62a7045c957742a8ee9d0cf848062ecce482f183ee35288a1f",
+      "audit": "PASS"
+    },
+    {
+      "stratum": "LATE",
+      "work_id": "굿캐스팅",
+      "episodes": "EP01-EP12",
+      "sha256": "af83e735e0adb4d8f69d1ca7cd3daaf5027789c9d7613ae875dca45dc2a8b912",
+      "audit": "PASS"
+    }
+  ],
+  "private_library_custody": {
+    "note": "Past-Only ZIPs contain human screenplay source text and therefore are not committed to the public Developer Hub.",
+    "folder": "/R77_H1_PROGRESS",
+    "metadata_census": "R77_H1_METADATA_ONLY_ELIGIBLE_WORK_CENSUS_R2.json",
+    "selection": "R77_H1_DETERMINISTIC_WORK_SELECTION_AND_SOURCE_PREFLIGHT_R1.json",
+    "package_master": "R77_H1_PAST_ONLY_PACKAGE_CONSTRUCTION_MASTER_R1.json",
+    "closure": "R77_H1_CENSUS_SELECTION_PAST_ONLY_CLOSURE_R1.json"
+  },
+  "package_audit": {
+    "all_crc_pass": true,
+    "duplicate_paths": 0,
+    "encrypted_entries": 0,
+    "unsafe_paths": 0,
+    "future_or_unknown_provenance_rows": 0,
+    "target_filename_hits": 0,
+    "human_target_payload_in_generator_packages": false
+  },
+  "current_outputs": {
+    "candidate_plans": 0,
+    "candidate_surfaces": 0,
+    "human_targets_revealed": 0
+  },
+  "human_target_story_payload_opened": false,
+  "exact_next": "Dispatch each Past-Only package into fresh isolated generator contexts. For each stratum seal C typed plan + >=35k surface and T typed plan + >=35k surface, then output-only reconstruction and text-derived state ledger. Only after both C/T are sealed may the corresponding Human target be opened."
+}
