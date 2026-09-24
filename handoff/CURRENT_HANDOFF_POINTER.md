@@ -26,7 +26,7 @@ R4 supersedes the 2026-09-24 R3 bootstrap.
 - R77-H1 Past-Only source packages SEALED and audited
 
 ## CURRENT R77-H1
-`R77_H1__CENSUS_COMPLETE__SELECTION_COMPLETE__PAST_ONLY_PACKAGES_SEALED__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_STORY_PAYLOAD_UNOPENED__PRIMARY_OUTPUTS_0`
+`R77_H1__CENSUS_COMPLETE__SELECTION_COMPLETE__PAST_ONLY_PACKAGES_SEALED__GENERATOR_DISPATCH_READY__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_STORY_PAYLOAD_UNOPENED__PRIMARY_OUTPUTS_0`
 
 Selected:
 - EARLY = 구르미그린달빛 (EP01 -> hidden EP02)
@@ -34,7 +34,7 @@ Selected:
 - LATE = 굿캐스팅 (EP01-12 -> hidden EP13)
 
 ## EXACT NEXT
-Fresh isolated C/T generator dispatch and sealing. Human target remains unopened until both C/T are sealed for the stratum.
+Fresh isolated C/T generation using the sealed private dispatch bundle. Human target remains unopened until both C/T are sealed for the stratum.\n\nDispatch evidence: `research/interventions/20260925/R77_H1_FRESH_ISOLATED_GENERATOR_DISPATCH_READY_R1.json`
 
 Canonical result:
 `research/interventions/20260925/R77_H1_METADATA_CENSUS_SELECTION_PAST_ONLY_CLOSURE_R1.json`
