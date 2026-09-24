@@ -1,0 +1,22 @@
+{
+  "schema": "R76_VP_B1_FINAL_CLOSURE_R1",
+  "date": "2026-09-24",
+  "status": "CLOSED_PASS__VIRTUAL_PROVIDER_BROADCAST_SCALE_ABSOLUTE_QUALITY_QUALIFIED",
+  "surface_sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4",
+  "surface_chars": 35333,
+  "sequences": 9,
+  "scenes": 52,
+  "external_judges": "3/3 PASS",
+  "pooled_whole_episode_median": 8.5,
+  "pooled_scene_median": 8,
+  "confirmed_critical_violations": 0,
+  "reconstruction": "PASS__CORE_ARCHITECTURE_AND_DUE_DEFERRED_BOUNDARY_RECOVERABLE",
+  "canonical_state_rule": "Only finished-screenplay-evidenced state is eligible for carry.",
+  "immutable_surface": true,
+  "production_unchanged": "ENG:R47 / LEGACY_R53",
+  "runtime_unchanged": "exact R69",
+  "runtime_db_unchanged": "DB59 frozen",
+  "operational_level3": "SUSPENDED__REQUALIFICATION_REQUIRED",
+  "formal_r140": "NOT_STARTED",
+  "next_research": "R77-H0 Human Next-Episode Prospective Benchmark Infrastructure"
+}
