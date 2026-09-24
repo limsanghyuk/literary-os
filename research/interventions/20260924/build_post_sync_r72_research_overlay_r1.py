@@ -10,6 +10,7 @@ for rel in [
     "research/interventions/20260923",
     "research/interventions/20260924",
     "handoff/20260923",
+    "handoff/20260924",
 ]:
     p=ROOT/rel
     if p.exists():
@@ -29,6 +30,7 @@ manifest={
     "reason":"Research overlay only while SYNC-R72 raw-byte custody is unavailable.",
     "r76":"CLOSED_PASS__EXTERNAL_3JUDGE",
     "r77_h0":"PASS__INFRASTRUCTURE_8_OF_8",
+    "r77_h1":"PREREGISTERED__INPUT_CUSTODY_ESTABLISHED__EXECUTION_HOLD__HUMAN_TARGET_ACCESSED_FALSE",
     "file_count":len(include),
     "zip_file":zip_path.name,
     "zip_bytes":zip_path.stat().st_size,
