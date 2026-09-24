@@ -34,7 +34,9 @@ Selected:
 - LATE = 굿캐스팅 (EP01-12 -> hidden EP13)
 
 ## EXACT NEXT
-Fresh isolated C/T generation using the sealed private dispatch bundle. Human target remains unopened until both C/T are sealed for the stratum.\n\nDispatch evidence: `research/interventions/20260925/R77_H1_FRESH_ISOLATED_GENERATOR_DISPATCH_READY_R1.json`
+Fresh isolated C/T generation using the sealed private dispatch bundle. Human target remains unopened until both C/T are sealed for the stratum.
+
+Dispatch evidence: `research/interventions/20260925/R77_H1_FRESH_ISOLATED_GENERATOR_DISPATCH_READY_R1.json`
 
 Canonical result:
 `research/interventions/20260925/R77_H1_METADATA_CENSUS_SELECTION_PAST_ONLY_CLOSURE_R1.json`
