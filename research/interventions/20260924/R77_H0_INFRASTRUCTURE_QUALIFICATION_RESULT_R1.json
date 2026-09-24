@@ -1,0 +1,27 @@
+{
+  "schema": "R77_H0_INFRASTRUCTURE_QUALIFICATION_RESULT_R1",
+  "date": "2026-09-24",
+  "status": "PASS",
+  "workflow_run_id": 35996246377,
+  "workflow_job_id": 107621764169,
+  "artifact_id": 10806297408,
+  "artifact_zip_sha256": "71922b98a56f429edb2b5b37cd207b05a3d98c5060a64141b8357b154e4af60d",
+  "gates": {
+    "H0_1_TYPED_SCHEMA_COMPLETE": true,
+    "H0_2_THREE_POSITION_STRATA_FROZEN": true,
+    "H0_3_HUMAN_TARGET_CUSTODY_RULE_FROZEN": true,
+    "H0_4_SAFE_FIXTURES_ACCEPTED": true,
+    "H0_5_TARGET_FUTURE_FIXTURE_BLOCKED": true,
+    "H0_6_DERIVED_FUTURE_FIXTURE_BLOCKED": true,
+    "H0_7_UNKNOWN_PROVENANCE_FAIL_CLOSED": true,
+    "H0_8_FIXTURE_EXPECTATIONS_EXACT": true
+  },
+  "source_hashes": {
+    "prereg": "4aae2ca88a21d2b35684c1c25a988c3640e3c4a17b21934075f2441cf4a636c1",
+    "cutoff_contract": "18dcb955962a9eea15d5dc90805ca96fa990cd48293656e7c72466b66a3d70c2",
+    "typed_contract": "4b12f6d03dbbfd806ff0d5d1f653a2402ca35a620809cbd7b4dd4484537af91a"
+  },
+  "human_target_accessed": false,
+  "primary_human_target_outputs": 0,
+  "next": "R77-H1 three-position pilot selection and Past-only cutoff package construction"
+}
