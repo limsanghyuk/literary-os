@@ -8,7 +8,7 @@ Last updated: 2026-09-25
 4. `research/interventions/20260924/R77_H0_PAST_ONLY_CUTOFF_CONTRACT_R1.json`
 
 ## STATUS
-`SYNC_R72_PHYSICAL__R76_CLOSED_PASS__R77_H0_PASS__R77_H1_CENSUS_SELECTION_PAST_ONLY_SEALED__C_T_PENDING__HUMAN_TARGET_UNOPENED`
+`SYNC_R72_PHYSICAL__R76_CLOSED_PASS__R77_H0_PASS__R77_H1_CENSUS_SELECTION_PAST_ONLY_SEALED__GENERATOR_DISPATCH_READY__C_T_PENDING__HUMAN_TARGET_UNOPENED`
 
 ## RECOVERED RUNTIME/CUSTODY FACT
 The 2026-09-24 CAAS/raw-custody hold was not a data-corruption failure.
@@ -29,7 +29,7 @@ Past-Only source ZIPs are stored in the user's private Library:
 They are not committed to the public repository because they contain human screenplay source text.
 
 ## RESUME
-Resume from fresh isolated C/T generator dispatch.
+Resume from fresh isolated C/T generation using `/R77_H1_PROGRESS/R77_H1_FRESH_ISOLATED_GENERATOR_DISPATCH_BUNDLE_R1.zip` (SHA256 `765c76f4460e4b62be8e12501abd77191be5c7d17542122564164a3bb5d471d4`).
 Do not repeat R74/R75/R76/R77-H0.
 Do not repeat H1 census/selection.
 Do not reveal Human targets before C/T sealing.
