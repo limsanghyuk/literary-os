@@ -1,0 +1,48 @@
+{
+  "schema": "R77_H1_FRESH_ISOLATED_GENERATOR_DISPATCH_READY_R1",
+  "date": "2026-09-25",
+  "status": "READY__FRESH_ISOLATED_C_T_GENERATOR_DISPATCH_BUNDLE_SEALED",
+  "parent": "R77_H1_METADATA_CENSUS_SELECTION_PAST_ONLY_CLOSURE_R1",
+  "bundle": {
+    "private_library_path": "/R77_H1_PROGRESS/R77_H1_FRESH_ISOLATED_GENERATOR_DISPATCH_BUNDLE_R1.zip",
+    "bytes": 282780,
+    "sha256": "765c76f4460e4b62be8e12501abd77191be5c7d17542122564164a3bb5d471d4",
+    "entries": 11,
+    "zip_crc": "PASS",
+    "duplicate_paths": 0,
+    "encrypted_entries": 0,
+    "unsafe_paths": 0,
+    "human_target_story_payload_included": false
+  },
+  "strata": [
+    {
+      "stratum": "EARLY",
+      "work_id": "구르미그린달빛",
+      "C_prompt": true,
+      "T_prompt": true,
+      "past_only_source": true
+    },
+    {
+      "stratum": "MIDDLE",
+      "work_id": "신화",
+      "C_prompt": true,
+      "T_prompt": true,
+      "past_only_source": true
+    },
+    {
+      "stratum": "LATE",
+      "work_id": "굿캐스팅",
+      "C_prompt": true,
+      "T_prompt": true,
+      "past_only_source": true
+    }
+  ],
+  "isolation": "Fresh context; no Project chat history, Memory, GitHub/web browsing, target/future files, or cross-arm output leakage.",
+  "current_project_chat_role": "coordinator_only__must_not_generate_C_or_T_screenplay",
+  "outputs": {
+    "candidate_plans": 0,
+    "candidate_surfaces": 0,
+    "human_targets_revealed": 0
+  },
+  "exact_next": "Run six isolated arm generations (EARLY C/T, MIDDLE C/T, LATE C/T), seal plan + >=35k surface + output-only reconstruction + text-derived state ledger. Reveal each H target only after both arms for that stratum are sealed."
+}
