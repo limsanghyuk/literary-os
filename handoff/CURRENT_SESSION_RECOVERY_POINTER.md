@@ -36,7 +36,7 @@ Do not reveal Human targets before C/T sealing.
 
 ## OPERATIONAL RUNTIME SAFETY
 Canonical resilience protocol:
-`research/operations/20260925/LITERARY_OS_RUNTIME_CONTAINER_RESILIENCE_PROTOCOL_R3.md`
+`research/operations/20260925/LITERARY_OS_RUNTIME_CONTAINER_RESILIENCE_PROTOCOL_R4.md`
 
 Current audit receipt:
 `research/operations/20260925/RUNTIME_CONTAINER_RESILIENCE_LEARNING_AUDIT_R1.json`
@@ -45,3 +45,6 @@ On ClientError/TransportTimeout at minimal-command level: STOP mutation/reseal -
 
 Latest direct C1/C2 attachment audit:
 `research/operations/20260925/RUNTIME_CONTAINER_RESILIENCE_C1_C2_ATTACHMENT_AUDIT_R1.json`
+
+Latest direct D1/D2 + DB59 carrier audit:
+`research/operations/20260925/RUNTIME_CONTAINER_RESILIENCE_D1_D2_ATTACHMENT_AUDIT_R1.json`
