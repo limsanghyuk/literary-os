@@ -1,10 +1,10 @@
 # CURRENT HANDOFF POINTER
-Last updated: 2026-09-24
+Last updated: 2026-09-25
 
 ## CANONICAL START HERE
-`handoff/20260924/START_HERE_POST_SYNC_R72_FULL_RESEARCH_RECOVERY_R77_H1_HOLD_R3.md`
+`handoff/20260925/START_HERE_POST_SYNC_R72_R77_H1_CENSUS_SELECTION_PAST_ONLY_R4.md`
 
-This R3 supersedes older post-SYNC-R72 R1/R2 START_HERE documents for new-session bootstrapping.
+R4 supersedes the 2026-09-24 R3 bootstrap.
 
 ## CURRENT AUTHORITY
 - Physical Authority: SYNC-R72
@@ -17,31 +17,26 @@ This R3 supersedes older post-SYNC-R72 R1/R2 START_HERE documents for new-sessio
 - Formal R140: NOT_STARTED
 
 ## COMPLETED AFTER SYNC-R72
-- R74: CLOSED_NO_EFFICACY_VERDICT; F05 NOT QUALIFIED
-- R75: PARTIAL PASS causal schema consumption
-- R76: CLOSED PASS, 35,333-char / 9-sequence / 52-scene broadcast surface, external J01/J02/J03 PASS 3/3
-- R77-H0: infrastructure PASS 8/8
+- R74 closed, no efficacy verdict
+- R75 partial pass
+- R76 closed pass, external 3-Judge 3/3
+- R77-H0 PASS 8/8
+- R77-H1 metadata-only census COMPLETE
+- R77-H1 deterministic selection COMPLETE
+- R77-H1 Past-Only source packages SEALED and audited
 
-## CURRENT RESEARCH
-R77-H1 Three-Position Human Next-Episode Pilot
+## CURRENT R77-H1
+`R77_H1__CENSUS_COMPLETE__SELECTION_COMPLETE__PAST_ONLY_PACKAGES_SEALED__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_STORY_PAYLOAD_UNOPENED__PRIMARY_OUTPUTS_0`
 
-Status:
-`R77_H1__PREREGISTERED__INPUT_CUSTODY_ESTABLISHED__METADATA_CENSUS_NOT_EXECUTED__CAAS_RUNTIME_HOLD__HUMAN_TARGET_ACCESSED_FALSE__PRIMARY_OUTPUTS_0`
-
-Human target content has NOT been opened.
+Selected:
+- EARLY = 구르미그린달빛 (EP01 -> hidden EP02)
+- MIDDLE = 신화 (EP01-05 -> hidden EP06)
+- LATE = 굿캐스팅 (EP01-12 -> hidden EP13)
 
 ## EXACT NEXT
-When trustworthy executable runtime returns:
-1. inspect H1 analysis ZIP central-directory/file-name metadata only;
-2. build work/episode census;
-3. apply frozen eligibility;
-4. deterministically select EARLY/MIDDLE/LATE works;
-5. build Past-Only packages;
-6. only then begin isolated C/T generation.
+Fresh isolated C/T generator dispatch and sealing. Human target remains unopened until both C/T are sealed for the stratum.
 
-## PHYSICALIZATION
-Current nine physical transports remain SYNC-R72.
-Post-R72 research is durable in Hub/full recovery overlay but not yet embedded into a successor 9-package set.
+Canonical result:
+`research/interventions/20260925/R77_H1_METADATA_CENSUS_SELECTION_PAST_ONLY_CLOSURE_R1.json`
 
-See:
-`research/interventions/20260924/POST_R76_R77H1_PHYSICALIZATION_FINAL_BLOCKER_R1.md`
+Physical authority remains SYNC-R72; successor 9-package reseal is still separate and incomplete.
