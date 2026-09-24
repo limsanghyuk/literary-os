@@ -1,0 +1,28 @@
+name: R77 H0 Human Next-Episode Infrastructure Qualification R1
+
+on:
+  push:
+    paths:
+      - 'research/interventions/20260924/R77_H0_**'
+      - 'research/interventions/20260924/r77_h0_cutoff_harness_r1.py'
+      - '.github/workflows/r77-h0-infrastructure-qualification-r1.yml'
+  workflow_dispatch:
+
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run cutoff and custody qualification
+        run: |
+          python research/interventions/20260924/r77_h0_cutoff_harness_r1.py | tee r77_h0_stdout.jsonl
+      - name: Upload evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: r77-h0-infrastructure-evidence-r1
+          path: |
+            research/interventions/20260924/r77_h0_evidence/
+            r77_h0_stdout.jsonl
