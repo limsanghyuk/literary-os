@@ -1,0 +1,77 @@
+{
+  "schema": "RUNTIME_CONTAINER_RESILIENCE_D1_D2_ATTACHMENT_AUDIT_R1",
+  "date": "2026-09-25",
+  "authority_effect": "NONE",
+  "scientific_effect": "NONE",
+  "D1": {
+    "bytes": 138011573,
+    "sha256": "a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504",
+    "entries": 25,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe": 0,
+    "crc_pass": true,
+    "manifest_match": true
+  },
+  "D2": {
+    "bytes": 173393886,
+    "sha256": "c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4",
+    "entries": 59,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe": 0,
+    "crc_pass": true,
+    "manifest_match": true
+  },
+  "split": {
+    "part001": {
+      "bytes": 129878261,
+      "sha256": "212e1f77c696d5a911f19eb44dd5ed4c0de145ac8f9f8be60ec2d942f477e9ff",
+      "match": true
+    },
+    "part002": {
+      "bytes": 129878260,
+      "sha256": "b5b0df4967df9e6b93a2641454a0cc7c03895d32e3178a77207c0ff2b01a1b3f",
+      "match": true
+    }
+  },
+  "DB59_LOGICAL": {
+    "bytes": 259756521,
+    "sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "entries": 38852,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe": 0,
+    "crc_pass": true,
+    "authority_map_match": true,
+    "working_location": "/tmp only",
+    "temporary_file_deleted": true
+  },
+  "nested_required_packages": {
+    "D1_DRAMA_ONLY": {
+      "bytes": 8546036,
+      "sha256": "9615bc96c3e99433c22b95ef003d381036c218aba52e4846a1b4e5a115915ed1",
+      "entries": 950,
+      "crc_pass": true,
+      "manifest_match": true
+    },
+    "D2_ANALYSIS_MASTER": {
+      "bytes": 46150549,
+      "sha256": "b9d61b17de9ef30cf08a21ea177b2478a8aa982e3a9ade91058d4dcee00ddf28",
+      "entries": 6403,
+      "crc_pass": true,
+      "manifest_match": true
+    }
+  },
+  "learned_rules": [
+    "validate outer carrier, embedded chunk, logical rejoin, and nested package as separate custody layers",
+    "stream split members directly to a temporary logical verifier instead of extracting all large parts",
+    "historical 8-transport bootstrap documents do not override current SYNC-R72 9-transport topology",
+    "byte-unchanged D1/D2 must remain immutable unless DB/data bytes actually change"
+  ],
+  "current_authority_unchanged": {
+    "physical": "SYNC-R72",
+    "active_runtime": "exact R69",
+    "runtime_db": "DB59 frozen"
+  }
+}
