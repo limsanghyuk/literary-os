@@ -1,0 +1,24 @@
+name: Post SYNC-R72 R74-R77 Research Overlay Build R1
+on:
+  push:
+    paths:
+      - 'research/interventions/20260924/build_post_sync_r72_research_overlay_r1.py'
+      - '.github/workflows/post-sync-r72-r74-r77-research-overlay-r1.yml'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build research overlay
+        run: python research/interventions/20260924/build_post_sync_r72_research_overlay_r1.py | tee overlay_build_result.jsonl
+      - uses: actions/upload-artifact@v4
+        with:
+          name: post-sync-r72-r74-r77-research-overlay-r1
+          path: |
+            research/interventions/20260924/POST_SYNC_R72_R74_R77_RESEARCH_OVERLAY_R1.zip
+            research/interventions/20260924/POST_SYNC_R72_R74_R77_RESEARCH_OVERLAY_MANIFEST_R1.json
+            overlay_build_result.jsonl
