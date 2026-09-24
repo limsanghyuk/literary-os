@@ -1,0 +1,261 @@
+{
+  "judge_id": "J02",
+  "whole_episode_scores": {
+    "EPISODE_PREMISE_COHERENCE": 9,
+    "CAUSAL_SEQUENCE_PROGRESSION": 8,
+    "THREAD_AND_SUBPLOT_INTEGRATION": 9,
+    "CHARACTER_RELATIONSHIP_TRAJECTORY": 8,
+    "INFORMATION_TOPOLOGY_DRAMATIZATION": 9,
+    "SCENE_NECESSITY_AND_DISTINCT_FUNCTION": 7,
+    "ESCALATION_PACING": 8,
+    "CLOSURE_DEFERRED_BALANCE": 9
+  },
+  "scene_scores": {
+    "SC07": {
+      "DIALOGUE_SUBTEXT": 7,
+      "CHARACTER_VOICE": 8,
+      "RELATIONSHIP_STATUS_PRESSURE": 7,
+      "PHYSICALIZATION_ACTION": 8,
+      "PACING_ESCALATION_TIME_PRESSURE": 9,
+      "ENSEMBLE_WORLD_SPECIFICITY": 8,
+      "INFORMATION_DRAMATIZATION": 8,
+      "KOREAN_SPOKEN_NATURALNESS": 8
+    },
+    "SC15": {
+      "DIALOGUE_SUBTEXT": 7,
+      "CHARACTER_VOICE": 8,
+      "RELATIONSHIP_STATUS_PRESSURE": 6,
+      "PHYSICALIZATION_ACTION": 8,
+      "PACING_ESCALATION_TIME_PRESSURE": 7,
+      "ENSEMBLE_WORLD_SPECIFICITY": 9,
+      "INFORMATION_DRAMATIZATION": 9,
+      "KOREAN_SPOKEN_NATURALNESS": 8
+    },
+    "SC30": {
+      "DIALOGUE_SUBTEXT": 9,
+      "CHARACTER_VOICE": 8,
+      "RELATIONSHIP_STATUS_PRESSURE": 9,
+      "PHYSICALIZATION_ACTION": 8,
+      "PACING_ESCALATION_TIME_PRESSURE": 8,
+      "ENSEMBLE_WORLD_SPECIFICITY": 8,
+      "INFORMATION_DRAMATIZATION": 9,
+      "KOREAN_SPOKEN_NATURALNESS": 9
+    },
+    "SC32": {
+      "DIALOGUE_SUBTEXT": 8,
+      "CHARACTER_VOICE": 9,
+      "RELATIONSHIP_STATUS_PRESSURE": 8,
+      "PHYSICALIZATION_ACTION": 9,
+      "PACING_ESCALATION_TIME_PRESSURE": 8,
+      "ENSEMBLE_WORLD_SPECIFICITY": 10,
+      "INFORMATION_DRAMATIZATION": 8,
+      "KOREAN_SPOKEN_NATURALNESS": 9
+    },
+    "SC39": {
+      "DIALOGUE_SUBTEXT": 9,
+      "CHARACTER_VOICE": 9,
+      "RELATIONSHIP_STATUS_PRESSURE": 9,
+      "PHYSICALIZATION_ACTION": 10,
+      "PACING_ESCALATION_TIME_PRESSURE": 10,
+      "ENSEMBLE_WORLD_SPECIFICITY": 9,
+      "INFORMATION_DRAMATIZATION": 9,
+      "KOREAN_SPOKEN_NATURALNESS": 9
+    },
+    "SC41": {
+      "DIALOGUE_SUBTEXT": 7,
+      "CHARACTER_VOICE": 8,
+      "RELATIONSHIP_STATUS_PRESSURE": 7,
+      "PHYSICALIZATION_ACTION": 10,
+      "PACING_ESCALATION_TIME_PRESSURE": 8,
+      "ENSEMBLE_WORLD_SPECIFICITY": 10,
+      "INFORMATION_DRAMATIZATION": 10,
+      "KOREAN_SPOKEN_NATURALNESS": 8
+    }
+  },
+  "reconstruction": {
+    "episode_premise": {
+      "status": "EVIDENCED",
+      "item": "폭풍 직후 재개관을 앞둔 시민극장에서 구조 균열과 전기설비 이상이 발견되어 실내 사용이 중지된다. 윤서는 안전을 우선해 극장을 닫고, 민호는 지원금·급여 마감 압박 속에서 실내 재개관 대신 '안전 + 오늘의 노동'을 보존하는 야외공연 대안을 구축한다. 동시에 오래된 비공식 배선과 보수계약 기록, 윤서 아버지의 과거 참여 가능성이 드러나면서 당일 운영 문제와 장기 책임 조사가 병행된다. "
+    },
+    "major_threads": [
+      {
+        "status": "EVIDENCED",
+        "item": "안전/사용구역 thread: 천장 균열 발견에서 객석 폐쇄, 전기회로 조사, 제한사용 구역 설정, 야외 독립전원 운영으로 진행된다."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "지원금/노동 thread: 민호가 네 시 반·다섯 시의 집행 마감과 급여 지연 위험을 숨기다가 직원들과 공유하고, 행사형태 변경안을 통해 인건비·장비비를 살릴 경로를 만든다. SC07에서 회계 마감이 구체적인 시간압력으로 설정된다. "
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "과거 보수공사/책임 thread: 도면과 다른 배선, 이상한 계약서 서명, 과거 공사명단 및 윤서 가족과 연결될 가능성이 발견되지만 개인 책임은 확정하지 않는다."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "상인회/야외공연 thread: 극장을 살리고 싶은 욕구와 배송·영업·통행권의 충돌을 조건부 합의와 현장 동선으로 조정한다."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "민호-윤서 신뢰 thread: 각자가 돈과 가족이라는 판단 오염 요인을 감추고 있었음을 공개한 뒤, 외부확인과 정보 선공개라는 상호 규칙을 만든다. "
+      }
+    ],
+    "functional_sequence_progression": [
+      {
+        "sequence": 1,
+        "status": "EVIDENCED",
+        "function": "물리적 위험을 발견하고 객석·무대를 폐쇄한다. '오늘 재개관'이라는 초기 목표가 처음으로 불가능해진다."
+      },
+      {
+        "sequence": 2,
+        "status": "EVIDENCED",
+        "function": "지원금 마감과 급여 위험을 도입해 폐쇄의 경제적 비용을 구체화하고, 목표를 '안전 + 오늘의 노동'으로 재정의한다."
+      },
+      {
+        "sequence": 3,
+        "status": "EVIDENCED",
+        "function": "비공식 배선과 오래된 계약서 이상을 발견해 단순 폭풍 피해를 과거 공사·책임 문제로 확장한다."
+      },
+      {
+        "sequence": 4,
+        "status": "EVIDENCED",
+        "function": "상인들의 찬반이 단순 이분법이 아님을 드러내고, 배송·통행·종료시각을 포함한 조건부 야외공연 공간을 설계한다."
+      },
+      {
+        "sequence": 5,
+        "status": "EVIDENCED",
+        "function": "윤서 아버지와 과거 공사의 연결 가능성을 노출하고 증거관리 권한을 분산한다. 이어 민호와 윤서가 서로의 이해충돌을 공개해 협력 규칙을 새로 세운다."
+      },
+      {
+        "sequence": 6,
+        "status": "EVIDENCED",
+        "function": "배터리 조명·무대 위치·배송선·대기공간을 실제 공간에서 시험하며 야외공연을 실행 가능한 운영안으로 바꾼다. SC32는 공연 미학과 냉동차 통행이라는 두 요구를 20cm의 물리적 이동으로 동시에 해결한다. "
+      },
+      {
+        "sequence": 7,
+        "status": "EVIDENCED",
+        "function": "안전·운영·예산 책임을 명문화하고 급여 문제를 다시 전면화한 뒤, 제한된 시간 안에 야외 전환안을 제출한다. SC39는 급여명단, 프로그램북, 17:10 제출 요구를 한 장면에 결합한다. "
+      },
+      {
+        "sequence": 8,
+        "status": "EVIDENCED",
+        "function": "추가 배선의 물리적 증거를 더 확보하고 확인된 사실과 미확정 책임을 분리한다. 위험 구역과 제한 구역을 구획해 건물 폐쇄와 야외사용을 동시에 성립시킨다. SC41의 사진·줄자·거울·통전금지 표시는 정보획득을 화면상 행동으로 운반한다. "
+      },
+      {
+        "sequence": 9,
+        "status": "EVIDENCED",
+        "function": "야외공연을 실제 관객 앞에서 시험한다. 예상보다 많은 관객으로 통행 문제가 재발하지만 현장 규칙을 갱신해 해결하고, 조건부 공연은 완료하되 건물 재개관·책임·최종 예산은 열어 둔다. "
+      }
+    ],
+    "character_relationship_trajectories": [
+      {
+        "status": "EVIDENCED",
+        "item": "윤서: 위험 발견 즉시 폐쇄를 명령하는 안전책임자에서 출발해, 가족 이해충돌이 드러난 뒤에는 원본관리와 판단을 타인과 분산하면서도 안전판단 자체는 회피하지 않는 인물로 진행한다."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "민호: '오늘만 넘기자'는 재개관 집착과 재정압박 은폐에서 출발해, 안전중지 우선권을 인정하고 재개관 대신 노동과 공연을 보존하는 운영자로 이동한다."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "민호-윤서: 충돌 관계에서 서로의 숨긴 이해관계를 공개하고 상호 감시·정보공개 규칙을 채택하는 제한적 신뢰 관계로 변화한다. "
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "지우: 급여와 공연 여부를 통보받는 위치에서 출발해 인원·장비·동선·관객관리까지 책임지는 실행 주체가 된다."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "지우-수경: 공연팀과 상인의 대립에서 출발해 서로의 경계를 실제 분필선·통행로·시간 규칙으로 공동 관리하는 관계가 된다. SC32에서 두 사람은 칭찬이나 화해 선언 없이 공간 수정 행동으로 합의를 보여 준다. "
+      },
+      {
+        "status": "INFERRED",
+        "item": "세라의 관계적 기능은 단순한 행정적 장애물에서 안전·노동·예산을 서로 번역하는 중개자로 확대된다. 다만 개인적 정서 변화보다 직무 행동으로 주로 표현된다."
+      }
+    ],
+    "major_information_shifts": [
+      {
+        "status": "EVIDENCED",
+        "item": "균열은 초반부터 현장 전체에 공개되며 원인만 미확정 상태로 유지된다."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "민호만 알고 있던 지원금·급여 마감 위험이 지우와 직원들, 이후 윤서에게까지 확산된다."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "폭풍 피해로 보였던 문제가 오래된 비공식 배선과 과거 보수계약 문제로 재분류된다."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "윤서 아버지의 이름과 유사 이니셜이 발견되지만, 작품은 '이름이 있다'와 '승인·책임이 있다'를 분리한다."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "야외공연 가능성은 추상적 아이디어에서 상인 조건, 독립전원, 책임표, 제한사용 구역, 시청 조건부 승인으로 단계적으로 공개·확정된다."
+      }
+    ],
+    "resolved_due_now_material": [
+      {
+        "status": "EVIDENCED",
+        "item": "당일 실내 재개관은 포기되고 객석·위험구역 사용중지가 유지된다."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "야외 임시공연 운영안은 조건부 승인을 받아 실제 공연까지 실행된다."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "상가 통행·배송·관객선·종료시각의 당일 운영규칙이 합의되고 현장에서 재조정된다."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "안전판단, 운영결정, 예산조건의 책임주체와 우선순위가 명시된다."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "공연은 20:30 제한 전에 끝나고 철수가 시작되어 당일 약속은 지켜진다. "
+      }
+    ],
+    "deferred_open_material": [
+      {
+        "status": "EVIDENCED",
+        "item": "시민극장의 완전한 안전복구와 정식 재개관 시점."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "비공식 증설 배선의 실제 시공자·승인 과정·책임 소재."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "문서 서명 불일치의 원인과 윤서 아버지의 정확한 역할."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "지원금의 최종 전환 금액과 모든 급여 지급 확정 여부."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "지우가 이 도시에 계속 남을지 여부와 향후 공연의 지속 가능성."
+      },
+      {
+        "status": "EVIDENCED",
+        "item": "엔딩은 오늘의 공연 성공과 장기 문제 해결을 의도적으로 분리한다. 보수비, 계약 책임, 가족 문제, 지우의 미래가 미결이라고 직접 남긴다. "
+      }
+    ]
+  },
+  "critical_violations": [],
+  "strengths": [
+    "여러 thread가 병렬로만 존재하지 않고 서로의 제약조건이 된다. 안전 때문에 실내가 닫히고, 그 폐쇄가 지원금·급여를 압박하며, 재정 압박이 야외대안을 만들고, 야외대안은 상인·통행·전원 문제를 다시 호출한다.",
+    "정보 변화가 대사 설명에만 의존하지 않는다. 안전테이프, 시계, 급여명세서, 두 개의 휴대폰 화면, 분필선, 서명문서, 이동식 조명 등 물리적 carrier가 상태변화를 반복적으로 화면화한다.",
+    "SC39는 표본 장면 중 가장 강하다. 돈, 시간, 공연의 실패 가능성과 지우의 개인적 이해관계를 프로그램북·급여명단·17:10 제출 메시지로 한 공간에 압축한다. ",
+    "SC32는 관계 변화와 세계 특수성을 설명 없이 행동으로 처리한다. 공연팀의 조명 요구와 상인의 냉동차 요구가 무대선을 20cm 이동시키는 구체적 타협으로 전환된다. ",
+    "결말은 당일 성공을 과장하지 않는다. 공연은 끝나지만 건물, 자금, 책임, 가족 문제는 별도 미결 상태로 남아 closure와 deferment의 경계가 선명하다. "
+  ],
+  "weaknesses": [
+    "중반 이후 기록, 사진, 봉인, 대조, 책임표, 조건문서가 반복되면서 일부 장면의 진행감이 지나치게 절차적으로 느껴진다. 각 단계는 인과적으로 정당하지만 52개 장면 규모에서는 몇몇 micro-step이 합쳐져도 기능 손실이 크지 않아 보인다.",
+    "몇몇 대사는 인물의 즉흥적인 한국어 회화라기보다 작품의 원칙을 매우 정돈된 문장으로 발화한다. 전체적으로 자연스럽지만 '확인된 것과 확인 안 된 것을 분리한다'는 테마가 여러 인물의 말에서 반복돼 작가적 통제가 보이는 순간이 있다.",
+    "SC15와 SC41은 정보 드라마타이제이션과 현장 구체성은 뛰어나지만, 관계 자체가 크게 변하는 장면은 아니어서 RELATIONSHIP_STATUS_PRESSURE와 DIALOGUE_SUBTEXT는 다른 표본보다 낮다. ",
+    "윤서의 가족 관련 갈등은 구조적으로 중요한 압력을 만들지만 감정적 후폭풍은 절제되어 있다. 이 선택이 작품의 절차적 톤에는 맞지만, 관계 드라마의 체감 진폭은 안전·증거 thread의 정교함보다 상대적으로 작다."
+  ],
+  "overall_notes": "Whole-episode score mean은 8.375/10, pre-frozen scene-axis 전체 평균은 8.417/10이다. 완성대본은 안전, 노동, 행정, 지역상권, 과거 책임을 하나의 당일 시간축 안에서 높은 인과적 통합도로 엮으며, 특히 정보를 물리적 행동과 문서·공간 변화로 외화하는 능력이 강하다. 가장 뚜렷한 약점은 중반부의 반복적인 절차·기록 단계가 일부 장면의 개별 필요성과 정서적 변주를 약화시키는 점이다. 명백한 INTERNAL_SCHEMA_OR_RESEARCH_META_LEAK, IMPORTANT_STATE_CHANGE_WITHOUT_SCREEN_VISIBLE_CARRIER, EXPOSITORY_EMOTION_STATE_DIALOGUE_AS_DOMINANT_CRAFT, SEVERE_CHARACTER_VOICE_COLLAPSE, MAJOR_CAUSAL_OR_CONTINUITY_BREAK는 확인되지 않았다."
+}
