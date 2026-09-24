@@ -1,0 +1,24 @@
+name: Post SYNC-R72 Full Recovery Overlay R2
+on:
+  push:
+    paths:
+      - 'research/interventions/20260924/build_post_sync_r72_full_recovery_overlay_r2.py'
+      - '.github/workflows/post-sync-r72-full-recovery-overlay-r2.yml'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build and audit full recovery overlay
+        run: python research/interventions/20260924/build_post_sync_r72_full_recovery_overlay_r2.py | tee full_recovery_overlay_build_result.jsonl
+      - uses: actions/upload-artifact@v4
+        with:
+          name: post-sync-r72-full-recovery-overlay-r2
+          path: |
+            research/interventions/20260924/POST_SYNC_R72_FULL_RECOVERY_OVERLAY_R2.zip
+            research/interventions/20260924/POST_SYNC_R72_FULL_RECOVERY_OVERLAY_MANIFEST_R2.json
+            full_recovery_overlay_build_result.jsonl
