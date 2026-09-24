@@ -22,3 +22,5 @@ jobs:
             research/interventions/20260924/POST_SYNC_R72_FULL_RECOVERY_OVERLAY_R2.zip
             research/interventions/20260924/POST_SYNC_R72_FULL_RECOVERY_OVERLAY_MANIFEST_R2.json
             full_recovery_overlay_build_result.jsonl
+
+# rebuild after R3 pointer reconciliation 2026-09-24
