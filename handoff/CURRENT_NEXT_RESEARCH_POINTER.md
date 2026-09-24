@@ -2,7 +2,7 @@
 Last updated: 2026-09-25
 
 ## START HERE
-`handoff/20260925/START_HERE_POST_SYNC_R72_R77_H1_CENSUS_SELECTION_PAST_ONLY_R4.md`
+`handoff/20260925/START_HERE_POST_SYNC_R72_R77_H1_DB64_R131_RESEARCH_AUTHORITY_R5.md`
 
 ## ACTIVE RESEARCH
 R77-H1 — Human Next-Episode Prospective Benchmark Three-Position Pilot
@@ -33,3 +33,7 @@ Use private Library bundle `/R77_H1_PROGRESS/R77_H1_FRESH_ISOLATED_GENERATOR_DIS
 6. post-reveal same-schema comparison + external blind
 
 Do not use this Project-aware coordinator conversation as the candidate prose generator.
+
+
+## DB64-R131 non-retroactivity
+Research DB is now DB64-R131 research-only, but the current R77-H1 census/selections/Past-Only packages remain frozen exactly as sealed. Do not replace H1 inputs with R131-derived fields or works.
