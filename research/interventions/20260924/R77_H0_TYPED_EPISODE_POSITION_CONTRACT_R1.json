@@ -1,0 +1,99 @@
+{
+  "schema": "R77_H0_TYPED_EPISODE_POSITION_CONTRACT_R1",
+  "series_position": [
+    "PILOT_OPENING",
+    "EARLY_SETUP",
+    "EARLY_EXPANSION",
+    "MID_EXPANSION",
+    "MIDPOINT_REVERSAL",
+    "LATE_CONVERGENCE",
+    "PRE_FINALE",
+    "FINALE"
+  ],
+  "episode_function": [
+    "INTRODUCE",
+    "EXPAND",
+    "COMPLICATE",
+    "REVEAL",
+    "REVERSE",
+    "CONVERGE",
+    "PAYOFF",
+    "TRANSITION"
+  ],
+  "material_portfolio": [
+    "NORMAL_LIFE",
+    "WORKPLACE_ECOLOGY",
+    "PRIVATE_LIFE",
+    "RELATIONSHIP",
+    "OPPOSITION",
+    "VICTIM_OR_EXTERNAL_WORLD",
+    "INCIDENT",
+    "INVESTIGATION",
+    "SOCIAL_ECOLOGY",
+    "THREAD_PAYOFF"
+  ],
+  "thread_operation": [
+    "SEED",
+    "MAINTAIN",
+    "ACTIVATE",
+    "ESCALATE",
+    "CROSS",
+    "DEFER",
+    "PAYOFF"
+  ],
+  "relationship_operation": [
+    "ESTABLISH",
+    "PRESSURE",
+    "TEST",
+    "FRACTURE",
+    "REPAIR",
+    "REVERSE",
+    "DEFER"
+  ],
+  "information_operation": [
+    "WITHHOLD",
+    "PARTIAL_REVEAL",
+    "PRIVATE_REVEAL",
+    "GROUP_REVEAL",
+    "PUBLIC_REVEAL",
+    "MISDIRECT"
+  ],
+  "opposition_exposure": [
+    "NONE",
+    "GLIMPSE",
+    "INDIRECT",
+    "PARTIAL",
+    "DIRECT"
+  ],
+  "incident_timing": [
+    "COLD_OPEN",
+    "EARLY_AFTER_BASELINE",
+    "MID_EPISODE",
+    "LATE_TRIGGER",
+    "NO_MAJOR_INCIDENT"
+  ],
+  "scene_contract_required": [
+    "LOCATION",
+    "TIME",
+    "ENTRY_STATE",
+    "BACKGROUND_CONTEXT",
+    "ACTIVE_EVENT",
+    "RELATIONSHIP_PRESSURE",
+    "CHARACTER_OBJECTIVES",
+    "OBSTACLES",
+    "SPATIAL_LAYOUT",
+    "OBJECT_ANCHORS",
+    "INFORMATION_ASYMMETRY",
+    "PRE_LINE_ACTION",
+    "FACIAL_GAZE",
+    "BODY_POSITION",
+    "PROP_ACTION",
+    "PAUSE_SILENCE",
+    "DIALOGUE_INTENT",
+    "REACTION",
+    "EXIT_IMAGE",
+    "EXIT_STATE"
+  ],
+  "exposure_budget_rule": "Soft budget only; no hard quota. Every new character/world/thread exposure must have a typed purpose and source-cutoff-safe provenance.",
+  "semantic_payload_rule": "Typed decisions coexist with natural-language semantic payloads; enums must not replace human-readable meaning."
+}
