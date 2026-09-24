@@ -2,16 +2,16 @@
 Last updated: 2026-09-25
 
 ## CANONICAL START HERE
-`handoff/20260925/START_HERE_POST_SYNC_R72_R77_H1_CENSUS_SELECTION_PAST_ONLY_R4.md`
+`handoff/20260925/START_HERE_POST_SYNC_R72_R77_H1_DB64_R131_RESEARCH_AUTHORITY_R5.md`
 
-R4 supersedes the 2026-09-24 R3 bootstrap.
+R5 supersedes R4. R77-H1 frozen inputs are unchanged; the research DB pointer advances to DB64-R131.
 
 ## CURRENT AUTHORITY
 - Physical Authority: SYNC-R72
 - Active Runtime: exact R69
 - Production: ENG:R47 / LEGACY_R53
 - Runtime DB: DB59 frozen
-- Research DB: DB64-R128 research-only
+- Research DB: DB64-R131 research-only
 - Operational Level-3: SUSPENDED__REQUALIFICATION_REQUIRED
 - Formal latest scored: R138
 - Formal R140: NOT_STARTED
