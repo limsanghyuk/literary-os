@@ -33,3 +33,12 @@ Resume from fresh isolated C/T generation using `/R77_H1_PROGRESS/R77_H1_FRESH_I
 Do not repeat R74/R75/R76/R77-H0.
 Do not repeat H1 census/selection.
 Do not reveal Human targets before C/T sealing.
+
+## OPERATIONAL RUNTIME SAFETY
+Canonical resilience protocol:
+`research/operations/20260925/LITERARY_OS_RUNTIME_CONTAINER_RESILIENCE_PROTOCOL_R2.md`
+
+Current audit receipt:
+`research/operations/20260925/RUNTIME_CONTAINER_RESILIENCE_LEARNING_AUDIT_R1.json`
+
+On ClientError/TransportTimeout at minimal-command level: STOP mutation/reseal -> RUNTIME_TRANSPORT_HOLD -> minimal health check -> verify last atomic checkpoint -> resume only the interrupted step.
