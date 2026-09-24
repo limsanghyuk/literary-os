@@ -1,0 +1,68 @@
+{
+  "schema": "R77_H0_HUMAN_NEXT_EPISODE_PROSPECTIVE_BENCHMARK_PREREGISTRATION_R1",
+  "date": "2026-09-24",
+  "status": "PREREGISTERED__PRIMARY_HUMAN_TARGET_OUTPUTS_0",
+  "parent_research": {
+    "R76": "PASS__EXTERNAL_3JUDGE_ABSOLUTE_BROADCAST_SCREENPLAY_QUALITY_QUALIFIED",
+    "surface_sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4"
+  },
+  "purpose": "Test whether Literary OS can consume only human-written past episodes, select position-appropriate material for the next episode, design typed upper layers, and realize a >=35,000-character screenplay before the actual human target episode is revealed.",
+  "research_questions": [
+    "Does explicit Series Position / Episode Function typing improve next-episode material selection versus the current candidate?",
+    "Can the candidate preserve human-world continuity without using target/future episode information?",
+    "After target reveal, how close are Candidate and Human choices at upper-layer architecture while remaining independently high-quality at surface level?"
+  ],
+  "strata": [
+    {
+      "id": "EARLY",
+      "past_cutoff": "EP01",
+      "target": "EP02",
+      "primary_capability": "world/character expansion, relationship baseline, opposition seed, incident timing"
+    },
+    {
+      "id": "MIDDLE",
+      "past_cutoff": "EP05",
+      "target": "EP06",
+      "primary_capability": "thread activation, focus allocation, subplot orchestration, escalation"
+    },
+    {
+      "id": "LATE",
+      "past_cutoff": "EP12",
+      "target": "EP13",
+      "primary_capability": "long-horizon state consumption, convergence, payoff/debt management"
+    }
+  ],
+  "arms": {
+    "C": "Current candidate planning without the new position-aware typed layer.",
+    "T": "Position-aware Treatment consuming SERIES_POSITION, EPISODE_FUNCTION, MATERIAL_PORTFOLIO, CHARACTER_FOCUS, THREAD_OPERATION, RELATIONSHIP_OPERATION, INFORMATION_OPERATION, OPPOSITION_EXPOSURE, INCIDENT_TIMING, EXPOSURE_BUDGET.",
+    "H": "Actual human target episode; physically and semantically hidden until both C and T plans and full surfaces are sealed."
+  },
+  "target_custody_rule": "No H target source, target-derived analysis, future-derived thread endpoint, payoff location, or post-cutoff summary may enter C/T inputs before seal.",
+  "candidate_completion_before_reveal": [
+    "typed episode plan sealed",
+    "sequence plan sealed",
+    "scene plan/contracts sealed",
+    ">=35,000-character screenplay surface sealed",
+    "output-only reverse reconstruction sealed",
+    "text-derived candidate state ledger sealed"
+  ],
+  "stage_order": [
+    "H0 infrastructure qualification",
+    "H1 three-position pilot: one EARLY, one MIDDLE, one LATE",
+    "H2 confirmatory multi-work benchmark only if H1 infrastructure and generation are valid"
+  ],
+  "external_evaluation": {
+    "upper_layer": "blind C vs T causal comparison, plus post-reveal T vs H benchmark comparison",
+    "surface": "whole-episode + pre-frozen functional scene samples",
+    "human_identity": "hidden from judges",
+    "prohibited_question": "Do not use 'which one is human?' as the primary quality question."
+  },
+  "abort_conditions": [
+    "future leakage detected",
+    "target episode accessed before candidate seal",
+    "target-derived registry/provenance cannot be excluded",
+    "candidate surface <35000 chars",
+    "hidden mapping/custody lost"
+  ],
+  "claim_boundary": "H0 qualifies benchmark infrastructure only. It does not itself qualify next-episode prediction, human-level quality, Production, Operational Level-3, or R140."
+}
