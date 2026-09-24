@@ -1,0 +1,28 @@
+{
+  "schema": "R77_H0_PAST_ONLY_CUTOFF_CONTRACT_R1",
+  "provenance_required": [
+    "work_id",
+    "field_path",
+    "source_episode_min",
+    "source_episode_max",
+    "source_refs",
+    "derived_from_future",
+    "derivation_stage"
+  ],
+  "eligibility_rule": "For target EP(N+1), every candidate input row must have source_episode_max <= N and derived_from_future=false.",
+  "prohibited_before_reveal": [
+    "target episode source text",
+    "target/future THICK or scene analysis",
+    "target/future episode plan or scene plan",
+    "thread endpoint/payoff fields whose derivation used target/future episodes",
+    "summaries generated with knowledge beyond cutoff",
+    "post-cutoff relationship or character states"
+  ],
+  "future_safe_transformations": [
+    "normalization over cutoff-bounded source only",
+    "entity alias resolution using cutoff-bounded evidence only",
+    "thread-state inference whose every evidence ref is <= cutoff",
+    "aggregate statistics that do not encode target-specific future content"
+  ],
+  "fail_closed": "Unknown or missing provenance on a field that could carry story information is ineligible, not assumed safe."
+}
