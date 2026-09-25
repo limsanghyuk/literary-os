@@ -1,0 +1,39 @@
+{
+  "schema": "R77_H1_PA_R1_FROZEN_SUITE_RESULT_SEALED",
+  "date": "2026-09-25",
+  "prereg": "research/interventions/20260925/R77_H1_PA_FULL_PIPELINE_PRETEST_PREREG_R1.json",
+  "run_id": 36142928148,
+  "job_id": 108096887018,
+  "artifact_id": 10867961188,
+  "artifact_zip_sha256": "42b46fde141640c9e95b50d99f0365fed1704947bb6f3bcf3c22103d78ae55a1",
+  "status": "R1_FAIL__BOUNDED_R2_REPAIR_REQUIRED",
+  "frozen_r1_subjects": {
+    "runner_sha256": "6fab07b128a46a8877cb6eb7974975f8579df10fde53b4810ad736471bbc1f01",
+    "validator_sha256": "40175c657ded02dcd1d6e4d95894beef9619b4d1fd4eb290938b30829f97dada",
+    "gate_sha256": "d8c13f256bd420e8347f9e5a5e79d12a7a20ecf9546f0e056bf0c97bef816c3c"
+  },
+  "PA0": "PASS_BASELINE",
+  "PA1": "PASS_FULL_SCALE_CONTENT__HARNESS_NORMALIZATION_CHANGED_FIXTURE_BYTES",
+  "PA2": {
+    "pass_count": 3,
+    "total": 10,
+    "correctly_rejected": [
+      "truncate_below_35000",
+      "malformed_reconstruction_json",
+      "malformed_ledger_json"
+    ],
+    "vulnerabilities": [
+      "trailing text outside four-file envelope accepted",
+      "duplicate FILE section accepted",
+      "response status=incomplete accepted when sections looked complete",
+      "returned model mismatch accepted",
+      "missing x-request-id accepted",
+      "post-receipt deliverable tamper not detected by reveal gate",
+      "C/C pair could be mistaken for C/T"
+    ]
+  },
+  "PA3": "PASS_RETRY_POLICY",
+  "PA4": "PASS_FILE_ISOLATION__PARAMETRIC_MEMORY_RISK_UNRESOLVED",
+  "PA5": "PASS_BLIND_PACKET_REHEARSAL__NO_JUDGE_OUTPUTS",
+  "harness_note": "R1 harness strip/join normalization yielded 35,324 chars / SHA f1e6ef6d... rather than exact sealed R76 surface. Preserved as R1 evidence; corrected before R2."
+}
