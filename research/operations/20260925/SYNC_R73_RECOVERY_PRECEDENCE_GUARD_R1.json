@@ -1,0 +1,31 @@
+{
+  "schema": "SYNC_R73_RECOVERY_PRECEDENCE_GUARD_R1",
+  "date": "2026-09-25",
+  "status": "ACTIVE__AUTHORITY_SHADOWING_GUARD",
+  "physical_authority": "SYNC-R73",
+  "parent": "SYNC-R72",
+  "precedence_order": [
+    "EXTERNAL_SYNC_R73_5PART_9PACKAGE_MANIFEST_R1",
+    "EXTERNAL_SYNC_R73_TRUST_ROOT_R1",
+    "EXTERNAL_00_READ_FIRST_SYNC_R73_20260925",
+    "TOP_LEVEL_PACKAGE_SYNC_R73_CURRENT_RECOVERY_20260925/01_CURRENT_AUTHORITY_R1.json",
+    "HUB_CURRENT_HANDOFF_AND_SESSION_RECOVERY_POINTERS",
+    "NESTED_HISTORICAL_OVERLAYS_AND_THEIR_CURRENT_POINTERS"
+  ],
+  "hard_rules": [
+    "A nested archive whose own manifest declares physical_authority_change=false cannot supersede the enclosing physical authority.",
+    "A nested artifact named CURRENT_* is historical when its enclosing object is explicitly a historical/recovery overlay.",
+    "Recursive recovery must compare authority generation/snapshot identity before accepting any CURRENT_* pointer.",
+    "If top-level manifest/trust-root and nested CURRENT_* disagree, top-level sealed authority wins and nested content remains provenance-only.",
+    "Do not rewrite or delete nested historical evidence solely to remove the ambiguity."
+  ],
+  "known_shadowing_object": {
+    "package": "B2",
+    "object": "POST_SYNC_R72_FULL_RECOVERY_OVERLAY_R3.zip",
+    "object_sha256": "e215795bdcafacb20ed4ee91f009cbd24c87dc8ebb07c6664e86056d7c1bc72f",
+    "historical_physical_parent": "SYNC-R72",
+    "physical_authority_change": false
+  },
+  "package_mutation_required": false,
+  "physical_reseal_required": false
+}
