@@ -2,6 +2,8 @@ name: R77-H1 Provider Execution Preflight R1
 on:
   push:
     branches: [main]
+permissions:
+  contents: write
 jobs:
   preflight:
     if: contains(github.event.head_commit.message, 'R77-H1 provider preflight R1')
