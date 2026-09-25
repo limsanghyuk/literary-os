@@ -1,0 +1,45 @@
+{
+  "schema": "R77_H1_PA_R2_FROZEN_SUITE_RESULT_SEALED",
+  "date": "2026-09-25",
+  "parent_r1_status": "R1_FAIL__BOUNDED_R2_REPAIR_REQUIRED",
+  "run_id": 36143223127,
+  "job_id": 108097872156,
+  "artifact_id": 10867956501,
+  "artifact_zip_sha256": "b73c28134139496a97058b8de02be2f217c1d453255694e5290d10781e9ceadf",
+  "status": "PASS__R2_EXECUTION_CONTRACT_REPAIRED__REAL_PROVIDER_PM0_REQUIRED",
+  "fixture": {
+    "work": "SYNTH_R76_BREAKWATER_THEATER",
+    "chars": 35333,
+    "sequences": 9,
+    "scenes": 52,
+    "sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4",
+    "exact_sealed_fixture_match": true
+  },
+  "PA0": "PASS",
+  "PA1": "PASS_EXACT_FULL_EPISODE_FIXTURE",
+  "PA2": {
+    "status": "PASS_10_OF_10_INVALID_CASES_REJECTED",
+    "cases": [
+      "truncate_below_35000",
+      "malformed_reconstruction_json",
+      "malformed_ledger_json",
+      "trailing_text",
+      "duplicate_section",
+      "incomplete_response",
+      "model_mismatch",
+      "missing_x_request_id",
+      "post_receipt_tamper",
+      "C_C_pair"
+    ]
+  },
+  "PA3": "PASS_429_5XX_RETRY_AND_400_STOP__CLIENT_REQUEST_ID_STABLE",
+  "PA4": "PASS_FILE_ISOLATION__REAL_PROVIDER_PM0_REQUIRED",
+  "PA5": {
+    "status": "PASS",
+    "judge_packets": 3,
+    "judge_outputs_created": 0,
+    "forbidden_hidden_material_hits": 0
+  },
+  "r2_contract_commit": "a2edc8d9176df94f059ea141b4a7d422f96e1ac2",
+  "scientific_boundary": "Provider-analog execution-contract qualification only. Does not establish actual OpenAI API literary quality, prospective validity, Production, Operational Level-3, or R140."
+}
