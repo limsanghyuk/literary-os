@@ -1,0 +1,150 @@
+{
+  "schema": "SYNC_R73_5PART_9PACKAGE_MANIFEST_R1",
+  "date": "2026-09-25",
+  "physical_authority": "SYNC-R73",
+  "parent_physical_authority": "SYNC-R72",
+  "namespace_note": "SYNC-R73 is a physical snapshot ID, distinct from historical Research Experiment R73.",
+  "read_order": [
+    "CONTROL",
+    "A",
+    "B1",
+    "B2",
+    "C1",
+    "C2A",
+    "C2B",
+    "D1",
+    "D2"
+  ],
+  "packages": {
+    "CONTROL": {
+      "file": "LITERARY_OS_CURRENT_CONTROL_POST_R77H1_DB64R131_SYNC_R73_20260925.zip",
+      "bytes": 289481224,
+      "sha256": "a8cec6b790018455079b3d1348e8e035352f40360474d2b673bb997ea29c2b96",
+      "entries": 1856,
+      "crc_pass": true
+    },
+    "A": {
+      "file": "LITERARY_OS_CURRENT_PART_A_POST_R77H1_DB64R131_SYNC_R73_20260925.zip",
+      "bytes": 304034403,
+      "sha256": "7b08674489f45df13af9cc1af55d1252618b607a859adbfb4e7a308041c7deae",
+      "entries": 1956,
+      "crc_pass": true
+    },
+    "B1": {
+      "file": "LITERARY_OS_CURRENT_PART_B1_SYNC_R73_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R72.zip",
+      "bytes": 196427036,
+      "sha256": "00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98",
+      "entries": 56,
+      "crc_pass": true,
+      "byte_unchanged_from_sync_r72": true
+    },
+    "B2": {
+      "file": "LITERARY_OS_CURRENT_PART_B2_POST_R77H1_DB64R131_SYNC_R73_20260925.zip",
+      "bytes": 295438493,
+      "sha256": "2afec8596a6ddddc39a6e818aa13e7470f6c2f76e6ea83abcaede47579ec8aec",
+      "entries": 1881,
+      "crc_pass": true
+    },
+    "C1": {
+      "file": "LITERARY_OS_CURRENT_C1_RUNTIME_CORE_SYNC_R73_EXACT_R69_20260925.zip",
+      "bytes": 140399417,
+      "sha256": "08344c7290a19149d2038c0538f31dc45ea4d08260886964641b124286ad73a6",
+      "entries": 96,
+      "crc_pass": true
+    },
+    "C2A": {
+      "file": "LITERARY_OS_CURRENT_C2_BINARY_A_SYNC_R73_POST_R77H1_20260925.bin",
+      "bytes": 264041901,
+      "sha256": "716e95139566d1ad3a4660d517bbf79c871bc19440ec38e1b0b5c0bbb1e9cee1"
+    },
+    "C2B": {
+      "file": "LITERARY_OS_CURRENT_C2_BINARY_B_SYNC_R73_POST_R77H1_20260925.bin",
+      "bytes": 264041901,
+      "sha256": "2d0aa2077a5593054cc5c127c913cabc9ac954f57ed71058aee870086a4fd16f"
+    },
+    "D1": {
+      "file": "LITERARY_OS_CURRENT_PART_D1_DB59_SYNC_R73_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R72.zip",
+      "bytes": 138011573,
+      "sha256": "a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504",
+      "entries": 25,
+      "crc_pass": true,
+      "byte_unchanged_from_sync_r72": true
+    },
+    "D2": {
+      "file": "LITERARY_OS_CURRENT_PART_D2_DB59_SYNC_R73_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R72.zip",
+      "bytes": 173393886,
+      "sha256": "c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4",
+      "entries": 59,
+      "crc_pass": true,
+      "byte_unchanged_from_sync_r72": true
+    }
+  },
+  "c2_logical": {
+    "bytes": 528083802,
+    "sha256": "5974d3eb4f047f8cd65d60ed83a88ffa54dc4478f30854d53bc00c341b99bbfe",
+    "entries": 4006,
+    "crc_pass": true,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe": 0
+  },
+  "delta": {
+    "changed": [
+      "CONTROL",
+      "A",
+      "B2",
+      "C1",
+      "C2A",
+      "C2B"
+    ],
+    "byte_unchanged": [
+      "B1",
+      "D1",
+      "D2"
+    ]
+  },
+  "embedded_recovery": {
+    "hub_overlay_r3": {
+      "sha256": "e215795bdcafacb20ed4ee91f009cbd24c87dc8ebb07c6664e86056d7c1bc72f",
+      "bytes": 328623,
+      "files": 139,
+      "location": "B2"
+    },
+    "h1_dispatch": {
+      "sha256": "765c76f4460e4b62be8e12501abd77191be5c7d17542122564164a3bb5d471d4",
+      "bytes": 282780,
+      "location": "B2"
+    },
+    "db64_r131_full": {
+      "sha256": "4986730dc062610a2395960af83615dddaf986f53172914d2175b459fdaf9d7b",
+      "bytes": 333821596,
+      "part01_sha256": "c4812527d32322381b79f5ac85ac1fff38753f4ab0854f09678df94cd7b6d3db",
+      "part02_sha256": "047670e211d7c62e034153f4b6c11e22e27887dd0783d258c55503642baa8688",
+      "part01_location": "CONTROL",
+      "part02_location": "A",
+      "research_only": true
+    },
+    "db64_r131_support_bundle": {
+      "sha256": "8082ffa2a6239ff8b3049653bee3a0f5fb12dfd462b8de7efbaa8b9e481fb3bd",
+      "bytes": 26140875,
+      "entries": 5,
+      "crc_pass": true,
+      "location": "B2"
+    }
+  },
+  "authority": {
+    "active_runtime": "exact R69",
+    "active_runtime_sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+    "production": "ENG:R47 / LEGACY_R53",
+    "runtime_db": "DB59 frozen",
+    "runtime_db_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "research_db": "DB64-R131 research-only",
+    "research_db_sha256": "4986730dc062610a2395960af83615dddaf986f53172914d2175b459fdaf9d7b",
+    "operational_level3": "SUSPENDED__REQUALIFICATION_REQUIRED",
+    "formal_scored_total": 137,
+    "formal_latest_scored": "R138",
+    "formal_r140": "NOT_STARTED"
+  },
+  "r77_h1": "CENSUS_SELECTION_PAST_ONLY_SEALED__GENERATOR_DISPATCH_READY__C_T_NOT_STARTED__HUMAN_TARGET_UNOPENED__PRIMARY_OUTPUTS_0",
+  "promotion_status": "PROMOTED__DELIVERED_COPY_9_OF_9_SHA_REVERIFIED"
+}
