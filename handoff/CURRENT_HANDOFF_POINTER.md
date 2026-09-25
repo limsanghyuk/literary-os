@@ -42,3 +42,15 @@ Canonical package manifest:
 
 Physicalization receipt:
 `research/operations/20260925/SYNC_R73_PHYSICALIZATION_RECEIPT_R1.json`
+
+
+## SYNC-R73 RECOVERY PRECEDENCE GUARD
+`research/operations/20260925/SYNC_R73_RECOVERY_PRECEDENCE_GUARD_R1.md`
+
+Mandatory rule:
+External SYNC-R73 Manifest -> Trust Root -> READ FIRST -> top-level SYNC-R73 current-authority metadata -> Hub CURRENT pointers -> nested historical overlays.
+
+Nested B2 `POST_SYNC_R72_FULL_RECOVERY_OVERLAY_R3.zip` is historical provenance only and MUST NOT override SYNC-R73.
+
+Debug closure:
+`research/operations/20260925/SYNC_R73_INTEGRITY_DEBUG_CLOSURE_R2.json`
