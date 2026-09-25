@@ -1,0 +1,28 @@
+{
+  "schema": "SYNC_R74_PHYSICALIZATION_RECEIPT_R1",
+  "date": "2026-09-25",
+  "status": "PASS__PROMOTED__DELIVERED_COPY_9_OF_9_SHA_REVERIFIED",
+  "physical_authority": "SYNC-R74",
+  "parent": "SYNC-R73",
+  "manifest_sha256": "7976e5eb3ba77c18097da4b00e5b774ea1d6f43182596223fb1a4335272ddae0",
+  "sha256sums_sha256": "cb402f9b08ead6527e09c2dfb151191b0ad6e1ed33a4f7f888c073a715dc0d21",
+  "trust_root_sha256": "e20851d66280702a48c96dacb891b089569fdeefbe13b241d20c71b23578f671",
+  "read_first_sha256": "f93b7c4a7e6eded563ee5a7aa7d1583ebb7b10f4752a3272b470c59df88eee3e",
+  "c2_logical_sha256": "8d766316cb153f04302ba633fb644967d1785b15298e1ea1b2a09b2d628e6896",
+  "c2_crc_pass": true,
+  "package_integrity": "PASS_9_OF_9_LOCAL",
+  "delivery_redownload_verification": {
+    "status": "PASS_9_OF_9",
+    "mismatches": 0
+  },
+  "parent_preservation": "PASS__MISSING_0__CHANGED_0",
+  "r77_h1_launch_payload": "PASS_6_OF_6_SHA__PHYSICALLY_EMBEDDED_B2",
+  "runtime_effect": "NONE__EXACT_R69_UNCHANGED",
+  "production_effect": "NONE__ENG_R47_LEGACY_R53_UNCHANGED",
+  "runtime_db_effect": "NONE__DB59_FROZEN_UNCHANGED",
+  "research_db": "DB64-R131 research-only",
+  "operational_level3": "SUSPENDED__REQUALIFICATION_REQUIRED",
+  "formal_latest_scored": "R138",
+  "formal_r140": "NOT_STARTED",
+  "r77_h1": "SIX_ISOLATED_LAUNCH_PACKETS_SEALED__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_UNOPENED__PRIMARY_OUTPUTS_0"
+}
