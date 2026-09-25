@@ -1,0 +1,19 @@
+name: R77-H1 Provider Analog Full Pipeline Pretest R1
+on:
+  push:
+    branches: [main]
+jobs:
+  pretest:
+    if: contains(github.event.head_commit.message, 'Run R77-H1 PA full-pipeline pretest R1')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run frozen R1 suite
+        run: python research/interventions/20260925/r77_h1_pa_full_pipeline_pretest_r1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r77-h1-pa-full-pipeline-pretest-r1
+          path: r77_h1_pa_r1_result.json
