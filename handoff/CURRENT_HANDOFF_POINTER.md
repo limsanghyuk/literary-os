@@ -2,12 +2,17 @@
 Last updated: 2026-09-25
 
 ## CANONICAL START HERE
-`handoff/20260925/START_HERE_POST_SYNC_R72_R77_H1_DB64_R131_RESEARCH_AUTHORITY_R5.md`
+`handoff/20260925/START_HERE_SYNC_R73_R77_H1_DB64_R131_PHYSICAL_CLOSURE_R6.md`
 
-R5 supersedes R4. R77-H1 frozen inputs are unchanged; the research DB pointer advances to DB64-R131.
+R6 supersedes R5.
 
 ## CURRENT AUTHORITY
-- Physical Authority: SYNC-R72
+- Physical Authority: **SYNC-R73**
+- Parent: SYNC-R72
+- Delivery redownload verification: PASS 9/9
+- Manifest SHA256: `604a16285e6d2137392dd171225aca44fd824a2b3bf81132424b16478bc49d72`
+- Trust Root SHA256: `fe06494b7f23d469796e37421cafcf0f524049ac4e989f2cdf98719b42fa02f3`
+- Logical C2 SHA256: `5974d3eb4f047f8cd65d60ed83a88ffa54dc4478f30854d53bc00c341b99bbfe`
 - Active Runtime: exact R69
 - Production: ENG:R47 / LEGACY_R53
 - Runtime DB: DB59 frozen
@@ -16,17 +21,8 @@ R5 supersedes R4. R77-H1 frozen inputs are unchanged; the research DB pointer ad
 - Formal latest scored: R138
 - Formal R140: NOT_STARTED
 
-## COMPLETED AFTER SYNC-R72
-- R74 closed, no efficacy verdict
-- R75 partial pass
-- R76 closed pass, external 3-Judge 3/3
-- R77-H0 PASS 8/8
-- R77-H1 metadata-only census COMPLETE
-- R77-H1 deterministic selection COMPLETE
-- R77-H1 Past-Only source packages SEALED and audited
-
 ## CURRENT R77-H1
-`R77_H1__CENSUS_COMPLETE__SELECTION_COMPLETE__PAST_ONLY_PACKAGES_SEALED__GENERATOR_DISPATCH_READY__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_STORY_PAYLOAD_UNOPENED__PRIMARY_OUTPUTS_0`
+`CENSUS_COMPLETE__SELECTION_COMPLETE__PAST_ONLY_PACKAGES_SEALED__GENERATOR_DISPATCH_READY__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_STORY_PAYLOAD_UNOPENED__PRIMARY_OUTPUTS_0`
 
 Selected:
 - EARLY = 구르미그린달빛 (EP01 -> hidden EP02)
@@ -34,11 +30,15 @@ Selected:
 - LATE = 굿캐스팅 (EP01-12 -> hidden EP13)
 
 ## EXACT NEXT
-Fresh isolated C/T generation using the sealed private dispatch bundle. Human target remains unopened until both C/T are sealed for the stratum.
+Fresh isolated C/T generation from the physically embedded private dispatch bundle.
+Do not reveal Human targets before both C/T arms for the stratum are sealed.
 
-Dispatch evidence: `research/interventions/20260925/R77_H1_FRESH_ISOLATED_GENERATOR_DISPATCH_READY_R1.json`
+## PACKAGE CUSTODY
+Personal Library:
+`/SYNC_R73_CURRENT_PHYSICAL_9PACKAGES`
 
-Canonical result:
-`research/interventions/20260925/R77_H1_METADATA_CENSUS_SELECTION_PAST_ONLY_CLOSURE_R1.json`
+Canonical package manifest:
+`research/operations/20260925/SYNC_R73_5PART_9PACKAGE_MANIFEST_R1.json`
 
-Physical authority remains SYNC-R72; successor 9-package reseal is still separate and incomplete.
+Physicalization receipt:
+`research/operations/20260925/SYNC_R73_PHYSICALIZATION_RECEIPT_R1.json`
