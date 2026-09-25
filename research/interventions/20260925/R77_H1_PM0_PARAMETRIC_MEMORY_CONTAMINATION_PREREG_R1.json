@@ -1,0 +1,54 @@
+{
+  "schema": "R77_H1_PM0_PARAMETRIC_MEMORY_CONTAMINATION_PREREG_R1",
+  "date": "2026-09-25",
+  "status": "PREREGISTERED_PRE_OUTPUT__PM0_OUTPUTS_0__HUMAN_TARGET_UNOPENED",
+  "parent": "R77-H1",
+  "problem": "Fresh chat/file isolation cannot prove the model lacks pretrained or parametric knowledge of already-broadcast target episodes.",
+  "timing": "Run PM0 recall probes before any C/T candidate generation. Seal all PM0 outputs before C/T. Do not reveal PM0 outputs to C/T generators.",
+  "per_work_probe": {
+    "contexts": 3,
+    "provider_class": "same real-provider model/config class used for C/T",
+    "input_only": [
+      "canonical public work title",
+      "target episode ordinal",
+      "instruction to report only specific target-episode facts already remembered without web/tools/files; UNKNOWN is explicitly allowed"
+    ],
+    "prohibited": [
+      "Past-Only screenplay package",
+      "Human target bytes",
+      "Project/GitHub history",
+      "web/tools",
+      "other PM0 outputs",
+      "C/T outputs"
+    ],
+    "output_fields": [
+      "claimed_target_facts",
+      "character_event_claims",
+      "location_or_prop_claims",
+      "outcome_claims",
+      "confidence_per_claim",
+      "explicit_unknown_if_no_memory"
+    ]
+  },
+  "custody": "Hash-seal three PM0 outputs per selected work before C/T starts. Coordinator stores them unread where feasible; in all cases candidate generators never receive them.",
+  "adjudication_after_human_reveal": {
+    "judges": 3,
+    "fresh_context": true,
+    "inputs": [
+      "sealed PM0 claims",
+      "revealed Human target episode",
+      "Past-Only cutoff material needed only to judge whether a claim was already inferable from past episodes"
+    ],
+    "labels": [
+      "EXACT_TARGET_FACT",
+      "GENERIC_OR_CUTOFF_INFERABLE",
+      "FALSE_OR_NOT_IN_TARGET",
+      "AMBIGUOUS"
+    ],
+    "confirmed_claim_rule": ">=2/3 judges label the same substantive claim EXACT_TARGET_FACT",
+    "contamination_positive_rule": ">=2 confirmed target-specific claims that are not generic/cutoff-inferable",
+    "consequence": "If positive, that work cannot support the primary prospective C/T/H claim. Preserve all outputs as secondary contaminated evidence; use the next preregistered hash-ranked eligible replacement if continuing the primary benchmark."
+  },
+  "no_posthoc_rule": "Thresholds and consequence may not change after first PM0 output.",
+  "claim_boundary": "PM0 is a contamination diagnostic, not a literary-quality score."
+}
