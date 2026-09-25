@@ -1,0 +1,24 @@
+{
+  "schema": "R77_H1_PA6_MECHANICAL_VALIDATOR_REPAIR_PREREG_R2",
+  "date": "2026-09-25",
+  "status": "PREREGISTERED__TREATMENT_IMMUTABLE",
+  "treatment_r1_sha256": "f2e5b113881dbcd43383beff388d349ef340ffe6c8bc60986f733e5eaa086f4a",
+  "treatment_chars": 40568,
+  "r1_failure": "P5_STAGE_DIRECTION_FALSE_NEGATIVE",
+  "false_negative_scenes": [
+    14,
+    16,
+    28,
+    48,
+    49
+  ],
+  "diagnosis": "R1 incorrectly required first non-empty prose line length >=15. The frozen requirement is presence of scene-opening/action stage direction, not a minimum sentence length. All five scenes begin with action/stage-direction prose.",
+  "allowed_change": "Change only P5 detector. A scene passes P5 when the first non-empty line after heading is not a recognized speaker cue and is not a bare dialogue label. Do not change Treatment bytes or any other gate.",
+  "forbidden": [
+    "Treatment mutation",
+    "threshold change",
+    "removing any other gate",
+    "posthoc literary-quality scoring"
+  ],
+  "rerun": "Same immutable Treatment R1 against all P1-P10 gates."
+}
