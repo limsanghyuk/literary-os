@@ -1,0 +1,38 @@
+{
+  "schema": "R77_H1_PA6_TREATMENT_R1_MECHANICAL_RESULT_R2_VALIDATOR",
+  "date": "2026-09-25",
+  "status": "PASS",
+  "treatment": {
+    "chars": 40568,
+    "sha256": "f2e5b113881dbcd43383beff388d349ef340ffe6c8bc60986f733e5eaa086f4a",
+    "sequences": 9,
+    "scenes": 52,
+    "dialogue_scenes": 52
+  },
+  "control_reference": {
+    "chars": 35333,
+    "sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4"
+  },
+  "gates": {
+    "P1_chars_ge_40000": true,
+    "P2_sequence_exact_1_to_9": true,
+    "P3_scene_exact_1_to_52": true,
+    "P4_dialogue_ge45": true,
+    "P5_stage_direction_all_scenes": true,
+    "P6_no_short_scene_under300": true,
+    "P7_metadata_leak_0": true,
+    "P8_duplicate_full_scene_0": true,
+    "P9_no_exact_control_line_ge35": true,
+    "P10_longest_normalized_overlap_lt120": true
+  },
+  "stage_failures": [],
+  "short_scenes": [],
+  "metadata_leaks": [],
+  "duplicate_scene_bodies": [],
+  "exact_control_lines_ge35": [],
+  "longest_normalized_control_overlap": {
+    "chars": 37,
+    "text": " 객석 씬 01. 시민극장 객석 / 오전 폭풍이 지나간 다음 날. "
+  },
+  "claim_boundary": "Mechanical/copy-independence gate only; not literary quality or external blind."
+}
