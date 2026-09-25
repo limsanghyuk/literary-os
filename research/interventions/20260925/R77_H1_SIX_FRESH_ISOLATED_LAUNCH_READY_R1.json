@@ -1,0 +1,49 @@
+{
+  "schema": "R77_H1_SIX_FRESH_ISOLATED_LAUNCH_READY_R1",
+  "date": "2026-09-25",
+  "physical_authority": "SYNC-R73",
+  "active_runtime": "exact R69",
+  "runtime_db": "DB59 frozen",
+  "research_db": "DB64-R131 research-only",
+  "status": "SIX_ISOLATED_LAUNCH_PACKETS_SEALED__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_UNOPENED__PRIMARY_OUTPUTS_0",
+  "source_dispatch_bundle": {
+    "sha256": "765c76f4460e4b62be8e12501abd77191be5c7d17542122564164a3bb5d471d4"
+  },
+  "packets": [
+    {
+      "stratum": "EARLY",
+      "arm": "C",
+      "sha256": "72771981ec23141d73acbe3c4709c921d6e7d28757a1aa9c5e4dbdf1413f0083"
+    },
+    {
+      "stratum": "EARLY",
+      "arm": "T",
+      "sha256": "1e4d5bc695e215ebf22fdc0dd5a33d34ddde79ef1fed2637f4e1afef4aabaaac"
+    },
+    {
+      "stratum": "MIDDLE",
+      "arm": "C",
+      "sha256": "76bbf26afe941c216fc2186798f5cdf9994cc792b440c52e9f9bcd037593709e"
+    },
+    {
+      "stratum": "MIDDLE",
+      "arm": "T",
+      "sha256": "9ebb85b449954220bbb97acdef9450b03732bc06e91c238fc4ab07c9af646d81"
+    },
+    {
+      "stratum": "LATE",
+      "arm": "C",
+      "sha256": "b6dec167881bb64c23160a66fad02ebb178f969ea4b938035ba9ba1d865b0abf"
+    },
+    {
+      "stratum": "LATE",
+      "arm": "T",
+      "sha256": "808d61ef1eefab064563f9b3f7bbcd61fa841339c65b4d6c071b6c384c0a1fdf"
+    }
+  ],
+  "private_library_folder": "/R77_H1_PROGRESS/ISOLATED_LAUNCH_R1",
+  "target_access": false,
+  "execution_boundary": "Each packet must run in a fresh isolated model context. The project-aware coordinator chat must not generate candidate prose.",
+  "current_environment_note": "OpenAI API key setup flow was opened, but the coordinator tool environment does not expose a fresh model-run surface or raw API key. No generation was fabricated or run inside this context.",
+  "exact_next": "Execute the six sealed packets in six fresh isolated contexts using the same model/config class where possible; return four deliverables plus receipt per arm; validate and seal each arm; only then reveal H per stratum."
+}
