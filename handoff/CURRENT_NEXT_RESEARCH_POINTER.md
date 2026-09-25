@@ -17,7 +17,7 @@ R77-H1 — Human Next-Episode Prospective Benchmark Three-Position Pilot
 - Formal R140: NOT_STARTED
 
 ## CURRENT STATUS
-`CENSUS_COMPLETE__SELECTION_COMPLETE__PAST_ONLY_PACKAGES_SEALED__GENERATOR_DISPATCH_READY__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_STORY_PAYLOAD_UNOPENED__PRIMARY_OUTPUTS_0`
+`CENSUS_COMPLETE__SELECTION_COMPLETE__PAST_ONLY_PACKAGES_SEALED__SIX_ISOLATED_LAUNCH_PACKETS_SEALED__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_STORY_PAYLOAD_UNOPENED__PRIMARY_OUTPUTS_0`
 
 Selected:
 - EARLY: 구르미그린달빛
@@ -41,3 +41,15 @@ Do not use this Project-aware coordinator conversation as candidate prose genera
 
 ## DB64-R131 NON-RETROACTIVITY
 DB64-R131 is now physically recoverable in SYNC-R73 as research-only data, but it MUST NOT change the already-frozen H1 census, selected works, Past-Only packages, hidden targets or gates.
+
+
+## SIX ISOLATED LAUNCH PACKETS
+Private Library:
+`/R77_H1_PROGRESS/ISOLATED_LAUNCH_R1`
+
+Hub receipt:
+`research/interventions/20260925/R77_H1_SIX_FRESH_ISOLATED_LAUNCH_READY_R1.json`
+
+Six packets are individually sealed for EARLY-C/T, MIDDLE-C/T, LATE-C/T.
+No Candidate/Treatment screenplay has been generated in the Project-aware coordinator context.
+Human targets remain unopened.
