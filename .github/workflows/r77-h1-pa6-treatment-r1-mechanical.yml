@@ -1,0 +1,28 @@
+name: R77-H1 PA6 Treatment R1 Mechanical Validation
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  validate:
+    if: contains(github.event.head_commit.message, 'Run PA6 Treatment R1 mechanical validation')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate
+        run: python research/interventions/20260925/r77_h1_pa6_treatment_r1_mechanical_validator.py
+      - name: Commit evidence
+        if: always()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add research/interventions/20260925/r77_h1_pa6_treatment_r1/R77_H1_PA6_TREATMENT_R1_FULL_SCREENPLAY.txt research/interventions/20260925/r77_h1_pa6_treatment_r1/R77_H1_PA6_TREATMENT_R1_MECHANICAL_RESULT.json
+          git commit -m 'Seal PA6 Treatment R1 mechanical result' || exit 0
+          git pull --rebase origin main
+          git push
