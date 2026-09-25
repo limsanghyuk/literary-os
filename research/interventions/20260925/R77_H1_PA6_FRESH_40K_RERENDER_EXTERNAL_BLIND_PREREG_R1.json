@@ -1,0 +1,132 @@
+{
+  "schema": "R77_H1_PA6_FRESH_40K_RERENDER_EXTERNAL_BLIND_PREREG_R1",
+  "date": "2026-09-25",
+  "status": "PREREGISTERED__TREATMENT_OUTPUTS_0__EXTERNAL_JUDGE_OUTPUTS_0",
+  "parent_physical_authority": "SYNC-R74",
+  "parent_research": "R77-H1",
+  "purpose": "Rehearse the improved post-R76 surface-realization and execution discipline at broadcast scale before real-provider H1. Re-render the exact frozen R76 52-scene architecture with current craft rules, require >=40,000 Korean characters, then externally blind-evaluate against the immutable R76 historical surface.",
+  "scientific_boundary": [
+    "This is Provider-Analog rehearsal, not actual OpenAI API validation.",
+    "Historical Control is the immutable R76 sealed surface, 35,333 chars.",
+    "Treatment uses the same frozen 9-sequence/52-scene architecture but current improved surface rules and >=40,000-char minimum.",
+    "Length is intentionally not matched, so paired result is directional rehearsal evidence, not clean causal proof.",
+    "No H1 selected work, Past-Only H1 source, or Human target is used.",
+    "No Production/Runtime/Level-3/R140 promotion can result."
+  ],
+  "control": {
+    "work_id": "SYNTH_R76_BREAKWATER_THEATER",
+    "title": "방파제 극장",
+    "surface_sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4",
+    "chars": 35333,
+    "sequences": 9,
+    "scenes": 52,
+    "mutation": "FORBIDDEN"
+  },
+  "treatment": {
+    "architecture_source": "R76_VP_B1_FROZEN_52_SCENE_SURFACE_CONTRACT_R1",
+    "exact_sequences": 9,
+    "exact_scenes": 52,
+    "min_chars": 40000,
+    "no_upper_cap": true,
+    "no_quota_padding": true,
+    "fresh_surface_required": true,
+    "current_craft_rules": [
+      "Dialogue must not explain emotion/state when action, silence, blocking, prop use, expression/gaze, failed action, approach/withdrawal can carry it.",
+      "Stage direction may be detailed and must make important changes screen-visible and playable.",
+      "Principal voices must differ in sentence length, vocabulary, directness, avoidance pattern, institutional role and conflict strategy.",
+      "Avoid repeated document/procedure scenes performing the same dramatic transaction.",
+      "Every scene must alter pressure, access, responsibility, information, relationship, spatial permission, or executable choice.",
+      "Information must be discovered, contradicted, withheld, verified, physically produced, or acted on rather than merely recited.",
+      "Scene openings should establish a visual/action condition before explanation.",
+      "Emotion is externalized through performance direction rather than direct self-description.",
+      "Detailed directions must remain economical: no redundant paraphrase of dialogue."
+    ],
+    "forbidden": [
+      "research/schema IDs in screenplay",
+      "copying R76 surface sentences as a rewrite shortcut",
+      "future episode source",
+      "automatic padding solely to reach 40k"
+    ]
+  },
+  "external_blind": {
+    "judges": [
+      "J01",
+      "J02",
+      "J03"
+    ],
+    "fresh_independent_contexts": true,
+    "mapping_hidden_until_all_three_outputs_sealed": true,
+    "packet_contents": [
+      "A/B whole-episode screenplay pair with randomized arm position",
+      "same pre-frozen scene sample SC07, SC15, SC30, SC32, SC39, SC41 from each arm",
+      "judge instruction only"
+    ],
+    "whole_axes": [
+      "EPISODE_PREMISE_COHERENCE",
+      "CAUSAL_SEQUENCE_PROGRESSION",
+      "THREAD_AND_SUBPLOT_INTEGRATION",
+      "CHARACTER_RELATIONSHIP_TRAJECTORY",
+      "INFORMATION_TOPOLOGY_DRAMATIZATION",
+      "SCENE_NECESSITY_AND_DISTINCT_FUNCTION",
+      "ESCALATION_PACING",
+      "CLOSURE_DEFERRED_BALANCE"
+    ],
+    "surface_axes": [
+      "DIALOGUE_SUBTEXT",
+      "CHARACTER_VOICE",
+      "RELATIONSHIP_STATUS_PRESSURE",
+      "PHYSICALIZATION_ACTION",
+      "PACING_ESCALATION_TIME_PRESSURE",
+      "ENSEMBLE_WORLD_SPECIFICITY",
+      "INFORMATION_DRAMATIZATION",
+      "KOREAN_SPOKEN_NATURALNESS",
+      "SCENE_OPENING_VISUALIZATION",
+      "PERFORMANCE_DIRECTION_QUALITY",
+      "ACTION_DIALOGUE_BINDING",
+      "EMOTION_EXTERNALIZATION",
+      "CINEMATIC_READABILITY",
+      "DIRECTION_DETAIL_ECONOMY"
+    ],
+    "critical_violations": [
+      "INTERNAL_SCHEMA_OR_RESEARCH_META_LEAK",
+      "IMPORTANT_STATE_CHANGE_WITHOUT_SCREEN_VISIBLE_CARRIER",
+      "EXPOSITORY_EMOTION_STATE_DIALOGUE_AS_DOMINANT_CRAFT",
+      "SEVERE_CHARACTER_VOICE_COLLAPSE",
+      "MAJOR_CAUSAL_OR_CONTINUITY_BREAK",
+      "DIRECTION_BLOAT_THAT_REPEATS_DIALOGUE_OR_STATE"
+    ],
+    "per_judge_required": [
+      "score both arms independently on all axes",
+      "whole_episode_preference A/B/TIE",
+      "surface_craft_preference A/B/TIE",
+      "output-only reconstruction for each arm",
+      "critical violations",
+      "evidence-based strengths and weaknesses"
+    ]
+  },
+  "rehearsal_gate": {
+    "treatment_absolute": [
+      "whole-episode mean >=7.0 for at least 2/3 judges",
+      "surface-craft mean >=7.0 for at least 2/3 judges",
+      "no critical violation confirmed independently by >=2 judges"
+    ],
+    "paired_directional": [
+      "Treatment surface-craft preference wins >=2/3 judges",
+      "Treatment whole-episode preference wins+ties >=2/3 judges",
+      "pooled Treatment median is not lower than Control on CHARACTER_VOICE, DIALOGUE_SUBTEXT, PHYSICALIZATION_ACTION, KOREAN_SPOKEN_NATURALNESS",
+      "at least 4 of 6 focus axes have pooled median delta >=+0.5: DIALOGUE_SUBTEXT, CHARACTER_VOICE, PHYSICALIZATION_ACTION, PERFORMANCE_DIRECTION_QUALITY, EMOTION_EXTERNALIZATION, DIRECTION_DETAIL_ECONOMY"
+    ],
+    "recoverability": [
+      "core episode premise recoverable",
+      "major threads recoverable",
+      "nine functional movements recoverable",
+      "relationship trajectories recoverable",
+      "due-now vs deferred/open boundary recoverable"
+    ]
+  },
+  "repair_rule": "If Treatment fails mechanical or internal evidence gates before external dispatch, preserve failed Treatment unchanged, localize responsible ancestor, preregister one bounded repair, generate a new Treatment ID, and never overwrite the failed candidate. Once any external judge sees a Treatment, that Treatment is immutable.",
+  "current_outputs": {
+    "treatment_surface": 0,
+    "external_judgments": 0
+  }
+}
