@@ -29,6 +29,7 @@ Logical C2 SHA256:
 `5974d3eb4f047f8cd65d60ed83a88ffa54dc4478f30854d53bc00c341b99bbfe`
 
 ## AUTHORITY
+- Physical Authority: SYNC-R73
 - Active Runtime: exact R69
 - Production: ENG:R47 / LEGACY_R53
 - Runtime DB: DB59 frozen
