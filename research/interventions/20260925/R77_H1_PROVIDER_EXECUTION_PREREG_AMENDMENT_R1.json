@@ -1,0 +1,53 @@
+{
+  "schema": "R77_H1_PROVIDER_EXECUTION_PREREG_AMENDMENT_R1",
+  "date": "2026-09-25",
+  "status": "SEALED_PRE_OUTPUT__PRIMARY_OUTPUTS_0__HUMAN_TARGET_UNOPENED",
+  "physical_authority": "SYNC-R74",
+  "purpose": "Freeze real-provider execution settings before any R77-H1 C/T generation.",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "high",
+  "tools_enabled": false,
+  "store": false,
+  "max_output_tokens": 100000,
+  "temperature": "UNSET_PROVIDER_DEFAULT",
+  "parallelism": "SIX_INDEPENDENT_RESPONSES__NO_SHARED_RESPONSE_STATE",
+  "input_policy": "Exact ARM_DISPATCH plus exact Past-Only UTF-8 source members in canonical filename order; no Project history, memory, web, GitHub, other-arm output, Human target, or future episode payload.",
+  "output_policy": {
+    "model_generated_files": [
+      "01_PLANNING_ARTIFACT.md",
+      "02_SCREENPLAY.md",
+      "03_OUTPUT_ONLY_RECONSTRUCTION.json",
+      "04_TEXT_DERIVED_STATE_LEDGER.json"
+    ],
+    "runner_generated_file": "05_EXECUTION_RECEIPT.json",
+    "screenplay_min_chars": 35000,
+    "automatic_content_repair": false,
+    "under_length_or_malformed_output": "INVALID_ARM_ATTEMPT__NO_AUTO_REWRITE"
+  },
+  "retry_policy": {
+    "content_retry": false,
+    "transport_retry_statuses": [
+      429,
+      500,
+      502,
+      503,
+      504
+    ],
+    "max_total_http_attempts": 3,
+    "same_payload_required": true,
+    "same_client_request_id_required": true,
+    "backoff_seconds": [
+      5,
+      15
+    ]
+  },
+  "reveal_gate": "Human target for a stratum remains unopened until both C and T arms pass intake validation and are hash-sealed.",
+  "launch_packet_sha256": {
+    "EARLY-C": "72771981ec23141d73acbe3c4709c921d6e7d28757a1aa9c5e4dbdf1413f0083",
+    "EARLY-T": "1e4d5bc695e215ebf22fdc0dd5a33d34ddde79ef1fed2637f4e1afef4aabaaac",
+    "MIDDLE-C": "76bbf26afe941c216fc2186798f5cdf9994cc792b440c52e9f9bcd037593709e",
+    "MIDDLE-T": "9ebb85b449954220bbb97acdef9450b03732bc06e91c238fc4ab07c9af646d81",
+    "LATE-C": "b6dec167881bb64c23160a66fad02ebb178f969ea4b938035ba9ba1d865b0abf",
+    "LATE-T": "808d61ef1eefab064563f9b3f7bbcd61fa841339c65b4d6c071b6c384c0a1fdf"
+  }
+}
