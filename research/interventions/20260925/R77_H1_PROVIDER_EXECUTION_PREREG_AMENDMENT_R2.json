@@ -1,0 +1,40 @@
+{
+  "schema": "R77_H1_PROVIDER_EXECUTION_PREREG_AMENDMENT_R2",
+  "date": "2026-09-25",
+  "status": "SEALED_PRE_OUTPUT__SUPERSEDES_R1_ACCEPTANCE_AND_SEAL_LOGIC_ONLY",
+  "parent_amendment": "R77_H1_PROVIDER_EXECUTION_PREREG_AMENDMENT_R1",
+  "unchanged": [
+    "model gpt-5.6-sol",
+    "reasoning high",
+    "tools disabled",
+    "store false",
+    "max_output_tokens 100000",
+    "same Past-Only packets",
+    "no content auto-repair",
+    "retry only 429/500/502/503/504 with identical payload and client-request-id",
+    "Human target unopened until valid C and T seal"
+  ],
+  "repaired_acceptance_boundary": [
+    "exact four-file envelope; no leading/trailing non-whitespace",
+    "exactly one start/end marker per required file",
+    "provider response status must be completed with null error/incomplete_details",
+    "returned model must exactly match requested model",
+    "response-id and x-request-id required",
+    "screenplay >=35,000 chars, >=9 sequences, >=45 scenes",
+    "reconstruction and state ledger must be JSON objects",
+    "receipt hashes must bind exact deliverable bytes",
+    "post-receipt tamper invalidates arm",
+    "Human reveal gate requires same stratum and exact arm set {C,T}"
+  ],
+  "execution_kit": {
+    "zip_sha256": "eb4db41d0ae7d2d0ec6053d2161d799a2d78337cd0eb1c797fb9d977b0e7c16c",
+    "runner_r2_sha256": "fb98d538259881af5c1787deda979af1957836ad0b80d0d3933207d0c10ef87e",
+    "validator_r2_sha256": "ba6af292197838ef0bf0495e541200fecd9f6596543efe7167c0f839429e27ce",
+    "gate_r2_sha256": "af9e2ecfaf5153a90d6e5133b381e2f43015f4a5486346a9f5bacb878e6454a4",
+    "private_library": "/R77_H1_PROGRESS/PROVIDER_EXECUTION_KIT_R2"
+  },
+  "provider_analog_evidence": "R77_H1_PA_R2_FROZEN_SUITE_RESULT_SEALED",
+  "pm0_required_before_primary_inference": true,
+  "primary_outputs": 0,
+  "human_target_opened": false
+}
