@@ -113,3 +113,56 @@ Exact next:
 4. Seal each C/T pair with R2 gate.
 5. Only then reveal that stratum's Human target.
 6. After reveal, adjudicate PM0 contamination before interpreting C/T/H as primary prospective evidence.
+
+
+## R77-H1 PA6 — FRESH 40K PROVIDER-ANALOG RERENDER — 2026-09-25
+
+Preregistration:
+`research/interventions/20260925/R77_H1_PA6_FRESH_40K_RERENDER_EXTERNAL_BLIND_PREREG_R1.json`
+
+40K floor amendment:
+`research/interventions/20260925/R77_H1_BROADCAST_LENGTH_FLOOR_AMENDMENT_R3.json`
+
+Progress receipt:
+`research/interventions/20260925/R77_H1_PA6_PROGRESS_RECEIPT_R1.json`
+
+External judge protocol:
+`research/interventions/20260925/R77_H1_PA6_EXTERNAL_3JUDGE_PROTOCOL_R1.json`
+
+Current token:
+`PA6_TREATMENT_40K_SEALED__MECHANICAL_R2_PASS__3_BLIND_PACKETS_SEALED__EXTERNAL_JUDGE_OUTPUTS_0__H1_PRIMARY_OUTPUTS_0__HUMAN_TARGET_UNOPENED`
+
+Treatment R1:
+- 40,568 characters
+- 9 sequences
+- 52 scenes
+- 52 dialogue-bearing scenes
+- SHA256 `f2e5b113881dbcd43383beff388d349ef340ffe6c8bc60986f733e5eaa086f4a`
+- metadata leak 0
+- duplicate full-scene bodies 0
+- exact historical-reference lines >=35 chars reused 0
+- longest normalized overlap 37 chars
+- Mechanical R1 failed only because of a false-negative stage-direction heuristic.
+- Bounded validator R2 repair changed no Treatment bytes and PASSed all P1-P10 gates.
+
+External dispatch:
+- Build R1 failed closed before any judge artifact because the judge instruction itself contained a lineage-identifying word.
+- Build R2 PASS; three judge packets sealed with mapping absent / forbidden hits 0.
+- J01 artifact ZIP SHA256 `ed87de882efd710343e07596552b89cd0e6d9cd53d89b253b289a298ee342c8c`
+- J02 artifact ZIP SHA256 `605111532f3131ff744df8eb570498caf0ed7f62657cbe36d9be0ce42012d5c6`
+- J03 artifact ZIP SHA256 `03a28692517193a034aa3f580d44d986f4d9b9d14d02be5fa86f190942dfa9c0`
+- Coordinator mapping artifact SHA256 `52acf1aab5d69856c46266ebb78288e8dba924b6496cc1b562a32747d5609b64`
+- Library custody: `/R77_H1_PROGRESS/PA6_EXTERNAL_3JUDGE_R2`
+- External judge outputs remain 0 because the current coordinator session has no independent model-inference execution surface. The coordinator must not substitute itself for J01/J02/J03.
+
+Important H1 custody update:
+- The six SYNC-R74 H1 launch packets still encode the historical >=35,000-char floor and are now **STALE_FOR_EXECUTION**.
+- No H1 C/T output exists, so the new >=40,000-char minimum was safely sealed pre-output.
+- Before real H1 provider execution, regenerate/reseal the six packets and intake validator at 40K after PA6 external-blind closure.
+- Physical Authority remains **SYNC-R74** until an actual successor is resealed and delivered.
+
+Exact next:
+1. Run J01/J02/J03 in three fresh independent evaluator contexts using only their sealed blind packets.
+2. Hash-seal all three first schema-valid raw JSON judgments.
+3. Only then reveal coordinator mapping and compute the preregistered absolute / paired / focus / recoverability gates.
+4. If PA6 qualifies, use its findings plus the 40K amendment to build the next six H1 launch packets; if it fails, localize the responsible ancestor before any real-provider H1 generation.
