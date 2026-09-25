@@ -2,17 +2,17 @@
 Last updated: 2026-09-25
 
 ## CANONICAL START HERE
-`handoff/20260925/START_HERE_SYNC_R73_R77_H1_DB64_R131_PHYSICAL_CLOSURE_R6.md`
+`handoff/20260925/START_HERE_SYNC_R74_R77_H1_SIX_ISOLATED_LAUNCH_PHYSICAL_CLOSURE_R7.md`
 
-R6 supersedes R5.
+R7 supersedes R6.
 
 ## CURRENT AUTHORITY
-- Physical Authority: **SYNC-R73**
-- Parent: SYNC-R72
-- Delivery redownload verification: PASS 9/9
-- Manifest SHA256: `604a16285e6d2137392dd171225aca44fd824a2b3bf81132424b16478bc49d72`
-- Trust Root SHA256: `fe06494b7f23d469796e37421cafcf0f524049ac4e989f2cdf98719b42fa02f3`
-- Logical C2 SHA256: `5974d3eb4f047f8cd65d60ed83a88ffa54dc4478f30854d53bc00c341b99bbfe`
+- Physical Authority: **SYNC-R74**
+- Parent: SYNC-R73
+- Delivery redownload verification: **PASS 9/9**
+- Manifest SHA256: `7976e5eb3ba77c18097da4b00e5b774ea1d6f43182596223fb1a4335272ddae0`
+- Trust Root SHA256: `e20851d66280702a48c96dacb891b089569fdeefbe13b241d20c71b23578f671`
+- Logical C2 SHA256: `8d766316cb153f04302ba633fb644967d1785b15298e1ea1b2a09b2d628e6896`
 - Active Runtime: exact R69
 - Production: ENG:R47 / LEGACY_R53
 - Runtime DB: DB59 frozen
@@ -22,40 +22,21 @@ R6 supersedes R5.
 - Formal R140: NOT_STARTED
 
 ## CURRENT R77-H1
-`CENSUS_COMPLETE__SELECTION_COMPLETE__PAST_ONLY_PACKAGES_SEALED__GENERATOR_DISPATCH_READY__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_STORY_PAYLOAD_UNOPENED__PRIMARY_OUTPUTS_0`
+`SIX_ISOLATED_LAUNCH_PACKETS_SEALED__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_UNOPENED__PRIMARY_OUTPUTS_0`
 
-Selected:
-- EARLY = 구르미그린달빛 (EP01 -> hidden EP02)
-- MIDDLE = 신화 (EP01-05 -> hidden EP06)
-- LATE = 굿캐스팅 (EP01-12 -> hidden EP13)
+Six fresh isolated launch packets are now physically embedded in Part B2.
 
 ## EXACT NEXT
-Fresh isolated C/T generation from the physically embedded private dispatch bundle.
-Do not reveal Human targets before both C/T arms for the stratum are sealed.
+Execute EARLY-C/T, MIDDLE-C/T, LATE-C/T in six fresh isolated model contexts.
+Do not generate candidate prose in the Project-aware coordinator context.
+Only after C and T of one stratum are both sealed may its Human target be opened.
 
 ## PACKAGE CUSTODY
 Personal Library:
-`/SYNC_R73_CURRENT_PHYSICAL_9PACKAGES`
+`/SYNC_R74_CURRENT_PHYSICAL_9PACKAGES`
 
-Canonical package manifest:
-`research/operations/20260925/SYNC_R73_5PART_9PACKAGE_MANIFEST_R1.json`
+Manifest:
+`research/operations/20260925/SYNC_R74_5PART_9PACKAGE_MANIFEST_R1.json`
 
-Physicalization receipt:
-`research/operations/20260925/SYNC_R73_PHYSICALIZATION_RECEIPT_R1.json`
-
-
-## SYNC-R73 RECOVERY PRECEDENCE GUARD
-`research/operations/20260925/SYNC_R73_RECOVERY_PRECEDENCE_GUARD_R1.md`
-
-Mandatory rule:
-External SYNC-R73 Manifest -> Trust Root -> READ FIRST -> top-level SYNC-R73 current-authority metadata -> Hub CURRENT pointers -> nested historical overlays.
-
-Nested B2 `POST_SYNC_R72_FULL_RECOVERY_OVERLAY_R3.zip` is historical provenance only and MUST NOT override SYNC-R73.
-
-Debug closure:
-`research/operations/20260925/SYNC_R73_INTEGRITY_DEBUG_CLOSURE_R2.json`
-
-
-## OPERATIONAL RUNTIME SAFETY
-Canonical protocol:
-`research/operations/20260925/LITERARY_OS_RUNTIME_CONTAINER_RESILIENCE_PROTOCOL_R5.md`
+Receipt:
+`research/operations/20260925/SYNC_R74_PHYSICALIZATION_RECEIPT_R1.json`
