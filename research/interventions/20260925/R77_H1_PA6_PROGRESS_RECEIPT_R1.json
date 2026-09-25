@@ -1,0 +1,53 @@
+{
+  "schema": "R77_H1_PA6_PROGRESS_RECEIPT_R1",
+  "date": "2026-09-25",
+  "status": "TREATMENT_40K_SEALED__MECHANICAL_R2_PASS__EXTERNAL_3JUDGE_PACKETS_SEALED__JUDGE_OUTPUTS_0",
+  "physical_authority": "SYNC-R74",
+  "treatment": {
+    "chars": 40568,
+    "sequences": 9,
+    "scenes": 52,
+    "dialogue_scenes": 52,
+    "sha256": "f2e5b113881dbcd43383beff388d349ef340ffe6c8bc60986f733e5eaa086f4a",
+    "mechanical_r1": "FAIL_FALSE_NEGATIVE_VALIDATOR_ONLY",
+    "mechanical_r2": "PASS",
+    "metadata_leak": 0,
+    "duplicate_scene_body": 0,
+    "exact_control_line_ge35_reuse": 0,
+    "longest_normalized_control_overlap_chars": 37
+  },
+  "historical_reference": {
+    "chars": 35333,
+    "sequences": 9,
+    "scenes": 52,
+    "sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4"
+  },
+  "dispatch": {
+    "build_r1": "FAIL_CLOSED_LINEAGE_WORD_IN_JUDGE_INSTRUCTION__NO_ARTIFACTS",
+    "build_r2": "PASS",
+    "workflow_run_id": 36154413907,
+    "judge_packet_artifact_zip_sha256": {
+      "J01": "ed87de882efd710343e07596552b89cd0e6d9cd53d89b253b289a298ee342c8c",
+      "J02": "605111532f3131ff744df8eb570498caf0ed7f62657cbe36d9be0ce42012d5c6",
+      "J03": "03a28692517193a034aa3f580d44d986f4d9b9d14d02be5fa86f190942dfa9c"
+    },
+    "inner_packet_sha256": {
+      "J01": "41c128dcf6f1bd3d7be67c364a7df2a2637fd32c676e0f654cd066c32e297334",
+      "J02": "a4061dcfb13442f7c29a83a54e772daca1bb8d879dafa35c7bc8dd96bd90bd4b",
+      "J03": "a4061dcfb13442f7c29a83a54e772daca1bb8d879dafa35c7bc8dd96bd90bd4b"
+    },
+    "leak_audit": "PASS__MAPPING_ABSENT__FORBIDDEN_HITS_0",
+    "library": "/R77_H1_PROGRESS/PA6_EXTERNAL_3JUDGE_R2",
+    "combined_dispatch_sha256": "4afd03060316c225f18891c29112f870d20cb3cff4b480b7812080916b2dece3",
+    "coordinator_mapping_artifact_sha256": "52acf1aab5d69856c46266ebb78288e8dba924b6496cc1b562a32747d5609b64"
+  },
+  "external_evaluation": {
+    "outputs": 0,
+    "status": "PENDING_FRESH_INDEPENDENT_J01_J02_J03",
+    "current_session_capability": "No independent model-inference tool is available; current coordinator cannot honestly substitute for external judges."
+  },
+  "h1_primary": {
+    "c_t_outputs": 0,
+    "human_target_opened": false
+  }
+}
