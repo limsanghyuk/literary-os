@@ -1,0 +1,62 @@
+name: R77-H1 Provider Execution Preflight R1
+on:
+  push:
+    branches: [main]
+jobs:
+  preflight:
+    if: contains(github.event.head_commit.message, 'R77-H1 provider preflight R1')
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Provider preflight
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os, json, pathlib, urllib.request, urllib.error, hashlib
+          key=os.environ.get("OPENAI_API_KEY","").strip()
+          out={
+            "schema":"R77_H1_PROVIDER_EXECUTION_PREFLIGHT_R1",
+            "date":"2026-09-25",
+            "provider_secret_present":bool(key),
+            "api_connectivity_checked":False,
+            "api_http_status":None,
+            "model_target":"gpt-5.6-sol",
+            "story_payload_accessed":False,
+            "human_target_accessed":False,
+            "candidate_outputs_created":0,
+          }
+          if key:
+            req=urllib.request.Request("https://api.openai.com/v1/models",headers={"Authorization":"Bearer "+key})
+            try:
+              with urllib.request.urlopen(req,timeout=30) as r:
+                out["api_connectivity_checked"]=True
+                out["api_http_status"]=r.status
+                out["status"]="READY__REAL_PROVIDER_AUTH_CONNECTIVITY_PASS" if r.status==200 else "HOLD__UNEXPECTED_HTTP_STATUS"
+            except urllib.error.HTTPError as e:
+              out["api_connectivity_checked"]=True
+              out["api_http_status"]=e.code
+              out["status"]="HOLD__REAL_PROVIDER_AUTH_OR_HTTP_FAIL"
+            except Exception as e:
+              out["api_connectivity_checked"]=True
+              out["api_http_status"]=None
+              out["error_type"]=type(e).__name__
+              out["status"]="HOLD__REAL_PROVIDER_TRANSPORT_FAIL"
+          else:
+            out["status"]="HOLD__REAL_PROVIDER_SECRET_ABSENT"
+          raw=json.dumps(out,ensure_ascii=False,sort_keys=True,separators=(",",":")).encode()
+          out["receipt_sha256_pre_field"]=hashlib.sha256(raw).hexdigest()
+          p=pathlib.Path("research/interventions/20260925/R77_H1_PROVIDER_EXECUTION_PREFLIGHT_R1_RESULT.json")
+          p.parent.mkdir(parents=True,exist_ok=True)
+          p.write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding="utf-8")
+          print(json.dumps(out,ensure_ascii=False,sort_keys=True))
+          PY
+      - name: Commit receipt
+        shell: bash
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add research/interventions/20260925/R77_H1_PROVIDER_EXECUTION_PREFLIGHT_R1_RESULT.json
+          git commit -m 'Seal R77-H1 provider preflight R1 result' || exit 0
+          git push
