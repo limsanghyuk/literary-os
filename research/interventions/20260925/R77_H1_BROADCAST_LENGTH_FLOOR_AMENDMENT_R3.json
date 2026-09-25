@@ -1,0 +1,27 @@
+{
+  "schema": "R77_H1_BROADCAST_LENGTH_FLOOR_AMENDMENT_R3",
+  "date": "2026-09-25",
+  "status": "SEALED_PRE_PRIMARY_OUTPUT__C_T_OUTPUTS_0__HUMAN_TARGET_UNOPENED",
+  "parent": "R77_H1_PROVIDER_EXECUTION_PREREG_AMENDMENT_R2",
+  "change": {
+    "old_min_chars": 35000,
+    "new_min_chars": 40000,
+    "no_upper_cap": true,
+    "applies_to": [
+      "all future R77-H1 real-provider C/T screenplay outputs",
+      "all new production-scale provider-analog rehearsals after this amendment"
+    ],
+    "does_not_retroactively_invalidate": [
+      "R76 historical 35,333-char evidence",
+      "already-completed historical experiments whose preregistered minimum was 35,000"
+    ],
+    "padding_prohibited": true,
+    "sequence_scene_rule": "9-10 sequences / 45-50 scenes remain reference minima, not fixed quotas; existing H1 typed architecture may exceed or differ where preregistered."
+  },
+  "custody_effect": {
+    "sync_r74_six_launch_packets": "STALE_FOR_EXECUTION__35K_FLOOR",
+    "action_before_real_h1": "Regenerate/reseal six launch packets and R2/R3 intake validation with 40K minimum after PA6 external-blind closure; do not run current 35K packets.",
+    "physical_authority": "SYNC-R74 remains current until a successor is actually resealed and delivered."
+  },
+  "rationale": "User raised the broadcast-scale floor before any H1 primary C/T output existed. Changing the floor now does not condition on primary results."
+}
