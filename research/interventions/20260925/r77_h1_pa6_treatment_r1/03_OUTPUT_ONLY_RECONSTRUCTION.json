@@ -1,0 +1,295 @@
+{
+  "schema": "R77_H1_PA6_TREATMENT_R1_OUTPUT_ONLY_RECONSTRUCTION",
+  "date": "2026-09-25",
+  "evaluator_boundary": "COORDINATOR_SAME_SESSION_RECONSTRUCTION_FROM_FINISHED_SCREENPLAY; NOT INDEPENDENT BLIND. External judges must reconstruct again from blind packets.",
+  "surface_sha256": "f2e5b113881dbcd43383beff388d349ef340ffe6c8bc60986f733e5eaa086f4a",
+  "episode_premise": {
+    "status": "EVIDENCED",
+    "text": "폭풍 뒤 시민극장 실내 재개관이 안전문제로 중단되자, 극장 관계자·시청·배우·상인들이 안전·임금·지원금·상권·과거 보수책임을 동시에 다루며 광장 야외공연이라는 제한적 대안을 실제로 실행하는 하루."
+  },
+  "major_threads": [
+    {
+      "thread": "건물 안전/전기 위험",
+      "status": "EVIDENCED",
+      "evidence": [
+        "SC01",
+        "SC02",
+        "SC13",
+        "SC14",
+        "SC25",
+        "SC26",
+        "SC41",
+        "SC42",
+        "SC45",
+        "SC46"
+      ]
+    },
+    {
+      "thread": "지원금/임시 노동비",
+      "status": "EVIDENCED",
+      "evidence": [
+        "SC07",
+        "SC08",
+        "SC09",
+        "SC10",
+        "SC39",
+        "SC40",
+        "SC51",
+        "SC52"
+      ]
+    },
+    {
+      "thread": "광장/상인 사회생태",
+      "status": "EVIDENCED",
+      "evidence": [
+        "SC19",
+        "SC20",
+        "SC23",
+        "SC24",
+        "SC33",
+        "SC34",
+        "SC35",
+        "SC36",
+        "SC49",
+        "SC50"
+      ]
+    },
+    {
+      "thread": "과거 보수자료/책임 증거",
+      "status": "EVIDENCED",
+      "evidence": [
+        "SC15",
+        "SC16",
+        "SC17",
+        "SC18",
+        "SC43",
+        "SC44"
+      ]
+    },
+    {
+      "thread": "윤서 가족 이해관계와 공적 판단 분리",
+      "status": "EVIDENCED",
+      "evidence": [
+        "SC05",
+        "SC06",
+        "SC17",
+        "SC18",
+        "SC27",
+        "SC28",
+        "SC45",
+        "SC46",
+        "SC52"
+      ]
+    },
+    {
+      "thread": "공연 생존/야외 전환",
+      "status": "EVIDENCED",
+      "evidence": [
+        "SC11",
+        "SC12",
+        "SC21",
+        "SC22",
+        "SC31",
+        "SC32",
+        "SC47",
+        "SC48",
+        "SC49",
+        "SC50",
+        "SC52"
+      ]
+    }
+  ],
+  "sequence_functions": [
+    {
+      "sequence": 1,
+      "status": "EVIDENCED",
+      "function": "균열 발견과 실내중지, 공개/출입/이해관계 기록 규칙 형성"
+    },
+    {
+      "sequence": 2,
+      "status": "EVIDENCED",
+      "function": "지원금과 급여 마감 압박을 구체화하고 민호의 목표를 사람·노동 보존으로 변경"
+    },
+    {
+      "sequence": 3,
+      "status": "EVIDENCED",
+      "function": "비공식 배선, 계약서 서명 문제, 가족 이름을 발견하면서 증거공유 경계를 설정"
+    },
+    {
+      "sequence": 4,
+      "status": "EVIDENCED",
+      "function": "광장의 상인/통행 조건을 실제 시험하고 조건부 공간사용 동의를 획득"
+    },
+    {
+      "sequence": 5,
+      "status": "EVIDENCED",
+      "function": "도면 밖 분기를 특정하고 윤서-태경/윤서-민호의 조건부 신뢰를 상호검증 규칙으로 전환"
+    },
+    {
+      "sequence": 6,
+      "status": "EVIDENCED",
+      "function": "이동식 조명과 실제 동선 시험으로 야외공연 feasibility와 지우-수경 협력 구축"
+    },
+    {
+      "sequence": 7,
+      "status": "EVIDENCED",
+      "function": "책임경계를 공개적으로 연결하고 마감 전 확인된 자료만 제출"
+    },
+    {
+      "sequence": 8,
+      "status": "EVIDENCED",
+      "function": "추가 전기 흔적과 공개 압박을 처리하며 가족/책임 추정과 현재 안전구역 판단을 분리"
+    },
+    {
+      "sequence": 9,
+      "status": "EVIDENCED",
+      "function": "야외공연 중 실제 군중·통행·조명 문제를 해결하고 당일 성과와 장기 미해결을 분리"
+    }
+  ],
+  "relationship_trajectories": [
+    {
+      "pair": "윤서-민호",
+      "from": "안전중지와 재개관 목표의 충돌",
+      "to": "안전책임자의 중지권과 이해관계 공개를 인정하는 조건부 절차 신뢰",
+      "evidence": [
+        "SC02",
+        "SC06",
+        "SC29",
+        "SC30",
+        "SC38",
+        "SC52"
+      ]
+    },
+    {
+      "pair": "윤서-태경",
+      "from": "기술 협력이나 판단/증거 보존의 역할 경계가 불안정",
+      "to": "서로 다른 원본과 hash를 보존하며 서로를 검증하는 동맹",
+      "evidence": [
+        "SC13",
+        "SC16",
+        "SC25",
+        "SC27",
+        "SC28",
+        "SC42"
+      ]
+    },
+    {
+      "pair": "지우-수경",
+      "from": "공연 필요와 상인 통행/영업 이해의 충돌",
+      "to": "시간·동선·중단권·현장 수정 규칙을 공유하는 조건부 협력",
+      "evidence": [
+        "SC19",
+        "SC22",
+        "SC23",
+        "SC24",
+        "SC33",
+        "SC34",
+        "SC35",
+        "SC36",
+        "SC49",
+        "SC50",
+        "SC52"
+      ]
+    }
+  ],
+  "resolved_due_now": [
+    {
+      "item": "실내 객석/무대는 당일 사용하지 않는다.",
+      "evidence": [
+        "SC02",
+        "SC12",
+        "SC46",
+        "SC52"
+      ]
+    },
+    {
+      "item": "광장 사용은 통행·시간·안전 조건 아래 당일 공연으로 실제 실행된다.",
+      "evidence": [
+        "SC24",
+        "SC36",
+        "SC46",
+        "SC47",
+        "SC48",
+        "SC49",
+        "SC50",
+        "SC52"
+      ]
+    },
+    {
+      "item": "안전·운영·공간·예산 책임과 중단권이 가시적으로 기록된다.",
+      "evidence": [
+        "SC37",
+        "SC38"
+      ]
+    },
+    {
+      "item": "지원금 야외전환 수정안이 확인된 자료만으로 마감 전에 접수된다.",
+      "evidence": [
+        "SC39",
+        "SC40",
+        "SC51"
+      ]
+    },
+    {
+      "item": "도면 밖 전기 분기 흔적과 계약서 서명 불일치 가능성은 증거로 보존·공개된다.",
+      "evidence": [
+        "SC41",
+        "SC42",
+        "SC43",
+        "SC44"
+      ]
+    }
+  ],
+  "deferred_open": [
+    {
+      "item": "건물 장기 보수와 보수비",
+      "evidence": [
+        "SC51",
+        "SC52"
+      ]
+    },
+    {
+      "item": "과거 보수공사의 최종 책임",
+      "evidence": [
+        "SC44",
+        "SC52"
+      ]
+    },
+    {
+      "item": "윤서 아버지의 실제 역할/책임",
+      "evidence": [
+        "SC17",
+        "SC45",
+        "SC52"
+      ]
+    },
+    {
+      "item": "지원금 최종 전환액과 실제 지급",
+      "evidence": [
+        "SC40",
+        "SC51",
+        "SC52"
+      ]
+    },
+    {
+      "item": "지우의 장기적인 지역/극장 잔류",
+      "evidence": [
+        "SC52"
+      ]
+    },
+    {
+      "item": "상인회의 향후 공연 장기 동의",
+      "evidence": [
+        "SC24",
+        "SC52"
+      ]
+    }
+  ],
+  "assessment": {
+    "premise_recoverable": true,
+    "major_threads_recoverable": true,
+    "nine_movements_recoverable": true,
+    "relationship_trajectories_recoverable": true,
+    "due_vs_deferred_boundary_recoverable": true
+  }
+}
