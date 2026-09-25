@@ -2,56 +2,65 @@
 Last updated: 2026-09-25
 
 ## CANONICAL RECOVERY
-1. `handoff/20260925/START_HERE_POST_SYNC_R72_R77_H1_DB64_R131_RESEARCH_AUTHORITY_R5.md`
-2. `research/interventions/20260925/R77_H1_METADATA_CENSUS_SELECTION_PAST_ONLY_CLOSURE_R1.json`
-3. `research/interventions/20260924/R77_H1_THREE_POSITION_PILOT_SELECTION_AND_CONTEXT_ISOLATION_PREREG_R1.json`
-4. `research/interventions/20260924/R77_H0_PAST_ONLY_CUTOFF_CONTRACT_R1.json`
+1. `handoff/20260925/START_HERE_SYNC_R73_R77_H1_DB64_R131_PHYSICAL_CLOSURE_R6.md`
+2. `research/operations/20260925/SYNC_R73_5PART_9PACKAGE_MANIFEST_R1.json`
+3. `research/operations/20260925/SYNC_R73_PHYSICALIZATION_RECEIPT_R1.json`
+4. `research/interventions/20260925/R77_H1_METADATA_CENSUS_SELECTION_PAST_ONLY_CLOSURE_R1.json`
+5. `research/interventions/20260924/R77_H1_THREE_POSITION_PILOT_SELECTION_AND_CONTEXT_ISOLATION_PREREG_R1.json`
+6. `research/interventions/20260924/R77_H0_PAST_ONLY_CUTOFF_CONTRACT_R1.json`
 
 ## STATUS
-`SYNC_R72_PHYSICAL__R76_CLOSED_PASS__R77_H0_PASS__R77_H1_CENSUS_SELECTION_PAST_ONLY_SEALED__GENERATOR_DISPATCH_READY__C_T_PENDING__HUMAN_TARGET_UNOPENED`
+`SYNC_R73_PHYSICAL__DELIVERY_9_OF_9_SHA_PASS__R76_CLOSED_PASS__R77_H0_PASS__R77_H1_GENERATOR_DISPATCH_READY__C_T_PENDING__HUMAN_TARGET_UNOPENED`
 
-## RECOVERED RUNTIME/CUSTODY FACT
-The 2026-09-24 CAAS/raw-custody hold was not a data-corruption failure.
-SYNC-R72 D1/D2 were successfully materialized and DB59 reassembled:
-- bytes: 259,756,521
-- SHA256: `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
-- CRC: PASS
+## PHYSICAL PACKAGE CUSTODY
+Personal Library:
+`/SYNC_R73_CURRENT_PHYSICAL_9PACKAGES`
 
-## SELECTED WORKS
-- EARLY: 구르미그린달빛
-- MIDDLE: 신화
-- LATE: 굿캐스팅
+Read order:
+CONTROL -> A -> B1 -> B2 -> C1 -> C2-A -> C2-B -> D1 -> D2
 
-## PRIVATE GENERATOR INPUT CUSTODY
-Past-Only source ZIPs are stored in the user's private Library:
-`/R77_H1_PROGRESS`
+Manifest SHA256:
+`604a16285e6d2137392dd171225aca44fd824a2b3bf81132424b16478bc49d72`
 
-They are not committed to the public repository because they contain human screenplay source text.
+Trust Root SHA256:
+`fe06494b7f23d469796e37421cafcf0f524049ac4e989f2cdf98719b42fa02f3`
 
-## RESUME
-Resume from fresh isolated C/T generation using `/R77_H1_PROGRESS/R77_H1_FRESH_ISOLATED_GENERATOR_DISPATCH_BUNDLE_R1.zip` (SHA256 `765c76f4460e4b62be8e12501abd77191be5c7d17542122564164a3bb5d471d4`).
-Do not repeat R74/R75/R76/R77-H0.
-Do not repeat H1 census/selection.
-Do not reveal Human targets before C/T sealing.
+Logical C2 SHA256:
+`5974d3eb4f047f8cd65d60ed83a88ffa54dc4478f30854d53bc00c341b99bbfe`
 
-## OPERATIONAL RUNTIME SAFETY
+## AUTHORITY
+- Active Runtime: exact R69
+- Production: ENG:R47 / LEGACY_R53
+- Runtime DB: DB59 frozen
+- Research DB: DB64-R131 research-only
+- Operational Level-3: SUSPENDED__REQUALIFICATION_REQUIRED
+- Formal latest scored: R138
+- Formal R140: NOT_STARTED
+
+## R77-H1
+Selected:
+- EARLY 구르미그린달빛
+- MIDDLE 신화
+- LATE 굿캐스팅
+
+Private H1 dispatch is physically embedded in B2.
+Human targets remain unopened.
+Primary C/T outputs remain 0.
+
+## DB64-R131
+Full research DB SHA256:
+`4986730dc062610a2395960af83615dddaf986f53172914d2175b459fdaf9d7b`
+
+Raw research recovery bytes are embedded:
+- part01 in CONTROL
+- part02 in A
+- supporting R131 bundle in B2
+
+Runtime DB remains DB59.
+
+## RUNTIME SAFETY
 Canonical resilience protocol:
 `research/operations/20260925/LITERARY_OS_RUNTIME_CONTAINER_RESILIENCE_PROTOCOL_R4.md`
 
-Current audit receipt:
-`research/operations/20260925/RUNTIME_CONTAINER_RESILIENCE_LEARNING_AUDIT_R1.json`
-
-On ClientError/TransportTimeout at minimal-command level: STOP mutation/reseal -> RUNTIME_TRANSPORT_HOLD -> minimal health check -> verify last atomic checkpoint -> resume only the interrupted step.
-
-Latest direct C1/C2 attachment audit:
-`research/operations/20260925/RUNTIME_CONTAINER_RESILIENCE_C1_C2_ATTACHMENT_AUDIT_R1.json`
-
-Latest direct D1/D2 + DB59 carrier audit:
-`research/operations/20260925/RUNTIME_CONTAINER_RESILIENCE_D1_D2_ATTACHMENT_AUDIT_R1.json`
-
-
-## DB64-R131 research recovery
-Current research DB pointer: DB64-R131 research-only.
-Full verified SHA256: `4986730dc062610a2395960af83615dddaf986f53172914d2175b459fdaf9d7b`.
-Whole-corpus semantic certification remains `SUSPENDED_PENDING_UNIFORM_V4_RECERTIFICATION`.
-R77-H1 frozen inputs remain pre-R131 and MUST NOT be regenerated or reselected.
+On ClientError/TransportTimeout at minimal-command level:
+STOP mutation/reseal -> RUNTIME_TRANSPORT_HOLD -> minimal health check -> verify last atomic checkpoint -> resume only interrupted step.
