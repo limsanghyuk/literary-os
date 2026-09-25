@@ -1,0 +1,142 @@
+{
+  "schema": "SYNC_R74_5PART_9PACKAGE_MANIFEST_R1",
+  "date": "2026-09-25",
+  "physical_authority": "SYNC-R74",
+  "parent_physical_authority": "SYNC-R73",
+  "namespace_note": "SYNC-R74 is a physical snapshot ID, distinct from historical Research Experiment R74.",
+  "read_order": [
+    "CONTROL",
+    "A",
+    "B1",
+    "B2",
+    "C1",
+    "C2A",
+    "C2B",
+    "D1",
+    "D2"
+  ],
+  "packages": {
+    "CONTROL": {
+      "file": "LITERARY_OS_CURRENT_CONTROL_R77H1_SIX_LAUNCH_SYNC_R74_20260925.zip",
+      "bytes": 289484954,
+      "sha256": "0c06de9bdc5a253a7e191a4bf00b7cea5e8fa6abec99983867a4689f2743d945",
+      "entries": 1860,
+      "crc_pass": true
+    },
+    "A": {
+      "file": "LITERARY_OS_CURRENT_PART_A_R77H1_SIX_LAUNCH_SYNC_R74_20260925.zip",
+      "bytes": 304038133,
+      "sha256": "69b1e592b9300358c90ef3866a9734a1457bc5d194fc03a331b674580bf5cf84",
+      "entries": 1960,
+      "crc_pass": true
+    },
+    "B1": {
+      "file": "LITERARY_OS_CURRENT_PART_B1_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73.zip",
+      "bytes": 196427036,
+      "sha256": "00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98",
+      "entries": 56,
+      "crc_pass": true,
+      "byte_unchanged_from_sync_r73": true
+    },
+    "B2": {
+      "file": "LITERARY_OS_CURRENT_PART_B2_R77H1_SIX_LAUNCH_SYNC_R74_20260925.zip",
+      "bytes": 296011084,
+      "sha256": "5462a1c9d355f01a41ce9a52302fce28241d2af1ef5065fdb6fec08c5d107dd0",
+      "entries": 1893,
+      "crc_pass": true
+    },
+    "C1": {
+      "file": "LITERARY_OS_CURRENT_C1_RUNTIME_CORE_SYNC_R74_EXACT_R69_20260925.zip",
+      "bytes": 140403571,
+      "sha256": "3a1880310b7291d832b24c749c47dee2f6862387ddedb8ce3bcb652e0e899f5d",
+      "entries": 101,
+      "crc_pass": true
+    },
+    "C2A": {
+      "file": "LITERARY_OS_CURRENT_C2_BINARY_A_SYNC_R74_R77H1_SIX_LAUNCH_20260925.bin",
+      "bytes": 264043978,
+      "sha256": "561733e08ef3bc77e9e12f124df69ffca69cd9386eb0d1e9d6f843f50408a2d7"
+    },
+    "C2B": {
+      "file": "LITERARY_OS_CURRENT_C2_BINARY_B_SYNC_R74_R77H1_SIX_LAUNCH_20260925.bin",
+      "bytes": 264043978,
+      "sha256": "1c2ccca49b4ac74de87f04a2a4c239d2ca6f3b0f67c352d30ba9dc0bae45685c"
+    },
+    "D1": {
+      "file": "LITERARY_OS_CURRENT_PART_D1_DB59_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73.zip",
+      "bytes": 138011573,
+      "sha256": "a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504",
+      "entries": 25,
+      "crc_pass": true,
+      "byte_unchanged_from_sync_r73": true
+    },
+    "D2": {
+      "file": "LITERARY_OS_CURRENT_PART_D2_DB59_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73.zip",
+      "bytes": 173393886,
+      "sha256": "c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4",
+      "entries": 59,
+      "crc_pass": true,
+      "byte_unchanged_from_sync_r73": true
+    }
+  },
+  "c2_logical": {
+    "bytes": 528087956,
+    "sha256": "8d766316cb153f04302ba633fb644967d1785b15298e1ea1b2a09b2d628e6896",
+    "entries": 4011,
+    "crc_pass": true,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe": 0
+  },
+  "parent_preservation_audit": {
+    "CONTROL": {
+      "missing": 0,
+      "changed": 0,
+      "added": 4
+    },
+    "A": {
+      "missing": 0,
+      "changed": 0,
+      "added": 4
+    },
+    "B2": {
+      "missing": 0,
+      "changed": 0,
+      "added": 12
+    },
+    "C1": {
+      "missing": 0,
+      "changed": 0,
+      "added": 5
+    },
+    "C2": {
+      "missing": 0,
+      "changed": 0,
+      "added": 5
+    }
+  },
+  "r77_h1": {
+    "status": "SIX_ISOLATED_LAUNCH_PACKETS_SEALED__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_UNOPENED__PRIMARY_OUTPUTS_0",
+    "launch_manifest_sha256": "da09bdb5ff405b37ac9aed40bb8bf96100b595df4fbb9131309e8bc4ae6f2369",
+    "intake_validator_sha256": "40175c657ded02dcd1d6e4d95894beef9619b4d1fd4eb290938b30829f97dada",
+    "physical_location": "B2/SYNC_R74_CURRENT_RECOVERY_20260925/private/isolated_launch/"
+  },
+  "authority": {
+    "active_runtime": "exact R69",
+    "active_runtime_sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+    "production": "ENG:R47 / LEGACY_R53",
+    "runtime_db": "DB59 frozen",
+    "runtime_db_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "research_db": "DB64-R131 research-only",
+    "research_db_sha256": "4986730dc062610a2395960af83615dddaf986f53172914d2175b459fdaf9d7b",
+    "operational_level3": "SUSPENDED__REQUALIFICATION_REQUIRED",
+    "formal_scored_total": 137,
+    "formal_latest_scored": "R138",
+    "formal_r140": "NOT_STARTED"
+  },
+  "delivery_redownload_verification": {
+    "status": "PASS_9_OF_9",
+    "mismatches": 0
+  },
+  "promotion_status": "PROMOTED__DELIVERED_COPY_9_OF_9_SHA_REVERIFIED"
+}
