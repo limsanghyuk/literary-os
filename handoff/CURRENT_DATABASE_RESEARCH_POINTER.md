@@ -2,16 +2,14 @@
 Last updated: 2026-09-25
 
 ## ACTIVE RUNTIME DATABASE AUTHORITY
-
 DB59 remains the frozen Production/Runtime database authority.
 
 Canonical DB59 SHA256:
 `a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9`
 
-No DB59 -> DB64 Production/Runtime adoption has occurred.
+No DB59 -> DB64 runtime/Production adoption has occurred.
 
 ## CURRENT RESEARCH DATABASE
-
 DB64-R131 is the current research-only database authority.
 
 Data authority:
@@ -22,7 +20,6 @@ Verified full archive:
 - SHA256: `4986730dc062610a2395960af83615dddaf986f53172914d2175b459fdaf9d7b`
 - logical files: 45,324
 - ZIP CRC: PASS
-- duplicate/encrypted/unsafe: 0/0/0
 - physical FINAL_SEALED: 73/98
 
 Current corpus semantic certification:
@@ -33,72 +30,33 @@ Current V4 repaired:
 - 시티헌터
 - 식객
 
-Risk-grade counts:
-- RA1A 25
-- RA1B 5
-- RA1C 2
-- RA1D 8
-- RA2 2
-- RA3 5
-- RA4 26
-
 Next default repair target:
 `건빵선생과별사탕` / RA1A
 
 A2:
 `PENDING`
 
-## R131 SIKGAEK REPAIR
+## PHYSICAL RECOVERY IN SYNC-R73
+Research DB64-R131 raw recovery bytes are now embedded in the current 9-package physical set:
+- part01 in CONTROL
+- part02 in A
+- R131 support/learning/change/checkpoint bundle in B2
 
-- 24 episodes
-- 118 sequences
-- 1,183 scenes
-- 346 cast functions
-- 1,909 semantic strings checked
-- source/stage exact contamination hits: 0
-- near90: 0
-- near80: 0
-- source-normalized 30-char overlap: 0
-- internal exact/near duplicates: 0
-- future leakage: 0
-- R131 V4: PASS
-- R131 contract: PASS_A2_PENDING
-
-The change package reprojects changed THICK semantics through:
-- thick_sequence
-- thread_state
-- planner_input
-- runtime_scene_projection
-- episode_plan
-
-rather than changing only a storage artifact.
+This makes the research DB recoverable from SYNC-R73 while preserving D1/D2 as byte-identical frozen DB59 runtime-data carriers.
 
 ## R77-H1 FROZEN INPUT BOUNDARY
+R77-H1 was frozen before DB64-R131 and must not be retroactively changed.
 
-The active R77-H1 experiment was frozen before this DB64-R131 update.
-
-Its census/selection used:
-- the R127 72-work verified membership; and
-- DB59 central-directory source-byte custody.
-
-Frozen selected works remain:
+Selected:
 - EARLY 구르미그린달빛
 - MIDDLE 신화
 - LATE 굿캐스팅
 
-Past-Only policy remains:
+Past-Only policy:
 `FAIL_CLOSED__RAW_PAST_SOURCE_ONLY__NO_WHOLE_SERIES_DERIVED_DB_FIELDS`
 
-Do not retroactively inject DB64-R131 into R77-H1.
-Any R131 use in a future candidate/evaluation path requires a fresh prospective preregistration.
-
-## FULL GENEALOGY AUDIT
-
-`research/operations/20260925/LITERARY_OS_FULL_RESEARCH_GENEALOGY_DB64_R131_AUDIT_R1.md`
-
 ## AUTHORITY SPLIT
-
-- Physical Authority: SYNC-R72
+- Physical Authority: SYNC-R73
 - Active Runtime: exact R69
 - Production: ENG:R47 / LEGACY_R53
 - Runtime DB: DB59 frozen
