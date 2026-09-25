@@ -40,3 +40,24 @@ Manifest:
 
 Receipt:
 `research/operations/20260925/SYNC_R74_PHYSICALIZATION_RECEIPT_R1.json`
+
+
+## R77-H1 PROVIDER EXECUTION OVERLAY — 2026-09-25
+Physical Authority remains **SYNC-R74**.
+
+Execution preregistration:
+`research/interventions/20260925/R77_H1_PROVIDER_EXECUTION_PREREG_AMENDMENT_R1.json`
+
+Provider preflight:
+`research/interventions/20260925/R77_H1_PROVIDER_EXECUTION_PREFLIGHT_R1_RESULT.json`
+
+Execution readiness:
+`research/interventions/20260925/R77_H1_PROVIDER_EXECUTION_READINESS_R1.json`
+
+Current token:
+`EXECUTION_PREREG_SEALED__RUNNER_VALIDATED__REAL_PROVIDER_HOLD_SECRET_ABSENT__C_T_OUTPUTS_0__HUMAN_TARGET_UNOPENED`
+
+No Human target has been opened. No C/T candidate screenplay has been generated.
+Provider preflight on 2026-09-25 confirmed the GitHub Actions `OPENAI_API_KEY` secret is absent.
+Private execution kit is preserved at:
+`/R77_H1_PROGRESS/PROVIDER_EXECUTION_KIT_R1`
