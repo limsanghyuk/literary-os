@@ -1,0 +1,182 @@
+{
+  "schema": "R77_H1_PA6_TREATMENT_R1_TEXT_DERIVED_STATE_LEDGER",
+  "date": "2026-09-25",
+  "rule": "Commit only states directly evidenced in the sealed finished Treatment R1 screenplay. Planner intention is not evidence.",
+  "surface_sha256": "f2e5b113881dbcd43383beff388d349ef340ffe6c8bc60986f733e5eaa086f4a",
+  "committed_state": [
+    {
+      "id": "STATE:THEATER_INTERIOR",
+      "value": "CLOSED_FOR_GENERAL_USE",
+      "evidence": [
+        "SC02",
+        "SC12",
+        "SC46",
+        "SC52"
+      ]
+    },
+    {
+      "id": "STATE:OUTDOOR_PERFORMANCE",
+      "value": "EXECUTED_UNDER_TIME_SPACE_TRAFFIC_AND_SAFETY_CONDITIONS",
+      "evidence": [
+        "SC24",
+        "SC36",
+        "SC47",
+        "SC48",
+        "SC49",
+        "SC50",
+        "SC52"
+      ]
+    },
+    {
+      "id": "STATE:FUNDING",
+      "value": "OUTDOOR_REVISION_SUBMITTED__CONDITIONAL_RECOGNITION__FINAL_AMOUNT_UNRESOLVED",
+      "evidence": [
+        "SC40",
+        "SC51",
+        "SC52"
+      ]
+    },
+    {
+      "id": "STATE:LABOR_PAY",
+      "value": "WORK_AND_AMOUNT_RECORDS_PRESERVED__PAYMENT_NOT_CONFIRMED",
+      "evidence": [
+        "SC09",
+        "SC10",
+        "SC39",
+        "SC52"
+      ]
+    },
+    {
+      "id": "STATE:RESPONSIBILITY",
+      "value": "SAFETY_OPERATION_SPACE_AND_BUDGET_BOUNDARIES_DOCUMENTED_WITH_SHARED_STOP_RULE",
+      "evidence": [
+        "SC37",
+        "SC38"
+      ]
+    },
+    {
+      "id": "STATE:ELECTRICAL_EVIDENCE",
+      "value": "OFF_DRAWING_OLD_BRANCH_AND_HIDDEN_CONNECTION_TRACE_EVIDENCED",
+      "evidence": [
+        "SC13",
+        "SC14",
+        "SC25",
+        "SC26",
+        "SC41",
+        "SC42"
+      ]
+    },
+    {
+      "id": "STATE:DOCUMENT_EVIDENCE",
+      "value": "HISTORICAL_REPAIR_SIGNATURE_MISMATCH_POSSIBLE__ORIGINAL_AUTHORSHIP_UNRESOLVED",
+      "evidence": [
+        "SC15",
+        "SC16",
+        "SC43",
+        "SC44"
+      ]
+    },
+    {
+      "id": "STATE:YUNSEO_FAMILY_LINK",
+      "value": "FATHER_NAME_PRESENT_IN_HISTORICAL_WORK_LIST__ROLE_AND_LIABILITY_UNRESOLVED",
+      "evidence": [
+        "SC17",
+        "SC18",
+        "SC45",
+        "SC52"
+      ]
+    },
+    {
+      "id": "REL:YUNSEO_MINHO",
+      "value": "CONDITIONAL_PROCEDURAL_TRUST_WITH_DISCLOSED_CONFLICT_AND_STOP_AUTHORITY",
+      "evidence": [
+        "SC29",
+        "SC30",
+        "SC38"
+      ]
+    },
+    {
+      "id": "REL:YUNSEO_TAEKYUNG",
+      "value": "MUTUAL_EVIDENCE_CUSTODY_AND_CROSS_CHECK_ALLIANCE",
+      "evidence": [
+        "SC27",
+        "SC28",
+        "SC42"
+      ]
+    },
+    {
+      "id": "REL:JIWOO_SOOKYUNG",
+      "value": "CONDITION_BASED_OPERATIONAL_COOPERATION_WITH_SHARED_TIME_AND_STOP_RULES",
+      "evidence": [
+        "SC33",
+        "SC34",
+        "SC36",
+        "SC49",
+        "SC50",
+        "SC52"
+      ]
+    },
+    {
+      "id": "SOC:MERCHANT_PERFORMANCE_SPACE",
+      "value": "ONE_DAY_CONDITIONAL_SPACE_SHARING_EXECUTED__NO_FUTURE_AUTOMATIC_CONSENT",
+      "evidence": [
+        "SC23",
+        "SC24",
+        "SC36",
+        "SC52"
+      ]
+    }
+  ],
+  "open_obligations": [
+    {
+      "id": "OPEN:LONG_TERM_REPAIR_FINANCE",
+      "evidence": [
+        "SC51",
+        "SC52"
+      ]
+    },
+    {
+      "id": "OPEN:HISTORICAL_LIABILITY",
+      "evidence": [
+        "SC44",
+        "SC52"
+      ]
+    },
+    {
+      "id": "OPEN:YUNSEO_FATHER_ROLE",
+      "evidence": [
+        "SC17",
+        "SC45",
+        "SC52"
+      ]
+    },
+    {
+      "id": "OPEN:FINAL_FUNDING_AMOUNT_AND_PAYMENT",
+      "evidence": [
+        "SC40",
+        "SC51",
+        "SC52"
+      ]
+    },
+    {
+      "id": "OPEN:JIWOO_LONG_TERM_COMMITMENT",
+      "evidence": [
+        "SC52"
+      ]
+    },
+    {
+      "id": "OPEN:FUTURE_MERCHANT_CONSENT",
+      "evidence": [
+        "SC24",
+        "SC52"
+      ]
+    }
+  ],
+  "forbidden_commits": [
+    "Do not commit that the theater building is repaired or reopened.",
+    "Do not commit that historical repair fraud is proven.",
+    "Do not commit that Yunseo's father caused or approved unsafe work.",
+    "Do not commit that final funding amount or temporary labor wages have been paid.",
+    "Do not commit that merchants permanently accept future outdoor performances."
+  ]
+}
