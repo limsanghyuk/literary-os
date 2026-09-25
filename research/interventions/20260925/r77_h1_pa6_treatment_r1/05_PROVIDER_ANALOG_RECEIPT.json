@@ -1,0 +1,31 @@
+{
+  "schema": "R77_H1_PA6_TREATMENT_R1_PROVIDER_ANALOG_RECEIPT",
+  "date": "2026-09-25",
+  "status": "SEALED_CANDIDATE__MECHANICAL_R2_PASS__EXTERNAL_BLIND_PENDING",
+  "provider_boundary": "ChatGPT GPT-5.6 Sol project-aware same-session provider-analog authoring; NOT actual OpenAI API and NOT fresh independent generation context.",
+  "architecture_parent": "R76_VP_B1_FROZEN_52_SCENE_SURFACE_CONTRACT_R1",
+  "prereg": "R77_H1_PA6_FRESH_40K_RERENDER_EXTERNAL_BLIND_PREREG_R1",
+  "surface": {
+    "chars": 40568,
+    "sequences": 9,
+    "scenes": 52,
+    "dialogue_scenes": 52,
+    "sha256": "f2e5b113881dbcd43383beff388d349ef340ffe6c8bc60986f733e5eaa086f4a"
+  },
+  "control_reference": {
+    "chars": 35333,
+    "sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4"
+  },
+  "mechanical": {
+    "r1_status": "FAIL_FALSE_NEGATIVE_STAGE_DIRECTION_HEURISTIC",
+    "r2_status": "PASS",
+    "metadata_leaks": 0,
+    "duplicate_scene_bodies": 0,
+    "exact_control_lines_ge35": 0,
+    "longest_normalized_control_overlap_chars": 37
+  },
+  "candidate_mutation_after_external_dispatch": "FORBIDDEN",
+  "external_judge_outputs": 0,
+  "h1_story_payload_used": false,
+  "human_target_accessed": false
+}
