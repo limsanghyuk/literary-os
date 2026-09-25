@@ -40,3 +40,28 @@ Per arm:
 Seal both C and T for one stratum before opening the Human target.
 
 Do not use this Project-aware coordinator conversation as candidate prose generator.
+
+
+## PROVIDER EXECUTION READINESS — 2026-09-25
+Execution preregistration:
+`research/interventions/20260925/R77_H1_PROVIDER_EXECUTION_PREREG_AMENDMENT_R1.json`
+
+Readiness receipt:
+`research/interventions/20260925/R77_H1_PROVIDER_EXECUTION_READINESS_R1.json`
+
+Current execution token:
+`EXECUTION_PREREG_SEALED__RUNNER_VALIDATED__REAL_PROVIDER_HOLD_SECRET_ABSENT__C_T_OUTPUTS_0__HUMAN_TARGET_UNOPENED`
+
+Frozen execution config:
+- model: `gpt-5.6-sol`
+- reasoning: `high`
+- tools: disabled
+- store: false
+- max_output_tokens: 100000
+- content auto-repair: prohibited
+- transport retry only for 429/5xx with identical payload/client-request-id
+
+Current GitHub Actions provider preflight on 2026-09-25 confirmed `OPENAI_API_KEY` absent. No story payload was opened and no candidate output was created.
+
+Private execution kit:
+`/R77_H1_PROGRESS/PROVIDER_EXECUTION_KIT_R1`
