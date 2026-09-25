@@ -1,0 +1,95 @@
+{
+  "schema": "R77_H1_PA_FULL_PIPELINE_PRETEST_PREREG_R1",
+  "date": "2026-09-25",
+  "status": "PREREGISTERED__OUTPUTS_0",
+  "parent_physical_authority": "SYNC-R74",
+  "parent_research": "R77-H1",
+  "purpose": "Provider-Analog full-pipeline rehearsal before any real-provider H1 C/T generation. Detect execution-contract, long-output, retry, isolation, sealing, and blind-dispatch defects without opening H1 Human targets.",
+  "scientific_boundary": [
+    "No actual OpenAI API literary-quality equivalence claim.",
+    "No H1 selected work story payload or Human target content may be used.",
+    "No C/T primary H1 output is created.",
+    "R76 sealed virtual-provider episode may be reused only as a non-H1 golden full-scale fixture for pipeline mechanics."
+  ],
+  "frozen_r1_subjects": {
+    "runner_sha256": "6fab07b128a46a8877cb6eb7974975f8579df10fde53b4810ad736471bbc1f01",
+    "intake_validator_sha256": "40175c657ded02dcd1d6e4d95894beef9619b4d1fd4eb290938b30829f97dada",
+    "stratum_gate_sha256": "d8c13f256bd420e8347f9e5a5e79d12a7a20ecf9546f0e056bf0c97bef816c3c"
+  },
+  "fixture": {
+    "work": "SYNTH_R76_BREAKWATER_THEATER",
+    "surface_sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4",
+    "chars": 35333,
+    "sequences": 9,
+    "scenes": 52,
+    "usage": "golden non-H1 transport/parser/packet fixture only"
+  },
+  "phases": {
+    "PA0": {
+      "name": "Exact Execution Contract Preflight",
+      "pass": [
+        "baseline exact four-section response accepted",
+        "response metadata requirements are explicit and machine-checkable",
+        "receipt hashes bind exact deliverable bytes"
+      ]
+    },
+    "PA1": {
+      "name": "Full-Episode Golden Fixture Dry Run",
+      "pass": [
+        "R76 full-scale fixture survives provider-analog envelope",
+        "screenplay >=35000 chars",
+        "9 sequences and 52 scenes retained",
+        "reconstruction JSON valid",
+        "state-ledger JSON valid",
+        "sealed hashes reproduce"
+      ]
+    },
+    "PA2": {
+      "name": "Length Format and Tamper Stress",
+      "cases": [
+        "screenplay truncated below 35000",
+        "malformed reconstruction JSON",
+        "malformed ledger JSON",
+        "text outside exact file envelope",
+        "duplicate FILE marker",
+        "response status incomplete despite complete-looking sections",
+        "returned model mismatch",
+        "missing x-request-id",
+        "post-receipt deliverable tamper"
+      ],
+      "pass": "every injected invalid condition is rejected fail-closed"
+    },
+    "PA3": {
+      "name": "Provider Fault Injection",
+      "cases": [
+        "429 then 200",
+        "500 then 200",
+        "three retryable 5xx failures",
+        "400 non-retryable",
+        "same client-request-id across retries"
+      ],
+      "pass": "only frozen retry policy is accepted; no content-regeneration retry"
+    },
+    "PA4": {
+      "name": "Isolation and Leakage Audit",
+      "pass": [
+        "no H1 Human target bytes opened",
+        "no other-arm output mixed into an arm",
+        "blind packet excludes plan, state ledger, internal scores, schema labels",
+        "parametric-memory contamination is explicitly audited as a separate unresolved real-provider risk rather than falsely treated as solved by file isolation"
+      ]
+    },
+    "PA5": {
+      "name": "External-Blind Dispatch Rehearsal",
+      "pass": [
+        "three judge packets can be built independently",
+        "packet leak audit passes",
+        "mapping/hidden planner/state-ledger/internal scores absent",
+        "no judge output is generated in this pretest"
+      ]
+    }
+  },
+  "repair_rule": "If R1 fails any preregistered invalid-case rejection, preserve the R1 failure result, implement bounded R2 repair, then rerun the identical frozen test suite. Do not change cases or pass rules after observing R1.",
+  "parametric_memory_rule": "Provider-Analog cannot establish absence of pretrained knowledge of existing dramas. Before real H1 generation, a separately sealed real-provider PM0 contamination diagnostic or an equivalent identity-safe design is mandatory.",
+  "promotion_rule": "This pretest cannot promote Production, Runtime, Operational Level-3, or Formal R140. Physical SYNC remains SYNC-R74 unless package-recovery content materially changes."
+}
