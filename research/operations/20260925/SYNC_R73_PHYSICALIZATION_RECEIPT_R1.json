@@ -1,0 +1,39 @@
+{
+  "schema": "SYNC_R73_PHYSICALIZATION_RECEIPT_R1",
+  "date": "2026-09-25",
+  "status": "PASS__PROMOTED__DELIVERED_COPY_9_OF_9_SHA_REVERIFIED",
+  "physical_authority": "SYNC-R73",
+  "parent": "SYNC-R72",
+  "manifest_sha256": "604a16285e6d2137392dd171225aca44fd824a2b3bf81132424b16478bc49d72",
+  "sha256sums_sha256": "7330d712e78120924a6a15022e18bad5915babef239106d22dd160a7591052fd",
+  "trust_root_sha256": "fe06494b7f23d469796e37421cafcf0f524049ac4e989f2cdf98719b42fa02f3",
+  "read_first_sha256": "a8971f5e1c7ff86a4b1294a38e1b3fd2939c280b3321b800b98fa10ad5b9b81f",
+  "c2_logical_sha256": "5974d3eb4f047f8cd65d60ed83a88ffa54dc4478f30854d53bc00c341b99bbfe",
+  "c2_crc_pass": true,
+  "changed": [
+    "CONTROL",
+    "A",
+    "B2",
+    "C1",
+    "C2A",
+    "C2B"
+  ],
+  "byte_unchanged": [
+    "B1",
+    "D1",
+    "D2"
+  ],
+  "delivery_redownload_verification": {
+    "status": "PASS_9_OF_9",
+    "method": "Final packages uploaded to personal Library then rematerialized raw-byte and SHA256-compared against local sealed final bytes",
+    "mismatches": 0
+  },
+  "runtime_effect": "NONE__EXACT_R69_UNCHANGED",
+  "production_effect": "NONE__ENG_R47_LEGACY_R53_UNCHANGED",
+  "runtime_db_effect": "NONE__DB59_FROZEN_UNCHANGED",
+  "research_db": "DB64-R131 research-only",
+  "operational_level3": "SUSPENDED__REQUALIFICATION_REQUIRED",
+  "formal_latest_scored": "R138",
+  "formal_r140": "NOT_STARTED",
+  "r77_h1": "GENERATOR_DISPATCH_READY__C_T_NOT_STARTED__HUMAN_TARGET_UNOPENED__PRIMARY_OUTPUTS_0"
+}
