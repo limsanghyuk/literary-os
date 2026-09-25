@@ -1,0 +1,13 @@
+{
+  "schema": "R77_H1_PA6_EXTERNAL_DISPATCH_BUILD_R1_FAILURE",
+  "date": "2026-09-25",
+  "run_id": 36152153204,
+  "job_id": 108127806474,
+  "status": "FAIL_CLOSED__NO_JUDGE_ARTIFACTS_CREATED",
+  "cause": "JUDGE_INSTRUCTION_CONTAINED_FORBIDDEN_LINEAGE_WORD_TREATMENT",
+  "leak_audit_triggered": true,
+  "judge_artifacts_created": 0,
+  "mapping_artifact_created": false,
+  "judge_outputs": 0,
+  "allowed_repair": "Remove lineage-identifying terms from judge-facing instruction only. Do not change scripts, scene sample, axes, gates, or mapping policy."
+}
