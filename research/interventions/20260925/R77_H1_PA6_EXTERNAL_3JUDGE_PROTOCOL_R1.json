@@ -1,0 +1,110 @@
+{
+  "schema": "R77_H1_PA6_EXTERNAL_3JUDGE_PROTOCOL_R1",
+  "date": "2026-09-25",
+  "status": "SEALED_BEFORE_JUDGE_OUTPUTS__JUDGE_OUTPUTS_0",
+  "candidate_surface_sha256": "f2e5b113881dbcd43383beff388d349ef340ffe6c8bc60986f733e5eaa086f4a",
+  "historical_reference_sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4",
+  "judges": [
+    "J01",
+    "J02",
+    "J03"
+  ],
+  "mapping": {
+    "positions": "Treatment occupies A for two judges and B for one judge; assignment pseudorandomized at dispatch using a run-secret seed.",
+    "custody": "Mapping exists only in coordinator artifact, not in judge artifacts, and is not committed to repository before judgments.",
+    "reveal": "Only after valid J01/J02/J03 raw judgments are hash-sealed."
+  },
+  "independence": [
+    "Each judge runs in a fresh context.",
+    "Judge receives only its own packet.",
+    "No Project/GitHub search, prior chat, hidden plan, state ledger, internal scores, other judge output, or model/candidate identity.",
+    "First complete schema-valid judgment is preserved; unfavorable scores are not rewritten."
+  ],
+  "packet": {
+    "whole": "Two complete screenplay surfaces labeled SCRIPT A and SCRIPT B.",
+    "scene_sample": [
+      "SC07",
+      "SC15",
+      "SC30",
+      "SC32",
+      "SC39",
+      "SC41"
+    ],
+    "hidden": [
+      "arm identity",
+      "lineage",
+      "char-count thresholds",
+      "internal evaluation",
+      "planning artifact",
+      "state ledger",
+      "research metadata"
+    ]
+  },
+  "whole_axes": [
+    "EPISODE_PREMISE_COHERENCE",
+    "CAUSAL_SEQUENCE_PROGRESSION",
+    "THREAD_AND_SUBPLOT_INTEGRATION",
+    "CHARACTER_RELATIONSHIP_TRAJECTORY",
+    "INFORMATION_TOPOLOGY_DRAMATIZATION",
+    "SCENE_NECESSITY_AND_DISTINCT_FUNCTION",
+    "ESCALATION_PACING",
+    "CLOSURE_DEFERRED_BALANCE"
+  ],
+  "surface_axes": [
+    "DIALOGUE_SUBTEXT",
+    "CHARACTER_VOICE",
+    "RELATIONSHIP_STATUS_PRESSURE",
+    "PHYSICALIZATION_ACTION",
+    "PACING_ESCALATION_TIME_PRESSURE",
+    "ENSEMBLE_WORLD_SPECIFICITY",
+    "INFORMATION_DRAMATIZATION",
+    "KOREAN_SPOKEN_NATURALNESS",
+    "SCENE_OPENING_VISUALIZATION",
+    "PERFORMANCE_DIRECTION_QUALITY",
+    "ACTION_DIALOGUE_BINDING",
+    "EMOTION_EXTERNALIZATION",
+    "CINEMATIC_READABILITY",
+    "DIRECTION_DETAIL_ECONOMY"
+  ],
+  "required_output": {
+    "judge_id": "J01|J02|J03",
+    "scripts": {
+      "A": [
+        "whole_episode_scores",
+        "scene_scores",
+        "reconstruction",
+        "critical_violations",
+        "strengths",
+        "weaknesses"
+      ],
+      "B": [
+        "whole_episode_scores",
+        "scene_scores",
+        "reconstruction",
+        "critical_violations",
+        "strengths",
+        "weaknesses"
+      ]
+    },
+    "paired": [
+      "whole_episode_preference A|B|TIE",
+      "surface_craft_preference A|B|TIE",
+      "paired_reasoning_evidence"
+    ]
+  },
+  "critical_violations": [
+    "INTERNAL_SCHEMA_OR_RESEARCH_META_LEAK",
+    "IMPORTANT_STATE_CHANGE_WITHOUT_SCREEN_VISIBLE_CARRIER",
+    "EXPOSITORY_EMOTION_STATE_DIALOGUE_AS_DOMINANT_CRAFT",
+    "SEVERE_CHARACTER_VOICE_COLLAPSE",
+    "MAJOR_CAUSAL_OR_CONTINUITY_BREAK",
+    "DIRECTION_BLOAT_THAT_REPEATS_DIALOGUE_OR_STATE"
+  ],
+  "gates": {
+    "absolute": "Mapped Treatment: >=2/3 judges whole mean >=7.0 and surface mean >=7.0; no critical violation confirmed by >=2 judges.",
+    "paired": "Mapped Treatment surface preference wins >=2/3; whole preference wins+ties >=2/3.",
+    "focus": "Pooled mapped Treatment median not below Control on DIALOGUE_SUBTEXT, CHARACTER_VOICE, PHYSICALIZATION_ACTION, KOREAN_SPOKEN_NATURALNESS; >=4 of 6 focus axes show median delta >=+0.5.",
+    "recoverability": "Treatment premise, major threads, nine movements, relationship trajectories, due/deferred boundary must be recoverable by >=2/3 judges at core-consensus level."
+  },
+  "claim_boundary": "Directional provider-analog rehearsal because historical Control is 35,333 chars and Treatment is 40,568 chars; not clean causal proof or actual API equivalence."
+}
