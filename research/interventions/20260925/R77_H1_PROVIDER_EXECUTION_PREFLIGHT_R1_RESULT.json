@@ -1,0 +1,19 @@
+{
+  "schema": "R77_H1_PROVIDER_EXECUTION_PREFLIGHT_R1_RESULT",
+  "date": "2026-09-25",
+  "workflow_run_id": 36138897527,
+  "job_id": 108083574914,
+  "provider_preflight_step": "PASS",
+  "provider_secret_present": false,
+  "api_connectivity_checked": false,
+  "api_http_status": null,
+  "model_target": "gpt-5.6-sol",
+  "story_payload_accessed": false,
+  "human_target_accessed": false,
+  "candidate_outputs_created": 0,
+  "provider_status": "HOLD__REAL_PROVIDER_SECRET_ABSENT",
+  "workflow_job_conclusion": "failure",
+  "workflow_failure_cause": "RECEIPT_COMMIT_PUSH_403__GITHUB_TOKEN_CONTENTS_READ_ONLY",
+  "scientific_interpretation": "Execution transport/provider credential HOLD only; no C/T generation attempted; no Human target opened; not a literary-quality or engine failure.",
+  "receipt_sha256_pre_field": "56f95cdceac50518fd4e4ccadb66d67ce45bf83ffc1805ac9871898cbb6ca03d"
+}
