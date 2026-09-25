@@ -61,7 +61,19 @@ Runtime DB remains DB59.
 
 ## RUNTIME SAFETY
 Canonical resilience protocol:
-`research/operations/20260925/LITERARY_OS_RUNTIME_CONTAINER_RESILIENCE_PROTOCOL_R4.md`
+`research/operations/20260925/LITERARY_OS_RUNTIME_CONTAINER_RESILIENCE_PROTOCOL_R5.md`
 
 On ClientError/TransportTimeout at minimal-command level:
 STOP mutation/reseal -> RUNTIME_TRANSPORT_HOLD -> minimal health check -> verify last atomic checkpoint -> resume only interrupted step.
+
+
+## SYNC-R73 RECOVERY PRECEDENCE GUARD
+`research/operations/20260925/SYNC_R73_RECOVERY_PRECEDENCE_GUARD_R1.md`
+
+Mandatory rule:
+External SYNC-R73 Manifest -> Trust Root -> READ FIRST -> top-level SYNC-R73 current-authority metadata -> Hub CURRENT pointers -> nested historical overlays.
+
+Nested B2 `POST_SYNC_R72_FULL_RECOVERY_OVERLAY_R3.zip` is historical provenance only and MUST NOT override SYNC-R73.
+
+Debug closure:
+`research/operations/20260925/SYNC_R73_INTEGRITY_DEBUG_CLOSURE_R2.json`
