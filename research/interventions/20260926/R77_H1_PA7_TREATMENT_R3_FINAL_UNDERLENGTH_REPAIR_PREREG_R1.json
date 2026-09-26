@@ -1,0 +1,41 @@
+{
+  "schema": "R77_H1_PA7_TREATMENT_R3_FINAL_UNDERLENGTH_REPAIR_PREREG_R1",
+  "date": "2026-09-26",
+  "status": "PREREGISTERED_BEFORE_COMPLETION_E",
+  "parent_treatment_r2": {
+    "chars": 38846,
+    "sha256": "34e66357f0298bb0ca7faf9a5a8c6b522003b3b91435430426d4f345b3d1102f",
+    "status": "FAIL_UNDER_40K_ONLY"
+  },
+  "control_reference": {
+    "chars": 40055,
+    "sha256": "41f45e7d00dbd9e4a89837cac0c7516c18c5f42fd1edd066015f824f27d36495",
+    "status": "PASS"
+  },
+  "selected_nonblind_scenes": [
+    "SC16",
+    "SC32",
+    "SC45"
+  ],
+  "blind_sample_excluded": [
+    "SC05",
+    "SC12",
+    "SC21",
+    "SC29",
+    "SC38",
+    "SC46"
+  ],
+  "allowed": "Add only playable action/voice/causal realization inside SC16, SC32, SC45. Preserve A-D and all frozen scene functions.",
+  "forbidden": [
+    "new scenes",
+    "sample-targeted optimization",
+    "post-action thematic summary",
+    "threshold change",
+    "external feedback"
+  ],
+  "target": {
+    "min_chars": 40000,
+    "max_chars": 42000,
+    "matched_length_diff_le_10pct": true
+  }
+}
