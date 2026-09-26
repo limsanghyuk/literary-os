@@ -1,0 +1,60 @@
+{
+  "schema": "R77_H1_PA7_MATCHED_40K_FRESH_PAIRED_PROVIDER_ANALOG_PREREG_R1",
+  "date": "2026-09-26",
+  "status": "PREREGISTERED__OUTPUTS_0",
+  "parent_physical_authority": "SYNC-R74",
+  "parent_research": "R77-H1",
+  "predecessor": "PA6 CLOSED_FAIL__FOCUS_EFFECT_SIZE_GATE",
+  "purpose": "Test whether the residual surface intervention produces preregistered focus-axis effect size on a fresh synthetic episode while removing the PA6 length mismatch.",
+  "design": {
+    "source": "fresh synthetic work not used in R76/PA6 and unrelated to H1 real works",
+    "architecture": "one newly frozen episode architecture shared byte-identically by Control and Treatment",
+    "arms": {
+      "Control": "40K+ surface realization under the pre-residual PA6/R76-style realization policy without the new residual intervention.",
+      "Treatment": "40K+ surface realization under the same architecture plus the residual intervention below."
+    },
+    "min_chars_each": 40000,
+    "no_upper_cap": true,
+    "matched_length_rule": "Both arms must be >=40,000 chars. Absolute difference should be <=10% of the shorter arm; otherwise paired result is descriptive only and cannot satisfy PA7 qualification.",
+    "same_sequence_scene_architecture": true,
+    "no_quota_padding": true,
+    "human_h1_payload_used": false
+  },
+  "treatment_residual_intervention": [
+    "POST_ACTION_SUMMARY_SUPPRESSION: after a visible action already establishes a state change, do not append an abstract sentence restating its meaning unless new causal information is added.",
+    "PROCEDURE_TRANSACTION_DEDUP: adjacent scenes may not repeat record/confirm/disclose/custody actions unless the repeated action changes authority, risk, relationship, or available choice.",
+    "VOICE_ORTHOGONALITY: preserve distinct sentence length, diction, directness, avoidance, humor, status strategy, and institutional vocabulary per principal even in procedural scenes.",
+    "EMOTIONAL_COUNTERPRESSURE: high-information scenes must contain a playable interpersonal cost or asymmetry rather than becoming neutral process simulation.",
+    "ENDING_COMPRESSION: after the dramatic climax, retain only closure actions that materially change state carry; avoid serial explanatory sorting beats when the screenplay already evidences the state.",
+    "DIRECTION_ECONOMY: stage directions must be playable and specific but may not paraphrase dialogue or summarize theme."
+  ],
+  "frozen_primary_focus_axes": [
+    "DIALOGUE_SUBTEXT",
+    "CHARACTER_VOICE",
+    "PHYSICALIZATION_ACTION",
+    "PERFORMANCE_DIRECTION_QUALITY",
+    "EMOTION_EXTERNALIZATION",
+    "DIRECTION_DETAIL_ECONOMY"
+  ],
+  "gates": {
+    "mechanical": "Both arms >=40K; same architecture; metadata leak 0; no full-scene duplicate; valid receipts and hashes.",
+    "absolute": "Treatment whole mean >=7.0 for >=2/3 judges; Treatment surface mean >=7.0 for >=2/3; no critical violation confirmed by >=2 judges.",
+    "paired": "Treatment surface preference wins >=2/3; whole preference wins+ties >=2/3.",
+    "focus": "Treatment pooled median not lower on CHARACTER_VOICE, DIALOGUE_SUBTEXT, PHYSICALIZATION_ACTION, KOREAN_SPOKEN_NATURALNESS; at least 4 of 6 frozen focus axes pooled median delta >=+0.5.",
+    "recoverability": "Treatment premise, major threads, sequence progression, relationship trajectories, and due/deferred boundary recoverable by >=2/3 judges."
+  },
+  "external_blind": {
+    "judges": [
+      "J01",
+      "J02",
+      "J03"
+    ],
+    "fresh_independent_contexts": true,
+    "balanced_hidden_mapping": true,
+    "mapping_reveal_after_3_of_3_valid_outputs": true,
+    "pre_frozen_scene_sample": "Must be selected and sealed before either arm surface is generated."
+  },
+  "no_posthoc_rule": "Do not weaken +0.5 threshold, change focus axes, replace the sample, or alter judging rules after first arm output.",
+  "promotion_boundary": "PA7 can qualify the provider-analog rehearsal layer only. It cannot promote Production/Runtime/Level-3/R140 or substitute for real-provider PM0/C/T.",
+  "outputs": 0
+}
