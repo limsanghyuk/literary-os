@@ -1,0 +1,28 @@
+name: R77-H1 PA7 Control R3 Serialization Rebuild
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  build:
+    if: contains(github.event.head_commit.message, 'Run PA7 Control R3 serialization rebuild')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Rebuild and validate without content mutation
+        run: python research/interventions/20260926/r77_h1_pa7_control_r3_serialization_rebuild.py
+      - name: Commit evidence
+        if: always()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add research/interventions/20260926/r77_h1_pa7_control_r1/R77_H1_PA7_CONTROL_R3_FULL_SCREENPLAY.txt research/interventions/20260926/r77_h1_pa7_control_r1/R77_H1_PA7_CONTROL_R3_MECHANICAL_RESULT.json
+          git commit -m 'Seal PA7 Control R3 serialization result' || exit 0
+          git pull --rebase origin main
+          git push
