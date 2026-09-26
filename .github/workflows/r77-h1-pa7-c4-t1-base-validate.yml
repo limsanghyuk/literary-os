@@ -1,0 +1,31 @@
+name: R77-H1 PA7 Control R4 and Treatment R1 Base Validate
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  validate:
+    if: contains(github.event.head_commit.message, 'Run PA7 C4 T1 base validation')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Control R4
+        run: python research/interventions/20260926/r77_h1_pa7_control_r4_build_validate.py
+      - name: Treatment R1 base
+        if: always()
+        run: python research/interventions/20260926/r77_h1_pa7_treatment_r1_build_validate.py || true
+      - name: Commit evidence
+        if: always()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add research/interventions/20260926/r77_h1_pa7_control_r1/R77_H1_PA7_CONTROL_R4_FULL_SCREENPLAY.txt research/interventions/20260926/r77_h1_pa7_control_r1/R77_H1_PA7_CONTROL_R4_MECHANICAL_RESULT.json research/interventions/20260926/r77_h1_pa7_treatment_r1/R77_H1_PA7_TREATMENT_R1_BASE_SCREENPLAY.txt research/interventions/20260926/r77_h1_pa7_treatment_r1/R77_H1_PA7_TREATMENT_R1_BASE_MECHANICAL_RESULT.json
+          git commit -m 'Seal PA7 Control R4 and Treatment R1 base results' || exit 0
+          git pull --rebase origin main
+          git push
