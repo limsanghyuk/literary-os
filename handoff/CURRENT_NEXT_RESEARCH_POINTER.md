@@ -17,29 +17,17 @@ R77-H1 — Human Next-Episode Prospective Benchmark Three-Position Pilot
 - Formal R140: NOT_STARTED
 
 ## CURRENT STATUS
-`SIX_ISOLATED_LAUNCH_PACKETS_SEALED__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_UNOPENED__PRIMARY_OUTPUTS_0`
+`PA7_IN_PROGRESS__CONTROL_R4_PASS__TREATMENT_R1_UNDER40K__COMPLETION_D_SEALED_NOT_COMPOSED__EXTERNAL_JUDGE_OUTPUTS_0__H1_PRIMARY_OUTPUTS_0__HUMAN_TARGET_UNOPENED`
 
-Six packets:
-- EARLY-C
-- EARLY-T
-- MIDDLE-C
-- MIDDLE-T
-- LATE-C
-- LATE-T
+Historical six H1 launch packets remain embedded in SYNC-R74 but are **STALE_FOR_EXECUTION__35K_FLOOR**.
 
 ## EXACT NEXT
-Run the six sealed packets in six fresh isolated model contexts with the same provider/model/config class where possible.
-
-Per arm:
-1. typed plan
-2. >=35,000-char Korean broadcast screenplay
-3. output-only reconstruction
-4. text-derived state ledger
-5. provider/model/config receipt
-
-Seal both C and T for one stratum before opening the Human target.
-
-Do not use this Project-aware coordinator conversation as candidate prose generator.
+1. Verify immutable Control R4: 40,055 chars / SHA `41f45e7d00dbd9e4a89837cac0c7516c18c5f42fd1edd066015f824f27d36495`.
+2. Compose Treatment R2 from Treatment R1 + sealed Completion D only.
+3. Run mechanical validation against the 40K floor and frozen 9-sequence / 50-scene architecture.
+4. If R2 remains under 40K, preserve the failure and preregister another bounded completion before writing.
+5. When both arms pass and length difference is <=10%, build the already-preregistered PA7 3-Judge blind evaluation.
+6. Do not execute real-provider H1 or the stale 35K packets yet.
 
 
 ## PROVIDER EXECUTION READINESS — 2026-09-25
