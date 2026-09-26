@@ -1,0 +1,142 @@
+{
+  "schema": "R77_H1_PA6_EXTERNAL_3JUDGE_MAPPED_RESULT_R1",
+  "date": "2026-09-26",
+  "status": "CLOSED_FAIL__FOCUS_EFFECT_SIZE_GATE",
+  "physical_authority": "SYNC-R74",
+  "treatment_surface_sha256": "f2e5b113881dbcd43383beff388d349ef340ffe6c8bc60986f733e5eaa086f4a",
+  "control_surface_sha256": "7b35fa2418f07382b52d5e93403e3da555539e1c96747cca98e3227e5c4c3ee4",
+  "mapping": {
+    "J01": {
+      "treatment": "B",
+      "control": "A"
+    },
+    "J02": {
+      "treatment": "A",
+      "control": "B"
+    },
+    "J03": {
+      "treatment": "A",
+      "control": "B"
+    }
+  },
+  "judge_intake": {
+    "J01": {
+      "raw_sha256": "0b9fcaa6922dcf2085375ae25076fda646e91cc1170944e15b9adbacb4e79a97",
+      "canonical_sha256": "8914d503d29bcb804e05af71a99ce2332fa2d49600661f7739e89acd3a70292b",
+      "normalization": "COMPOSER_MARKDOWN_ESCAPE_NORMALIZATION_ONLY",
+      "schema_complete": true
+    },
+    "J02": {
+      "raw_sha256": "ea39dcb6d643f05f2e462ebe5f0b083309fade9aef66c80a647c83070bddcc94",
+      "canonical_sha256": "f8589e21a74ee3005da6b3778d4cd60c0c8d5dc679ecce68d339779c14b10bc8",
+      "normalization": "NONE__RAW_JSON",
+      "schema_complete": true
+    },
+    "J03": {
+      "raw_sha256": "c999af2acf88bf2e858bddb2d04f8a0e67be9fe9de87106265c4bb54780bad71",
+      "canonical_sha256": "7e2196276b302bc114ceb7b4026af3f6f13d8a19ed88ffcb54db3b258ec9100e",
+      "normalization": "UI_ANNOTATION_STRIP_IN_OVERALL_NOTES_ONLY",
+      "schema_complete": true
+    },
+    "rule": "Only transport/UI encoding was normalized. No score, preference, reconstruction, critical violation, strength, or weakness field was edited."
+  },
+  "judge_metrics": {
+    "J01": {
+      "treatment_whole_mean": 9.425,
+      "control_whole_mean": 8.8125,
+      "treatment_surface_mean": 9.32619,
+      "control_surface_mean": 8.759524,
+      "whole_preference": "TREATMENT",
+      "surface_preference": "TREATMENT",
+      "treatment_critical_violations": 0
+    },
+    "J02": {
+      "treatment_whole_mean": 9.35,
+      "control_whole_mean": 9.0375,
+      "treatment_surface_mean": 9.164286,
+      "control_surface_mean": 8.945238,
+      "whole_preference": "TREATMENT",
+      "surface_preference": "TREATMENT",
+      "treatment_critical_violations": 0
+    },
+    "J03": {
+      "treatment_whole_mean": 9.4,
+      "control_whole_mean": 8.9,
+      "treatment_surface_mean": 9.233333,
+      "control_surface_mean": 8.942857,
+      "whole_preference": "TREATMENT",
+      "surface_preference": "TREATMENT",
+      "treatment_critical_violations": 0
+    }
+  },
+  "pooled": {
+    "whole": {
+      "treatment_median": 9.4,
+      "control_median": 8.95,
+      "treatment_mean": 9.391667,
+      "control_mean": 8.916667
+    },
+    "surface": {
+      "treatment_median": 9.3,
+      "control_median": 8.9,
+      "treatment_mean": 9.24127,
+      "control_mean": 8.88254
+    }
+  },
+  "focus_axes": {
+    "DIALOGUE_SUBTEXT": {
+      "treatment_median": 9.05,
+      "control_median": 8.65,
+      "delta": 0.4
+    },
+    "CHARACTER_VOICE": {
+      "treatment_median": 9.1,
+      "control_median": 8.9,
+      "delta": 0.2
+    },
+    "PHYSICALIZATION_ACTION": {
+      "treatment_median": 9.4,
+      "control_median": 9,
+      "delta": 0.4
+    },
+    "PERFORMANCE_DIRECTION_QUALITY": {
+      "treatment_median": 9.3,
+      "control_median": 9,
+      "delta": 0.3
+    },
+    "EMOTION_EXTERNALIZATION": {
+      "treatment_median": 9.05,
+      "control_median": 8.75,
+      "delta": 0.3
+    },
+    "DIRECTION_DETAIL_ECONOMY": {
+      "treatment_median": 9.3,
+      "control_median": 9.05,
+      "delta": 0.25
+    }
+  },
+  "preregistered_gates": {
+    "absolute": {
+      "pass": true,
+      "detail": "3/3 Treatment whole mean >=7; 3/3 Treatment surface mean >=7; confirmed critical violations 0"
+    },
+    "paired_directional": {
+      "pass": true,
+      "detail": "Treatment whole preference win/tie 3/3; Treatment surface preference win 3/3"
+    },
+    "focus": {
+      "pass": false,
+      "detail": "Treatment not lower on CHARACTER_VOICE/DIALOGUE_SUBTEXT/PHYSICALIZATION_ACTION/KOREAN_SPOKEN_NATURALNESS, but focus axes with pooled median delta >=+0.5 = 0/6; required >=4/6"
+    },
+    "recoverability": {
+      "pass": true,
+      "detail": "3/3 Treatment reconstructions recover premise, major threads, all nine sequence movements, relationship trajectories, resolved due-now and deferred/open boundaries"
+    }
+  },
+  "overall_pass": false,
+  "interpretation": {
+    "supported": "Strong absolute quality and unanimous directional preference for the 40K Treatment.",
+    "not_supported": "Preregistered focus effect-size qualification. The treatment improvements are positive but smaller than the frozen +0.5-on-4-of-6 requirement.",
+    "claim_boundary": "Historical Control is 35,333 chars and Treatment is 40,568 chars; paired evidence is directional provider-analog rehearsal evidence, not clean causal proof."
+  }
+}
