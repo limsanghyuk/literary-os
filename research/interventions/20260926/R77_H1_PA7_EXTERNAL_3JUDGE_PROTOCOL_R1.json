@@ -1,0 +1,96 @@
+{
+  "schema": "R77_H1_PA7_EXTERNAL_3JUDGE_PROTOCOL_R1",
+  "date": "2026-09-26",
+  "status": "SEALED_AFTER_SURFACE_MECHANICAL_PASS__BEFORE_JUDGE_OUTPUTS",
+  "control": {
+    "chars": 40055,
+    "sha256": "41f45e7d00dbd9e4a89837cac0c7516c18c5f42fd1edd066015f824f27d36495"
+  },
+  "treatment": {
+    "chars": 40250,
+    "sha256": "001571fd5ff9b7998a973ced39efa3957ebe515aa06fa8b295c5c2f47cb641ec"
+  },
+  "length_match": {
+    "absolute_diff": 195,
+    "pct_of_shorter": 0.004868306079141181
+  },
+  "prefrozen_sample": [
+    "SC05",
+    "SC12",
+    "SC21",
+    "SC29",
+    "SC38",
+    "SC46"
+  ],
+  "judges": [
+    "J01",
+    "J02",
+    "J03"
+  ],
+  "independence": [
+    "fresh independent context per judge",
+    "judge receives only its own blind packet",
+    "no Project/GitHub/prior chat/model identity/lineage/internal scores/other judge output",
+    "first complete schema-valid judgment is immutable"
+  ],
+  "whole_axes": [
+    "EPISODE_PREMISE_COHERENCE",
+    "CAUSAL_SEQUENCE_PROGRESSION",
+    "THREAD_AND_SUBPLOT_INTEGRATION",
+    "CHARACTER_RELATIONSHIP_TRAJECTORY",
+    "INFORMATION_TOPOLOGY_DRAMATIZATION",
+    "SCENE_NECESSITY_AND_DISTINCT_FUNCTION",
+    "ESCALATION_PACING",
+    "CLOSURE_DEFERRED_BALANCE"
+  ],
+  "surface_axes": [
+    "DIALOGUE_SUBTEXT",
+    "CHARACTER_VOICE",
+    "RELATIONSHIP_STATUS_PRESSURE",
+    "PHYSICALIZATION_ACTION",
+    "PACING_ESCALATION_TIME_PRESSURE",
+    "ENSEMBLE_WORLD_SPECIFICITY",
+    "INFORMATION_DRAMATIZATION",
+    "KOREAN_SPOKEN_NATURALNESS",
+    "SCENE_OPENING_VISUALIZATION",
+    "PERFORMANCE_DIRECTION_QUALITY",
+    "ACTION_DIALOGUE_BINDING",
+    "EMOTION_EXTERNALIZATION",
+    "CINEMATIC_READABILITY",
+    "DIRECTION_DETAIL_ECONOMY"
+  ],
+  "critical_violations": [
+    "INTERNAL_SCHEMA_OR_RESEARCH_META_LEAK",
+    "IMPORTANT_STATE_CHANGE_WITHOUT_SCREEN_VISIBLE_CARRIER",
+    "EXPOSITORY_EMOTION_STATE_DIALOGUE_AS_DOMINANT_CRAFT",
+    "SEVERE_CHARACTER_VOICE_COLLAPSE",
+    "MAJOR_CAUSAL_OR_CONTINUITY_BREAK",
+    "DIRECTION_BLOAT_THAT_REPEATS_DIALOGUE_OR_STATE"
+  ],
+  "required_output": [
+    "score both A/B independently on all whole axes",
+    "score A/B on all surface axes for each prefrozen scene",
+    "reconstruct premise, major threads, sequence progression, relationship trajectories, resolved due-now, deferred/open for each script",
+    "critical violations with scene evidence",
+    "whole_episode_preference A/B/TIE",
+    "surface_craft_preference A/B/TIE",
+    "evidence-based strengths/weaknesses"
+  ],
+  "frozen_gates": {
+    "absolute": "Mapped Treatment whole mean >=7.0 for >=2/3; surface mean >=7.0 for >=2/3; no critical violation confirmed by >=2 judges.",
+    "paired": "Mapped Treatment surface preference wins >=2/3; whole preference wins+ties >=2/3.",
+    "focus": "Mapped Treatment pooled median not lower than Control on CHARACTER_VOICE, DIALOGUE_SUBTEXT, PHYSICALIZATION_ACTION, KOREAN_SPOKEN_NATURALNESS; >=4 of 6 focus axes pooled median delta >=+0.5.",
+    "focus_axes": [
+      "DIALOGUE_SUBTEXT",
+      "CHARACTER_VOICE",
+      "PHYSICALIZATION_ACTION",
+      "PERFORMANCE_DIRECTION_QUALITY",
+      "EMOTION_EXTERNALIZATION",
+      "DIRECTION_DETAIL_ECONOMY"
+    ],
+    "recoverability": "Mapped Treatment premise, major threads, nine sequence movements, relationship trajectories, due/deferred boundary recoverable at core-consensus by >=2/3 judges."
+  },
+  "mapping": "Balanced hidden mapping; reveal only after 3/3 first schema-valid judgments are hash-sealed.",
+  "no_posthoc_rule": "Do not change axes, sample, thresholds, or mapping after first judge packet is dispatched.",
+  "claim_boundary": "Provider-analog matched-length rehearsal only; not actual real-provider H1 or Production/Runtime promotion."
+}
