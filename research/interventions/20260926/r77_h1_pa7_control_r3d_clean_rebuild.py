@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+import json,re,hashlib,pathlib
+ROOT=pathlib.Path(__file__).resolve().parents[3]
+D=ROOT/"research/interventions/20260926/r77_h1_pa7_control_r1"
+
+parts=[(D/f"R77_H1_PA7_CONTROL_SQ{i:02d}.txt").read_text(encoding="utf-8") for i in range(1,10)]
+text="\n\n".join(parts)+"\n"
+
+ins={}
+ins.update(json.loads((D/"R77_H1_PA7_CONTROL_R1_COMPLETION_INSERTS.json").read_text(encoding="utf-8"))["inserts"])
+ins.update(json.loads((D/"R77_H1_PA7_CONTROL_R2_UNDERLENGTH_COMPLETION.json").read_text(encoding="utf-8"))["inserts"])
+sup=json.loads((D/"R77_H1_PA7_CONTROL_R3_SINGLE_SCENE_COMPLETION.json").read_text(encoding="utf-8"))
+ins[str(sup["scene"])]=sup["text"]
+
+def scene_pat(n):
+    return re.compile(rf"(?m)^씬\s+0*{n}\.\s*[^\n]*$")
+
+for sc in sorted((int(k) for k in ins.keys()), reverse=True):
+    m=scene_pat(sc).search(text)
+    if not m:
+        raise SystemExit(f"scene start missing {sc}")
+    if sc < 50:
+        nxt=scene_pat(sc+1).search(text,m.end())
+        if not nxt:
+            raise SystemExit(f"next scene missing {sc+1}")
+        pos=nxt.start()
+    else:
+        pos=len(text)
+    text=text[:pos].rstrip()+"\n\n"+ins[str(sc)].strip()+"\n\n"+text[pos:].lstrip("\n")
+
+if not text.endswith("\n"):
+    text+="\n"
+
+seqs=[int(x) for x in re.findall(r"(?m)^시퀀스\s+(\d+)\s+—",text)]
+scenes=[int(x) for x in re.findall(r"(?m)^씬\s+(\d+)\.",text)]
+meta=["R77_","PA7","provider_analog","schema","focus_axis"]
+res={
+ "schema":"R77_H1_PA7_CONTROL_R3D_MECHANICAL_RESULT",
+ "date":"2026-09-26",
+ "chars":len(text),
+ "sha256":hashlib.sha256(text.encode()).hexdigest(),
+ "sequences":len(seqs),
+ "scenes":len(scenes),
+ "gates":{
+  "chars_ge_40000":len(text)>=40000,
+  "sequences_exact_1_to_9":seqs==list(range(1,10)),
+  "scenes_exact_1_to_50":scenes==list(range(1,51)),
+  "metadata_leak_0":not any(t.lower() in text.lower() for t in meta),
+  "duplicate_scene_heading_0":len(scenes)==len(set(scenes))
+ }
+}
+res["status"]="PASS" if all(res["gates"].values()) else "FAIL"
+(D/"R77_H1_PA7_CONTROL_R3D_FULL_SCREENPLAY.txt").write_text(text,encoding="utf-8")
+(D/"R77_H1_PA7_CONTROL_R3D_MECHANICAL_RESULT.json").write_text(json.dumps(res,ensure_ascii=False,indent=2),encoding="utf-8")
+print(json.dumps(res,ensure_ascii=False,sort_keys=True))
+raise SystemExit(0 if res["status"]=="PASS" else 2)
