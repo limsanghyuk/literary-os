@@ -1,8 +1,8 @@
 # CURRENT SESSION RECOVERY POINTER
-Last updated: 2026-09-25
+Last updated: 2026-09-26
 
 ## CANONICAL RECOVERY
-1. `handoff/20260925/START_HERE_SYNC_R74_R77_H1_SIX_ISOLATED_LAUNCH_PHYSICAL_CLOSURE_R7.md`
+1. `handoff/20260926/START_HERE_SYNC_R74_R77_H1_PA7_INTERRUPTED_HANDOFF_R8.md`
 2. `research/operations/20260925/SYNC_R74_5PART_9PACKAGE_MANIFEST_R1.json`
 3. `research/operations/20260925/SYNC_R74_PHYSICALIZATION_RECEIPT_R1.json`
 4. `research/interventions/20260925/R77_H1_SIX_FRESH_ISOLATED_LAUNCH_READY_R1.json`
@@ -223,3 +223,32 @@ PA7:
 Physical Authority remains **SYNC-R74**.
 Existing 35K H1 launch packets remain **STALE_FOR_EXECUTION**.
 Real-provider H1 PM0/C/T remains blocked until provider-analog qualification is achieved and 40K H1 launch packets are rebuilt/resealed.
+
+
+## LATEST SESSION HANDOFF — 2026-09-26
+
+Canonical new-session handoff:
+`handoff/20260926/START_HERE_SYNC_R74_R77_H1_PA7_INTERRUPTED_HANDOFF_R8.md`
+
+Session-interrupt receipt:
+`research/interventions/20260926/R77_H1_PA7_SESSION_INTERRUPT_HANDOFF_R1.json`
+
+Current token:
+`PHYSICAL_SYNC_R74_9_OF_9_PASS__PA6_CLOSED_FOCUS_FAIL__PA7_CONTROL_R4_40055_PASS__TREATMENT_R1_35656_UNDER40K__COMPLETION_D_SEALED_NOT_COMPOSED__PA7_EXTERNAL_0_OF_3__H1_TARGET_UNOPENED`
+
+Authoritative interpretation:
+- Physical Authority is still **SYNC-R74**. No post-R74 5-Part/9-Package successor has completed reseal + 9/9 delivery/redownload verification.
+- Control R4 is immutable PASS: 40,055 chars / 9 seq / 50 scenes / SHA256 `41f45e7d00dbd9e4a89837cac0c7516c18c5f42fd1edd066015f824f27d36495`.
+- Treatment R1 is 35,656 chars / 9 seq / 50 scenes / SHA256 `34590dc4892737e6ec24309c50088cc5a0ba0b508e30cd482568a333a006759f`; FAIL under 40K only.
+- Treatment Completion D is sealed for SC04/07/18/26/34/37/43/49, 3,174 insert-text chars, but has **not** been composed into final Treatment R2.
+- PA7 external judge outputs remain 0/3.
+- H1 primary C/T outputs remain 0; Human target remains unopened.
+- The six H1 packets physically embedded in SYNC-R74 are **STALE_FOR_EXECUTION__35K_FLOOR** after the 40K amendment.
+
+Exact next:
+1. Verify SYNC-R74 manifest/9-package authority.
+2. Verify immutable Control R4 SHA/PASS.
+3. Compose Treatment R2 using existing Treatment R1 + sealed Completion D only.
+4. Mechanically validate exact chars/9 seq/50 scenes/leak/duplicates.
+5. If still <40K, preserve that failed R2 and preregister a further bounded underlength repair before writing any new content.
+6. Only after Treatment passes and arm length difference <=10%, build external 3-Judge blind packets and continue PA7.
