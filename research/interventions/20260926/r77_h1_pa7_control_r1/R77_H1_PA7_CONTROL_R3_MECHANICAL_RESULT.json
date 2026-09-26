@@ -1,0 +1,20 @@
+{
+  "schema": "R77_H1_PA7_CONTROL_R3_SERIALIZATION_ONLY_MECHANICAL_RESULT",
+  "date": "2026-09-26",
+  "chars": 39664,
+  "sha256": "caeb702e870e85c073e5fb7e2e67eab9d695e5337938877c0f80e15268ef2f1a",
+  "sequences": 9,
+  "scenes": 50,
+  "source_control_r1_sha256": "10bb42ad080472137107076f3ea456ce7345fca957a43a8f19bf2f6ba1506e12",
+  "insert_count": 7,
+  "expected_insert_count": 7,
+  "gates": {
+    "chars_ge_40000": false,
+    "sequences_exact_1_to_9": true,
+    "scenes_exact_1_to_50": true,
+    "all_presealed_inserts_applied": true,
+    "metadata_leak_0": true,
+    "duplicate_scene_heading_0": true
+  },
+  "status": "FAIL"
+}
