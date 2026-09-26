@@ -1,0 +1,20 @@
+{
+  "schema": "R77_H1_PA7_CONTROL_R4_FINAL_MECHANICAL_RESULT",
+  "date": "2026-09-26",
+  "chars": 40055,
+  "sha256": "41f45e7d00dbd9e4a89837cac0c7516c18c5f42fd1edd066015f824f27d36495",
+  "sequences": 9,
+  "scenes": 50,
+  "inserted": true,
+  "parent_r3_sha256": "caeb702e870e85c073e5fb7e2e67eab9d695e5337938877c0f80e15268ef2f1a",
+  "gates": {
+    "chars_ge_40000": true,
+    "chars_le_41500": true,
+    "sequences_exact_1_to_9": true,
+    "scenes_exact_1_to_50": true,
+    "inserted_once": true,
+    "metadata_leak_0": true,
+    "duplicate_scene_heading_0": true
+  },
+  "status": "PASS"
+}
