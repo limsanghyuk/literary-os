@@ -1,0 +1,16 @@
+{
+  "schema": "R77_H1_PA7_TREATMENT_R1_MECHANICAL_RESULT",
+  "date": "2026-09-26",
+  "chars": 35656,
+  "sha256": "34590dc4892737e6ec24309c50088cc5a0ba0b508e30cd482568a333a006759f",
+  "sequences": 9,
+  "scenes": 50,
+  "gates": {
+    "chars_ge_40000": false,
+    "sequences_exact_1_to_9": true,
+    "scenes_exact_1_to_50": true,
+    "metadata_leak_0": true,
+    "duplicate_scene_heading_0": true
+  },
+  "status": "FAIL"
+}
