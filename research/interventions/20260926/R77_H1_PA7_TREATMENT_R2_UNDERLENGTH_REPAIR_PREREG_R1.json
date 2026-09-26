@@ -1,0 +1,33 @@
+{
+  "schema": "R77_H1_PA7_TREATMENT_R2_UNDERLENGTH_REPAIR_PREREG_R1",
+  "date": "2026-09-26",
+  "status": "PREREGISTERED_BEFORE_COMPLETION_D",
+  "parent_treatment_r1": {
+    "chars": 35656,
+    "sha256": "34590dc4892737e6ec24309c50088cc5a0ba0b508e30cd482568a333a006759f",
+    "status": "FAIL_UNDER_40K_ONLY"
+  },
+  "existing_completion_layers": [
+    "A",
+    "B",
+    "C"
+  ],
+  "allowed": [
+    "Add a new completion layer D only inside existing frozen scenes.",
+    "Preserve all A/B/C text and all sequence/scene functions.",
+    "Use no external-judge feedback; no judge has seen PA7 surfaces.",
+    "Add only playable action, voice-specific interaction, or causal operational consequence."
+  ],
+  "forbidden": [
+    "New scene or changed scene function",
+    "Changing the +0.5 focus gate or 40K floor",
+    "Using the known blind sample as a selection target",
+    "Post-action thematic summary whose information is already carried by action",
+    "Padding or repeated procedure"
+  ],
+  "target": {
+    "min_chars": 40000,
+    "max_chars": 43500,
+    "matched_length_with_control_r4": "absolute difference <=10% of shorter arm"
+  }
+}
