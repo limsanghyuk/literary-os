@@ -1,0 +1,17 @@
+{
+  "schema": "R77_H1_PA7_CONTROL_R3_SERIALIZATION_ONLY_REBUILD_PREREG_R1",
+  "date": "2026-09-26",
+  "status": "PREREGISTERED__NO_NEW_CONTENT",
+  "source_control_r1_sha256": "10bb42ad080472137107076f3ea456ce7345fca957a43a8f19bf2f6ba1506e12",
+  "source_completion_file": "research/interventions/20260926/r77_h1_pa7_control_r1/R77_H1_PA7_CONTROL_R2_UNDERLENGTH_COMPLETION.json",
+  "content_mutation": "FORBIDDEN",
+  "builder_rule": "Preserve Control R1 scene text and sequence headings exactly. For selected scenes, append the pre-sealed completion text followed by exactly two newlines before the next scene/sequence heading.",
+  "gates": [
+    "chars_ge_40000",
+    "sequences_exact_1_to_9",
+    "scenes_exact_1_to_50",
+    "metadata_leak_0",
+    "duplicate_scene_heading_0"
+  ],
+  "consequence": "If serialization-correct output remains <40,000 chars, preserve it as mechanical FAIL and preregister a separate bounded content completion. Do not change threshold."
+}
