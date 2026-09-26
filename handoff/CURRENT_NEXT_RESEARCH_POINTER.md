@@ -161,3 +161,60 @@ Exact next:
 2. Hash-seal all three first schema-valid raw JSON judgments.
 3. Only then reveal coordinator mapping and compute the preregistered absolute / paired / focus / recoverability gates.
 4. If PA6 qualifies, use its findings plus the 40K amendment to build the next six H1 launch packets; if it fails, localize the responsible ancestor before any real-provider H1 generation.
+
+
+## R77-H1 PA6 EXTERNAL BLIND CLOSURE / PA7 ENTRY — 2026-09-26
+
+PA6 mapped external result:
+`research/interventions/20260926/R77_H1_PA6_EXTERNAL_3JUDGE_MAPPED_RESULT_R1.json`
+
+PA6 closure:
+`research/interventions/20260926/R77_H1_PA6_EXTERNAL_BLIND_CLOSURE_R1.json`
+
+PA6 postblind diagnostic:
+`research/interventions/20260926/R77_H1_PA6_POSTBLIND_RESPONSIBLE_ANCESTOR_DIAGNOSTIC_R1.json`
+
+PA7 preregistration:
+`research/interventions/20260926/R77_H1_PA7_MATCHED_40K_FRESH_PAIRED_PROVIDER_ANALOG_PREREG_R1.json`
+
+Current token:
+`PA6_CLOSED_FAIL_FOCUS_EFFECT_SIZE__ABSOLUTE_PASS__PAIRED_3_OF_3_TREATMENT__RECOVERABILITY_PASS__PA7_PREREGISTERED_OUTPUTS_0`
+
+PA6 external mapping:
+- J01: Treatment=B / Control=A
+- J02: Treatment=A / Control=B
+- J03: Treatment=A / Control=B
+
+PA6 mapped results:
+- Treatment whole preference: 3/3
+- Treatment surface preference: 3/3
+- Treatment critical violations confirmed by >=2 judges: 0
+- Pooled whole median: Treatment 9.4 / Control 8.95
+- Pooled surface median: Treatment 9.3 / Control 8.9
+- Absolute gate PASS
+- Paired directional gate PASS
+- Recoverability gate PASS
+- Focus gate FAIL: 0/6 focus axes reached pooled median delta >= +0.5; prereg required >=4/6.
+- Focus deltas: Dialogue Subtext +0.40; Character Voice +0.20; Physicalization +0.40; Performance Direction +0.30; Emotion Externalization +0.30; Direction Detail Economy +0.25.
+- Do not weaken the frozen threshold post hoc.
+
+Common residuals:
+- post-action/theme restatement after the action already carries the meaning
+- repeated record/confirm/disclose/custody transactions in adjacent scenes
+- administrative information density crowding emotional breathing room
+- limited character-voice effect size
+- overlong post-climax state-sorting tail
+
+PA7:
+- fresh synthetic case unrelated to H1
+- same fresh frozen architecture for Control/Treatment
+- both arms >=40,000 chars
+- arm length difference <=10%
+- new residual intervention targets summary suppression, procedure dedup, voice orthogonality, emotional counterpressure, ending compression, direction economy
+- same external 3-judge blind
+- same frozen +0.5 / 4-of-6 focus gate
+- outputs 0
+
+Physical Authority remains **SYNC-R74**.
+Existing 35K H1 launch packets remain **STALE_FOR_EXECUTION**.
+Real-provider H1 PM0/C/T remains blocked until provider-analog qualification is achieved and 40K H1 launch packets are rebuilt/resealed.
