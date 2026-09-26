@@ -2,9 +2,9 @@
 Last updated: 2026-09-26
 
 ## CANONICAL START HERE
-`handoff/20260926/START_HERE_SYNC_R74_R77_H1_PA7_INTERRUPTED_HANDOFF_R8.md`
+`handoff/20260926/START_HERE_SYNC_R74_R77_H1_PA7_INTERRUPTED_HANDOFF_R9.md`
 
-R8 supersedes R7.
+R9 supersedes R8.
 
 ## CURRENT AUTHORITY
 - Physical Authority: **SYNC-R74**
@@ -222,7 +222,7 @@ Real-provider H1 PM0/C/T remains blocked until provider-analog qualification is 
 ## LATEST SESSION HANDOFF — 2026-09-26
 
 Canonical new-session handoff:
-`handoff/20260926/START_HERE_SYNC_R74_R77_H1_PA7_INTERRUPTED_HANDOFF_R8.md`
+`handoff/20260926/START_HERE_SYNC_R74_R77_H1_PA7_INTERRUPTED_HANDOFF_R9.md`
 
 Session-interrupt receipt:
 `research/interventions/20260926/R77_H1_PA7_SESSION_INTERRUPT_HANDOFF_R1.json`
@@ -246,3 +246,34 @@ Exact next:
 4. Mechanically validate exact chars/9 seq/50 scenes/leak/duplicates.
 5. If still <40K, preserve that failed R2 and preregister a further bounded underlength repair before writing any new content.
 6. Only after Treatment passes and arm length difference <=10%, build external 3-Judge blind packets and continue PA7.
+
+
+## AUTHORITY ALIGNMENT R9 — 2026-09-26
+Canonical handoff:
+`handoff/20260926/START_HERE_SYNC_R74_R77_H1_PA7_INTERRUPTED_HANDOFF_R9.md`
+
+Physical authority remains **SYNC-R74** because no post-R74 successor has completed reseal + 9/9 delivery/redownload verification.
+
+Developer physical custody:
+`/SYNC_R74_CURRENT_PHYSICAL_9PACKAGES`
+
+Verified Library presence:
+9/9 package files present; Library sizes match the canonical SYNC-R74 manifest.
+
+Canonical existing receipt:
+- local package integrity PASS 9/9
+- delivery redownload verification PASS 9/9
+- mismatches 0
+
+Current research overlay:
+`PA6_CLOSED_FOCUS_FAIL__PA7_CONTROL_R4_40055_PASS__TREATMENT_R1_35656_UNDER40K__COMPLETION_D_SEALED_NOT_COMPOSED__PA7_EXTERNAL_0_OF_3__H1_PRIMARY_0__HUMAN_TARGET_UNOPENED`
+
+Container status during redelivery preparation:
+`RUNTIME_TRANSPORT_HOLD__PACKAGE_CORRUPTION_NOT_SUPPORTED`
+Minimal health check also returned ClientError. Do not create/promote SYNC-R75 while runtime is unhealthy.
+
+Existing six H1 35K launch packets in B2:
+`STALE_FOR_EXECUTION__35K_FLOOR`
+
+Exact next:
+recover runtime -> reverify R74 parent hashes -> compose PA7 Treatment R2 -> finish PA7 external blind -> rebuild 40K H1 launch packets -> only then reseal a successor physical snapshot.
