@@ -10,7 +10,7 @@ Last updated: 2026-09-26
 6. `research/interventions/20260924/R77_H0_PAST_ONLY_CUTOFF_CONTRACT_R1.json`
 
 ## STATUS
-`SYNC_R74_PHYSICAL__DELIVERY_9_OF_9_SHA_PASS__R77_H1_SIX_ISOLATED_LAUNCH_PACKETS_SEALED__C_T_PENDING__HUMAN_TARGET_UNOPENED`
+`SYNC_R74_PHYSICAL__DELIVERY_9_OF_9_SHA_PASS__PA6_CLOSED_FOCUS_FAIL__PA7_CONTROL_R4_PASS__TREATMENT_R1_UNDER40K__COMPLETION_D_SEALED_NOT_COMPOSED__PA7_EXTERNAL_0_OF_3__H1_TARGET_UNOPENED`
 
 ## PHYSICAL PACKAGE CUSTODY
 Personal Library:
@@ -39,9 +39,10 @@ Logical C2 SHA256:
 - Formal R140: NOT_STARTED
 
 ## R77-H1
-Six isolated launch packets are physically embedded in B2.
+Six historical 35K isolated launch packets are physically embedded in B2 but are **STALE_FOR_EXECUTION** after the 40K floor amendment.
 Human targets remain unopened.
-Primary C/T outputs remain 0.
+Primary H1 C/T outputs remain 0.
+Active recovery target is PA7 Treatment R2 composition/validation, not real-provider H1 execution.
 
 ## RUNTIME SAFETY
 Canonical protocol:
