@@ -1,0 +1,97 @@
+{
+  "schema": "RUNTIME_CONTAINER_RESILIENCE_SYNC_R74_B1_B2_LEARNING_AUDIT_R1",
+  "date": "2026-09-26",
+  "scope": "operational_recovery_learning_only",
+  "authority_effect": "NONE",
+  "scientific_effect": "NONE",
+  "physical_authority": "SYNC-R74",
+  "canonical_resilience_protocol": {
+    "path": "research/operations/20260925/LITERARY_OS_RUNTIME_CONTAINER_RESILIENCE_PROTOCOL_R5.md",
+    "blob_sha": "419ab9a424b26b1e0ca0c6b1b6aa327dabb68852"
+  },
+  "direct_attachment_audit": {
+    "B1": {
+      "file": "LITERARY_OS_CURRENT_PART_B1_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73.zip",
+      "bytes": 196427036,
+      "sha256": "00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98",
+      "canonical_manifest_match": true,
+      "entries": 56,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe_paths": 0,
+      "crc_pass": true
+    },
+    "B2": {
+      "file": "LITERARY_OS_CURRENT_PART_B2_R77H1_SIX_LAUNCH_SYNC_R74_20260925.zip",
+      "bytes": 296011084,
+      "sha256": "5462a1c9d355f01a41ce9a52302fce28241d2af1ef5065fdb6fec08c5d107dd0",
+      "canonical_manifest_match": true,
+      "entries": 1893,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe_paths": 0,
+      "crc_pass": true
+    }
+  },
+  "nested_r77_h1_launch_packet_audit": {
+    "packet_count": 6,
+    "all_manifest_sha_match": true,
+    "all_nested_crc_pass": true,
+    "duplicates": 0,
+    "encrypted": 0,
+    "execution_status": "STALE_FOR_EXECUTION__35K_FLOOR__VERIFY_ONLY_DO_NOT_RUN"
+  },
+  "historical_incidents_relearned": [
+    {
+      "type": "ClientError",
+      "classification": "INTERMITTENT_TOOL_GATEWAY_OR_SESSION_BACKEND_FAILURE__NOT_SCIENTIFIC_FAIL",
+      "lesson": "If grouped inspection fails, stop mutation, run minimal health checks, then retry one artifact/one step through a healthy execution path."
+    },
+    {
+      "type": "large_upload_truncation",
+      "example": "D1 expected 138011573 bytes but a prior mount had 132644864 bytes",
+      "classification": "PHYSICAL_UPLOAD_TRUNCATION__NOT_RESEARCH_OR_ENGINE_FAILURE",
+      "lesson": "Never treat visible file presence as byte authority; verify size/SHA/ZIP/CRC before use."
+    },
+    {
+      "type": "grouped_long_call_timeout",
+      "classification": "TOOL_WRAPPER_TIMEOUT_FROM_GROUPED_LARGE_VALIDATION",
+      "lesson": "Split validation into atomic one-artifact calls and resume only the failed step."
+    },
+    {
+      "type": "raw_byte_materialization_denial",
+      "classification": "ACCESS_BOUNDARY__NOT_CORRUPTION",
+      "lesson": "Metadata-only custody cannot authorize mutation/reseal."
+    },
+    {
+      "type": "mount_readiness_race",
+      "classification": "MOUNT_READINESS__NOT_MISSING_BYTES_UNTIL_RECHECKED",
+      "lesson": "Use the exact grounded sandbox path and relist before declaring a file missing."
+    },
+    {
+      "type": "page_cache_pressure",
+      "classification": "RESOURCE_PRESSURE__OOM_ONLY_IF_MEMORY_EVENTS_SUPPORT_IT",
+      "lesson": "One archive at a time, streaming I/O, POSIX_FADV_DONTNEED, and inspect memory.events before calling OOM."
+    },
+    {
+      "type": "authority_shadowing",
+      "classification": "RECOVERY_PRECEDENCE_AMBIGUITY__NOT_DATA_CORRUPTION",
+      "lesson": "External current manifest/trust-root and current handoff outrank nested historical CURRENT_* files."
+    }
+  ],
+  "current_runtime_probe": {
+    "tmp_write_read_delete": "PASS",
+    "memory_max_bytes": 4294967296,
+    "memory_current_bytes_after_audit": 897486848,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    }
+  },
+  "non_negotiable_resume_rule": "STOP -> RUNTIME_TRANSPORT_HOLD -> MINIMAL_HEALTH_CHECK -> LAST_ATOMIC_CHECKPOINT_VERIFY -> RESUME_ONLY_FAILED_STEP",
+  "mutation_policy": "No package mutation/reseal/promotion was performed during this audit."
+}
