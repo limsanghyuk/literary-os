@@ -1,0 +1,25 @@
+{
+  "schema": "R77_H1_PA7_EXTERNAL_BLIND_PREFROZEN_SCENE_SAMPLE_R1",
+  "date": "2026-09-26",
+  "status": "SEALED_BEFORE_CONTROL_OR_TREATMENT_SURFACE",
+  "work_id": "SYNTH_PA7_LAST_BUS_RADIUS",
+  "selected_scenes": [
+    "SC05",
+    "SC12",
+    "SC21",
+    "SC29",
+    "SC38",
+    "SC46"
+  ],
+  "rationale": {
+    "SC05": "초기 권한/KPI 충돌과 인물 음성",
+    "SC12": "목표 재정의 및 압축된 의사결정",
+    "SC21": "접근성·수요지표 충돌과 행동 증명",
+    "SC29": "은정-미라 관계전환과 Voice Orthogonality",
+    "SC38": "시장/버스 실제 공간충돌과 Emotional Counterpressure",
+    "SC46": "실운행 중 행동-대사 결속과 안전/지역 약속"
+  },
+  "immutable_after_first_surface_output": true,
+  "judge_count": 3,
+  "mapping_hidden": true
+}
