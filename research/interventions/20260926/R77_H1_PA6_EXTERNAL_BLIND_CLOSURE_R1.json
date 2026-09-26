@@ -1,0 +1,18 @@
+{
+  "schema": "R77_H1_PA6_EXTERNAL_BLIND_CLOSURE_R1",
+  "date": "2026-09-26",
+  "status": "CLOSED_FAIL__FOCUS_EFFECT_SIZE_GATE",
+  "physical_authority": "SYNC-R74",
+  "result": "research/interventions/20260926/R77_H1_PA6_EXTERNAL_3JUDGE_MAPPED_RESULT_R1.json",
+  "judge_outputs_sealed": 3,
+  "mapping_revealed_after_3_of_3": true,
+  "absolute_gate": "PASS",
+  "paired_directional_gate": "PASS",
+  "focus_gate": "FAIL__0_OF_6_DELTA_GE_0_5__REQUIRED_4_OF_6",
+  "recoverability_gate": "PASS",
+  "h1_primary_outputs": 0,
+  "human_target_opened": false,
+  "real_provider_h1_allowed": false,
+  "stale_35k_launch_packets": "DO_NOT_EXECUTE",
+  "next": "Run a fresh matched-length >=40K provider-analog paired replication that targets residual procedure repetition, post-action explanatory summary, character-voice separation, and ending compression. Keep the +0.5 focus threshold unchanged. Only after that rehearsal qualifies should 40K H1 launch packets be rebuilt for real-provider PM0/C/T."
+}
