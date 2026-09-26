@@ -1,0 +1,112 @@
+{
+  "schema": "RUNTIME_CONTAINER_RESILIENCE_SYNC_R74_D1_D2_LEARNING_AUDIT_R1",
+  "date": "2026-09-26",
+  "scope": "operational_recovery_learning_only",
+  "authority_effect": "NONE",
+  "scientific_effect": "NONE",
+  "physical_authority": "SYNC-R74",
+  "canonical_manifest": "research/operations/20260925/SYNC_R74_5PART_9PACKAGE_MANIFEST_R1.json",
+  "canonical_resilience_protocol": "research/operations/20260925/LITERARY_OS_RUNTIME_CONTAINER_RESILIENCE_PROTOCOL_R5.md",
+  "direct_attachment_audit": {
+    "D1": {
+      "file": "LITERARY_OS_CURRENT_PART_D1_DB59_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73.zip",
+      "bytes": 138011573,
+      "sha256": "a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504",
+      "canonical_manifest_match": true,
+      "entries": 25,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe_paths": 0,
+      "crc_pass": true,
+      "byte_unchanged_from_sync_r73": true
+    },
+    "D2": {
+      "file": "LITERARY_OS_CURRENT_PART_D2_DB59_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73.zip",
+      "bytes": 173393886,
+      "sha256": "c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4",
+      "canonical_manifest_match": true,
+      "entries": 59,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe_paths": 0,
+      "crc_pass": true,
+      "byte_unchanged_from_sync_r73": true
+    }
+  },
+  "embedded_split_audit": {
+    "part001": {
+      "member": "20_SPLIT_VOLUMES/DB59_AUTHORITY_METADATA_REPAIRED_FULL.zip.part001",
+      "bytes": 129878261,
+      "sha256": "212e1f77c696d5a911f19eb44dd5ed4c0de145ac8f9f8be60ec2d942f477e9ff"
+    },
+    "part002": {
+      "member": "20_SPLIT_VOLUMES/DB59_AUTHORITY_METADATA_REPAIRED_FULL.zip.part002",
+      "bytes": 129878260,
+      "sha256": "b5b0df4967df9e6b93a2641454a0cc7c03895d32e3178a77207c0ff2b01a1b3f"
+    }
+  },
+  "logical_db59_audit": {
+    "rejoin_location": "/tmp only",
+    "bytes": 259756521,
+    "sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "authority_hash_match": true,
+    "entries": 38852,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe_paths": 0,
+    "crc_pass": true,
+    "temporary_rejoin_deleted": true
+  },
+  "nested_required_packages": {
+    "D1_DRAMA_ONLY": {
+      "bytes": 8546036,
+      "sha256": "9615bc96c3e99433c22b95ef003d381036c218aba52e4846a1b4e5a115915ed1",
+      "entries": 950,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe_paths": 0,
+      "crc_pass": true,
+      "temporary_extract_deleted": true
+    },
+    "D2_ANALYSIS_MASTER": {
+      "bytes": 46150549,
+      "sha256": "b9d61b17de9ef30cf08a21ea177b2478a8aa982e3a9ade91058d4dcee00ddf28",
+      "entries": 6403,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe_paths": 0,
+      "crc_pass": true,
+      "temporary_extract_deleted": true
+    }
+  },
+  "learned_rules": [
+    "Validate four custody layers separately: outer transport -> embedded split chunk -> logical rejoin -> nested required packages.",
+    "Stream split members directly into a /tmp logical verifier; do not materialize multiple large standalone chunks unless required.",
+    "A healthy outer carrier does not prove an inner chunk or logical DB authority is correct.",
+    "Historical embedded bootstrap/CURRENT documents are provenance only and cannot override the current external SYNC-R74 manifest/trust-root/handoff.",
+    "If DB59 semantic payload remains unchanged, D1/D2 remain byte-identical and must not be mutated merely because later research advanced.",
+    "Visible upload presence is not byte authority; size/SHA/central-directory/CRC/member checks are required.",
+    "On ClientError or minimal-command failure: STOP -> RUNTIME_TRANSPORT_HOLD -> MINIMAL_HEALTH_CHECK -> LAST_ATOMIC_CHECKPOINT_VERIFY -> RESUME_ONLY_FAILED_STEP.",
+    "Do not call page-cache pressure OOM unless memory.events supports it."
+  ],
+  "historical_error_relearning": {
+    "known_truncation_example": "Prior D1 mount had 132644864 bytes instead of canonical 138011573 bytes; classify as PHYSICAL_UPLOAD_TRUNCATION, not research/engine failure.",
+    "grouped_validation_risk": "Large grouped validation previously caused wrapper timeout; use one artifact/one step.",
+    "tool_gateway_risk": "Intermittent ClientError can occur while local shell/filesystem remains healthy; local success does not prove all gateways healthy.",
+    "authority_conflict_rule": "If authority conflict cannot be resolved, stop as AUTHORITY_CONFLICT_UNRESOLVED rather than guessing."
+  },
+  "current_runtime_probe": {
+    "tmp_write_read_delete": "PASS",
+    "memory_max_bytes": 4294967296,
+    "memory_current_bytes_after_cleanup": 2409013248,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    }
+  },
+  "mutation_policy": "No package mutation/reseal/promotion was performed during this audit."
+}
