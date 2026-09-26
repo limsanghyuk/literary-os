@@ -1,0 +1,41 @@
+{
+  "schema": "R77_H1_PA6_POSTBLIND_RESPONSIBLE_ANCESTOR_DIAGNOSTIC_R1",
+  "date": "2026-09-26",
+  "status": "CLOSED_DIAGNOSTIC__NO_SCORE_CHANGE",
+  "parent_result": "research/interventions/20260926/R77_H1_PA6_EXTERNAL_3JUDGE_MAPPED_RESULT_R1.json",
+  "evidence": {
+    "unanimous_directional_preference": "Treatment 3/3 whole + 3/3 surface",
+    "absolute_quality": "PASS",
+    "recoverability": "PASS",
+    "focus_effect_size": "FAIL__0_OF_6_GE_PLUS_0_5",
+    "observed_focus_deltas": {
+      "DIALOGUE_SUBTEXT": 0.4,
+      "CHARACTER_VOICE": 0.2,
+      "PHYSICALIZATION_ACTION": 0.4,
+      "PERFORMANCE_DIRECTION_QUALITY": 0.3,
+      "EMOTION_EXTERNALIZATION": 0.3,
+      "DIRECTION_DETAIL_ECONOMY": 0.25
+    }
+  },
+  "cross_judge_common_residuals": [
+    "Post-action explanatory or thematic summary lines remain after the scene has already carried the meaning through behavior.",
+    "Record/confirm/disclose/separate procedures recur in adjacent scenes and can flatten dramatic differentiation.",
+    "Administrative/evidence-handling density sometimes compresses emotional breathing room.",
+    "Character-voice gains are positive but smaller than the other craft gains.",
+    "Final sequence continues several record/sort/close beats after the central performance climax."
+  ],
+  "responsible_ancestor_hypothesis": [
+    "Surface realization policy still treats semantic explicitness as a safety fallback too often after successful physicalization.",
+    "Scene-function deduplication does not sufficiently penalize repeated evidence-custody/administrative transactions.",
+    "Voice controller is subordinate to institutional task semantics in high-procedure scenes.",
+    "Ending controller over-preserves every state-ledger closure cue instead of allowing some state to be inferable from already-visible action."
+  ],
+  "excluded_as_primary_cause": [
+    "Episode premise coherence",
+    "Nine-sequence architecture",
+    "Major-thread integration",
+    "Output recoverability",
+    "Basic physicalization capability"
+  ],
+  "next_research_requirement": "Fresh matched-length 40K+ paired rehearsal with a new synthetic architecture, same frozen input for both arms, explicit residual-surface intervention, unchanged +0.5 focus gate, external 3-judge blind."
+}
