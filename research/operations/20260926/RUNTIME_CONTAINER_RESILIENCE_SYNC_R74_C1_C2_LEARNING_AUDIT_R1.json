@@ -1,0 +1,107 @@
+{
+  "schema": "RUNTIME_CONTAINER_RESILIENCE_SYNC_R74_C1_C2_LEARNING_AUDIT_R1",
+  "date": "2026-09-26",
+  "scope": "operational_recovery_learning_only",
+  "authority_effect": "NONE",
+  "scientific_effect": "NONE",
+  "physical_authority": "SYNC-R74",
+  "canonical_resilience_protocol": "research/operations/20260925/LITERARY_OS_RUNTIME_CONTAINER_RESILIENCE_PROTOCOL_R5.md",
+  "direct_attachment_audit": {
+    "C1": {
+      "file": "LITERARY_OS_CURRENT_C1_RUNTIME_CORE_SYNC_R74_EXACT_R69_20260925.zip",
+      "bytes": 140403571,
+      "sha256": "3a1880310b7291d832b24c749c47dee2f6862387ddedb8ce3bcb652e0e899f5d",
+      "canonical_manifest_match": true,
+      "entries": 101,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe_paths": 0,
+      "crc_pass": true
+    },
+    "C2A": {
+      "file": "LITERARY_OS_CURRENT_C2_BINARY_A_SYNC_R74_R77H1_SIX_LAUNCH_20260925.bin",
+      "bytes": 264043978,
+      "sha256": "561733e08ef3bc77e9e12f124df69ffca69cd9386eb0d1e9d6f843f50408a2d7",
+      "canonical_manifest_match": true
+    },
+    "C2B": {
+      "file": "LITERARY_OS_CURRENT_C2_BINARY_B_SYNC_R74_R77H1_SIX_LAUNCH_20260925.bin",
+      "bytes": 264043978,
+      "sha256": "1c2ccca49b4ac74de87f04a2a4c239d2ca6f3b0f67c352d30ba9dc0bae45685c",
+      "canonical_manifest_match": true
+    }
+  },
+  "logical_c2_audit": {
+    "rejoin_location": "/tmp only",
+    "bytes": 528087956,
+    "sha256": "8d766316cb153f04302ba633fb644967d1785b15298e1ea1b2a09b2d628e6896",
+    "canonical_manifest_match": true,
+    "entries": 4011,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe_paths": 0,
+    "crc_pass": true,
+    "temporary_rejoin_deleted": true
+  },
+  "exact_r69_runtime_member": {
+    "member": "candidate_overlay_sync_r67_post_r69/R69_RUNTIME_SOURCE_FROZEN.zip",
+    "bytes": 19137771,
+    "sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+    "authority_hash_match": true,
+    "entries": 497,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe_paths": 0,
+    "crc_pass": true,
+    "temporary_extract_deleted": true
+  },
+  "r74_runtime_binding": {
+    "active_runtime": "exact R69",
+    "runtime_changed": false,
+    "physical_authority": "SYNC-R74",
+    "note": "SYNC-R74 is research-state physical alignment only; no runtime mutation."
+  },
+  "historical_incidents_relearned": [
+    {
+      "evidence": "00_CURRENT_R8_REI_INTEGRATED_PRETEST_PHYSICAL_CLOSURE/09_CONTAINER_CLIENTERROR_OPERATIONAL_SAFETY_R1.json",
+      "classification": "INTERMITTENT_TOOL_GATEWAY_OR_SESSION_BACKEND_FAILURE__LOCAL_RESOURCE_EXHAUSTION_NOT_SUPPORTED__ROOT_CAUSE_NOT_OBSERVABLE",
+      "lesson": "Never mark experiment FAIL solely on ClientError; atomic checkpoint and resume only failed stage."
+    },
+    {
+      "evidence": "P07_I4H_RUNTIME_RECOVERY_R3_DELTA_R1/EVIDENCE/RUNTIME_INCIDENT_RESOLUTION.json",
+      "classification": "DURABLE_UPLOAD_TRANSPORT_BOUNDARY_INSTABILITY_PLUS_WRONG_C2_MATERIALIZATION_TOPOLOGY_ASSUMPTION",
+      "lesson": "C2 is a multi-overlay archive. Do not flatten or infer a single-root topology; materialize by frozen overlay order and prevalidate before provider/render calls."
+    },
+    {
+      "evidence": "research_sync_r60/CONTAINER_RESILIENCE_LEARNED_R1.md",
+      "classification": "RECOVERY_OPERATIONS_RULESET",
+      "lesson": "Use /tmp for large intermediates, streaming I/O, POSIX_FADV_DONTNEED, exact byte verification, and keep physical authority separate from alternate-compute scientific validation."
+    },
+    {
+      "evidence": "research_sync_r70_post_r72_closure/R72/R72_PRIMARY_MATERIALIZATION_PROTOCOL_R4.json",
+      "classification": "PREFLIGHT_BEFORE_PRIMARY_OUTPUT",
+      "lesson": "Run deterministic eligibility/completeness gates before treatment/provider outputs; after treatment is viewed, do not replace cases."
+    },
+    {
+      "evidence": "SYNC_R71_AUTHORITY_REPAIR/SYNC_R70_COLLISION_QUARANTINE_R1.json",
+      "classification": "SAME_NAME_DIFFERENT_HASH_COLLISION",
+      "lesson": "Never overwrite or silently choose same-label/different-hash objects; preserve both, quarantine ambiguity, and establish a uniquely identified successor."
+    }
+  ],
+  "current_runtime_probe": {
+    "minimal_shell": "PASS",
+    "tmp_write_read_delete": "PASS",
+    "memory_max_bytes": 4294967296,
+    "memory_current_bytes_after_cleanup": 1545420800,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    }
+  },
+  "non_negotiable_resume_rule": "STOP -> RUNTIME_TRANSPORT_HOLD -> MINIMAL_HEALTH_CHECK -> LAST_ATOMIC_CHECKPOINT_VERIFY -> RESUME_ONLY_FAILED_STEP",
+  "mutation_policy": "No package mutation/reseal/promotion was performed during this audit."
+}
