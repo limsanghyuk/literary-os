@@ -1,0 +1,41 @@
+{
+  "schema": "R77_H1_PA7_SESSION_INTERRUPT_HANDOFF_R1",
+  "date": "2026-09-26",
+  "physical_authority": "SYNC-R74",
+  "physical_delivery_status": "PASS_9_OF_9",
+  "research_status": "PA7_IN_PROGRESS__CONTROL_R4_PASS__TREATMENT_R2_NOT_YET_COMPOSED",
+  "control_r4": {
+    "chars": 40055,
+    "sha256": "41f45e7d00dbd9e4a89837cac0c7516c18c5f42fd1edd066015f824f27d36495",
+    "sequences": 9,
+    "scenes": 50,
+    "status": "PASS_IMMUTABLE"
+  },
+  "treatment_r1": {
+    "chars": 35656,
+    "sha256": "34590dc4892737e6ec24309c50088cc5a0ba0b508e30cd482568a333a006759f",
+    "sequences": 9,
+    "scenes": 50,
+    "status": "FAIL_UNDER40K_ONLY"
+  },
+  "treatment_completion_d": {
+    "scenes": [
+      4,
+      7,
+      18,
+      26,
+      34,
+      37,
+      43,
+      49
+    ],
+    "insert_text_chars": 3174,
+    "status": "SEALED_NOT_COMPOSED"
+  },
+  "pa7_external_judge_outputs": 0,
+  "h1_primary_outputs": 0,
+  "human_target_opened": false,
+  "old_sync_r74_h1_packets": "STALE_FOR_EXECUTION__35K_FLOOR",
+  "exact_next": "Compose Treatment R2 from existing Treatment R1 plus sealed Completion D, mechanically validate, and only if still under 40K preregister a further bounded underlength repair before writing new content.",
+  "handoff": "handoff/20260926/START_HERE_SYNC_R74_R77_H1_PA7_INTERRUPTED_HANDOFF_R8.md"
+}
