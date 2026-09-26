@@ -1,0 +1,19 @@
+{
+  "schema": "R77_H1_PA7_CONTROL_R4_FINAL_UNDERLENGTH_REPAIR_PREREG_R1",
+  "date": "2026-09-26",
+  "status": "PREREGISTERED_BEFORE_R4_CONTENT",
+  "parent_control_r3": {
+    "chars": 39664,
+    "sha256": "caeb702e870e85c073e5fb7e2e67eab9d695e5337938877c0f80e15268ef2f1a",
+    "status": "FAIL_UNDER_40K_ONLY"
+  },
+  "allowed": "Add one bounded scene-specific action/dialogue realization inside an existing frozen scene; keep architecture and all prior content intact.",
+  "forbidden": [
+    "new scene",
+    "changed scene function",
+    "Treatment residual intervention",
+    "threshold change",
+    "external feedback"
+  ],
+  "target": "40,000-41,500 chars"
+}
