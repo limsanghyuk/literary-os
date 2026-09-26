@@ -1,0 +1,32 @@
+name: R77-H1 PA7 C4 T1 Base Evidence Seal R2
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  seal:
+    if: contains(github.event.head_commit.message, 'Seal PA7 C4 T1 base evidence R2')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Rebuild Control R4
+        run: python research/interventions/20260926/r77_h1_pa7_control_r4_build_validate.py
+      - name: Rebuild Treatment R1 base
+        run: python research/interventions/20260926/r77_h1_pa7_treatment_r1_build_validate.py || true
+      - name: Seal exact evidence paths
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add research/interventions/20260926/r77_h1_pa7_control_r1/R77_H1_PA7_CONTROL_R4_FULL_SCREENPLAY.txt
+          git add research/interventions/20260926/r77_h1_pa7_control_r1/R77_H1_PA7_CONTROL_R4_MECHANICAL_RESULT.json
+          git add research/interventions/20260926/r77_h1_pa7_treatment_r1/R77_H1_PA7_TREATMENT_R1_FULL_SCREENPLAY.txt
+          git add research/interventions/20260926/r77_h1_pa7_treatment_r1/R77_H1_PA7_TREATMENT_R1_MECHANICAL_RESULT.json
+          git commit -m 'Seal PA7 Control R4 and Treatment R1 base evidence R2' || exit 0
+          git pull --rebase origin main
+          git push
