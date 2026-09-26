@@ -1,0 +1,23 @@
+{
+  "schema": "R77_H1_PA7_CONTROL_R2_UNDERLENGTH_REPAIR_PREREG_R1",
+  "date": "2026-09-26",
+  "status": "PREREGISTERED_BEFORE_CONTROL_R2_CONTENT",
+  "parent_control_r1": {
+    "chars": 37628,
+    "sha256": "10bb42ad080472137107076f3ea456ce7345fca957a43a8f19bf2f6ba1506e12",
+    "status": "FAIL__UNDER_40K_ONLY"
+  },
+  "allowed": [
+    "Add scene-specific action/dialogue realization only inside existing frozen scenes.",
+    "Keep the same 9-sequence/50-scene architecture and scene functions.",
+    "Do not use Treatment output or any external-judge feedback.",
+    "Do not remove or rewrite the sealed Control R1 evidence."
+  ],
+  "forbidden": [
+    "New scenes or changed scene functions",
+    "Treatment residual intervention",
+    "Changing the 40K threshold",
+    "Using external quality feedback"
+  ],
+  "target": "Control R2 >=40,000 chars with all other mechanical gates unchanged."
+}
