@@ -1,0 +1,34 @@
+{
+  "schema": "R77_H1_PA7_TREATMENT_R3_FINAL_MECHANICAL_RESULT",
+  "date": "2026-09-26",
+  "treatment": {
+    "chars": 40250,
+    "sha256": "001571fd5ff9b7998a973ced39efa3957ebe515aa06fa8b295c5c2f47cb641ec",
+    "sequences": 9,
+    "scenes": 50
+  },
+  "control_reference": {
+    "chars": 40055,
+    "sha256": "41f45e7d00dbd9e4a89837cac0c7516c18c5f42fd1edd066015f824f27d36495"
+  },
+  "matched_length": {
+    "absolute_diff": 195,
+    "pct_of_shorter": 0.004868306079141181
+  },
+  "applied_scene_count": 50,
+  "identical_full_scenes": [],
+  "gates": {
+    "treatment_chars_ge_40000": true,
+    "treatment_chars_le_42000": true,
+    "control_chars_ge_40000": true,
+    "matched_length_diff_le_10pct": true,
+    "sequences_exact_1_to_9": true,
+    "scenes_exact_1_to_50": true,
+    "all_50_scenes_have_preseal_realization": true,
+    "metadata_leak_0": true,
+    "duplicate_scene_heading_0": true,
+    "treatment_control_sha_different": true,
+    "identical_full_scene_0": true
+  },
+  "status": "PASS"
+}
