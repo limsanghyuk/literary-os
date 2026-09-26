@@ -1,0 +1,27 @@
+name: R74 Stage M R4 Packed-Stage Recovery
+on:
+  pull_request:
+    paths:
+      - 'research/interventions/20260922/R74_R4_PACKED_STAGE_RECOVERY_PREREGISTRATION_ADDENDUM_R1.md'
+      - 'research/interventions/20260922/r74_symmetric_semantic_measurement_bridge_r4.py'
+      - 'research/interventions/20260922/r74_stage_m_r4_packed_stage.py'
+      - '.github/workflows/r74-stage-m-r4-packed-stage.yml'
+permissions:
+  contents: read
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run R74 Stage M R4 packed-stage qualification
+        run: python research/interventions/20260922/r74_stage_m_r4_packed_stage.py
+      - name: Upload result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r74-stage-m-r4-result
+          path: r74_stage_m_r4_result.json
+          if-no-files-found: error
