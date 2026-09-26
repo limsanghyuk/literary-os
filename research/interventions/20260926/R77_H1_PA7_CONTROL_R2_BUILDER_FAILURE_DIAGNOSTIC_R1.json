@@ -1,0 +1,16 @@
+{
+  "schema": "R77_H1_PA7_CONTROL_R2_BUILDER_FAILURE_DIAGNOSTIC_R1",
+  "date": "2026-09-26",
+  "status": "CLOSED_INFRA_SERIALIZATION_BUG__SCIENTIFIC_CONTENT_NOT_FAILED",
+  "parent_control_r1_sha256": "10bb42ad080472137107076f3ea456ce7345fca957a43a8f19bf2f6ba1506e12",
+  "failed_control_r2_sha256": "9483a94157c6f031f653da5eda879db5257d964037aac7abfc392b8c83e4036b",
+  "observed": {
+    "chars": 39595,
+    "sequences": 9,
+    "detected_scenes": 8
+  },
+  "cause": "R2 builder concatenated each base scene chunk after rstrip() without restoring a separator when no insert followed. Most subsequent '씬 N.' headings were attached to the previous prose line and ceased to match the line-anchored scene regex. This also removed formatting bytes and invalidated the character count.",
+  "evidence_boundary": "No external judge saw Control R2. No Treatment score or external feedback was available. R1 source and R2 completion inserts remain unchanged.",
+  "allowed_repair": "Serialization-only R3: preserve every byte of Control R1 and insert the already-sealed R2 completion text before the next scene heading with explicit newline separators. No new screenplay content.",
+  "scientific_effect": "NONE"
+}
