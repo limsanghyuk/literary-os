@@ -1,0 +1,20 @@
+{
+  "schema": "R77_H1_PA7_CONTROL_R3_FINAL_MECHANICAL_REPAIR_PREREG_R1",
+  "date": "2026-09-26",
+  "status": "PREREGISTERED_BEFORE_R3_CONTENT",
+  "parent_r2": {
+    "chars": 39595,
+    "sha256": "9483a94157c6f031f653da5eda879db5257d964037aac7abfc392b8c83e4036b",
+    "status": "FAIL"
+  },
+  "causes": [
+    "Builder newline preservation bug caused only 8 of 50 headings to remain line-start parseable.",
+    "Content remained 405 chars below the frozen 40,000 minimum."
+  ],
+  "allowed": [
+    "Fix builder only so existing headings remain byte-visible at line starts.",
+    "Add one scene-specific completion of >=500 substantive chars inside an existing frozen scene.",
+    "No scene/function changes and no Treatment/external feedback."
+  ],
+  "target": "R3 >=40K, exact 9 sequences/50 scenes, all prior mechanical gates PASS."
+}
