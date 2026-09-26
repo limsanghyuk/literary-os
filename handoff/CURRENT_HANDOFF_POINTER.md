@@ -4,7 +4,7 @@ Last updated: 2026-09-26
 ## CANONICAL START HERE
 `handoff/20260926/START_HERE_SYNC_R74_R77_H1_PA7_INTERRUPTED_HANDOFF_R8.md`
 
-R7 supersedes R6.
+R8 supersedes R7.
 
 ## CURRENT AUTHORITY
 - Physical Authority: **SYNC-R74**
@@ -22,14 +22,17 @@ R7 supersedes R6.
 - Formal R140: NOT_STARTED
 
 ## CURRENT R77-H1
-`SIX_ISOLATED_LAUNCH_PACKETS_SEALED__C_T_GENERATION_NOT_STARTED__HUMAN_TARGET_UNOPENED__PRIMARY_OUTPUTS_0`
+`PA6_CLOSED_FAIL_FOCUS_EFFECT_SIZE__PA7_CONTROL_R4_40055_PASS__TREATMENT_R1_35656_UNDER40K__COMPLETION_D_SEALED_NOT_COMPOSED__PA7_EXTERNAL_0_OF_3__H1_PRIMARY_OUTPUTS_0__HUMAN_TARGET_UNOPENED`
 
-Six fresh isolated launch packets are now physically embedded in Part B2.
+Six historical 35K launch packets remain physically embedded in Part B2, but after the 40K amendment they are **STALE_FOR_EXECUTION**. Current active work is PA7 provider-analog qualification.
 
 ## EXACT NEXT
-Execute EARLY-C/T, MIDDLE-C/T, LATE-C/T in six fresh isolated model contexts.
-Do not generate candidate prose in the Project-aware coordinator context.
-Only after C and T of one stratum are both sealed may its Human target be opened.
+1. Keep Physical Authority at SYNC-R74.
+2. Keep Control R4 immutable: 40,055 chars / SHA `41f45e7d00dbd9e4a89837cac0c7516c18c5f42fd1edd066015f824f27d36495`.
+3. Compose Treatment R2 from existing Treatment R1 + sealed Completion D only.
+4. Mechanically validate 40K / 9 sequences / 50 scenes / leak and duplicate checks.
+5. If still under 40K, preserve failed R2 and preregister the next bounded underlength repair before writing content.
+6. Only after PA7 external-blind qualification, rebuild six H1 launch packets under the 40K floor.
 
 ## PACKAGE CUSTODY
 Personal Library:
