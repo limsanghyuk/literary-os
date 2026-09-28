@@ -1,8 +1,8 @@
 # CURRENT SESSION RECOVERY POINTER
-Last updated: 2026-09-26
+Last updated: 2026-09-28
 
 ## CANONICAL RECOVERY
-1. `handoff/20260926/START_HERE_SYNC_R74_R77_H1_PA7_INTERRUPTED_HANDOFF_R9.md`
+1. `handoff/20260928/START_HERE_SYNC_R74_R77_H1_PA7_EXTERNAL_DISPATCH_READY_R10.md`
 2. `research/operations/20260925/SYNC_R74_5PART_9PACKAGE_MANIFEST_R1.json`
 3. `research/operations/20260925/SYNC_R74_PHYSICALIZATION_RECEIPT_R1.json`
 4. `research/interventions/20260925/R77_H1_SIX_FRESH_ISOLATED_LAUNCH_READY_R1.json`
@@ -10,7 +10,7 @@ Last updated: 2026-09-26
 6. `research/interventions/20260924/R77_H0_PAST_ONLY_CUTOFF_CONTRACT_R1.json`
 
 ## STATUS
-`SYNC_R74_PHYSICAL__DELIVERY_9_OF_9_SHA_PASS__PA6_CLOSED_FOCUS_FAIL__PA7_CONTROL_R4_PASS__TREATMENT_R1_UNDER40K__COMPLETION_D_SEALED_NOT_COMPOSED__PA7_EXTERNAL_0_OF_3__H1_TARGET_UNOPENED`
+`SYNC_R74_PHYSICAL__DELIVERY_9_OF_9_SHA_PASS__PA7_CONTROL_R4_PASS__TREATMENT_R3_FINAL_PASS__MATCHED_LENGTH_PASS__3_BLIND_PACKETS_SEALED__JUDGE_OUTPUTS_0_OF_3__H1_TARGET_UNOPENED`
 
 ## PHYSICAL PACKAGE CUSTODY
 Personal Library:
@@ -284,3 +284,16 @@ Existing six H1 35K launch packets in B2:
 
 Exact next:
 recover runtime -> reverify R74 parent hashes -> compose PA7 Treatment R2 -> finish PA7 external blind -> rebuild 40K H1 launch packets -> only then reseal a successor physical snapshot.
+
+
+## PA7 EXTERNAL DISPATCH READY — 2026-09-28
+Recovery handoff:
+`handoff/20260928/START_HERE_SYNC_R74_R77_H1_PA7_EXTERNAL_DISPATCH_READY_R10.md`
+
+Dispatch:
+`research/interventions/20260928/pa7_external_dispatch_r1/`
+
+Current state:
+`PA7_MECHANICAL_PASS__MATCHED_LENGTH_PASS__DISPATCH_3_OF_3_SEALED__LEAK_0__JUDGE_OUTPUTS_0_OF_3__MAPPING_UNREVEALED__H1_PRIMARY_0__HUMAN_TARGET_UNOPENED`
+
+Resume only at independent judge evaluation. Do not regenerate Control/Treatment surfaces and do not reveal coordinator mapping before 3/3 valid judgments are sealed.
