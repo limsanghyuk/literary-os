@@ -1,0 +1,39 @@
+{
+  "schema": "PA7_BLIND_JUDGE_PACKAGE_MANIFEST_R2",
+  "date": "2026-09-28",
+  "judge_id": "J01",
+  "status": "PASS__JUDGE_FACING_SET_COMPLETE__MAPPING_ABSENT",
+  "judge_facing_files": [
+    {
+      "name": "J01_EVALUATOR_READ_FIRST_R1.md",
+      "git_blob_sha": "5f3017188fb5295c9679c1326626ae0400f1cb75"
+    },
+    {
+      "name": "J01_BLIND_PACKET.txt",
+      "git_blob_sha": "4638cb0c398ba3bceb12b75e5cf90c17c93a0a75",
+      "sha256": "50d8f274286b70b4085d976c3938f1d2f5b58cef0f6397abc60f1c9acafc14e5",
+      "chars": 94330
+    },
+    {
+      "name": "J01_OUTPUT_SCHEMA.json",
+      "git_blob_sha": "ec20cb22f5cf49446eee1090f47b4c58a80c6b9e"
+    }
+  ],
+  "coordinator_only_integrity_file": {
+    "name": "J01_PACKET_MANIFEST.json",
+    "git_blob_sha": "68c783b81dbf82b920a3b62b23ffff3f90fffbd4"
+  },
+  "prefrozen_scenes": [
+    "SC05",
+    "SC12",
+    "SC21",
+    "SC29",
+    "SC38",
+    "SC46"
+  ],
+  "mapping_present_in_judge_facing_files": false,
+  "surface_identity_present": false,
+  "lineage_present": false,
+  "evaluation_clarification": "research/interventions/20260928/R77_H1_PA7_EXTERNAL_EVALUATION_CLARIFICATION_PREREG_R1.json",
+  "intake_validation_spec": "research/interventions/20260928/R77_H1_PA7_JUDGE_OUTPUT_INTAKE_VALIDATION_SPEC_R1.json"
+}
