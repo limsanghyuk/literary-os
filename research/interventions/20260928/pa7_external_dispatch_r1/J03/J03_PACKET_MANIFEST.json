@@ -1,0 +1,18 @@
+{
+  "schema": "PA7_BLIND_JUDGE_PACKET_MANIFEST_R1",
+  "date": "2026-09-28",
+  "judge_id": "J03",
+  "packet_sha256": "50d8f274286b70b4085d976c3938f1d2f5b58cef0f6397abc60f1c9acafc14e5",
+  "packet_chars": 94330,
+  "prefrozen_scenes": [
+    5,
+    12,
+    21,
+    29,
+    38,
+    46
+  ],
+  "mapping_present": false,
+  "forbidden_hit_count": 0,
+  "source_surface_hashes_not_in_packet": true
+}
