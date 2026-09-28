@@ -1,8 +1,8 @@
 # CURRENT NEXT RESEARCH POINTER
-Last updated: 2026-09-26
+Last updated: 2026-09-28
 
 ## START HERE
-`handoff/20260926/START_HERE_SYNC_R74_R77_H1_PA7_INTERRUPTED_HANDOFF_R9.md`
+`handoff/20260928/START_HERE_SYNC_R74_R77_H1_PA7_EXTERNAL_DISPATCH_READY_R10.md`
 
 ## ACTIVE RESEARCH
 R77-H1 — Human Next-Episode Prospective Benchmark Three-Position Pilot
@@ -17,7 +17,7 @@ R77-H1 — Human Next-Episode Prospective Benchmark Three-Position Pilot
 - Formal R140: NOT_STARTED
 
 ## CURRENT STATUS
-`PA7_IN_PROGRESS__CONTROL_R4_PASS__TREATMENT_R1_UNDER40K__COMPLETION_D_SEALED_NOT_COMPOSED__EXTERNAL_JUDGE_OUTPUTS_0__H1_PRIMARY_OUTPUTS_0__HUMAN_TARGET_UNOPENED`
+`PA7_SURFACES_MATCHED_PASS__CONTROL_R4_40055__TREATMENT_R3_40250__3_BLIND_PACKETS_SEALED_LEAK_0__JUDGE_OUTPUTS_0_OF_3__H1_PRIMARY_OUTPUTS_0__HUMAN_TARGET_UNOPENED`
 
 Historical six H1 launch packets remain embedded in SYNC-R74 but are **STALE_FOR_EXECUTION__35K_FLOOR**.
 
@@ -266,3 +266,19 @@ Existing six H1 35K launch packets in B2:
 
 Exact next:
 recover runtime -> reverify R74 parent hashes -> compose PA7 Treatment R2 -> finish PA7 external blind -> rebuild 40K H1 launch packets -> only then reseal a successor physical snapshot.
+
+
+## LATEST NEXT — 2026-09-28
+PA7 mechanical surface qualification is complete:
+- Control R4 PASS 40,055
+- Treatment R3 Final PASS 40,250
+- matched-length PASS
+- blind dispatch PASS 3 packets / leak 0
+
+Exact next research action:
+1. Run J01 in a fresh independent evaluator context using only its sealed packet + output schema.
+2. Hash-seal first complete schema-valid raw JSON.
+3. Repeat separately for J02 and J03.
+4. Do not reveal mapping before 3/3.
+5. After 3/3, reveal mapping and calculate frozen Absolute / Paired / Focus / Recoverability gates.
+6. Do not execute stale 35K H1 packets.
