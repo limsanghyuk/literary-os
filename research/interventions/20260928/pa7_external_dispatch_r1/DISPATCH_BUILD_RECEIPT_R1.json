@@ -1,0 +1,26 @@
+{
+  "schema": "R77_H1_PA7_DISPATCH_BUILD_RECEIPT_R1",
+  "date": "2026-09-28",
+  "status": "PASS__3_BLIND_PACKETS__LEAK_0",
+  "judge_packet_hashes": {
+    "J01": "50d8f274286b70b4085d976c3938f1d2f5b58cef0f6397abc60f1c9acafc14e5",
+    "J02": "eba31aa22ec632638b43e2d8fb6376be82b9587ae3fdea95431f8b5ee81988b2",
+    "J03": "50d8f274286b70b4085d976c3938f1d2f5b58cef0f6397abc60f1c9acafc14e5"
+  },
+  "judge_packet_chars": {
+    "J01": 94330,
+    "J02": 94330,
+    "J03": 94330
+  },
+  "mapping_artifact_present": true,
+  "control_sha256": "41f45e7d00dbd9e4a89837cac0c7516c18c5f42fd1edd066015f824f27d36495",
+  "treatment_sha256": "001571fd5ff9b7998a973ced39efa3957ebe515aa06fa8b295c5c2f47cb641ec",
+  "prefrozen_scenes": [
+    5,
+    12,
+    21,
+    29,
+    38,
+    46
+  ]
+}
