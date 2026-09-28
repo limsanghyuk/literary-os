@@ -1,0 +1,58 @@
+{
+  "schema": "PA7_3JUDGE_PREMAPPING_INTAKE_SEAL_R1",
+  "date": "2026-09-29",
+  "status": "PASS__3_OF_3_FIRST_SCHEMA_VALID_JUDGMENTS_HASH_SEALED__MAPPING_NOT_YET_REVEALED_AT_SEAL",
+  "source_context": "User supplied three independent judge results in the current coordinator session. J01/J03 arrived as UI-markdown escaped JSON; J02 arrived as JSON.",
+  "intake_spec": "research/interventions/20260928/R77_H1_PA7_JUDGE_OUTPUT_INTAKE_VALIDATION_SPEC_R1.json",
+  "results": {
+    "J01": {
+      "received_file": "붙여넣은 마크다운.md",
+      "raw_bytes": 28493,
+      "raw_sha256": "f0201b39a79d5db9247d26449b43c0f5d295a99c9a9073a7e5f6bdf8a784f75d",
+      "transport_normalization": [
+        "HTML entity decode",
+        "remove UI line-ending backslash",
+        "unescape markdown \\~ to ~"
+      ],
+      "canonical_json_bytes": 26330,
+      "canonical_json_sha256": "a8a26e8924ae0cb3edfdf2d82be01ed4c3e5f2d9c0401f17b177ec6b782e221b",
+      "schema_valid": true,
+      "whole_score_slots": 16,
+      "surface_score_slots": 168,
+      "whole_preference": "A",
+      "surface_preference": "A"
+    },
+    "J02": {
+      "received_file": "J02_RESULT.json",
+      "raw_bytes": 25475,
+      "raw_sha256": "41da679817f86b55309678b05b4fcb8d00f6cdea8e0a73f18464f8b83c1a7cb0",
+      "transport_normalization": [],
+      "schema_valid": true,
+      "whole_score_slots": 16,
+      "surface_score_slots": 168,
+      "whole_preference": "B",
+      "surface_preference": "B"
+    },
+    "J03": {
+      "received_file": "붙여넣은 마크다운(2).md",
+      "raw_bytes": 27937,
+      "raw_sha256": "8751374d8e7dce7f215fa067b19217dfda9f1f6e40898b69690d07860a130c61",
+      "transport_normalization": [
+        "HTML entity decode",
+        "remove UI line-ending backslash",
+        "unescape markdown \\~ to ~"
+      ],
+      "canonical_json_bytes": 25810,
+      "canonical_json_sha256": "5e27fbd01856a5afeb278ae7e3cb8102528eee49df8b31a77cf0d326658bddbd",
+      "schema_valid": true,
+      "whole_score_slots": 16,
+      "surface_score_slots": 168,
+      "whole_preference": "A",
+      "surface_preference": "A"
+    }
+  },
+  "substantive_manual_edits": 0,
+  "invalid_outputs_repaired": 0,
+  "mapping_accessed_before_seal": false,
+  "consequence": "Coordinator mapping may now be revealed under the frozen protocol. No gate calculation has yet been performed in this seal."
+}
