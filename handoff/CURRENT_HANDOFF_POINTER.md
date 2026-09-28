@@ -1,10 +1,10 @@
 # CURRENT HANDOFF POINTER
-Last updated: 2026-09-26
+Last updated: 2026-09-28
 
 ## CANONICAL START HERE
-`handoff/20260926/START_HERE_SYNC_R74_R77_H1_PA7_INTERRUPTED_HANDOFF_R9.md`
+`handoff/20260928/START_HERE_SYNC_R74_R77_H1_PA7_EXTERNAL_DISPATCH_READY_R10.md`
 
-R9 supersedes R8.
+R10 supersedes R9.
 
 ## CURRENT AUTHORITY
 - Physical Authority: **SYNC-R74**
@@ -22,7 +22,7 @@ R9 supersedes R8.
 - Formal R140: NOT_STARTED
 
 ## CURRENT R77-H1
-`PA6_CLOSED_FAIL_FOCUS_EFFECT_SIZE__PA7_CONTROL_R4_40055_PASS__TREATMENT_R1_35656_UNDER40K__COMPLETION_D_SEALED_NOT_COMPOSED__PA7_EXTERNAL_0_OF_3__H1_PRIMARY_OUTPUTS_0__HUMAN_TARGET_UNOPENED`
+`PA7_CONTROL_R4_40055_PASS__TREATMENT_R3_40250_PASS__MATCHED_LENGTH_PASS__3_BLIND_PACKETS_SEALED_LEAK_0__JUDGE_OUTPUTS_0_OF_3__H1_PRIMARY_OUTPUTS_0__HUMAN_TARGET_UNOPENED`
 
 Six historical 35K launch packets remain physically embedded in Part B2, but after the 40K amendment they are **STALE_FOR_EXECUTION**. Current active work is PA7 provider-analog qualification.
 
@@ -277,3 +277,20 @@ Existing six H1 35K launch packets in B2:
 
 Exact next:
 recover runtime -> reverify R74 parent hashes -> compose PA7 Treatment R2 -> finish PA7 external blind -> rebuild 40K H1 launch packets -> only then reseal a successor physical snapshot.
+
+
+## LATEST OVERRIDE — 2026-09-28
+Canonical handoff:
+`handoff/20260928/START_HERE_SYNC_R74_R77_H1_PA7_EXTERNAL_DISPATCH_READY_R10.md`
+
+PA7 latest:
+- Control R4 40,055 chars PASS / SHA `41f45e7d00dbd9e4a89837cac0c7516c18c5f42fd1edd066015f824f27d36495`
+- Treatment R3 Final 40,250 chars PASS / SHA `001571fd5ff9b7998a973ced39efa3957ebe515aa06fa8b295c5c2f47cb641ec`
+- matched-length difference 195 chars = 0.4868%
+- three blind packets sealed, leak 0
+- external judge outputs 0/3
+- coordinator mapping sealed and MUST NOT be revealed before 3/3 valid raw judgments are hash-sealed
+- H1 primary outputs 0; Human target unopened
+
+Exact next:
+J01/J02/J03 fresh independent blind evaluation -> seal first schema-valid raw JSON 3/3 -> reveal mapping -> apply frozen PA7 gates.
