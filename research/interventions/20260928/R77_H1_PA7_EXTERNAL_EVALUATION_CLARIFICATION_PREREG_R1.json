@@ -1,0 +1,36 @@
+{
+  "schema": "R77_H1_PA7_EXTERNAL_EVALUATION_CLARIFICATION_PREREG_R1",
+  "date": "2026-09-28",
+  "status": "SEALED_BEFORE_ANY_PA7_JUDGE_OUTPUT",
+  "judge_outputs_at_seal": "0/3",
+  "purpose": "Remove operational ambiguity in judge execution and intake without changing any screenplay bytes, blind mapping, pre-frozen sample, scoring axis, critical-violation label, gate, threshold, or claim boundary.",
+  "immutable_parent": {
+    "protocol": "research/interventions/20260926/R77_H1_PA7_EXTERNAL_3JUDGE_PROTOCOL_R1.json",
+    "dispatch": "research/interventions/20260928/pa7_external_dispatch_r1/",
+    "control_sha256": "41f45e7d00dbd9e4a89837cac0c7516c18c5f42fd1edd066015f824f27d36495",
+    "treatment_sha256": "001571fd5ff9b7998a973ced39efa3957ebe515aa06fa8b295c5c2f47cb641ec",
+    "prefrozen_scenes": ["SC05","SC12","SC21","SC29","SC38","SC46"]
+  },
+  "allowed_clarifications": [
+    "Every numeric score placeholder 0 must be replaced with a number from 1.0 through 10.0 inclusive; integer or one decimal.",
+    "Every paired preference placeholder must be replaced by exactly A, B, or TIE.",
+    "Reconstruction arrays must mark every item with EVIDENCED: or INFERRED: while retaining the existing array fields.",
+    "Critical-violation arrays must use only the frozen labels and identify scene evidence; use [] when none.",
+    "Return one JSON object only: no Markdown fences, no prose before or after JSON.",
+    "Whole-episode scoring should be performed from the two complete scripts; the repeated pre-frozen sample block is for surface scoring and must not be counted as additional scenes in whole-episode judgment.",
+    "First complete schema-valid judgment is immutable. Only transport/UI encoding normalization may occur after receipt; no score, preference, evidence, reconstruction, strength, weakness, or critical-violation content may be edited."
+  ],
+  "forbidden_changes": [
+    "script bytes",
+    "A/B mapping",
+    "scene sample",
+    "whole or surface axes",
+    "critical-violation labels",
+    "absolute/paired/focus/recoverability gates",
+    "+0.50 threshold",
+    "4-of-6 requirement",
+    "judge identity or replacement after seeing an output",
+    "coordinator mapping reveal before 3/3 valid raw judgments are hash-sealed"
+  ],
+  "effect_on_preregistered_science": "NONE__PROCEDURAL_CLARIFICATION_ONLY"
+}
