@@ -1,0 +1,138 @@
+{
+  "schema": "R77_H1_PA7_EXTERNAL_3JUDGE_MAPPED_RESULT_R1",
+  "date": "2026-09-29",
+  "prereg": "research/interventions/20260926/R77_H1_PA7_MATCHED_40K_FRESH_PAIRED_PROVIDER_ANALOG_PREREG_R1.json",
+  "premapping_seal": "research/interventions/20260929/PA7_3JUDGE_PREMAPPING_INTAKE_SEAL_R1.json",
+  "mapping_sha": "62ba2d12829981bbe25b11a852be61ce74e53c38",
+  "mapping_revealed_after_valid_3_of_3": true,
+  "mapped_positions": {
+    "J01": {
+      "treatment": "A",
+      "control": "B"
+    },
+    "J02": {
+      "treatment": "B",
+      "control": "A"
+    },
+    "J03": {
+      "treatment": "A",
+      "control": "B"
+    }
+  },
+  "treatment_means": {
+    "J01": {
+      "whole": 9.3125,
+      "surface": 9.47857142857143
+    },
+    "J02": {
+      "whole": 9,
+      "surface": 9.22857142857143
+    },
+    "J03": {
+      "whole": 9.575,
+      "surface": 9.555952380952382
+    }
+  },
+  "control_means": {
+    "J01": {
+      "whole": 8.7375,
+      "surface": 8.908333333333333
+    },
+    "J02": {
+      "whole": 8.675,
+      "surface": 8.767857142857142
+    },
+    "J03": {
+      "whole": 9.1625,
+      "surface": 9.153571428571428
+    }
+  },
+  "absolute_gate": {
+    "score_thresholds": {
+      "treatment_whole_mean_ge_7": "PASS__3_OF_3",
+      "treatment_surface_mean_ge_7": "PASS__3_OF_3"
+    },
+    "critical_violation_consensus": {
+      "label": "MAJOR_CAUSAL_OR_CONTINUITY_BREAK",
+      "shared_issue": "SC30 chronology inversion around rear-gate 00:05 window / cold-truck arrival versus scene time around 00:38",
+      "treatment_judges_confirming": [
+        "J01",
+        "J02",
+        "J03"
+      ],
+      "confirmed_by_ge_2": true
+    },
+    "final": "FAIL__CONFIRMED_CRITICAL_VIOLATION"
+  },
+  "paired_gate": {
+    "treatment_surface_preference_wins": "3/3",
+    "treatment_whole_preference_wins_plus_ties": "3/3",
+    "final": "PASS"
+  },
+  "focus_gate": {
+    "pooled_medians": {
+      "DIALOGUE_SUBTEXT": {
+        "treatment": 9.4,
+        "control": 8.75,
+        "delta": 0.65
+      },
+      "CHARACTER_VOICE": {
+        "treatment": 9.4,
+        "control": 9,
+        "delta": 0.4
+      },
+      "PHYSICALIZATION_ACTION": {
+        "treatment": 9.6,
+        "control": 9.1,
+        "delta": 0.5
+      },
+      "PERFORMANCE_DIRECTION_QUALITY": {
+        "treatment": 9.45,
+        "control": 8.95,
+        "delta": 0.5
+      },
+      "EMOTION_EXTERNALIZATION": {
+        "treatment": 9.45,
+        "control": 8.85,
+        "delta": 0.6
+      },
+      "DIRECTION_DETAIL_ECONOMY": {
+        "treatment": 9.55,
+        "control": 8.2,
+        "delta": 1.35
+      },
+      "KOREAN_SPOKEN_NATURALNESS": {
+        "treatment": 9.4,
+        "control": 9.05,
+        "delta": 0.35
+      }
+    },
+    "nonregression": {
+      "CHARACTER_VOICE": "PASS",
+      "DIALOGUE_SUBTEXT": "PASS",
+      "PHYSICALIZATION_ACTION": "PASS",
+      "KOREAN_SPOKEN_NATURALNESS": "PASS"
+    },
+    "focus_axes_delta_ge_0_5": "5/6",
+    "required": "4/6",
+    "final": "PASS"
+  },
+  "recoverability_gate": {
+    "premise": "PASS",
+    "major_threads": "PASS",
+    "nine_sequence_movements": "PASS",
+    "principal_relationship_trajectories": "PASS",
+    "resolved_due_now": "PASS",
+    "deferred_open": "PASS",
+    "consensus": "AT_LEAST_2_OF_3_ON_ALL_REQUIRED_CATEGORIES",
+    "final": "PASS"
+  },
+  "overall": "FAIL__ABSOLUTE_GATE_CRITICAL_VIOLATION",
+  "claim_boundary": "Treatment shows strong paired/focus improvement under the blind judging, but PA7 does not qualify because the preregistered Absolute gate forbids any critical violation confirmed by >=2 judges.",
+  "h1_real_provider_allowed": false,
+  "human_target_opened": false,
+  "physical_authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "production_effect": "NONE",
+  "formal_effect": "NONE"
+}
