@@ -1,0 +1,120 @@
+{
+  "schema": "RUNTIME_CONTAINER_RESILIENCE_SYNC_R74_D1_D2_DIRECT_AUDIT_R1",
+  "date": "2026-09-28",
+  "scope": "operational_recovery_learning_only",
+  "authority_effect": "NONE",
+  "scientific_effect": "NONE",
+  "physical_authority": "SYNC-R74",
+  "direct_attachment_audit": {
+    "D1": {
+      "file": "LITERARY_OS_CURRENT_PART_D1_DB59_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73(2).zip",
+      "bytes": 138011573,
+      "sha256": "a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504",
+      "canonical_manifest_match": true,
+      "entries": 25,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe_paths": 0,
+      "crc_pass": true,
+      "byte_unchanged_from_sync_r73": true
+    },
+    "D2": {
+      "file": "LITERARY_OS_CURRENT_PART_D2_DB59_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73(2).zip",
+      "bytes": 173393886,
+      "sha256": "c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4",
+      "canonical_manifest_match": true,
+      "entries": 59,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe_paths": 0,
+      "crc_pass": true,
+      "byte_unchanged_from_sync_r73": true
+    }
+  },
+  "split_chunk_audit": {
+    "part001": {
+      "carrier": "D1",
+      "member": "20_SPLIT_VOLUMES/DB59_AUTHORITY_METADATA_REPAIRED_FULL.zip.part001",
+      "bytes": 129878261,
+      "sha256": "212e1f77c696d5a911f19eb44dd5ed4c0de145ac8f9f8be60ec2d942f477e9ff"
+    },
+    "part002": {
+      "carrier": "D2",
+      "member": "20_SPLIT_VOLUMES/DB59_AUTHORITY_METADATA_REPAIRED_FULL.zip.part002",
+      "bytes": 129878260,
+      "sha256": "b5b0df4967df9e6b93a2641454a0cc7c03895d32e3178a77207c0ff2b01a1b3f"
+    }
+  },
+  "logical_db59_audit": {
+    "rejoin_location": "/tmp only",
+    "bytes": 259756521,
+    "sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "authority_hash_match": true,
+    "entries": 38852,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe_paths": 0,
+    "crc_pass": true,
+    "temporary_rejoin_deleted": true
+  },
+  "nested_required_package_audit": {
+    "D1_DRAMA_ONLY": {
+      "member": "10_REQUIRED_PACKAGES/DRAMA_ANALYSIS_ONLY_LEARNING_BUNDLE_DB59_R9E_FULL_CURRENT_20260902_SEALED.zip",
+      "bytes": 8546036,
+      "sha256": "9615bc96c3e99433c22b95ef003d381036c218aba52e4846a1b4e5a115915ed1",
+      "entries": 950,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe_paths": 0,
+      "crc_pass": true,
+      "temporary_extract_deleted": true
+    },
+    "D2_ANALYSIS_MASTER": {
+      "member": "10_REQUIRED_PACKAGES/LITERARY_OS_DRAMA_ANALYSIS_LEARNING_MASTER_CURRENT_R9E_FULL_CURRENT_20260902_SEALED.zip",
+      "bytes": 46150549,
+      "sha256": "b9d61b17de9ef30cf08a21ea177b2478a8aa982e3a9ade91058d4dcee00ddf28",
+      "entries": 6403,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe_paths": 0,
+      "crc_pass": true,
+      "temporary_extract_deleted": true
+    }
+  },
+  "embedded_recovery_document_learning": {
+    "historical_topology_note": "D1/D2 embed a 2026-09-02 historical 5-logical-set / 8-physical-file continuation protocol. It is provenance only and MUST NOT override the external/current SYNC-R74 5-Part / 9-Package Manifest, Trust Root, READ FIRST, or current Hub pointers.",
+    "conflict_rule": "If authority conflict is unresolved, stop as AUTHORITY_CONFLICT_UNRESOLVED rather than guessing.",
+    "reseal_rule": "Full CURRENT reseal requires SHA256 manifest, CRC, fresh extraction validation, and developer delivery manifest; primary evidence is never deleted/overwritten.",
+    "db_rule": "If DB semantic payload is unchanged, preserve byte identity where declared and record SEMANTIC_PAYLOAD_UNCHANGED/BYTE_UNCHANGED rather than mutating carriers merely because later research advanced.",
+    "split_rule": "Validate outer transport -> embedded chunk -> logical rejoin -> nested required packages as four distinct custody layers. One PASS never substitutes for the next."
+  },
+  "container_resilience_learning": [
+    "ClientError/TransportTimeout at a tool boundary is not scientific, engine, package, or DB failure without valid-byte reproduction.",
+    "On minimal-command failure: STOP -> RUNTIME_TRANSPORT_HOLD -> MINIMAL_HEALTH_CHECK -> LAST_ATOMIC_CHECKPOINT_VERIFY -> RESUME_ONLY_FAILED_STEP.",
+    "Use exact grounded sandbox paths only; relist/recheck before declaring missing due to mount readiness.",
+    "Visible file presence is not byte authority; verify size -> SHA256 -> ZIP central directory -> CRC -> required members.",
+    "For split data carriers, stream chunks into /tmp logical verifier in declared order, hash while streaming, verify logical ZIP, then delete temporary.",
+    "Use one large artifact at a time, streaming I/O and POSIX_FADV_DONTNEED; do not call OOM unless memory.events reports oom/oom_kill.",
+    "GeneratedFileUploadError is a delivery-boundary failure if local output completion and hashes are proven; do not recompute expensive work solely because attachment registration failed.",
+    "Same-name/different-hash authority objects must be preserved and quarantined; never overwrite or silently choose.",
+    "Nested historical CURRENT_* files cannot supersede current external manifest/trust-root/handoff.",
+    "Never reconstruct lost hidden mapping/frozen inputs from memory; HOLD or abort the affected experiment."
+  ],
+  "resource_observation": {
+    "memory_max_bytes": 4294967296,
+    "memory_current_before_final_cleanup_bytes": 2443751424,
+    "memory_current_after_cleanup_bytes": 2122936320,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "tmp_rejoin_deleted": true,
+    "nested_tmp_deleted": true
+  },
+  "mandatory_resume_rule": "STOP -> RUNTIME_TRANSPORT_HOLD -> MINIMAL_HEALTH_CHECK -> LAST_ATOMIC_CHECKPOINT_VERIFY -> RESUME_ONLY_FAILED_STEP",
+  "mutation_policy": "No package mutation, reseal, physical promotion, runtime change, DB authority change, formal-count change, or experimental scoring was performed."
+}
