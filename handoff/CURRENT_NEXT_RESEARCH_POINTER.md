@@ -1,12 +1,14 @@
 # CURRENT NEXT RESEARCH POINTER
-Last updated: 2026-09-28
+Last updated: 2026-09-29
 
 ## START HERE
-`handoff/20260928/START_HERE_SYNC_R74_R77_H1_PA7_EXTERNAL_DISPATCH_READY_R10.md`
+`handoff/20260929/START_HERE_SYNC_R74_R77_H1_PA7_CLOSED_FAIL_R11.md`
 
 ## ACTIVE RESEARCH
 R77-H1 — Human Next-Episode Prospective Benchmark
-Current qualification subline: **PA7 external 3-Judge blind**
+
+PA7 is now:
+`CLOSED_FAIL__ABSOLUTE_CRITICAL_VIOLATION_GATE__PAIRED_PASS__FOCUS_PASS_5_OF_6__RECOVERABILITY_PASS`
 
 ## PHYSICAL / RUNTIME BASE
 - Physical Authority: SYNC-R74
@@ -15,21 +17,13 @@ Current qualification subline: **PA7 external 3-Judge blind**
 - Production: ENG:R47 / LEGACY_R53
 - Operational Level-3: `SUSPENDED__REQUALIFICATION_REQUIRED`
 
-## CURRENT STATUS
-`PA7_MECHANICAL_PASS__CONTROL_R4_40055__TREATMENT_R3_40250__MATCHED_LENGTH_PASS__DISPATCH_3_OF_3_SEALED__LEAK_0__JUDGE_OUTPUTS_0_OF_3__MAPPING_UNREVEALED__H1_PRIMARY_0__HUMAN_TARGET_UNOPENED`
-
-Blind dispatch custody:
-`research/interventions/20260928/pa7_external_dispatch_r1/`
-
 ## EXACT NEXT
-1. J01 fresh independent blind evaluation -> seal first schema-valid raw JSON.
-2. J02 fresh independent blind evaluation -> seal first schema-valid raw JSON.
-3. J03 fresh independent blind evaluation -> seal first schema-valid raw JSON.
-4. Only after 3/3: reveal coordinator mapping.
-5. Compute preregistered PA7 Absolute / Paired / Focus / Recoverability gates.
-6. Do not change the +0.50 / >=4-of-6 Focus threshold.
-7. Do not execute historical 35K H1 packets.
+1. Preregister a shared scene-clock / temporal-consistency constraint and validator.
+2. Include monotonic scene-time and future-ETA validation plus cross-scene passenger/location continuity.
+3. Use a fresh synthetic episode; do not patch PA7.
+4. Re-run provider-analog qualification under unchanged PA7-style external governance.
+5. Only after a fresh qualification PASS may >=40K H1 packets be rebuilt, followed by PM0 and real-provider C/T.
+6. Human target remains unopened.
 
-## AFTER PA7
-- PASS -> rebuild six >=40K H1 packets -> PM0 -> real-provider six C/T arms -> stratum-by-stratum Human reveal.
-- FAIL -> immutable failure -> responsible-ancestor localization before any next intervention.
+## BOUNDARY
+PA7 paired/focus strength does not override the Absolute critical-violation FAIL.
