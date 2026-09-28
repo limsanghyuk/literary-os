@@ -1,0 +1,33 @@
+{
+  "schema": "R77_H1_PA7_POSTBLIND_RESPONSIBLE_ANCESTOR_DIAGNOSTIC_R1",
+  "date": "2026-09-29",
+  "parent_result": "research/interventions/20260929/R77_H1_PA7_EXTERNAL_3JUDGE_MAPPED_RESULT_R1.json",
+  "status": "LOCALIZED__SHARED_ARCHITECTURE_TEMPORAL_CONSTRAINT_GAP",
+  "evidence": {
+    "both_arms_share_frozen_architecture": true,
+    "architecture_path": "research/interventions/20260926/R77_H1_PA7_FRESH_SYNTHETIC_EPISODE_ARCHITECTURE_R1.json",
+    "architecture_blob_sha": "3b6f86b8718d4f88c7058fd6aa367143d195d958",
+    "shared_constraints": [
+      "SC22 fixes rear-gate use to 23:20-00:05.",
+      "SC30 says first delivery truck may arrive 10 minutes earlier than 00:05.",
+      "The architecture has an episode clock 22:08-00:41 but does not freeze monotonically valid per-scene timestamps or a validator preventing a scene after 00:05 from treating a 23:55-00:00 event as future."
+    ],
+    "blind_confirmation": {
+      "treatment_sc30_issue": "3/3 judges",
+      "control_sc30_issue": "3/3 judges",
+      "interpretation": "The same critical chronology defect exists in both arms, so it is not attributable to the PA7 residual Treatment intervention."
+    }
+  },
+  "responsible_ancestor": "COMMON_EPISODE_ARCHITECTURE_TEMPORAL_SCHEDULING_AND_VALIDATION_LAYER",
+  "not_responsible_as_primary_cause": "PA7 residual surface intervention",
+  "next_research_requirement": [
+    "Preserve PA7 FAIL unchanged; do not repair or rescore the existing scripts.",
+    "Preregister a shared temporal-consistency/scene-clock constraint and validator before any fresh provider-analog replication.",
+    "Require monotonically coherent scene time, event ETA >= current scene time when framed as future, and cross-scene passenger/location continuity checks before blind scoring.",
+    "Use a fresh synthetic episode for any new qualification attempt; do not salvage PA7 by editing SC30 post hoc."
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "physical_effect": "NONE",
+  "formal_effect": "NONE"
+}
