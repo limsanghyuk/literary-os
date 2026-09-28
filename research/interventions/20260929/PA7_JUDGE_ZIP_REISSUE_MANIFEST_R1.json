@@ -1,0 +1,40 @@
+{
+  "schema": "PA7_JUDGE_ZIP_REISSUE_MANIFEST_R1",
+  "date": "2026-09-29",
+  "status": "PASS__3_INDEPENDENT_JUDGE_ZIPS_REISSUED",
+  "packages": {
+    "J01": {
+      "path": "research/interventions/20260929/PA7_J01_INDEPENDENT_BLIND_EVALUATION_PACKAGE_R1.zip",
+      "bytes": 217844,
+      "sha256": "9135ac4a0f439efdbeac54baaa6395874d87a607d075e9f0d13ed00e32971b37",
+      "git_blob_sha": "f3a3e8aad54d6366ddb4c561937342905ff6d678",
+      "files": [
+        "J01_EVALUATOR_READ_FIRST_R1.md",
+        "J01_BLIND_PACKET.txt",
+        "J01_OUTPUT_SCHEMA.json"
+      ]
+    },
+    "J02": {
+      "path": "research/interventions/20260929/PA7_J02_INDEPENDENT_BLIND_EVALUATION_PACKAGE_R1.zip",
+      "bytes": 217844,
+      "sha256": "5f7fa244bcb780cfb829f162e3c9e4b2f12974ffc3dff7710727bcb799e16e82",
+      "git_blob_sha": "a38faa5715cd5474aa0244f0cdb561acc8938b0f",
+      "files": [
+        "J02_EVALUATOR_READ_FIRST_R1.md",
+        "J02_BLIND_PACKET.txt",
+        "J02_OUTPUT_SCHEMA.json"
+      ]
+    },
+    "J03": {
+      "path": "research/interventions/20260929/PA7_J03_INDEPENDENT_BLIND_EVALUATION_PACKAGE_R1.zip",
+      "bytes": 217844,
+      "sha256": "a92f083e7a9179765b91de0562bc1982e0c9e6a72ec0940f14f1567a627b370a",
+      "git_blob_sha": "558b651bf3b3789bc6cfa551df174c26956f75b8",
+      "files": [
+        "J03_EVALUATOR_READ_FIRST_R1.md",
+        "J03_BLIND_PACKET.txt",
+        "J03_OUTPUT_SCHEMA.json"
+      ]
+    }
+  }
+}
