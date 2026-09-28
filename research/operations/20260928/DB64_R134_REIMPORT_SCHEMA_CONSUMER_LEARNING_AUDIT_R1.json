@@ -1,0 +1,180 @@
+{
+  "schema": "DB64_R134_REIMPORT_SCHEMA_CONSUMER_LEARNING_AUDIT_R1",
+  "date": "2026-09-28",
+  "scope": "research_database_reimport_reverification_schema_consumer_learning",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "physical_5part_effect": "NONE",
+  "relation_to_prior_audit": {
+    "prior": "research/operations/20260926/DB64_R134_EXTERNAL_IMPORT_INDEPENDENT_AUDIT_R1.json",
+    "prior_blob_sha": "b0a6c1ece40cef11362e984c54328c76cc56ac2f",
+    "conclusion": "CURRENT_UPLOADS_BYTE_IDENTICAL_TO_PRIOR_AUDITED_R134_SNAPSHOT__NO_NEW_DATA_VERSION"
+  },
+  "uploaded_artifacts": {
+    "part01": {
+      "bytes": 165948385,
+      "sha256": "bf2ce061f2043e881ac9ac3c52abc0c6836b7e0dabd5f1812893a041c3c4baa4"
+    },
+    "part02": {
+      "bytes": 165948386,
+      "sha256": "8844fdc7c2e3d1344513b58882ad3239cc6cc537da12a0ac59509a427e49197f"
+    },
+    "change_package": {
+      "bytes": 3042531,
+      "sha256": "bac99fc241f5ebd6b7b25aaee1e32388783b97e6fc9516e4e54add749f07bd6a",
+      "entries": 439,
+      "crc_pass": true
+    },
+    "cycle1_checkpoint": {
+      "bytes": 661249,
+      "sha256": "693ffdaf843e547e936584e12356c344487a7fc7cfbb4bfe559687d05d6b4ad3",
+      "entries": 89,
+      "crc_pass": true
+    },
+    "latest_learning_bundle": {
+      "bytes": 32860212,
+      "sha256": "e98b9f2b2e85329718d91cff802bfceb5cbbbbaa1cc59188d1e42afab9ce2610",
+      "entries": 24,
+      "crc_pass": true
+    }
+  },
+  "full_db_rejoin": {
+    "bytes": 331896771,
+    "sha256": "7f5d10e9e86c71c217c971da1a75bbf87c8ee2405bcfd2fbd18a4f10fd6a7901",
+    "entries": 45331,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe_paths": 0,
+    "crc_pass": true,
+    "actual_rejoin_exact": true,
+    "temporary_rejoin_deleted": true
+  },
+  "pipeline_integrity": {
+    "cycle1_thick_files": 86,
+    "cycle1_checkpoint_to_final_exact": 86,
+    "change_overlay_files": 433,
+    "change_overlay_to_final_exact": 433,
+    "overlay_breakdown": {
+      "thick_sequence": 86,
+      "runtime_scene_projection": 86,
+      "planner_input": 86,
+      "episode_plan": 86,
+      "thread_state": 86,
+      "release_receipt": 3
+    }
+  },
+  "declared_authorities": {
+    "data": "DATA:DB64_R134_FIVEWORK_V5_SEMANTIC_NATURALNESS_REPAIR_R1",
+    "learning": "LEARNING:R134A_73WORK_SESSION_RETROSPECTIVE_V5_CONTINUITY_R2",
+    "active_runtime_db_policy": "DB59_FROZEN",
+    "db64_runtime_adopted": false,
+    "A2": "PENDING_SEPARATE_RESEARCH_PREREGISTRATION_AND_ENGINE_EXPERIMENT",
+    "five_declared_v5_repaired": [
+      "38사기동대",
+      "시티헌터",
+      "식객",
+      "건빵선생과별사탕",
+      "신의퀴즈1"
+    ],
+    "corpus_physical_final_sealed": "73/98",
+    "corpus_semantic_certification": "SUSPENDED_PENDING_UNIFORM_V5_RECERTIFICATION"
+  },
+  "current_registry": {
+    "rows": 73,
+    "unique_works": 73,
+    "risk_grade_counts": {
+      "RA1A": 25,
+      "RA1B": 5,
+      "RA1C": 2,
+      "RA1D": 8,
+      "RA2": 2,
+      "RA3": 5,
+      "RA4": 26
+    },
+    "semantic_status_counts": {
+      "REAUTHOR_REQUIRED": 35,
+      "PROVISIONAL_CLEAN_REAUDIT_REQUIRED": 26,
+      "CURRENT_V5_REPAIRED_FINAL_SEALED": 5,
+      "MANUAL_REVIEW_REQUIRED": 5,
+      "TARGETED_REPAIR_REQUIRED": 2
+    },
+    "next_default_target": "미안하다사랑한다"
+  },
+  "confirmed_strengths": [
+    "V5 adds 6/8/10-token partial-template checks, structured-ID leakage checks, SOURCE30 overlap, listed Korean surface checks and explicit direct-reading precedence over metrics.",
+    "The five-work repair preserves SOURCE/Stage and reprojects exactly the THICK-dependent Runtime/PlannerInput/EpisodePlan/ThreadState chain.",
+    "All 433 overlays in the change package exactly match the final DB; all 86 Cycle1 THICK checkpoints exactly match final DB THICK files.",
+    "EpisodePlan has explicit episode axes, deferred obligations, debt-ledger deltas, terminal design and sequence allocation.",
+    "ThreadState vNext carries durable thread node/closure/residual-pressure/continuation information with prior-only/future-leakage safety.",
+    "THICK rows expose cast function, event, info shift, plant/payoff, scene notes and SOURCE evidence refs.",
+    "RelationshipArc schema exists and current authored_relarc layer is materially populated; derived character-load layers support ensemble load analysis."
+  ],
+  "independent_quality_carry_forward": {
+    "prior_status": "CONCRETE_NEW_DEFECT_PROVED__SHORT_TEMPLATE_SKELETON_RESIDUE",
+    "recommended_status": "R134_PHYSICAL_STRUCTURAL_PASS__FIVEWORK_SEMANTIC_REAUDIT_REQUIRED",
+    "current_reinspection_examples": {
+      "suspicious_exact_phrase_hits_by_work": {
+        "38사기동대": 157,
+        "시티헌터": 94,
+        "식객": 53,
+        "건빵선생과별사탕": 131,
+        "신의퀴즈1": 43
+      },
+      "note": "Counts are diagnostic phrase hits, not an automatic grammatical-error count. Direct samples still include formulaic/fragmentary forms such as 역할 전환, 여지 유지, 전면에 있지만 의미는 아직 확정되지 않는다, and some malformed particle combinations."
+    },
+    "direct_reading_rule": "Machine V5 PASS is necessary but not sufficient; concrete direct-reading defects reopen semantic certification under the package's own governance."
+  },
+  "new_schema_consumer_findings": {
+    "full_db_self_description": {
+      "status": "RECOVERY_AMBIGUITY_RISK__NOT_BYTE_CORRUPTION",
+      "finding": "The final DB root CURRENT_AUTHORITY_POINTER.json still contains older DB64 current-pointer state rather than R134. Only three R134 release files exist inside the full DB and no R134 root authority/handoff pointer is embedded.",
+      "consequence": "A consumer loading the full DB without the R134A learning/handoff sidecar can misidentify current data authority.",
+      "rule": "For R134 recovery, external R134A learning authority + R134 handoff/join manifest outrank historical CURRENT_* records embedded in the full DB. Do not mutate the sealed R134 bytes to repair this; use a future uniquely hashed successor if self-description is repaired."
+    },
+    "social_ecology": {
+      "evidence_files": 19,
+      "evidence_rows": 3948,
+      "group_membership_claim_rows_nonempty": 0,
+      "group_membership_claims_total": 0,
+      "current_fivework_coverage": {
+        "38사기동대": "present",
+        "시티헌터": "present",
+        "식객": "present",
+        "건빵선생과별사탕": "absent",
+        "신의퀴즈1": "present"
+      },
+      "r134_overlay_reprojected": false,
+      "status": "PARTIAL_DERIVED_VIEW__GROUP_MEMBERSHIP_NOT_POPULATED__POST_R134_REVALIDATION_REQUIRED",
+      "consequence": "Event-owner/participant evidence exists for a limited subset, but explicit group affiliation/social-ecology graph data is not yet sufficiently populated for a production consumer."
+    },
+    "relationship_and_ensemble": {
+      "authored_relarc_files": 1794,
+      "derived_character_load_files": 1103,
+      "relation_fields": [
+        "char_a",
+        "char_b",
+        "episode_no",
+        "relation_state",
+        "relation_delta",
+        "trigger_scene_no",
+        "evidence"
+      ],
+      "status": "RELATIONSHIP_STATE_AND_CHARACTER_LOAD_PRESENT__EXPLICIT_GROUP_MEMBERSHIP_LAYER_STILL_WEAK"
+    }
+  },
+  "recommended_learning_order": [
+    "Treat R134 as the same physically verified newer research snapshot already audited on 2026-09-26; do not create a duplicate authority branch.",
+    "Before next RA1 expansion, preregister V6-or-stricter short-template/direct-authorship re-audit for the five R134 works.",
+    "Add or revalidate social-ecology consumers after THICK repair, with explicit group-membership evidence and unknown/no-invention policy.",
+    "Repair self-description only in a future successor release; never alter the sealed R134 bytes in place.",
+    "Only after semantic recertification and separate A2 preregistered engine experiment should DB64 adoption into runtime be considered."
+  ],
+  "container_observation": {
+    "large_operations": "sequential_streaming_only",
+    "memory_max_bytes": 4294967296,
+    "memory_current_after_cleanup_bytes": 2216951808,
+    "oom": 0,
+    "oom_kill": 0,
+    "temporary_full_db_deleted": true
+  }
+}
