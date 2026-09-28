@@ -1,0 +1,85 @@
+{
+  "schema": "R77_H1_PA7_EXTERNAL_3JUDGE_PACKAGE_AUDIT_R1",
+  "date": "2026-09-28",
+  "status": "PASS__3_OF_3_PACKAGES_READY__JUDGE_OUTPUTS_0_OF_3",
+  "scope": "Blind package content, integrity, schema completeness, sample fidelity, leakage, and operator-execution safety.",
+  "prior_methodology_relearned": {
+    "PA6_R1_dispatch": "FAIL_CLOSED because judge instruction contained a forbidden lineage word. No judge artifact or mapping artifact was accepted.",
+    "PA6_R2_dispatch": "PASS after instruction-only repair; scripts/sample/axes/gates unchanged.",
+    "PA6_intake": "Three first valid judgments were raw-hash sealed before mapping reveal. Only transport/UI normalization was allowed; no substantive score/preference/evidence content was edited.",
+    "PA6_closure": "Absolute PASS, paired PASS, recoverability PASS, focus effect-size FAIL; frozen threshold was not weakened.",
+    "R139_lesson": "Protocol failure must close as not-scored rather than being converted into a quality result."
+  },
+  "current_surfaces": {
+    "script_1_sha256": "41f45e7d00dbd9e4a89837cac0c7516c18c5f42fd1edd066015f824f27d36495",
+    "script_2_sha256": "001571fd5ff9b7998a973ced39efa3957ebe515aa06fa8b295c5c2f47cb641ec",
+    "chars": [40055,40250],
+    "matched_length_diff_chars": 195,
+    "matched_length_pct_of_shorter": 0.004868306079141181
+  },
+  "prefrozen_sample": ["SC05","SC12","SC21","SC29","SC38","SC46"],
+  "package_audit": {
+    "J01": {
+      "blind_packet_sha256": "50d8f274286b70b4085d976c3938f1d2f5b58cef0f6397abc60f1c9acafc14e5",
+      "packet_chars": 94330,
+      "full_scripts_exact_canonical_pair": true,
+      "sample_exact_match": true,
+      "whole_score_slots": 16,
+      "surface_score_slots": 168,
+      "mapping_present": false,
+      "forbidden_hit_count": 0,
+      "package_manifest_r2": "PASS__JUDGE_FACING_SET_COMPLETE__MAPPING_ABSENT"
+    },
+    "J02": {
+      "blind_packet_sha256": "eba31aa22ec632638b43e2d8fb6376be82b9587ae3fdea95431f8b5ee81988b2",
+      "packet_chars": 94330,
+      "full_scripts_exact_canonical_pair": true,
+      "sample_exact_match": true,
+      "whole_score_slots": 16,
+      "surface_score_slots": 168,
+      "mapping_present": false,
+      "forbidden_hit_count": 0,
+      "package_manifest_r2": "PASS__JUDGE_FACING_SET_COMPLETE__MAPPING_ABSENT"
+    },
+    "J03": {
+      "blind_packet_sha256": "50d8f274286b70b4085d976c3938f1d2f5b58cef0f6397abc60f1c9acafc14e5",
+      "packet_chars": 94330,
+      "full_scripts_exact_canonical_pair": true,
+      "sample_exact_match": true,
+      "whole_score_slots": 16,
+      "surface_score_slots": 168,
+      "mapping_present": false,
+      "forbidden_hit_count": 0,
+      "package_manifest_r2": "PASS__JUDGE_FACING_SET_COMPLETE__MAPPING_ABSENT"
+    }
+  },
+  "balanced_hidden_mapping": {
+    "status": "PASS",
+    "distribution": "2_TO_1_BALANCED_WITH_THREE_JUDGES",
+    "positions_not_disclosed_in_audit": true
+  },
+  "nonfatal_ambiguities_found_and_preoutput_repaired": [
+    "Numeric 0 placeholders needed an explicit replace-all rule and score-range validation.",
+    "Reconstruction-array item marking was semantically required but structurally underspecified.",
+    "Repeated pre-frozen sample text could be double-counted in whole-episode judgment without an explicit warning.",
+    "Raw-output custody and transport-only normalization rules needed a single operator document."
+  ],
+  "repair_boundary": {
+    "judge_outputs_at_repair": "0/3",
+    "script_bytes_changed": false,
+    "mapping_changed": false,
+    "sample_changed": false,
+    "axes_changed": false,
+    "gates_changed": false,
+    "thresholds_changed": false,
+    "clarification_prereg": "research/interventions/20260928/R77_H1_PA7_EXTERNAL_EVALUATION_CLARIFICATION_PREREG_R1.json",
+    "operator_guide": "research/interventions/20260928/R77_H1_PA7_EXTERNAL_EVALUATION_OPERATOR_GUIDE_R1.md",
+    "intake_validation_spec": "research/interventions/20260928/R77_H1_PA7_JUDGE_OUTPUT_INTAKE_VALIDATION_SPEC_R1.json"
+  },
+  "final_judge_package_contents": {
+    "judge_facing": ["Jxx_EVALUATOR_READ_FIRST_R1.md","Jxx_BLIND_PACKET.txt","Jxx_OUTPUT_SCHEMA.json"],
+    "coordinator_integrity_only": ["Jxx_PACKET_MANIFEST.json","Jxx_PACKAGE_MANIFEST_R2.json"],
+    "coordinator_mapping": "NEVER_JUDGE_FACING__REVEAL_AFTER_VALID_RAW_3_OF_3_ONLY"
+  },
+  "claim": "The three current PA7 judge packages are mechanically and procedurally ready for independent external blind evaluation. No PA7 quality result exists until three independent judgments are sealed and mapped."
+}
