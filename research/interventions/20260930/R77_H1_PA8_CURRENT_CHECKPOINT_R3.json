@@ -1,0 +1,54 @@
+{
+  "schema": "R77_H1_PA8_CURRENT_CHECKPOINT_R3",
+  "date": "2026-09-30",
+  "status": "PA8_A_PASS__PA8_B_PASS__PA8_C_R2_PASS__PA8_D_CONTROL_FIRST_OUTPUT_RECEIVED__CONTROL_STRUCTURAL_MECHANICAL_PASS__CONTROL_CONTINUITY_HEADROOM_ESTABLISHED__TREATMENT_OUTPUTS_0__JUDGE_OUTPUTS_0",
+  "parent_checkpoint": "research/interventions/20260929/R77_H1_PA8_CURRENT_CHECKPOINT_R2.json",
+  "authority": {
+    "physical": "SYNC-R74",
+    "active_runtime": "exact R69",
+    "production": "ENG:R47 / LEGACY_R53",
+    "runtime_db": "DB59 frozen",
+    "operational_level3": "SUSPENDED__REQUALIFICATION_REQUIRED",
+    "latest_formal_scored": "R138",
+    "formal_r140": "NOT_STARTED"
+  },
+  "control_first_output": {
+    "intake": "research/interventions/20260930/PA8_D_CONTROL_FIRST_OUTPUT_INTAKE_R1.json",
+    "txt_size_bytes": 91732,
+    "extracted_characters": 40588,
+    "total_lines": 2822,
+    "sequence_count": 9,
+    "scene_count": 50,
+    "structural_mechanical_status": "PASS",
+    "continuity_headroom": "ESTABLISHED__CROSS_SCENE_ENTITY_LOCATION_STATE_BREAK",
+    "key_break": "SC41 truck departs with audit-original pallet, then SC43 A-120 reappears at ground staging requiring stair movement without an explaining return transition.",
+    "raw_byte_sha256": "PENDING_RUNTIME_TRANSPORT_RECOVERY",
+    "zip_crc_identity": "PENDING_RUNTIME_TRANSPORT_RECOVERY"
+  },
+  "treatment_first_output": {
+    "status": "NOT_RECEIVED",
+    "outputs": 0
+  },
+  "paired_status": "NOT_RUN__WAITING_TREATMENT",
+  "external_judges": {
+    "status": "NOT_DISPATCHED",
+    "outputs": 0,
+    "mapping_accessed": false
+  },
+  "exact_next": [
+    "Receive the first complete TREATMENT screenplay generated in a separate fresh context from the sealed Treatment ZIP only.",
+    "Preserve and intake Treatment without cross-arm repair.",
+    "Run Treatment structural + ESCC clock/location/spacetime mechanical checks.",
+    "Run paired <=10% length gate.",
+    "After both qualify, construct blind A/B packets using frozen sample SC05/SC13/SC21/SC30/SC39/SC47.",
+    "Dispatch J01/J02/J03 in independent blind contexts; seal 3/3 first schema-valid judgments before mapping reveal.",
+    "Apply frozen PA8-E literary + continuity gates."
+  ],
+  "physicalization": {
+    "runtime_bytes_changed": false,
+    "c1_c2_changed": false,
+    "db59_changed": false,
+    "successor_required_now": false,
+    "physical_authority_remains": "SYNC-R74"
+  }
+}
