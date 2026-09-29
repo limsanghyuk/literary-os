@@ -1,0 +1,11 @@
+{
+  "date": "2026-09-29",
+  "escc_present": true,
+  "human_target_present": false,
+  "other_arm_output_present": false,
+  "packet_bytes_canonical_json": 47156,
+  "packet_sha256": "fb17e6859c00bcbd1101d5f82a58e6bee88f01caa5bdd62b1ebc203a41d363ae",
+  "schema": "PA8_D_GENERATION_PACKET_MANIFEST_R1",
+  "semantic_payload_sha256": "adefb2f6463939cc2e23c5c08deee82c912932721753a3e1047ed9533cadac34",
+  "surface_outputs_at_build": 0
+}

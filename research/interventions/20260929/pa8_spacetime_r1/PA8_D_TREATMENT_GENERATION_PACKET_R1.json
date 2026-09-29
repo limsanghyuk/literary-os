@@ -1,0 +1,2373 @@
+{
+  "custody": {
+    "do_not_request_other_arm": true,
+    "h1_real_work_payload_present": false,
+    "human_target_present": false,
+    "use_only_this_packet": true
+  },
+  "date": "2026-09-29",
+  "mechanical_requirements": {
+    "min_chars": 40000,
+    "no_quota_padding": true,
+    "scene_count": 50,
+    "sequence_count": 9,
+    "upper_cap": null
+  },
+  "schema": "PA8_D_ISOLATED_GENERATION_PACKET_R1",
+  "semantic_architecture": {
+    "deferred_open": [
+      "지하 잔류 기록의 다음날 회수 가능성.",
+      "배관·전력 설비의 장기 복구.",
+      "미복제 디지털 파일의 복구 여부.",
+      "긴급 인계 절차에 대한 사후 감사 책임.",
+      "손상 기록의 장기 보존 성공 여부."
+    ],
+    "due_now": [
+      "침수된 기록을 손상진행도와 증거/회복가능성 기준으로 실제 선별한다.",
+      "02:50 이전에 화물 엘리베이터를 이용한 마지막 지하 이송을 끝낸다.",
+      "03:05 이전에 핵심 디지털 인덱스 복제를 끝내거나 미복제 상태를 명시한다.",
+      "감사 원본의 공동 인계와 젖은 기록의 보존처리를 실제로 완료한다.",
+      "03:20 주전원 차단 전에 잔류 구역을 안전하게 폐쇄한다.",
+      "보존하지 못한 기록/파일을 숨기지 않고 상태로 남긴다."
+    ],
+    "hard_state_constraints": [
+      "B2 침수는 회차 중 완전히 해결되지 않는다.",
+      "화물 엘리베이터는 02:50 이후 기록 이송에 사용할 수 없다.",
+      "서버 UPS는 03:05까지다.",
+      "로딩독 직접 출차 창은 02:20-03:05다.",
+      "제습차 처리 창은 02:42-03:12다.",
+      "건물 주전원은 03:20에 차단된다.",
+      "감사 원본은 서진아와 이채원의 공동 인계 없이 이동 완료로 처리할 수 없다.",
+      "모든 기록과 모든 디지털 파일을 보존하는 결말은 금지한다.",
+      "최종 상태는 이송/잔류/미복제 손실을 구분해 기록해야 한다.",
+      "H1 실제 작품·Past-Only payload·Human target은 사용하지 않는다."
+    ],
+    "premise": "시립기록관 지하 서고가 새벽에 침수된 뒤 03:20 건물 전원 차단이 예고되자, 야간 책임자·보존사·시설기사·감사관·화물기사·디지털 기술자가 제한된 엘리베이터·UPS·운송·제습 시간 안에서 모든 기록을 구한다는 허상을 버리고 어떤 기록을 옮기고 어떤 손실을 공개적으로 남길지 결정하고 실행한다.",
+    "principal_cast": [
+      {
+        "name": "서진아",
+        "pressure": "모든 기록을 지켜야 한다는 직업윤리와 제한시간 사이.",
+        "role": "시립기록관 야간 책임자",
+        "voice_contract": "짧은 우선순위·결정 문장. 감정 대신 무엇을 남기고 무엇을 포기할지 말한다."
+      },
+      {
+        "name": "한도윤",
+        "pressure": "가치가 높은 기록보다 지금 젖는 기록을 먼저 살려야 할 수 있음.",
+        "role": "종이기록 보존사",
+        "voice_contract": "종이·습도·섬유 상태를 촉감과 재료 언어로 말한다. 확신 없을 때 단정하지 않는다."
+      },
+      {
+        "name": "류성호",
+        "pressure": "건물 설비 보호와 사람/기록 대피 사이.",
+        "role": "시설기사",
+        "voice_contract": "밸브·수위·전력 수치 중심. 건조한 농담을 하지만 위험 판단에서는 말이 짧아진다."
+      },
+      {
+        "name": "이채원",
+        "pressure": "감사 원본의 증거능력과 긴급보존 사이.",
+        "role": "시 감사관",
+        "voice_contract": "절차·서명·인계 책임을 정확히 묻는다. 압박받을수록 문장이 더 공식적이 된다."
+      },
+      {
+        "name": "박민석",
+        "pressure": "운송 제한시간과 현장 구조 요구 사이.",
+        "role": "야간 화물기사 겸 운송노조 대의원",
+        "voice_contract": "무게·동선·운전시간으로 말한다. 불가능한 요구에는 바로 선을 긋는다."
+      },
+      {
+        "name": "문유경",
+        "pressure": "UPS 종료 전에 불완전한 디지털 복제를 어디까지 신뢰할지.",
+        "role": "디지털 아카이브 기술자",
+        "voice_contract": "파일·전원·복제상태를 간결하게 말하지만 실패를 숨기지 않는다."
+      }
+    ],
+    "scene_contracts": [
+      {
+        "function": "지하 B2 서고에서 스프링클러 주배관이 터지고 바닥에 물이 번지기 시작한다.",
+        "must_change": "정상 야간근무→침수 비상",
+        "scene": 1,
+        "scene_id": "SC01",
+        "sequence": 1
+      },
+      {
+        "function": "성호가 구역 밸브를 잠그지만 수위가 계속 올라 배수만으로 해결 불가를 확인한다.",
+        "must_change": "국지 누수→구역 침수",
+        "scene": 2,
+        "scene_id": "SC02",
+        "sequence": 1
+      },
+      {
+        "function": "진아가 ‘전부 위로’ 지시를 취소하고 사람·전력·이송수단부터 확인한다.",
+        "must_change": "전면 구조→제약 확인",
+        "scene": 3,
+        "scene_id": "SC03",
+        "sequence": 1
+      },
+      {
+        "function": "도윤이 젖은 상자와 아직 마른 상자를 손으로 구분해 긴급 보존 우선군을 만든다.",
+        "must_change": "가치순서→손상진행순서 추가",
+        "scene": 4,
+        "scene_id": "SC04",
+        "sequence": 1
+      },
+      {
+        "function": "유경이 서버 UPS 잔여시간이 03:05까지라고 알리고 복제 중인 데이터가 완전하지 않음을 밝힌다.",
+        "must_change": "디지털 백업 기대→시간제한 공개",
+        "scene": 5,
+        "scene_id": "SC05",
+        "sequence": 1
+      },
+      {
+        "function": "진아가 상황판의 ‘전체 보존’ 문구를 지우고 ‘인명·증거·회복가능성 기준 선별’로 바꾼다.",
+        "must_change": "완전보존 목표→선별보존 모드",
+        "scene": 6,
+        "scene_id": "SC06",
+        "sequence": 1
+      },
+      {
+        "function": "화물 엘리베이터를 빈 카트로 시험해 정상 운행하지만 피트 수위 상승 경보를 확인한다.",
+        "must_change": "이송수단 확보→시간제한 동반",
+        "scene": 7,
+        "scene_id": "SC07",
+        "sequence": 2
+      },
+      {
+        "function": "도윤과 민석이 카트·상자 무게를 다시 재어 한 번에 옮길 수 있는 중량을 줄인다.",
+        "must_change": "이론 적재량→실제 적재량",
+        "scene": 8,
+        "scene_id": "SC08",
+        "sequence": 2
+      },
+      {
+        "function": "유경이 UPS 종료 전까지 복제 가능한 데이터 범위를 줄이고 핵심 인덱스부터 선택한다.",
+        "must_change": "전체 복제→핵심 복제",
+        "scene": 9,
+        "scene_id": "SC09",
+        "sequence": 2
+      },
+      {
+        "function": "채원이 감사 중인 봉인 상자는 관리자와 감사관 공동 인계 없이는 이동할 수 없다고 못 박는다.",
+        "must_change": "긴급 이동→증거 인계 조건 추가",
+        "scene": 10,
+        "scene_id": "SC10",
+        "sequence": 2
+      },
+      {
+        "function": "민석이 화물차를 로딩독에 대지만 03:05 이후에는 시 작업차 때문에 출차가 막힌다고 알린다.",
+        "must_change": "차량 확보→출차 시간창 고정",
+        "scene": 11,
+        "scene_id": "SC11",
+        "sequence": 2
+      },
+      {
+        "function": "진아가 ‘젖는 기록/감사 원본/복구 핵심 인덱스’ 세 묶음을 1차 목표로 봉인한다.",
+        "must_change": "우선순위 논쟁→1차 목표 확정",
+        "scene": 12,
+        "scene_id": "SC12",
+        "sequence": 2
+      },
+      {
+        "function": "첫 카트에 젖은 시민기록을 싣고 각 상자 상태표를 붙인다.",
+        "must_change": "계획→첫 실제 적재",
+        "scene": 13,
+        "scene_id": "SC13",
+        "sequence": 3
+      },
+      {
+        "function": "첫 카트가 화물 엘리베이터를 타고 지상으로 올라간다.",
+        "must_change": "지하 기록→지상 이동 시작",
+        "scene": 14,
+        "scene_id": "SC14",
+        "sequence": 3
+      },
+      {
+        "function": "지상 도착 상자 일부에서 물이 더 흘러 예상보다 넓은 격리공간이 필요해진다.",
+        "must_change": "이송 성공→2차 손상 문제",
+        "scene": 15,
+        "scene_id": "SC15",
+        "sequence": 3
+      },
+      {
+        "function": "도윤이 보존실에서 동결건조 후보와 공기건조 후보를 분리해 처리량 한계를 보여준다.",
+        "must_change": "한 묶음 보존→처리 방식 분기",
+        "scene": 16,
+        "scene_id": "SC16",
+        "sequence": 3
+      },
+      {
+        "function": "진아가 두 번째 지하 적재를 시작하며 감사 원본을 포함할지 채원과 충돌한다.",
+        "must_change": "2차 적재→증거 우선 갈등",
+        "scene": 17,
+        "scene_id": "SC17",
+        "sequence": 3
+      },
+      {
+        "function": "유경이 서버 복제를 계속하면서 지상 스테이징 목록과 디지털 인덱스를 대조해 누락 상자를 찾는다.",
+        "must_change": "물리 목록→디지털 대조",
+        "scene": 18,
+        "scene_id": "SC18",
+        "sequence": 3
+      },
+      {
+        "function": "채원이 감사 원본을 먼저 옮기자고 요구하고 도윤은 젖는 시민기록의 손상이 더 빠르다고 반박한다.",
+        "must_change": "증거 우선↔손상 우선 충돌",
+        "scene": 19,
+        "scene_id": "SC19",
+        "sequence": 4
+      },
+      {
+        "function": "두 번째 카트가 중량 초과로 엘리베이터에서 경고음을 내고 일부 상자를 내려야 한다.",
+        "must_change": "분할안→중량 한계 현실화",
+        "scene": 20,
+        "scene_id": "SC20",
+        "sequence": 4
+      },
+      {
+        "function": "민석이 과적 상태로는 차에 싣지 않겠다고 거부하고 상자 수가 아니라 실제 중량 기준을 요구한다.",
+        "must_change": "구조 속도→운송 안전 기준",
+        "scene": 21,
+        "scene_id": "SC21",
+        "sequence": 4
+      },
+      {
+        "function": "채원이 봉인 훼손 위험을 이유로 감사 원본의 임시 분할을 거부한다.",
+        "must_change": "분할 적재→증거 단위 유지",
+        "scene": 22,
+        "scene_id": "SC22",
+        "sequence": 4
+      },
+      {
+        "function": "도윤이 이미 젖은 상자 한 개를 펼쳐 지연될수록 손상범위가 커지는 것을 보여준다.",
+        "must_change": "추상 손상 위험→가시적 손상",
+        "scene": 23,
+        "scene_id": "SC23",
+        "sequence": 4
+      },
+      {
+        "function": "진아가 젖은 기록과 감사 원본을 서로 다른 카트로 보내고 낮은 우선군 일부를 지하에 남기기로 결정한다.",
+        "must_change": "모두 이동→의도적 잔류 결정",
+        "scene": 24,
+        "scene_id": "SC24",
+        "sequence": 4
+      },
+      {
+        "function": "성호가 피트 수위 상승으로 엘리베이터 안전 종료를 02:50으로 앞당긴다.",
+        "must_change": "남은 시간→마지막 이송 횟수 축소",
+        "scene": 25,
+        "scene_id": "SC25",
+        "sequence": 5
+      },
+      {
+        "function": "민석이 첫 지상 기록 묶음을 화물차 쪽 임시 팔레트로 이동시키고 실제 적재 중량을 기록한다.",
+        "must_change": "스테이징→운송 준비",
+        "scene": 26,
+        "scene_id": "SC26",
+        "sequence": 5
+      },
+      {
+        "function": "제습차가 도착하고 도윤이 가장 젖은 상자부터 처리 슬롯을 배정한다.",
+        "must_change": "보존실 병목→외부 처리자원 확보",
+        "scene": 27,
+        "scene_id": "SC27",
+        "sequence": 5
+      },
+      {
+        "function": "진아와 채원이 감사 원본 봉인번호를 함께 확인하고 공동 인계서에 서명한다.",
+        "must_change": "절차 갈등→공동 인계 성립",
+        "scene": 28,
+        "scene_id": "SC28",
+        "sequence": 5
+      },
+      {
+        "function": "마지막 엘리베이터 카트에 감사 원본과 회복불가 위험 기록만 싣고 출발시킨다.",
+        "must_change": "마지막 이송 대상 확정",
+        "scene": 29,
+        "scene_id": "SC29",
+        "sequence": 5
+      },
+      {
+        "function": "엘리베이터가 02:51 안전잠금으로 멈추고 지하에 남은 낮은 우선군은 당장 옮길 수 없게 된다.",
+        "must_change": "이송 가능→지하 잔류 확정",
+        "scene": 30,
+        "scene_id": "SC30",
+        "sequence": 5
+      },
+      {
+        "function": "지상 스테이징 목록과 실제 상자 수가 하나 맞지 않아 전체가 잠시 멈춘다.",
+        "must_change": "이송 완료 기대→누락 확인",
+        "scene": 31,
+        "scene_id": "SC31",
+        "sequence": 6
+      },
+      {
+        "function": "유경이 디지털 인덱스에서 누락 상자가 지하 잔류군으로 재분류된 사실을 찾아낸다.",
+        "must_change": "분실 의심→재분류 확인",
+        "scene": 32,
+        "scene_id": "SC32",
+        "sequence": 6
+      },
+      {
+        "function": "도윤이 제습차 처리 슬롯보다 젖은 상자가 많아 한 묶음을 동결보관 대기로 돌린다.",
+        "must_change": "외부 자원 확보→추가 포기 필요",
+        "scene": 33,
+        "scene_id": "SC33",
+        "sequence": 6
+      },
+      {
+        "function": "민석이 화물차 축중을 맞추기 위해 감사 원본과 젖은 기록 팔레트의 위치를 바꾼다.",
+        "must_change": "적재 완료→중량 재배치",
+        "scene": 34,
+        "scene_id": "SC34",
+        "sequence": 6
+      },
+      {
+        "function": "진아와 채원이 ‘모두 보존’ 표현을 인계서에서 삭제하고 실제 이송/잔류 목록을 공동 서명한다.",
+        "must_change": "책임 방어→손실까지 기록",
+        "scene": 35,
+        "scene_id": "SC35",
+        "sequence": 6
+      },
+      {
+        "function": "유경이 UPS 종료 전 마지막 복제 범위를 다시 줄이고 복제 실패 파일 목록도 함께 남긴다.",
+        "must_change": "성공 목록만 기록→실패 목록 병기",
+        "scene": 36,
+        "scene_id": "SC36",
+        "sequence": 6
+      },
+      {
+        "function": "유경이 03:05 직전 핵심 인덱스 복제를 끝내고 서버실에서 철수한다.",
+        "must_change": "복제 진행→핵심 복제 종료",
+        "scene": 37,
+        "scene_id": "SC37",
+        "sequence": 7
+      },
+      {
+        "function": "UPS가 떨어져 남은 전체파일 복제가 중단되고 유경이 실패 상태를 그대로 봉인한다.",
+        "must_change": "부분 성공→미복제 확정",
+        "scene": 38,
+        "scene_id": "SC38",
+        "sequence": 7
+      },
+      {
+        "function": "03:05 로딩독 시간창이 닫히며 민석이 화물차를 안쪽 대신 외부 대기선으로 옮긴다.",
+        "must_change": "직접 적재 동선→우회 인계",
+        "scene": 39,
+        "scene_id": "SC39",
+        "sequence": 7
+      },
+      {
+        "function": "제습차 출발 직전 마지막 젖은 상자를 싣고 처리목록을 도윤이 직접 확인한다.",
+        "must_change": "제습 처리 선택→최종 슬롯 봉인",
+        "scene": 40,
+        "scene_id": "SC40",
+        "sequence": 7
+      },
+      {
+        "function": "민석이 첫 화물차를 출발시키고 남은 상자는 두 번째 차량 없이 현장 보관하기로 한다.",
+        "must_change": "전량 운송→1차분만 출발",
+        "scene": 41,
+        "scene_id": "SC41",
+        "sequence": 7
+      },
+      {
+        "function": "성호가 03:20 건물 주전원 차단 전 마지막 안전점검 순서를 알린다.",
+        "must_change": "기록 구조→건물 폐쇄 단계",
+        "scene": 42,
+        "scene_id": "SC42",
+        "sequence": 8
+      },
+      {
+        "function": "채원과 진아가 감사 원본 최종 봉인 상태를 확인하고 수동 계단 이동이 필요한 한 상자를 분리한다.",
+        "must_change": "일괄 봉인→수동 이동 1건 발생",
+        "scene": 43,
+        "scene_id": "SC43",
+        "sequence": 8
+      },
+      {
+        "function": "도윤이 보존실 전원을 끄기 전 온습도 센서와 잔류 기록 상태를 사진으로 남긴다.",
+        "must_change": "작업 종료→상태 증거 보존",
+        "scene": 44,
+        "scene_id": "SC44",
+        "sequence": 8
+      },
+      {
+        "function": "03:20 성호가 주전원을 차단하고 비상조명만 남는다.",
+        "must_change": "전원 사용 가능→비상전원 상태",
+        "scene": 45,
+        "scene_id": "SC45",
+        "sequence": 8
+      },
+      {
+        "function": "진아가 지하 접근금지 표식을 걸고 남겨둔 기록의 위치·수위·다음 점검 시각을 적는다.",
+        "must_change": "잔류 기록→검증 가능한 보류 상태",
+        "scene": 46,
+        "scene_id": "SC46",
+        "sequence": 8
+      },
+      {
+        "function": "외부 대기선에서 감사 원본과 젖은 기록의 인계 영수증을 각각 다른 책임자에게 넘긴다.",
+        "must_change": "현장 보유→외부 인계 완료",
+        "scene": 47,
+        "scene_id": "SC47",
+        "sequence": 9
+      },
+      {
+        "function": "진아가 공개 상황문에서 ‘자료 전부 보존’ 문구를 거부하고 이송·잔류·미복제 수를 그대로 적는다.",
+        "must_change": "완전 성공 서사→부분 손실 공개",
+        "scene": 48,
+        "scene_id": "SC48",
+        "sequence": 9
+      },
+      {
+        "function": "채원이 예외보고서에 긴급이송 때문에 지킨 절차와 포기한 절차를 구분해 기록한다.",
+        "must_change": "절차 방어→예외의 범위 명시",
+        "scene": 49,
+        "scene_id": "SC49",
+        "sequence": 9
+      },
+      {
+        "function": "03:30, 어두워진 지하 출입문 앞에서 수위 센서가 안정되는 것을 확인하지만 복구 완료를 선언하지 않고 다음 점검만 남긴다.",
+        "must_change": "오늘 실행 완료→장기 복구는 열림",
+        "scene": 50,
+        "scene_id": "SC50",
+        "sequence": 9
+      }
+    ],
+    "sequence_contracts": [
+      {
+        "function": "침수와 전력 차단 예고로 ‘전부 보존’ 목표가 무너지고 긴급 선별 모드로 전환한다.",
+        "scenes": "SC01-SC06",
+        "sequence": 1
+      },
+      {
+        "function": "엘리베이터·UPS·운송·감사 원본의 시간창을 실제 자원 조건으로 드러내고 우선순위를 고정한다.",
+        "scenes": "SC07-SC12",
+        "sequence": 2
+      },
+      {
+        "function": "첫 기록 이송을 실행하며 젖은 종이, 중량, 보존실 처리량이 계획과 다름을 확인한다.",
+        "scenes": "SC13-SC18",
+        "sequence": 3
+      },
+      {
+        "function": "감사 증거와 시민기록 중 무엇을 먼저 옮길지를 두고 충돌하고, 단일 우선순위가 아닌 분할 이송을 선택한다.",
+        "scenes": "SC19-SC24",
+        "sequence": 4
+      },
+      {
+        "function": "엘리베이터 폐쇄 시간이 앞당겨지고 제습차가 도착하면서 마지막 지하 이송 기회를 실제로 사용한다.",
+        "scenes": "SC25-SC30",
+        "sequence": 5
+      },
+      {
+        "function": "엘리베이터 폐쇄 후 지상 스테이징에서 누락·중량·인계 문제를 재조정하고 남은 실행안을 압축한다.",
+        "scenes": "SC31-SC36",
+        "sequence": 6
+      },
+      {
+        "function": "서버 UPS와 제습차 시간창이 닫히면서 디지털 복제와 젖은 기록 중 일부를 의도적으로 포기한다.",
+        "scenes": "SC37-SC41",
+        "sequence": 7
+      },
+      {
+        "function": "03:20 건물 전원 차단을 앞두고 마지막 봉인·수동 이동·구역 폐쇄를 실행한다.",
+        "scenes": "SC42-SC46",
+        "sequence": 8
+      },
+      {
+        "function": "살린 것과 남긴 것을 숨기지 않고 기록하며, 완전한 복구 대신 검증 가능한 손실·인계 상태로 회차를 닫는다.",
+        "scenes": "SC47-SC50",
+        "sequence": 9
+      }
+    ],
+    "title": "새벽 보존실",
+    "work_id": "SYNTH_PA8_ARCHIVE_NIGHT"
+  },
+  "shared_generation_instructions": [
+    "완성된 한국어 방송드라마 대본 한 회차를 작성한다.",
+    "최소 40,000자 이상이며 상한은 없다. 분량을 채우기 위한 반복·패딩은 금지한다.",
+    "정확히 동결된 9개 시퀀스와 50개 씬의 의미 기능을 보존한다.",
+    "대사는 감정·상태를 직접 설명하지 말고 압박, 회피, 선택, 협상, 침묵과 서브텍스트를 사용한다.",
+    "중요한 변화는 표정·시선·손·소품·자리 이동·실패 행동·멈춤·침묵·결과 등 화면에 보이는 행동으로 실현한다.",
+    "지문은 배우가 연기할 수 있도록 구체적이어야 하지만 대사나 이미 보인 상태를 추상적으로 다시 설명하지 않는다.",
+    "인물마다 문장 길이, 어휘, 직접성, 유머, 회피 방식, 직업 언어, 지위 전략을 분리한다.",
+    "고정보다 실제 인과 변화가 없는 절차 반복을 피한다.",
+    "고정보다 이미 행동이 증명한 의미를 후행 설명문으로 다시 요약하지 않는다.",
+    "고정보다 정보가 많은 씬에서도 인물 간 비용·비대칭·압박이 실제 연기 가능하게 존재해야 한다.",
+    "클라이맥스 이후에는 다음 회차 상태에 영향을 주는 종료 행동만 남겨 결말을 압축한다.",
+    "연구 메타데이터, arm 이름, 실험 번호, schema, validator, ESCC 같은 내부 용어를 대본에 노출하지 않는다.",
+    "각 씬 제목은 '씬 N. 장소 / 시각' 형식으로 자연스럽게 작성하고, 시퀀스 제목도 포함한다.",
+    "완성 대본 외의 해설, 평가, JSON, 작업노트는 출력하지 않는다."
+  ],
+  "surface_contract": {
+    "episode_clock": "01:48-03:32",
+    "instruction": "Realize the frozen semantics while obeying every supplied scene spacetime constraint. If prose would contradict a constraint, realize the same scene function in a compliant way; do not add/delete/reorder scenes.",
+    "mode": "SEMANTIC_ARCHITECTURE_PLUS_EXPLICIT_SPACETIME_CONTRACT",
+    "resources": {
+      "DEHUMIDIFICATION_VAN": {
+        "valid_from": "02:42",
+        "valid_to": "03:12"
+      },
+      "FREIGHT_ELEVATOR": {
+        "valid_from": "01:48",
+        "valid_to": "02:50"
+      },
+      "LOADING_DOCK_ACCESS": {
+        "valid_from": "02:20",
+        "valid_to": "03:05"
+      },
+      "MAIN_POWER": {
+        "valid_from": "01:48",
+        "valid_to": "03:20"
+      },
+      "SERVER_UPS": {
+        "valid_from": "01:48",
+        "valid_to": "03:05"
+      }
+    },
+    "scene_spacetime": [
+      {
+        "scene_id": "SC01",
+        "spacetime": {
+          "clock": "01:48",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "B2_STACKS",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "서진아",
+            "한도윤",
+            "류성호"
+          ],
+          "predecessor": null,
+          "timeline_mode": "LINEAR_REALTIME"
+        }
+      },
+      {
+        "scene_id": "SC02",
+        "spacetime": {
+          "clock": "01:50",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "B2_STACKS",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "류성호",
+            "한도윤"
+          ],
+          "predecessor": "SC01",
+          "timeline_mode": "LINEAR_REALTIME"
+        }
+      },
+      {
+        "scene_id": "SC03",
+        "spacetime": {
+          "clock": "01:52",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "B2_STACKS",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "서진아",
+            "한도윤",
+            "류성호"
+          ],
+          "predecessor": "SC02",
+          "timeline_mode": "LINEAR_REALTIME"
+        }
+      },
+      {
+        "scene_id": "SC04",
+        "spacetime": {
+          "clock": "01:54",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "B2_STACKS",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "한도윤",
+            "서진아"
+          ],
+          "predecessor": "SC03",
+          "timeline_mode": "LINEAR_REALTIME"
+        }
+      },
+      {
+        "scene_id": "SC05",
+        "spacetime": {
+          "clock": "01:56",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "SERVER_ROOM",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "문유경",
+            "서진아"
+          ],
+          "predecessor": "SC04",
+          "resources": [
+            {
+              "resource": "SERVER_UPS",
+              "valid_from": {
+                "clock": "01:48",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "03:05",
+                "day": 0
+              }
+            }
+          ],
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 2,
+              "entity": "서진아",
+              "from_location": "B2_STACKS",
+              "from_scene": "SC04",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "SERVER_ROOM",
+              "travel_min": 2,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC06",
+        "spacetime": {
+          "clock": "01:58",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "서진아",
+            "한도윤",
+            "이채원"
+          ],
+          "predecessor": "SC05",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "서진아",
+              "from_location": "SERVER_ROOM",
+              "from_scene": "SC05",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 0,
+              "entity": "한도윤",
+              "from_location": "B2_STACKS",
+              "from_scene": "SC04",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC07",
+        "spacetime": {
+          "clock": "02:00",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "FREIGHT_ELEVATOR",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "류성호",
+            "한도윤"
+          ],
+          "predecessor": "SC06",
+          "resources": [
+            {
+              "resource": "FREIGHT_ELEVATOR",
+              "valid_from": {
+                "clock": "01:48",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "02:50",
+                "day": 0
+              }
+            }
+          ],
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "류성호",
+              "from_location": "B2_STACKS",
+              "from_scene": "SC03",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "FREIGHT_ELEVATOR",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 1,
+              "entity": "한도윤",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC06",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "FREIGHT_ELEVATOR",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC08",
+        "spacetime": {
+          "clock": "02:02",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "한도윤",
+            "박민석"
+          ],
+          "predecessor": "SC07",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "한도윤",
+              "from_location": "FREIGHT_ELEVATOR",
+              "from_scene": "SC07",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC09",
+        "spacetime": {
+          "clock": "02:04",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "SERVER_ROOM",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "문유경",
+            "서진아"
+          ],
+          "predecessor": "SC08",
+          "resources": [
+            {
+              "resource": "SERVER_UPS",
+              "valid_from": {
+                "clock": "01:48",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "03:05",
+                "day": 0
+              }
+            }
+          ],
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "서진아",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC06",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "SERVER_ROOM",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC10",
+        "spacetime": {
+          "clock": "02:06",
+          "day": 0,
+          "duration_min": 3,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "이채원",
+            "서진아"
+          ],
+          "predecessor": "SC09",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "서진아",
+              "from_location": "SERVER_ROOM",
+              "from_scene": "SC09",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC11",
+        "spacetime": {
+          "clock": "02:09",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "LOADING_DOCK",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "박민석",
+            "서진아"
+          ],
+          "predecessor": "SC10",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "박민석",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC08",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "LOADING_DOCK",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 1,
+              "entity": "서진아",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC10",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "LOADING_DOCK",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC12",
+        "spacetime": {
+          "clock": "02:11",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "서진아",
+            "한도윤",
+            "이채원",
+            "문유경"
+          ],
+          "predecessor": "SC11",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "서진아",
+              "from_location": "LOADING_DOCK",
+              "from_scene": "SC11",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 0,
+              "entity": "문유경",
+              "from_location": "SERVER_ROOM",
+              "from_scene": "SC09",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC13",
+        "spacetime": {
+          "clock": "02:13",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "B2_STACKS",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "한도윤",
+            "서진아"
+          ],
+          "predecessor": "SC12",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "한도윤",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC12",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "B2_STACKS",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 1,
+              "entity": "서진아",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC12",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "B2_STACKS",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC14",
+        "spacetime": {
+          "clock": "02:15",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "FREIGHT_ELEVATOR",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "한도윤",
+            "류성호"
+          ],
+          "predecessor": "SC13",
+          "resources": [
+            {
+              "resource": "FREIGHT_ELEVATOR",
+              "valid_from": {
+                "clock": "01:48",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "02:50",
+                "day": 0
+              }
+            }
+          ],
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "한도윤",
+              "from_location": "B2_STACKS",
+              "from_scene": "SC13",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "FREIGHT_ELEVATOR",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC15",
+        "spacetime": {
+          "clock": "02:17",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "한도윤",
+            "서진아"
+          ],
+          "predecessor": "SC14",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "한도윤",
+              "from_location": "FREIGHT_ELEVATOR",
+              "from_scene": "SC14",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 0,
+              "entity": "서진아",
+              "from_location": "B2_STACKS",
+              "from_scene": "SC13",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC16",
+        "spacetime": {
+          "clock": "02:19",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "CONSERVATION_LAB",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "한도윤"
+          ],
+          "predecessor": "SC15",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "한도윤",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC15",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "CONSERVATION_LAB",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC17",
+        "spacetime": {
+          "clock": "02:21",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "B2_STACKS",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "서진아",
+            "이채원",
+            "한도윤"
+          ],
+          "predecessor": "SC16",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "서진아",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC15",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "B2_STACKS",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 0,
+              "entity": "이채원",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC12",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "B2_STACKS",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 2,
+              "entity": "한도윤",
+              "from_location": "CONSERVATION_LAB",
+              "from_scene": "SC16",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "B2_STACKS",
+              "travel_min": 2,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC18",
+        "spacetime": {
+          "clock": "02:23",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "SERVER_ROOM",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "문유경"
+          ],
+          "predecessor": "SC17",
+          "resources": [
+            {
+              "resource": "SERVER_UPS",
+              "valid_from": {
+                "clock": "01:48",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "03:05",
+                "day": 0
+              }
+            }
+          ],
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "문유경",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC12",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "SERVER_ROOM",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC19",
+        "spacetime": {
+          "clock": "02:25",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "이채원",
+            "한도윤",
+            "서진아"
+          ],
+          "predecessor": "SC18",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "이채원",
+              "from_location": "B2_STACKS",
+              "from_scene": "SC17",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 0,
+              "entity": "한도윤",
+              "from_location": "B2_STACKS",
+              "from_scene": "SC17",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 0,
+              "entity": "서진아",
+              "from_location": "B2_STACKS",
+              "from_scene": "SC17",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC20",
+        "spacetime": {
+          "clock": "02:27",
+          "day": 0,
+          "duration_min": 3,
+          "location_id": "FREIGHT_ELEVATOR",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "류성호",
+            "한도윤"
+          ],
+          "predecessor": "SC19",
+          "resources": [
+            {
+              "resource": "FREIGHT_ELEVATOR",
+              "valid_from": {
+                "clock": "01:48",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "02:50",
+                "day": 0
+              }
+            }
+          ],
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "한도윤",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC19",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "FREIGHT_ELEVATOR",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC21",
+        "spacetime": {
+          "clock": "02:30",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "LOADING_DOCK",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "박민석",
+            "서진아"
+          ],
+          "predecessor": "SC20",
+          "resources": [
+            {
+              "resource": "LOADING_DOCK_ACCESS",
+              "valid_from": {
+                "clock": "02:20",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "03:05",
+                "day": 0
+              }
+            }
+          ],
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "서진아",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC19",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "LOADING_DOCK",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC22",
+        "spacetime": {
+          "clock": "02:32",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "이채원",
+            "서진아"
+          ],
+          "predecessor": "SC21",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "서진아",
+              "from_location": "LOADING_DOCK",
+              "from_scene": "SC21",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC23",
+        "spacetime": {
+          "clock": "02:34",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "CONSERVATION_LAB",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "한도윤",
+            "이채원"
+          ],
+          "predecessor": "SC22",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "한도윤",
+              "from_location": "FREIGHT_ELEVATOR",
+              "from_scene": "SC20",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "CONSERVATION_LAB",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 1,
+              "entity": "이채원",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC22",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "CONSERVATION_LAB",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC24",
+        "spacetime": {
+          "clock": "02:36",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "서진아",
+            "한도윤",
+            "이채원"
+          ],
+          "predecessor": "SC23",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "한도윤",
+              "from_location": "CONSERVATION_LAB",
+              "from_scene": "SC23",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 1,
+              "entity": "이채원",
+              "from_location": "CONSERVATION_LAB",
+              "from_scene": "SC23",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC25",
+        "spacetime": {
+          "clock": "02:38",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "FREIGHT_ELEVATOR",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "류성호",
+            "서진아"
+          ],
+          "predecessor": "SC24",
+          "resources": [
+            {
+              "resource": "FREIGHT_ELEVATOR",
+              "valid_from": {
+                "clock": "01:48",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "02:50",
+                "day": 0
+              }
+            }
+          ],
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "서진아",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC24",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "FREIGHT_ELEVATOR",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC26",
+        "spacetime": {
+          "clock": "02:40",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "LOADING_DOCK",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "박민석",
+            "한도윤"
+          ],
+          "predecessor": "SC25",
+          "resources": [
+            {
+              "resource": "LOADING_DOCK_ACCESS",
+              "valid_from": {
+                "clock": "02:20",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "03:05",
+                "day": 0
+              }
+            }
+          ],
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "한도윤",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC24",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "LOADING_DOCK",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC27",
+        "spacetime": {
+          "clock": "02:42",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "COURTYARD",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "한도윤",
+            "서진아"
+          ],
+          "predecessor": "SC26",
+          "resources": [
+            {
+              "resource": "DEHUMIDIFICATION_VAN",
+              "valid_from": {
+                "clock": "02:42",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "03:12",
+                "day": 0
+              }
+            }
+          ],
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "한도윤",
+              "from_location": "LOADING_DOCK",
+              "from_scene": "SC26",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "COURTYARD",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 0,
+              "entity": "서진아",
+              "from_location": "FREIGHT_ELEVATOR",
+              "from_scene": "SC25",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "COURTYARD",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC28",
+        "spacetime": {
+          "clock": "02:44",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "서진아",
+            "이채원"
+          ],
+          "predecessor": "SC27",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "서진아",
+              "from_location": "COURTYARD",
+              "from_scene": "SC27",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC29",
+        "spacetime": {
+          "clock": "02:46",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "FREIGHT_ELEVATOR",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "서진아",
+            "이채원",
+            "류성호"
+          ],
+          "predecessor": "SC28",
+          "resources": [
+            {
+              "resource": "FREIGHT_ELEVATOR",
+              "valid_from": {
+                "clock": "01:48",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "02:50",
+                "day": 0
+              }
+            }
+          ],
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "서진아",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC28",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "FREIGHT_ELEVATOR",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 1,
+              "entity": "이채원",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC28",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "FREIGHT_ELEVATOR",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC30",
+        "spacetime": {
+          "clock": "02:48",
+          "day": 0,
+          "duration_min": 3,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "류성호",
+            "서진아",
+            "한도윤"
+          ],
+          "predecessor": "SC29",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "류성호",
+              "from_location": "FREIGHT_ELEVATOR",
+              "from_scene": "SC29",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 1,
+              "entity": "서진아",
+              "from_location": "FREIGHT_ELEVATOR",
+              "from_scene": "SC29",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 0,
+              "entity": "한도윤",
+              "from_location": "COURTYARD",
+              "from_scene": "SC27",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC31",
+        "spacetime": {
+          "clock": "02:51",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "서진아",
+            "문유경",
+            "이채원"
+          ],
+          "predecessor": "SC30",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "문유경",
+              "from_location": "SERVER_ROOM",
+              "from_scene": "SC18",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 0,
+              "entity": "이채원",
+              "from_location": "FREIGHT_ELEVATOR",
+              "from_scene": "SC29",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC32",
+        "spacetime": {
+          "clock": "02:53",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "문유경",
+            "서진아"
+          ],
+          "predecessor": "SC31",
+          "timeline_mode": "LINEAR_REALTIME"
+        }
+      },
+      {
+        "scene_id": "SC33",
+        "spacetime": {
+          "clock": "02:55",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "COURTYARD",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "한도윤",
+            "서진아"
+          ],
+          "predecessor": "SC32",
+          "resources": [
+            {
+              "resource": "DEHUMIDIFICATION_VAN",
+              "valid_from": {
+                "clock": "02:42",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "03:12",
+                "day": 0
+              }
+            }
+          ],
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "한도윤",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC30",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "COURTYARD",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 1,
+              "entity": "서진아",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC32",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "COURTYARD",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC34",
+        "spacetime": {
+          "clock": "02:57",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "LOADING_DOCK",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "박민석",
+            "이채원"
+          ],
+          "predecessor": "SC33",
+          "resources": [
+            {
+              "resource": "LOADING_DOCK_ACCESS",
+              "valid_from": {
+                "clock": "02:20",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "03:05",
+                "day": 0
+              }
+            }
+          ],
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "이채원",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC31",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "LOADING_DOCK",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC35",
+        "spacetime": {
+          "clock": "02:59",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "서진아",
+            "이채원"
+          ],
+          "predecessor": "SC34",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "서진아",
+              "from_location": "COURTYARD",
+              "from_scene": "SC33",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 1,
+              "entity": "이채원",
+              "from_location": "LOADING_DOCK",
+              "from_scene": "SC34",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC36",
+        "spacetime": {
+          "clock": "03:01",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "SERVER_ROOM",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "문유경",
+            "서진아"
+          ],
+          "predecessor": "SC35",
+          "resources": [
+            {
+              "resource": "SERVER_UPS",
+              "valid_from": {
+                "clock": "01:48",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "03:05",
+                "day": 0
+              }
+            }
+          ],
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "문유경",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC32",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "SERVER_ROOM",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 1,
+              "entity": "서진아",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC35",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "SERVER_ROOM",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC37",
+        "spacetime": {
+          "clock": "03:03",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "SERVER_ROOM",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "문유경"
+          ],
+          "predecessor": "SC36",
+          "resources": [
+            {
+              "resource": "SERVER_UPS",
+              "valid_from": {
+                "clock": "01:48",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "03:05",
+                "day": 0
+              }
+            }
+          ],
+          "timeline_mode": "LINEAR_REALTIME"
+        }
+      },
+      {
+        "scene_id": "SC38",
+        "spacetime": {
+          "clock": "03:05",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "문유경",
+            "서진아"
+          ],
+          "predecessor": "SC37",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "문유경",
+              "from_location": "SERVER_ROOM",
+              "from_scene": "SC37",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 0,
+              "entity": "서진아",
+              "from_location": "SERVER_ROOM",
+              "from_scene": "SC36",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC39",
+        "spacetime": {
+          "clock": "03:07",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "COURTYARD",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "박민석",
+            "서진아"
+          ],
+          "predecessor": "SC38",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "박민석",
+              "from_location": "LOADING_DOCK",
+              "from_scene": "SC34",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "COURTYARD",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 1,
+              "entity": "서진아",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC38",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "COURTYARD",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC40",
+        "spacetime": {
+          "clock": "03:09",
+          "day": 0,
+          "duration_min": 3,
+          "location_id": "COURTYARD",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "한도윤",
+            "서진아"
+          ],
+          "predecessor": "SC39",
+          "resources": [
+            {
+              "resource": "DEHUMIDIFICATION_VAN",
+              "valid_from": {
+                "clock": "02:42",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "03:12",
+                "day": 0
+              }
+            }
+          ],
+          "timeline_mode": "LINEAR_REALTIME"
+        }
+      },
+      {
+        "scene_id": "SC41",
+        "spacetime": {
+          "clock": "03:12",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "COURTYARD",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "박민석",
+            "서진아"
+          ],
+          "predecessor": "SC40",
+          "timeline_mode": "LINEAR_REALTIME"
+        }
+      },
+      {
+        "scene_id": "SC42",
+        "spacetime": {
+          "clock": "03:14",
+          "day": 0,
+          "duration_min": 2,
+          "future_events": [
+            {
+              "clock": "03:20",
+              "day": 0,
+              "event": "MAIN_POWER_ISOLATION",
+              "framing": "FUTURE"
+            }
+          ],
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "류성호",
+            "서진아"
+          ],
+          "predecessor": "SC41",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "서진아",
+              "from_location": "COURTYARD",
+              "from_scene": "SC41",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC43",
+        "spacetime": {
+          "clock": "03:16",
+          "day": 0,
+          "duration_min": 2,
+          "future_events": [
+            {
+              "clock": "03:20",
+              "day": 0,
+              "event": "MAIN_POWER_ISOLATION",
+              "framing": "FUTURE"
+            }
+          ],
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "이채원",
+            "서진아"
+          ],
+          "predecessor": "SC42",
+          "timeline_mode": "LINEAR_REALTIME"
+        }
+      },
+      {
+        "scene_id": "SC44",
+        "spacetime": {
+          "clock": "03:18",
+          "day": 0,
+          "duration_min": 2,
+          "future_events": [
+            {
+              "clock": "03:20",
+              "day": 0,
+              "event": "MAIN_POWER_ISOLATION",
+              "framing": "FUTURE"
+            }
+          ],
+          "location_id": "CONSERVATION_LAB",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "한도윤",
+            "류성호"
+          ],
+          "predecessor": "SC43",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "한도윤",
+              "from_location": "COURTYARD",
+              "from_scene": "SC40",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "CONSERVATION_LAB",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 0,
+              "entity": "류성호",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC42",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "CONSERVATION_LAB",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC45",
+        "spacetime": {
+          "clock": "03:20",
+          "day": 0,
+          "duration_min": 2,
+          "events": [
+            {
+              "clock": "03:20",
+              "day": 0,
+              "event": "MAIN_POWER_ISOLATION",
+              "framing": "CURRENT"
+            }
+          ],
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "류성호",
+            "서진아"
+          ],
+          "predecessor": "SC44",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "류성호",
+              "from_location": "CONSERVATION_LAB",
+              "from_scene": "SC44",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC46",
+        "spacetime": {
+          "clock": "03:22",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "서진아",
+            "한도윤"
+          ],
+          "predecessor": "SC45",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "한도윤",
+              "from_location": "CONSERVATION_LAB",
+              "from_scene": "SC44",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC47",
+        "spacetime": {
+          "clock": "03:24",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "COURTYARD",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "서진아",
+            "이채원",
+            "한도윤"
+          ],
+          "predecessor": "SC46",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "서진아",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC46",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "COURTYARD",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 0,
+              "entity": "이채원",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC43",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "COURTYARD",
+              "travel_min": 1,
+              "type": "MOVE"
+            },
+            {
+              "arrival_offset_min": 1,
+              "entity": "한도윤",
+              "from_location": "GROUND_STAGING",
+              "from_scene": "SC46",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "COURTYARD",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC48",
+        "spacetime": {
+          "clock": "03:26",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "서진아",
+            "문유경"
+          ],
+          "predecessor": "SC47",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 1,
+              "entity": "서진아",
+              "from_location": "COURTYARD",
+              "from_scene": "SC47",
+              "mode": "AT_SCENE_OPEN",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC49",
+        "spacetime": {
+          "clock": "03:28",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "이채원",
+            "서진아"
+          ],
+          "predecessor": "SC48",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "이채원",
+              "from_location": "COURTYARD",
+              "from_scene": "SC47",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      },
+      {
+        "scene_id": "SC50",
+        "spacetime": {
+          "clock": "03:30",
+          "day": 0,
+          "duration_min": 2,
+          "location_id": "GROUND_STAGING",
+          "min_gap_after_predecessor": 0,
+          "participants": [
+            "서진아",
+            "류성호",
+            "한도윤"
+          ],
+          "predecessor": "SC49",
+          "timeline_mode": "LINEAR_REALTIME",
+          "transitions": [
+            {
+              "arrival_offset_min": 0,
+              "entity": "한도윤",
+              "from_location": "COURTYARD",
+              "from_scene": "SC47",
+              "mode": "BETWEEN_SCENES",
+              "to_location": "GROUND_STAGING",
+              "travel_min": 1,
+              "type": "MOVE"
+            }
+          ]
+        }
+      }
+    ],
+    "transition_contract": {
+      "at_scene_open": "allowed only when travel_min <= destination scene duration; arrival_offset_min=travel_min",
+      "between_scenes": "elapsed gap >= travel_min",
+      "semantic_effect": "NONE__MOVEMENT_TYPING_ONLY"
+    },
+    "travel_minutes": {
+      "B2_STACKS|CONSERVATION_LAB": 2,
+      "B2_STACKS|COURTYARD": 2,
+      "B2_STACKS|FREIGHT_ELEVATOR": 1,
+      "B2_STACKS|GROUND_STAGING": 1,
+      "B2_STACKS|LOADING_DOCK": 2,
+      "B2_STACKS|SERVER_ROOM": 2,
+      "CONSERVATION_LAB|B2_STACKS": 2,
+      "CONSERVATION_LAB|COURTYARD": 1,
+      "CONSERVATION_LAB|FREIGHT_ELEVATOR": 1,
+      "CONSERVATION_LAB|GROUND_STAGING": 1,
+      "CONSERVATION_LAB|LOADING_DOCK": 2,
+      "CONSERVATION_LAB|SERVER_ROOM": 2,
+      "COURTYARD|B2_STACKS": 2,
+      "COURTYARD|CONSERVATION_LAB": 1,
+      "COURTYARD|FREIGHT_ELEVATOR": 1,
+      "COURTYARD|GROUND_STAGING": 1,
+      "COURTYARD|LOADING_DOCK": 1,
+      "COURTYARD|SERVER_ROOM": 2,
+      "FREIGHT_ELEVATOR|B2_STACKS": 1,
+      "FREIGHT_ELEVATOR|CONSERVATION_LAB": 1,
+      "FREIGHT_ELEVATOR|COURTYARD": 1,
+      "FREIGHT_ELEVATOR|GROUND_STAGING": 1,
+      "FREIGHT_ELEVATOR|LOADING_DOCK": 1,
+      "FREIGHT_ELEVATOR|SERVER_ROOM": 1,
+      "GROUND_STAGING|B2_STACKS": 1,
+      "GROUND_STAGING|CONSERVATION_LAB": 1,
+      "GROUND_STAGING|COURTYARD": 1,
+      "GROUND_STAGING|FREIGHT_ELEVATOR": 1,
+      "GROUND_STAGING|LOADING_DOCK": 1,
+      "GROUND_STAGING|SERVER_ROOM": 1,
+      "LOADING_DOCK|B2_STACKS": 2,
+      "LOADING_DOCK|CONSERVATION_LAB": 2,
+      "LOADING_DOCK|COURTYARD": 1,
+      "LOADING_DOCK|FREIGHT_ELEVATOR": 1,
+      "LOADING_DOCK|GROUND_STAGING": 1,
+      "LOADING_DOCK|SERVER_ROOM": 2,
+      "SERVER_ROOM|B2_STACKS": 2,
+      "SERVER_ROOM|CONSERVATION_LAB": 2,
+      "SERVER_ROOM|COURTYARD": 2,
+      "SERVER_ROOM|FREIGHT_ELEVATOR": 1,
+      "SERVER_ROOM|GROUND_STAGING": 1,
+      "SERVER_ROOM|LOADING_DOCK": 2
+    }
+  },
+  "task": "WRITE_ONE_COMPLETE_KOREAN_BROADCAST_SCREENPLAY"
+}

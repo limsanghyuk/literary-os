@@ -1,0 +1,23 @@
+{
+  "active_runtime_effect": "NONE__EXACT_R69_UNCHANGED",
+  "control_packet_sha256": "28fe250e505b6a3751435afd1ae384340ff1cac1f6e17d857ea007912fd274f7",
+  "control_surface_outputs": 0,
+  "date": "2026-09-29",
+  "dispatch_rule": "Give CONTROL packet to one fresh generation context and TREATMENT packet to a different fresh generation context. Neither context may see the other packet/output.",
+  "gates": {
+    "control_escc_absent": true,
+    "human_target_absent": true,
+    "other_arm_output_absent": true,
+    "semantic_payload_hash_equal": true,
+    "surface_outputs_0": true,
+    "treatment_escc_present": true
+  },
+  "human_target_accessed": false,
+  "parent_architecture_sha256": "2486c4534482943d82fb91723d931a611551d8c3b2cf4ba36907852d325c9bbf",
+  "physical_package_effect": "NONE__RESEARCH_ONLY",
+  "schema": "PA8_D_GENERATION_PACKET_BUILD_RECEIPT_R1",
+  "semantic_payload_sha256": "adefb2f6463939cc2e23c5c08deee82c912932721753a3e1047ed9533cadac34",
+  "status": "PASS",
+  "treatment_packet_sha256": "fb17e6859c00bcbd1101d5f82a58e6bee88f01caa5bdd62b1ebc203a41d363ae",
+  "treatment_surface_outputs": 0
+}
