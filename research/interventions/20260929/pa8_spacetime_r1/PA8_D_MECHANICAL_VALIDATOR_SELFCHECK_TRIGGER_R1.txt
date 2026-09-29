@@ -1,0 +1,1 @@
+Trigger PA8-D mechanical validator selfcheck. Expected result before screenplay intake: HOLD__MISSING_FIRST_OUTPUTS.
