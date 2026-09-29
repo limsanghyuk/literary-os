@@ -1,0 +1,44 @@
+{
+  "schema": "PA8_D_GENERATION_ZIP_GITIGNORE_INCIDENT_CLOSURE_R1",
+  "date": "2026-09-29",
+  "classification": "OPERATIONAL_PACKAGING_FAILURE__NOT_SCIENTIFIC_FAIL__CLOSED_PASS",
+  "failed_run": {
+    "run_id": 36574536664,
+    "conclusion": "failure",
+    "observed": "ZIP builder itself completed PASS and produced two CRC-PASS ZIPs plus manifest. Failure occurred at git add.",
+    "root_cause": "Repository .gitignore excludes ZIP files; plain git add returned exit code 1.",
+    "evidence": "Job log explicitly reported both PA8_D_*_INDEPENDENT_GENERATION_PACKAGE_R1.zip paths are ignored."
+  },
+  "repair": {
+    "scope": "PACKAGING_ONLY",
+    "change": "Use git add -f for the two already-declared ZIP output paths.",
+    "workflow_commit": "c302a6fdbb11233b571475241304a400cd489072",
+    "retry_trigger_commit": "dcae33f5fdc2702dde62c0797388b04fd243eb35",
+    "retry_run_id": 36576289701,
+    "retry_conclusion": "success",
+    "scientific_inputs_changed": false,
+    "thresholds_changed": false,
+    "architecture_changed": false,
+    "generator_packets_changed": false
+  },
+  "final_packages": {
+    "CONTROL": {
+      "bytes": 8213,
+      "sha256": "67d3c4f76cfd29c5bc86dd417b024cc70b84fd76d02afde1dc1697d2230da323",
+      "crc_pass": true,
+      "path": "research/interventions/20260929/pa8_spacetime_r1/PA8_D_CONTROL_INDEPENDENT_GENERATION_PACKAGE_R1.zip"
+    },
+    "TREATMENT": {
+      "bytes": 11288,
+      "sha256": "989cf32123780bc5ead50fe924e959bef0de964a7d7ee00aa272642c42d2b4ef",
+      "crc_pass": true,
+      "path": "research/interventions/20260929/pa8_spacetime_r1/PA8_D_TREATMENT_INDEPENDENT_GENERATION_PACKAGE_R1.zip"
+    }
+  },
+  "authority_effect": "NONE",
+  "active_runtime_effect": "NONE__EXACT_R69_UNCHANGED",
+  "production_effect": "NONE",
+  "runtime_db_effect": "NONE",
+  "physical_package_effect": "NONE",
+  "lesson": "When research artifacts intentionally include ZIP binaries in an ignored extension, use an explicit force-add or artifact store. A successful builder + CRC receipt must not be reclassified as scientific failure merely because repository ignore policy blocks commit."
+}
