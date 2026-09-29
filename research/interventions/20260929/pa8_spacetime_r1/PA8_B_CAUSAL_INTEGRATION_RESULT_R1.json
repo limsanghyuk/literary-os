@@ -1,0 +1,231 @@
+{
+  "active_runtime_effect": "NONE__EXACT_R69_UNCHANGED",
+  "adoption_chain": "value change -> consumer compiled input -> provider-input hash -> downstream schedule/replan hash",
+  "date": "2026-09-29",
+  "evidence": {
+    "baseline": {
+      "provider_input_sha256": "b3c0c1f83bdbe1fa6b31866d6e8b6a0088999e557f4bb0d1102e8103753234f3",
+      "schedule": {
+        "reason": "NONE",
+        "schedule": [
+          {
+            "end": 1325,
+            "scene": "S1",
+            "start": 1320
+          },
+          {
+            "end": 1335,
+            "scene": "S2",
+            "start": 1330
+          },
+          {
+            "end": 1350,
+            "scene": "S3",
+            "start": 1345
+          },
+          {
+            "end": 1360,
+            "scene": "S4",
+            "start": 1355
+          }
+        ],
+        "status": "SCHEDULED"
+      },
+      "schedule_sha256": "214d458db645ebea09f21ee1a07558398743d46b7521ac123d141f39cb1299fc",
+      "semantic_sha256": "94788cea6321b89342c0d219ee0e990fe81076cb687175026362ee9a20970131"
+    },
+    "gates": {
+      "C1_RELEVANT_EARLIEST_START_SHIFT": true,
+      "C2_RELEVANT_TRAVEL_GAP_SHIFT": true,
+      "C3_RELEVANT_AVAILABILITY_CONFLICT": true,
+      "C4_PA7_LIKE_DEADLINE_CONFLICT": true,
+      "N1_IRRELEVANT_METADATA_INVARIANCE": true,
+      "N2_SEMANTIC_INVARIANCE": true
+    },
+    "semantic_sha256": "94788cea6321b89342c0d219ee0e990fe81076cb687175026362ee9a20970131",
+    "variants": {
+      "C1_RELEVANT_EARLIEST_START_SHIFT": {
+        "provider_changed": true,
+        "provider_input_sha256": "4c783f8503d53da8edc5b369be8fa3d5a8c25cb2e5bba2cc4e9f1b6628fad638",
+        "schedule": {
+          "reason": "NONE",
+          "schedule": [
+            {
+              "end": 1325,
+              "scene": "S1",
+              "start": 1320
+            },
+            {
+              "end": 1340,
+              "scene": "S2",
+              "start": 1335
+            },
+            {
+              "end": 1355,
+              "scene": "S3",
+              "start": 1350
+            },
+            {
+              "end": 1365,
+              "scene": "S4",
+              "start": 1360
+            }
+          ],
+          "status": "SCHEDULED"
+        },
+        "schedule_changed": true,
+        "schedule_sha256": "48fdf7dfeb6bbd1b17614af02f7828c72ae6969a71a2a9101b67d74e17ed2ede",
+        "semantic_sha256": "94788cea6321b89342c0d219ee0e990fe81076cb687175026362ee9a20970131"
+      },
+      "C2_RELEVANT_TRAVEL_GAP_SHIFT": {
+        "provider_changed": true,
+        "provider_input_sha256": "f0b4a93e69b8ee879abca823fc70a8091e5ad73e15e09deeafbe1353b7ec1c47",
+        "schedule": {
+          "reason": "NONE",
+          "schedule": [
+            {
+              "end": 1325,
+              "scene": "S1",
+              "start": 1320
+            },
+            {
+              "end": 1335,
+              "scene": "S2",
+              "start": 1330
+            },
+            {
+              "end": 1360,
+              "scene": "S3",
+              "start": 1355
+            },
+            {
+              "end": 1370,
+              "scene": "S4",
+              "start": 1365
+            }
+          ],
+          "status": "SCHEDULED"
+        },
+        "schedule_changed": true,
+        "schedule_sha256": "558409ff7211fc78a87cef394f597cf0a1f28a50099ee7a8ce19799f00d7bd6d",
+        "semantic_sha256": "94788cea6321b89342c0d219ee0e990fe81076cb687175026362ee9a20970131"
+      },
+      "C3_RELEVANT_AVAILABILITY_CONFLICT": {
+        "provider_changed": true,
+        "provider_input_sha256": "4395ed6e7c133602a9b415a2a67fd665cc55e4fbe1c8199a80b55bb3c831b115",
+        "schedule": {
+          "candidate_end": 1350,
+          "candidate_start": 1345,
+          "reason": "AVAILABILITY_WINDOW_VIOLATION",
+          "scene": "S3",
+          "schedule": [
+            {
+              "end": 1325,
+              "scene": "S1",
+              "start": 1320
+            },
+            {
+              "end": 1335,
+              "scene": "S2",
+              "start": 1330
+            }
+          ],
+          "status": "REPLAN_REQUIRED",
+          "window": {
+            "from": 1340,
+            "to": 1344
+          }
+        },
+        "schedule_changed": true,
+        "schedule_sha256": "b9fd5d56512fb6122e08b2be6f3defb3380e8ffb652affc58ecc1ce64f7c2751",
+        "semantic_sha256": "94788cea6321b89342c0d219ee0e990fe81076cb687175026362ee9a20970131"
+      },
+      "C4_PA7_LIKE_DEADLINE_CONFLICT": {
+        "provider_changed": true,
+        "provider_input_sha256": "caef6001dc0a239e8ceae59aa9fe53fb3efd3b7e1d571440f10e0d2f96eb2e3a",
+        "schedule": {
+          "candidate_start": 1385,
+          "future_event_time": 1380,
+          "reason": "FUTURE_EVENT_IN_PAST",
+          "scene": "S4",
+          "schedule": [
+            {
+              "end": 1325,
+              "scene": "S1",
+              "start": 1320
+            },
+            {
+              "end": 1335,
+              "scene": "S2",
+              "start": 1330
+            },
+            {
+              "end": 1350,
+              "scene": "S3",
+              "start": 1345
+            }
+          ],
+          "status": "REPLAN_REQUIRED"
+        },
+        "schedule_changed": true,
+        "schedule_sha256": "e37068fc87648e0e30a43445a203716d097725d48b3a38dda1c78c50ba92be60",
+        "semantic_sha256": "94788cea6321b89342c0d219ee0e990fe81076cb687175026362ee9a20970131"
+      },
+      "N1_IRRELEVANT_METADATA_SHIFT": {
+        "provider_changed": false,
+        "provider_input_sha256": "b3c0c1f83bdbe1fa6b31866d6e8b6a0088999e557f4bb0d1102e8103753234f3",
+        "schedule": {
+          "reason": "NONE",
+          "schedule": [
+            {
+              "end": 1325,
+              "scene": "S1",
+              "start": 1320
+            },
+            {
+              "end": 1335,
+              "scene": "S2",
+              "start": 1330
+            },
+            {
+              "end": 1350,
+              "scene": "S3",
+              "start": 1345
+            },
+            {
+              "end": 1360,
+              "scene": "S4",
+              "start": 1355
+            }
+          ],
+          "status": "SCHEDULED"
+        },
+        "schedule_changed": false,
+        "schedule_sha256": "214d458db645ebea09f21ee1a07558398743d46b7521ac123d141f39cb1299fc",
+        "semantic_sha256": "94788cea6321b89342c0d219ee0e990fe81076cb687175026362ee9a20970131"
+      }
+    }
+  },
+  "fixture_sha256": "d4ccd30d53171d9fc00bda9f767ca56f0912c1536cfa4cd4ebef8adf9150009f",
+  "gates": {
+    "C1_RELEVANT_EARLIEST_START_SHIFT": true,
+    "C2_RELEVANT_TRAVEL_GAP_SHIFT": true,
+    "C3_RELEVANT_AVAILABILITY_CONFLICT": true,
+    "C4_PA7_LIKE_DEADLINE_CONFLICT": true,
+    "DETERMINISTIC_RERUN_IDENTICAL": true,
+    "N1_IRRELEVANT_METADATA_INVARIANCE": true,
+    "N2_SEMANTIC_INVARIANCE": true,
+    "RESEARCH_ONLY_BOUNDARY": true
+  },
+  "h1_primary_outputs": 0,
+  "human_target_accessed": false,
+  "implementation_sha256": "10fe2eb78157c414cf55bd96aed6d42bfb13e6326223366e9b3f3ad341f1a04e",
+  "next_if_pass": "PA8-C fresh synthetic episode architecture with ESCC fields frozen before any surface generation.",
+  "parent": "PA8-A PASS",
+  "parent_physical_authority": "SYNC-R74",
+  "physical_package_effect": "NONE__RESEARCH_ONLY",
+  "production_effect": "NONE",
+  "runtime_db_effect": "NONE",
+  "schema": "R77_H1_PA8_B_CAUSAL_INTEGRATION_RESULT_R1",
+  "status": "PASS"
+}
