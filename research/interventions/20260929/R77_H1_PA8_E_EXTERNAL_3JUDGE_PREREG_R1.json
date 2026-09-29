@@ -1,0 +1,92 @@
+{
+  "schema": "R77_H1_PA8_E_EXTERNAL_3JUDGE_PREREG_R1",
+  "date": "2026-09-29",
+  "status": "PREREGISTERED__BEFORE_PA8_D_SURFACE_OUTPUTS__JUDGE_OUTPUTS_0",
+  "parent": "PA8-D paired generation preregistration",
+  "prefrozen_sample": [
+    "SC05",
+    "SC13",
+    "SC21",
+    "SC30",
+    "SC39",
+    "SC47"
+  ],
+  "judges": [
+    "J01",
+    "J02",
+    "J03"
+  ],
+  "independence": [
+    "fresh independent context per judge",
+    "judge receives only its own blind packet and output schema",
+    "no Project/GitHub/prior chat/internal lineage/internal scores/other judge output",
+    "mapping revealed only after 3/3 first schema-valid judgments are hash-sealed"
+  ],
+  "whole_axes": [
+    "EPISODE_PREMISE_COHERENCE",
+    "CAUSAL_SEQUENCE_PROGRESSION",
+    "THREAD_AND_SUBPLOT_INTEGRATION",
+    "CHARACTER_RELATIONSHIP_TRAJECTORY",
+    "INFORMATION_TOPOLOGY_DRAMATIZATION",
+    "SCENE_NECESSITY_AND_DISTINCT_FUNCTION",
+    "ESCALATION_PACING",
+    "CLOSURE_DEFERRED_BALANCE"
+  ],
+  "literary_surface_axes": [
+    "DIALOGUE_SUBTEXT",
+    "CHARACTER_VOICE",
+    "RELATIONSHIP_STATUS_PRESSURE",
+    "PHYSICALIZATION_ACTION",
+    "PACING_ESCALATION_TIME_PRESSURE",
+    "ENSEMBLE_WORLD_SPECIFICITY",
+    "INFORMATION_DRAMATIZATION",
+    "KOREAN_SPOKEN_NATURALNESS",
+    "SCENE_OPENING_VISUALIZATION",
+    "PERFORMANCE_DIRECTION_QUALITY",
+    "ACTION_DIALOGUE_BINDING",
+    "EMOTION_EXTERNALIZATION",
+    "CINEMATIC_READABILITY",
+    "DIRECTION_DETAIL_ECONOMY"
+  ],
+  "continuity_axis": "TEMPORAL_SPATIAL_CONTINUITY",
+  "continuity_axis_definition": "Whether the scene's time, event windows, travel/movement, physical location, vehicle/container membership, and cross-scene presence are mutually possible and legible without chronology inversion or unexplained teleportation.",
+  "critical_violations": [
+    "INTERNAL_SCHEMA_OR_RESEARCH_META_LEAK",
+    "IMPORTANT_STATE_CHANGE_WITHOUT_SCREEN_VISIBLE_CARRIER",
+    "EXPOSITORY_EMOTION_STATE_DIALOGUE_AS_DOMINANT_CRAFT",
+    "SEVERE_CHARACTER_VOICE_COLLAPSE",
+    "MAJOR_CAUSAL_OR_CONTINUITY_BREAK",
+    "DIRECTION_BLOAT_THAT_REPEATS_DIALOGUE_OR_STATE"
+  ],
+  "required_output": [
+    "score A/B independently on all 8 whole axes",
+    "score A/B on all 14 literary surface axes for each of six prefrozen scenes",
+    "score A/B on TEMPORAL_SPATIAL_CONTINUITY for each of six prefrozen scenes",
+    "reconstruct premise, major threads, nine sequence movements, relationship trajectories, resolved due-now, deferred/open for each script",
+    "report critical violations with concrete scene evidence",
+    "choose whole_episode_preference A/B/TIE",
+    "choose surface_craft_preference A/B/TIE",
+    "choose continuity_preference A/B/TIE",
+    "give evidence-based strengths/weaknesses"
+  ],
+  "frozen_gates": {
+    "absolute_literary": "Mapped Treatment whole mean >=7.0 for >=2/3 judges; mapped Treatment literary-surface mean >=7.0 for >=2/3; no critical violation of any frozen label confirmed on Treatment by >=2 judges.",
+    "paired_literary": "Mapped Treatment surface-craft preference wins >=2/3; whole preference wins+ties >=2/3.",
+    "focus_literary": "Mapped Treatment pooled median not lower than Control on CHARACTER_VOICE, DIALOGUE_SUBTEXT, PHYSICALIZATION_ACTION, KOREAN_SPOKEN_NATURALNESS; >=4 of 6 PA7 focus axes pooled median delta >=+0.5.",
+    "focus_axes": [
+      "DIALOGUE_SUBTEXT",
+      "CHARACTER_VOICE",
+      "PHYSICALIZATION_ACTION",
+      "PERFORMANCE_DIRECTION_QUALITY",
+      "EMOTION_EXTERNALIZATION",
+      "DIRECTION_DETAIL_ECONOMY"
+    ],
+    "recoverability": "Mapped Treatment premise, major threads, nine sequence movements, relationship trajectories, due-now/deferred-open boundary recoverable at core-consensus by >=2/3 judges.",
+    "continuity_absolute": "Mapped Treatment TEMPORAL_SPATIAL_CONTINUITY mean >=7.0 for >=2/3 judges; no MAJOR_CAUSAL_OR_CONTINUITY_BREAK confirmed on Treatment by >=2 judges; deterministic Treatment spacetime preflight critical violations = 0.",
+    "continuity_paired": "Mapped Treatment continuity_preference wins >=2/3 judges.",
+    "continuity_effect": "If deterministic Control preblind diagnostic establishes >=1 target continuity violation (headroom), Treatment must reduce deterministic target violations and pooled TEMPORAL_SPATIAL_CONTINUITY median must be >= Control +0.50. If deterministic Control target violations = 0, classify continuity-effect claim as HOLD__NO_DETERMINISTIC_HEADROOM rather than PASS; literary/noninferiority results may still be reported but PA8 repair-effect qualification is not established."
+  },
+  "no_posthoc_rule": "Do not change sample, axes, definitions, thresholds, headroom rule, mapping, or critical labels after first screenplay output or first judge dispatch.",
+  "mapping": "Balanced hidden mapping selected and sealed only after both mechanical-qualified surfaces exist; reveal after 3/3 first schema-valid judgments are sealed.",
+  "claim_boundary": "PA8 is provider-analog/fresh-synthetic repair qualification. Even full PASS does not itself establish real-provider H1, Production promotion, Operational Level-3, or Formal R140."
+}
