@@ -1,0 +1,113 @@
+{
+  "schema": "PA8_B_FROZEN_CAUSAL_FIXTURE_R1",
+  "date": "2026-09-29",
+  "semantic_payload": {
+    "work_id": "SYNTH_PA8_B_CAUSAL_FIXTURE",
+    "scenes": [
+      {
+        "scene": "S1",
+        "function": "정문 위험을 확인하고 운행 재편 모드로 전환한다.",
+        "actor": "A"
+      },
+      {
+        "scene": "S2",
+        "function": "대체 출구의 실제 사용 조건을 확인한다.",
+        "actor": "B"
+      },
+      {
+        "scene": "S3",
+        "function": "차량 이동과 지역 시간창을 맞춰 실행 가능성을 검증한다.",
+        "actor": "C"
+      },
+      {
+        "scene": "S4",
+        "function": "다가오는 외부 사건 전에 최종 배치를 봉인한다.",
+        "actor": "D"
+      }
+    ]
+  },
+  "baseline": {
+    "metadata": {
+      "research_note": "baseline",
+      "display_label": "BASE",
+      "diagnostic_comment": "none"
+    },
+    "schedule": [
+      {
+        "scene": "S1",
+        "earliest_start": 1320,
+        "latest_start": 1325,
+        "duration_min": 5
+      },
+      {
+        "scene": "S2",
+        "earliest_start": 1330,
+        "latest_start": 1340,
+        "duration_min": 5,
+        "predecessor": "S1",
+        "min_gap_after_predecessor": 5
+      },
+      {
+        "scene": "S3",
+        "earliest_start": 1340,
+        "latest_start": 1360,
+        "duration_min": 5,
+        "predecessor": "S2",
+        "min_gap_after_predecessor": 10,
+        "resource_window": {
+          "from": 1340,
+          "to": 1380
+        }
+      },
+      {
+        "scene": "S4",
+        "earliest_start": 1350,
+        "latest_start": 1370,
+        "duration_min": 5,
+        "predecessor": "S3",
+        "min_gap_after_predecessor": 5,
+        "future_event_time": 1380
+      }
+    ]
+  },
+  "variants": {
+    "C1_RELEVANT_EARLIEST_START_SHIFT": {
+      "mutate": {
+        "scene": "S2",
+        "field": "earliest_start",
+        "value": 1335
+      }
+    },
+    "C2_RELEVANT_TRAVEL_GAP_SHIFT": {
+      "mutate": {
+        "scene": "S3",
+        "field": "min_gap_after_predecessor",
+        "value": 20
+      }
+    },
+    "C3_RELEVANT_AVAILABILITY_CONFLICT": {
+      "mutate": {
+        "scene": "S3",
+        "field": "resource_window",
+        "value": {
+          "from": 1340,
+          "to": 1344
+        }
+      }
+    },
+    "C4_PA7_LIKE_DEADLINE_CONFLICT": {
+      "mutate": {
+        "scene": "S4",
+        "field": "earliest_start",
+        "value": 1385
+      }
+    },
+    "N1_IRRELEVANT_METADATA_SHIFT": {
+      "metadata": {
+        "research_note": "changed only",
+        "display_label": "CHANGED",
+        "diagnostic_comment": "should be ignored"
+      }
+    }
+  }
+}
