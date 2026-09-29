@@ -1,0 +1,251 @@
+{
+  "active_runtime_effect": "NONE__EXACT_R69_UNCHANGED",
+  "case_results": [
+    {
+      "actual_valid": false,
+      "case_id": "P01_SCENE_CLOCK_REVERSAL",
+      "expected_valid": false,
+      "expected_violation": "SCENE_CLOCK_REVERSAL",
+      "violation_types": [
+        "SCENE_CLOCK_REVERSAL"
+      ],
+      "violations": [
+        {
+          "current_start_abs_min": 1355,
+          "previous_end_abs_min": 1360,
+          "previous_scene": "S1",
+          "scene": "S2",
+          "type": "SCENE_CLOCK_REVERSAL"
+        }
+      ]
+    },
+    {
+      "actual_valid": false,
+      "case_id": "P02_PA7_PATTERN_FUTURE_EVENT_IN_PAST",
+      "expected_valid": false,
+      "expected_violation": "FUTURE_EVENT_IN_PAST",
+      "violation_types": [
+        "FUTURE_EVENT_IN_PAST"
+      ],
+      "violations": [
+        {
+          "event": "first_delivery_truck",
+          "event_abs_min": 1435,
+          "scene": "S1",
+          "scene_start_abs_min": 1478,
+          "type": "FUTURE_EVENT_IN_PAST"
+        }
+      ]
+    },
+    {
+      "actual_valid": false,
+      "case_id": "P03_AVAILABILITY_WINDOW_VIOLATION",
+      "expected_valid": false,
+      "expected_violation": "AVAILABILITY_WINDOW_VIOLATION",
+      "violation_types": [
+        "AVAILABILITY_WINDOW_VIOLATION"
+      ],
+      "violations": [
+        {
+          "resource": "rear_gate",
+          "scene": "S1",
+          "scene_end": 1455,
+          "scene_start": 1450,
+          "type": "AVAILABILITY_WINDOW_VIOLATION",
+          "valid_from": 1400,
+          "valid_to": 1445
+        }
+      ]
+    },
+    {
+      "actual_valid": false,
+      "case_id": "P04_IMPOSSIBLE_TRAVEL",
+      "expected_valid": false,
+      "expected_violation": "IMPOSSIBLE_TRAVEL",
+      "violation_types": [
+        "IMPOSSIBLE_TRAVEL"
+      ],
+      "violations": [
+        {
+          "available_min": 5,
+          "entity": "driver",
+          "from_location": "depot",
+          "required_min": 20,
+          "scene": "S2",
+          "to_location": "market",
+          "type": "IMPOSSIBLE_TRAVEL"
+        }
+      ]
+    },
+    {
+      "actual_valid": false,
+      "case_id": "P05_ENTITY_MULTI_LOCATION",
+      "expected_valid": false,
+      "expected_violation": "ENTITY_MULTI_LOCATION",
+      "violation_types": [
+        "ENTITY_MULTI_LOCATION"
+      ],
+      "violations": [
+        {
+          "entity": "E1",
+          "locations": [
+            "depot",
+            "market"
+          ],
+          "scene": "S1",
+          "type": "ENTITY_MULTI_LOCATION"
+        }
+      ]
+    },
+    {
+      "actual_valid": false,
+      "case_id": "P06_CONTAINER_TRANSITION_BREAK",
+      "expected_valid": false,
+      "expected_violation": "CONTAINER_TRANSITION_BREAK",
+      "violation_types": [
+        "CONTAINER_TRANSITION_BREAK"
+      ],
+      "violations": [
+        {
+          "entity": "passenger",
+          "from_container": "BUS310",
+          "scene": "S2",
+          "to_container": null,
+          "type": "CONTAINER_TRANSITION_BREAK"
+        }
+      ]
+    },
+    {
+      "actual_valid": false,
+      "case_id": "P07_LOCATION_TRANSITION_BREAK",
+      "expected_valid": false,
+      "expected_violation": "LOCATION_TRANSITION_BREAK",
+      "violation_types": [
+        "LOCATION_TRANSITION_BREAK"
+      ],
+      "violations": [
+        {
+          "entity": "E1",
+          "from_location": "depot",
+          "scene": "S2",
+          "to_location": "market",
+          "type": "LOCATION_TRANSITION_BREAK"
+        }
+      ]
+    },
+    {
+      "actual_valid": false,
+      "case_id": "P08_CROSS_MIDNIGHT_NORMALIZATION_ERROR",
+      "expected_valid": false,
+      "expected_violation": "CROSS_MIDNIGHT_NORMALIZATION_ERROR",
+      "violation_types": [
+        "CROSS_MIDNIGHT_NORMALIZATION_ERROR"
+      ],
+      "violations": [
+        {
+          "current_clock": "00:10",
+          "current_day": 0,
+          "previous_clock": "23:50",
+          "previous_day": 0,
+          "previous_scene": "S1",
+          "scene": "S2",
+          "type": "CROSS_MIDNIGHT_NORMALIZATION_ERROR"
+        }
+      ]
+    },
+    {
+      "actual_valid": true,
+      "case_id": "N01_VALID_MONOTONIC_LINEAR",
+      "expected_valid": true,
+      "expected_violation": null,
+      "violation_types": [],
+      "violations": []
+    },
+    {
+      "actual_valid": true,
+      "case_id": "N02_VALID_FUTURE_EVENT",
+      "expected_valid": true,
+      "expected_violation": null,
+      "violation_types": [],
+      "violations": []
+    },
+    {
+      "actual_valid": true,
+      "case_id": "N03_VALID_AVAILABILITY_WINDOW",
+      "expected_valid": true,
+      "expected_violation": null,
+      "violation_types": [],
+      "violations": []
+    },
+    {
+      "actual_valid": true,
+      "case_id": "N04_VALID_TRAVEL_WITH_TIME",
+      "expected_valid": true,
+      "expected_violation": null,
+      "violation_types": [],
+      "violations": []
+    },
+    {
+      "actual_valid": true,
+      "case_id": "N05_VALID_FLASHBACK",
+      "expected_valid": true,
+      "expected_violation": null,
+      "violation_types": [],
+      "violations": []
+    },
+    {
+      "actual_valid": true,
+      "case_id": "N06_VALID_PARALLEL_OVERLAP",
+      "expected_valid": true,
+      "expected_violation": null,
+      "violation_types": [],
+      "violations": []
+    },
+    {
+      "actual_valid": true,
+      "case_id": "N07_VALID_EXPLICIT_CONTAINER_TRANSITIONS",
+      "expected_valid": true,
+      "expected_violation": null,
+      "violation_types": [],
+      "violations": []
+    },
+    {
+      "actual_valid": true,
+      "case_id": "N08_VALID_CROSS_MIDNIGHT",
+      "expected_valid": true,
+      "expected_violation": null,
+      "violation_types": [],
+      "violations": []
+    }
+  ],
+  "cases_sha256": "69a696742c4a4defd9919e45290ac8e4d39dbffc1658feeb8975725e66779990",
+  "claim_boundary": "Qualifies only the deterministic research-level within-episode spacetime predicate. It does not modify or qualify exact R69 runtime, Production, DB59, Level-3, Formal R140, or real-provider H1.",
+  "date": "2026-09-29",
+  "gates": {
+    "deterministic_rerun_identical": true,
+    "false_negative_0": true,
+    "false_positive_0": true,
+    "negative_8_of_8": true,
+    "positive_8_of_8": true,
+    "research_only_boundary": true,
+    "specific_violation_class_8_of_8": true
+  },
+  "h1_primary_outputs": 0,
+  "human_target_accessed": false,
+  "metrics": {
+    "expected_specific_detection": 8,
+    "fn": 0,
+    "fp": 0,
+    "negative_correct_non_detection": "8/8",
+    "positive_detection": "8/8",
+    "tn": 8,
+    "tp": 8
+  },
+  "next_if_pass": "PA8-B causal integration: bind the qualified predicate between Episode Architecture and Scene Contract in a research candidate and prove positive/negative propagation before any 40K surface generation.",
+  "parent_physical_authority": "SYNC-R74",
+  "production_effect": "NONE__ENG_R47_LEGACY_R53_UNCHANGED",
+  "runtime_db_effect": "NONE__DB59_FROZEN_UNCHANGED",
+  "schema": "R77_H1_PA8_A_EPISODE_SPACETIME_CONTINUITY_RESULT_R1",
+  "status": "PASS",
+  "validator_sha256": "99917bbf5ca24e9ee034321cbca43ef364bb15da9e116f4c110169b7f5b2da51"
+}
