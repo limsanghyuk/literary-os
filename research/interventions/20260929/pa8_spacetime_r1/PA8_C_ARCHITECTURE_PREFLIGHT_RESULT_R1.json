@@ -1,0 +1,862 @@
+{
+  "architecture_sha256": "de278fb3834e8d74e8492a8bf300175724781dfd5808778d8b6d0a2d2907e059",
+  "authority_effect": "NONE",
+  "date": "2026-09-29",
+  "episode_end": "03:32",
+  "episode_start": "01:48",
+  "human_target_accessed": false,
+  "issues": [
+    {
+      "entity": "서진아",
+      "from": "B2_STACKS",
+      "from_scene": "SC04",
+      "gap_min": 0,
+      "to": "SERVER_ROOM",
+      "to_scene": "SC05",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "서진아",
+      "from": "SERVER_ROOM",
+      "from_scene": "SC05",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC06",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "한도윤",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC06",
+      "gap_min": 0,
+      "to": "FREIGHT_ELEVATOR",
+      "to_scene": "SC07",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "한도윤",
+      "from": "FREIGHT_ELEVATOR",
+      "from_scene": "SC07",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC08",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "서진아",
+      "from": "SERVER_ROOM",
+      "from_scene": "SC09",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC10",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC10",
+      "gap_min": 0,
+      "to": "LOADING_DOCK",
+      "to_scene": "SC11",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "서진아",
+      "from": "LOADING_DOCK",
+      "from_scene": "SC11",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC12",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "한도윤",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC12",
+      "gap_min": 0,
+      "to": "B2_STACKS",
+      "to_scene": "SC13",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC12",
+      "gap_min": 0,
+      "to": "B2_STACKS",
+      "to_scene": "SC13",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "한도윤",
+      "from": "B2_STACKS",
+      "from_scene": "SC13",
+      "gap_min": 0,
+      "to": "FREIGHT_ELEVATOR",
+      "to_scene": "SC14",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "한도윤",
+      "from": "FREIGHT_ELEVATOR",
+      "from_scene": "SC14",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC15",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "한도윤",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC15",
+      "gap_min": 0,
+      "to": "CONSERVATION_LAB",
+      "to_scene": "SC16",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "한도윤",
+      "from": "CONSERVATION_LAB",
+      "from_scene": "SC16",
+      "gap_min": 0,
+      "to": "B2_STACKS",
+      "to_scene": "SC17",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "한도윤",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC19",
+      "gap_min": 0,
+      "to": "FREIGHT_ELEVATOR",
+      "to_scene": "SC20",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "서진아",
+      "from": "LOADING_DOCK",
+      "from_scene": "SC21",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC22",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "이채원",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC22",
+      "gap_min": 0,
+      "to": "CONSERVATION_LAB",
+      "to_scene": "SC23",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "한도윤",
+      "from": "CONSERVATION_LAB",
+      "from_scene": "SC23",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC24",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "이채원",
+      "from": "CONSERVATION_LAB",
+      "from_scene": "SC23",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC24",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC24",
+      "gap_min": 0,
+      "to": "FREIGHT_ELEVATOR",
+      "to_scene": "SC25",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "한도윤",
+      "from": "LOADING_DOCK",
+      "from_scene": "SC26",
+      "gap_min": 0,
+      "to": "COURTYARD",
+      "to_scene": "SC27",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "서진아",
+      "from": "COURTYARD",
+      "from_scene": "SC27",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC28",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC28",
+      "gap_min": 0,
+      "to": "FREIGHT_ELEVATOR",
+      "to_scene": "SC29",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "이채원",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC28",
+      "gap_min": 0,
+      "to": "FREIGHT_ELEVATOR",
+      "to_scene": "SC29",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "류성호",
+      "from": "FREIGHT_ELEVATOR",
+      "from_scene": "SC29",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC30",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "서진아",
+      "from": "FREIGHT_ELEVATOR",
+      "from_scene": "SC29",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC30",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC32",
+      "gap_min": 0,
+      "to": "COURTYARD",
+      "to_scene": "SC33",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "이채원",
+      "from": "LOADING_DOCK",
+      "from_scene": "SC34",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC35",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC35",
+      "gap_min": 0,
+      "to": "SERVER_ROOM",
+      "to_scene": "SC36",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "문유경",
+      "from": "SERVER_ROOM",
+      "from_scene": "SC37",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC38",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC38",
+      "gap_min": 0,
+      "to": "COURTYARD",
+      "to_scene": "SC39",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "서진아",
+      "from": "COURTYARD",
+      "from_scene": "SC41",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC42",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "류성호",
+      "from": "CONSERVATION_LAB",
+      "from_scene": "SC44",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC45",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC46",
+      "gap_min": 0,
+      "to": "COURTYARD",
+      "to_scene": "SC47",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "한도윤",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC46",
+      "gap_min": 0,
+      "to": "COURTYARD",
+      "to_scene": "SC47",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    },
+    {
+      "entity": "서진아",
+      "from": "COURTYARD",
+      "from_scene": "SC47",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC48",
+      "type": "UNTYPED_ZERO_GAP_LOCATION_JUMP"
+    }
+  ],
+  "next_if_fail": "Preserve R1 and preregister/freeze an R2 architecture repair before any surface output. Repair only explicit transition/time typing; do not change premise/due-deferred/scene semantic functions.",
+  "next_if_pass": "Proceed to PA8-D paired >=40K surface generation under frozen architecture.",
+  "scene_count": 50,
+  "schema": "PA8_C_ARCHITECTURE_PREFLIGHT_RESULT_R1",
+  "sequence_count": 9,
+  "status": "FAIL",
+  "surface_outputs": 0,
+  "transition_gap_diagnostics": [
+    {
+      "entity": "서진아",
+      "from": "B2_STACKS",
+      "from_scene": "SC04",
+      "gap_min": 0,
+      "to": "SERVER_ROOM",
+      "to_scene": "SC05"
+    },
+    {
+      "entity": "서진아",
+      "from": "SERVER_ROOM",
+      "from_scene": "SC05",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC06"
+    },
+    {
+      "entity": "한도윤",
+      "from": "B2_STACKS",
+      "from_scene": "SC04",
+      "gap_min": 2,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC06"
+    },
+    {
+      "entity": "류성호",
+      "from": "B2_STACKS",
+      "from_scene": "SC03",
+      "gap_min": 6,
+      "to": "FREIGHT_ELEVATOR",
+      "to_scene": "SC07"
+    },
+    {
+      "entity": "한도윤",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC06",
+      "gap_min": 0,
+      "to": "FREIGHT_ELEVATOR",
+      "to_scene": "SC07"
+    },
+    {
+      "entity": "한도윤",
+      "from": "FREIGHT_ELEVATOR",
+      "from_scene": "SC07",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC08"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC06",
+      "gap_min": 4,
+      "to": "SERVER_ROOM",
+      "to_scene": "SC09"
+    },
+    {
+      "entity": "서진아",
+      "from": "SERVER_ROOM",
+      "from_scene": "SC09",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC10"
+    },
+    {
+      "entity": "박민석",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC08",
+      "gap_min": 5,
+      "to": "LOADING_DOCK",
+      "to_scene": "SC11"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC10",
+      "gap_min": 0,
+      "to": "LOADING_DOCK",
+      "to_scene": "SC11"
+    },
+    {
+      "entity": "서진아",
+      "from": "LOADING_DOCK",
+      "from_scene": "SC11",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC12"
+    },
+    {
+      "entity": "문유경",
+      "from": "SERVER_ROOM",
+      "from_scene": "SC09",
+      "gap_min": 5,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC12"
+    },
+    {
+      "entity": "한도윤",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC12",
+      "gap_min": 0,
+      "to": "B2_STACKS",
+      "to_scene": "SC13"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC12",
+      "gap_min": 0,
+      "to": "B2_STACKS",
+      "to_scene": "SC13"
+    },
+    {
+      "entity": "한도윤",
+      "from": "B2_STACKS",
+      "from_scene": "SC13",
+      "gap_min": 0,
+      "to": "FREIGHT_ELEVATOR",
+      "to_scene": "SC14"
+    },
+    {
+      "entity": "한도윤",
+      "from": "FREIGHT_ELEVATOR",
+      "from_scene": "SC14",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC15"
+    },
+    {
+      "entity": "서진아",
+      "from": "B2_STACKS",
+      "from_scene": "SC13",
+      "gap_min": 2,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC15"
+    },
+    {
+      "entity": "한도윤",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC15",
+      "gap_min": 0,
+      "to": "CONSERVATION_LAB",
+      "to_scene": "SC16"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC15",
+      "gap_min": 2,
+      "to": "B2_STACKS",
+      "to_scene": "SC17"
+    },
+    {
+      "entity": "이채원",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC12",
+      "gap_min": 8,
+      "to": "B2_STACKS",
+      "to_scene": "SC17"
+    },
+    {
+      "entity": "한도윤",
+      "from": "CONSERVATION_LAB",
+      "from_scene": "SC16",
+      "gap_min": 0,
+      "to": "B2_STACKS",
+      "to_scene": "SC17"
+    },
+    {
+      "entity": "문유경",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC12",
+      "gap_min": 10,
+      "to": "SERVER_ROOM",
+      "to_scene": "SC18"
+    },
+    {
+      "entity": "이채원",
+      "from": "B2_STACKS",
+      "from_scene": "SC17",
+      "gap_min": 2,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC19"
+    },
+    {
+      "entity": "한도윤",
+      "from": "B2_STACKS",
+      "from_scene": "SC17",
+      "gap_min": 2,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC19"
+    },
+    {
+      "entity": "서진아",
+      "from": "B2_STACKS",
+      "from_scene": "SC17",
+      "gap_min": 2,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC19"
+    },
+    {
+      "entity": "한도윤",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC19",
+      "gap_min": 0,
+      "to": "FREIGHT_ELEVATOR",
+      "to_scene": "SC20"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC19",
+      "gap_min": 3,
+      "to": "LOADING_DOCK",
+      "to_scene": "SC21"
+    },
+    {
+      "entity": "서진아",
+      "from": "LOADING_DOCK",
+      "from_scene": "SC21",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC22"
+    },
+    {
+      "entity": "한도윤",
+      "from": "FREIGHT_ELEVATOR",
+      "from_scene": "SC20",
+      "gap_min": 4,
+      "to": "CONSERVATION_LAB",
+      "to_scene": "SC23"
+    },
+    {
+      "entity": "이채원",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC22",
+      "gap_min": 0,
+      "to": "CONSERVATION_LAB",
+      "to_scene": "SC23"
+    },
+    {
+      "entity": "한도윤",
+      "from": "CONSERVATION_LAB",
+      "from_scene": "SC23",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC24"
+    },
+    {
+      "entity": "이채원",
+      "from": "CONSERVATION_LAB",
+      "from_scene": "SC23",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC24"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC24",
+      "gap_min": 0,
+      "to": "FREIGHT_ELEVATOR",
+      "to_scene": "SC25"
+    },
+    {
+      "entity": "한도윤",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC24",
+      "gap_min": 2,
+      "to": "LOADING_DOCK",
+      "to_scene": "SC26"
+    },
+    {
+      "entity": "한도윤",
+      "from": "LOADING_DOCK",
+      "from_scene": "SC26",
+      "gap_min": 0,
+      "to": "COURTYARD",
+      "to_scene": "SC27"
+    },
+    {
+      "entity": "서진아",
+      "from": "FREIGHT_ELEVATOR",
+      "from_scene": "SC25",
+      "gap_min": 2,
+      "to": "COURTYARD",
+      "to_scene": "SC27"
+    },
+    {
+      "entity": "서진아",
+      "from": "COURTYARD",
+      "from_scene": "SC27",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC28"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC28",
+      "gap_min": 0,
+      "to": "FREIGHT_ELEVATOR",
+      "to_scene": "SC29"
+    },
+    {
+      "entity": "이채원",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC28",
+      "gap_min": 0,
+      "to": "FREIGHT_ELEVATOR",
+      "to_scene": "SC29"
+    },
+    {
+      "entity": "류성호",
+      "from": "FREIGHT_ELEVATOR",
+      "from_scene": "SC29",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC30"
+    },
+    {
+      "entity": "서진아",
+      "from": "FREIGHT_ELEVATOR",
+      "from_scene": "SC29",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC30"
+    },
+    {
+      "entity": "한도윤",
+      "from": "COURTYARD",
+      "from_scene": "SC27",
+      "gap_min": 4,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC30"
+    },
+    {
+      "entity": "문유경",
+      "from": "SERVER_ROOM",
+      "from_scene": "SC18",
+      "gap_min": 26,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC31"
+    },
+    {
+      "entity": "이채원",
+      "from": "FREIGHT_ELEVATOR",
+      "from_scene": "SC29",
+      "gap_min": 3,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC31"
+    },
+    {
+      "entity": "한도윤",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC30",
+      "gap_min": 4,
+      "to": "COURTYARD",
+      "to_scene": "SC33"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC32",
+      "gap_min": 0,
+      "to": "COURTYARD",
+      "to_scene": "SC33"
+    },
+    {
+      "entity": "이채원",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC31",
+      "gap_min": 4,
+      "to": "LOADING_DOCK",
+      "to_scene": "SC34"
+    },
+    {
+      "entity": "서진아",
+      "from": "COURTYARD",
+      "from_scene": "SC33",
+      "gap_min": 2,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC35"
+    },
+    {
+      "entity": "이채원",
+      "from": "LOADING_DOCK",
+      "from_scene": "SC34",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC35"
+    },
+    {
+      "entity": "문유경",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC32",
+      "gap_min": 6,
+      "to": "SERVER_ROOM",
+      "to_scene": "SC36"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC35",
+      "gap_min": 0,
+      "to": "SERVER_ROOM",
+      "to_scene": "SC36"
+    },
+    {
+      "entity": "문유경",
+      "from": "SERVER_ROOM",
+      "from_scene": "SC37",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC38"
+    },
+    {
+      "entity": "서진아",
+      "from": "SERVER_ROOM",
+      "from_scene": "SC36",
+      "gap_min": 2,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC38"
+    },
+    {
+      "entity": "박민석",
+      "from": "LOADING_DOCK",
+      "from_scene": "SC34",
+      "gap_min": 8,
+      "to": "COURTYARD",
+      "to_scene": "SC39"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC38",
+      "gap_min": 0,
+      "to": "COURTYARD",
+      "to_scene": "SC39"
+    },
+    {
+      "entity": "서진아",
+      "from": "COURTYARD",
+      "from_scene": "SC41",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC42"
+    },
+    {
+      "entity": "한도윤",
+      "from": "COURTYARD",
+      "from_scene": "SC40",
+      "gap_min": 6,
+      "to": "CONSERVATION_LAB",
+      "to_scene": "SC44"
+    },
+    {
+      "entity": "류성호",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC42",
+      "gap_min": 2,
+      "to": "CONSERVATION_LAB",
+      "to_scene": "SC44"
+    },
+    {
+      "entity": "류성호",
+      "from": "CONSERVATION_LAB",
+      "from_scene": "SC44",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC45"
+    },
+    {
+      "entity": "한도윤",
+      "from": "CONSERVATION_LAB",
+      "from_scene": "SC44",
+      "gap_min": 2,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC46"
+    },
+    {
+      "entity": "서진아",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC46",
+      "gap_min": 0,
+      "to": "COURTYARD",
+      "to_scene": "SC47"
+    },
+    {
+      "entity": "이채원",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC43",
+      "gap_min": 6,
+      "to": "COURTYARD",
+      "to_scene": "SC47"
+    },
+    {
+      "entity": "한도윤",
+      "from": "GROUND_STAGING",
+      "from_scene": "SC46",
+      "gap_min": 0,
+      "to": "COURTYARD",
+      "to_scene": "SC47"
+    },
+    {
+      "entity": "서진아",
+      "from": "COURTYARD",
+      "from_scene": "SC47",
+      "gap_min": 0,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC48"
+    },
+    {
+      "entity": "이채원",
+      "from": "COURTYARD",
+      "from_scene": "SC47",
+      "gap_min": 2,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC49"
+    },
+    {
+      "entity": "한도윤",
+      "from": "COURTYARD",
+      "from_scene": "SC47",
+      "gap_min": 4,
+      "to": "GROUND_STAGING",
+      "to_scene": "SC50"
+    }
+  ]
+}
