@@ -1,0 +1,36 @@
+name: R77-H1 PA8-C R2 Transition Repair
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  qualify:
+    if: contains(github.event.head_commit.message, 'Run PA8-C R2 transition repair')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build R2 transition typing
+        run: python research/interventions/20260929/pa8_spacetime_r1/pa8_c_r2_transition_builder.py
+      - name: Run R2 preflight
+        run: python research/interventions/20260929/pa8_spacetime_r1/pa8_c_r2_preflight.py || true
+      - name: Verify outputs
+        run: |
+          test -s research/interventions/20260929/pa8_spacetime_r1/R77_H1_PA8_C_FRESH_EPISODE_ARCHITECTURE_R2.json
+          test -s research/interventions/20260929/pa8_spacetime_r1/PA8_C_R2_BUILD_RECEIPT_R1.json
+          test -s research/interventions/20260929/pa8_spacetime_r1/PA8_C_R2_PREFLIGHT_RESULT_R1.json
+      - name: Commit R2 evidence
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add research/interventions/20260929/pa8_spacetime_r1/R77_H1_PA8_C_FRESH_EPISODE_ARCHITECTURE_R2.json
+          git add research/interventions/20260929/pa8_spacetime_r1/PA8_C_R2_BUILD_RECEIPT_R1.json
+          git add research/interventions/20260929/pa8_spacetime_r1/PA8_C_R2_PREFLIGHT_RESULT_R1.json
+          git commit -m 'Seal PA8-C R2 transition repair results' || exit 0
+          git pull --rebase origin main
+          git push
