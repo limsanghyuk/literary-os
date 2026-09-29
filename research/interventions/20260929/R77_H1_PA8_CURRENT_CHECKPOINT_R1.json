@@ -1,0 +1,113 @@
+{
+  "schema": "R77_H1_PA8_CURRENT_CHECKPOINT_R1",
+  "date": "2026-09-29",
+  "status": "PA8_A_PASS__PA8_B_PASS__PA8_C_R2_PASS__PA8_D_GENERATION_DISPATCH_READY__SURFACE_OUTPUTS_0__HUMAN_TARGET_UNOPENED",
+  "parent_physical_authority": "SYNC-R74",
+  "active_runtime": "exact R69",
+  "production": "ENG:R47 / LEGACY_R53",
+  "runtime_db": "DB59 frozen",
+  "operational_level3": "SUSPENDED__REQUALIFICATION_REQUIRED",
+  "formal_latest_scored": "R138",
+  "formal_r140": "NOT_STARTED",
+  "phases": {
+    "PA8_A": {
+      "status": "PASS",
+      "claim": "deterministic within-episode spacetime predicate",
+      "metrics": {
+        "positive_detection": "8/8",
+        "negative_correct_non_detection": "8/8",
+        "fp": 0,
+        "fn": 0,
+        "deterministic": true
+      },
+      "result": "research/interventions/20260929/pa8_spacetime_r1/PA8_A_DETERMINISTIC_RESULT_R1.json"
+    },
+    "PA8_B": {
+      "status": "PASS",
+      "claim": "causal consumption / provider-facing propagation",
+      "gates": {
+        "relevant_earliest_start_shift": true,
+        "relevant_travel_gap_shift": true,
+        "availability_conflict_fail_closed": true,
+        "pa7_like_deadline_conflict_fail_closed": true,
+        "irrelevant_metadata_invariant": true,
+        "semantic_invariance": true,
+        "deterministic": true
+      },
+      "result": "research/interventions/20260929/pa8_spacetime_r1/PA8_B_CAUSAL_INTEGRATION_RESULT_R1.json"
+    },
+    "PA8_C": {
+      "r1_status": "FAIL__UNTYPED_ZERO_GAP_LOCATION_JUMP",
+      "r1_surface_outputs": 0,
+      "r1_issue_count": 35,
+      "r2_status": "PASS",
+      "r2_repair_scope": "TRANSITION_TYPING_ONLY",
+      "r2_scene_count": 50,
+      "r2_sequence_count": 9,
+      "r2_episode_clock": "01:48-03:32",
+      "r2_typed_location_transitions": 66,
+      "r2_preflight_issues": 0,
+      "semantic_projection_invariance": true,
+      "semantic_projection_sha256": "a449ed98f5845003cd1d496dc6e9f65a1bae651f46a24ef75e7b9148cfaa85b1",
+      "r2_architecture_sha256": "2486c4534482943d82fb91723d931a611551d8c3b2cf4ba36907852d325c9bbf",
+      "architecture": "research/interventions/20260929/pa8_spacetime_r1/R77_H1_PA8_C_FRESH_EPISODE_ARCHITECTURE_R2.json",
+      "preflight": "research/interventions/20260929/pa8_spacetime_r1/PA8_C_R2_PREFLIGHT_RESULT_R1.json"
+    },
+    "PA8_D": {
+      "status": "GENERATION_DISPATCH_READY__OUTPUTS_0",
+      "semantic_payload_sha256": "adefb2f6463939cc2e23c5c08deee82c912932721753a3e1047ed9533cadac34",
+      "control": {
+        "escc_present": false,
+        "packet_sha256": "28fe250e505b6a3751435afd1ae384340ff1cac1f6e17d857ea007912fd274f7",
+        "generation_zip_sha256": "67d3c4f76cfd29c5bc86dd417b024cc70b84fd76d02afde1dc1697d2230da323",
+        "generation_zip_bytes": 8213,
+        "generation_zip_crc_pass": true,
+        "path": "research/interventions/20260929/pa8_spacetime_r1/PA8_D_CONTROL_INDEPENDENT_GENERATION_PACKAGE_R1.zip"
+      },
+      "treatment": {
+        "escc_present": true,
+        "packet_sha256": "fb17e6859c00bcbd1101d5f82a58e6bee88f01caa5bdd62b1ebc203a41d363ae",
+        "generation_zip_sha256": "989cf32123780bc5ead50fe924e959bef0de964a7d7ee00aa272642c42d2b4ef",
+        "generation_zip_bytes": 11288,
+        "generation_zip_crc_pass": true,
+        "path": "research/interventions/20260929/pa8_spacetime_r1/PA8_D_TREATMENT_INDEPENDENT_GENERATION_PACKAGE_R1.zip"
+      },
+      "dispatch_independence": "Each ZIP must be used in a separate fresh generation context. Neither context may see the other arm packet/output.",
+      "surface_outputs": {
+        "control": 0,
+        "treatment": 0
+      },
+      "external_judge_outputs": 0
+    }
+  },
+  "operational_incident": {
+    "status": "CLOSED_PASS",
+    "issue": "ZIP outputs were ignored by repository .gitignore during git add.",
+    "repair": "git add -f on only the declared two ZIP paths",
+    "failed_run_id": 36574536664,
+    "successful_retry_run_id": 36576289701,
+    "successful_zip_commit": "3f60554ac8da3dca718ca0fef687828476d0bf08",
+    "scientific_effect": "NONE"
+  },
+  "next_transaction": [
+    "Use CONTROL ZIP in one fresh independent generation context and seal the first complete output.",
+    "Use TREATMENT ZIP in a different fresh independent generation context and seal the first complete output.",
+    "Do not expose one arm to the other.",
+    "Run frozen mechanical validation; any underlength repair must be separately preregistered and arm-local.",
+    "Only after both arms mechanically qualify, build external 3-Judge blind packets using frozen SC05/SC13/SC21/SC30/SC39/SC47 sample.",
+    "Seal 3/3 first schema-valid judgments before revealing mapping.",
+    "Apply unchanged PA7 literary gates plus separate PA8 continuity gate.",
+    "Only if PA8 closes PASS should implementation into the actual candidate runtime and C1/C2 binding be considered.",
+    "Physical 5-Part/9-Package successor is mandatory only after an actual candidate-runtime/package byte change passes regression/binding/reseal; no such byte change has occurred yet."
+  ],
+  "boundaries": {
+    "active_runtime_effect": "NONE__EXACT_R69_UNCHANGED",
+    "production_effect": "NONE",
+    "runtime_db_effect": "NONE",
+    "physical_authority_effect": "NONE__SYNC_R74_REMAINS_CURRENT",
+    "h1_primary_outputs": 0,
+    "human_target_accessed": false,
+    "pa8_full_closed": false,
+    "reason_pa8_not_full_closed": "Frozen protocol requires two genuinely separate fresh generation contexts and later independent 3-Judge evaluation. The current coordinator context must not self-substitute for both generators/judges."
+  }
+}
