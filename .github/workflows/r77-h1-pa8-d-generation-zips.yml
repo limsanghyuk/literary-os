@@ -1,0 +1,34 @@
+name: R77-H1 PA8-D Independent Generation ZIPs
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  build:
+    if: contains(github.event.head_commit.message, 'Run PA8-D generation ZIP build')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build deterministic generation ZIPs
+        run: python research/interventions/20260929/pa8_spacetime_r1/pa8_d_generation_zip_builder_r1.py
+      - name: Verify outputs
+        run: |
+          test -s research/interventions/20260929/pa8_spacetime_r1/PA8_D_CONTROL_INDEPENDENT_GENERATION_PACKAGE_R1.zip
+          test -s research/interventions/20260929/pa8_spacetime_r1/PA8_D_TREATMENT_INDEPENDENT_GENERATION_PACKAGE_R1.zip
+          test -s research/interventions/20260929/pa8_spacetime_r1/PA8_D_GENERATION_ZIP_MANIFEST_R1.json
+      - name: Commit generation packages
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add research/interventions/20260929/pa8_spacetime_r1/PA8_D_CONTROL_INDEPENDENT_GENERATION_PACKAGE_R1.zip
+          git add research/interventions/20260929/pa8_spacetime_r1/PA8_D_TREATMENT_INDEPENDENT_GENERATION_PACKAGE_R1.zip
+          git add research/interventions/20260929/pa8_spacetime_r1/PA8_D_GENERATION_ZIP_MANIFEST_R1.json
+          git commit -m 'Seal PA8-D independent generation ZIP packages' || exit 0
+          git pull --rebase origin main
+          git push
