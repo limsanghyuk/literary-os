@@ -1,0 +1,34 @@
+name: R77-H1 PA8-D Isolated Generation Packets
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  build:
+    if: contains(github.event.head_commit.message, 'Run PA8-D generation packet build')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build isolated generation packets
+        run: python research/interventions/20260929/pa8_spacetime_r1/pa8_d_generation_packet_builder_r1.py
+      - name: Verify outputs
+        run: |
+          test -s research/interventions/20260929/pa8_spacetime_r1/PA8_D_CONTROL_GENERATION_PACKET_R1.json
+          test -s research/interventions/20260929/pa8_spacetime_r1/PA8_D_TREATMENT_GENERATION_PACKET_R1.json
+          test -s research/interventions/20260929/pa8_spacetime_r1/PA8_D_CONTROL_GENERATION_PACKET_MANIFEST_R1.json
+          test -s research/interventions/20260929/pa8_spacetime_r1/PA8_D_TREATMENT_GENERATION_PACKET_MANIFEST_R1.json
+          test -s research/interventions/20260929/pa8_spacetime_r1/PA8_D_GENERATION_PACKET_BUILD_RECEIPT_R1.json
+      - name: Commit packet evidence
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add research/interventions/20260929/pa8_spacetime_r1/PA8_D_*GENERATION_PACKET*.json
+          git commit -m 'Seal PA8-D isolated generation packets' || exit 0
+          git pull --rebase origin main
+          git push
