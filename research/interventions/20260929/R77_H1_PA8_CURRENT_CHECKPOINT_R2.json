@@ -1,0 +1,94 @@
+{
+  "schema": "R77_H1_PA8_CURRENT_CHECKPOINT_R2",
+  "date": "2026-09-29",
+  "status": "PA8_A_PASS__PA8_B_PASS__PA8_C_R2_PASS__PA8_D_GENERATION_DISPATCH_READY__PA8_D_INTAKE_AND_MECHANICAL_FROZEN__PA8_E_PREREGISTERED__JUDGE_TEMPLATES_FROZEN__SURFACE_OUTPUTS_0__JUDGE_OUTPUTS_0",
+  "parent_checkpoint": "research/interventions/20260929/R77_H1_PA8_CURRENT_CHECKPOINT_R1.json",
+  "authority": {
+    "physical": "SYNC-R74",
+    "active_runtime": "exact R69",
+    "production": "ENG:R47 / LEGACY_R53",
+    "runtime_db": "DB59 frozen",
+    "operational_level3": "SUSPENDED__REQUALIFICATION_REQUIRED",
+    "latest_formal_scored": "R138",
+    "formal_r140": "NOT_STARTED"
+  },
+  "completed": [
+    "PA8-A deterministic spacetime predicate PASS: 8/8 positives, 8/8 negative controls, FP0/FN0, deterministic rerun.",
+    "PA8-B causal consumption PASS: relevant spacetime mutation changes provider-facing input/downstream schedule; irrelevant metadata invariant.",
+    "PA8-C R1 failure preserved: 35 untyped zero-gap location jumps with surface outputs 0.",
+    "PA8-C R2 transition-only repair PASS: 66 typed movements, semantic projection invariant, preflight issues 0.",
+    "PA8-D Control/Treatment generation packets sealed with identical semantic payload SHA and ESCC only in Treatment.",
+    "PA8-D independent generation ZIPs sealed CRC PASS after packaging-only .gitignore fix.",
+    "PA8-D first-output intake and mechanical validation rules sealed before outputs.",
+    "PA8-D mechanical validator implemented and clean-run selfcheck SUCCESS; missing-output state returns HOLD, not false verdict.",
+    "PA8-E external 3-Judge axes/gates/headroom rule sealed before surface outputs.",
+    "PA8-E J01/J02/J03 READ FIRST and output schemas sealed before surface outputs.",
+    "PA8-E judge-output intake/transport-normalization rules sealed before surface outputs."
+  ],
+  "frozen_generation": {
+    "control_zip": {
+      "path": "research/interventions/20260929/pa8_spacetime_r1/PA8_D_CONTROL_INDEPENDENT_GENERATION_PACKAGE_R1.zip",
+      "bytes": 8213,
+      "sha256": "67d3c4f76cfd29c5bc86dd417b024cc70b84fd76d02afde1dc1697d2230da323"
+    },
+    "treatment_zip": {
+      "path": "research/interventions/20260929/pa8_spacetime_r1/PA8_D_TREATMENT_INDEPENDENT_GENERATION_PACKAGE_R1.zip",
+      "bytes": 11288,
+      "sha256": "989cf32123780bc5ead50fe924e959bef0de964a7d7ee00aa272642c42d2b4ef"
+    },
+    "semantic_payload_sha256": "adefb2f6463939cc2e23c5c08deee82c912932721753a3e1047ed9533cadac34",
+    "outputs": {
+      "control": 0,
+      "treatment": 0
+    }
+  },
+  "mechanical_validator": {
+    "path": "research/interventions/20260929/pa8_spacetime_r1/pa8_d_mechanical_validator_r1.py",
+    "selfcheck_run_id": 36579999402,
+    "selfcheck_conclusion": "success",
+    "zero_output_expected_status": "HOLD__MISSING_FIRST_OUTPUTS"
+  },
+  "external_evaluation": {
+    "prereg": "research/interventions/20260929/R77_H1_PA8_E_EXTERNAL_3JUDGE_PREREG_R1.json",
+    "sample": [
+      "SC05",
+      "SC13",
+      "SC21",
+      "SC30",
+      "SC39",
+      "SC47"
+    ],
+    "continuity_axis": "TEMPORAL_SPATIAL_CONTINUITY",
+    "headroom_rule": "Control deterministic target violations = 0 => HOLD__NO_DETERMINISTIC_HEADROOM for repair-effect claim, not PASS.",
+    "judge_templates_root": "research/interventions/20260929/pa8_external_templates_r1/",
+    "intake_spec": "research/interventions/20260929/R77_H1_PA8_E_JUDGE_OUTPUT_INTAKE_SPEC_R1.json",
+    "judge_outputs": 0
+  },
+  "exact_next": [
+    "Create CONTROL screenplay in one fresh independent generation context using only the sealed CONTROL ZIP; seal first complete output.",
+    "Create TREATMENT screenplay in a different fresh independent generation context using only the sealed TREATMENT ZIP; seal first complete output.",
+    "Never expose either arm packet/output to the other generator.",
+    "Commit the two raw first outputs under their canonical filenames.",
+    "Run the already-frozen PA8-D mechanical validator.",
+    "If both mechanical-qualified and Control has target continuity headroom, build blind packets and dispatch J01/J02/J03.",
+    "If Control has no deterministic headroom, preserve result and classify repair-effect claim HOLD__NO_DETERMINISTIC_HEADROOM; do not invent efficacy.",
+    "Reveal mapping only after 3/3 schema-valid judgments are hash-sealed."
+  ],
+  "execution_boundary": {
+    "coordinator_can_create_fresh_chat_contexts": false,
+    "github_actions_has_text_llm_generator": false,
+    "available_plugin_search_found_no_independent_text_generation_connector": true,
+    "current_coordinator_has_seen_both_arm_specs": true,
+    "consequence": "Generating either experimental arm here would not satisfy the preregistered fresh independent generation-context condition; do not contaminate PA8-D.",
+    "human_target_accessed": false,
+    "h1_primary_outputs": 0
+  },
+  "physicalization": {
+    "candidate_runtime_bytes_changed": false,
+    "c1_c2_binding_changed": false,
+    "db59_changed": false,
+    "production_changed": false,
+    "physical_successor_required_now": false,
+    "rule": "Only after actual candidate-runtime implementation + regression PASS + C1/C2 binding PASS does a new 5-Part/9-Package successor become mandatory."
+  }
+}
