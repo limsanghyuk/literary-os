@@ -2,13 +2,21 @@
 Last updated: 2026-09-29
 
 ## START HERE
-`handoff/20260929/START_HERE_SYNC_R74_R77_H1_PA7_CLOSED_FAIL_R11.md`
+`handoff/20260929/START_HERE_SYNC_R74_R77_H1_PA8_D_GENERATION_DISPATCH_READY_R12.md`
 
 ## ACTIVE RESEARCH
 R77-H1 — Human Next-Episode Prospective Benchmark
 
-PA7 is now:
-`CLOSED_FAIL__ABSOLUTE_CRITICAL_VIOLATION_GATE__PAIRED_PASS__FOCUS_PASS_5_OF_6__RECOVERABILITY_PASS`
+PA8 now:
+`A_PASS__B_PASS__C_R2_PASS__D_GENERATION_DISPATCH_READY__SURFACE_OUTPUTS_0`
+
+## COMPLETED IN PA8
+1. Deterministic spacetime predicate: PASS 8/8 positives + 8/8 negatives, FP0/FN0.
+2. Causal consumption: PASS.
+3. Fresh 50-scene architecture R1: FAIL on 35 untyped zero-gap location jumps, preserved.
+4. Transition-only R2: PASS; 66 typed movements; semantic projection invariant; preflight issues 0.
+5. Isolated Control/Treatment generation packets: PASS; identical semantic payload hash.
+6. Independent generation ZIP build: PASS after packaging-only .gitignore repair.
 
 ## PHYSICAL / RUNTIME BASE
 - Physical Authority: SYNC-R74
@@ -18,12 +26,15 @@ PA7 is now:
 - Operational Level-3: `SUSPENDED__REQUALIFICATION_REQUIRED`
 
 ## EXACT NEXT
-1. Preregister a shared scene-clock / temporal-consistency constraint and validator.
-2. Include monotonic scene-time and future-ETA validation plus cross-scene passenger/location continuity.
-3. Use a fresh synthetic episode; do not patch PA7.
-4. Re-run provider-analog qualification under unchanged PA7-style external governance.
-5. Only after a fresh qualification PASS may >=40K H1 packets be rebuilt, followed by PM0 and real-provider C/T.
-6. Human target remains unopened.
+1. Generate Control from CONTROL ZIP in one fresh context.
+2. Generate Treatment from TREATMENT ZIP in a different fresh context.
+3. Seal first complete outputs independently.
+4. Run frozen >=40K/9-sequence/50-scene/mechanical and Treatment spacetime checks.
+5. If both qualify, build blind J01/J02/J03 packages using frozen sample SC05/SC13/SC21/SC30/SC39/SC47.
+6. Seal 3/3 first schema-valid raw judgments before mapping reveal.
+7. Apply unchanged PA7 literary gates plus separate PA8 continuity gate.
+8. Only after PA8 full PASS may actual candidate-runtime integration and then physical successor reseal be considered.
 
 ## BOUNDARY
-PA7 paired/focus strength does not override the Absolute critical-violation FAIL.
+The current coordinator must not self-generate both arms or self-substitute for independent judges.
+No candidate runtime/package bytes have changed yet, so SYNC-R74 remains current.
