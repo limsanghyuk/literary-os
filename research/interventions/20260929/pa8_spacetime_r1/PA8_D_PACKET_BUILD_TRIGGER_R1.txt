@@ -1,0 +1,2 @@
+PA8-D isolated generation packet build trigger.
+Preregistration and builder were committed before this trigger.
