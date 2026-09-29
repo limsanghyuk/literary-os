@@ -1,0 +1,2 @@
+PA8-A deterministic qualification trigger.
+Frozen cases and validator were committed before this trigger.
