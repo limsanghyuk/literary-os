@@ -1,0 +1,29 @@
+name: R77-H1 PA8-A Spacetime Deterministic Qualification
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  qualify:
+    if: contains(github.event.head_commit.message, 'Run PA8-A deterministic qualification')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run PA8-A frozen 16-case qualification
+        run: python research/interventions/20260929/pa8_spacetime_r1/pa8_spacetime_validator_r1.py
+      - name: Verify result exists
+        run: test -s research/interventions/20260929/pa8_spacetime_r1/PA8_A_DETERMINISTIC_RESULT_R1.json
+      - name: Commit sealed result
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add research/interventions/20260929/pa8_spacetime_r1/PA8_A_DETERMINISTIC_RESULT_R1.json
+          git commit -m 'Seal PA8-A deterministic qualification result' || exit 0
+          git pull --rebase origin main
+          git push
