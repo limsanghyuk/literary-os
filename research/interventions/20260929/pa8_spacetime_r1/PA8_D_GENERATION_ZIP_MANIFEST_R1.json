@@ -1,0 +1,68 @@
+{
+  "control_surface_outputs": 0,
+  "date": "2026-09-29",
+  "dispatch": "Use each ZIP in a separate fresh generation conversation/context. Never expose the other arm packet/output.",
+  "human_target_accessed": false,
+  "packages": {
+    "CONTROL": {
+      "bytes": 8213,
+      "crc_pass": true,
+      "entries": [
+        "PA8_D_CONTROL_GENERATOR_READ_FIRST_R1.md",
+        "PA8_D_CONTROL_GENERATION_PACKET_R1.json",
+        "PA8_D_CONTROL_GENERATION_PACKET_MANIFEST_R1.json"
+      ],
+      "file": "PA8_D_CONTROL_INDEPENDENT_GENERATION_PACKAGE_R1.zip",
+      "members": [
+        {
+          "bytes": 684,
+          "file": "PA8_D_CONTROL_GENERATOR_READ_FIRST_R1.md",
+          "sha256": "a670e3b7003bfaf05c7bab9f244c7263bbc4c12a3ed0d4b92ae5ee59772f612e"
+        },
+        {
+          "bytes": 23002,
+          "file": "PA8_D_CONTROL_GENERATION_PACKET_R1.json",
+          "sha256": "483d8d3832b9b818ad832ff8178a2df50fe2eff5f57f4f0b7115cc8e5f4ee1e2"
+        },
+        {
+          "bytes": 430,
+          "file": "PA8_D_CONTROL_GENERATION_PACKET_MANIFEST_R1.json",
+          "sha256": "a3a593eb6ce4f166aa6de0e3a0243d7bdcbc416fa23068f754fd633a0d37af38"
+        }
+      ],
+      "sha256": "67d3c4f76cfd29c5bc86dd417b024cc70b84fd76d02afde1dc1697d2230da323"
+    },
+    "TREATMENT": {
+      "bytes": 11288,
+      "crc_pass": true,
+      "entries": [
+        "PA8_D_TREATMENT_GENERATOR_READ_FIRST_R1.md",
+        "PA8_D_TREATMENT_GENERATION_PACKET_R1.json",
+        "PA8_D_TREATMENT_GENERATION_PACKET_MANIFEST_R1.json"
+      ],
+      "file": "PA8_D_TREATMENT_INDEPENDENT_GENERATION_PACKAGE_R1.zip",
+      "members": [
+        {
+          "bytes": 947,
+          "file": "PA8_D_TREATMENT_GENERATOR_READ_FIRST_R1.md",
+          "sha256": "b425eb6a5b81120bd1a1ab354a50af56a88d2d37c4a71b6a0976c99f3f60fd49"
+        },
+        {
+          "bytes": 75750,
+          "file": "PA8_D_TREATMENT_GENERATION_PACKET_R1.json",
+          "sha256": "dc6643e836e4a22ae485b70565de0af8581323bc07e7f53f829c13d29325b9c2"
+        },
+        {
+          "bytes": 429,
+          "file": "PA8_D_TREATMENT_GENERATION_PACKET_MANIFEST_R1.json",
+          "sha256": "33432f52ed0ee05d5eead35ee01062e21542a370d82dbed6cc2b50b85588712c"
+        }
+      ],
+      "sha256": "989cf32123780bc5ead50fe924e959bef0de964a7d7ee00aa272642c42d2b4ef"
+    }
+  },
+  "physical_authority_effect": "NONE",
+  "schema": "PA8_D_GENERATION_ZIP_MANIFEST_R1",
+  "status": "PASS",
+  "treatment_surface_outputs": 0
+}
