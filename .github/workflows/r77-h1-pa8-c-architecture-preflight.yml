@@ -1,0 +1,29 @@
+name: R77-H1 PA8-C Architecture Spacetime Preflight
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  qualify:
+    if: contains(github.event.head_commit.message, 'Run PA8-C architecture preflight')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run PA8-C architecture preflight
+        run: python research/interventions/20260929/pa8_spacetime_r1/pa8_c_architecture_preflight_r1.py || true
+      - name: Verify result
+        run: test -s research/interventions/20260929/pa8_spacetime_r1/PA8_C_ARCHITECTURE_PREFLIGHT_RESULT_R1.json
+      - name: Commit result
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add research/interventions/20260929/pa8_spacetime_r1/PA8_C_ARCHITECTURE_PREFLIGHT_RESULT_R1.json
+          git commit -m 'Seal PA8-C architecture preflight result' || exit 0
+          git pull --rebase origin main
+          git push
