@@ -1,0 +1,33 @@
+name: R77-H1 PA8-D Mechanical Validator Selfcheck
+on:
+  push:
+    branches: [main]
+jobs:
+  selfcheck:
+    if: contains(github.event.head_commit.message, 'Run PA8-D mechanical validator selfcheck')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile validator
+        run: python -m py_compile research/interventions/20260929/pa8_spacetime_r1/pa8_d_mechanical_validator_r1.py
+      - name: Confirm zero-output HOLD contract
+        shell: bash
+        run: |
+          set +e
+          python research/interventions/20260929/pa8_spacetime_r1/pa8_d_mechanical_validator_r1.py > /tmp/pa8_d_selfcheck.json
+          rc=$?
+          set -e
+          test "$rc" -eq 2
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/pa8_d_selfcheck.json',encoding='utf-8'))
+          assert d["status"]=="HOLD__MISSING_FIRST_OUTPUTS", d
+          assert sorted(d["missing"])==sorted([
+            "PA8_D_CONTROL_FIRST_OUTPUT_RAW_R1.txt",
+            "PA8_D_TREATMENT_FIRST_OUTPUT_RAW_R1.txt"
+          ]), d
+          print(json.dumps(d,ensure_ascii=False,sort_keys=True))
+          PY
