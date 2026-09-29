@@ -1,0 +1,16 @@
+{
+  "at_scene_open_count": 35,
+  "authority_effect": "NONE",
+  "between_scenes_count": 31,
+  "date": "2026-09-29",
+  "human_target_accessed": false,
+  "parent_r1_sha256": "de278fb3834e8d74e8492a8bf300175724781dfd5808778d8b6d0a2d2907e059",
+  "schema": "PA8_C_R2_BUILD_RECEIPT_R1",
+  "semantic_invariance": true,
+  "semantic_projection_r1_sha256": "a449ed98f5845003cd1d496dc6e9f65a1bae651f46a24ef75e7b9148cfaa85b1",
+  "semantic_projection_r2_sha256": "a449ed98f5845003cd1d496dc6e9f65a1bae651f46a24ef75e7b9148cfaa85b1",
+  "status": "PASS",
+  "surface_outputs": 0,
+  "transition_count": 66,
+  "unrepairable_transitions": []
+}

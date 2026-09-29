@@ -1,0 +1,19 @@
+{
+  "active_runtime_effect": "NONE__EXACT_R69_UNCHANGED",
+  "date": "2026-09-29",
+  "human_target_accessed": false,
+  "issues": [],
+  "next_if_fail": "Preserve R2 and repair only the newly exposed spacetime typing defect before any surface output.",
+  "next_if_pass": "PA8-D paired >=40K provider-analog surface generation under frozen R2 architecture.",
+  "physical_package_effect": "NONE__RESEARCH_ONLY",
+  "r2_sha256": "2486c4534482943d82fb91723d931a611551d8c3b2cf4ba36907852d325c9bbf",
+  "scene_count": 50,
+  "schema": "PA8_C_R2_PREFLIGHT_RESULT_R1",
+  "semantic_invariance": true,
+  "semantic_projection_r1_sha256": "a449ed98f5845003cd1d496dc6e9f65a1bae651f46a24ef75e7b9148cfaa85b1",
+  "semantic_projection_r2_sha256": "a449ed98f5845003cd1d496dc6e9f65a1bae651f46a24ef75e7b9148cfaa85b1",
+  "sequence_count": 9,
+  "status": "PASS",
+  "surface_outputs": 0,
+  "typed_location_transitions": 66
+}
