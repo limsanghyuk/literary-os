@@ -1,0 +1,2 @@
+PA8-C R2 transition repair trigger.
+R1 failure, R2 preregistration, builder and preflight were committed before this trigger.
