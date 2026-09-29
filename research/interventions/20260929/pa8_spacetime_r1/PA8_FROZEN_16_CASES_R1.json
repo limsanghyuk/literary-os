@@ -1,0 +1,573 @@
+{
+  "schema": "PA8_SPACETIME_FROZEN_CASES_R1",
+  "date": "2026-09-29",
+  "frozen_before_first_execution": true,
+  "cases": [
+    {
+      "case_id": "P01_SCENE_CLOCK_REVERSAL",
+      "expected_valid": false,
+      "expected_violation": "SCENE_CLOCK_REVERSAL",
+      "travel_minutes": {},
+      "scenes": [
+        {
+          "scene": "S1",
+          "mode": "LINEAR_REALTIME",
+          "clock": "22:30",
+          "day": 0,
+          "duration_min": 10,
+          "location": "A",
+          "entities": [
+            {
+              "entity": "E1",
+              "location": "A"
+            }
+          ]
+        },
+        {
+          "scene": "S2",
+          "mode": "LINEAR_REALTIME",
+          "clock": "22:35",
+          "day": 0,
+          "duration_min": 5,
+          "location": "A",
+          "entities": [
+            {
+              "entity": "E1",
+              "location": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "P02_PA7_PATTERN_FUTURE_EVENT_IN_PAST",
+      "expected_valid": false,
+      "expected_violation": "FUTURE_EVENT_IN_PAST",
+      "travel_minutes": {},
+      "scenes": [
+        {
+          "scene": "S1",
+          "mode": "LINEAR_REALTIME",
+          "clock": "00:38",
+          "day": 1,
+          "duration_min": 5,
+          "location": "rear_gate",
+          "entities": [],
+          "events": [
+            {
+              "event": "first_delivery_truck",
+              "framing": "FUTURE",
+              "clock": "23:55",
+              "day": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "P03_AVAILABILITY_WINDOW_VIOLATION",
+      "expected_valid": false,
+      "expected_violation": "AVAILABILITY_WINDOW_VIOLATION",
+      "travel_minutes": {},
+      "scenes": [
+        {
+          "scene": "S1",
+          "mode": "LINEAR_REALTIME",
+          "clock": "00:10",
+          "day": 1,
+          "duration_min": 5,
+          "location": "rear_gate",
+          "entities": [],
+          "resources": [
+            {
+              "resource": "rear_gate",
+              "valid_from": {
+                "clock": "23:20",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "00:05",
+                "day": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "P04_IMPOSSIBLE_TRAVEL",
+      "expected_valid": false,
+      "expected_violation": "IMPOSSIBLE_TRAVEL",
+      "travel_minutes": {
+        "depot|market": 20
+      },
+      "scenes": [
+        {
+          "scene": "S1",
+          "mode": "LINEAR_REALTIME",
+          "clock": "23:00",
+          "day": 0,
+          "duration_min": 5,
+          "location": "depot",
+          "entities": [
+            {
+              "entity": "driver",
+              "location": "depot"
+            }
+          ]
+        },
+        {
+          "scene": "S2",
+          "mode": "LINEAR_REALTIME",
+          "clock": "23:10",
+          "day": 0,
+          "duration_min": 5,
+          "location": "market",
+          "entities": [
+            {
+              "entity": "driver",
+              "location": "market",
+              "location_change_requires_evidence": true
+            }
+          ],
+          "transitions": [
+            {
+              "entity": "driver",
+              "type": "MOVE",
+              "from_location": "depot",
+              "to_location": "market"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "P05_ENTITY_MULTI_LOCATION",
+      "expected_valid": false,
+      "expected_violation": "ENTITY_MULTI_LOCATION",
+      "travel_minutes": {},
+      "scenes": [
+        {
+          "scene": "S1",
+          "mode": "LINEAR_REALTIME",
+          "clock": "23:00",
+          "day": 0,
+          "duration_min": 5,
+          "location": "depot",
+          "entities": [
+            {
+              "entity": "E1",
+              "location": "depot"
+            },
+            {
+              "entity": "E1",
+              "location": "market"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "P06_CONTAINER_TRANSITION_BREAK",
+      "expected_valid": false,
+      "expected_violation": "CONTAINER_TRANSITION_BREAK",
+      "travel_minutes": {},
+      "scenes": [
+        {
+          "scene": "S1",
+          "mode": "LINEAR_REALTIME",
+          "clock": "23:00",
+          "day": 0,
+          "duration_min": 5,
+          "location": "depot",
+          "entities": [
+            {
+              "entity": "passenger",
+              "location": "depot",
+              "container": "BUS310"
+            }
+          ]
+        },
+        {
+          "scene": "S2",
+          "mode": "LINEAR_REALTIME",
+          "clock": "23:10",
+          "day": 0,
+          "duration_min": 5,
+          "location": "depot",
+          "entities": [
+            {
+              "entity": "passenger",
+              "location": "depot",
+              "container": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "P07_LOCATION_TRANSITION_BREAK",
+      "expected_valid": false,
+      "expected_violation": "LOCATION_TRANSITION_BREAK",
+      "travel_minutes": {},
+      "scenes": [
+        {
+          "scene": "S1",
+          "mode": "LINEAR_REALTIME",
+          "clock": "23:00",
+          "day": 0,
+          "duration_min": 5,
+          "location": "depot",
+          "entities": [
+            {
+              "entity": "E1",
+              "location": "depot"
+            }
+          ]
+        },
+        {
+          "scene": "S2",
+          "mode": "LINEAR_REALTIME",
+          "clock": "23:20",
+          "day": 0,
+          "duration_min": 5,
+          "location": "market",
+          "entities": [
+            {
+              "entity": "E1",
+              "location": "market",
+              "location_change_requires_evidence": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "P08_CROSS_MIDNIGHT_NORMALIZATION_ERROR",
+      "expected_valid": false,
+      "expected_violation": "CROSS_MIDNIGHT_NORMALIZATION_ERROR",
+      "travel_minutes": {},
+      "scenes": [
+        {
+          "scene": "S1",
+          "mode": "LINEAR_REALTIME",
+          "clock": "23:50",
+          "day": 0,
+          "duration_min": 5,
+          "location": "A",
+          "entities": []
+        },
+        {
+          "scene": "S2",
+          "mode": "LINEAR_REALTIME",
+          "clock": "00:10",
+          "day": 0,
+          "duration_min": 5,
+          "location": "A",
+          "entities": []
+        }
+      ]
+    },
+    {
+      "case_id": "N01_VALID_MONOTONIC_LINEAR",
+      "expected_valid": true,
+      "travel_minutes": {},
+      "scenes": [
+        {
+          "scene": "S1",
+          "mode": "LINEAR_REALTIME",
+          "clock": "22:00",
+          "day": 0,
+          "duration_min": 5,
+          "location": "A",
+          "entities": [
+            {
+              "entity": "E1",
+              "location": "A"
+            }
+          ]
+        },
+        {
+          "scene": "S2",
+          "mode": "LINEAR_REALTIME",
+          "clock": "22:06",
+          "day": 0,
+          "duration_min": 5,
+          "location": "A",
+          "entities": [
+            {
+              "entity": "E1",
+              "location": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "N02_VALID_FUTURE_EVENT",
+      "expected_valid": true,
+      "travel_minutes": {},
+      "scenes": [
+        {
+          "scene": "S1",
+          "mode": "LINEAR_REALTIME",
+          "clock": "23:00",
+          "day": 0,
+          "duration_min": 5,
+          "location": "A",
+          "entities": [],
+          "events": [
+            {
+              "event": "arrival",
+              "framing": "FUTURE",
+              "clock": "23:00",
+              "day": 0
+            },
+            {
+              "event": "later",
+              "framing": "FUTURE",
+              "clock": "23:15",
+              "day": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "N03_VALID_AVAILABILITY_WINDOW",
+      "expected_valid": true,
+      "travel_minutes": {},
+      "scenes": [
+        {
+          "scene": "S1",
+          "mode": "LINEAR_REALTIME",
+          "clock": "23:30",
+          "day": 0,
+          "duration_min": 10,
+          "location": "rear_gate",
+          "entities": [],
+          "resources": [
+            {
+              "resource": "rear_gate",
+              "valid_from": {
+                "clock": "23:20",
+                "day": 0
+              },
+              "valid_to": {
+                "clock": "00:05",
+                "day": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "N04_VALID_TRAVEL_WITH_TIME",
+      "expected_valid": true,
+      "travel_minutes": {
+        "depot|market": 20
+      },
+      "scenes": [
+        {
+          "scene": "S1",
+          "mode": "LINEAR_REALTIME",
+          "clock": "22:00",
+          "day": 0,
+          "duration_min": 5,
+          "location": "depot",
+          "entities": [
+            {
+              "entity": "driver",
+              "location": "depot"
+            }
+          ]
+        },
+        {
+          "scene": "S2",
+          "mode": "LINEAR_REALTIME",
+          "clock": "22:30",
+          "day": 0,
+          "duration_min": 5,
+          "location": "market",
+          "entities": [
+            {
+              "entity": "driver",
+              "location": "market",
+              "location_change_requires_evidence": true
+            }
+          ],
+          "transitions": [
+            {
+              "entity": "driver",
+              "type": "MOVE",
+              "from_location": "depot",
+              "to_location": "market"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "N05_VALID_FLASHBACK",
+      "expected_valid": true,
+      "travel_minutes": {},
+      "scenes": [
+        {
+          "scene": "S1",
+          "mode": "LINEAR_REALTIME",
+          "clock": "22:30",
+          "day": 0,
+          "duration_min": 5,
+          "location": "A",
+          "entities": []
+        },
+        {
+          "scene": "S2",
+          "mode": "FLASHBACK",
+          "clock": "18:00",
+          "day": 0,
+          "duration_min": 10,
+          "location": "B",
+          "entities": []
+        },
+        {
+          "scene": "S3",
+          "mode": "LINEAR_REALTIME",
+          "clock": "22:40",
+          "day": 0,
+          "duration_min": 5,
+          "location": "A",
+          "entities": []
+        }
+      ]
+    },
+    {
+      "case_id": "N06_VALID_PARALLEL_OVERLAP",
+      "expected_valid": true,
+      "travel_minutes": {},
+      "scenes": [
+        {
+          "scene": "S1",
+          "mode": "LINEAR_REALTIME",
+          "clock": "22:30",
+          "day": 0,
+          "duration_min": 10,
+          "location": "A",
+          "entities": []
+        },
+        {
+          "scene": "S2",
+          "mode": "PARALLEL",
+          "clock": "22:32",
+          "day": 0,
+          "duration_min": 5,
+          "location": "B",
+          "entities": []
+        },
+        {
+          "scene": "S3",
+          "mode": "LINEAR_REALTIME",
+          "clock": "22:41",
+          "day": 0,
+          "duration_min": 5,
+          "location": "A",
+          "entities": []
+        }
+      ]
+    },
+    {
+      "case_id": "N07_VALID_EXPLICIT_CONTAINER_TRANSITIONS",
+      "expected_valid": true,
+      "travel_minutes": {},
+      "scenes": [
+        {
+          "scene": "S1",
+          "mode": "LINEAR_REALTIME",
+          "clock": "23:00",
+          "day": 0,
+          "duration_min": 5,
+          "location": "depot",
+          "entities": [
+            {
+              "entity": "passenger",
+              "location": "depot",
+              "container": null
+            }
+          ]
+        },
+        {
+          "scene": "S2",
+          "mode": "LINEAR_REALTIME",
+          "clock": "23:06",
+          "day": 0,
+          "duration_min": 5,
+          "location": "depot",
+          "entities": [
+            {
+              "entity": "passenger",
+              "location": "depot",
+              "container": "BUS310"
+            }
+          ],
+          "transitions": [
+            {
+              "entity": "passenger",
+              "type": "BOARD",
+              "from_container": null,
+              "to_container": "BUS310"
+            }
+          ]
+        },
+        {
+          "scene": "S3",
+          "mode": "LINEAR_REALTIME",
+          "clock": "23:20",
+          "day": 0,
+          "duration_min": 5,
+          "location": "depot",
+          "entities": [
+            {
+              "entity": "passenger",
+              "location": "depot",
+              "container": null
+            }
+          ],
+          "transitions": [
+            {
+              "entity": "passenger",
+              "type": "EXIT",
+              "from_container": "BUS310",
+              "to_container": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "N08_VALID_CROSS_MIDNIGHT",
+      "expected_valid": true,
+      "travel_minutes": {},
+      "scenes": [
+        {
+          "scene": "S1",
+          "mode": "LINEAR_REALTIME",
+          "clock": "23:50",
+          "day": 0,
+          "duration_min": 5,
+          "location": "A",
+          "entities": []
+        },
+        {
+          "scene": "S2",
+          "mode": "LINEAR_REALTIME",
+          "clock": "00:10",
+          "day": 1,
+          "duration_min": 5,
+          "location": "A",
+          "entities": []
+        }
+      ]
+    }
+  ]
+}
