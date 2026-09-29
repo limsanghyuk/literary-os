@@ -1,0 +1,98 @@
+{
+  "schema": "PA8_D_CONTROL_FIRST_OUTPUT_INTAKE_R1",
+  "date": "2026-09-30",
+  "status": "CONTROL_FIRST_OUTPUT_INTAKE__STRUCTURAL_MECHANICAL_PASS__CONTINUITY_HEADROOM_ESTABLISHED__RAW_BYTE_HASH_PENDING_RUNTIME_TRANSPORT_HOLD__PAIRED_PENDING_TREATMENT",
+  "source": {
+    "txt_file_id": "file_00000000b56c8230b7782fafbb1b2176",
+    "txt_uploaded_name": "PA8_D_FIRST_COMPLETE_SCREENPLAY_R1.txt",
+    "txt_size_bytes": 91732,
+    "txt_total_lines": 2822,
+    "zip_file_id": "file_0000000042848206af59b88e52ce2e8f",
+    "zip_uploaded_name": "PA8_D_CONTROL_FIRST_COMPLETE_SCREENPLAY_R1.zip",
+    "zip_size_bytes": 34005,
+    "zip_binary_inspection_status": "PENDING__BYTE_PROCESSING_RUNTIME_CLIENTERROR_AND_PROJECT_RAW_MATERIALIZATION_UNAVAILABLE"
+  },
+  "text_intake": {
+    "extracted_text_characters": 40588,
+    "note": "Character count is from complete indexed text reconstructed from three contiguous Files ranges; raw TXT byte SHA remains pending because byte-processing runtime returned ClientError.",
+    "sequence_count": 9,
+    "sequence_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "scene_count": 50,
+    "scene_numbers_exact_1_to_50": true,
+    "metadata_leak_hits": [],
+    "exact_duplicate_full_scene_pairs": [],
+    "gates": {
+      "chars_ge_40000": true,
+      "sequence_headings_9": true,
+      "scene_headings_50": true,
+      "scene_numbers_exact": true,
+      "metadata_leaks_0": true,
+      "duplicate_full_scene_bodies_0": true
+    }
+  },
+  "deterministic_control_headroom": {
+    "status": "ESTABLISHED__AT_LEAST_ONE_TARGET_CONTINUITY_VIOLATION",
+    "class": "CROSS_SCENE_ENTITY_LOCATION_STATE_BREAK",
+    "entity_group": "audit originals A-117..A-120, especially A-120",
+    "evidence": [
+      {
+        "scene": "SC29",
+        "time": "02:46-02:49",
+        "fact": "A-117..A-120 are explicitly on the same final freight-elevator cart and arrive at ground level."
+      },
+      {
+        "scene": "SC34",
+        "time": "02:57",
+        "fact": "The four audit-original boxes are explicitly on one pallet inside the truck and are not split."
+      },
+      {
+        "scene": "SC41",
+        "time": "03:12",
+        "fact": "The first truck departs carrying one audit-original pallet plus two wet-record pallets."
+      },
+      {
+        "scene": "SC43",
+        "time": "03:16-03:17",
+        "fact": "A-120 is again physically present at ground staging and is newly assigned manual stair movement because the freight elevator is locked, without any return/reversal transition explaining how it came back from the departed truck."
+      },
+      {
+        "scene": "SC47",
+        "time": "03:24-03:25",
+        "fact": "A-117..A-120 are reported as finally received; this does not repair the unexplained SC41->SC43 state/location reappearance."
+      }
+    ],
+    "prereg_effect": "PA8-E continuity-effect headroom rule is satisfied on Control; do not classify future Treatment improvement as ceiling-effect HOLD merely because Control is clean."
+  },
+  "additional_surface_anomaly": {
+    "scene": "SC39",
+    "time": "03:07-03:08",
+    "type": "EDITORIAL_TIME_SELF_CORRECTION_ARTIFACT",
+    "text_excerpt": "02:—가 아니라 이미 03:08 무렵",
+    "classification": "SURFACE_SERIALIZATION_ANOMALY__NOT_RESEARCH_META_LEAK"
+  },
+  "pending": [
+    "Raw TXT SHA256 and ZIP member/CRC/identity check after byte-processing runtime recovery.",
+    "Treatment first output intake.",
+    "Paired <=10% length gate.",
+    "Treatment exact ESCC clock/location/spacetime mechanical checks.",
+    "Blind A/B packet construction and J01/J02/J03 external evaluation only after both arms mechanically qualify."
+  ],
+  "authority_effect": {
+    "physical_authority": "NONE__SYNC-R74_REMAINS_CURRENT",
+    "active_runtime": "NONE__EXACT_R69_UNCHANGED",
+    "production": "NONE",
+    "runtime_db": "NONE",
+    "human_target_accessed": false,
+    "h1_primary_outputs": 0
+  }
+}
