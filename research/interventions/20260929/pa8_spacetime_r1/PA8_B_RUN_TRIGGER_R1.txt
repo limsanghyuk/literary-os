@@ -1,0 +1,2 @@
+PA8-B causal integration trigger.
+Frozen fixture and implementation were committed before this trigger.
