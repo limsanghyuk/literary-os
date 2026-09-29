@@ -1,0 +1,79 @@
+{
+  "schema": "R77_H1_PA8_E_JUDGE_OUTPUT_INTAKE_SPEC_R1",
+  "date": "2026-09-29",
+  "status": "SEALED_BEFORE_SURFACE_OUTPUTS_AND_JUDGE_DISPATCH",
+  "judge_ids": [
+    "J01",
+    "J02",
+    "J03"
+  ],
+  "first_valid_rule": "For each judge, preserve and hash-seal the first complete schema-valid raw JSON. Do not ask the judge to revise scores after a valid judgment.",
+  "transport_only_normalization": [
+    "If UI transport wraps JSON in a markdown code fence, preserve raw transport text and remove only the outer fence for parsing.",
+    "HTML entity decoding is allowed only when the UI visibly encoded JSON characters; preserve both raw and normalized hashes.",
+    "Removal of UI line-ending escape backslashes is allowed only when demonstrably transport-generated; preserve raw and normalized hashes.",
+    "No numeric score, preference, reconstruction text, critical label, or evidence string may be substantively edited."
+  ],
+  "required_counts": {
+    "whole_numeric_slots": 16,
+    "literary_surface_numeric_slots": 168,
+    "continuity_numeric_slots": 12,
+    "total_scene_numeric_slots": 180
+  },
+  "score_range": {
+    "min": 1,
+    "max": 10
+  },
+  "required_samples": [
+    "SC05",
+    "SC13",
+    "SC21",
+    "SC30",
+    "SC39",
+    "SC47"
+  ],
+  "required_literary_axes": [
+    "DIALOGUE_SUBTEXT",
+    "CHARACTER_VOICE",
+    "RELATIONSHIP_STATUS_PRESSURE",
+    "PHYSICALIZATION_ACTION",
+    "PACING_ESCALATION_TIME_PRESSURE",
+    "ENSEMBLE_WORLD_SPECIFICITY",
+    "INFORMATION_DRAMATIZATION",
+    "KOREAN_SPOKEN_NATURALNESS",
+    "SCENE_OPENING_VISUALIZATION",
+    "PERFORMANCE_DIRECTION_QUALITY",
+    "ACTION_DIALOGUE_BINDING",
+    "EMOTION_EXTERNALIZATION",
+    "CINEMATIC_READABILITY",
+    "DIRECTION_DETAIL_ECONOMY"
+  ],
+  "required_continuity_axis": "TEMPORAL_SPATIAL_CONTINUITY",
+  "required_preferences": [
+    "whole_episode_preference",
+    "surface_craft_preference",
+    "continuity_preference"
+  ],
+  "allowed_preferences": [
+    "A",
+    "B",
+    "TIE"
+  ],
+  "reconstruction_prefixes": [
+    "EVIDENCED:",
+    "INFERRED:"
+  ],
+  "allowed_critical_labels": [
+    "INTERNAL_SCHEMA_OR_RESEARCH_META_LEAK",
+    "IMPORTANT_STATE_CHANGE_WITHOUT_SCREEN_VISIBLE_CARRIER",
+    "EXPOSITORY_EMOTION_STATE_DIALOGUE_AS_DOMINANT_CRAFT",
+    "SEVERE_CHARACTER_VOICE_COLLAPSE",
+    "MAJOR_CAUSAL_OR_CONTINUITY_BREAK",
+    "DIRECTION_BLOAT_THAT_REPEATS_DIALOGUE_OR_STATE"
+  ],
+  "premapping_gate": "Coordinator mapping MUST NOT be accessed or revealed until J01/J02/J03 first schema-valid judgments are all hash-sealed.",
+  "invalid_output_rule": "If output is schema-invalid, preserve it as invalid evidence. A judge may be asked only to repair schema/serialization omissions without seeing mapping, other judges, or outcome calculations. Do not coach scores.",
+  "mapping_application": "After 3/3 valid raw judgments are sealed, reveal coordinator mapping once and compute the frozen PA8-E gates.",
+  "human_target_accessed": false,
+  "authority_effect": "NONE"
+}
