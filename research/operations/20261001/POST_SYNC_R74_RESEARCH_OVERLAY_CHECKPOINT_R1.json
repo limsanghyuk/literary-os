@@ -1,0 +1,81 @@
+{
+  "schema": "POST_SYNC_R74_RESEARCH_OVERLAY_CHECKPOINT_R1",
+  "date": "2026-10-01",
+  "status": "RESEARCH_OVERLAY_CURRENT__PHYSICAL_SYNC_R74_UNCHANGED",
+  "physical_baseline": "research/operations/20261001/SYNC_R74_DEVELOPER_HELD_9PACKAGE_BASELINE_R1.json",
+  "research_overlay": [
+    {
+      "phase": "PA7 external blind closure",
+      "status": "CLOSED_FAIL__ABSOLUTE_CRITICAL_VIOLATION_GATE__PAIRED_PASS__FOCUS_PASS_5_OF_6__RECOVERABILITY_PASS",
+      "facts": [
+        "Treatment preferred 3/3 on whole and surface.",
+        "Focus Gate PASS 5/6.",
+        "Absolute gate failed because all judges confirmed a major chronology/continuity break.",
+        "Responsible ancestor localized to COMMON_EPISODE_ARCHITECTURE_TEMPORAL_SCHEDULING_AND_VALIDATION_LAYER.",
+        "PA7 remains immutable; do not patch/rescore."
+      ]
+    },
+    {
+      "phase": "PA8 spacetime repair qualification",
+      "status": "CONTROL_1__TREATMENT_0__FROZEN",
+      "facts": [
+        "PA8-A deterministic spacetime predicate PASS: 8/8 positives, 8/8 negative controls, FP0/FN0.",
+        "PA8-B causal consumption PASS.",
+        "PA8-C R1 fresh architecture preflight FAIL on 35 untyped zero-gap location jumps; failure preserved.",
+        "PA8-C R2 transition-only repair PASS: 66 typed movements, semantic projection invariant, issues 0.",
+        "PA8-D Control first independent screenplay received: 40,588 chars, 9 sequences, 50 scenes, structural mechanical PASS.",
+        "Control continuity headroom established via SC41->SC43 audit-original location/state break.",
+        "Treatment first output not received; judges 0/3; PA8 remains frozen under R14/R3."
+      ]
+    },
+    {
+      "phase": "Dialogue and dramatic-ecology diagnosis",
+      "status": "PARALLEL_RESEARCH__NO_RUNTIME_CHANGE",
+      "facts": [
+        "PA8 Control dialogue turns = 566; historical 2,264-episode corpus mean 395.9, median 376; Dae Jang Geum median 602.",
+        "Control's perceived dialogue weakness is not low turn count alone; short utterances + high direction/action share + weak conversational expansion are implicated.",
+        "Control diagnostic dialogue share ~35.6% of dialogue+direction; no formal human dialogue-share target is authorized yet.",
+        "Human Dialogue/Direction Baseline preregistered; raw human-script source measurement pending."
+      ]
+    },
+    {
+      "phase": "Upper-layer historical recovery",
+      "status": "HISTORICAL_CAPABILITY_RECOVERED",
+      "facts": [
+        "Existing work already covered subplot metrology, Affiliation Ensemble Generator/Subplot Allocator, P07-I2 Ensemble Ecology, I4K multi-origin Event Ecology, UL14 flattening diagnosis, UL15 Adaptive Multi-Obligation Planner, UL16 Candidate Main-Path integration, R58C scene-depth/material-diversity, and R59-R69 adaptive lineage.",
+        "Important correction: physical SYNC-R58 architecture-only blind had already closed PASS 18W/0T/0L versus ENG:R47.",
+        "Therefore the next task is not inventing a new thread architecture but requalifying current exact R69 consumption of the inherited upper Showrunner chain."
+      ]
+    },
+    {
+      "phase": "UL17 current exact R69 upper-layer requalification",
+      "status": "STAGE_A_PASS__STAGE_B_RUNTIME_TRANSPORT_HOLD",
+      "facts": [
+        "UL17 preregistered on 2026-10-01.",
+        "Stage A lineage inheritance audit PASS: current exact R69 is an ADAPTIVE_UL16 descendant.",
+        "Fresh multi-strand fixture '오후 네 시의 라디오' frozen before exact-R69 architecture output.",
+        "Stage B B01-B08 causal intervention matrix frozen.",
+        "Stage C architecture-output contract frozen.",
+        "Stage D architecture-only blind spec and Control/Treatment identities frozen.",
+        "C1 materialized successfully through Files at 140,403,571 bytes.",
+        "Minimal shell and Python byte-processing both returned ClientError; Stage B classified RUNTIME_TRANSPORT_HOLD__NO_SCIENTIFIC_VERDICT.",
+        "No exact-R69 Stage B output exists yet."
+      ]
+    }
+  ],
+  "exact_resume": [
+    "Do not rerun UL17 Stage A.",
+    "Do not modify the frozen UL17 fresh fixture, B01-B08 matrix, Stage C contract, or Stage D blind rules after outputs.",
+    "Restore byte-processing runtime health.",
+    "Verify SYNC-R74 C1 size/SHA256.",
+    "Extract only the nested exact-R69 runtime and verify SHA256/CRC.",
+    "Execute UL17 B01-B08 against exact current R69 bytes.",
+    "If Stage B PASS, generate Stage C architecture only from the frozen fresh fixture.",
+    "Run Stage C structural diagnostics including single-causal-spine test, due/deferred preservation, scene necessity and semantic repetition.",
+    "If eligible, build J01/J02/J03 architecture-only blind packets and seal 3/3 first valid judgments before mapping reveal.",
+    "Only after Stage D PASS proceed to provider/full >=40k screenplay.",
+    "In parallel, when independent PA8 Treatment arrives, resume PA8 under R14 without changing Control.",
+    "Continue Human Dialogue/Direction baseline only from verified human-authored script sources."
+  ],
+  "authority_effect": "NONE__SYNC_R74_REMAINS_PHYSICAL_AUTHORITY"
+}
