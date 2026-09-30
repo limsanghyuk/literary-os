@@ -1,0 +1,66 @@
+{
+  "schema": "UL17_STAGE_C_ARCHITECTURE_OUTPUT_CONTRACT_R1",
+  "date": "2026-10-01",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "required_outputs": [
+    "normalized typed obligation portfolio with provenance/disposition",
+    "episode selection/defer decision artifact",
+    "ensemble/social activation artifact",
+    "episode weave graph",
+    "sequence transaction plan",
+    "scene transaction plan",
+    "reverse reconstruction result",
+    "scene-necessity audit",
+    "semantic-transaction repetition audit",
+    "canonical validation receipt",
+    "architecture hash and per-layer hashes"
+  ],
+  "required_per_sequence": [
+    "sequence_id",
+    "owners",
+    "obligation_ids",
+    "obligation_kinds",
+    "goal_or_attempt",
+    "collision_or_cooperation",
+    "state_delta_requirement",
+    "turn_or_choice_if_any",
+    "downstream_consumer"
+  ],
+  "required_per_scene": [
+    "scene_id",
+    "sequence_id",
+    "actors",
+    "protected_functions",
+    "goal",
+    "opposition",
+    "physical_action_or_failed_action",
+    "information_transaction",
+    "relationship_transaction",
+    "pre_state",
+    "post_state",
+    "downstream_consumer",
+    "necessity_reason"
+  ],
+  "diagnostics": {
+    "independent_causal_roots": "Count distinct source causal roots represented in selected architecture.",
+    "active_obligation_families": "THREAD/RELATIONSHIP/INFORMATION/SOCIAL/EVENT/PAYOFF/CHARACTER.",
+    "owner_concentration": "Share of planned transactions owned by top owner.",
+    "multi_owner_sequence_fraction": "Sequences with >=2 meaningful owners / all sequences.",
+    "multi_kind_sequence_fraction": "Sequences with >=2 obligation kinds / all sequences.",
+    "thread_intersection_count": "Justified cross-root intersections; forced intersections are defects.",
+    "multi_function_scene_fraction": "Scenes with >=2 protected narrative functions that are not redundant aliases.",
+    "pure_supporting_scene_fraction": "Scenes with no protagonist where organically justified.",
+    "single_causal_spine_test": "Whether all selected strands can be reduced to downstream subproblems of one initiating event."
+  },
+  "hard_fail": [
+    "future-source leakage",
+    "due-now obligation loss",
+    "deferred false closure",
+    "lost deferred debt",
+    "canonical validation error",
+    "single causal spine caused by collapsing independent roots into one logistics/procedural chain",
+    "quota padding or mechanical obligation cloning"
+  ],
+  "no_quota_note": "No fixed minimum is imposed for thread count, pure-supporting share, or multi-function-scene share beyond preserving the fixture's causally relevant obligations. Human corpus values are diagnostic priors only.",
+  "authority_effect": "NONE"
+}
