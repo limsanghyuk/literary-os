@@ -1,0 +1,115 @@
+{
+  "schema": "UL17_STAGE_B_FROZEN_CAUSAL_INTERVENTION_MATRIX_R1",
+  "date": "2026-10-01",
+  "status": "FROZEN_BEFORE_EXACT_R69_EXECUTION",
+  "base_fixture": "research/upper_layer/20261001/UL17_FRESH_MULTI_STRAND_CURRENT_STATE_FIXTURE_R1.json",
+  "rule": "Each intervention starts from the identical frozen base fixture. Change only the declared field(s). Compare exact-R69 decision/realization hashes against the base run. Do not chain interventions.",
+  "probes": [
+    {
+      "id": "B01_THREAD_PRESSURE",
+      "family": "THREAD",
+      "mutation": "THR_LEASE_1 pressure 0.93 -> 0.54; due remains true",
+      "expected_consumer": "Episode obligation selection/priority and downstream weave ordering",
+      "required_effect": "At least one appropriate decision or ordering artifact changes if pressure participates in current-R69 planning.",
+      "protected_invariants": [
+        "REL_SISTERS_1 statement",
+        "INFO_JOB_OFFER fact",
+        "weather sentinel",
+        "series premise"
+      ]
+    },
+    {
+      "id": "B02_RELATIONSHIP_PRESSURE",
+      "family": "RELATIONSHIP",
+      "mutation": "REL_SISTERS_1 pressure 0.86 -> 0.97",
+      "expected_consumer": "Relationship obligation priority/weaving and Scene/Sequence ownership where justified",
+      "required_effect": "Relationship-related planning artifact changes without unrelated factual state mutation.",
+      "protected_invariants": [
+        "landlord lease fact",
+        "Nari job-offer fact",
+        "founding tape fact"
+      ]
+    },
+    {
+      "id": "B03_INFORMATION_DEADLINE",
+      "family": "INFORMATION",
+      "mutation": "INFO_JOB_OFFER deadline 22:00 -> 16:30 and INFO_NARI_1 pressure 0.90 -> 0.98",
+      "expected_consumer": "Information obligation timing/priority and downstream decision exposure",
+      "required_effect": "Information-bearing architecture changes before/around the earlier deadline.",
+      "protected_invariants": [
+        "Nari has the same job offer",
+        "Seo-yun/Hye-jin family debt state",
+        "weather sentinel"
+      ]
+    },
+    {
+      "id": "B04_SOCIAL_PRESSURE",
+      "family": "SOCIAL",
+      "mutation": "SOC_VOLUNTEER_1 pressure 0.82 -> 0.96",
+      "expected_consumer": "Social/group activation, owner participation, weave/sequence pressure",
+      "required_effect": "Volunteer/social ecology representation changes in architecture.",
+      "protected_invariants": [
+        "group membership identities",
+        "lease fact",
+        "guest cancellation fact"
+      ]
+    },
+    {
+      "id": "B05_EVENT_PRECONDITION",
+      "family": "EVENT",
+      "mutation": "EVENT_GUEST_1 causal event toggled from guest-cancelled to guest-confirmed; all other state identical",
+      "expected_consumer": "Event obligation existence/selection and dependent CHAR_JUNHO_1 eligibility",
+      "required_effect": "Guest-cancellation event transactions disappear/change and dependent character obligation is blocked/reframed according to dependency logic.",
+      "protected_invariants": [
+        "lease",
+        "Nari job offer",
+        "volunteer claim",
+        "founding tape"
+      ]
+    },
+    {
+      "id": "B06_PAYOFF_URGENCY",
+      "family": "PAYOFF",
+      "mutation": "PAY_TAPE_1 pressure 0.62 -> 0.88; can_defer true -> false; due false remains source-state false but urgency must be disposition-tested rather than auto-fulfilled",
+      "expected_consumer": "Due/defer selector and preservation of unverified payoff state",
+      "required_effect": "Disposition/pressure handling changes while authentication remains unresolved.",
+      "protected_invariants": [
+        "tape factual content remains partial/unverified",
+        "no public resolution invented",
+        "series premise"
+      ]
+    },
+    {
+      "id": "B07_CHARACTER_PRESSURE",
+      "family": "CHARACTER",
+      "mutation": "CHAR_JUNHO_1 pressure 0.81 -> 0.95 with dependency EVENT_GUEST_1 unchanged",
+      "expected_consumer": "Character-choice transaction burden/staging after prerequisite satisfaction",
+      "required_effect": "Character-specific planning burden or ordering changes without altering event fact.",
+      "protected_invariants": [
+        "guest cancellation remains true",
+        "rival contact remains private",
+        "lease fact"
+      ]
+    },
+    {
+      "id": "B08_IRRELEVANT_METADATA_SENTINEL",
+      "family": "INVARIANCE_CONTROL",
+      "mutation": "Add nonsemantic audit_note='UL17_SENTINEL_VARIANT_B' only",
+      "expected_consumer": "NONE",
+      "required_effect": "No semantic provider/planner decision hash or architecture hash changes.",
+      "protected_invariants": [
+        "all story-bearing state and obligations"
+      ]
+    }
+  ],
+  "hard_gates": {
+    "future_source_leakage": 0,
+    "false_due_fulfillment": 0,
+    "false_deferred_fulfillment": 0,
+    "lost_deferred_debt": 0,
+    "canonical_validation_errors": 0,
+    "irrelevant_metadata_semantic_change": 0
+  },
+  "execution_boundary": "Must run against exact current R69 runtime SHA 3d104f...07437b1. Approximate/reconstructed/prototype execution is not admissible.",
+  "authority_effect": "NONE"
+}
