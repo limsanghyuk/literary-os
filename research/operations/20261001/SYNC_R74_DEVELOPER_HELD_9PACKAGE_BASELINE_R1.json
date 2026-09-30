@@ -1,0 +1,105 @@
+{
+  "schema": "SYNC_R74_DEVELOPER_HELD_9PACKAGE_BASELINE_R1",
+  "date": "2026-10-01",
+  "status": "DEVELOPER_HELD_PHYSICAL_BASELINE__9_OF_9__NO_POST_R74_PHYSICAL_SUCCESSOR_DELIVERED",
+  "physical_authority": "SYNC-R74",
+  "active_runtime": "exact R69",
+  "production": "ENG:R47 / LEGACY_R53",
+  "runtime_db": "DB59 frozen",
+  "canonical_manifest": "research/operations/20260925/SYNC_R74_5PART_9PACKAGE_MANIFEST_R1.json",
+  "canonical_manifest_sha256": "7976e5eb3ba77c18097da4b00e5b774ea1d6f43182596223fb1a4335272ddae0",
+  "trust_root_sha256": "e20851d66280702a48c96dacb891b089569fdeefbe13b241d20c71b23578f671",
+  "packages": [
+    {
+      "order": 1,
+      "part": "CONTROL",
+      "filename": "LITERARY_OS_CURRENT_CONTROL_R77H1_SIX_LAUNCH_SYNC_R74_20260925.zip",
+      "bytes": 289484954,
+      "sha256": "0c06de9bdc5a253a7e191a4bf00b7cea5e8fa6abec99983867a4689f2743d945",
+      "crc": "PASS"
+    },
+    {
+      "order": 2,
+      "part": "A",
+      "filename": "LITERARY_OS_CURRENT_PART_A_R77H1_SIX_LAUNCH_SYNC_R74_20260925.zip",
+      "bytes": 304038133,
+      "sha256": "69b1e592b9300358c90ef3866a9734a1457bc5d194fc03a331b674580bf5cf84",
+      "crc": "PASS"
+    },
+    {
+      "order": 3,
+      "part": "B1",
+      "filename": "LITERARY_OS_CURRENT_PART_B1_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73(1).zip",
+      "canonical_filename": "LITERARY_OS_CURRENT_PART_B1_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73.zip",
+      "bytes": 196427036,
+      "sha256": "00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98",
+      "crc": "PASS",
+      "byte_unchanged_from": "SYNC-R73"
+    },
+    {
+      "order": 4,
+      "part": "B2",
+      "filename": "LITERARY_OS_CURRENT_PART_B2_R77H1_SIX_LAUNCH_SYNC_R74_20260925.zip",
+      "bytes": 296011084,
+      "sha256": "5462a1c9d355f01a41ce9a52302fce28241d2af1ef5065fdb6fec08c5d107dd0",
+      "crc": "PASS"
+    },
+    {
+      "order": 5,
+      "part": "C1",
+      "filename": "LITERARY_OS_CURRENT_C1_RUNTIME_CORE_SYNC_R74_EXACT_R69_20260925(1).zip",
+      "canonical_filename": "LITERARY_OS_CURRENT_C1_RUNTIME_CORE_SYNC_R74_EXACT_R69_20260925.zip",
+      "bytes": 140403571,
+      "sha256": "3a1880310b7291d832b24c749c47dee2f6862387ddedb8ce3bcb652e0e899f5d",
+      "crc": "PASS",
+      "runtime": "exact R69"
+    },
+    {
+      "order": 6,
+      "part": "C2-A",
+      "filename": "LITERARY_OS_CURRENT_C2_BINARY_A_SYNC_R74_R77H1_SIX_LAUNCH_20260925(1).bin",
+      "canonical_filename": "LITERARY_OS_CURRENT_C2_BINARY_A_SYNC_R74_R77H1_SIX_LAUNCH_20260925.bin",
+      "bytes": 264043978,
+      "sha256": "561733e08ef3bc77e9e12f124df69ffca69cd9386eb0d1e9d6f843f50408a2d7"
+    },
+    {
+      "order": 7,
+      "part": "C2-B",
+      "filename": "LITERARY_OS_CURRENT_C2_BINARY_B_SYNC_R74_R77H1_SIX_LAUNCH_20260925(1).bin",
+      "canonical_filename": "LITERARY_OS_CURRENT_C2_BINARY_B_SYNC_R74_R77H1_SIX_LAUNCH_20260925.bin",
+      "bytes": 264043978,
+      "sha256": "1c2ccca49b4ac74de87f04a2a4c239d2ca6f3b0f67c352d30ba9dc0bae45685c"
+    },
+    {
+      "order": 8,
+      "part": "D1",
+      "filename": "LITERARY_OS_CURRENT_PART_D1_DB59_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73(2).zip",
+      "canonical_filename": "LITERARY_OS_CURRENT_PART_D1_DB59_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73.zip",
+      "bytes": 138011573,
+      "sha256": "a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504",
+      "crc": "PASS",
+      "byte_unchanged_from": "SYNC-R73"
+    },
+    {
+      "order": 9,
+      "part": "D2",
+      "filename": "LITERARY_OS_CURRENT_PART_D2_DB59_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73(2).zip",
+      "canonical_filename": "LITERARY_OS_CURRENT_PART_D2_DB59_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73.zip",
+      "bytes": 173393886,
+      "sha256": "c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4",
+      "crc": "PASS",
+      "byte_unchanged_from": "SYNC-R73"
+    }
+  ],
+  "logical_c2": {
+    "bytes": 528087956,
+    "sha256": "8d766316cb153f04302ba633fb644967d1785b15298e1ea1b2a09b2d628e6896",
+    "entries": 4011,
+    "crc": "PASS"
+  },
+  "interpretation": [
+    "These nine files are the last physical 5-Part/9-Package set actually held by the developer/user.",
+    "All later PA7/PA8/dialogue/UL17 work is Research Overlay unless and until a new audited physical successor is built and delivered.",
+    "Do not infer a post-R74 physical successor from later Hub research documents."
+  ]
+}
