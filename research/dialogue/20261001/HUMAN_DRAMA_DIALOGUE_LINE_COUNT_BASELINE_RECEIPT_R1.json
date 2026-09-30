@@ -1,0 +1,45 @@
+{
+  "schema": "HUMAN_DRAMA_DIALOGUE_LINE_COUNT_BASELINE_RECEIPT_R1",
+  "date": "2026-10-01",
+  "source": "docs/measurement/subplot_ratio_results.json",
+  "source_context": "122 drama works / 2,264 measured episodes from the earlier speaker-dialogue corpus analysis",
+  "status": "PASS__EXISTING_CORPUS_LINE_COUNT_BASELINE_RECOVERED",
+  "drama_episodes": 2264,
+  "dialogue_lines_per_episode": {
+    "mean": 395.9,
+    "p10": 113,
+    "p25": 235,
+    "median": 376,
+    "p75": 536,
+    "p90": 655,
+    "min": 20,
+    "max": 5527
+  },
+  "control_pa8": {
+    "title": "새벽 보존실 Control first independent screenplay",
+    "dialogue_turns_extracted": 566,
+    "approximate_percentile_against_human_episode_dialogue_line_counts": 79.4,
+    "interpretation": "Control is not low in number of dialogue turns; its perceived dialogue scarcity is more consistent with short utterances plus high direction/action share."
+  },
+  "dae_jang_geum": {
+    "measured_episodes": 54,
+    "dialogue_lines_per_episode_mean": 606,
+    "p25": 515,
+    "median": 602,
+    "p75": 667,
+    "min": 442,
+    "max": 828
+  },
+  "historical_subplot_context": {
+    "supporting_dialogue_share_work_median": 0.459,
+    "pure_subplot_scene_share_mean": 0.239,
+    "dae_jang_geum_supporting_dialogue_share": 0.64
+  },
+  "claim_boundary": [
+    "dlg_total is a detected dialogue-line/turn proxy from the historical corpus, not dialogue character share.",
+    "This receipt does not establish dialogue-vs-direction character ratio for human scripts.",
+    "It does not define a target dialogue percentage for Literary OS."
+  ],
+  "next": "Measure dialogue-character share, direction-character share, utterance-length distribution, exchange length, register diversity and dialogue-driven state change from accessible human-script source text under a separate frozen protocol.",
+  "authority_effect": "NONE"
+}
