@@ -1,0 +1,12 @@
+{
+  "schema": "UL18_STAGE_C_EXECUTION_HARNESS_FREEZE_R1",
+  "date": "2026-10-01",
+  "status": "FROZEN_BEFORE_STAGE_C_OUTPUT",
+  "authority_effect": "NONE",
+  "inherited_gate_commit": "295ab41bee84b40b056d978ceb8dc69ae4d41266",
+  "research_candidate_adaptive_source_sha256": "c9fd7a3bd685c8abea8d257fa1a69730e27848b1b206bb1d5917e8336eb6d443",
+  "harness_sha256": "10bd746255a628ec30440e41f8ffba10792ec5aab40457bfc515fba6ee4d5df5",
+  "input_fixture_git_blob_sha": "5b51c2afb7737b84b1f9e2ff500e9189480cae57",
+  "execution_mode": "broadcast_mode=true",
+  "note": "Harness reuses the UL17 Stage-B frozen fixture projection and adds only deterministic Stage-C diagnostics required by the inherited UL17 contract."
+}
