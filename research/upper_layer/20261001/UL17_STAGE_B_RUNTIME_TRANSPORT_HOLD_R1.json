@@ -1,0 +1,39 @@
+{
+  "schema": "UL17_STAGE_B_RUNTIME_TRANSPORT_HOLD_R1",
+  "date": "2026-10-01",
+  "status": "HOLD__RUNTIME_TRANSPORT__NO_SCIENTIFIC_VERDICT",
+  "attempted_exact_source": {
+    "physical_authority": "SYNC-R74",
+    "c1_file_id": "file_00000000f5e08206b3bcfcf71fb70e18",
+    "c1_materialized_path": "/mnt/data/r69_upper_reaudit/LITERARY_OS_CURRENT_C1_RUNTIME_CORE_SYNC_R74_EXACT_R69_20260925(1).zip",
+    "c1_materialized_bytes": 140403571,
+    "c1_expected_sha256": "3a1880310b7291d832b24c749c47dee2f6862387ddedb8ce3bcb652e0e899f5d",
+    "nested_exact_r69_member": "10_REQUIRED_PACKAGES/LITERARY_OS_RUNTIME_SOURCE_CURRENT.zip or C2 candidate_overlay_sync_r67_post_r69/R69_RUNTIME_SOURCE_FROZEN.zip",
+    "exact_r69_expected_sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1"
+  },
+  "failures": [
+    {
+      "operation": "minimal container shell/stat/memory.events",
+      "result": "ClientError"
+    },
+    {
+      "operation": "private Python local byte-processing retry",
+      "result": "ClientError"
+    }
+  ],
+  "not_failed": [
+    "Files-layer C1 materialization",
+    "GitHub evidence retrieval",
+    "UL17 Stage A lineage audit",
+    "UL17 preregistration/fixture/intervention/evaluation freezes"
+  ],
+  "classification": "INTERMITTENT_RUNTIME_TOOL_GATEWAY_OR_SESSION_BACKEND_FAILURE__NO_ENGINE_OR_PACKAGE_FAILURE_INFERRED",
+  "resume_rule": "STOP -> verify C1 exact size/SHA -> extract only nested exact R69 runtime -> verify nested SHA/CRC -> execute frozen Stage B matrix -> continue Stage C only if Stage B PASS",
+  "prohibited": [
+    "Do not reconstruct R69 from memory or research prototype.",
+    "Do not substitute R58/R58C research ZIP for current exact R69.",
+    "Do not classify UL17 scientific FAIL from ClientError.",
+    "Do not modify frozen fixture/intervention matrix after outputs."
+  ],
+  "authority_effect": "NONE"
+}
