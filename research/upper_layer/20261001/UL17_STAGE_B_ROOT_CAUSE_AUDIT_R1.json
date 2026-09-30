@@ -1,0 +1,27 @@
+{
+  "schema": "UL17_STAGE_B_ROOT_CAUSE_AUDIT_R1",
+  "date": "2026-10-01",
+  "status": "CLOSED__RESPONSIBLE_ANCESTOR_LOCALIZED",
+  "authority_effect": "NONE",
+  "exact_r69_adaptive_source_sha256": "740cca05a94dbb59eb9a1600e1c7d98cdc887693aa5ab46fec2bd2eaef78d306",
+  "exact_r69_episode_architecture_source_sha256": "ab73b87440b44ad875cc4962ba51ca949c8f2247ad0ffea3e8a33177fcb956c1",
+  "recovered_existing_contract_semantics": {
+    "due_now_closure": "PARTIAL_ONLY",
+    "partial_payoff_mode": "PARTIAL_PAYMENT",
+    "terminal_contract_no_full_closure": true,
+    "debt_budget_full_closure_allowed": false,
+    "defer_status": "KEEP_OPEN"
+  },
+  "lost_at_adaptive_boundary": [
+    "_norm does not retain closure/status/resolution policy.",
+    "Structured episode-contract due_now rows are not preserved as closure-bearing obligations.",
+    "due=false + can_defer=false is scheduled as SELECTED_DUE.",
+    "Every selected obligation is forced to a final RESOLVE scene.",
+    "Adaptive validation requires every selected due obligation to resolve exactly once."
+  ],
+  "prior_state_carry_support": {
+    "R60": "planner-unrealized obligation ledger already separates future planning debt from established factual state.",
+    "R67": "dual-ledger state carry runtime qualified; consumer can distinguish ledgers."
+  },
+  "conclusion": "The repair should recover existing partial/open debt semantics at the adaptive obligation boundary, not invent a new upper architecture."
+}
