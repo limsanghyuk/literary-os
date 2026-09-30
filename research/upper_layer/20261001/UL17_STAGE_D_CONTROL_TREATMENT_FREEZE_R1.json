@@ -1,0 +1,34 @@
+{
+  "schema": "UL17_STAGE_D_CONTROL_TREATMENT_FREEZE_R1",
+  "date": "2026-10-01",
+  "status": "FROZEN_BEFORE_CURRENT_R69_ARCHITECTURE_OUTPUT",
+  "input_fixture": "research/upper_layer/20261001/UL17_FRESH_MULTI_STRAND_CURRENT_STATE_FIXTURE_R1.json",
+  "control": {
+    "identity": "ENG:R47 / LEGACY_R53",
+    "role": "Production/control architecture path",
+    "requirement": "Run on the identical frozen UL17 current-state fixture with no Treatment-only adaptive metadata injected."
+  },
+  "treatment": {
+    "identity": "exact R69",
+    "runtime_sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+    "lineage": "ADAPTIVE_UL16 -> R66 -> R67 -> R68 -> R69",
+    "requirement": "Use exact current bytes only; no reconstruction/prototype substitution."
+  },
+  "historical_reference": {
+    "identity": "physical SYNC-R58 ADAPTIVE_UL16",
+    "architecture_blind_result": "18W/0T/0L versus ENG:R47",
+    "use": "Historical benchmark/non-regression reference only; not an arm in UL17."
+  },
+  "mapping": {
+    "strategy": "balanced A/B per judge",
+    "seal_before_judgments": true,
+    "reveal_after": "3/3 first schema-valid judgments hash-sealed"
+  },
+  "rationale": [
+    "Replicates the same conceptual control used in the successful physical SYNC-R58 architecture blind.",
+    "Tests whether current exact R69 preserves the previously qualified adaptive upper-layer advantage.",
+    "Avoids treating R58 as a current arm after subsequent R66/R67 changes."
+  ],
+  "supersedes_clause": "This file resolves the previously unspecified current Control in UL17_STAGE_D_ARCHITECTURE_ONLY_BLIND_SPEC_R1. All other frozen axes/gates remain unchanged except where a later pre-output addendum explicitly says otherwise.",
+  "authority_effect": "NONE"
+}
