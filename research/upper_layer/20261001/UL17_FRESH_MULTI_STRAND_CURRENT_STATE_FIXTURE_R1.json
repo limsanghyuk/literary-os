@@ -1,0 +1,326 @@
+{
+  "schema": "UL17_FRESH_MULTI_STRAND_CURRENT_STATE_FIXTURE_R1",
+  "date": "2026-10-01",
+  "status": "FROZEN_BEFORE_EXACT_R69_ARCHITECTURE_OUTPUT",
+  "synthetic_work": {
+    "work_id": "SYNTH_UL17_FOUR_OCLOCK_RADIO",
+    "title": "오후 네 시의 라디오",
+    "format": "Korean broadcast drama",
+    "episode_target": "EP04",
+    "source_cutoff": "Synthetic current state through EP03 only. No target answer key exists.",
+    "premise": "A small neighborhood radio station is entering its final month in its current building while the people who depend on it are making incompatible private decisions about work, family, money, memory, and whether the station should survive in its present form."
+  },
+  "series_anchors": {
+    "protagonist": "HAN_SEOYUN",
+    "ensemble": [
+      "HAN_SEOYUN",
+      "KANG_MIRA",
+      "PARK_JUNHO",
+      "OH_NARI",
+      "CHOI_DONGWOO",
+      "LEE_HYEJIN",
+      "YOON_GYEONGSU"
+    ],
+    "immutable_premise": "The station functions as a social crossroads; saving the institution must never automatically solve the characters' private conflicts.",
+    "tone": "ensemble workplace/family drama with restrained humor, social texture, and emotionally indirect dialogue",
+    "forbidden_shortcut": [
+      "Do not make all strands consequences of the lease problem.",
+      "Do not solve multiple private conflicts with one public event.",
+      "Do not force every subplot to intersect the main plot if the intersection would flatten its meaning."
+    ]
+  },
+  "groups": [
+    {
+      "group_id": "G_STATION_STAFF",
+      "kind": "work",
+      "members": [
+        "HAN_SEOYUN",
+        "PARK_JUNHO",
+        "OH_NARI",
+        "CHOI_DONGWOO"
+      ]
+    },
+    {
+      "group_id": "G_LOCAL_SHOPS",
+      "kind": "community",
+      "members": [
+        "KANG_MIRA",
+        "YOON_GYEONGSU"
+      ]
+    },
+    {
+      "group_id": "G_SEOYUN_FAMILY",
+      "kind": "family",
+      "members": [
+        "HAN_SEOYUN",
+        "LEE_HYEJIN"
+      ]
+    },
+    {
+      "group_id": "G_VOLUNTEERS",
+      "kind": "community",
+      "members": [
+        "OH_NARI",
+        "YOON_GYEONGSU"
+      ]
+    }
+  ],
+  "current_character_state": {
+    "HAN_SEOYUN": {
+      "role": "station_program_director",
+      "public_goal": "keep the station broadcasting through the month",
+      "private_goal": "avoid asking her estranged older sister for help",
+      "fear": "being seen as repeating their late father's habit of sacrificing family for the station",
+      "withheld": "has not told staff that the landlord offered her a private buyout option requiring personal debt"
+    },
+    "KANG_MIRA": {
+      "role": "bakery_owner_and_longtime_sponsor",
+      "public_goal": "protect the station as a neighborhood institution",
+      "private_goal": "stop the station from using volunteer labor as if goodwill has no cost",
+      "fear": "becoming the person who financially carries everyone again"
+    },
+    "PARK_JUNHO": {
+      "role": "veteran_host",
+      "public_goal": "keep his afternoon program unchanged",
+      "private_goal": "prove he is still necessary after audience numbers fell",
+      "fear": "being quietly replaced",
+      "withheld": "knows a rival network informally sounded him out"
+    },
+    "OH_NARI": {
+      "role": "junior_producer",
+      "public_goal": "make EP04's live segment succeed",
+      "private_goal": "leave for a better job without being framed as abandoning the team",
+      "fear": "Seo-yun interpreting her departure as betrayal",
+      "withheld": "has accepted a conditional job offer with a response deadline tonight"
+    },
+    "CHOI_DONGWOO": {
+      "role": "sound_engineer",
+      "public_goal": "keep aging equipment stable",
+      "private_goal": "finish digitizing a box of old station tapes before disposal",
+      "fear": "finding evidence that contradicts the station's heroic founding story"
+    },
+    "LEE_HYEJIN": {
+      "role": "Seo-yun's estranged older sister and accountant",
+      "public_goal": "keep family finances separate from the station",
+      "private_goal": "force Seo-yun to acknowledge the debt their father left",
+      "fear": "being pulled back into the same cycle"
+    },
+    "YOON_GYEONGSU": {
+      "role": "retired_bus_driver_and_station_volunteer",
+      "public_goal": "keep volunteer phone desk operating",
+      "private_goal": "obtain recognition for volunteers who carried unpaid night shifts",
+      "fear": "the station surviving by erasing the labor that kept it alive"
+    }
+  },
+  "relationship_state": [
+    {
+      "pair": [
+        "HAN_SEOYUN",
+        "LEE_HYEJIN"
+      ],
+      "state": "estranged cooperation",
+      "pressure": "late father's unresolved debt and unequal caregiving memory"
+    },
+    {
+      "pair": [
+        "HAN_SEOYUN",
+        "OH_NARI"
+      ],
+      "state": "mentor/protege trust",
+      "pressure": "Seo-yun assumes Nari will stay; Nari has already accepted a conditional offer"
+    },
+    {
+      "pair": [
+        "HAN_SEOYUN",
+        "KANG_MIRA"
+      ],
+      "state": "old friendship with financial asymmetry",
+      "pressure": "Mira refuses to be treated as emergency money"
+    },
+    {
+      "pair": [
+        "PARK_JUNHO",
+        "OH_NARI"
+      ],
+      "state": "professional affection with status gap",
+      "pressure": "Junho jokes about being replaceable; Nari knows the schedule is already being reconsidered"
+    },
+    {
+      "pair": [
+        "CHOI_DONGWOO",
+        "HAN_SEOYUN"
+      ],
+      "state": "technical trust",
+      "pressure": "Dongwoo has not yet disclosed what one old tape may contain"
+    }
+  ],
+  "information_state": [
+    {
+      "id": "INFO_JOB_OFFER",
+      "knowers": [
+        "OH_NARI"
+      ],
+      "fact": "Nari has a conditional job offer; answer due 22:00 today.",
+      "visibility": "private"
+    },
+    {
+      "id": "INFO_BUYOUT_OPTION",
+      "knowers": [
+        "HAN_SEOYUN"
+      ],
+      "fact": "Landlord offered Seo-yun a personal-debt buyout route.",
+      "visibility": "private"
+    },
+    {
+      "id": "INFO_RIVAL_CONTACT",
+      "knowers": [
+        "PARK_JUNHO"
+      ],
+      "fact": "A rival network informally contacted Junho.",
+      "visibility": "private"
+    },
+    {
+      "id": "INFO_FOUNDING_TAPE",
+      "knowers": [
+        "CHOI_DONGWOO"
+      ],
+      "fact": "An undigitized tape appears to contain the late founder discussing volunteer pay rather than volunteer sacrifice.",
+      "visibility": "partial"
+    }
+  ],
+  "obligation_portfolio": [
+    {
+      "id": "THR_LEASE_1",
+      "kind": "THREAD",
+      "causal_root": "landlord's independent redevelopment decision predating EP04",
+      "owners": [
+        "HAN_SEOYUN",
+        "KANG_MIRA"
+      ],
+      "due": true,
+      "pressure": 0.93,
+      "statement": "The station must decide what operational stance to take after formal notice that the current building lease will not be renewed.",
+      "protected_delta": "A concrete operational decision must be made, but saving the station is not required.",
+      "dependencies": []
+    },
+    {
+      "id": "REL_SISTERS_1",
+      "kind": "RELATIONSHIP",
+      "causal_root": "years-old family debt and caregiving resentment",
+      "owners": [
+        "HAN_SEOYUN",
+        "LEE_HYEJIN"
+      ],
+      "due": true,
+      "pressure": 0.86,
+      "statement": "Seo-yun and Hye-jin must move from avoidance to a new explicit boundary about family money and the station.",
+      "protected_delta": "Relationship state changes without requiring reconciliation.",
+      "dependencies": []
+    },
+    {
+      "id": "INFO_NARI_1",
+      "kind": "INFORMATION",
+      "causal_root": "Nari's independent career opportunity",
+      "owners": [
+        "OH_NARI",
+        "HAN_SEOYUN"
+      ],
+      "due": true,
+      "pressure": 0.9,
+      "statement": "Nari's accepted conditional offer must become behaviorally consequential before the 22:00 deadline.",
+      "protected_delta": "At least one other character's decision changes because Nari may leave.",
+      "dependencies": []
+    },
+    {
+      "id": "SOC_VOLUNTEER_1",
+      "kind": "SOCIAL",
+      "causal_root": "longstanding unpaid volunteer labor dispute",
+      "owners": [
+        "YOON_GYEONGSU",
+        "KANG_MIRA",
+        "HAN_SEOYUN"
+      ],
+      "due": true,
+      "pressure": 0.82,
+      "statement": "Volunteer labor must be treated as an institutional cost/claim rather than sentimental background.",
+      "protected_delta": "The station's operating plan changes in response to volunteer claims.",
+      "dependencies": []
+    },
+    {
+      "id": "EVENT_GUEST_1",
+      "kind": "EVENT",
+      "causal_root": "scheduled live guest independently cancels because of a family emergency",
+      "owners": [
+        "OH_NARI",
+        "PARK_JUNHO"
+      ],
+      "due": true,
+      "pressure": 0.78,
+      "can_defer": false,
+      "statement": "The 16:00 live interview slot loses its guest shortly before air.",
+      "protected_delta": "The program must make an on-air content decision that exposes character priorities.",
+      "dependencies": []
+    },
+    {
+      "id": "PAY_TAPE_1",
+      "kind": "PAYOFF",
+      "causal_root": "old tape digitization begun in prior episodes for archival reasons",
+      "owners": [
+        "CHOI_DONGWOO",
+        "HAN_SEOYUN",
+        "YOON_GYEONGSU"
+      ],
+      "due": false,
+      "pressure": 0.62,
+      "can_defer": true,
+      "statement": "The founding tape suggesting volunteers were once promised compensation must exert pressure without being fully authenticated or publicly resolved yet.",
+      "protected_delta": "Tape remains open/deferred but changes at least one private stance if touched.",
+      "dependencies": []
+    },
+    {
+      "id": "CHAR_JUNHO_1",
+      "kind": "CHARACTER",
+      "causal_root": "Junho's fear of professional obsolescence after declining audience share",
+      "owners": [
+        "PARK_JUNHO"
+      ],
+      "due": true,
+      "pressure": 0.81,
+      "statement": "Junho must make a choice that reveals whether he values the show's identity or his own indispensability more.",
+      "protected_delta": "Choice incurs a cost; no simple heroic affirmation.",
+      "dependencies": [
+        "EVENT_GUEST_1"
+      ]
+    }
+  ],
+  "unrelated_sentinels": {
+    "weather": "clear",
+    "building_power": "normal",
+    "no_disaster_event": true,
+    "no_election_or_public_office_plot": true,
+    "note": "These are sentinels for causal-adoption invariance and must not change when unrelated obligation values are mutated."
+  },
+  "expected_research_properties": {
+    "distinct_causal_roots_min": 6,
+    "obligation_families": [
+      "THREAD",
+      "RELATIONSHIP",
+      "INFORMATION",
+      "SOCIAL",
+      "EVENT",
+      "PAYOFF",
+      "CHARACTER"
+    ],
+    "available_owners": 7,
+    "deferred_obligations": [
+      "PAY_TAPE_1"
+    ],
+    "explicit_dependency_edges": [
+      [
+        "EVENT_GUEST_1",
+        "CHAR_JUNHO_1"
+      ]
+    ],
+    "architecture_should_not_collapse_to_single_lease_spine": true
+  }
+}
