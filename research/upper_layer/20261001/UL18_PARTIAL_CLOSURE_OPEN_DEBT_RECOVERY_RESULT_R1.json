@@ -1,0 +1,136 @@
+{
+  "schema": "UL18_PARTIAL_CLOSURE_OPEN_DEBT_RECOVERY_RESULT_R1",
+  "date": "2026-10-01",
+  "status": "PASS__RESEARCH_PATCH_RECOVERS_PARTIAL_CLOSURE_WITH_BOUNDED_CURRENT_R69_NONREGRESSION",
+  "authority_effect": "NONE",
+  "physical_authority": "SYNC-R74",
+  "parent_runtime": {
+    "name": "exact R69",
+    "sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+    "adaptive_source_sha256": "740cca05a94dbb59eb9a1600e1c7d98cdc887693aa5ab46fec2bd2eaef78d306"
+  },
+  "research_candidate": {
+    "adaptive_source_sha256": "c9fd7a3bd685c8abea8d257fa1a69730e27848b1b206bb1d5917e8336eb6d443",
+    "patch_diff_sha256": "30b8858bf0c56e2ce68377d19106bd59bdd2cd1f53bfd753897b67f54c1606b6",
+    "python_compile": "PASS",
+    "runtime_mutated": false
+  },
+  "prereg_commit": "a73ab44ed10b619b5f77cec6584b65a4f640e0a0",
+  "primary_test_artifact": {
+    "sha256": "ab40af253ff35127ee7309c01b38d512b479f3d763b7413d4b5a9c3d55e9c229"
+  },
+  "T1_B06": {
+    "result": "PASS",
+    "source_due": false,
+    "closure_policy": "MUST_TOUCH_KEEP_OPEN",
+    "disposition": "SELECTED_TOUCH_KEEP_OPEN",
+    "resolved_count": 0,
+    "open_advance_count": 1,
+    "canonical_ir": "PASS",
+    "canonical_graph_hash": "a2b9e64fa470ee3cb5eb7efe6a43754a702c3a0a74974648f2ac98f98ab9b721",
+    "state_carry": {
+      "status": "OPEN",
+      "planner_unrealized_preserved": true,
+      "fulfilled_excludes_PAY_TAPE_1": true
+    }
+  },
+  "T2_four_state_matrix": [
+    {
+      "due": true,
+      "can_defer": false,
+      "disposition": "SELECTED_DUE",
+      "closure_policy": "RESOLVE_ONCE",
+      "resolve_count": 1,
+      "open_count": 0,
+      "validation": "PASS"
+    },
+    {
+      "due": true,
+      "can_defer": true,
+      "disposition": "SELECTED_DUE",
+      "closure_policy": "RESOLVE_ONCE",
+      "resolve_count": 1,
+      "open_count": 0,
+      "validation": "PASS"
+    },
+    {
+      "due": false,
+      "can_defer": true,
+      "disposition": "DEFERRED",
+      "resolve_count": 0,
+      "open_count": 0,
+      "validation": "PASS"
+    },
+    {
+      "due": false,
+      "can_defer": false,
+      "disposition": "SELECTED_TOUCH_KEEP_OPEN",
+      "closure_policy": "MUST_TOUCH_KEEP_OPEN",
+      "resolve_count": 0,
+      "open_count": 1,
+      "validation": "PASS"
+    }
+  ],
+  "T3_nonregression": {
+    "semantic_projection_exact_equals_candidate": [
+      "BASE",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B07",
+      "B08",
+      "BASE_STATE_PACKET",
+      "R58B"
+    ],
+    "intentional_difference": [
+      "B06"
+    ],
+    "exact_projection_sha256": "d6f5672c142b2f56edc32edba40f75a43cf1c5ec4a945fce35018af84e51d0fa",
+    "candidate_projection_sha256": "d4e8dd641d063e7d2423bc3fa1cc81353205bd56026a27d7259a9ed0330489ba",
+    "B08_invariance": "PASS"
+  },
+  "T4_existing_contract_recovery": {
+    "explicit_PARTIAL_ONLY": {
+      "closure_policy": "KEEP_OPEN",
+      "resolve_count": 0,
+      "open_count": 1,
+      "validation": "PASS"
+    },
+    "explicit_KEEP_OPEN": {
+      "closure_policy": "KEEP_OPEN",
+      "resolve_count": 0,
+      "open_count": 1,
+      "validation": "PASS"
+    },
+    "explicit_RESOLVE_ONCE": {
+      "closure_policy": "RESOLVE_ONCE",
+      "resolve_count": 1,
+      "open_count": 0,
+      "validation": "PASS"
+    },
+    "R109_schema_faithful_contract_validation": "PASS",
+    "normalized_contract_rows": {
+      "due_now": "KEEP_OPEN",
+      "defer": "KEEP_OPEN",
+      "partial_payoff": "KEEP_OPEN"
+    },
+    "adaptive_validation": "PASS"
+  },
+  "preexisting_diagnostic": {
+    "id": "R109_MULTI_DEFER_DUPLICATE_MATERIAL",
+    "classification": "PREEXISTING_PARENT_INTEGRATION_DEFECT__NOT_UL18_REGRESSION",
+    "exact_R69": "valid 3-thread R109 contract is rejected when two KEEP_OPEN deferred rows are mechanically identical",
+    "exact_R69_exception": "ValueError: MECHANICAL_OBLIGATION_PATTERN_REPEAT:[[\"DEFER:001\", \"DEFER:002\"]]",
+    "UL18_candidate_exception": "ValueError: DUPLICATE_OBLIGATION_MATERIAL:[[\"DEFER:001\", \"DEFER:002\"]]",
+    "action": "preserve and repair only under a separately frozen successor scope"
+  },
+  "R58B_current_parity": {
+    "exact_R69_and_candidate_semantic_projection_identical": true,
+    "both_current_validator_issue": "SEMANTIC_TRANSACTION_REPEAT_GE3",
+    "interpretation": "historical R58C PASS predates the stricter current R68 repetition validator; UL18 introduces no regression on this fixture"
+  },
+  "conclusion": "The declared partial-closure/open-debt defect is repaired in a research-only exact-R69 derivative. This does not requalify exact R69, does not promote the candidate, and does not change Physical Authority.",
+  "next_gate": "freeze inherited UL17 Stage-C architecture contract unchanged, then run fresh multi-strand architecture on the UL18 research candidate; no Stage-D blind or 40K screenplay unless that architecture gate passes"
+}
