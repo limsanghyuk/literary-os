@@ -1,0 +1,29 @@
+{
+  "schema": "UL18_STAGE_C_INHERITED_ARCHITECTURE_GATE_FREEZE_R1",
+  "date": "2026-10-01",
+  "status": "FROZEN_BEFORE_UL18_FRESH_ARCHITECTURE_OUTPUT",
+  "authority_effect": "NONE",
+  "parent_research_result": "UL18_PARTIAL_CLOSURE_OPEN_DEBT_RECOVERY_RESULT_R1",
+  "research_candidate_adaptive_source_sha256": "c9fd7a3bd685c8abea8d257fa1a69730e27848b1b206bb1d5917e8336eb6d443",
+  "input_fixture": "research/upper_layer/20261001/UL17_FRESH_MULTI_STRAND_CURRENT_STATE_FIXTURE_R1.json",
+  "input_fixture_git_blob_sha": "5b51c2afb7737b84b1f9e2ff500e9189480cae57",
+  "inherited_contract": "research/upper_layer/20261001/UL17_STAGE_C_ARCHITECTURE_OUTPUT_CONTRACT_R1.json",
+  "inherited_contract_git_blob_sha": "0afad8a42bee81fb197fb82ff11bf365cf34ee3b",
+  "inheritance_rule": "Use the UL17 Stage-C required outputs, diagnostics, hard-fails and no-quota rule unchanged. Add only UL18 closure/open-debt receipts required by the preregistered repair; do not relax any UL17 criterion.",
+  "execution_mode": "broadcast_mode=true",
+  "required_hard_fails_unchanged": [
+    "future-source leakage",
+    "due-now obligation loss",
+    "deferred false closure",
+    "lost deferred debt",
+    "canonical validation error",
+    "single causal spine caused by collapsing independent roots into one logistics/procedural chain",
+    "quota padding or mechanical obligation cloning"
+  ],
+  "additional_UL18_integrity_checks": [
+    "open-touch obligation falsely resolved = 0",
+    "open-touch debt lost at terminal/state carry = 0",
+    "research candidate source SHA must match frozen candidate SHA"
+  ],
+  "blind_eligibility": "Only if this inherited architecture gate passes. Stage-D blind rules remain UL17's frozen rules unless a successor blind prereg is explicitly sealed before packets."
+}
