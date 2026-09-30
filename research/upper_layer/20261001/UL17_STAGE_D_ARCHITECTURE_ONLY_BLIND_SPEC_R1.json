@@ -1,0 +1,62 @@
+{
+  "schema": "UL17_STAGE_D_ARCHITECTURE_ONLY_BLIND_SPEC_R1",
+  "date": "2026-10-01",
+  "status": "FROZEN_BEFORE_CURRENT_R69_ARCHITECTURE_OUTPUT",
+  "prerequisite": "UL17 Stage B exact-current-byte causal adoption PASS and Stage C fresh exact-R69 architecture output sealed.",
+  "judges": [
+    "J01",
+    "J02",
+    "J03"
+  ],
+  "evidence_boundary": "Architecture only: Episode Plan + Sequence Plan + Scene Plan. No screenplay prose.",
+  "frozen_axes": [
+    "EPISODE_MULTI_STRAND_ARCHITECTURE",
+    "INDEPENDENT_CAUSAL_ROOT_DIVERSITY",
+    "SEQUENCE_FUNCTIONAL_DIVERSITY",
+    "ENSEMBLE_RELATIONSHIP_WEAVING",
+    "INFORMATION_ASYMMETRY_USE",
+    "SOCIAL_ECOLOGY_INTEGRATION",
+    "SCENE_TRANSACTION_SPECIFICITY_NECESSITY",
+    "MULTI_FUNCTION_SCENE_QUALITY",
+    "CAUSAL_STATE_CONTINUITY",
+    "ESCALATION_TURNING_ARCHITECTURE",
+    "DUE_DEFERRED_HANDLING",
+    "FUTURE_THREAD_SUSTAINABILITY"
+  ],
+  "instructions": [
+    "Reward distinct story strands only when they have distinct causal roots, owners/desires and consequences.",
+    "Do not reward raw strand/scene counts.",
+    "Penalize a single initiating incident merely being decomposed into many logistical subproblems.",
+    "Reward justified intersections; do not require every strand to intersect.",
+    "Penalize redundant phase inflation, generic repeated transaction stages and scenes whose protected function is losslessly mergeable.",
+    "Evaluate whether supporting characters possess independent dramatic agency rather than serving as functional instruments for the protagonist."
+  ],
+  "critical_violations": [
+    "FUTURE_SOURCE_LEAKAGE",
+    "DUE_NOW_OMITTED",
+    "DEFERRED_FALSELY_CLOSED",
+    "SINGLE_CAUSAL_SPINE_COLLAPSE",
+    "ARM_IDENTIFYING_IMPLEMENTATION_LEAK"
+  ],
+  "comparison_design": {
+    "control": "Historical physical SYNC-R58 architecture-qualified candidate is not used as current Control. The current experiment must compare exact R69 against a frozen appropriate control chosen before outputs, with identical input state.",
+    "treatment": "exact R69",
+    "mapping": "balanced hidden mapping sealed before judgments",
+    "reveal": "only after 3/3 first schema-valid judgments are hash-sealed"
+  },
+  "gate": {
+    "minimum_total_judge_pair_outcomes": 18,
+    "treatment_wins_min": 12,
+    "treatment_wins_plus_ties_min": 15,
+    "critical_violation_majority_allowed": 0,
+    "additional_noninferiority": "No median axis loss worse than -0.50 on Ensemble/Relationship Weaving, Information Asymmetry, Social Ecology, Causal Continuity, Due/Deferred Handling.",
+    "single_spine_rule": "If >=2/3 judges classify the Treatment episode as a single causal spine with dependent subproblems rather than genuinely multi-strand architecture, Stage D FAIL regardless of aggregate wins."
+  },
+  "diagnostics_not_quotas": {
+    "historical_supporting_dialogue_median": 0.459,
+    "historical_pure_subplot_scene_mean": 0.239,
+    "note": "These human-corpus observations are context diagnostics only. Architecture is not scored by matching these numbers mechanically."
+  },
+  "authority_effect": "NONE",
+  "no_posthoc_rule": "Do not change axes, critical labels, thresholds, mapping policy or single-spine rule after first Stage C architecture output."
+}
