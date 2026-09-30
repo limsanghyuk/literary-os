@@ -1,0 +1,146 @@
+{
+  "schema": "UL17_STAGE_B_EXACT_R69_CAUSAL_ADOPTION_RESULT_R1",
+  "date": "2026-10-01",
+  "status": "FAIL__EXACT_R69_CAUSAL_ADOPTION_HARD_GATE",
+  "scientific_attempt": "FIRST_CURRENT_BYTE_EXECUTION_AFTER_TRANSPORT_RECOVERY",
+  "authority_effect": "NONE",
+  "physical_authority": "SYNC-R74",
+  "runtime": "exact R69",
+  "runtime_identity": {
+    "c1_bytes": 140403571,
+    "c1_sha256": "3a1880310b7291d832b24c749c47dee2f6862387ddedb8ce3bcb652e0e899f5d",
+    "nested_runtime_bytes": 19137771,
+    "nested_runtime_sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+    "nested_runtime_entries": 497,
+    "nested_runtime_crc": "PASS",
+    "adaptive_showrunner_source_sha256": "740cca05a94dbb59eb9a1600e1c7d98cdc887693aa5ab46fec2bd2eaef78d306"
+  },
+  "frozen_inputs": {
+    "fixture_git_blob_sha": "5b51c2afb7737b84b1f9e2ff500e9189480cae57",
+    "matrix_git_blob_sha": "254bf0bf371f10785003d4109d18571cfe9b8d27",
+    "local_execution_adapter_sha256": "29c687d6f61a07c0e891b0da10c3f480b8b258923c6fa7fb09f968f4280ce0de",
+    "full_local_result_sha256": "a3c24d0262c13083b5c0ed70d13b637a2d0387ef73d83e5b5eeef3b83a7d8b4d"
+  },
+  "base": {
+    "architecture_hash": "14e9e0418f2f20399499435fc2eedcbe7a6b495cf62b449a3bc797fe11e1da51",
+    "semantic_decision_hash": "ee8ddd3c453e04fbf05ddc0b7505706c98ea6aee37fa27bd7fbccab8b85ade60",
+    "sequence_count": 2,
+    "scene_count": 12,
+    "adaptive_validation": "PASS",
+    "canonical_ir_validation": "PASS",
+    "sequence_summary": [
+      [
+        "SQ01",
+        [
+          "THR_LEASE_1",
+          "INFO_NARI_1",
+          "REL_SISTERS_1",
+          "SOC_VOLUNTEER_1"
+        ],
+        0.877
+      ],
+      [
+        "SQ02",
+        [
+          "EVENT_GUEST_1",
+          "CHAR_JUNHO_1"
+        ],
+        0.795
+      ]
+    ]
+  },
+  "probes": [
+    {
+      "id": "B01_THREAD_PRESSURE",
+      "required_effect": "PASS",
+      "architecture_hash": "8ed8ef8711dfe4ff7b3a608c2bafc65d91ecf8ee5493fcf54b7c38ea936e4505",
+      "semantic_decision_hash": "ac3cac344f0b90394fba908a6d478f985de5cf7ece09ba86b8c634d378dba511",
+      "evidence": "THR_LEASE_1 becomes independent SQ03 after pressure 0.93->0.54."
+    },
+    {
+      "id": "B02_RELATIONSHIP_PRESSURE",
+      "required_effect": "PASS",
+      "architecture_hash": "6ce8377aee3639015f215dabdd976ac6a8627621bfcf5aa9fa41aa5bc697ab3f",
+      "semantic_decision_hash": "a45307cac3939cd8683304693686c39a6c319935c1d9ee5976dd4e888eb8a727",
+      "evidence": "REL_SISTERS_1 moves to leading SQ01 transaction after pressure 0.86->0.97."
+    },
+    {
+      "id": "B03_INFORMATION_DEADLINE",
+      "required_effect": "PASS",
+      "architecture_hash": "c84b9616a60ab6579614d76620c3cc82e2855a324ba81244a75c98831c1ed32b",
+      "semantic_decision_hash": "09178b9f694803217e198e232c2cef5baa255b33c23fc2489c1f501506f6df04",
+      "evidence": "INFO_NARI_1 leads SQ01 and 16:30 deadline propagates into exact scene transaction actions."
+    },
+    {
+      "id": "B04_SOCIAL_PRESSURE",
+      "required_effect": "PASS",
+      "architecture_hash": "38cbbea7a481bd4ff7ca0a66fb5f1f6373c2ea4208223902e34994c7732756f4",
+      "semantic_decision_hash": "0a758c5adf5a9cc53b5f76e4730ecdf7a8c79844a02c9dc7ed1415d972ff163e",
+      "evidence": "SOC_VOLUNTEER_1 moves to leading SQ01 transaction after pressure 0.82->0.96."
+    },
+    {
+      "id": "B05_EVENT_PRECONDITION",
+      "required_effect": "PASS",
+      "architecture_hash": "292b00911c9db4ae7e6e58cecd000a60793f8ac7f5a80e2cdb0dcafd197356e2",
+      "semantic_decision_hash": "241f2fbf8d489fc306167daec823bb30abbb96d36fb3fb473ac623860bd80b62",
+      "evidence": "Guest cancellation obligation absent; dependent CHAR_JUNHO_1 becomes BLOCKED_PRECONDITION and gets no scene."
+    },
+    {
+      "id": "B06_PAYOFF_URGENCY",
+      "required_effect": "FAIL",
+      "causal_receipt": "PASS",
+      "architecture_hash": "1d27a64de1a7ba58e2399e88a5bc914dcf923633983329a04e9c3d924cb5a2bb",
+      "semantic_decision_hash": "cb6e58af0261c0dbb06ca34d26ae62d34ace8c3166a639fd53a2f8337e28856a",
+      "evidence": "PAY_TAPE_1 remains source due=false but can_defer=false causes SELECTED_DUE and final RESOLVE.",
+      "violations": [
+        "FALSE_SOURCE_DUE_FULFILLMENT",
+        "OPEN_PAYOFF_FALSE_CLOSURE",
+        "LOST_OPEN_PAYOFF_DEBT"
+      ]
+    },
+    {
+      "id": "B07_CHARACTER_PRESSURE",
+      "required_effect": "PASS",
+      "architecture_hash": "d24d810d824807a87df256eed9058a66f45e6d148ecaa30566748f81ed631269",
+      "semantic_decision_hash": "8b05871fd636ab3a5818381da1d0d99ed82fc715ee632a9200642dd145fac25b",
+      "evidence": "EVENT+CHARACTER SQ02 burden changes entry_pressure 0.795->0.865; event fact/dependency unchanged."
+    },
+    {
+      "id": "B08_IRRELEVANT_METADATA_SENTINEL",
+      "required_effect": "PASS",
+      "architecture_hash": "14e9e0418f2f20399499435fc2eedcbe7a6b495cf62b449a3bc797fe11e1da51",
+      "semantic_decision_hash": "ee8ddd3c453e04fbf05ddc0b7505706c98ea6aee37fa27bd7fbccab8b85ade60",
+      "evidence": "audit_note causes zero semantic or architecture change."
+    }
+  ],
+  "hard_gates": {
+    "future_source_leakage": 0,
+    "false_due_fulfillment": 1,
+    "false_deferred_fulfillment": 1,
+    "lost_deferred_debt": 1,
+    "canonical_validation_errors": 0,
+    "irrelevant_metadata_semantic_change": 0
+  },
+  "family_required_effect_pass": {
+    "THREAD": true,
+    "RELATIONSHIP": true,
+    "INFORMATION": true,
+    "SOCIAL": true,
+    "EVENT": true,
+    "PAYOFF": false,
+    "CHARACTER": true
+  },
+  "diagnosis": {
+    "responsible_boundary": "UL16_OBLIGATION_DISPOSITION_AND_SCENE_RESOLUTION_SEMANTICS",
+    "exact_code_behavior": [
+      "compile_active_obligation_portfolio uses due_raw = due OR not can_defer.",
+      "Every accepted due_raw obligation becomes SELECTED_DUE.",
+      "build_adaptive_scene_graph gives every selected obligation a final RESOLVE stage."
+    ],
+    "interpretation": "nondeferrable/urgent is conflated with due/fulfillable; exact R69 cannot represent MUST_TOUCH_BUT_KEEP_OPEN in B06."
+  },
+  "stage_c_eligibility": false,
+  "stage_d_eligibility": false,
+  "full_40k_provider_eligibility": false,
+  "physicalization_required": false
+}
