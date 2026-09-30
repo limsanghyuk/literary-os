@@ -1,0 +1,98 @@
+{
+  "schema": "UL17_STAGE_A_LINEAGE_INHERITANCE_AUDIT_R1",
+  "date": "2026-10-01",
+  "status": "PASS__CURRENT_R69_IS_ADAPTIVE_UL16_DESCENDANT__R58_ARCH_GATE_HISTORICAL_STRONG_EVIDENCE__FRESH_R69_REQUALIFICATION_REQUIRED",
+  "current_authority": {
+    "physical": "SYNC-R74",
+    "active_runtime": "exact R69",
+    "runtime_sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+    "production": "ENG:R47 / LEGACY_R53",
+    "runtime_db": "DB59 frozen"
+  },
+  "verified_lineage": [
+    {
+      "step": "SYNC-R58",
+      "finding": "Physicalized R58/R58B/R58C into actual C1 runtime source and C2 Candidate overlay; Candidate route explicitly ADAPTIVE_UL16.",
+      "evidence": "handoff/20260917/SYNC_R58_PHYSICALIZATION_AND_DELIVERY_RECEIPT_R1.md",
+      "runtime_sha256": "30281db791d9bb629218a79c51c230bffb8f9088d79c2cfe6d676f996098b250",
+      "key_properties": [
+        "12 sequences / 66 scenes on frozen diverse-material replay",
+        "visible-action grounding 37/37",
+        "exact action duplicates 0",
+        "duplicate Scene-function signatures 0",
+        "generic fallback ratio 0",
+        "due obligations resolved exactly once"
+      ]
+    },
+    {
+      "step": "SYNC-R58 architecture-only blind",
+      "finding": "Physical R58 Candidate passed independent architecture-only blind 18 wins / 0 ties / 0 losses versus ENG:R47 control.",
+      "evidence": "research/upper_layer/20260917/SYNC_R58_ARCHITECTURE_BLIND_RESULT_R1.md",
+      "axis_deltas": {
+        "EPISODE_MULTI_STRAND_ARCHITECTURE": "+6.000",
+        "SEQUENCE_FUNCTIONAL_DIVERSITY": "+3.333",
+        "ENSEMBLE_RELATIONSHIP_WEAVING": "+5.889",
+        "INFORMATION_ASYMMETRY_USE": "+5.222",
+        "SOCIAL_ECOLOGY_INTEGRATION": "+6.000",
+        "SCENE_TRANSACTION_SPECIFICITY_NECESSITY": "+4.667",
+        "CAUSAL_STATE_CONTINUITY": "+3.611",
+        "ESCALATION_TURNING_ARCHITECTURE": "+3.333"
+      },
+      "qualification": "UPPER_LAYER_ARCHITECTURE_QUALIFICATION = PASS at physical SYNC-R58"
+    },
+    {
+      "step": "R66",
+      "finding": "Parent/Control is exact SYNC-R58 / ADAPTIVE_UL16. R66 changes F01 predicate/transaction selection including _stage_plan_for_obligation and preserves R58-family regression.",
+      "evidence": [
+        "research/interventions/20260920/R66_F01_BOUNDARY_SAFE_IMPLEMENTATION_FREEZE_R1.md",
+        "research/interventions/20260920/R66_F01_BOUNDARY_SAFE_FINAL_RESULT_R1.md"
+      ],
+      "consequence": "R58 blind result cannot be automatically promoted to R66/R69 because scene transaction selection behavior changed."
+    },
+    {
+      "step": "R67",
+      "finding": "Adds Dual-Ledger State Carry; Adaptive Showrunner consumes planner_unrealized_obligations with provenance PLANNER_UNREALIZED_OBLIGATION. R66 F01 decisions remain bit-identical in pre-freeze equivalence.",
+      "evidence": [
+        "research/interventions/20260920/R67_F07_DUAL_LEDGER_IMPLEMENTATION_FREEZE_R1.md",
+        "research/interventions/20260920/R67_F07_DUAL_LEDGER_STATE_CARRY_RUNTIME_RESULT_R1.md"
+      ]
+    },
+    {
+      "step": "R68",
+      "finding": "Validator-only semantic transaction repetition intervention; explicitly does not change sequence allocation or concrete-action generation.",
+      "evidence": "research/interventions/20260920/R68_F04_SEMANTIC_TRANSACTION_REPETITION_RESULT_R1.md"
+    },
+    {
+      "step": "R69",
+      "finding": "Validator-only counterfactual scene necessity intervention; explicitly does not change scene generation, sequence allocation, obligation compiler or state-carry runtime. R66/R67/R68 regressions PASS.",
+      "evidence": [
+        "research/interventions/20260921/R69_F06_COUNTERFACTUAL_SCENE_NECESSITY_IMPLEMENTATION_FREEZE_R1.md",
+        "research/interventions/20260921/R69_F06_COUNTERFACTUAL_SCENE_NECESSITY_RESULT_R1.md"
+      ]
+    }
+  ],
+  "stage_a_gates": {
+    "r66_parent_exact_sync_r58_adaptive_ul16": true,
+    "r66_bounded_intervention_and_r58_regression": true,
+    "r67_adaptive_planner_ledger_consumption": true,
+    "r68_generation_unchanged": true,
+    "r69_generation_sequence_allocation_obligation_compiler_unchanged": true,
+    "r69_preserves_r66_r67_r68_regressions": true
+  },
+  "scientific_interpretation": [
+    "Current exact R69 is not a new thin planner unrelated to UL16; it is a descendant of the physically integrated R58 ADAPTIVE_UL16 candidate.",
+    "The strongest prior architecture evidence is the physical SYNC-R58 independent blind 18/18 PASS.",
+    "Fresh current-R69 requalification is still mandatory because R66 changed transaction/stage planning behavior and R67 changed planner-state consumption after the R58 blind."
+  ],
+  "unresolved_current_byte_question": "Exact R69 current-byte executable causal-adoption and fresh multi-strand architecture output have not yet been rerun in this UL17 transaction.",
+  "runtime_transport_incident": {
+    "c1_materialized_bytes": 140403571,
+    "c1_expected_sha256": "3a1880310b7291d832b24c749c47dee2f6862387ddedb8ce3bcb652e0e899f5d",
+    "shell_health_check": "ClientError",
+    "python_byte_processing": "ClientError",
+    "classification": "RUNTIME_TRANSPORT_HOLD__NO_SCIENTIFIC_FAIL",
+    "policy": "Do not substitute reconstructed/approximate runtime. Resume only exact-current-byte execution when runtime transport is healthy."
+  },
+  "next": "UL17 Stage B exact-current-byte causal adoption on the frozen fresh multi-strand fixture, then Stage C current-R69 architecture-only output and Stage D fresh blind requalification.",
+  "authority_effect": "NONE"
+}
