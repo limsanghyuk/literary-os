@@ -1,3 +1,6 @@
+> STATUS: SUPPLEMENTAL_DUPLICATE__CANONICAL_FULL_HISTORY_AUDIT_IS research/operations/20261001/FULL_RESEARCH_LINEAGE_AND_CURRENT_POSITION_AUDIT_R1.md
+> This file is preserved as an independently reconstructed companion audit. It does not supersede the canonical full-history audit or any current authority pointer.
+
 # Literary OS — Full Research Lineage and Exact Current Position Audit R1
 
 Date: 2026-10-01
