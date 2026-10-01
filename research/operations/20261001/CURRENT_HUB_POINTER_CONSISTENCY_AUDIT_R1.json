@@ -1,0 +1,48 @@
+{
+  "schema": "CURRENT_HUB_POINTER_CONSISTENCY_AUDIT_R1",
+  "date": "2026-10-01",
+  "status": "PASS__CURRENT_TOP_LEVEL_POINTERS_REPAIRED_AND_ALIGNED",
+  "repaired_defects": [
+    {
+      "path": "handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md",
+      "before": "stale 2026-09-23 authority: SYNC-R72 / R74 Stage-M / DB64-R127",
+      "after": "SYNC-R74 / exact R69 / R17+UL18 frontier / latest audited DB64-R134 boundary",
+      "commit": "07a6a39f3282dceee7bad575dec91b7bfd561acf"
+    },
+    {
+      "path": "handoff/CURRENT_DATABASE_RESEARCH_POINTER.md",
+      "before": "headline called DB64-R131 current research DB while later section documented newer audited R134; historical next-target wording remained active-looking",
+      "after": "R131 explicitly labeled earlier research-authority baseline; R134 explicitly latest audited snapshot; V6/direct-authorship governance override made current",
+      "commit": "d6fd927a1f0e7d01c43dec73692d3cb62d3a3b0b"
+    }
+  ],
+  "canonical_current": {
+    "physical_authority": "SYNC-R74",
+    "developer_held_packages": "9/9",
+    "active_runtime": "exact R69",
+    "production": "ENG:R47 / LEGACY_R53",
+    "runtime_db": "DB59 frozen",
+    "latest_audited_research_db": "DB64-R134 semantic re-audit HOLD",
+    "formal_scored": 137,
+    "latest_formal": "R138",
+    "r140": "NOT_STARTED",
+    "operational_maturity": "SUSPENDED__REQUALIFICATION_REQUIRED",
+    "ul17": "exact R69 Stage B FAIL immutable",
+    "ul18": "A/B/C PASS__ADOPTION_ELIGIBLE__RESEARCH_ONLY__PHYSICALIZATION_NOT_STARTED",
+    "pa8": "Control1/Treatment0 frozen"
+  },
+  "top_level_pointer_order": [
+    "CURRENT_RUNTIME_CONTAINER_RESILIENCE_POINTER when infrastructure trouble is suspected",
+    "CURRENT_DEVELOPER_HUB_AUTHORITY",
+    "CURRENT_HANDOFF_POINTER",
+    "CURRENT_SESSION_RECOVERY_POINTER",
+    "CURRENT_PHYSICAL_DELIVERY_POINTER",
+    "CURRENT_RESEARCH_OVERLAY_POINTER",
+    "CURRENT_NEXT_RESEARCH_POINTER",
+    "CURRENT_DATABASE_RESEARCH_POINTER",
+    "CURRENT_FULL_RESEARCH_LINEAGE_AUDIT_POINTER"
+  ],
+  "historical_document_rule": "Historical START_HERE/CURRENT-style files remain immutable provenance and may contain superseded authority claims. They do not compete with the current top-level pointer set.",
+  "physical_effect": "NONE",
+  "scientific_effect": "NONE"
+}
