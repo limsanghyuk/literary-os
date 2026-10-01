@@ -9,8 +9,10 @@ Canonical DB59 SHA256:
 
 No DB59 -> DB64 runtime/Production adoption has occurred.
 
-## CURRENT RESEARCH DATABASE
-DB64-R131 remains the current research-only database authority.
+## RESEARCH DATABASE LINEAGE / CURRENT SNAPSHOT
+DB64-R131 remains the last internally established research-authority baseline in the earlier DB repair lineage.
+
+The **latest externally supplied, byte-verified and independently audited research snapshot is DB64-R134**. R134 is newer research data, but it is not Runtime/Production authority and its five-work semantic certification is reopened for direct-authorship / short-template re-audit.
 
 Verified full archive:
 - SHA256: `4986730dc062610a2395960af83615dddaf986f53172914d2175b459fdaf9d7b`
@@ -24,17 +26,21 @@ Current V4 repaired:
 - 시티헌터
 - 식객
 
-Next default DB repair target:
+Historical pre-R134 default repair target:
 `건빵선생과별사탕` / RA1A
 
-A2: `PENDING`
+Current governance override after R134 audit:
+Do **not** advance to the next RA1 work solely from the V5 numeric PASS. First define and run a V6-or-stricter short-template/direct-authorship re-audit on the five R134 repaired works.
+
+A2 runtime-adoption research: `PENDING`
 
 ## PHYSICAL AUTHORITY
 - Physical Authority: SYNC-R74
 - Active Runtime: exact R69
 - Production: ENG:R47 / LEGACY_R53
 - Runtime DB: DB59 frozen
-- Research DB: DB64-R131 research-only
+- Research DB baseline: DB64-R131 research-only
+- Latest audited research snapshot: DB64-R134 — semantic re-audit HOLD
 - Operational Level-3: SUSPENDED__REQUALIFICATION_REQUIRED
 - Formal latest scored: R138
 - Formal R140: NOT_STARTED
