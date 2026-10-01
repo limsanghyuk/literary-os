@@ -2,40 +2,35 @@
 Last updated: 2026-10-01
 
 ## START HERE
-`handoff/20261001/START_HERE_SYNC_R74_DEVELOPER_PHYSICAL_BASELINE_POST_R74_OVERLAY_UL17_STAGE_B_HOLD_R16.md`
+`handoff/20261001/START_HERE_SYNC_R74_UL17_FAIL_UL18_REPAIR_QUALIFIED_PHYSICALIZATION_PENDING_R17.md`
 
 ## PRIMARY ACTIVE RESEARCH
-UL17 — Current exact R69 Upper-Layer Recovery & Requalification.
+UL18 repair-candidate physicalization preflight.
 
 Current:
-`STAGE_A_PASS__FRESH_FIXTURE_FROZEN__B01_B08_FROZEN__STAGE_C_D_FROZEN__STAGE_B_RUNTIME_TRANSPORT_HOLD`
+`UL17_EXACT_R69_STAGE_B_FAIL__UL18_A_B_C_PASS__REPAIR_CANDIDATE_ADOPTION_ELIGIBLE__PHYSICALIZATION_NOT_STARTED`
 
-## EXACT NEXT — UL17
-1. Restore healthy byte-processing runtime.
-2. Verify developer-held SYNC-R74 C1 size/SHA.
-3. Extract only nested exact R69 runtime.
-4. Verify exact R69 SHA256/CRC.
-5. Execute frozen B01-B08 causal-adoption probes.
-6. If Stage B PASS, generate Stage C architecture only from `오후 네 시의 라디오` frozen fixture.
-7. Run single-causal-spine, obligation preservation, scene-necessity, repetition and canonical-validation gates.
-8. If eligible, build architecture-only blind J01/J02/J03 packets against ENG:R47/LEGACY_R53.
-9. Seal 3/3 first valid judgments before mapping reveal.
-10. Only after Stage D PASS proceed to provider/full >=40k screenplay.
+## EXACT NEXT
+1. Recover the broadest executable regression harness available for the exact-R69 lineage.
+2. Run it unchanged against exact R69 and the UL18 repair candidate.
+3. Require unchanged outputs outside the open-touch semantic boundary and preserve R66 F01 / R67 F07 / R68 F04 / R69 F06 qualified behavior.
+4. If PASS, assign a new successor Candidate runtime identity.
+5. Bind that runtime into C1 and logical C2.
+6. Rebuild/reseal the complete 5-Part / 9-Package set.
+7. Verify package SHA256, CRC, logical C2, Trust Root, secrets/custody and downloadability.
+8. Deliver all nine files before changing Physical Authority.
+9. Then preregister a fresh unseen multi-strand fixture for successor upper-layer architecture-only qualification/blind.
 
 ## PARALLEL — PA8
 PA8 remains:
 `CONTROL_1__TREATMENT_0__CONTROL_STRUCTURAL_PASS__CONTROL_CONTINUITY_HEADROOM_ESTABLISHED`
 
-If Treatment arrives:
-- preserve first Treatment output;
-- run frozen mechanical + ESCC checks;
-- continue paired/blind evaluation under R14;
-- never repair/regenerate Control.
+If Treatment arrives, resume under R14; preserve first outputs.
 
 ## PARALLEL — DIALOGUE
-Human Dialogue/Direction baseline is preregistered.
-Do not freeze a numeric dialogue-share target until verified human-authored screenplay text is measured.
+Human Dialogue/Direction baseline remains preregistered.
+Do not freeze a numeric dialogue-share target before human-authored screenplay measurement.
 
 ## PHYSICAL BOUNDARY
-No post-R74 Candidate runtime/package bytes have changed.
-SYNC-R74 remains Physical Authority and the last developer-held complete 9-file set.
+Physical Authority remains **SYNC-R74**.
+Research-only repair artifacts are not C1/C2 and are not a physical successor.
