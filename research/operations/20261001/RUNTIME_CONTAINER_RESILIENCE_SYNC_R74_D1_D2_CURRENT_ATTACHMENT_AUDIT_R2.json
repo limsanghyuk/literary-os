@@ -1,0 +1,158 @@
+{
+  "schema": "RUNTIME_CONTAINER_RESILIENCE_SYNC_R74_D1_D2_CURRENT_ATTACHMENT_AUDIT_R2",
+  "date": "2026-10-01",
+  "scope": "operational_recovery_learning_only",
+  "authority_effect": "NONE",
+  "scientific_effect": "NONE",
+  "physical_authority": "SYNC-R74",
+  "active_runtime": "exact R69",
+  "production": "ENG:R47 / LEGACY_R53",
+  "runtime_db": "DB59 frozen",
+  "current_runtime_health": {
+    "minimal_shell_python_path": "PASS",
+    "exact_path_stat": "PASS",
+    "tmp_write_read_delete": "PASS",
+    "memory_max_bytes": 4294967296,
+    "memory_current_after_cleanup_bytes": 2238201856,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "posix_fadvise_dontneed": "PASS_D1_D2",
+    "interpretation": "No OOM evidence. Container-local path remained healthy during sequential D1/D2 audit."
+  },
+  "direct_attachment_audit": {
+    "D1": {
+      "file": "LITERARY_OS_CURRENT_PART_D1_DB59_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73(2)(1).zip",
+      "bytes": 138011573,
+      "sha256": "a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504",
+      "canonical_manifest_match": true,
+      "entries": 25,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe_paths": 0,
+      "crc_pass": true,
+      "byte_unchanged_from_sync_r73": true
+    },
+    "D2": {
+      "file": "LITERARY_OS_CURRENT_PART_D2_DB59_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73(2)(1).zip",
+      "bytes": 173393886,
+      "sha256": "c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4",
+      "canonical_manifest_match": true,
+      "entries": 59,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe_paths": 0,
+      "crc_pass": true,
+      "byte_unchanged_from_sync_r73": true
+    }
+  },
+  "split_chunk_audit": {
+    "part001": {
+      "carrier": "D1",
+      "member": "20_SPLIT_VOLUMES/DB59_AUTHORITY_METADATA_REPAIRED_FULL.zip.part001",
+      "bytes": 129878261,
+      "sha256": "212e1f77c696d5a911f19eb44dd5ed4c0de145ac8f9f8be60ec2d942f477e9ff",
+      "canonical_match": true
+    },
+    "part002": {
+      "carrier": "D2",
+      "member": "20_SPLIT_VOLUMES/DB59_AUTHORITY_METADATA_REPAIRED_FULL.zip.part002",
+      "bytes": 129878260,
+      "sha256": "b5b0df4967df9e6b93a2641454a0cc7c03895d32e3178a77207c0ff2b01a1b3f",
+      "canonical_match": true
+    }
+  },
+  "logical_db59_audit": {
+    "rejoin_location": "/tmp only",
+    "bytes": 259756521,
+    "sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+    "authority_hash_match": true,
+    "entries": 38852,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe_paths": 0,
+    "crc_pass": true,
+    "temporary_rejoin_deleted": true
+  },
+  "nested_required_package_audit": {
+    "D1_DRAMA_ONLY": {
+      "member": "10_REQUIRED_PACKAGES/DRAMA_ANALYSIS_ONLY_LEARNING_BUNDLE_DB59_R9E_FULL_CURRENT_20260902_SEALED.zip",
+      "bytes": 8546036,
+      "sha256": "9615bc96c3e99433c22b95ef003d381036c218aba52e4846a1b4e5a115915ed1",
+      "entries": 950,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe_paths": 0,
+      "crc_pass": true,
+      "temporary_extract_deleted": true
+    },
+    "D2_ANALYSIS_MASTER": {
+      "member": "10_REQUIRED_PACKAGES/LITERARY_OS_DRAMA_ANALYSIS_LEARNING_MASTER_CURRENT_R9E_FULL_CURRENT_20260902_SEALED.zip",
+      "bytes": 46150549,
+      "sha256": "b9d61b17de9ef30cf08a21ea177b2478a8aa982e3a9ade91058d4dcee00ddf28",
+      "entries": 6403,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe_paths": 0,
+      "crc_pass": true,
+      "temporary_extract_deleted": true
+    }
+  },
+  "embedded_document_learning": {
+    "historical_topology": "The attached D1/D2 preserve a 2026-09-02/03 continuation model of 5 logical sets / 8 physical files.",
+    "current_topology_precedence": "The external/current SYNC-R74 5-Part / 9-Package manifest, Trust Root and Hub CURRENT pointers supersede the embedded historical topology.",
+    "scientific_truth_rule": "Primary Evidence and executable runtime source remain domain-specific truth; navigation/bootstrap files do not overwrite them.",
+    "reseal_rule": "Full CURRENT reseal requires exact bytes, SHA256, ZIP CRC, fresh extraction/required-member validation and developer delivery; historical primary evidence is preserved non-destructively.",
+    "data_consumption_rule": "DB presence is not consumption. Valid consumption requires physical bytes -> binding/extraction -> retrieval -> downstream planning input -> trace/receipt.",
+    "runtime_invalid_vs_scientific_fail": "Historical documents explicitly require separation of Runtime Invalid from Scientific Fail."
+  },
+  "relearned_failure_classes": [
+    {
+      "class": "RUNTIME_TRANSPORT",
+      "examples": [
+        "ClientError",
+        "TransportTimeoutError"
+      ],
+      "rule": "STOP mutation/reseal/scoring/generation; RUNTIME_TRANSPORT_HOLD; minimal health check; verify last atomic checkpoint; resume only failed step."
+    },
+    {
+      "class": "PHYSICAL_UPLOAD_OR_RETENTION_TRUNCATION",
+      "rule": "Visible file presence is not byte authority. Check expected size before SHA/ZIP/CRC; never fabricate missing bytes."
+    },
+    {
+      "class": "MEMORY_IO_PAGE_CACHE_PRESSURE",
+      "rule": "4 GiB cgroup: one artifact at a time, streaming I/O, /tmp intermediates, POSIX_FADV_DONTNEED. Do not call OOM unless memory.events supports it."
+    },
+    {
+      "class": "SPLIT_AUTHORITY_VALIDATION",
+      "rule": "Validate outer transport -> split chunk -> logical rejoin -> nested required package as separate custody layers. One layer PASS never substitutes for the next."
+    },
+    {
+      "class": "AUTHORITY_SHADOWING",
+      "rule": "Embedded historical CURRENT/READ_FIRST/bootstrap documents are provenance only when superseded by enclosing current physical manifest/Trust Root/Hub pointers."
+    },
+    {
+      "class": "SAME_NAME_DIFFERENT_HASH_COLLISION",
+      "rule": "Preserve and quarantine ambiguity; never overwrite or silently choose."
+    },
+    {
+      "class": "CUSTODY_LOSS",
+      "rule": "Never reconstruct frozen inputs or hidden mappings from memory; HOLD/abort affected experiment."
+    }
+  ],
+  "strengthened_d_part_rules": [
+    "D1/D2 byte-unchanged carriers must remain byte-identical at successor reseal unless DB59 or carrier payload actually changes.",
+    "Do not extract split chunks to durable standalone files merely for verification; stream them in declared order into a /tmp logical verifier.",
+    "Verify part hashes and total logical DB59 hash before opening the rejoined ZIP.",
+    "Delete logical /tmp DB59 after CRC/structure verification.",
+    "Historical 5-logical/8-physical documents inside D1/D2 cannot override current SYNC-R74 5-Part/9-Package topology.",
+    "Post-R74 research progress alone does not authorize DB59 carrier mutation."
+  ],
+  "mandatory_resume_rule": "STOP -> RUNTIME_TRANSPORT_HOLD -> MINIMAL_HEALTH_CHECK -> LAST_ATOMIC_CHECKPOINT_VERIFY -> RESUME_ONLY_FAILED_STEP",
+  "mutation_policy": "No package mutation, reseal, physical promotion, runtime change, DB authority change, formal-count change, or experimental scoring performed."
+}
