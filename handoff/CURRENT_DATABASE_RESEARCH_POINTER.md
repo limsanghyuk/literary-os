@@ -1,5 +1,5 @@
 # CURRENT DATABASE RESEARCH POINTER
-Last updated: 2026-09-26
+Last updated: 2026-10-01
 
 ## ACTIVE RUNTIME DATABASE AUTHORITY
 DB59 remains the frozen Production/Runtime database authority.
@@ -90,3 +90,34 @@ Independent audit:
 `research/operations/20260926/DB64_R134_EXTERNAL_IMPORT_INDEPENDENT_AUDIT_R1.json`
 
 This section records the newer supplied snapshot without changing DB59 Runtime authority, SYNC-R74 physical authority, or A2 status.
+
+
+## 2026-10-01 CURRENT ATTACHMENT REVERIFICATION / LEARNING
+
+The user re-supplied the same R134 data/learning package and it was reverified from current mounted bytes.
+
+All five uploaded artifact SHA256 values exactly match the 2026-09-26 independent audit.
+Full Part01 -> Part02 rejoin again produced:
+- 331,896,771 bytes
+- SHA256 `7f5d10e9e86c71c217c971da1a75bbf87c8ee2405bcfd2fbd18a4f10fd6a7901`
+- 45,331 entries
+- duplicate/encrypted/unsafe = 0/0/0
+- full CRC PASS
+- Change overlay exact = 433/433
+- Cycle1 THICK exact = 86/86
+
+The short-template diagnostic was independently rerun on the current Cycle1 checkpoint and reproduced exactly:
+- 38사기동대 37.74%
+- 시티헌터 48.82%
+- 식객 52.75%
+- 건빵선생과별사탕 37.12%
+- 신의퀴즈1 47.17%
+- 38사기동대 manual EP01-03 0.34% vs R134 machine EP04-16 49.04%
+
+Therefore the current boundary is unchanged:
+`R134_PHYSICAL_STRUCTURAL_PASS__FIVEWORK_SEMANTIC_REAUDIT_REQUIRED`
+
+New learning/verification audit:
+`research/operations/20261001/DB64_R134_CURRENT_ATTACHMENT_REVERIFICATION_AND_LEARNING_AUDIT_R2.json`
+
+R134A learning authority is learned and should guide future DB repair operations, but DB59 remains Runtime authority and DB64-R134 remains non-adopted research data.
