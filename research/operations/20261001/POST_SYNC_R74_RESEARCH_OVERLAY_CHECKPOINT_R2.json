@@ -1,0 +1,34 @@
+{
+  "schema": "POST_SYNC_R74_RESEARCH_OVERLAY_CHECKPOINT_R2",
+  "date": "2026-10-01",
+  "physical_authority": "SYNC-R74",
+  "post_r74_physical_successor_delivered": false,
+  "active_runtime": "exact R69",
+  "production": "ENG:R47 / LEGACY_R53",
+  "runtime_db": "DB59 frozen",
+  "pa7": "CLOSED_FAIL__ABSOLUTE_CRITICAL_CONTINUITY_GATE",
+  "pa8": "CONTROL_1__TREATMENT_0__CONTROL_STRUCTURAL_PASS__CONTROL_CONTINUITY_HEADROOM_ESTABLISHED",
+  "dialogue": "HUMAN_DIALOGUE_DIRECTION_BASELINE_PREREGISTERED__NO_NUMERIC_SHARE_QUOTA",
+  "ul17": {
+    "stage_a": "PASS",
+    "exact_r69_stage_b": "FAIL__B06_OPEN_PAYOFF_FALSE_CLOSURE",
+    "stage_c_d": "NOT_ELIGIBLE",
+    "repair_root_cause": "UL16_OBLIGATION_DISPOSITION_AND_SCENE_RESOLUTION_SEMANTICS"
+  },
+  "ul18": {
+    "prereg": "research/upper_layer/20261001/UL18_OPEN_DEBT_SEMANTIC_SUCCESSOR_QUALIFICATION_PREREG_R1.md",
+    "stage_a": "PASS",
+    "stage_b": "PASS_8_OF_8_FRESH",
+    "stage_c": "PASS_3_OF_3_APPLICABLE",
+    "result": "research/upper_layer/20261001/UL18_OPEN_DEBT_SUCCESSOR_QUALIFICATION_RESULT_R1.json",
+    "candidate_status": "ADOPTION_ELIGIBLE__RESEARCH_ONLY__PHYSICALIZATION_NOT_STARTED",
+    "patched_source_sha256": "f2a22d1156f50152b8de1ae745d16e3189f6731758a83b8cc7dc2b37e8e8553b"
+  },
+  "authority_boundary": "No Candidate runtime/C1/C2/DB59/Production package byte has been adopted or resealed after SYNC-R74. Research-only patched files do not change Physical Authority.",
+  "exact_next": [
+    "Recover/run project-wide executable regression against the repaired candidate.",
+    "If regression passes, assign a successor Candidate runtime identity and bind it into C1/C2.",
+    "Reseal/audit/deliver the complete 5-Part/9-Package successor before changing Physical Authority.",
+    "After physicalization, seal a fresh unseen multi-strand fixture and rerun architecture-only qualification/blind; do not reuse UL17 Stage-C/D as successor qualification."
+  ]
+}
