@@ -1,0 +1,355 @@
+{
+  "broadcast_mode": false,
+  "cases": [
+    {
+      "expected": {
+        "DUE_SPONSOR_CALL": {
+          "disposition": "SELECTED_DUE",
+          "open": false,
+          "resolved": true
+        }
+      },
+      "id": "U18B01_TRUE_DUE_NONDEFERRABLE",
+      "obligations": [
+        {
+          "can_defer": false,
+          "dependencies": [],
+          "due": true,
+          "id": "ANCHOR_LIVE_SLOT",
+          "kind": "EVENT",
+          "owners": [
+            "MINA",
+            "TAEHO"
+          ],
+          "pressure": 0.84,
+          "statement": "The station must decide whether to continue the live neighborhood bulletin after the transmitter cooling alarm.",
+          "visible_action": "Mina switches the studio clock to emergency mode and hands Taeho the live microphone."
+        },
+        {
+          "can_defer": false,
+          "dependencies": [],
+          "due": true,
+          "id": "DUE_SPONSOR_CALL",
+          "kind": "THREAD",
+          "owners": [
+            "MINA",
+            "SOOJIN"
+          ],
+          "pressure": 0.91,
+          "statement": "A sponsor withdrawal call received before airtime requires a current-episode decision about whether the bulletin remains commercial-free.",
+          "visible_action": "Soojin places the sponsor contract face-down while Mina crosses the ad cue out of the rundown."
+        }
+      ]
+    },
+    {
+      "expected": {
+        "OPEN_ARCHIVE_KEY": {
+          "disposition": "SELECTED_OPEN_TOUCH",
+          "open": true,
+          "resolved": false
+        }
+      },
+      "id": "U18B02_OPEN_NONDEFERRABLE",
+      "obligations": [
+        {
+          "can_defer": false,
+          "dependencies": [],
+          "due": true,
+          "id": "ANCHOR_LIVE_SLOT",
+          "kind": "EVENT",
+          "owners": [
+            "MINA",
+            "TAEHO"
+          ],
+          "pressure": 0.84,
+          "statement": "The station must decide whether to continue the live neighborhood bulletin after the transmitter cooling alarm.",
+          "visible_action": "Mina switches the studio clock to emergency mode and hands Taeho the live microphone."
+        },
+        {
+          "can_defer": false,
+          "dependencies": [],
+          "due": false,
+          "id": "OPEN_ARCHIVE_KEY",
+          "kind": "PAYOFF",
+          "owners": [
+            "MINA",
+            "DONGIL"
+          ],
+          "pressure": 0.89,
+          "statement": "A newly found cabinet key must affect today's choices, but what the locked cabinet proves cannot yet be established.",
+          "visible_action": "Dongil puts the key on the mixing desk but keeps the cabinet seal unbroken."
+        }
+      ]
+    },
+    {
+      "expected": {
+        "DEFER_OLD_POSTCARD": {
+          "disposition": "DEFERRED",
+          "open": true,
+          "resolved": false,
+          "scheduled": false
+        }
+      },
+      "id": "U18B03_OPEN_DEFERRABLE",
+      "obligations": [
+        {
+          "can_defer": false,
+          "dependencies": [],
+          "due": true,
+          "id": "ANCHOR_LIVE_SLOT",
+          "kind": "EVENT",
+          "owners": [
+            "MINA",
+            "TAEHO"
+          ],
+          "pressure": 0.84,
+          "statement": "The station must decide whether to continue the live neighborhood bulletin after the transmitter cooling alarm.",
+          "visible_action": "Mina switches the studio clock to emergency mode and hands Taeho the live microphone."
+        },
+        {
+          "can_defer": true,
+          "dependencies": [],
+          "due": false,
+          "id": "DEFER_OLD_POSTCARD",
+          "kind": "INFORMATION",
+          "owners": [
+            "YERIN"
+          ],
+          "pressure": 0.58,
+          "statement": "An unsigned postcard about the station founder may wait for a later episode because no current decision depends on it.",
+          "visible_action": "Yerin slips the postcard back into an envelope marked for later verification."
+        }
+      ]
+    },
+    {
+      "expected": {
+        "BLOCKED_DUE_APOLOGY": {
+          "disposition": "BLOCKED_PRECONDITION",
+          "resolved": false,
+          "scheduled": false
+        }
+      },
+      "id": "U18B04_BLOCKED_TRUE_DUE",
+      "obligations": [
+        {
+          "can_defer": false,
+          "dependencies": [],
+          "due": true,
+          "id": "ANCHOR_LIVE_SLOT",
+          "kind": "EVENT",
+          "owners": [
+            "MINA",
+            "TAEHO"
+          ],
+          "pressure": 0.84,
+          "statement": "The station must decide whether to continue the live neighborhood bulletin after the transmitter cooling alarm.",
+          "visible_action": "Mina switches the studio clock to emergency mode and hands Taeho the live microphone."
+        },
+        {
+          "can_defer": false,
+          "dependencies": [
+            "MISSING_RECORDING_VERIFIED"
+          ],
+          "due": true,
+          "id": "BLOCKED_DUE_APOLOGY",
+          "kind": "RELATIONSHIP",
+          "owners": [
+            "TAEHO",
+            "YERIN"
+          ],
+          "pressure": 0.92,
+          "statement": "Taeho owes Yerin an on-air correction, but it may occur only after the missing recording is verified.",
+          "visible_action": "Taeho writes Yerin's name on the correction card and leaves the evidence line blank."
+        }
+      ]
+    },
+    {
+      "expected": {
+        "BLOCKED_OPEN_MEETING": {
+          "disposition": "BLOCKED_PRECONDITION",
+          "resolved": false,
+          "scheduled": false
+        }
+      },
+      "id": "U18B05_BLOCKED_OPEN_TOUCH",
+      "obligations": [
+        {
+          "can_defer": false,
+          "dependencies": [],
+          "due": true,
+          "id": "ANCHOR_LIVE_SLOT",
+          "kind": "EVENT",
+          "owners": [
+            "MINA",
+            "TAEHO"
+          ],
+          "pressure": 0.84,
+          "statement": "The station must decide whether to continue the live neighborhood bulletin after the transmitter cooling alarm.",
+          "visible_action": "Mina switches the studio clock to emergency mode and hands Taeho the live microphone."
+        },
+        {
+          "can_defer": false,
+          "dependencies": [
+            "HALL_RELEASED"
+          ],
+          "due": false,
+          "id": "BLOCKED_OPEN_MEETING",
+          "kind": "SOCIAL",
+          "owners": [
+            "MINA",
+            "RESIDENT_COUNCIL"
+          ],
+          "pressure": 0.94,
+          "statement": "The resident council demands an immediate meeting, but attendance cannot be promised until the fire marshal releases the hall.",
+          "visible_action": "Mina pins the council request beside the locked hall notice without writing a meeting time."
+        }
+      ]
+    },
+    {
+      "expected": {
+        "OPEN_SISTER_MESSAGE": {
+          "disposition": "SELECTED_OPEN_TOUCH",
+          "open": true,
+          "resolved": false
+        },
+        "OPEN_VOLUNTEER_LEDGER": {
+          "disposition": "SELECTED_OPEN_TOUCH",
+          "open": true,
+          "resolved": false
+        }
+      },
+      "id": "U18B06_MULTIPLE_OPEN_TOUCH",
+      "obligations": [
+        {
+          "can_defer": false,
+          "dependencies": [],
+          "due": true,
+          "id": "ANCHOR_LIVE_SLOT",
+          "kind": "EVENT",
+          "owners": [
+            "MINA",
+            "TAEHO"
+          ],
+          "pressure": 0.84,
+          "statement": "The station must decide whether to continue the live neighborhood bulletin after the transmitter cooling alarm.",
+          "visible_action": "Mina switches the studio clock to emergency mode and hands Taeho the live microphone."
+        },
+        {
+          "can_defer": false,
+          "dependencies": [],
+          "due": false,
+          "id": "OPEN_VOLUNTEER_LEDGER",
+          "kind": "SOCIAL",
+          "owners": [
+            "SOOJIN",
+            "VOLUNTEER_DESK"
+          ],
+          "pressure": 0.88,
+          "statement": "A volunteer-hours ledger must alter today's staffing negotiation while the compensation claim remains unsettled.",
+          "visible_action": "Soojin copies today's hours onto the staffing board and returns the ledger to its envelope."
+        },
+        {
+          "can_defer": false,
+          "dependencies": [],
+          "due": false,
+          "id": "OPEN_SISTER_MESSAGE",
+          "kind": "RELATIONSHIP",
+          "owners": [
+            "MINA",
+            "HANA"
+          ],
+          "pressure": 0.87,
+          "statement": "A voice message from Mina's sister must affect whether Mina stays after the broadcast, without settling their family dispute.",
+          "visible_action": "Mina listens through one earbud, deletes the taxi booking, and does not call back."
+        }
+      ]
+    },
+    {
+      "expected": {
+        "DUE_HOST_HANDOFF": {
+          "disposition": "SELECTED_DUE",
+          "resolved": true
+        },
+        "OPEN_FAMILY_LOAN": {
+          "disposition": "SELECTED_OPEN_TOUCH",
+          "open": true,
+          "resolved": false
+        },
+        "must_share_sequence": true
+      },
+      "id": "U18B07_OPEN_TOUCH_WITH_DUE_INTERSECTION",
+      "obligations": [
+        {
+          "can_defer": false,
+          "dependencies": [],
+          "due": true,
+          "id": "ANCHOR_LIVE_SLOT",
+          "kind": "EVENT",
+          "owners": [
+            "MINA",
+            "TAEHO"
+          ],
+          "pressure": 0.84,
+          "statement": "The station must decide whether to continue the live neighborhood bulletin after the transmitter cooling alarm.",
+          "visible_action": "Mina switches the studio clock to emergency mode and hands Taeho the live microphone."
+        },
+        {
+          "can_defer": false,
+          "dependencies": [],
+          "due": true,
+          "id": "DUE_HOST_HANDOFF",
+          "kind": "CHARACTER",
+          "owners": [
+            "TAEHO",
+            "MINA"
+          ],
+          "pressure": 0.93,
+          "statement": "Taeho must decide whether Mina or he takes the emergency live host position for the next segment.",
+          "visible_action": "Taeho removes his own name card from the host slot and slides Mina's card into it."
+        },
+        {
+          "can_defer": false,
+          "dependencies": [],
+          "due": false,
+          "id": "OPEN_FAMILY_LOAN",
+          "kind": "RELATIONSHIP",
+          "owners": [
+            "TAEHO",
+            "MINA"
+          ],
+          "pressure": 0.86,
+          "statement": "Their unresolved family loan must color the handoff, but repayment and blame cannot be settled during the emergency segment.",
+          "visible_action": "Mina accepts the host card but leaves Taeho's folded repayment note untouched beside the console."
+        }
+      ]
+    },
+    {
+      "expected": {
+        "architecture_hash_equal_to_anchor_only": true
+      },
+      "id": "U18B08_IRRELEVANT_METADATA_SENTINEL",
+      "metadata": {
+        "audit_note": "UL18_METADATA_SENTINEL_B"
+      },
+      "obligations": [
+        {
+          "can_defer": false,
+          "dependencies": [],
+          "due": true,
+          "id": "ANCHOR_LIVE_SLOT",
+          "kind": "EVENT",
+          "owners": [
+            "MINA",
+            "TAEHO"
+          ],
+          "pressure": 0.84,
+          "statement": "The station must decide whether to continue the live neighborhood bulletin after the transmitter cooling alarm.",
+          "visible_action": "Mina switches the studio clock to emergency mode and hands Taeho the live microphone."
+        }
+      ]
+    }
+  ],
+  "date": "2026-10-01",
+  "schema": "UL18_OPEN_DEBT_ADVERSARIAL_SUITE_R1",
+  "status": "FROZEN_BEFORE_EXECUTION"
+}
