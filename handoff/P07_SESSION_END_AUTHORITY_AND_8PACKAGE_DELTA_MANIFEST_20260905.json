@@ -1,0 +1,77 @@
+{
+  "date": "2026-09-05",
+  "status": "SESSION_END_AUTHORITY_DELTA__PHYSICAL_RESEAL_PENDING_BACKEND_RECOVERY",
+  "formal_scored_count": 137,
+  "r140": {
+    "formal_attempts": 0,
+    "formal_outputs": 0,
+    "formal_scores": 0
+  },
+  "p06": "COMPLETED_PHYSICALLY_CLOSED",
+  "p07": "ACTIVE_PREFORMAL__NARRATIVE_ARCHITECTURE_CONSUMPTION_REAUDIT_INCOMPLETE",
+  "latest_physical_authority": [
+    {"slot":"CONTROL","revision":"R27","sha256":"0f4087469ed0233ac176bfae495fae8b44e34585c8abe0756b4488d1e1cd2a30","mutable":true},
+    {"slot":"PART-A","revision":"R26","sha256":"b61bd5061a49261bb441e1f8dadc4b8c5fef6a29af9ab73fd41d3bfb327c68ba","mutable":true},
+    {"slot":"PART-B1","revision":"R10","sha256":"00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98","mutable":false,"byte_unchanged":true},
+    {"slot":"PART-B2","revision":"R27","sha256":"3f5f98055eec8daea669d17f4a29cc3599f253203eb90c7c37d7dac56ea50cdc","mutable":true},
+    {"slot":"PART-C1","revision":"R10","sha256":"dcfe8e76e8be66b5dffe0c3dd048fde4fba6267457a9bbf06fed1105b5a8c518","mutable":false,"byte_unchanged":true,"authority":"ENG:R47 Production"},
+    {"slot":"PART-C2","revision":"R26","sha256":"580d6e72b62c1aa28aefe27a0771d8fc777c8a6265c03acc8510e73f84bae0e5","mutable":true},
+    {"slot":"PART-D1","revision":"R10","sha256":"a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504","mutable":false,"byte_unchanged":true,"authority":"DB59 frozen reference snapshot"},
+    {"slot":"PART-D2","revision":"R10","sha256":"c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4","mutable":false,"byte_unchanged":true}
+  ],
+  "target_after_delta_application": [
+    {"slot":"CONTROL","target_revision":"R28","physical_status":"NOT_YET_SEALED"},
+    {"slot":"PART-A","target_revision":"R27","physical_status":"NOT_YET_SEALED"},
+    {"slot":"PART-B1","target_revision":"R10","physical_status":"UNCHANGED"},
+    {"slot":"PART-B2","target_revision":"R28","physical_status":"NOT_YET_SEALED"},
+    {"slot":"PART-C1","target_revision":"R10","physical_status":"UNCHANGED"},
+    {"slot":"PART-C2","target_revision":"R27","physical_status":"NOT_YET_SEALED"},
+    {"slot":"PART-D1","target_revision":"R10","physical_status":"UNCHANGED"},
+    {"slot":"PART-D2","target_revision":"R10","physical_status":"UNCHANGED"}
+  ],
+  "delta_application": {
+    "CONTROL_R28": [
+      "Replace premature 'near-final preformal' readiness with middle-to-late transition status.",
+      "Set R-B Narrative Architecture Closure as next active phase; CP1/API connection deferred.",
+      "Record formal count 137 and R140 0/0/0.",
+      "Supersede old G0 for future formal use; preserve as historical evidence only.",
+      "Add package reseal pending due CAAS ClientError."
+    ],
+    "PART_A_R27": [
+      "Add NONFORMAL registry entries/synthesis for R5-R8, P07-PRE-09 E0-E9, Ordered Beats V2, Mechanical Parity, CP0 and full historical re-audit.",
+      "Record every failure/repair without overwriting earlier failures.",
+      "Add revised preformal phase order R-B -> R-C -> R-D -> R-E -> R-F -> R-G.",
+      "Preserve R140 formal attempts/outputs/scores at zero."
+    ],
+    "PART_B2_R28": [
+      "Add deep current-research synthesis of Ensemble/Social Ecology/Event Ownership/Group Membership/Whole Story/Long Arc/Detailed Episode Synopsis/THICK Sequence lineage.",
+      "Add doctrine: ensemble is distributed causal ownership, not cast count.",
+      "Add historical links to Candidate Portfolio/Critic/R82 safety, long-horizon carry/rollback/novelty, voice/subtext/repetition bottlenecks.",
+      "Add current claim boundaries: mechanical closure != frontier craft parity."
+    ],
+    "PART_C2_R27": [
+      "Carry forward Development Overlay repairs already completed: semantic route, safe retrieval fallback, semantic render bridge, P9C-D consumption, generalized entity guard, ordered beats, lossless serializer, verified closed loop, research-policy injection.",
+      "Add explicit unresolved runtime consumers for R-B: Whole Story/Long Arc, Social Ecology Graph, Group Membership, Event/Plot-Axis Ownership, Detailed Episode Synopsis, THICK Sequence/Boundary.",
+      "Mark Candidate Portfolio/Critic/R82 safe commit, long-horizon carry/rollback/Authorized Novelty, voice and repetition guards as subsequent closure phases.",
+      "Do not modify ENG:R47 Production."
+    ],
+    "PART_B1_R10": "NO_CHANGE",
+    "PART_C1_R10": "NO_CHANGE",
+    "PART_D1_R10": "NO_CHANGE",
+    "PART_D2_R10": "NO_CHANGE"
+  },
+  "session_end_backend_failure": {
+    "class": "caas.internal.errors.ClientError",
+    "reproduced_on": ["container minimal command","python minimal execution","python_user_visible minimal execution"],
+    "interpretation": "session-local artifact execution backend failure, not evidence of P07 logic/data corruption",
+    "consequence": "cannot truthfully claim the target R28/R27/R28/R27 ZIPs were physically rebuilt or SHA-sealed in this session"
+  },
+  "next_session_priority_0": [
+    "Verify /mnt/data access and local container/python health.",
+    "Locate the latest physical R27/R26/R10/R27/R10/R26/R10/R10 package set and validate existing SHA256/CRC.",
+    "Apply this handoff delta to CONTROL/A/B2/C2 only.",
+    "Rebuild target CONTROL R28 / A R27 / B2 R28 / C2 R27; preserve B1/C1/D1/D2 byte-identical.",
+    "Fresh-validate all eight packages, emit SHA256SUMS, new Trust Root and START HERE.",
+    "Only then resume R-B Narrative Architecture Closure."
+  ]
+}
