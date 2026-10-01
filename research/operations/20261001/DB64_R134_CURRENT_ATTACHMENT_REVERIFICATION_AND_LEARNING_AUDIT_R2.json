@@ -1,0 +1,168 @@
+{
+  "schema": "DB64_R134_CURRENT_ATTACHMENT_REVERIFICATION_AND_LEARNING_AUDIT_R2",
+  "date": "2026-10-01",
+  "scope": "research_database_reverification_and_learning",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "physical_5part_effect": "NONE",
+  "active_runtime_db": "DB59_FROZEN",
+  "supplied_data_authority": "DATA:DB64_R134_FIVEWORK_V5_SEMANTIC_NATURALNESS_REPAIR_R1",
+  "supplied_learning_authority": "LEARNING:R134A_73WORK_SESSION_RETROSPECTIVE_V5_CONTINUITY_R2",
+  "uploaded_artifacts": {
+    "part01": {
+      "bytes": 165948385,
+      "sha256": "bf2ce061f2043e881ac9ac3c52abc0c6836b7e0dabd5f1812893a041c3c4baa4"
+    },
+    "part02": {
+      "bytes": 165948386,
+      "sha256": "8844fdc7c2e3d1344513b58882ad3239cc6cc537da12a0ac59509a427e49197f"
+    },
+    "change_package": {
+      "bytes": 3042531,
+      "sha256": "bac99fc241f5ebd6b7b25aaee1e32388783b97e6fc9516e4e54add749f07bd6a",
+      "entries": 439,
+      "crc_pass": true
+    },
+    "cycle1_checkpoint": {
+      "bytes": 661249,
+      "sha256": "693ffdaf843e547e936584e12356c344487a7fc7cfbb4bfe559687d05d6b4ad3",
+      "entries": 89,
+      "crc_pass": true
+    },
+    "latest_learning_bundle": {
+      "bytes": 32860212,
+      "sha256": "e98b9f2b2e85329718d91cff802bfceb5cbbbbaa1cc59188d1e42afab9ce2610",
+      "entries": 24,
+      "crc_pass": true
+    }
+  },
+  "full_db_verification": {
+    "rejoin_order": [
+      "part01",
+      "part02"
+    ],
+    "bytes": 331896771,
+    "sha256": "7f5d10e9e86c71c217c971da1a75bbf87c8ee2405bcfd2fbd18a4f10fd6a7901",
+    "exact_manifest_match": true,
+    "entries": 45331,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe_paths": 0,
+    "json_files": 21144,
+    "crc_pass": true,
+    "temporary_rejoin_location": "/tmp only",
+    "temporary_rejoin_deleted": true
+  },
+  "package_consistency": {
+    "change_overlay_files": 433,
+    "change_overlay_exact_match_inside_full_db": 433,
+    "overlay_missing": 0,
+    "overlay_mismatch": 0,
+    "cycle1_thick_files": 86,
+    "cycle1_thick_exact_match_inside_full_db": 86
+  },
+  "declared_improvements": {
+    "parent_sha256": "0a900945a2b3dfe41ae1f2afdf7323fb781dd3cf35e939611c511b024ec05db0",
+    "v5_repaired_works": [
+      "38사기동대",
+      "시티헌터",
+      "식객",
+      "건빵선생과별사탕",
+      "신의퀴즈1"
+    ],
+    "core_change": "Re-repair five works under V5 to address Stage-mediated copying, long/full-string uniqueness blind spots, internal partial-template repetition, meta-writing residue, structured-ID leakage and Korean surface naturalness.",
+    "downstream_reprojection": "Runtime / EpisodePlan / durable ThreadState / prior-only PlannerInput rebuilt for all five; SOURCE/Stage/EXT06/A1 preserved where declared.",
+    "fresh_validation": {
+      "logical_files": 45331,
+      "duplicate_names": 0,
+      "overlay_exact": "433/433",
+      "json_files": 21144,
+      "jsonl_rows": 936158,
+      "parse_errors": 0,
+      "non_overlay_parent_files_byte_preserved": "2030/2030",
+      "future_leakage": 0,
+      "nine_contract": "PASS_A2_PENDING"
+    }
+  },
+  "learned_methodology": {
+    "v4_not_sufficient": "Whole-string exact/near-copy PASS can coexist with repeated internal prose skeletons and unnatural Korean.",
+    "v5_additions": [
+      "6/8/10-token partial repetition ceilings",
+      "banned meta-writing residue = 0",
+      "structured IDs in prose = 0",
+      "SOURCE normalized 30-char overlap = 0",
+      "surface-critical Korean error = 0",
+      "owner/locality and SOURCE-grounding checks",
+      "direct-reading authorship-quality override over machine metrics"
+    ],
+    "anti_gaming": "Unique token/ID insertion or rotating templates cannot be used to game similarity gates.",
+    "authoring_separation": "RA1 THICK authoring must be SOURCE-only with Stage01-04 and old THICK semantic prose hidden until validation.",
+    "durable_checkpoint_rule": "author -> persist -> hash -> validate -> persist receipt -> downstream -> package -> verify -> upload",
+    "packaging_rule": "Do not use zip -u as proof of overlay replacement; use Unicode-safe Python zipfile and compare overlay hashes.",
+    "validation_scaling": "Avoid naive O(n^2) fuzzy comparison; block candidates by normalized hashes/shingles/n-grams first."
+  },
+  "independent_quality_reproduction": {
+    "status": "CONCRETE_DEFECT_REPRODUCED__SHORT_TEMPLATE_SKELETON_RESIDUE",
+    "diagnostic_phrase_set": [
+      "다음 부담",
+      "책임이 커진다",
+      "방향이 달라진다",
+      "후속 조건",
+      "결과 변화",
+      "여파 유지",
+      "대응 전환",
+      "후속 변수",
+      "다음 선택",
+      "행동폭이 좁아진다",
+      "역할 전환",
+      "선택이 압박받는다"
+    ],
+    "affected_semantic_string_ratio_pct": {
+      "38사기동대": 37.74,
+      "시티헌터": 48.82,
+      "식객": 52.75,
+      "건빵선생과별사탕": 37.12,
+      "신의퀴즈1": 47.17
+    },
+    "38사기동대_manual_ep01_03": {
+      "strings": 892,
+      "affected": 3,
+      "ratio_pct": 0.34
+    },
+    "38사기동대_r134_v5_machine_ep04_16": {
+      "strings": 2955,
+      "affected": 1449,
+      "ratio_pct": 49.04
+    },
+    "interpretation": "R134 is a real physical/structural and long-template improvement, but direct-authorship/short-template quality is not yet sufficient for semantic promotion."
+  },
+  "corpus_state": {
+    "physical_final_sealed": "73/98",
+    "semantic_certification": "SUSPENDED_PENDING_UNIFORM_V5_RECERTIFICATION",
+    "registry_rows": 73,
+    "risk_grade_counts": {
+      "RA1A": 25,
+      "RA1B": 5,
+      "RA1C": 2,
+      "RA1D": 8,
+      "RA2": 2,
+      "RA3": 5,
+      "RA4": 26
+    },
+    "original_next_default_target": "미안하다사랑한다",
+    "governance_override": "Do not advance to next RA1 solely from original V5 numeric PASS; first define V6-or-stricter short-template/direct-authorship gate and re-audit the five R134 works."
+  },
+  "adoption_boundary": {
+    "db64_runtime_adopted": false,
+    "A2": "PENDING_SEPARATE_RESEARCH_PREREGISTRATION_AND_ENGINE_EXPERIMENT",
+    "recommended_status": "R134_PHYSICAL_STRUCTURAL_PASS__FIVEWORK_SEMANTIC_REAUDIT_REQUIRED",
+    "runtime_db_remains": "DB59_FROZEN"
+  },
+  "container_observation": {
+    "memory_max_bytes": 4294967296,
+    "memory_current_after_cleanup_bytes": 2869239808,
+    "oom": 0,
+    "oom_kill": 0,
+    "operations": "sequential streaming only; full DB rejoined only in /tmp and deleted after verification"
+  }
+}
