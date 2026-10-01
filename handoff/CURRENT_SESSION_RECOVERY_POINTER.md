@@ -18,3 +18,22 @@ Historical experiment files remain evidence and should be opened only when the a
 ## RESUME RULE
 Do not rerun closed UL17 stages.
 Next primary research is the broad executable regression of exact R69 versus the UL18 repair candidate.
+
+
+## PERSISTENT PHYSICAL BYTE RECOVERY
+
+If the next research task requires actual package bytes, do not ask the developer to re-upload SYNC-R74 by default.
+
+1. Read `handoff/CURRENT_PHYSICAL_DELIVERY_POINTER.md`.
+2. List Library folder:
+   `/Literary_OS/Physical_Archive/SYNC_R74_CURRENT_9PACKAGES`
+3. Require 9/9 canonical objects.
+4. Materialize only the needed package(s), one at a time under R6.
+5. Verify expected size and SHA256 before use.
+6. For full successor physicalization, materialize all affected parents and run the complete reseal/custody audit.
+
+Canonical reload audit:
+`research/operations/20261002/SYNC_R74_PERSISTENT_LIBRARY_9PACKAGE_CUSTODY_RELOAD_AUDIT_R1.json`
+
+Status:
+`PERSISTENT_LIBRARY_9_OF_9__RAW_BYTE_RELOAD_9_OF_9_PASS`
