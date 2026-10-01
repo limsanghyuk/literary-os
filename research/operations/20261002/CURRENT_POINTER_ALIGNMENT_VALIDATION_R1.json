@@ -1,0 +1,47 @@
+{
+  "schema": "CURRENT_POINTER_ALIGNMENT_VALIDATION_R1",
+  "date": "2026-10-02",
+  "result": "PASS__CURRENT_RECOVERY_SURFACE_ALIGNED",
+  "canonical_start_here": "handoff/20261002/START_HERE_CURRENT_AUTHORITY_COMPACT_R18.md",
+  "verified_current_files": [
+    "handoff/CURRENT_DEVELOPER_HUB_AUTHORITY.md",
+    "handoff/CURRENT_HANDOFF_POINTER.md",
+    "handoff/CURRENT_SESSION_RECOVERY_POINTER.md",
+    "handoff/CURRENT_NEXT_RESEARCH_CANDIDATE.md",
+    "handoff/CURRENT_NEXT_RESEARCH_POINTER.md",
+    "handoff/CURRENT_DATABASE_RESEARCH_POINTER.md",
+    "handoff/CURRENT_PHYSICAL_DELIVERY_POINTER.md",
+    "handoff/CURRENT_RESEARCH_OVERLAY_POINTER.md",
+    "handoff/CURRENT_RUNTIME_CONTAINER_RESILIENCE_POINTER.md"
+  ],
+  "authority_stack": {
+    "physical_authority": "SYNC-R74",
+    "developer_held_physical_set": "9/9",
+    "post_r74_developer_delivered_successor": "NONE",
+    "active_runtime": "exact R69",
+    "production": "ENG:R47 / LEGACY_R53",
+    "runtime_db": "DB59 frozen",
+    "latest_audited_research_db": "DB64-R134 semantic re-audit HOLD",
+    "formal_scored_count": 137,
+    "latest_formal_scored": "R138",
+    "r140": "NOT_STARTED",
+    "operational_maturity": "SUSPENDED__REQUALIFICATION_REQUIRED"
+  },
+  "research_frontier": {
+    "ul17": "EXACT_R69_STAGE_B_FAIL__B06_OPEN_PAYOFF_FALSE_CLOSURE__IMMUTABLE",
+    "ul18": "STAGE_A_PASS__STAGE_B_8_OF_8_PASS__STAGE_C_3_OF_3_APPLICABLE_PASS__ADOPTION_ELIGIBLE_RESEARCH_ONLY__PHYSICALIZATION_NOT_STARTED",
+    "pa8": "CONTROL_1__TREATMENT_0",
+    "dialogue": "HUMAN_BASELINE_PREREGISTERED__NO_FIXED_RATIO_QUOTA"
+  },
+  "cleanup_completed": [
+    "CURRENT_NEXT_RESEARCH_CANDIDATE no longer points to the obsolete SYNC-R53 candidate path.",
+    "CURRENT_DATABASE_RESEARCH_POINTER no longer duplicates R131 as if it were the latest research snapshot ahead of R134.",
+    "CURRENT_SESSION_RECOVERY_POINTER reduced to a minimal six-item recovery order.",
+    "CURRENT_HANDOFF_POINTER now routes to compact R18.",
+    "CURRENT_RESEARCH_OVERLAY_POINTER now routes to Overlay R3.",
+    "legacy CURRENT_HANDOFF_POINTER_R53_POSTSESSION marked HISTORICAL/SUPERSEDED.",
+    "historical START_HERE, FAIL, HOLD and research evidence were preserved rather than deleted."
+  ],
+  "historical_custody_rule": "Historical SYNC-R75 Hub/server-library evidence is preserved, but current developer-held physical custody remains SYNC-R74 under the 2026-10-01 custody correction.",
+  "next_research": "Broad executable regression of exact R69 vs UL18 repair candidate; no new research is executed by this cleanup."
+}
