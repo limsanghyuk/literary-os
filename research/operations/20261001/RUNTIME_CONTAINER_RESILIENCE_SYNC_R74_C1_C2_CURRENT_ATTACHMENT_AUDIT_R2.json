@@ -1,0 +1,141 @@
+{
+  "schema": "RUNTIME_CONTAINER_RESILIENCE_SYNC_R74_C1_C2_CURRENT_ATTACHMENT_AUDIT_R2",
+  "date": "2026-10-01",
+  "scope": "operational_recovery_learning_only",
+  "authority_effect": "NONE",
+  "scientific_effect": "NONE",
+  "physical_authority": "SYNC-R74",
+  "active_runtime": "exact R69",
+  "current_runtime_health": {
+    "minimal_shell": "PASS",
+    "exact_path_stat": "PASS",
+    "tmp_write_read_delete": "PASS",
+    "memory_max_bytes": 4294967296,
+    "memory_current_after_cleanup_bytes": 2094370816,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "interpretation": "No current OOM evidence. Container-local shell/Python/filesystem path remained healthy during sequential C1/C2 audit."
+  },
+  "direct_attachment_audit": {
+    "C1": {
+      "file": "LITERARY_OS_CURRENT_C1_RUNTIME_CORE_SYNC_R74_EXACT_R69_20260925(1)(1).zip",
+      "bytes": 140403571,
+      "sha256": "3a1880310b7291d832b24c749c47dee2f6862387ddedb8ce3bcb652e0e899f5d",
+      "canonical_manifest_match": true,
+      "entries": 101,
+      "duplicates": 0,
+      "encrypted": 0,
+      "unsafe_paths": 0,
+      "crc_pass": true
+    },
+    "C2A": {
+      "file": "LITERARY_OS_CURRENT_C2_BINARY_A_SYNC_R74_R77H1_SIX_LAUNCH_20260925(1)(1).bin",
+      "bytes": 264043978,
+      "sha256": "561733e08ef3bc77e9e12f124df69ffca69cd9386eb0d1e9d6f843f50408a2d7",
+      "canonical_manifest_match": true
+    },
+    "C2B": {
+      "file": "LITERARY_OS_CURRENT_C2_BINARY_B_SYNC_R74_R77H1_SIX_LAUNCH_20260925(1)(1).bin",
+      "bytes": 264043978,
+      "sha256": "1c2ccca49b4ac74de87f04a2a4c239d2ca6f3b0f67c352d30ba9dc0bae45685c",
+      "canonical_manifest_match": true
+    }
+  },
+  "logical_c2_audit": {
+    "rejoin_location": "/tmp only",
+    "bytes": 528087956,
+    "sha256": "8d766316cb153f04302ba633fb644967d1785b15298e1ea1b2a09b2d628e6896",
+    "canonical_manifest_match": true,
+    "entries": 4011,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe_paths": 0,
+    "crc_pass": true,
+    "temporary_rejoin_deleted": true
+  },
+  "exact_r69_cross_carrier_verification": {
+    "C1_member": "10_REQUIRED_PACKAGES/LITERARY_OS_RUNTIME_SOURCE_CURRENT.zip",
+    "C2_member": "candidate_overlay_sync_r67_post_r69/R69_RUNTIME_SOURCE_FROZEN.zip",
+    "bytes_each": 19137771,
+    "sha256_each": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+    "byte_identity_by_hash": true,
+    "nested_entries": 497,
+    "nested_duplicates": 0,
+    "nested_encrypted": 0,
+    "nested_unsafe_paths": 0,
+    "nested_crc_pass": true,
+    "temporary_extract_deleted": true
+  },
+  "current_recovery_metadata_cross_carrier": {
+    "identical_between_C1_and_C2": true,
+    "files": {
+      "SYNC_R74_CURRENT_RECOVERY_20260925/00_READ_FIRST_SYNC_R74.md": "37a65459c5eee093d49bb23a1333531e42f946ec187ec1ed5773c2f867438f51",
+      "SYNC_R74_CURRENT_RECOVERY_20260925/01_CURRENT_AUTHORITY_R1.json": "765e98617742b8e0453947779d8257b51003e2b2b886a38482cfe3c153019d14",
+      "SYNC_R74_CURRENT_RECOVERY_20260925/02_DELTA_MAP_R1.json": "b62b0cd1026f58b1312a26056318ed84fec48f145154c36067e321cdae6bc614",
+      "SYNC_R74_CURRENT_RECOVERY_20260925/04_RUNTIME_BINDING_R1.json": "0b0c4e4736b64c1439a11313bcff38d4d23d1e021882de91fd7361bd6711a5cc"
+    },
+    "embedded_snapshot_claims": {
+      "physical_authority": "SYNC-R74",
+      "runtime": "exact R69",
+      "production": "ENG:R47 / LEGACY_R53",
+      "runtime_db": "DB59 frozen",
+      "runtime_changed_at_sync_r74": false,
+      "byte_unchanged_transports": [
+        "B1",
+        "D1",
+        "D2"
+      ],
+      "changed_transports": [
+        "CONTROL",
+        "A",
+        "B2",
+        "C1",
+        "C2-A",
+        "C2-B"
+      ]
+    }
+  },
+  "relearned_incidents": [
+    {
+      "evidence": "R3_RECOVERY_R1/D1_UPLOAD_TRUNCATION_INCIDENT_R1.json",
+      "classification": "PHYSICAL_UPLOAD_TRUNCATION__NOT_RESEARCH_OR_ENGINE_FAILURE",
+      "rule": "Visible upload presence is not byte authority; reject size/SHA mismatch before use."
+    },
+    {
+      "evidence": "R3_RECOVERY_R1/CONTAINER_FAILURE_BOUNDARY_R1.json",
+      "classification": "INTERMITTENT_INFRASTRUCTURE_FAILURE__ENGINE_FAILURE_NOT_ESTABLISHED",
+      "rule": "On ClientError, stop mutation/seal, run minimal health check, resume only from last verified checkpoint."
+    },
+    {
+      "evidence": "00_CURRENT_R8_REI_INTEGRATED_PRETEST_PHYSICAL_CLOSURE/09_CONTAINER_CLIENTERROR_OPERATIONAL_SAFETY_R1.json",
+      "classification": "INTERMITTENT_TOOL_GATEWAY_OR_SESSION_BACKEND_FAILURE__LOCAL_RESOURCE_EXHAUSTION_NOT_SUPPORTED__ROOT_CAUSE_NOT_OBSERVABLE",
+      "rule": "Healthy local shell does not prove gateway health; never infer scientific FAIL from ClientError alone."
+    },
+    {
+      "evidence": "P07_I4H_RUNTIME_RECOVERY_R3_DELTA_R1/EVIDENCE/RUNTIME_INCIDENT_RESOLUTION.json",
+      "classification": "DURABLE_UPLOAD_BOUNDARY_INSTABILITY_PLUS_WRONG_C2_MATERIALIZATION_TOPOLOGY_ASSUMPTION",
+      "rule": "Use /tmp intermediates, streaming I/O, POSIX_FADV_DONTNEED, and materialize C2 by frozen multi-overlay order rather than assumed single-root topology."
+    },
+    {
+      "evidence": "research_sync_r60/CONTAINER_RESILIENCE_LEARNED_R1.md",
+      "classification": "RECOVERY_OPERATIONS_RULESET",
+      "rule": "Page-cache pressure is not OOM without memory.events evidence; physical authority cannot be resealed without exact parent bytes."
+    }
+  ],
+  "strengthened_c_part_rules": [
+    "C1 and logical C2 independently bind the same exact R69 runtime hash; verify both when custody allows.",
+    "C2 split carriers are not individually ZIP archives and must be treated as ordered binary parts of the logical C2 authority.",
+    "Rejoin C2 only in /tmp, verify exact logical size/SHA before opening as ZIP, run central-directory safety and CRC, then delete the temporary logical file.",
+    "Never infer active runtime from plausible CURRENT/ACTIVE nested filenames alone; use enclosing physical authority, manifest, runtime binding, and exact runtime hash.",
+    "Historical recovery documents inside C2 remain provenance-only and cannot override current external Hub pointers/research overlay.",
+    "A byte-healthy historical R77-H1 packet can be procedurally stale; byte integrity and experimental currency are separate properties."
+  ],
+  "mandatory_resume_rule": "STOP -> RUNTIME_TRANSPORT_HOLD -> MINIMAL_HEALTH_CHECK -> LAST_ATOMIC_CHECKPOINT_VERIFY -> RESUME_ONLY_FAILED_STEP",
+  "mutation_policy": "No package mutation, reseal, physical promotion, runtime change, DB authority change, formal-count change, or experimental scoring performed."
+}
