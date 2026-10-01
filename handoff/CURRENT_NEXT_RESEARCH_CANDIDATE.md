@@ -1,44 +1,32 @@
 # CURRENT NEXT RESEARCH CANDIDATE
-Last updated: 2026-09-16
+Last updated: 2026-10-02
 
-## PHYSICAL ROOT
-**SYNC-R53** is the last complete developer-held physical baseline.
+## CURRENT CANDIDATE
+The current successor candidate is the **UL18 bounded open-debt semantic repair**.
 
-Canonical handoff:
-`handoff/20260916/START_HERE_SYNC_R53_POSTSESSION_RESEARCH_HANDOFF_R1.md`
+Base:
+- Physical Authority: **SYNC-R74**
+- Active Runtime: **exact R69**
+- Production: **ENG:R47 / LEGACY_R53**
+- Runtime DB: **DB59 frozen**
 
-## CANDIDATE RESEARCH STATE
-Candidate Base Engine: `P07-I4H Recovery R3`.
-Production remains `ENG:R47`.
+Candidate change:
+- bounded `SELECTED_OPEN_TOUCH` semantic repair at the UL16 obligation-disposition boundary;
+- exact R69 UL17 B06 FAIL remains immutable;
+- UL18 Stage A PASS;
+- UL18 Stage B PASS 8/8 fresh;
+- UL18 Stage C PASS 3/3 applicable.
 
-The next Candidate is NOT a new broad literary theory. It is the clean rebuilt successor that integrates the already-developed post-R53 upper-layer qualification stack:
-- UL-1..UL-10 upper-layer architecture/portfolio/weaving/replan/closure/state lineage;
-- UL-11 integrity/isolation gate;
-- UL-12 fresh-context Provider qualification runner;
-- UL-13 end-to-end hierarchical Surface qualification.
+Status:
+`ADOPTION_ELIGIBLE__RESEARCH_ONLY__PHYSICALIZATION_NOT_STARTED`
 
-## REQUIRED EVIDENCE BEFORE PROMOTION
-A Candidate successor is eligible for promotion consideration only after all of the following:
-1. rebuilt from verified SYNC-R53 baseline;
-2. 12-step physical-custody gate PASS and developer-visible/archive-visible 9/9 delivery;
-3. UL-13 external two-stage blind evidence acquired;
-4. actual OpenAI Responses API execution in fresh isolated contexts;
-5. real provider receipts with response/request identity, model, usage, input/output hash and failure status;
-6. whole-episode Synopsis -> Sequence -> Scene -> Surface hierarchical quality preserved under the real Provider;
-7. no target leakage / sibling contamination / arm contamination / pretraining-memory overclaim;
-8. production/state-commit gates remain fail-closed until qualification is complete.
+## REQUIRED BEFORE PHYSICAL ADOPTION
+1. broad executable regression;
+2. no unrelated behavioral drift;
+3. preserve R66/R67/R68/R69 qualified behavior;
+4. assign a new successor runtime identity;
+5. bind C1/C2;
+6. reseal/audit/deliver all 9 packages;
+7. only then move Physical Authority and run fresh post-repair blind qualification.
 
-## CURRENT HOLD
-- External UL-13 judges: 0.
-- Live OpenAI qualification outputs: 0.
-- Candidate Production promotion: NO.
-- Operational Level-3: SUSPENDED.
-- Level 4: NOT STARTED.
-
-## NEXT CANDIDATE STATUS
-`READY_FOR_CLEAN_PHYSICAL_REBUILD_AND_EXTERNAL/LIVE_QUALIFICATION__NOT_READY_FOR_PRODUCTION_PROMOTION`
-
-Do not use the locally named R54/R55/R56 builds as the new developer physical root. Rebuild a new successor from R53 and preserve those names as historical local attempts.
-
-## STATUS TOKEN
-`NEXT_CANDIDATE__BASE_SYNC_R53__INTEGRATE_UL1_TO_UL13__NEW_SYNC_REQUIRED__EXTERNAL0__LIVE0__PROMOTION_HOLD`
+Historical R53/UL1-UL13 candidate text is superseded for current navigation and remains provenance only.
