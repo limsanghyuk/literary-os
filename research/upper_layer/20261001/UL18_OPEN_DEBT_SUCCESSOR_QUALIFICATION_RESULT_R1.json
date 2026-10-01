@@ -1,0 +1,98 @@
+{
+  "schema": "UL18_OPEN_DEBT_SUCCESSOR_QUALIFICATION_RESULT_R1",
+  "date": "2026-10-01",
+  "status": "STAGE_A_PASS__STAGE_B_PASS_8_OF_8__STAGE_C_PASS_3_OF_3_APPLICABLE__ADOPTION_ELIGIBLE__PHYSICALIZATION_NOT_STARTED",
+  "authority_effect": "NONE",
+  "physical_authority": "SYNC-R74",
+  "active_runtime": "exact R69",
+  "repaired_candidate": {
+    "identity": "UL18_OPEN_DEBT_REPAIR_CANDIDATE_R1",
+    "patched_source_sha256": "f2a22d1156f50152b8de1ae745d16e3189f6731758a83b8cc7dc2b37e8e8553b",
+    "patch_diff_sha256": "2ec2e9e334dfae83fa4d496ab77359707e6de38d20d838670c7c64718baaab08",
+    "research_zip_sha256": "d67f1d6f603f6cdda51fa67fb86c170a0b86780b579e06bfdbec8cc204dcf95f",
+    "physical_authority": false
+  },
+  "stage_a": {
+    "verdict": "PASS",
+    "executable_checks": {
+      "runtime_compile": "45/45 PASS",
+      "ul17_unaffected_exact_hash_identity": "PASS: BASE+B01-B05+B07+B08 identical to canonical exact-R69 Stage-B hashes",
+      "r58b_diverse_material_full_output_equivalence": {
+        "verdict": "PASS",
+        "exact_r69_and_repair_output_sha256": "aae3e10eb9203aabd91c0e85bc689f3f52424f9f2dc042508c3ad6d6f80b856f"
+      }
+    },
+    "historical_receipt_only_checks": {
+      "R66": "CLOSED_PASS; F01 12/12 external pairs Treatment wins; later R67/R68/R69 receipts record F01 regression preservation.",
+      "R67": "CLOSED_PASS; dual-ledger fresh 12/12, planner continuity 11/11; later R68/R69 receipts record R67 regression PASS.",
+      "R68": "CLOSED_PASS; semantic repetition 16/16, FP0/FN0; R69 receipt records R68 regression 16/16 PASS.",
+      "R69": "CLOSED_PASS; scene necessity 16/16, FP0/FN0; exact source is parent of this bounded repair."
+    },
+    "limitation": "The historical R66/R67/R68/R69 fresh-suite executable inputs/runners are not bundled as executable files in the recovered exact-R69 runtime. Their immutable Hub result receipts are used only as historical evidence; project-wide executable regression remains mandatory before physicalization."
+  },
+  "stage_b": {
+    "suite": "research/upper_layer/20261001/UL18_OPEN_DEBT_ADVERSARIAL_SUITE_R1.json",
+    "suite_sha256": "d5263d72ea9038e59ac1b68206365b4a59c16ca9bb60fe4e63efd665d3681502",
+    "result_sha256": "c426d420d859fab4a5d7886cfbf78668436bcc12025ce13d7cfdc90dd47d48da",
+    "verdict": "PASS_8_OF_8",
+    "cases": {
+      "U18B01_TRUE_DUE_NONDEFERRABLE": "PASS",
+      "U18B02_OPEN_NONDEFERRABLE": "PASS",
+      "U18B03_OPEN_DEFERRABLE": "PASS",
+      "U18B04_BLOCKED_TRUE_DUE": "PASS",
+      "U18B05_BLOCKED_OPEN_TOUCH": "PASS",
+      "U18B06_MULTIPLE_OPEN_TOUCH": "PASS",
+      "U18B07_OPEN_TOUCH_WITH_DUE_INTERSECTION": "PASS",
+      "U18B08_IRRELEVANT_METADATA_SENTINEL": "PASS"
+    },
+    "hard_gates": {
+      "future_source_leakage": 0,
+      "false_due_fulfillment": 0,
+      "false_open_touch_fulfillment": 0,
+      "lost_open_debt": 0,
+      "blocked_precondition_false_fulfillment": 0,
+      "unrelated_metadata_semantic_change": 0,
+      "validation_errors": 0
+    }
+  },
+  "stage_c": {
+    "result_sha256": "3e12ae584a20dfffc925570e429f73d8f9120b601afea4701eaa8149ce290c6f",
+    "applicable_cases": 3,
+    "pass_count": 3,
+    "verdict": "PASS_3_OF_3_APPLICABLE",
+    "obligations_checked": [
+      "OPEN_ARCHIVE_KEY",
+      "OPEN_SISTER_MESSAGE",
+      "OPEN_VOLUNTEER_LEDGER",
+      "OPEN_FAMILY_LOAN"
+    ],
+    "guarantees": [
+      "canonical deferred state records OPEN evidence",
+      "planner-unrealized ledger retains planning metadata",
+      "factual_access_forbidden=true",
+      "open-touch obligation is not fulfilled in the source episode",
+      "next-episode adaptive portfolio consumes the planner-only obligation with provenance PLANNER_UNREALIZED_OBLIGATION"
+    ],
+    "note": "On next-episode reconsumption, carried planner obligations return as due=false/can_defer=true; urgency is episode-local unless refreshed by new current-state evidence. This is consistent with preserving open debt without inventing a future fulfillment fact."
+  },
+  "scientific_conclusion": "The UL17 B06 failure was not evidence that Adaptive UL16 multi-strand architecture is absent. It was a bounded disposition/closure semantic loss. The SELECTED_OPEN_TOUCH repair generalizes across fresh adversarial cases while preserving unaffected exact-R69 architecture hashes and dual-ledger legality.",
+  "original_ul17_boundary": {
+    "exact_r69_stage_b": "FAIL remains immutable",
+    "ul17_stage_c_d_transfer": "FORBIDDEN",
+    "reason": "Treatment identity changed after the exact-R69 Stage-B failure."
+  },
+  "adoption_decision": {
+    "candidate_adoption_eligibility": true,
+    "actual_candidate_adoption": false,
+    "physicalization_started": false,
+    "required_before_adoption": [
+      "recover/run project-wide executable regression suite",
+      "bind the repaired source into a successor runtime identity",
+      "C1/C2 binding verification",
+      "5-Part/9-Package reseal",
+      "SHA256/CRC/logical-C2/Trust-Root/custody audit",
+      "developer delivery"
+    ]
+  },
+  "next_research": "Physicalization-preflight regression for the repaired candidate. Only after that passes may a successor physical authority be built. After physicalization, start a fresh upper-layer quality requalification with a new unseen multi-strand fixture and new architecture-only blind packets."
+}
