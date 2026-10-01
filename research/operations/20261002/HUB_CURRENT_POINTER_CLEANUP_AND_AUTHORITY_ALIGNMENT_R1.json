@@ -1,0 +1,25 @@
+{
+  "schema": "HUB_CURRENT_POINTER_CLEANUP_AND_AUTHORITY_ALIGNMENT_R1",
+  "date": "2026-10-02",
+  "reason": "Long-session context instability made recovery through many historical CURRENT/START_HERE documents error-prone.",
+  "action_policy": "Preserve historical evidence; simplify only CURRENT recovery surfaces; never delete or rewrite scientific FAIL/HOLD history.",
+  "canonical_start_here": "handoff/20261002/START_HERE_CURRENT_AUTHORITY_COMPACT_R18.md",
+  "current_authority": {
+    "physical": "SYNC-R74",
+    "developer_held": "9/9",
+    "runtime": "exact R69",
+    "production": "ENG:R47 / LEGACY_R53",
+    "runtime_db": "DB59 frozen",
+    "latest_research_db": "DB64-R134 semantic re-audit HOLD",
+    "formal": "137 scored / latest R138 / R140 NOT_STARTED",
+    "frontier": "UL17 B06 FAIL immutable / UL18 A-B-C PASS research-only / physicalization pending"
+  },
+  "cleanup_rules": [
+    "CURRENT_* files must not point to SYNC-R53 as present authority.",
+    "Historical SYNC-R75 server/library handoff remains evidence but does not supersede current developer-held SYNC-R74 custody correction.",
+    "CURRENT_DATABASE_RESEARCH_POINTER should state DB64-R134 once as latest audited snapshot and DB59 once as runtime authority.",
+    "CURRENT_SESSION_RECOVERY_POINTER should use a minimal read order, not a long experimental file list.",
+    "CURRENT_NEXT_RESEARCH_CANDIDATE should describe UL18 repair-candidate adoption preflight, not old UL1-UL13/R53 rebuild.",
+    "Obsolete START_HERE and pointer-like files remain in place as provenance with SUPERSEDED/HISTORICAL labels where needed."
+  ]
+}
