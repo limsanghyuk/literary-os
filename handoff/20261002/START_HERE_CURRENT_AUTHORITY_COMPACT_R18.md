@@ -139,3 +139,22 @@ This covers Stage 1 R1-R103, Stage 2 AUX-001..068, Formal continuation, P07/I4/I
 ## 8. CURRENT POSITION IN ONE LINE
 
 `PHYSICAL_SYNC_R74__ACTIVE_EXACT_R69__PRODUCTION_ENG_R47_LEGACY_R53__DB59_RUNTIME__DB64_R134_RESEARCH_REAUDIT_HOLD__FORMAL_137_LATEST_R138_R140_NOT_STARTED__UL17_B06_FAIL_IMMUTABLE__UL18_A_B_C_PASS_RESEARCH_ONLY__PHYSICALIZATION_PENDING__PA8_CONTROL1_TREATMENT0__LEVEL3_SUSPENDED_REQUALIFICATION_REQUIRED`
+
+
+## 9. PERSISTENT RAW-BYTE RECOVERY
+
+Current physical authority remains SYNC-R74. The nine canonical package bytes are now persistently recoverable from:
+
+`/Literary_OS/Physical_Archive/SYNC_R74_CURRENT_9PACKAGES`
+
+Verified on 2026-10-02:
+- 9/9 Library objects listed;
+- 9/9 raw-file materializations succeeded;
+- 9/9 reloaded size/SHA256 values exactly matched the SYNC-R74 canonical baseline.
+
+Audit:
+`research/operations/20261002/SYNC_R74_PERSISTENT_LIBRARY_9PACKAGE_CUSTODY_RELOAD_AUDIT_R1.json`
+
+Important:
+GitHub Hub is the authority/research/navigation store. The persistent Library is the large raw-byte store.
+A new session does not need to materialize all nine by default. Load only the package(s) required for the next task under R6, and load all nine only for full physicalization/reseal audit.
