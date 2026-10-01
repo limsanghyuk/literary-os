@@ -2,11 +2,11 @@
 Last updated: 2026-10-01
 
 ## CANONICAL START HERE
-`handoff/20261001/START_HERE_SYNC_R74_DEVELOPER_PHYSICAL_BASELINE_POST_R74_OVERLAY_UL17_STAGE_B_HOLD_R16.md`
+`handoff/20261001/START_HERE_SYNC_R74_UL17_FAIL_UL18_REPAIR_QUALIFIED_PHYSICALIZATION_PENDING_R17.md`
 
-R16 supersedes R15 for overall authority/session recovery interpretation.
-R15 remains supporting evidence for UL17 Stage-A/Stage-B transition.
-R14 remains canonical for the frozen PA8 experiment state.
+R17 supersedes R16 for overall session recovery and current research interpretation.
+R16 remains canonical for the pre-execution transport HOLD and SYNC-R74 developer-held baseline.
+R14 remains canonical for PA8 Control1/Treatment0.
 
 ## CURRENT AUTHORITY
 - Physical Authority: **SYNC-R74**
@@ -14,18 +14,18 @@ R14 remains canonical for the frozen PA8 experiment state.
 - Active Runtime: **exact R69**
 - Production: **ENG:R47 / LEGACY_R53**
 - Runtime DB: **DB59 frozen**
-- Operational Level-3: `SUSPENDED__REQUALIFICATION_REQUIRED`
-- Latest Formal scored: R138
-- Formal R140: NOT_STARTED
+- Post-R74 physical successor delivered: **NONE**
 
-## POST-R74 RESEARCH OVERLAY
-- PA7: CLOSED FAIL on absolute critical chronology/continuity gate; paired/focus/recoverability passed.
-- PA8: Control1 / Treatment0 frozen; Control structural PASS and continuity headroom established.
-- Dialogue: human line-count baseline recovered; dialogue-vs-direction baseline preregistered.
-- UL17: Stage A PASS; fresh fixture and Stage-B/C/D rules frozen; Stage B exact-byte execution on runtime transport HOLD.
+## CURRENT RESEARCH
+- UL17 exact-R69 Stage A: PASS.
+- UL17 exact-R69 Stage B: **FAIL at B06 open-payoff false closure**; Stage C/D not eligible.
+- UL18 repaired-successor qualification: **Stage A PASS / Stage B 8/8 PASS / Stage C 3/3 applicable PASS**.
+- Repair candidate: **ADOPTION_ELIGIBLE__RESEARCH_ONLY__PHYSICALIZATION_NOT_STARTED**.
+- PA8: Control1 / Treatment0 frozen.
+- Dialogue: human Dialogue/Direction baseline preregistered.
 
 ## EXACT NEXT
-Resume UL17 only from exact current R69 bytes after runtime transport recovery. Independently, if PA8 Treatment arrives, resume PA8 under R14 without modifying Control.
+Run broader project-wide executable regression on the UL18 repair candidate. Only after regression PASS may a successor Candidate runtime be bound into C1/C2 and a complete new 5-Part/9-Package set be resealed and delivered.
 
 ## PHYSICAL DELIVERY POINTER
 `handoff/CURRENT_PHYSICAL_DELIVERY_POINTER.md`
