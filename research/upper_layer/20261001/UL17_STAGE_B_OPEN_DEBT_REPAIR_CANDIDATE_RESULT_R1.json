@@ -1,0 +1,99 @@
+{
+  "schema": "UL17_STAGE_B_OPEN_DEBT_REPAIR_CANDIDATE_RESULT_R1",
+  "date": "2026-10-01",
+  "status": "REPAIR_CANDIDATE_LOCAL_PASS__EXACT_R69_STAGE_B_FAIL_PRESERVED__STAGE_C_NOT_AUTHORIZED",
+  "authority_effect": "NONE",
+  "physical_authority": "SYNC-R74",
+  "active_runtime": "exact R69",
+  "production": "ENG:R47 / LEGACY_R53",
+  "trigger": {
+    "canonical_exact_r69_result": "research/upper_layer/20261001/UL17_STAGE_B_EXACT_R69_CAUSAL_ADOPTION_RESULT_R1.json",
+    "exact_r69_status": "FAIL__EXACT_R69_CAUSAL_ADOPTION_HARD_GATE",
+    "failing_probe": "B06_PAYOFF_URGENCY",
+    "violations": [
+      "FALSE_SOURCE_DUE_FULFILLMENT",
+      "OPEN_PAYOFF_FALSE_CLOSURE",
+      "LOST_OPEN_PAYOFF_DEBT"
+    ],
+    "responsible_boundary": "UL16_OBLIGATION_DISPOSITION_AND_SCENE_RESOLUTION_SEMANTICS"
+  },
+  "preregistration": {
+    "path": "research/upper_layer/20261001/UL17_STAGE_B_REPAIR_PREREG_R1.md",
+    "commit": "d05dccd38a727ceafc7d89df025f89b0d73e1ec5"
+  },
+  "exact_runtime_identity": {
+    "c1_sha256": "3a1880310b7291d832b24c749c47dee2f6862387ddedb8ce3bcb652e0e899f5d",
+    "nested_exact_r69_sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+    "adaptive_showrunner_source_sha256": "740cca05a94dbb59eb9a1600e1c7d98cdc887693aa5ab46fec2bd2eaef78d306"
+  },
+  "frozen_input_identity": {
+    "fixture_sha256": "ecd9975c84c981690707fe3a833b41ebcde8f001a21359a98ab8851d926b77c8",
+    "matrix_sha256": "a4455389e60751d2165ceb2412f433e1f63e61524524c9aa48c595b86b4c74dd"
+  },
+  "repair": {
+    "changed_file_only": "literary_os_runtime/adaptive_showrunner_ul16.py",
+    "patched_source_sha256": "f2a22d1156f50152b8de1ae745d16e3189f6731758a83b8cc7dc2b37e8e8553b",
+    "patch_diff_sha256": "2ec2e9e334dfae83fa4d496ab77359707e6de38d20d838670c7c64718baaab08",
+    "semantic_change": [
+      "Separate current-episode scheduling urgency from source due/closure eligibility.",
+      "Introduce SELECTED_OPEN_TOUCH only for source due=false plus nondeferrable obligations.",
+      "Schedule/touch SELECTED_OPEN_TOUCH but forbid final RESOLVE.",
+      "Carry SELECTED_OPEN_TOUCH as terminal open debt and validate non-fulfillment."
+    ]
+  },
+  "exact_frozen_replay": {
+    "mode": "same frozen UL17 fixture and B01-B08 matrix; broadcast_mode=false as canonical Stage-B causal-adoption qualification",
+    "raw_replay_sha256": "0c64fc470764c5ae558c796a037441a2cfb467cb27403533c65d14c5f6dfbacc",
+    "base_architecture_hash": "14e9e0418f2f20399499435fc2eedcbe7a6b495cf62b449a3bc797fe11e1da51",
+    "unaffected_hash_identity": {
+      "B01_THREAD_PRESSURE": "8ed8ef8711dfe4ff7b3a608c2bafc65d91ecf8ee5493fcf54b7c38ea936e4505",
+      "B02_RELATIONSHIP_PRESSURE": "6ce8377aee3639015f215dabdd976ac6a8627621bfcf5aa9fa41aa5bc697ab3f",
+      "B03_INFORMATION_DEADLINE": "c84b9616a60ab6579614d76620c3cc82e2855a324ba81244a75c98831c1ed32b",
+      "B04_SOCIAL_PRESSURE": "38cbbea7a481bd4ff7ca0a66fb5f1f6373c2ea4208223902e34994c7732756f4",
+      "B05_EVENT_PRECONDITION": "292b00911c9db4ae7e6e58cecd000a60793f8ac7f5a80e2cdb0dcafd197356e2",
+      "B07_CHARACTER_PRESSURE": "d24d810d824807a87df256eed9058a66f45e6d148ecaa30566748f81ed631269",
+      "B08_IRRELEVANT_METADATA_SENTINEL": "14e9e0418f2f20399499435fc2eedcbe7a6b495cf62b449a3bc797fe11e1da51"
+    },
+    "B06_repaired": {
+      "architecture_hash": "06ab5ce8d682539c511adcefc28eed9603868e0f7bafae034f5b0b00eca230a0",
+      "disposition": "SELECTED_OPEN_TOUCH",
+      "source_due": false,
+      "remains_in_open_debt": true,
+      "payoff_scene_phases": [
+        "ACTIVATE_PAYOFF",
+        "ADVANCE_KEEP_OPEN"
+      ],
+      "final_resolve": false,
+      "open_touch_preserved": true,
+      "lost_deferred": 0,
+      "false_fulfilled_deferred": 0,
+      "validation": "PASS"
+    },
+    "all_eight_probe_validation": "PASS"
+  },
+  "regression": {
+    "runtime_compile": "45/45 PASS",
+    "r58b_diverse_material_full_output_equivalence": {
+      "status": "PASS",
+      "original_and_repair_output_sha256": "aae3e10eb9203aabd91c0e85bc689f3f52424f9f2dc042508c3ad6d6f80b856f"
+    },
+    "state_carry_open_debt": {
+      "status": "PASS",
+      "payoff_canonical_state": "OPEN",
+      "planner_unrealized_present": true,
+      "payoff_fulfilled": false
+    }
+  },
+  "research_candidate_artifact": {
+    "local_zip_sha256": "d67f1d6f603f6cdda51fa67fb86c170a0b86780b579e06bfdbec8cc204dcf95f",
+    "note": "Research-only local artifact. Not C1, not Physical Authority, not a 9-package successor."
+  },
+  "scientific_interpretation": "The Stage-B failure is repairable by recovering an existing open-debt semantic distinction at the adaptive obligation boundary. It does not require inventing a new multi-strand architecture.",
+  "protocol_boundary": {
+    "exact_r69_stage_b_verdict": "FAIL remains immutable",
+    "original_UL17_stage_c_eligibility": false,
+    "reason": "UL17 Stage C/D were frozen for exact R69. A patched runtime is a new Treatment identity and cannot inherit exact-R69 Stage-C eligibility.",
+    "next_required_transaction": "Create a successor requalification preregistration for the repaired Candidate; recover/run broader regressions; only after Candidate adoption + C1/C2 binding + audited 9-package reseal may a new physical successor be claimed."
+  },
+  "physicalization_required_now": false
+}
