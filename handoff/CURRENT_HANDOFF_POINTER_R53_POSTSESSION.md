@@ -1,15 +1,16 @@
-# CURRENT HANDOFF POINTER — R53 POSTSESSION
+# HISTORICAL / SUPERSEDED POINTER — R53 POSTSESSION
 
-Canonical handoff:
+This file is retained only because its historical filename begins with CURRENT.
+
+It is **NOT** a current recovery pointer.
+
+Historical target:
 `handoff/20260916/START_HERE_SYNC_R53_POSTSESSION_RESEARCH_HANDOFF_R1.md`
 
-Physical baseline:
-`SYNC-R53`
+Current canonical recovery:
+`handoff/20261002/START_HERE_CURRENT_AUTHORITY_COMPACT_R18.md`
 
-Production Engine:
-`ENG:R47`
+Current Physical Authority:
+**SYNC-R74**
 
-Research state:
-`POST_R53_HUB_RESEARCH_AND_CANDIDATE_DEVELOPMENT_THROUGH_UL13`
-
-This pointer is additive until legacy pointer files are reconciled. A new session must prefer this pointer over older R52-era handoff statements.
+Do not use this R53 pointer for present authority or next-research decisions.
