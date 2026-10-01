@@ -1,0 +1,56 @@
+{
+  "schema": "RUNTIME_CONTAINER_RESILIENCE_SYNC_R74_B1_REUPLOAD_RECOVERY_AUDIT_R3",
+  "date": "2026-10-01",
+  "scope": "operational_recovery_learning_only",
+  "authority_effect": "NONE",
+  "scientific_effect": "NONE",
+  "physical_authority": "SYNC-R74",
+  "previous_incident": {
+    "audit": "research/operations/20261001/RUNTIME_CONTAINER_RESILIENCE_SYNC_R74_B1_B2_CURRENT_ATTACHMENT_AUDIT_R2.json",
+    "prior_uploaded_b1_bytes": 42958848,
+    "classification": "PHYSICAL_UPLOAD_TRUNCATION__NOT_RESEARCH_OR_ENGINE_FAILURE",
+    "preservation_rule": "Preserve as immutable transport-incident evidence; do not rewrite or delete."
+  },
+  "recovered_uploaded_b1": {
+    "file": "LITERARY_OS_CURRENT_PART_B1_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73(1)(3).zip",
+    "bytes": 196427036,
+    "sha256": "00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98",
+    "canonical_manifest_match": true,
+    "entries": 56,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe_paths": 0,
+    "crc_pass": true,
+    "byte_unchanged_from_sync_r73": true,
+    "classification": "RECOVERED_HEALTHY_CANONICAL_SYNC_R74_B1"
+  },
+  "runtime_health": {
+    "memory_max_bytes": 4294967296,
+    "memory_current_after_crc_bytes": 2736128000,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "posix_fadvise_dontneed": "PASS",
+    "interpretation": "No OOM evidence. The replacement B1 was verified through a healthy local container path."
+  },
+  "embedded_authority_learning": {
+    "historical_topology": "B1 preserves a 2026-09-02 historical 5-logical / 8-physical continuation model.",
+    "current_precedence": "That historical topology is provenance only. Current external SYNC-R74 5-Part / 9-Package Manifest, Trust Root and Hub CURRENT pointers supersede it.",
+    "source_truth_rule": "Navigation/bootstrap documents route authority but do not overwrite Primary Evidence or executable runtime source truth.",
+    "conflict_rule": "If authority conflict cannot be resolved, stop as AUTHORITY_CONFLICT_UNRESOLVED rather than guessing.",
+    "delivery_rule": "When runtime/source bytes actually change, full CURRENT reseal plus SHA256/CRC/fresh-extraction validation and developer delivery manifest are required."
+  },
+  "strengthened_transfer_recovery_rule": [
+    "A truncated upload does not damage the canonical parent authority.",
+    "When a replacement copy arrives, verify it from scratch: exact size -> SHA256 -> central directory -> CRC.",
+    "Do not overwrite the truncation incident record; preserve both the failed transport copy and the later recovered canonical copy as separate evidence.",
+    "Only the byte-verified replacement may re-enter custody for future reseal/recovery work."
+  ],
+  "current_b1_status": "AVAILABLE_AS_VERIFIED_CANONICAL_SYNC_R74_B1",
+  "mutation_policy": "No package mutation, reseal, physical promotion, runtime change, DB authority change, formal-count change, or experimental scoring performed."
+}
