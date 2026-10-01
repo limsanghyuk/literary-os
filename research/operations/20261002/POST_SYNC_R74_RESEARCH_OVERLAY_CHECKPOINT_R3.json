@@ -1,0 +1,48 @@
+{
+  "schema": "POST_SYNC_R74_RESEARCH_OVERLAY_CHECKPOINT_R3",
+  "date": "2026-10-02",
+  "physical_authority": "SYNC-R74",
+  "developer_held_physical_set": "9_OF_9",
+  "post_r74_physical_successor_delivered": false,
+  "active_runtime": "exact R69",
+  "active_runtime_sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+  "production": "ENG:R47 / LEGACY_R53",
+  "runtime_db": "DB59 frozen",
+  "formal": {
+    "scored_count": 137,
+    "latest_scored": "R138",
+    "r140": "NOT_STARTED"
+  },
+  "maturity": "SUSPENDED__REQUALIFICATION_REQUIRED",
+  "ul17": {
+    "stage_a": "PASS",
+    "exact_r69_stage_b": "FAIL__B06_OPEN_PAYOFF_FALSE_CLOSURE",
+    "stage_c_d": "NOT_ELIGIBLE",
+    "responsible_boundary": "UL16_OBLIGATION_DISPOSITION_AND_SCENE_RESOLUTION_SEMANTICS"
+  },
+  "ul18": {
+    "stage_a": "PASS",
+    "stage_b": "PASS_8_OF_8_FRESH",
+    "stage_c": "PASS_3_OF_3_APPLICABLE",
+    "candidate_status": "ADOPTION_ELIGIBLE__RESEARCH_ONLY__PHYSICALIZATION_NOT_STARTED",
+    "patched_source_sha256": "f2a22d1156f50152b8de1ae745d16e3189f6731758a83b8cc7dc2b37e8e8553b"
+  },
+  "pa8": "CONTROL_1__TREATMENT_0__CONTROL_STRUCTURAL_PASS__CONTROL_CONTINUITY_HEADROOM_ESTABLISHED",
+  "dialogue": "HUMAN_DIALOGUE_DIRECTION_BASELINE_PREREGISTERED__NO_NUMERIC_SHARE_QUOTA",
+  "research_db": {
+    "latest_audited_snapshot": "DB64-R134",
+    "full_sha256": "7f5d10e9e86c71c217c971da1a75bbf87c8ee2405bcfd2fbd18a4f10fd6a7901",
+    "status": "R134_PHYSICAL_STRUCTURAL_PASS__FIVEWORK_SEMANTIC_REAUDIT_REQUIRED",
+    "runtime_adopted": false
+  },
+  "container_protocol": "research/operations/20261001/LITERARY_OS_RUNTIME_CONTAINER_RESILIENCE_PROTOCOL_R6.md",
+  "exact_next": [
+    "Recover the broadest executable exact-R69 lineage regression harness.",
+    "Run exact R69 and UL18 repair candidate under the same frozen harness.",
+    "Require no unrelated drift and preserve R66/R67/R68/R69 qualified behavior.",
+    "If PASS, assign successor Candidate runtime identity and bind C1/C2.",
+    "Reseal/audit/deliver all 9 packages before moving Physical Authority.",
+    "After physicalization run a fresh unseen multi-strand architecture-only 3-judge qualification."
+  ],
+  "authority_boundary": "Research Overlay never changes Physical Authority by itself."
+}
