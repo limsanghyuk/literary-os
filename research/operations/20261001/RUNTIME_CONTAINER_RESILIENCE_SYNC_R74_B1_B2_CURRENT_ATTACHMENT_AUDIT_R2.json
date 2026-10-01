@@ -1,0 +1,108 @@
+{
+  "schema": "RUNTIME_CONTAINER_RESILIENCE_SYNC_R74_B1_B2_CURRENT_ATTACHMENT_AUDIT_R2",
+  "date": "2026-10-01",
+  "scope": "operational_recovery_learning_only",
+  "authority_effect": "NONE",
+  "scientific_effect": "NONE",
+  "physical_authority": "SYNC-R74",
+  "current_runtime_health": {
+    "minimal_shell": "PASS",
+    "python_stat": "PASS",
+    "memory_max_bytes": 4294967296,
+    "memory_current_after_b2_crc_bytes": 1245429760,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "interpretation": "No current OOM evidence; local container shell/Python/filesystem path healthy during the audit."
+  },
+  "first_grouped_probe_incident": {
+    "operation": "Python loop attempted central-directory open on both uploaded B1 and B2 before per-file size localization",
+    "result": "BadZipFile",
+    "classification": "GROUPED_ARCHIVE_PROBE_MASKED_SINGLE_TRUNCATED_INPUT__NOT_CONTAINER_DEATH",
+    "lesson": "Do per-file stat/expected-size localization before ZipFile open. A grouped BadZipFile does not identify which artifact is bad and must not contaminate judgment of the other artifacts."
+  },
+  "current_uploaded_b1": {
+    "file": "LITERARY_OS_CURRENT_PART_B1_SYNC_R74_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R73(1)(2).zip",
+    "expected_bytes": 196427036,
+    "expected_sha256": "00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98",
+    "actual_bytes": 42958848,
+    "shortfall_bytes": 153468188,
+    "received_percent": 21.8701299346593,
+    "head_signature": "PK local-file header present",
+    "end_of_central_directory": false,
+    "zip_openable": false,
+    "classification": "PHYSICAL_UPLOAD_TRUNCATION__NOT_RESEARCH_OR_ENGINE_FAILURE",
+    "authority": false,
+    "policy": "Do not hash/CRC as if canonical, do not fabricate missing bytes, do not use for mutation/reseal. Recover another exact authoritative B1 copy and verify size/SHA/central-directory/CRC before use."
+  },
+  "current_uploaded_b2": {
+    "file": "LITERARY_OS_CURRENT_PART_B2_R77H1_SIX_LAUNCH_SYNC_R74_20260925(2).zip",
+    "bytes": 296011084,
+    "sha256": "5462a1c9d355f01a41ce9a52302fce28241d2af1ef5065fdb6fec08c5d107dd0",
+    "canonical_manifest_match": true,
+    "entries": 1893,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe_paths": 0,
+    "crc_pass": true,
+    "classification": "HEALTHY_CANONICAL_SYNC_R74_B2"
+  },
+  "embedded_operational_learning": [
+    {
+      "evidence": "R3_RECOVERY_R1/D1_UPLOAD_TRUNCATION_INCIDENT_R1.json",
+      "lesson": "Historical D1 truncation proves visible upload presence is not byte authority; exact size/SHA/ZIP/CRC are mandatory."
+    },
+    {
+      "evidence": "R3_RECOVERY_R1/CONTAINER_FAILURE_BOUNDARY_R1.json",
+      "lesson": "ClientError is intermittent infrastructure UNKNOWN unless engine/data failure reproduces with valid bytes."
+    },
+    {
+      "evidence": "00_CURRENT_R8_REI_INTEGRATED_PRETEST_PHYSICAL_CLOSURE/09_CONTAINER_CLIENTERROR_OPERATIONAL_SAFETY_R1.json",
+      "lesson": "Local resource exhaustion was not supported; tool-gateway/backend state is not observable from local container health."
+    },
+    {
+      "evidence": "P07_I4H_RECOVERY_R3/RUNTIME_INCIDENT_RESOLUTION.json",
+      "lesson": "Use /tmp intermediates, streaming I/O, POSIX_FADV_DONTNEED; distinguish upload boundary instability from wrong materialization topology."
+    },
+    {
+      "evidence": "research_sync_r33/POST_R32_CAAS_TRANSPORT_INCIDENT_AND_FAILOVER_RECEIPT_R1_20260912.json",
+      "lesson": "Repeated TransportTimeout across minimal tools is transport-plane failure; preserve scientific rules and physical authority while failing over only deterministic validation where legitimate."
+    }
+  ],
+  "b2_current_recovery_learning": {
+    "enclosing_physical_authority": "SYNC-R74",
+    "byte_unchanged_transports": [
+      "B1",
+      "D1",
+      "D2"
+    ],
+    "changed_transports": [
+      "CONTROL",
+      "A",
+      "B2",
+      "C1",
+      "C2-A",
+      "C2-B"
+    ],
+    "nested_historical_current_files": "PROVENANCE_ONLY__MUST_NOT_OVERRIDE_ENCLOSING_AUTHORITY",
+    "r77_h1_six_launch_packets": "HISTORICAL/STALE_FOR_CURRENT_EXECUTION__VERIFY_ONLY_DO_NOT_RUN"
+  },
+  "strengthened_diagnostic_order": [
+    "minimal shell/Python health",
+    "exact grounded path existence/stat for ONE artifact",
+    "compare expected size before any ZipFile open",
+    "if size mismatch: classify transfer/retention truncation and STOP that artifact",
+    "only for size-matched artifact: streaming SHA256",
+    "ZIP central directory: entries/duplicates/encrypted/unsafe",
+    "CRC/testzip",
+    "required/nested member checks",
+    "only then extraction/rejoin/mutation/reseal"
+  ],
+  "non_negotiable_resume_rule": "STOP -> RUNTIME_TRANSPORT_HOLD -> MINIMAL_HEALTH_CHECK -> LAST_ATOMIC_CHECKPOINT_VERIFY -> RESUME_ONLY_FAILED_STEP",
+  "mutation_policy": "No package mutation, reseal, physical promotion, runtime change, DB authority change, formal-count change, or experimental scoring performed."
+}
