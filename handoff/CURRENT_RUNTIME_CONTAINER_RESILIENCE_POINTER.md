@@ -1,5 +1,5 @@
 # CURRENT RUNTIME / CONTAINER RESILIENCE POINTER
-Last updated: 2026-10-01
+Last updated: 2026-10-02
 
 ## CANONICAL PROTOCOL
 `research/operations/20261001/LITERARY_OS_RUNTIME_CONTAINER_RESILIENCE_PROTOCOL_R6.md`
@@ -31,3 +31,10 @@ A truncated sibling upload does not contaminate the verdict of a healthy artifac
 
 ## AUTHORITY EFFECT
 NONE. Physical Authority remains SYNC-R74.
+
+
+## CURRENT AUTHORITY RECOVERY
+After runtime/file health is restored, return to:
+`handoff/20261002/START_HERE_CURRENT_AUTHORITY_COMPACT_R18.md`
+
+Do not continue from an older START_HERE merely because the incident evidence inside it is useful.
