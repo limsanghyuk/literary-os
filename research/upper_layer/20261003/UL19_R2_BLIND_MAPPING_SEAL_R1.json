@@ -1,0 +1,11 @@
+{
+  "schema":"UL19_R2_BLIND_MAPPING_SEAL_R1",
+  "date":"2026-10-03",
+  "status":"SEALED_BEFORE_R2_ARCHITECTURE_OUTPUTS",
+  "coordinator_secret_sha256":"08c07a533f70f6f8b09065ba14281e28b95cdd172c735a090a48988f4f32f40f",
+  "judges":["J01","J02","J03"],
+  "pairs_per_judge":6,
+  "arm_balance":"3A_3B_PER_JUDGE",
+  "reveal_rule":"Do not reveal until 3/3 first schema-valid judgments are hash-sealed.",
+  "authority_effect":"NONE"
+}
