@@ -1,47 +1,26 @@
-# CURRENT RESEARCH CANDIDATE CUSTODY POINTER
+# CURRENT RESEARCH SOURCE / CANDIDATE CUSTODY POINTER
 Last updated: 2026-10-03
 
-## CANONICAL CURRENT UL18 CANDIDATE
-
-Scientific identity:
-`UL18 bounded open-debt repair candidate / canonical F2 source`
-
-Persistent Library path:
+## CANONICAL UL18-F2 SOURCE / 정본 UL18-F2 소스
+Library:
 `/Literary_OS/Research_Candidates/UL18_CANONICAL/UL18_OPEN_DEBT_REPAIR_CANDIDATE_CANONICAL_F2A22D_R1.zip`
 
-Verified:
-- bytes: 18,752,588
-- ZIP SHA256: `d67f1d6f603f6cdda51fa67fb86c170a0b86780b579e06bfdbec8cc204dcf95f`
-- entries: 452
-- CRC: PASS
-- internal `literary_os_runtime/adaptive_showrunner_ul16.py`
-- source SHA256: `f2a22d1156f50152b8de1ae745d16e3189f6731758a83b8cc7dc2b37e8e8553b`
-- persistent Library raw reload: PASS
+Candidate ZIP SHA256:
+`d67f1d6f603f6cdda51fa67fb86c170a0b86780b579e06bfdbec8cc204dcf95f`
 
-Canonical guard:
-`research/operations/20261003/UL18_CANONICAL_LIBRARY_CUSTODY_AND_REVISION_GUARD_R1.json`
+Adaptive source SHA256:
+`f2a22d1156f50152b8de1ae745d16e3189f6731758a83b8cc7dc2b37e8e8553b`
 
-## ALTERNATE LIBRARY OBJECT — NOT CURRENT AUTHORITY
+This source has now passed Broad Executable Regression(광범위 실행 회귀검증) and has been adopted into:
+**UL18_F2_SUCCESSOR_RUNTIME_R1**
+Runtime SHA256:
+`56254a8f52b19651638ab21ece2c35618e621e3aedc02d917efb6e22ca11db88`
 
-Folder:
+Physical Authority(물리 권위): **SYNC-R76**
+
+## ALTERNATE OBJECT / 대체 객체
 `/Literary_OS/UL18_R2`
+remains:
+`UNADOPTED_LIBRARY_RESEARCH_OBJECT__DO_NOT_USE_AS_CURRENT_SOURCE`
 
-Observed alternate source SHA256:
-`7c3028fa8c7e648fc4a6cb2416548c06036b00be828cb85f4283aecf8b4cfae4`
-
-Observed alternate runtime ZIP SHA256:
-`acbc935a54a5c9654023aca5ff94963918383946eebc9485c66b9e09d83ea11e`
-
-Classification:
-`UNADOPTED_LIBRARY_RESEARCH_OBJECT__DO_NOT_USE_AS_CURRENT_CANDIDATE`
-
-A preregistration exists, but no Hub result/adoption record was found for this alternate revision.
-Preserve it as provenance. Do not bind, physicalize or execute it as the current Treatment unless a later sealed Hub transaction explicitly supersedes the canonical F2 candidate.
-
-## AUTHORITY EFFECT
-
-NONE.
-
-- Physical Authority remains SYNC-R74.
-- Active Runtime remains exact R69.
-- Canonical F2 remains research-only and not physicalized.
+Exact R69 remains preserved as Qualified Parent(자격 부모), not Active Runtime.
