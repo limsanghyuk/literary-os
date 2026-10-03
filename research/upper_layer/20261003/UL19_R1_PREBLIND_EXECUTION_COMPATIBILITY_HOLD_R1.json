@@ -1,0 +1,58 @@
+{
+  "schema": "UL19_R1_PREBLIND_EXECUTION_COMPATIBILITY_HOLD_R1",
+  "date": "2026-10-03",
+  "status": "CLOSED__PREBLIND_INPUT_DENSITY_HOLD__NO_ARCHITECTURE_QUALITY_VERDICT",
+  "authority_effect": "NONE",
+  "physical_authority": "SYNC-R76",
+  "treatment_runtime": "UL18_F2_SUCCESSOR_RUNTIME_R1",
+  "fixture": "research/upper_layer/20261003/UL19_FRESH_UNSEEN_MULTI_STRAND_FIXTURE_R1.json",
+  "preregistration": "research/upper_layer/20261003/UL19_FRESH_UNSEEN_ARCHITECTURE_REQUALIFICATION_PREREG_R1.md",
+  "mapping_seal": "research/upper_layer/20261003/UL19_BLIND_MAPPING_SEAL_R1.json",
+  "probe_boundary": "P01 adapter-compatibility execution only; no blind packet was created and no judge saw output.",
+  "control": {
+    "mode": "LEGACY_R53",
+    "initial_relationship_floor_adapter": "HOLD__RELATIONSHIP_OBLIGATION_FLOOR_FAIL",
+    "compatibility_retry_without_extra_relationship_floor": "PASS",
+    "sequence_count": 9,
+    "scene_count": 20
+  },
+  "treatment": {
+    "mode": "ADAPTIVE_UL16 / UL18_F2_SUCCESSOR_RUNTIME_R1",
+    "status": "HOLD__UL16_ADAPTIVE_VALIDATION_FAIL",
+    "sequence_count": 3,
+    "scene_count": 14,
+    "issues": [
+      "UNDERDEVELOPED_UNIQUE_SEQUENCE_MATERIAL",
+      "UNDERDEVELOPED_DRAMATIZATION_DEPTH"
+    ],
+    "all_other_observed_validation": {
+      "due_recoverable": true,
+      "due_unique_in_sequences": true,
+      "due_resolved_once": true,
+      "deferred_preserved": true,
+      "open_touch_preserved": true,
+      "blocked_preserved": true,
+      "semantic_transaction_repetition_groups": 0,
+      "redundant_or_mergeable_scenes": 0,
+      "unique_actions": 14,
+      "generic_fallback_ratio": 0.0
+    }
+  },
+  "root_cause": {
+    "classification": "FROZEN_FIXTURE_HAS_ONLY_SEVEN_SCHEDULED_UNIQUE_OBLIGATIONS__BROADCAST_DEPTH_PRIOR_CANNOT_BE_MET_WITHOUT_CLONING",
+    "runtime_policy": "R57 anti-padding rule forbids cloning obligations merely to reach human broadcast depth.",
+    "broadcast_prior": {
+      "episode_sequence_median": 9,
+      "episode_scene_p10": 46
+    },
+    "interpretation": "This is not evidence that UL18-F2 regressed. The fixture is insufficient for a broadcast-depth architecture test because the runtime correctly refuses quota padding."
+  },
+  "scientific_rule": [
+    "Do not modify R1 fixture after observing the HOLD.",
+    "Do not lower broadcast_mode or validation thresholds.",
+    "Do not count the P01 probe as an independent blind outcome.",
+    "Create a new preregistered R2 fixture with sufficient distinct current-state obligations before any R2 output."
+  ],
+  "r1_blind_gate": "NOT_ELIGIBLE__NO_PACKETS__NO_JUDGMENTS",
+  "next": "UL19_R2_FRESH_UNSEEN_BROADCAST_DENSITY_FIXTURE_PREREGISTRATION"
+}
