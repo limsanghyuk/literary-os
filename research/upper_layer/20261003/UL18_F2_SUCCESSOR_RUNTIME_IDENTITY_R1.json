@@ -1,0 +1,31 @@
+{
+  "schema": "UL18_F2_SUCCESSOR_RUNTIME_IDENTITY_R1",
+  "date": "2026-10-03",
+  "status": "SUCCESSOR_CANDIDATE_RUNTIME_BUILT__NOT_YET_PHYSICAL_AUTHORITY",
+  "identity": "UL18_F2_SUCCESSOR_RUNTIME_R1",
+  "parent_identity": "exact R69",
+  "parent_runtime_sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+  "successor_runtime": {
+    "bytes": 19072672,
+    "sha256": "56254a8f52b19651638ab21ece2c35618e621e3aedc02d917efb6e22ca11db88",
+    "entries": 497,
+    "crc": "PASS",
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe_paths": 0,
+    "python_compile": "45/45 PASS"
+  },
+  "source_delta": {
+    "changed_member_only": "literary_os_runtime/adaptive_showrunner_ul16.py",
+    "parent_source_sha256": "740cca05a94dbb59eb9a1600e1c7d98cdc887693aa5ab46fec2bd2eaef78d306",
+    "successor_source_sha256": "f2a22d1156f50152b8de1ae745d16e3189f6731758a83b8cc7dc2b37e8e8553b",
+    "all_other_members_content_identical": true
+  },
+  "qualification": "UL18_F2_BROAD_EXECUTABLE_REGRESSION_PASS",
+  "physical_namespace": {
+    "parent_physical_authority": "SYNC-R74",
+    "reserved_successor_if_and_only_if_full_reseal_delivery_passes": "SYNC-R76",
+    "why_not_sync_r75": "SYNC-R75 has conflicting/superseded historical authority records and is provenance-only under current custody correction."
+  },
+  "authority_boundary": "Until C1/C2 binding, full 9-package audit, Library custody/redownload and developer delivery complete, Physical Authority remains SYNC-R74 and Active Runtime remains exact R69."
+}
