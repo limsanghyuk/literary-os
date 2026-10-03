@@ -1,0 +1,95 @@
+{
+  "schema": "SYNC_R77_5PART_9PACKAGE_MANIFEST_R1",
+  "date": "2026-10-03",
+  "physical_authority": "SYNC-R77",
+  "parent_physical_authority": "SYNC-R76",
+  "namespace_note": "SYNC-R77 here is a physical snapshot ID, distinct from historical Research R77.",
+  "active_runtime": "UL20_F04_TRUSTED_ROOT_SUCCESSOR_RUNTIME_R1",
+  "active_runtime_sha256": "aeb24721f9ef483daefe922cef1842f6459e07f0fd72e4e31d4bb4ed4094f200",
+  "adaptive_source_sha256": "112a43d5609d2c35fb86c9f03f1494ba77f2da4118b02284c2db03334a6bf94a",
+  "qualified_parent_runtime": "UL18_F2_SUCCESSOR_RUNTIME_R1",
+  "qualified_parent_runtime_sha256": "56254a8f52b19651638ab21ece2c35618e621e3aedc02d917efb6e22ca11db88",
+  "production": "ENG:R47 / LEGACY_R53",
+  "runtime_db": "DB59 frozen",
+  "research_db": "DB64-R134 research-only / HOLD",
+  "ul20": "CLOSED_PASS__FRESH_16_OF_16__FP0_FN0",
+  "packages": [
+    {
+      "order": 1,
+      "part": "CONTROL",
+      "file": "LITERARY_OS_CURRENT_CONTROL_UL20_F04_SUCCESSOR_SYNC_R77_20261003.zip",
+      "bytes": 289494359,
+      "sha256": "b7a5a65829e626dfa8c266609a76dc1fdc4d2a03cde0b3c8fc4e06e25fb66cf0"
+    },
+    {
+      "order": 2,
+      "part": "A",
+      "file": "LITERARY_OS_CURRENT_PART_A_UL20_F04_SUCCESSOR_SYNC_R77_20261003.zip",
+      "bytes": 304047538,
+      "sha256": "47b8ec25efe760122905085f16c3cc3b75e207ebdbdbfec9a1c0b5cd7b978b83"
+    },
+    {
+      "order": 3,
+      "part": "B1",
+      "file": "LITERARY_OS_CURRENT_PART_B1_SYNC_R77_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R76.zip",
+      "bytes": 196427036,
+      "sha256": "00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98"
+    },
+    {
+      "order": 4,
+      "part": "B2",
+      "file": "LITERARY_OS_CURRENT_PART_B2_UL20_F04_SUCCESSOR_SYNC_R77_20261003.zip",
+      "bytes": 296020489,
+      "sha256": "9fdd4378b3e478f5c636fe19cf6fc97ec70ac5dd6afbd9a934d16db69b330e89"
+    },
+    {
+      "order": 5,
+      "part": "C1",
+      "file": "LITERARY_OS_CURRENT_C1_RUNTIME_CORE_SYNC_R77_UL20_F04_SUCCESSOR_20261003.zip",
+      "bytes": 140347110,
+      "sha256": "5d54af11bdd1147b6077cf99e6d677ddfec0c3ae5896943fd6f88b20820f4b42"
+    },
+    {
+      "order": 6,
+      "part": "C2-A",
+      "file": "LITERARY_OS_CURRENT_C2_BINARY_A_SYNC_R77_UL20_F04_SUCCESSOR_20261003.bin",
+      "bytes": 282865908,
+      "sha256": "85909842d263862a87862ec4476601956944df5eaa42e86f5b7b96e840eed803"
+    },
+    {
+      "order": 7,
+      "part": "C2-B",
+      "file": "LITERARY_OS_CURRENT_C2_BINARY_B_SYNC_R77_UL20_F04_SUCCESSOR_20261003.bin",
+      "bytes": 282865907,
+      "sha256": "4e427b0fab9149289a3b25431a29e89bfe0bef23b674334ae2c869f92f4b6e59"
+    },
+    {
+      "order": 8,
+      "part": "D1",
+      "file": "LITERARY_OS_CURRENT_PART_D1_DB59_SYNC_R77_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R76.zip",
+      "bytes": 138011573,
+      "sha256": "a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504"
+    },
+    {
+      "order": 9,
+      "part": "D2",
+      "file": "LITERARY_OS_CURRENT_PART_D2_DB59_SYNC_R77_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R76.zip",
+      "bytes": 173393886,
+      "sha256": "c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4"
+    }
+  ],
+  "logical_c2": {
+    "bytes": 565731815,
+    "sha256": "e10902964eed0cdd690339d5bd8816a28c5e07844d3158c5c2ffe1e6ed990c8b",
+    "entries": 4029,
+    "crc_pass": true,
+    "duplicates": 0,
+    "encrypted": 0,
+    "unsafe": 0,
+    "parent_runtime_preserved": true,
+    "successor_runtime_bound": true
+  },
+  "trust_root_sha256": "79e1df6f571a913a672ddff1da779e6ad910864bf81933cc82f7783c7b1c4851",
+  "library_path": "/Literary_OS/Physical_Archive/SYNC_R77_CURRENT_9PACKAGES",
+  "custody": "PASS_9_OF_9_RAW_REMATERIALIZATION_SHA_MATCH"
+}
