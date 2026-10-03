@@ -1,0 +1,696 @@
+{
+  "schema": "UL19_R2_FRESH_UNSEEN_BROADCAST_DENSITY_FIXTURE_R1",
+  "date": "2026-10-03",
+  "status": "FROZEN_BEFORE_ANY_R2_CONTROL_OR_TREATMENT_OUTPUT",
+  "synthetic_work": {
+    "work_id": "SYNTH_UL19R2_BEFORE_FIRST_BUS",
+    "title": "첫차가 오기 전",
+    "format": "Korean broadcast ensemble drama",
+    "episode_target": "EP07",
+    "source_cutoff": "Synthetic current state through EP06 only. No EP07 answer key exists.",
+    "premise": "A city bus depot before dawn contains overlapping but independently caused pressures involving route policy, family care, certification, subcontract labor, school transport, safety history, professional exit, union procedure, lost property, electrical maintenance, probation, and accessibility. The depot is a meeting place, not a single master cause."
+  },
+  "anchors": {
+    "protagonist": "KANG_YEONGSU",
+    "ensemble": [
+      "KANG_YEONGSU",
+      "KANG_JIWON",
+      "PARK_TAEJUN",
+      "MIN_SEOHUI",
+      "CHOI_GARAM",
+      "OH_MISUN",
+      "LEE_HYEONJAE",
+      "PARK_YURI",
+      "SONG_DAEHO",
+      "NAM_SUJIN",
+      "HAN_EUNBYEOL",
+      "IM_SEONGHO"
+    ],
+    "forbidden_shortcut": [
+      "Do not reduce all strands to the city route-reallocation decision.",
+      "Do not solve family-care conflict through depot success or failure.",
+      "Do not treat subcontract labor, union procedure, and accessibility as interchangeable social background.",
+      "Do not authenticate old safety evidence merely because it becomes dramatically useful.",
+      "Do not force every supporting character into the protagonist's decision."
+    ]
+  },
+  "groups": [
+    {
+      "id": "G_DEPOT_CORE",
+      "kind": "work",
+      "members": [
+        "KANG_YEONGSU",
+        "PARK_TAEJUN",
+        "MIN_SEOHUI",
+        "CHOI_GARAM",
+        "HAN_EUNBYEOL",
+        "IM_SEONGHO"
+      ]
+    },
+    {
+      "id": "G_CITY_MOBILITY",
+      "kind": "institution",
+      "members": [
+        "NAM_SUJIN",
+        "KANG_YEONGSU"
+      ]
+    },
+    {
+      "id": "G_SUBCONTRACT_CLEANERS",
+      "kind": "labor",
+      "members": [
+        "OH_MISUN"
+      ]
+    },
+    {
+      "id": "G_UNION",
+      "kind": "labor",
+      "members": [
+        "LEE_HYEONJAE",
+        "PARK_TAEJUN"
+      ]
+    },
+    {
+      "id": "G_SCHOOL_TRANSPORT",
+      "kind": "school",
+      "members": [
+        "SONG_DAEHO",
+        "PARK_YURI"
+      ]
+    },
+    {
+      "id": "G_YEONGSU_FAMILY",
+      "kind": "family",
+      "members": [
+        "KANG_YEONGSU",
+        "KANG_JIWON"
+      ]
+    },
+    {
+      "id": "G_ACCESSIBILITY_USERS",
+      "kind": "community",
+      "members": [
+        "PARK_YURI",
+        "SONG_DAEHO"
+      ]
+    }
+  ],
+  "current_character_state": {
+    "KANG_YEONGSU": {
+      "role": "depot_operations_chief",
+      "private_pressure": "mother's care schedule is falling mostly on his sister",
+      "withheld": "the city offered him a temporary reorganization post if he supports route cuts"
+    },
+    "KANG_JIWON": {
+      "role": "rehabilitation_nurse_and_older_sister",
+      "private_pressure": "wants a written rotation for their mother's care rather than emergency requests"
+    },
+    "PARK_TAEJUN": {
+      "role": "veteran_driver",
+      "private_pressure": "a private shuttle company offered him a job after his prior accident review closed"
+    },
+    "MIN_SEOHUI": {
+      "role": "junior_mechanic",
+      "private_pressure": "her certification appeal closes this morning and she refuses to ask Youngsu to intervene"
+    },
+    "CHOI_GARAM": {
+      "role": "dispatcher_on_probation",
+      "private_pressure": "one more dispatch mistake may end probation"
+    },
+    "OH_MISUN": {
+      "role": "subcontract_cleaner_representative",
+      "private_pressure": "three months of night-shift overtime remain unpaid"
+    },
+    "LEE_HYEONJAE": {
+      "role": "union_steward",
+      "private_pressure": "must implement a split-shift ballot result without turning it into a personal fight with Taejun"
+    },
+    "PARK_YURI": {
+      "role": "Taejun's daughter_and_wheelchair_user",
+      "private_pressure": "school trip planning keeps treating her access needs as exceptional favors"
+    },
+    "SONG_DAEHO": {
+      "role": "school_transport_coordinator",
+      "private_pressure": "the booked field-trip bus has just failed a safety inspection"
+    },
+    "NAM_SUJIN": {
+      "role": "city_mobility_analyst",
+      "private_pressure": "she discovered the passenger model excludes some early-shift workers"
+    },
+    "HAN_EUNBYEOL": {
+      "role": "lost_property_clerk",
+      "private_pressure": "an envelope of cash has a route receipt but no reliable owner identification"
+    },
+    "IM_SEONGHO": {
+      "role": "night_electrician",
+      "private_pressure": "a scheduled power shutdown was moved two hours earlier by the utility"
+    }
+  },
+  "information_state": [
+    {
+      "id": "INFO_CERT_APPEAL",
+      "knowers": [
+        "MIN_SEOHUI"
+      ],
+      "fact": "Certification appeal closes at 07:10 today.",
+      "visibility": "private"
+    },
+    {
+      "id": "INFO_MODEL_FLAW",
+      "knowers": [
+        "NAM_SUJIN"
+      ],
+      "fact": "The route model excludes a category of early-shift riders.",
+      "visibility": "private"
+    },
+    {
+      "id": "INFO_CASH_RECEIPT",
+      "knowers": [
+        "HAN_EUNBYEOL",
+        "CHOI_GARAM"
+      ],
+      "fact": "The cash envelope contains a receipt tied to Route 18 but not to a person.",
+      "visibility": "limited"
+    },
+    {
+      "id": "INFO_OLD_BRAKE_LOG",
+      "knowers": [
+        "LEE_HYEONJAE",
+        "PARK_TAEJUN"
+      ],
+      "fact": "A copied brake-maintenance page appears inconsistent with the official prior-accident chronology; authenticity is incomplete.",
+      "visibility": "partial"
+    },
+    {
+      "id": "INFO_OLD_AUDIO",
+      "knowers": [
+        "PARK_TAEJUN"
+      ],
+      "fact": "A recovered radio recording may contain a supervisor instruction from the accident night; the file is incomplete.",
+      "visibility": "partial"
+    }
+  ],
+  "obligations": [
+    {
+      "id": "T01_ROUTE_STANCE",
+      "kind": "THREAD",
+      "causal_root": "ROOT_ROUTE_REVIEW",
+      "owners": [
+        "KANG_YEONGSU",
+        "NAM_SUJIN"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.96,
+      "statement": "오늘 노선 재편 회의에서 차고지가 공식적으로 방어할 운행 범위를 정해야 한다.",
+      "visible_action": "영수가 노선도에서 세 개의 자석을 떼었다가 수진의 승객표를 보고 한 개를 다시 붙인다."
+    },
+    {
+      "id": "T02_NIGHT_STAFFING",
+      "kind": "THREAD",
+      "causal_root": "ROOT_ROUTE_REVIEW",
+      "owners": [
+        "KANG_YEONGSU",
+        "PARK_TAEJUN"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.86,
+      "statement": "야간 노선을 유지할 경우 누가 실제 운행 부담을 질지 오늘 근무표에 반영해야 한다.",
+      "visible_action": "태준이 자신의 이름이 적힌 야간 칸을 가린 채 영수에게 빈 근무표를 밀어 놓는다."
+    },
+    {
+      "id": "T03_PROBATION_COVERAGE",
+      "kind": "THREAD",
+      "causal_root": "ROOT_DISPATCH_PROBATION",
+      "owners": [
+        "CHOI_GARAM",
+        "KANG_YEONGSU"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.83,
+      "statement": "가람의 수습 평가 기간 동안 배차 승인 권한을 누가 함께 책임질지 정해야 한다.",
+      "visible_action": "가람이 승인 도장을 영수 책상에 내려놓고 공동 확인란을 새로 그린다."
+    },
+    {
+      "id": "R01_CARE_ROTATION",
+      "kind": "RELATIONSHIP",
+      "causal_root": "ROOT_FAMILY_CARE",
+      "owners": [
+        "KANG_YEONGSU",
+        "KANG_JIWON"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.92,
+      "statement": "영수와 지원은 어머니 돌봄을 긴급 부탁이 아닌 명시적 순번으로 바꿀지 결정해야 한다.",
+      "visible_action": "지원이 병원 달력에서 영수 이름을 지우고 빈 주말 칸에 펜을 올려둔다.",
+      "relationship_pair": [
+        "KANG_YEONGSU",
+        "KANG_JIWON"
+      ],
+      "relationship_delta": "care responsibility becomes explicitly negotiated"
+    },
+    {
+      "id": "R02_DRIVER_DAUGHTER_ACCESS",
+      "kind": "RELATIONSHIP",
+      "causal_root": "ROOT_ACCESS_NEEDS",
+      "owners": [
+        "PARK_TAEJUN",
+        "PARK_YURI"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.84,
+      "statement": "태준은 유리의 이동 필요를 대신 결정하지 않고 유리에게 선택권을 넘겨야 한다.",
+      "visible_action": "태준이 준비한 승하차 동선을 접자 유리가 직접 경사로 위치를 지도에 표시한다.",
+      "relationship_pair": [
+        "PARK_TAEJUN",
+        "PARK_YURI"
+      ],
+      "relationship_delta": "parental protection shifts toward explicit autonomy"
+    },
+    {
+      "id": "R03_MENTOR_BOUNDARY",
+      "kind": "RELATIONSHIP",
+      "causal_root": "ROOT_CERTIFICATION_APPEAL",
+      "owners": [
+        "MIN_SEOHUI",
+        "KANG_YEONGSU"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.81,
+      "statement": "서희는 자격 이의신청을 영수의 영향력 없이 처리하겠다는 경계를 행동으로 세워야 한다.",
+      "visible_action": "서희가 영수가 건넨 추천 연락처 메모를 공구함 안쪽에 넣고 자신의 이의신청서를 봉투에 넣는다.",
+      "relationship_pair": [
+        "MIN_SEOHUI",
+        "KANG_YEONGSU"
+      ],
+      "relationship_delta": "mentor dependence decreases without ending trust"
+    },
+    {
+      "id": "I01_CERT_DEADLINE",
+      "kind": "INFORMATION",
+      "causal_root": "ROOT_CERTIFICATION_APPEAL",
+      "owners": [
+        "MIN_SEOHUI"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.97,
+      "statement": "07:10 자격 이의신청 마감이 서희의 정비 선택에 실제 제약으로 작동해야 한다.",
+      "visible_action": "서희가 엔진 덮개 옆에 휴대전화 마감 타이머를 세우고 마지막 점검 항목 하나를 다른 정비사에게 넘긴다.",
+      "information_delta": "certification deadline changes current work allocation"
+    },
+    {
+      "id": "I02_MODEL_FLAW",
+      "kind": "INFORMATION",
+      "causal_root": "ROOT_ROUTE_MODEL_FLAW",
+      "owners": [
+        "NAM_SUJIN",
+        "KANG_YEONGSU"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.89,
+      "statement": "수진이 발견한 조기근무 승객 누락이 노선 결정 전에 실제 판단 자료로 들어가야 한다.",
+      "visible_action": "수진이 총승객 숫자 위에 포스트잇을 붙이고 누락된 새벽 승객 표본을 따로 펼친다.",
+      "information_delta": "route evidence becomes contested before decision"
+    },
+    {
+      "id": "I03_CASH_PROVENANCE",
+      "kind": "INFORMATION",
+      "causal_root": "ROOT_LOST_PROPERTY_CASH",
+      "owners": [
+        "HAN_EUNBYEOL",
+        "CHOI_GARAM"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.82,
+      "statement": "현금 봉투의 소유자를 단정하지 않은 채 Route 18 영수증의 의미를 확인할 다음 절차를 정해야 한다.",
+      "visible_action": "은별이 현금을 봉인함에 다시 넣고 영수증만 투명 슬리브에 분리해 가람에게 건넨다.",
+      "information_delta": "evidence handling advances without owner invention"
+    },
+    {
+      "id": "I04_MODEL_DISCLOSURE",
+      "kind": "INFORMATION",
+      "causal_root": "ROOT_ROUTE_MODEL_FLAW",
+      "owners": [
+        "NAM_SUJIN"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.85,
+      "statement": "수진은 모델 결함을 회의 자료에 공식 표기할지 선택해야 한다.",
+      "visible_action": "수진이 배포용 표의 각주 칸을 비워둔 채 수정본과 원본 두 파일을 동시에 띄운다.",
+      "information_delta": "withheld model limitation becomes a present decision"
+    },
+    {
+      "id": "S01_CLEANER_OVERTIME",
+      "kind": "SOCIAL",
+      "causal_root": "ROOT_SUBCONTRACT_OVERTIME",
+      "owners": [
+        "OH_MISUN",
+        "KANG_YEONGSU"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.94,
+      "statement": "야간 청소 노동의 미지급 초과시간을 차고지 운영 비용으로 인정할지 결정해야 한다.",
+      "visible_action": "미선이 청소카트 위에 세 달치 출퇴근 기록을 펴고 무료 간식 상자를 그 위에서 치운다.",
+      "social_delta": "subcontract labor becomes explicit operating debt",
+      "group_refs": [
+        "G_SUBCONTRACT_CLEANERS",
+        "G_DEPOT_CORE"
+      ]
+    },
+    {
+      "id": "S02_SPLIT_SHIFT_BALLOT",
+      "kind": "SOCIAL",
+      "causal_root": "ROOT_UNION_BALLOT",
+      "owners": [
+        "LEE_HYEONJAE",
+        "PARK_TAEJUN"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.87,
+      "statement": "분할근무 찬반 투표 결과를 개인 압박이 아니라 집단 절차로 실제 근무표에 반영해야 한다.",
+      "visible_action": "현재가 투표 집계표를 태준 앞에 놓고 자신의 메모를 떼어낸 뒤 공식 결과만 남긴다.",
+      "social_delta": "union procedure constrains scheduling",
+      "group_refs": [
+        "G_UNION",
+        "G_DEPOT_CORE"
+      ]
+    },
+    {
+      "id": "S03_ACCESS_TRIP",
+      "kind": "SOCIAL",
+      "causal_root": "ROOT_ACCESS_NEEDS",
+      "owners": [
+        "PARK_YURI",
+        "SONG_DAEHO"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.88,
+      "statement": "학교 현장학습의 접근성 요구를 호의가 아닌 운송 조건으로 계획에 반영해야 한다.",
+      "visible_action": "유리가 관광버스 사진을 치우고 필요한 리프트 규격이 적힌 체크리스트를 대호 앞에 붙인다.",
+      "social_delta": "access requirement becomes transport condition",
+      "group_refs": [
+        "G_ACCESSIBILITY_USERS",
+        "G_SCHOOL_TRANSPORT"
+      ]
+    },
+    {
+      "id": "S04_PUBLIC_COMMENT",
+      "kind": "SOCIAL",
+      "causal_root": "ROOT_ROUTE_REVIEW",
+      "owners": [
+        "NAM_SUJIN",
+        "LEE_HYEONJAE"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.8,
+      "statement": "노선 재편 회의에 노동자와 새벽 이용자의 의견을 어떤 형식으로 제출할지 결정해야 한다.",
+      "visible_action": "현재가 서명지를 회의자료 맨 뒤에 끼우고 수진이 표준 의견서 양식을 그 앞에 놓는다.",
+      "social_delta": "community/labor voice receives formal channel",
+      "group_refs": [
+        "G_UNION",
+        "G_CITY_MOBILITY"
+      ]
+    },
+    {
+      "id": "E01_SHUTTLE_FAIL",
+      "kind": "EVENT",
+      "causal_root": "ROOT_SCHOOL_BUS_INSPECTION",
+      "owners": [
+        "SONG_DAEHO",
+        "MIN_SEOHUI"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.93,
+      "statement": "현장학습용 버스가 안전검사에서 탈락해 출발 계획을 즉시 바꿔야 한다.",
+      "visible_action": "대호가 출발표에서 차량번호를 가리고 서희가 검사 스티커를 떼어 정비대 위에 붙인다.",
+      "event_ref": "SCHOOL_SHUTTLE_FAIL"
+    },
+    {
+      "id": "E02_POWER_SHUTDOWN",
+      "kind": "EVENT",
+      "causal_root": "ROOT_UTILITY_SHUTDOWN",
+      "owners": [
+        "IM_SEONGHO",
+        "CHOI_GARAM"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.91,
+      "statement": "전력 차단 시각이 두 시간 앞당겨져 첫차 준비 절차의 순서를 다시 정해야 한다.",
+      "visible_action": "성호가 분전반에 새 차단시각을 적고 가람이 배차 모니터의 충전 순서를 손으로 다시 번호 매긴다.",
+      "event_ref": "UTILITY_SHUTDOWN"
+    },
+    {
+      "id": "E03_FIRST_BUS_SICK_CALL",
+      "kind": "EVENT",
+      "causal_root": "ROOT_DRIVER_SICK_CALL",
+      "owners": [
+        "CHOI_GARAM",
+        "PARK_TAEJUN"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.9,
+      "statement": "첫차 담당 기사의 갑작스러운 병가 연락으로 대체 운전 결정을 해야 한다.",
+      "visible_action": "가람이 첫차 키를 빈 칸에 걸고 태준의 휴게실 사물함 쪽을 바라보다 호출 버튼에서 손을 뗀다.",
+      "event_ref": "FIRST_BUS_SICK_CALL"
+    },
+    {
+      "id": "E04_ELEVATOR_LOCKOUT",
+      "kind": "EVENT",
+      "causal_root": "ROOT_ACCESS_NEEDS",
+      "owners": [
+        "PARK_YURI",
+        "SONG_DAEHO"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.78,
+      "statement": "차고지 견학 동선의 승강기가 정기검사로 잠겨 대체 접근 동선을 즉시 정해야 한다.",
+      "visible_action": "대호가 계단 안내표를 떼고 유리가 경사로가 연결되는 후문을 지도에서 손가락으로 짚는다.",
+      "event_ref": "ELEVATOR_LOCKOUT"
+    },
+    {
+      "id": "P01_OLD_BRAKE_LOG",
+      "kind": "PAYOFF",
+      "causal_root": "ROOT_OLD_ACCIDENT_RECORD",
+      "owners": [
+        "LEE_HYEONJAE",
+        "PARK_TAEJUN",
+        "KANG_YEONGSU"
+      ],
+      "due": false,
+      "can_defer": false,
+      "pressure": 0.9,
+      "statement": "불완전한 옛 브레이크 정비 기록은 오늘 선택에 영향을 주되 아직 사고 진실로 인증되거나 공개 해결되어서는 안 된다.",
+      "visible_action": "현재가 복사된 정비기록을 태준에게 보여주지만 서명란이 잘린 부분은 투명파일 안에 그대로 남겨둔다.",
+      "payoff_ref": "OLD_BRAKE_LOG"
+    },
+    {
+      "id": "P02_OLD_RADIO_AUDIO",
+      "kind": "PAYOFF",
+      "causal_root": "ROOT_OLD_ACCIDENT_AUDIO",
+      "owners": [
+        "PARK_TAEJUN",
+        "PARK_YURI"
+      ],
+      "due": false,
+      "can_defer": false,
+      "pressure": 0.83,
+      "statement": "사고 당일 무전 녹음의 일부가 태준의 태도에 압력을 주되 녹음 전체 의미는 아직 확정하면 안 된다.",
+      "visible_action": "태준이 한쪽 이어폰으로 잡음 섞인 음성을 듣다가 재생을 멈추고 파일을 유리에게 보내지 않은 채 화면을 잠근다.",
+      "payoff_ref": "OLD_RADIO_AUDIO"
+    },
+    {
+      "id": "C01_TAEJUN_EXIT",
+      "kind": "CHARACTER",
+      "causal_root": "ROOT_PRIVATE_JOB_OFFER",
+      "owners": [
+        "PARK_TAEJUN"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.88,
+      "statement": "태준은 외부 운전직 제안과 현재 차고지 책임 사이에서 실제 비용이 있는 선택을 해야 한다.",
+      "visible_action": "태준이 외부 회사 명함을 근무수첩에서 꺼내 첫차 대체근무 칸 옆에 놓는다."
+    },
+    {
+      "id": "C02_GARAM_PROBATION",
+      "kind": "CHARACTER",
+      "causal_root": "ROOT_DISPATCH_PROBATION",
+      "owners": [
+        "CHOI_GARAM"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.86,
+      "statement": "가람은 실수를 숨겨 수습을 지킬지, 기록을 남기고 평가 위험을 감수할지 선택해야 한다.",
+      "visible_action": "가람이 지운 배차 기록을 다시 복원하고 자신의 수습번호로 수정 사유를 입력한다."
+    },
+    {
+      "id": "C03_SEOHUI_APPEAL",
+      "kind": "CHARACTER",
+      "causal_root": "ROOT_CERTIFICATION_APPEAL",
+      "owners": [
+        "MIN_SEOHUI"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.84,
+      "statement": "서희는 정비 업무를 끝까지 붙들지 않고 자신의 자격 이의신청 시간을 확보하는 선택을 해야 한다.",
+      "visible_action": "서희가 토크렌치를 동료에게 넘기고 작업장 바닥의 노란선 밖으로 노트북 가방을 옮긴다."
+    },
+    {
+      "id": "C04_SUJIN_DISCLOSE",
+      "kind": "CHARACTER",
+      "causal_root": "ROOT_ROUTE_MODEL_FLAW",
+      "owners": [
+        "NAM_SUJIN"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.83,
+      "statement": "수진은 자신이 만든 분석의 결함을 공개해 평가를 깎일 위험을 감수할지 선택해야 한다.",
+      "visible_action": "수진이 자신의 이름이 적힌 표지 위에 '표본 누락' 스티커를 붙이고 출력 버튼을 누르지 않은 채 멈춘다."
+    },
+    {
+      "id": "C05_MISUN_ACTION",
+      "kind": "CHARACTER",
+      "causal_root": "ROOT_SUBCONTRACT_OVERTIME",
+      "owners": [
+        "OH_MISUN"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.82,
+      "statement": "미선은 작업중단을 선언할지, 지급 약속을 문서로 받을 때까지 제한 근무를 할지 선택해야 한다.",
+      "visible_action": "미선이 청소장갑 한 짝만 끼고 나머지 한 짝을 근무확인서 위에 올려놓는다."
+    },
+    {
+      "id": "C06_JIWON_BOUNDARY",
+      "kind": "CHARACTER",
+      "causal_root": "ROOT_FAMILY_CARE",
+      "owners": [
+        "KANG_JIWON"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.8,
+      "statement": "지원은 영수의 오늘 사정을 대신 해결해주지 않고 돌봄 경계를 지키는 선택을 해야 한다.",
+      "visible_action": "지원이 영수의 부재중 전화를 확인한 뒤 간병교대표 사진만 보내고 직접 전화를 걸지 않는다."
+    },
+    {
+      "id": "D01_CASH_OWNER",
+      "kind": "INFORMATION",
+      "causal_root": "ROOT_LOST_PROPERTY_CASH",
+      "owners": [
+        "HAN_EUNBYEOL"
+      ],
+      "due": false,
+      "can_defer": true,
+      "pressure": 0.55,
+      "statement": "현금 봉투의 실제 소유자 확인은 증거가 생길 때까지 다음 회차로 열어 둔다.",
+      "visible_action": "은별이 봉인번호를 장부에 적고 소유자 칸은 비워둔다."
+    },
+    {
+      "id": "D02_CONTRACT_RENEWAL",
+      "kind": "THREAD",
+      "causal_root": "ROOT_SUBCONTRACT_OVERTIME",
+      "owners": [
+        "OH_MISUN",
+        "KANG_YEONGSU"
+      ],
+      "due": false,
+      "can_defer": true,
+      "pressure": 0.58,
+      "statement": "청소업체 재계약 문제는 오늘 미지급 노동 인정과 분리해 다음 주 협상으로 유예한다.",
+      "visible_action": "미선이 재계약 서류는 가방에 넣고 미지급 시간표만 책상 위에 남긴다."
+    },
+    {
+      "id": "D03_MOTHER_SURGERY",
+      "kind": "RELATIONSHIP",
+      "causal_root": "ROOT_FAMILY_CARE",
+      "owners": [
+        "KANG_YEONGSU",
+        "KANG_JIWON"
+      ],
+      "due": false,
+      "can_defer": true,
+      "pressure": 0.6,
+      "statement": "어머니의 다음 달 수술 결정은 오늘 돌봄 순번 합의와 분리해 열어 둔다.",
+      "visible_action": "지원이 수술 동의서는 접어 봉투에 넣고 이번 주 교대표만 펼쳐둔다.",
+      "relationship_pair": [
+        "KANG_YEONGSU",
+        "KANG_JIWON"
+      ]
+    },
+    {
+      "id": "D04_UNION_GRIEVANCE",
+      "kind": "SOCIAL",
+      "causal_root": "ROOT_UNION_BALLOT",
+      "owners": [
+        "LEE_HYEONJAE"
+      ],
+      "due": false,
+      "can_defer": true,
+      "pressure": 0.57,
+      "statement": "분할근무와 별개의 징계 이의제기는 다음 절차일까지 미해결 상태로 유지한다.",
+      "visible_action": "현재가 징계 이의서에 다음 심의 날짜만 적고 서명란은 비워둔다.",
+      "group_refs": [
+        "G_UNION"
+      ]
+    }
+  ],
+  "expected_properties": {
+    "independent_causal_roots_min": 12,
+    "total_obligations": 30,
+    "scheduled_due_or_open_touch": 26,
+    "deferred": 4,
+    "open_touch": [
+      "P01_OLD_BRAKE_LOG",
+      "P02_OLD_RADIO_AUDIO"
+    ],
+    "architecture_should_not_collapse_to_route_review": true,
+    "no_quota_padding": true
+  },
+  "workload_variants": [
+    {
+      "id": "P01_BASE",
+      "mutation": "none"
+    },
+    {
+      "id": "P02_FAMILY_PRESSURE",
+      "mutation": "R01_CARE_ROTATION pressure .92 -> .99; C06_JIWON_BOUNDARY .80 -> .90"
+    },
+    {
+      "id": "P03_CERT_EARLY",
+      "mutation": "I01_CERT_DEADLINE deadline 07:10 -> 06:35 and pressure .97 -> .99"
+    },
+    {
+      "id": "P04_LABOR_HIGH",
+      "mutation": "S01_CLEANER_OVERTIME .94 -> .99; C05_MISUN_ACTION .82 -> .93"
+    },
+    {
+      "id": "P05_SHUTTLE_RESTORED",
+      "mutation": "E01_SHUTTLE_FAIL removed because replacement bus passes inspection; all unrelated roots unchanged"
+    },
+    {
+      "id": "P06_OPEN_EVIDENCE_HIGH",
+      "mutation": "P01_OLD_BRAKE_LOG .90 -> .99; P02_OLD_RADIO_AUDIO .83 -> .94; both remain due=false can_defer=false and must remain OPEN"
+    }
+  ]
+}
