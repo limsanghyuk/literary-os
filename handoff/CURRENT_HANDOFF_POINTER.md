@@ -1,17 +1,23 @@
 # CURRENT HANDOFF POINTER
-Last updated: 2026-10-02
+Last updated: 2026-10-03
 
 ## CANONICAL START HERE
-`handoff/20261002/START_HERE_CURRENT_AUTHORITY_COMPACT_R18.md`
+`handoff/20261003/START_HERE_CURRENT_AUTHORITY_HUB_LIBRARY_RECOVERY_R19.md`
 
-R18 supersedes R17 for **current recovery navigation only**.
-R17 remains immutable scientific/history evidence for UL17/UL18 closure state.
+R19 supersedes R18 for **current recovery navigation only**.
+R18/R17 remain immutable historical/scientific evidence.
 
 ## CURRENT STATE
-`PHYSICAL_SYNC_R74__ACTIVE_EXACT_R69__UL17_B06_FAIL_IMMUTABLE__UL18_A_B_C_PASS_RESEARCH_ONLY__PHYSICALIZATION_PENDING`
+`PHYSICAL_SYNC_R74__ACTIVE_EXACT_R69__UL17_B06_FAIL_IMMUTABLE__UL18_F2_A_B_C_PASS_RESEARCH_ONLY__CANONICAL_CANDIDATE_LIBRARY_CUSTODY_PASS__PHYSICALIZATION_PENDING`
 
 Physical delivery:
 `handoff/CURRENT_PHYSICAL_DELIVERY_POINTER.md`
 
+Research candidate bytes:
+`handoff/CURRENT_RESEARCH_CANDIDATE_CUSTODY_POINTER.md`
+
 Research overlay:
 `handoff/CURRENT_RESEARCH_OVERLAY_POINTER.md`
+
+Database:
+`handoff/CURRENT_DATABASE_RESEARCH_POINTER.md`
