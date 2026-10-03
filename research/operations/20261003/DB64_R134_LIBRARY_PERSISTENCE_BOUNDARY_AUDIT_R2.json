@@ -1,0 +1,52 @@
+{
+  "schema": "DB64_R134_LIBRARY_PERSISTENCE_BOUNDARY_AUDIT_R2",
+  "date": "2026-10-03",
+  "status": "LIBRARY_LISTING_5_OF_5_VISIBLE__RAW_MATERIALIZATION_0_OF_5_DENIED__PERSISTENT_RAW_BYTE_CUSTODY_NOT_PROVEN",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "physical_authority": "SYNC-R74",
+  "runtime_db": "DB59 frozen",
+  "research_db": "DB64-R134",
+  "canonical_full_sha256": "7f5d10e9e86c71c217c971da1a75bbf87c8ee2405bcfd2fbd18a4f10fd6a7901",
+  "semantic_status": "R134_PHYSICAL_STRUCTURAL_PASS__FIVEWORK_SEMANTIC_REAUDIT_REQUIRED",
+  "library_path": "/Literary_OS/Research_DB/DB64_R134",
+  "current_listing_observation": {
+    "folder_exists": true,
+    "listing_count": 5,
+    "files": [
+      {"name":"R134_DOWNLOAD_01_FINAL_DB.part01","bytes":165948385,"expected_sha256":"bf2ce061f2043e881ac9ac3c52abc0c6836b7e0dabd5f1812893a041c3c4baa4"},
+      {"name":"R134_DOWNLOAD_02_FINAL_DB.part02","bytes":165948386,"expected_sha256":"8844fdc7c2e3d1344513b58882ad3239cc6cc537da12a0ac59509a427e49197f"},
+      {"name":"R134_DOWNLOAD_03_CHANGE_PACKAGE.zip","bytes":3042531,"expected_sha256":"bac99fc241f5ebd6b7b25aaee1e32388783b97e6fc9516e4e54add749f07bd6a"},
+      {"name":"R134_DOWNLOAD_04_CYCLE1_CHECKPOINT.zip","bytes":661249,"expected_sha256":"693ffdaf843e547e936584e12356c344487a7fc7cfbb4bfe559687d05d6b4ad3"},
+      {"name":"R134_DOWNLOAD_09_LATEST_LEARNING_BUNDLE.zip","bytes":32860212,"expected_sha256":"e98b9f2b2e85329718d91cff802bfceb5cbbbbaa1cc59188d1e42afab9ce2610"}
+    ]
+  },
+  "raw_materialization_probe": {
+    "attempted_files": 5,
+    "success": 0,
+    "denied": 5,
+    "message_class": "NO_AUTHORIZED_RAW_BYTE_MATERIALIZATION_PATH",
+    "library_native_id_retry_on_change_package": "DENIED_SAME_BOUNDARY"
+  },
+  "historical_change_from_r1": {
+    "r1_listing_count": 0,
+    "r2_listing_count": 5,
+    "interpretation": "Library metadata/listing visibility recovered after the earlier audit, but executable raw-byte custody is still not established."
+  },
+  "known_source_verification_from_current_hub_evidence": {
+    "part01_sha256": "bf2ce061f2043e881ac9ac3c52abc0c6836b7e0dabd5f1812893a041c3c4baa4",
+    "part02_sha256": "8844fdc7c2e3d1344513b58882ad3239cc6cc537da12a0ac59509a427e49197f",
+    "full_rejoin_bytes": 331896771,
+    "full_rejoin_sha256": "7f5d10e9e86c71c217c971da1a75bbf87c8ee2405bcfd2fbd18a4f10fd6a7901",
+    "full_entries": 45331,
+    "full_crc": "PASS",
+    "change_overlay_exact": "433/433",
+    "cycle1_thick_exact": "86/86"
+  },
+  "recovery_rule": [
+    "Do not treat listing visibility as raw-byte custody.",
+    "Do not classify the database as corrupted.",
+    "Before mutation, A2 execution, reseal or Runtime adoption, reacquire/materialize exact raw files and verify expected SHA256 values.",
+    "This boundary does not block the primary UL18 broad-regression track."
+  ]
+}
