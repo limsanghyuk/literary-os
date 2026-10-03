@@ -1,0 +1,12 @@
+{
+  "schema": "UL19_BLIND_MAPPING_SEAL_R1",
+  "date": "2026-10-03",
+  "status": "SEALED_BEFORE_ARCHITECTURE_OUTPUTS",
+  "coordinator_secret_sha256": "0f840b732d48d99f2dbdc122fc020ad31d3f09f520eebeaa20a973109bf05674",
+  "judges": ["J01","J02","J03"],
+  "pairs_per_judge": 6,
+  "arm_balance": "3A_3B_PER_JUDGE",
+  "meaning": "Coordinator secret records which arm is Treatment for each pair.",
+  "reveal_rule": "Do not reveal mapping until 3/3 first schema-valid judgments are hash-sealed.",
+  "authority_effect": "NONE"
+}
