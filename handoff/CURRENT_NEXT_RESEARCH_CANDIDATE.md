@@ -1,32 +1,25 @@
 # CURRENT NEXT RESEARCH CANDIDATE
-Last updated: 2026-10-02
+Last updated: 2026-10-03
 
-## CURRENT CANDIDATE
-The current successor candidate is the **UL18 bounded open-debt semantic repair**.
+## CURRENT RUNTIME / 현재 런타임
+The former UL18-F2 research candidate has completed Broad Executable Regression(광범위 실행 회귀검증), C1/C2 Binding(바인딩), 9-Package Reseal(9패키지 재봉인), custody verification(보관 검증) and physical promotion(물리 승격).
 
-Base:
-- Physical Authority: **SYNC-R74**
-- Active Runtime: **exact R69**
-- Production: **ENG:R47 / LEGACY_R53**
-- Runtime DB: **DB59 frozen**
+Active Runtime:
+**UL18_F2_SUCCESSOR_RUNTIME_R1**
+SHA256:
+`56254a8f52b19651638ab21ece2c35618e621e3aedc02d917efb6e22ca11db88`
 
-Candidate change:
-- bounded `SELECTED_OPEN_TOUCH` semantic repair at the UL16 obligation-disposition boundary;
-- exact R69 UL17 B06 FAIL remains immutable;
-- UL18 Stage A PASS;
-- UL18 Stage B PASS 8/8 fresh;
-- UL18 Stage C PASS 3/3 applicable.
+Physical Authority:
+**SYNC-R76**
 
-Status:
-`ADOPTION_ELIGIBLE__RESEARCH_ONLY__PHYSICALIZATION_NOT_STARTED`
+Qualified Parent:
+**exact R69**
 
-## REQUIRED BEFORE PHYSICAL ADOPTION
-1. broad executable regression;
-2. no unrelated behavioral drift;
-3. preserve R66/R67/R68/R69 qualified behavior;
-4. assign a new successor runtime identity;
-5. bind C1/C2;
-6. reseal/audit/deliver all 9 packages;
-7. only then move Physical Authority and run fresh post-repair blind qualification.
+There is currently **no separate unadopted successor runtime candidate** selected for adoption.
 
-Historical R53/UL1-UL13 candidate text is superseded for current navigation and remains provenance only.
+## NEXT QUALIFICATION TARGET / 다음 자격 대상
+The current active runtime itself must now undergo a fresh unseen multi-strand Architecture Requalification(구조 재자격) with independent J01/J02/J03 Architecture-Only Blind(구조 전용 맹검).
+
+Do not invent a new runtime intervention before this quality qualification unless the fresh test exposes a responsible-ancestor defect requiring a separately preregistered repair.
+
+Alternate `/Literary_OS/UL18_R2` remains unadopted/quarantined provenance.
