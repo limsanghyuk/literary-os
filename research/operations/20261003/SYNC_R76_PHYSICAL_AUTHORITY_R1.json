@@ -1,0 +1,26 @@
+{
+  "schema": "SYNC_R76_PHYSICAL_AUTHORITY_R1",
+  "date": "2026-10-03",
+  "physical_authority": "SYNC-R76",
+  "parent": "SYNC-R74",
+  "status": "PROMOTED__UL18_F2_SUCCESSOR_RUNTIME_ADOPTED__9_OF_9_CUSTODY_REVERIFIED",
+  "active_runtime": "UL18_F2_SUCCESSOR_RUNTIME_R1",
+  "active_runtime_sha256": "56254a8f52b19651638ab21ece2c35618e621e3aedc02d917efb6e22ca11db88",
+  "qualified_parent": "exact R69",
+  "qualified_parent_sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+  "production": "ENG:R47 / LEGACY_R53",
+  "runtime_db": "DB59 frozen",
+  "research_db": "DB64-R134 research-only / semantic re-audit HOLD / raw Library custody not proven",
+  "formal": {
+    "scored": 137,
+    "latest": "R138",
+    "r140": "NOT_STARTED"
+  },
+  "operational_level3": "SUSPENDED__REQUALIFICATION_REQUIRED",
+  "pa8": "CONTROL_1__TREATMENT_0",
+  "broad_regression_result": "PASS",
+  "logical_c2_sha256": "974fc0bd5de09cf7269f3e2bd369dce886084647a81fcd39a5779415c9638772",
+  "trust_root_sha256": "8b2eeb9508389cc86161d75b7960f98b5be9fe28723b03cb55ea8ae179ff8f79",
+  "library_custody": "PASS_9_OF_9",
+  "developer_delivery": "SET_READY_9_OF_9"
+}
