@@ -1,0 +1,116 @@
+{
+  "schema": "SYNC_R76_5PART_9PACKAGE_MANIFEST_R1",
+  "date": "2026-10-03",
+  "physical_authority": "SYNC-R76",
+  "parent_physical_authority": "SYNC-R74",
+  "promotion_status": "PROMOTED__LOCAL_INTEGRITY_PASS__PERSISTENT_LIBRARY_9_OF_9__REMATERIALIZE_SHA_MATCH_9_OF_9__DEVELOPER_DELIVERY_SET_READY",
+  "active_runtime": "UL18_F2_SUCCESSOR_RUNTIME_R1",
+  "active_runtime_sha256": "56254a8f52b19651638ab21ece2c35618e621e3aedc02d917efb6e22ca11db88",
+  "qualified_parent_runtime": "exact R69",
+  "qualified_parent_runtime_sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+  "production": "ENG:R47 / LEGACY_R53",
+  "runtime_db": "DB59 frozen",
+  "runtime_db_sha256": "a5cff0fcd43584220f41a4be85b112c7fc5246977d856797d2676546bccb6bc9",
+  "research_db": "DB64-R134 research-only__semantic_reaudit_hold__raw_library_custody_not_proven",
+  "formal": {
+    "scored": 137,
+    "latest": "R138",
+    "r140": "NOT_STARTED"
+  },
+  "operational_level3": "SUSPENDED__REQUALIFICATION_REQUIRED",
+  "pa8": "CONTROL_1__TREATMENT_0",
+  "broad_regression": "PASS__R66_F01__R67_F07__R68_F04__R69_F06_PRESERVED",
+  "packages": [
+    {
+      "order": 1,
+      "part": "CONTROL",
+      "file": "LITERARY_OS_CURRENT_CONTROL_UL18_F2_SUCCESSOR_SYNC_R76_20261003.zip",
+      "bytes": 289489851,
+      "sha256": "c95e3f4b3844d9a7207d48daca1f794e9f41bcf3aa46fcb880fd9b1692416eab"
+    },
+    {
+      "order": 2,
+      "part": "A",
+      "file": "LITERARY_OS_CURRENT_PART_A_UL18_F2_SUCCESSOR_SYNC_R76_20261003.zip",
+      "bytes": 304043030,
+      "sha256": "5b29e2262bb90ba8b79e4b36df142d3b76720a061a718b28106bccf90dfddbce"
+    },
+    {
+      "order": 3,
+      "part": "B1",
+      "file": "LITERARY_OS_CURRENT_PART_B1_SYNC_R76_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R74.zip",
+      "bytes": 196427036,
+      "sha256": "00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98"
+    },
+    {
+      "order": 4,
+      "part": "B2",
+      "file": "LITERARY_OS_CURRENT_PART_B2_UL18_F2_SUCCESSOR_SYNC_R76_20261003.zip",
+      "bytes": 296015981,
+      "sha256": "50de0ee29463d198dfa78e7063712b723bcd5447e90f6a5c69f7411cecb372f2"
+    },
+    {
+      "order": 5,
+      "part": "C1",
+      "file": "LITERARY_OS_CURRENT_C1_RUNTIME_CORE_SYNC_R76_UL18_F2_SUCCESSOR_20261003.zip",
+      "bytes": 140341909,
+      "sha256": "4dbfbe10e9c066ba739cb40cb1c8d975cffa938360be3984714b1c13e693a139"
+    },
+    {
+      "order": 6,
+      "part": "C2-A",
+      "file": "LITERARY_OS_CURRENT_C2_BINARY_A_SYNC_R76_UL18_F2_SUCCESSOR_20261003.bin",
+      "bytes": 273583222,
+      "sha256": "3f61f769a2cfaff495acf7e4cd8e42718a3fb04861526e6f4f7b33831d3db731"
+    },
+    {
+      "order": 7,
+      "part": "C2-B",
+      "file": "LITERARY_OS_CURRENT_C2_BINARY_B_SYNC_R76_UL18_F2_SUCCESSOR_20261003.bin",
+      "bytes": 273583221,
+      "sha256": "639aabcdf9762f36b3f03b7d7c7784842629be76fe5584bc2502c7327b36b0fd"
+    },
+    {
+      "order": 8,
+      "part": "D1",
+      "file": "LITERARY_OS_CURRENT_PART_D1_DB59_SYNC_R76_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R74.zip",
+      "bytes": 138011573,
+      "sha256": "a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504"
+    },
+    {
+      "order": 9,
+      "part": "D2",
+      "file": "LITERARY_OS_CURRENT_PART_D2_DB59_SYNC_R76_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R74.zip",
+      "bytes": 173393886,
+      "sha256": "c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4"
+    }
+  ],
+  "changed_transports": [
+    "CONTROL",
+    "A",
+    "B2",
+    "C1",
+    "C2-A",
+    "C2-B"
+  ],
+  "byte_unchanged_transports": [
+    "B1",
+    "D1",
+    "D2"
+  ],
+  "logical_c2": {
+    "bytes": 547166443,
+    "sha256": "974fc0bd5de09cf7269f3e2bd369dce886084647a81fcd39a5779415c9638772",
+    "entries": 4020,
+    "crc_pass": true,
+    "duplicates": 0,
+    "parent_preservation_pass": true,
+    "qualified_parent_runtime_sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+    "successor_runtime_sha256": "56254a8f52b19651638ab21ece2c35618e621e3aedc02d917efb6e22ca11db88"
+  },
+  "package_set_root_sha256": "25f946e340a848e81383c27d025241e4791966fe6c3cc2438cbdc1364b1a6473",
+  "sha256sums_sha256": "6903613602e210a40b957f33f534f99f2e0cd59619f1705e8b8319ded89b4873",
+  "local_manifest_sha256": "1763bf62fe7874172be40368f3a8cb813a35aed6ded6779ab44c5bf9ab5326a6",
+  "trust_root_sha256": "8b2eeb9508389cc86161d75b7960f98b5be9fe28723b03cb55ea8ae179ff8f79",
+  "persistent_library_path": "/Literary_OS/Physical_Archive/SYNC_R76_CURRENT_9PACKAGES"
+}
