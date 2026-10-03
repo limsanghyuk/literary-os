@@ -1,0 +1,85 @@
+{
+  "schema": "UL18_F2_BROAD_EXECUTABLE_REGRESSION_RESULT_R1",
+  "date": "2026-10-03",
+  "status": "PASS__R66_R67_R68_R69_PRESERVED__INTENDED_OPEN_DEBT_DELTA_ONLY",
+  "authority_effect_at_result_time": "NONE",
+  "physical_authority_at_execution": "SYNC-R74",
+  "active_runtime_at_execution": "exact R69",
+  "parent_runtime_sha256": "3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1",
+  "canonical_ul18_f2": {
+    "candidate_zip_sha256": "d67f1d6f603f6cdda51fa67fb86c170a0b86780b579e06bfdbec8cc204dcf95f",
+    "adaptive_source_sha256": "f2a22d1156f50152b8de1ae745d16e3189f6731758a83b8cc7dc2b37e8e8553b"
+  },
+  "runtime_recovery": {
+    "c1_bytes": 140403571,
+    "c1_sha256": "3a1880310b7291d832b24c749c47dee2f6862387ddedb8ce3bcb652e0e899f5d",
+    "nested_exact_r69_bytes": 19137771,
+    "nested_exact_r69_entries": 497,
+    "nested_exact_r69_crc": "PASS"
+  },
+  "frozen_inputs": {
+    "R66": {"cases": 12, "bytes": 20711, "sha256": "9ba77865f1fd4f9f9ec91a23456686c026269f3ec5ed62c3490f2e43065bc5a7"},
+    "R67": {"cases": 12, "bytes": 24434, "sha256": "414d099308e3606acff8483c899eb4cd7f4b5783e2c98bc2b01ba20629d1cfcb"},
+    "R68": {"cases": 16, "bytes": 40815, "sha256": "fa57198f9f2dd142079da44179f36817b6bf4eee9b4f2d10d2b5eba33c7451e0"},
+    "R69": {"cases": 16, "bytes": 36062, "sha256": "09d547ede028aad0cd1b2b51c34cd6057dceb38463be1662684500de4219d3e7"}
+  },
+  "source_boundary": {
+    "python_files_parent": 45,
+    "python_files_candidate": 45,
+    "changed_python_files": ["literary_os_runtime/adaptive_showrunner_ul16.py"],
+    "added_python_files": [],
+    "removed_python_files": [],
+    "compile_parent": "45/45 PASS",
+    "compile_candidate": "45/45 PASS"
+  },
+  "regressions": {
+    "R66_F01": {
+      "verdict": "PASS_12_OF_12",
+      "parent_candidate_output_bit_identical": true,
+      "output_sha256_both": "7a411184565238ea36cd88404ecbd7fe7ff5c41a5fa94b3f819175320278ab11",
+      "artifact_sha256_parent": "65fcc5fe4fec5671c7ee98ceee68f55aafe0525aa0d962f65ecfd01aa9914bfd",
+      "artifact_sha256_candidate": "65fcc5fe4fec5671c7ee98ceee68f55aafe0525aa0d962f65ecfd01aa9914bfd"
+    },
+    "R67_F07": {
+      "verdict": "PASS_12_OF_12_CONTRACT_REPLAY",
+      "state_carry_source_bit_identical": true,
+      "state_carry_source_sha256": "ce38885171d0f318aeb2142ec16d119814be7fb736ebc361166007b4d2eea087",
+      "parent_candidate_case_output_bit_identical": true,
+      "output_sha256_both": "463b540f4e569c31370e994ff4ca1cad92928c83b5f0b6e9fcfce6f6331b98d7",
+      "legality_recheck": "12/12 PASS",
+      "execution_note": "Historical standalone runner was not bundled in exact-R69 runtime; the immutable frozen case payload plus preregistered/result contract was replayed directly against current runtime functions."
+    },
+    "R68_F04": {
+      "verdict": "PASS_16_OF_16__FP0_FN0",
+      "parent_candidate_output_bit_identical": true,
+      "output_sha256_both": "c26890fa4de28ed14d88099b4c6a7e734688a6639d3f153a4a0e96cb028fdac8"
+    },
+    "R69_F06": {
+      "verdict": "PASS_16_OF_16__FP0_FN0",
+      "parent_candidate_output_bit_identical": true,
+      "output_sha256_both": "1d6e9123466b60a22a0356fb494c4b9c6fd6f448bd73387058635b2fa5ca8b22"
+    }
+  },
+  "intended_delta_matrix": {
+    "due_true_can_defer_false": "IDENTICAL__SELECTED_DUE__RESOLVE",
+    "due_true_can_defer_true": "IDENTICAL__SELECTED_DUE__RESOLVE",
+    "due_false_can_defer_true": "IDENTICAL__DEFERRED__NO_RESOLVE",
+    "due_false_can_defer_false": {
+      "exact_r69": "SELECTED_DUE__RESOLVE__KNOWN_DEFECT",
+      "ul18_f2": "SELECTED_OPEN_TOUCH__ADVANCE_KEEP_OPEN__NO_RESOLVE__OPEN_DEBT_PRESERVED"
+    },
+    "unaffected_states_identical": 3,
+    "intentional_changed_states": 1
+  },
+  "broad_gate": {
+    "preserve_R66_F01": true,
+    "preserve_R67_F07": true,
+    "preserve_R68_F04": true,
+    "preserve_R69_F06": true,
+    "no_unrelated_python_source_drift": true,
+    "intended_UL18_delta_present": true
+  },
+  "verdict": "PASS",
+  "next_authorized_transaction": "ASSIGN_SUCCESSOR_CANDIDATE_RUNTIME_IDENTITY__THEN_C1_C2_BINDING__THEN_FULL_9_PACKAGE_RESEAL",
+  "database_boundary": "DB64-R134 remains research-only; no mutation/A2/runtime adoption authorized."
+}
