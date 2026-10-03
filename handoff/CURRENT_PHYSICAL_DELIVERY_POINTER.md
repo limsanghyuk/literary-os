@@ -1,43 +1,37 @@
 # CURRENT PHYSICAL DELIVERY POINTER
-Last updated: 2026-10-02
+Last updated: 2026-10-03
 
-## LAST DEVELOPER-HELD COMPLETE PHYSICAL SET
-**SYNC-R74 — 5 logical Parts / 9 transport files — 9/9**
+## CURRENT COMPLETE PHYSICAL SET / 현재 완전 물리 세트
+**SYNC-R76 — 5 logical Parts / 9 transport files — 9/9**
 
-Canonical baseline:
-`research/operations/20261001/SYNC_R74_DEVELOPER_HELD_9PACKAGE_BASELINE_R1.json`
+Physical Authority(물리 권위): **SYNC-R76**
+Parent(부모): SYNC-R74
+Active Runtime(활성 런타임): **UL18_F2_SUCCESSOR_RUNTIME_R1**
+Runtime SHA256: `56254a8f52b19651638ab21ece2c35618e621e3aedc02d917efb6e22ca11db88`
+Qualified Parent Runtime(자격 부모): exact R69 `3d104f635f3c2aea5812917c8b273d1a5fc250b13165f3f88509e0b7a07437b1`
+Production(프로덕션): ENG:R47 / LEGACY_R53
+Runtime DB(런타임 DB): DB59 frozen
 
-Original manifest:
-`research/operations/20260925/SYNC_R74_5PART_9PACKAGE_MANIFEST_R1.json`
+Manifest(매니페스트):
+`research/operations/20261003/SYNC_R76_5PART_9PACKAGE_MANIFEST_R1.json`
 
-Interpretation:
-`DEVELOPER_HELD_9_OF_9__NO_POST_R74_PHYSICAL_SUCCESSOR_DELIVERED`
+Physical authority receipt(물리 권위 영수증):
+`research/operations/20261003/SYNC_R76_PHYSICAL_AUTHORITY_R1.json`
 
-- Active Runtime: **exact R69**
-- Production: **ENG:R47 / LEGACY_R53**
-- Runtime DB: **DB59 frozen**
+Trust Root(신뢰 루트):
+`8b2eeb9508389cc86161d75b7960f98b5be9fe28723b03cb55ea8ae179ff8f79`
 
-A historical SYNC-R75 Hub/server-library handoff exists. It is preserved as provenance but does **not** supersede this current developer-held custody correction.
+Logical C2(논리 C2):
+`974fc0bd5de09cf7269f3e2bd369dce886084647a81fcd39a5779415c9638772`
 
-Do not infer a newer Physical Authority from research dates, Hub titles, or Library objects.
-
-
-## PERSISTENT RAW-BYTE RECOVERY — VERIFIED 2026-10-02
-
-GitHub Hub itself does not contain the nine large package blobs in the repository tree or a verified SYNC-R74 Release asset set.
-
-The exact SYNC-R74 9-package bytes are now persistently stored in the user's Library at:
-
-`/Literary_OS/Physical_Archive/SYNC_R74_CURRENT_9PACKAGES`
-
-Custody/reload audit:
-`research/operations/20261002/SYNC_R74_PERSISTENT_LIBRARY_9PACKAGE_CUSTODY_RELOAD_AUDIT_R1.json`
+Persistent Library(영속 라이브러리):
+`/Literary_OS/Physical_Archive/SYNC_R76_CURRENT_9PACKAGES`
 
 Verified:
-- Library listing: 9/9 canonical files
-- raw-byte materialization: 9/9 PASS
-- reloaded size/SHA256 against canonical SYNC-R74 baseline: 9/9 PASS
-- earlier canonical ZIP/logical C2/DB59 CRC audits remain applicable because reloaded hashes are byte-identical
+- listing 9/9
+- upload 9/9
+- raw rematerialization 9/9
+- SHA match 9/9
+- mismatches 0
 
-New sessions should use the Hub for authority/navigation and the persistent Library folder for large physical bytes.
-Do not confuse metadata custody with raw-byte custody.
+Historical SYNC-R75 remains provenance-only under the corrected authority lineage.
