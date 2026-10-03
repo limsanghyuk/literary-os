@@ -15,8 +15,14 @@ Runtime DB(런타임 DB): DB59 frozen
 Manifest(매니페스트):
 `research/operations/20261003/SYNC_R76_5PART_9PACKAGE_MANIFEST_R1.json`
 
-Physical authority receipt(물리 권위 영수증):
+Physical Authority Receipt(물리 권위 영수증):
 `research/operations/20261003/SYNC_R76_PHYSICAL_AUTHORITY_R1.json`
+
+Developer Delivery / Library Reload Audit(개발자 전달 / 라이브러리 재로드 감사):
+`research/operations/20261003/SYNC_R76_DELIVERY_REDOWNLOAD_AUDIT_R1.md`
+
+Generated-file delivery incident recovery(생성 파일 전달 오류 복구):
+`research/operations/20261003/SYNC_R76_GENERATED_FILE_DELIVERY_INCIDENT_AND_RECOVERY_R1.json`
 
 Trust Root(신뢰 루트):
 `8b2eeb9508389cc86161d75b7960f98b5be9fe28723b03cb55ea8ae179ff8f79`
@@ -29,9 +35,10 @@ Persistent Library(영속 라이브러리):
 
 Verified:
 - listing 9/9
-- upload 9/9
+- local reseal/integrity PASS
 - raw rematerialization 9/9
 - SHA match 9/9
 - mismatches 0
+- developer-delivery sandbox artifacts 9/9 ready
 
 Historical SYNC-R75 remains provenance-only under the corrected authority lineage.
