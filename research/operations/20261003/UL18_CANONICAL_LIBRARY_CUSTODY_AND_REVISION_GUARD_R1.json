@@ -1,0 +1,45 @@
+{
+  "schema": "UL18_CANONICAL_LIBRARY_CUSTODY_AND_REVISION_GUARD_R1",
+  "date": "2026-10-03",
+  "status": "PASS__CANONICAL_UL18_F2_RAW_LIBRARY_CUSTODY_RECOVERABLE__ALTERNATE_UL18_R2_QUARANTINED_NONAUTHORITY",
+  "authority_effect": "NONE",
+  "physical_authority": "SYNC-R74",
+  "active_runtime": "exact R69",
+  "canonical_current_research_candidate": {
+    "scientific_identity": "UL18 bounded open-debt repair candidate from R17/R18",
+    "library_path": "/Literary_OS/Research_Candidates/UL18_CANONICAL/UL18_OPEN_DEBT_REPAIR_CANDIDATE_CANONICAL_F2A22D_R1.zip",
+    "library_file_id": "libfile_87003f04572c81918ab2cfe9e2ddfbc6",
+    "bytes": 18752588,
+    "zip_sha256": "d67f1d6f603f6cdda51fa67fb86c170a0b86780b579e06bfdbec8cc204dcf95f",
+    "entries": 452,
+    "crc": "PASS",
+    "internal_source": "literary_os_runtime/adaptive_showrunner_ul16.py",
+    "internal_source_bytes": 106293,
+    "internal_source_sha256": "f2a22d1156f50152b8de1ae745d16e3189f6731758a83b8cc7dc2b37e8e8553b",
+    "raw_library_reload": "PASS",
+    "interpretation": "This is the candidate identity referenced by canonical R17/R18 and must be used for the next broad executable regression unless a later Hub result explicitly supersedes it."
+  },
+  "alternate_library_object": {
+    "folder": "/Literary_OS/UL18_R2",
+    "runtime_zip": "UL18_R2_RUNTIME_CANDIDATE.zip",
+    "runtime_zip_bytes": 18752890,
+    "runtime_zip_sha256": "acbc935a54a5c9654023aca5ff94963918383946eebc9485c66b9e09d83ea11e",
+    "source": "adaptive_showrunner_ul16_UL18_R2.py",
+    "source_bytes": 108120,
+    "source_sha256": "7c3028fa8c7e648fc4a6cb2416548c06036b00be828cb85f4283aecf8b4cfae4",
+    "patch": "UL18_R2.patch",
+    "patch_sha256": "9c90ef39377f44bcc42b3c1596cfa3c3fd9e9e24d43a4c312d8ef7115f704488",
+    "hub_prereg": "research/upper_layer/20261001/UL18_R2_SOURCE_CUSTODY_RECOVERY_AND_REIMPLEMENTATION_PREREG_R1.md",
+    "hub_result_found": false,
+    "adoption_found": false,
+    "classification": "UNADOPTED_LIBRARY_RESEARCH_OBJECT__DO_NOT_USE_AS_CURRENT_CANDIDATE",
+    "rule": "Preserve as provenance. Do not execute it as current Treatment, bind it into C1/C2, or infer supersession from the R2 label alone."
+  },
+  "resume_rule": [
+    "Read the current START_HERE and CURRENT_RESEARCH_CANDIDATE_CUSTODY_POINTER first.",
+    "Materialize the canonical F2 candidate from /Literary_OS/Research_Candidates/UL18_CANONICAL.",
+    "Verify size -> ZIP SHA256 -> central directory/CRC -> internal source SHA256 before execution.",
+    "Run exact R69 and the canonical F2 candidate on the same recovered broad regression harness.",
+    "Treat /Literary_OS/UL18_R2 as quarantined provenance until a new preregistered/result-sealed successor transaction explicitly adopts it."
+  ]
+}
