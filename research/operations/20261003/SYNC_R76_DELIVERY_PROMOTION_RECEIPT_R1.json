@@ -1,0 +1,23 @@
+{
+  "schema": "SYNC_R76_DELIVERY_PROMOTION_RECEIPT_R1",
+  "date": "2026-10-03",
+  "status": "PASS__PROMOTION_GATE_SATISFIED",
+  "broad_regression": "PASS",
+  "successor_runtime_build": "PASS__497_ENTRIES__45_OF_45_COMPILE__ONE_SOURCE_MEMBER_CHANGED",
+  "c1_binding": "PASS",
+  "logical_c2": "PASS",
+  "package_reseal": "PASS_9_OF_9",
+  "zip_crc_safety": "PASS",
+  "parent_preservation": "PASS",
+  "incremental_secret_scan": "PASS",
+  "persistent_library_upload": "PASS_9_OF_9",
+  "persistent_library_rematerialization": "PASS_9_OF_9",
+  "sha_match": "PASS_9_OF_9",
+  "mismatches": 0,
+  "trust_root_sha256": "8b2eeb9508389cc86161d75b7960f98b5be9fe28723b03cb55ea8ae179ff8f79",
+  "promotion": "SYNC-R74 -> SYNC-R76",
+  "active_runtime": "exact R69 -> UL18_F2_SUCCESSOR_RUNTIME_R1",
+  "production_effect": "NONE",
+  "runtime_db_effect": "NONE",
+  "formal_effect": "NONE"
+}
