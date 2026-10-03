@@ -1,0 +1,27 @@
+{
+  "schema": "SYNC_R77_PHYSICAL_AUTHORITY_R1",
+  "date": "2026-10-03",
+  "status": "PROMOTED__UL20_F04_SUCCESSOR_RUNTIME_ADOPTED__9_OF_9_CUSTODY_REVERIFIED",
+  "physical_authority": "SYNC-R77",
+  "parent": "SYNC-R76",
+  "active_runtime": "UL20_F04_TRUSTED_ROOT_SUCCESSOR_RUNTIME_R1",
+  "active_runtime_sha256": "aeb24721f9ef483daefe922cef1842f6459e07f0fd72e4e31d4bb4ed4094f200",
+  "adaptive_source_sha256": "112a43d5609d2c35fb86c9f03f1494ba77f2da4118b02284c2db03334a6bf94a",
+  "qualified_parent": "UL18_F2_SUCCESSOR_RUNTIME_R1",
+  "qualified_parent_sha256": "56254a8f52b19651638ab21ece2c35618e621e3aedc02d917efb6e22ca11db88",
+  "production": "ENG:R47 / LEGACY_R53",
+  "runtime_db": "DB59 frozen",
+  "research_db": "DB64-R134 research-only / raw custody not proven",
+  "formal": {
+    "scored": 137,
+    "latest": "R138",
+    "r140": "NOT_STARTED"
+  },
+  "operational_level3": "SUSPENDED__REQUALIFICATION_REQUIRED",
+  "pa8": "CONTROL_1__TREATMENT_0",
+  "ul20_result": "CLOSED_PASS__16_OF_16__FP0_FN0",
+  "logical_c2_sha256": "e10902964eed0cdd690339d5bd8816a28c5e07844d3158c5c2ffe1e6ed990c8b",
+  "trust_root_sha256": "79e1df6f571a913a672ddff1da779e6ad910864bf81933cc82f7783c7b1c4851",
+  "library_custody": "PASS_9_OF_9__RAW_REMATERIALIZATION_SHA_MATCH",
+  "developer_delivery": "SET_READY_9_OF_9_CURRENT_RESPONSE"
+}
