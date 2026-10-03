@@ -1,0 +1,55 @@
+{
+  "schema": "UL20_PREIMPLEMENTATION_ADVERSARIAL_SUITE_R1",
+  "date": "2026-10-03",
+  "status": "FROZEN_BEFORE_IMPLEMENTATION",
+  "threshold": 3,
+  "cases": [
+    {
+      "id": "D01_SAME_ROOT_REPEAT_3",
+      "expected_f04": true,
+      "root_mode": "valid_same_evidence",
+      "note": "three same semantic roles share one validated source record"
+    },
+    {
+      "id": "D02_FAKE_LABELS_NO_EVIDENCE",
+      "expected_f04": true,
+      "root_mode": "free_text_labels_only",
+      "note": "different causal_root strings are not trusted evidence"
+    },
+    {
+      "id": "D03_SAME_SOURCE_ID_DIFFERENT_LABELS",
+      "expected_f04": true,
+      "root_mode": "same_validated_source_identity",
+      "note": "label renaming cannot split one source root"
+    },
+    {
+      "id": "D04_INVALID_HASH",
+      "expected_f04": true,
+      "root_mode": "invalid_evidence_hash",
+      "note": "invalid evidence falls back to historical unpartitioned grouping"
+    },
+    {
+      "id": "D05_THREE_VALID_INDEPENDENT_ROOTS",
+      "expected_f04": false,
+      "root_mode": "three_valid_distinct_source_records"
+    },
+    {
+      "id": "D06_TWO_PLUS_ONE",
+      "expected_f04": false,
+      "root_mode": "two_same_valid_root_plus_one_independent"
+    },
+    {
+      "id": "D07_INDEPENDENT_BUT_REDUNDANT",
+      "expected_f04": false,
+      "expected_f06_redundant": true,
+      "root_mode": "three_valid_distinct_roots_but_duplicate_same-obligation scene design"
+    },
+    {
+      "id": "D08_METADATA_SENTINEL",
+      "expected_semantic_output_change": false,
+      "root_mode": "valid_distinct_roots_with_irrelevant_metadata_change"
+    }
+  ],
+  "anti_gaming": "Root free-text labels and obligation IDs must never become partition keys.",
+  "authority_effect": "NONE"
+}
