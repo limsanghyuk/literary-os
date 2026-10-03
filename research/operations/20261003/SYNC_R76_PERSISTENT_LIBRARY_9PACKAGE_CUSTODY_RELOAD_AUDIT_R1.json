@@ -1,0 +1,73 @@
+{
+  "schema": "SYNC_R76_PERSISTENT_LIBRARY_9PACKAGE_CUSTODY_RELOAD_AUDIT_R1",
+  "date": "2026-10-03",
+  "status": "PASS__LIBRARY_LISTING_9_OF_9__RAW_REMATERIALIZATION_9_OF_9__SHA_MATCH_9_OF_9",
+  "physical_authority": "SYNC-R76",
+  "library_path": "/Literary_OS/Physical_Archive/SYNC_R76_CURRENT_9PACKAGES",
+  "mismatches": 0,
+  "packages": [
+    {
+      "order": 1,
+      "part": "CONTROL",
+      "file": "LITERARY_OS_CURRENT_CONTROL_UL18_F2_SUCCESSOR_SYNC_R76_20261003.zip",
+      "bytes": 289489851,
+      "sha256": "c95e3f4b3844d9a7207d48daca1f794e9f41bcf3aa46fcb880fd9b1692416eab"
+    },
+    {
+      "order": 2,
+      "part": "A",
+      "file": "LITERARY_OS_CURRENT_PART_A_UL18_F2_SUCCESSOR_SYNC_R76_20261003.zip",
+      "bytes": 304043030,
+      "sha256": "5b29e2262bb90ba8b79e4b36df142d3b76720a061a718b28106bccf90dfddbce"
+    },
+    {
+      "order": 3,
+      "part": "B1",
+      "file": "LITERARY_OS_CURRENT_PART_B1_SYNC_R76_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R74.zip",
+      "bytes": 196427036,
+      "sha256": "00b671a5cdf8ecf2d6e54651abdd9606457245f3654a71eba26f6d684faa9c98"
+    },
+    {
+      "order": 4,
+      "part": "B2",
+      "file": "LITERARY_OS_CURRENT_PART_B2_UL18_F2_SUCCESSOR_SYNC_R76_20261003.zip",
+      "bytes": 296015981,
+      "sha256": "50de0ee29463d198dfa78e7063712b723bcd5447e90f6a5c69f7411cecb372f2"
+    },
+    {
+      "order": 5,
+      "part": "C1",
+      "file": "LITERARY_OS_CURRENT_C1_RUNTIME_CORE_SYNC_R76_UL18_F2_SUCCESSOR_20261003.zip",
+      "bytes": 140341909,
+      "sha256": "4dbfbe10e9c066ba739cb40cb1c8d975cffa938360be3984714b1c13e693a139"
+    },
+    {
+      "order": 6,
+      "part": "C2-A",
+      "file": "LITERARY_OS_CURRENT_C2_BINARY_A_SYNC_R76_UL18_F2_SUCCESSOR_20261003.bin",
+      "bytes": 273583222,
+      "sha256": "3f61f769a2cfaff495acf7e4cd8e42718a3fb04861526e6f4f7b33831d3db731"
+    },
+    {
+      "order": 7,
+      "part": "C2-B",
+      "file": "LITERARY_OS_CURRENT_C2_BINARY_B_SYNC_R76_UL18_F2_SUCCESSOR_20261003.bin",
+      "bytes": 273583221,
+      "sha256": "639aabcdf9762f36b3f03b7d7c7784842629be76fe5584bc2502c7327b36b0fd"
+    },
+    {
+      "order": 8,
+      "part": "D1",
+      "file": "LITERARY_OS_CURRENT_PART_D1_DB59_SYNC_R76_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R74.zip",
+      "bytes": 138011573,
+      "sha256": "a63a253263d86e461d48b753865c6e993e86de9d6a17a77f199f2c38316ec504"
+    },
+    {
+      "order": 9,
+      "part": "D2",
+      "file": "LITERARY_OS_CURRENT_PART_D2_DB59_SYNC_R76_INHERITED_BYTE_UNCHANGED_FROM_SYNC_R74.zip",
+      "bytes": 173393886,
+      "sha256": "c6288a00294a91ecdd1eb20cb086365eefa1a3d8fbb7febd9ba7fe554fc172c4"
+    }
+  ]
+}
