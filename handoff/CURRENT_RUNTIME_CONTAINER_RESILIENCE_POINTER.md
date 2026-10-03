@@ -1,13 +1,13 @@
 # CURRENT RUNTIME / CONTAINER RESILIENCE POINTER
 Last updated: 2026-10-03
 
-## CANONICAL PROTOCOL
+## CANONICAL PROTOCOL / 정본 프로토콜
 `research/operations/20261001/LITERARY_OS_RUNTIME_CONTAINER_RESILIENCE_PROTOCOL_R6.md`
 
-## NON-NEGOTIABLE RULE
+## NON-NEGOTIABLE RULE / 필수 규칙
 `STOP -> RUNTIME_TRANSPORT_HOLD -> MINIMAL_HEALTH_CHECK -> LAST_ATOMIC_CHECKPOINT_VERIFY -> RESUME_ONLY_FAILED_STEP`
 
-## DIAGNOSTIC ORDER
+## DIAGNOSTIC ORDER / 진단 순서
 For each artifact independently:
 1. exact grounded path + stat;
 2. expected size comparison;
@@ -25,16 +25,16 @@ A truncated sibling upload does not contaminate the verdict of a healthy artifac
 - `research/operations/20261001/RUNTIME_CONTAINER_RESILIENCE_SYNC_R74_B1_REUPLOAD_RECOVERY_AUDIT_R3.json`
 - `research/operations/20261001/RUNTIME_CONTAINER_RESILIENCE_SYNC_R74_C1_C2_CURRENT_ATTACHMENT_AUDIT_R2.json`
 - `research/operations/20261001/RUNTIME_CONTAINER_RESILIENCE_SYNC_R74_D1_D2_CURRENT_ATTACHMENT_AUDIT_R2.json`
-- `research/operations/20261003/DB64_R134_LIBRARY_PERSISTENCE_BOUNDARY_AUDIT_R1.json`
+- `research/operations/20261003/DB64_R134_LIBRARY_PERSISTENCE_BOUNDARY_AUDIT_R2.json`
 
-## CURRENT AUTHORITY RECOVERY
+## CURRENT AUTHORITY RECOVERY / 현재 권위 복구
 After runtime/file health is restored, return to:
-`handoff/20261003/START_HERE_CURRENT_AUTHORITY_HUB_LIBRARY_RECOVERY_R19.md`
+`handoff/20261003/START_HERE_CURRENT_AUTHORITY_HUB_LIBRARY_RECOVERY_R20.md`
 
 Candidate byte selection must use:
 `handoff/CURRENT_RESEARCH_CANDIDATE_CUSTODY_POINTER.md`
 
 Do not continue from an older START_HERE merely because its incident evidence is useful.
 
-## AUTHORITY EFFECT
+## AUTHORITY EFFECT / 권위 영향
 NONE. Physical Authority remains SYNC-R74.
