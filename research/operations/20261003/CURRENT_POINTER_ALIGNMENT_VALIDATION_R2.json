@@ -1,0 +1,45 @@
+{
+  "schema": "CURRENT_POINTER_ALIGNMENT_VALIDATION_R2",
+  "date": "2026-10-03",
+  "status": "PASS__R20_CURRENT_POINTERS_ALIGNED__NO_AUTHORITY_ESCALATION__DB64_LIBRARY_BOUNDARY_CORRECTED",
+  "canonical_start_here": "handoff/20261003/START_HERE_CURRENT_AUTHORITY_HUB_LIBRARY_RECOVERY_R20.md",
+  "authority": {
+    "physical_authority": "SYNC-R74",
+    "active_runtime": "exact R69",
+    "production": "ENG:R47 / LEGACY_R53",
+    "runtime_db": "DB59 frozen",
+    "post_r74_physical_successor": "NONE",
+    "formal_scored": 137,
+    "latest_formal": "R138",
+    "r140": "NOT_STARTED"
+  },
+  "research": {
+    "ul17": "B06_FAIL_IMMUTABLE",
+    "ul18_canonical_source_sha256": "f2a22d1156f50152b8de1ae745d16e3189f6731758a83b8cc7dc2b37e8e8553b",
+    "ul18_status": "A_B_C_PASS__RESEARCH_ONLY__PHYSICALIZATION_NOT_STARTED",
+    "ul18_fresh_raw_reload": "PASS__ZIP_SHA_CRC_SOURCE_SHA_MATCH",
+    "pa8": "CONTROL1_TREATMENT0",
+    "research_db": "DB64-R134_REAUDIT_HOLD"
+  },
+  "db64_r134_library": {
+    "path": "/Literary_OS/Research_DB/DB64_R134",
+    "expected_files_visible": "5/5",
+    "raw_materialization": "0/5_DENIED",
+    "persistent_raw_byte_custody": "NOT_PROVEN",
+    "corruption_claimed": false,
+    "audit": "research/operations/20261003/DB64_R134_LIBRARY_PERSISTENCE_BOUNDARY_AUDIT_R2.json"
+  },
+  "current_pointers": [
+    "handoff/CURRENT_HANDOFF_POINTER.md",
+    "handoff/CURRENT_SESSION_RECOVERY_POINTER.md",
+    "handoff/CURRENT_PHYSICAL_DELIVERY_POINTER.md",
+    "handoff/CURRENT_RESEARCH_CANDIDATE_CUSTODY_POINTER.md",
+    "handoff/CURRENT_RESEARCH_OVERLAY_POINTER.md",
+    "handoff/CURRENT_NEXT_RESEARCH_POINTER.md",
+    "handoff/CURRENT_DATABASE_RESEARCH_POINTER.md",
+    "handoff/CURRENT_RUNTIME_CONTAINER_RESILIENCE_POINTER.md",
+    "handoff/CURRENT_FULL_RESEARCH_LINEAGE_AUDIT_POINTER.md"
+  ],
+  "next_primary": "BROAD_EXECUTABLE_REGRESSION__EXACT_R69_VS_CANONICAL_UL18_F2",
+  "physicalization_rule": "NO_NEW_SYNC_OR_PHYSICAL_AUTHORITY_CHANGE_BEFORE_REGRESSION_PASS_AND_9_OF_9_RESEAL_DELIVERY"
+}
