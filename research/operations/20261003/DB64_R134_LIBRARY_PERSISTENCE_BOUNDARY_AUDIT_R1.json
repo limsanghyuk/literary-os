@@ -1,0 +1,39 @@
+{
+  "schema": "DB64_R134_LIBRARY_PERSISTENCE_BOUNDARY_AUDIT_R1",
+  "date": "2026-10-03",
+  "status": "HUB_RESEARCH_STATE_COMPLETE__CURRENT_CONVERSATION_BYTES_VERIFIED__LIBRARY_UPLOAD_ACKNOWLEDGED__PERSISTENT_RAW_BYTE_CUSTODY_NOT_PROVEN",
+  "authority_effect": "NONE",
+  "runtime_db": "DB59 frozen",
+  "research_db": "DB64-R134",
+  "canonical_full_sha256": "7f5d10e9e86c71c217c971da1a75bbf87c8ee2405bcfd2fbd18a4f10fd6a7901",
+  "current_semantic_status": "R134_PHYSICAL_STRUCTURAL_PASS__FIVEWORK_SEMANTIC_REAUDIT_REQUIRED",
+  "attempted_library_path": "/Literary_OS/Research_DB/DB64_R134",
+  "upload_acknowledged_files": [
+    "R134_DOWNLOAD_01_FINAL_DB.part01",
+    "R134_DOWNLOAD_02_FINAL_DB.part02",
+    "R134_DOWNLOAD_03_CHANGE_PACKAGE.zip",
+    "R134_DOWNLOAD_04_CYCLE1_CHECKPOINT.zip",
+    "R134_DOWNLOAD_09_LATEST_LEARNING_BUNDLE.zip"
+  ],
+  "post_upload_observation": {
+    "folder_exists": true,
+    "folder_listing_count": 0,
+    "direct_raw_materialization_probe": "DENIED__NO_AUTHORIZED_RAW_BYTE_MATERIALIZATION_PATH",
+    "container_path_overwrite_retry": "FAILED__CONTAINER_SESSION_EXPIRED",
+    "classification": "FILE_SERVICE_OR_LIBRARY_MATERIALIZATION_BOUNDARY__NOT_DB_CORRUPTION"
+  },
+  "source_byte_evidence": {
+    "current_conversation_reverification": "PASS",
+    "part01_sha256": "bf2ce061f2043e881ac9ac3c52abc0c6836b7e0dabd5f1812893a041c3c4baa4",
+    "part02_sha256": "8844fdc7c2e3d1344513b58882ad3239cc6cc537da12a0ac59509a427e49197f",
+    "full_rejoin_sha256": "7f5d10e9e86c71c217c971da1a75bbf87c8ee2405bcfd2fbd18a4f10fd6a7901",
+    "full_crc": "PASS",
+    "hub_audit": "research/operations/20261001/DB64_R134_CURRENT_ATTACHMENT_REVERIFICATION_AND_LEARNING_AUDIT_R2.json"
+  },
+  "recovery_rule": [
+    "Do not claim the R134 database is corrupted.",
+    "Hub contains the scientific/semantic status and exact expected hashes needed to identify the data.",
+    "Before any future DB mutation/reseal/A2 execution, require a fresh raw-byte materialization of the exact R134 parts and verify the recorded hashes.",
+    "If Library raw custody still cannot be proven, request/recover the exact R134 artifacts then; this does not block the primary UL18 runtime-regression track."
+  ]
+}
