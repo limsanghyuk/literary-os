@@ -1,0 +1,368 @@
+{
+  "schema": "UL19_FRESH_UNSEEN_MULTI_STRAND_FIXTURE_R1",
+  "date": "2026-10-03",
+  "status": "FROZEN_BEFORE_ANY_CONTROL_OR_TREATMENT_ARCHITECTURE_OUTPUT",
+  "synthetic_work": {
+    "work_id": "SYNTH_UL19_MONDAY_OBSERVATORY",
+    "title": "월요일의 천문대",
+    "format": "Korean broadcast ensemble drama",
+    "episode_target": "EP05",
+    "source_cutoff": "Synthetic current state through EP04 only. No EP05 answer key exists.",
+    "premise": "A municipal hilltop observatory, a nearby middle school, and several families share the same neighborhood but face separate pressures involving public funding, caregiving, career choices, accessibility, memory, and professional identity. The episode must allow intersections without treating every conflict as a consequence of the observatory's budget."
+  },
+  "series_anchors": {
+    "protagonist": "YOON_HAEJIN",
+    "ensemble": [
+      "YOON_HAEJIN",
+      "SEO_MINWOO",
+      "KIM_BORA",
+      "PARK_DONGSIK",
+      "CHOI_EUNSEO",
+      "LEE_SORA",
+      "HAN_JAEHO"
+    ],
+    "immutable_premise": "The observatory is a social crossroads, not a master cause. Independent family, school, career, volunteer, and historical-memory conflicts must retain their own causal roots.",
+    "tone": "ensemble workplace/family drama with restrained humor, social texture, indirect emotion, and visible physical behavior",
+    "forbidden_shortcut": [
+      "Do not make all strands consequences of the municipal funding review.",
+      "Do not solve private family conflict through one public astronomy event.",
+      "Do not force every supporting-character strand into Haejin's decision.",
+      "Do not convert open historical evidence into a fully verified public truth without source support."
+    ]
+  },
+  "groups": [
+    {
+      "group_id": "G_OBSERVATORY_STAFF",
+      "kind": "work",
+      "members": [
+        "YOON_HAEJIN",
+        "SEO_MINWOO",
+        "KIM_BORA",
+        "PARK_DONGSIK"
+      ]
+    },
+    {
+      "group_id": "G_SCHOOL_SCIENCE_CLUB",
+      "kind": "school",
+      "members": [
+        "CHOI_EUNSEO",
+        "HAN_JAEHO"
+      ]
+    },
+    {
+      "group_id": "G_ACCESS_VOLUNTEERS",
+      "kind": "community",
+      "members": [
+        "LEE_SORA",
+        "PARK_DONGSIK"
+      ]
+    },
+    {
+      "group_id": "G_HAEJIN_FAMILY",
+      "kind": "family",
+      "members": [
+        "YOON_HAEJIN",
+        "CHOI_EUNSEO"
+      ]
+    }
+  ],
+  "current_character_state": {
+    "YOON_HAEJIN": {
+      "role": "observatory_program_director",
+      "public_goal": "keep the public program credible during the municipal review",
+      "private_goal": "avoid using her niece Eunseo as proof that the observatory serves schools",
+      "fear": "turning family care into institutional leverage",
+      "withheld": "has not told staff that the city offered her a temporary administrative post if programs are cut"
+    },
+    "SEO_MINWOO": {
+      "role": "senior_astronomy_educator",
+      "public_goal": "protect the late-night observation program",
+      "private_goal": "decide whether to accept a private planetarium job",
+      "fear": "staying only because others expect him to be indispensable",
+      "withheld": "a private planetarium asked for a decision by tomorrow noon"
+    },
+    "KIM_BORA": {
+      "role": "junior_instrument_technician",
+      "public_goal": "repair the spectrograph before the school visit",
+      "private_goal": "submit an overseas fellowship application without asking Minwoo for a recommendation",
+      "fear": "being treated as an apprentice forever",
+      "withheld": "the fellowship application closes at 18:30 today"
+    },
+    "PARK_DONGSIK": {
+      "role": "night_guard_and_longtime_volunteer",
+      "public_goal": "keep visitor flow safe",
+      "private_goal": "secure written recognition for years of unpaid accessibility escort work",
+      "fear": "the institution will praise volunteers while erasing their labor"
+    },
+    "CHOI_EUNSEO": {
+      "role": "Haejin's teenage niece and science-club leader",
+      "public_goal": "prepare the club's lunar-occultation presentation",
+      "private_goal": "set a boundary against being treated as Haejin's responsibility project",
+      "fear": "her mother's absence becoming a reason adults make choices for her"
+    },
+    "LEE_SORA": {
+      "role": "wheelchair user and neighborhood accessibility organizer",
+      "public_goal": "make the observatory's winter program physically accessible",
+      "private_goal": "stop accepting symbolic invitations without operational changes",
+      "fear": "being used as a publicity image"
+    },
+    "HAN_JAEHO": {
+      "role": "middle-school science teacher",
+      "public_goal": "keep the school club visit scheduled",
+      "private_goal": "admit he altered the club roster to protect one student from a disciplinary record",
+      "fear": "losing institutional trust if the alteration becomes known"
+    }
+  },
+  "relationship_state": [
+    {
+      "pair": [
+        "YOON_HAEJIN",
+        "CHOI_EUNSEO"
+      ],
+      "state": "caregiving closeness with boundary strain",
+      "pressure": "Haejin acts as guardian in practice; Eunseo resists being managed"
+    },
+    {
+      "pair": [
+        "YOON_HAEJIN",
+        "SEO_MINWOO"
+      ],
+      "state": "long professional trust",
+      "pressure": "Haejin assumes Minwoo will stay through winter; he is considering leaving"
+    },
+    {
+      "pair": [
+        "SEO_MINWOO",
+        "KIM_BORA"
+      ],
+      "state": "mentor/apprentice respect",
+      "pressure": "Bora wants independence and has not asked for a recommendation"
+    },
+    {
+      "pair": [
+        "PARK_DONGSIK",
+        "LEE_SORA"
+      ],
+      "state": "practical alliance",
+      "pressure": "both want accessibility work recognized but disagree about public confrontation"
+    },
+    {
+      "pair": [
+        "CHOI_EUNSEO",
+        "HAN_JAEHO"
+      ],
+      "state": "teacher/student trust",
+      "pressure": "Eunseo knows the club roster was quietly changed but not why"
+    }
+  ],
+  "information_state": [
+    {
+      "id": "INFO_BORA_FELLOWSHIP",
+      "knowers": [
+        "KIM_BORA"
+      ],
+      "fact": "Bora's fellowship application closes at 18:30 today.",
+      "visibility": "private"
+    },
+    {
+      "id": "INFO_MINWOO_OFFER",
+      "knowers": [
+        "SEO_MINWOO"
+      ],
+      "fact": "A private planetarium offered Minwoo a job; answer due tomorrow noon.",
+      "visibility": "private"
+    },
+    {
+      "id": "INFO_ROSTER_EDIT",
+      "knowers": [
+        "HAN_JAEHO",
+        "CHOI_EUNSEO"
+      ],
+      "fact": "Jaeho altered the science-club roster to protect a student from a disciplinary mark.",
+      "visibility": "limited"
+    },
+    {
+      "id": "INFO_OLD_ACCESS_LOG",
+      "knowers": [
+        "PARK_DONGSIK"
+      ],
+      "fact": "An old maintenance log appears to show the observatory once budgeted for paid accessibility escorts, but the page is incomplete and unauthenticated.",
+      "visibility": "partial"
+    }
+  ],
+  "obligation_portfolio": [
+    {
+      "id": "THR_CITY_REVIEW",
+      "kind": "THREAD",
+      "causal_root": "municipal review cycle scheduled months earlier",
+      "owners": [
+        "YOON_HAEJIN",
+        "SEO_MINWOO"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.91,
+      "statement": "The observatory must choose what program scope it will formally defend at today's municipal review meeting.",
+      "protected_delta": "A concrete operating stance must be chosen; continued full funding is not required.",
+      "dependencies": [],
+      "visible_action": "Haejin removes two program cards from the presentation board, then restores one after Minwoo refuses to sign the reduced schedule."
+    },
+    {
+      "id": "REL_GUARDIAN_BOUNDARY",
+      "kind": "RELATIONSHIP",
+      "causal_root": "years of informal caregiving after Eunseo's mother began working abroad",
+      "owners": [
+        "YOON_HAEJIN",
+        "CHOI_EUNSEO"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.87,
+      "statement": "Haejin and Eunseo must establish a new explicit boundary about decisions Haejin may make on Eunseo's behalf.",
+      "protected_delta": "Relationship state changes without requiring reconciliation or family harmony.",
+      "dependencies": [],
+      "visible_action": "Eunseo takes the emergency-contact form from Haejin's folder, crosses out Haejin's prewritten answer, and writes her own."
+    },
+    {
+      "id": "INFO_FELLOWSHIP",
+      "kind": "INFORMATION",
+      "causal_root": "Bora's independent career application",
+      "owners": [
+        "KIM_BORA",
+        "SEO_MINWOO"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.9,
+      "deadline": "18:30",
+      "statement": "Bora's fellowship deadline must become behaviorally consequential before 18:30.",
+      "protected_delta": "At least one work decision changes because Bora may leave or needs time to apply.",
+      "dependencies": [],
+      "visible_action": "Bora sets a laptop beside the open spectrograph, starts the application timer, and refuses Minwoo's request to stay through the evening repair."
+    },
+    {
+      "id": "SOC_ACCESS_LABOR",
+      "kind": "SOCIAL",
+      "causal_root": "years of unpaid accessibility escort work predating the current review",
+      "owners": [
+        "PARK_DONGSIK",
+        "LEE_SORA",
+        "YOON_HAEJIN"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.84,
+      "statement": "Accessibility labor must be treated as an institutional operating cost and claim, not as sentimental volunteer goodwill.",
+      "protected_delta": "The operating plan changes in response to accessibility labor claims.",
+      "dependencies": [],
+      "visible_action": "Sora wheels past the ceremonial ribbon and places a typed escort-shift cost sheet over the photo-op schedule."
+    },
+    {
+      "id": "EVENT_CLOUD_CANCELLATION",
+      "kind": "EVENT",
+      "causal_root": "a regional cloud front independently cancels the booked mobile telescope demonstration",
+      "owners": [
+        "CHOI_EUNSEO",
+        "HAN_JAEHO",
+        "SEO_MINWOO"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.79,
+      "statement": "The school club loses its planned mobile telescope demonstration less than two hours before the visit.",
+      "protected_delta": "The club must make a replacement public-learning decision that exposes character priorities.",
+      "dependencies": [],
+      "visible_action": "Jaeho folds the printed rooftop route map while Eunseo erases the telescope icon from the club board and leaves the time slot blank."
+    },
+    {
+      "id": "PAY_OLD_ACCESS_LOG",
+      "kind": "PAYOFF",
+      "causal_root": "a maintenance archive found during an unrelated storeroom inventory in EP04",
+      "owners": [
+        "PARK_DONGSIK",
+        "LEE_SORA",
+        "YOON_HAEJIN"
+      ],
+      "due": false,
+      "can_defer": false,
+      "pressure": 0.88,
+      "statement": "The incomplete old accessibility-pay log must affect today's choices but cannot yet be authenticated or publicly resolved.",
+      "protected_delta": "The log is touched and changes at least one private stance while remaining OPEN.",
+      "dependencies": [],
+      "visible_action": "Dongsik slips the torn log page under Sora's cost sheet, but keeps the missing signature column covered with his hand."
+    },
+    {
+      "id": "CHAR_MINWOO_CHOICE",
+      "kind": "CHARACTER",
+      "causal_root": "Minwoo's private job offer and long-standing fear of becoming professionally static",
+      "owners": [
+        "SEO_MINWOO"
+      ],
+      "due": true,
+      "can_defer": false,
+      "pressure": 0.82,
+      "statement": "Minwoo must make a costly choice that reveals whether he values institutional continuity or his own next step more.",
+      "protected_delta": "The choice incurs a concrete cost and cannot be a simple heroic pledge.",
+      "dependencies": [
+        "THR_CITY_REVIEW"
+      ],
+      "visible_action": "Minwoo signs the municipal schedule only after removing his own name from the winter lecture roster."
+    }
+  ],
+  "unrelated_sentinels": {
+    "weather_before_event": "overcast but safe",
+    "building_power": "normal",
+    "no_disaster_event": true,
+    "no_election_or_public_office_plot": true,
+    "note": "Sentinels must not drift across variants unless explicitly mutated."
+  },
+  "expected_research_properties": {
+    "distinct_causal_roots_min": 7,
+    "obligation_families": [
+      "THREAD",
+      "RELATIONSHIP",
+      "INFORMATION",
+      "SOCIAL",
+      "EVENT",
+      "PAYOFF",
+      "CHARACTER"
+    ],
+    "available_owners": 7,
+    "open_touch_obligations": [
+      "PAY_OLD_ACCESS_LOG"
+    ],
+    "explicit_dependency_edges": [
+      [
+        "THR_CITY_REVIEW",
+        "CHAR_MINWOO_CHOICE"
+      ]
+    ],
+    "architecture_should_not_collapse_to_single_city_review_spine": true
+  },
+  "workload_variants": [
+    {
+      "id": "P01_BASE",
+      "mutation": "none"
+    },
+    {
+      "id": "P02_RELATIONSHIP_HIGH",
+      "mutation": "REL_GUARDIAN_BOUNDARY pressure 0.87 -> 0.97; all facts unchanged"
+    },
+    {
+      "id": "P03_INFORMATION_EARLY",
+      "mutation": "INFO_FELLOWSHIP deadline 18:30 -> 16:45 and pressure 0.90 -> 0.98"
+    },
+    {
+      "id": "P04_SOCIAL_HIGH",
+      "mutation": "SOC_ACCESS_LABOR pressure 0.84 -> 0.96"
+    },
+    {
+      "id": "P05_EVENT_CONFIRMED",
+      "mutation": "EVENT_CLOUD_CANCELLATION replaced by weather clearing / demonstration restored; dependent facts otherwise unchanged"
+    },
+    {
+      "id": "P06_OPEN_TOUCH_HIGH",
+      "mutation": "PAY_OLD_ACCESS_LOG pressure 0.88 -> 0.97; remains due=false can_defer=false and must remain open"
+    }
+  ]
+}
