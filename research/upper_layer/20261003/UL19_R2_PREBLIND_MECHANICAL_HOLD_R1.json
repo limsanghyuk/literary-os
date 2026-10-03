@@ -1,0 +1,44 @@
+{
+  "schema":"UL19_R2_PREBLIND_MECHANICAL_HOLD_R1",
+  "date":"2026-10-03",
+  "status":"CLOSED__PREBLIND_MECHANICAL_HOLD__NO_EXTERNAL_ARCHITECTURE_QUALITY_VERDICT",
+  "authority_effect":"NONE",
+  "physical_authority":"SYNC-R76",
+  "active_runtime":"UL18_F2_SUCCESSOR_RUNTIME_R1",
+  "fixture":"research/upper_layer/20261003/UL19_R2_FRESH_UNSEEN_BROADCAST_DENSITY_FIXTURE_R1.json",
+  "preregistration":"research/upper_layer/20261003/UL19_R2_ARCHITECTURE_REQUALIFICATION_PREREG_R1.md",
+  "mapping_seal":"research/upper_layer/20261003/UL19_R2_BLIND_MAPPING_SEAL_R1.json",
+  "outputs":{
+    "summary_sha256":"26924021dd389d4b58a84c1c807d8e1c6a749e7887d0f10d4513efc7ffc95616",
+    "P01":{"control":"PASS__9_SEQ__20_SCENES","treatment":"HOLD__9_SEQ__46_SCENES__SEMANTIC_TRANSACTION_REPEAT_GE3"},
+    "P02":{"control":"PASS__9_SEQ__20_SCENES","treatment":"HOLD__8_SEQ__46_SCENES__SEMANTIC_REPEAT_PLUS_SEQUENCE_DEPTH"},
+    "P03":{"control":"PASS__9_SEQ__20_SCENES","treatment":"HOLD__9_SEQ__46_SCENES__SEMANTIC_TRANSACTION_REPEAT_GE3"},
+    "P04":{"control":"PASS__9_SEQ__20_SCENES","treatment":"HOLD__8_SEQ__46_SCENES__SEMANTIC_REPEAT_PLUS_SEQUENCE_DEPTH"},
+    "P05":{"control":"HOLD__EPISODE_ARCHITECTURE_FAIL","treatment":"HOLD__9_SEQ__44_SCENES__SEMANTIC_REPEAT_PLUS_SCENE_DEPTH"},
+    "P06":{"control":"PASS__9_SEQ__20_SCENES","treatment":"HOLD__9_SEQ__46_SCENES__SEMANTIC_TRANSACTION_REPEAT_GE3"}
+  },
+  "treatment_legality_preserved":{
+    "due_recoverable":true,
+    "due_resolved_once":true,
+    "deferred_preserved":true,
+    "open_touch_preserved":true,
+    "blocked_preserved":true,
+    "unique_actions":"44-46 per variant",
+    "generic_fallback_ratio":0.0
+  },
+  "repetition_diagnosis":{
+    "repeated_groups_P01":[
+      {"kind":"EVENT","stage":"ENGAGE_EVENT","count":4,"obligations":["E01_SHUTTLE_FAIL","E02_POWER_SHUTDOWN","E03_FIRST_BUS_SICK_CALL","E04_ELEVATOR_LOCKOUT"]},
+      {"kind":"SOCIAL","stage":"SOCIAL_INSTITUTIONAL_PRESSURE","count":4,"obligations":["S01_CLEANER_OVERTIME","S02_SPLIT_SHIFT_BALLOT","S03_ACCESS_TRIP","S04_PUBLIC_COMMENT"]},
+      {"kind":"THREAD","stage":"COMPLICATE_THREAD","count":3,"obligations":["T01_ROUTE_STANCE","T02_NIGHT_STAFFING","T03_PROBATION_COVERAGE"]},
+      {"kind":"RELATIONSHIP","stage":"TEST_BOUNDARY","count":3,"obligations":["R01_CARE_ROTATION","R02_DRIVER_DAUGHTER_ACCESS","R03_MENTOR_BOUNDARY"]}
+    ],
+    "all_have_distinct_story_material":true,
+    "multiple_groups_have_distinct_declared_causal_roots":true,
+    "scene_necessity_conflict":"R69 F06 classifies the affected scenes as necessary separate scenes rather than redundant/mergeable.",
+    "responsible_boundary":"R68_F04_SEMANTIC_TRANSACTION_SIGNATURE__CAUSAL_ROOT_BLINDNESS"
+  },
+  "interpretation":"R2 cannot proceed to independent blind because the frozen mechanical gate is not passed. The observed conflict is a validator-scope issue: F04 intentionally removes literal material and currently also ignores independent causal-root provenance, causing legitimate ensemble transactions to collapse into the same coarse signature.",
+  "blind_status":"NOT_DISPATCHED__PACKETS_0__JUDGMENTS_0__MAPPING_UNREVEALED",
+  "next":"PREREGISTER_BOUNDED_F04_TRUSTED_CAUSAL_ROOT_PARTITION_REPAIR_WITH_ANTI_GAMING_AND_FULL_R66_R69_REGRESSION"
+}
