@@ -17,4 +17,4 @@ Database(데이터베이스): `handoff/CURRENT_DATABASE_RESEARCH_POINTER.md`
 Runtime resilience(런타임 복원력): `handoff/CURRENT_RUNTIME_CONTAINER_RESILIENCE_POINTER.md`
 
 Pointer Alignment Validation(포인터 정렬 검증):
-`research/operations/20261003/CURRENT_POINTER_ALIGNMENT_VALIDATION_R3.json`
+`research/operations/20261003/CURRENT_POINTER_ALIGNMENT_VALIDATION_R4.json`
