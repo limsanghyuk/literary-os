@@ -1,0 +1,62 @@
+{
+  "schema": "CURRENT_HUB_LIBRARY_RECOVERY_AUDIT_R1",
+  "date": "2026-10-03",
+  "status": "PASS_WITH_DB_RAW_CUSTODY_CAUTION__NEW_SESSION_PRIMARY_RESEARCH_RECOVERABLE",
+  "github": {
+    "repository": "limsanghyuk/literary-os",
+    "observed_head_before_this_audit": "7a369f8d3c3cd2470316896e056ceaae627469be",
+    "head_message": "Add persistent physical-byte recovery to session resume path",
+    "current_navigation_before_update": "handoff/20261002/START_HERE_CURRENT_AUTHORITY_COMPACT_R18.md",
+    "pointer_alignment": "PASS"
+  },
+  "authority": {
+    "physical": "SYNC-R74",
+    "developer_held_physical": "9/9",
+    "post_r74_physical_successor": "NONE",
+    "active_runtime": "exact R69",
+    "production": "ENG:R47 / LEGACY_R53",
+    "runtime_db": "DB59 frozen",
+    "latest_research_db": "DB64-R134 re-audit HOLD",
+    "formal_scored_count": 137,
+    "latest_formal": "R138",
+    "r140": "NOT_STARTED",
+    "maturity": "SUSPENDED__REQUALIFICATION_REQUIRED"
+  },
+  "library": {
+    "physical_sync_r74": {
+      "path": "/Literary_OS/Physical_Archive/SYNC_R74_CURRENT_9PACKAGES",
+      "listing": "9/9",
+      "prior_raw_reload": "9/9 PASS",
+      "audit": "research/operations/20261002/SYNC_R74_PERSISTENT_LIBRARY_9PACKAGE_CUSTODY_RELOAD_AUDIT_R1.json"
+    },
+    "ul18_canonical": {
+      "path": "/Literary_OS/Research_Candidates/UL18_CANONICAL/UL18_OPEN_DEBT_REPAIR_CANDIDATE_CANONICAL_F2A22D_R1.zip",
+      "raw_reload": "PASS",
+      "zip_sha256": "d67f1d6f603f6cdda51fa67fb86c170a0b86780b579e06bfdbec8cc204dcf95f",
+      "source_sha256": "f2a22d1156f50152b8de1ae745d16e3189f6731758a83b8cc7dc2b37e8e8553b"
+    },
+    "ul18_r2": {
+      "path": "/Literary_OS/UL18_R2",
+      "classification": "UNADOPTED_LIBRARY_RESEARCH_OBJECT__QUARANTINE_FROM_CURRENT_CANDIDATE"
+    },
+    "db64_r134": {
+      "attempted_path": "/Literary_OS/Research_DB/DB64_R134",
+      "persistent_raw_custody": "NOT_PROVEN",
+      "does_not_block_primary_runtime_research": true
+    }
+  },
+  "current_science": {
+    "ul17": "EXACT_R69_STAGE_B_FAIL__B06_OPEN_PAYOFF_FALSE_CLOSURE__IMMUTABLE",
+    "ul18": "A_B_C_PASS__ADOPTION_ELIGIBLE_RESEARCH_ONLY__PHYSICALIZATION_NOT_STARTED",
+    "pa8": "CONTROL_1__TREATMENT_0__FROZEN",
+    "db64_r134": "PHYSICAL_STRUCTURAL_PASS__FIVEWORK_SEMANTIC_REAUDIT_REQUIRED"
+  },
+  "next_primary": [
+    "Recover broadest executable exact-R69 lineage regression harness.",
+    "Run exact R69 and canonical UL18 F2 candidate under the same frozen inputs.",
+    "Require preservation of R66 F01 / R67 F07 / R68 F04 / R69 F06 and no unrelated drift.",
+    "If PASS, assign a new successor Candidate runtime identity.",
+    "Bind into C1/logical C2, reseal/audit/deliver all nine transports, then change Physical Authority only after delivery.",
+    "After physicalization use a fresh unseen multi-strand fixture and independent architecture-only 3-judge blind."
+  ]
+}
