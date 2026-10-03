@@ -61,8 +61,8 @@ Exact frozen input SHA values:
 - R69 fresh 16-case JSON: `09d547ede028aad0cd1b2b51c34cd6057dceb38463be1662684500de4219d3e7`
 
 Results:
-- R66 F01 exact frozen case projection: parent/candidate **bit-identical**, SHA `6433fcf2df4d1246f8e923bf2f4d310636da83a5804b4bd0342053d119697552`
-- R67 F07 exact frozen dual-ledger replay: parent/candidate **bit-identical**, SHA `49aad5769b93ec70cb69f432e2ccb3ed7185a1b45f3cf6d429fd43508a11e8cd`
+- R66 F01 exact frozen case projection: parent/candidate **bit-identical**, SHA `f372d8043785fbf1e9c0b9f3216c56d361f170ce03cc2523c3bb7e0c6b4a9aea`
+- R67 F07 exact frozen dual-ledger replay: parent/candidate **bit-identical**, SHA `d6b6e689be1024b2c370f11c26bb3b4565cc8b6d14f4139df3569cf077b03740`
 - R68 F04: **16/16 PASS**, parent/candidate diagnostic output **bit-identical**, SHA `e182559d1322ea918bde4539d355c3068dc9a2d5d89cfaa43df4f95f786bfdd3`
 - R69 F06: **16/16 PASS**, parent/candidate output **bit-identical**, SHA `387e4107cf0adefcba0542b4b326be6c0fa7e214c444c2a0914584f9665c1e8a`
 - UL18 four-state disposition/closure matrix: parent/candidate **bit-identical**, SHA `d3063a3889b3acf56cdd6cfd5881e546c43724c603b61e35fa343d191d190819`
@@ -86,3 +86,7 @@ Authority effect: **NONE**. SYNC-R76 remains current physical authority.
 
 Status token:
 `UL20_SOURCE_FROZEN__F04_TRUSTED_ROOT_PARTITION_ONLY__ADVERSARIAL_8_OF_8_PASS__R66_R69_AND_UL18_REGRESSION_PASS__45_OF_45_COMPILE__FRESH_PRIMARY_NOT_CREATED`
+
+
+## R1 Verification Hash Correction / R1 검증 해시 정정
+Before any fresh-primary input was sealed or executed, the exact R66/R67 frozen inputs were rerun with the final canonical projection runner. The earlier draft projection hashes referred to a different internal serialization shape. Scientific outputs were unchanged; the canonical frozen-run hashes above are the authoritative values. Source SHA and diff SHA are unchanged. No Treatment source code changed.
