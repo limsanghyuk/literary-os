@@ -1,0 +1,102 @@
+{
+  "schema": "UL21_PREBLIND_MECHANICAL_RESULT_R1",
+  "date": "2026-10-04",
+  "status": "CLOSED_FAIL__PREBLIND_MECHANICAL_GATE__NO_EXTERNAL_QUALITY_VERDICT",
+  "authority_effect": "NONE",
+  "physical_authority": "SYNC-R77",
+  "active_runtime": "UL20_F04_TRUSTED_ROOT_SUCCESSOR_RUNTIME_R1",
+  "runtime_sha256": "aeb24721f9ef483daefe922cef1842f6459e07f0fd72e4e31d4bb4ed4094f200",
+  "fixture": "research/upper_layer/20261004/UL21_FRESH_SYNC_R77_MULTI_STRAND_FIXTURE_R1.json",
+  "preregistration": "research/upper_layer/20261004/UL21_ARCHITECTURE_REQUALIFICATION_PREREG_R1.md",
+  "adapter_freeze": "research/upper_layer/20261004/UL21_EXECUTION_AND_ADAPTER_FREEZE_R1.json",
+  "mapping_seal": "research/upper_layer/20261004/UL21_BLIND_MAPPING_SEAL_R1.json",
+  "mapping_status": "UNREVEALED",
+  "blind_status": "NOT_DISPATCHED__PACKETS_0__JUDGMENTS_0",
+  "execution_summary_sha256": "1d5586d15ee49d58a7e5b2bece96c034158c6904b3b3c43caf35f38381d556e4",
+  "variants": {
+    "P01": {
+      "treatment": "PASS_INTERNAL_VALIDATION__9_SEQ__56_SCENES",
+      "control": "PASS__9_SEQ__20_SCENES",
+      "semantic_preservation_issues": 14,
+      "spacetime_failures": 45
+    },
+    "P02": {
+      "treatment": "PASS_INTERNAL_VALIDATION__9_SEQ__56_SCENES",
+      "control": "PASS__9_SEQ__20_SCENES",
+      "semantic_preservation_issues": 14,
+      "spacetime_failures": 40
+    },
+    "P03": {
+      "treatment": "PASS_INTERNAL_VALIDATION__9_SEQ__56_SCENES",
+      "control": "PASS__9_SEQ__20_SCENES",
+      "semantic_preservation_issues": 14,
+      "spacetime_failures": 45
+    },
+    "P04": {
+      "treatment": "PASS_INTERNAL_VALIDATION__9_SEQ__56_SCENES",
+      "control": "PASS__9_SEQ__20_SCENES",
+      "semantic_preservation_issues": 14,
+      "spacetime_failures": 42
+    },
+    "P05": {
+      "treatment": "PASS_INTERNAL_VALIDATION__9_SEQ__54_SCENES",
+      "control": "PASS__9_SEQ__20_SCENES",
+      "semantic_preservation_issues": 14,
+      "spacetime_failures": 43
+    },
+    "P06": {
+      "treatment": "PASS_INTERNAL_VALIDATION__9_SEQ__56_SCENES",
+      "control": "PASS__9_SEQ__20_SCENES",
+      "semantic_preservation_issues": 14,
+      "spacetime_failures": 42
+    }
+  },
+  "gates_that_passed": [
+    "due-now recoverability",
+    "deferred preservation",
+    "open-touch preservation",
+    "UL20 trusted-root validation",
+    "F04 semantic repetition clear",
+    "F06 redundant/mergeable count 0",
+    "16 distinct causal roots represented",
+    "largest root scene share below 0.10",
+    "broadcast depth from unique material",
+    "Canonical IR validation",
+    "Legacy Control execution"
+  ],
+  "hard_failures": [
+    {
+      "id": "SEMANTIC_TARGET_PRESERVATION",
+      "finding": "14 precursor scenes per variant replace concrete relationship/information/social target deltas with generic pressure text.",
+      "historical_contract": "UL16 R3 required concrete relationship/info/social deltas to survive into each transacting scene.",
+      "current_source_behavior": "_semantic_scene_anchor deliberately emits generic state text for resolves=false.",
+      "responsible_boundary": "R58_MULTI_STAGE_PRE_RESOLUTION_SEMANTIC_TARGET_ERASURE__CANONICAL_TARGET_VS_REALIZED_DELTA_NOT_TYPED",
+      "interpretation": "Real regression/contract drift, not a UL21 checker artifact. Precursor scenes should preserve the concrete target without falsely claiming the target has already been realized."
+    },
+    {
+      "id": "SPACETIME_COHERENCE",
+      "finding": "40-45 infeasible scene-time placements per variant under frozen scheduler; generated order repeatedly returns from later-hour obligations to earlier closed windows.",
+      "example": "P01 sequence order moves through 16:00/17:30/18:00 material and then returns to a 16:10-18:05 relationship obligation; later sequences attempt 16:20 and 16:40 events after the clock has advanced past 18:00.",
+      "source_cause": "build_adaptive_sequence_graph orders by dependency then pressure/id and bundles by owner/dependency/event/relationship/group relatedness; time_window/location_id are not normalized or consumed.",
+      "responsible_boundary": "ADAPTIVE_SEQUENCE_ORDERING_AND_BUNDLING__TEMPORAL_SPATIAL_CONSTRAINT_BLINDNESS",
+      "historical_connection": "Same class as PA7 shared Episode Architecture chronology defect; PA8 validator was not integrated into current adaptive planner."
+    }
+  ],
+  "nonfindings": [
+    "No single-causal-spine collapse observed.",
+    "No UL18 open-touch regression observed.",
+    "No UL20 F04 false-positive regression observed.",
+    "No F06 redundancy inflation observed.",
+    "No DB or Production mutation occurred."
+  ],
+  "output_hashes": {
+    "P01_T": "f45970ed8ea9d8422f08f74f3ec2bc422ee16176cf0593f9ca0db1e4afa8ab21",
+    "P02_T": "76131e92915e0b65150bc16c88c765d636a154ae1d2acb0d69bf5d8436129eea",
+    "P03_T": "95ef74436b3c45fb3dce7ef17c199416fa974450944b22b561bf712b0a9c913d",
+    "P04_T": "e21d4111271d6387f0d46d695023ee585c35428ad30412c1d89aebfa09da4b95",
+    "P05_T": "857d493a1ee81b13d0c271f01af4d6fde33b5971ac4bf221167bb4ce264aa656",
+    "P06_T": "cd8dfd1e22110712cd30ce2bea9c4993978ba843d61f2081c7a26474c4fe8d1e"
+  },
+  "next": "UL22A_SEMANTIC_TARGET_PRESERVATION_CONTRACT_REPAIR__THEN_UL22B_TEMPORAL_SPATIAL_ORDERING_REPAIR",
+  "database_guard": "DB64-R134 untouched."
+}
