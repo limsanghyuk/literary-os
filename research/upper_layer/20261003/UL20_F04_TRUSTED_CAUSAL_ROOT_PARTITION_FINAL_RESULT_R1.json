@@ -1,0 +1,64 @@
+{
+  "schema": "UL20_F04_TRUSTED_CAUSAL_ROOT_PARTITION_FINAL_RESULT_R1",
+  "date": "2026-10-03",
+  "status": "CLOSED_PASS__F04_TRUSTED_CAUSAL_ROOT_PARTITION_QUALIFIED__FRESH_16_OF_16__FP0_FN0",
+  "authority_effect": "NONE_UNTIL_SEPARATE_PHYSICALIZATION",
+  "parent_physical_authority": "SYNC-R76",
+  "parent_runtime": "UL18_F2_SUCCESSOR_RUNTIME_R1",
+  "parent_runtime_sha256": "56254a8f52b19651638ab21ece2c35618e621e3aedc02d917efb6e22ca11db88",
+  "preregistration": "research/upper_layer/20261003/UL20_F04_TRUSTED_CAUSAL_ROOT_PARTITION_PREREG_R1.md",
+  "final_source_freeze_commit": "b9bcb9bac97063c558a4354170b7ca613e4a5b45",
+  "fresh_input_seal_commit": "818706d2920ddf88abfefdd9122cb1d931b4a961",
+  "treatment_source": {
+    "adaptive_source_sha256": "112a43d5609d2c35fb86c9f03f1494ba77f2da4118b02284c2db03334a6bf94a",
+    "canonical_diff_sha256": "b46f786af08748179dec36cccba790fc3e5ee934e283bc22630c2cc6faaed094",
+    "changed_python_files": ["literary_os_runtime/adaptive_showrunner_ul16.py"],
+    "unrelated_python_source_drift": 0,
+    "python_compile": "45/45 PASS"
+  },
+  "deterministic_adversarial": {
+    "cases": 8,
+    "pass": "8/8",
+    "anti_gaming": "PASS",
+    "f06_interaction": "PASS"
+  },
+  "historical_regression": {
+    "R66_F01": {"status":"PASS__PARENT_CANDIDATE_BIT_IDENTICAL","sha256":"f372d8043785fbf1e9c0b9f3216c56d361f170ce03cc2523c3bb7e0c6b4a9aea"},
+    "R67_F07": {"status":"PASS__PARENT_CANDIDATE_BIT_IDENTICAL","sha256":"d6b6e689be1024b2c370f11c26bb3b4565cc8b6d14f4139df3569cf077b03740"},
+    "R68_F04": {"status":"PASS_16_OF_16__DIAGNOSTIC_BIT_IDENTICAL_WITHOUT_TRUSTED_EVIDENCE","sha256":"e182559d1322ea918bde4539d355c3068dc9a2d5d89cfaa43df4f95f786bfdd3"},
+    "R69_F06": {"status":"PASS_16_OF_16__BIT_IDENTICAL","sha256":"387e4107cf0adefcba0542b4b326be6c0fa7e214c444c2a0914584f9665c1e8a"},
+    "UL18_OPEN_TOUCH_4STATE": {"status":"PASS__BIT_IDENTICAL","sha256":"d3063a3889b3acf56cdd6cfd5881e546c43724c603b61e35fa343d191d190819"}
+  },
+  "fresh_primary": {
+    "input_cases": 16,
+    "positive_expected_violations": 8,
+    "negative_expected_nonviolations": 8,
+    "input_json_sha256": "14084affcc51f8623c964716d1674d706b5a645bc8e9efe2b690dd69c9e69f93",
+    "input_gzip_sha256": "19bd8a12419c92e54a29106b2bc422910c439361a8e0499d30a886fd0ef7e72c",
+    "tp": 8,
+    "tn": 8,
+    "fp": 0,
+    "fn": 0,
+    "pass_count": 16,
+    "result_sha256": "b2d26c9aff3dde6c268a0360c1d81942c5fbb89dfaf3e30be1a58cdeff475861",
+    "N07": "F04_CLEAR__F06_REDUNDANT_OR_MERGEABLE_COUNT_2",
+    "N08": "IRRELEVANT_METADATA_INVARIANCE_PASS"
+  },
+  "runner_incident": {
+    "initial_observation": "15/16 because the local result adapter read a nonexistent F06 key named redundant_or_mergeable.",
+    "root_cause": "TEST_RUNNER_RESULT_KEY_MISMATCH",
+    "canonical_f06_key": "redundant_or_mergeable_count",
+    "source_or_input_changed": false,
+    "corrected_replay": "16/16 PASS",
+    "scientific_interpretation": "execution adapter defect only; F06 engine output already contained count=2 and scene ids N07S0/N07S0B."
+  },
+  "qualified_claim": "F04_TRUSTED_CAUSAL_ROOT_PARTITION = QUALIFIED_AT_SCENE_GRAPH_VALIDATION_LEVEL",
+  "claim_boundary": [
+    "Does not establish independent Architecture-Only Blind quality.",
+    "Does not establish screenplay-surface quality.",
+    "Does not change Production.",
+    "Does not change DB authority.",
+    "Requires a separately audited successor runtime/physicalization before current-architecture blind requalification can resume."
+  ],
+  "database_guard": "DB64-R134 untouched; no mutation/A2/runtime adoption."
+}
