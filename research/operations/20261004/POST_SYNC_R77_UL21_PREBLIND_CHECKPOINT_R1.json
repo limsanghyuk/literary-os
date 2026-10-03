@@ -1,0 +1,39 @@
+{
+  "schema": "POST_SYNC_R77_UL21_PREBLIND_CHECKPOINT_R1",
+  "date": "2026-10-04",
+  "status": "UL21_CLOSED_PREBLIND_FAIL__UL22A_NEXT",
+  "physical_authority": "SYNC-R77",
+  "active_runtime": "UL20_F04_TRUSTED_ROOT_SUCCESSOR_RUNTIME_R1",
+  "active_runtime_sha256": "aeb24721f9ef483daefe922cef1842f6459e07f0fd72e4e31d4bb4ed4094f200",
+  "ul20": "CLOSED_PASS__PHYSICALIZED",
+  "ul21": {
+    "status": "CLOSED_FAIL__PREBLIND_MECHANICAL_GATE__NO_EXTERNAL_QUALITY_VERDICT",
+    "passes": [
+      "due/deferred/open-touch",
+      "trusted roots",
+      "F04",
+      "F06",
+      "16-root diversity",
+      "broadcast depth",
+      "Canonical IR"
+    ],
+    "failures": [
+      "SEMANTIC_TARGET_PRESERVATION",
+      "SPACETIME_COHERENCE"
+    ],
+    "blind": "NOT_DISPATCHED__PACKETS_0__JUDGMENTS_0__MAPPING_UNREVEALED"
+  },
+  "responsible_ancestors": [
+    "R58_MULTI_STAGE_PRE_RESOLUTION_SEMANTIC_TARGET_ERASURE__CANONICAL_TARGET_VS_REALIZED_DELTA_NOT_TYPED",
+    "ADAPTIVE_SEQUENCE_ORDERING_AND_BUNDLING__TEMPORAL_SPATIAL_CONSTRAINT_BLINDNESS"
+  ],
+  "next_sequence": [
+    "UL22-A semantic target preservation typed repair",
+    "UL22-A historical regressions and fresh qualification",
+    "UL22-B temporal/spatial ordering repair",
+    "fresh post-repair architecture requalification only after both close"
+  ],
+  "production": "ENG:R47 / LEGACY_R53",
+  "runtime_db": "DB59 frozen",
+  "database_guard": "DB64-R134 untouched / raw custody not proven"
+}
