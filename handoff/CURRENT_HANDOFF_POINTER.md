@@ -21,3 +21,6 @@ Research overlay:
 
 Database:
 `handoff/CURRENT_DATABASE_RESEARCH_POINTER.md`
+
+Validation:
+`research/operations/20261003/CURRENT_POINTER_ALIGNMENT_VALIDATION_R1.json`
