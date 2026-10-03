@@ -1,0 +1,24 @@
+{
+  "schema":"UL21_EXECUTION_AND_ADAPTER_FREEZE_R1",
+  "date":"2026-10-04",
+  "status":"FROZEN_BEFORE_OUTPUT",
+  "fixture":"research/upper_layer/20261004/UL21_FRESH_SYNC_R77_MULTI_STRAND_FIXTURE_R1.json",
+  "treatment_runtime_sha256":"aeb24721f9ef483daefe922cef1842f6459e07f0fd72e4e31d4bb4ed4094f200",
+  "control_identity":"ENG:R47 / LEGACY_R53",
+  "control_reference_sequence_prior":9,
+  "scene_duration_minutes":2,
+  "default_cross_location_transition_minutes":5,
+  "trusted_root_hashing":"SHA256(canonical JSON payload; ensure_ascii=false; sort_keys=true; separators=comma-colon)",
+  "variant_rule":"Apply only the preregistered mutations/removals. Root records and unrelated obligation bytes remain unchanged.",
+  "control_projection":{
+    "due_now":"all due=true statements",
+    "defer":"all due=false/can_defer=true statements plus explicit KEEP OPEN language",
+    "open_touch":"represented only as unresolved partial-payoff pressure; never supplied as resolved fact",
+    "relationship_repair_overrides":"NONE",
+    "treatment_only_metadata":"NOT PROVIDED"
+  },
+  "treatment_projection":"Expand compact rows; inject validated root evidence from frozen root_records; group by obligation kind; execute Adaptive broadcast_mode=true.",
+  "spacetime_rule":"Earliest-feasible deterministic schedule in generated scene order; 2-minute scene; frozen transition cost; inherited obligation time/location.",
+  "blind_dispatch_condition":"ALL_MECHANICAL_GATES_PASS_FOR_ALL_SIX_VARIANTS",
+  "authority_effect":"NONE"
+}
