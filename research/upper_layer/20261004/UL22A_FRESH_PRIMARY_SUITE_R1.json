@@ -1,0 +1,23 @@
+{
+  "schema": "UL22A_FRESH_PRIMARY_SUITE_R1",
+  "date": "2026-10-04",
+  "status": "FROZEN_INPUT_BEFORE_TREATMENT_EXECUTION",
+  "cases": [
+    {"id":"V01_REL_PRE","kind":"RELATIONSHIP","resolves":false,"delta":"fresh relationship boundary becomes explicit","mutation":"NONE","expected":"PASS"},
+    {"id":"V02_INFO_PRE","kind":"INFORMATION","resolves":false,"delta":"fresh evidence access changes downstream choice","mutation":"NONE","expected":"PASS"},
+    {"id":"V03_SOC_PRE","kind":"SOCIAL","resolves":false,"delta":"fresh institutional cost becomes operational constraint","mutation":"NONE","expected":"PASS"},
+    {"id":"V04_REL_RESOLVE","kind":"RELATIONSHIP","resolves":true,"delta":"fresh mentor boundary is concretely renegotiated","mutation":"NONE","expected":"PASS"},
+    {"id":"V05_INFO_RESOLVE","kind":"INFORMATION","resolves":true,"delta":"fresh withheld fact becomes decision-relevant knowledge","mutation":"NONE","expected":"PASS"},
+    {"id":"V06_SOC_RESOLVE","kind":"SOCIAL","resolves":true,"delta":"fresh group claim changes resource allocation","mutation":"NONE","expected":"PASS"},
+    {"id":"V07_LEGACY_EMPTY","kind":"INFORMATION","resolves":false,"delta":null,"mutation":"LEGACY_NO_TARGET_FIELDS","expected":"PASS"},
+    {"id":"V08_METADATA","kind":"SOCIAL","resolves":false,"delta":"fresh accessibility rule changes routing","mutation":"IRRELEVANT_METADATA_ONLY","expected":"PASS"},
+    {"id":"X01_PROJECTION_TARGET","kind":"RELATIONSHIP","resolves":false,"delta":"fresh family boundary target","mutation":"PROJECTION_TARGET_TAMPER","expected":"DETECT"},
+    {"id":"X02_PROJECTION_HASH","kind":"INFORMATION","resolves":false,"delta":"fresh document access target","mutation":"PROJECTION_TARGET_HASH_TAMPER","expected":"DETECT"},
+    {"id":"X03_SOURCE_TARGET","kind":"SOCIAL","resolves":false,"delta":"fresh labor allocation target","mutation":"SOURCE_TARGET_MISMATCH","expected":"DETECT"},
+    {"id":"X04_FALSE_REALIZATION","kind":"RELATIONSHIP","resolves":false,"delta":"fresh sibling trust target","mutation":"PRECURSOR_FALSELY_REALIZED","expected":"DETECT"},
+    {"id":"X05_MISSING_REALIZATION","kind":"INFORMATION","resolves":true,"delta":"fresh provenance fact target","mutation":"RESOLVE_MISSING_REALIZATION","expected":"DETECT"},
+    {"id":"X06_MISSING_TARGET","kind":"SOCIAL","resolves":false,"delta":"fresh volunteer policy target","mutation":"MISSING_TARGET_FIELD","expected":"DETECT"},
+    {"id":"X07_WRONG_SLOT","kind":"RELATIONSHIP","resolves":false,"delta":"fresh colleague boundary target","mutation":"TARGET_IN_WRONG_KIND_SLOT","expected":"DETECT"},
+    {"id":"X08_STATE_HASH","kind":"SOCIAL","resolves":true,"delta":"fresh institutional approval target","mutation":"STATE_DELTA_HASH_TAMPER","expected":"DETECT"}
+  ]
+}
