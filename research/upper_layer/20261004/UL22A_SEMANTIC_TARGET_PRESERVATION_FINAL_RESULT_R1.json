@@ -1,0 +1,67 @@
+{
+  "schema": "UL22A_SEMANTIC_TARGET_PRESERVATION_FINAL_RESULT_R1",
+  "date": "2026-10-04",
+  "status": "CLOSED_PASS__SEMANTIC_TARGET_PRESERVATION_QUALIFIED__FRESH_16_OF_16",
+  "authority_effect": "NONE__RESEARCH_ONLY",
+  "parent_physical_authority": "SYNC-R77",
+  "parent_runtime": "UL20_F04_TRUSTED_ROOT_SUCCESSOR_RUNTIME_R1",
+  "parent_runtime_sha256": "aeb24721f9ef483daefe922cef1842f6459e07f0fd72e4e31d4bb4ed4094f200",
+  "preregistration": "research/upper_layer/20261004/UL22A_SEMANTIC_TARGET_PRESERVATION_PREREG_R1.md",
+  "implementation_freeze": "research/upper_layer/20261004/UL22A_SEMANTIC_TARGET_IMPLEMENTATION_FREEZE_R1.md",
+  "source": {
+    "adaptive_sha256": "62dfaf7408df2024c0a07ccf03ddb245b3d4a605810e97fe48e8ec2fb8681c5f",
+    "canonical_ir_sha256": "8274b7aa64076969022bd479246d8bf02a44d8937e77c20d77c69e90a8a28898",
+    "diff_sha256": "d396e4cc5d0844098fad1596a80a2934f446387bfa8aa41fe0e288276b481111",
+    "changed_python_files": [
+      "literary_os_runtime/adaptive_showrunner_ul16.py",
+      "literary_os_runtime/canonical_ir_v2.py"
+    ],
+    "python_compile": "45/45 PASS"
+  },
+  "ul21_failure_recheck": {
+    "source_obligations": 14,
+    "stage_checks": 28,
+    "target_loss": 0,
+    "precursor_false_realization": 0,
+    "resolving_realization_errors": 0,
+    "rows_sha256": "142d02fcc47bad7954910732d9ce5e5e0adc0149877d155c47798beab02db078"
+  },
+  "preservation": {
+    "representative_parent_candidate_behavior": "BIT_IDENTICAL_AFTER_REMOVING_ONLY_NEW_TARGET_FIELDS",
+    "representative_core_sha256": "7fbba5d45d5b297b305303089847da9539460f9f33618a7b015caa3f94f66a53",
+    "ul18_four_state": "BIT_IDENTICAL",
+    "f01_function_source_identity": true,
+    "f04_transitive_source_identity": true,
+    "f06_transitive_source_identity": true,
+    "f07_dual_ledger_module_identity": true,
+    "open_touch_compiler_identity": true,
+    "reverse_reconstruction_identity": true,
+    "historical_suite_transport_note": "Hub frozen-case bytes were not raw-materializable into the active container. Preservation for unchanged validator paths is established by deterministic transitive source identity plus parent/candidate behavioral equivalence; this is not represented as a second byte-level replay."
+  },
+  "fresh_primary": {
+    "suite": "research/upper_layer/20261004/UL22A_FRESH_PRIMARY_SUITE_R1.json",
+    "seal": "research/upper_layer/20261004/UL22A_FRESH_PRIMARY_CASE_SEAL_R1.md",
+    "input_cases": 16,
+    "pass_expected": 8,
+    "detect_expected": 8,
+    "input_sha256": "8aa28661535e85ddfe0b803a7a149033686f79651cd978c25f18e5c2deede08e",
+    "pass_count": 16,
+    "fail_count": 0,
+    "rows_sha256": "5893d3c6f5648ca8142cc03282aa406d73422673b60e05cd55a3b8d281a2ff2f"
+  },
+  "research_candidate": {
+    "file": "LITERARY_OS_UL22A_SEMANTIC_TARGET_RESEARCH_CANDIDATE_R1.zip",
+    "bytes": 19076076,
+    "sha256": "26caeaabb62a162bc0887101619418147606e2817ae30f4220bb1f64ac63d5a5",
+    "entries": 497,
+    "crc": "PASS"
+  },
+  "claim": "UL22-A repairs target-vs-realized semantic contract drift at adaptive Scene -> EpisodeResult -> Canonical SceneIR -> renderer projection boundaries.",
+  "claim_boundary": [
+    "Does not repair temporal/spatial ordering.",
+    "Does not qualify Architecture-Only Blind.",
+    "Does not change Physical Authority or Production.",
+    "No SYNC-R78 exists."
+  ],
+  "next": "UL22B_TEMPORAL_SPATIAL_ORDERING_REPAIR"
+}
