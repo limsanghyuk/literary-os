@@ -1,0 +1,42 @@
+{
+  "schema": "UL23_RUNTIME_TRANSPORT_HOLD_INCIDENT_R1",
+  "date": "2026-10-06",
+  "status": "RUNTIME_TRANSPORT_HOLD__NO_SCIENTIFIC_VERDICT",
+  "trigger": "First UL23 execution transaction",
+  "failed_operations": [
+    "container exact-path/stat/SHA preflight -> ClientError",
+    "minimal shell printf health check -> ClientError",
+    "minimal Python health check -> ClientError"
+  ],
+  "healthy_surfaces": [
+    "GitHub connector read/write",
+    "Hub authority documents"
+  ],
+  "classification": "CAAS_EXECUTION_SURFACE_FAILURE__NOT_ENGINE_FAILURE__NOT_FIXTURE_FAILURE__NOT_PACKAGE_CORRUPTION",
+  "protocol": "research/operations/20261001/LITERARY_OS_RUNTIME_CONTAINER_RESILIENCE_PROTOCOL_R6.md",
+  "last_atomic_checkpoint": {
+    "canonical_start": "handoff/20261005/START_HERE_SYNC_R77_UL22AB_PASS_UL23_PREFROZEN_R24.md",
+    "physical_authority": "SYNC-R77",
+    "physical_runtime": "UL20_F04_TRUSTED_ROOT_SUCCESSOR_RUNTIME_R1",
+    "research_successor": "UL22AB_INTEGRATED_RESEARCH_SUCCESSOR_RUNTIME_R1",
+    "research_successor_sha256": "2a2450977bf7626c640bb73dba547c75a04d08b2c94d8939481bee4f819df91b",
+    "ul23_fixture": "FROZEN",
+    "ul23_preregistration": "FROZEN",
+    "ul23_blind_mapping": "FROZEN",
+    "ul23_outputs": 0,
+    "ul23_judgments": 0,
+    "mapping_revealed": false
+  },
+  "forbidden_during_hold": [
+    "no mutation",
+    "no reseal",
+    "no promotion",
+    "no new scoring",
+    "no generated UL23 output",
+    "no attempt-count increment for infrastructure failure"
+  ],
+  "exact_resume_step": "Verify minimal local health, verify exact UL22AB runtime bytes against frozen SHA256, then execute UL23 P01 Treatment and Control only; continue P02-P06 sequentially if healthy.",
+  "authority_effect": "NONE",
+  "sync_r78": "DOES_NOT_EXIST",
+  "database_guard": "DB64-R134 untouched"
+}
