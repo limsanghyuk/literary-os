@@ -1,0 +1,1115 @@
+{
+  "schema": "UL23_FRESH_UNSEEN_MULTI_STRAND_FIXTURE_R1",
+  "date": "2026-10-05",
+  "status": "FROZEN_BEFORE_ANY_UL23_OUTPUT",
+  "synthetic_work": {
+    "work_id": "SYNTH_UL23_EVENING_GYM",
+    "title": "저녁 여섯 시의 시민체육관",
+    "format": "Korean broadcast ensemble drama",
+    "episode_target": "EP11",
+    "source_cutoff": "Synthetic current state through EP10 plus pre-target notices only. No EP11 answer key exists.",
+    "premise": "A civic sports center is a crossroads for staff, family, school, labor, accessibility, volunteers, vendors and neighborhood claims. These pressures have independent roots and may intersect without collapsing into one event-permit plot."
+  },
+  "protagonist": "SEO_HYEJIN",
+  "ensemble": [
+    "SEO_HYEJIN",
+    "SEO_JIHO",
+    "KANG_MINSEOK",
+    "CHOI_YUNA",
+    "PARK_SUNGHO",
+    "MOON_TAEHO",
+    "BAE_MIRA",
+    "HAN_JUNHO",
+    "KIM_ARA"
+  ],
+  "groups": [
+    {
+      "id": "G_GYM",
+      "members": [
+        "SEO_HYEJIN",
+        "KANG_MINSEOK",
+        "CHOI_YUNA",
+        "PARK_SUNGHO",
+        "MOON_TAEHO"
+      ]
+    },
+    {
+      "id": "G_UNION",
+      "members": [
+        "KANG_MINSEOK",
+        "MOON_TAEHO"
+      ]
+    },
+    {
+      "id": "G_SCHOOL",
+      "members": [
+        "HAN_JUNHO",
+        "KIM_ARA"
+      ]
+    },
+    {
+      "id": "G_ACCESS",
+      "members": [
+        "KIM_ARA"
+      ]
+    },
+    {
+      "id": "G_VENDOR",
+      "members": [
+        "BAE_MIRA"
+      ]
+    },
+    {
+      "id": "G_NEIGHBOR",
+      "members": [
+        "PARK_SUNGHO"
+      ]
+    }
+  ],
+  "spacetime_context": {
+    "episode_window": [
+      "16:00",
+      "20:30"
+    ],
+    "default_cross_location_transition_minutes": 5,
+    "special_transition_minutes": {
+      "L_LOADING>L_GYM": 8,
+      "L_GYM>L_LOADING": 8,
+      "L_ARCHIVE>L_COURT": 10,
+      "L_COURT>L_ARCHIVE": 10
+    }
+  },
+  "root_records": {
+    "ROOT_EVENT_PERMIT": {
+      "source_record_id": "CITY_EVENT_PERMIT_31",
+      "source_record_type": "institutional",
+      "established_before_target_episode": true,
+      "payload": {
+        "record": "institutional",
+        "fact": "community sports event permit review scheduled before target episode"
+      }
+    },
+    "ROOT_VOLUNTEER_RULE": {
+      "source_record_id": "VOLUNTEER_HOUR_RULE_7",
+      "source_record_type": "institutional",
+      "established_before_target_episode": true,
+      "payload": {
+        "record": "institutional",
+        "fact": "volunteer night-hour cap established in prior policy"
+      }
+    },
+    "ROOT_SIBLING_CARE": {
+      "source_record_id": "FAMILY_CARE_ROTATION_22",
+      "source_record_type": "family",
+      "established_before_target_episode": true,
+      "payload": {
+        "record": "family",
+        "fact": "siblings have unresolved parent-care rotation"
+      }
+    },
+    "ROOT_COACH_OFFER": {
+      "source_record_id": "PRIVATE_COACH_OFFER_4",
+      "source_record_type": "career",
+      "established_before_target_episode": true,
+      "payload": {
+        "record": "career",
+        "fact": "senior coach has a private club offer due next morning"
+      }
+    },
+    "ROOT_SCHOLARSHIP": {
+      "source_record_id": "YOUTH_SCHOLARSHIP_2026",
+      "source_record_type": "deadline",
+      "established_before_target_episode": true,
+      "payload": {
+        "record": "deadline",
+        "fact": "junior staff scholarship application closes at 18:40"
+      }
+    },
+    "ROOT_ACCESS_RAMP": {
+      "source_record_id": "RAMP_INSPECTION_14",
+      "source_record_type": "infrastructure",
+      "established_before_target_episode": true,
+      "payload": {
+        "record": "infrastructure",
+        "fact": "main ramp inspection blocks one entrance 17:00-17:35"
+      }
+    },
+    "ROOT_VENDOR_DELAY": {
+      "source_record_id": "SPORTS_VENDOR_TRUCK_9",
+      "source_record_type": "event",
+      "established_before_target_episode": true,
+      "payload": {
+        "record": "event",
+        "fact": "equipment vendor shipment delayed by warehouse error"
+      }
+    },
+    "ROOT_POWER_TEST": {
+      "source_record_id": "POWER_TEST_WINDOW_6",
+      "source_record_type": "infrastructure",
+      "established_before_target_episode": true,
+      "payload": {
+        "record": "infrastructure",
+        "fact": "partial power test scheduled 19:10-19:35"
+      }
+    },
+    "ROOT_UNION_BALLOT": {
+      "source_record_id": "GYM_UNION_BALLOT_8",
+      "source_record_type": "labor",
+      "established_before_target_episode": true,
+      "payload": {
+        "record": "labor",
+        "fact": "split-duty ballot result must be implemented"
+      }
+    },
+    "ROOT_LOST_LOCKER": {
+      "source_record_id": "LOCKER_PHONE_18",
+      "source_record_type": "property",
+      "established_before_target_episode": true,
+      "payload": {
+        "record": "property",
+        "fact": "lost phone found in locker with no verified owner"
+      }
+    },
+    "ROOT_OLD_OVERTIME": {
+      "source_record_id": "OVERTIME_NOTE_2019_2",
+      "source_record_type": "history",
+      "established_before_target_episode": true,
+      "payload": {
+        "record": "history",
+        "fact": "old unsigned overtime promise note exists but is unauthenticated"
+      }
+    },
+    "ROOT_SCHOOL_TEAM": {
+      "source_record_id": "SCHOOL_TEAM_BOOKING_16",
+      "source_record_type": "school",
+      "established_before_target_episode": true,
+      "payload": {
+        "record": "school",
+        "fact": "school team booked court session at 17:40"
+      }
+    },
+    "ROOT_TRANSLATOR": {
+      "source_record_id": "INTERPRETER_CONTRACT_5",
+      "source_record_type": "contract",
+      "established_before_target_episode": true,
+      "payload": {
+        "record": "contract",
+        "fact": "freelance interpreter renewal deadline is today"
+      }
+    },
+    "ROOT_EQUIPMENT_RECALL": {
+      "source_record_id": "EQUIPMENT_RECALL_3",
+      "source_record_type": "safety",
+      "established_before_target_episode": true,
+      "payload": {
+        "record": "safety",
+        "fact": "one training machine lot has manufacturer recall notice"
+      }
+    },
+    "ROOT_NEIGHBOR_NOISE": {
+      "source_record_id": "NOISE_PETITION_11",
+      "source_record_type": "community",
+      "established_before_target_episode": true,
+      "payload": {
+        "record": "community",
+        "fact": "neighbor petition about evening whistle/noise predates target episode"
+      }
+    },
+    "ROOT_ARCHIVE_RECORD": {
+      "source_record_id": "DONOR_LEDGER_8",
+      "source_record_type": "history",
+      "established_before_target_episode": true,
+      "payload": {
+        "record": "history",
+        "fact": "donor ledger has missing signature page and incomplete provenance"
+      }
+    }
+  },
+  "obligation_rows": [
+    [
+      "T01_PERMIT_STANCE",
+      "THREAD",
+      "ROOT_EVENT_PERMIT",
+      [
+        "SEO_HYEJIN",
+        "MOON_TAEHO"
+      ],
+      true,
+      false,
+      0.97,
+      "체육관은 오늘 행사 허가 검토에서 어떤 운영 범위를 공식적으로 지킬지 정해야 한다.",
+      "혜진이 행사 보드에서 두 프로그램 카드를 떼었다가 이용자표를 보고 하나를 다시 붙인다.",
+      {
+        "location_id": "L_ADMIN",
+        "time_window": [
+          "16:00",
+          "17:00"
+        ]
+      }
+    ],
+    [
+      "T02_NIGHT_STAFF",
+      "THREAD",
+      "ROOT_EVENT_PERMIT",
+      [
+        "SEO_HYEJIN",
+        "KANG_MINSEOK"
+      ],
+      true,
+      false,
+      0.88,
+      "야간 운영을 유지할 경우 실제 책임자와 축소 범위를 근무표에 반영해야 한다.",
+      "민석이 야간 책임자 칸을 비운 채 근무표를 혜진에게 돌린다.",
+      {
+        "location_id": "L_STAFF",
+        "time_window": [
+          "16:10",
+          "18:20"
+        ]
+      }
+    ],
+    [
+      "T03_VOLUNTEER_CAP",
+      "THREAD",
+      "ROOT_VOLUNTEER_RULE",
+      [
+        "PARK_SUNGHO",
+        "SEO_HYEJIN"
+      ],
+      true,
+      false,
+      0.84,
+      "정책을 넘긴 자원봉사 시간을 이번 주 운영표에서 줄이거나 유급 대체해야 한다.",
+      "성호가 초과시간 아래에 새 교대표를 붙인다.",
+      {
+        "location_id": "L_DESK",
+        "time_window": [
+          "16:20",
+          "19:00"
+        ]
+      }
+    ],
+    [
+      "T04_RECALL_ZONE",
+      "THREAD",
+      "ROOT_EQUIPMENT_RECALL",
+      [
+        "CHOI_YUNA",
+        "SEO_HYEJIN"
+      ],
+      true,
+      false,
+      0.85,
+      "리콜 대상 장비가 있는 훈련구역을 오늘 운영에서 분리해야 한다.",
+      "유나가 장비 세 대에 사용중지 태그를 걸고 바닥선을 다시 친다.",
+      {
+        "location_id": "L_GYM",
+        "time_window": [
+          "16:30",
+          "18:15"
+        ]
+      }
+    ],
+    [
+      "R01_SIBLING_BOUNDARY",
+      "RELATIONSHIP",
+      "ROOT_SIBLING_CARE",
+      [
+        "SEO_HYEJIN",
+        "SEO_JIHO"
+      ],
+      true,
+      false,
+      0.93,
+      "혜진과 지호는 부모 돌봄을 당일 부탁이 아닌 명시적 순번으로 바꿀지 결정해야 한다.",
+      "지호가 돌봄 달력에서 혜진의 임의 메모를 지우고 빈 주말 칸에 펜을 놓는다.",
+      {
+        "relationship_pair": [
+          "SEO_HYEJIN",
+          "SEO_JIHO"
+        ],
+        "relationship_delta": "care responsibility becomes explicitly negotiated",
+        "location_id": "L_CAFE",
+        "time_window": [
+          "16:30",
+          "19:30"
+        ]
+      }
+    ],
+    [
+      "R02_COACH_EXIT",
+      "RELATIONSHIP",
+      "ROOT_COACH_OFFER",
+      [
+        "KANG_MINSEOK",
+        "SEO_HYEJIN"
+      ],
+      true,
+      false,
+      0.86,
+      "민석은 외부 코치 제안을 숨긴 채 야간 책임을 떠맡는 관계를 계속하지 않을지 혜진과 경계를 정해야 한다.",
+      "민석이 다음 달 지도표에서 자신의 이름을 지우고 외부 명함을 뒤집어 놓는다.",
+      {
+        "relationship_pair": [
+          "KANG_MINSEOK",
+          "SEO_HYEJIN"
+        ],
+        "relationship_delta": "professional trust gains explicit exit boundary",
+        "location_id": "L_STAFF",
+        "time_window": [
+          "17:10",
+          "20:00"
+        ]
+      }
+    ],
+    [
+      "R03_SCHOLAR_MENTOR",
+      "RELATIONSHIP",
+      "ROOT_SCHOLARSHIP",
+      [
+        "CHOI_YUNA",
+        "KANG_MINSEOK"
+      ],
+      true,
+      false,
+      0.84,
+      "유나는 민석의 추천에 기대지 않고 장학 지원을 끝내겠다는 경계를 행동으로 세워야 한다.",
+      "유나가 민석의 추천 메모를 접어 서랍에 넣고 자신의 지원서를 다시 연다.",
+      {
+        "relationship_pair": [
+          "CHOI_YUNA",
+          "KANG_MINSEOK"
+        ],
+        "relationship_delta": "mentor dependence decreases without ending trust",
+        "location_id": "L_OFFICE",
+        "time_window": [
+          "16:40",
+          "18:35"
+        ]
+      }
+    ],
+    [
+      "R04_STUDENT_AUTONOMY",
+      "RELATIONSHIP",
+      "ROOT_SCHOOL_TEAM",
+      [
+        "HAN_JUNHO",
+        "KIM_ARA"
+      ],
+      true,
+      false,
+      0.81,
+      "준호는 학생 대표 아라의 경기 운영 선택을 대신 결정하지 않고 선택권을 넘겨야 한다.",
+      "준호가 미리 적은 경기순서를 접고 아라가 직접 순서를 칠판에 붙인다.",
+      {
+        "relationship_pair": [
+          "HAN_JUNHO",
+          "KIM_ARA"
+        ],
+        "relationship_delta": "teacher control shifts toward explicit student agency",
+        "location_id": "L_COURT",
+        "time_window": [
+          "17:20",
+          "18:20"
+        ]
+      }
+    ],
+    [
+      "I01_SCHOLAR_DEADLINE",
+      "INFORMATION",
+      "ROOT_SCHOLARSHIP",
+      [
+        "CHOI_YUNA"
+      ],
+      true,
+      false,
+      0.98,
+      "18:40 장학 지원 마감이 유나의 현재 업무 배분을 실제로 바꿔야 한다.",
+      "유나가 정비 체크리스트 하나를 동료에게 넘기고 노트북 타이머를 켠다.",
+      {
+        "information_delta": "scholarship deadline changes current work allocation",
+        "location_id": "L_OFFICE",
+        "time_window": [
+          "16:20",
+          "18:38"
+        ]
+      }
+    ],
+    [
+      "I02_VENDOR_ETA",
+      "INFORMATION",
+      "ROOT_VENDOR_DELAY",
+      [
+        "MOON_TAEHO",
+        "SEO_HYEJIN"
+      ],
+      true,
+      false,
+      0.9,
+      "장비 납품 지연 ETA가 오늘 프로그램 순서를 실제로 바꿔야 한다.",
+      "태호가 17:10 입고표를 지우고 18:25 예상시각을 새로 적는다.",
+      {
+        "information_delta": "vendor ETA changes event preparation order",
+        "location_id": "L_LOADING",
+        "time_window": [
+          "16:10",
+          "18:10"
+        ]
+      }
+    ],
+    [
+      "I03_RECALL_SCOPE",
+      "INFORMATION",
+      "ROOT_EQUIPMENT_RECALL",
+      [
+        "CHOI_YUNA",
+        "SEO_HYEJIN"
+      ],
+      true,
+      false,
+      0.88,
+      "리콜 공지의 제조번호 범위가 어떤 장비를 막을지 운영 판단에 들어가야 한다.",
+      "유나가 공지 번호와 장비 라벨을 나란히 놓고 세 대만 빨간표시한다.",
+      {
+        "information_delta": "recall scope changes equipment availability",
+        "location_id": "L_GYM",
+        "time_window": [
+          "16:20",
+          "18:00"
+        ]
+      }
+    ],
+    [
+      "I04_LOST_PHONE",
+      "INFORMATION",
+      "ROOT_LOST_LOCKER",
+      [
+        "PARK_SUNGHO",
+        "KIM_ARA"
+      ],
+      true,
+      false,
+      0.82,
+      "분실 휴대전화의 소유자를 단정하지 않은 채 확인 절차를 정해야 한다.",
+      "성호가 휴대전화를 봉인봉투에 넣고 잠금화면 이니셜만 기록한다.",
+      {
+        "information_delta": "property evidence advances without owner invention",
+        "location_id": "L_DESK",
+        "time_window": [
+          "16:30",
+          "20:10"
+        ]
+      }
+    ],
+    [
+      "I05_LEDGER_GAP",
+      "INFORMATION",
+      "ROOT_ARCHIVE_RECORD",
+      [
+        "MOON_TAEHO",
+        "SEO_HYEJIN"
+      ],
+      true,
+      false,
+      0.87,
+      "기증 장부의 누락 서명이 행사 후원 표기 결정을 확정 전에 흔들어야 한다.",
+      "태호가 후원표 위에 장부 복사본을 놓고 빈 서명란을 연필로 표시한다.",
+      {
+        "information_delta": "provenance uncertainty changes sponsor display decision",
+        "location_id": "L_ARCHIVE",
+        "time_window": [
+          "16:40",
+          "19:40"
+        ]
+      }
+    ],
+    [
+      "S01_OVERTIME",
+      "SOCIAL",
+      "ROOT_OLD_OVERTIME",
+      [
+        "BAE_MIRA",
+        "SEO_HYEJIN"
+      ],
+      true,
+      false,
+      0.94,
+      "과거 초과근무 약속 문제를 감사 인사가 아니라 운영상 노동채무로 다뤄야 한다.",
+      "미라가 무료 간식 상자를 치우고 근무시간표를 계산대 위에 펼친다.",
+      {
+        "social_delta": "unpaid labor becomes explicit operating debt",
+        "group_refs": [
+          "G_VENDOR",
+          "G_GYM"
+        ],
+        "location_id": "L_CAFE",
+        "time_window": [
+          "16:20",
+          "19:40"
+        ]
+      }
+    ],
+    [
+      "S02_UNION_BALLOT",
+      "SOCIAL",
+      "ROOT_UNION_BALLOT",
+      [
+        "KANG_MINSEOK",
+        "MOON_TAEHO"
+      ],
+      true,
+      false,
+      0.89,
+      "분할근무 투표 결과를 개인 부탁이 아니라 집단 절차로 근무표에 반영해야 한다.",
+      "민석이 개인 메모를 떼고 공식 집계표만 태호 앞에 놓는다.",
+      {
+        "social_delta": "union procedure constrains staffing",
+        "group_refs": [
+          "G_UNION",
+          "G_GYM"
+        ],
+        "location_id": "L_STAFF",
+        "time_window": [
+          "16:20",
+          "18:30"
+        ]
+      }
+    ],
+    [
+      "S03_ACCESS_RAMP",
+      "SOCIAL",
+      "ROOT_ACCESS_RAMP",
+      [
+        "KIM_ARA",
+        "SEO_HYEJIN"
+      ],
+      true,
+      false,
+      0.91,
+      "경사로 점검 시간의 접근성 요구를 호의가 아닌 운영 조건으로 반영해야 한다.",
+      "아라가 계단 안내판을 치우고 남쪽 출입구 동선을 지도에 직접 표시한다.",
+      {
+        "social_delta": "access requirement changes participant routing",
+        "group_refs": [
+          "G_ACCESS",
+          "G_GYM"
+        ],
+        "location_id": "L_LOBBY",
+        "time_window": [
+          "16:45",
+          "17:40"
+        ]
+      }
+    ],
+    [
+      "S04_NOISE_CHANNEL",
+      "SOCIAL",
+      "ROOT_NEIGHBOR_NOISE",
+      [
+        "SEO_HYEJIN",
+        "PARK_SUNGHO"
+      ],
+      true,
+      false,
+      0.83,
+      "소음 민원을 행사 취소 압박이 아니라 시간·행동 규칙으로 운영계획에 반영해야 한다.",
+      "혜진이 민원서를 접어두고 19시 이후 휘슬 금지표를 행사표에 붙인다.",
+      {
+        "social_delta": "community noise claim becomes operating constraint",
+        "group_refs": [
+          "G_NEIGHBOR",
+          "G_GYM"
+        ],
+        "location_id": "L_ADMIN",
+        "time_window": [
+          "17:00",
+          "19:00"
+        ]
+      }
+    ],
+    [
+      "S05_STUDENT_ROLE",
+      "SOCIAL",
+      "ROOT_SCHOOL_TEAM",
+      [
+        "HAN_JUNHO",
+        "KIM_ARA"
+      ],
+      true,
+      false,
+      0.82,
+      "학교 팀 학생들을 성인 진행 보조가 아니라 독립 경기 운영 주체로 확정해야 한다.",
+      "아라가 진행자 명찰을 준호에게 돌려주고 학생 역할표를 코트에 붙인다.",
+      {
+        "social_delta": "student group gains independent program agency",
+        "group_refs": [
+          "G_SCHOOL",
+          "G_GYM"
+        ],
+        "location_id": "L_COURT",
+        "time_window": [
+          "17:30",
+          "18:30"
+        ]
+      }
+    ],
+    [
+      "E01_RAMP_LOCK",
+      "EVENT",
+      "ROOT_ACCESS_RAMP",
+      [
+        "KIM_ARA",
+        "PARK_SUNGHO"
+      ],
+      true,
+      false,
+      0.95,
+      "17:00 경사로 점검 시작으로 주출입 동선을 즉시 바꿔야 한다.",
+      "성호가 주출입구 표지판을 내리고 아라가 남쪽 경사로 안내판을 가져온다.",
+      {
+        "event_ref": "RAMP_INSPECTION",
+        "location_id": "L_LOBBY",
+        "time_window": [
+          "16:55",
+          "17:10"
+        ]
+      }
+    ],
+    [
+      "E02_VENDOR_DELAY",
+      "EVENT",
+      "ROOT_VENDOR_DELAY",
+      [
+        "MOON_TAEHO",
+        "CHOI_YUNA"
+      ],
+      true,
+      false,
+      0.91,
+      "17:10 예정 장비 납품이 18:25로 밀려 행사 준비 순서를 바꿔야 한다.",
+      "태호가 빈 운반카트를 접고 유나가 대체 장비에 임시 라벨을 붙인다.",
+      {
+        "event_ref": "VENDOR_DELAY",
+        "location_id": "L_LOADING",
+        "time_window": [
+          "17:00",
+          "17:20"
+        ]
+      }
+    ],
+    [
+      "E03_SCHOOL_ARRIVAL",
+      "EVENT",
+      "ROOT_SCHOOL_TEAM",
+      [
+        "HAN_JUNHO",
+        "KIM_ARA"
+      ],
+      true,
+      false,
+      0.87,
+      "17:40 학교 팀 도착 전에 리콜 구역을 피해 코트 배치를 끝내야 한다.",
+      "준호가 코트 배치도를 접고 아라가 안전구역 테이프를 다시 친다.",
+      {
+        "event_ref": "SCHOOL_TEAM_ARRIVAL",
+        "location_id": "L_COURT",
+        "time_window": [
+          "17:25",
+          "17:38"
+        ]
+      }
+    ],
+    [
+      "E04_POWER_TEST",
+      "EVENT",
+      "ROOT_POWER_TEST",
+      [
+        "CHOI_YUNA",
+        "PARK_SUNGHO"
+      ],
+      true,
+      false,
+      0.88,
+      "19:10 부분 정전 전에 장비 충전과 야간 안내 순서를 조정해야 한다.",
+      "유나가 충전 상태를 확인하고 성호가 비상등 표의 순서를 바꾼다.",
+      {
+        "event_ref": "POWER_TEST",
+        "location_id": "L_GYM",
+        "time_window": [
+          "18:50",
+          "19:08"
+        ]
+      }
+    ],
+    [
+      "E05_INTERPRETER_NOSHOW",
+      "EVENT",
+      "ROOT_TRANSLATOR",
+      [
+        "BAE_MIRA",
+        "HAN_JUNHO"
+      ],
+      true,
+      false,
+      0.8,
+      "18:00 통역사가 오지 못해 대체 진행 방식을 정해야 한다.",
+      "미라가 통역 이어폰 상자를 닫고 준호가 이중언어 안내지를 앞줄에 놓는다.",
+      {
+        "event_ref": "INTERPRETER_NO_SHOW",
+        "location_id": "L_COURT",
+        "time_window": [
+          "17:50",
+          "18:05"
+        ]
+      }
+    ],
+    [
+      "P01_OVERTIME_NOTE",
+      "PAYOFF",
+      "ROOT_OLD_OVERTIME",
+      [
+        "BAE_MIRA",
+        "KANG_MINSEOK"
+      ],
+      false,
+      false,
+      0.9,
+      "오래된 구두 지급약속 메모는 오늘 협상 태도에 영향을 주되 지급 사실로 완전히 인증되면 안 된다.",
+      "미라가 메모를 민석에게 보여주지만 서명 없는 부분은 투명슬리브 안에 둔다.",
+      {
+        "payoff_ref": "OLD_OVERTIME_NOTE",
+        "location_id": "L_CAFE",
+        "time_window": [
+          "18:00",
+          "20:10"
+        ]
+      }
+    ],
+    [
+      "P02_DONOR_LEDGER",
+      "PAYOFF",
+      "ROOT_ARCHIVE_RECORD",
+      [
+        "MOON_TAEHO",
+        "SEO_HYEJIN"
+      ],
+      false,
+      false,
+      0.86,
+      "누락된 기증 장부는 후원 표기에 압력을 주되 기증 진실을 완전히 확정하면 안 된다.",
+      "태호가 장부 복사본을 펼치지만 빠진 서명칸은 그대로 비워둔다.",
+      {
+        "payoff_ref": "DONOR_LEDGER_GAP",
+        "location_id": "L_ARCHIVE",
+        "time_window": [
+          "17:30",
+          "20:00"
+        ]
+      }
+    ],
+    [
+      "C01_COACH_EXIT",
+      "CHARACTER",
+      "ROOT_COACH_OFFER",
+      [
+        "KANG_MINSEOK"
+      ],
+      true,
+      false,
+      0.89,
+      "민석은 외부 코치직과 현재 야간 책임 사이에서 실제 비용이 있는 선택을 해야 한다.",
+      "민석이 외부 명함을 야간 근무표 옆에 놓고 다음 주 자신의 칸을 비운다.",
+      {
+        "location_id": "L_STAFF",
+        "time_window": [
+          "18:10",
+          "20:20"
+        ]
+      }
+    ],
+    [
+      "C02_YUNA_APPLICATION",
+      "CHARACTER",
+      "ROOT_SCHOLARSHIP",
+      [
+        "CHOI_YUNA"
+      ],
+      true,
+      false,
+      0.9,
+      "유나는 남은 장비 점검을 모두 떠안지 않고 장학 지원 시간을 확보해야 한다.",
+      "유나가 체크리스트를 동료에게 넘기고 노트북 가방을 책상 위에 올린다.",
+      {
+        "location_id": "L_OFFICE",
+        "time_window": [
+          "18:00",
+          "18:38"
+        ]
+      }
+    ],
+    [
+      "C03_MIRA_ACTION",
+      "CHARACTER",
+      "ROOT_OLD_OVERTIME",
+      [
+        "BAE_MIRA"
+      ],
+      true,
+      false,
+      0.84,
+      "미라는 무료 초과근무를 계속할지 문서 약속 전까지 서비스 범위를 줄일지 선택해야 한다.",
+      "미라가 앞치마 한 장을 벗어 근무표 위에 올려놓는다.",
+      {
+        "location_id": "L_CAFE",
+        "time_window": [
+          "18:10",
+          "20:10"
+        ]
+      }
+    ],
+    [
+      "C04_ARA_AGENCY",
+      "CHARACTER",
+      "ROOT_ACCESS_RAMP",
+      [
+        "KIM_ARA"
+      ],
+      true,
+      false,
+      0.83,
+      "아라는 접근 동선을 직원에게 맡기지 않고 자신이 원하는 대체 경로를 선택해야 한다.",
+      "아라가 직원 화살표를 지우고 자신의 이동선을 새로 그린다.",
+      {
+        "location_id": "L_LOBBY",
+        "time_window": [
+          "17:05",
+          "18:00"
+        ]
+      }
+    ],
+    [
+      "C05_HYEJIN_DISCLOSE",
+      "CHARACTER",
+      "ROOT_EVENT_PERMIT",
+      [
+        "SEO_HYEJIN"
+      ],
+      true,
+      false,
+      0.82,
+      "혜진은 허가 검토에 유리한 수치만 쓸지 한계를 공개해 불이익을 감수할지 선택해야 한다.",
+      "혜진이 이용자 통계 표지에 표본 누락 메모를 붙인다.",
+      {
+        "location_id": "L_ADMIN",
+        "time_window": [
+          "16:40",
+          "18:00"
+        ]
+      }
+    ],
+    [
+      "C06_TAEHO_PROVENANCE",
+      "CHARACTER",
+      "ROOT_ARCHIVE_RECORD",
+      [
+        "MOON_TAEHO"
+      ],
+      true,
+      false,
+      0.81,
+      "태호는 행사 일정 손실을 감수하고 기증 장부 확인을 더 요구할지 선택해야 한다.",
+      "태호가 완성된 후원 캡션을 뒤집고 확인란에 물음표를 적는다.",
+      {
+        "location_id": "L_ARCHIVE",
+        "time_window": [
+          "18:00",
+          "20:00"
+        ]
+      }
+    ],
+    [
+      "D01_PHONE_OWNER",
+      "INFORMATION",
+      "ROOT_LOST_LOCKER",
+      [
+        "PARK_SUNGHO"
+      ],
+      false,
+      true,
+      0.55,
+      "분실 휴대전화 실제 소유자는 추가 증거가 생길 때까지 다음 회차로 열어 둔다.",
+      "성호가 봉인번호를 장부에 적고 소유자 칸은 비워둔다.",
+      {
+        "information_delta": "owner identity remains unresolved",
+        "location_id": "L_DESK",
+        "time_window": [
+          "16:30",
+          "20:30"
+        ]
+      }
+    ],
+    [
+      "D02_TRANSLATOR_RENEWAL",
+      "THREAD",
+      "ROOT_TRANSLATOR",
+      [
+        "BAE_MIRA",
+        "SEO_HYEJIN"
+      ],
+      false,
+      true,
+      0.58,
+      "통역 계약 갱신 조건은 오늘 대체 진행 결정과 분리해 다음 협상으로 유예한다.",
+      "미라가 갱신서류는 가방에 넣고 오늘 안내지만 남긴다.",
+      {
+        "location_id": "L_COURT",
+        "time_window": [
+          "18:05",
+          "20:30"
+        ]
+      }
+    ],
+    [
+      "D03_FAMILY_SURGERY",
+      "RELATIONSHIP",
+      "ROOT_SIBLING_CARE",
+      [
+        "SEO_HYEJIN",
+        "SEO_JIHO"
+      ],
+      false,
+      true,
+      0.6,
+      "부모의 다음 달 수술 분담은 오늘 돌봄 순번과 분리해 미해결로 유지한다.",
+      "지호가 수술 동의서는 접고 이번 주 교대표만 펼쳐둔다.",
+      {
+        "relationship_pair": [
+          "SEO_HYEJIN",
+          "SEO_JIHO"
+        ],
+        "relationship_delta": "future surgery responsibility remains open",
+        "location_id": "L_CAFE",
+        "time_window": [
+          "17:00",
+          "20:30"
+        ]
+      }
+    ],
+    [
+      "D04_UNION_GRIEVANCE",
+      "SOCIAL",
+      "ROOT_UNION_BALLOT",
+      [
+        "KANG_MINSEOK"
+      ],
+      false,
+      true,
+      0.57,
+      "분할근무와 별개의 징계 이의제기는 다음 심의일까지 열어 둔다.",
+      "민석이 이의서에 다음 심의 날짜만 적고 서명란은 비워둔다.",
+      {
+        "social_delta": "separate grievance remains open",
+        "group_refs": [
+          "G_UNION"
+        ],
+        "location_id": "L_STAFF",
+        "time_window": [
+          "17:00",
+          "20:30"
+        ]
+      }
+    ]
+  ],
+  "expected": {
+    "independent_root_count": 16,
+    "total_obligations": 35,
+    "scheduled_due_or_open_touch": 31,
+    "deferred": 4,
+    "open_touch": [
+      "P01_OVERTIME_NOTE",
+      "P02_DONOR_LEDGER"
+    ],
+    "single_causal_spine_forbidden": true,
+    "broadcast_depth_from_unique_material_required": true
+  },
+  "variants": [
+    {
+      "id": "P01_BASE",
+      "mutations": []
+    },
+    {
+      "id": "P02_FAMILY_HIGH",
+      "mutations": [
+        {
+          "id": "R01_SIBLING_BOUNDARY",
+          "pressure": 0.99
+        },
+        {
+          "id": "D03_FAMILY_SURGERY",
+          "pressure": 0.68
+        }
+      ]
+    },
+    {
+      "id": "P03_SCHOLAR_EARLY",
+      "mutations": [
+        {
+          "id": "I01_SCHOLAR_DEADLINE",
+          "time_window": [
+            "16:20",
+            "18:05"
+          ],
+          "pressure": 0.99
+        },
+        {
+          "id": "C02_YUNA_APPLICATION",
+          "time_window": [
+            "17:30",
+            "18:05"
+          ],
+          "pressure": 0.97
+        }
+      ]
+    },
+    {
+      "id": "P04_LABOR_HIGH",
+      "mutations": [
+        {
+          "id": "S01_OVERTIME",
+          "pressure": 0.99
+        },
+        {
+          "id": "C03_MIRA_ACTION",
+          "pressure": 0.94
+        }
+      ]
+    },
+    {
+      "id": "P05_VENDOR_RESTORED",
+      "remove_obligations": [
+        "E02_VENDOR_DELAY"
+      ],
+      "mutations": [
+        {
+          "id": "I02_VENDOR_ETA",
+          "statement": "납품이 예정대로 도착했다는 정보가 준비 순서를 원래 계획으로 되돌려야 한다.",
+          "visible_action": "태호가 수정했던 18:25 예상시각을 지우고 원래 17:10 입고표를 다시 붙인다.",
+          "information_delta": "restored ETA returns preparation order toward baseline"
+        }
+      ]
+    },
+    {
+      "id": "P06_OPEN_EVIDENCE_HIGH",
+      "mutations": [
+        {
+          "id": "P01_OVERTIME_NOTE",
+          "pressure": 0.99
+        },
+        {
+          "id": "P02_DONOR_LEDGER",
+          "pressure": 0.96
+        }
+      ]
+    }
+  ]
+}
