@@ -1,0 +1,77 @@
+{
+  "schema": "UL22B_TEMPORAL_SPATIAL_ORDERING_FINAL_RESULT_R1",
+  "date": "2026-10-05",
+  "status": "CLOSED_PASS__FRESH_16_OF_16__FP0_FN0__UL21_DERIVED_SPACETIME_0_FAILURES",
+  "authority_effect": "NONE_UNTIL_SEPARATE_REQUALIFICATION_AND_PHYSICALIZATION",
+  "parent_physical_authority": "SYNC-R77",
+  "parent_runtime": "UL20_F04_TRUSTED_ROOT_SUCCESSOR_RUNTIME_R1",
+  "ul22a_status": "CLOSED_PASS",
+  "source_freeze_commit": "b3cf9e33b7250bcb66e218144d9b05785eed6e09",
+  "fresh_suite_commit": "57da3434bcb83b374c696c15c54c8b6b90d724e8",
+  "treatment_source": {
+    "adaptive_source_sha256": "0bcc11d49e026271acccd28e5799a7127895f10598c1a360af38da641b2df236",
+    "canonical_ir_v2_sha256": "1fb1289bc656f9d09bbb5259513f718607f001793f15281ea033a2451a3963b4",
+    "ul22a_to_ul22b_diff_sha256": "605b6682d5e508591e475dd75bab314376f63289c25a579c5c85d34b9db5cfc9",
+    "candidate_runtime_zip_sha256": "2a2450977bf7626c640bb73dba547c75a04d08b2c94d8939481bee4f819df91b",
+    "candidate_runtime_zip_bytes": 18755256,
+    "python_compile": "45/45 PASS"
+  },
+  "prefreeze": {
+    "deterministic": "8/8 PASS",
+    "deterministic_result_sha256": "4ca76f6158e1bd8d86eaad0f274173f47a5b03b59a129b6a50f614c665d6f113",
+    "ul22a_semantic_target": "16/16 PASS",
+    "ul22a_result_sha256": "d232ca14644e7a7dd745a96c20a413e21388431f1b07bc5c441f226010bf0540",
+    "untyped_full_architecture_equivalence": {
+      "status": "PASS",
+      "architecture_hash_both": "ee572f3c767594cf26eff4793e58c4247f34d917931705ee1e8efc16bf8472ec"
+    },
+    "ul21_derived_dense_probe": {
+      "initial_draft_spacetime_failures": 5,
+      "final_spacetime_failures": 0,
+      "sequence_count": 9,
+      "scene_count": 32,
+      "note": "Reduced 16-obligation timing stress subset; not a broadcast-depth qualification."
+    }
+  },
+  "fresh_primary": {
+    "status": "PASS__16_OF_16",
+    "pass_count": 16,
+    "total": 16,
+    "fp": 0,
+    "fn": 0,
+    "result_sha256": "82339e64c73763f5ba4b814bbc090df7c804549189079a49a268822588bb7dcd"
+  },
+  "postfreeze_regression": {
+    "status": "PASS",
+    "result_sha256": "cec4f186e82a0bd9e11a1674eedea68a98e079594c00a77605d8bc6645ef70b2",
+    "UL18_4STATE": "PASS__PARENT_CANDIDATE_IDENTICAL",
+    "R68_F04": "PASS__PARENT_CANDIDATE_IDENTICAL",
+    "UL20_TRUSTED_ROOT": "PASS__PARENT_CANDIDATE_IDENTICAL",
+    "R69_F06": "PASS__PARENT_CANDIDATE_IDENTICAL",
+    "unaffected_function_source_invariance": [
+      "_trusted_causal_root_partition",
+      "_semantic_repetition_groups",
+      "_scene_necessity_audit",
+      "reverse_reconstruction",
+      "_stage_plan_for_obligation"
+    ],
+    "intended_changed_functions": [
+      "_norm",
+      "compile_active_obligation_portfolio",
+      "build_adaptive_sequence_graph",
+      "build_adaptive_scene_graph"
+    ],
+    "ul22a_semantic_target_postfreeze": "16/16 PASS",
+    "untyped_historical_path_postfreeze": "FULL_ARCHITECTURE_EQUIVALENCE_PASS"
+  },
+  "qualified_claim": "TYPED_TEMPORAL_SPATIAL_ORDERING_AND_UPSTREAM_VALIDATION_QUALIFIED_AT_ARCHITECTURE_MECHANICAL_LEVEL",
+  "claim_boundary": [
+    "Does not establish independent literary architecture quality.",
+    "Does not authorize Production change.",
+    "Does not authorize DB change.",
+    "Does not authorize Physical Authority promotion before fresh unseen architecture requalification."
+  ],
+  "next": "INTEGRATE_UL22A_PLUS_UL22B_RESEARCH_SUCCESSOR__THEN_FRESH_UNSEEN_ARCHITECTURE_REQUALIFICATION",
+  "physicalization": "NOT_AUTHORIZED",
+  "database_guard": "DB64-R134 untouched."
+}
