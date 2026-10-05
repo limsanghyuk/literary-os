@@ -1,0 +1,15 @@
+{
+  "schema": "UL23_BLIND_MAPPING_SEAL_R1",
+  "date": "2026-10-05",
+  "status": "SEALED_BEFORE_ANY_UL23_ARCHITECTURE_OUTPUT",
+  "coordinator_secret_sha256": "2f880fc0f6b29be7c87aaee034b6e6f3c4ba48d650db46fdb42386493cf2e0f1",
+  "judges": [
+    "J01",
+    "J02",
+    "J03"
+  ],
+  "pairs_per_judge": 6,
+  "arm_balance": "3A_3B_PER_JUDGE",
+  "reveal_rule": "Only after 3/3 first schema-valid independent judgments are hash-sealed.",
+  "authority_effect": "NONE"
+}
