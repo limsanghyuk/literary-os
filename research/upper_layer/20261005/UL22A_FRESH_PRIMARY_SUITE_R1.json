@@ -1,0 +1,103 @@
+{
+  "schema": "UL22A_FRESH_PRIMARY_SUITE_R1",
+  "date": "2026-10-05",
+  "status": "SEALED_AFTER_SOURCE_FREEZE__BEFORE_EXECUTION",
+  "source_freeze_commit": "835fa7b5c37543509f13e585e65d22abd7c071c7",
+  "cases": [
+    {
+      "id": "P01_REL_PRE",
+      "domain": "RELATIONSHIP",
+      "resolves": false,
+      "expected": "TARGET_PRESERVED__NOT_REALIZED"
+    },
+    {
+      "id": "P02_REL_RESOLVE",
+      "domain": "RELATIONSHIP",
+      "resolves": true,
+      "expected": "TARGET_PRESERVED__REALIZED"
+    },
+    {
+      "id": "P03_INFO_PRE",
+      "domain": "INFORMATION",
+      "resolves": false,
+      "expected": "TARGET_PRESERVED__NOT_REALIZED"
+    },
+    {
+      "id": "P04_INFO_RESOLVE",
+      "domain": "INFORMATION",
+      "resolves": true,
+      "expected": "TARGET_PRESERVED__REALIZED"
+    },
+    {
+      "id": "P05_SOCIAL_PRE",
+      "domain": "SOCIAL",
+      "resolves": false,
+      "expected": "TARGET_PRESERVED__NOT_REALIZED"
+    },
+    {
+      "id": "P06_SOCIAL_RESOLVE",
+      "domain": "SOCIAL",
+      "resolves": true,
+      "expected": "TARGET_PRESERVED__REALIZED"
+    },
+    {
+      "id": "P07_MULTI_STAGE",
+      "domain": "RELATIONSHIP",
+      "stages": [
+        "TEST_BOUNDARY",
+        "PRESSURE_ESCALATION",
+        "RELATIONSHIP_BOUNDARY_CHANGE"
+      ],
+      "expected": "SAME_TARGET_ALL_STAGES__ONLY_FINAL_REALIZED"
+    },
+    {
+      "id": "P08_NON_TARGET_KIND",
+      "domain": "EVENT",
+      "resolves": false,
+      "expected": "NO_INVENTED_TARGET"
+    },
+    {
+      "id": "N01_CANON_HASH_TAMPER",
+      "tamper": "CANONICAL_TARGET_HASH",
+      "expected": "REJECT"
+    },
+    {
+      "id": "N02_RENDER_HASH_TAMPER",
+      "tamper": "RENDERER_TARGET_HASH",
+      "expected": "REJECT"
+    },
+    {
+      "id": "N03_TARGET_VALUE_TAMPER",
+      "tamper": "TARGET_VALUE_AFTER_ANCHOR",
+      "expected": "REJECT_BY_TARGET_CHECK"
+    },
+    {
+      "id": "N04_PREMATURE_REALIZATION",
+      "tamper": "PRECURSOR_REALIZED_EQUALS_TARGET",
+      "expected": "REJECT_BY_REALIZATION_CHECK"
+    },
+    {
+      "id": "N05_TARGET_DROP_CANON",
+      "tamper": "DROP_TARGET_BEFORE_CANONICAL_IR",
+      "expected": "REJECT_BY_TARGET_CHECK"
+    },
+    {
+      "id": "N06_TARGET_DROP_RENDER",
+      "tamper": "DROP_TARGET_IN_RENDERER_PROJECTION",
+      "expected": "REJECT"
+    },
+    {
+      "id": "N07_IRRELEVANT_METADATA",
+      "tamper": "IRRELEVANT_METADATA_ONLY",
+      "expected": "TARGET_INVARIANT"
+    },
+    {
+      "id": "N08_EMPTY_DOMAIN_FIELDS",
+      "domain": "CHARACTER",
+      "resolves": false,
+      "expected": "EMPTY_TARGETS_STABLE"
+    }
+  ],
+  "pass_rule": "16/16 exact; no threshold rescue",
+  "authority_effect": "NONE"
+}
