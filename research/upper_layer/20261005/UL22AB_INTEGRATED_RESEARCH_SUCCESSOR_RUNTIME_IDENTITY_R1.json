@@ -1,0 +1,30 @@
+{
+  "schema": "UL22AB_INTEGRATED_RESEARCH_SUCCESSOR_RUNTIME_IDENTITY_R1",
+  "date": "2026-10-05",
+  "status": "RESEARCH_SUCCESSOR_QUALIFIED_MECHANICALLY__NOT_PHYSICAL_AUTHORITY",
+  "identity": "UL22AB_INTEGRATED_RESEARCH_SUCCESSOR_RUNTIME_R1",
+  "parent_physical_authority": "SYNC-R77",
+  "parent_runtime": "UL20_F04_TRUSTED_ROOT_SUCCESSOR_RUNTIME_R1",
+  "runtime_zip_sha256": "2a2450977bf7626c640bb73dba547c75a04d08b2c94d8939481bee4f819df91b",
+  "runtime_zip_bytes": 18755256,
+  "adaptive_source_sha256": "0bcc11d49e026271acccd28e5799a7127895f10598c1a360af38da641b2df236",
+  "canonical_ir_v2_sha256": "1fb1289bc656f9d09bbb5259513f718607f001793f15281ea033a2451a3963b4",
+  "contains": {
+    "UL22A": "Semantic Target typed separately from realized state",
+    "UL22B": "Typed temporal/spatial ordering, compatible weaving and upstream schedule validation",
+    "UL20": "Trusted causal-root partition preserved",
+    "UL18": "Open-touch semantics preserved"
+  },
+  "qualification": {
+    "UL22A": "CLOSED_PASS",
+    "UL22B": "CLOSED_PASS",
+    "compile": "45/45 PASS",
+    "untyped_historical_path": "FULL_ARCHITECTURE_EQUIVALENCE_PASS",
+    "open_touch": "PASS",
+    "F04": "PASS",
+    "F06": "PASS"
+  },
+  "next_required_gate": "FRESH_UNSEEN_MULTI_STRAND_ARCHITECTURE_REQUALIFICATION__MECHANICAL_THEN_J01_J02_J03_BLIND",
+  "authority_boundary": "Physical Authority remains SYNC-R77. No SYNC-R78 yet.",
+  "database_guard": "DB64-R134 untouched."
+}
