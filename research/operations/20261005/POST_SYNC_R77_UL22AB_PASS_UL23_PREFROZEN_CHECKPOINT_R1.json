@@ -1,0 +1,34 @@
+{
+  "schema": "POST_SYNC_R77_UL22AB_PASS_UL23_PREFROZEN_CHECKPOINT_R1",
+  "date": "2026-10-05",
+  "status": "UL22A_PASS__UL22B_PASS__UL23_PREREG_AND_MAPPING_FROZEN__OUTPUTS_0",
+  "physical_authority": "SYNC-R77",
+  "physical_runtime": "UL20_F04_TRUSTED_ROOT_SUCCESSOR_RUNTIME_R1",
+  "research_successor": {
+    "identity": "UL22AB_INTEGRATED_RESEARCH_SUCCESSOR_RUNTIME_R1",
+    "runtime_zip_sha256": "2a2450977bf7626c640bb73dba547c75a04d08b2c94d8939481bee4f819df91b",
+    "status": "MECHANICALLY_QUALIFIED__NOT_PHYSICAL_AUTHORITY"
+  },
+  "ul22a": {
+    "status": "CLOSED_PASS",
+    "result": "research/upper_layer/20261005/UL22A_SEMANTIC_TARGET_PRESERVATION_FINAL_RESULT_R1.json"
+  },
+  "ul22b": {
+    "status": "CLOSED_PASS__FRESH_16_OF_16__FP0_FN0",
+    "result": "research/upper_layer/20261005/UL22B_TEMPORAL_SPATIAL_ORDERING_FINAL_RESULT_R1.json"
+  },
+  "ul23": {
+    "fixture": "research/upper_layer/20261005/UL23_FRESH_UNSEEN_MULTI_STRAND_FIXTURE_R1.json",
+    "prereg": "research/upper_layer/20261005/UL23_ARCHITECTURE_REQUALIFICATION_PREREG_R1.md",
+    "mapping": "research/upper_layer/20261005/UL23_BLIND_MAPPING_SEAL_R1.json",
+    "outputs": 0,
+    "judgments": 0,
+    "mapping_revealed": false,
+    "next": "EXECUTE_SIX_VARIANT_MECHANICAL_PREBLIND_GATE"
+  },
+  "production": "ENG:R47 / LEGACY_R53",
+  "runtime_db": "DB59 frozen",
+  "db64": "RESEARCH_HOLD__UNTOUCHED",
+  "sync_r78": "DOES_NOT_EXIST",
+  "provider_screenplay": "BLOCKED_UNTIL_UL23_BLIND_PASS"
+}
