@@ -1,0 +1,74 @@
+{
+  "schema": "UL22B_FRESH_PRIMARY_SUITE_R1",
+  "date": "2026-10-05",
+  "status": "SEALED_AFTER_SOURCE_FREEZE__BEFORE_EXECUTION",
+  "source_freeze_commit": "b3cf9e33b7250bcb66e218144d9b05785eed6e09",
+  "cases": [
+    {
+      "id": "F01_MONOTONIC_SINGLE_LOCATION",
+      "expected": "FEASIBLE"
+    },
+    {
+      "id": "F02_OVERLAP_RELATED_WEAVE",
+      "expected": "FEASIBLE"
+    },
+    {
+      "id": "F03_GAP_FILL_BEFORE_FUTURE_TIGHT_EVENT",
+      "expected": "FEASIBLE"
+    },
+    {
+      "id": "F04_SPECIAL_TRANSITION_WITH_HEADROOM",
+      "expected": "FEASIBLE"
+    },
+    {
+      "id": "F05_DEPENDENCY_AND_WINDOWS_COMPATIBLE",
+      "expected": "FEASIBLE"
+    },
+    {
+      "id": "F06_MULTI_LOCATION_DEFAULT_TRANSITIONS",
+      "expected": "FEASIBLE"
+    },
+    {
+      "id": "F07_TYPED_OPEN_TOUCH_REMAINS_OPEN",
+      "expected": "FEASIBLE__OPEN_TOUCH_PRESERVED"
+    },
+    {
+      "id": "F08_UNTYPED_HISTORICAL_SENTINEL",
+      "expected": "UNTYPED_PASS__HISTORICAL_PATH"
+    },
+    {
+      "id": "N01_DEPENDENCY_DEADLINE_IMPOSSIBLE",
+      "expected": "INFEASIBLE"
+    },
+    {
+      "id": "N02_SPECIAL_TRANSITION_MISSES_WINDOW",
+      "expected": "INFEASIBLE"
+    },
+    {
+      "id": "N03_EPISODE_WINDOW_EXCEEDED",
+      "expected": "INFEASIBLE"
+    },
+    {
+      "id": "N04_INVALID_REVERSED_TIME_WINDOW",
+      "expected": "INFEASIBLE"
+    },
+    {
+      "id": "N05_CUMULATIVE_SCENE_OVERLOAD",
+      "expected": "INFEASIBLE"
+    },
+    {
+      "id": "N06_DEPENDENCY_CYCLE_WITH_TIGHT_WINDOWS",
+      "expected": "INFEASIBLE"
+    },
+    {
+      "id": "N07_MIXED_TYPED_MISSING_WINDOW",
+      "expected": "INFEASIBLE"
+    },
+    {
+      "id": "N08_LOCATION_HOP_CHAIN_TOO_TIGHT",
+      "expected": "INFEASIBLE"
+    }
+  ],
+  "pass_rule": "16/16 exact classification; FP0/FN0; no threshold rescue",
+  "authority_effect": "NONE"
+}
