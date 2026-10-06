@@ -2,17 +2,22 @@
 Last updated: 2026-10-06
 
 ## MINIMAL RECOVERY ORDER / 최소 복구 순서
-1. `handoff/20261006/START_HERE_SYNC_R77_UL23_RUNTIME_HOLD_R25.md`
-2. `research/operations/20261006/UL23_RUNTIME_TRANSPORT_HOLD_INCIDENT_R1.json`
-3. `research/upper_layer/20261005/UL22AB_INTEGRATED_RESEARCH_SUCCESSOR_RUNTIME_IDENTITY_R1.json`
-4. `research/upper_layer/20261005/UL23_FRESH_UNSEEN_MULTI_STRAND_FIXTURE_R1.json`
-5. `research/upper_layer/20261005/UL23_ARCHITECTURE_REQUALIFICATION_PREREG_R1.md`
-6. `research/upper_layer/20261005/UL23_BLIND_MAPPING_SEAL_R1.json`
-7. `handoff/CURRENT_PHYSICAL_DELIVERY_POINTER.md`
-8. `handoff/CURRENT_DATABASE_RESEARCH_POINTER.md`
+1. `handoff/20261006/START_HERE_NEW_SESSION_MASTER_RECOVERY_R26.md`
+2. `research/operations/20261001/FULL_RESEARCH_LINEAGE_AND_CURRENT_POSITION_AUDIT_R1.md`
+3. `handoff/CURRENT_LIBRARY_RECOVERY_POINTER.md`
+4. `handoff/CURRENT_PHYSICAL_DELIVERY_POINTER.md`
+5. `research/upper_layer/20261004/UL21_PREEXPERIMENT_UPPER_LAYER_PROBLEM_LEDGER_R1.md`
+6. `research/upper_layer/20261005/UL22A_SEMANTIC_TARGET_PRESERVATION_FINAL_RESULT_R1.json`
+7. `research/upper_layer/20261005/UL22B_TEMPORAL_SPATIAL_ORDERING_FINAL_RESULT_R1.json`
+8. `research/upper_layer/20261005/UL22AB_INTEGRATED_RESEARCH_SUCCESSOR_RUNTIME_IDENTITY_R1.json`
+9. `research/upper_layer/20261005/UL23_FRESH_UNSEEN_MULTI_STRAND_FIXTURE_R1.json`
+10. `research/upper_layer/20261005/UL23_ARCHITECTURE_REQUALIFICATION_PREREG_R1.md`
+11. `research/upper_layer/20261005/UL23_BLIND_MAPPING_SEAL_R1.json`
+12. `research/operations/20261001/LITERARY_OS_RUNTIME_CONTAINER_RESILIENCE_PROTOCOL_R6.md`
+13. `handoff/CURRENT_DATABASE_RESEARCH_POINTER.md`
 
 ## CURRENT STATUS / 현재 상태
 `RUNTIME_TRANSPORT_HOLD__UL23_OUTPUTS_0__JUDGMENTS_0__MAPPING_UNREVEALED`
 
-Resume only the failed execution step after minimal health and runtime-byte verification.
-Do not regenerate or modify Fixture / Preregistration / Mapping.
+New session must inspect Library directly and perform minimal shell/Python health before large materialization.
+Do not regenerate Fixture / Preregistration / Mapping.
