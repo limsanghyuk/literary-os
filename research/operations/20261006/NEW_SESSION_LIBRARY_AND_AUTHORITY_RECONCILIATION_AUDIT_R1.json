@@ -1,0 +1,52 @@
+{
+  "schema": "NEW_SESSION_LIBRARY_AND_AUTHORITY_RECONCILIATION_AUDIT_R1",
+  "date": "2026-10-06",
+  "status": "PASS_WITH_DB64_VISIBILITY_HOLD__CURRENT_AUTHORITY_RECONCILED",
+  "physical_authority": {
+    "id": "SYNC-R77",
+    "library_path": "/Literary_OS/Physical_Archive/SYNC_R77_CURRENT_9PACKAGES",
+    "listing_current": "9/9 visible",
+    "prior_custody": "9/9 raw rematerialization + SHA match PASS",
+    "runtime": "UL20_F04_TRUSTED_ROOT_SUCCESSOR_RUNTIME_R1",
+    "runtime_sha256": "aeb24721f9ef483daefe922cef1842f6459e07f0fd72e4e31d4bb4ed4094f200",
+    "logical_c2_sha256": "e10902964eed0cdd690339d5bd8816a28c5e07844d3158c5c2ffe1e6ed990c8b",
+    "trust_root": "79e1df6f571a913a672ddff1da779e6ad910864bf81933cc82f7783c7b1c4851"
+  },
+  "research_candidate": {
+    "identity": "UL22AB_INTEGRATED_RESEARCH_SUCCESSOR_RUNTIME_R1",
+    "library_path": "/Literary_OS/Research_Candidates/UL22AB_CANONICAL/LITERARY_OS_UL22AB_INTEGRATED_RESEARCH_SUCCESSOR_RUNTIME_R1.zip",
+    "current_listing": "1/1 visible",
+    "bytes": 18755256,
+    "sha256": "2a2450977bf7626c640bb73dba547c75a04d08b2c94d8939481bee4f819df91b",
+    "current_raw_materialization": "PASS to /mnt/data/ul23_resume during 2026-10-06 recovery",
+    "authority_effect": "NONE__RESEARCH_ONLY"
+  },
+  "historical_research_candidate": {
+    "identity": "UL18_OPEN_DEBT_REPAIR_CANDIDATE_CANONICAL_F2A22D_R1",
+    "library_path": "/Literary_OS/Research_Candidates/UL18_CANONICAL/UL18_OPEN_DEBT_REPAIR_CANDIDATE_CANONICAL_F2A22D_R1.zip",
+    "current_listing": "1/1 visible",
+    "bytes": 18752588,
+    "status": "HISTORICAL_QUALIFIED_PARENT__NOT_CURRENT_TREATMENT"
+  },
+  "research_db": {
+    "identity": "DB64-R134",
+    "library_path": "/Literary_OS/Research_DB/DB64_R134",
+    "historical_2026_10_03": "5/5 expected files visible; raw materialization 0/5 denied",
+    "current_2026_10_06": "folder listing 0 files; exact-title Library search 0 results",
+    "interpretation": "LIBRARY_VISIBILITY_INSTABILITY__RAW_CUSTODY_UNPROVEN__NO_CORRUPTION_CLAIM",
+    "runtime_adoption": "FORBIDDEN",
+    "required_before_mutation": "reacquire exact 5 files -> verify part SHA -> rejoin full DB -> verify full SHA/CRC/topology -> only then DB research"
+  },
+  "stale_hub_findings": [
+    "CURRENT_DEVELOPER_HUB_AUTHORITY still pointed to R22 / UL20 frontier",
+    "CURRENT_FULL_RESEARCH_LINEAGE_AUDIT_POINTER still pointed current extension to R21 / SYNC-R76"
+  ],
+  "current_research": {
+    "ul22a": "CLOSED_PASS",
+    "ul22b": "CLOSED_PASS",
+    "ul22ab": "MECHANICALLY_QUALIFIED_RESEARCH_SUCCESSOR__NOT_PHYSICAL_AUTHORITY",
+    "ul23": "FIXTURE_PREREG_MAPPING_FROZEN__OUTPUTS_0__JUDGMENTS_0",
+    "runtime_hold": "CAAS_EXECUTION_SURFACE_FAILURE__NO_SCIENTIFIC_VERDICT"
+  },
+  "next": "NEW_SESSION_RECOVER_FRESH_EXECUTION_SURFACE__VERIFY_UL22AB_BYTES__RESUME_UL23_P01_ONLY"
+}
